@@ -21,16 +21,16 @@ __all__ = ['ForwardingProfileRegionalAndCustomProxyArgs', 'ForwardingProfileRegi
 @pulumi.input_type
 class ForwardingProfileRegionalAndCustomProxyArgs:
     def __init__(__self__, *,
-                 connectivity_preferences: Optional[pulumi.Input[Sequence[pulumi.Input['ForwardingProfileRegionalAndCustomProxyConnectivityPreferenceArgs']]]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 fallback_option: Optional[pulumi.Input[_builtins.str]] = None,
-                 folder: Optional[pulumi.Input[_builtins.str]] = None,
-                 location_preference: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 prisma_access_locations: Optional[pulumi.Input[Sequence[pulumi.Input['ForwardingProfileRegionalAndCustomProxyPrismaAccessLocationArgs']]]] = None,
-                 proxy1: Optional[pulumi.Input['ForwardingProfileRegionalAndCustomProxyProxy1Args']] = None,
-                 proxy2: Optional[pulumi.Input['ForwardingProfileRegionalAndCustomProxyProxy2Args']] = None,
-                 type: Optional[pulumi.Input[_builtins.str]] = None):
+                 connectivity_preferences: pulumi.Input[Optional[Sequence[pulumi.Input['ForwardingProfileRegionalAndCustomProxyConnectivityPreferenceArgs']]]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 fallback_option: pulumi.Input[Optional[_builtins.str]] = None,
+                 folder: pulumi.Input[Optional[_builtins.str]] = None,
+                 location_preference: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 prisma_access_locations: pulumi.Input[Optional[Sequence[pulumi.Input['ForwardingProfileRegionalAndCustomProxyPrismaAccessLocationArgs']]]] = None,
+                 proxy1: pulumi.Input[Optional['ForwardingProfileRegionalAndCustomProxyProxy1Args']] = None,
+                 proxy2: pulumi.Input[Optional['ForwardingProfileRegionalAndCustomProxyProxy2Args']] = None,
+                 type: pulumi.Input[Optional[_builtins.str]] = None):
         """
         The set of arguments for constructing a ForwardingProfileRegionalAndCustomProxy resource.
 
@@ -68,139 +68,139 @@ class ForwardingProfileRegionalAndCustomProxyArgs:
 
     @_builtins.property
     @pulumi.getter(name="connectivityPreferences")
-    def connectivity_preferences(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['ForwardingProfileRegionalAndCustomProxyConnectivityPreferenceArgs']]]]:
+    def connectivity_preferences(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['ForwardingProfileRegionalAndCustomProxyConnectivityPreferenceArgs']]]]:
         """
         List of connectivity methods and their enablement status for establishing proxy connections
         """
         return pulumi.get(self, "connectivity_preferences")
 
     @connectivity_preferences.setter
-    def connectivity_preferences(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['ForwardingProfileRegionalAndCustomProxyConnectivityPreferenceArgs']]]]):
+    def connectivity_preferences(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['ForwardingProfileRegionalAndCustomProxyConnectivityPreferenceArgs']]]]):
         pulumi.set(self, "connectivity_preferences", value)
 
     @_builtins.property
     @pulumi.getter
-    def description(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def description(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         regional and custom proxy configuration description
         """
         return pulumi.get(self, "description")
 
     @description.setter
-    def description(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def description(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "description", value)
 
     @_builtins.property
     @pulumi.getter(name="fallbackOption")
-    def fallback_option(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def fallback_option(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Behavior when proxy connection fails - 'fail-open' allows direct internet access, 'fail-safe' blocks traffic until proxy is restored
         """
         return pulumi.get(self, "fallback_option")
 
     @fallback_option.setter
-    def fallback_option(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def fallback_option(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "fallback_option", value)
 
     @_builtins.property
     @pulumi.getter
-    def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def folder(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
         """
         return pulumi.get(self, "folder")
 
     @folder.setter
-    def folder(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def folder(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "folder", value)
 
     @_builtins.property
     @pulumi.getter(name="locationPreference")
-    def location_preference(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def location_preference(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Strategy for selecting Prisma Access location - 'best-available-pa-location' automatically selects optimal location, 'specific-pa-location' uses predefined locations
         """
         return pulumi.get(self, "location_preference")
 
     @location_preference.setter
-    def location_preference(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def location_preference(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "location_preference", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         alphanumeric string [ 0-9a-zA-Z ._-]
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter(name="prismaAccessLocations")
-    def prisma_access_locations(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['ForwardingProfileRegionalAndCustomProxyPrismaAccessLocationArgs']]]]:
+    def prisma_access_locations(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['ForwardingProfileRegionalAndCustomProxyPrismaAccessLocationArgs']]]]:
         """
         Select Prisma Access location Americas, Europe and Asia-Pacific.
         """
         return pulumi.get(self, "prisma_access_locations")
 
     @prisma_access_locations.setter
-    def prisma_access_locations(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['ForwardingProfileRegionalAndCustomProxyPrismaAccessLocationArgs']]]]):
+    def prisma_access_locations(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['ForwardingProfileRegionalAndCustomProxyPrismaAccessLocationArgs']]]]):
         pulumi.set(self, "prisma_access_locations", value)
 
     @_builtins.property
     @pulumi.getter
-    def proxy1(self) -> Optional[pulumi.Input['ForwardingProfileRegionalAndCustomProxyProxy1Args']]:
+    def proxy1(self) -> pulumi.Input[Optional['ForwardingProfileRegionalAndCustomProxyProxy1Args']]:
         """
         primary regional and custom proxy
         """
         return pulumi.get(self, "proxy1")
 
     @proxy1.setter
-    def proxy1(self, value: Optional[pulumi.Input['ForwardingProfileRegionalAndCustomProxyProxy1Args']]):
+    def proxy1(self, value: pulumi.Input[Optional['ForwardingProfileRegionalAndCustomProxyProxy1Args']]):
         pulumi.set(self, "proxy1", value)
 
     @_builtins.property
     @pulumi.getter
-    def proxy2(self) -> Optional[pulumi.Input['ForwardingProfileRegionalAndCustomProxyProxy2Args']]:
+    def proxy2(self) -> pulumi.Input[Optional['ForwardingProfileRegionalAndCustomProxyProxy2Args']]:
         """
         secondary regional and custom proxy
         """
         return pulumi.get(self, "proxy2")
 
     @proxy2.setter
-    def proxy2(self, value: Optional[pulumi.Input['ForwardingProfileRegionalAndCustomProxyProxy2Args']]):
+    def proxy2(self, value: pulumi.Input[Optional['ForwardingProfileRegionalAndCustomProxyProxy2Args']]):
         pulumi.set(self, "proxy2", value)
 
     @_builtins.property
     @pulumi.getter
-    def type(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def type(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Proxy configuration type - 'gp-and-pac' for GlobalProtect and PAC file forwarding, 'ztna-agent' for ZTNA agent forwarding
         """
         return pulumi.get(self, "type")
 
     @type.setter
-    def type(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def type(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "type", value)
 
 
 @pulumi.input_type
 class _ForwardingProfileRegionalAndCustomProxyState:
     def __init__(__self__, *,
-                 connectivity_preferences: Optional[pulumi.Input[Sequence[pulumi.Input['ForwardingProfileRegionalAndCustomProxyConnectivityPreferenceArgs']]]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 fallback_option: Optional[pulumi.Input[_builtins.str]] = None,
-                 folder: Optional[pulumi.Input[_builtins.str]] = None,
-                 location_preference: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 prisma_access_locations: Optional[pulumi.Input[Sequence[pulumi.Input['ForwardingProfileRegionalAndCustomProxyPrismaAccessLocationArgs']]]] = None,
-                 proxy1: Optional[pulumi.Input['ForwardingProfileRegionalAndCustomProxyProxy1Args']] = None,
-                 proxy2: Optional[pulumi.Input['ForwardingProfileRegionalAndCustomProxyProxy2Args']] = None,
-                 tfid: Optional[pulumi.Input[_builtins.str]] = None,
-                 type: Optional[pulumi.Input[_builtins.str]] = None):
+                 connectivity_preferences: pulumi.Input[Optional[Sequence[pulumi.Input['ForwardingProfileRegionalAndCustomProxyConnectivityPreferenceArgs']]]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 fallback_option: pulumi.Input[Optional[_builtins.str]] = None,
+                 folder: pulumi.Input[Optional[_builtins.str]] = None,
+                 location_preference: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 prisma_access_locations: pulumi.Input[Optional[Sequence[pulumi.Input['ForwardingProfileRegionalAndCustomProxyPrismaAccessLocationArgs']]]] = None,
+                 proxy1: pulumi.Input[Optional['ForwardingProfileRegionalAndCustomProxyProxy1Args']] = None,
+                 proxy2: pulumi.Input[Optional['ForwardingProfileRegionalAndCustomProxyProxy2Args']] = None,
+                 tfid: pulumi.Input[Optional[_builtins.str]] = None,
+                 type: pulumi.Input[Optional[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering ForwardingProfileRegionalAndCustomProxy resources.
 
@@ -241,134 +241,134 @@ class _ForwardingProfileRegionalAndCustomProxyState:
 
     @_builtins.property
     @pulumi.getter(name="connectivityPreferences")
-    def connectivity_preferences(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['ForwardingProfileRegionalAndCustomProxyConnectivityPreferenceArgs']]]]:
+    def connectivity_preferences(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['ForwardingProfileRegionalAndCustomProxyConnectivityPreferenceArgs']]]]:
         """
         List of connectivity methods and their enablement status for establishing proxy connections
         """
         return pulumi.get(self, "connectivity_preferences")
 
     @connectivity_preferences.setter
-    def connectivity_preferences(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['ForwardingProfileRegionalAndCustomProxyConnectivityPreferenceArgs']]]]):
+    def connectivity_preferences(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['ForwardingProfileRegionalAndCustomProxyConnectivityPreferenceArgs']]]]):
         pulumi.set(self, "connectivity_preferences", value)
 
     @_builtins.property
     @pulumi.getter
-    def description(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def description(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         regional and custom proxy configuration description
         """
         return pulumi.get(self, "description")
 
     @description.setter
-    def description(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def description(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "description", value)
 
     @_builtins.property
     @pulumi.getter(name="fallbackOption")
-    def fallback_option(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def fallback_option(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Behavior when proxy connection fails - 'fail-open' allows direct internet access, 'fail-safe' blocks traffic until proxy is restored
         """
         return pulumi.get(self, "fallback_option")
 
     @fallback_option.setter
-    def fallback_option(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def fallback_option(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "fallback_option", value)
 
     @_builtins.property
     @pulumi.getter
-    def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def folder(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
         """
         return pulumi.get(self, "folder")
 
     @folder.setter
-    def folder(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def folder(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "folder", value)
 
     @_builtins.property
     @pulumi.getter(name="locationPreference")
-    def location_preference(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def location_preference(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Strategy for selecting Prisma Access location - 'best-available-pa-location' automatically selects optimal location, 'specific-pa-location' uses predefined locations
         """
         return pulumi.get(self, "location_preference")
 
     @location_preference.setter
-    def location_preference(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def location_preference(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "location_preference", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         alphanumeric string [ 0-9a-zA-Z ._-]
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter(name="prismaAccessLocations")
-    def prisma_access_locations(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['ForwardingProfileRegionalAndCustomProxyPrismaAccessLocationArgs']]]]:
+    def prisma_access_locations(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['ForwardingProfileRegionalAndCustomProxyPrismaAccessLocationArgs']]]]:
         """
         Select Prisma Access location Americas, Europe and Asia-Pacific.
         """
         return pulumi.get(self, "prisma_access_locations")
 
     @prisma_access_locations.setter
-    def prisma_access_locations(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['ForwardingProfileRegionalAndCustomProxyPrismaAccessLocationArgs']]]]):
+    def prisma_access_locations(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['ForwardingProfileRegionalAndCustomProxyPrismaAccessLocationArgs']]]]):
         pulumi.set(self, "prisma_access_locations", value)
 
     @_builtins.property
     @pulumi.getter
-    def proxy1(self) -> Optional[pulumi.Input['ForwardingProfileRegionalAndCustomProxyProxy1Args']]:
+    def proxy1(self) -> pulumi.Input[Optional['ForwardingProfileRegionalAndCustomProxyProxy1Args']]:
         """
         primary regional and custom proxy
         """
         return pulumi.get(self, "proxy1")
 
     @proxy1.setter
-    def proxy1(self, value: Optional[pulumi.Input['ForwardingProfileRegionalAndCustomProxyProxy1Args']]):
+    def proxy1(self, value: pulumi.Input[Optional['ForwardingProfileRegionalAndCustomProxyProxy1Args']]):
         pulumi.set(self, "proxy1", value)
 
     @_builtins.property
     @pulumi.getter
-    def proxy2(self) -> Optional[pulumi.Input['ForwardingProfileRegionalAndCustomProxyProxy2Args']]:
+    def proxy2(self) -> pulumi.Input[Optional['ForwardingProfileRegionalAndCustomProxyProxy2Args']]:
         """
         secondary regional and custom proxy
         """
         return pulumi.get(self, "proxy2")
 
     @proxy2.setter
-    def proxy2(self, value: Optional[pulumi.Input['ForwardingProfileRegionalAndCustomProxyProxy2Args']]):
+    def proxy2(self, value: pulumi.Input[Optional['ForwardingProfileRegionalAndCustomProxyProxy2Args']]):
         pulumi.set(self, "proxy2", value)
 
     @_builtins.property
     @pulumi.getter
-    def tfid(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def tfid(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The Terraform ID.
         """
         return pulumi.get(self, "tfid")
 
     @tfid.setter
-    def tfid(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def tfid(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "tfid", value)
 
     @_builtins.property
     @pulumi.getter
-    def type(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def type(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Proxy configuration type - 'gp-and-pac' for GlobalProtect and PAC file forwarding, 'ztna-agent' for ZTNA agent forwarding
         """
         return pulumi.get(self, "type")
 
     @type.setter
-    def type(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def type(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "type", value)
 
 
@@ -378,16 +378,16 @@ class ForwardingProfileRegionalAndCustomProxy(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 connectivity_preferences: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ForwardingProfileRegionalAndCustomProxyConnectivityPreferenceArgs', 'ForwardingProfileRegionalAndCustomProxyConnectivityPreferenceArgsDict']]]]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 fallback_option: Optional[pulumi.Input[_builtins.str]] = None,
-                 folder: Optional[pulumi.Input[_builtins.str]] = None,
-                 location_preference: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 prisma_access_locations: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ForwardingProfileRegionalAndCustomProxyPrismaAccessLocationArgs', 'ForwardingProfileRegionalAndCustomProxyPrismaAccessLocationArgsDict']]]]] = None,
-                 proxy1: Optional[pulumi.Input[Union['ForwardingProfileRegionalAndCustomProxyProxy1Args', 'ForwardingProfileRegionalAndCustomProxyProxy1ArgsDict']]] = None,
-                 proxy2: Optional[pulumi.Input[Union['ForwardingProfileRegionalAndCustomProxyProxy2Args', 'ForwardingProfileRegionalAndCustomProxyProxy2ArgsDict']]] = None,
-                 type: Optional[pulumi.Input[_builtins.str]] = None,
+                 connectivity_preferences: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ForwardingProfileRegionalAndCustomProxyConnectivityPreferenceArgs', 'ForwardingProfileRegionalAndCustomProxyConnectivityPreferenceArgsDict']]]]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 fallback_option: pulumi.Input[Optional[_builtins.str]] = None,
+                 folder: pulumi.Input[Optional[_builtins.str]] = None,
+                 location_preference: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 prisma_access_locations: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ForwardingProfileRegionalAndCustomProxyPrismaAccessLocationArgs', 'ForwardingProfileRegionalAndCustomProxyPrismaAccessLocationArgsDict']]]]] = None,
+                 proxy1: pulumi.Input[Optional[Union['ForwardingProfileRegionalAndCustomProxyProxy1Args', 'ForwardingProfileRegionalAndCustomProxyProxy1ArgsDict']]] = None,
+                 proxy2: pulumi.Input[Optional[Union['ForwardingProfileRegionalAndCustomProxyProxy2Args', 'ForwardingProfileRegionalAndCustomProxyProxy2ArgsDict']]] = None,
+                 type: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
         ForwardingProfileRegionalAndCustomProxy resource
@@ -663,16 +663,16 @@ class ForwardingProfileRegionalAndCustomProxy(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 connectivity_preferences: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ForwardingProfileRegionalAndCustomProxyConnectivityPreferenceArgs', 'ForwardingProfileRegionalAndCustomProxyConnectivityPreferenceArgsDict']]]]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 fallback_option: Optional[pulumi.Input[_builtins.str]] = None,
-                 folder: Optional[pulumi.Input[_builtins.str]] = None,
-                 location_preference: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 prisma_access_locations: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ForwardingProfileRegionalAndCustomProxyPrismaAccessLocationArgs', 'ForwardingProfileRegionalAndCustomProxyPrismaAccessLocationArgsDict']]]]] = None,
-                 proxy1: Optional[pulumi.Input[Union['ForwardingProfileRegionalAndCustomProxyProxy1Args', 'ForwardingProfileRegionalAndCustomProxyProxy1ArgsDict']]] = None,
-                 proxy2: Optional[pulumi.Input[Union['ForwardingProfileRegionalAndCustomProxyProxy2Args', 'ForwardingProfileRegionalAndCustomProxyProxy2ArgsDict']]] = None,
-                 type: Optional[pulumi.Input[_builtins.str]] = None,
+                 connectivity_preferences: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ForwardingProfileRegionalAndCustomProxyConnectivityPreferenceArgs', 'ForwardingProfileRegionalAndCustomProxyConnectivityPreferenceArgsDict']]]]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 fallback_option: pulumi.Input[Optional[_builtins.str]] = None,
+                 folder: pulumi.Input[Optional[_builtins.str]] = None,
+                 location_preference: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 prisma_access_locations: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ForwardingProfileRegionalAndCustomProxyPrismaAccessLocationArgs', 'ForwardingProfileRegionalAndCustomProxyPrismaAccessLocationArgsDict']]]]] = None,
+                 proxy1: pulumi.Input[Optional[Union['ForwardingProfileRegionalAndCustomProxyProxy1Args', 'ForwardingProfileRegionalAndCustomProxyProxy1ArgsDict']]] = None,
+                 proxy2: pulumi.Input[Optional[Union['ForwardingProfileRegionalAndCustomProxyProxy2Args', 'ForwardingProfileRegionalAndCustomProxyProxy2ArgsDict']]] = None,
+                 type: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -703,17 +703,17 @@ class ForwardingProfileRegionalAndCustomProxy(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            connectivity_preferences: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ForwardingProfileRegionalAndCustomProxyConnectivityPreferenceArgs', 'ForwardingProfileRegionalAndCustomProxyConnectivityPreferenceArgsDict']]]]] = None,
-            description: Optional[pulumi.Input[_builtins.str]] = None,
-            fallback_option: Optional[pulumi.Input[_builtins.str]] = None,
-            folder: Optional[pulumi.Input[_builtins.str]] = None,
-            location_preference: Optional[pulumi.Input[_builtins.str]] = None,
-            name: Optional[pulumi.Input[_builtins.str]] = None,
-            prisma_access_locations: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ForwardingProfileRegionalAndCustomProxyPrismaAccessLocationArgs', 'ForwardingProfileRegionalAndCustomProxyPrismaAccessLocationArgsDict']]]]] = None,
-            proxy1: Optional[pulumi.Input[Union['ForwardingProfileRegionalAndCustomProxyProxy1Args', 'ForwardingProfileRegionalAndCustomProxyProxy1ArgsDict']]] = None,
-            proxy2: Optional[pulumi.Input[Union['ForwardingProfileRegionalAndCustomProxyProxy2Args', 'ForwardingProfileRegionalAndCustomProxyProxy2ArgsDict']]] = None,
-            tfid: Optional[pulumi.Input[_builtins.str]] = None,
-            type: Optional[pulumi.Input[_builtins.str]] = None) -> 'ForwardingProfileRegionalAndCustomProxy':
+            connectivity_preferences: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ForwardingProfileRegionalAndCustomProxyConnectivityPreferenceArgs', 'ForwardingProfileRegionalAndCustomProxyConnectivityPreferenceArgsDict']]]]] = None,
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            fallback_option: pulumi.Input[Optional[_builtins.str]] = None,
+            folder: pulumi.Input[Optional[_builtins.str]] = None,
+            location_preference: pulumi.Input[Optional[_builtins.str]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            prisma_access_locations: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ForwardingProfileRegionalAndCustomProxyPrismaAccessLocationArgs', 'ForwardingProfileRegionalAndCustomProxyPrismaAccessLocationArgsDict']]]]] = None,
+            proxy1: pulumi.Input[Optional[Union['ForwardingProfileRegionalAndCustomProxyProxy1Args', 'ForwardingProfileRegionalAndCustomProxyProxy1ArgsDict']]] = None,
+            proxy2: pulumi.Input[Optional[Union['ForwardingProfileRegionalAndCustomProxyProxy2Args', 'ForwardingProfileRegionalAndCustomProxyProxy2ArgsDict']]] = None,
+            tfid: pulumi.Input[Optional[_builtins.str]] = None,
+            type: pulumi.Input[Optional[_builtins.str]] = None) -> 'ForwardingProfileRegionalAndCustomProxy':
         """
         Get an existing ForwardingProfileRegionalAndCustomProxy resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

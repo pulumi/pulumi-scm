@@ -514,163 +514,163 @@ export interface SecurityRuleState {
     /**
      * The action to be taken when the rule is matched
      */
-    action?: pulumi.Input<string>;
+    action?: pulumi.Input<string | undefined>;
     /**
      * Allow url category
      */
-    allowUrlCategories?: pulumi.Input<pulumi.Input<inputs.SecurityRuleAllowUrlCategory>[]>;
+    allowUrlCategories?: pulumi.Input<pulumi.Input<inputs.SecurityRuleAllowUrlCategory>[] | undefined>;
     /**
      * Allow web application
      */
-    allowWebApplications?: pulumi.Input<pulumi.Input<inputs.SecurityRuleAllowWebApplication>[]>;
+    allowWebApplications?: pulumi.Input<pulumi.Input<inputs.SecurityRuleAllowWebApplication>[] | undefined>;
     /**
      * The application(s) being accessed
      */
-    applications?: pulumi.Input<pulumi.Input<string>[]>;
+    applications?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Block url category
      */
-    blockUrlCategories?: pulumi.Input<pulumi.Input<string>[]>;
+    blockUrlCategories?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Block web application
      */
-    blockWebApplications?: pulumi.Input<pulumi.Input<string>[]>;
+    blockWebApplications?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * The URL categories being accessed
      */
-    categories?: pulumi.Input<pulumi.Input<string>[]>;
+    categories?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Default profile settings
      */
-    defaultProfileSettings?: pulumi.Input<inputs.SecurityRuleDefaultProfileSettings>;
+    defaultProfileSettings?: pulumi.Input<inputs.SecurityRuleDefaultProfileSettings | undefined>;
     /**
      * The description of the security rule
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * The destination Host Integrity Profile(s)
      */
-    destinationHips?: pulumi.Input<pulumi.Input<string>[]>;
+    destinationHips?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * The destination address(es)
      */
-    destinations?: pulumi.Input<pulumi.Input<string>[]>;
+    destinations?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * The device in which the resource is defined
      */
-    device?: pulumi.Input<string>;
+    device?: pulumi.Input<string | undefined>;
     /**
      * Devices
      */
-    devices?: pulumi.Input<pulumi.Input<string>[]>;
+    devices?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Is the security rule disabled?
      */
-    disabled?: pulumi.Input<boolean>;
+    disabled?: pulumi.Input<boolean | undefined>;
     /**
      * The folder in which the resource is defined
      */
-    folder?: pulumi.Input<string>;
+    folder?: pulumi.Input<string | undefined>;
     /**
      * The source security zone(s)
      */
-    froms?: pulumi.Input<pulumi.Input<string>[]>;
+    froms?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Log at session end?
      */
-    logEnd?: pulumi.Input<boolean>;
+    logEnd?: pulumi.Input<boolean | undefined>;
     /**
      * The external log forwarding profile
      */
-    logSetting?: pulumi.Input<string>;
+    logSetting?: pulumi.Input<string | undefined>;
     /**
      * Log settings
      */
-    logSettings?: pulumi.Input<inputs.SecurityRuleLogSettings>;
+    logSettings?: pulumi.Input<inputs.SecurityRuleLogSettings | undefined>;
     /**
      * Log at session start?
      */
-    logStart?: pulumi.Input<boolean>;
+    logStart?: pulumi.Input<boolean | undefined>;
     /**
      * The name of the security rule
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Negate the destination addresses(es)?
      */
-    negateDestination?: pulumi.Input<boolean>;
+    negateDestination?: pulumi.Input<boolean | undefined>;
     /**
      * Negate the source address(es)?
      */
-    negateSource?: pulumi.Input<boolean>;
+    negateSource?: pulumi.Input<boolean | undefined>;
     /**
      * Negate user
      */
-    negateUser?: pulumi.Input<boolean>;
+    negateUser?: pulumi.Input<boolean | undefined>;
     /**
      * Policy type
      */
-    policyType?: pulumi.Input<string>;
+    policyType?: pulumi.Input<string | undefined>;
     /**
      * The position of a security rule
      */
-    position?: pulumi.Input<string>;
+    position?: pulumi.Input<string | undefined>;
     /**
      * The security profile object
      */
-    profileSetting?: pulumi.Input<inputs.SecurityRuleProfileSetting>;
+    profileSetting?: pulumi.Input<inputs.SecurityRuleProfileSetting | undefined>;
     /**
      * Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
      */
-    relativePosition?: pulumi.Input<string>;
+    relativePosition?: pulumi.Input<string | undefined>;
     /**
      * Schedule in which this rule will be applied
      */
-    schedule?: pulumi.Input<string>;
+    schedule?: pulumi.Input<string | undefined>;
     /**
      * Security settings
      */
-    securitySettings?: pulumi.Input<inputs.SecurityRuleSecuritySettings>;
+    securitySettings?: pulumi.Input<inputs.SecurityRuleSecuritySettings | undefined>;
     /**
      * The service(s) being accessed
      */
-    services?: pulumi.Input<pulumi.Input<string>[]>;
+    services?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * The snippet in which the resource is defined
      */
-    snippet?: pulumi.Input<string>;
+    snippet?: pulumi.Input<string | undefined>;
     /**
      * The source Host Integrity Profile(s)
      */
-    sourceHips?: pulumi.Input<pulumi.Input<string>[]>;
+    sourceHips?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * List of source users and/or groups.  Reserved words include `any`, `pre-login`, `known-user`, and `unknown`.
      */
-    sourceUsers?: pulumi.Input<pulumi.Input<string>[]>;
+    sourceUsers?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * The source addresses(es)
      */
-    sources?: pulumi.Input<pulumi.Input<string>[]>;
+    sources?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * The tags associated with the security rule
      */
-    tags?: pulumi.Input<pulumi.Input<string>[]>;
+    tags?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `"before"` or `"after"`.
      */
-    targetRule?: pulumi.Input<string>;
+    targetRule?: pulumi.Input<string | undefined>;
     /**
      * Tenant restrictions
      */
-    tenantRestrictions?: pulumi.Input<pulumi.Input<string>[]>;
+    tenantRestrictions?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * The Terraform ID.
      */
-    tfid?: pulumi.Input<string>;
+    tfid?: pulumi.Input<string | undefined>;
     /**
      * The destination security zone(s)
      */
-    tos?: pulumi.Input<pulumi.Input<string>[]>;
+    tos?: pulumi.Input<pulumi.Input<string>[] | undefined>;
 }
 
 /**
@@ -680,157 +680,157 @@ export interface SecurityRuleArgs {
     /**
      * The action to be taken when the rule is matched
      */
-    action?: pulumi.Input<string>;
+    action?: pulumi.Input<string | undefined>;
     /**
      * Allow url category
      */
-    allowUrlCategories?: pulumi.Input<pulumi.Input<inputs.SecurityRuleAllowUrlCategory>[]>;
+    allowUrlCategories?: pulumi.Input<pulumi.Input<inputs.SecurityRuleAllowUrlCategory>[] | undefined>;
     /**
      * Allow web application
      */
-    allowWebApplications?: pulumi.Input<pulumi.Input<inputs.SecurityRuleAllowWebApplication>[]>;
+    allowWebApplications?: pulumi.Input<pulumi.Input<inputs.SecurityRuleAllowWebApplication>[] | undefined>;
     /**
      * The application(s) being accessed
      */
-    applications?: pulumi.Input<pulumi.Input<string>[]>;
+    applications?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Block url category
      */
-    blockUrlCategories?: pulumi.Input<pulumi.Input<string>[]>;
+    blockUrlCategories?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Block web application
      */
-    blockWebApplications?: pulumi.Input<pulumi.Input<string>[]>;
+    blockWebApplications?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * The URL categories being accessed
      */
-    categories?: pulumi.Input<pulumi.Input<string>[]>;
+    categories?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Default profile settings
      */
-    defaultProfileSettings?: pulumi.Input<inputs.SecurityRuleDefaultProfileSettings>;
+    defaultProfileSettings?: pulumi.Input<inputs.SecurityRuleDefaultProfileSettings | undefined>;
     /**
      * The description of the security rule
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * The destination Host Integrity Profile(s)
      */
-    destinationHips?: pulumi.Input<pulumi.Input<string>[]>;
+    destinationHips?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * The destination address(es)
      */
-    destinations?: pulumi.Input<pulumi.Input<string>[]>;
+    destinations?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * The device in which the resource is defined
      */
-    device?: pulumi.Input<string>;
+    device?: pulumi.Input<string | undefined>;
     /**
      * Devices
      */
-    devices?: pulumi.Input<pulumi.Input<string>[]>;
+    devices?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Is the security rule disabled?
      */
-    disabled?: pulumi.Input<boolean>;
+    disabled?: pulumi.Input<boolean | undefined>;
     /**
      * The folder in which the resource is defined
      */
-    folder?: pulumi.Input<string>;
+    folder?: pulumi.Input<string | undefined>;
     /**
      * The source security zone(s)
      */
-    froms?: pulumi.Input<pulumi.Input<string>[]>;
+    froms?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Log at session end?
      */
-    logEnd?: pulumi.Input<boolean>;
+    logEnd?: pulumi.Input<boolean | undefined>;
     /**
      * The external log forwarding profile
      */
-    logSetting?: pulumi.Input<string>;
+    logSetting?: pulumi.Input<string | undefined>;
     /**
      * Log settings
      */
-    logSettings?: pulumi.Input<inputs.SecurityRuleLogSettings>;
+    logSettings?: pulumi.Input<inputs.SecurityRuleLogSettings | undefined>;
     /**
      * Log at session start?
      */
-    logStart?: pulumi.Input<boolean>;
+    logStart?: pulumi.Input<boolean | undefined>;
     /**
      * The name of the security rule
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Negate the destination addresses(es)?
      */
-    negateDestination?: pulumi.Input<boolean>;
+    negateDestination?: pulumi.Input<boolean | undefined>;
     /**
      * Negate the source address(es)?
      */
-    negateSource?: pulumi.Input<boolean>;
+    negateSource?: pulumi.Input<boolean | undefined>;
     /**
      * Negate user
      */
-    negateUser?: pulumi.Input<boolean>;
+    negateUser?: pulumi.Input<boolean | undefined>;
     /**
      * Policy type
      */
-    policyType?: pulumi.Input<string>;
+    policyType?: pulumi.Input<string | undefined>;
     /**
      * The position of a security rule
      */
-    position?: pulumi.Input<string>;
+    position?: pulumi.Input<string | undefined>;
     /**
      * The security profile object
      */
-    profileSetting?: pulumi.Input<inputs.SecurityRuleProfileSetting>;
+    profileSetting?: pulumi.Input<inputs.SecurityRuleProfileSetting | undefined>;
     /**
      * Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
      */
-    relativePosition?: pulumi.Input<string>;
+    relativePosition?: pulumi.Input<string | undefined>;
     /**
      * Schedule in which this rule will be applied
      */
-    schedule?: pulumi.Input<string>;
+    schedule?: pulumi.Input<string | undefined>;
     /**
      * Security settings
      */
-    securitySettings?: pulumi.Input<inputs.SecurityRuleSecuritySettings>;
+    securitySettings?: pulumi.Input<inputs.SecurityRuleSecuritySettings | undefined>;
     /**
      * The service(s) being accessed
      */
-    services?: pulumi.Input<pulumi.Input<string>[]>;
+    services?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * The snippet in which the resource is defined
      */
-    snippet?: pulumi.Input<string>;
+    snippet?: pulumi.Input<string | undefined>;
     /**
      * The source Host Integrity Profile(s)
      */
-    sourceHips?: pulumi.Input<pulumi.Input<string>[]>;
+    sourceHips?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * List of source users and/or groups.  Reserved words include `any`, `pre-login`, `known-user`, and `unknown`.
      */
-    sourceUsers?: pulumi.Input<pulumi.Input<string>[]>;
+    sourceUsers?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * The source addresses(es)
      */
-    sources?: pulumi.Input<pulumi.Input<string>[]>;
+    sources?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * The tags associated with the security rule
      */
-    tags?: pulumi.Input<pulumi.Input<string>[]>;
+    tags?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `"before"` or `"after"`.
      */
-    targetRule?: pulumi.Input<string>;
+    targetRule?: pulumi.Input<string | undefined>;
     /**
      * Tenant restrictions
      */
-    tenantRestrictions?: pulumi.Input<pulumi.Input<string>[]>;
+    tenantRestrictions?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * The destination security zone(s)
      */
-    tos?: pulumi.Input<pulumi.Input<string>[]>;
+    tos?: pulumi.Input<pulumi.Input<string>[] | undefined>;
 }

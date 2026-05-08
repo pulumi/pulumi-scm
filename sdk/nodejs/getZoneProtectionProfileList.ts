@@ -72,10 +72,10 @@ export function getZoneProtectionProfileListOutput(args?: GetZoneProtectionProfi
  * A collection of arguments for invoking getZoneProtectionProfileList.
  */
 export interface GetZoneProtectionProfileListOutputArgs {
-    device?: pulumi.Input<string>;
-    folder?: pulumi.Input<string>;
-    limit?: pulumi.Input<number>;
-    name?: pulumi.Input<string>;
-    offset?: pulumi.Input<number>;
-    snippet?: pulumi.Input<string>;
+    device?: pulumi.Input<string | undefined>;
+    folder?: pulumi.Input<string | undefined>;
+    limit?: pulumi.Input<number | undefined>;
+    name?: pulumi.Input<string | undefined>;
+    offset?: pulumi.Input<number | undefined>;
+    snippet?: pulumi.Input<string | undefined>;
 }

@@ -21,13 +21,13 @@ __all__ = ['LldpProfileArgs', 'LldpProfile']
 @pulumi.input_type
 class LldpProfileArgs:
     def __init__(__self__, *,
-                 device: Optional[pulumi.Input[_builtins.str]] = None,
-                 folder: Optional[pulumi.Input[_builtins.str]] = None,
-                 mode: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 option_tlvs: Optional[pulumi.Input['LldpProfileOptionTlvsArgs']] = None,
-                 snippet: Optional[pulumi.Input[_builtins.str]] = None,
-                 snmp_syslog_notification: Optional[pulumi.Input[_builtins.bool]] = None):
+                 device: pulumi.Input[Optional[_builtins.str]] = None,
+                 folder: pulumi.Input[Optional[_builtins.str]] = None,
+                 mode: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 option_tlvs: pulumi.Input[Optional['LldpProfileOptionTlvsArgs']] = None,
+                 snippet: pulumi.Input[Optional[_builtins.str]] = None,
+                 snmp_syslog_notification: pulumi.Input[Optional[_builtins.bool]] = None):
         """
         The set of arguments for constructing a LldpProfile resource.
 
@@ -60,19 +60,19 @@ class LldpProfileArgs:
 
     @_builtins.property
     @pulumi.getter
-    def device(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def device(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The device in which the resource is defined
         """
         return pulumi.get(self, "device")
 
     @device.setter
-    def device(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def device(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "device", value)
 
     @_builtins.property
     @pulumi.getter
-    def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def folder(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
 
@@ -81,48 +81,48 @@ class LldpProfileArgs:
         return pulumi.get(self, "folder")
 
     @folder.setter
-    def folder(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def folder(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "folder", value)
 
     @_builtins.property
     @pulumi.getter
-    def mode(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def mode(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         LLDP mode
         """
         return pulumi.get(self, "mode")
 
     @mode.setter
-    def mode(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def mode(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "mode", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         LLDP profile name
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter(name="optionTlvs")
-    def option_tlvs(self) -> Optional[pulumi.Input['LldpProfileOptionTlvsArgs']]:
+    def option_tlvs(self) -> pulumi.Input[Optional['LldpProfileOptionTlvsArgs']]:
         """
         Option tlvs
         """
         return pulumi.get(self, "option_tlvs")
 
     @option_tlvs.setter
-    def option_tlvs(self, value: Optional[pulumi.Input['LldpProfileOptionTlvsArgs']]):
+    def option_tlvs(self, value: pulumi.Input[Optional['LldpProfileOptionTlvsArgs']]):
         pulumi.set(self, "option_tlvs", value)
 
     @_builtins.property
     @pulumi.getter
-    def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def snippet(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
 
@@ -131,33 +131,33 @@ class LldpProfileArgs:
         return pulumi.get(self, "snippet")
 
     @snippet.setter
-    def snippet(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def snippet(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "snippet", value)
 
     @_builtins.property
     @pulumi.getter(name="snmpSyslogNotification")
-    def snmp_syslog_notification(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def snmp_syslog_notification(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         SNMP syslog notification
         """
         return pulumi.get(self, "snmp_syslog_notification")
 
     @snmp_syslog_notification.setter
-    def snmp_syslog_notification(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def snmp_syslog_notification(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "snmp_syslog_notification", value)
 
 
 @pulumi.input_type
 class _LldpProfileState:
     def __init__(__self__, *,
-                 device: Optional[pulumi.Input[_builtins.str]] = None,
-                 folder: Optional[pulumi.Input[_builtins.str]] = None,
-                 mode: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 option_tlvs: Optional[pulumi.Input['LldpProfileOptionTlvsArgs']] = None,
-                 snippet: Optional[pulumi.Input[_builtins.str]] = None,
-                 snmp_syslog_notification: Optional[pulumi.Input[_builtins.bool]] = None,
-                 tfid: Optional[pulumi.Input[_builtins.str]] = None):
+                 device: pulumi.Input[Optional[_builtins.str]] = None,
+                 folder: pulumi.Input[Optional[_builtins.str]] = None,
+                 mode: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 option_tlvs: pulumi.Input[Optional['LldpProfileOptionTlvsArgs']] = None,
+                 snippet: pulumi.Input[Optional[_builtins.str]] = None,
+                 snmp_syslog_notification: pulumi.Input[Optional[_builtins.bool]] = None,
+                 tfid: pulumi.Input[Optional[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering LldpProfile resources.
 
@@ -193,19 +193,19 @@ class _LldpProfileState:
 
     @_builtins.property
     @pulumi.getter
-    def device(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def device(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The device in which the resource is defined
         """
         return pulumi.get(self, "device")
 
     @device.setter
-    def device(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def device(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "device", value)
 
     @_builtins.property
     @pulumi.getter
-    def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def folder(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
 
@@ -214,48 +214,48 @@ class _LldpProfileState:
         return pulumi.get(self, "folder")
 
     @folder.setter
-    def folder(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def folder(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "folder", value)
 
     @_builtins.property
     @pulumi.getter
-    def mode(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def mode(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         LLDP mode
         """
         return pulumi.get(self, "mode")
 
     @mode.setter
-    def mode(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def mode(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "mode", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         LLDP profile name
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter(name="optionTlvs")
-    def option_tlvs(self) -> Optional[pulumi.Input['LldpProfileOptionTlvsArgs']]:
+    def option_tlvs(self) -> pulumi.Input[Optional['LldpProfileOptionTlvsArgs']]:
         """
         Option tlvs
         """
         return pulumi.get(self, "option_tlvs")
 
     @option_tlvs.setter
-    def option_tlvs(self, value: Optional[pulumi.Input['LldpProfileOptionTlvsArgs']]):
+    def option_tlvs(self, value: pulumi.Input[Optional['LldpProfileOptionTlvsArgs']]):
         pulumi.set(self, "option_tlvs", value)
 
     @_builtins.property
     @pulumi.getter
-    def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def snippet(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
 
@@ -264,31 +264,31 @@ class _LldpProfileState:
         return pulumi.get(self, "snippet")
 
     @snippet.setter
-    def snippet(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def snippet(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "snippet", value)
 
     @_builtins.property
     @pulumi.getter(name="snmpSyslogNotification")
-    def snmp_syslog_notification(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def snmp_syslog_notification(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         SNMP syslog notification
         """
         return pulumi.get(self, "snmp_syslog_notification")
 
     @snmp_syslog_notification.setter
-    def snmp_syslog_notification(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def snmp_syslog_notification(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "snmp_syslog_notification", value)
 
     @_builtins.property
     @pulumi.getter
-    def tfid(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def tfid(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The Terraform ID.
         """
         return pulumi.get(self, "tfid")
 
     @tfid.setter
-    def tfid(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def tfid(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "tfid", value)
 
 
@@ -298,13 +298,13 @@ class LldpProfile(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 device: Optional[pulumi.Input[_builtins.str]] = None,
-                 folder: Optional[pulumi.Input[_builtins.str]] = None,
-                 mode: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 option_tlvs: Optional[pulumi.Input[Union['LldpProfileOptionTlvsArgs', 'LldpProfileOptionTlvsArgsDict']]] = None,
-                 snippet: Optional[pulumi.Input[_builtins.str]] = None,
-                 snmp_syslog_notification: Optional[pulumi.Input[_builtins.bool]] = None,
+                 device: pulumi.Input[Optional[_builtins.str]] = None,
+                 folder: pulumi.Input[Optional[_builtins.str]] = None,
+                 mode: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 option_tlvs: pulumi.Input[Optional[Union['LldpProfileOptionTlvsArgs', 'LldpProfileOptionTlvsArgsDict']]] = None,
+                 snippet: pulumi.Input[Optional[_builtins.str]] = None,
+                 snmp_syslog_notification: pulumi.Input[Optional[_builtins.bool]] = None,
                  __props__=None):
         """
         LldpProfile resource
@@ -437,13 +437,13 @@ class LldpProfile(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 device: Optional[pulumi.Input[_builtins.str]] = None,
-                 folder: Optional[pulumi.Input[_builtins.str]] = None,
-                 mode: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 option_tlvs: Optional[pulumi.Input[Union['LldpProfileOptionTlvsArgs', 'LldpProfileOptionTlvsArgsDict']]] = None,
-                 snippet: Optional[pulumi.Input[_builtins.str]] = None,
-                 snmp_syslog_notification: Optional[pulumi.Input[_builtins.bool]] = None,
+                 device: pulumi.Input[Optional[_builtins.str]] = None,
+                 folder: pulumi.Input[Optional[_builtins.str]] = None,
+                 mode: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 option_tlvs: pulumi.Input[Optional[Union['LldpProfileOptionTlvsArgs', 'LldpProfileOptionTlvsArgsDict']]] = None,
+                 snippet: pulumi.Input[Optional[_builtins.str]] = None,
+                 snmp_syslog_notification: pulumi.Input[Optional[_builtins.bool]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -471,14 +471,14 @@ class LldpProfile(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            device: Optional[pulumi.Input[_builtins.str]] = None,
-            folder: Optional[pulumi.Input[_builtins.str]] = None,
-            mode: Optional[pulumi.Input[_builtins.str]] = None,
-            name: Optional[pulumi.Input[_builtins.str]] = None,
-            option_tlvs: Optional[pulumi.Input[Union['LldpProfileOptionTlvsArgs', 'LldpProfileOptionTlvsArgsDict']]] = None,
-            snippet: Optional[pulumi.Input[_builtins.str]] = None,
-            snmp_syslog_notification: Optional[pulumi.Input[_builtins.bool]] = None,
-            tfid: Optional[pulumi.Input[_builtins.str]] = None) -> 'LldpProfile':
+            device: pulumi.Input[Optional[_builtins.str]] = None,
+            folder: pulumi.Input[Optional[_builtins.str]] = None,
+            mode: pulumi.Input[Optional[_builtins.str]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            option_tlvs: pulumi.Input[Optional[Union['LldpProfileOptionTlvsArgs', 'LldpProfileOptionTlvsArgsDict']]] = None,
+            snippet: pulumi.Input[Optional[_builtins.str]] = None,
+            snmp_syslog_notification: pulumi.Input[Optional[_builtins.bool]] = None,
+            tfid: pulumi.Input[Optional[_builtins.str]] = None) -> 'LldpProfile':
         """
         Get an existing LldpProfile resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

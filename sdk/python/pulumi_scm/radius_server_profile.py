@@ -23,12 +23,12 @@ class RadiusServerProfileArgs:
     def __init__(__self__, *,
                  protocol: pulumi.Input['RadiusServerProfileProtocolArgs'],
                  servers: pulumi.Input[Sequence[pulumi.Input['RadiusServerProfileServerArgs']]],
-                 device: Optional[pulumi.Input[_builtins.str]] = None,
-                 folder: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 retries: Optional[pulumi.Input[_builtins.int]] = None,
-                 snippet: Optional[pulumi.Input[_builtins.str]] = None,
-                 timeout: Optional[pulumi.Input[_builtins.int]] = None):
+                 device: pulumi.Input[Optional[_builtins.str]] = None,
+                 folder: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 retries: pulumi.Input[Optional[_builtins.int]] = None,
+                 snippet: pulumi.Input[Optional[_builtins.str]] = None,
+                 timeout: pulumi.Input[Optional[_builtins.int]] = None):
         """
         The set of arguments for constructing a RadiusServerProfile resource.
 
@@ -86,19 +86,19 @@ class RadiusServerProfileArgs:
 
     @_builtins.property
     @pulumi.getter
-    def device(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def device(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The device in which the resource is defined
         """
         return pulumi.get(self, "device")
 
     @device.setter
-    def device(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def device(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "device", value)
 
     @_builtins.property
     @pulumi.getter
-    def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def folder(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
 
@@ -107,36 +107,36 @@ class RadiusServerProfileArgs:
         return pulumi.get(self, "folder")
 
     @folder.setter
-    def folder(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def folder(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "folder", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the RADIUS server profile
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter
-    def retries(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def retries(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The number of RADIUS server retries
         """
         return pulumi.get(self, "retries")
 
     @retries.setter
-    def retries(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def retries(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "retries", value)
 
     @_builtins.property
     @pulumi.getter
-    def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def snippet(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
 
@@ -145,35 +145,35 @@ class RadiusServerProfileArgs:
         return pulumi.get(self, "snippet")
 
     @snippet.setter
-    def snippet(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def snippet(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "snippet", value)
 
     @_builtins.property
     @pulumi.getter
-    def timeout(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def timeout(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The RADIUS server authentication timeout (seconds)
         """
         return pulumi.get(self, "timeout")
 
     @timeout.setter
-    def timeout(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def timeout(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "timeout", value)
 
 
 @pulumi.input_type
 class _RadiusServerProfileState:
     def __init__(__self__, *,
-                 device: Optional[pulumi.Input[_builtins.str]] = None,
-                 encrypted_values: Optional[pulumi.Input[Mapping[str, pulumi.Input[_builtins.str]]]] = None,
-                 folder: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 protocol: Optional[pulumi.Input['RadiusServerProfileProtocolArgs']] = None,
-                 retries: Optional[pulumi.Input[_builtins.int]] = None,
-                 servers: Optional[pulumi.Input[Sequence[pulumi.Input['RadiusServerProfileServerArgs']]]] = None,
-                 snippet: Optional[pulumi.Input[_builtins.str]] = None,
-                 tfid: Optional[pulumi.Input[_builtins.str]] = None,
-                 timeout: Optional[pulumi.Input[_builtins.int]] = None):
+                 device: pulumi.Input[Optional[_builtins.str]] = None,
+                 encrypted_values: pulumi.Input[Optional[Mapping[str, pulumi.Input[_builtins.str]]]] = None,
+                 folder: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 protocol: pulumi.Input[Optional['RadiusServerProfileProtocolArgs']] = None,
+                 retries: pulumi.Input[Optional[_builtins.int]] = None,
+                 servers: pulumi.Input[Optional[Sequence[pulumi.Input['RadiusServerProfileServerArgs']]]] = None,
+                 snippet: pulumi.Input[Optional[_builtins.str]] = None,
+                 tfid: pulumi.Input[Optional[_builtins.str]] = None,
+                 timeout: pulumi.Input[Optional[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering RadiusServerProfile resources.
 
@@ -215,31 +215,31 @@ class _RadiusServerProfileState:
 
     @_builtins.property
     @pulumi.getter
-    def device(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def device(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The device in which the resource is defined
         """
         return pulumi.get(self, "device")
 
     @device.setter
-    def device(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def device(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "device", value)
 
     @_builtins.property
     @pulumi.getter(name="encryptedValues")
-    def encrypted_values(self) -> Optional[pulumi.Input[Mapping[str, pulumi.Input[_builtins.str]]]]:
+    def encrypted_values(self) -> pulumi.Input[Optional[Mapping[str, pulumi.Input[_builtins.str]]]]:
         """
         Map of sensitive values returned from the API.
         """
         return pulumi.get(self, "encrypted_values")
 
     @encrypted_values.setter
-    def encrypted_values(self, value: Optional[pulumi.Input[Mapping[str, pulumi.Input[_builtins.str]]]]):
+    def encrypted_values(self, value: pulumi.Input[Optional[Mapping[str, pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "encrypted_values", value)
 
     @_builtins.property
     @pulumi.getter
-    def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def folder(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
 
@@ -248,60 +248,60 @@ class _RadiusServerProfileState:
         return pulumi.get(self, "folder")
 
     @folder.setter
-    def folder(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def folder(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "folder", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the RADIUS server profile
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter
-    def protocol(self) -> Optional[pulumi.Input['RadiusServerProfileProtocolArgs']]:
+    def protocol(self) -> pulumi.Input[Optional['RadiusServerProfileProtocolArgs']]:
         """
         The RADIUS authentication protocol
         """
         return pulumi.get(self, "protocol")
 
     @protocol.setter
-    def protocol(self, value: Optional[pulumi.Input['RadiusServerProfileProtocolArgs']]):
+    def protocol(self, value: pulumi.Input[Optional['RadiusServerProfileProtocolArgs']]):
         pulumi.set(self, "protocol", value)
 
     @_builtins.property
     @pulumi.getter
-    def retries(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def retries(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The number of RADIUS server retries
         """
         return pulumi.get(self, "retries")
 
     @retries.setter
-    def retries(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def retries(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "retries", value)
 
     @_builtins.property
     @pulumi.getter
-    def servers(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['RadiusServerProfileServerArgs']]]]:
+    def servers(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['RadiusServerProfileServerArgs']]]]:
         """
         Server
         """
         return pulumi.get(self, "servers")
 
     @servers.setter
-    def servers(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['RadiusServerProfileServerArgs']]]]):
+    def servers(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['RadiusServerProfileServerArgs']]]]):
         pulumi.set(self, "servers", value)
 
     @_builtins.property
     @pulumi.getter
-    def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def snippet(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
 
@@ -310,31 +310,31 @@ class _RadiusServerProfileState:
         return pulumi.get(self, "snippet")
 
     @snippet.setter
-    def snippet(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def snippet(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "snippet", value)
 
     @_builtins.property
     @pulumi.getter
-    def tfid(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def tfid(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The Terraform ID.
         """
         return pulumi.get(self, "tfid")
 
     @tfid.setter
-    def tfid(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def tfid(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "tfid", value)
 
     @_builtins.property
     @pulumi.getter
-    def timeout(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def timeout(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The RADIUS server authentication timeout (seconds)
         """
         return pulumi.get(self, "timeout")
 
     @timeout.setter
-    def timeout(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def timeout(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "timeout", value)
 
 
@@ -344,14 +344,14 @@ class RadiusServerProfile(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 device: Optional[pulumi.Input[_builtins.str]] = None,
-                 folder: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 protocol: Optional[pulumi.Input[Union['RadiusServerProfileProtocolArgs', 'RadiusServerProfileProtocolArgsDict']]] = None,
-                 retries: Optional[pulumi.Input[_builtins.int]] = None,
-                 servers: Optional[pulumi.Input[Sequence[pulumi.Input[Union['RadiusServerProfileServerArgs', 'RadiusServerProfileServerArgsDict']]]]] = None,
-                 snippet: Optional[pulumi.Input[_builtins.str]] = None,
-                 timeout: Optional[pulumi.Input[_builtins.int]] = None,
+                 device: pulumi.Input[Optional[_builtins.str]] = None,
+                 folder: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 protocol: pulumi.Input[Optional[Union['RadiusServerProfileProtocolArgs', 'RadiusServerProfileProtocolArgsDict']]] = None,
+                 retries: pulumi.Input[Optional[_builtins.int]] = None,
+                 servers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['RadiusServerProfileServerArgs', 'RadiusServerProfileServerArgsDict']]]]] = None,
+                 snippet: pulumi.Input[Optional[_builtins.str]] = None,
+                 timeout: pulumi.Input[Optional[_builtins.int]] = None,
                  __props__=None):
         """
         RadiusServerProfile resource
@@ -513,14 +513,14 @@ class RadiusServerProfile(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 device: Optional[pulumi.Input[_builtins.str]] = None,
-                 folder: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 protocol: Optional[pulumi.Input[Union['RadiusServerProfileProtocolArgs', 'RadiusServerProfileProtocolArgsDict']]] = None,
-                 retries: Optional[pulumi.Input[_builtins.int]] = None,
-                 servers: Optional[pulumi.Input[Sequence[pulumi.Input[Union['RadiusServerProfileServerArgs', 'RadiusServerProfileServerArgsDict']]]]] = None,
-                 snippet: Optional[pulumi.Input[_builtins.str]] = None,
-                 timeout: Optional[pulumi.Input[_builtins.int]] = None,
+                 device: pulumi.Input[Optional[_builtins.str]] = None,
+                 folder: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 protocol: pulumi.Input[Optional[Union['RadiusServerProfileProtocolArgs', 'RadiusServerProfileProtocolArgsDict']]] = None,
+                 retries: pulumi.Input[Optional[_builtins.int]] = None,
+                 servers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['RadiusServerProfileServerArgs', 'RadiusServerProfileServerArgsDict']]]]] = None,
+                 snippet: pulumi.Input[Optional[_builtins.str]] = None,
+                 timeout: pulumi.Input[Optional[_builtins.int]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -556,16 +556,16 @@ class RadiusServerProfile(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            device: Optional[pulumi.Input[_builtins.str]] = None,
-            encrypted_values: Optional[pulumi.Input[Mapping[str, pulumi.Input[_builtins.str]]]] = None,
-            folder: Optional[pulumi.Input[_builtins.str]] = None,
-            name: Optional[pulumi.Input[_builtins.str]] = None,
-            protocol: Optional[pulumi.Input[Union['RadiusServerProfileProtocolArgs', 'RadiusServerProfileProtocolArgsDict']]] = None,
-            retries: Optional[pulumi.Input[_builtins.int]] = None,
-            servers: Optional[pulumi.Input[Sequence[pulumi.Input[Union['RadiusServerProfileServerArgs', 'RadiusServerProfileServerArgsDict']]]]] = None,
-            snippet: Optional[pulumi.Input[_builtins.str]] = None,
-            tfid: Optional[pulumi.Input[_builtins.str]] = None,
-            timeout: Optional[pulumi.Input[_builtins.int]] = None) -> 'RadiusServerProfile':
+            device: pulumi.Input[Optional[_builtins.str]] = None,
+            encrypted_values: pulumi.Input[Optional[Mapping[str, pulumi.Input[_builtins.str]]]] = None,
+            folder: pulumi.Input[Optional[_builtins.str]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            protocol: pulumi.Input[Optional[Union['RadiusServerProfileProtocolArgs', 'RadiusServerProfileProtocolArgsDict']]] = None,
+            retries: pulumi.Input[Optional[_builtins.int]] = None,
+            servers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['RadiusServerProfileServerArgs', 'RadiusServerProfileServerArgsDict']]]]] = None,
+            snippet: pulumi.Input[Optional[_builtins.str]] = None,
+            tfid: pulumi.Input[Optional[_builtins.str]] = None,
+            timeout: pulumi.Input[Optional[_builtins.int]] = None) -> 'RadiusServerProfile':
         """
         Get an existing RadiusServerProfile resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

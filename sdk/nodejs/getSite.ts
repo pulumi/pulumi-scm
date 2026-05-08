@@ -148,7 +148,7 @@ export interface GetSiteOutputArgs {
     /**
      * The folder in which the resource is defined
      */
-    folder?: pulumi.Input<string>;
+    folder?: pulumi.Input<string | undefined>;
     /**
      * The UUID of the site
      */
@@ -156,5 +156,5 @@ export interface GetSiteOutputArgs {
     /**
      * The name of the site
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
 }

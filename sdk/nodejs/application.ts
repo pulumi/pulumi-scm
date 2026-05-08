@@ -361,135 +361,135 @@ export interface ApplicationState {
     /**
      * Able to transfer file
      */
-    ableToTransferFile?: pulumi.Input<boolean>;
+    ableToTransferFile?: pulumi.Input<boolean | undefined>;
     /**
      * Alg disable capability
      */
-    algDisableCapability?: pulumi.Input<string>;
+    algDisableCapability?: pulumi.Input<string | undefined>;
     /**
      * Category
      */
-    category?: pulumi.Input<string>;
+    category?: pulumi.Input<string | undefined>;
     /**
      * Consume big bandwidth
      */
-    consumeBigBandwidth?: pulumi.Input<boolean>;
+    consumeBigBandwidth?: pulumi.Input<boolean | undefined>;
     /**
      * Data ident
      */
-    dataIdent?: pulumi.Input<boolean>;
+    dataIdent?: pulumi.Input<boolean | undefined>;
     /**
      * Default
      */
-    default?: pulumi.Input<inputs.ApplicationDefault>;
+    default?: pulumi.Input<inputs.ApplicationDefault | undefined>;
     /**
      * Description
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * The device in which the resource is defined
      */
-    device?: pulumi.Input<string>;
+    device?: pulumi.Input<string | undefined>;
     /**
      * Evasive behavior
      */
-    evasiveBehavior?: pulumi.Input<boolean>;
+    evasiveBehavior?: pulumi.Input<boolean | undefined>;
     /**
      * File type ident
      */
-    fileTypeIdent?: pulumi.Input<boolean>;
+    fileTypeIdent?: pulumi.Input<boolean | undefined>;
     /**
      * The folder in which the resource is defined
      *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
-    folder?: pulumi.Input<string>;
+    folder?: pulumi.Input<string | undefined>;
     /**
      * Has known vulnerability
      */
-    hasKnownVulnerability?: pulumi.Input<boolean>;
+    hasKnownVulnerability?: pulumi.Input<boolean | undefined>;
     /**
      * The name of the application
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * No appid caching
      */
-    noAppidCaching?: pulumi.Input<boolean>;
+    noAppidCaching?: pulumi.Input<boolean | undefined>;
     /**
      * Parent app
      */
-    parentApp?: pulumi.Input<string>;
+    parentApp?: pulumi.Input<string | undefined>;
     /**
      * Pervasive use
      */
-    pervasiveUse?: pulumi.Input<boolean>;
+    pervasiveUse?: pulumi.Input<boolean | undefined>;
     /**
      * Prone to misuse
      */
-    proneToMisuse?: pulumi.Input<boolean>;
+    proneToMisuse?: pulumi.Input<boolean | undefined>;
     /**
      * Risk
      */
-    risk?: pulumi.Input<string>;
+    risk?: pulumi.Input<string | undefined>;
     /**
      * Signature
      */
-    signatures?: pulumi.Input<pulumi.Input<inputs.ApplicationSignature>[]>;
+    signatures?: pulumi.Input<pulumi.Input<inputs.ApplicationSignature>[] | undefined>;
     /**
      * The snippet in which the resource is defined
      *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
-    snippet?: pulumi.Input<string>;
+    snippet?: pulumi.Input<string | undefined>;
     /**
      * Subcategory
      */
-    subcategory?: pulumi.Input<string>;
+    subcategory?: pulumi.Input<string | undefined>;
     /**
      * timeout for half-close session in seconds
      */
-    tcpHalfClosedTimeout?: pulumi.Input<number>;
+    tcpHalfClosedTimeout?: pulumi.Input<number | undefined>;
     /**
      * timeout for session in timeWait state in seconds
      */
-    tcpTimeWaitTimeout?: pulumi.Input<number>;
+    tcpTimeWaitTimeout?: pulumi.Input<number | undefined>;
     /**
      * timeout in seconds
      */
-    tcpTimeout?: pulumi.Input<number>;
+    tcpTimeout?: pulumi.Input<number | undefined>;
     /**
      * Technology
      */
-    technology?: pulumi.Input<string>;
+    technology?: pulumi.Input<string | undefined>;
     /**
      * The Terraform ID.
      */
-    tfid?: pulumi.Input<string>;
+    tfid?: pulumi.Input<string | undefined>;
     /**
      * timeout in seconds
      */
-    timeout?: pulumi.Input<number>;
+    timeout?: pulumi.Input<number | undefined>;
     /**
      * Tunnel applications
      */
-    tunnelApplications?: pulumi.Input<boolean>;
+    tunnelApplications?: pulumi.Input<boolean | undefined>;
     /**
      * Tunnel other application
      */
-    tunnelOtherApplication?: pulumi.Input<boolean>;
+    tunnelOtherApplication?: pulumi.Input<boolean | undefined>;
     /**
      * timeout in seconds
      */
-    udpTimeout?: pulumi.Input<number>;
+    udpTimeout?: pulumi.Input<number | undefined>;
     /**
      * Used by malware
      */
-    usedByMalware?: pulumi.Input<boolean>;
+    usedByMalware?: pulumi.Input<boolean | undefined>;
     /**
      * Virus ident
      */
-    virusIdent?: pulumi.Input<boolean>;
+    virusIdent?: pulumi.Input<boolean | undefined>;
 }
 
 /**
@@ -499,11 +499,11 @@ export interface ApplicationArgs {
     /**
      * Able to transfer file
      */
-    ableToTransferFile?: pulumi.Input<boolean>;
+    ableToTransferFile?: pulumi.Input<boolean | undefined>;
     /**
      * Alg disable capability
      */
-    algDisableCapability?: pulumi.Input<string>;
+    algDisableCapability?: pulumi.Input<string | undefined>;
     /**
      * Category
      */
@@ -511,61 +511,61 @@ export interface ApplicationArgs {
     /**
      * Consume big bandwidth
      */
-    consumeBigBandwidth?: pulumi.Input<boolean>;
+    consumeBigBandwidth?: pulumi.Input<boolean | undefined>;
     /**
      * Data ident
      */
-    dataIdent?: pulumi.Input<boolean>;
+    dataIdent?: pulumi.Input<boolean | undefined>;
     /**
      * Default
      */
-    default?: pulumi.Input<inputs.ApplicationDefault>;
+    default?: pulumi.Input<inputs.ApplicationDefault | undefined>;
     /**
      * Description
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * The device in which the resource is defined
      */
-    device?: pulumi.Input<string>;
+    device?: pulumi.Input<string | undefined>;
     /**
      * Evasive behavior
      */
-    evasiveBehavior?: pulumi.Input<boolean>;
+    evasiveBehavior?: pulumi.Input<boolean | undefined>;
     /**
      * File type ident
      */
-    fileTypeIdent?: pulumi.Input<boolean>;
+    fileTypeIdent?: pulumi.Input<boolean | undefined>;
     /**
      * The folder in which the resource is defined
      *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
-    folder?: pulumi.Input<string>;
+    folder?: pulumi.Input<string | undefined>;
     /**
      * Has known vulnerability
      */
-    hasKnownVulnerability?: pulumi.Input<boolean>;
+    hasKnownVulnerability?: pulumi.Input<boolean | undefined>;
     /**
      * The name of the application
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * No appid caching
      */
-    noAppidCaching?: pulumi.Input<boolean>;
+    noAppidCaching?: pulumi.Input<boolean | undefined>;
     /**
      * Parent app
      */
-    parentApp?: pulumi.Input<string>;
+    parentApp?: pulumi.Input<string | undefined>;
     /**
      * Pervasive use
      */
-    pervasiveUse?: pulumi.Input<boolean>;
+    pervasiveUse?: pulumi.Input<boolean | undefined>;
     /**
      * Prone to misuse
      */
-    proneToMisuse?: pulumi.Input<boolean>;
+    proneToMisuse?: pulumi.Input<boolean | undefined>;
     /**
      * Risk
      */
@@ -573,55 +573,55 @@ export interface ApplicationArgs {
     /**
      * Signature
      */
-    signatures?: pulumi.Input<pulumi.Input<inputs.ApplicationSignature>[]>;
+    signatures?: pulumi.Input<pulumi.Input<inputs.ApplicationSignature>[] | undefined>;
     /**
      * The snippet in which the resource is defined
      *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
-    snippet?: pulumi.Input<string>;
+    snippet?: pulumi.Input<string | undefined>;
     /**
      * Subcategory
      */
-    subcategory?: pulumi.Input<string>;
+    subcategory?: pulumi.Input<string | undefined>;
     /**
      * timeout for half-close session in seconds
      */
-    tcpHalfClosedTimeout?: pulumi.Input<number>;
+    tcpHalfClosedTimeout?: pulumi.Input<number | undefined>;
     /**
      * timeout for session in timeWait state in seconds
      */
-    tcpTimeWaitTimeout?: pulumi.Input<number>;
+    tcpTimeWaitTimeout?: pulumi.Input<number | undefined>;
     /**
      * timeout in seconds
      */
-    tcpTimeout?: pulumi.Input<number>;
+    tcpTimeout?: pulumi.Input<number | undefined>;
     /**
      * Technology
      */
-    technology?: pulumi.Input<string>;
+    technology?: pulumi.Input<string | undefined>;
     /**
      * timeout in seconds
      */
-    timeout?: pulumi.Input<number>;
+    timeout?: pulumi.Input<number | undefined>;
     /**
      * Tunnel applications
      */
-    tunnelApplications?: pulumi.Input<boolean>;
+    tunnelApplications?: pulumi.Input<boolean | undefined>;
     /**
      * Tunnel other application
      */
-    tunnelOtherApplication?: pulumi.Input<boolean>;
+    tunnelOtherApplication?: pulumi.Input<boolean | undefined>;
     /**
      * timeout in seconds
      */
-    udpTimeout?: pulumi.Input<number>;
+    udpTimeout?: pulumi.Input<number | undefined>;
     /**
      * Used by malware
      */
-    usedByMalware?: pulumi.Input<boolean>;
+    usedByMalware?: pulumi.Input<boolean | undefined>;
     /**
      * Virus ident
      */
-    virusIdent?: pulumi.Input<boolean>;
+    virusIdent?: pulumi.Input<boolean | undefined>;
 }

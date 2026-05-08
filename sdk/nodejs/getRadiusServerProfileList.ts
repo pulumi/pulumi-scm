@@ -8,6 +8,41 @@ import * as utilities from "./utilities";
 
 /**
  * Retrieves a listing of config items.
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * function tryOutput_(
+ * 	...fns: Array<() => pulumi.Input<any>>
+ * ): pulumi.Output<any> {
+ * 	if (fns.length === 0) {
+ * 		throw new Error("try: all parameters failed");
+ * 	}
+ * 	const [fn, ...rest] = fns;
+ * 	try {
+ * 		return pulumi.output(fn()).apply(result => result !== undefined ? result : tryOutput_(...rest));
+ * 	} catch {
+ * 		return tryOutput_(...rest);
+ * 	}
+ * 	throw new Error("try: all parameters failed");
+ * }
+ *
+ *
+ * const pagedProfilesList = scm.getRadiusServerProfileList({
+ *     folder: "All",
+ *     limit: 10,
+ * });
+ * export const fetchedProfileListSummary = {
+ *     countOfProfilesFetched: pagedProfilesList.then(pagedProfilesList => pagedProfilesList.total),
+ *     firstProfileName: tryOutput_(
+ *         () => pagedProfilesList.then(pagedProfilesList => pagedProfilesList.datas?.[0]?.name),
+ *         () => "List is empty"
+ *     ),
+ * };
+ * ```
  */
 export function getRadiusServerProfileList(args?: GetRadiusServerProfileListArgs, opts?: pulumi.InvokeOptions): Promise<GetRadiusServerProfileListResult> {
     args = args || {};
@@ -99,6 +134,41 @@ export interface GetRadiusServerProfileListResult {
 }
 /**
  * Retrieves a listing of config items.
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * function tryOutput_(
+ * 	...fns: Array<() => pulumi.Input<any>>
+ * ): pulumi.Output<any> {
+ * 	if (fns.length === 0) {
+ * 		throw new Error("try: all parameters failed");
+ * 	}
+ * 	const [fn, ...rest] = fns;
+ * 	try {
+ * 		return pulumi.output(fn()).apply(result => result !== undefined ? result : tryOutput_(...rest));
+ * 	} catch {
+ * 		return tryOutput_(...rest);
+ * 	}
+ * 	throw new Error("try: all parameters failed");
+ * }
+ *
+ *
+ * const pagedProfilesList = scm.getRadiusServerProfileList({
+ *     folder: "All",
+ *     limit: 10,
+ * });
+ * export const fetchedProfileListSummary = {
+ *     countOfProfilesFetched: pagedProfilesList.then(pagedProfilesList => pagedProfilesList.total),
+ *     firstProfileName: tryOutput_(
+ *         () => pagedProfilesList.then(pagedProfilesList => pagedProfilesList.datas?.[0]?.name),
+ *         () => "List is empty"
+ *     ),
+ * };
+ * ```
  */
 export function getRadiusServerProfileListOutput(args?: GetRadiusServerProfileListOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetRadiusServerProfileListResult> {
     args = args || {};
@@ -120,25 +190,25 @@ export interface GetRadiusServerProfileListOutputArgs {
     /**
      * The device of the item.
      */
-    device?: pulumi.Input<string>;
+    device?: pulumi.Input<string | undefined>;
     /**
      * The folder of the item. Default: Shared.
      */
-    folder?: pulumi.Input<string>;
+    folder?: pulumi.Input<string | undefined>;
     /**
      * The max number of items to return. Default: 200.
      */
-    limit?: pulumi.Input<number>;
+    limit?: pulumi.Input<number | undefined>;
     /**
      * The name of the item.
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * The offset of the first item to return.
      */
-    offset?: pulumi.Input<number>;
+    offset?: pulumi.Input<number | undefined>;
     /**
      * The snippet of the item.
      */
-    snippet?: pulumi.Input<string>;
+    snippet?: pulumi.Input<string | undefined>;
 }

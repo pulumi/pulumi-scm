@@ -124,12 +124,12 @@ export interface GetDecryptionRuleOutputArgs {
     /**
      * The device in which the resource is defined
      */
-    device?: pulumi.Input<string>;
-    folder?: pulumi.Input<string>;
+    device?: pulumi.Input<string | undefined>;
+    folder?: pulumi.Input<string | undefined>;
     /**
      * The UUID of the decryption rule
      */
     id: pulumi.Input<string>;
-    name?: pulumi.Input<string>;
-    snippet?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
+    snippet?: pulumi.Input<string | undefined>;
 }

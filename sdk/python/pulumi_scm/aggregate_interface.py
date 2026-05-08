@@ -21,14 +21,14 @@ __all__ = ['AggregateInterfaceArgs', 'AggregateInterface']
 @pulumi.input_type
 class AggregateInterfaceArgs:
     def __init__(__self__, *,
-                 comment: Optional[pulumi.Input[_builtins.str]] = None,
-                 default_value: Optional[pulumi.Input[_builtins.str]] = None,
-                 device: Optional[pulumi.Input[_builtins.str]] = None,
-                 folder: Optional[pulumi.Input[_builtins.str]] = None,
-                 layer2: Optional[pulumi.Input['AggregateInterfaceLayer2Args']] = None,
-                 layer3: Optional[pulumi.Input['AggregateInterfaceLayer3Args']] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 snippet: Optional[pulumi.Input[_builtins.str]] = None):
+                 comment: pulumi.Input[Optional[_builtins.str]] = None,
+                 default_value: pulumi.Input[Optional[_builtins.str]] = None,
+                 device: pulumi.Input[Optional[_builtins.str]] = None,
+                 folder: pulumi.Input[Optional[_builtins.str]] = None,
+                 layer2: pulumi.Input[Optional['AggregateInterfaceLayer2Args']] = None,
+                 layer3: pulumi.Input[Optional['AggregateInterfaceLayer3Args']] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 snippet: pulumi.Input[Optional[_builtins.str]] = None):
         """
         The set of arguments for constructing a AggregateInterface resource.
 
@@ -68,43 +68,43 @@ class AggregateInterfaceArgs:
 
     @_builtins.property
     @pulumi.getter
-    def comment(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def comment(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Aggregate interface description
         """
         return pulumi.get(self, "comment")
 
     @comment.setter
-    def comment(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def comment(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "comment", value)
 
     @_builtins.property
     @pulumi.getter(name="defaultValue")
-    def default_value(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def default_value(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Default interface assignment
         """
         return pulumi.get(self, "default_value")
 
     @default_value.setter
-    def default_value(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def default_value(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "default_value", value)
 
     @_builtins.property
     @pulumi.getter
-    def device(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def device(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The device in which the resource is defined
         """
         return pulumi.get(self, "device")
 
     @device.setter
-    def device(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def device(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "device", value)
 
     @_builtins.property
     @pulumi.getter
-    def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def folder(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
 
@@ -113,12 +113,12 @@ class AggregateInterfaceArgs:
         return pulumi.get(self, "folder")
 
     @folder.setter
-    def folder(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def folder(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "folder", value)
 
     @_builtins.property
     @pulumi.getter
-    def layer2(self) -> Optional[pulumi.Input['AggregateInterfaceLayer2Args']]:
+    def layer2(self) -> pulumi.Input[Optional['AggregateInterfaceLayer2Args']]:
         """
         Layer2
 
@@ -127,12 +127,12 @@ class AggregateInterfaceArgs:
         return pulumi.get(self, "layer2")
 
     @layer2.setter
-    def layer2(self, value: Optional[pulumi.Input['AggregateInterfaceLayer2Args']]):
+    def layer2(self, value: pulumi.Input[Optional['AggregateInterfaceLayer2Args']]):
         pulumi.set(self, "layer2", value)
 
     @_builtins.property
     @pulumi.getter
-    def layer3(self) -> Optional[pulumi.Input['AggregateInterfaceLayer3Args']]:
+    def layer3(self) -> pulumi.Input[Optional['AggregateInterfaceLayer3Args']]:
         """
         Aggregate Interface Layer 3 configuration
 
@@ -141,24 +141,24 @@ class AggregateInterfaceArgs:
         return pulumi.get(self, "layer3")
 
     @layer3.setter
-    def layer3(self, value: Optional[pulumi.Input['AggregateInterfaceLayer3Args']]):
+    def layer3(self, value: pulumi.Input[Optional['AggregateInterfaceLayer3Args']]):
         pulumi.set(self, "layer3", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Aggregate interface name
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter
-    def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def snippet(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
 
@@ -167,22 +167,22 @@ class AggregateInterfaceArgs:
         return pulumi.get(self, "snippet")
 
     @snippet.setter
-    def snippet(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def snippet(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "snippet", value)
 
 
 @pulumi.input_type
 class _AggregateInterfaceState:
     def __init__(__self__, *,
-                 comment: Optional[pulumi.Input[_builtins.str]] = None,
-                 default_value: Optional[pulumi.Input[_builtins.str]] = None,
-                 device: Optional[pulumi.Input[_builtins.str]] = None,
-                 folder: Optional[pulumi.Input[_builtins.str]] = None,
-                 layer2: Optional[pulumi.Input['AggregateInterfaceLayer2Args']] = None,
-                 layer3: Optional[pulumi.Input['AggregateInterfaceLayer3Args']] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 snippet: Optional[pulumi.Input[_builtins.str]] = None,
-                 tfid: Optional[pulumi.Input[_builtins.str]] = None):
+                 comment: pulumi.Input[Optional[_builtins.str]] = None,
+                 default_value: pulumi.Input[Optional[_builtins.str]] = None,
+                 device: pulumi.Input[Optional[_builtins.str]] = None,
+                 folder: pulumi.Input[Optional[_builtins.str]] = None,
+                 layer2: pulumi.Input[Optional['AggregateInterfaceLayer2Args']] = None,
+                 layer3: pulumi.Input[Optional['AggregateInterfaceLayer3Args']] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 snippet: pulumi.Input[Optional[_builtins.str]] = None,
+                 tfid: pulumi.Input[Optional[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering AggregateInterface resources.
 
@@ -225,43 +225,43 @@ class _AggregateInterfaceState:
 
     @_builtins.property
     @pulumi.getter
-    def comment(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def comment(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Aggregate interface description
         """
         return pulumi.get(self, "comment")
 
     @comment.setter
-    def comment(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def comment(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "comment", value)
 
     @_builtins.property
     @pulumi.getter(name="defaultValue")
-    def default_value(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def default_value(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Default interface assignment
         """
         return pulumi.get(self, "default_value")
 
     @default_value.setter
-    def default_value(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def default_value(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "default_value", value)
 
     @_builtins.property
     @pulumi.getter
-    def device(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def device(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The device in which the resource is defined
         """
         return pulumi.get(self, "device")
 
     @device.setter
-    def device(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def device(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "device", value)
 
     @_builtins.property
     @pulumi.getter
-    def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def folder(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
 
@@ -270,12 +270,12 @@ class _AggregateInterfaceState:
         return pulumi.get(self, "folder")
 
     @folder.setter
-    def folder(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def folder(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "folder", value)
 
     @_builtins.property
     @pulumi.getter
-    def layer2(self) -> Optional[pulumi.Input['AggregateInterfaceLayer2Args']]:
+    def layer2(self) -> pulumi.Input[Optional['AggregateInterfaceLayer2Args']]:
         """
         Layer2
 
@@ -284,12 +284,12 @@ class _AggregateInterfaceState:
         return pulumi.get(self, "layer2")
 
     @layer2.setter
-    def layer2(self, value: Optional[pulumi.Input['AggregateInterfaceLayer2Args']]):
+    def layer2(self, value: pulumi.Input[Optional['AggregateInterfaceLayer2Args']]):
         pulumi.set(self, "layer2", value)
 
     @_builtins.property
     @pulumi.getter
-    def layer3(self) -> Optional[pulumi.Input['AggregateInterfaceLayer3Args']]:
+    def layer3(self) -> pulumi.Input[Optional['AggregateInterfaceLayer3Args']]:
         """
         Aggregate Interface Layer 3 configuration
 
@@ -298,24 +298,24 @@ class _AggregateInterfaceState:
         return pulumi.get(self, "layer3")
 
     @layer3.setter
-    def layer3(self, value: Optional[pulumi.Input['AggregateInterfaceLayer3Args']]):
+    def layer3(self, value: pulumi.Input[Optional['AggregateInterfaceLayer3Args']]):
         pulumi.set(self, "layer3", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Aggregate interface name
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter
-    def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def snippet(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
 
@@ -324,19 +324,19 @@ class _AggregateInterfaceState:
         return pulumi.get(self, "snippet")
 
     @snippet.setter
-    def snippet(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def snippet(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "snippet", value)
 
     @_builtins.property
     @pulumi.getter
-    def tfid(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def tfid(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The Terraform ID.
         """
         return pulumi.get(self, "tfid")
 
     @tfid.setter
-    def tfid(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def tfid(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "tfid", value)
 
 
@@ -346,14 +346,14 @@ class AggregateInterface(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 comment: Optional[pulumi.Input[_builtins.str]] = None,
-                 default_value: Optional[pulumi.Input[_builtins.str]] = None,
-                 device: Optional[pulumi.Input[_builtins.str]] = None,
-                 folder: Optional[pulumi.Input[_builtins.str]] = None,
-                 layer2: Optional[pulumi.Input[Union['AggregateInterfaceLayer2Args', 'AggregateInterfaceLayer2ArgsDict']]] = None,
-                 layer3: Optional[pulumi.Input[Union['AggregateInterfaceLayer3Args', 'AggregateInterfaceLayer3ArgsDict']]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 snippet: Optional[pulumi.Input[_builtins.str]] = None,
+                 comment: pulumi.Input[Optional[_builtins.str]] = None,
+                 default_value: pulumi.Input[Optional[_builtins.str]] = None,
+                 device: pulumi.Input[Optional[_builtins.str]] = None,
+                 folder: pulumi.Input[Optional[_builtins.str]] = None,
+                 layer2: pulumi.Input[Optional[Union['AggregateInterfaceLayer2Args', 'AggregateInterfaceLayer2ArgsDict']]] = None,
+                 layer3: pulumi.Input[Optional[Union['AggregateInterfaceLayer3Args', 'AggregateInterfaceLayer3ArgsDict']]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 snippet: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
         AggregateInterface resource
@@ -625,14 +625,14 @@ class AggregateInterface(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 comment: Optional[pulumi.Input[_builtins.str]] = None,
-                 default_value: Optional[pulumi.Input[_builtins.str]] = None,
-                 device: Optional[pulumi.Input[_builtins.str]] = None,
-                 folder: Optional[pulumi.Input[_builtins.str]] = None,
-                 layer2: Optional[pulumi.Input[Union['AggregateInterfaceLayer2Args', 'AggregateInterfaceLayer2ArgsDict']]] = None,
-                 layer3: Optional[pulumi.Input[Union['AggregateInterfaceLayer3Args', 'AggregateInterfaceLayer3ArgsDict']]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 snippet: Optional[pulumi.Input[_builtins.str]] = None,
+                 comment: pulumi.Input[Optional[_builtins.str]] = None,
+                 default_value: pulumi.Input[Optional[_builtins.str]] = None,
+                 device: pulumi.Input[Optional[_builtins.str]] = None,
+                 folder: pulumi.Input[Optional[_builtins.str]] = None,
+                 layer2: pulumi.Input[Optional[Union['AggregateInterfaceLayer2Args', 'AggregateInterfaceLayer2ArgsDict']]] = None,
+                 layer3: pulumi.Input[Optional[Union['AggregateInterfaceLayer3Args', 'AggregateInterfaceLayer3ArgsDict']]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 snippet: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -661,15 +661,15 @@ class AggregateInterface(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            comment: Optional[pulumi.Input[_builtins.str]] = None,
-            default_value: Optional[pulumi.Input[_builtins.str]] = None,
-            device: Optional[pulumi.Input[_builtins.str]] = None,
-            folder: Optional[pulumi.Input[_builtins.str]] = None,
-            layer2: Optional[pulumi.Input[Union['AggregateInterfaceLayer2Args', 'AggregateInterfaceLayer2ArgsDict']]] = None,
-            layer3: Optional[pulumi.Input[Union['AggregateInterfaceLayer3Args', 'AggregateInterfaceLayer3ArgsDict']]] = None,
-            name: Optional[pulumi.Input[_builtins.str]] = None,
-            snippet: Optional[pulumi.Input[_builtins.str]] = None,
-            tfid: Optional[pulumi.Input[_builtins.str]] = None) -> 'AggregateInterface':
+            comment: pulumi.Input[Optional[_builtins.str]] = None,
+            default_value: pulumi.Input[Optional[_builtins.str]] = None,
+            device: pulumi.Input[Optional[_builtins.str]] = None,
+            folder: pulumi.Input[Optional[_builtins.str]] = None,
+            layer2: pulumi.Input[Optional[Union['AggregateInterfaceLayer2Args', 'AggregateInterfaceLayer2ArgsDict']]] = None,
+            layer3: pulumi.Input[Optional[Union['AggregateInterfaceLayer3Args', 'AggregateInterfaceLayer3ArgsDict']]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            snippet: pulumi.Input[Optional[_builtins.str]] = None,
+            tfid: pulumi.Input[Optional[_builtins.str]] = None) -> 'AggregateInterface':
         """
         Get an existing AggregateInterface resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

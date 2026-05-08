@@ -189,51 +189,51 @@ export interface IpsecCryptoProfileState {
     /**
      * Ah
      */
-    ah?: pulumi.Input<inputs.IpsecCryptoProfileAh>;
+    ah?: pulumi.Input<inputs.IpsecCryptoProfileAh | undefined>;
     /**
      * The device in which the resource is defined
      *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
-    device?: pulumi.Input<string>;
+    device?: pulumi.Input<string | undefined>;
     /**
      * phase-2 DH group (PFS DH group)
      */
-    dhGroup?: pulumi.Input<string>;
+    dhGroup?: pulumi.Input<string | undefined>;
     /**
      * Esp
      *
      * > ℹ️ **Note:** You must specify exactly one of `ah` and `esp`.
      */
-    esp?: pulumi.Input<inputs.IpsecCryptoProfileEsp>;
+    esp?: pulumi.Input<inputs.IpsecCryptoProfileEsp | undefined>;
     /**
      * The folder in which the resource is defined
      *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
-    folder?: pulumi.Input<string>;
+    folder?: pulumi.Input<string | undefined>;
     /**
      * Lifesize
      */
-    lifesize?: pulumi.Input<inputs.IpsecCryptoProfileLifesize>;
+    lifesize?: pulumi.Input<inputs.IpsecCryptoProfileLifesize | undefined>;
     /**
      * Ipsec crypto profile lifetime
      */
-    lifetime?: pulumi.Input<inputs.IpsecCryptoProfileLifetime>;
+    lifetime?: pulumi.Input<inputs.IpsecCryptoProfileLifetime | undefined>;
     /**
      * Alphanumeric string begin with letter: [0-9a-zA-Z._-]
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * The snippet in which the resource is defined
      *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
-    snippet?: pulumi.Input<string>;
+    snippet?: pulumi.Input<string | undefined>;
     /**
      * The Terraform ID.
      */
-    tfid?: pulumi.Input<string>;
+    tfid?: pulumi.Input<string | undefined>;
 }
 
 /**
@@ -243,33 +243,33 @@ export interface IpsecCryptoProfileArgs {
     /**
      * Ah
      */
-    ah?: pulumi.Input<inputs.IpsecCryptoProfileAh>;
+    ah?: pulumi.Input<inputs.IpsecCryptoProfileAh | undefined>;
     /**
      * The device in which the resource is defined
      *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
-    device?: pulumi.Input<string>;
+    device?: pulumi.Input<string | undefined>;
     /**
      * phase-2 DH group (PFS DH group)
      */
-    dhGroup?: pulumi.Input<string>;
+    dhGroup?: pulumi.Input<string | undefined>;
     /**
      * Esp
      *
      * > ℹ️ **Note:** You must specify exactly one of `ah` and `esp`.
      */
-    esp?: pulumi.Input<inputs.IpsecCryptoProfileEsp>;
+    esp?: pulumi.Input<inputs.IpsecCryptoProfileEsp | undefined>;
     /**
      * The folder in which the resource is defined
      *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
-    folder?: pulumi.Input<string>;
+    folder?: pulumi.Input<string | undefined>;
     /**
      * Lifesize
      */
-    lifesize?: pulumi.Input<inputs.IpsecCryptoProfileLifesize>;
+    lifesize?: pulumi.Input<inputs.IpsecCryptoProfileLifesize | undefined>;
     /**
      * Ipsec crypto profile lifetime
      */
@@ -277,11 +277,11 @@ export interface IpsecCryptoProfileArgs {
     /**
      * Alphanumeric string begin with letter: [0-9a-zA-Z._-]
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * The snippet in which the resource is defined
      *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
-    snippet?: pulumi.Input<string>;
+    snippet?: pulumi.Input<string | undefined>;
 }

@@ -12,6 +12,8 @@ import (
 )
 
 // Retrieves a listing of config items.
+//
+// ## Example Usage
 func GetApplicationFilterList(ctx *pulumi.Context, args *GetApplicationFilterListArgs, opts ...pulumi.InvokeOption) (*GetApplicationFilterListResult, error) {
 	opts = internal.PkgInvokeDefaultOpts(opts)
 	var rv GetApplicationFilterListResult

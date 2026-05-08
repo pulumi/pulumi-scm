@@ -22,21 +22,21 @@ __all__ = ['CertificateProfileArgs', 'CertificateProfile']
 class CertificateProfileArgs:
     def __init__(__self__, *,
                  ca_certificates: pulumi.Input[Sequence[pulumi.Input['CertificateProfileCaCertificateArgs']]],
-                 block_expired_cert: Optional[pulumi.Input[_builtins.bool]] = None,
-                 block_timeout_cert: Optional[pulumi.Input[_builtins.bool]] = None,
-                 block_unauthenticated_cert: Optional[pulumi.Input[_builtins.bool]] = None,
-                 block_unknown_cert: Optional[pulumi.Input[_builtins.bool]] = None,
-                 cert_status_timeout: Optional[pulumi.Input[_builtins.str]] = None,
-                 crl_receive_timeout: Optional[pulumi.Input[_builtins.str]] = None,
-                 device: Optional[pulumi.Input[_builtins.str]] = None,
-                 domain: Optional[pulumi.Input[_builtins.str]] = None,
-                 folder: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 ocsp_receive_timeout: Optional[pulumi.Input[_builtins.str]] = None,
-                 snippet: Optional[pulumi.Input[_builtins.str]] = None,
-                 use_crl: Optional[pulumi.Input[_builtins.bool]] = None,
-                 use_ocsp: Optional[pulumi.Input[_builtins.bool]] = None,
-                 username_field: Optional[pulumi.Input['CertificateProfileUsernameFieldArgs']] = None):
+                 block_expired_cert: pulumi.Input[Optional[_builtins.bool]] = None,
+                 block_timeout_cert: pulumi.Input[Optional[_builtins.bool]] = None,
+                 block_unauthenticated_cert: pulumi.Input[Optional[_builtins.bool]] = None,
+                 block_unknown_cert: pulumi.Input[Optional[_builtins.bool]] = None,
+                 cert_status_timeout: pulumi.Input[Optional[_builtins.str]] = None,
+                 crl_receive_timeout: pulumi.Input[Optional[_builtins.str]] = None,
+                 device: pulumi.Input[Optional[_builtins.str]] = None,
+                 domain: pulumi.Input[Optional[_builtins.str]] = None,
+                 folder: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 ocsp_receive_timeout: pulumi.Input[Optional[_builtins.str]] = None,
+                 snippet: pulumi.Input[Optional[_builtins.str]] = None,
+                 use_crl: pulumi.Input[Optional[_builtins.bool]] = None,
+                 use_ocsp: pulumi.Input[Optional[_builtins.bool]] = None,
+                 username_field: pulumi.Input[Optional['CertificateProfileUsernameFieldArgs']] = None):
         """
         The set of arguments for constructing a CertificateProfile resource.
 
@@ -107,103 +107,103 @@ class CertificateProfileArgs:
 
     @_builtins.property
     @pulumi.getter(name="blockExpiredCert")
-    def block_expired_cert(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def block_expired_cert(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Block sessions with expired certificates?
         """
         return pulumi.get(self, "block_expired_cert")
 
     @block_expired_cert.setter
-    def block_expired_cert(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def block_expired_cert(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "block_expired_cert", value)
 
     @_builtins.property
     @pulumi.getter(name="blockTimeoutCert")
-    def block_timeout_cert(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def block_timeout_cert(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Block session if certificate status cannot be retrieved within timeout?
         """
         return pulumi.get(self, "block_timeout_cert")
 
     @block_timeout_cert.setter
-    def block_timeout_cert(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def block_timeout_cert(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "block_timeout_cert", value)
 
     @_builtins.property
     @pulumi.getter(name="blockUnauthenticatedCert")
-    def block_unauthenticated_cert(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def block_unauthenticated_cert(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Block session if the certificate was not issued to the authenticating device?
         """
         return pulumi.get(self, "block_unauthenticated_cert")
 
     @block_unauthenticated_cert.setter
-    def block_unauthenticated_cert(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def block_unauthenticated_cert(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "block_unauthenticated_cert", value)
 
     @_builtins.property
     @pulumi.getter(name="blockUnknownCert")
-    def block_unknown_cert(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def block_unknown_cert(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Block session if certificate status is unknown?
         """
         return pulumi.get(self, "block_unknown_cert")
 
     @block_unknown_cert.setter
-    def block_unknown_cert(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def block_unknown_cert(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "block_unknown_cert", value)
 
     @_builtins.property
     @pulumi.getter(name="certStatusTimeout")
-    def cert_status_timeout(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def cert_status_timeout(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Certificate status timeout
         """
         return pulumi.get(self, "cert_status_timeout")
 
     @cert_status_timeout.setter
-    def cert_status_timeout(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def cert_status_timeout(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "cert_status_timeout", value)
 
     @_builtins.property
     @pulumi.getter(name="crlReceiveTimeout")
-    def crl_receive_timeout(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def crl_receive_timeout(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         CRL receive timeout (seconds)
         """
         return pulumi.get(self, "crl_receive_timeout")
 
     @crl_receive_timeout.setter
-    def crl_receive_timeout(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def crl_receive_timeout(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "crl_receive_timeout", value)
 
     @_builtins.property
     @pulumi.getter
-    def device(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def device(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The device in which the resource is defined
         """
         return pulumi.get(self, "device")
 
     @device.setter
-    def device(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def device(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "device", value)
 
     @_builtins.property
     @pulumi.getter
-    def domain(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def domain(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         User domain
         """
         return pulumi.get(self, "domain")
 
     @domain.setter
-    def domain(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def domain(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "domain", value)
 
     @_builtins.property
     @pulumi.getter
-    def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def folder(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
 
@@ -212,36 +212,36 @@ class CertificateProfileArgs:
         return pulumi.get(self, "folder")
 
     @folder.setter
-    def folder(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def folder(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "folder", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the certificate profile
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter(name="ocspReceiveTimeout")
-    def ocsp_receive_timeout(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ocsp_receive_timeout(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         OCSP receive timeout (seconds)
         """
         return pulumi.get(self, "ocsp_receive_timeout")
 
     @ocsp_receive_timeout.setter
-    def ocsp_receive_timeout(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ocsp_receive_timeout(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ocsp_receive_timeout", value)
 
     @_builtins.property
     @pulumi.getter
-    def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def snippet(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
 
@@ -250,66 +250,66 @@ class CertificateProfileArgs:
         return pulumi.get(self, "snippet")
 
     @snippet.setter
-    def snippet(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def snippet(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "snippet", value)
 
     @_builtins.property
     @pulumi.getter(name="useCrl")
-    def use_crl(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def use_crl(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Use CRL?
         """
         return pulumi.get(self, "use_crl")
 
     @use_crl.setter
-    def use_crl(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def use_crl(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "use_crl", value)
 
     @_builtins.property
     @pulumi.getter(name="useOcsp")
-    def use_ocsp(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def use_ocsp(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Use OCSP?
         """
         return pulumi.get(self, "use_ocsp")
 
     @use_ocsp.setter
-    def use_ocsp(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def use_ocsp(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "use_ocsp", value)
 
     @_builtins.property
     @pulumi.getter(name="usernameField")
-    def username_field(self) -> Optional[pulumi.Input['CertificateProfileUsernameFieldArgs']]:
+    def username_field(self) -> pulumi.Input[Optional['CertificateProfileUsernameFieldArgs']]:
         """
         Certificate username field
         """
         return pulumi.get(self, "username_field")
 
     @username_field.setter
-    def username_field(self, value: Optional[pulumi.Input['CertificateProfileUsernameFieldArgs']]):
+    def username_field(self, value: pulumi.Input[Optional['CertificateProfileUsernameFieldArgs']]):
         pulumi.set(self, "username_field", value)
 
 
 @pulumi.input_type
 class _CertificateProfileState:
     def __init__(__self__, *,
-                 block_expired_cert: Optional[pulumi.Input[_builtins.bool]] = None,
-                 block_timeout_cert: Optional[pulumi.Input[_builtins.bool]] = None,
-                 block_unauthenticated_cert: Optional[pulumi.Input[_builtins.bool]] = None,
-                 block_unknown_cert: Optional[pulumi.Input[_builtins.bool]] = None,
-                 ca_certificates: Optional[pulumi.Input[Sequence[pulumi.Input['CertificateProfileCaCertificateArgs']]]] = None,
-                 cert_status_timeout: Optional[pulumi.Input[_builtins.str]] = None,
-                 crl_receive_timeout: Optional[pulumi.Input[_builtins.str]] = None,
-                 device: Optional[pulumi.Input[_builtins.str]] = None,
-                 domain: Optional[pulumi.Input[_builtins.str]] = None,
-                 folder: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 ocsp_receive_timeout: Optional[pulumi.Input[_builtins.str]] = None,
-                 snippet: Optional[pulumi.Input[_builtins.str]] = None,
-                 tfid: Optional[pulumi.Input[_builtins.str]] = None,
-                 use_crl: Optional[pulumi.Input[_builtins.bool]] = None,
-                 use_ocsp: Optional[pulumi.Input[_builtins.bool]] = None,
-                 username_field: Optional[pulumi.Input['CertificateProfileUsernameFieldArgs']] = None):
+                 block_expired_cert: pulumi.Input[Optional[_builtins.bool]] = None,
+                 block_timeout_cert: pulumi.Input[Optional[_builtins.bool]] = None,
+                 block_unauthenticated_cert: pulumi.Input[Optional[_builtins.bool]] = None,
+                 block_unknown_cert: pulumi.Input[Optional[_builtins.bool]] = None,
+                 ca_certificates: pulumi.Input[Optional[Sequence[pulumi.Input['CertificateProfileCaCertificateArgs']]]] = None,
+                 cert_status_timeout: pulumi.Input[Optional[_builtins.str]] = None,
+                 crl_receive_timeout: pulumi.Input[Optional[_builtins.str]] = None,
+                 device: pulumi.Input[Optional[_builtins.str]] = None,
+                 domain: pulumi.Input[Optional[_builtins.str]] = None,
+                 folder: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 ocsp_receive_timeout: pulumi.Input[Optional[_builtins.str]] = None,
+                 snippet: pulumi.Input[Optional[_builtins.str]] = None,
+                 tfid: pulumi.Input[Optional[_builtins.str]] = None,
+                 use_crl: pulumi.Input[Optional[_builtins.bool]] = None,
+                 use_ocsp: pulumi.Input[Optional[_builtins.bool]] = None,
+                 username_field: pulumi.Input[Optional['CertificateProfileUsernameFieldArgs']] = None):
         """
         Input properties used for looking up and filtering CertificateProfile resources.
 
@@ -372,115 +372,115 @@ class _CertificateProfileState:
 
     @_builtins.property
     @pulumi.getter(name="blockExpiredCert")
-    def block_expired_cert(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def block_expired_cert(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Block sessions with expired certificates?
         """
         return pulumi.get(self, "block_expired_cert")
 
     @block_expired_cert.setter
-    def block_expired_cert(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def block_expired_cert(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "block_expired_cert", value)
 
     @_builtins.property
     @pulumi.getter(name="blockTimeoutCert")
-    def block_timeout_cert(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def block_timeout_cert(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Block session if certificate status cannot be retrieved within timeout?
         """
         return pulumi.get(self, "block_timeout_cert")
 
     @block_timeout_cert.setter
-    def block_timeout_cert(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def block_timeout_cert(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "block_timeout_cert", value)
 
     @_builtins.property
     @pulumi.getter(name="blockUnauthenticatedCert")
-    def block_unauthenticated_cert(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def block_unauthenticated_cert(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Block session if the certificate was not issued to the authenticating device?
         """
         return pulumi.get(self, "block_unauthenticated_cert")
 
     @block_unauthenticated_cert.setter
-    def block_unauthenticated_cert(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def block_unauthenticated_cert(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "block_unauthenticated_cert", value)
 
     @_builtins.property
     @pulumi.getter(name="blockUnknownCert")
-    def block_unknown_cert(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def block_unknown_cert(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Block session if certificate status is unknown?
         """
         return pulumi.get(self, "block_unknown_cert")
 
     @block_unknown_cert.setter
-    def block_unknown_cert(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def block_unknown_cert(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "block_unknown_cert", value)
 
     @_builtins.property
     @pulumi.getter(name="caCertificates")
-    def ca_certificates(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['CertificateProfileCaCertificateArgs']]]]:
+    def ca_certificates(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['CertificateProfileCaCertificateArgs']]]]:
         """
         An ordered list of CA certificates
         """
         return pulumi.get(self, "ca_certificates")
 
     @ca_certificates.setter
-    def ca_certificates(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['CertificateProfileCaCertificateArgs']]]]):
+    def ca_certificates(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['CertificateProfileCaCertificateArgs']]]]):
         pulumi.set(self, "ca_certificates", value)
 
     @_builtins.property
     @pulumi.getter(name="certStatusTimeout")
-    def cert_status_timeout(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def cert_status_timeout(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Certificate status timeout
         """
         return pulumi.get(self, "cert_status_timeout")
 
     @cert_status_timeout.setter
-    def cert_status_timeout(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def cert_status_timeout(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "cert_status_timeout", value)
 
     @_builtins.property
     @pulumi.getter(name="crlReceiveTimeout")
-    def crl_receive_timeout(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def crl_receive_timeout(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         CRL receive timeout (seconds)
         """
         return pulumi.get(self, "crl_receive_timeout")
 
     @crl_receive_timeout.setter
-    def crl_receive_timeout(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def crl_receive_timeout(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "crl_receive_timeout", value)
 
     @_builtins.property
     @pulumi.getter
-    def device(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def device(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The device in which the resource is defined
         """
         return pulumi.get(self, "device")
 
     @device.setter
-    def device(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def device(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "device", value)
 
     @_builtins.property
     @pulumi.getter
-    def domain(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def domain(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         User domain
         """
         return pulumi.get(self, "domain")
 
     @domain.setter
-    def domain(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def domain(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "domain", value)
 
     @_builtins.property
     @pulumi.getter
-    def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def folder(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
 
@@ -489,36 +489,36 @@ class _CertificateProfileState:
         return pulumi.get(self, "folder")
 
     @folder.setter
-    def folder(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def folder(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "folder", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the certificate profile
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter(name="ocspReceiveTimeout")
-    def ocsp_receive_timeout(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ocsp_receive_timeout(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         OCSP receive timeout (seconds)
         """
         return pulumi.get(self, "ocsp_receive_timeout")
 
     @ocsp_receive_timeout.setter
-    def ocsp_receive_timeout(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ocsp_receive_timeout(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ocsp_receive_timeout", value)
 
     @_builtins.property
     @pulumi.getter
-    def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def snippet(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
 
@@ -527,55 +527,55 @@ class _CertificateProfileState:
         return pulumi.get(self, "snippet")
 
     @snippet.setter
-    def snippet(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def snippet(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "snippet", value)
 
     @_builtins.property
     @pulumi.getter
-    def tfid(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def tfid(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The Terraform ID.
         """
         return pulumi.get(self, "tfid")
 
     @tfid.setter
-    def tfid(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def tfid(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "tfid", value)
 
     @_builtins.property
     @pulumi.getter(name="useCrl")
-    def use_crl(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def use_crl(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Use CRL?
         """
         return pulumi.get(self, "use_crl")
 
     @use_crl.setter
-    def use_crl(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def use_crl(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "use_crl", value)
 
     @_builtins.property
     @pulumi.getter(name="useOcsp")
-    def use_ocsp(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def use_ocsp(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Use OCSP?
         """
         return pulumi.get(self, "use_ocsp")
 
     @use_ocsp.setter
-    def use_ocsp(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def use_ocsp(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "use_ocsp", value)
 
     @_builtins.property
     @pulumi.getter(name="usernameField")
-    def username_field(self) -> Optional[pulumi.Input['CertificateProfileUsernameFieldArgs']]:
+    def username_field(self) -> pulumi.Input[Optional['CertificateProfileUsernameFieldArgs']]:
         """
         Certificate username field
         """
         return pulumi.get(self, "username_field")
 
     @username_field.setter
-    def username_field(self, value: Optional[pulumi.Input['CertificateProfileUsernameFieldArgs']]):
+    def username_field(self, value: pulumi.Input[Optional['CertificateProfileUsernameFieldArgs']]):
         pulumi.set(self, "username_field", value)
 
 
@@ -585,22 +585,22 @@ class CertificateProfile(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 block_expired_cert: Optional[pulumi.Input[_builtins.bool]] = None,
-                 block_timeout_cert: Optional[pulumi.Input[_builtins.bool]] = None,
-                 block_unauthenticated_cert: Optional[pulumi.Input[_builtins.bool]] = None,
-                 block_unknown_cert: Optional[pulumi.Input[_builtins.bool]] = None,
-                 ca_certificates: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CertificateProfileCaCertificateArgs', 'CertificateProfileCaCertificateArgsDict']]]]] = None,
-                 cert_status_timeout: Optional[pulumi.Input[_builtins.str]] = None,
-                 crl_receive_timeout: Optional[pulumi.Input[_builtins.str]] = None,
-                 device: Optional[pulumi.Input[_builtins.str]] = None,
-                 domain: Optional[pulumi.Input[_builtins.str]] = None,
-                 folder: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 ocsp_receive_timeout: Optional[pulumi.Input[_builtins.str]] = None,
-                 snippet: Optional[pulumi.Input[_builtins.str]] = None,
-                 use_crl: Optional[pulumi.Input[_builtins.bool]] = None,
-                 use_ocsp: Optional[pulumi.Input[_builtins.bool]] = None,
-                 username_field: Optional[pulumi.Input[Union['CertificateProfileUsernameFieldArgs', 'CertificateProfileUsernameFieldArgsDict']]] = None,
+                 block_expired_cert: pulumi.Input[Optional[_builtins.bool]] = None,
+                 block_timeout_cert: pulumi.Input[Optional[_builtins.bool]] = None,
+                 block_unauthenticated_cert: pulumi.Input[Optional[_builtins.bool]] = None,
+                 block_unknown_cert: pulumi.Input[Optional[_builtins.bool]] = None,
+                 ca_certificates: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CertificateProfileCaCertificateArgs', 'CertificateProfileCaCertificateArgsDict']]]]] = None,
+                 cert_status_timeout: pulumi.Input[Optional[_builtins.str]] = None,
+                 crl_receive_timeout: pulumi.Input[Optional[_builtins.str]] = None,
+                 device: pulumi.Input[Optional[_builtins.str]] = None,
+                 domain: pulumi.Input[Optional[_builtins.str]] = None,
+                 folder: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 ocsp_receive_timeout: pulumi.Input[Optional[_builtins.str]] = None,
+                 snippet: pulumi.Input[Optional[_builtins.str]] = None,
+                 use_crl: pulumi.Input[Optional[_builtins.bool]] = None,
+                 use_ocsp: pulumi.Input[Optional[_builtins.bool]] = None,
+                 username_field: pulumi.Input[Optional[Union['CertificateProfileUsernameFieldArgs', 'CertificateProfileUsernameFieldArgsDict']]] = None,
                  __props__=None):
         """
         CertificateProfile resource
@@ -758,22 +758,22 @@ class CertificateProfile(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 block_expired_cert: Optional[pulumi.Input[_builtins.bool]] = None,
-                 block_timeout_cert: Optional[pulumi.Input[_builtins.bool]] = None,
-                 block_unauthenticated_cert: Optional[pulumi.Input[_builtins.bool]] = None,
-                 block_unknown_cert: Optional[pulumi.Input[_builtins.bool]] = None,
-                 ca_certificates: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CertificateProfileCaCertificateArgs', 'CertificateProfileCaCertificateArgsDict']]]]] = None,
-                 cert_status_timeout: Optional[pulumi.Input[_builtins.str]] = None,
-                 crl_receive_timeout: Optional[pulumi.Input[_builtins.str]] = None,
-                 device: Optional[pulumi.Input[_builtins.str]] = None,
-                 domain: Optional[pulumi.Input[_builtins.str]] = None,
-                 folder: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 ocsp_receive_timeout: Optional[pulumi.Input[_builtins.str]] = None,
-                 snippet: Optional[pulumi.Input[_builtins.str]] = None,
-                 use_crl: Optional[pulumi.Input[_builtins.bool]] = None,
-                 use_ocsp: Optional[pulumi.Input[_builtins.bool]] = None,
-                 username_field: Optional[pulumi.Input[Union['CertificateProfileUsernameFieldArgs', 'CertificateProfileUsernameFieldArgsDict']]] = None,
+                 block_expired_cert: pulumi.Input[Optional[_builtins.bool]] = None,
+                 block_timeout_cert: pulumi.Input[Optional[_builtins.bool]] = None,
+                 block_unauthenticated_cert: pulumi.Input[Optional[_builtins.bool]] = None,
+                 block_unknown_cert: pulumi.Input[Optional[_builtins.bool]] = None,
+                 ca_certificates: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CertificateProfileCaCertificateArgs', 'CertificateProfileCaCertificateArgsDict']]]]] = None,
+                 cert_status_timeout: pulumi.Input[Optional[_builtins.str]] = None,
+                 crl_receive_timeout: pulumi.Input[Optional[_builtins.str]] = None,
+                 device: pulumi.Input[Optional[_builtins.str]] = None,
+                 domain: pulumi.Input[Optional[_builtins.str]] = None,
+                 folder: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 ocsp_receive_timeout: pulumi.Input[Optional[_builtins.str]] = None,
+                 snippet: pulumi.Input[Optional[_builtins.str]] = None,
+                 use_crl: pulumi.Input[Optional[_builtins.bool]] = None,
+                 use_ocsp: pulumi.Input[Optional[_builtins.bool]] = None,
+                 username_field: pulumi.Input[Optional[Union['CertificateProfileUsernameFieldArgs', 'CertificateProfileUsernameFieldArgsDict']]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -812,23 +812,23 @@ class CertificateProfile(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            block_expired_cert: Optional[pulumi.Input[_builtins.bool]] = None,
-            block_timeout_cert: Optional[pulumi.Input[_builtins.bool]] = None,
-            block_unauthenticated_cert: Optional[pulumi.Input[_builtins.bool]] = None,
-            block_unknown_cert: Optional[pulumi.Input[_builtins.bool]] = None,
-            ca_certificates: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CertificateProfileCaCertificateArgs', 'CertificateProfileCaCertificateArgsDict']]]]] = None,
-            cert_status_timeout: Optional[pulumi.Input[_builtins.str]] = None,
-            crl_receive_timeout: Optional[pulumi.Input[_builtins.str]] = None,
-            device: Optional[pulumi.Input[_builtins.str]] = None,
-            domain: Optional[pulumi.Input[_builtins.str]] = None,
-            folder: Optional[pulumi.Input[_builtins.str]] = None,
-            name: Optional[pulumi.Input[_builtins.str]] = None,
-            ocsp_receive_timeout: Optional[pulumi.Input[_builtins.str]] = None,
-            snippet: Optional[pulumi.Input[_builtins.str]] = None,
-            tfid: Optional[pulumi.Input[_builtins.str]] = None,
-            use_crl: Optional[pulumi.Input[_builtins.bool]] = None,
-            use_ocsp: Optional[pulumi.Input[_builtins.bool]] = None,
-            username_field: Optional[pulumi.Input[Union['CertificateProfileUsernameFieldArgs', 'CertificateProfileUsernameFieldArgsDict']]] = None) -> 'CertificateProfile':
+            block_expired_cert: pulumi.Input[Optional[_builtins.bool]] = None,
+            block_timeout_cert: pulumi.Input[Optional[_builtins.bool]] = None,
+            block_unauthenticated_cert: pulumi.Input[Optional[_builtins.bool]] = None,
+            block_unknown_cert: pulumi.Input[Optional[_builtins.bool]] = None,
+            ca_certificates: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CertificateProfileCaCertificateArgs', 'CertificateProfileCaCertificateArgsDict']]]]] = None,
+            cert_status_timeout: pulumi.Input[Optional[_builtins.str]] = None,
+            crl_receive_timeout: pulumi.Input[Optional[_builtins.str]] = None,
+            device: pulumi.Input[Optional[_builtins.str]] = None,
+            domain: pulumi.Input[Optional[_builtins.str]] = None,
+            folder: pulumi.Input[Optional[_builtins.str]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            ocsp_receive_timeout: pulumi.Input[Optional[_builtins.str]] = None,
+            snippet: pulumi.Input[Optional[_builtins.str]] = None,
+            tfid: pulumi.Input[Optional[_builtins.str]] = None,
+            use_crl: pulumi.Input[Optional[_builtins.bool]] = None,
+            use_ocsp: pulumi.Input[Optional[_builtins.bool]] = None,
+            username_field: pulumi.Input[Optional[Union['CertificateProfileUsernameFieldArgs', 'CertificateProfileUsernameFieldArgsDict']]] = None) -> 'CertificateProfile':
         """
         Get an existing CertificateProfile resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

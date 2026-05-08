@@ -12,6 +12,8 @@ import (
 )
 
 // Retrieves a listing of config items.
+//
+// ## Example Usage
 func GetRadiusServerProfileList(ctx *pulumi.Context, args *GetRadiusServerProfileListArgs, opts ...pulumi.InvokeOption) (*GetRadiusServerProfileListResult, error) {
 	opts = internal.PkgInvokeDefaultOpts(opts)
 	var rv GetRadiusServerProfileListResult

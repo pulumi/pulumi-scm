@@ -21,20 +21,20 @@ __all__ = ['EthernetInterfaceArgs', 'EthernetInterface']
 @pulumi.input_type
 class EthernetInterfaceArgs:
     def __init__(__self__, *,
-                 aggregate_group: Optional[pulumi.Input[_builtins.str]] = None,
-                 comment: Optional[pulumi.Input[_builtins.str]] = None,
-                 default_value: Optional[pulumi.Input[_builtins.str]] = None,
-                 device: Optional[pulumi.Input[_builtins.str]] = None,
-                 folder: Optional[pulumi.Input[_builtins.str]] = None,
-                 layer2: Optional[pulumi.Input['EthernetInterfaceLayer2Args']] = None,
-                 layer3: Optional[pulumi.Input['EthernetInterfaceLayer3Args']] = None,
-                 link_duplex: Optional[pulumi.Input[_builtins.str]] = None,
-                 link_speed: Optional[pulumi.Input[_builtins.str]] = None,
-                 link_state: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 poe: Optional[pulumi.Input['EthernetInterfacePoeArgs']] = None,
-                 snippet: Optional[pulumi.Input[_builtins.str]] = None,
-                 tap: Optional[pulumi.Input['EthernetInterfaceTapArgs']] = None):
+                 aggregate_group: pulumi.Input[Optional[_builtins.str]] = None,
+                 comment: pulumi.Input[Optional[_builtins.str]] = None,
+                 default_value: pulumi.Input[Optional[_builtins.str]] = None,
+                 device: pulumi.Input[Optional[_builtins.str]] = None,
+                 folder: pulumi.Input[Optional[_builtins.str]] = None,
+                 layer2: pulumi.Input[Optional['EthernetInterfaceLayer2Args']] = None,
+                 layer3: pulumi.Input[Optional['EthernetInterfaceLayer3Args']] = None,
+                 link_duplex: pulumi.Input[Optional[_builtins.str]] = None,
+                 link_speed: pulumi.Input[Optional[_builtins.str]] = None,
+                 link_state: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 poe: pulumi.Input[Optional['EthernetInterfacePoeArgs']] = None,
+                 snippet: pulumi.Input[Optional[_builtins.str]] = None,
+                 tap: pulumi.Input[Optional['EthernetInterfaceTapArgs']] = None):
         """
         The set of arguments for constructing a EthernetInterface resource.
 
@@ -96,43 +96,43 @@ class EthernetInterfaceArgs:
 
     @_builtins.property
     @pulumi.getter(name="aggregateGroup")
-    def aggregate_group(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def aggregate_group(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Aggregate group
         """
         return pulumi.get(self, "aggregate_group")
 
     @aggregate_group.setter
-    def aggregate_group(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def aggregate_group(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "aggregate_group", value)
 
     @_builtins.property
     @pulumi.getter
-    def comment(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def comment(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Interface description
         """
         return pulumi.get(self, "comment")
 
     @comment.setter
-    def comment(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def comment(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "comment", value)
 
     @_builtins.property
     @pulumi.getter(name="defaultValue")
-    def default_value(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def default_value(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Default interface assignment
         """
         return pulumi.get(self, "default_value")
 
     @default_value.setter
-    def default_value(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def default_value(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "default_value", value)
 
     @_builtins.property
     @pulumi.getter
-    def device(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def device(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The device in which the resource is defined
 
@@ -141,12 +141,12 @@ class EthernetInterfaceArgs:
         return pulumi.get(self, "device")
 
     @device.setter
-    def device(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def device(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "device", value)
 
     @_builtins.property
     @pulumi.getter
-    def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def folder(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
 
@@ -155,12 +155,12 @@ class EthernetInterfaceArgs:
         return pulumi.get(self, "folder")
 
     @folder.setter
-    def folder(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def folder(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "folder", value)
 
     @_builtins.property
     @pulumi.getter
-    def layer2(self) -> Optional[pulumi.Input['EthernetInterfaceLayer2Args']]:
+    def layer2(self) -> pulumi.Input[Optional['EthernetInterfaceLayer2Args']]:
         """
         Layer2
 
@@ -169,12 +169,12 @@ class EthernetInterfaceArgs:
         return pulumi.get(self, "layer2")
 
     @layer2.setter
-    def layer2(self, value: Optional[pulumi.Input['EthernetInterfaceLayer2Args']]):
+    def layer2(self, value: pulumi.Input[Optional['EthernetInterfaceLayer2Args']]):
         pulumi.set(self, "layer2", value)
 
     @_builtins.property
     @pulumi.getter
-    def layer3(self) -> Optional[pulumi.Input['EthernetInterfaceLayer3Args']]:
+    def layer3(self) -> pulumi.Input[Optional['EthernetInterfaceLayer3Args']]:
         """
         Ethernet Interface Layer 3 configuration
 
@@ -183,72 +183,72 @@ class EthernetInterfaceArgs:
         return pulumi.get(self, "layer3")
 
     @layer3.setter
-    def layer3(self, value: Optional[pulumi.Input['EthernetInterfaceLayer3Args']]):
+    def layer3(self, value: pulumi.Input[Optional['EthernetInterfaceLayer3Args']]):
         pulumi.set(self, "layer3", value)
 
     @_builtins.property
     @pulumi.getter(name="linkDuplex")
-    def link_duplex(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def link_duplex(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Link duplex
         """
         return pulumi.get(self, "link_duplex")
 
     @link_duplex.setter
-    def link_duplex(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def link_duplex(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "link_duplex", value)
 
     @_builtins.property
     @pulumi.getter(name="linkSpeed")
-    def link_speed(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def link_speed(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Link speed
         """
         return pulumi.get(self, "link_speed")
 
     @link_speed.setter
-    def link_speed(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def link_speed(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "link_speed", value)
 
     @_builtins.property
     @pulumi.getter(name="linkState")
-    def link_state(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def link_state(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Link state
         """
         return pulumi.get(self, "link_state")
 
     @link_state.setter
-    def link_state(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def link_state(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "link_state", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Interface name
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter
-    def poe(self) -> Optional[pulumi.Input['EthernetInterfacePoeArgs']]:
+    def poe(self) -> pulumi.Input[Optional['EthernetInterfacePoeArgs']]:
         """
         Poe
         """
         return pulumi.get(self, "poe")
 
     @poe.setter
-    def poe(self, value: Optional[pulumi.Input['EthernetInterfacePoeArgs']]):
+    def poe(self, value: pulumi.Input[Optional['EthernetInterfacePoeArgs']]):
         pulumi.set(self, "poe", value)
 
     @_builtins.property
     @pulumi.getter
-    def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def snippet(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
 
@@ -257,12 +257,12 @@ class EthernetInterfaceArgs:
         return pulumi.get(self, "snippet")
 
     @snippet.setter
-    def snippet(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def snippet(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "snippet", value)
 
     @_builtins.property
     @pulumi.getter
-    def tap(self) -> Optional[pulumi.Input['EthernetInterfaceTapArgs']]:
+    def tap(self) -> pulumi.Input[Optional['EthernetInterfaceTapArgs']]:
         """
         Tap
 
@@ -271,29 +271,29 @@ class EthernetInterfaceArgs:
         return pulumi.get(self, "tap")
 
     @tap.setter
-    def tap(self, value: Optional[pulumi.Input['EthernetInterfaceTapArgs']]):
+    def tap(self, value: pulumi.Input[Optional['EthernetInterfaceTapArgs']]):
         pulumi.set(self, "tap", value)
 
 
 @pulumi.input_type
 class _EthernetInterfaceState:
     def __init__(__self__, *,
-                 aggregate_group: Optional[pulumi.Input[_builtins.str]] = None,
-                 comment: Optional[pulumi.Input[_builtins.str]] = None,
-                 default_value: Optional[pulumi.Input[_builtins.str]] = None,
-                 device: Optional[pulumi.Input[_builtins.str]] = None,
-                 encrypted_values: Optional[pulumi.Input[Mapping[str, pulumi.Input[_builtins.str]]]] = None,
-                 folder: Optional[pulumi.Input[_builtins.str]] = None,
-                 layer2: Optional[pulumi.Input['EthernetInterfaceLayer2Args']] = None,
-                 layer3: Optional[pulumi.Input['EthernetInterfaceLayer3Args']] = None,
-                 link_duplex: Optional[pulumi.Input[_builtins.str]] = None,
-                 link_speed: Optional[pulumi.Input[_builtins.str]] = None,
-                 link_state: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 poe: Optional[pulumi.Input['EthernetInterfacePoeArgs']] = None,
-                 snippet: Optional[pulumi.Input[_builtins.str]] = None,
-                 tap: Optional[pulumi.Input['EthernetInterfaceTapArgs']] = None,
-                 tfid: Optional[pulumi.Input[_builtins.str]] = None):
+                 aggregate_group: pulumi.Input[Optional[_builtins.str]] = None,
+                 comment: pulumi.Input[Optional[_builtins.str]] = None,
+                 default_value: pulumi.Input[Optional[_builtins.str]] = None,
+                 device: pulumi.Input[Optional[_builtins.str]] = None,
+                 encrypted_values: pulumi.Input[Optional[Mapping[str, pulumi.Input[_builtins.str]]]] = None,
+                 folder: pulumi.Input[Optional[_builtins.str]] = None,
+                 layer2: pulumi.Input[Optional['EthernetInterfaceLayer2Args']] = None,
+                 layer3: pulumi.Input[Optional['EthernetInterfaceLayer3Args']] = None,
+                 link_duplex: pulumi.Input[Optional[_builtins.str]] = None,
+                 link_speed: pulumi.Input[Optional[_builtins.str]] = None,
+                 link_state: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 poe: pulumi.Input[Optional['EthernetInterfacePoeArgs']] = None,
+                 snippet: pulumi.Input[Optional[_builtins.str]] = None,
+                 tap: pulumi.Input[Optional['EthernetInterfaceTapArgs']] = None,
+                 tfid: pulumi.Input[Optional[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering EthernetInterface resources.
 
@@ -361,43 +361,43 @@ class _EthernetInterfaceState:
 
     @_builtins.property
     @pulumi.getter(name="aggregateGroup")
-    def aggregate_group(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def aggregate_group(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Aggregate group
         """
         return pulumi.get(self, "aggregate_group")
 
     @aggregate_group.setter
-    def aggregate_group(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def aggregate_group(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "aggregate_group", value)
 
     @_builtins.property
     @pulumi.getter
-    def comment(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def comment(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Interface description
         """
         return pulumi.get(self, "comment")
 
     @comment.setter
-    def comment(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def comment(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "comment", value)
 
     @_builtins.property
     @pulumi.getter(name="defaultValue")
-    def default_value(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def default_value(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Default interface assignment
         """
         return pulumi.get(self, "default_value")
 
     @default_value.setter
-    def default_value(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def default_value(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "default_value", value)
 
     @_builtins.property
     @pulumi.getter
-    def device(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def device(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The device in which the resource is defined
 
@@ -406,24 +406,24 @@ class _EthernetInterfaceState:
         return pulumi.get(self, "device")
 
     @device.setter
-    def device(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def device(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "device", value)
 
     @_builtins.property
     @pulumi.getter(name="encryptedValues")
-    def encrypted_values(self) -> Optional[pulumi.Input[Mapping[str, pulumi.Input[_builtins.str]]]]:
+    def encrypted_values(self) -> pulumi.Input[Optional[Mapping[str, pulumi.Input[_builtins.str]]]]:
         """
         Map of sensitive values returned from the API.
         """
         return pulumi.get(self, "encrypted_values")
 
     @encrypted_values.setter
-    def encrypted_values(self, value: Optional[pulumi.Input[Mapping[str, pulumi.Input[_builtins.str]]]]):
+    def encrypted_values(self, value: pulumi.Input[Optional[Mapping[str, pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "encrypted_values", value)
 
     @_builtins.property
     @pulumi.getter
-    def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def folder(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
 
@@ -432,12 +432,12 @@ class _EthernetInterfaceState:
         return pulumi.get(self, "folder")
 
     @folder.setter
-    def folder(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def folder(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "folder", value)
 
     @_builtins.property
     @pulumi.getter
-    def layer2(self) -> Optional[pulumi.Input['EthernetInterfaceLayer2Args']]:
+    def layer2(self) -> pulumi.Input[Optional['EthernetInterfaceLayer2Args']]:
         """
         Layer2
 
@@ -446,12 +446,12 @@ class _EthernetInterfaceState:
         return pulumi.get(self, "layer2")
 
     @layer2.setter
-    def layer2(self, value: Optional[pulumi.Input['EthernetInterfaceLayer2Args']]):
+    def layer2(self, value: pulumi.Input[Optional['EthernetInterfaceLayer2Args']]):
         pulumi.set(self, "layer2", value)
 
     @_builtins.property
     @pulumi.getter
-    def layer3(self) -> Optional[pulumi.Input['EthernetInterfaceLayer3Args']]:
+    def layer3(self) -> pulumi.Input[Optional['EthernetInterfaceLayer3Args']]:
         """
         Ethernet Interface Layer 3 configuration
 
@@ -460,72 +460,72 @@ class _EthernetInterfaceState:
         return pulumi.get(self, "layer3")
 
     @layer3.setter
-    def layer3(self, value: Optional[pulumi.Input['EthernetInterfaceLayer3Args']]):
+    def layer3(self, value: pulumi.Input[Optional['EthernetInterfaceLayer3Args']]):
         pulumi.set(self, "layer3", value)
 
     @_builtins.property
     @pulumi.getter(name="linkDuplex")
-    def link_duplex(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def link_duplex(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Link duplex
         """
         return pulumi.get(self, "link_duplex")
 
     @link_duplex.setter
-    def link_duplex(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def link_duplex(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "link_duplex", value)
 
     @_builtins.property
     @pulumi.getter(name="linkSpeed")
-    def link_speed(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def link_speed(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Link speed
         """
         return pulumi.get(self, "link_speed")
 
     @link_speed.setter
-    def link_speed(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def link_speed(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "link_speed", value)
 
     @_builtins.property
     @pulumi.getter(name="linkState")
-    def link_state(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def link_state(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Link state
         """
         return pulumi.get(self, "link_state")
 
     @link_state.setter
-    def link_state(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def link_state(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "link_state", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Interface name
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter
-    def poe(self) -> Optional[pulumi.Input['EthernetInterfacePoeArgs']]:
+    def poe(self) -> pulumi.Input[Optional['EthernetInterfacePoeArgs']]:
         """
         Poe
         """
         return pulumi.get(self, "poe")
 
     @poe.setter
-    def poe(self, value: Optional[pulumi.Input['EthernetInterfacePoeArgs']]):
+    def poe(self, value: pulumi.Input[Optional['EthernetInterfacePoeArgs']]):
         pulumi.set(self, "poe", value)
 
     @_builtins.property
     @pulumi.getter
-    def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def snippet(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
 
@@ -534,12 +534,12 @@ class _EthernetInterfaceState:
         return pulumi.get(self, "snippet")
 
     @snippet.setter
-    def snippet(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def snippet(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "snippet", value)
 
     @_builtins.property
     @pulumi.getter
-    def tap(self) -> Optional[pulumi.Input['EthernetInterfaceTapArgs']]:
+    def tap(self) -> pulumi.Input[Optional['EthernetInterfaceTapArgs']]:
         """
         Tap
 
@@ -548,19 +548,19 @@ class _EthernetInterfaceState:
         return pulumi.get(self, "tap")
 
     @tap.setter
-    def tap(self, value: Optional[pulumi.Input['EthernetInterfaceTapArgs']]):
+    def tap(self, value: pulumi.Input[Optional['EthernetInterfaceTapArgs']]):
         pulumi.set(self, "tap", value)
 
     @_builtins.property
     @pulumi.getter
-    def tfid(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def tfid(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The Terraform ID.
         """
         return pulumi.get(self, "tfid")
 
     @tfid.setter
-    def tfid(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def tfid(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "tfid", value)
 
 
@@ -570,20 +570,20 @@ class EthernetInterface(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 aggregate_group: Optional[pulumi.Input[_builtins.str]] = None,
-                 comment: Optional[pulumi.Input[_builtins.str]] = None,
-                 default_value: Optional[pulumi.Input[_builtins.str]] = None,
-                 device: Optional[pulumi.Input[_builtins.str]] = None,
-                 folder: Optional[pulumi.Input[_builtins.str]] = None,
-                 layer2: Optional[pulumi.Input[Union['EthernetInterfaceLayer2Args', 'EthernetInterfaceLayer2ArgsDict']]] = None,
-                 layer3: Optional[pulumi.Input[Union['EthernetInterfaceLayer3Args', 'EthernetInterfaceLayer3ArgsDict']]] = None,
-                 link_duplex: Optional[pulumi.Input[_builtins.str]] = None,
-                 link_speed: Optional[pulumi.Input[_builtins.str]] = None,
-                 link_state: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 poe: Optional[pulumi.Input[Union['EthernetInterfacePoeArgs', 'EthernetInterfacePoeArgsDict']]] = None,
-                 snippet: Optional[pulumi.Input[_builtins.str]] = None,
-                 tap: Optional[pulumi.Input[Union['EthernetInterfaceTapArgs', 'EthernetInterfaceTapArgsDict']]] = None,
+                 aggregate_group: pulumi.Input[Optional[_builtins.str]] = None,
+                 comment: pulumi.Input[Optional[_builtins.str]] = None,
+                 default_value: pulumi.Input[Optional[_builtins.str]] = None,
+                 device: pulumi.Input[Optional[_builtins.str]] = None,
+                 folder: pulumi.Input[Optional[_builtins.str]] = None,
+                 layer2: pulumi.Input[Optional[Union['EthernetInterfaceLayer2Args', 'EthernetInterfaceLayer2ArgsDict']]] = None,
+                 layer3: pulumi.Input[Optional[Union['EthernetInterfaceLayer3Args', 'EthernetInterfaceLayer3ArgsDict']]] = None,
+                 link_duplex: pulumi.Input[Optional[_builtins.str]] = None,
+                 link_speed: pulumi.Input[Optional[_builtins.str]] = None,
+                 link_state: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 poe: pulumi.Input[Optional[Union['EthernetInterfacePoeArgs', 'EthernetInterfacePoeArgsDict']]] = None,
+                 snippet: pulumi.Input[Optional[_builtins.str]] = None,
+                 tap: pulumi.Input[Optional[Union['EthernetInterfaceTapArgs', 'EthernetInterfaceTapArgsDict']]] = None,
                  __props__=None):
         """
         EthernetInterface resource
@@ -953,20 +953,20 @@ class EthernetInterface(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 aggregate_group: Optional[pulumi.Input[_builtins.str]] = None,
-                 comment: Optional[pulumi.Input[_builtins.str]] = None,
-                 default_value: Optional[pulumi.Input[_builtins.str]] = None,
-                 device: Optional[pulumi.Input[_builtins.str]] = None,
-                 folder: Optional[pulumi.Input[_builtins.str]] = None,
-                 layer2: Optional[pulumi.Input[Union['EthernetInterfaceLayer2Args', 'EthernetInterfaceLayer2ArgsDict']]] = None,
-                 layer3: Optional[pulumi.Input[Union['EthernetInterfaceLayer3Args', 'EthernetInterfaceLayer3ArgsDict']]] = None,
-                 link_duplex: Optional[pulumi.Input[_builtins.str]] = None,
-                 link_speed: Optional[pulumi.Input[_builtins.str]] = None,
-                 link_state: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 poe: Optional[pulumi.Input[Union['EthernetInterfacePoeArgs', 'EthernetInterfacePoeArgsDict']]] = None,
-                 snippet: Optional[pulumi.Input[_builtins.str]] = None,
-                 tap: Optional[pulumi.Input[Union['EthernetInterfaceTapArgs', 'EthernetInterfaceTapArgsDict']]] = None,
+                 aggregate_group: pulumi.Input[Optional[_builtins.str]] = None,
+                 comment: pulumi.Input[Optional[_builtins.str]] = None,
+                 default_value: pulumi.Input[Optional[_builtins.str]] = None,
+                 device: pulumi.Input[Optional[_builtins.str]] = None,
+                 folder: pulumi.Input[Optional[_builtins.str]] = None,
+                 layer2: pulumi.Input[Optional[Union['EthernetInterfaceLayer2Args', 'EthernetInterfaceLayer2ArgsDict']]] = None,
+                 layer3: pulumi.Input[Optional[Union['EthernetInterfaceLayer3Args', 'EthernetInterfaceLayer3ArgsDict']]] = None,
+                 link_duplex: pulumi.Input[Optional[_builtins.str]] = None,
+                 link_speed: pulumi.Input[Optional[_builtins.str]] = None,
+                 link_state: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 poe: pulumi.Input[Optional[Union['EthernetInterfacePoeArgs', 'EthernetInterfacePoeArgsDict']]] = None,
+                 snippet: pulumi.Input[Optional[_builtins.str]] = None,
+                 tap: pulumi.Input[Optional[Union['EthernetInterfaceTapArgs', 'EthernetInterfaceTapArgsDict']]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -1004,22 +1004,22 @@ class EthernetInterface(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            aggregate_group: Optional[pulumi.Input[_builtins.str]] = None,
-            comment: Optional[pulumi.Input[_builtins.str]] = None,
-            default_value: Optional[pulumi.Input[_builtins.str]] = None,
-            device: Optional[pulumi.Input[_builtins.str]] = None,
-            encrypted_values: Optional[pulumi.Input[Mapping[str, pulumi.Input[_builtins.str]]]] = None,
-            folder: Optional[pulumi.Input[_builtins.str]] = None,
-            layer2: Optional[pulumi.Input[Union['EthernetInterfaceLayer2Args', 'EthernetInterfaceLayer2ArgsDict']]] = None,
-            layer3: Optional[pulumi.Input[Union['EthernetInterfaceLayer3Args', 'EthernetInterfaceLayer3ArgsDict']]] = None,
-            link_duplex: Optional[pulumi.Input[_builtins.str]] = None,
-            link_speed: Optional[pulumi.Input[_builtins.str]] = None,
-            link_state: Optional[pulumi.Input[_builtins.str]] = None,
-            name: Optional[pulumi.Input[_builtins.str]] = None,
-            poe: Optional[pulumi.Input[Union['EthernetInterfacePoeArgs', 'EthernetInterfacePoeArgsDict']]] = None,
-            snippet: Optional[pulumi.Input[_builtins.str]] = None,
-            tap: Optional[pulumi.Input[Union['EthernetInterfaceTapArgs', 'EthernetInterfaceTapArgsDict']]] = None,
-            tfid: Optional[pulumi.Input[_builtins.str]] = None) -> 'EthernetInterface':
+            aggregate_group: pulumi.Input[Optional[_builtins.str]] = None,
+            comment: pulumi.Input[Optional[_builtins.str]] = None,
+            default_value: pulumi.Input[Optional[_builtins.str]] = None,
+            device: pulumi.Input[Optional[_builtins.str]] = None,
+            encrypted_values: pulumi.Input[Optional[Mapping[str, pulumi.Input[_builtins.str]]]] = None,
+            folder: pulumi.Input[Optional[_builtins.str]] = None,
+            layer2: pulumi.Input[Optional[Union['EthernetInterfaceLayer2Args', 'EthernetInterfaceLayer2ArgsDict']]] = None,
+            layer3: pulumi.Input[Optional[Union['EthernetInterfaceLayer3Args', 'EthernetInterfaceLayer3ArgsDict']]] = None,
+            link_duplex: pulumi.Input[Optional[_builtins.str]] = None,
+            link_speed: pulumi.Input[Optional[_builtins.str]] = None,
+            link_state: pulumi.Input[Optional[_builtins.str]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            poe: pulumi.Input[Optional[Union['EthernetInterfacePoeArgs', 'EthernetInterfacePoeArgsDict']]] = None,
+            snippet: pulumi.Input[Optional[_builtins.str]] = None,
+            tap: pulumi.Input[Optional[Union['EthernetInterfaceTapArgs', 'EthernetInterfaceTapArgsDict']]] = None,
+            tfid: pulumi.Input[Optional[_builtins.str]] = None) -> 'EthernetInterface':
         """
         Get an existing EthernetInterface resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

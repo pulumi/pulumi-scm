@@ -21,17 +21,17 @@ __all__ = ['AuthenticationProfileArgs', 'AuthenticationProfile']
 @pulumi.input_type
 class AuthenticationProfileArgs:
     def __init__(__self__, *,
-                 allow_lists: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 device: Optional[pulumi.Input[_builtins.str]] = None,
-                 folder: Optional[pulumi.Input[_builtins.str]] = None,
-                 lockout: Optional[pulumi.Input['AuthenticationProfileLockoutArgs']] = None,
-                 method: Optional[pulumi.Input['AuthenticationProfileMethodArgs']] = None,
-                 multi_factor_auth: Optional[pulumi.Input['AuthenticationProfileMultiFactorAuthArgs']] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 single_sign_on: Optional[pulumi.Input['AuthenticationProfileSingleSignOnArgs']] = None,
-                 snippet: Optional[pulumi.Input[_builtins.str]] = None,
-                 user_domain: Optional[pulumi.Input[_builtins.str]] = None,
-                 username_modifier: Optional[pulumi.Input[_builtins.str]] = None):
+                 allow_lists: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 device: pulumi.Input[Optional[_builtins.str]] = None,
+                 folder: pulumi.Input[Optional[_builtins.str]] = None,
+                 lockout: pulumi.Input[Optional['AuthenticationProfileLockoutArgs']] = None,
+                 method: pulumi.Input[Optional['AuthenticationProfileMethodArgs']] = None,
+                 multi_factor_auth: pulumi.Input[Optional['AuthenticationProfileMultiFactorAuthArgs']] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 single_sign_on: pulumi.Input[Optional['AuthenticationProfileSingleSignOnArgs']] = None,
+                 snippet: pulumi.Input[Optional[_builtins.str]] = None,
+                 user_domain: pulumi.Input[Optional[_builtins.str]] = None,
+                 username_modifier: pulumi.Input[Optional[_builtins.str]] = None):
         """
         The set of arguments for constructing a AuthenticationProfile resource.
 
@@ -76,31 +76,31 @@ class AuthenticationProfileArgs:
 
     @_builtins.property
     @pulumi.getter(name="allowLists")
-    def allow_lists(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def allow_lists(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         The allow_list of the authentication profile
         """
         return pulumi.get(self, "allow_lists")
 
     @allow_lists.setter
-    def allow_lists(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def allow_lists(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "allow_lists", value)
 
     @_builtins.property
     @pulumi.getter
-    def device(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def device(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The device in which the resource is defined
         """
         return pulumi.get(self, "device")
 
     @device.setter
-    def device(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def device(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "device", value)
 
     @_builtins.property
     @pulumi.getter
-    def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def folder(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
 
@@ -109,72 +109,72 @@ class AuthenticationProfileArgs:
         return pulumi.get(self, "folder")
 
     @folder.setter
-    def folder(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def folder(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "folder", value)
 
     @_builtins.property
     @pulumi.getter
-    def lockout(self) -> Optional[pulumi.Input['AuthenticationProfileLockoutArgs']]:
+    def lockout(self) -> pulumi.Input[Optional['AuthenticationProfileLockoutArgs']]:
         """
         Lockout object of the authentication profile
         """
         return pulumi.get(self, "lockout")
 
     @lockout.setter
-    def lockout(self, value: Optional[pulumi.Input['AuthenticationProfileLockoutArgs']]):
+    def lockout(self, value: pulumi.Input[Optional['AuthenticationProfileLockoutArgs']]):
         pulumi.set(self, "lockout", value)
 
     @_builtins.property
     @pulumi.getter
-    def method(self) -> Optional[pulumi.Input['AuthenticationProfileMethodArgs']]:
+    def method(self) -> pulumi.Input[Optional['AuthenticationProfileMethodArgs']]:
         """
         method object of authentication profile
         """
         return pulumi.get(self, "method")
 
     @method.setter
-    def method(self, value: Optional[pulumi.Input['AuthenticationProfileMethodArgs']]):
+    def method(self, value: pulumi.Input[Optional['AuthenticationProfileMethodArgs']]):
         pulumi.set(self, "method", value)
 
     @_builtins.property
     @pulumi.getter(name="multiFactorAuth")
-    def multi_factor_auth(self) -> Optional[pulumi.Input['AuthenticationProfileMultiFactorAuthArgs']]:
+    def multi_factor_auth(self) -> pulumi.Input[Optional['AuthenticationProfileMultiFactorAuthArgs']]:
         """
         Multi factor auth
         """
         return pulumi.get(self, "multi_factor_auth")
 
     @multi_factor_auth.setter
-    def multi_factor_auth(self, value: Optional[pulumi.Input['AuthenticationProfileMultiFactorAuthArgs']]):
+    def multi_factor_auth(self, value: pulumi.Input[Optional['AuthenticationProfileMultiFactorAuthArgs']]):
         pulumi.set(self, "multi_factor_auth", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the authentication profile
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter(name="singleSignOn")
-    def single_sign_on(self) -> Optional[pulumi.Input['AuthenticationProfileSingleSignOnArgs']]:
+    def single_sign_on(self) -> pulumi.Input[Optional['AuthenticationProfileSingleSignOnArgs']]:
         """
         Single sign on
         """
         return pulumi.get(self, "single_sign_on")
 
     @single_sign_on.setter
-    def single_sign_on(self, value: Optional[pulumi.Input['AuthenticationProfileSingleSignOnArgs']]):
+    def single_sign_on(self, value: pulumi.Input[Optional['AuthenticationProfileSingleSignOnArgs']]):
         pulumi.set(self, "single_sign_on", value)
 
     @_builtins.property
     @pulumi.getter
-    def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def snippet(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
 
@@ -183,49 +183,49 @@ class AuthenticationProfileArgs:
         return pulumi.get(self, "snippet")
 
     @snippet.setter
-    def snippet(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def snippet(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "snippet", value)
 
     @_builtins.property
     @pulumi.getter(name="userDomain")
-    def user_domain(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def user_domain(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         User domain
         """
         return pulumi.get(self, "user_domain")
 
     @user_domain.setter
-    def user_domain(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def user_domain(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "user_domain", value)
 
     @_builtins.property
     @pulumi.getter(name="usernameModifier")
-    def username_modifier(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def username_modifier(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Username modifier
         """
         return pulumi.get(self, "username_modifier")
 
     @username_modifier.setter
-    def username_modifier(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def username_modifier(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "username_modifier", value)
 
 
 @pulumi.input_type
 class _AuthenticationProfileState:
     def __init__(__self__, *,
-                 allow_lists: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 device: Optional[pulumi.Input[_builtins.str]] = None,
-                 folder: Optional[pulumi.Input[_builtins.str]] = None,
-                 lockout: Optional[pulumi.Input['AuthenticationProfileLockoutArgs']] = None,
-                 method: Optional[pulumi.Input['AuthenticationProfileMethodArgs']] = None,
-                 multi_factor_auth: Optional[pulumi.Input['AuthenticationProfileMultiFactorAuthArgs']] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 single_sign_on: Optional[pulumi.Input['AuthenticationProfileSingleSignOnArgs']] = None,
-                 snippet: Optional[pulumi.Input[_builtins.str]] = None,
-                 tfid: Optional[pulumi.Input[_builtins.str]] = None,
-                 user_domain: Optional[pulumi.Input[_builtins.str]] = None,
-                 username_modifier: Optional[pulumi.Input[_builtins.str]] = None):
+                 allow_lists: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 device: pulumi.Input[Optional[_builtins.str]] = None,
+                 folder: pulumi.Input[Optional[_builtins.str]] = None,
+                 lockout: pulumi.Input[Optional['AuthenticationProfileLockoutArgs']] = None,
+                 method: pulumi.Input[Optional['AuthenticationProfileMethodArgs']] = None,
+                 multi_factor_auth: pulumi.Input[Optional['AuthenticationProfileMultiFactorAuthArgs']] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 single_sign_on: pulumi.Input[Optional['AuthenticationProfileSingleSignOnArgs']] = None,
+                 snippet: pulumi.Input[Optional[_builtins.str]] = None,
+                 tfid: pulumi.Input[Optional[_builtins.str]] = None,
+                 user_domain: pulumi.Input[Optional[_builtins.str]] = None,
+                 username_modifier: pulumi.Input[Optional[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering AuthenticationProfile resources.
 
@@ -273,31 +273,31 @@ class _AuthenticationProfileState:
 
     @_builtins.property
     @pulumi.getter(name="allowLists")
-    def allow_lists(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def allow_lists(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         The allow_list of the authentication profile
         """
         return pulumi.get(self, "allow_lists")
 
     @allow_lists.setter
-    def allow_lists(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def allow_lists(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "allow_lists", value)
 
     @_builtins.property
     @pulumi.getter
-    def device(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def device(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The device in which the resource is defined
         """
         return pulumi.get(self, "device")
 
     @device.setter
-    def device(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def device(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "device", value)
 
     @_builtins.property
     @pulumi.getter
-    def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def folder(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
 
@@ -306,72 +306,72 @@ class _AuthenticationProfileState:
         return pulumi.get(self, "folder")
 
     @folder.setter
-    def folder(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def folder(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "folder", value)
 
     @_builtins.property
     @pulumi.getter
-    def lockout(self) -> Optional[pulumi.Input['AuthenticationProfileLockoutArgs']]:
+    def lockout(self) -> pulumi.Input[Optional['AuthenticationProfileLockoutArgs']]:
         """
         Lockout object of the authentication profile
         """
         return pulumi.get(self, "lockout")
 
     @lockout.setter
-    def lockout(self, value: Optional[pulumi.Input['AuthenticationProfileLockoutArgs']]):
+    def lockout(self, value: pulumi.Input[Optional['AuthenticationProfileLockoutArgs']]):
         pulumi.set(self, "lockout", value)
 
     @_builtins.property
     @pulumi.getter
-    def method(self) -> Optional[pulumi.Input['AuthenticationProfileMethodArgs']]:
+    def method(self) -> pulumi.Input[Optional['AuthenticationProfileMethodArgs']]:
         """
         method object of authentication profile
         """
         return pulumi.get(self, "method")
 
     @method.setter
-    def method(self, value: Optional[pulumi.Input['AuthenticationProfileMethodArgs']]):
+    def method(self, value: pulumi.Input[Optional['AuthenticationProfileMethodArgs']]):
         pulumi.set(self, "method", value)
 
     @_builtins.property
     @pulumi.getter(name="multiFactorAuth")
-    def multi_factor_auth(self) -> Optional[pulumi.Input['AuthenticationProfileMultiFactorAuthArgs']]:
+    def multi_factor_auth(self) -> pulumi.Input[Optional['AuthenticationProfileMultiFactorAuthArgs']]:
         """
         Multi factor auth
         """
         return pulumi.get(self, "multi_factor_auth")
 
     @multi_factor_auth.setter
-    def multi_factor_auth(self, value: Optional[pulumi.Input['AuthenticationProfileMultiFactorAuthArgs']]):
+    def multi_factor_auth(self, value: pulumi.Input[Optional['AuthenticationProfileMultiFactorAuthArgs']]):
         pulumi.set(self, "multi_factor_auth", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the authentication profile
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter(name="singleSignOn")
-    def single_sign_on(self) -> Optional[pulumi.Input['AuthenticationProfileSingleSignOnArgs']]:
+    def single_sign_on(self) -> pulumi.Input[Optional['AuthenticationProfileSingleSignOnArgs']]:
         """
         Single sign on
         """
         return pulumi.get(self, "single_sign_on")
 
     @single_sign_on.setter
-    def single_sign_on(self, value: Optional[pulumi.Input['AuthenticationProfileSingleSignOnArgs']]):
+    def single_sign_on(self, value: pulumi.Input[Optional['AuthenticationProfileSingleSignOnArgs']]):
         pulumi.set(self, "single_sign_on", value)
 
     @_builtins.property
     @pulumi.getter
-    def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def snippet(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
 
@@ -380,43 +380,43 @@ class _AuthenticationProfileState:
         return pulumi.get(self, "snippet")
 
     @snippet.setter
-    def snippet(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def snippet(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "snippet", value)
 
     @_builtins.property
     @pulumi.getter
-    def tfid(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def tfid(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The Terraform ID.
         """
         return pulumi.get(self, "tfid")
 
     @tfid.setter
-    def tfid(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def tfid(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "tfid", value)
 
     @_builtins.property
     @pulumi.getter(name="userDomain")
-    def user_domain(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def user_domain(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         User domain
         """
         return pulumi.get(self, "user_domain")
 
     @user_domain.setter
-    def user_domain(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def user_domain(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "user_domain", value)
 
     @_builtins.property
     @pulumi.getter(name="usernameModifier")
-    def username_modifier(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def username_modifier(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Username modifier
         """
         return pulumi.get(self, "username_modifier")
 
     @username_modifier.setter
-    def username_modifier(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def username_modifier(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "username_modifier", value)
 
 
@@ -426,17 +426,17 @@ class AuthenticationProfile(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 allow_lists: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 device: Optional[pulumi.Input[_builtins.str]] = None,
-                 folder: Optional[pulumi.Input[_builtins.str]] = None,
-                 lockout: Optional[pulumi.Input[Union['AuthenticationProfileLockoutArgs', 'AuthenticationProfileLockoutArgsDict']]] = None,
-                 method: Optional[pulumi.Input[Union['AuthenticationProfileMethodArgs', 'AuthenticationProfileMethodArgsDict']]] = None,
-                 multi_factor_auth: Optional[pulumi.Input[Union['AuthenticationProfileMultiFactorAuthArgs', 'AuthenticationProfileMultiFactorAuthArgsDict']]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 single_sign_on: Optional[pulumi.Input[Union['AuthenticationProfileSingleSignOnArgs', 'AuthenticationProfileSingleSignOnArgsDict']]] = None,
-                 snippet: Optional[pulumi.Input[_builtins.str]] = None,
-                 user_domain: Optional[pulumi.Input[_builtins.str]] = None,
-                 username_modifier: Optional[pulumi.Input[_builtins.str]] = None,
+                 allow_lists: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 device: pulumi.Input[Optional[_builtins.str]] = None,
+                 folder: pulumi.Input[Optional[_builtins.str]] = None,
+                 lockout: pulumi.Input[Optional[Union['AuthenticationProfileLockoutArgs', 'AuthenticationProfileLockoutArgsDict']]] = None,
+                 method: pulumi.Input[Optional[Union['AuthenticationProfileMethodArgs', 'AuthenticationProfileMethodArgsDict']]] = None,
+                 multi_factor_auth: pulumi.Input[Optional[Union['AuthenticationProfileMultiFactorAuthArgs', 'AuthenticationProfileMultiFactorAuthArgsDict']]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 single_sign_on: pulumi.Input[Optional[Union['AuthenticationProfileSingleSignOnArgs', 'AuthenticationProfileSingleSignOnArgsDict']]] = None,
+                 snippet: pulumi.Input[Optional[_builtins.str]] = None,
+                 user_domain: pulumi.Input[Optional[_builtins.str]] = None,
+                 username_modifier: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
         AuthenticationProfile resource
@@ -643,17 +643,17 @@ class AuthenticationProfile(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 allow_lists: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 device: Optional[pulumi.Input[_builtins.str]] = None,
-                 folder: Optional[pulumi.Input[_builtins.str]] = None,
-                 lockout: Optional[pulumi.Input[Union['AuthenticationProfileLockoutArgs', 'AuthenticationProfileLockoutArgsDict']]] = None,
-                 method: Optional[pulumi.Input[Union['AuthenticationProfileMethodArgs', 'AuthenticationProfileMethodArgsDict']]] = None,
-                 multi_factor_auth: Optional[pulumi.Input[Union['AuthenticationProfileMultiFactorAuthArgs', 'AuthenticationProfileMultiFactorAuthArgsDict']]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 single_sign_on: Optional[pulumi.Input[Union['AuthenticationProfileSingleSignOnArgs', 'AuthenticationProfileSingleSignOnArgsDict']]] = None,
-                 snippet: Optional[pulumi.Input[_builtins.str]] = None,
-                 user_domain: Optional[pulumi.Input[_builtins.str]] = None,
-                 username_modifier: Optional[pulumi.Input[_builtins.str]] = None,
+                 allow_lists: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 device: pulumi.Input[Optional[_builtins.str]] = None,
+                 folder: pulumi.Input[Optional[_builtins.str]] = None,
+                 lockout: pulumi.Input[Optional[Union['AuthenticationProfileLockoutArgs', 'AuthenticationProfileLockoutArgsDict']]] = None,
+                 method: pulumi.Input[Optional[Union['AuthenticationProfileMethodArgs', 'AuthenticationProfileMethodArgsDict']]] = None,
+                 multi_factor_auth: pulumi.Input[Optional[Union['AuthenticationProfileMultiFactorAuthArgs', 'AuthenticationProfileMultiFactorAuthArgsDict']]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 single_sign_on: pulumi.Input[Optional[Union['AuthenticationProfileSingleSignOnArgs', 'AuthenticationProfileSingleSignOnArgsDict']]] = None,
+                 snippet: pulumi.Input[Optional[_builtins.str]] = None,
+                 user_domain: pulumi.Input[Optional[_builtins.str]] = None,
+                 username_modifier: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -685,18 +685,18 @@ class AuthenticationProfile(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            allow_lists: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-            device: Optional[pulumi.Input[_builtins.str]] = None,
-            folder: Optional[pulumi.Input[_builtins.str]] = None,
-            lockout: Optional[pulumi.Input[Union['AuthenticationProfileLockoutArgs', 'AuthenticationProfileLockoutArgsDict']]] = None,
-            method: Optional[pulumi.Input[Union['AuthenticationProfileMethodArgs', 'AuthenticationProfileMethodArgsDict']]] = None,
-            multi_factor_auth: Optional[pulumi.Input[Union['AuthenticationProfileMultiFactorAuthArgs', 'AuthenticationProfileMultiFactorAuthArgsDict']]] = None,
-            name: Optional[pulumi.Input[_builtins.str]] = None,
-            single_sign_on: Optional[pulumi.Input[Union['AuthenticationProfileSingleSignOnArgs', 'AuthenticationProfileSingleSignOnArgsDict']]] = None,
-            snippet: Optional[pulumi.Input[_builtins.str]] = None,
-            tfid: Optional[pulumi.Input[_builtins.str]] = None,
-            user_domain: Optional[pulumi.Input[_builtins.str]] = None,
-            username_modifier: Optional[pulumi.Input[_builtins.str]] = None) -> 'AuthenticationProfile':
+            allow_lists: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            device: pulumi.Input[Optional[_builtins.str]] = None,
+            folder: pulumi.Input[Optional[_builtins.str]] = None,
+            lockout: pulumi.Input[Optional[Union['AuthenticationProfileLockoutArgs', 'AuthenticationProfileLockoutArgsDict']]] = None,
+            method: pulumi.Input[Optional[Union['AuthenticationProfileMethodArgs', 'AuthenticationProfileMethodArgsDict']]] = None,
+            multi_factor_auth: pulumi.Input[Optional[Union['AuthenticationProfileMultiFactorAuthArgs', 'AuthenticationProfileMultiFactorAuthArgsDict']]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            single_sign_on: pulumi.Input[Optional[Union['AuthenticationProfileSingleSignOnArgs', 'AuthenticationProfileSingleSignOnArgsDict']]] = None,
+            snippet: pulumi.Input[Optional[_builtins.str]] = None,
+            tfid: pulumi.Input[Optional[_builtins.str]] = None,
+            user_domain: pulumi.Input[Optional[_builtins.str]] = None,
+            username_modifier: pulumi.Input[Optional[_builtins.str]] = None) -> 'AuthenticationProfile':
         """
         Get an existing AuthenticationProfile resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

@@ -131,31 +131,31 @@ export interface ScheduleState {
     /**
      * The device in which the resource is defined
      */
-    device?: pulumi.Input<string>;
+    device?: pulumi.Input<string | undefined>;
     /**
      * The folder in which the resource is defined
      *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
-    folder?: pulumi.Input<string>;
+    folder?: pulumi.Input<string | undefined>;
     /**
      * The name of the schedule
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Schedule type
      */
-    scheduleType?: pulumi.Input<inputs.ScheduleScheduleType>;
+    scheduleType?: pulumi.Input<inputs.ScheduleScheduleType | undefined>;
     /**
      * The snippet in which the resource is defined
      *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
-    snippet?: pulumi.Input<string>;
+    snippet?: pulumi.Input<string | undefined>;
     /**
      * The Terraform ID.
      */
-    tfid?: pulumi.Input<string>;
+    tfid?: pulumi.Input<string | undefined>;
 }
 
 /**
@@ -165,17 +165,17 @@ export interface ScheduleArgs {
     /**
      * The device in which the resource is defined
      */
-    device?: pulumi.Input<string>;
+    device?: pulumi.Input<string | undefined>;
     /**
      * The folder in which the resource is defined
      *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
-    folder?: pulumi.Input<string>;
+    folder?: pulumi.Input<string | undefined>;
     /**
      * The name of the schedule
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Schedule type
      */
@@ -185,5 +185,5 @@ export interface ScheduleArgs {
      *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
-    snippet?: pulumi.Input<string>;
+    snippet?: pulumi.Input<string | undefined>;
 }

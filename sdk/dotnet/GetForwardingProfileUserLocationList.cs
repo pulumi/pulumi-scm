@@ -27,12 +27,12 @@ namespace Pulumi.Scm
         ///     // This data source will call the "ListForwardingProfileUserLocations" API endpoint
         ///     // and return all forwarding profile user locations in the "Mobile Users" folder.
         ///     // 1. Use a single data block to fetch ALL user locations in the "Mobile Users" folder.
-        ///     var allMobileUsers = Scm.Index.GetForwardingProfileUserLocationList.Invoke(new()
+        ///     var allMobileUsers = Scm.GetForwardingProfileUserLocationList.Invoke(new()
         ///     {
         ///         Folder = "Mobile Users",
         ///     });
         /// 
-        ///     var paginatedUserLocationsExample = Scm.Index.GetForwardingProfileUserLocationList.Invoke(new()
+        ///     var paginatedUserLocationsExample = Scm.GetForwardingProfileUserLocationList.Invoke(new()
         ///     {
         ///         Folder = "Mobile Users",
         ///         Limit = 5,
@@ -71,12 +71,12 @@ namespace Pulumi.Scm
         ///     // This data source will call the "ListForwardingProfileUserLocations" API endpoint
         ///     // and return all forwarding profile user locations in the "Mobile Users" folder.
         ///     // 1. Use a single data block to fetch ALL user locations in the "Mobile Users" folder.
-        ///     var allMobileUsers = Scm.Index.GetForwardingProfileUserLocationList.Invoke(new()
+        ///     var allMobileUsers = Scm.GetForwardingProfileUserLocationList.Invoke(new()
         ///     {
         ///         Folder = "Mobile Users",
         ///     });
         /// 
-        ///     var paginatedUserLocationsExample = Scm.Index.GetForwardingProfileUserLocationList.Invoke(new()
+        ///     var paginatedUserLocationsExample = Scm.GetForwardingProfileUserLocationList.Invoke(new()
         ///     {
         ///         Folder = "Mobile Users",
         ///         Limit = 5,
@@ -115,12 +115,12 @@ namespace Pulumi.Scm
         ///     // This data source will call the "ListForwardingProfileUserLocations" API endpoint
         ///     // and return all forwarding profile user locations in the "Mobile Users" folder.
         ///     // 1. Use a single data block to fetch ALL user locations in the "Mobile Users" folder.
-        ///     var allMobileUsers = Scm.Index.GetForwardingProfileUserLocationList.Invoke(new()
+        ///     var allMobileUsers = Scm.GetForwardingProfileUserLocationList.Invoke(new()
         ///     {
         ///         Folder = "Mobile Users",
         ///     });
         /// 
-        ///     var paginatedUserLocationsExample = Scm.Index.GetForwardingProfileUserLocationList.Invoke(new()
+        ///     var paginatedUserLocationsExample = Scm.GetForwardingProfileUserLocationList.Invoke(new()
         ///     {
         ///         Folder = "Mobile Users",
         ///         Limit = 5,

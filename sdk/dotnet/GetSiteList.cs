@@ -24,7 +24,7 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     var allSites = Scm.Index.GetSiteList.Invoke(new()
+        ///     var allSites = Scm.GetSiteList.Invoke(new()
         ///     {
         ///         Limit = 50,
         ///         Folder = "Remote Networks",
@@ -36,7 +36,7 @@ namespace Pulumi.Scm
         ///         {
         ///             return conn.Name;
         ///         }).ToList(),
-        ///         ["totalConnectionsCount"] = allSites.Apply(getSiteListResult =&gt; getSiteListResult.Datas).Length,
+        ///         ["totalConnectionsCount"] = allSites.Apply(getSiteListResult =&gt; getSiteListResult.Datas).Length(),
         ///     };
         /// });
         /// ```
@@ -57,7 +57,7 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     var allSites = Scm.Index.GetSiteList.Invoke(new()
+        ///     var allSites = Scm.GetSiteList.Invoke(new()
         ///     {
         ///         Limit = 50,
         ///         Folder = "Remote Networks",
@@ -69,7 +69,7 @@ namespace Pulumi.Scm
         ///         {
         ///             return conn.Name;
         ///         }).ToList(),
-        ///         ["totalConnectionsCount"] = allSites.Apply(getSiteListResult =&gt; getSiteListResult.Datas).Length,
+        ///         ["totalConnectionsCount"] = allSites.Apply(getSiteListResult =&gt; getSiteListResult.Datas).Length(),
         ///     };
         /// });
         /// ```
@@ -90,7 +90,7 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     var allSites = Scm.Index.GetSiteList.Invoke(new()
+        ///     var allSites = Scm.GetSiteList.Invoke(new()
         ///     {
         ///         Limit = 50,
         ///         Folder = "Remote Networks",
@@ -102,7 +102,7 @@ namespace Pulumi.Scm
         ///         {
         ///             return conn.Name;
         ///         }).ToList(),
-        ///         ["totalConnectionsCount"] = allSites.Apply(getSiteListResult =&gt; getSiteListResult.Datas).Length,
+        ///         ["totalConnectionsCount"] = allSites.Apply(getSiteListResult =&gt; getSiteListResult.Datas).Length(),
         ///     };
         /// });
         /// ```

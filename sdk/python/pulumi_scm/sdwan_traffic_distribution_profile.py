@@ -21,12 +21,12 @@ __all__ = ['SdwanTrafficDistributionProfileArgs', 'SdwanTrafficDistributionProfi
 @pulumi.input_type
 class SdwanTrafficDistributionProfileArgs:
     def __init__(__self__, *,
-                 device: Optional[pulumi.Input[_builtins.str]] = None,
-                 folder: Optional[pulumi.Input[_builtins.str]] = None,
-                 link_tags: Optional[pulumi.Input[Sequence[pulumi.Input['SdwanTrafficDistributionProfileLinkTagArgs']]]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 snippet: Optional[pulumi.Input[_builtins.str]] = None,
-                 traffic_distribution: Optional[pulumi.Input[_builtins.str]] = None):
+                 device: pulumi.Input[Optional[_builtins.str]] = None,
+                 folder: pulumi.Input[Optional[_builtins.str]] = None,
+                 link_tags: pulumi.Input[Optional[Sequence[pulumi.Input['SdwanTrafficDistributionProfileLinkTagArgs']]]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 snippet: pulumi.Input[Optional[_builtins.str]] = None,
+                 traffic_distribution: pulumi.Input[Optional[_builtins.str]] = None):
         """
         The set of arguments for constructing a SdwanTrafficDistributionProfile resource.
 
@@ -56,19 +56,19 @@ class SdwanTrafficDistributionProfileArgs:
 
     @_builtins.property
     @pulumi.getter
-    def device(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def device(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The device in which the resource is defined
         """
         return pulumi.get(self, "device")
 
     @device.setter
-    def device(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def device(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "device", value)
 
     @_builtins.property
     @pulumi.getter
-    def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def folder(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
 
@@ -77,36 +77,36 @@ class SdwanTrafficDistributionProfileArgs:
         return pulumi.get(self, "folder")
 
     @folder.setter
-    def folder(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def folder(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "folder", value)
 
     @_builtins.property
     @pulumi.getter(name="linkTags")
-    def link_tags(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['SdwanTrafficDistributionProfileLinkTagArgs']]]]:
+    def link_tags(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['SdwanTrafficDistributionProfileLinkTagArgs']]]]:
         """
         Link-Tags for interfaces identified by defined tags
         """
         return pulumi.get(self, "link_tags")
 
     @link_tags.setter
-    def link_tags(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['SdwanTrafficDistributionProfileLinkTagArgs']]]]):
+    def link_tags(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['SdwanTrafficDistributionProfileLinkTagArgs']]]]):
         pulumi.set(self, "link_tags", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Profile name
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter
-    def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def snippet(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
 
@@ -115,32 +115,32 @@ class SdwanTrafficDistributionProfileArgs:
         return pulumi.get(self, "snippet")
 
     @snippet.setter
-    def snippet(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def snippet(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "snippet", value)
 
     @_builtins.property
     @pulumi.getter(name="trafficDistribution")
-    def traffic_distribution(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def traffic_distribution(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Traffic distribution
         """
         return pulumi.get(self, "traffic_distribution")
 
     @traffic_distribution.setter
-    def traffic_distribution(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def traffic_distribution(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "traffic_distribution", value)
 
 
 @pulumi.input_type
 class _SdwanTrafficDistributionProfileState:
     def __init__(__self__, *,
-                 device: Optional[pulumi.Input[_builtins.str]] = None,
-                 folder: Optional[pulumi.Input[_builtins.str]] = None,
-                 link_tags: Optional[pulumi.Input[Sequence[pulumi.Input['SdwanTrafficDistributionProfileLinkTagArgs']]]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 snippet: Optional[pulumi.Input[_builtins.str]] = None,
-                 tfid: Optional[pulumi.Input[_builtins.str]] = None,
-                 traffic_distribution: Optional[pulumi.Input[_builtins.str]] = None):
+                 device: pulumi.Input[Optional[_builtins.str]] = None,
+                 folder: pulumi.Input[Optional[_builtins.str]] = None,
+                 link_tags: pulumi.Input[Optional[Sequence[pulumi.Input['SdwanTrafficDistributionProfileLinkTagArgs']]]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 snippet: pulumi.Input[Optional[_builtins.str]] = None,
+                 tfid: pulumi.Input[Optional[_builtins.str]] = None,
+                 traffic_distribution: pulumi.Input[Optional[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering SdwanTrafficDistributionProfile resources.
 
@@ -173,19 +173,19 @@ class _SdwanTrafficDistributionProfileState:
 
     @_builtins.property
     @pulumi.getter
-    def device(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def device(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The device in which the resource is defined
         """
         return pulumi.get(self, "device")
 
     @device.setter
-    def device(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def device(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "device", value)
 
     @_builtins.property
     @pulumi.getter
-    def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def folder(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
 
@@ -194,36 +194,36 @@ class _SdwanTrafficDistributionProfileState:
         return pulumi.get(self, "folder")
 
     @folder.setter
-    def folder(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def folder(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "folder", value)
 
     @_builtins.property
     @pulumi.getter(name="linkTags")
-    def link_tags(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['SdwanTrafficDistributionProfileLinkTagArgs']]]]:
+    def link_tags(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['SdwanTrafficDistributionProfileLinkTagArgs']]]]:
         """
         Link-Tags for interfaces identified by defined tags
         """
         return pulumi.get(self, "link_tags")
 
     @link_tags.setter
-    def link_tags(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['SdwanTrafficDistributionProfileLinkTagArgs']]]]):
+    def link_tags(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['SdwanTrafficDistributionProfileLinkTagArgs']]]]):
         pulumi.set(self, "link_tags", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Profile name
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter
-    def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def snippet(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
 
@@ -232,31 +232,31 @@ class _SdwanTrafficDistributionProfileState:
         return pulumi.get(self, "snippet")
 
     @snippet.setter
-    def snippet(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def snippet(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "snippet", value)
 
     @_builtins.property
     @pulumi.getter
-    def tfid(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def tfid(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The Terraform ID.
         """
         return pulumi.get(self, "tfid")
 
     @tfid.setter
-    def tfid(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def tfid(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "tfid", value)
 
     @_builtins.property
     @pulumi.getter(name="trafficDistribution")
-    def traffic_distribution(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def traffic_distribution(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Traffic distribution
         """
         return pulumi.get(self, "traffic_distribution")
 
     @traffic_distribution.setter
-    def traffic_distribution(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def traffic_distribution(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "traffic_distribution", value)
 
 
@@ -266,12 +266,12 @@ class SdwanTrafficDistributionProfile(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 device: Optional[pulumi.Input[_builtins.str]] = None,
-                 folder: Optional[pulumi.Input[_builtins.str]] = None,
-                 link_tags: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SdwanTrafficDistributionProfileLinkTagArgs', 'SdwanTrafficDistributionProfileLinkTagArgsDict']]]]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 snippet: Optional[pulumi.Input[_builtins.str]] = None,
-                 traffic_distribution: Optional[pulumi.Input[_builtins.str]] = None,
+                 device: pulumi.Input[Optional[_builtins.str]] = None,
+                 folder: pulumi.Input[Optional[_builtins.str]] = None,
+                 link_tags: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SdwanTrafficDistributionProfileLinkTagArgs', 'SdwanTrafficDistributionProfileLinkTagArgsDict']]]]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 snippet: pulumi.Input[Optional[_builtins.str]] = None,
+                 traffic_distribution: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
         SdwanTrafficDistributionProfile resource
@@ -359,12 +359,12 @@ class SdwanTrafficDistributionProfile(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 device: Optional[pulumi.Input[_builtins.str]] = None,
-                 folder: Optional[pulumi.Input[_builtins.str]] = None,
-                 link_tags: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SdwanTrafficDistributionProfileLinkTagArgs', 'SdwanTrafficDistributionProfileLinkTagArgsDict']]]]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 snippet: Optional[pulumi.Input[_builtins.str]] = None,
-                 traffic_distribution: Optional[pulumi.Input[_builtins.str]] = None,
+                 device: pulumi.Input[Optional[_builtins.str]] = None,
+                 folder: pulumi.Input[Optional[_builtins.str]] = None,
+                 link_tags: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SdwanTrafficDistributionProfileLinkTagArgs', 'SdwanTrafficDistributionProfileLinkTagArgsDict']]]]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 snippet: pulumi.Input[Optional[_builtins.str]] = None,
+                 traffic_distribution: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -391,13 +391,13 @@ class SdwanTrafficDistributionProfile(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            device: Optional[pulumi.Input[_builtins.str]] = None,
-            folder: Optional[pulumi.Input[_builtins.str]] = None,
-            link_tags: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SdwanTrafficDistributionProfileLinkTagArgs', 'SdwanTrafficDistributionProfileLinkTagArgsDict']]]]] = None,
-            name: Optional[pulumi.Input[_builtins.str]] = None,
-            snippet: Optional[pulumi.Input[_builtins.str]] = None,
-            tfid: Optional[pulumi.Input[_builtins.str]] = None,
-            traffic_distribution: Optional[pulumi.Input[_builtins.str]] = None) -> 'SdwanTrafficDistributionProfile':
+            device: pulumi.Input[Optional[_builtins.str]] = None,
+            folder: pulumi.Input[Optional[_builtins.str]] = None,
+            link_tags: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SdwanTrafficDistributionProfileLinkTagArgs', 'SdwanTrafficDistributionProfileLinkTagArgsDict']]]]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            snippet: pulumi.Input[Optional[_builtins.str]] = None,
+            tfid: pulumi.Input[Optional[_builtins.str]] = None,
+            traffic_distribution: pulumi.Input[Optional[_builtins.str]] = None) -> 'SdwanTrafficDistributionProfile':
         """
         Get an existing SdwanTrafficDistributionProfile resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

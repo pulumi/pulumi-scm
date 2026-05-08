@@ -21,22 +21,22 @@ __all__ = ['HipObjectArgs', 'HipObject']
 @pulumi.input_type
 class HipObjectArgs:
     def __init__(__self__, *,
-                 anti_malware: Optional[pulumi.Input['HipObjectAntiMalwareArgs']] = None,
-                 certificate: Optional[pulumi.Input['HipObjectCertificateArgs']] = None,
-                 custom_checks: Optional[pulumi.Input['HipObjectCustomChecksArgs']] = None,
-                 data_loss_prevention: Optional[pulumi.Input['HipObjectDataLossPreventionArgs']] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 device: Optional[pulumi.Input[_builtins.str]] = None,
-                 disk_backup: Optional[pulumi.Input['HipObjectDiskBackupArgs']] = None,
-                 disk_encryption: Optional[pulumi.Input['HipObjectDiskEncryptionArgs']] = None,
-                 firewall: Optional[pulumi.Input['HipObjectFirewallArgs']] = None,
-                 folder: Optional[pulumi.Input[_builtins.str]] = None,
-                 host_info: Optional[pulumi.Input['HipObjectHostInfoArgs']] = None,
-                 mobile_device: Optional[pulumi.Input['HipObjectMobileDeviceArgs']] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 network_info: Optional[pulumi.Input['HipObjectNetworkInfoArgs']] = None,
-                 patch_management: Optional[pulumi.Input['HipObjectPatchManagementArgs']] = None,
-                 snippet: Optional[pulumi.Input[_builtins.str]] = None):
+                 anti_malware: pulumi.Input[Optional['HipObjectAntiMalwareArgs']] = None,
+                 certificate: pulumi.Input[Optional['HipObjectCertificateArgs']] = None,
+                 custom_checks: pulumi.Input[Optional['HipObjectCustomChecksArgs']] = None,
+                 data_loss_prevention: pulumi.Input[Optional['HipObjectDataLossPreventionArgs']] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 device: pulumi.Input[Optional[_builtins.str]] = None,
+                 disk_backup: pulumi.Input[Optional['HipObjectDiskBackupArgs']] = None,
+                 disk_encryption: pulumi.Input[Optional['HipObjectDiskEncryptionArgs']] = None,
+                 firewall: pulumi.Input[Optional['HipObjectFirewallArgs']] = None,
+                 folder: pulumi.Input[Optional[_builtins.str]] = None,
+                 host_info: pulumi.Input[Optional['HipObjectHostInfoArgs']] = None,
+                 mobile_device: pulumi.Input[Optional['HipObjectMobileDeviceArgs']] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 network_info: pulumi.Input[Optional['HipObjectNetworkInfoArgs']] = None,
+                 patch_management: pulumi.Input[Optional['HipObjectPatchManagementArgs']] = None,
+                 snippet: pulumi.Input[Optional[_builtins.str]] = None):
         """
         The set of arguments for constructing a HipObject resource.
 
@@ -96,115 +96,115 @@ class HipObjectArgs:
 
     @_builtins.property
     @pulumi.getter(name="antiMalware")
-    def anti_malware(self) -> Optional[pulumi.Input['HipObjectAntiMalwareArgs']]:
+    def anti_malware(self) -> pulumi.Input[Optional['HipObjectAntiMalwareArgs']]:
         """
         Anti malware
         """
         return pulumi.get(self, "anti_malware")
 
     @anti_malware.setter
-    def anti_malware(self, value: Optional[pulumi.Input['HipObjectAntiMalwareArgs']]):
+    def anti_malware(self, value: pulumi.Input[Optional['HipObjectAntiMalwareArgs']]):
         pulumi.set(self, "anti_malware", value)
 
     @_builtins.property
     @pulumi.getter
-    def certificate(self) -> Optional[pulumi.Input['HipObjectCertificateArgs']]:
+    def certificate(self) -> pulumi.Input[Optional['HipObjectCertificateArgs']]:
         """
         Certificate
         """
         return pulumi.get(self, "certificate")
 
     @certificate.setter
-    def certificate(self, value: Optional[pulumi.Input['HipObjectCertificateArgs']]):
+    def certificate(self, value: pulumi.Input[Optional['HipObjectCertificateArgs']]):
         pulumi.set(self, "certificate", value)
 
     @_builtins.property
     @pulumi.getter(name="customChecks")
-    def custom_checks(self) -> Optional[pulumi.Input['HipObjectCustomChecksArgs']]:
+    def custom_checks(self) -> pulumi.Input[Optional['HipObjectCustomChecksArgs']]:
         """
         Custom checks
         """
         return pulumi.get(self, "custom_checks")
 
     @custom_checks.setter
-    def custom_checks(self, value: Optional[pulumi.Input['HipObjectCustomChecksArgs']]):
+    def custom_checks(self, value: pulumi.Input[Optional['HipObjectCustomChecksArgs']]):
         pulumi.set(self, "custom_checks", value)
 
     @_builtins.property
     @pulumi.getter(name="dataLossPrevention")
-    def data_loss_prevention(self) -> Optional[pulumi.Input['HipObjectDataLossPreventionArgs']]:
+    def data_loss_prevention(self) -> pulumi.Input[Optional['HipObjectDataLossPreventionArgs']]:
         """
         Data loss prevention
         """
         return pulumi.get(self, "data_loss_prevention")
 
     @data_loss_prevention.setter
-    def data_loss_prevention(self, value: Optional[pulumi.Input['HipObjectDataLossPreventionArgs']]):
+    def data_loss_prevention(self, value: pulumi.Input[Optional['HipObjectDataLossPreventionArgs']]):
         pulumi.set(self, "data_loss_prevention", value)
 
     @_builtins.property
     @pulumi.getter
-    def description(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def description(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Description
         """
         return pulumi.get(self, "description")
 
     @description.setter
-    def description(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def description(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "description", value)
 
     @_builtins.property
     @pulumi.getter
-    def device(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def device(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The device in which the resource is defined
         """
         return pulumi.get(self, "device")
 
     @device.setter
-    def device(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def device(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "device", value)
 
     @_builtins.property
     @pulumi.getter(name="diskBackup")
-    def disk_backup(self) -> Optional[pulumi.Input['HipObjectDiskBackupArgs']]:
+    def disk_backup(self) -> pulumi.Input[Optional['HipObjectDiskBackupArgs']]:
         """
         Disk backup
         """
         return pulumi.get(self, "disk_backup")
 
     @disk_backup.setter
-    def disk_backup(self, value: Optional[pulumi.Input['HipObjectDiskBackupArgs']]):
+    def disk_backup(self, value: pulumi.Input[Optional['HipObjectDiskBackupArgs']]):
         pulumi.set(self, "disk_backup", value)
 
     @_builtins.property
     @pulumi.getter(name="diskEncryption")
-    def disk_encryption(self) -> Optional[pulumi.Input['HipObjectDiskEncryptionArgs']]:
+    def disk_encryption(self) -> pulumi.Input[Optional['HipObjectDiskEncryptionArgs']]:
         """
         Disk encryption
         """
         return pulumi.get(self, "disk_encryption")
 
     @disk_encryption.setter
-    def disk_encryption(self, value: Optional[pulumi.Input['HipObjectDiskEncryptionArgs']]):
+    def disk_encryption(self, value: pulumi.Input[Optional['HipObjectDiskEncryptionArgs']]):
         pulumi.set(self, "disk_encryption", value)
 
     @_builtins.property
     @pulumi.getter
-    def firewall(self) -> Optional[pulumi.Input['HipObjectFirewallArgs']]:
+    def firewall(self) -> pulumi.Input[Optional['HipObjectFirewallArgs']]:
         """
         Firewall
         """
         return pulumi.get(self, "firewall")
 
     @firewall.setter
-    def firewall(self, value: Optional[pulumi.Input['HipObjectFirewallArgs']]):
+    def firewall(self, value: pulumi.Input[Optional['HipObjectFirewallArgs']]):
         pulumi.set(self, "firewall", value)
 
     @_builtins.property
     @pulumi.getter
-    def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def folder(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
 
@@ -213,72 +213,72 @@ class HipObjectArgs:
         return pulumi.get(self, "folder")
 
     @folder.setter
-    def folder(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def folder(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "folder", value)
 
     @_builtins.property
     @pulumi.getter(name="hostInfo")
-    def host_info(self) -> Optional[pulumi.Input['HipObjectHostInfoArgs']]:
+    def host_info(self) -> pulumi.Input[Optional['HipObjectHostInfoArgs']]:
         """
         Host info
         """
         return pulumi.get(self, "host_info")
 
     @host_info.setter
-    def host_info(self, value: Optional[pulumi.Input['HipObjectHostInfoArgs']]):
+    def host_info(self, value: pulumi.Input[Optional['HipObjectHostInfoArgs']]):
         pulumi.set(self, "host_info", value)
 
     @_builtins.property
     @pulumi.getter(name="mobileDevice")
-    def mobile_device(self) -> Optional[pulumi.Input['HipObjectMobileDeviceArgs']]:
+    def mobile_device(self) -> pulumi.Input[Optional['HipObjectMobileDeviceArgs']]:
         """
         Mobile device
         """
         return pulumi.get(self, "mobile_device")
 
     @mobile_device.setter
-    def mobile_device(self, value: Optional[pulumi.Input['HipObjectMobileDeviceArgs']]):
+    def mobile_device(self, value: pulumi.Input[Optional['HipObjectMobileDeviceArgs']]):
         pulumi.set(self, "mobile_device", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the HIP object
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter(name="networkInfo")
-    def network_info(self) -> Optional[pulumi.Input['HipObjectNetworkInfoArgs']]:
+    def network_info(self) -> pulumi.Input[Optional['HipObjectNetworkInfoArgs']]:
         """
         Network info
         """
         return pulumi.get(self, "network_info")
 
     @network_info.setter
-    def network_info(self, value: Optional[pulumi.Input['HipObjectNetworkInfoArgs']]):
+    def network_info(self, value: pulumi.Input[Optional['HipObjectNetworkInfoArgs']]):
         pulumi.set(self, "network_info", value)
 
     @_builtins.property
     @pulumi.getter(name="patchManagement")
-    def patch_management(self) -> Optional[pulumi.Input['HipObjectPatchManagementArgs']]:
+    def patch_management(self) -> pulumi.Input[Optional['HipObjectPatchManagementArgs']]:
         """
         Patch management
         """
         return pulumi.get(self, "patch_management")
 
     @patch_management.setter
-    def patch_management(self, value: Optional[pulumi.Input['HipObjectPatchManagementArgs']]):
+    def patch_management(self, value: pulumi.Input[Optional['HipObjectPatchManagementArgs']]):
         pulumi.set(self, "patch_management", value)
 
     @_builtins.property
     @pulumi.getter
-    def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def snippet(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
 
@@ -287,30 +287,30 @@ class HipObjectArgs:
         return pulumi.get(self, "snippet")
 
     @snippet.setter
-    def snippet(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def snippet(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "snippet", value)
 
 
 @pulumi.input_type
 class _HipObjectState:
     def __init__(__self__, *,
-                 anti_malware: Optional[pulumi.Input['HipObjectAntiMalwareArgs']] = None,
-                 certificate: Optional[pulumi.Input['HipObjectCertificateArgs']] = None,
-                 custom_checks: Optional[pulumi.Input['HipObjectCustomChecksArgs']] = None,
-                 data_loss_prevention: Optional[pulumi.Input['HipObjectDataLossPreventionArgs']] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 device: Optional[pulumi.Input[_builtins.str]] = None,
-                 disk_backup: Optional[pulumi.Input['HipObjectDiskBackupArgs']] = None,
-                 disk_encryption: Optional[pulumi.Input['HipObjectDiskEncryptionArgs']] = None,
-                 firewall: Optional[pulumi.Input['HipObjectFirewallArgs']] = None,
-                 folder: Optional[pulumi.Input[_builtins.str]] = None,
-                 host_info: Optional[pulumi.Input['HipObjectHostInfoArgs']] = None,
-                 mobile_device: Optional[pulumi.Input['HipObjectMobileDeviceArgs']] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 network_info: Optional[pulumi.Input['HipObjectNetworkInfoArgs']] = None,
-                 patch_management: Optional[pulumi.Input['HipObjectPatchManagementArgs']] = None,
-                 snippet: Optional[pulumi.Input[_builtins.str]] = None,
-                 tfid: Optional[pulumi.Input[_builtins.str]] = None):
+                 anti_malware: pulumi.Input[Optional['HipObjectAntiMalwareArgs']] = None,
+                 certificate: pulumi.Input[Optional['HipObjectCertificateArgs']] = None,
+                 custom_checks: pulumi.Input[Optional['HipObjectCustomChecksArgs']] = None,
+                 data_loss_prevention: pulumi.Input[Optional['HipObjectDataLossPreventionArgs']] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 device: pulumi.Input[Optional[_builtins.str]] = None,
+                 disk_backup: pulumi.Input[Optional['HipObjectDiskBackupArgs']] = None,
+                 disk_encryption: pulumi.Input[Optional['HipObjectDiskEncryptionArgs']] = None,
+                 firewall: pulumi.Input[Optional['HipObjectFirewallArgs']] = None,
+                 folder: pulumi.Input[Optional[_builtins.str]] = None,
+                 host_info: pulumi.Input[Optional['HipObjectHostInfoArgs']] = None,
+                 mobile_device: pulumi.Input[Optional['HipObjectMobileDeviceArgs']] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 network_info: pulumi.Input[Optional['HipObjectNetworkInfoArgs']] = None,
+                 patch_management: pulumi.Input[Optional['HipObjectPatchManagementArgs']] = None,
+                 snippet: pulumi.Input[Optional[_builtins.str]] = None,
+                 tfid: pulumi.Input[Optional[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering HipObject resources.
 
@@ -373,115 +373,115 @@ class _HipObjectState:
 
     @_builtins.property
     @pulumi.getter(name="antiMalware")
-    def anti_malware(self) -> Optional[pulumi.Input['HipObjectAntiMalwareArgs']]:
+    def anti_malware(self) -> pulumi.Input[Optional['HipObjectAntiMalwareArgs']]:
         """
         Anti malware
         """
         return pulumi.get(self, "anti_malware")
 
     @anti_malware.setter
-    def anti_malware(self, value: Optional[pulumi.Input['HipObjectAntiMalwareArgs']]):
+    def anti_malware(self, value: pulumi.Input[Optional['HipObjectAntiMalwareArgs']]):
         pulumi.set(self, "anti_malware", value)
 
     @_builtins.property
     @pulumi.getter
-    def certificate(self) -> Optional[pulumi.Input['HipObjectCertificateArgs']]:
+    def certificate(self) -> pulumi.Input[Optional['HipObjectCertificateArgs']]:
         """
         Certificate
         """
         return pulumi.get(self, "certificate")
 
     @certificate.setter
-    def certificate(self, value: Optional[pulumi.Input['HipObjectCertificateArgs']]):
+    def certificate(self, value: pulumi.Input[Optional['HipObjectCertificateArgs']]):
         pulumi.set(self, "certificate", value)
 
     @_builtins.property
     @pulumi.getter(name="customChecks")
-    def custom_checks(self) -> Optional[pulumi.Input['HipObjectCustomChecksArgs']]:
+    def custom_checks(self) -> pulumi.Input[Optional['HipObjectCustomChecksArgs']]:
         """
         Custom checks
         """
         return pulumi.get(self, "custom_checks")
 
     @custom_checks.setter
-    def custom_checks(self, value: Optional[pulumi.Input['HipObjectCustomChecksArgs']]):
+    def custom_checks(self, value: pulumi.Input[Optional['HipObjectCustomChecksArgs']]):
         pulumi.set(self, "custom_checks", value)
 
     @_builtins.property
     @pulumi.getter(name="dataLossPrevention")
-    def data_loss_prevention(self) -> Optional[pulumi.Input['HipObjectDataLossPreventionArgs']]:
+    def data_loss_prevention(self) -> pulumi.Input[Optional['HipObjectDataLossPreventionArgs']]:
         """
         Data loss prevention
         """
         return pulumi.get(self, "data_loss_prevention")
 
     @data_loss_prevention.setter
-    def data_loss_prevention(self, value: Optional[pulumi.Input['HipObjectDataLossPreventionArgs']]):
+    def data_loss_prevention(self, value: pulumi.Input[Optional['HipObjectDataLossPreventionArgs']]):
         pulumi.set(self, "data_loss_prevention", value)
 
     @_builtins.property
     @pulumi.getter
-    def description(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def description(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Description
         """
         return pulumi.get(self, "description")
 
     @description.setter
-    def description(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def description(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "description", value)
 
     @_builtins.property
     @pulumi.getter
-    def device(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def device(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The device in which the resource is defined
         """
         return pulumi.get(self, "device")
 
     @device.setter
-    def device(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def device(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "device", value)
 
     @_builtins.property
     @pulumi.getter(name="diskBackup")
-    def disk_backup(self) -> Optional[pulumi.Input['HipObjectDiskBackupArgs']]:
+    def disk_backup(self) -> pulumi.Input[Optional['HipObjectDiskBackupArgs']]:
         """
         Disk backup
         """
         return pulumi.get(self, "disk_backup")
 
     @disk_backup.setter
-    def disk_backup(self, value: Optional[pulumi.Input['HipObjectDiskBackupArgs']]):
+    def disk_backup(self, value: pulumi.Input[Optional['HipObjectDiskBackupArgs']]):
         pulumi.set(self, "disk_backup", value)
 
     @_builtins.property
     @pulumi.getter(name="diskEncryption")
-    def disk_encryption(self) -> Optional[pulumi.Input['HipObjectDiskEncryptionArgs']]:
+    def disk_encryption(self) -> pulumi.Input[Optional['HipObjectDiskEncryptionArgs']]:
         """
         Disk encryption
         """
         return pulumi.get(self, "disk_encryption")
 
     @disk_encryption.setter
-    def disk_encryption(self, value: Optional[pulumi.Input['HipObjectDiskEncryptionArgs']]):
+    def disk_encryption(self, value: pulumi.Input[Optional['HipObjectDiskEncryptionArgs']]):
         pulumi.set(self, "disk_encryption", value)
 
     @_builtins.property
     @pulumi.getter
-    def firewall(self) -> Optional[pulumi.Input['HipObjectFirewallArgs']]:
+    def firewall(self) -> pulumi.Input[Optional['HipObjectFirewallArgs']]:
         """
         Firewall
         """
         return pulumi.get(self, "firewall")
 
     @firewall.setter
-    def firewall(self, value: Optional[pulumi.Input['HipObjectFirewallArgs']]):
+    def firewall(self, value: pulumi.Input[Optional['HipObjectFirewallArgs']]):
         pulumi.set(self, "firewall", value)
 
     @_builtins.property
     @pulumi.getter
-    def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def folder(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
 
@@ -490,72 +490,72 @@ class _HipObjectState:
         return pulumi.get(self, "folder")
 
     @folder.setter
-    def folder(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def folder(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "folder", value)
 
     @_builtins.property
     @pulumi.getter(name="hostInfo")
-    def host_info(self) -> Optional[pulumi.Input['HipObjectHostInfoArgs']]:
+    def host_info(self) -> pulumi.Input[Optional['HipObjectHostInfoArgs']]:
         """
         Host info
         """
         return pulumi.get(self, "host_info")
 
     @host_info.setter
-    def host_info(self, value: Optional[pulumi.Input['HipObjectHostInfoArgs']]):
+    def host_info(self, value: pulumi.Input[Optional['HipObjectHostInfoArgs']]):
         pulumi.set(self, "host_info", value)
 
     @_builtins.property
     @pulumi.getter(name="mobileDevice")
-    def mobile_device(self) -> Optional[pulumi.Input['HipObjectMobileDeviceArgs']]:
+    def mobile_device(self) -> pulumi.Input[Optional['HipObjectMobileDeviceArgs']]:
         """
         Mobile device
         """
         return pulumi.get(self, "mobile_device")
 
     @mobile_device.setter
-    def mobile_device(self, value: Optional[pulumi.Input['HipObjectMobileDeviceArgs']]):
+    def mobile_device(self, value: pulumi.Input[Optional['HipObjectMobileDeviceArgs']]):
         pulumi.set(self, "mobile_device", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the HIP object
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter(name="networkInfo")
-    def network_info(self) -> Optional[pulumi.Input['HipObjectNetworkInfoArgs']]:
+    def network_info(self) -> pulumi.Input[Optional['HipObjectNetworkInfoArgs']]:
         """
         Network info
         """
         return pulumi.get(self, "network_info")
 
     @network_info.setter
-    def network_info(self, value: Optional[pulumi.Input['HipObjectNetworkInfoArgs']]):
+    def network_info(self, value: pulumi.Input[Optional['HipObjectNetworkInfoArgs']]):
         pulumi.set(self, "network_info", value)
 
     @_builtins.property
     @pulumi.getter(name="patchManagement")
-    def patch_management(self) -> Optional[pulumi.Input['HipObjectPatchManagementArgs']]:
+    def patch_management(self) -> pulumi.Input[Optional['HipObjectPatchManagementArgs']]:
         """
         Patch management
         """
         return pulumi.get(self, "patch_management")
 
     @patch_management.setter
-    def patch_management(self, value: Optional[pulumi.Input['HipObjectPatchManagementArgs']]):
+    def patch_management(self, value: pulumi.Input[Optional['HipObjectPatchManagementArgs']]):
         pulumi.set(self, "patch_management", value)
 
     @_builtins.property
     @pulumi.getter
-    def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def snippet(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
 
@@ -564,19 +564,19 @@ class _HipObjectState:
         return pulumi.get(self, "snippet")
 
     @snippet.setter
-    def snippet(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def snippet(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "snippet", value)
 
     @_builtins.property
     @pulumi.getter
-    def tfid(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def tfid(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The Terraform ID.
         """
         return pulumi.get(self, "tfid")
 
     @tfid.setter
-    def tfid(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def tfid(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "tfid", value)
 
 
@@ -586,22 +586,22 @@ class HipObject(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 anti_malware: Optional[pulumi.Input[Union['HipObjectAntiMalwareArgs', 'HipObjectAntiMalwareArgsDict']]] = None,
-                 certificate: Optional[pulumi.Input[Union['HipObjectCertificateArgs', 'HipObjectCertificateArgsDict']]] = None,
-                 custom_checks: Optional[pulumi.Input[Union['HipObjectCustomChecksArgs', 'HipObjectCustomChecksArgsDict']]] = None,
-                 data_loss_prevention: Optional[pulumi.Input[Union['HipObjectDataLossPreventionArgs', 'HipObjectDataLossPreventionArgsDict']]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 device: Optional[pulumi.Input[_builtins.str]] = None,
-                 disk_backup: Optional[pulumi.Input[Union['HipObjectDiskBackupArgs', 'HipObjectDiskBackupArgsDict']]] = None,
-                 disk_encryption: Optional[pulumi.Input[Union['HipObjectDiskEncryptionArgs', 'HipObjectDiskEncryptionArgsDict']]] = None,
-                 firewall: Optional[pulumi.Input[Union['HipObjectFirewallArgs', 'HipObjectFirewallArgsDict']]] = None,
-                 folder: Optional[pulumi.Input[_builtins.str]] = None,
-                 host_info: Optional[pulumi.Input[Union['HipObjectHostInfoArgs', 'HipObjectHostInfoArgsDict']]] = None,
-                 mobile_device: Optional[pulumi.Input[Union['HipObjectMobileDeviceArgs', 'HipObjectMobileDeviceArgsDict']]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 network_info: Optional[pulumi.Input[Union['HipObjectNetworkInfoArgs', 'HipObjectNetworkInfoArgsDict']]] = None,
-                 patch_management: Optional[pulumi.Input[Union['HipObjectPatchManagementArgs', 'HipObjectPatchManagementArgsDict']]] = None,
-                 snippet: Optional[pulumi.Input[_builtins.str]] = None,
+                 anti_malware: pulumi.Input[Optional[Union['HipObjectAntiMalwareArgs', 'HipObjectAntiMalwareArgsDict']]] = None,
+                 certificate: pulumi.Input[Optional[Union['HipObjectCertificateArgs', 'HipObjectCertificateArgsDict']]] = None,
+                 custom_checks: pulumi.Input[Optional[Union['HipObjectCustomChecksArgs', 'HipObjectCustomChecksArgsDict']]] = None,
+                 data_loss_prevention: pulumi.Input[Optional[Union['HipObjectDataLossPreventionArgs', 'HipObjectDataLossPreventionArgsDict']]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 device: pulumi.Input[Optional[_builtins.str]] = None,
+                 disk_backup: pulumi.Input[Optional[Union['HipObjectDiskBackupArgs', 'HipObjectDiskBackupArgsDict']]] = None,
+                 disk_encryption: pulumi.Input[Optional[Union['HipObjectDiskEncryptionArgs', 'HipObjectDiskEncryptionArgsDict']]] = None,
+                 firewall: pulumi.Input[Optional[Union['HipObjectFirewallArgs', 'HipObjectFirewallArgsDict']]] = None,
+                 folder: pulumi.Input[Optional[_builtins.str]] = None,
+                 host_info: pulumi.Input[Optional[Union['HipObjectHostInfoArgs', 'HipObjectHostInfoArgsDict']]] = None,
+                 mobile_device: pulumi.Input[Optional[Union['HipObjectMobileDeviceArgs', 'HipObjectMobileDeviceArgsDict']]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 network_info: pulumi.Input[Optional[Union['HipObjectNetworkInfoArgs', 'HipObjectNetworkInfoArgsDict']]] = None,
+                 patch_management: pulumi.Input[Optional[Union['HipObjectPatchManagementArgs', 'HipObjectPatchManagementArgsDict']]] = None,
+                 snippet: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
         HipObject resource
@@ -1013,22 +1013,22 @@ class HipObject(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 anti_malware: Optional[pulumi.Input[Union['HipObjectAntiMalwareArgs', 'HipObjectAntiMalwareArgsDict']]] = None,
-                 certificate: Optional[pulumi.Input[Union['HipObjectCertificateArgs', 'HipObjectCertificateArgsDict']]] = None,
-                 custom_checks: Optional[pulumi.Input[Union['HipObjectCustomChecksArgs', 'HipObjectCustomChecksArgsDict']]] = None,
-                 data_loss_prevention: Optional[pulumi.Input[Union['HipObjectDataLossPreventionArgs', 'HipObjectDataLossPreventionArgsDict']]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 device: Optional[pulumi.Input[_builtins.str]] = None,
-                 disk_backup: Optional[pulumi.Input[Union['HipObjectDiskBackupArgs', 'HipObjectDiskBackupArgsDict']]] = None,
-                 disk_encryption: Optional[pulumi.Input[Union['HipObjectDiskEncryptionArgs', 'HipObjectDiskEncryptionArgsDict']]] = None,
-                 firewall: Optional[pulumi.Input[Union['HipObjectFirewallArgs', 'HipObjectFirewallArgsDict']]] = None,
-                 folder: Optional[pulumi.Input[_builtins.str]] = None,
-                 host_info: Optional[pulumi.Input[Union['HipObjectHostInfoArgs', 'HipObjectHostInfoArgsDict']]] = None,
-                 mobile_device: Optional[pulumi.Input[Union['HipObjectMobileDeviceArgs', 'HipObjectMobileDeviceArgsDict']]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 network_info: Optional[pulumi.Input[Union['HipObjectNetworkInfoArgs', 'HipObjectNetworkInfoArgsDict']]] = None,
-                 patch_management: Optional[pulumi.Input[Union['HipObjectPatchManagementArgs', 'HipObjectPatchManagementArgsDict']]] = None,
-                 snippet: Optional[pulumi.Input[_builtins.str]] = None,
+                 anti_malware: pulumi.Input[Optional[Union['HipObjectAntiMalwareArgs', 'HipObjectAntiMalwareArgsDict']]] = None,
+                 certificate: pulumi.Input[Optional[Union['HipObjectCertificateArgs', 'HipObjectCertificateArgsDict']]] = None,
+                 custom_checks: pulumi.Input[Optional[Union['HipObjectCustomChecksArgs', 'HipObjectCustomChecksArgsDict']]] = None,
+                 data_loss_prevention: pulumi.Input[Optional[Union['HipObjectDataLossPreventionArgs', 'HipObjectDataLossPreventionArgsDict']]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 device: pulumi.Input[Optional[_builtins.str]] = None,
+                 disk_backup: pulumi.Input[Optional[Union['HipObjectDiskBackupArgs', 'HipObjectDiskBackupArgsDict']]] = None,
+                 disk_encryption: pulumi.Input[Optional[Union['HipObjectDiskEncryptionArgs', 'HipObjectDiskEncryptionArgsDict']]] = None,
+                 firewall: pulumi.Input[Optional[Union['HipObjectFirewallArgs', 'HipObjectFirewallArgsDict']]] = None,
+                 folder: pulumi.Input[Optional[_builtins.str]] = None,
+                 host_info: pulumi.Input[Optional[Union['HipObjectHostInfoArgs', 'HipObjectHostInfoArgsDict']]] = None,
+                 mobile_device: pulumi.Input[Optional[Union['HipObjectMobileDeviceArgs', 'HipObjectMobileDeviceArgsDict']]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 network_info: pulumi.Input[Optional[Union['HipObjectNetworkInfoArgs', 'HipObjectNetworkInfoArgsDict']]] = None,
+                 patch_management: pulumi.Input[Optional[Union['HipObjectPatchManagementArgs', 'HipObjectPatchManagementArgsDict']]] = None,
+                 snippet: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -1065,23 +1065,23 @@ class HipObject(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            anti_malware: Optional[pulumi.Input[Union['HipObjectAntiMalwareArgs', 'HipObjectAntiMalwareArgsDict']]] = None,
-            certificate: Optional[pulumi.Input[Union['HipObjectCertificateArgs', 'HipObjectCertificateArgsDict']]] = None,
-            custom_checks: Optional[pulumi.Input[Union['HipObjectCustomChecksArgs', 'HipObjectCustomChecksArgsDict']]] = None,
-            data_loss_prevention: Optional[pulumi.Input[Union['HipObjectDataLossPreventionArgs', 'HipObjectDataLossPreventionArgsDict']]] = None,
-            description: Optional[pulumi.Input[_builtins.str]] = None,
-            device: Optional[pulumi.Input[_builtins.str]] = None,
-            disk_backup: Optional[pulumi.Input[Union['HipObjectDiskBackupArgs', 'HipObjectDiskBackupArgsDict']]] = None,
-            disk_encryption: Optional[pulumi.Input[Union['HipObjectDiskEncryptionArgs', 'HipObjectDiskEncryptionArgsDict']]] = None,
-            firewall: Optional[pulumi.Input[Union['HipObjectFirewallArgs', 'HipObjectFirewallArgsDict']]] = None,
-            folder: Optional[pulumi.Input[_builtins.str]] = None,
-            host_info: Optional[pulumi.Input[Union['HipObjectHostInfoArgs', 'HipObjectHostInfoArgsDict']]] = None,
-            mobile_device: Optional[pulumi.Input[Union['HipObjectMobileDeviceArgs', 'HipObjectMobileDeviceArgsDict']]] = None,
-            name: Optional[pulumi.Input[_builtins.str]] = None,
-            network_info: Optional[pulumi.Input[Union['HipObjectNetworkInfoArgs', 'HipObjectNetworkInfoArgsDict']]] = None,
-            patch_management: Optional[pulumi.Input[Union['HipObjectPatchManagementArgs', 'HipObjectPatchManagementArgsDict']]] = None,
-            snippet: Optional[pulumi.Input[_builtins.str]] = None,
-            tfid: Optional[pulumi.Input[_builtins.str]] = None) -> 'HipObject':
+            anti_malware: pulumi.Input[Optional[Union['HipObjectAntiMalwareArgs', 'HipObjectAntiMalwareArgsDict']]] = None,
+            certificate: pulumi.Input[Optional[Union['HipObjectCertificateArgs', 'HipObjectCertificateArgsDict']]] = None,
+            custom_checks: pulumi.Input[Optional[Union['HipObjectCustomChecksArgs', 'HipObjectCustomChecksArgsDict']]] = None,
+            data_loss_prevention: pulumi.Input[Optional[Union['HipObjectDataLossPreventionArgs', 'HipObjectDataLossPreventionArgsDict']]] = None,
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            device: pulumi.Input[Optional[_builtins.str]] = None,
+            disk_backup: pulumi.Input[Optional[Union['HipObjectDiskBackupArgs', 'HipObjectDiskBackupArgsDict']]] = None,
+            disk_encryption: pulumi.Input[Optional[Union['HipObjectDiskEncryptionArgs', 'HipObjectDiskEncryptionArgsDict']]] = None,
+            firewall: pulumi.Input[Optional[Union['HipObjectFirewallArgs', 'HipObjectFirewallArgsDict']]] = None,
+            folder: pulumi.Input[Optional[_builtins.str]] = None,
+            host_info: pulumi.Input[Optional[Union['HipObjectHostInfoArgs', 'HipObjectHostInfoArgsDict']]] = None,
+            mobile_device: pulumi.Input[Optional[Union['HipObjectMobileDeviceArgs', 'HipObjectMobileDeviceArgsDict']]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            network_info: pulumi.Input[Optional[Union['HipObjectNetworkInfoArgs', 'HipObjectNetworkInfoArgsDict']]] = None,
+            patch_management: pulumi.Input[Optional[Union['HipObjectPatchManagementArgs', 'HipObjectPatchManagementArgsDict']]] = None,
+            snippet: pulumi.Input[Optional[_builtins.str]] = None,
+            tfid: pulumi.Input[Optional[_builtins.str]] = None) -> 'HipObject':
         """
         Get an existing HipObject resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

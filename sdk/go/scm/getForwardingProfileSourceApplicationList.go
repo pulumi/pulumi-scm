@@ -12,6 +12,8 @@ import (
 )
 
 // Retrieves a listing of config items.
+//
+// ## Example Usage
 func GetForwardingProfileSourceApplicationList(ctx *pulumi.Context, args *GetForwardingProfileSourceApplicationListArgs, opts ...pulumi.InvokeOption) (*GetForwardingProfileSourceApplicationListResult, error) {
 	opts = internal.PkgInvokeDefaultOpts(opts)
 	var rv GetForwardingProfileSourceApplicationListResult

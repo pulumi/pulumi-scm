@@ -36,8 +36,8 @@ import javax.annotation.Nullable;
  * import com.pulumi.scm.DataFilteringProfile;
  * import com.pulumi.scm.DataFilteringProfileArgs;
  * import com.pulumi.scm.inputs.DataFilteringProfileRuleArgs;
- * import java.util.List;
  * import java.util.ArrayList;
+ * import java.util.Arrays;
  * import java.util.Map;
  * import java.io.File;
  * import java.nio.file.Files;
@@ -55,7 +55,7 @@ import javax.annotation.Nullable;
  *             .patternType(DataObjectPatternTypeArgs.builder()
  *                 .predefined(DataObjectPatternTypePredefinedArgs.builder()
  *                     .patterns(DataObjectPatternTypePredefinedPatternArgs.builder()
- *                         .fileType(List.of("text/html"))
+ *                         .fileType(Arrays.asList("text/html"))
  *                         .name("ABA-Routing-Number")
  *                         .build())
  *                     .build())
@@ -70,8 +70,8 @@ import javax.annotation.Nullable;
  *             .rules(DataFilteringProfileRuleArgs.builder()
  *                 .name("rule0")
  *                 .dataObject(scmDataFilteringProfileExample.name())
- *                 .application(List.of("any"))
- *                 .fileType(List.of("any"))
+ *                 .application(Arrays.asList("any"))
+ *                 .fileType(Arrays.asList("any"))
  *                 .direction("both")
  *                 .alertThreshold(1)
  *                 .blockThreshold(1)

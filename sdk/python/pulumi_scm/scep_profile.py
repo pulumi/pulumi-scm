@@ -27,16 +27,16 @@ class ScepProfileArgs:
                  scep_challenge: pulumi.Input['ScepProfileScepChallengeArgs'],
                  scep_url: pulumi.Input[_builtins.str],
                  subject: pulumi.Input[_builtins.str],
-                 certificate_attributes: Optional[pulumi.Input['ScepProfileCertificateAttributesArgs']] = None,
-                 device: Optional[pulumi.Input[_builtins.str]] = None,
-                 fingerprint: Optional[pulumi.Input[_builtins.str]] = None,
-                 folder: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 scep_ca_cert: Optional[pulumi.Input[_builtins.str]] = None,
-                 scep_client_cert: Optional[pulumi.Input[_builtins.str]] = None,
-                 snippet: Optional[pulumi.Input[_builtins.str]] = None,
-                 use_as_digital_signature: Optional[pulumi.Input[_builtins.bool]] = None,
-                 use_for_key_encipherment: Optional[pulumi.Input[_builtins.bool]] = None):
+                 certificate_attributes: pulumi.Input[Optional['ScepProfileCertificateAttributesArgs']] = None,
+                 device: pulumi.Input[Optional[_builtins.str]] = None,
+                 fingerprint: pulumi.Input[Optional[_builtins.str]] = None,
+                 folder: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 scep_ca_cert: pulumi.Input[Optional[_builtins.str]] = None,
+                 scep_client_cert: pulumi.Input[Optional[_builtins.str]] = None,
+                 snippet: pulumi.Input[Optional[_builtins.str]] = None,
+                 use_as_digital_signature: pulumi.Input[Optional[_builtins.bool]] = None,
+                 use_for_key_encipherment: pulumi.Input[Optional[_builtins.bool]] = None):
         """
         The set of arguments for constructing a ScepProfile resource.
 
@@ -162,43 +162,43 @@ class ScepProfileArgs:
 
     @_builtins.property
     @pulumi.getter(name="certificateAttributes")
-    def certificate_attributes(self) -> Optional[pulumi.Input['ScepProfileCertificateAttributesArgs']]:
+    def certificate_attributes(self) -> pulumi.Input[Optional['ScepProfileCertificateAttributesArgs']]:
         """
         Subject Alternative name type
         """
         return pulumi.get(self, "certificate_attributes")
 
     @certificate_attributes.setter
-    def certificate_attributes(self, value: Optional[pulumi.Input['ScepProfileCertificateAttributesArgs']]):
+    def certificate_attributes(self, value: pulumi.Input[Optional['ScepProfileCertificateAttributesArgs']]):
         pulumi.set(self, "certificate_attributes", value)
 
     @_builtins.property
     @pulumi.getter
-    def device(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def device(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The device in which the resource is defined
         """
         return pulumi.get(self, "device")
 
     @device.setter
-    def device(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def device(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "device", value)
 
     @_builtins.property
     @pulumi.getter
-    def fingerprint(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def fingerprint(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         CA Certificate Fingerprint
         """
         return pulumi.get(self, "fingerprint")
 
     @fingerprint.setter
-    def fingerprint(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def fingerprint(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "fingerprint", value)
 
     @_builtins.property
     @pulumi.getter
-    def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def folder(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
 
@@ -207,48 +207,48 @@ class ScepProfileArgs:
         return pulumi.get(self, "folder")
 
     @folder.setter
-    def folder(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def folder(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "folder", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the SCEP profile
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter(name="scepCaCert")
-    def scep_ca_cert(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def scep_ca_cert(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         SCEP Server CA Certificate
         """
         return pulumi.get(self, "scep_ca_cert")
 
     @scep_ca_cert.setter
-    def scep_ca_cert(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def scep_ca_cert(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "scep_ca_cert", value)
 
     @_builtins.property
     @pulumi.getter(name="scepClientCert")
-    def scep_client_cert(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def scep_client_cert(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         SCEP Client Certificate
         """
         return pulumi.get(self, "scep_client_cert")
 
     @scep_client_cert.setter
-    def scep_client_cert(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def scep_client_cert(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "scep_client_cert", value)
 
     @_builtins.property
     @pulumi.getter
-    def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def snippet(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
 
@@ -257,55 +257,55 @@ class ScepProfileArgs:
         return pulumi.get(self, "snippet")
 
     @snippet.setter
-    def snippet(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def snippet(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "snippet", value)
 
     @_builtins.property
     @pulumi.getter(name="useAsDigitalSignature")
-    def use_as_digital_signature(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def use_as_digital_signature(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Use as digital signature?
         """
         return pulumi.get(self, "use_as_digital_signature")
 
     @use_as_digital_signature.setter
-    def use_as_digital_signature(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def use_as_digital_signature(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "use_as_digital_signature", value)
 
     @_builtins.property
     @pulumi.getter(name="useForKeyEncipherment")
-    def use_for_key_encipherment(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def use_for_key_encipherment(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Use for key encipherment?
         """
         return pulumi.get(self, "use_for_key_encipherment")
 
     @use_for_key_encipherment.setter
-    def use_for_key_encipherment(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def use_for_key_encipherment(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "use_for_key_encipherment", value)
 
 
 @pulumi.input_type
 class _ScepProfileState:
     def __init__(__self__, *,
-                 algorithm: Optional[pulumi.Input['ScepProfileAlgorithmArgs']] = None,
-                 ca_identity_name: Optional[pulumi.Input[_builtins.str]] = None,
-                 certificate_attributes: Optional[pulumi.Input['ScepProfileCertificateAttributesArgs']] = None,
-                 device: Optional[pulumi.Input[_builtins.str]] = None,
-                 digest: Optional[pulumi.Input[_builtins.str]] = None,
-                 encrypted_values: Optional[pulumi.Input[Mapping[str, pulumi.Input[_builtins.str]]]] = None,
-                 fingerprint: Optional[pulumi.Input[_builtins.str]] = None,
-                 folder: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 scep_ca_cert: Optional[pulumi.Input[_builtins.str]] = None,
-                 scep_challenge: Optional[pulumi.Input['ScepProfileScepChallengeArgs']] = None,
-                 scep_client_cert: Optional[pulumi.Input[_builtins.str]] = None,
-                 scep_url: Optional[pulumi.Input[_builtins.str]] = None,
-                 snippet: Optional[pulumi.Input[_builtins.str]] = None,
-                 subject: Optional[pulumi.Input[_builtins.str]] = None,
-                 tfid: Optional[pulumi.Input[_builtins.str]] = None,
-                 use_as_digital_signature: Optional[pulumi.Input[_builtins.bool]] = None,
-                 use_for_key_encipherment: Optional[pulumi.Input[_builtins.bool]] = None):
+                 algorithm: pulumi.Input[Optional['ScepProfileAlgorithmArgs']] = None,
+                 ca_identity_name: pulumi.Input[Optional[_builtins.str]] = None,
+                 certificate_attributes: pulumi.Input[Optional['ScepProfileCertificateAttributesArgs']] = None,
+                 device: pulumi.Input[Optional[_builtins.str]] = None,
+                 digest: pulumi.Input[Optional[_builtins.str]] = None,
+                 encrypted_values: pulumi.Input[Optional[Mapping[str, pulumi.Input[_builtins.str]]]] = None,
+                 fingerprint: pulumi.Input[Optional[_builtins.str]] = None,
+                 folder: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 scep_ca_cert: pulumi.Input[Optional[_builtins.str]] = None,
+                 scep_challenge: pulumi.Input[Optional['ScepProfileScepChallengeArgs']] = None,
+                 scep_client_cert: pulumi.Input[Optional[_builtins.str]] = None,
+                 scep_url: pulumi.Input[Optional[_builtins.str]] = None,
+                 snippet: pulumi.Input[Optional[_builtins.str]] = None,
+                 subject: pulumi.Input[Optional[_builtins.str]] = None,
+                 tfid: pulumi.Input[Optional[_builtins.str]] = None,
+                 use_as_digital_signature: pulumi.Input[Optional[_builtins.bool]] = None,
+                 use_for_key_encipherment: pulumi.Input[Optional[_builtins.bool]] = None):
         """
         Input properties used for looking up and filtering ScepProfile resources.
 
@@ -371,91 +371,91 @@ class _ScepProfileState:
 
     @_builtins.property
     @pulumi.getter
-    def algorithm(self) -> Optional[pulumi.Input['ScepProfileAlgorithmArgs']]:
+    def algorithm(self) -> pulumi.Input[Optional['ScepProfileAlgorithmArgs']]:
         """
         Algorithm
         """
         return pulumi.get(self, "algorithm")
 
     @algorithm.setter
-    def algorithm(self, value: Optional[pulumi.Input['ScepProfileAlgorithmArgs']]):
+    def algorithm(self, value: pulumi.Input[Optional['ScepProfileAlgorithmArgs']]):
         pulumi.set(self, "algorithm", value)
 
     @_builtins.property
     @pulumi.getter(name="caIdentityName")
-    def ca_identity_name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ca_identity_name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Certificate Authority Identity
         """
         return pulumi.get(self, "ca_identity_name")
 
     @ca_identity_name.setter
-    def ca_identity_name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ca_identity_name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ca_identity_name", value)
 
     @_builtins.property
     @pulumi.getter(name="certificateAttributes")
-    def certificate_attributes(self) -> Optional[pulumi.Input['ScepProfileCertificateAttributesArgs']]:
+    def certificate_attributes(self) -> pulumi.Input[Optional['ScepProfileCertificateAttributesArgs']]:
         """
         Subject Alternative name type
         """
         return pulumi.get(self, "certificate_attributes")
 
     @certificate_attributes.setter
-    def certificate_attributes(self, value: Optional[pulumi.Input['ScepProfileCertificateAttributesArgs']]):
+    def certificate_attributes(self, value: pulumi.Input[Optional['ScepProfileCertificateAttributesArgs']]):
         pulumi.set(self, "certificate_attributes", value)
 
     @_builtins.property
     @pulumi.getter
-    def device(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def device(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The device in which the resource is defined
         """
         return pulumi.get(self, "device")
 
     @device.setter
-    def device(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def device(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "device", value)
 
     @_builtins.property
     @pulumi.getter
-    def digest(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def digest(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Digest for CSR
         """
         return pulumi.get(self, "digest")
 
     @digest.setter
-    def digest(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def digest(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "digest", value)
 
     @_builtins.property
     @pulumi.getter(name="encryptedValues")
-    def encrypted_values(self) -> Optional[pulumi.Input[Mapping[str, pulumi.Input[_builtins.str]]]]:
+    def encrypted_values(self) -> pulumi.Input[Optional[Mapping[str, pulumi.Input[_builtins.str]]]]:
         """
         Map of sensitive values returned from the API.
         """
         return pulumi.get(self, "encrypted_values")
 
     @encrypted_values.setter
-    def encrypted_values(self, value: Optional[pulumi.Input[Mapping[str, pulumi.Input[_builtins.str]]]]):
+    def encrypted_values(self, value: pulumi.Input[Optional[Mapping[str, pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "encrypted_values", value)
 
     @_builtins.property
     @pulumi.getter
-    def fingerprint(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def fingerprint(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         CA Certificate Fingerprint
         """
         return pulumi.get(self, "fingerprint")
 
     @fingerprint.setter
-    def fingerprint(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def fingerprint(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "fingerprint", value)
 
     @_builtins.property
     @pulumi.getter
-    def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def folder(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
 
@@ -464,72 +464,72 @@ class _ScepProfileState:
         return pulumi.get(self, "folder")
 
     @folder.setter
-    def folder(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def folder(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "folder", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the SCEP profile
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter(name="scepCaCert")
-    def scep_ca_cert(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def scep_ca_cert(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         SCEP Server CA Certificate
         """
         return pulumi.get(self, "scep_ca_cert")
 
     @scep_ca_cert.setter
-    def scep_ca_cert(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def scep_ca_cert(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "scep_ca_cert", value)
 
     @_builtins.property
     @pulumi.getter(name="scepChallenge")
-    def scep_challenge(self) -> Optional[pulumi.Input['ScepProfileScepChallengeArgs']]:
+    def scep_challenge(self) -> pulumi.Input[Optional['ScepProfileScepChallengeArgs']]:
         """
         One Time Password Challenge
         """
         return pulumi.get(self, "scep_challenge")
 
     @scep_challenge.setter
-    def scep_challenge(self, value: Optional[pulumi.Input['ScepProfileScepChallengeArgs']]):
+    def scep_challenge(self, value: pulumi.Input[Optional['ScepProfileScepChallengeArgs']]):
         pulumi.set(self, "scep_challenge", value)
 
     @_builtins.property
     @pulumi.getter(name="scepClientCert")
-    def scep_client_cert(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def scep_client_cert(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         SCEP Client Certificate
         """
         return pulumi.get(self, "scep_client_cert")
 
     @scep_client_cert.setter
-    def scep_client_cert(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def scep_client_cert(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "scep_client_cert", value)
 
     @_builtins.property
     @pulumi.getter(name="scepUrl")
-    def scep_url(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def scep_url(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         SCEP server URL
         """
         return pulumi.get(self, "scep_url")
 
     @scep_url.setter
-    def scep_url(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def scep_url(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "scep_url", value)
 
     @_builtins.property
     @pulumi.getter
-    def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def snippet(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
 
@@ -538,55 +538,55 @@ class _ScepProfileState:
         return pulumi.get(self, "snippet")
 
     @snippet.setter
-    def snippet(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def snippet(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "snippet", value)
 
     @_builtins.property
     @pulumi.getter
-    def subject(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def subject(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Subject
         """
         return pulumi.get(self, "subject")
 
     @subject.setter
-    def subject(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def subject(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "subject", value)
 
     @_builtins.property
     @pulumi.getter
-    def tfid(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def tfid(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The Terraform ID.
         """
         return pulumi.get(self, "tfid")
 
     @tfid.setter
-    def tfid(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def tfid(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "tfid", value)
 
     @_builtins.property
     @pulumi.getter(name="useAsDigitalSignature")
-    def use_as_digital_signature(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def use_as_digital_signature(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Use as digital signature?
         """
         return pulumi.get(self, "use_as_digital_signature")
 
     @use_as_digital_signature.setter
-    def use_as_digital_signature(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def use_as_digital_signature(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "use_as_digital_signature", value)
 
     @_builtins.property
     @pulumi.getter(name="useForKeyEncipherment")
-    def use_for_key_encipherment(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def use_for_key_encipherment(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Use for key encipherment?
         """
         return pulumi.get(self, "use_for_key_encipherment")
 
     @use_for_key_encipherment.setter
-    def use_for_key_encipherment(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def use_for_key_encipherment(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "use_for_key_encipherment", value)
 
 
@@ -596,22 +596,22 @@ class ScepProfile(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 algorithm: Optional[pulumi.Input[Union['ScepProfileAlgorithmArgs', 'ScepProfileAlgorithmArgsDict']]] = None,
-                 ca_identity_name: Optional[pulumi.Input[_builtins.str]] = None,
-                 certificate_attributes: Optional[pulumi.Input[Union['ScepProfileCertificateAttributesArgs', 'ScepProfileCertificateAttributesArgsDict']]] = None,
-                 device: Optional[pulumi.Input[_builtins.str]] = None,
-                 digest: Optional[pulumi.Input[_builtins.str]] = None,
-                 fingerprint: Optional[pulumi.Input[_builtins.str]] = None,
-                 folder: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 scep_ca_cert: Optional[pulumi.Input[_builtins.str]] = None,
-                 scep_challenge: Optional[pulumi.Input[Union['ScepProfileScepChallengeArgs', 'ScepProfileScepChallengeArgsDict']]] = None,
-                 scep_client_cert: Optional[pulumi.Input[_builtins.str]] = None,
-                 scep_url: Optional[pulumi.Input[_builtins.str]] = None,
-                 snippet: Optional[pulumi.Input[_builtins.str]] = None,
-                 subject: Optional[pulumi.Input[_builtins.str]] = None,
-                 use_as_digital_signature: Optional[pulumi.Input[_builtins.bool]] = None,
-                 use_for_key_encipherment: Optional[pulumi.Input[_builtins.bool]] = None,
+                 algorithm: pulumi.Input[Optional[Union['ScepProfileAlgorithmArgs', 'ScepProfileAlgorithmArgsDict']]] = None,
+                 ca_identity_name: pulumi.Input[Optional[_builtins.str]] = None,
+                 certificate_attributes: pulumi.Input[Optional[Union['ScepProfileCertificateAttributesArgs', 'ScepProfileCertificateAttributesArgsDict']]] = None,
+                 device: pulumi.Input[Optional[_builtins.str]] = None,
+                 digest: pulumi.Input[Optional[_builtins.str]] = None,
+                 fingerprint: pulumi.Input[Optional[_builtins.str]] = None,
+                 folder: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 scep_ca_cert: pulumi.Input[Optional[_builtins.str]] = None,
+                 scep_challenge: pulumi.Input[Optional[Union['ScepProfileScepChallengeArgs', 'ScepProfileScepChallengeArgsDict']]] = None,
+                 scep_client_cert: pulumi.Input[Optional[_builtins.str]] = None,
+                 scep_url: pulumi.Input[Optional[_builtins.str]] = None,
+                 snippet: pulumi.Input[Optional[_builtins.str]] = None,
+                 subject: pulumi.Input[Optional[_builtins.str]] = None,
+                 use_as_digital_signature: pulumi.Input[Optional[_builtins.bool]] = None,
+                 use_for_key_encipherment: pulumi.Input[Optional[_builtins.bool]] = None,
                  __props__=None):
         """
         ScepProfile resource
@@ -905,22 +905,22 @@ class ScepProfile(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 algorithm: Optional[pulumi.Input[Union['ScepProfileAlgorithmArgs', 'ScepProfileAlgorithmArgsDict']]] = None,
-                 ca_identity_name: Optional[pulumi.Input[_builtins.str]] = None,
-                 certificate_attributes: Optional[pulumi.Input[Union['ScepProfileCertificateAttributesArgs', 'ScepProfileCertificateAttributesArgsDict']]] = None,
-                 device: Optional[pulumi.Input[_builtins.str]] = None,
-                 digest: Optional[pulumi.Input[_builtins.str]] = None,
-                 fingerprint: Optional[pulumi.Input[_builtins.str]] = None,
-                 folder: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 scep_ca_cert: Optional[pulumi.Input[_builtins.str]] = None,
-                 scep_challenge: Optional[pulumi.Input[Union['ScepProfileScepChallengeArgs', 'ScepProfileScepChallengeArgsDict']]] = None,
-                 scep_client_cert: Optional[pulumi.Input[_builtins.str]] = None,
-                 scep_url: Optional[pulumi.Input[_builtins.str]] = None,
-                 snippet: Optional[pulumi.Input[_builtins.str]] = None,
-                 subject: Optional[pulumi.Input[_builtins.str]] = None,
-                 use_as_digital_signature: Optional[pulumi.Input[_builtins.bool]] = None,
-                 use_for_key_encipherment: Optional[pulumi.Input[_builtins.bool]] = None,
+                 algorithm: pulumi.Input[Optional[Union['ScepProfileAlgorithmArgs', 'ScepProfileAlgorithmArgsDict']]] = None,
+                 ca_identity_name: pulumi.Input[Optional[_builtins.str]] = None,
+                 certificate_attributes: pulumi.Input[Optional[Union['ScepProfileCertificateAttributesArgs', 'ScepProfileCertificateAttributesArgsDict']]] = None,
+                 device: pulumi.Input[Optional[_builtins.str]] = None,
+                 digest: pulumi.Input[Optional[_builtins.str]] = None,
+                 fingerprint: pulumi.Input[Optional[_builtins.str]] = None,
+                 folder: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 scep_ca_cert: pulumi.Input[Optional[_builtins.str]] = None,
+                 scep_challenge: pulumi.Input[Optional[Union['ScepProfileScepChallengeArgs', 'ScepProfileScepChallengeArgsDict']]] = None,
+                 scep_client_cert: pulumi.Input[Optional[_builtins.str]] = None,
+                 scep_url: pulumi.Input[Optional[_builtins.str]] = None,
+                 snippet: pulumi.Input[Optional[_builtins.str]] = None,
+                 subject: pulumi.Input[Optional[_builtins.str]] = None,
+                 use_as_digital_signature: pulumi.Input[Optional[_builtins.bool]] = None,
+                 use_for_key_encipherment: pulumi.Input[Optional[_builtins.bool]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -972,24 +972,24 @@ class ScepProfile(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            algorithm: Optional[pulumi.Input[Union['ScepProfileAlgorithmArgs', 'ScepProfileAlgorithmArgsDict']]] = None,
-            ca_identity_name: Optional[pulumi.Input[_builtins.str]] = None,
-            certificate_attributes: Optional[pulumi.Input[Union['ScepProfileCertificateAttributesArgs', 'ScepProfileCertificateAttributesArgsDict']]] = None,
-            device: Optional[pulumi.Input[_builtins.str]] = None,
-            digest: Optional[pulumi.Input[_builtins.str]] = None,
-            encrypted_values: Optional[pulumi.Input[Mapping[str, pulumi.Input[_builtins.str]]]] = None,
-            fingerprint: Optional[pulumi.Input[_builtins.str]] = None,
-            folder: Optional[pulumi.Input[_builtins.str]] = None,
-            name: Optional[pulumi.Input[_builtins.str]] = None,
-            scep_ca_cert: Optional[pulumi.Input[_builtins.str]] = None,
-            scep_challenge: Optional[pulumi.Input[Union['ScepProfileScepChallengeArgs', 'ScepProfileScepChallengeArgsDict']]] = None,
-            scep_client_cert: Optional[pulumi.Input[_builtins.str]] = None,
-            scep_url: Optional[pulumi.Input[_builtins.str]] = None,
-            snippet: Optional[pulumi.Input[_builtins.str]] = None,
-            subject: Optional[pulumi.Input[_builtins.str]] = None,
-            tfid: Optional[pulumi.Input[_builtins.str]] = None,
-            use_as_digital_signature: Optional[pulumi.Input[_builtins.bool]] = None,
-            use_for_key_encipherment: Optional[pulumi.Input[_builtins.bool]] = None) -> 'ScepProfile':
+            algorithm: pulumi.Input[Optional[Union['ScepProfileAlgorithmArgs', 'ScepProfileAlgorithmArgsDict']]] = None,
+            ca_identity_name: pulumi.Input[Optional[_builtins.str]] = None,
+            certificate_attributes: pulumi.Input[Optional[Union['ScepProfileCertificateAttributesArgs', 'ScepProfileCertificateAttributesArgsDict']]] = None,
+            device: pulumi.Input[Optional[_builtins.str]] = None,
+            digest: pulumi.Input[Optional[_builtins.str]] = None,
+            encrypted_values: pulumi.Input[Optional[Mapping[str, pulumi.Input[_builtins.str]]]] = None,
+            fingerprint: pulumi.Input[Optional[_builtins.str]] = None,
+            folder: pulumi.Input[Optional[_builtins.str]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            scep_ca_cert: pulumi.Input[Optional[_builtins.str]] = None,
+            scep_challenge: pulumi.Input[Optional[Union['ScepProfileScepChallengeArgs', 'ScepProfileScepChallengeArgsDict']]] = None,
+            scep_client_cert: pulumi.Input[Optional[_builtins.str]] = None,
+            scep_url: pulumi.Input[Optional[_builtins.str]] = None,
+            snippet: pulumi.Input[Optional[_builtins.str]] = None,
+            subject: pulumi.Input[Optional[_builtins.str]] = None,
+            tfid: pulumi.Input[Optional[_builtins.str]] = None,
+            use_as_digital_signature: pulumi.Input[Optional[_builtins.bool]] = None,
+            use_for_key_encipherment: pulumi.Input[Optional[_builtins.bool]] = None) -> 'ScepProfile':
         """
         Get an existing ScepProfile resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

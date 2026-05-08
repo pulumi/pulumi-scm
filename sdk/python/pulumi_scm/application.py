@@ -23,35 +23,35 @@ class ApplicationArgs:
     def __init__(__self__, *,
                  category: pulumi.Input[_builtins.str],
                  risk: pulumi.Input[_builtins.str],
-                 able_to_transfer_file: Optional[pulumi.Input[_builtins.bool]] = None,
-                 alg_disable_capability: Optional[pulumi.Input[_builtins.str]] = None,
-                 consume_big_bandwidth: Optional[pulumi.Input[_builtins.bool]] = None,
-                 data_ident: Optional[pulumi.Input[_builtins.bool]] = None,
-                 default: Optional[pulumi.Input['ApplicationDefaultArgs']] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 device: Optional[pulumi.Input[_builtins.str]] = None,
-                 evasive_behavior: Optional[pulumi.Input[_builtins.bool]] = None,
-                 file_type_ident: Optional[pulumi.Input[_builtins.bool]] = None,
-                 folder: Optional[pulumi.Input[_builtins.str]] = None,
-                 has_known_vulnerability: Optional[pulumi.Input[_builtins.bool]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 no_appid_caching: Optional[pulumi.Input[_builtins.bool]] = None,
-                 parent_app: Optional[pulumi.Input[_builtins.str]] = None,
-                 pervasive_use: Optional[pulumi.Input[_builtins.bool]] = None,
-                 prone_to_misuse: Optional[pulumi.Input[_builtins.bool]] = None,
-                 signatures: Optional[pulumi.Input[Sequence[pulumi.Input['ApplicationSignatureArgs']]]] = None,
-                 snippet: Optional[pulumi.Input[_builtins.str]] = None,
-                 subcategory: Optional[pulumi.Input[_builtins.str]] = None,
-                 tcp_half_closed_timeout: Optional[pulumi.Input[_builtins.int]] = None,
-                 tcp_time_wait_timeout: Optional[pulumi.Input[_builtins.int]] = None,
-                 tcp_timeout: Optional[pulumi.Input[_builtins.int]] = None,
-                 technology: Optional[pulumi.Input[_builtins.str]] = None,
-                 timeout: Optional[pulumi.Input[_builtins.int]] = None,
-                 tunnel_applications: Optional[pulumi.Input[_builtins.bool]] = None,
-                 tunnel_other_application: Optional[pulumi.Input[_builtins.bool]] = None,
-                 udp_timeout: Optional[pulumi.Input[_builtins.int]] = None,
-                 used_by_malware: Optional[pulumi.Input[_builtins.bool]] = None,
-                 virus_ident: Optional[pulumi.Input[_builtins.bool]] = None):
+                 able_to_transfer_file: pulumi.Input[Optional[_builtins.bool]] = None,
+                 alg_disable_capability: pulumi.Input[Optional[_builtins.str]] = None,
+                 consume_big_bandwidth: pulumi.Input[Optional[_builtins.bool]] = None,
+                 data_ident: pulumi.Input[Optional[_builtins.bool]] = None,
+                 default: pulumi.Input[Optional['ApplicationDefaultArgs']] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 device: pulumi.Input[Optional[_builtins.str]] = None,
+                 evasive_behavior: pulumi.Input[Optional[_builtins.bool]] = None,
+                 file_type_ident: pulumi.Input[Optional[_builtins.bool]] = None,
+                 folder: pulumi.Input[Optional[_builtins.str]] = None,
+                 has_known_vulnerability: pulumi.Input[Optional[_builtins.bool]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 no_appid_caching: pulumi.Input[Optional[_builtins.bool]] = None,
+                 parent_app: pulumi.Input[Optional[_builtins.str]] = None,
+                 pervasive_use: pulumi.Input[Optional[_builtins.bool]] = None,
+                 prone_to_misuse: pulumi.Input[Optional[_builtins.bool]] = None,
+                 signatures: pulumi.Input[Optional[Sequence[pulumi.Input['ApplicationSignatureArgs']]]] = None,
+                 snippet: pulumi.Input[Optional[_builtins.str]] = None,
+                 subcategory: pulumi.Input[Optional[_builtins.str]] = None,
+                 tcp_half_closed_timeout: pulumi.Input[Optional[_builtins.int]] = None,
+                 tcp_time_wait_timeout: pulumi.Input[Optional[_builtins.int]] = None,
+                 tcp_timeout: pulumi.Input[Optional[_builtins.int]] = None,
+                 technology: pulumi.Input[Optional[_builtins.str]] = None,
+                 timeout: pulumi.Input[Optional[_builtins.int]] = None,
+                 tunnel_applications: pulumi.Input[Optional[_builtins.bool]] = None,
+                 tunnel_other_application: pulumi.Input[Optional[_builtins.bool]] = None,
+                 udp_timeout: pulumi.Input[Optional[_builtins.int]] = None,
+                 used_by_malware: pulumi.Input[Optional[_builtins.bool]] = None,
+                 virus_ident: pulumi.Input[Optional[_builtins.bool]] = None):
         """
         The set of arguments for constructing a Application resource.
 
@@ -178,115 +178,115 @@ class ApplicationArgs:
 
     @_builtins.property
     @pulumi.getter(name="ableToTransferFile")
-    def able_to_transfer_file(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def able_to_transfer_file(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Able to transfer file
         """
         return pulumi.get(self, "able_to_transfer_file")
 
     @able_to_transfer_file.setter
-    def able_to_transfer_file(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def able_to_transfer_file(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "able_to_transfer_file", value)
 
     @_builtins.property
     @pulumi.getter(name="algDisableCapability")
-    def alg_disable_capability(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def alg_disable_capability(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Alg disable capability
         """
         return pulumi.get(self, "alg_disable_capability")
 
     @alg_disable_capability.setter
-    def alg_disable_capability(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def alg_disable_capability(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "alg_disable_capability", value)
 
     @_builtins.property
     @pulumi.getter(name="consumeBigBandwidth")
-    def consume_big_bandwidth(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def consume_big_bandwidth(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Consume big bandwidth
         """
         return pulumi.get(self, "consume_big_bandwidth")
 
     @consume_big_bandwidth.setter
-    def consume_big_bandwidth(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def consume_big_bandwidth(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "consume_big_bandwidth", value)
 
     @_builtins.property
     @pulumi.getter(name="dataIdent")
-    def data_ident(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def data_ident(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Data ident
         """
         return pulumi.get(self, "data_ident")
 
     @data_ident.setter
-    def data_ident(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def data_ident(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "data_ident", value)
 
     @_builtins.property
     @pulumi.getter
-    def default(self) -> Optional[pulumi.Input['ApplicationDefaultArgs']]:
+    def default(self) -> pulumi.Input[Optional['ApplicationDefaultArgs']]:
         """
         Default
         """
         return pulumi.get(self, "default")
 
     @default.setter
-    def default(self, value: Optional[pulumi.Input['ApplicationDefaultArgs']]):
+    def default(self, value: pulumi.Input[Optional['ApplicationDefaultArgs']]):
         pulumi.set(self, "default", value)
 
     @_builtins.property
     @pulumi.getter
-    def description(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def description(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Description
         """
         return pulumi.get(self, "description")
 
     @description.setter
-    def description(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def description(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "description", value)
 
     @_builtins.property
     @pulumi.getter
-    def device(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def device(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The device in which the resource is defined
         """
         return pulumi.get(self, "device")
 
     @device.setter
-    def device(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def device(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "device", value)
 
     @_builtins.property
     @pulumi.getter(name="evasiveBehavior")
-    def evasive_behavior(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def evasive_behavior(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Evasive behavior
         """
         return pulumi.get(self, "evasive_behavior")
 
     @evasive_behavior.setter
-    def evasive_behavior(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def evasive_behavior(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "evasive_behavior", value)
 
     @_builtins.property
     @pulumi.getter(name="fileTypeIdent")
-    def file_type_ident(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def file_type_ident(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         File type ident
         """
         return pulumi.get(self, "file_type_ident")
 
     @file_type_ident.setter
-    def file_type_ident(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def file_type_ident(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "file_type_ident", value)
 
     @_builtins.property
     @pulumi.getter
-    def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def folder(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
 
@@ -295,96 +295,96 @@ class ApplicationArgs:
         return pulumi.get(self, "folder")
 
     @folder.setter
-    def folder(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def folder(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "folder", value)
 
     @_builtins.property
     @pulumi.getter(name="hasKnownVulnerability")
-    def has_known_vulnerability(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def has_known_vulnerability(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Has known vulnerability
         """
         return pulumi.get(self, "has_known_vulnerability")
 
     @has_known_vulnerability.setter
-    def has_known_vulnerability(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def has_known_vulnerability(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "has_known_vulnerability", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the application
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter(name="noAppidCaching")
-    def no_appid_caching(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def no_appid_caching(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         No appid caching
         """
         return pulumi.get(self, "no_appid_caching")
 
     @no_appid_caching.setter
-    def no_appid_caching(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def no_appid_caching(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "no_appid_caching", value)
 
     @_builtins.property
     @pulumi.getter(name="parentApp")
-    def parent_app(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def parent_app(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Parent app
         """
         return pulumi.get(self, "parent_app")
 
     @parent_app.setter
-    def parent_app(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def parent_app(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "parent_app", value)
 
     @_builtins.property
     @pulumi.getter(name="pervasiveUse")
-    def pervasive_use(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def pervasive_use(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Pervasive use
         """
         return pulumi.get(self, "pervasive_use")
 
     @pervasive_use.setter
-    def pervasive_use(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def pervasive_use(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "pervasive_use", value)
 
     @_builtins.property
     @pulumi.getter(name="proneToMisuse")
-    def prone_to_misuse(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def prone_to_misuse(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Prone to misuse
         """
         return pulumi.get(self, "prone_to_misuse")
 
     @prone_to_misuse.setter
-    def prone_to_misuse(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def prone_to_misuse(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "prone_to_misuse", value)
 
     @_builtins.property
     @pulumi.getter
-    def signatures(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['ApplicationSignatureArgs']]]]:
+    def signatures(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['ApplicationSignatureArgs']]]]:
         """
         Signature
         """
         return pulumi.get(self, "signatures")
 
     @signatures.setter
-    def signatures(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['ApplicationSignatureArgs']]]]):
+    def signatures(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['ApplicationSignatureArgs']]]]):
         pulumi.set(self, "signatures", value)
 
     @_builtins.property
     @pulumi.getter
-    def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def snippet(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
 
@@ -393,177 +393,177 @@ class ApplicationArgs:
         return pulumi.get(self, "snippet")
 
     @snippet.setter
-    def snippet(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def snippet(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "snippet", value)
 
     @_builtins.property
     @pulumi.getter
-    def subcategory(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def subcategory(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Subcategory
         """
         return pulumi.get(self, "subcategory")
 
     @subcategory.setter
-    def subcategory(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def subcategory(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "subcategory", value)
 
     @_builtins.property
     @pulumi.getter(name="tcpHalfClosedTimeout")
-    def tcp_half_closed_timeout(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def tcp_half_closed_timeout(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         timeout for half-close session in seconds
         """
         return pulumi.get(self, "tcp_half_closed_timeout")
 
     @tcp_half_closed_timeout.setter
-    def tcp_half_closed_timeout(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def tcp_half_closed_timeout(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "tcp_half_closed_timeout", value)
 
     @_builtins.property
     @pulumi.getter(name="tcpTimeWaitTimeout")
-    def tcp_time_wait_timeout(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def tcp_time_wait_timeout(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         timeout for session in time_wait state in seconds
         """
         return pulumi.get(self, "tcp_time_wait_timeout")
 
     @tcp_time_wait_timeout.setter
-    def tcp_time_wait_timeout(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def tcp_time_wait_timeout(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "tcp_time_wait_timeout", value)
 
     @_builtins.property
     @pulumi.getter(name="tcpTimeout")
-    def tcp_timeout(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def tcp_timeout(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         timeout in seconds
         """
         return pulumi.get(self, "tcp_timeout")
 
     @tcp_timeout.setter
-    def tcp_timeout(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def tcp_timeout(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "tcp_timeout", value)
 
     @_builtins.property
     @pulumi.getter
-    def technology(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def technology(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Technology
         """
         return pulumi.get(self, "technology")
 
     @technology.setter
-    def technology(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def technology(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "technology", value)
 
     @_builtins.property
     @pulumi.getter
-    def timeout(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def timeout(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         timeout in seconds
         """
         return pulumi.get(self, "timeout")
 
     @timeout.setter
-    def timeout(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def timeout(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "timeout", value)
 
     @_builtins.property
     @pulumi.getter(name="tunnelApplications")
-    def tunnel_applications(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def tunnel_applications(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Tunnel applications
         """
         return pulumi.get(self, "tunnel_applications")
 
     @tunnel_applications.setter
-    def tunnel_applications(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def tunnel_applications(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "tunnel_applications", value)
 
     @_builtins.property
     @pulumi.getter(name="tunnelOtherApplication")
-    def tunnel_other_application(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def tunnel_other_application(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Tunnel other application
         """
         return pulumi.get(self, "tunnel_other_application")
 
     @tunnel_other_application.setter
-    def tunnel_other_application(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def tunnel_other_application(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "tunnel_other_application", value)
 
     @_builtins.property
     @pulumi.getter(name="udpTimeout")
-    def udp_timeout(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def udp_timeout(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         timeout in seconds
         """
         return pulumi.get(self, "udp_timeout")
 
     @udp_timeout.setter
-    def udp_timeout(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def udp_timeout(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "udp_timeout", value)
 
     @_builtins.property
     @pulumi.getter(name="usedByMalware")
-    def used_by_malware(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def used_by_malware(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Used by malware
         """
         return pulumi.get(self, "used_by_malware")
 
     @used_by_malware.setter
-    def used_by_malware(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def used_by_malware(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "used_by_malware", value)
 
     @_builtins.property
     @pulumi.getter(name="virusIdent")
-    def virus_ident(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def virus_ident(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Virus ident
         """
         return pulumi.get(self, "virus_ident")
 
     @virus_ident.setter
-    def virus_ident(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def virus_ident(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "virus_ident", value)
 
 
 @pulumi.input_type
 class _ApplicationState:
     def __init__(__self__, *,
-                 able_to_transfer_file: Optional[pulumi.Input[_builtins.bool]] = None,
-                 alg_disable_capability: Optional[pulumi.Input[_builtins.str]] = None,
-                 category: Optional[pulumi.Input[_builtins.str]] = None,
-                 consume_big_bandwidth: Optional[pulumi.Input[_builtins.bool]] = None,
-                 data_ident: Optional[pulumi.Input[_builtins.bool]] = None,
-                 default: Optional[pulumi.Input['ApplicationDefaultArgs']] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 device: Optional[pulumi.Input[_builtins.str]] = None,
-                 evasive_behavior: Optional[pulumi.Input[_builtins.bool]] = None,
-                 file_type_ident: Optional[pulumi.Input[_builtins.bool]] = None,
-                 folder: Optional[pulumi.Input[_builtins.str]] = None,
-                 has_known_vulnerability: Optional[pulumi.Input[_builtins.bool]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 no_appid_caching: Optional[pulumi.Input[_builtins.bool]] = None,
-                 parent_app: Optional[pulumi.Input[_builtins.str]] = None,
-                 pervasive_use: Optional[pulumi.Input[_builtins.bool]] = None,
-                 prone_to_misuse: Optional[pulumi.Input[_builtins.bool]] = None,
-                 risk: Optional[pulumi.Input[_builtins.str]] = None,
-                 signatures: Optional[pulumi.Input[Sequence[pulumi.Input['ApplicationSignatureArgs']]]] = None,
-                 snippet: Optional[pulumi.Input[_builtins.str]] = None,
-                 subcategory: Optional[pulumi.Input[_builtins.str]] = None,
-                 tcp_half_closed_timeout: Optional[pulumi.Input[_builtins.int]] = None,
-                 tcp_time_wait_timeout: Optional[pulumi.Input[_builtins.int]] = None,
-                 tcp_timeout: Optional[pulumi.Input[_builtins.int]] = None,
-                 technology: Optional[pulumi.Input[_builtins.str]] = None,
-                 tfid: Optional[pulumi.Input[_builtins.str]] = None,
-                 timeout: Optional[pulumi.Input[_builtins.int]] = None,
-                 tunnel_applications: Optional[pulumi.Input[_builtins.bool]] = None,
-                 tunnel_other_application: Optional[pulumi.Input[_builtins.bool]] = None,
-                 udp_timeout: Optional[pulumi.Input[_builtins.int]] = None,
-                 used_by_malware: Optional[pulumi.Input[_builtins.bool]] = None,
-                 virus_ident: Optional[pulumi.Input[_builtins.bool]] = None):
+                 able_to_transfer_file: pulumi.Input[Optional[_builtins.bool]] = None,
+                 alg_disable_capability: pulumi.Input[Optional[_builtins.str]] = None,
+                 category: pulumi.Input[Optional[_builtins.str]] = None,
+                 consume_big_bandwidth: pulumi.Input[Optional[_builtins.bool]] = None,
+                 data_ident: pulumi.Input[Optional[_builtins.bool]] = None,
+                 default: pulumi.Input[Optional['ApplicationDefaultArgs']] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 device: pulumi.Input[Optional[_builtins.str]] = None,
+                 evasive_behavior: pulumi.Input[Optional[_builtins.bool]] = None,
+                 file_type_ident: pulumi.Input[Optional[_builtins.bool]] = None,
+                 folder: pulumi.Input[Optional[_builtins.str]] = None,
+                 has_known_vulnerability: pulumi.Input[Optional[_builtins.bool]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 no_appid_caching: pulumi.Input[Optional[_builtins.bool]] = None,
+                 parent_app: pulumi.Input[Optional[_builtins.str]] = None,
+                 pervasive_use: pulumi.Input[Optional[_builtins.bool]] = None,
+                 prone_to_misuse: pulumi.Input[Optional[_builtins.bool]] = None,
+                 risk: pulumi.Input[Optional[_builtins.str]] = None,
+                 signatures: pulumi.Input[Optional[Sequence[pulumi.Input['ApplicationSignatureArgs']]]] = None,
+                 snippet: pulumi.Input[Optional[_builtins.str]] = None,
+                 subcategory: pulumi.Input[Optional[_builtins.str]] = None,
+                 tcp_half_closed_timeout: pulumi.Input[Optional[_builtins.int]] = None,
+                 tcp_time_wait_timeout: pulumi.Input[Optional[_builtins.int]] = None,
+                 tcp_timeout: pulumi.Input[Optional[_builtins.int]] = None,
+                 technology: pulumi.Input[Optional[_builtins.str]] = None,
+                 tfid: pulumi.Input[Optional[_builtins.str]] = None,
+                 timeout: pulumi.Input[Optional[_builtins.int]] = None,
+                 tunnel_applications: pulumi.Input[Optional[_builtins.bool]] = None,
+                 tunnel_other_application: pulumi.Input[Optional[_builtins.bool]] = None,
+                 udp_timeout: pulumi.Input[Optional[_builtins.int]] = None,
+                 used_by_malware: pulumi.Input[Optional[_builtins.bool]] = None,
+                 virus_ident: pulumi.Input[Optional[_builtins.bool]] = None):
         """
         Input properties used for looking up and filtering Application resources.
 
@@ -671,127 +671,127 @@ class _ApplicationState:
 
     @_builtins.property
     @pulumi.getter(name="ableToTransferFile")
-    def able_to_transfer_file(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def able_to_transfer_file(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Able to transfer file
         """
         return pulumi.get(self, "able_to_transfer_file")
 
     @able_to_transfer_file.setter
-    def able_to_transfer_file(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def able_to_transfer_file(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "able_to_transfer_file", value)
 
     @_builtins.property
     @pulumi.getter(name="algDisableCapability")
-    def alg_disable_capability(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def alg_disable_capability(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Alg disable capability
         """
         return pulumi.get(self, "alg_disable_capability")
 
     @alg_disable_capability.setter
-    def alg_disable_capability(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def alg_disable_capability(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "alg_disable_capability", value)
 
     @_builtins.property
     @pulumi.getter
-    def category(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def category(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Category
         """
         return pulumi.get(self, "category")
 
     @category.setter
-    def category(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def category(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "category", value)
 
     @_builtins.property
     @pulumi.getter(name="consumeBigBandwidth")
-    def consume_big_bandwidth(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def consume_big_bandwidth(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Consume big bandwidth
         """
         return pulumi.get(self, "consume_big_bandwidth")
 
     @consume_big_bandwidth.setter
-    def consume_big_bandwidth(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def consume_big_bandwidth(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "consume_big_bandwidth", value)
 
     @_builtins.property
     @pulumi.getter(name="dataIdent")
-    def data_ident(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def data_ident(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Data ident
         """
         return pulumi.get(self, "data_ident")
 
     @data_ident.setter
-    def data_ident(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def data_ident(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "data_ident", value)
 
     @_builtins.property
     @pulumi.getter
-    def default(self) -> Optional[pulumi.Input['ApplicationDefaultArgs']]:
+    def default(self) -> pulumi.Input[Optional['ApplicationDefaultArgs']]:
         """
         Default
         """
         return pulumi.get(self, "default")
 
     @default.setter
-    def default(self, value: Optional[pulumi.Input['ApplicationDefaultArgs']]):
+    def default(self, value: pulumi.Input[Optional['ApplicationDefaultArgs']]):
         pulumi.set(self, "default", value)
 
     @_builtins.property
     @pulumi.getter
-    def description(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def description(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Description
         """
         return pulumi.get(self, "description")
 
     @description.setter
-    def description(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def description(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "description", value)
 
     @_builtins.property
     @pulumi.getter
-    def device(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def device(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The device in which the resource is defined
         """
         return pulumi.get(self, "device")
 
     @device.setter
-    def device(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def device(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "device", value)
 
     @_builtins.property
     @pulumi.getter(name="evasiveBehavior")
-    def evasive_behavior(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def evasive_behavior(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Evasive behavior
         """
         return pulumi.get(self, "evasive_behavior")
 
     @evasive_behavior.setter
-    def evasive_behavior(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def evasive_behavior(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "evasive_behavior", value)
 
     @_builtins.property
     @pulumi.getter(name="fileTypeIdent")
-    def file_type_ident(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def file_type_ident(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         File type ident
         """
         return pulumi.get(self, "file_type_ident")
 
     @file_type_ident.setter
-    def file_type_ident(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def file_type_ident(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "file_type_ident", value)
 
     @_builtins.property
     @pulumi.getter
-    def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def folder(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
 
@@ -800,108 +800,108 @@ class _ApplicationState:
         return pulumi.get(self, "folder")
 
     @folder.setter
-    def folder(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def folder(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "folder", value)
 
     @_builtins.property
     @pulumi.getter(name="hasKnownVulnerability")
-    def has_known_vulnerability(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def has_known_vulnerability(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Has known vulnerability
         """
         return pulumi.get(self, "has_known_vulnerability")
 
     @has_known_vulnerability.setter
-    def has_known_vulnerability(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def has_known_vulnerability(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "has_known_vulnerability", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the application
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter(name="noAppidCaching")
-    def no_appid_caching(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def no_appid_caching(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         No appid caching
         """
         return pulumi.get(self, "no_appid_caching")
 
     @no_appid_caching.setter
-    def no_appid_caching(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def no_appid_caching(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "no_appid_caching", value)
 
     @_builtins.property
     @pulumi.getter(name="parentApp")
-    def parent_app(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def parent_app(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Parent app
         """
         return pulumi.get(self, "parent_app")
 
     @parent_app.setter
-    def parent_app(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def parent_app(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "parent_app", value)
 
     @_builtins.property
     @pulumi.getter(name="pervasiveUse")
-    def pervasive_use(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def pervasive_use(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Pervasive use
         """
         return pulumi.get(self, "pervasive_use")
 
     @pervasive_use.setter
-    def pervasive_use(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def pervasive_use(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "pervasive_use", value)
 
     @_builtins.property
     @pulumi.getter(name="proneToMisuse")
-    def prone_to_misuse(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def prone_to_misuse(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Prone to misuse
         """
         return pulumi.get(self, "prone_to_misuse")
 
     @prone_to_misuse.setter
-    def prone_to_misuse(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def prone_to_misuse(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "prone_to_misuse", value)
 
     @_builtins.property
     @pulumi.getter
-    def risk(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def risk(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Risk
         """
         return pulumi.get(self, "risk")
 
     @risk.setter
-    def risk(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def risk(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "risk", value)
 
     @_builtins.property
     @pulumi.getter
-    def signatures(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['ApplicationSignatureArgs']]]]:
+    def signatures(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['ApplicationSignatureArgs']]]]:
         """
         Signature
         """
         return pulumi.get(self, "signatures")
 
     @signatures.setter
-    def signatures(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['ApplicationSignatureArgs']]]]):
+    def signatures(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['ApplicationSignatureArgs']]]]):
         pulumi.set(self, "signatures", value)
 
     @_builtins.property
     @pulumi.getter
-    def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def snippet(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
 
@@ -910,151 +910,151 @@ class _ApplicationState:
         return pulumi.get(self, "snippet")
 
     @snippet.setter
-    def snippet(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def snippet(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "snippet", value)
 
     @_builtins.property
     @pulumi.getter
-    def subcategory(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def subcategory(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Subcategory
         """
         return pulumi.get(self, "subcategory")
 
     @subcategory.setter
-    def subcategory(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def subcategory(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "subcategory", value)
 
     @_builtins.property
     @pulumi.getter(name="tcpHalfClosedTimeout")
-    def tcp_half_closed_timeout(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def tcp_half_closed_timeout(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         timeout for half-close session in seconds
         """
         return pulumi.get(self, "tcp_half_closed_timeout")
 
     @tcp_half_closed_timeout.setter
-    def tcp_half_closed_timeout(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def tcp_half_closed_timeout(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "tcp_half_closed_timeout", value)
 
     @_builtins.property
     @pulumi.getter(name="tcpTimeWaitTimeout")
-    def tcp_time_wait_timeout(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def tcp_time_wait_timeout(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         timeout for session in time_wait state in seconds
         """
         return pulumi.get(self, "tcp_time_wait_timeout")
 
     @tcp_time_wait_timeout.setter
-    def tcp_time_wait_timeout(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def tcp_time_wait_timeout(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "tcp_time_wait_timeout", value)
 
     @_builtins.property
     @pulumi.getter(name="tcpTimeout")
-    def tcp_timeout(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def tcp_timeout(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         timeout in seconds
         """
         return pulumi.get(self, "tcp_timeout")
 
     @tcp_timeout.setter
-    def tcp_timeout(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def tcp_timeout(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "tcp_timeout", value)
 
     @_builtins.property
     @pulumi.getter
-    def technology(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def technology(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Technology
         """
         return pulumi.get(self, "technology")
 
     @technology.setter
-    def technology(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def technology(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "technology", value)
 
     @_builtins.property
     @pulumi.getter
-    def tfid(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def tfid(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The Terraform ID.
         """
         return pulumi.get(self, "tfid")
 
     @tfid.setter
-    def tfid(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def tfid(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "tfid", value)
 
     @_builtins.property
     @pulumi.getter
-    def timeout(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def timeout(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         timeout in seconds
         """
         return pulumi.get(self, "timeout")
 
     @timeout.setter
-    def timeout(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def timeout(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "timeout", value)
 
     @_builtins.property
     @pulumi.getter(name="tunnelApplications")
-    def tunnel_applications(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def tunnel_applications(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Tunnel applications
         """
         return pulumi.get(self, "tunnel_applications")
 
     @tunnel_applications.setter
-    def tunnel_applications(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def tunnel_applications(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "tunnel_applications", value)
 
     @_builtins.property
     @pulumi.getter(name="tunnelOtherApplication")
-    def tunnel_other_application(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def tunnel_other_application(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Tunnel other application
         """
         return pulumi.get(self, "tunnel_other_application")
 
     @tunnel_other_application.setter
-    def tunnel_other_application(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def tunnel_other_application(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "tunnel_other_application", value)
 
     @_builtins.property
     @pulumi.getter(name="udpTimeout")
-    def udp_timeout(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def udp_timeout(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         timeout in seconds
         """
         return pulumi.get(self, "udp_timeout")
 
     @udp_timeout.setter
-    def udp_timeout(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def udp_timeout(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "udp_timeout", value)
 
     @_builtins.property
     @pulumi.getter(name="usedByMalware")
-    def used_by_malware(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def used_by_malware(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Used by malware
         """
         return pulumi.get(self, "used_by_malware")
 
     @used_by_malware.setter
-    def used_by_malware(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def used_by_malware(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "used_by_malware", value)
 
     @_builtins.property
     @pulumi.getter(name="virusIdent")
-    def virus_ident(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def virus_ident(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Virus ident
         """
         return pulumi.get(self, "virus_ident")
 
     @virus_ident.setter
-    def virus_ident(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def virus_ident(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "virus_ident", value)
 
 
@@ -1064,37 +1064,37 @@ class Application(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 able_to_transfer_file: Optional[pulumi.Input[_builtins.bool]] = None,
-                 alg_disable_capability: Optional[pulumi.Input[_builtins.str]] = None,
-                 category: Optional[pulumi.Input[_builtins.str]] = None,
-                 consume_big_bandwidth: Optional[pulumi.Input[_builtins.bool]] = None,
-                 data_ident: Optional[pulumi.Input[_builtins.bool]] = None,
-                 default: Optional[pulumi.Input[Union['ApplicationDefaultArgs', 'ApplicationDefaultArgsDict']]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 device: Optional[pulumi.Input[_builtins.str]] = None,
-                 evasive_behavior: Optional[pulumi.Input[_builtins.bool]] = None,
-                 file_type_ident: Optional[pulumi.Input[_builtins.bool]] = None,
-                 folder: Optional[pulumi.Input[_builtins.str]] = None,
-                 has_known_vulnerability: Optional[pulumi.Input[_builtins.bool]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 no_appid_caching: Optional[pulumi.Input[_builtins.bool]] = None,
-                 parent_app: Optional[pulumi.Input[_builtins.str]] = None,
-                 pervasive_use: Optional[pulumi.Input[_builtins.bool]] = None,
-                 prone_to_misuse: Optional[pulumi.Input[_builtins.bool]] = None,
-                 risk: Optional[pulumi.Input[_builtins.str]] = None,
-                 signatures: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ApplicationSignatureArgs', 'ApplicationSignatureArgsDict']]]]] = None,
-                 snippet: Optional[pulumi.Input[_builtins.str]] = None,
-                 subcategory: Optional[pulumi.Input[_builtins.str]] = None,
-                 tcp_half_closed_timeout: Optional[pulumi.Input[_builtins.int]] = None,
-                 tcp_time_wait_timeout: Optional[pulumi.Input[_builtins.int]] = None,
-                 tcp_timeout: Optional[pulumi.Input[_builtins.int]] = None,
-                 technology: Optional[pulumi.Input[_builtins.str]] = None,
-                 timeout: Optional[pulumi.Input[_builtins.int]] = None,
-                 tunnel_applications: Optional[pulumi.Input[_builtins.bool]] = None,
-                 tunnel_other_application: Optional[pulumi.Input[_builtins.bool]] = None,
-                 udp_timeout: Optional[pulumi.Input[_builtins.int]] = None,
-                 used_by_malware: Optional[pulumi.Input[_builtins.bool]] = None,
-                 virus_ident: Optional[pulumi.Input[_builtins.bool]] = None,
+                 able_to_transfer_file: pulumi.Input[Optional[_builtins.bool]] = None,
+                 alg_disable_capability: pulumi.Input[Optional[_builtins.str]] = None,
+                 category: pulumi.Input[Optional[_builtins.str]] = None,
+                 consume_big_bandwidth: pulumi.Input[Optional[_builtins.bool]] = None,
+                 data_ident: pulumi.Input[Optional[_builtins.bool]] = None,
+                 default: pulumi.Input[Optional[Union['ApplicationDefaultArgs', 'ApplicationDefaultArgsDict']]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 device: pulumi.Input[Optional[_builtins.str]] = None,
+                 evasive_behavior: pulumi.Input[Optional[_builtins.bool]] = None,
+                 file_type_ident: pulumi.Input[Optional[_builtins.bool]] = None,
+                 folder: pulumi.Input[Optional[_builtins.str]] = None,
+                 has_known_vulnerability: pulumi.Input[Optional[_builtins.bool]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 no_appid_caching: pulumi.Input[Optional[_builtins.bool]] = None,
+                 parent_app: pulumi.Input[Optional[_builtins.str]] = None,
+                 pervasive_use: pulumi.Input[Optional[_builtins.bool]] = None,
+                 prone_to_misuse: pulumi.Input[Optional[_builtins.bool]] = None,
+                 risk: pulumi.Input[Optional[_builtins.str]] = None,
+                 signatures: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ApplicationSignatureArgs', 'ApplicationSignatureArgsDict']]]]] = None,
+                 snippet: pulumi.Input[Optional[_builtins.str]] = None,
+                 subcategory: pulumi.Input[Optional[_builtins.str]] = None,
+                 tcp_half_closed_timeout: pulumi.Input[Optional[_builtins.int]] = None,
+                 tcp_time_wait_timeout: pulumi.Input[Optional[_builtins.int]] = None,
+                 tcp_timeout: pulumi.Input[Optional[_builtins.int]] = None,
+                 technology: pulumi.Input[Optional[_builtins.str]] = None,
+                 timeout: pulumi.Input[Optional[_builtins.int]] = None,
+                 tunnel_applications: pulumi.Input[Optional[_builtins.bool]] = None,
+                 tunnel_other_application: pulumi.Input[Optional[_builtins.bool]] = None,
+                 udp_timeout: pulumi.Input[Optional[_builtins.int]] = None,
+                 used_by_malware: pulumi.Input[Optional[_builtins.bool]] = None,
+                 virus_ident: pulumi.Input[Optional[_builtins.bool]] = None,
                  __props__=None):
         """
         Application resource
@@ -1343,37 +1343,37 @@ class Application(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 able_to_transfer_file: Optional[pulumi.Input[_builtins.bool]] = None,
-                 alg_disable_capability: Optional[pulumi.Input[_builtins.str]] = None,
-                 category: Optional[pulumi.Input[_builtins.str]] = None,
-                 consume_big_bandwidth: Optional[pulumi.Input[_builtins.bool]] = None,
-                 data_ident: Optional[pulumi.Input[_builtins.bool]] = None,
-                 default: Optional[pulumi.Input[Union['ApplicationDefaultArgs', 'ApplicationDefaultArgsDict']]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 device: Optional[pulumi.Input[_builtins.str]] = None,
-                 evasive_behavior: Optional[pulumi.Input[_builtins.bool]] = None,
-                 file_type_ident: Optional[pulumi.Input[_builtins.bool]] = None,
-                 folder: Optional[pulumi.Input[_builtins.str]] = None,
-                 has_known_vulnerability: Optional[pulumi.Input[_builtins.bool]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 no_appid_caching: Optional[pulumi.Input[_builtins.bool]] = None,
-                 parent_app: Optional[pulumi.Input[_builtins.str]] = None,
-                 pervasive_use: Optional[pulumi.Input[_builtins.bool]] = None,
-                 prone_to_misuse: Optional[pulumi.Input[_builtins.bool]] = None,
-                 risk: Optional[pulumi.Input[_builtins.str]] = None,
-                 signatures: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ApplicationSignatureArgs', 'ApplicationSignatureArgsDict']]]]] = None,
-                 snippet: Optional[pulumi.Input[_builtins.str]] = None,
-                 subcategory: Optional[pulumi.Input[_builtins.str]] = None,
-                 tcp_half_closed_timeout: Optional[pulumi.Input[_builtins.int]] = None,
-                 tcp_time_wait_timeout: Optional[pulumi.Input[_builtins.int]] = None,
-                 tcp_timeout: Optional[pulumi.Input[_builtins.int]] = None,
-                 technology: Optional[pulumi.Input[_builtins.str]] = None,
-                 timeout: Optional[pulumi.Input[_builtins.int]] = None,
-                 tunnel_applications: Optional[pulumi.Input[_builtins.bool]] = None,
-                 tunnel_other_application: Optional[pulumi.Input[_builtins.bool]] = None,
-                 udp_timeout: Optional[pulumi.Input[_builtins.int]] = None,
-                 used_by_malware: Optional[pulumi.Input[_builtins.bool]] = None,
-                 virus_ident: Optional[pulumi.Input[_builtins.bool]] = None,
+                 able_to_transfer_file: pulumi.Input[Optional[_builtins.bool]] = None,
+                 alg_disable_capability: pulumi.Input[Optional[_builtins.str]] = None,
+                 category: pulumi.Input[Optional[_builtins.str]] = None,
+                 consume_big_bandwidth: pulumi.Input[Optional[_builtins.bool]] = None,
+                 data_ident: pulumi.Input[Optional[_builtins.bool]] = None,
+                 default: pulumi.Input[Optional[Union['ApplicationDefaultArgs', 'ApplicationDefaultArgsDict']]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 device: pulumi.Input[Optional[_builtins.str]] = None,
+                 evasive_behavior: pulumi.Input[Optional[_builtins.bool]] = None,
+                 file_type_ident: pulumi.Input[Optional[_builtins.bool]] = None,
+                 folder: pulumi.Input[Optional[_builtins.str]] = None,
+                 has_known_vulnerability: pulumi.Input[Optional[_builtins.bool]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 no_appid_caching: pulumi.Input[Optional[_builtins.bool]] = None,
+                 parent_app: pulumi.Input[Optional[_builtins.str]] = None,
+                 pervasive_use: pulumi.Input[Optional[_builtins.bool]] = None,
+                 prone_to_misuse: pulumi.Input[Optional[_builtins.bool]] = None,
+                 risk: pulumi.Input[Optional[_builtins.str]] = None,
+                 signatures: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ApplicationSignatureArgs', 'ApplicationSignatureArgsDict']]]]] = None,
+                 snippet: pulumi.Input[Optional[_builtins.str]] = None,
+                 subcategory: pulumi.Input[Optional[_builtins.str]] = None,
+                 tcp_half_closed_timeout: pulumi.Input[Optional[_builtins.int]] = None,
+                 tcp_time_wait_timeout: pulumi.Input[Optional[_builtins.int]] = None,
+                 tcp_timeout: pulumi.Input[Optional[_builtins.int]] = None,
+                 technology: pulumi.Input[Optional[_builtins.str]] = None,
+                 timeout: pulumi.Input[Optional[_builtins.int]] = None,
+                 tunnel_applications: pulumi.Input[Optional[_builtins.bool]] = None,
+                 tunnel_other_application: pulumi.Input[Optional[_builtins.bool]] = None,
+                 udp_timeout: pulumi.Input[Optional[_builtins.int]] = None,
+                 used_by_malware: pulumi.Input[Optional[_builtins.bool]] = None,
+                 virus_ident: pulumi.Input[Optional[_builtins.bool]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -1429,38 +1429,38 @@ class Application(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            able_to_transfer_file: Optional[pulumi.Input[_builtins.bool]] = None,
-            alg_disable_capability: Optional[pulumi.Input[_builtins.str]] = None,
-            category: Optional[pulumi.Input[_builtins.str]] = None,
-            consume_big_bandwidth: Optional[pulumi.Input[_builtins.bool]] = None,
-            data_ident: Optional[pulumi.Input[_builtins.bool]] = None,
-            default: Optional[pulumi.Input[Union['ApplicationDefaultArgs', 'ApplicationDefaultArgsDict']]] = None,
-            description: Optional[pulumi.Input[_builtins.str]] = None,
-            device: Optional[pulumi.Input[_builtins.str]] = None,
-            evasive_behavior: Optional[pulumi.Input[_builtins.bool]] = None,
-            file_type_ident: Optional[pulumi.Input[_builtins.bool]] = None,
-            folder: Optional[pulumi.Input[_builtins.str]] = None,
-            has_known_vulnerability: Optional[pulumi.Input[_builtins.bool]] = None,
-            name: Optional[pulumi.Input[_builtins.str]] = None,
-            no_appid_caching: Optional[pulumi.Input[_builtins.bool]] = None,
-            parent_app: Optional[pulumi.Input[_builtins.str]] = None,
-            pervasive_use: Optional[pulumi.Input[_builtins.bool]] = None,
-            prone_to_misuse: Optional[pulumi.Input[_builtins.bool]] = None,
-            risk: Optional[pulumi.Input[_builtins.str]] = None,
-            signatures: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ApplicationSignatureArgs', 'ApplicationSignatureArgsDict']]]]] = None,
-            snippet: Optional[pulumi.Input[_builtins.str]] = None,
-            subcategory: Optional[pulumi.Input[_builtins.str]] = None,
-            tcp_half_closed_timeout: Optional[pulumi.Input[_builtins.int]] = None,
-            tcp_time_wait_timeout: Optional[pulumi.Input[_builtins.int]] = None,
-            tcp_timeout: Optional[pulumi.Input[_builtins.int]] = None,
-            technology: Optional[pulumi.Input[_builtins.str]] = None,
-            tfid: Optional[pulumi.Input[_builtins.str]] = None,
-            timeout: Optional[pulumi.Input[_builtins.int]] = None,
-            tunnel_applications: Optional[pulumi.Input[_builtins.bool]] = None,
-            tunnel_other_application: Optional[pulumi.Input[_builtins.bool]] = None,
-            udp_timeout: Optional[pulumi.Input[_builtins.int]] = None,
-            used_by_malware: Optional[pulumi.Input[_builtins.bool]] = None,
-            virus_ident: Optional[pulumi.Input[_builtins.bool]] = None) -> 'Application':
+            able_to_transfer_file: pulumi.Input[Optional[_builtins.bool]] = None,
+            alg_disable_capability: pulumi.Input[Optional[_builtins.str]] = None,
+            category: pulumi.Input[Optional[_builtins.str]] = None,
+            consume_big_bandwidth: pulumi.Input[Optional[_builtins.bool]] = None,
+            data_ident: pulumi.Input[Optional[_builtins.bool]] = None,
+            default: pulumi.Input[Optional[Union['ApplicationDefaultArgs', 'ApplicationDefaultArgsDict']]] = None,
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            device: pulumi.Input[Optional[_builtins.str]] = None,
+            evasive_behavior: pulumi.Input[Optional[_builtins.bool]] = None,
+            file_type_ident: pulumi.Input[Optional[_builtins.bool]] = None,
+            folder: pulumi.Input[Optional[_builtins.str]] = None,
+            has_known_vulnerability: pulumi.Input[Optional[_builtins.bool]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            no_appid_caching: pulumi.Input[Optional[_builtins.bool]] = None,
+            parent_app: pulumi.Input[Optional[_builtins.str]] = None,
+            pervasive_use: pulumi.Input[Optional[_builtins.bool]] = None,
+            prone_to_misuse: pulumi.Input[Optional[_builtins.bool]] = None,
+            risk: pulumi.Input[Optional[_builtins.str]] = None,
+            signatures: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ApplicationSignatureArgs', 'ApplicationSignatureArgsDict']]]]] = None,
+            snippet: pulumi.Input[Optional[_builtins.str]] = None,
+            subcategory: pulumi.Input[Optional[_builtins.str]] = None,
+            tcp_half_closed_timeout: pulumi.Input[Optional[_builtins.int]] = None,
+            tcp_time_wait_timeout: pulumi.Input[Optional[_builtins.int]] = None,
+            tcp_timeout: pulumi.Input[Optional[_builtins.int]] = None,
+            technology: pulumi.Input[Optional[_builtins.str]] = None,
+            tfid: pulumi.Input[Optional[_builtins.str]] = None,
+            timeout: pulumi.Input[Optional[_builtins.int]] = None,
+            tunnel_applications: pulumi.Input[Optional[_builtins.bool]] = None,
+            tunnel_other_application: pulumi.Input[Optional[_builtins.bool]] = None,
+            udp_timeout: pulumi.Input[Optional[_builtins.int]] = None,
+            used_by_malware: pulumi.Input[Optional[_builtins.bool]] = None,
+            virus_ident: pulumi.Input[Optional[_builtins.bool]] = None) -> 'Application':
         """
         Get an existing Application resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

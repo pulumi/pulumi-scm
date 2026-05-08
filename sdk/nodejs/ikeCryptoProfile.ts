@@ -190,47 +190,47 @@ export interface IkeCryptoProfileState {
     /**
      * IKEv2 SA reauthentication interval equals authetication-multiple * rekey-lifetime; 0 means reauthentication disabled
      */
-    authenticationMultiple?: pulumi.Input<number>;
+    authenticationMultiple?: pulumi.Input<number | undefined>;
     /**
      * The device in which the resource is defined
      */
-    device?: pulumi.Input<string>;
+    device?: pulumi.Input<string | undefined>;
     /**
      * Dh group
      */
-    dhGroups?: pulumi.Input<pulumi.Input<string>[]>;
+    dhGroups?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Encryption algorithm
      */
-    encryptions?: pulumi.Input<pulumi.Input<string>[]>;
+    encryptions?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * The folder in which the resource is defined
      *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
-    folder?: pulumi.Input<string>;
+    folder?: pulumi.Input<string | undefined>;
     /**
      * Hash
      */
-    hashes?: pulumi.Input<pulumi.Input<string>[]>;
+    hashes?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Ike crypto profile lifetime
      */
-    lifetime?: pulumi.Input<inputs.IkeCryptoProfileLifetime>;
+    lifetime?: pulumi.Input<inputs.IkeCryptoProfileLifetime | undefined>;
     /**
      * Alphanumeric string begin with letter: [0-9a-zA-Z._-]
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * The snippet in which the resource is defined
      *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
-    snippet?: pulumi.Input<string>;
+    snippet?: pulumi.Input<string | undefined>;
     /**
      * The Terraform ID.
      */
-    tfid?: pulumi.Input<string>;
+    tfid?: pulumi.Input<string | undefined>;
 }
 
 /**
@@ -240,11 +240,11 @@ export interface IkeCryptoProfileArgs {
     /**
      * IKEv2 SA reauthentication interval equals authetication-multiple * rekey-lifetime; 0 means reauthentication disabled
      */
-    authenticationMultiple?: pulumi.Input<number>;
+    authenticationMultiple?: pulumi.Input<number | undefined>;
     /**
      * The device in which the resource is defined
      */
-    device?: pulumi.Input<string>;
+    device?: pulumi.Input<string | undefined>;
     /**
      * Dh group
      */
@@ -258,7 +258,7 @@ export interface IkeCryptoProfileArgs {
      *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
-    folder?: pulumi.Input<string>;
+    folder?: pulumi.Input<string | undefined>;
     /**
      * Hash
      */
@@ -266,15 +266,15 @@ export interface IkeCryptoProfileArgs {
     /**
      * Ike crypto profile lifetime
      */
-    lifetime?: pulumi.Input<inputs.IkeCryptoProfileLifetime>;
+    lifetime?: pulumi.Input<inputs.IkeCryptoProfileLifetime | undefined>;
     /**
      * Alphanumeric string begin with letter: [0-9a-zA-Z._-]
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * The snippet in which the resource is defined
      *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
-    snippet?: pulumi.Input<string>;
+    snippet?: pulumi.Input<string | undefined>;
 }

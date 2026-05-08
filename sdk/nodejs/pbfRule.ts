@@ -277,71 +277,71 @@ export interface PbfRuleState {
     /**
      * Action
      */
-    action?: pulumi.Input<inputs.PbfRuleAction>;
+    action?: pulumi.Input<inputs.PbfRuleAction | undefined>;
     /**
      * Applications
      */
-    applications?: pulumi.Input<pulumi.Input<string>[]>;
+    applications?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Description
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * Destination addresses
      */
-    destinations?: pulumi.Input<pulumi.Input<string>[]>;
+    destinations?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * The device in which the resource is defined
      */
-    device?: pulumi.Input<string>;
+    device?: pulumi.Input<string | undefined>;
     /**
      * Enforce symmetric return
      */
-    enforceSymmetricReturn?: pulumi.Input<inputs.PbfRuleEnforceSymmetricReturn>;
+    enforceSymmetricReturn?: pulumi.Input<inputs.PbfRuleEnforceSymmetricReturn | undefined>;
     /**
      * The folder in which the resource is defined
      *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
-    folder?: pulumi.Input<string>;
+    folder?: pulumi.Input<string | undefined>;
     /**
      * From
      */
-    from?: pulumi.Input<inputs.PbfRuleFrom>;
+    from?: pulumi.Input<inputs.PbfRuleFrom | undefined>;
     /**
      * PBF rule name
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Schedule
      */
-    schedule?: pulumi.Input<string>;
+    schedule?: pulumi.Input<string | undefined>;
     /**
      * Services
      */
-    services?: pulumi.Input<pulumi.Input<string>[]>;
+    services?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * The snippet in which the resource is defined
      *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
-    snippet?: pulumi.Input<string>;
+    snippet?: pulumi.Input<string | undefined>;
     /**
      * Source users
      */
-    sourceUsers?: pulumi.Input<pulumi.Input<string>[]>;
+    sourceUsers?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Source addresses
      */
-    sources?: pulumi.Input<pulumi.Input<string>[]>;
+    sources?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Tags
      */
-    tags?: pulumi.Input<pulumi.Input<string>[]>;
+    tags?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * The Terraform ID.
      */
-    tfid?: pulumi.Input<string>;
+    tfid?: pulumi.Input<string | undefined>;
 }
 
 /**
@@ -351,65 +351,65 @@ export interface PbfRuleArgs {
     /**
      * Action
      */
-    action?: pulumi.Input<inputs.PbfRuleAction>;
+    action?: pulumi.Input<inputs.PbfRuleAction | undefined>;
     /**
      * Applications
      */
-    applications?: pulumi.Input<pulumi.Input<string>[]>;
+    applications?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Description
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * Destination addresses
      */
-    destinations?: pulumi.Input<pulumi.Input<string>[]>;
+    destinations?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * The device in which the resource is defined
      */
-    device?: pulumi.Input<string>;
+    device?: pulumi.Input<string | undefined>;
     /**
      * Enforce symmetric return
      */
-    enforceSymmetricReturn?: pulumi.Input<inputs.PbfRuleEnforceSymmetricReturn>;
+    enforceSymmetricReturn?: pulumi.Input<inputs.PbfRuleEnforceSymmetricReturn | undefined>;
     /**
      * The folder in which the resource is defined
      *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
-    folder?: pulumi.Input<string>;
+    folder?: pulumi.Input<string | undefined>;
     /**
      * From
      */
-    from?: pulumi.Input<inputs.PbfRuleFrom>;
+    from?: pulumi.Input<inputs.PbfRuleFrom | undefined>;
     /**
      * PBF rule name
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Schedule
      */
-    schedule?: pulumi.Input<string>;
+    schedule?: pulumi.Input<string | undefined>;
     /**
      * Services
      */
-    services?: pulumi.Input<pulumi.Input<string>[]>;
+    services?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * The snippet in which the resource is defined
      *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
-    snippet?: pulumi.Input<string>;
+    snippet?: pulumi.Input<string | undefined>;
     /**
      * Source users
      */
-    sourceUsers?: pulumi.Input<pulumi.Input<string>[]>;
+    sourceUsers?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Source addresses
      */
-    sources?: pulumi.Input<pulumi.Input<string>[]>;
+    sources?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Tags
      */
-    tags?: pulumi.Input<pulumi.Input<string>[]>;
+    tags?: pulumi.Input<pulumi.Input<string>[] | undefined>;
 }

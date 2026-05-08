@@ -174,63 +174,63 @@ export interface ProfileGroupState {
     /**
      * Ai security
      */
-    aiSecurities?: pulumi.Input<pulumi.Input<string>[]>;
+    aiSecurities?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Data filtering
      */
-    dataFilterings?: pulumi.Input<pulumi.Input<string>[]>;
+    dataFilterings?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * The device in which the resource is defined
      */
-    device?: pulumi.Input<string>;
+    device?: pulumi.Input<string | undefined>;
     /**
      * Dns security
      */
-    dnsSecurities?: pulumi.Input<pulumi.Input<string>[]>;
+    dnsSecurities?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * File blocking
      */
-    fileBlockings?: pulumi.Input<pulumi.Input<string>[]>;
+    fileBlockings?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * The folder in which the resource is defined
      *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
-    folder?: pulumi.Input<string>;
+    folder?: pulumi.Input<string | undefined>;
     /**
      * The name of the profile group
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Saas security
      */
-    saasSecurities?: pulumi.Input<pulumi.Input<string>[]>;
+    saasSecurities?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * The snippet in which the resource is defined
      *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
-    snippet?: pulumi.Input<string>;
+    snippet?: pulumi.Input<string | undefined>;
     /**
      * Spyware
      */
-    spywares?: pulumi.Input<pulumi.Input<string>[]>;
+    spywares?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * The Terraform ID.
      */
-    tfid?: pulumi.Input<string>;
+    tfid?: pulumi.Input<string | undefined>;
     /**
      * Url filtering
      */
-    urlFilterings?: pulumi.Input<pulumi.Input<string>[]>;
+    urlFilterings?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Virus and wildfire analysis
      */
-    virusAndWildfireAnalyses?: pulumi.Input<pulumi.Input<string>[]>;
+    virusAndWildfireAnalyses?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Vulnerability
      */
-    vulnerabilities?: pulumi.Input<pulumi.Input<string>[]>;
+    vulnerabilities?: pulumi.Input<pulumi.Input<string>[] | undefined>;
 }
 
 /**
@@ -240,57 +240,57 @@ export interface ProfileGroupArgs {
     /**
      * Ai security
      */
-    aiSecurities?: pulumi.Input<pulumi.Input<string>[]>;
+    aiSecurities?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Data filtering
      */
-    dataFilterings?: pulumi.Input<pulumi.Input<string>[]>;
+    dataFilterings?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * The device in which the resource is defined
      */
-    device?: pulumi.Input<string>;
+    device?: pulumi.Input<string | undefined>;
     /**
      * Dns security
      */
-    dnsSecurities?: pulumi.Input<pulumi.Input<string>[]>;
+    dnsSecurities?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * File blocking
      */
-    fileBlockings?: pulumi.Input<pulumi.Input<string>[]>;
+    fileBlockings?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * The folder in which the resource is defined
      *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
-    folder?: pulumi.Input<string>;
+    folder?: pulumi.Input<string | undefined>;
     /**
      * The name of the profile group
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Saas security
      */
-    saasSecurities?: pulumi.Input<pulumi.Input<string>[]>;
+    saasSecurities?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * The snippet in which the resource is defined
      *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
-    snippet?: pulumi.Input<string>;
+    snippet?: pulumi.Input<string | undefined>;
     /**
      * Spyware
      */
-    spywares?: pulumi.Input<pulumi.Input<string>[]>;
+    spywares?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Url filtering
      */
-    urlFilterings?: pulumi.Input<pulumi.Input<string>[]>;
+    urlFilterings?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Virus and wildfire analysis
      */
-    virusAndWildfireAnalyses?: pulumi.Input<pulumi.Input<string>[]>;
+    virusAndWildfireAnalyses?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Vulnerability
      */
-    vulnerabilities?: pulumi.Input<pulumi.Input<string>[]>;
+    vulnerabilities?: pulumi.Input<pulumi.Input<string>[] | undefined>;
 }

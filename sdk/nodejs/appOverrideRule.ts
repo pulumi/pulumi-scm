@@ -305,91 +305,91 @@ export interface AppOverrideRuleState {
     /**
      * Application
      */
-    application?: pulumi.Input<string>;
+    application?: pulumi.Input<string | undefined>;
     /**
      * Description
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * Destination
      */
-    destinations?: pulumi.Input<pulumi.Input<string>[]>;
+    destinations?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * The device in which the resource is defined
      */
-    device?: pulumi.Input<string>;
+    device?: pulumi.Input<string | undefined>;
     /**
      * Disabled
      */
-    disabled?: pulumi.Input<boolean>;
+    disabled?: pulumi.Input<boolean | undefined>;
     /**
      * The folder in which the resource is defined
      *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
-    folder?: pulumi.Input<string>;
+    folder?: pulumi.Input<string | undefined>;
     /**
      * From
      */
-    froms?: pulumi.Input<pulumi.Input<string>[]>;
+    froms?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Group tag
      */
-    groupTag?: pulumi.Input<string>;
+    groupTag?: pulumi.Input<string | undefined>;
     /**
      * Name
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Negate destination
      */
-    negateDestination?: pulumi.Input<boolean>;
+    negateDestination?: pulumi.Input<boolean | undefined>;
     /**
      * Negate source
      */
-    negateSource?: pulumi.Input<boolean>;
+    negateSource?: pulumi.Input<boolean | undefined>;
     /**
      * Port
      */
-    port?: pulumi.Input<string>;
+    port?: pulumi.Input<string | undefined>;
     /**
      * The position of a security rule
      */
-    position?: pulumi.Input<string>;
+    position?: pulumi.Input<string | undefined>;
     /**
      * Protocol
      */
-    protocol?: pulumi.Input<string>;
+    protocol?: pulumi.Input<string | undefined>;
     /**
      * Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
      */
-    relativePosition?: pulumi.Input<string>;
+    relativePosition?: pulumi.Input<string | undefined>;
     /**
      * The snippet in which the resource is defined
      *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
-    snippet?: pulumi.Input<string>;
+    snippet?: pulumi.Input<string | undefined>;
     /**
      * Source
      */
-    sources?: pulumi.Input<pulumi.Input<string>[]>;
+    sources?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Tag
      */
-    tags?: pulumi.Input<pulumi.Input<string>[]>;
+    tags?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `"before"` or `"after"`.
      */
-    targetRule?: pulumi.Input<string>;
+    targetRule?: pulumi.Input<string | undefined>;
     /**
      * The Terraform ID.
      */
-    tfid?: pulumi.Input<string>;
+    tfid?: pulumi.Input<string | undefined>;
     /**
      * To
      */
-    tos?: pulumi.Input<pulumi.Input<string>[]>;
+    tos?: pulumi.Input<pulumi.Input<string>[] | undefined>;
 }
 
 /**
@@ -399,85 +399,85 @@ export interface AppOverrideRuleArgs {
     /**
      * Application
      */
-    application?: pulumi.Input<string>;
+    application?: pulumi.Input<string | undefined>;
     /**
      * Description
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * Destination
      */
-    destinations?: pulumi.Input<pulumi.Input<string>[]>;
+    destinations?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * The device in which the resource is defined
      */
-    device?: pulumi.Input<string>;
+    device?: pulumi.Input<string | undefined>;
     /**
      * Disabled
      */
-    disabled?: pulumi.Input<boolean>;
+    disabled?: pulumi.Input<boolean | undefined>;
     /**
      * The folder in which the resource is defined
      *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
-    folder?: pulumi.Input<string>;
+    folder?: pulumi.Input<string | undefined>;
     /**
      * From
      */
-    froms?: pulumi.Input<pulumi.Input<string>[]>;
+    froms?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Group tag
      */
-    groupTag?: pulumi.Input<string>;
+    groupTag?: pulumi.Input<string | undefined>;
     /**
      * Name
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Negate destination
      */
-    negateDestination?: pulumi.Input<boolean>;
+    negateDestination?: pulumi.Input<boolean | undefined>;
     /**
      * Negate source
      */
-    negateSource?: pulumi.Input<boolean>;
+    negateSource?: pulumi.Input<boolean | undefined>;
     /**
      * Port
      */
-    port?: pulumi.Input<string>;
+    port?: pulumi.Input<string | undefined>;
     /**
      * The position of a security rule
      */
-    position?: pulumi.Input<string>;
+    position?: pulumi.Input<string | undefined>;
     /**
      * Protocol
      */
-    protocol?: pulumi.Input<string>;
+    protocol?: pulumi.Input<string | undefined>;
     /**
      * Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
      */
-    relativePosition?: pulumi.Input<string>;
+    relativePosition?: pulumi.Input<string | undefined>;
     /**
      * The snippet in which the resource is defined
      *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
-    snippet?: pulumi.Input<string>;
+    snippet?: pulumi.Input<string | undefined>;
     /**
      * Source
      */
-    sources?: pulumi.Input<pulumi.Input<string>[]>;
+    sources?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Tag
      */
-    tags?: pulumi.Input<pulumi.Input<string>[]>;
+    tags?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `"before"` or `"after"`.
      */
-    targetRule?: pulumi.Input<string>;
+    targetRule?: pulumi.Input<string | undefined>;
     /**
      * To
      */
-    tos?: pulumi.Input<pulumi.Input<string>[]>;
+    tos?: pulumi.Input<pulumi.Input<string>[] | undefined>;
 }

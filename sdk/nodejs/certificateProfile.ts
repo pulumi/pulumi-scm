@@ -228,75 +228,75 @@ export interface CertificateProfileState {
     /**
      * Block sessions with expired certificates?
      */
-    blockExpiredCert?: pulumi.Input<boolean>;
+    blockExpiredCert?: pulumi.Input<boolean | undefined>;
     /**
      * Block session if certificate status cannot be retrieved within timeout?
      */
-    blockTimeoutCert?: pulumi.Input<boolean>;
+    blockTimeoutCert?: pulumi.Input<boolean | undefined>;
     /**
      * Block session if the certificate was not issued to the authenticating device?
      */
-    blockUnauthenticatedCert?: pulumi.Input<boolean>;
+    blockUnauthenticatedCert?: pulumi.Input<boolean | undefined>;
     /**
      * Block session if certificate status is unknown?
      */
-    blockUnknownCert?: pulumi.Input<boolean>;
+    blockUnknownCert?: pulumi.Input<boolean | undefined>;
     /**
      * An ordered list of CA certificates
      */
-    caCertificates?: pulumi.Input<pulumi.Input<inputs.CertificateProfileCaCertificate>[]>;
+    caCertificates?: pulumi.Input<pulumi.Input<inputs.CertificateProfileCaCertificate>[] | undefined>;
     /**
      * Certificate status timeout
      */
-    certStatusTimeout?: pulumi.Input<string>;
+    certStatusTimeout?: pulumi.Input<string | undefined>;
     /**
      * CRL receive timeout (seconds)
      */
-    crlReceiveTimeout?: pulumi.Input<string>;
+    crlReceiveTimeout?: pulumi.Input<string | undefined>;
     /**
      * The device in which the resource is defined
      */
-    device?: pulumi.Input<string>;
+    device?: pulumi.Input<string | undefined>;
     /**
      * User domain
      */
-    domain?: pulumi.Input<string>;
+    domain?: pulumi.Input<string | undefined>;
     /**
      * The folder in which the resource is defined
      *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
-    folder?: pulumi.Input<string>;
+    folder?: pulumi.Input<string | undefined>;
     /**
      * The name of the certificate profile
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * OCSP receive timeout (seconds)
      */
-    ocspReceiveTimeout?: pulumi.Input<string>;
+    ocspReceiveTimeout?: pulumi.Input<string | undefined>;
     /**
      * The snippet in which the resource is defined
      *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
-    snippet?: pulumi.Input<string>;
+    snippet?: pulumi.Input<string | undefined>;
     /**
      * The Terraform ID.
      */
-    tfid?: pulumi.Input<string>;
+    tfid?: pulumi.Input<string | undefined>;
     /**
      * Use CRL?
      */
-    useCrl?: pulumi.Input<boolean>;
+    useCrl?: pulumi.Input<boolean | undefined>;
     /**
      * Use OCSP?
      */
-    useOcsp?: pulumi.Input<boolean>;
+    useOcsp?: pulumi.Input<boolean | undefined>;
     /**
      * Certificate username field
      */
-    usernameField?: pulumi.Input<inputs.CertificateProfileUsernameField>;
+    usernameField?: pulumi.Input<inputs.CertificateProfileUsernameField | undefined>;
 }
 
 /**
@@ -306,19 +306,19 @@ export interface CertificateProfileArgs {
     /**
      * Block sessions with expired certificates?
      */
-    blockExpiredCert?: pulumi.Input<boolean>;
+    blockExpiredCert?: pulumi.Input<boolean | undefined>;
     /**
      * Block session if certificate status cannot be retrieved within timeout?
      */
-    blockTimeoutCert?: pulumi.Input<boolean>;
+    blockTimeoutCert?: pulumi.Input<boolean | undefined>;
     /**
      * Block session if the certificate was not issued to the authenticating device?
      */
-    blockUnauthenticatedCert?: pulumi.Input<boolean>;
+    blockUnauthenticatedCert?: pulumi.Input<boolean | undefined>;
     /**
      * Block session if certificate status is unknown?
      */
-    blockUnknownCert?: pulumi.Input<boolean>;
+    blockUnknownCert?: pulumi.Input<boolean | undefined>;
     /**
      * An ordered list of CA certificates
      */
@@ -326,49 +326,49 @@ export interface CertificateProfileArgs {
     /**
      * Certificate status timeout
      */
-    certStatusTimeout?: pulumi.Input<string>;
+    certStatusTimeout?: pulumi.Input<string | undefined>;
     /**
      * CRL receive timeout (seconds)
      */
-    crlReceiveTimeout?: pulumi.Input<string>;
+    crlReceiveTimeout?: pulumi.Input<string | undefined>;
     /**
      * The device in which the resource is defined
      */
-    device?: pulumi.Input<string>;
+    device?: pulumi.Input<string | undefined>;
     /**
      * User domain
      */
-    domain?: pulumi.Input<string>;
+    domain?: pulumi.Input<string | undefined>;
     /**
      * The folder in which the resource is defined
      *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
-    folder?: pulumi.Input<string>;
+    folder?: pulumi.Input<string | undefined>;
     /**
      * The name of the certificate profile
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * OCSP receive timeout (seconds)
      */
-    ocspReceiveTimeout?: pulumi.Input<string>;
+    ocspReceiveTimeout?: pulumi.Input<string | undefined>;
     /**
      * The snippet in which the resource is defined
      *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
-    snippet?: pulumi.Input<string>;
+    snippet?: pulumi.Input<string | undefined>;
     /**
      * Use CRL?
      */
-    useCrl?: pulumi.Input<boolean>;
+    useCrl?: pulumi.Input<boolean | undefined>;
     /**
      * Use OCSP?
      */
-    useOcsp?: pulumi.Input<boolean>;
+    useOcsp?: pulumi.Input<boolean | undefined>;
     /**
      * Certificate username field
      */
-    usernameField?: pulumi.Input<inputs.CertificateProfileUsernameField>;
+    usernameField?: pulumi.Input<inputs.CertificateProfileUsernameField | undefined>;
 }

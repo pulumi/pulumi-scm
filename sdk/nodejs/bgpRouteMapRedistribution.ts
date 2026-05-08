@@ -152,49 +152,49 @@ export interface BgpRouteMapRedistributionState {
     /**
      * Bgp
      */
-    bgp?: pulumi.Input<inputs.BgpRouteMapRedistributionBgp>;
+    bgp?: pulumi.Input<inputs.BgpRouteMapRedistributionBgp | undefined>;
     /**
      * Connected static
      *
      * > ℹ️ **Note:** You must specify exactly one of `bgp`, `connectedStatic`, and `ospf`.
      */
-    connectedStatic?: pulumi.Input<inputs.BgpRouteMapRedistributionConnectedStatic>;
+    connectedStatic?: pulumi.Input<inputs.BgpRouteMapRedistributionConnectedStatic | undefined>;
     /**
      * BGP Route Map Redistributions Description
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * The device in which the resource is defined
      *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
-    device?: pulumi.Input<string>;
+    device?: pulumi.Input<string | undefined>;
     /**
      * The folder in which the resource is defined
      *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
-    folder?: pulumi.Input<string>;
+    folder?: pulumi.Input<string | undefined>;
     /**
      * BGP Route Map Redistributions Name
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Ospf
      *
      * > ℹ️ **Note:** You must specify exactly one of `bgp`, `connectedStatic`, and `ospf`.
      */
-    ospf?: pulumi.Input<inputs.BgpRouteMapRedistributionOspf>;
+    ospf?: pulumi.Input<inputs.BgpRouteMapRedistributionOspf | undefined>;
     /**
      * The snippet in which the resource is defined
      *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
-    snippet?: pulumi.Input<string>;
+    snippet?: pulumi.Input<string | undefined>;
     /**
      * The Terraform ID.
      */
-    tfid?: pulumi.Input<string>;
+    tfid?: pulumi.Input<string | undefined>;
 }
 
 /**
@@ -204,43 +204,43 @@ export interface BgpRouteMapRedistributionArgs {
     /**
      * Bgp
      */
-    bgp?: pulumi.Input<inputs.BgpRouteMapRedistributionBgp>;
+    bgp?: pulumi.Input<inputs.BgpRouteMapRedistributionBgp | undefined>;
     /**
      * Connected static
      *
      * > ℹ️ **Note:** You must specify exactly one of `bgp`, `connectedStatic`, and `ospf`.
      */
-    connectedStatic?: pulumi.Input<inputs.BgpRouteMapRedistributionConnectedStatic>;
+    connectedStatic?: pulumi.Input<inputs.BgpRouteMapRedistributionConnectedStatic | undefined>;
     /**
      * BGP Route Map Redistributions Description
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * The device in which the resource is defined
      *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
-    device?: pulumi.Input<string>;
+    device?: pulumi.Input<string | undefined>;
     /**
      * The folder in which the resource is defined
      *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
-    folder?: pulumi.Input<string>;
+    folder?: pulumi.Input<string | undefined>;
     /**
      * BGP Route Map Redistributions Name
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Ospf
      *
      * > ℹ️ **Note:** You must specify exactly one of `bgp`, `connectedStatic`, and `ospf`.
      */
-    ospf?: pulumi.Input<inputs.BgpRouteMapRedistributionOspf>;
+    ospf?: pulumi.Input<inputs.BgpRouteMapRedistributionOspf | undefined>;
     /**
      * The snippet in which the resource is defined
      *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
-    snippet?: pulumi.Input<string>;
+    snippet?: pulumi.Input<string | undefined>;
 }

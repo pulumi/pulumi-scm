@@ -21,14 +21,14 @@ __all__ = ['DecryptionProfileArgs', 'DecryptionProfile']
 @pulumi.input_type
 class DecryptionProfileArgs:
     def __init__(__self__, *,
-                 device: Optional[pulumi.Input[_builtins.str]] = None,
-                 folder: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 snippet: Optional[pulumi.Input[_builtins.str]] = None,
-                 ssl_forward_proxy: Optional[pulumi.Input['DecryptionProfileSslForwardProxyArgs']] = None,
-                 ssl_inbound_proxy: Optional[pulumi.Input['DecryptionProfileSslInboundProxyArgs']] = None,
-                 ssl_no_proxy: Optional[pulumi.Input['DecryptionProfileSslNoProxyArgs']] = None,
-                 ssl_protocol_settings: Optional[pulumi.Input['DecryptionProfileSslProtocolSettingsArgs']] = None):
+                 device: pulumi.Input[Optional[_builtins.str]] = None,
+                 folder: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 snippet: pulumi.Input[Optional[_builtins.str]] = None,
+                 ssl_forward_proxy: pulumi.Input[Optional['DecryptionProfileSslForwardProxyArgs']] = None,
+                 ssl_inbound_proxy: pulumi.Input[Optional['DecryptionProfileSslInboundProxyArgs']] = None,
+                 ssl_no_proxy: pulumi.Input[Optional['DecryptionProfileSslNoProxyArgs']] = None,
+                 ssl_protocol_settings: pulumi.Input[Optional['DecryptionProfileSslProtocolSettingsArgs']] = None):
         """
         The set of arguments for constructing a DecryptionProfile resource.
 
@@ -64,19 +64,19 @@ class DecryptionProfileArgs:
 
     @_builtins.property
     @pulumi.getter
-    def device(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def device(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The device in which the resource is defined
         """
         return pulumi.get(self, "device")
 
     @device.setter
-    def device(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def device(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "device", value)
 
     @_builtins.property
     @pulumi.getter
-    def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def folder(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
 
@@ -85,24 +85,24 @@ class DecryptionProfileArgs:
         return pulumi.get(self, "folder")
 
     @folder.setter
-    def folder(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def folder(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "folder", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Must start with alphanumeric char and should contain only alphanemeric, underscore, hyphen, dot or space
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter
-    def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def snippet(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
 
@@ -111,70 +111,70 @@ class DecryptionProfileArgs:
         return pulumi.get(self, "snippet")
 
     @snippet.setter
-    def snippet(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def snippet(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "snippet", value)
 
     @_builtins.property
     @pulumi.getter(name="sslForwardProxy")
-    def ssl_forward_proxy(self) -> Optional[pulumi.Input['DecryptionProfileSslForwardProxyArgs']]:
+    def ssl_forward_proxy(self) -> pulumi.Input[Optional['DecryptionProfileSslForwardProxyArgs']]:
         """
         Ssl forward proxy
         """
         return pulumi.get(self, "ssl_forward_proxy")
 
     @ssl_forward_proxy.setter
-    def ssl_forward_proxy(self, value: Optional[pulumi.Input['DecryptionProfileSslForwardProxyArgs']]):
+    def ssl_forward_proxy(self, value: pulumi.Input[Optional['DecryptionProfileSslForwardProxyArgs']]):
         pulumi.set(self, "ssl_forward_proxy", value)
 
     @_builtins.property
     @pulumi.getter(name="sslInboundProxy")
-    def ssl_inbound_proxy(self) -> Optional[pulumi.Input['DecryptionProfileSslInboundProxyArgs']]:
+    def ssl_inbound_proxy(self) -> pulumi.Input[Optional['DecryptionProfileSslInboundProxyArgs']]:
         """
         Ssl inbound proxy
         """
         return pulumi.get(self, "ssl_inbound_proxy")
 
     @ssl_inbound_proxy.setter
-    def ssl_inbound_proxy(self, value: Optional[pulumi.Input['DecryptionProfileSslInboundProxyArgs']]):
+    def ssl_inbound_proxy(self, value: pulumi.Input[Optional['DecryptionProfileSslInboundProxyArgs']]):
         pulumi.set(self, "ssl_inbound_proxy", value)
 
     @_builtins.property
     @pulumi.getter(name="sslNoProxy")
-    def ssl_no_proxy(self) -> Optional[pulumi.Input['DecryptionProfileSslNoProxyArgs']]:
+    def ssl_no_proxy(self) -> pulumi.Input[Optional['DecryptionProfileSslNoProxyArgs']]:
         """
         Ssl no proxy
         """
         return pulumi.get(self, "ssl_no_proxy")
 
     @ssl_no_proxy.setter
-    def ssl_no_proxy(self, value: Optional[pulumi.Input['DecryptionProfileSslNoProxyArgs']]):
+    def ssl_no_proxy(self, value: pulumi.Input[Optional['DecryptionProfileSslNoProxyArgs']]):
         pulumi.set(self, "ssl_no_proxy", value)
 
     @_builtins.property
     @pulumi.getter(name="sslProtocolSettings")
-    def ssl_protocol_settings(self) -> Optional[pulumi.Input['DecryptionProfileSslProtocolSettingsArgs']]:
+    def ssl_protocol_settings(self) -> pulumi.Input[Optional['DecryptionProfileSslProtocolSettingsArgs']]:
         """
         Ssl protocol settings
         """
         return pulumi.get(self, "ssl_protocol_settings")
 
     @ssl_protocol_settings.setter
-    def ssl_protocol_settings(self, value: Optional[pulumi.Input['DecryptionProfileSslProtocolSettingsArgs']]):
+    def ssl_protocol_settings(self, value: pulumi.Input[Optional['DecryptionProfileSslProtocolSettingsArgs']]):
         pulumi.set(self, "ssl_protocol_settings", value)
 
 
 @pulumi.input_type
 class _DecryptionProfileState:
     def __init__(__self__, *,
-                 device: Optional[pulumi.Input[_builtins.str]] = None,
-                 folder: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 snippet: Optional[pulumi.Input[_builtins.str]] = None,
-                 ssl_forward_proxy: Optional[pulumi.Input['DecryptionProfileSslForwardProxyArgs']] = None,
-                 ssl_inbound_proxy: Optional[pulumi.Input['DecryptionProfileSslInboundProxyArgs']] = None,
-                 ssl_no_proxy: Optional[pulumi.Input['DecryptionProfileSslNoProxyArgs']] = None,
-                 ssl_protocol_settings: Optional[pulumi.Input['DecryptionProfileSslProtocolSettingsArgs']] = None,
-                 tfid: Optional[pulumi.Input[_builtins.str]] = None):
+                 device: pulumi.Input[Optional[_builtins.str]] = None,
+                 folder: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 snippet: pulumi.Input[Optional[_builtins.str]] = None,
+                 ssl_forward_proxy: pulumi.Input[Optional['DecryptionProfileSslForwardProxyArgs']] = None,
+                 ssl_inbound_proxy: pulumi.Input[Optional['DecryptionProfileSslInboundProxyArgs']] = None,
+                 ssl_no_proxy: pulumi.Input[Optional['DecryptionProfileSslNoProxyArgs']] = None,
+                 ssl_protocol_settings: pulumi.Input[Optional['DecryptionProfileSslProtocolSettingsArgs']] = None,
+                 tfid: pulumi.Input[Optional[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering DecryptionProfile resources.
 
@@ -213,19 +213,19 @@ class _DecryptionProfileState:
 
     @_builtins.property
     @pulumi.getter
-    def device(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def device(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The device in which the resource is defined
         """
         return pulumi.get(self, "device")
 
     @device.setter
-    def device(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def device(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "device", value)
 
     @_builtins.property
     @pulumi.getter
-    def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def folder(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
 
@@ -234,24 +234,24 @@ class _DecryptionProfileState:
         return pulumi.get(self, "folder")
 
     @folder.setter
-    def folder(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def folder(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "folder", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Must start with alphanumeric char and should contain only alphanemeric, underscore, hyphen, dot or space
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter
-    def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def snippet(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
 
@@ -260,67 +260,67 @@ class _DecryptionProfileState:
         return pulumi.get(self, "snippet")
 
     @snippet.setter
-    def snippet(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def snippet(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "snippet", value)
 
     @_builtins.property
     @pulumi.getter(name="sslForwardProxy")
-    def ssl_forward_proxy(self) -> Optional[pulumi.Input['DecryptionProfileSslForwardProxyArgs']]:
+    def ssl_forward_proxy(self) -> pulumi.Input[Optional['DecryptionProfileSslForwardProxyArgs']]:
         """
         Ssl forward proxy
         """
         return pulumi.get(self, "ssl_forward_proxy")
 
     @ssl_forward_proxy.setter
-    def ssl_forward_proxy(self, value: Optional[pulumi.Input['DecryptionProfileSslForwardProxyArgs']]):
+    def ssl_forward_proxy(self, value: pulumi.Input[Optional['DecryptionProfileSslForwardProxyArgs']]):
         pulumi.set(self, "ssl_forward_proxy", value)
 
     @_builtins.property
     @pulumi.getter(name="sslInboundProxy")
-    def ssl_inbound_proxy(self) -> Optional[pulumi.Input['DecryptionProfileSslInboundProxyArgs']]:
+    def ssl_inbound_proxy(self) -> pulumi.Input[Optional['DecryptionProfileSslInboundProxyArgs']]:
         """
         Ssl inbound proxy
         """
         return pulumi.get(self, "ssl_inbound_proxy")
 
     @ssl_inbound_proxy.setter
-    def ssl_inbound_proxy(self, value: Optional[pulumi.Input['DecryptionProfileSslInboundProxyArgs']]):
+    def ssl_inbound_proxy(self, value: pulumi.Input[Optional['DecryptionProfileSslInboundProxyArgs']]):
         pulumi.set(self, "ssl_inbound_proxy", value)
 
     @_builtins.property
     @pulumi.getter(name="sslNoProxy")
-    def ssl_no_proxy(self) -> Optional[pulumi.Input['DecryptionProfileSslNoProxyArgs']]:
+    def ssl_no_proxy(self) -> pulumi.Input[Optional['DecryptionProfileSslNoProxyArgs']]:
         """
         Ssl no proxy
         """
         return pulumi.get(self, "ssl_no_proxy")
 
     @ssl_no_proxy.setter
-    def ssl_no_proxy(self, value: Optional[pulumi.Input['DecryptionProfileSslNoProxyArgs']]):
+    def ssl_no_proxy(self, value: pulumi.Input[Optional['DecryptionProfileSslNoProxyArgs']]):
         pulumi.set(self, "ssl_no_proxy", value)
 
     @_builtins.property
     @pulumi.getter(name="sslProtocolSettings")
-    def ssl_protocol_settings(self) -> Optional[pulumi.Input['DecryptionProfileSslProtocolSettingsArgs']]:
+    def ssl_protocol_settings(self) -> pulumi.Input[Optional['DecryptionProfileSslProtocolSettingsArgs']]:
         """
         Ssl protocol settings
         """
         return pulumi.get(self, "ssl_protocol_settings")
 
     @ssl_protocol_settings.setter
-    def ssl_protocol_settings(self, value: Optional[pulumi.Input['DecryptionProfileSslProtocolSettingsArgs']]):
+    def ssl_protocol_settings(self, value: pulumi.Input[Optional['DecryptionProfileSslProtocolSettingsArgs']]):
         pulumi.set(self, "ssl_protocol_settings", value)
 
     @_builtins.property
     @pulumi.getter
-    def tfid(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def tfid(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The Terraform ID.
         """
         return pulumi.get(self, "tfid")
 
     @tfid.setter
-    def tfid(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def tfid(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "tfid", value)
 
 
@@ -330,14 +330,14 @@ class DecryptionProfile(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 device: Optional[pulumi.Input[_builtins.str]] = None,
-                 folder: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 snippet: Optional[pulumi.Input[_builtins.str]] = None,
-                 ssl_forward_proxy: Optional[pulumi.Input[Union['DecryptionProfileSslForwardProxyArgs', 'DecryptionProfileSslForwardProxyArgsDict']]] = None,
-                 ssl_inbound_proxy: Optional[pulumi.Input[Union['DecryptionProfileSslInboundProxyArgs', 'DecryptionProfileSslInboundProxyArgsDict']]] = None,
-                 ssl_no_proxy: Optional[pulumi.Input[Union['DecryptionProfileSslNoProxyArgs', 'DecryptionProfileSslNoProxyArgsDict']]] = None,
-                 ssl_protocol_settings: Optional[pulumi.Input[Union['DecryptionProfileSslProtocolSettingsArgs', 'DecryptionProfileSslProtocolSettingsArgsDict']]] = None,
+                 device: pulumi.Input[Optional[_builtins.str]] = None,
+                 folder: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 snippet: pulumi.Input[Optional[_builtins.str]] = None,
+                 ssl_forward_proxy: pulumi.Input[Optional[Union['DecryptionProfileSslForwardProxyArgs', 'DecryptionProfileSslForwardProxyArgsDict']]] = None,
+                 ssl_inbound_proxy: pulumi.Input[Optional[Union['DecryptionProfileSslInboundProxyArgs', 'DecryptionProfileSslInboundProxyArgsDict']]] = None,
+                 ssl_no_proxy: pulumi.Input[Optional[Union['DecryptionProfileSslNoProxyArgs', 'DecryptionProfileSslNoProxyArgsDict']]] = None,
+                 ssl_protocol_settings: pulumi.Input[Optional[Union['DecryptionProfileSslProtocolSettingsArgs', 'DecryptionProfileSslProtocolSettingsArgsDict']]] = None,
                  __props__=None):
         """
         DecryptionProfile resource
@@ -691,14 +691,14 @@ class DecryptionProfile(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 device: Optional[pulumi.Input[_builtins.str]] = None,
-                 folder: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 snippet: Optional[pulumi.Input[_builtins.str]] = None,
-                 ssl_forward_proxy: Optional[pulumi.Input[Union['DecryptionProfileSslForwardProxyArgs', 'DecryptionProfileSslForwardProxyArgsDict']]] = None,
-                 ssl_inbound_proxy: Optional[pulumi.Input[Union['DecryptionProfileSslInboundProxyArgs', 'DecryptionProfileSslInboundProxyArgsDict']]] = None,
-                 ssl_no_proxy: Optional[pulumi.Input[Union['DecryptionProfileSslNoProxyArgs', 'DecryptionProfileSslNoProxyArgsDict']]] = None,
-                 ssl_protocol_settings: Optional[pulumi.Input[Union['DecryptionProfileSslProtocolSettingsArgs', 'DecryptionProfileSslProtocolSettingsArgsDict']]] = None,
+                 device: pulumi.Input[Optional[_builtins.str]] = None,
+                 folder: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 snippet: pulumi.Input[Optional[_builtins.str]] = None,
+                 ssl_forward_proxy: pulumi.Input[Optional[Union['DecryptionProfileSslForwardProxyArgs', 'DecryptionProfileSslForwardProxyArgsDict']]] = None,
+                 ssl_inbound_proxy: pulumi.Input[Optional[Union['DecryptionProfileSslInboundProxyArgs', 'DecryptionProfileSslInboundProxyArgsDict']]] = None,
+                 ssl_no_proxy: pulumi.Input[Optional[Union['DecryptionProfileSslNoProxyArgs', 'DecryptionProfileSslNoProxyArgsDict']]] = None,
+                 ssl_protocol_settings: pulumi.Input[Optional[Union['DecryptionProfileSslProtocolSettingsArgs', 'DecryptionProfileSslProtocolSettingsArgsDict']]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -727,15 +727,15 @@ class DecryptionProfile(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            device: Optional[pulumi.Input[_builtins.str]] = None,
-            folder: Optional[pulumi.Input[_builtins.str]] = None,
-            name: Optional[pulumi.Input[_builtins.str]] = None,
-            snippet: Optional[pulumi.Input[_builtins.str]] = None,
-            ssl_forward_proxy: Optional[pulumi.Input[Union['DecryptionProfileSslForwardProxyArgs', 'DecryptionProfileSslForwardProxyArgsDict']]] = None,
-            ssl_inbound_proxy: Optional[pulumi.Input[Union['DecryptionProfileSslInboundProxyArgs', 'DecryptionProfileSslInboundProxyArgsDict']]] = None,
-            ssl_no_proxy: Optional[pulumi.Input[Union['DecryptionProfileSslNoProxyArgs', 'DecryptionProfileSslNoProxyArgsDict']]] = None,
-            ssl_protocol_settings: Optional[pulumi.Input[Union['DecryptionProfileSslProtocolSettingsArgs', 'DecryptionProfileSslProtocolSettingsArgsDict']]] = None,
-            tfid: Optional[pulumi.Input[_builtins.str]] = None) -> 'DecryptionProfile':
+            device: pulumi.Input[Optional[_builtins.str]] = None,
+            folder: pulumi.Input[Optional[_builtins.str]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            snippet: pulumi.Input[Optional[_builtins.str]] = None,
+            ssl_forward_proxy: pulumi.Input[Optional[Union['DecryptionProfileSslForwardProxyArgs', 'DecryptionProfileSslForwardProxyArgsDict']]] = None,
+            ssl_inbound_proxy: pulumi.Input[Optional[Union['DecryptionProfileSslInboundProxyArgs', 'DecryptionProfileSslInboundProxyArgsDict']]] = None,
+            ssl_no_proxy: pulumi.Input[Optional[Union['DecryptionProfileSslNoProxyArgs', 'DecryptionProfileSslNoProxyArgsDict']]] = None,
+            ssl_protocol_settings: pulumi.Input[Optional[Union['DecryptionProfileSslProtocolSettingsArgs', 'DecryptionProfileSslProtocolSettingsArgsDict']]] = None,
+            tfid: pulumi.Input[Optional[_builtins.str]] = None) -> 'DecryptionProfile':
         """
         Get an existing DecryptionProfile resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

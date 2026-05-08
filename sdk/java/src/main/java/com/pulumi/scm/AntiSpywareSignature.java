@@ -36,8 +36,8 @@ import javax.annotation.Nullable;
  * import com.pulumi.scm.inputs.AntiSpywareSignatureSignatureArgs;
  * import com.pulumi.scm.inputs.AntiSpywareSignatureSignatureCombinationArgs;
  * import com.pulumi.scm.inputs.AntiSpywareSignatureSignatureCombinationTimeAttributeArgs;
- * import java.util.List;
  * import java.util.ArrayList;
+ * import java.util.Arrays;
  * import java.util.Map;
  * import java.io.File;
  * import java.nio.file.Files;
@@ -64,7 +64,7 @@ import javax.annotation.Nullable;
  *                 .combination(AntiSpywareSignatureSignatureCombinationArgs.builder()
  *                     .andConditions(AntiSpywareSignatureSignatureCombinationAndConditionArgs.builder()
  *                         .name("And Condition 1")
- *                         .orCondition(List.of(Map.ofEntries(
+ *                         .orCondition(Arrays.asList(Map.ofEntries(
  *                             Map.entry("name", "Test"),
  *                             Map.entry("threat_id", "10001")
  *                         )))

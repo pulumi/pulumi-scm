@@ -120,5 +120,5 @@ export interface GetFolderOutputArgs {
     /**
      * The name of the folder
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
 }

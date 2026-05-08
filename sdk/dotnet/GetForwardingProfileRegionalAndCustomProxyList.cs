@@ -27,12 +27,12 @@ namespace Pulumi.Scm
         ///     // This data source will call the "ListForwardingProfileRegionalAndCustomProxies" API endpoint
         ///     // and return all forwarding profile regional and custom proxies in the "Mobile Users" folder.
         ///     // 1. Use a single data block to fetch ALL forwarding profile regional and custom proxies in the "Mobile Users" folder.
-        ///     var allMobileUsers = Scm.Index.GetForwardingProfileRegionalAndCustomProxyList.Invoke(new()
+        ///     var allMobileUsers = Scm.GetForwardingProfileRegionalAndCustomProxyList.Invoke(new()
         ///     {
         ///         Folder = "Mobile Users",
         ///     });
         /// 
-        ///     var paginatedProxiesExample = Scm.Index.GetForwardingProfileRegionalAndCustomProxyList.Invoke(new()
+        ///     var paginatedProxiesExample = Scm.GetForwardingProfileRegionalAndCustomProxyList.Invoke(new()
         ///     {
         ///         Folder = "Mobile Users",
         ///         Limit = 5,
@@ -71,12 +71,12 @@ namespace Pulumi.Scm
         ///     // This data source will call the "ListForwardingProfileRegionalAndCustomProxies" API endpoint
         ///     // and return all forwarding profile regional and custom proxies in the "Mobile Users" folder.
         ///     // 1. Use a single data block to fetch ALL forwarding profile regional and custom proxies in the "Mobile Users" folder.
-        ///     var allMobileUsers = Scm.Index.GetForwardingProfileRegionalAndCustomProxyList.Invoke(new()
+        ///     var allMobileUsers = Scm.GetForwardingProfileRegionalAndCustomProxyList.Invoke(new()
         ///     {
         ///         Folder = "Mobile Users",
         ///     });
         /// 
-        ///     var paginatedProxiesExample = Scm.Index.GetForwardingProfileRegionalAndCustomProxyList.Invoke(new()
+        ///     var paginatedProxiesExample = Scm.GetForwardingProfileRegionalAndCustomProxyList.Invoke(new()
         ///     {
         ///         Folder = "Mobile Users",
         ///         Limit = 5,
@@ -115,12 +115,12 @@ namespace Pulumi.Scm
         ///     // This data source will call the "ListForwardingProfileRegionalAndCustomProxies" API endpoint
         ///     // and return all forwarding profile regional and custom proxies in the "Mobile Users" folder.
         ///     // 1. Use a single data block to fetch ALL forwarding profile regional and custom proxies in the "Mobile Users" folder.
-        ///     var allMobileUsers = Scm.Index.GetForwardingProfileRegionalAndCustomProxyList.Invoke(new()
+        ///     var allMobileUsers = Scm.GetForwardingProfileRegionalAndCustomProxyList.Invoke(new()
         ///     {
         ///         Folder = "Mobile Users",
         ///     });
         /// 
-        ///     var paginatedProxiesExample = Scm.Index.GetForwardingProfileRegionalAndCustomProxyList.Invoke(new()
+        ///     var paginatedProxiesExample = Scm.GetForwardingProfileRegionalAndCustomProxyList.Invoke(new()
         ///     {
         ///         Folder = "Mobile Users",
         ///         Limit = 5,

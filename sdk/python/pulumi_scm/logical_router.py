@@ -21,12 +21,12 @@ __all__ = ['LogicalRouterArgs', 'LogicalRouter']
 @pulumi.input_type
 class LogicalRouterArgs:
     def __init__(__self__, *,
-                 device: Optional[pulumi.Input[_builtins.str]] = None,
-                 folder: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 routing_stack: Optional[pulumi.Input[_builtins.str]] = None,
-                 snippet: Optional[pulumi.Input[_builtins.str]] = None,
-                 vrves: Optional[pulumi.Input[Sequence[pulumi.Input['LogicalRouterVrfArgs']]]] = None):
+                 device: pulumi.Input[Optional[_builtins.str]] = None,
+                 folder: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 routing_stack: pulumi.Input[Optional[_builtins.str]] = None,
+                 snippet: pulumi.Input[Optional[_builtins.str]] = None,
+                 vrves: pulumi.Input[Optional[Sequence[pulumi.Input['LogicalRouterVrfArgs']]]] = None):
         """
         The set of arguments for constructing a LogicalRouter resource.
 
@@ -56,19 +56,19 @@ class LogicalRouterArgs:
 
     @_builtins.property
     @pulumi.getter
-    def device(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def device(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The device in which the resource is defined
         """
         return pulumi.get(self, "device")
 
     @device.setter
-    def device(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def device(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "device", value)
 
     @_builtins.property
     @pulumi.getter
-    def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def folder(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
 
@@ -77,36 +77,36 @@ class LogicalRouterArgs:
         return pulumi.get(self, "folder")
 
     @folder.setter
-    def folder(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def folder(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "folder", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Name
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter(name="routingStack")
-    def routing_stack(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def routing_stack(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Routing stack
         """
         return pulumi.get(self, "routing_stack")
 
     @routing_stack.setter
-    def routing_stack(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def routing_stack(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "routing_stack", value)
 
     @_builtins.property
     @pulumi.getter
-    def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def snippet(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
 
@@ -115,32 +115,32 @@ class LogicalRouterArgs:
         return pulumi.get(self, "snippet")
 
     @snippet.setter
-    def snippet(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def snippet(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "snippet", value)
 
     @_builtins.property
     @pulumi.getter
-    def vrves(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['LogicalRouterVrfArgs']]]]:
+    def vrves(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['LogicalRouterVrfArgs']]]]:
         """
         Vrf
         """
         return pulumi.get(self, "vrves")
 
     @vrves.setter
-    def vrves(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['LogicalRouterVrfArgs']]]]):
+    def vrves(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['LogicalRouterVrfArgs']]]]):
         pulumi.set(self, "vrves", value)
 
 
 @pulumi.input_type
 class _LogicalRouterState:
     def __init__(__self__, *,
-                 device: Optional[pulumi.Input[_builtins.str]] = None,
-                 folder: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 routing_stack: Optional[pulumi.Input[_builtins.str]] = None,
-                 snippet: Optional[pulumi.Input[_builtins.str]] = None,
-                 tfid: Optional[pulumi.Input[_builtins.str]] = None,
-                 vrves: Optional[pulumi.Input[Sequence[pulumi.Input['LogicalRouterVrfArgs']]]] = None):
+                 device: pulumi.Input[Optional[_builtins.str]] = None,
+                 folder: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 routing_stack: pulumi.Input[Optional[_builtins.str]] = None,
+                 snippet: pulumi.Input[Optional[_builtins.str]] = None,
+                 tfid: pulumi.Input[Optional[_builtins.str]] = None,
+                 vrves: pulumi.Input[Optional[Sequence[pulumi.Input['LogicalRouterVrfArgs']]]] = None):
         """
         Input properties used for looking up and filtering LogicalRouter resources.
 
@@ -173,19 +173,19 @@ class _LogicalRouterState:
 
     @_builtins.property
     @pulumi.getter
-    def device(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def device(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The device in which the resource is defined
         """
         return pulumi.get(self, "device")
 
     @device.setter
-    def device(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def device(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "device", value)
 
     @_builtins.property
     @pulumi.getter
-    def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def folder(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
 
@@ -194,36 +194,36 @@ class _LogicalRouterState:
         return pulumi.get(self, "folder")
 
     @folder.setter
-    def folder(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def folder(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "folder", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Name
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter(name="routingStack")
-    def routing_stack(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def routing_stack(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Routing stack
         """
         return pulumi.get(self, "routing_stack")
 
     @routing_stack.setter
-    def routing_stack(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def routing_stack(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "routing_stack", value)
 
     @_builtins.property
     @pulumi.getter
-    def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def snippet(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
 
@@ -232,31 +232,31 @@ class _LogicalRouterState:
         return pulumi.get(self, "snippet")
 
     @snippet.setter
-    def snippet(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def snippet(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "snippet", value)
 
     @_builtins.property
     @pulumi.getter
-    def tfid(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def tfid(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The Terraform ID.
         """
         return pulumi.get(self, "tfid")
 
     @tfid.setter
-    def tfid(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def tfid(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "tfid", value)
 
     @_builtins.property
     @pulumi.getter
-    def vrves(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['LogicalRouterVrfArgs']]]]:
+    def vrves(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['LogicalRouterVrfArgs']]]]:
         """
         Vrf
         """
         return pulumi.get(self, "vrves")
 
     @vrves.setter
-    def vrves(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['LogicalRouterVrfArgs']]]]):
+    def vrves(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['LogicalRouterVrfArgs']]]]):
         pulumi.set(self, "vrves", value)
 
 
@@ -266,12 +266,12 @@ class LogicalRouter(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 device: Optional[pulumi.Input[_builtins.str]] = None,
-                 folder: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 routing_stack: Optional[pulumi.Input[_builtins.str]] = None,
-                 snippet: Optional[pulumi.Input[_builtins.str]] = None,
-                 vrves: Optional[pulumi.Input[Sequence[pulumi.Input[Union['LogicalRouterVrfArgs', 'LogicalRouterVrfArgsDict']]]]] = None,
+                 device: pulumi.Input[Optional[_builtins.str]] = None,
+                 folder: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 routing_stack: pulumi.Input[Optional[_builtins.str]] = None,
+                 snippet: pulumi.Input[Optional[_builtins.str]] = None,
+                 vrves: pulumi.Input[Optional[Sequence[pulumi.Input[Union['LogicalRouterVrfArgs', 'LogicalRouterVrfArgsDict']]]]] = None,
                  __props__=None):
         """
         LogicalRouter resource
@@ -641,12 +641,12 @@ class LogicalRouter(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 device: Optional[pulumi.Input[_builtins.str]] = None,
-                 folder: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 routing_stack: Optional[pulumi.Input[_builtins.str]] = None,
-                 snippet: Optional[pulumi.Input[_builtins.str]] = None,
-                 vrves: Optional[pulumi.Input[Sequence[pulumi.Input[Union['LogicalRouterVrfArgs', 'LogicalRouterVrfArgsDict']]]]] = None,
+                 device: pulumi.Input[Optional[_builtins.str]] = None,
+                 folder: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 routing_stack: pulumi.Input[Optional[_builtins.str]] = None,
+                 snippet: pulumi.Input[Optional[_builtins.str]] = None,
+                 vrves: pulumi.Input[Optional[Sequence[pulumi.Input[Union['LogicalRouterVrfArgs', 'LogicalRouterVrfArgsDict']]]]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -673,13 +673,13 @@ class LogicalRouter(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            device: Optional[pulumi.Input[_builtins.str]] = None,
-            folder: Optional[pulumi.Input[_builtins.str]] = None,
-            name: Optional[pulumi.Input[_builtins.str]] = None,
-            routing_stack: Optional[pulumi.Input[_builtins.str]] = None,
-            snippet: Optional[pulumi.Input[_builtins.str]] = None,
-            tfid: Optional[pulumi.Input[_builtins.str]] = None,
-            vrves: Optional[pulumi.Input[Sequence[pulumi.Input[Union['LogicalRouterVrfArgs', 'LogicalRouterVrfArgsDict']]]]] = None) -> 'LogicalRouter':
+            device: pulumi.Input[Optional[_builtins.str]] = None,
+            folder: pulumi.Input[Optional[_builtins.str]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            routing_stack: pulumi.Input[Optional[_builtins.str]] = None,
+            snippet: pulumi.Input[Optional[_builtins.str]] = None,
+            tfid: pulumi.Input[Optional[_builtins.str]] = None,
+            vrves: pulumi.Input[Optional[Sequence[pulumi.Input[Union['LogicalRouterVrfArgs', 'LogicalRouterVrfArgsDict']]]]] = None) -> 'LogicalRouter':
         """
         Get an existing LogicalRouter resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

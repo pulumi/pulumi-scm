@@ -26,20 +26,20 @@ class NatRuleArgs:
                  service: pulumi.Input[_builtins.str],
                  sources: pulumi.Input[Sequence[pulumi.Input[_builtins.str]]],
                  tos: pulumi.Input[Sequence[pulumi.Input[_builtins.str]]],
-                 active_active_device_binding: Optional[pulumi.Input[_builtins.str]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 destination_translation: Optional[pulumi.Input['NatRuleDestinationTranslationArgs']] = None,
-                 device: Optional[pulumi.Input[_builtins.str]] = None,
-                 disabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 dynamic_destination_translation: Optional[pulumi.Input['NatRuleDynamicDestinationTranslationArgs']] = None,
-                 folder: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 nat_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 position: Optional[pulumi.Input[_builtins.str]] = None,
-                 snippet: Optional[pulumi.Input[_builtins.str]] = None,
-                 source_translation: Optional[pulumi.Input['NatRuleSourceTranslationArgs']] = None,
-                 tags: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 to_interface: Optional[pulumi.Input[_builtins.str]] = None):
+                 active_active_device_binding: pulumi.Input[Optional[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 destination_translation: pulumi.Input[Optional['NatRuleDestinationTranslationArgs']] = None,
+                 device: pulumi.Input[Optional[_builtins.str]] = None,
+                 disabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 dynamic_destination_translation: pulumi.Input[Optional['NatRuleDynamicDestinationTranslationArgs']] = None,
+                 folder: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 nat_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 position: pulumi.Input[Optional[_builtins.str]] = None,
+                 snippet: pulumi.Input[Optional[_builtins.str]] = None,
+                 source_translation: pulumi.Input[Optional['NatRuleSourceTranslationArgs']] = None,
+                 tags: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 to_interface: pulumi.Input[Optional[_builtins.str]] = None):
         """
         The set of arguments for constructing a NatRule resource.
 
@@ -159,196 +159,196 @@ class NatRuleArgs:
 
     @_builtins.property
     @pulumi.getter(name="activeActiveDeviceBinding")
-    def active_active_device_binding(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def active_active_device_binding(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Active active device binding
         """
         return pulumi.get(self, "active_active_device_binding")
 
     @active_active_device_binding.setter
-    def active_active_device_binding(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def active_active_device_binding(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "active_active_device_binding", value)
 
     @_builtins.property
     @pulumi.getter
-    def description(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def description(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         NAT rule description
         """
         return pulumi.get(self, "description")
 
     @description.setter
-    def description(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def description(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "description", value)
 
     @_builtins.property
     @pulumi.getter(name="destinationTranslation")
-    def destination_translation(self) -> Optional[pulumi.Input['NatRuleDestinationTranslationArgs']]:
+    def destination_translation(self) -> pulumi.Input[Optional['NatRuleDestinationTranslationArgs']]:
         """
         Destination translation
         """
         return pulumi.get(self, "destination_translation")
 
     @destination_translation.setter
-    def destination_translation(self, value: Optional[pulumi.Input['NatRuleDestinationTranslationArgs']]):
+    def destination_translation(self, value: pulumi.Input[Optional['NatRuleDestinationTranslationArgs']]):
         pulumi.set(self, "destination_translation", value)
 
     @_builtins.property
     @pulumi.getter
-    def device(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def device(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The device in which the resource is defined
         """
         return pulumi.get(self, "device")
 
     @device.setter
-    def device(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def device(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "device", value)
 
     @_builtins.property
     @pulumi.getter
-    def disabled(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def disabled(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Disable NAT rule?
         """
         return pulumi.get(self, "disabled")
 
     @disabled.setter
-    def disabled(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def disabled(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "disabled", value)
 
     @_builtins.property
     @pulumi.getter(name="dynamicDestinationTranslation")
-    def dynamic_destination_translation(self) -> Optional[pulumi.Input['NatRuleDynamicDestinationTranslationArgs']]:
+    def dynamic_destination_translation(self) -> pulumi.Input[Optional['NatRuleDynamicDestinationTranslationArgs']]:
         """
         Dynamic destination translation
         """
         return pulumi.get(self, "dynamic_destination_translation")
 
     @dynamic_destination_translation.setter
-    def dynamic_destination_translation(self, value: Optional[pulumi.Input['NatRuleDynamicDestinationTranslationArgs']]):
+    def dynamic_destination_translation(self, value: pulumi.Input[Optional['NatRuleDynamicDestinationTranslationArgs']]):
         pulumi.set(self, "dynamic_destination_translation", value)
 
     @_builtins.property
     @pulumi.getter
-    def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def folder(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
         """
         return pulumi.get(self, "folder")
 
     @folder.setter
-    def folder(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def folder(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "folder", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         NAT rule name
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter(name="natType")
-    def nat_type(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def nat_type(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         NAT type
         """
         return pulumi.get(self, "nat_type")
 
     @nat_type.setter
-    def nat_type(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def nat_type(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "nat_type", value)
 
     @_builtins.property
     @pulumi.getter
-    def position(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def position(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The relative position of the rule
         """
         return pulumi.get(self, "position")
 
     @position.setter
-    def position(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def position(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "position", value)
 
     @_builtins.property
     @pulumi.getter
-    def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def snippet(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
         """
         return pulumi.get(self, "snippet")
 
     @snippet.setter
-    def snippet(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def snippet(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "snippet", value)
 
     @_builtins.property
     @pulumi.getter(name="sourceTranslation")
-    def source_translation(self) -> Optional[pulumi.Input['NatRuleSourceTranslationArgs']]:
+    def source_translation(self) -> pulumi.Input[Optional['NatRuleSourceTranslationArgs']]:
         """
         Source translation
         """
         return pulumi.get(self, "source_translation")
 
     @source_translation.setter
-    def source_translation(self, value: Optional[pulumi.Input['NatRuleSourceTranslationArgs']]):
+    def source_translation(self, value: pulumi.Input[Optional['NatRuleSourceTranslationArgs']]):
         pulumi.set(self, "source_translation", value)
 
     @_builtins.property
     @pulumi.getter
-    def tags(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def tags(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         NAT rule tags
         """
         return pulumi.get(self, "tags")
 
     @tags.setter
-    def tags(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def tags(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "tags", value)
 
     @_builtins.property
     @pulumi.getter(name="toInterface")
-    def to_interface(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def to_interface(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Destination interface of the original packet
         """
         return pulumi.get(self, "to_interface")
 
     @to_interface.setter
-    def to_interface(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def to_interface(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "to_interface", value)
 
 
 @pulumi.input_type
 class _NatRuleState:
     def __init__(__self__, *,
-                 active_active_device_binding: Optional[pulumi.Input[_builtins.str]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 destination_translation: Optional[pulumi.Input['NatRuleDestinationTranslationArgs']] = None,
-                 destinations: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 device: Optional[pulumi.Input[_builtins.str]] = None,
-                 disabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 dynamic_destination_translation: Optional[pulumi.Input['NatRuleDynamicDestinationTranslationArgs']] = None,
-                 folder: Optional[pulumi.Input[_builtins.str]] = None,
-                 froms: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 nat_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 position: Optional[pulumi.Input[_builtins.str]] = None,
-                 service: Optional[pulumi.Input[_builtins.str]] = None,
-                 snippet: Optional[pulumi.Input[_builtins.str]] = None,
-                 source_translation: Optional[pulumi.Input['NatRuleSourceTranslationArgs']] = None,
-                 sources: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 tags: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 tfid: Optional[pulumi.Input[_builtins.str]] = None,
-                 to_interface: Optional[pulumi.Input[_builtins.str]] = None,
-                 tos: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None):
+                 active_active_device_binding: pulumi.Input[Optional[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 destination_translation: pulumi.Input[Optional['NatRuleDestinationTranslationArgs']] = None,
+                 destinations: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 device: pulumi.Input[Optional[_builtins.str]] = None,
+                 disabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 dynamic_destination_translation: pulumi.Input[Optional['NatRuleDynamicDestinationTranslationArgs']] = None,
+                 folder: pulumi.Input[Optional[_builtins.str]] = None,
+                 froms: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 nat_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 position: pulumi.Input[Optional[_builtins.str]] = None,
+                 service: pulumi.Input[Optional[_builtins.str]] = None,
+                 snippet: pulumi.Input[Optional[_builtins.str]] = None,
+                 source_translation: pulumi.Input[Optional['NatRuleSourceTranslationArgs']] = None,
+                 sources: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 tags: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 tfid: pulumi.Input[Optional[_builtins.str]] = None,
+                 to_interface: pulumi.Input[Optional[_builtins.str]] = None,
+                 tos: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None):
         """
         Input properties used for looking up and filtering NatRule resources.
 
@@ -416,242 +416,242 @@ class _NatRuleState:
 
     @_builtins.property
     @pulumi.getter(name="activeActiveDeviceBinding")
-    def active_active_device_binding(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def active_active_device_binding(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Active active device binding
         """
         return pulumi.get(self, "active_active_device_binding")
 
     @active_active_device_binding.setter
-    def active_active_device_binding(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def active_active_device_binding(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "active_active_device_binding", value)
 
     @_builtins.property
     @pulumi.getter
-    def description(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def description(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         NAT rule description
         """
         return pulumi.get(self, "description")
 
     @description.setter
-    def description(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def description(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "description", value)
 
     @_builtins.property
     @pulumi.getter(name="destinationTranslation")
-    def destination_translation(self) -> Optional[pulumi.Input['NatRuleDestinationTranslationArgs']]:
+    def destination_translation(self) -> pulumi.Input[Optional['NatRuleDestinationTranslationArgs']]:
         """
         Destination translation
         """
         return pulumi.get(self, "destination_translation")
 
     @destination_translation.setter
-    def destination_translation(self, value: Optional[pulumi.Input['NatRuleDestinationTranslationArgs']]):
+    def destination_translation(self, value: pulumi.Input[Optional['NatRuleDestinationTranslationArgs']]):
         pulumi.set(self, "destination_translation", value)
 
     @_builtins.property
     @pulumi.getter
-    def destinations(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def destinations(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         Destination address(es) of the original packet
         """
         return pulumi.get(self, "destinations")
 
     @destinations.setter
-    def destinations(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def destinations(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "destinations", value)
 
     @_builtins.property
     @pulumi.getter
-    def device(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def device(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The device in which the resource is defined
         """
         return pulumi.get(self, "device")
 
     @device.setter
-    def device(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def device(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "device", value)
 
     @_builtins.property
     @pulumi.getter
-    def disabled(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def disabled(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Disable NAT rule?
         """
         return pulumi.get(self, "disabled")
 
     @disabled.setter
-    def disabled(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def disabled(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "disabled", value)
 
     @_builtins.property
     @pulumi.getter(name="dynamicDestinationTranslation")
-    def dynamic_destination_translation(self) -> Optional[pulumi.Input['NatRuleDynamicDestinationTranslationArgs']]:
+    def dynamic_destination_translation(self) -> pulumi.Input[Optional['NatRuleDynamicDestinationTranslationArgs']]:
         """
         Dynamic destination translation
         """
         return pulumi.get(self, "dynamic_destination_translation")
 
     @dynamic_destination_translation.setter
-    def dynamic_destination_translation(self, value: Optional[pulumi.Input['NatRuleDynamicDestinationTranslationArgs']]):
+    def dynamic_destination_translation(self, value: pulumi.Input[Optional['NatRuleDynamicDestinationTranslationArgs']]):
         pulumi.set(self, "dynamic_destination_translation", value)
 
     @_builtins.property
     @pulumi.getter
-    def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def folder(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
         """
         return pulumi.get(self, "folder")
 
     @folder.setter
-    def folder(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def folder(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "folder", value)
 
     @_builtins.property
     @pulumi.getter
-    def froms(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def froms(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         Source zone(s) of the original packet
         """
         return pulumi.get(self, "froms")
 
     @froms.setter
-    def froms(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def froms(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "froms", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         NAT rule name
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter(name="natType")
-    def nat_type(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def nat_type(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         NAT type
         """
         return pulumi.get(self, "nat_type")
 
     @nat_type.setter
-    def nat_type(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def nat_type(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "nat_type", value)
 
     @_builtins.property
     @pulumi.getter
-    def position(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def position(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The relative position of the rule
         """
         return pulumi.get(self, "position")
 
     @position.setter
-    def position(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def position(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "position", value)
 
     @_builtins.property
     @pulumi.getter
-    def service(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def service(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The service of the original packet
         """
         return pulumi.get(self, "service")
 
     @service.setter
-    def service(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def service(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "service", value)
 
     @_builtins.property
     @pulumi.getter
-    def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def snippet(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
         """
         return pulumi.get(self, "snippet")
 
     @snippet.setter
-    def snippet(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def snippet(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "snippet", value)
 
     @_builtins.property
     @pulumi.getter(name="sourceTranslation")
-    def source_translation(self) -> Optional[pulumi.Input['NatRuleSourceTranslationArgs']]:
+    def source_translation(self) -> pulumi.Input[Optional['NatRuleSourceTranslationArgs']]:
         """
         Source translation
         """
         return pulumi.get(self, "source_translation")
 
     @source_translation.setter
-    def source_translation(self, value: Optional[pulumi.Input['NatRuleSourceTranslationArgs']]):
+    def source_translation(self, value: pulumi.Input[Optional['NatRuleSourceTranslationArgs']]):
         pulumi.set(self, "source_translation", value)
 
     @_builtins.property
     @pulumi.getter
-    def sources(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def sources(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         Source address(es) of the original packet
         """
         return pulumi.get(self, "sources")
 
     @sources.setter
-    def sources(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def sources(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "sources", value)
 
     @_builtins.property
     @pulumi.getter
-    def tags(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def tags(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         NAT rule tags
         """
         return pulumi.get(self, "tags")
 
     @tags.setter
-    def tags(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def tags(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "tags", value)
 
     @_builtins.property
     @pulumi.getter
-    def tfid(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def tfid(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The Terraform ID.
         """
         return pulumi.get(self, "tfid")
 
     @tfid.setter
-    def tfid(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def tfid(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "tfid", value)
 
     @_builtins.property
     @pulumi.getter(name="toInterface")
-    def to_interface(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def to_interface(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Destination interface of the original packet
         """
         return pulumi.get(self, "to_interface")
 
     @to_interface.setter
-    def to_interface(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def to_interface(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "to_interface", value)
 
     @_builtins.property
     @pulumi.getter
-    def tos(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def tos(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         Destination zone of the original packet
         """
         return pulumi.get(self, "tos")
 
     @tos.setter
-    def tos(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def tos(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "tos", value)
 
 
@@ -661,25 +661,25 @@ class NatRule(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 active_active_device_binding: Optional[pulumi.Input[_builtins.str]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 destination_translation: Optional[pulumi.Input[Union['NatRuleDestinationTranslationArgs', 'NatRuleDestinationTranslationArgsDict']]] = None,
-                 destinations: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 device: Optional[pulumi.Input[_builtins.str]] = None,
-                 disabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 dynamic_destination_translation: Optional[pulumi.Input[Union['NatRuleDynamicDestinationTranslationArgs', 'NatRuleDynamicDestinationTranslationArgsDict']]] = None,
-                 folder: Optional[pulumi.Input[_builtins.str]] = None,
-                 froms: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 nat_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 position: Optional[pulumi.Input[_builtins.str]] = None,
-                 service: Optional[pulumi.Input[_builtins.str]] = None,
-                 snippet: Optional[pulumi.Input[_builtins.str]] = None,
-                 source_translation: Optional[pulumi.Input[Union['NatRuleSourceTranslationArgs', 'NatRuleSourceTranslationArgsDict']]] = None,
-                 sources: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 tags: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 to_interface: Optional[pulumi.Input[_builtins.str]] = None,
-                 tos: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 active_active_device_binding: pulumi.Input[Optional[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 destination_translation: pulumi.Input[Optional[Union['NatRuleDestinationTranslationArgs', 'NatRuleDestinationTranslationArgsDict']]] = None,
+                 destinations: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 device: pulumi.Input[Optional[_builtins.str]] = None,
+                 disabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 dynamic_destination_translation: pulumi.Input[Optional[Union['NatRuleDynamicDestinationTranslationArgs', 'NatRuleDynamicDestinationTranslationArgsDict']]] = None,
+                 folder: pulumi.Input[Optional[_builtins.str]] = None,
+                 froms: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 nat_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 position: pulumi.Input[Optional[_builtins.str]] = None,
+                 service: pulumi.Input[Optional[_builtins.str]] = None,
+                 snippet: pulumi.Input[Optional[_builtins.str]] = None,
+                 source_translation: pulumi.Input[Optional[Union['NatRuleSourceTranslationArgs', 'NatRuleSourceTranslationArgsDict']]] = None,
+                 sources: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 tags: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 to_interface: pulumi.Input[Optional[_builtins.str]] = None,
+                 tos: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  __props__=None):
         """
         NatRule resource
@@ -1000,25 +1000,25 @@ class NatRule(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 active_active_device_binding: Optional[pulumi.Input[_builtins.str]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 destination_translation: Optional[pulumi.Input[Union['NatRuleDestinationTranslationArgs', 'NatRuleDestinationTranslationArgsDict']]] = None,
-                 destinations: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 device: Optional[pulumi.Input[_builtins.str]] = None,
-                 disabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 dynamic_destination_translation: Optional[pulumi.Input[Union['NatRuleDynamicDestinationTranslationArgs', 'NatRuleDynamicDestinationTranslationArgsDict']]] = None,
-                 folder: Optional[pulumi.Input[_builtins.str]] = None,
-                 froms: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 nat_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 position: Optional[pulumi.Input[_builtins.str]] = None,
-                 service: Optional[pulumi.Input[_builtins.str]] = None,
-                 snippet: Optional[pulumi.Input[_builtins.str]] = None,
-                 source_translation: Optional[pulumi.Input[Union['NatRuleSourceTranslationArgs', 'NatRuleSourceTranslationArgsDict']]] = None,
-                 sources: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 tags: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 to_interface: Optional[pulumi.Input[_builtins.str]] = None,
-                 tos: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 active_active_device_binding: pulumi.Input[Optional[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 destination_translation: pulumi.Input[Optional[Union['NatRuleDestinationTranslationArgs', 'NatRuleDestinationTranslationArgsDict']]] = None,
+                 destinations: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 device: pulumi.Input[Optional[_builtins.str]] = None,
+                 disabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 dynamic_destination_translation: pulumi.Input[Optional[Union['NatRuleDynamicDestinationTranslationArgs', 'NatRuleDynamicDestinationTranslationArgsDict']]] = None,
+                 folder: pulumi.Input[Optional[_builtins.str]] = None,
+                 froms: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 nat_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 position: pulumi.Input[Optional[_builtins.str]] = None,
+                 service: pulumi.Input[Optional[_builtins.str]] = None,
+                 snippet: pulumi.Input[Optional[_builtins.str]] = None,
+                 source_translation: pulumi.Input[Optional[Union['NatRuleSourceTranslationArgs', 'NatRuleSourceTranslationArgsDict']]] = None,
+                 sources: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 tags: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 to_interface: pulumi.Input[Optional[_builtins.str]] = None,
+                 tos: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -1068,26 +1068,26 @@ class NatRule(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            active_active_device_binding: Optional[pulumi.Input[_builtins.str]] = None,
-            description: Optional[pulumi.Input[_builtins.str]] = None,
-            destination_translation: Optional[pulumi.Input[Union['NatRuleDestinationTranslationArgs', 'NatRuleDestinationTranslationArgsDict']]] = None,
-            destinations: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-            device: Optional[pulumi.Input[_builtins.str]] = None,
-            disabled: Optional[pulumi.Input[_builtins.bool]] = None,
-            dynamic_destination_translation: Optional[pulumi.Input[Union['NatRuleDynamicDestinationTranslationArgs', 'NatRuleDynamicDestinationTranslationArgsDict']]] = None,
-            folder: Optional[pulumi.Input[_builtins.str]] = None,
-            froms: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-            name: Optional[pulumi.Input[_builtins.str]] = None,
-            nat_type: Optional[pulumi.Input[_builtins.str]] = None,
-            position: Optional[pulumi.Input[_builtins.str]] = None,
-            service: Optional[pulumi.Input[_builtins.str]] = None,
-            snippet: Optional[pulumi.Input[_builtins.str]] = None,
-            source_translation: Optional[pulumi.Input[Union['NatRuleSourceTranslationArgs', 'NatRuleSourceTranslationArgsDict']]] = None,
-            sources: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-            tags: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-            tfid: Optional[pulumi.Input[_builtins.str]] = None,
-            to_interface: Optional[pulumi.Input[_builtins.str]] = None,
-            tos: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None) -> 'NatRule':
+            active_active_device_binding: pulumi.Input[Optional[_builtins.str]] = None,
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            destination_translation: pulumi.Input[Optional[Union['NatRuleDestinationTranslationArgs', 'NatRuleDestinationTranslationArgsDict']]] = None,
+            destinations: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            device: pulumi.Input[Optional[_builtins.str]] = None,
+            disabled: pulumi.Input[Optional[_builtins.bool]] = None,
+            dynamic_destination_translation: pulumi.Input[Optional[Union['NatRuleDynamicDestinationTranslationArgs', 'NatRuleDynamicDestinationTranslationArgsDict']]] = None,
+            folder: pulumi.Input[Optional[_builtins.str]] = None,
+            froms: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            nat_type: pulumi.Input[Optional[_builtins.str]] = None,
+            position: pulumi.Input[Optional[_builtins.str]] = None,
+            service: pulumi.Input[Optional[_builtins.str]] = None,
+            snippet: pulumi.Input[Optional[_builtins.str]] = None,
+            source_translation: pulumi.Input[Optional[Union['NatRuleSourceTranslationArgs', 'NatRuleSourceTranslationArgsDict']]] = None,
+            sources: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            tags: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            tfid: pulumi.Input[Optional[_builtins.str]] = None,
+            to_interface: pulumi.Input[Optional[_builtins.str]] = None,
+            tos: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None) -> 'NatRule':
         """
         Get an existing NatRule resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

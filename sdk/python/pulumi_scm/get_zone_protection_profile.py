@@ -447,11 +447,11 @@ def get_zone_protection_profile(device: Optional[_builtins.str] = None,
         tfid=pulumi.get(__ret__, 'tfid'),
         timestamp_discard=pulumi.get(__ret__, 'timestamp_discard'),
         unknown_option_discard=pulumi.get(__ret__, 'unknown_option_discard'))
-def get_zone_protection_profile_output(device: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
-                                       folder: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
-                                       id: Optional[pulumi.Input[_builtins.str]] = None,
-                                       name: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
-                                       snippet: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
+def get_zone_protection_profile_output(device: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
+                                       folder: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
+                                       id: pulumi.Input[Optional[_builtins.str]] = None,
+                                       name: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
+                                       snippet: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
                                        opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetZoneProtectionProfileResult]:
     """
     ZoneProtectionProfile data source

@@ -198,47 +198,47 @@ export interface RadiusServerProfileState {
     /**
      * The device in which the resource is defined
      */
-    device?: pulumi.Input<string>;
+    device?: pulumi.Input<string | undefined>;
     /**
      * Map of sensitive values returned from the API.
      */
-    encryptedValues?: pulumi.Input<{[key: string]: pulumi.Input<string>}>;
+    encryptedValues?: pulumi.Input<{[key: string]: pulumi.Input<string>} | undefined>;
     /**
      * The folder in which the resource is defined
      *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
-    folder?: pulumi.Input<string>;
+    folder?: pulumi.Input<string | undefined>;
     /**
      * The name of the RADIUS server profile
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * The RADIUS authentication protocol
      */
-    protocol?: pulumi.Input<inputs.RadiusServerProfileProtocol>;
+    protocol?: pulumi.Input<inputs.RadiusServerProfileProtocol | undefined>;
     /**
      * The number of RADIUS server retries
      */
-    retries?: pulumi.Input<number>;
+    retries?: pulumi.Input<number | undefined>;
     /**
      * Server
      */
-    servers?: pulumi.Input<pulumi.Input<inputs.RadiusServerProfileServer>[]>;
+    servers?: pulumi.Input<pulumi.Input<inputs.RadiusServerProfileServer>[] | undefined>;
     /**
      * The snippet in which the resource is defined
      *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
-    snippet?: pulumi.Input<string>;
+    snippet?: pulumi.Input<string | undefined>;
     /**
      * The Terraform ID.
      */
-    tfid?: pulumi.Input<string>;
+    tfid?: pulumi.Input<string | undefined>;
     /**
      * The RADIUS server authentication timeout (seconds)
      */
-    timeout?: pulumi.Input<number>;
+    timeout?: pulumi.Input<number | undefined>;
 }
 
 /**
@@ -248,17 +248,17 @@ export interface RadiusServerProfileArgs {
     /**
      * The device in which the resource is defined
      */
-    device?: pulumi.Input<string>;
+    device?: pulumi.Input<string | undefined>;
     /**
      * The folder in which the resource is defined
      *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
-    folder?: pulumi.Input<string>;
+    folder?: pulumi.Input<string | undefined>;
     /**
      * The name of the RADIUS server profile
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * The RADIUS authentication protocol
      */
@@ -266,7 +266,7 @@ export interface RadiusServerProfileArgs {
     /**
      * The number of RADIUS server retries
      */
-    retries?: pulumi.Input<number>;
+    retries?: pulumi.Input<number | undefined>;
     /**
      * Server
      */
@@ -276,9 +276,9 @@ export interface RadiusServerProfileArgs {
      *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
-    snippet?: pulumi.Input<string>;
+    snippet?: pulumi.Input<string | undefined>;
     /**
      * The RADIUS server authentication timeout (seconds)
      */
-    timeout?: pulumi.Input<number>;
+    timeout?: pulumi.Input<number | undefined>;
 }

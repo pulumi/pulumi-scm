@@ -138,7 +138,7 @@ export interface GetForwardingProfileUserLocationOutputArgs {
     /**
      * The folder in which the resource is defined
      */
-    folder?: pulumi.Input<string>;
+    folder?: pulumi.Input<string | undefined>;
     /**
      * The UUID of the user location
      */
@@ -146,5 +146,5 @@ export interface GetForwardingProfileUserLocationOutputArgs {
     /**
      * alphanumeric string [ 0-9a-zA-Z._-]
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
 }

@@ -21,28 +21,28 @@ __all__ = ['ApplicationFilterArgs', 'ApplicationFilter']
 @pulumi.input_type
 class ApplicationFilterArgs:
     def __init__(__self__, *,
-                 categories: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 device: Optional[pulumi.Input[_builtins.str]] = None,
-                 evasive: Optional[pulumi.Input[_builtins.bool]] = None,
-                 excessive_bandwidth_use: Optional[pulumi.Input[_builtins.bool]] = None,
-                 excludes: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 folder: Optional[pulumi.Input[_builtins.str]] = None,
-                 has_known_vulnerabilities: Optional[pulumi.Input[_builtins.bool]] = None,
-                 is_saas: Optional[pulumi.Input[_builtins.bool]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 new_appid: Optional[pulumi.Input[_builtins.bool]] = None,
-                 pervasive: Optional[pulumi.Input[_builtins.bool]] = None,
-                 prone_to_misuse: Optional[pulumi.Input[_builtins.bool]] = None,
-                 risks: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.int]]]] = None,
-                 saas_certifications: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 saas_risks: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 snippet: Optional[pulumi.Input[_builtins.str]] = None,
-                 subcategories: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 tagging: Optional[pulumi.Input['ApplicationFilterTaggingArgs']] = None,
-                 technologies: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 transfers_files: Optional[pulumi.Input[_builtins.bool]] = None,
-                 tunnels_other_apps: Optional[pulumi.Input[_builtins.bool]] = None,
-                 used_by_malware: Optional[pulumi.Input[_builtins.bool]] = None):
+                 categories: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 device: pulumi.Input[Optional[_builtins.str]] = None,
+                 evasive: pulumi.Input[Optional[_builtins.bool]] = None,
+                 excessive_bandwidth_use: pulumi.Input[Optional[_builtins.bool]] = None,
+                 excludes: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 folder: pulumi.Input[Optional[_builtins.str]] = None,
+                 has_known_vulnerabilities: pulumi.Input[Optional[_builtins.bool]] = None,
+                 is_saas: pulumi.Input[Optional[_builtins.bool]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 new_appid: pulumi.Input[Optional[_builtins.bool]] = None,
+                 pervasive: pulumi.Input[Optional[_builtins.bool]] = None,
+                 prone_to_misuse: pulumi.Input[Optional[_builtins.bool]] = None,
+                 risks: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.int]]]] = None,
+                 saas_certifications: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 saas_risks: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 snippet: pulumi.Input[Optional[_builtins.str]] = None,
+                 subcategories: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 tagging: pulumi.Input[Optional['ApplicationFilterTaggingArgs']] = None,
+                 technologies: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 transfers_files: pulumi.Input[Optional[_builtins.bool]] = None,
+                 tunnels_other_apps: pulumi.Input[Optional[_builtins.bool]] = None,
+                 used_by_malware: pulumi.Input[Optional[_builtins.bool]] = None):
         """
         The set of arguments for constructing a ApplicationFilter resource.
 
@@ -120,67 +120,67 @@ class ApplicationFilterArgs:
 
     @_builtins.property
     @pulumi.getter
-    def categories(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def categories(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         Category
         """
         return pulumi.get(self, "categories")
 
     @categories.setter
-    def categories(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def categories(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "categories", value)
 
     @_builtins.property
     @pulumi.getter
-    def device(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def device(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The device in which the resource is defined
         """
         return pulumi.get(self, "device")
 
     @device.setter
-    def device(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def device(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "device", value)
 
     @_builtins.property
     @pulumi.getter
-    def evasive(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def evasive(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         only True is a valid value
         """
         return pulumi.get(self, "evasive")
 
     @evasive.setter
-    def evasive(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def evasive(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "evasive", value)
 
     @_builtins.property
     @pulumi.getter(name="excessiveBandwidthUse")
-    def excessive_bandwidth_use(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def excessive_bandwidth_use(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         only True is a valid value
         """
         return pulumi.get(self, "excessive_bandwidth_use")
 
     @excessive_bandwidth_use.setter
-    def excessive_bandwidth_use(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def excessive_bandwidth_use(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "excessive_bandwidth_use", value)
 
     @_builtins.property
     @pulumi.getter
-    def excludes(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def excludes(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         Exclude
         """
         return pulumi.get(self, "excludes")
 
     @excludes.setter
-    def excludes(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def excludes(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "excludes", value)
 
     @_builtins.property
     @pulumi.getter
-    def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def folder(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
 
@@ -189,120 +189,120 @@ class ApplicationFilterArgs:
         return pulumi.get(self, "folder")
 
     @folder.setter
-    def folder(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def folder(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "folder", value)
 
     @_builtins.property
     @pulumi.getter(name="hasKnownVulnerabilities")
-    def has_known_vulnerabilities(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def has_known_vulnerabilities(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         only True is a valid value
         """
         return pulumi.get(self, "has_known_vulnerabilities")
 
     @has_known_vulnerabilities.setter
-    def has_known_vulnerabilities(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def has_known_vulnerabilities(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "has_known_vulnerabilities", value)
 
     @_builtins.property
     @pulumi.getter(name="isSaas")
-    def is_saas(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def is_saas(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         only True is a valid value
         """
         return pulumi.get(self, "is_saas")
 
     @is_saas.setter
-    def is_saas(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def is_saas(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "is_saas", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Alphanumeric string [ 0-9a-zA-Z._-]
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter(name="newAppid")
-    def new_appid(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def new_appid(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         only True is a valid value
         """
         return pulumi.get(self, "new_appid")
 
     @new_appid.setter
-    def new_appid(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def new_appid(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "new_appid", value)
 
     @_builtins.property
     @pulumi.getter
-    def pervasive(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def pervasive(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         only True is a valid value
         """
         return pulumi.get(self, "pervasive")
 
     @pervasive.setter
-    def pervasive(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def pervasive(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "pervasive", value)
 
     @_builtins.property
     @pulumi.getter(name="proneToMisuse")
-    def prone_to_misuse(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def prone_to_misuse(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         only True is a valid value
         """
         return pulumi.get(self, "prone_to_misuse")
 
     @prone_to_misuse.setter
-    def prone_to_misuse(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def prone_to_misuse(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "prone_to_misuse", value)
 
     @_builtins.property
     @pulumi.getter
-    def risks(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.int]]]]:
+    def risks(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.int]]]]:
         """
         Risk
         """
         return pulumi.get(self, "risks")
 
     @risks.setter
-    def risks(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.int]]]]):
+    def risks(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.int]]]]):
         pulumi.set(self, "risks", value)
 
     @_builtins.property
     @pulumi.getter(name="saasCertifications")
-    def saas_certifications(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def saas_certifications(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         Saas certifications
         """
         return pulumi.get(self, "saas_certifications")
 
     @saas_certifications.setter
-    def saas_certifications(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def saas_certifications(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "saas_certifications", value)
 
     @_builtins.property
     @pulumi.getter(name="saasRisks")
-    def saas_risks(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def saas_risks(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         Saas risk
         """
         return pulumi.get(self, "saas_risks")
 
     @saas_risks.setter
-    def saas_risks(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def saas_risks(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "saas_risks", value)
 
     @_builtins.property
     @pulumi.getter
-    def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def snippet(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
 
@@ -311,108 +311,108 @@ class ApplicationFilterArgs:
         return pulumi.get(self, "snippet")
 
     @snippet.setter
-    def snippet(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def snippet(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "snippet", value)
 
     @_builtins.property
     @pulumi.getter
-    def subcategories(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def subcategories(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         Subcategory
         """
         return pulumi.get(self, "subcategories")
 
     @subcategories.setter
-    def subcategories(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def subcategories(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "subcategories", value)
 
     @_builtins.property
     @pulumi.getter
-    def tagging(self) -> Optional[pulumi.Input['ApplicationFilterTaggingArgs']]:
+    def tagging(self) -> pulumi.Input[Optional['ApplicationFilterTaggingArgs']]:
         """
         Tagging
         """
         return pulumi.get(self, "tagging")
 
     @tagging.setter
-    def tagging(self, value: Optional[pulumi.Input['ApplicationFilterTaggingArgs']]):
+    def tagging(self, value: pulumi.Input[Optional['ApplicationFilterTaggingArgs']]):
         pulumi.set(self, "tagging", value)
 
     @_builtins.property
     @pulumi.getter
-    def technologies(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def technologies(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         Technology
         """
         return pulumi.get(self, "technologies")
 
     @technologies.setter
-    def technologies(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def technologies(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "technologies", value)
 
     @_builtins.property
     @pulumi.getter(name="transfersFiles")
-    def transfers_files(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def transfers_files(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         only True is a valid value
         """
         return pulumi.get(self, "transfers_files")
 
     @transfers_files.setter
-    def transfers_files(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def transfers_files(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "transfers_files", value)
 
     @_builtins.property
     @pulumi.getter(name="tunnelsOtherApps")
-    def tunnels_other_apps(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def tunnels_other_apps(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         only True is a valid value
         """
         return pulumi.get(self, "tunnels_other_apps")
 
     @tunnels_other_apps.setter
-    def tunnels_other_apps(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def tunnels_other_apps(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "tunnels_other_apps", value)
 
     @_builtins.property
     @pulumi.getter(name="usedByMalware")
-    def used_by_malware(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def used_by_malware(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         only True is a valid value
         """
         return pulumi.get(self, "used_by_malware")
 
     @used_by_malware.setter
-    def used_by_malware(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def used_by_malware(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "used_by_malware", value)
 
 
 @pulumi.input_type
 class _ApplicationFilterState:
     def __init__(__self__, *,
-                 categories: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 device: Optional[pulumi.Input[_builtins.str]] = None,
-                 evasive: Optional[pulumi.Input[_builtins.bool]] = None,
-                 excessive_bandwidth_use: Optional[pulumi.Input[_builtins.bool]] = None,
-                 excludes: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 folder: Optional[pulumi.Input[_builtins.str]] = None,
-                 has_known_vulnerabilities: Optional[pulumi.Input[_builtins.bool]] = None,
-                 is_saas: Optional[pulumi.Input[_builtins.bool]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 new_appid: Optional[pulumi.Input[_builtins.bool]] = None,
-                 pervasive: Optional[pulumi.Input[_builtins.bool]] = None,
-                 prone_to_misuse: Optional[pulumi.Input[_builtins.bool]] = None,
-                 risks: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.int]]]] = None,
-                 saas_certifications: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 saas_risks: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 snippet: Optional[pulumi.Input[_builtins.str]] = None,
-                 subcategories: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 tagging: Optional[pulumi.Input['ApplicationFilterTaggingArgs']] = None,
-                 technologies: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 tfid: Optional[pulumi.Input[_builtins.str]] = None,
-                 transfers_files: Optional[pulumi.Input[_builtins.bool]] = None,
-                 tunnels_other_apps: Optional[pulumi.Input[_builtins.bool]] = None,
-                 used_by_malware: Optional[pulumi.Input[_builtins.bool]] = None):
+                 categories: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 device: pulumi.Input[Optional[_builtins.str]] = None,
+                 evasive: pulumi.Input[Optional[_builtins.bool]] = None,
+                 excessive_bandwidth_use: pulumi.Input[Optional[_builtins.bool]] = None,
+                 excludes: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 folder: pulumi.Input[Optional[_builtins.str]] = None,
+                 has_known_vulnerabilities: pulumi.Input[Optional[_builtins.bool]] = None,
+                 is_saas: pulumi.Input[Optional[_builtins.bool]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 new_appid: pulumi.Input[Optional[_builtins.bool]] = None,
+                 pervasive: pulumi.Input[Optional[_builtins.bool]] = None,
+                 prone_to_misuse: pulumi.Input[Optional[_builtins.bool]] = None,
+                 risks: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.int]]]] = None,
+                 saas_certifications: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 saas_risks: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 snippet: pulumi.Input[Optional[_builtins.str]] = None,
+                 subcategories: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 tagging: pulumi.Input[Optional['ApplicationFilterTaggingArgs']] = None,
+                 technologies: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 tfid: pulumi.Input[Optional[_builtins.str]] = None,
+                 transfers_files: pulumi.Input[Optional[_builtins.bool]] = None,
+                 tunnels_other_apps: pulumi.Input[Optional[_builtins.bool]] = None,
+                 used_by_malware: pulumi.Input[Optional[_builtins.bool]] = None):
         """
         Input properties used for looking up and filtering ApplicationFilter resources.
 
@@ -493,67 +493,67 @@ class _ApplicationFilterState:
 
     @_builtins.property
     @pulumi.getter
-    def categories(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def categories(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         Category
         """
         return pulumi.get(self, "categories")
 
     @categories.setter
-    def categories(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def categories(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "categories", value)
 
     @_builtins.property
     @pulumi.getter
-    def device(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def device(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The device in which the resource is defined
         """
         return pulumi.get(self, "device")
 
     @device.setter
-    def device(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def device(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "device", value)
 
     @_builtins.property
     @pulumi.getter
-    def evasive(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def evasive(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         only True is a valid value
         """
         return pulumi.get(self, "evasive")
 
     @evasive.setter
-    def evasive(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def evasive(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "evasive", value)
 
     @_builtins.property
     @pulumi.getter(name="excessiveBandwidthUse")
-    def excessive_bandwidth_use(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def excessive_bandwidth_use(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         only True is a valid value
         """
         return pulumi.get(self, "excessive_bandwidth_use")
 
     @excessive_bandwidth_use.setter
-    def excessive_bandwidth_use(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def excessive_bandwidth_use(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "excessive_bandwidth_use", value)
 
     @_builtins.property
     @pulumi.getter
-    def excludes(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def excludes(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         Exclude
         """
         return pulumi.get(self, "excludes")
 
     @excludes.setter
-    def excludes(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def excludes(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "excludes", value)
 
     @_builtins.property
     @pulumi.getter
-    def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def folder(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
 
@@ -562,120 +562,120 @@ class _ApplicationFilterState:
         return pulumi.get(self, "folder")
 
     @folder.setter
-    def folder(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def folder(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "folder", value)
 
     @_builtins.property
     @pulumi.getter(name="hasKnownVulnerabilities")
-    def has_known_vulnerabilities(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def has_known_vulnerabilities(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         only True is a valid value
         """
         return pulumi.get(self, "has_known_vulnerabilities")
 
     @has_known_vulnerabilities.setter
-    def has_known_vulnerabilities(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def has_known_vulnerabilities(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "has_known_vulnerabilities", value)
 
     @_builtins.property
     @pulumi.getter(name="isSaas")
-    def is_saas(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def is_saas(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         only True is a valid value
         """
         return pulumi.get(self, "is_saas")
 
     @is_saas.setter
-    def is_saas(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def is_saas(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "is_saas", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Alphanumeric string [ 0-9a-zA-Z._-]
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter(name="newAppid")
-    def new_appid(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def new_appid(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         only True is a valid value
         """
         return pulumi.get(self, "new_appid")
 
     @new_appid.setter
-    def new_appid(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def new_appid(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "new_appid", value)
 
     @_builtins.property
     @pulumi.getter
-    def pervasive(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def pervasive(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         only True is a valid value
         """
         return pulumi.get(self, "pervasive")
 
     @pervasive.setter
-    def pervasive(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def pervasive(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "pervasive", value)
 
     @_builtins.property
     @pulumi.getter(name="proneToMisuse")
-    def prone_to_misuse(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def prone_to_misuse(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         only True is a valid value
         """
         return pulumi.get(self, "prone_to_misuse")
 
     @prone_to_misuse.setter
-    def prone_to_misuse(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def prone_to_misuse(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "prone_to_misuse", value)
 
     @_builtins.property
     @pulumi.getter
-    def risks(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.int]]]]:
+    def risks(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.int]]]]:
         """
         Risk
         """
         return pulumi.get(self, "risks")
 
     @risks.setter
-    def risks(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.int]]]]):
+    def risks(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.int]]]]):
         pulumi.set(self, "risks", value)
 
     @_builtins.property
     @pulumi.getter(name="saasCertifications")
-    def saas_certifications(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def saas_certifications(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         Saas certifications
         """
         return pulumi.get(self, "saas_certifications")
 
     @saas_certifications.setter
-    def saas_certifications(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def saas_certifications(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "saas_certifications", value)
 
     @_builtins.property
     @pulumi.getter(name="saasRisks")
-    def saas_risks(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def saas_risks(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         Saas risk
         """
         return pulumi.get(self, "saas_risks")
 
     @saas_risks.setter
-    def saas_risks(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def saas_risks(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "saas_risks", value)
 
     @_builtins.property
     @pulumi.getter
-    def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def snippet(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
 
@@ -684,91 +684,91 @@ class _ApplicationFilterState:
         return pulumi.get(self, "snippet")
 
     @snippet.setter
-    def snippet(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def snippet(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "snippet", value)
 
     @_builtins.property
     @pulumi.getter
-    def subcategories(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def subcategories(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         Subcategory
         """
         return pulumi.get(self, "subcategories")
 
     @subcategories.setter
-    def subcategories(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def subcategories(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "subcategories", value)
 
     @_builtins.property
     @pulumi.getter
-    def tagging(self) -> Optional[pulumi.Input['ApplicationFilterTaggingArgs']]:
+    def tagging(self) -> pulumi.Input[Optional['ApplicationFilterTaggingArgs']]:
         """
         Tagging
         """
         return pulumi.get(self, "tagging")
 
     @tagging.setter
-    def tagging(self, value: Optional[pulumi.Input['ApplicationFilterTaggingArgs']]):
+    def tagging(self, value: pulumi.Input[Optional['ApplicationFilterTaggingArgs']]):
         pulumi.set(self, "tagging", value)
 
     @_builtins.property
     @pulumi.getter
-    def technologies(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def technologies(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         Technology
         """
         return pulumi.get(self, "technologies")
 
     @technologies.setter
-    def technologies(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def technologies(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "technologies", value)
 
     @_builtins.property
     @pulumi.getter
-    def tfid(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def tfid(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The Terraform ID.
         """
         return pulumi.get(self, "tfid")
 
     @tfid.setter
-    def tfid(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def tfid(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "tfid", value)
 
     @_builtins.property
     @pulumi.getter(name="transfersFiles")
-    def transfers_files(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def transfers_files(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         only True is a valid value
         """
         return pulumi.get(self, "transfers_files")
 
     @transfers_files.setter
-    def transfers_files(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def transfers_files(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "transfers_files", value)
 
     @_builtins.property
     @pulumi.getter(name="tunnelsOtherApps")
-    def tunnels_other_apps(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def tunnels_other_apps(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         only True is a valid value
         """
         return pulumi.get(self, "tunnels_other_apps")
 
     @tunnels_other_apps.setter
-    def tunnels_other_apps(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def tunnels_other_apps(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "tunnels_other_apps", value)
 
     @_builtins.property
     @pulumi.getter(name="usedByMalware")
-    def used_by_malware(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def used_by_malware(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         only True is a valid value
         """
         return pulumi.get(self, "used_by_malware")
 
     @used_by_malware.setter
-    def used_by_malware(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def used_by_malware(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "used_by_malware", value)
 
 
@@ -778,28 +778,28 @@ class ApplicationFilter(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 categories: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 device: Optional[pulumi.Input[_builtins.str]] = None,
-                 evasive: Optional[pulumi.Input[_builtins.bool]] = None,
-                 excessive_bandwidth_use: Optional[pulumi.Input[_builtins.bool]] = None,
-                 excludes: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 folder: Optional[pulumi.Input[_builtins.str]] = None,
-                 has_known_vulnerabilities: Optional[pulumi.Input[_builtins.bool]] = None,
-                 is_saas: Optional[pulumi.Input[_builtins.bool]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 new_appid: Optional[pulumi.Input[_builtins.bool]] = None,
-                 pervasive: Optional[pulumi.Input[_builtins.bool]] = None,
-                 prone_to_misuse: Optional[pulumi.Input[_builtins.bool]] = None,
-                 risks: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.int]]]] = None,
-                 saas_certifications: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 saas_risks: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 snippet: Optional[pulumi.Input[_builtins.str]] = None,
-                 subcategories: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 tagging: Optional[pulumi.Input[Union['ApplicationFilterTaggingArgs', 'ApplicationFilterTaggingArgsDict']]] = None,
-                 technologies: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 transfers_files: Optional[pulumi.Input[_builtins.bool]] = None,
-                 tunnels_other_apps: Optional[pulumi.Input[_builtins.bool]] = None,
-                 used_by_malware: Optional[pulumi.Input[_builtins.bool]] = None,
+                 categories: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 device: pulumi.Input[Optional[_builtins.str]] = None,
+                 evasive: pulumi.Input[Optional[_builtins.bool]] = None,
+                 excessive_bandwidth_use: pulumi.Input[Optional[_builtins.bool]] = None,
+                 excludes: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 folder: pulumi.Input[Optional[_builtins.str]] = None,
+                 has_known_vulnerabilities: pulumi.Input[Optional[_builtins.bool]] = None,
+                 is_saas: pulumi.Input[Optional[_builtins.bool]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 new_appid: pulumi.Input[Optional[_builtins.bool]] = None,
+                 pervasive: pulumi.Input[Optional[_builtins.bool]] = None,
+                 prone_to_misuse: pulumi.Input[Optional[_builtins.bool]] = None,
+                 risks: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.int]]]] = None,
+                 saas_certifications: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 saas_risks: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 snippet: pulumi.Input[Optional[_builtins.str]] = None,
+                 subcategories: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 tagging: pulumi.Input[Optional[Union['ApplicationFilterTaggingArgs', 'ApplicationFilterTaggingArgsDict']]] = None,
+                 technologies: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 transfers_files: pulumi.Input[Optional[_builtins.bool]] = None,
+                 tunnels_other_apps: pulumi.Input[Optional[_builtins.bool]] = None,
+                 used_by_malware: pulumi.Input[Optional[_builtins.bool]] = None,
                  __props__=None):
         """
         ApplicationFilter resource
@@ -937,28 +937,28 @@ class ApplicationFilter(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 categories: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 device: Optional[pulumi.Input[_builtins.str]] = None,
-                 evasive: Optional[pulumi.Input[_builtins.bool]] = None,
-                 excessive_bandwidth_use: Optional[pulumi.Input[_builtins.bool]] = None,
-                 excludes: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 folder: Optional[pulumi.Input[_builtins.str]] = None,
-                 has_known_vulnerabilities: Optional[pulumi.Input[_builtins.bool]] = None,
-                 is_saas: Optional[pulumi.Input[_builtins.bool]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 new_appid: Optional[pulumi.Input[_builtins.bool]] = None,
-                 pervasive: Optional[pulumi.Input[_builtins.bool]] = None,
-                 prone_to_misuse: Optional[pulumi.Input[_builtins.bool]] = None,
-                 risks: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.int]]]] = None,
-                 saas_certifications: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 saas_risks: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 snippet: Optional[pulumi.Input[_builtins.str]] = None,
-                 subcategories: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 tagging: Optional[pulumi.Input[Union['ApplicationFilterTaggingArgs', 'ApplicationFilterTaggingArgsDict']]] = None,
-                 technologies: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 transfers_files: Optional[pulumi.Input[_builtins.bool]] = None,
-                 tunnels_other_apps: Optional[pulumi.Input[_builtins.bool]] = None,
-                 used_by_malware: Optional[pulumi.Input[_builtins.bool]] = None,
+                 categories: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 device: pulumi.Input[Optional[_builtins.str]] = None,
+                 evasive: pulumi.Input[Optional[_builtins.bool]] = None,
+                 excessive_bandwidth_use: pulumi.Input[Optional[_builtins.bool]] = None,
+                 excludes: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 folder: pulumi.Input[Optional[_builtins.str]] = None,
+                 has_known_vulnerabilities: pulumi.Input[Optional[_builtins.bool]] = None,
+                 is_saas: pulumi.Input[Optional[_builtins.bool]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 new_appid: pulumi.Input[Optional[_builtins.bool]] = None,
+                 pervasive: pulumi.Input[Optional[_builtins.bool]] = None,
+                 prone_to_misuse: pulumi.Input[Optional[_builtins.bool]] = None,
+                 risks: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.int]]]] = None,
+                 saas_certifications: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 saas_risks: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 snippet: pulumi.Input[Optional[_builtins.str]] = None,
+                 subcategories: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 tagging: pulumi.Input[Optional[Union['ApplicationFilterTaggingArgs', 'ApplicationFilterTaggingArgsDict']]] = None,
+                 technologies: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 transfers_files: pulumi.Input[Optional[_builtins.bool]] = None,
+                 tunnels_other_apps: pulumi.Input[Optional[_builtins.bool]] = None,
+                 used_by_malware: pulumi.Input[Optional[_builtins.bool]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -1001,29 +1001,29 @@ class ApplicationFilter(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            categories: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-            device: Optional[pulumi.Input[_builtins.str]] = None,
-            evasive: Optional[pulumi.Input[_builtins.bool]] = None,
-            excessive_bandwidth_use: Optional[pulumi.Input[_builtins.bool]] = None,
-            excludes: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-            folder: Optional[pulumi.Input[_builtins.str]] = None,
-            has_known_vulnerabilities: Optional[pulumi.Input[_builtins.bool]] = None,
-            is_saas: Optional[pulumi.Input[_builtins.bool]] = None,
-            name: Optional[pulumi.Input[_builtins.str]] = None,
-            new_appid: Optional[pulumi.Input[_builtins.bool]] = None,
-            pervasive: Optional[pulumi.Input[_builtins.bool]] = None,
-            prone_to_misuse: Optional[pulumi.Input[_builtins.bool]] = None,
-            risks: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.int]]]] = None,
-            saas_certifications: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-            saas_risks: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-            snippet: Optional[pulumi.Input[_builtins.str]] = None,
-            subcategories: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-            tagging: Optional[pulumi.Input[Union['ApplicationFilterTaggingArgs', 'ApplicationFilterTaggingArgsDict']]] = None,
-            technologies: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-            tfid: Optional[pulumi.Input[_builtins.str]] = None,
-            transfers_files: Optional[pulumi.Input[_builtins.bool]] = None,
-            tunnels_other_apps: Optional[pulumi.Input[_builtins.bool]] = None,
-            used_by_malware: Optional[pulumi.Input[_builtins.bool]] = None) -> 'ApplicationFilter':
+            categories: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            device: pulumi.Input[Optional[_builtins.str]] = None,
+            evasive: pulumi.Input[Optional[_builtins.bool]] = None,
+            excessive_bandwidth_use: pulumi.Input[Optional[_builtins.bool]] = None,
+            excludes: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            folder: pulumi.Input[Optional[_builtins.str]] = None,
+            has_known_vulnerabilities: pulumi.Input[Optional[_builtins.bool]] = None,
+            is_saas: pulumi.Input[Optional[_builtins.bool]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            new_appid: pulumi.Input[Optional[_builtins.bool]] = None,
+            pervasive: pulumi.Input[Optional[_builtins.bool]] = None,
+            prone_to_misuse: pulumi.Input[Optional[_builtins.bool]] = None,
+            risks: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.int]]]] = None,
+            saas_certifications: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            saas_risks: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            snippet: pulumi.Input[Optional[_builtins.str]] = None,
+            subcategories: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            tagging: pulumi.Input[Optional[Union['ApplicationFilterTaggingArgs', 'ApplicationFilterTaggingArgsDict']]] = None,
+            technologies: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            tfid: pulumi.Input[Optional[_builtins.str]] = None,
+            transfers_files: pulumi.Input[Optional[_builtins.bool]] = None,
+            tunnels_other_apps: pulumi.Input[Optional[_builtins.bool]] = None,
+            used_by_malware: pulumi.Input[Optional[_builtins.bool]] = None) -> 'ApplicationFilter':
         """
         Get an existing ApplicationFilter resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

@@ -409,11 +409,11 @@ def get_application(device: Optional[_builtins.str] = None,
         udp_timeout=pulumi.get(__ret__, 'udp_timeout'),
         used_by_malware=pulumi.get(__ret__, 'used_by_malware'),
         virus_ident=pulumi.get(__ret__, 'virus_ident'))
-def get_application_output(device: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
-                           folder: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
-                           id: Optional[pulumi.Input[_builtins.str]] = None,
-                           name: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
-                           snippet: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
+def get_application_output(device: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
+                           folder: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
+                           id: pulumi.Input[Optional[_builtins.str]] = None,
+                           name: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
+                           snippet: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
                            opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetApplicationResult]:
     """
     Application data source

@@ -21,17 +21,17 @@ __all__ = ['AntiSpywareProfileArgs', 'AntiSpywareProfile']
 @pulumi.input_type
 class AntiSpywareProfileArgs:
     def __init__(__self__, *,
-                 cloud_inline_analysis: Optional[pulumi.Input[_builtins.bool]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 device: Optional[pulumi.Input[_builtins.str]] = None,
-                 folder: Optional[pulumi.Input[_builtins.str]] = None,
-                 inline_exception_edl_urls: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 inline_exception_ip_addresses: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 mica_engine_spyware_enableds: Optional[pulumi.Input[Sequence[pulumi.Input['AntiSpywareProfileMicaEngineSpywareEnabledArgs']]]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 rules: Optional[pulumi.Input[Sequence[pulumi.Input['AntiSpywareProfileRuleArgs']]]] = None,
-                 snippet: Optional[pulumi.Input[_builtins.str]] = None,
-                 threat_exceptions: Optional[pulumi.Input[Sequence[pulumi.Input['AntiSpywareProfileThreatExceptionArgs']]]] = None):
+                 cloud_inline_analysis: pulumi.Input[Optional[_builtins.bool]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 device: pulumi.Input[Optional[_builtins.str]] = None,
+                 folder: pulumi.Input[Optional[_builtins.str]] = None,
+                 inline_exception_edl_urls: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 inline_exception_ip_addresses: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 mica_engine_spyware_enableds: pulumi.Input[Optional[Sequence[pulumi.Input['AntiSpywareProfileMicaEngineSpywareEnabledArgs']]]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 rules: pulumi.Input[Optional[Sequence[pulumi.Input['AntiSpywareProfileRuleArgs']]]] = None,
+                 snippet: pulumi.Input[Optional[_builtins.str]] = None,
+                 threat_exceptions: pulumi.Input[Optional[Sequence[pulumi.Input['AntiSpywareProfileThreatExceptionArgs']]]] = None):
         """
         The set of arguments for constructing a AntiSpywareProfile resource.
 
@@ -76,43 +76,43 @@ class AntiSpywareProfileArgs:
 
     @_builtins.property
     @pulumi.getter(name="cloudInlineAnalysis")
-    def cloud_inline_analysis(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def cloud_inline_analysis(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Cloud inline analysis
         """
         return pulumi.get(self, "cloud_inline_analysis")
 
     @cloud_inline_analysis.setter
-    def cloud_inline_analysis(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def cloud_inline_analysis(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "cloud_inline_analysis", value)
 
     @_builtins.property
     @pulumi.getter
-    def description(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def description(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Description
         """
         return pulumi.get(self, "description")
 
     @description.setter
-    def description(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def description(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "description", value)
 
     @_builtins.property
     @pulumi.getter
-    def device(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def device(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The device in which the resource is defined
         """
         return pulumi.get(self, "device")
 
     @device.setter
-    def device(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def device(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "device", value)
 
     @_builtins.property
     @pulumi.getter
-    def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def folder(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
 
@@ -121,72 +121,72 @@ class AntiSpywareProfileArgs:
         return pulumi.get(self, "folder")
 
     @folder.setter
-    def folder(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def folder(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "folder", value)
 
     @_builtins.property
     @pulumi.getter(name="inlineExceptionEdlUrls")
-    def inline_exception_edl_urls(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def inline_exception_edl_urls(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         Inline exception edl url
         """
         return pulumi.get(self, "inline_exception_edl_urls")
 
     @inline_exception_edl_urls.setter
-    def inline_exception_edl_urls(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def inline_exception_edl_urls(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "inline_exception_edl_urls", value)
 
     @_builtins.property
     @pulumi.getter(name="inlineExceptionIpAddresses")
-    def inline_exception_ip_addresses(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def inline_exception_ip_addresses(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         Inline exception ip address
         """
         return pulumi.get(self, "inline_exception_ip_addresses")
 
     @inline_exception_ip_addresses.setter
-    def inline_exception_ip_addresses(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def inline_exception_ip_addresses(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "inline_exception_ip_addresses", value)
 
     @_builtins.property
     @pulumi.getter(name="micaEngineSpywareEnableds")
-    def mica_engine_spyware_enableds(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['AntiSpywareProfileMicaEngineSpywareEnabledArgs']]]]:
+    def mica_engine_spyware_enableds(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['AntiSpywareProfileMicaEngineSpywareEnabledArgs']]]]:
         """
         Mica engine spyware enabled
         """
         return pulumi.get(self, "mica_engine_spyware_enableds")
 
     @mica_engine_spyware_enableds.setter
-    def mica_engine_spyware_enableds(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['AntiSpywareProfileMicaEngineSpywareEnabledArgs']]]]):
+    def mica_engine_spyware_enableds(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['AntiSpywareProfileMicaEngineSpywareEnabledArgs']]]]):
         pulumi.set(self, "mica_engine_spyware_enableds", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the anti-spyware profile
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter
-    def rules(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['AntiSpywareProfileRuleArgs']]]]:
+    def rules(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['AntiSpywareProfileRuleArgs']]]]:
         """
         Rules
         """
         return pulumi.get(self, "rules")
 
     @rules.setter
-    def rules(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['AntiSpywareProfileRuleArgs']]]]):
+    def rules(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['AntiSpywareProfileRuleArgs']]]]):
         pulumi.set(self, "rules", value)
 
     @_builtins.property
     @pulumi.getter
-    def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def snippet(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
 
@@ -195,37 +195,37 @@ class AntiSpywareProfileArgs:
         return pulumi.get(self, "snippet")
 
     @snippet.setter
-    def snippet(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def snippet(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "snippet", value)
 
     @_builtins.property
     @pulumi.getter(name="threatExceptions")
-    def threat_exceptions(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['AntiSpywareProfileThreatExceptionArgs']]]]:
+    def threat_exceptions(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['AntiSpywareProfileThreatExceptionArgs']]]]:
         """
         Threat exception
         """
         return pulumi.get(self, "threat_exceptions")
 
     @threat_exceptions.setter
-    def threat_exceptions(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['AntiSpywareProfileThreatExceptionArgs']]]]):
+    def threat_exceptions(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['AntiSpywareProfileThreatExceptionArgs']]]]):
         pulumi.set(self, "threat_exceptions", value)
 
 
 @pulumi.input_type
 class _AntiSpywareProfileState:
     def __init__(__self__, *,
-                 cloud_inline_analysis: Optional[pulumi.Input[_builtins.bool]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 device: Optional[pulumi.Input[_builtins.str]] = None,
-                 folder: Optional[pulumi.Input[_builtins.str]] = None,
-                 inline_exception_edl_urls: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 inline_exception_ip_addresses: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 mica_engine_spyware_enableds: Optional[pulumi.Input[Sequence[pulumi.Input['AntiSpywareProfileMicaEngineSpywareEnabledArgs']]]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 rules: Optional[pulumi.Input[Sequence[pulumi.Input['AntiSpywareProfileRuleArgs']]]] = None,
-                 snippet: Optional[pulumi.Input[_builtins.str]] = None,
-                 tfid: Optional[pulumi.Input[_builtins.str]] = None,
-                 threat_exceptions: Optional[pulumi.Input[Sequence[pulumi.Input['AntiSpywareProfileThreatExceptionArgs']]]] = None):
+                 cloud_inline_analysis: pulumi.Input[Optional[_builtins.bool]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 device: pulumi.Input[Optional[_builtins.str]] = None,
+                 folder: pulumi.Input[Optional[_builtins.str]] = None,
+                 inline_exception_edl_urls: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 inline_exception_ip_addresses: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 mica_engine_spyware_enableds: pulumi.Input[Optional[Sequence[pulumi.Input['AntiSpywareProfileMicaEngineSpywareEnabledArgs']]]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 rules: pulumi.Input[Optional[Sequence[pulumi.Input['AntiSpywareProfileRuleArgs']]]] = None,
+                 snippet: pulumi.Input[Optional[_builtins.str]] = None,
+                 tfid: pulumi.Input[Optional[_builtins.str]] = None,
+                 threat_exceptions: pulumi.Input[Optional[Sequence[pulumi.Input['AntiSpywareProfileThreatExceptionArgs']]]] = None):
         """
         Input properties used for looking up and filtering AntiSpywareProfile resources.
 
@@ -273,43 +273,43 @@ class _AntiSpywareProfileState:
 
     @_builtins.property
     @pulumi.getter(name="cloudInlineAnalysis")
-    def cloud_inline_analysis(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def cloud_inline_analysis(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Cloud inline analysis
         """
         return pulumi.get(self, "cloud_inline_analysis")
 
     @cloud_inline_analysis.setter
-    def cloud_inline_analysis(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def cloud_inline_analysis(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "cloud_inline_analysis", value)
 
     @_builtins.property
     @pulumi.getter
-    def description(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def description(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Description
         """
         return pulumi.get(self, "description")
 
     @description.setter
-    def description(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def description(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "description", value)
 
     @_builtins.property
     @pulumi.getter
-    def device(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def device(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The device in which the resource is defined
         """
         return pulumi.get(self, "device")
 
     @device.setter
-    def device(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def device(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "device", value)
 
     @_builtins.property
     @pulumi.getter
-    def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def folder(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
 
@@ -318,72 +318,72 @@ class _AntiSpywareProfileState:
         return pulumi.get(self, "folder")
 
     @folder.setter
-    def folder(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def folder(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "folder", value)
 
     @_builtins.property
     @pulumi.getter(name="inlineExceptionEdlUrls")
-    def inline_exception_edl_urls(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def inline_exception_edl_urls(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         Inline exception edl url
         """
         return pulumi.get(self, "inline_exception_edl_urls")
 
     @inline_exception_edl_urls.setter
-    def inline_exception_edl_urls(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def inline_exception_edl_urls(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "inline_exception_edl_urls", value)
 
     @_builtins.property
     @pulumi.getter(name="inlineExceptionIpAddresses")
-    def inline_exception_ip_addresses(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def inline_exception_ip_addresses(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         Inline exception ip address
         """
         return pulumi.get(self, "inline_exception_ip_addresses")
 
     @inline_exception_ip_addresses.setter
-    def inline_exception_ip_addresses(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def inline_exception_ip_addresses(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "inline_exception_ip_addresses", value)
 
     @_builtins.property
     @pulumi.getter(name="micaEngineSpywareEnableds")
-    def mica_engine_spyware_enableds(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['AntiSpywareProfileMicaEngineSpywareEnabledArgs']]]]:
+    def mica_engine_spyware_enableds(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['AntiSpywareProfileMicaEngineSpywareEnabledArgs']]]]:
         """
         Mica engine spyware enabled
         """
         return pulumi.get(self, "mica_engine_spyware_enableds")
 
     @mica_engine_spyware_enableds.setter
-    def mica_engine_spyware_enableds(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['AntiSpywareProfileMicaEngineSpywareEnabledArgs']]]]):
+    def mica_engine_spyware_enableds(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['AntiSpywareProfileMicaEngineSpywareEnabledArgs']]]]):
         pulumi.set(self, "mica_engine_spyware_enableds", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the anti-spyware profile
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter
-    def rules(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['AntiSpywareProfileRuleArgs']]]]:
+    def rules(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['AntiSpywareProfileRuleArgs']]]]:
         """
         Rules
         """
         return pulumi.get(self, "rules")
 
     @rules.setter
-    def rules(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['AntiSpywareProfileRuleArgs']]]]):
+    def rules(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['AntiSpywareProfileRuleArgs']]]]):
         pulumi.set(self, "rules", value)
 
     @_builtins.property
     @pulumi.getter
-    def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def snippet(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
 
@@ -392,31 +392,31 @@ class _AntiSpywareProfileState:
         return pulumi.get(self, "snippet")
 
     @snippet.setter
-    def snippet(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def snippet(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "snippet", value)
 
     @_builtins.property
     @pulumi.getter
-    def tfid(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def tfid(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The Terraform ID.
         """
         return pulumi.get(self, "tfid")
 
     @tfid.setter
-    def tfid(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def tfid(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "tfid", value)
 
     @_builtins.property
     @pulumi.getter(name="threatExceptions")
-    def threat_exceptions(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['AntiSpywareProfileThreatExceptionArgs']]]]:
+    def threat_exceptions(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['AntiSpywareProfileThreatExceptionArgs']]]]:
         """
         Threat exception
         """
         return pulumi.get(self, "threat_exceptions")
 
     @threat_exceptions.setter
-    def threat_exceptions(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['AntiSpywareProfileThreatExceptionArgs']]]]):
+    def threat_exceptions(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['AntiSpywareProfileThreatExceptionArgs']]]]):
         pulumi.set(self, "threat_exceptions", value)
 
 
@@ -426,17 +426,17 @@ class AntiSpywareProfile(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 cloud_inline_analysis: Optional[pulumi.Input[_builtins.bool]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 device: Optional[pulumi.Input[_builtins.str]] = None,
-                 folder: Optional[pulumi.Input[_builtins.str]] = None,
-                 inline_exception_edl_urls: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 inline_exception_ip_addresses: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 mica_engine_spyware_enableds: Optional[pulumi.Input[Sequence[pulumi.Input[Union['AntiSpywareProfileMicaEngineSpywareEnabledArgs', 'AntiSpywareProfileMicaEngineSpywareEnabledArgsDict']]]]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 rules: Optional[pulumi.Input[Sequence[pulumi.Input[Union['AntiSpywareProfileRuleArgs', 'AntiSpywareProfileRuleArgsDict']]]]] = None,
-                 snippet: Optional[pulumi.Input[_builtins.str]] = None,
-                 threat_exceptions: Optional[pulumi.Input[Sequence[pulumi.Input[Union['AntiSpywareProfileThreatExceptionArgs', 'AntiSpywareProfileThreatExceptionArgsDict']]]]] = None,
+                 cloud_inline_analysis: pulumi.Input[Optional[_builtins.bool]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 device: pulumi.Input[Optional[_builtins.str]] = None,
+                 folder: pulumi.Input[Optional[_builtins.str]] = None,
+                 inline_exception_edl_urls: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 inline_exception_ip_addresses: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 mica_engine_spyware_enableds: pulumi.Input[Optional[Sequence[pulumi.Input[Union['AntiSpywareProfileMicaEngineSpywareEnabledArgs', 'AntiSpywareProfileMicaEngineSpywareEnabledArgsDict']]]]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 rules: pulumi.Input[Optional[Sequence[pulumi.Input[Union['AntiSpywareProfileRuleArgs', 'AntiSpywareProfileRuleArgsDict']]]]] = None,
+                 snippet: pulumi.Input[Optional[_builtins.str]] = None,
+                 threat_exceptions: pulumi.Input[Optional[Sequence[pulumi.Input[Union['AntiSpywareProfileThreatExceptionArgs', 'AntiSpywareProfileThreatExceptionArgsDict']]]]] = None,
                  __props__=None):
         """
         AntiSpywareProfile resource
@@ -569,17 +569,17 @@ class AntiSpywareProfile(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 cloud_inline_analysis: Optional[pulumi.Input[_builtins.bool]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 device: Optional[pulumi.Input[_builtins.str]] = None,
-                 folder: Optional[pulumi.Input[_builtins.str]] = None,
-                 inline_exception_edl_urls: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 inline_exception_ip_addresses: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 mica_engine_spyware_enableds: Optional[pulumi.Input[Sequence[pulumi.Input[Union['AntiSpywareProfileMicaEngineSpywareEnabledArgs', 'AntiSpywareProfileMicaEngineSpywareEnabledArgsDict']]]]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 rules: Optional[pulumi.Input[Sequence[pulumi.Input[Union['AntiSpywareProfileRuleArgs', 'AntiSpywareProfileRuleArgsDict']]]]] = None,
-                 snippet: Optional[pulumi.Input[_builtins.str]] = None,
-                 threat_exceptions: Optional[pulumi.Input[Sequence[pulumi.Input[Union['AntiSpywareProfileThreatExceptionArgs', 'AntiSpywareProfileThreatExceptionArgsDict']]]]] = None,
+                 cloud_inline_analysis: pulumi.Input[Optional[_builtins.bool]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 device: pulumi.Input[Optional[_builtins.str]] = None,
+                 folder: pulumi.Input[Optional[_builtins.str]] = None,
+                 inline_exception_edl_urls: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 inline_exception_ip_addresses: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 mica_engine_spyware_enableds: pulumi.Input[Optional[Sequence[pulumi.Input[Union['AntiSpywareProfileMicaEngineSpywareEnabledArgs', 'AntiSpywareProfileMicaEngineSpywareEnabledArgsDict']]]]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 rules: pulumi.Input[Optional[Sequence[pulumi.Input[Union['AntiSpywareProfileRuleArgs', 'AntiSpywareProfileRuleArgsDict']]]]] = None,
+                 snippet: pulumi.Input[Optional[_builtins.str]] = None,
+                 threat_exceptions: pulumi.Input[Optional[Sequence[pulumi.Input[Union['AntiSpywareProfileThreatExceptionArgs', 'AntiSpywareProfileThreatExceptionArgsDict']]]]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -611,18 +611,18 @@ class AntiSpywareProfile(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            cloud_inline_analysis: Optional[pulumi.Input[_builtins.bool]] = None,
-            description: Optional[pulumi.Input[_builtins.str]] = None,
-            device: Optional[pulumi.Input[_builtins.str]] = None,
-            folder: Optional[pulumi.Input[_builtins.str]] = None,
-            inline_exception_edl_urls: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-            inline_exception_ip_addresses: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-            mica_engine_spyware_enableds: Optional[pulumi.Input[Sequence[pulumi.Input[Union['AntiSpywareProfileMicaEngineSpywareEnabledArgs', 'AntiSpywareProfileMicaEngineSpywareEnabledArgsDict']]]]] = None,
-            name: Optional[pulumi.Input[_builtins.str]] = None,
-            rules: Optional[pulumi.Input[Sequence[pulumi.Input[Union['AntiSpywareProfileRuleArgs', 'AntiSpywareProfileRuleArgsDict']]]]] = None,
-            snippet: Optional[pulumi.Input[_builtins.str]] = None,
-            tfid: Optional[pulumi.Input[_builtins.str]] = None,
-            threat_exceptions: Optional[pulumi.Input[Sequence[pulumi.Input[Union['AntiSpywareProfileThreatExceptionArgs', 'AntiSpywareProfileThreatExceptionArgsDict']]]]] = None) -> 'AntiSpywareProfile':
+            cloud_inline_analysis: pulumi.Input[Optional[_builtins.bool]] = None,
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            device: pulumi.Input[Optional[_builtins.str]] = None,
+            folder: pulumi.Input[Optional[_builtins.str]] = None,
+            inline_exception_edl_urls: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            inline_exception_ip_addresses: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            mica_engine_spyware_enableds: pulumi.Input[Optional[Sequence[pulumi.Input[Union['AntiSpywareProfileMicaEngineSpywareEnabledArgs', 'AntiSpywareProfileMicaEngineSpywareEnabledArgsDict']]]]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            rules: pulumi.Input[Optional[Sequence[pulumi.Input[Union['AntiSpywareProfileRuleArgs', 'AntiSpywareProfileRuleArgsDict']]]]] = None,
+            snippet: pulumi.Input[Optional[_builtins.str]] = None,
+            tfid: pulumi.Input[Optional[_builtins.str]] = None,
+            threat_exceptions: pulumi.Input[Optional[Sequence[pulumi.Input[Union['AntiSpywareProfileThreatExceptionArgs', 'AntiSpywareProfileThreatExceptionArgsDict']]]]] = None) -> 'AntiSpywareProfile':
         """
         Get an existing AntiSpywareProfile resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

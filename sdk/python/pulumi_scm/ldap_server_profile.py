@@ -22,19 +22,19 @@ __all__ = ['LdapServerProfileArgs', 'LdapServerProfile']
 class LdapServerProfileArgs:
     def __init__(__self__, *,
                  servers: pulumi.Input[Sequence[pulumi.Input['LdapServerProfileServerArgs']]],
-                 base: Optional[pulumi.Input[_builtins.str]] = None,
-                 bind_dn: Optional[pulumi.Input[_builtins.str]] = None,
-                 bind_password: Optional[pulumi.Input[_builtins.str]] = None,
-                 bind_timelimit: Optional[pulumi.Input[_builtins.str]] = None,
-                 device: Optional[pulumi.Input[_builtins.str]] = None,
-                 folder: Optional[pulumi.Input[_builtins.str]] = None,
-                 ldap_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 retry_interval: Optional[pulumi.Input[_builtins.int]] = None,
-                 snippet: Optional[pulumi.Input[_builtins.str]] = None,
-                 ssl: Optional[pulumi.Input[_builtins.bool]] = None,
-                 timelimit: Optional[pulumi.Input[_builtins.int]] = None,
-                 verify_server_certificate: Optional[pulumi.Input[_builtins.bool]] = None):
+                 base: pulumi.Input[Optional[_builtins.str]] = None,
+                 bind_dn: pulumi.Input[Optional[_builtins.str]] = None,
+                 bind_password: pulumi.Input[Optional[_builtins.str]] = None,
+                 bind_timelimit: pulumi.Input[Optional[_builtins.str]] = None,
+                 device: pulumi.Input[Optional[_builtins.str]] = None,
+                 folder: pulumi.Input[Optional[_builtins.str]] = None,
+                 ldap_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 retry_interval: pulumi.Input[Optional[_builtins.int]] = None,
+                 snippet: pulumi.Input[Optional[_builtins.str]] = None,
+                 ssl: pulumi.Input[Optional[_builtins.bool]] = None,
+                 timelimit: pulumi.Input[Optional[_builtins.int]] = None,
+                 verify_server_certificate: pulumi.Input[Optional[_builtins.bool]] = None):
         """
         The set of arguments for constructing a LdapServerProfile resource.
 
@@ -99,67 +99,67 @@ class LdapServerProfileArgs:
 
     @_builtins.property
     @pulumi.getter
-    def base(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def base(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The base DN
         """
         return pulumi.get(self, "base")
 
     @base.setter
-    def base(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def base(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "base", value)
 
     @_builtins.property
     @pulumi.getter(name="bindDn")
-    def bind_dn(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def bind_dn(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The bind DN
         """
         return pulumi.get(self, "bind_dn")
 
     @bind_dn.setter
-    def bind_dn(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def bind_dn(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "bind_dn", value)
 
     @_builtins.property
     @pulumi.getter(name="bindPassword")
-    def bind_password(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def bind_password(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The bind password
         """
         return pulumi.get(self, "bind_password")
 
     @bind_password.setter
-    def bind_password(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def bind_password(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "bind_password", value)
 
     @_builtins.property
     @pulumi.getter(name="bindTimelimit")
-    def bind_timelimit(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def bind_timelimit(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The bind timeout (seconds)
         """
         return pulumi.get(self, "bind_timelimit")
 
     @bind_timelimit.setter
-    def bind_timelimit(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def bind_timelimit(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "bind_timelimit", value)
 
     @_builtins.property
     @pulumi.getter
-    def device(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def device(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The device in which the resource is defined
         """
         return pulumi.get(self, "device")
 
     @device.setter
-    def device(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def device(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "device", value)
 
     @_builtins.property
     @pulumi.getter
-    def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def folder(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
 
@@ -168,48 +168,48 @@ class LdapServerProfileArgs:
         return pulumi.get(self, "folder")
 
     @folder.setter
-    def folder(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def folder(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "folder", value)
 
     @_builtins.property
     @pulumi.getter(name="ldapType")
-    def ldap_type(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ldap_type(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The LDAP server time
         """
         return pulumi.get(self, "ldap_type")
 
     @ldap_type.setter
-    def ldap_type(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ldap_type(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ldap_type", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the LDAP server profile
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter(name="retryInterval")
-    def retry_interval(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def retry_interval(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The search retry interval (seconds)
         """
         return pulumi.get(self, "retry_interval")
 
     @retry_interval.setter
-    def retry_interval(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def retry_interval(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "retry_interval", value)
 
     @_builtins.property
     @pulumi.getter
-    def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def snippet(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
 
@@ -218,65 +218,65 @@ class LdapServerProfileArgs:
         return pulumi.get(self, "snippet")
 
     @snippet.setter
-    def snippet(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def snippet(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "snippet", value)
 
     @_builtins.property
     @pulumi.getter
-    def ssl(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def ssl(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Require SSL/TLS secured connection?
         """
         return pulumi.get(self, "ssl")
 
     @ssl.setter
-    def ssl(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def ssl(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "ssl", value)
 
     @_builtins.property
     @pulumi.getter
-    def timelimit(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def timelimit(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The search timeout (seconds)
         """
         return pulumi.get(self, "timelimit")
 
     @timelimit.setter
-    def timelimit(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def timelimit(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "timelimit", value)
 
     @_builtins.property
     @pulumi.getter(name="verifyServerCertificate")
-    def verify_server_certificate(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def verify_server_certificate(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Verify server certificate for SSL sessions?
         """
         return pulumi.get(self, "verify_server_certificate")
 
     @verify_server_certificate.setter
-    def verify_server_certificate(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def verify_server_certificate(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "verify_server_certificate", value)
 
 
 @pulumi.input_type
 class _LdapServerProfileState:
     def __init__(__self__, *,
-                 base: Optional[pulumi.Input[_builtins.str]] = None,
-                 bind_dn: Optional[pulumi.Input[_builtins.str]] = None,
-                 bind_password: Optional[pulumi.Input[_builtins.str]] = None,
-                 bind_timelimit: Optional[pulumi.Input[_builtins.str]] = None,
-                 device: Optional[pulumi.Input[_builtins.str]] = None,
-                 encrypted_values: Optional[pulumi.Input[Mapping[str, pulumi.Input[_builtins.str]]]] = None,
-                 folder: Optional[pulumi.Input[_builtins.str]] = None,
-                 ldap_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 retry_interval: Optional[pulumi.Input[_builtins.int]] = None,
-                 servers: Optional[pulumi.Input[Sequence[pulumi.Input['LdapServerProfileServerArgs']]]] = None,
-                 snippet: Optional[pulumi.Input[_builtins.str]] = None,
-                 ssl: Optional[pulumi.Input[_builtins.bool]] = None,
-                 tfid: Optional[pulumi.Input[_builtins.str]] = None,
-                 timelimit: Optional[pulumi.Input[_builtins.int]] = None,
-                 verify_server_certificate: Optional[pulumi.Input[_builtins.bool]] = None):
+                 base: pulumi.Input[Optional[_builtins.str]] = None,
+                 bind_dn: pulumi.Input[Optional[_builtins.str]] = None,
+                 bind_password: pulumi.Input[Optional[_builtins.str]] = None,
+                 bind_timelimit: pulumi.Input[Optional[_builtins.str]] = None,
+                 device: pulumi.Input[Optional[_builtins.str]] = None,
+                 encrypted_values: pulumi.Input[Optional[Mapping[str, pulumi.Input[_builtins.str]]]] = None,
+                 folder: pulumi.Input[Optional[_builtins.str]] = None,
+                 ldap_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 retry_interval: pulumi.Input[Optional[_builtins.int]] = None,
+                 servers: pulumi.Input[Optional[Sequence[pulumi.Input['LdapServerProfileServerArgs']]]] = None,
+                 snippet: pulumi.Input[Optional[_builtins.str]] = None,
+                 ssl: pulumi.Input[Optional[_builtins.bool]] = None,
+                 tfid: pulumi.Input[Optional[_builtins.str]] = None,
+                 timelimit: pulumi.Input[Optional[_builtins.int]] = None,
+                 verify_server_certificate: pulumi.Input[Optional[_builtins.bool]] = None):
         """
         Input properties used for looking up and filtering LdapServerProfile resources.
 
@@ -336,79 +336,79 @@ class _LdapServerProfileState:
 
     @_builtins.property
     @pulumi.getter
-    def base(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def base(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The base DN
         """
         return pulumi.get(self, "base")
 
     @base.setter
-    def base(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def base(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "base", value)
 
     @_builtins.property
     @pulumi.getter(name="bindDn")
-    def bind_dn(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def bind_dn(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The bind DN
         """
         return pulumi.get(self, "bind_dn")
 
     @bind_dn.setter
-    def bind_dn(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def bind_dn(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "bind_dn", value)
 
     @_builtins.property
     @pulumi.getter(name="bindPassword")
-    def bind_password(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def bind_password(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The bind password
         """
         return pulumi.get(self, "bind_password")
 
     @bind_password.setter
-    def bind_password(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def bind_password(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "bind_password", value)
 
     @_builtins.property
     @pulumi.getter(name="bindTimelimit")
-    def bind_timelimit(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def bind_timelimit(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The bind timeout (seconds)
         """
         return pulumi.get(self, "bind_timelimit")
 
     @bind_timelimit.setter
-    def bind_timelimit(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def bind_timelimit(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "bind_timelimit", value)
 
     @_builtins.property
     @pulumi.getter
-    def device(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def device(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The device in which the resource is defined
         """
         return pulumi.get(self, "device")
 
     @device.setter
-    def device(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def device(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "device", value)
 
     @_builtins.property
     @pulumi.getter(name="encryptedValues")
-    def encrypted_values(self) -> Optional[pulumi.Input[Mapping[str, pulumi.Input[_builtins.str]]]]:
+    def encrypted_values(self) -> pulumi.Input[Optional[Mapping[str, pulumi.Input[_builtins.str]]]]:
         """
         Map of sensitive values returned from the API.
         """
         return pulumi.get(self, "encrypted_values")
 
     @encrypted_values.setter
-    def encrypted_values(self, value: Optional[pulumi.Input[Mapping[str, pulumi.Input[_builtins.str]]]]):
+    def encrypted_values(self, value: pulumi.Input[Optional[Mapping[str, pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "encrypted_values", value)
 
     @_builtins.property
     @pulumi.getter
-    def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def folder(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
 
@@ -417,60 +417,60 @@ class _LdapServerProfileState:
         return pulumi.get(self, "folder")
 
     @folder.setter
-    def folder(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def folder(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "folder", value)
 
     @_builtins.property
     @pulumi.getter(name="ldapType")
-    def ldap_type(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ldap_type(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The LDAP server time
         """
         return pulumi.get(self, "ldap_type")
 
     @ldap_type.setter
-    def ldap_type(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ldap_type(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ldap_type", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the LDAP server profile
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter(name="retryInterval")
-    def retry_interval(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def retry_interval(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The search retry interval (seconds)
         """
         return pulumi.get(self, "retry_interval")
 
     @retry_interval.setter
-    def retry_interval(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def retry_interval(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "retry_interval", value)
 
     @_builtins.property
     @pulumi.getter
-    def servers(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['LdapServerProfileServerArgs']]]]:
+    def servers(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['LdapServerProfileServerArgs']]]]:
         """
         The LDAP server configuration
         """
         return pulumi.get(self, "servers")
 
     @servers.setter
-    def servers(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['LdapServerProfileServerArgs']]]]):
+    def servers(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['LdapServerProfileServerArgs']]]]):
         pulumi.set(self, "servers", value)
 
     @_builtins.property
     @pulumi.getter
-    def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def snippet(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
 
@@ -479,55 +479,55 @@ class _LdapServerProfileState:
         return pulumi.get(self, "snippet")
 
     @snippet.setter
-    def snippet(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def snippet(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "snippet", value)
 
     @_builtins.property
     @pulumi.getter
-    def ssl(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def ssl(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Require SSL/TLS secured connection?
         """
         return pulumi.get(self, "ssl")
 
     @ssl.setter
-    def ssl(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def ssl(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "ssl", value)
 
     @_builtins.property
     @pulumi.getter
-    def tfid(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def tfid(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The Terraform ID.
         """
         return pulumi.get(self, "tfid")
 
     @tfid.setter
-    def tfid(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def tfid(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "tfid", value)
 
     @_builtins.property
     @pulumi.getter
-    def timelimit(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def timelimit(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The search timeout (seconds)
         """
         return pulumi.get(self, "timelimit")
 
     @timelimit.setter
-    def timelimit(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def timelimit(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "timelimit", value)
 
     @_builtins.property
     @pulumi.getter(name="verifyServerCertificate")
-    def verify_server_certificate(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def verify_server_certificate(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Verify server certificate for SSL sessions?
         """
         return pulumi.get(self, "verify_server_certificate")
 
     @verify_server_certificate.setter
-    def verify_server_certificate(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def verify_server_certificate(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "verify_server_certificate", value)
 
 
@@ -537,20 +537,20 @@ class LdapServerProfile(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 base: Optional[pulumi.Input[_builtins.str]] = None,
-                 bind_dn: Optional[pulumi.Input[_builtins.str]] = None,
-                 bind_password: Optional[pulumi.Input[_builtins.str]] = None,
-                 bind_timelimit: Optional[pulumi.Input[_builtins.str]] = None,
-                 device: Optional[pulumi.Input[_builtins.str]] = None,
-                 folder: Optional[pulumi.Input[_builtins.str]] = None,
-                 ldap_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 retry_interval: Optional[pulumi.Input[_builtins.int]] = None,
-                 servers: Optional[pulumi.Input[Sequence[pulumi.Input[Union['LdapServerProfileServerArgs', 'LdapServerProfileServerArgsDict']]]]] = None,
-                 snippet: Optional[pulumi.Input[_builtins.str]] = None,
-                 ssl: Optional[pulumi.Input[_builtins.bool]] = None,
-                 timelimit: Optional[pulumi.Input[_builtins.int]] = None,
-                 verify_server_certificate: Optional[pulumi.Input[_builtins.bool]] = None,
+                 base: pulumi.Input[Optional[_builtins.str]] = None,
+                 bind_dn: pulumi.Input[Optional[_builtins.str]] = None,
+                 bind_password: pulumi.Input[Optional[_builtins.str]] = None,
+                 bind_timelimit: pulumi.Input[Optional[_builtins.str]] = None,
+                 device: pulumi.Input[Optional[_builtins.str]] = None,
+                 folder: pulumi.Input[Optional[_builtins.str]] = None,
+                 ldap_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 retry_interval: pulumi.Input[Optional[_builtins.int]] = None,
+                 servers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['LdapServerProfileServerArgs', 'LdapServerProfileServerArgsDict']]]]] = None,
+                 snippet: pulumi.Input[Optional[_builtins.str]] = None,
+                 ssl: pulumi.Input[Optional[_builtins.bool]] = None,
+                 timelimit: pulumi.Input[Optional[_builtins.int]] = None,
+                 verify_server_certificate: pulumi.Input[Optional[_builtins.bool]] = None,
                  __props__=None):
         """
         LdapServerProfile resource
@@ -862,20 +862,20 @@ class LdapServerProfile(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 base: Optional[pulumi.Input[_builtins.str]] = None,
-                 bind_dn: Optional[pulumi.Input[_builtins.str]] = None,
-                 bind_password: Optional[pulumi.Input[_builtins.str]] = None,
-                 bind_timelimit: Optional[pulumi.Input[_builtins.str]] = None,
-                 device: Optional[pulumi.Input[_builtins.str]] = None,
-                 folder: Optional[pulumi.Input[_builtins.str]] = None,
-                 ldap_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 retry_interval: Optional[pulumi.Input[_builtins.int]] = None,
-                 servers: Optional[pulumi.Input[Sequence[pulumi.Input[Union['LdapServerProfileServerArgs', 'LdapServerProfileServerArgsDict']]]]] = None,
-                 snippet: Optional[pulumi.Input[_builtins.str]] = None,
-                 ssl: Optional[pulumi.Input[_builtins.bool]] = None,
-                 timelimit: Optional[pulumi.Input[_builtins.int]] = None,
-                 verify_server_certificate: Optional[pulumi.Input[_builtins.bool]] = None,
+                 base: pulumi.Input[Optional[_builtins.str]] = None,
+                 bind_dn: pulumi.Input[Optional[_builtins.str]] = None,
+                 bind_password: pulumi.Input[Optional[_builtins.str]] = None,
+                 bind_timelimit: pulumi.Input[Optional[_builtins.str]] = None,
+                 device: pulumi.Input[Optional[_builtins.str]] = None,
+                 folder: pulumi.Input[Optional[_builtins.str]] = None,
+                 ldap_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 retry_interval: pulumi.Input[Optional[_builtins.int]] = None,
+                 servers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['LdapServerProfileServerArgs', 'LdapServerProfileServerArgsDict']]]]] = None,
+                 snippet: pulumi.Input[Optional[_builtins.str]] = None,
+                 ssl: pulumi.Input[Optional[_builtins.bool]] = None,
+                 timelimit: pulumi.Input[Optional[_builtins.int]] = None,
+                 verify_server_certificate: pulumi.Input[Optional[_builtins.bool]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -915,22 +915,22 @@ class LdapServerProfile(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            base: Optional[pulumi.Input[_builtins.str]] = None,
-            bind_dn: Optional[pulumi.Input[_builtins.str]] = None,
-            bind_password: Optional[pulumi.Input[_builtins.str]] = None,
-            bind_timelimit: Optional[pulumi.Input[_builtins.str]] = None,
-            device: Optional[pulumi.Input[_builtins.str]] = None,
-            encrypted_values: Optional[pulumi.Input[Mapping[str, pulumi.Input[_builtins.str]]]] = None,
-            folder: Optional[pulumi.Input[_builtins.str]] = None,
-            ldap_type: Optional[pulumi.Input[_builtins.str]] = None,
-            name: Optional[pulumi.Input[_builtins.str]] = None,
-            retry_interval: Optional[pulumi.Input[_builtins.int]] = None,
-            servers: Optional[pulumi.Input[Sequence[pulumi.Input[Union['LdapServerProfileServerArgs', 'LdapServerProfileServerArgsDict']]]]] = None,
-            snippet: Optional[pulumi.Input[_builtins.str]] = None,
-            ssl: Optional[pulumi.Input[_builtins.bool]] = None,
-            tfid: Optional[pulumi.Input[_builtins.str]] = None,
-            timelimit: Optional[pulumi.Input[_builtins.int]] = None,
-            verify_server_certificate: Optional[pulumi.Input[_builtins.bool]] = None) -> 'LdapServerProfile':
+            base: pulumi.Input[Optional[_builtins.str]] = None,
+            bind_dn: pulumi.Input[Optional[_builtins.str]] = None,
+            bind_password: pulumi.Input[Optional[_builtins.str]] = None,
+            bind_timelimit: pulumi.Input[Optional[_builtins.str]] = None,
+            device: pulumi.Input[Optional[_builtins.str]] = None,
+            encrypted_values: pulumi.Input[Optional[Mapping[str, pulumi.Input[_builtins.str]]]] = None,
+            folder: pulumi.Input[Optional[_builtins.str]] = None,
+            ldap_type: pulumi.Input[Optional[_builtins.str]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            retry_interval: pulumi.Input[Optional[_builtins.int]] = None,
+            servers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['LdapServerProfileServerArgs', 'LdapServerProfileServerArgsDict']]]]] = None,
+            snippet: pulumi.Input[Optional[_builtins.str]] = None,
+            ssl: pulumi.Input[Optional[_builtins.bool]] = None,
+            tfid: pulumi.Input[Optional[_builtins.str]] = None,
+            timelimit: pulumi.Input[Optional[_builtins.int]] = None,
+            verify_server_certificate: pulumi.Input[Optional[_builtins.bool]] = None) -> 'LdapServerProfile':
         """
         Get an existing LdapServerProfile resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

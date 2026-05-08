@@ -194,11 +194,11 @@ def get_tacacs_server_profile(device: Optional[_builtins.str] = None,
         tfid=pulumi.get(__ret__, 'tfid'),
         timeout=pulumi.get(__ret__, 'timeout'),
         use_single_connection=pulumi.get(__ret__, 'use_single_connection'))
-def get_tacacs_server_profile_output(device: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
-                                     folder: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
-                                     id: Optional[pulumi.Input[_builtins.str]] = None,
-                                     name: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
-                                     snippet: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
+def get_tacacs_server_profile_output(device: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
+                                     folder: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
+                                     id: pulumi.Input[Optional[_builtins.str]] = None,
+                                     name: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
+                                     snippet: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
                                      opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetTacacsServerProfileResult]:
     """
     TacacsServerProfile data source

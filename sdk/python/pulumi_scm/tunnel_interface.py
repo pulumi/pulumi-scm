@@ -21,17 +21,17 @@ __all__ = ['TunnelInterfaceArgs', 'TunnelInterface']
 @pulumi.input_type
 class TunnelInterfaceArgs:
     def __init__(__self__, *,
-                 comment: Optional[pulumi.Input[_builtins.str]] = None,
-                 default_value: Optional[pulumi.Input[_builtins.str]] = None,
-                 device: Optional[pulumi.Input[_builtins.str]] = None,
-                 folder: Optional[pulumi.Input[_builtins.str]] = None,
-                 interface_management_profile: Optional[pulumi.Input[_builtins.str]] = None,
-                 ips: Optional[pulumi.Input[Sequence[pulumi.Input['TunnelInterfaceIpArgs']]]] = None,
-                 ipv6: Optional[pulumi.Input['TunnelInterfaceIpv6Args']] = None,
-                 mtu: Optional[pulumi.Input[_builtins.int]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 netflow_profile: Optional[pulumi.Input[_builtins.str]] = None,
-                 snippet: Optional[pulumi.Input[_builtins.str]] = None):
+                 comment: pulumi.Input[Optional[_builtins.str]] = None,
+                 default_value: pulumi.Input[Optional[_builtins.str]] = None,
+                 device: pulumi.Input[Optional[_builtins.str]] = None,
+                 folder: pulumi.Input[Optional[_builtins.str]] = None,
+                 interface_management_profile: pulumi.Input[Optional[_builtins.str]] = None,
+                 ips: pulumi.Input[Optional[Sequence[pulumi.Input['TunnelInterfaceIpArgs']]]] = None,
+                 ipv6: pulumi.Input[Optional['TunnelInterfaceIpv6Args']] = None,
+                 mtu: pulumi.Input[Optional[_builtins.int]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 netflow_profile: pulumi.Input[Optional[_builtins.str]] = None,
+                 snippet: pulumi.Input[Optional[_builtins.str]] = None):
         """
         The set of arguments for constructing a TunnelInterface resource.
 
@@ -76,43 +76,43 @@ class TunnelInterfaceArgs:
 
     @_builtins.property
     @pulumi.getter
-    def comment(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def comment(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Description for tunnel interface
         """
         return pulumi.get(self, "comment")
 
     @comment.setter
-    def comment(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def comment(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "comment", value)
 
     @_builtins.property
     @pulumi.getter(name="defaultValue")
-    def default_value(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def default_value(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Default interface assignment for tunnel interface
         """
         return pulumi.get(self, "default_value")
 
     @default_value.setter
-    def default_value(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def default_value(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "default_value", value)
 
     @_builtins.property
     @pulumi.getter
-    def device(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def device(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The device in which the resource is defined
         """
         return pulumi.get(self, "device")
 
     @device.setter
-    def device(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def device(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "device", value)
 
     @_builtins.property
     @pulumi.getter
-    def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def folder(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
 
@@ -121,84 +121,84 @@ class TunnelInterfaceArgs:
         return pulumi.get(self, "folder")
 
     @folder.setter
-    def folder(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def folder(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "folder", value)
 
     @_builtins.property
     @pulumi.getter(name="interfaceManagementProfile")
-    def interface_management_profile(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def interface_management_profile(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Interface management profile for tunnel interface
         """
         return pulumi.get(self, "interface_management_profile")
 
     @interface_management_profile.setter
-    def interface_management_profile(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def interface_management_profile(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "interface_management_profile", value)
 
     @_builtins.property
     @pulumi.getter
-    def ips(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['TunnelInterfaceIpArgs']]]]:
+    def ips(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['TunnelInterfaceIpArgs']]]]:
         """
         Tunnel Interface IP Parent
         """
         return pulumi.get(self, "ips")
 
     @ips.setter
-    def ips(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['TunnelInterfaceIpArgs']]]]):
+    def ips(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['TunnelInterfaceIpArgs']]]]):
         pulumi.set(self, "ips", value)
 
     @_builtins.property
     @pulumi.getter
-    def ipv6(self) -> Optional[pulumi.Input['TunnelInterfaceIpv6Args']]:
+    def ipv6(self) -> pulumi.Input[Optional['TunnelInterfaceIpv6Args']]:
         """
         Tunnel Interface IPv6 Configuration
         """
         return pulumi.get(self, "ipv6")
 
     @ipv6.setter
-    def ipv6(self, value: Optional[pulumi.Input['TunnelInterfaceIpv6Args']]):
+    def ipv6(self, value: pulumi.Input[Optional['TunnelInterfaceIpv6Args']]):
         pulumi.set(self, "ipv6", value)
 
     @_builtins.property
     @pulumi.getter
-    def mtu(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def mtu(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         MTU for tunnel interface
         """
         return pulumi.get(self, "mtu")
 
     @mtu.setter
-    def mtu(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def mtu(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "mtu", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         L3 sub-interface name for tunnel interface
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter(name="netflowProfile")
-    def netflow_profile(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def netflow_profile(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Name of Netflow Profile to assign to Interface
         """
         return pulumi.get(self, "netflow_profile")
 
     @netflow_profile.setter
-    def netflow_profile(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def netflow_profile(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "netflow_profile", value)
 
     @_builtins.property
     @pulumi.getter
-    def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def snippet(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
 
@@ -207,25 +207,25 @@ class TunnelInterfaceArgs:
         return pulumi.get(self, "snippet")
 
     @snippet.setter
-    def snippet(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def snippet(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "snippet", value)
 
 
 @pulumi.input_type
 class _TunnelInterfaceState:
     def __init__(__self__, *,
-                 comment: Optional[pulumi.Input[_builtins.str]] = None,
-                 default_value: Optional[pulumi.Input[_builtins.str]] = None,
-                 device: Optional[pulumi.Input[_builtins.str]] = None,
-                 folder: Optional[pulumi.Input[_builtins.str]] = None,
-                 interface_management_profile: Optional[pulumi.Input[_builtins.str]] = None,
-                 ips: Optional[pulumi.Input[Sequence[pulumi.Input['TunnelInterfaceIpArgs']]]] = None,
-                 ipv6: Optional[pulumi.Input['TunnelInterfaceIpv6Args']] = None,
-                 mtu: Optional[pulumi.Input[_builtins.int]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 netflow_profile: Optional[pulumi.Input[_builtins.str]] = None,
-                 snippet: Optional[pulumi.Input[_builtins.str]] = None,
-                 tfid: Optional[pulumi.Input[_builtins.str]] = None):
+                 comment: pulumi.Input[Optional[_builtins.str]] = None,
+                 default_value: pulumi.Input[Optional[_builtins.str]] = None,
+                 device: pulumi.Input[Optional[_builtins.str]] = None,
+                 folder: pulumi.Input[Optional[_builtins.str]] = None,
+                 interface_management_profile: pulumi.Input[Optional[_builtins.str]] = None,
+                 ips: pulumi.Input[Optional[Sequence[pulumi.Input['TunnelInterfaceIpArgs']]]] = None,
+                 ipv6: pulumi.Input[Optional['TunnelInterfaceIpv6Args']] = None,
+                 mtu: pulumi.Input[Optional[_builtins.int]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 netflow_profile: pulumi.Input[Optional[_builtins.str]] = None,
+                 snippet: pulumi.Input[Optional[_builtins.str]] = None,
+                 tfid: pulumi.Input[Optional[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering TunnelInterface resources.
 
@@ -273,43 +273,43 @@ class _TunnelInterfaceState:
 
     @_builtins.property
     @pulumi.getter
-    def comment(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def comment(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Description for tunnel interface
         """
         return pulumi.get(self, "comment")
 
     @comment.setter
-    def comment(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def comment(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "comment", value)
 
     @_builtins.property
     @pulumi.getter(name="defaultValue")
-    def default_value(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def default_value(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Default interface assignment for tunnel interface
         """
         return pulumi.get(self, "default_value")
 
     @default_value.setter
-    def default_value(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def default_value(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "default_value", value)
 
     @_builtins.property
     @pulumi.getter
-    def device(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def device(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The device in which the resource is defined
         """
         return pulumi.get(self, "device")
 
     @device.setter
-    def device(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def device(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "device", value)
 
     @_builtins.property
     @pulumi.getter
-    def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def folder(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
 
@@ -318,84 +318,84 @@ class _TunnelInterfaceState:
         return pulumi.get(self, "folder")
 
     @folder.setter
-    def folder(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def folder(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "folder", value)
 
     @_builtins.property
     @pulumi.getter(name="interfaceManagementProfile")
-    def interface_management_profile(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def interface_management_profile(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Interface management profile for tunnel interface
         """
         return pulumi.get(self, "interface_management_profile")
 
     @interface_management_profile.setter
-    def interface_management_profile(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def interface_management_profile(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "interface_management_profile", value)
 
     @_builtins.property
     @pulumi.getter
-    def ips(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['TunnelInterfaceIpArgs']]]]:
+    def ips(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['TunnelInterfaceIpArgs']]]]:
         """
         Tunnel Interface IP Parent
         """
         return pulumi.get(self, "ips")
 
     @ips.setter
-    def ips(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['TunnelInterfaceIpArgs']]]]):
+    def ips(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['TunnelInterfaceIpArgs']]]]):
         pulumi.set(self, "ips", value)
 
     @_builtins.property
     @pulumi.getter
-    def ipv6(self) -> Optional[pulumi.Input['TunnelInterfaceIpv6Args']]:
+    def ipv6(self) -> pulumi.Input[Optional['TunnelInterfaceIpv6Args']]:
         """
         Tunnel Interface IPv6 Configuration
         """
         return pulumi.get(self, "ipv6")
 
     @ipv6.setter
-    def ipv6(self, value: Optional[pulumi.Input['TunnelInterfaceIpv6Args']]):
+    def ipv6(self, value: pulumi.Input[Optional['TunnelInterfaceIpv6Args']]):
         pulumi.set(self, "ipv6", value)
 
     @_builtins.property
     @pulumi.getter
-    def mtu(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def mtu(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         MTU for tunnel interface
         """
         return pulumi.get(self, "mtu")
 
     @mtu.setter
-    def mtu(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def mtu(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "mtu", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         L3 sub-interface name for tunnel interface
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter(name="netflowProfile")
-    def netflow_profile(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def netflow_profile(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Name of Netflow Profile to assign to Interface
         """
         return pulumi.get(self, "netflow_profile")
 
     @netflow_profile.setter
-    def netflow_profile(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def netflow_profile(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "netflow_profile", value)
 
     @_builtins.property
     @pulumi.getter
-    def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def snippet(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
 
@@ -404,19 +404,19 @@ class _TunnelInterfaceState:
         return pulumi.get(self, "snippet")
 
     @snippet.setter
-    def snippet(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def snippet(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "snippet", value)
 
     @_builtins.property
     @pulumi.getter
-    def tfid(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def tfid(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The Terraform ID.
         """
         return pulumi.get(self, "tfid")
 
     @tfid.setter
-    def tfid(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def tfid(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "tfid", value)
 
 
@@ -426,17 +426,17 @@ class TunnelInterface(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 comment: Optional[pulumi.Input[_builtins.str]] = None,
-                 default_value: Optional[pulumi.Input[_builtins.str]] = None,
-                 device: Optional[pulumi.Input[_builtins.str]] = None,
-                 folder: Optional[pulumi.Input[_builtins.str]] = None,
-                 interface_management_profile: Optional[pulumi.Input[_builtins.str]] = None,
-                 ips: Optional[pulumi.Input[Sequence[pulumi.Input[Union['TunnelInterfaceIpArgs', 'TunnelInterfaceIpArgsDict']]]]] = None,
-                 ipv6: Optional[pulumi.Input[Union['TunnelInterfaceIpv6Args', 'TunnelInterfaceIpv6ArgsDict']]] = None,
-                 mtu: Optional[pulumi.Input[_builtins.int]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 netflow_profile: Optional[pulumi.Input[_builtins.str]] = None,
-                 snippet: Optional[pulumi.Input[_builtins.str]] = None,
+                 comment: pulumi.Input[Optional[_builtins.str]] = None,
+                 default_value: pulumi.Input[Optional[_builtins.str]] = None,
+                 device: pulumi.Input[Optional[_builtins.str]] = None,
+                 folder: pulumi.Input[Optional[_builtins.str]] = None,
+                 interface_management_profile: pulumi.Input[Optional[_builtins.str]] = None,
+                 ips: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TunnelInterfaceIpArgs', 'TunnelInterfaceIpArgsDict']]]]] = None,
+                 ipv6: pulumi.Input[Optional[Union['TunnelInterfaceIpv6Args', 'TunnelInterfaceIpv6ArgsDict']]] = None,
+                 mtu: pulumi.Input[Optional[_builtins.int]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 netflow_profile: pulumi.Input[Optional[_builtins.str]] = None,
+                 snippet: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
         TunnelInterface resource
@@ -637,17 +637,17 @@ class TunnelInterface(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 comment: Optional[pulumi.Input[_builtins.str]] = None,
-                 default_value: Optional[pulumi.Input[_builtins.str]] = None,
-                 device: Optional[pulumi.Input[_builtins.str]] = None,
-                 folder: Optional[pulumi.Input[_builtins.str]] = None,
-                 interface_management_profile: Optional[pulumi.Input[_builtins.str]] = None,
-                 ips: Optional[pulumi.Input[Sequence[pulumi.Input[Union['TunnelInterfaceIpArgs', 'TunnelInterfaceIpArgsDict']]]]] = None,
-                 ipv6: Optional[pulumi.Input[Union['TunnelInterfaceIpv6Args', 'TunnelInterfaceIpv6ArgsDict']]] = None,
-                 mtu: Optional[pulumi.Input[_builtins.int]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 netflow_profile: Optional[pulumi.Input[_builtins.str]] = None,
-                 snippet: Optional[pulumi.Input[_builtins.str]] = None,
+                 comment: pulumi.Input[Optional[_builtins.str]] = None,
+                 default_value: pulumi.Input[Optional[_builtins.str]] = None,
+                 device: pulumi.Input[Optional[_builtins.str]] = None,
+                 folder: pulumi.Input[Optional[_builtins.str]] = None,
+                 interface_management_profile: pulumi.Input[Optional[_builtins.str]] = None,
+                 ips: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TunnelInterfaceIpArgs', 'TunnelInterfaceIpArgsDict']]]]] = None,
+                 ipv6: pulumi.Input[Optional[Union['TunnelInterfaceIpv6Args', 'TunnelInterfaceIpv6ArgsDict']]] = None,
+                 mtu: pulumi.Input[Optional[_builtins.int]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 netflow_profile: pulumi.Input[Optional[_builtins.str]] = None,
+                 snippet: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -679,18 +679,18 @@ class TunnelInterface(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            comment: Optional[pulumi.Input[_builtins.str]] = None,
-            default_value: Optional[pulumi.Input[_builtins.str]] = None,
-            device: Optional[pulumi.Input[_builtins.str]] = None,
-            folder: Optional[pulumi.Input[_builtins.str]] = None,
-            interface_management_profile: Optional[pulumi.Input[_builtins.str]] = None,
-            ips: Optional[pulumi.Input[Sequence[pulumi.Input[Union['TunnelInterfaceIpArgs', 'TunnelInterfaceIpArgsDict']]]]] = None,
-            ipv6: Optional[pulumi.Input[Union['TunnelInterfaceIpv6Args', 'TunnelInterfaceIpv6ArgsDict']]] = None,
-            mtu: Optional[pulumi.Input[_builtins.int]] = None,
-            name: Optional[pulumi.Input[_builtins.str]] = None,
-            netflow_profile: Optional[pulumi.Input[_builtins.str]] = None,
-            snippet: Optional[pulumi.Input[_builtins.str]] = None,
-            tfid: Optional[pulumi.Input[_builtins.str]] = None) -> 'TunnelInterface':
+            comment: pulumi.Input[Optional[_builtins.str]] = None,
+            default_value: pulumi.Input[Optional[_builtins.str]] = None,
+            device: pulumi.Input[Optional[_builtins.str]] = None,
+            folder: pulumi.Input[Optional[_builtins.str]] = None,
+            interface_management_profile: pulumi.Input[Optional[_builtins.str]] = None,
+            ips: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TunnelInterfaceIpArgs', 'TunnelInterfaceIpArgsDict']]]]] = None,
+            ipv6: pulumi.Input[Optional[Union['TunnelInterfaceIpv6Args', 'TunnelInterfaceIpv6ArgsDict']]] = None,
+            mtu: pulumi.Input[Optional[_builtins.int]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            netflow_profile: pulumi.Input[Optional[_builtins.str]] = None,
+            snippet: pulumi.Input[Optional[_builtins.str]] = None,
+            tfid: pulumi.Input[Optional[_builtins.str]] = None) -> 'TunnelInterface':
         """
         Get an existing TunnelInterface resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

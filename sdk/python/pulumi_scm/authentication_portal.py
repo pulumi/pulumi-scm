@@ -20,15 +20,15 @@ __all__ = ['AuthenticationPortalArgs', 'AuthenticationPortal']
 class AuthenticationPortalArgs:
     def __init__(__self__, *,
                  redirect_host: pulumi.Input[_builtins.str],
-                 authentication_profile: Optional[pulumi.Input[_builtins.str]] = None,
-                 certificate_profile: Optional[pulumi.Input[_builtins.str]] = None,
-                 device: Optional[pulumi.Input[_builtins.str]] = None,
-                 folder: Optional[pulumi.Input[_builtins.str]] = None,
-                 gp_udp_port: Optional[pulumi.Input[_builtins.int]] = None,
-                 idle_timer: Optional[pulumi.Input[_builtins.int]] = None,
-                 snippet: Optional[pulumi.Input[_builtins.str]] = None,
-                 timer: Optional[pulumi.Input[_builtins.int]] = None,
-                 tls_service_profile: Optional[pulumi.Input[_builtins.str]] = None):
+                 authentication_profile: pulumi.Input[Optional[_builtins.str]] = None,
+                 certificate_profile: pulumi.Input[Optional[_builtins.str]] = None,
+                 device: pulumi.Input[Optional[_builtins.str]] = None,
+                 folder: pulumi.Input[Optional[_builtins.str]] = None,
+                 gp_udp_port: pulumi.Input[Optional[_builtins.int]] = None,
+                 idle_timer: pulumi.Input[Optional[_builtins.int]] = None,
+                 snippet: pulumi.Input[Optional[_builtins.str]] = None,
+                 timer: pulumi.Input[Optional[_builtins.int]] = None,
+                 tls_service_profile: pulumi.Input[Optional[_builtins.str]] = None):
         """
         The set of arguments for constructing a AuthenticationPortal resource.
 
@@ -81,43 +81,43 @@ class AuthenticationPortalArgs:
 
     @_builtins.property
     @pulumi.getter(name="authenticationProfile")
-    def authentication_profile(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def authentication_profile(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The authentication profile
         """
         return pulumi.get(self, "authentication_profile")
 
     @authentication_profile.setter
-    def authentication_profile(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def authentication_profile(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "authentication_profile", value)
 
     @_builtins.property
     @pulumi.getter(name="certificateProfile")
-    def certificate_profile(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def certificate_profile(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The certificate profile
         """
         return pulumi.get(self, "certificate_profile")
 
     @certificate_profile.setter
-    def certificate_profile(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def certificate_profile(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "certificate_profile", value)
 
     @_builtins.property
     @pulumi.getter
-    def device(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def device(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The device in which the resource is defined
         """
         return pulumi.get(self, "device")
 
     @device.setter
-    def device(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def device(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "device", value)
 
     @_builtins.property
     @pulumi.getter
-    def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def folder(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
 
@@ -126,36 +126,36 @@ class AuthenticationPortalArgs:
         return pulumi.get(self, "folder")
 
     @folder.setter
-    def folder(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def folder(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "folder", value)
 
     @_builtins.property
     @pulumi.getter(name="gpUdpPort")
-    def gp_udp_port(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def gp_udp_port(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The UDP port for inbound authentication prompts
         """
         return pulumi.get(self, "gp_udp_port")
 
     @gp_udp_port.setter
-    def gp_udp_port(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def gp_udp_port(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "gp_udp_port", value)
 
     @_builtins.property
     @pulumi.getter(name="idleTimer")
-    def idle_timer(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def idle_timer(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The idle timeout value (minutes)
         """
         return pulumi.get(self, "idle_timer")
 
     @idle_timer.setter
-    def idle_timer(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def idle_timer(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "idle_timer", value)
 
     @_builtins.property
     @pulumi.getter
-    def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def snippet(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
 
@@ -164,48 +164,48 @@ class AuthenticationPortalArgs:
         return pulumi.get(self, "snippet")
 
     @snippet.setter
-    def snippet(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def snippet(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "snippet", value)
 
     @_builtins.property
     @pulumi.getter
-    def timer(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def timer(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Timer
         """
         return pulumi.get(self, "timer")
 
     @timer.setter
-    def timer(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def timer(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "timer", value)
 
     @_builtins.property
     @pulumi.getter(name="tlsServiceProfile")
-    def tls_service_profile(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def tls_service_profile(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The SSL/TLS service profile
         """
         return pulumi.get(self, "tls_service_profile")
 
     @tls_service_profile.setter
-    def tls_service_profile(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def tls_service_profile(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "tls_service_profile", value)
 
 
 @pulumi.input_type
 class _AuthenticationPortalState:
     def __init__(__self__, *,
-                 authentication_profile: Optional[pulumi.Input[_builtins.str]] = None,
-                 certificate_profile: Optional[pulumi.Input[_builtins.str]] = None,
-                 device: Optional[pulumi.Input[_builtins.str]] = None,
-                 folder: Optional[pulumi.Input[_builtins.str]] = None,
-                 gp_udp_port: Optional[pulumi.Input[_builtins.int]] = None,
-                 idle_timer: Optional[pulumi.Input[_builtins.int]] = None,
-                 redirect_host: Optional[pulumi.Input[_builtins.str]] = None,
-                 snippet: Optional[pulumi.Input[_builtins.str]] = None,
-                 tfid: Optional[pulumi.Input[_builtins.str]] = None,
-                 timer: Optional[pulumi.Input[_builtins.int]] = None,
-                 tls_service_profile: Optional[pulumi.Input[_builtins.str]] = None):
+                 authentication_profile: pulumi.Input[Optional[_builtins.str]] = None,
+                 certificate_profile: pulumi.Input[Optional[_builtins.str]] = None,
+                 device: pulumi.Input[Optional[_builtins.str]] = None,
+                 folder: pulumi.Input[Optional[_builtins.str]] = None,
+                 gp_udp_port: pulumi.Input[Optional[_builtins.int]] = None,
+                 idle_timer: pulumi.Input[Optional[_builtins.int]] = None,
+                 redirect_host: pulumi.Input[Optional[_builtins.str]] = None,
+                 snippet: pulumi.Input[Optional[_builtins.str]] = None,
+                 tfid: pulumi.Input[Optional[_builtins.str]] = None,
+                 timer: pulumi.Input[Optional[_builtins.int]] = None,
+                 tls_service_profile: pulumi.Input[Optional[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering AuthenticationPortal resources.
 
@@ -250,43 +250,43 @@ class _AuthenticationPortalState:
 
     @_builtins.property
     @pulumi.getter(name="authenticationProfile")
-    def authentication_profile(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def authentication_profile(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The authentication profile
         """
         return pulumi.get(self, "authentication_profile")
 
     @authentication_profile.setter
-    def authentication_profile(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def authentication_profile(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "authentication_profile", value)
 
     @_builtins.property
     @pulumi.getter(name="certificateProfile")
-    def certificate_profile(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def certificate_profile(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The certificate profile
         """
         return pulumi.get(self, "certificate_profile")
 
     @certificate_profile.setter
-    def certificate_profile(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def certificate_profile(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "certificate_profile", value)
 
     @_builtins.property
     @pulumi.getter
-    def device(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def device(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The device in which the resource is defined
         """
         return pulumi.get(self, "device")
 
     @device.setter
-    def device(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def device(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "device", value)
 
     @_builtins.property
     @pulumi.getter
-    def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def folder(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
 
@@ -295,48 +295,48 @@ class _AuthenticationPortalState:
         return pulumi.get(self, "folder")
 
     @folder.setter
-    def folder(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def folder(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "folder", value)
 
     @_builtins.property
     @pulumi.getter(name="gpUdpPort")
-    def gp_udp_port(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def gp_udp_port(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The UDP port for inbound authentication prompts
         """
         return pulumi.get(self, "gp_udp_port")
 
     @gp_udp_port.setter
-    def gp_udp_port(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def gp_udp_port(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "gp_udp_port", value)
 
     @_builtins.property
     @pulumi.getter(name="idleTimer")
-    def idle_timer(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def idle_timer(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The idle timeout value (minutes)
         """
         return pulumi.get(self, "idle_timer")
 
     @idle_timer.setter
-    def idle_timer(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def idle_timer(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "idle_timer", value)
 
     @_builtins.property
     @pulumi.getter(name="redirectHost")
-    def redirect_host(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def redirect_host(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The authentication portal IP address or hostname
         """
         return pulumi.get(self, "redirect_host")
 
     @redirect_host.setter
-    def redirect_host(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def redirect_host(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "redirect_host", value)
 
     @_builtins.property
     @pulumi.getter
-    def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def snippet(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
 
@@ -345,43 +345,43 @@ class _AuthenticationPortalState:
         return pulumi.get(self, "snippet")
 
     @snippet.setter
-    def snippet(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def snippet(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "snippet", value)
 
     @_builtins.property
     @pulumi.getter
-    def tfid(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def tfid(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The Terraform ID.
         """
         return pulumi.get(self, "tfid")
 
     @tfid.setter
-    def tfid(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def tfid(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "tfid", value)
 
     @_builtins.property
     @pulumi.getter
-    def timer(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def timer(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Timer
         """
         return pulumi.get(self, "timer")
 
     @timer.setter
-    def timer(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def timer(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "timer", value)
 
     @_builtins.property
     @pulumi.getter(name="tlsServiceProfile")
-    def tls_service_profile(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def tls_service_profile(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The SSL/TLS service profile
         """
         return pulumi.get(self, "tls_service_profile")
 
     @tls_service_profile.setter
-    def tls_service_profile(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def tls_service_profile(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "tls_service_profile", value)
 
 
@@ -391,16 +391,16 @@ class AuthenticationPortal(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 authentication_profile: Optional[pulumi.Input[_builtins.str]] = None,
-                 certificate_profile: Optional[pulumi.Input[_builtins.str]] = None,
-                 device: Optional[pulumi.Input[_builtins.str]] = None,
-                 folder: Optional[pulumi.Input[_builtins.str]] = None,
-                 gp_udp_port: Optional[pulumi.Input[_builtins.int]] = None,
-                 idle_timer: Optional[pulumi.Input[_builtins.int]] = None,
-                 redirect_host: Optional[pulumi.Input[_builtins.str]] = None,
-                 snippet: Optional[pulumi.Input[_builtins.str]] = None,
-                 timer: Optional[pulumi.Input[_builtins.int]] = None,
-                 tls_service_profile: Optional[pulumi.Input[_builtins.str]] = None,
+                 authentication_profile: pulumi.Input[Optional[_builtins.str]] = None,
+                 certificate_profile: pulumi.Input[Optional[_builtins.str]] = None,
+                 device: pulumi.Input[Optional[_builtins.str]] = None,
+                 folder: pulumi.Input[Optional[_builtins.str]] = None,
+                 gp_udp_port: pulumi.Input[Optional[_builtins.int]] = None,
+                 idle_timer: pulumi.Input[Optional[_builtins.int]] = None,
+                 redirect_host: pulumi.Input[Optional[_builtins.str]] = None,
+                 snippet: pulumi.Input[Optional[_builtins.str]] = None,
+                 timer: pulumi.Input[Optional[_builtins.int]] = None,
+                 tls_service_profile: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
         AuthenticationPortal resource
@@ -524,16 +524,16 @@ class AuthenticationPortal(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 authentication_profile: Optional[pulumi.Input[_builtins.str]] = None,
-                 certificate_profile: Optional[pulumi.Input[_builtins.str]] = None,
-                 device: Optional[pulumi.Input[_builtins.str]] = None,
-                 folder: Optional[pulumi.Input[_builtins.str]] = None,
-                 gp_udp_port: Optional[pulumi.Input[_builtins.int]] = None,
-                 idle_timer: Optional[pulumi.Input[_builtins.int]] = None,
-                 redirect_host: Optional[pulumi.Input[_builtins.str]] = None,
-                 snippet: Optional[pulumi.Input[_builtins.str]] = None,
-                 timer: Optional[pulumi.Input[_builtins.int]] = None,
-                 tls_service_profile: Optional[pulumi.Input[_builtins.str]] = None,
+                 authentication_profile: pulumi.Input[Optional[_builtins.str]] = None,
+                 certificate_profile: pulumi.Input[Optional[_builtins.str]] = None,
+                 device: pulumi.Input[Optional[_builtins.str]] = None,
+                 folder: pulumi.Input[Optional[_builtins.str]] = None,
+                 gp_udp_port: pulumi.Input[Optional[_builtins.int]] = None,
+                 idle_timer: pulumi.Input[Optional[_builtins.int]] = None,
+                 redirect_host: pulumi.Input[Optional[_builtins.str]] = None,
+                 snippet: pulumi.Input[Optional[_builtins.str]] = None,
+                 timer: pulumi.Input[Optional[_builtins.int]] = None,
+                 tls_service_profile: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -566,17 +566,17 @@ class AuthenticationPortal(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            authentication_profile: Optional[pulumi.Input[_builtins.str]] = None,
-            certificate_profile: Optional[pulumi.Input[_builtins.str]] = None,
-            device: Optional[pulumi.Input[_builtins.str]] = None,
-            folder: Optional[pulumi.Input[_builtins.str]] = None,
-            gp_udp_port: Optional[pulumi.Input[_builtins.int]] = None,
-            idle_timer: Optional[pulumi.Input[_builtins.int]] = None,
-            redirect_host: Optional[pulumi.Input[_builtins.str]] = None,
-            snippet: Optional[pulumi.Input[_builtins.str]] = None,
-            tfid: Optional[pulumi.Input[_builtins.str]] = None,
-            timer: Optional[pulumi.Input[_builtins.int]] = None,
-            tls_service_profile: Optional[pulumi.Input[_builtins.str]] = None) -> 'AuthenticationPortal':
+            authentication_profile: pulumi.Input[Optional[_builtins.str]] = None,
+            certificate_profile: pulumi.Input[Optional[_builtins.str]] = None,
+            device: pulumi.Input[Optional[_builtins.str]] = None,
+            folder: pulumi.Input[Optional[_builtins.str]] = None,
+            gp_udp_port: pulumi.Input[Optional[_builtins.int]] = None,
+            idle_timer: pulumi.Input[Optional[_builtins.int]] = None,
+            redirect_host: pulumi.Input[Optional[_builtins.str]] = None,
+            snippet: pulumi.Input[Optional[_builtins.str]] = None,
+            tfid: pulumi.Input[Optional[_builtins.str]] = None,
+            timer: pulumi.Input[Optional[_builtins.int]] = None,
+            tls_service_profile: pulumi.Input[Optional[_builtins.str]] = None) -> 'AuthenticationPortal':
         """
         Get an existing AuthenticationPortal resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

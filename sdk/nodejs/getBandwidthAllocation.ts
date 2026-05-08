@@ -104,5 +104,5 @@ export interface GetBandwidthAllocationOutputArgs {
     /**
      * name of the aggregated bandwidth region
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
 }

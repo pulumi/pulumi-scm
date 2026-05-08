@@ -72,5 +72,5 @@ export interface GetLabelOutputArgs {
     /**
      * The name of the label
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
 }

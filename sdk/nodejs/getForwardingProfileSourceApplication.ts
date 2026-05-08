@@ -108,7 +108,7 @@ export interface GetForwardingProfileSourceApplicationOutputArgs {
     /**
      * The folder in which the resource is defined
      */
-    folder?: pulumi.Input<string>;
+    folder?: pulumi.Input<string | undefined>;
     /**
      * The id of the source application
      */
@@ -116,5 +116,5 @@ export interface GetForwardingProfileSourceApplicationOutputArgs {
     /**
      * The unique name identifying the source application. Must be alphanumeric with allowed characters [0-9a-zA-Z._-]
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
 }

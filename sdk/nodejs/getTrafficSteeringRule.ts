@@ -100,7 +100,7 @@ export interface GetTrafficSteeringRuleOutputArgs {
     /**
      * The folder containing the traffic steering rule
      */
-    folder?: pulumi.Input<string>;
+    folder?: pulumi.Input<string | undefined>;
     /**
      * The UUID of the traffic steering rule
      */
@@ -108,5 +108,5 @@ export interface GetTrafficSteeringRuleOutputArgs {
     /**
      * Name
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
 }

@@ -25,19 +25,19 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // Look up the user location with IP addresses by its ID.
-        ///     var scmForwardingProfileUserLocation1Ds = Scm.Index.GetForwardingProfileUserLocation.Invoke(new()
+        ///     var scmForwardingProfileUserLocation1Ds = Scm.GetForwardingProfileUserLocation.Invoke(new()
         ///     {
         ///         Id = "847948c9-8973-48aa-8496-212f572ab859",
         ///     });
         /// 
         ///     // Look up the user location with internal host detection by its ID.
-        ///     var scmForwardingProfileUserLocation2Ds = Scm.Index.GetForwardingProfileUserLocation.Invoke(new()
+        ///     var scmForwardingProfileUserLocation2Ds = Scm.GetForwardingProfileUserLocation.Invoke(new()
         ///     {
         ///         Id = "ee149f5a-533e-48be-8492-e3aa6b20acf2",
         ///     });
         /// 
         ///     // Look up the user location with multiple IP ranges by its ID.
-        ///     var scmForwardingProfileUserLocation4Ds = Scm.Index.GetForwardingProfileUserLocation.Invoke(new()
+        ///     var scmForwardingProfileUserLocation4Ds = Scm.GetForwardingProfileUserLocation.Invoke(new()
         ///     {
         ///         Id = "23293d0f-0403-4549-870f-c6c04cd6c95c",
         ///     });
@@ -71,19 +71,19 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // Look up the user location with IP addresses by its ID.
-        ///     var scmForwardingProfileUserLocation1Ds = Scm.Index.GetForwardingProfileUserLocation.Invoke(new()
+        ///     var scmForwardingProfileUserLocation1Ds = Scm.GetForwardingProfileUserLocation.Invoke(new()
         ///     {
         ///         Id = "847948c9-8973-48aa-8496-212f572ab859",
         ///     });
         /// 
         ///     // Look up the user location with internal host detection by its ID.
-        ///     var scmForwardingProfileUserLocation2Ds = Scm.Index.GetForwardingProfileUserLocation.Invoke(new()
+        ///     var scmForwardingProfileUserLocation2Ds = Scm.GetForwardingProfileUserLocation.Invoke(new()
         ///     {
         ///         Id = "ee149f5a-533e-48be-8492-e3aa6b20acf2",
         ///     });
         /// 
         ///     // Look up the user location with multiple IP ranges by its ID.
-        ///     var scmForwardingProfileUserLocation4Ds = Scm.Index.GetForwardingProfileUserLocation.Invoke(new()
+        ///     var scmForwardingProfileUserLocation4Ds = Scm.GetForwardingProfileUserLocation.Invoke(new()
         ///     {
         ///         Id = "23293d0f-0403-4549-870f-c6c04cd6c95c",
         ///     });
@@ -117,19 +117,19 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // Look up the user location with IP addresses by its ID.
-        ///     var scmForwardingProfileUserLocation1Ds = Scm.Index.GetForwardingProfileUserLocation.Invoke(new()
+        ///     var scmForwardingProfileUserLocation1Ds = Scm.GetForwardingProfileUserLocation.Invoke(new()
         ///     {
         ///         Id = "847948c9-8973-48aa-8496-212f572ab859",
         ///     });
         /// 
         ///     // Look up the user location with internal host detection by its ID.
-        ///     var scmForwardingProfileUserLocation2Ds = Scm.Index.GetForwardingProfileUserLocation.Invoke(new()
+        ///     var scmForwardingProfileUserLocation2Ds = Scm.GetForwardingProfileUserLocation.Invoke(new()
         ///     {
         ///         Id = "ee149f5a-533e-48be-8492-e3aa6b20acf2",
         ///     });
         /// 
         ///     // Look up the user location with multiple IP ranges by its ID.
-        ///     var scmForwardingProfileUserLocation4Ds = Scm.Index.GetForwardingProfileUserLocation.Invoke(new()
+        ///     var scmForwardingProfileUserLocation4Ds = Scm.GetForwardingProfileUserLocation.Invoke(new()
         ///     {
         ///         Id = "23293d0f-0403-4549-870f-c6c04cd6c95c",
         ///     });

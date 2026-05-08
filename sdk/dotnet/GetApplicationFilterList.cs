@@ -13,18 +13,24 @@ namespace Pulumi.Scm
     {
         /// <summary>
         /// Retrieves a listing of config items.
+        /// 
+        /// ## Example Usage
         /// </summary>
         public static Task<GetApplicationFilterListResult> InvokeAsync(GetApplicationFilterListArgs? args = null, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.InvokeAsync<GetApplicationFilterListResult>("scm:index/getApplicationFilterList:getApplicationFilterList", args ?? new GetApplicationFilterListArgs(), options.WithDefaults());
 
         /// <summary>
         /// Retrieves a listing of config items.
+        /// 
+        /// ## Example Usage
         /// </summary>
         public static Output<GetApplicationFilterListResult> Invoke(GetApplicationFilterListInvokeArgs? args = null, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetApplicationFilterListResult>("scm:index/getApplicationFilterList:getApplicationFilterList", args ?? new GetApplicationFilterListInvokeArgs(), options.WithDefaults());
 
         /// <summary>
         /// Retrieves a listing of config items.
+        /// 
+        /// ## Example Usage
         /// </summary>
         public static Output<GetApplicationFilterListResult> Invoke(GetApplicationFilterListInvokeArgs args, InvokeOutputOptions options)
             => global::Pulumi.Deployment.Instance.Invoke<GetApplicationFilterListResult>("scm:index/getApplicationFilterList:getApplicationFilterList", args ?? new GetApplicationFilterListInvokeArgs(), options.WithDefaults());

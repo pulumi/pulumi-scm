@@ -135,10 +135,10 @@ def get_motd_banner_setting(device: Optional[_builtins.str] = None,
         motd_and_banner=pulumi.get(__ret__, 'motd_and_banner'),
         snippet=pulumi.get(__ret__, 'snippet'),
         tfid=pulumi.get(__ret__, 'tfid'))
-def get_motd_banner_setting_output(device: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
-                                   folder: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
-                                   id: Optional[pulumi.Input[_builtins.str]] = None,
-                                   snippet: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
+def get_motd_banner_setting_output(device: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
+                                   folder: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
+                                   id: pulumi.Input[Optional[_builtins.str]] = None,
+                                   snippet: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
                                    opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetMotdBannerSettingResult]:
     """
     MotdBannerSetting data source

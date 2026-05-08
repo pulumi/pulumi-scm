@@ -22,9 +22,9 @@ __all__ = ['BandwidthAllocationArgs', 'BandwidthAllocation']
 class BandwidthAllocationArgs:
     def __init__(__self__, *,
                  allocated_bandwidth: pulumi.Input[_builtins.int],
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 qos: Optional[pulumi.Input['BandwidthAllocationQosArgs']] = None,
-                 spn_name_lists: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None):
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 qos: pulumi.Input[Optional['BandwidthAllocationQosArgs']] = None,
+                 spn_name_lists: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None):
         """
         The set of arguments for constructing a BandwidthAllocation resource.
 
@@ -55,49 +55,49 @@ class BandwidthAllocationArgs:
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         name of the aggregated bandwidth region
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter
-    def qos(self) -> Optional[pulumi.Input['BandwidthAllocationQosArgs']]:
+    def qos(self) -> pulumi.Input[Optional['BandwidthAllocationQosArgs']]:
         """
         Qos
         """
         return pulumi.get(self, "qos")
 
     @qos.setter
-    def qos(self, value: Optional[pulumi.Input['BandwidthAllocationQosArgs']]):
+    def qos(self, value: pulumi.Input[Optional['BandwidthAllocationQosArgs']]):
         pulumi.set(self, "qos", value)
 
     @_builtins.property
     @pulumi.getter(name="spnNameLists")
-    def spn_name_lists(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def spn_name_lists(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         Spn name list
         """
         return pulumi.get(self, "spn_name_lists")
 
     @spn_name_lists.setter
-    def spn_name_lists(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def spn_name_lists(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "spn_name_lists", value)
 
 
 @pulumi.input_type
 class _BandwidthAllocationState:
     def __init__(__self__, *,
-                 allocated_bandwidth: Optional[pulumi.Input[_builtins.int]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 qos: Optional[pulumi.Input['BandwidthAllocationQosArgs']] = None,
-                 spn_name_lists: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 tfid: Optional[pulumi.Input[_builtins.str]] = None):
+                 allocated_bandwidth: pulumi.Input[Optional[_builtins.int]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 qos: pulumi.Input[Optional['BandwidthAllocationQosArgs']] = None,
+                 spn_name_lists: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 tfid: pulumi.Input[Optional[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering BandwidthAllocation resources.
 
@@ -120,62 +120,62 @@ class _BandwidthAllocationState:
 
     @_builtins.property
     @pulumi.getter(name="allocatedBandwidth")
-    def allocated_bandwidth(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def allocated_bandwidth(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         bandwidth to allocate in Mbps
         """
         return pulumi.get(self, "allocated_bandwidth")
 
     @allocated_bandwidth.setter
-    def allocated_bandwidth(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def allocated_bandwidth(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "allocated_bandwidth", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         name of the aggregated bandwidth region
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter
-    def qos(self) -> Optional[pulumi.Input['BandwidthAllocationQosArgs']]:
+    def qos(self) -> pulumi.Input[Optional['BandwidthAllocationQosArgs']]:
         """
         Qos
         """
         return pulumi.get(self, "qos")
 
     @qos.setter
-    def qos(self, value: Optional[pulumi.Input['BandwidthAllocationQosArgs']]):
+    def qos(self, value: pulumi.Input[Optional['BandwidthAllocationQosArgs']]):
         pulumi.set(self, "qos", value)
 
     @_builtins.property
     @pulumi.getter(name="spnNameLists")
-    def spn_name_lists(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def spn_name_lists(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         Spn name list
         """
         return pulumi.get(self, "spn_name_lists")
 
     @spn_name_lists.setter
-    def spn_name_lists(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def spn_name_lists(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "spn_name_lists", value)
 
     @_builtins.property
     @pulumi.getter
-    def tfid(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def tfid(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The Terraform ID.
         """
         return pulumi.get(self, "tfid")
 
     @tfid.setter
-    def tfid(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def tfid(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "tfid", value)
 
 
@@ -185,10 +185,10 @@ class BandwidthAllocation(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 allocated_bandwidth: Optional[pulumi.Input[_builtins.int]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 qos: Optional[pulumi.Input[Union['BandwidthAllocationQosArgs', 'BandwidthAllocationQosArgsDict']]] = None,
-                 spn_name_lists: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 allocated_bandwidth: pulumi.Input[Optional[_builtins.int]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 qos: pulumi.Input[Optional[Union['BandwidthAllocationQosArgs', 'BandwidthAllocationQosArgsDict']]] = None,
+                 spn_name_lists: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  __props__=None):
         """
         BandwidthAllocation resource
@@ -304,10 +304,10 @@ class BandwidthAllocation(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 allocated_bandwidth: Optional[pulumi.Input[_builtins.int]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 qos: Optional[pulumi.Input[Union['BandwidthAllocationQosArgs', 'BandwidthAllocationQosArgsDict']]] = None,
-                 spn_name_lists: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 allocated_bandwidth: pulumi.Input[Optional[_builtins.int]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 qos: pulumi.Input[Optional[Union['BandwidthAllocationQosArgs', 'BandwidthAllocationQosArgsDict']]] = None,
+                 spn_name_lists: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -334,11 +334,11 @@ class BandwidthAllocation(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            allocated_bandwidth: Optional[pulumi.Input[_builtins.int]] = None,
-            name: Optional[pulumi.Input[_builtins.str]] = None,
-            qos: Optional[pulumi.Input[Union['BandwidthAllocationQosArgs', 'BandwidthAllocationQosArgsDict']]] = None,
-            spn_name_lists: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-            tfid: Optional[pulumi.Input[_builtins.str]] = None) -> 'BandwidthAllocation':
+            allocated_bandwidth: pulumi.Input[Optional[_builtins.int]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            qos: pulumi.Input[Optional[Union['BandwidthAllocationQosArgs', 'BandwidthAllocationQosArgsDict']]] = None,
+            spn_name_lists: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            tfid: pulumi.Input[Optional[_builtins.str]] = None) -> 'BandwidthAllocation':
         """
         Get an existing BandwidthAllocation resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

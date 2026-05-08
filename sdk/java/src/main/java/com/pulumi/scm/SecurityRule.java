@@ -41,8 +41,8 @@ import javax.annotation.Nullable;
  * import com.pulumi.scm.inputs.SecurityRuleSecuritySettingsArgs;
  * import com.pulumi.scm.inputs.SecurityRuleLogSettingsArgs;
  * import com.pulumi.scm.inputs.SecurityRuleAllowWebApplicationArgs;
- * import java.util.List;
  * import java.util.ArrayList;
+ * import java.util.Arrays;
  * import java.util.Map;
  * import java.io.File;
  * import java.nio.file.Files;
@@ -216,13 +216,13 @@ import javax.annotation.Nullable;
  *                 SecurityRuleAllowWebApplicationArgs.builder()
  *                     .name("web_appln")
  *                     .type("application")
- *                     .applicationFunction(List.of("any"))
+ *                     .applicationFunction(Arrays.asList("any"))
  *                     .appId("4sync")
  *                     .build(),
  *                 SecurityRuleAllowWebApplicationArgs.builder()
  *                     .name("web_appln_2")
  *                     .type("application")
- *                     .applicationFunction(List.of("any"))
+ *                     .applicationFunction(Arrays.asList("any"))
  *                     .appId("4sync")
  *                     .build())
  *             .sources("any")

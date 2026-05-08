@@ -279,71 +279,71 @@ export interface ServiceConnectionState {
     /**
      * Backup s c
      */
-    backupSc?: pulumi.Input<string>;
+    backupSc?: pulumi.Input<string | undefined>;
     /**
      * Bgp peer
      */
-    bgpPeer?: pulumi.Input<inputs.ServiceConnectionBgpPeer>;
+    bgpPeer?: pulumi.Input<inputs.ServiceConnectionBgpPeer | undefined>;
     /**
      * Map of sensitive values returned from the API.
      */
-    encryptedValues?: pulumi.Input<{[key: string]: pulumi.Input<string>}>;
+    encryptedValues?: pulumi.Input<{[key: string]: pulumi.Input<string>} | undefined>;
     /**
      * The folder in which the resource is defined
      */
-    folder?: pulumi.Input<string>;
+    folder?: pulumi.Input<string | undefined>;
     /**
      * Ipsec tunnel
      */
-    ipsecTunnel?: pulumi.Input<string>;
+    ipsecTunnel?: pulumi.Input<string | undefined>;
     /**
      * The name of the service connection
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Nat pool
      */
-    natPool?: pulumi.Input<string>;
+    natPool?: pulumi.Input<string | undefined>;
     /**
      * No export community
      */
-    noExportCommunity?: pulumi.Input<string>;
+    noExportCommunity?: pulumi.Input<string | undefined>;
     /**
      * Onboarding type
      */
-    onboardingType?: pulumi.Input<string>;
+    onboardingType?: pulumi.Input<string | undefined>;
     /**
      * Protocol
      */
-    protocol?: pulumi.Input<inputs.ServiceConnectionProtocol>;
+    protocol?: pulumi.Input<inputs.ServiceConnectionProtocol | undefined>;
     /**
      * Qos
      */
-    qos?: pulumi.Input<inputs.ServiceConnectionQos>;
+    qos?: pulumi.Input<inputs.ServiceConnectionQos | undefined>;
     /**
      * Region
      */
-    region?: pulumi.Input<string>;
+    region?: pulumi.Input<string | undefined>;
     /**
      * Region tag
      */
-    regionTag?: pulumi.Input<string>;
+    regionTag?: pulumi.Input<string | undefined>;
     /**
      * Secondary ipsec tunnel
      */
-    secondaryIpsecTunnel?: pulumi.Input<string>;
+    secondaryIpsecTunnel?: pulumi.Input<string | undefined>;
     /**
      * Source nat
      */
-    sourceNat?: pulumi.Input<boolean>;
+    sourceNat?: pulumi.Input<boolean | undefined>;
     /**
      * Subnets
      */
-    subnets?: pulumi.Input<pulumi.Input<string>[]>;
+    subnets?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * The Terraform ID.
      */
-    tfid?: pulumi.Input<string>;
+    tfid?: pulumi.Input<string | undefined>;
 }
 
 /**
@@ -353,11 +353,11 @@ export interface ServiceConnectionArgs {
     /**
      * Backup s c
      */
-    backupSc?: pulumi.Input<string>;
+    backupSc?: pulumi.Input<string | undefined>;
     /**
      * Bgp peer
      */
-    bgpPeer?: pulumi.Input<inputs.ServiceConnectionBgpPeer>;
+    bgpPeer?: pulumi.Input<inputs.ServiceConnectionBgpPeer | undefined>;
     /**
      * Ipsec tunnel
      */
@@ -365,27 +365,27 @@ export interface ServiceConnectionArgs {
     /**
      * The name of the service connection
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Nat pool
      */
-    natPool?: pulumi.Input<string>;
+    natPool?: pulumi.Input<string | undefined>;
     /**
      * No export community
      */
-    noExportCommunity?: pulumi.Input<string>;
+    noExportCommunity?: pulumi.Input<string | undefined>;
     /**
      * Onboarding type
      */
-    onboardingType?: pulumi.Input<string>;
+    onboardingType?: pulumi.Input<string | undefined>;
     /**
      * Protocol
      */
-    protocol?: pulumi.Input<inputs.ServiceConnectionProtocol>;
+    protocol?: pulumi.Input<inputs.ServiceConnectionProtocol | undefined>;
     /**
      * Qos
      */
-    qos?: pulumi.Input<inputs.ServiceConnectionQos>;
+    qos?: pulumi.Input<inputs.ServiceConnectionQos | undefined>;
     /**
      * Region
      */
@@ -393,17 +393,17 @@ export interface ServiceConnectionArgs {
     /**
      * Region tag
      */
-    regionTag?: pulumi.Input<string>;
+    regionTag?: pulumi.Input<string | undefined>;
     /**
      * Secondary ipsec tunnel
      */
-    secondaryIpsecTunnel?: pulumi.Input<string>;
+    secondaryIpsecTunnel?: pulumi.Input<string | undefined>;
     /**
      * Source nat
      */
-    sourceNat?: pulumi.Input<boolean>;
+    sourceNat?: pulumi.Input<boolean | undefined>;
     /**
      * Subnets
      */
-    subnets?: pulumi.Input<pulumi.Input<string>[]>;
+    subnets?: pulumi.Input<pulumi.Input<string>[] | undefined>;
 }

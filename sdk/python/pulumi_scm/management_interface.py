@@ -21,10 +21,10 @@ __all__ = ['ManagementInterfaceArgs', 'ManagementInterface']
 @pulumi.input_type
 class ManagementInterfaceArgs:
     def __init__(__self__, *,
-                 device: Optional[pulumi.Input[_builtins.str]] = None,
-                 folder: Optional[pulumi.Input[_builtins.str]] = None,
-                 management_interface: Optional[pulumi.Input['ManagementInterfaceManagementInterfaceArgs']] = None,
-                 snippet: Optional[pulumi.Input[_builtins.str]] = None):
+                 device: pulumi.Input[Optional[_builtins.str]] = None,
+                 folder: pulumi.Input[Optional[_builtins.str]] = None,
+                 management_interface: pulumi.Input[Optional['ManagementInterfaceManagementInterfaceArgs']] = None,
+                 snippet: pulumi.Input[Optional[_builtins.str]] = None):
         """
         The set of arguments for constructing a ManagementInterface resource.
 
@@ -48,19 +48,19 @@ class ManagementInterfaceArgs:
 
     @_builtins.property
     @pulumi.getter
-    def device(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def device(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The device in which the resource is defined
         """
         return pulumi.get(self, "device")
 
     @device.setter
-    def device(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def device(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "device", value)
 
     @_builtins.property
     @pulumi.getter
-    def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def folder(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
 
@@ -69,24 +69,24 @@ class ManagementInterfaceArgs:
         return pulumi.get(self, "folder")
 
     @folder.setter
-    def folder(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def folder(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "folder", value)
 
     @_builtins.property
     @pulumi.getter(name="managementInterface")
-    def management_interface(self) -> Optional[pulumi.Input['ManagementInterfaceManagementInterfaceArgs']]:
+    def management_interface(self) -> pulumi.Input[Optional['ManagementInterfaceManagementInterfaceArgs']]:
         """
         Management interface
         """
         return pulumi.get(self, "management_interface")
 
     @management_interface.setter
-    def management_interface(self, value: Optional[pulumi.Input['ManagementInterfaceManagementInterfaceArgs']]):
+    def management_interface(self, value: pulumi.Input[Optional['ManagementInterfaceManagementInterfaceArgs']]):
         pulumi.set(self, "management_interface", value)
 
     @_builtins.property
     @pulumi.getter
-    def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def snippet(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
 
@@ -95,18 +95,18 @@ class ManagementInterfaceArgs:
         return pulumi.get(self, "snippet")
 
     @snippet.setter
-    def snippet(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def snippet(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "snippet", value)
 
 
 @pulumi.input_type
 class _ManagementInterfaceState:
     def __init__(__self__, *,
-                 device: Optional[pulumi.Input[_builtins.str]] = None,
-                 folder: Optional[pulumi.Input[_builtins.str]] = None,
-                 management_interface: Optional[pulumi.Input['ManagementInterfaceManagementInterfaceArgs']] = None,
-                 snippet: Optional[pulumi.Input[_builtins.str]] = None,
-                 tfid: Optional[pulumi.Input[_builtins.str]] = None):
+                 device: pulumi.Input[Optional[_builtins.str]] = None,
+                 folder: pulumi.Input[Optional[_builtins.str]] = None,
+                 management_interface: pulumi.Input[Optional['ManagementInterfaceManagementInterfaceArgs']] = None,
+                 snippet: pulumi.Input[Optional[_builtins.str]] = None,
+                 tfid: pulumi.Input[Optional[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering ManagementInterface resources.
 
@@ -133,19 +133,19 @@ class _ManagementInterfaceState:
 
     @_builtins.property
     @pulumi.getter
-    def device(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def device(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The device in which the resource is defined
         """
         return pulumi.get(self, "device")
 
     @device.setter
-    def device(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def device(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "device", value)
 
     @_builtins.property
     @pulumi.getter
-    def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def folder(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
 
@@ -154,24 +154,24 @@ class _ManagementInterfaceState:
         return pulumi.get(self, "folder")
 
     @folder.setter
-    def folder(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def folder(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "folder", value)
 
     @_builtins.property
     @pulumi.getter(name="managementInterface")
-    def management_interface(self) -> Optional[pulumi.Input['ManagementInterfaceManagementInterfaceArgs']]:
+    def management_interface(self) -> pulumi.Input[Optional['ManagementInterfaceManagementInterfaceArgs']]:
         """
         Management interface
         """
         return pulumi.get(self, "management_interface")
 
     @management_interface.setter
-    def management_interface(self, value: Optional[pulumi.Input['ManagementInterfaceManagementInterfaceArgs']]):
+    def management_interface(self, value: pulumi.Input[Optional['ManagementInterfaceManagementInterfaceArgs']]):
         pulumi.set(self, "management_interface", value)
 
     @_builtins.property
     @pulumi.getter
-    def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def snippet(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
 
@@ -180,19 +180,19 @@ class _ManagementInterfaceState:
         return pulumi.get(self, "snippet")
 
     @snippet.setter
-    def snippet(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def snippet(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "snippet", value)
 
     @_builtins.property
     @pulumi.getter
-    def tfid(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def tfid(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The Terraform ID.
         """
         return pulumi.get(self, "tfid")
 
     @tfid.setter
-    def tfid(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def tfid(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "tfid", value)
 
 
@@ -202,10 +202,10 @@ class ManagementInterface(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 device: Optional[pulumi.Input[_builtins.str]] = None,
-                 folder: Optional[pulumi.Input[_builtins.str]] = None,
-                 management_interface: Optional[pulumi.Input[Union['ManagementInterfaceManagementInterfaceArgs', 'ManagementInterfaceManagementInterfaceArgsDict']]] = None,
-                 snippet: Optional[pulumi.Input[_builtins.str]] = None,
+                 device: pulumi.Input[Optional[_builtins.str]] = None,
+                 folder: pulumi.Input[Optional[_builtins.str]] = None,
+                 management_interface: pulumi.Input[Optional[Union['ManagementInterfaceManagementInterfaceArgs', 'ManagementInterfaceManagementInterfaceArgsDict']]] = None,
+                 snippet: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
         ManagementInterface resource
@@ -423,10 +423,10 @@ class ManagementInterface(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 device: Optional[pulumi.Input[_builtins.str]] = None,
-                 folder: Optional[pulumi.Input[_builtins.str]] = None,
-                 management_interface: Optional[pulumi.Input[Union['ManagementInterfaceManagementInterfaceArgs', 'ManagementInterfaceManagementInterfaceArgsDict']]] = None,
-                 snippet: Optional[pulumi.Input[_builtins.str]] = None,
+                 device: pulumi.Input[Optional[_builtins.str]] = None,
+                 folder: pulumi.Input[Optional[_builtins.str]] = None,
+                 management_interface: pulumi.Input[Optional[Union['ManagementInterfaceManagementInterfaceArgs', 'ManagementInterfaceManagementInterfaceArgsDict']]] = None,
+                 snippet: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -451,11 +451,11 @@ class ManagementInterface(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            device: Optional[pulumi.Input[_builtins.str]] = None,
-            folder: Optional[pulumi.Input[_builtins.str]] = None,
-            management_interface: Optional[pulumi.Input[Union['ManagementInterfaceManagementInterfaceArgs', 'ManagementInterfaceManagementInterfaceArgsDict']]] = None,
-            snippet: Optional[pulumi.Input[_builtins.str]] = None,
-            tfid: Optional[pulumi.Input[_builtins.str]] = None) -> 'ManagementInterface':
+            device: pulumi.Input[Optional[_builtins.str]] = None,
+            folder: pulumi.Input[Optional[_builtins.str]] = None,
+            management_interface: pulumi.Input[Optional[Union['ManagementInterfaceManagementInterfaceArgs', 'ManagementInterfaceManagementInterfaceArgsDict']]] = None,
+            snippet: pulumi.Input[Optional[_builtins.str]] = None,
+            tfid: pulumi.Input[Optional[_builtins.str]] = None) -> 'ManagementInterface':
         """
         Get an existing ManagementInterface resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

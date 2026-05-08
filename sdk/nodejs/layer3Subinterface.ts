@@ -245,71 +245,71 @@ export interface Layer3SubinterfaceState {
     /**
      * Layer 3 sub Interfaces ARP configuration
      */
-    arps?: pulumi.Input<pulumi.Input<inputs.Layer3SubinterfaceArp>[]>;
+    arps?: pulumi.Input<pulumi.Input<inputs.Layer3SubinterfaceArp>[] | undefined>;
     /**
      * Description
      */
-    comment?: pulumi.Input<string>;
+    comment?: pulumi.Input<string | undefined>;
     /**
      * Dynamic DNS configuration specific to the Layer 3 sub Interfaces.
      */
-    ddnsConfig?: pulumi.Input<inputs.Layer3SubinterfaceDdnsConfig>;
+    ddnsConfig?: pulumi.Input<inputs.Layer3SubinterfaceDdnsConfig | undefined>;
     /**
      * The device in which the resource is defined
      */
-    device?: pulumi.Input<string>;
+    device?: pulumi.Input<string | undefined>;
     /**
      * Layer3 sub interfaces DHCP Client Object
      *
      * > ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
      */
-    dhcpClient?: pulumi.Input<inputs.Layer3SubinterfaceDhcpClient>;
+    dhcpClient?: pulumi.Input<inputs.Layer3SubinterfaceDhcpClient | undefined>;
     /**
      * The folder in which the resource is defined
      *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
-    folder?: pulumi.Input<string>;
+    folder?: pulumi.Input<string | undefined>;
     /**
      * Interface management profile
      */
-    interfaceManagementProfile?: pulumi.Input<string>;
+    interfaceManagementProfile?: pulumi.Input<string | undefined>;
     /**
      * L3 sub-interface IP Parent
      *
      * > ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
      */
-    ips?: pulumi.Input<pulumi.Input<inputs.Layer3SubinterfaceIp>[]>;
+    ips?: pulumi.Input<pulumi.Input<inputs.Layer3SubinterfaceIp>[] | undefined>;
     /**
      * MTU
      */
-    mtu?: pulumi.Input<number>;
+    mtu?: pulumi.Input<number | undefined>;
     /**
      * L3 sub-interface name
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Name of Netflow Profile to assign to Interface
      */
-    netflowProfile?: pulumi.Input<string>;
+    netflowProfile?: pulumi.Input<string | undefined>;
     /**
      * Parent interface
      */
-    parentInterface?: pulumi.Input<string>;
+    parentInterface?: pulumi.Input<string | undefined>;
     /**
      * The snippet in which the resource is defined
      *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
-    snippet?: pulumi.Input<string>;
+    snippet?: pulumi.Input<string | undefined>;
     /**
      * VLAN tag
      */
-    tag?: pulumi.Input<number>;
+    tag?: pulumi.Input<number | undefined>;
     /**
      * The Terraform ID.
      */
-    tfid?: pulumi.Input<string>;
+    tfid?: pulumi.Input<string | undefined>;
 }
 
 /**
@@ -319,65 +319,65 @@ export interface Layer3SubinterfaceArgs {
     /**
      * Layer 3 sub Interfaces ARP configuration
      */
-    arps?: pulumi.Input<pulumi.Input<inputs.Layer3SubinterfaceArp>[]>;
+    arps?: pulumi.Input<pulumi.Input<inputs.Layer3SubinterfaceArp>[] | undefined>;
     /**
      * Description
      */
-    comment?: pulumi.Input<string>;
+    comment?: pulumi.Input<string | undefined>;
     /**
      * Dynamic DNS configuration specific to the Layer 3 sub Interfaces.
      */
-    ddnsConfig?: pulumi.Input<inputs.Layer3SubinterfaceDdnsConfig>;
+    ddnsConfig?: pulumi.Input<inputs.Layer3SubinterfaceDdnsConfig | undefined>;
     /**
      * The device in which the resource is defined
      */
-    device?: pulumi.Input<string>;
+    device?: pulumi.Input<string | undefined>;
     /**
      * Layer3 sub interfaces DHCP Client Object
      *
      * > ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
      */
-    dhcpClient?: pulumi.Input<inputs.Layer3SubinterfaceDhcpClient>;
+    dhcpClient?: pulumi.Input<inputs.Layer3SubinterfaceDhcpClient | undefined>;
     /**
      * The folder in which the resource is defined
      *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
-    folder?: pulumi.Input<string>;
+    folder?: pulumi.Input<string | undefined>;
     /**
      * Interface management profile
      */
-    interfaceManagementProfile?: pulumi.Input<string>;
+    interfaceManagementProfile?: pulumi.Input<string | undefined>;
     /**
      * L3 sub-interface IP Parent
      *
      * > ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
      */
-    ips?: pulumi.Input<pulumi.Input<inputs.Layer3SubinterfaceIp>[]>;
+    ips?: pulumi.Input<pulumi.Input<inputs.Layer3SubinterfaceIp>[] | undefined>;
     /**
      * MTU
      */
-    mtu?: pulumi.Input<number>;
+    mtu?: pulumi.Input<number | undefined>;
     /**
      * L3 sub-interface name
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Name of Netflow Profile to assign to Interface
      */
-    netflowProfile?: pulumi.Input<string>;
+    netflowProfile?: pulumi.Input<string | undefined>;
     /**
      * Parent interface
      */
-    parentInterface?: pulumi.Input<string>;
+    parentInterface?: pulumi.Input<string | undefined>;
     /**
      * The snippet in which the resource is defined
      *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
-    snippet?: pulumi.Input<string>;
+    snippet?: pulumi.Input<string | undefined>;
     /**
      * VLAN tag
      */
-    tag?: pulumi.Input<number>;
+    tag?: pulumi.Input<number | undefined>;
 }

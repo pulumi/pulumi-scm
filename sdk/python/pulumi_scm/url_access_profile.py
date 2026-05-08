@@ -21,25 +21,25 @@ __all__ = ['UrlAccessProfileArgs', 'UrlAccessProfile']
 @pulumi.input_type
 class UrlAccessProfileArgs:
     def __init__(__self__, *,
-                 alerts: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 allows: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 blocks: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 cloud_inline_cat: Optional[pulumi.Input[_builtins.bool]] = None,
-                 continues: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 credential_enforcement: Optional[pulumi.Input['UrlAccessProfileCredentialEnforcementArgs']] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 device: Optional[pulumi.Input[_builtins.str]] = None,
-                 folder: Optional[pulumi.Input[_builtins.str]] = None,
-                 local_inline_cat: Optional[pulumi.Input[_builtins.bool]] = None,
-                 log_container_page_only: Optional[pulumi.Input[_builtins.bool]] = None,
-                 log_http_hdr_referer: Optional[pulumi.Input[_builtins.bool]] = None,
-                 log_http_hdr_user_agent: Optional[pulumi.Input[_builtins.bool]] = None,
-                 log_http_hdr_xff: Optional[pulumi.Input[_builtins.bool]] = None,
-                 mlav_category_exceptions: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 redirects: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 safe_search_enforcement: Optional[pulumi.Input[_builtins.bool]] = None,
-                 snippet: Optional[pulumi.Input[_builtins.str]] = None):
+                 alerts: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 allows: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 blocks: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 cloud_inline_cat: pulumi.Input[Optional[_builtins.bool]] = None,
+                 continues: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 credential_enforcement: pulumi.Input[Optional['UrlAccessProfileCredentialEnforcementArgs']] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 device: pulumi.Input[Optional[_builtins.str]] = None,
+                 folder: pulumi.Input[Optional[_builtins.str]] = None,
+                 local_inline_cat: pulumi.Input[Optional[_builtins.bool]] = None,
+                 log_container_page_only: pulumi.Input[Optional[_builtins.bool]] = None,
+                 log_http_hdr_referer: pulumi.Input[Optional[_builtins.bool]] = None,
+                 log_http_hdr_user_agent: pulumi.Input[Optional[_builtins.bool]] = None,
+                 log_http_hdr_xff: pulumi.Input[Optional[_builtins.bool]] = None,
+                 mlav_category_exceptions: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 redirects: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 safe_search_enforcement: pulumi.Input[Optional[_builtins.bool]] = None,
+                 snippet: pulumi.Input[Optional[_builtins.str]] = None):
         """
         The set of arguments for constructing a UrlAccessProfile resource.
 
@@ -108,103 +108,103 @@ class UrlAccessProfileArgs:
 
     @_builtins.property
     @pulumi.getter
-    def alerts(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def alerts(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         Alert
         """
         return pulumi.get(self, "alerts")
 
     @alerts.setter
-    def alerts(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def alerts(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "alerts", value)
 
     @_builtins.property
     @pulumi.getter
-    def allows(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def allows(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         Allow
         """
         return pulumi.get(self, "allows")
 
     @allows.setter
-    def allows(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def allows(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "allows", value)
 
     @_builtins.property
     @pulumi.getter
-    def blocks(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def blocks(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         Block
         """
         return pulumi.get(self, "blocks")
 
     @blocks.setter
-    def blocks(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def blocks(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "blocks", value)
 
     @_builtins.property
     @pulumi.getter(name="cloudInlineCat")
-    def cloud_inline_cat(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def cloud_inline_cat(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Cloud inline cat
         """
         return pulumi.get(self, "cloud_inline_cat")
 
     @cloud_inline_cat.setter
-    def cloud_inline_cat(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def cloud_inline_cat(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "cloud_inline_cat", value)
 
     @_builtins.property
     @pulumi.getter
-    def continues(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def continues(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         Continue
         """
         return pulumi.get(self, "continues")
 
     @continues.setter
-    def continues(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def continues(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "continues", value)
 
     @_builtins.property
     @pulumi.getter(name="credentialEnforcement")
-    def credential_enforcement(self) -> Optional[pulumi.Input['UrlAccessProfileCredentialEnforcementArgs']]:
+    def credential_enforcement(self) -> pulumi.Input[Optional['UrlAccessProfileCredentialEnforcementArgs']]:
         """
         Credential enforcement
         """
         return pulumi.get(self, "credential_enforcement")
 
     @credential_enforcement.setter
-    def credential_enforcement(self, value: Optional[pulumi.Input['UrlAccessProfileCredentialEnforcementArgs']]):
+    def credential_enforcement(self, value: pulumi.Input[Optional['UrlAccessProfileCredentialEnforcementArgs']]):
         pulumi.set(self, "credential_enforcement", value)
 
     @_builtins.property
     @pulumi.getter
-    def description(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def description(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Description
         """
         return pulumi.get(self, "description")
 
     @description.setter
-    def description(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def description(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "description", value)
 
     @_builtins.property
     @pulumi.getter
-    def device(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def device(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The device in which the resource is defined
         """
         return pulumi.get(self, "device")
 
     @device.setter
-    def device(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def device(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "device", value)
 
     @_builtins.property
     @pulumi.getter
-    def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def folder(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
 
@@ -213,120 +213,120 @@ class UrlAccessProfileArgs:
         return pulumi.get(self, "folder")
 
     @folder.setter
-    def folder(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def folder(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "folder", value)
 
     @_builtins.property
     @pulumi.getter(name="localInlineCat")
-    def local_inline_cat(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def local_inline_cat(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Local inline cat
         """
         return pulumi.get(self, "local_inline_cat")
 
     @local_inline_cat.setter
-    def local_inline_cat(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def local_inline_cat(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "local_inline_cat", value)
 
     @_builtins.property
     @pulumi.getter(name="logContainerPageOnly")
-    def log_container_page_only(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def log_container_page_only(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Log container page only
         """
         return pulumi.get(self, "log_container_page_only")
 
     @log_container_page_only.setter
-    def log_container_page_only(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def log_container_page_only(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "log_container_page_only", value)
 
     @_builtins.property
     @pulumi.getter(name="logHttpHdrReferer")
-    def log_http_hdr_referer(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def log_http_hdr_referer(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Log http hdr referer
         """
         return pulumi.get(self, "log_http_hdr_referer")
 
     @log_http_hdr_referer.setter
-    def log_http_hdr_referer(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def log_http_hdr_referer(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "log_http_hdr_referer", value)
 
     @_builtins.property
     @pulumi.getter(name="logHttpHdrUserAgent")
-    def log_http_hdr_user_agent(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def log_http_hdr_user_agent(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Log http hdr user agent
         """
         return pulumi.get(self, "log_http_hdr_user_agent")
 
     @log_http_hdr_user_agent.setter
-    def log_http_hdr_user_agent(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def log_http_hdr_user_agent(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "log_http_hdr_user_agent", value)
 
     @_builtins.property
     @pulumi.getter(name="logHttpHdrXff")
-    def log_http_hdr_xff(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def log_http_hdr_xff(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Log http hdr xff
         """
         return pulumi.get(self, "log_http_hdr_xff")
 
     @log_http_hdr_xff.setter
-    def log_http_hdr_xff(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def log_http_hdr_xff(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "log_http_hdr_xff", value)
 
     @_builtins.property
     @pulumi.getter(name="mlavCategoryExceptions")
-    def mlav_category_exceptions(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def mlav_category_exceptions(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         Mlav category exception
         """
         return pulumi.get(self, "mlav_category_exceptions")
 
     @mlav_category_exceptions.setter
-    def mlav_category_exceptions(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def mlav_category_exceptions(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "mlav_category_exceptions", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Name
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter
-    def redirects(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def redirects(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         Redirect
         """
         return pulumi.get(self, "redirects")
 
     @redirects.setter
-    def redirects(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def redirects(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "redirects", value)
 
     @_builtins.property
     @pulumi.getter(name="safeSearchEnforcement")
-    def safe_search_enforcement(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def safe_search_enforcement(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Safe search enforcement
         """
         return pulumi.get(self, "safe_search_enforcement")
 
     @safe_search_enforcement.setter
-    def safe_search_enforcement(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def safe_search_enforcement(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "safe_search_enforcement", value)
 
     @_builtins.property
     @pulumi.getter
-    def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def snippet(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
 
@@ -335,33 +335,33 @@ class UrlAccessProfileArgs:
         return pulumi.get(self, "snippet")
 
     @snippet.setter
-    def snippet(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def snippet(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "snippet", value)
 
 
 @pulumi.input_type
 class _UrlAccessProfileState:
     def __init__(__self__, *,
-                 alerts: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 allows: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 blocks: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 cloud_inline_cat: Optional[pulumi.Input[_builtins.bool]] = None,
-                 continues: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 credential_enforcement: Optional[pulumi.Input['UrlAccessProfileCredentialEnforcementArgs']] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 device: Optional[pulumi.Input[_builtins.str]] = None,
-                 folder: Optional[pulumi.Input[_builtins.str]] = None,
-                 local_inline_cat: Optional[pulumi.Input[_builtins.bool]] = None,
-                 log_container_page_only: Optional[pulumi.Input[_builtins.bool]] = None,
-                 log_http_hdr_referer: Optional[pulumi.Input[_builtins.bool]] = None,
-                 log_http_hdr_user_agent: Optional[pulumi.Input[_builtins.bool]] = None,
-                 log_http_hdr_xff: Optional[pulumi.Input[_builtins.bool]] = None,
-                 mlav_category_exceptions: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 redirects: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 safe_search_enforcement: Optional[pulumi.Input[_builtins.bool]] = None,
-                 snippet: Optional[pulumi.Input[_builtins.str]] = None,
-                 tfid: Optional[pulumi.Input[_builtins.str]] = None):
+                 alerts: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 allows: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 blocks: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 cloud_inline_cat: pulumi.Input[Optional[_builtins.bool]] = None,
+                 continues: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 credential_enforcement: pulumi.Input[Optional['UrlAccessProfileCredentialEnforcementArgs']] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 device: pulumi.Input[Optional[_builtins.str]] = None,
+                 folder: pulumi.Input[Optional[_builtins.str]] = None,
+                 local_inline_cat: pulumi.Input[Optional[_builtins.bool]] = None,
+                 log_container_page_only: pulumi.Input[Optional[_builtins.bool]] = None,
+                 log_http_hdr_referer: pulumi.Input[Optional[_builtins.bool]] = None,
+                 log_http_hdr_user_agent: pulumi.Input[Optional[_builtins.bool]] = None,
+                 log_http_hdr_xff: pulumi.Input[Optional[_builtins.bool]] = None,
+                 mlav_category_exceptions: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 redirects: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 safe_search_enforcement: pulumi.Input[Optional[_builtins.bool]] = None,
+                 snippet: pulumi.Input[Optional[_builtins.str]] = None,
+                 tfid: pulumi.Input[Optional[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering UrlAccessProfile resources.
 
@@ -433,103 +433,103 @@ class _UrlAccessProfileState:
 
     @_builtins.property
     @pulumi.getter
-    def alerts(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def alerts(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         Alert
         """
         return pulumi.get(self, "alerts")
 
     @alerts.setter
-    def alerts(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def alerts(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "alerts", value)
 
     @_builtins.property
     @pulumi.getter
-    def allows(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def allows(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         Allow
         """
         return pulumi.get(self, "allows")
 
     @allows.setter
-    def allows(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def allows(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "allows", value)
 
     @_builtins.property
     @pulumi.getter
-    def blocks(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def blocks(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         Block
         """
         return pulumi.get(self, "blocks")
 
     @blocks.setter
-    def blocks(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def blocks(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "blocks", value)
 
     @_builtins.property
     @pulumi.getter(name="cloudInlineCat")
-    def cloud_inline_cat(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def cloud_inline_cat(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Cloud inline cat
         """
         return pulumi.get(self, "cloud_inline_cat")
 
     @cloud_inline_cat.setter
-    def cloud_inline_cat(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def cloud_inline_cat(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "cloud_inline_cat", value)
 
     @_builtins.property
     @pulumi.getter
-    def continues(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def continues(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         Continue
         """
         return pulumi.get(self, "continues")
 
     @continues.setter
-    def continues(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def continues(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "continues", value)
 
     @_builtins.property
     @pulumi.getter(name="credentialEnforcement")
-    def credential_enforcement(self) -> Optional[pulumi.Input['UrlAccessProfileCredentialEnforcementArgs']]:
+    def credential_enforcement(self) -> pulumi.Input[Optional['UrlAccessProfileCredentialEnforcementArgs']]:
         """
         Credential enforcement
         """
         return pulumi.get(self, "credential_enforcement")
 
     @credential_enforcement.setter
-    def credential_enforcement(self, value: Optional[pulumi.Input['UrlAccessProfileCredentialEnforcementArgs']]):
+    def credential_enforcement(self, value: pulumi.Input[Optional['UrlAccessProfileCredentialEnforcementArgs']]):
         pulumi.set(self, "credential_enforcement", value)
 
     @_builtins.property
     @pulumi.getter
-    def description(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def description(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Description
         """
         return pulumi.get(self, "description")
 
     @description.setter
-    def description(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def description(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "description", value)
 
     @_builtins.property
     @pulumi.getter
-    def device(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def device(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The device in which the resource is defined
         """
         return pulumi.get(self, "device")
 
     @device.setter
-    def device(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def device(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "device", value)
 
     @_builtins.property
     @pulumi.getter
-    def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def folder(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
 
@@ -538,120 +538,120 @@ class _UrlAccessProfileState:
         return pulumi.get(self, "folder")
 
     @folder.setter
-    def folder(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def folder(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "folder", value)
 
     @_builtins.property
     @pulumi.getter(name="localInlineCat")
-    def local_inline_cat(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def local_inline_cat(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Local inline cat
         """
         return pulumi.get(self, "local_inline_cat")
 
     @local_inline_cat.setter
-    def local_inline_cat(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def local_inline_cat(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "local_inline_cat", value)
 
     @_builtins.property
     @pulumi.getter(name="logContainerPageOnly")
-    def log_container_page_only(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def log_container_page_only(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Log container page only
         """
         return pulumi.get(self, "log_container_page_only")
 
     @log_container_page_only.setter
-    def log_container_page_only(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def log_container_page_only(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "log_container_page_only", value)
 
     @_builtins.property
     @pulumi.getter(name="logHttpHdrReferer")
-    def log_http_hdr_referer(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def log_http_hdr_referer(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Log http hdr referer
         """
         return pulumi.get(self, "log_http_hdr_referer")
 
     @log_http_hdr_referer.setter
-    def log_http_hdr_referer(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def log_http_hdr_referer(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "log_http_hdr_referer", value)
 
     @_builtins.property
     @pulumi.getter(name="logHttpHdrUserAgent")
-    def log_http_hdr_user_agent(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def log_http_hdr_user_agent(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Log http hdr user agent
         """
         return pulumi.get(self, "log_http_hdr_user_agent")
 
     @log_http_hdr_user_agent.setter
-    def log_http_hdr_user_agent(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def log_http_hdr_user_agent(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "log_http_hdr_user_agent", value)
 
     @_builtins.property
     @pulumi.getter(name="logHttpHdrXff")
-    def log_http_hdr_xff(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def log_http_hdr_xff(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Log http hdr xff
         """
         return pulumi.get(self, "log_http_hdr_xff")
 
     @log_http_hdr_xff.setter
-    def log_http_hdr_xff(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def log_http_hdr_xff(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "log_http_hdr_xff", value)
 
     @_builtins.property
     @pulumi.getter(name="mlavCategoryExceptions")
-    def mlav_category_exceptions(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def mlav_category_exceptions(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         Mlav category exception
         """
         return pulumi.get(self, "mlav_category_exceptions")
 
     @mlav_category_exceptions.setter
-    def mlav_category_exceptions(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def mlav_category_exceptions(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "mlav_category_exceptions", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Name
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter
-    def redirects(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def redirects(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         Redirect
         """
         return pulumi.get(self, "redirects")
 
     @redirects.setter
-    def redirects(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def redirects(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "redirects", value)
 
     @_builtins.property
     @pulumi.getter(name="safeSearchEnforcement")
-    def safe_search_enforcement(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def safe_search_enforcement(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Safe search enforcement
         """
         return pulumi.get(self, "safe_search_enforcement")
 
     @safe_search_enforcement.setter
-    def safe_search_enforcement(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def safe_search_enforcement(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "safe_search_enforcement", value)
 
     @_builtins.property
     @pulumi.getter
-    def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def snippet(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
 
@@ -660,19 +660,19 @@ class _UrlAccessProfileState:
         return pulumi.get(self, "snippet")
 
     @snippet.setter
-    def snippet(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def snippet(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "snippet", value)
 
     @_builtins.property
     @pulumi.getter
-    def tfid(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def tfid(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The Terraform ID.
         """
         return pulumi.get(self, "tfid")
 
     @tfid.setter
-    def tfid(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def tfid(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "tfid", value)
 
 
@@ -682,25 +682,25 @@ class UrlAccessProfile(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 alerts: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 allows: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 blocks: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 cloud_inline_cat: Optional[pulumi.Input[_builtins.bool]] = None,
-                 continues: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 credential_enforcement: Optional[pulumi.Input[Union['UrlAccessProfileCredentialEnforcementArgs', 'UrlAccessProfileCredentialEnforcementArgsDict']]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 device: Optional[pulumi.Input[_builtins.str]] = None,
-                 folder: Optional[pulumi.Input[_builtins.str]] = None,
-                 local_inline_cat: Optional[pulumi.Input[_builtins.bool]] = None,
-                 log_container_page_only: Optional[pulumi.Input[_builtins.bool]] = None,
-                 log_http_hdr_referer: Optional[pulumi.Input[_builtins.bool]] = None,
-                 log_http_hdr_user_agent: Optional[pulumi.Input[_builtins.bool]] = None,
-                 log_http_hdr_xff: Optional[pulumi.Input[_builtins.bool]] = None,
-                 mlav_category_exceptions: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 redirects: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 safe_search_enforcement: Optional[pulumi.Input[_builtins.bool]] = None,
-                 snippet: Optional[pulumi.Input[_builtins.str]] = None,
+                 alerts: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 allows: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 blocks: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 cloud_inline_cat: pulumi.Input[Optional[_builtins.bool]] = None,
+                 continues: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 credential_enforcement: pulumi.Input[Optional[Union['UrlAccessProfileCredentialEnforcementArgs', 'UrlAccessProfileCredentialEnforcementArgsDict']]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 device: pulumi.Input[Optional[_builtins.str]] = None,
+                 folder: pulumi.Input[Optional[_builtins.str]] = None,
+                 local_inline_cat: pulumi.Input[Optional[_builtins.bool]] = None,
+                 log_container_page_only: pulumi.Input[Optional[_builtins.bool]] = None,
+                 log_http_hdr_referer: pulumi.Input[Optional[_builtins.bool]] = None,
+                 log_http_hdr_user_agent: pulumi.Input[Optional[_builtins.bool]] = None,
+                 log_http_hdr_xff: pulumi.Input[Optional[_builtins.bool]] = None,
+                 mlav_category_exceptions: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 redirects: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 safe_search_enforcement: pulumi.Input[Optional[_builtins.bool]] = None,
+                 snippet: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
         UrlAccessProfile resource
@@ -847,25 +847,25 @@ class UrlAccessProfile(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 alerts: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 allows: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 blocks: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 cloud_inline_cat: Optional[pulumi.Input[_builtins.bool]] = None,
-                 continues: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 credential_enforcement: Optional[pulumi.Input[Union['UrlAccessProfileCredentialEnforcementArgs', 'UrlAccessProfileCredentialEnforcementArgsDict']]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 device: Optional[pulumi.Input[_builtins.str]] = None,
-                 folder: Optional[pulumi.Input[_builtins.str]] = None,
-                 local_inline_cat: Optional[pulumi.Input[_builtins.bool]] = None,
-                 log_container_page_only: Optional[pulumi.Input[_builtins.bool]] = None,
-                 log_http_hdr_referer: Optional[pulumi.Input[_builtins.bool]] = None,
-                 log_http_hdr_user_agent: Optional[pulumi.Input[_builtins.bool]] = None,
-                 log_http_hdr_xff: Optional[pulumi.Input[_builtins.bool]] = None,
-                 mlav_category_exceptions: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 redirects: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 safe_search_enforcement: Optional[pulumi.Input[_builtins.bool]] = None,
-                 snippet: Optional[pulumi.Input[_builtins.str]] = None,
+                 alerts: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 allows: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 blocks: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 cloud_inline_cat: pulumi.Input[Optional[_builtins.bool]] = None,
+                 continues: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 credential_enforcement: pulumi.Input[Optional[Union['UrlAccessProfileCredentialEnforcementArgs', 'UrlAccessProfileCredentialEnforcementArgsDict']]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 device: pulumi.Input[Optional[_builtins.str]] = None,
+                 folder: pulumi.Input[Optional[_builtins.str]] = None,
+                 local_inline_cat: pulumi.Input[Optional[_builtins.bool]] = None,
+                 log_container_page_only: pulumi.Input[Optional[_builtins.bool]] = None,
+                 log_http_hdr_referer: pulumi.Input[Optional[_builtins.bool]] = None,
+                 log_http_hdr_user_agent: pulumi.Input[Optional[_builtins.bool]] = None,
+                 log_http_hdr_xff: pulumi.Input[Optional[_builtins.bool]] = None,
+                 mlav_category_exceptions: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 redirects: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 safe_search_enforcement: pulumi.Input[Optional[_builtins.bool]] = None,
+                 snippet: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -905,26 +905,26 @@ class UrlAccessProfile(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            alerts: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-            allows: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-            blocks: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-            cloud_inline_cat: Optional[pulumi.Input[_builtins.bool]] = None,
-            continues: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-            credential_enforcement: Optional[pulumi.Input[Union['UrlAccessProfileCredentialEnforcementArgs', 'UrlAccessProfileCredentialEnforcementArgsDict']]] = None,
-            description: Optional[pulumi.Input[_builtins.str]] = None,
-            device: Optional[pulumi.Input[_builtins.str]] = None,
-            folder: Optional[pulumi.Input[_builtins.str]] = None,
-            local_inline_cat: Optional[pulumi.Input[_builtins.bool]] = None,
-            log_container_page_only: Optional[pulumi.Input[_builtins.bool]] = None,
-            log_http_hdr_referer: Optional[pulumi.Input[_builtins.bool]] = None,
-            log_http_hdr_user_agent: Optional[pulumi.Input[_builtins.bool]] = None,
-            log_http_hdr_xff: Optional[pulumi.Input[_builtins.bool]] = None,
-            mlav_category_exceptions: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-            name: Optional[pulumi.Input[_builtins.str]] = None,
-            redirects: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-            safe_search_enforcement: Optional[pulumi.Input[_builtins.bool]] = None,
-            snippet: Optional[pulumi.Input[_builtins.str]] = None,
-            tfid: Optional[pulumi.Input[_builtins.str]] = None) -> 'UrlAccessProfile':
+            alerts: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            allows: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            blocks: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            cloud_inline_cat: pulumi.Input[Optional[_builtins.bool]] = None,
+            continues: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            credential_enforcement: pulumi.Input[Optional[Union['UrlAccessProfileCredentialEnforcementArgs', 'UrlAccessProfileCredentialEnforcementArgsDict']]] = None,
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            device: pulumi.Input[Optional[_builtins.str]] = None,
+            folder: pulumi.Input[Optional[_builtins.str]] = None,
+            local_inline_cat: pulumi.Input[Optional[_builtins.bool]] = None,
+            log_container_page_only: pulumi.Input[Optional[_builtins.bool]] = None,
+            log_http_hdr_referer: pulumi.Input[Optional[_builtins.bool]] = None,
+            log_http_hdr_user_agent: pulumi.Input[Optional[_builtins.bool]] = None,
+            log_http_hdr_xff: pulumi.Input[Optional[_builtins.bool]] = None,
+            mlav_category_exceptions: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            redirects: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            safe_search_enforcement: pulumi.Input[Optional[_builtins.bool]] = None,
+            snippet: pulumi.Input[Optional[_builtins.str]] = None,
+            tfid: pulumi.Input[Optional[_builtins.str]] = None) -> 'UrlAccessProfile':
         """
         Get an existing UrlAccessProfile resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

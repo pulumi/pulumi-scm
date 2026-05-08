@@ -245,47 +245,47 @@ export interface AggregateInterfaceState {
     /**
      * Aggregate interface description
      */
-    comment?: pulumi.Input<string>;
+    comment?: pulumi.Input<string | undefined>;
     /**
      * Default interface assignment
      */
-    defaultValue?: pulumi.Input<string>;
+    defaultValue?: pulumi.Input<string | undefined>;
     /**
      * The device in which the resource is defined
      */
-    device?: pulumi.Input<string>;
+    device?: pulumi.Input<string | undefined>;
     /**
      * The folder in which the resource is defined
      *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
-    folder?: pulumi.Input<string>;
+    folder?: pulumi.Input<string | undefined>;
     /**
      * Layer2
      *
      * > ℹ️ **Note:** You must specify exactly one of `layer2` and `layer3`.
      */
-    layer2?: pulumi.Input<inputs.AggregateInterfaceLayer2>;
+    layer2?: pulumi.Input<inputs.AggregateInterfaceLayer2 | undefined>;
     /**
      * Aggregate Interface Layer 3 configuration
      *
      * > ℹ️ **Note:** You must specify exactly one of `layer2` and `layer3`.
      */
-    layer3?: pulumi.Input<inputs.AggregateInterfaceLayer3>;
+    layer3?: pulumi.Input<inputs.AggregateInterfaceLayer3 | undefined>;
     /**
      * Aggregate interface name
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * The snippet in which the resource is defined
      *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
-    snippet?: pulumi.Input<string>;
+    snippet?: pulumi.Input<string | undefined>;
     /**
      * The Terraform ID.
      */
-    tfid?: pulumi.Input<string>;
+    tfid?: pulumi.Input<string | undefined>;
 }
 
 /**
@@ -295,41 +295,41 @@ export interface AggregateInterfaceArgs {
     /**
      * Aggregate interface description
      */
-    comment?: pulumi.Input<string>;
+    comment?: pulumi.Input<string | undefined>;
     /**
      * Default interface assignment
      */
-    defaultValue?: pulumi.Input<string>;
+    defaultValue?: pulumi.Input<string | undefined>;
     /**
      * The device in which the resource is defined
      */
-    device?: pulumi.Input<string>;
+    device?: pulumi.Input<string | undefined>;
     /**
      * The folder in which the resource is defined
      *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
-    folder?: pulumi.Input<string>;
+    folder?: pulumi.Input<string | undefined>;
     /**
      * Layer2
      *
      * > ℹ️ **Note:** You must specify exactly one of `layer2` and `layer3`.
      */
-    layer2?: pulumi.Input<inputs.AggregateInterfaceLayer2>;
+    layer2?: pulumi.Input<inputs.AggregateInterfaceLayer2 | undefined>;
     /**
      * Aggregate Interface Layer 3 configuration
      *
      * > ℹ️ **Note:** You must specify exactly one of `layer2` and `layer3`.
      */
-    layer3?: pulumi.Input<inputs.AggregateInterfaceLayer3>;
+    layer3?: pulumi.Input<inputs.AggregateInterfaceLayer3 | undefined>;
     /**
      * Aggregate interface name
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * The snippet in which the resource is defined
      *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
-    snippet?: pulumi.Input<string>;
+    snippet?: pulumi.Input<string | undefined>;
 }

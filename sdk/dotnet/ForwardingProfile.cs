@@ -23,7 +23,7 @@ namespace Pulumi.Scm
     /// return await Deployment.RunAsync(() =&gt; 
     /// {
     ///     // User location representing the US East office IP ranges
-    ///     var exampleUsEast = new Scm.Index.ForwardingProfileUserLocation("example_us_east", new()
+    ///     var exampleUsEast = new Scm.ForwardingProfileUserLocation("example_us_east", new()
     ///     {
     ///         Folder = "Mobile Users",
     ///         Name = "us-east-tf",
@@ -36,7 +36,7 @@ namespace Pulumi.Scm
     ///     });
     /// 
     ///     // Corporate destination profile with FQDN and IP ranges
-    ///     var corpDestinations = new Scm.Index.ForwardingProfileDestination("corp_destinations", new()
+    ///     var corpDestinations = new Scm.ForwardingProfileDestination("corp_destinations", new()
     ///     {
     ///         Folder = "Mobile Users",
     ///         Name = "corp-destinations-combined",
@@ -70,7 +70,7 @@ namespace Pulumi.Scm
     ///     });
     /// 
     ///     // Basic Global Protect proxy-based forwarding profile with a single forwarding rule
-    ///     var exampleGpProxyBasic = new Scm.Index.ForwardingProfile("example_gp_proxy_basic", new()
+    ///     var exampleGpProxyBasic = new Scm.ForwardingProfile("example_gp_proxy_basic", new()
     ///     {
     ///         Folder = "Mobile Users",
     ///         Name = "example-gp-proxy-basic",
@@ -100,7 +100,7 @@ namespace Pulumi.Scm
     ///     });
     /// 
     ///     // Global Protect proxy-based forwarding profile with block rule and multiple forwarding rules
-    ///     var exampleGpProxyFull = new Scm.Index.ForwardingProfile("example_gp_proxy_full", new()
+    ///     var exampleGpProxyFull = new Scm.ForwardingProfile("example_gp_proxy_full", new()
     ///     {
     ///         Folder = "Mobile Users",
     ///         Name = "example-gp-proxy-full",
@@ -155,7 +155,7 @@ namespace Pulumi.Scm
     ///     });
     /// 
     ///     // PAC file based forwarding profile
-    ///     var examplePacFile = new Scm.Index.ForwardingProfile("example_pac_file", new()
+    ///     var examplePacFile = new Scm.ForwardingProfile("example_pac_file", new()
     ///     {
     ///         Folder = "Mobile Users",
     ///         Name = "example-pac-file",
@@ -187,7 +187,7 @@ namespace Pulumi.Scm
     ///     });
     /// 
     ///     // ZTNA agent-based forwarding profile with block rule and forwarding rules
-    ///     var exampleZtnaAgent = new Scm.Index.ForwardingProfile("example_ztna_agent", new()
+    ///     var exampleZtnaAgent = new Scm.ForwardingProfile("example_ztna_agent", new()
     ///     {
     ///         Folder = "Mobile Users",
     ///         Name = "example-ztna-agent",

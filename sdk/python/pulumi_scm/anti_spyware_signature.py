@@ -23,18 +23,18 @@ class AntiSpywareSignatureArgs:
     def __init__(__self__, *,
                  threat_id: pulumi.Input[_builtins.str],
                  threatname: pulumi.Input[_builtins.str],
-                 bugtraqs: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 comment: Optional[pulumi.Input[_builtins.str]] = None,
-                 cves: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 default_action: Optional[pulumi.Input['AntiSpywareSignatureDefaultActionArgs']] = None,
-                 device: Optional[pulumi.Input[_builtins.str]] = None,
-                 direction: Optional[pulumi.Input[_builtins.str]] = None,
-                 folder: Optional[pulumi.Input[_builtins.str]] = None,
-                 references: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 severity: Optional[pulumi.Input[_builtins.str]] = None,
-                 signature: Optional[pulumi.Input['AntiSpywareSignatureSignatureArgs']] = None,
-                 snippet: Optional[pulumi.Input[_builtins.str]] = None,
-                 vendors: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None):
+                 bugtraqs: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 comment: pulumi.Input[Optional[_builtins.str]] = None,
+                 cves: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 default_action: pulumi.Input[Optional['AntiSpywareSignatureDefaultActionArgs']] = None,
+                 device: pulumi.Input[Optional[_builtins.str]] = None,
+                 direction: pulumi.Input[Optional[_builtins.str]] = None,
+                 folder: pulumi.Input[Optional[_builtins.str]] = None,
+                 references: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 severity: pulumi.Input[Optional[_builtins.str]] = None,
+                 signature: pulumi.Input[Optional['AntiSpywareSignatureSignatureArgs']] = None,
+                 snippet: pulumi.Input[Optional[_builtins.str]] = None,
+                 vendors: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None):
         """
         The set of arguments for constructing a AntiSpywareSignature resource.
 
@@ -110,79 +110,79 @@ class AntiSpywareSignatureArgs:
 
     @_builtins.property
     @pulumi.getter
-    def bugtraqs(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def bugtraqs(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         Bugtraq
         """
         return pulumi.get(self, "bugtraqs")
 
     @bugtraqs.setter
-    def bugtraqs(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def bugtraqs(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "bugtraqs", value)
 
     @_builtins.property
     @pulumi.getter
-    def comment(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def comment(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Comment
         """
         return pulumi.get(self, "comment")
 
     @comment.setter
-    def comment(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def comment(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "comment", value)
 
     @_builtins.property
     @pulumi.getter
-    def cves(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def cves(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         Cve
         """
         return pulumi.get(self, "cves")
 
     @cves.setter
-    def cves(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def cves(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "cves", value)
 
     @_builtins.property
     @pulumi.getter(name="defaultAction")
-    def default_action(self) -> Optional[pulumi.Input['AntiSpywareSignatureDefaultActionArgs']]:
+    def default_action(self) -> pulumi.Input[Optional['AntiSpywareSignatureDefaultActionArgs']]:
         """
         anti spyware signature default action
         """
         return pulumi.get(self, "default_action")
 
     @default_action.setter
-    def default_action(self, value: Optional[pulumi.Input['AntiSpywareSignatureDefaultActionArgs']]):
+    def default_action(self, value: pulumi.Input[Optional['AntiSpywareSignatureDefaultActionArgs']]):
         pulumi.set(self, "default_action", value)
 
     @_builtins.property
     @pulumi.getter
-    def device(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def device(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The device in which the resource is defined
         """
         return pulumi.get(self, "device")
 
     @device.setter
-    def device(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def device(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "device", value)
 
     @_builtins.property
     @pulumi.getter
-    def direction(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def direction(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Direction
         """
         return pulumi.get(self, "direction")
 
     @direction.setter
-    def direction(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def direction(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "direction", value)
 
     @_builtins.property
     @pulumi.getter
-    def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def folder(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
 
@@ -191,48 +191,48 @@ class AntiSpywareSignatureArgs:
         return pulumi.get(self, "folder")
 
     @folder.setter
-    def folder(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def folder(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "folder", value)
 
     @_builtins.property
     @pulumi.getter
-    def references(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def references(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         Reference
         """
         return pulumi.get(self, "references")
 
     @references.setter
-    def references(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def references(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "references", value)
 
     @_builtins.property
     @pulumi.getter
-    def severity(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def severity(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Severity
         """
         return pulumi.get(self, "severity")
 
     @severity.setter
-    def severity(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def severity(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "severity", value)
 
     @_builtins.property
     @pulumi.getter
-    def signature(self) -> Optional[pulumi.Input['AntiSpywareSignatureSignatureArgs']]:
+    def signature(self) -> pulumi.Input[Optional['AntiSpywareSignatureSignatureArgs']]:
         """
         anti spyware signature
         """
         return pulumi.get(self, "signature")
 
     @signature.setter
-    def signature(self, value: Optional[pulumi.Input['AntiSpywareSignatureSignatureArgs']]):
+    def signature(self, value: pulumi.Input[Optional['AntiSpywareSignatureSignatureArgs']]):
         pulumi.set(self, "signature", value)
 
     @_builtins.property
     @pulumi.getter
-    def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def snippet(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
 
@@ -241,40 +241,40 @@ class AntiSpywareSignatureArgs:
         return pulumi.get(self, "snippet")
 
     @snippet.setter
-    def snippet(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def snippet(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "snippet", value)
 
     @_builtins.property
     @pulumi.getter
-    def vendors(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def vendors(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         Vendor
         """
         return pulumi.get(self, "vendors")
 
     @vendors.setter
-    def vendors(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def vendors(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "vendors", value)
 
 
 @pulumi.input_type
 class _AntiSpywareSignatureState:
     def __init__(__self__, *,
-                 bugtraqs: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 comment: Optional[pulumi.Input[_builtins.str]] = None,
-                 cves: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 default_action: Optional[pulumi.Input['AntiSpywareSignatureDefaultActionArgs']] = None,
-                 device: Optional[pulumi.Input[_builtins.str]] = None,
-                 direction: Optional[pulumi.Input[_builtins.str]] = None,
-                 folder: Optional[pulumi.Input[_builtins.str]] = None,
-                 references: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 severity: Optional[pulumi.Input[_builtins.str]] = None,
-                 signature: Optional[pulumi.Input['AntiSpywareSignatureSignatureArgs']] = None,
-                 snippet: Optional[pulumi.Input[_builtins.str]] = None,
-                 tfid: Optional[pulumi.Input[_builtins.str]] = None,
-                 threat_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 threatname: Optional[pulumi.Input[_builtins.str]] = None,
-                 vendors: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None):
+                 bugtraqs: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 comment: pulumi.Input[Optional[_builtins.str]] = None,
+                 cves: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 default_action: pulumi.Input[Optional['AntiSpywareSignatureDefaultActionArgs']] = None,
+                 device: pulumi.Input[Optional[_builtins.str]] = None,
+                 direction: pulumi.Input[Optional[_builtins.str]] = None,
+                 folder: pulumi.Input[Optional[_builtins.str]] = None,
+                 references: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 severity: pulumi.Input[Optional[_builtins.str]] = None,
+                 signature: pulumi.Input[Optional['AntiSpywareSignatureSignatureArgs']] = None,
+                 snippet: pulumi.Input[Optional[_builtins.str]] = None,
+                 tfid: pulumi.Input[Optional[_builtins.str]] = None,
+                 threat_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 threatname: pulumi.Input[Optional[_builtins.str]] = None,
+                 vendors: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None):
         """
         Input properties used for looking up and filtering AntiSpywareSignature resources.
 
@@ -331,79 +331,79 @@ class _AntiSpywareSignatureState:
 
     @_builtins.property
     @pulumi.getter
-    def bugtraqs(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def bugtraqs(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         Bugtraq
         """
         return pulumi.get(self, "bugtraqs")
 
     @bugtraqs.setter
-    def bugtraqs(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def bugtraqs(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "bugtraqs", value)
 
     @_builtins.property
     @pulumi.getter
-    def comment(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def comment(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Comment
         """
         return pulumi.get(self, "comment")
 
     @comment.setter
-    def comment(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def comment(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "comment", value)
 
     @_builtins.property
     @pulumi.getter
-    def cves(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def cves(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         Cve
         """
         return pulumi.get(self, "cves")
 
     @cves.setter
-    def cves(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def cves(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "cves", value)
 
     @_builtins.property
     @pulumi.getter(name="defaultAction")
-    def default_action(self) -> Optional[pulumi.Input['AntiSpywareSignatureDefaultActionArgs']]:
+    def default_action(self) -> pulumi.Input[Optional['AntiSpywareSignatureDefaultActionArgs']]:
         """
         anti spyware signature default action
         """
         return pulumi.get(self, "default_action")
 
     @default_action.setter
-    def default_action(self, value: Optional[pulumi.Input['AntiSpywareSignatureDefaultActionArgs']]):
+    def default_action(self, value: pulumi.Input[Optional['AntiSpywareSignatureDefaultActionArgs']]):
         pulumi.set(self, "default_action", value)
 
     @_builtins.property
     @pulumi.getter
-    def device(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def device(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The device in which the resource is defined
         """
         return pulumi.get(self, "device")
 
     @device.setter
-    def device(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def device(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "device", value)
 
     @_builtins.property
     @pulumi.getter
-    def direction(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def direction(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Direction
         """
         return pulumi.get(self, "direction")
 
     @direction.setter
-    def direction(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def direction(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "direction", value)
 
     @_builtins.property
     @pulumi.getter
-    def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def folder(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
 
@@ -412,48 +412,48 @@ class _AntiSpywareSignatureState:
         return pulumi.get(self, "folder")
 
     @folder.setter
-    def folder(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def folder(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "folder", value)
 
     @_builtins.property
     @pulumi.getter
-    def references(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def references(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         Reference
         """
         return pulumi.get(self, "references")
 
     @references.setter
-    def references(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def references(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "references", value)
 
     @_builtins.property
     @pulumi.getter
-    def severity(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def severity(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Severity
         """
         return pulumi.get(self, "severity")
 
     @severity.setter
-    def severity(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def severity(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "severity", value)
 
     @_builtins.property
     @pulumi.getter
-    def signature(self) -> Optional[pulumi.Input['AntiSpywareSignatureSignatureArgs']]:
+    def signature(self) -> pulumi.Input[Optional['AntiSpywareSignatureSignatureArgs']]:
         """
         anti spyware signature
         """
         return pulumi.get(self, "signature")
 
     @signature.setter
-    def signature(self, value: Optional[pulumi.Input['AntiSpywareSignatureSignatureArgs']]):
+    def signature(self, value: pulumi.Input[Optional['AntiSpywareSignatureSignatureArgs']]):
         pulumi.set(self, "signature", value)
 
     @_builtins.property
     @pulumi.getter
-    def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def snippet(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
 
@@ -462,55 +462,55 @@ class _AntiSpywareSignatureState:
         return pulumi.get(self, "snippet")
 
     @snippet.setter
-    def snippet(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def snippet(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "snippet", value)
 
     @_builtins.property
     @pulumi.getter
-    def tfid(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def tfid(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The Terraform ID.
         """
         return pulumi.get(self, "tfid")
 
     @tfid.setter
-    def tfid(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def tfid(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "tfid", value)
 
     @_builtins.property
     @pulumi.getter(name="threatId")
-    def threat_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def threat_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         threat id range \\n\\n and \\n\\n
         """
         return pulumi.get(self, "threat_id")
 
     @threat_id.setter
-    def threat_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def threat_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "threat_id", value)
 
     @_builtins.property
     @pulumi.getter
-    def threatname(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def threatname(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Threatname
         """
         return pulumi.get(self, "threatname")
 
     @threatname.setter
-    def threatname(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def threatname(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "threatname", value)
 
     @_builtins.property
     @pulumi.getter
-    def vendors(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def vendors(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         Vendor
         """
         return pulumi.get(self, "vendors")
 
     @vendors.setter
-    def vendors(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def vendors(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "vendors", value)
 
 
@@ -520,20 +520,20 @@ class AntiSpywareSignature(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 bugtraqs: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 comment: Optional[pulumi.Input[_builtins.str]] = None,
-                 cves: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 default_action: Optional[pulumi.Input[Union['AntiSpywareSignatureDefaultActionArgs', 'AntiSpywareSignatureDefaultActionArgsDict']]] = None,
-                 device: Optional[pulumi.Input[_builtins.str]] = None,
-                 direction: Optional[pulumi.Input[_builtins.str]] = None,
-                 folder: Optional[pulumi.Input[_builtins.str]] = None,
-                 references: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 severity: Optional[pulumi.Input[_builtins.str]] = None,
-                 signature: Optional[pulumi.Input[Union['AntiSpywareSignatureSignatureArgs', 'AntiSpywareSignatureSignatureArgsDict']]] = None,
-                 snippet: Optional[pulumi.Input[_builtins.str]] = None,
-                 threat_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 threatname: Optional[pulumi.Input[_builtins.str]] = None,
-                 vendors: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 bugtraqs: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 comment: pulumi.Input[Optional[_builtins.str]] = None,
+                 cves: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 default_action: pulumi.Input[Optional[Union['AntiSpywareSignatureDefaultActionArgs', 'AntiSpywareSignatureDefaultActionArgsDict']]] = None,
+                 device: pulumi.Input[Optional[_builtins.str]] = None,
+                 direction: pulumi.Input[Optional[_builtins.str]] = None,
+                 folder: pulumi.Input[Optional[_builtins.str]] = None,
+                 references: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 severity: pulumi.Input[Optional[_builtins.str]] = None,
+                 signature: pulumi.Input[Optional[Union['AntiSpywareSignatureSignatureArgs', 'AntiSpywareSignatureSignatureArgsDict']]] = None,
+                 snippet: pulumi.Input[Optional[_builtins.str]] = None,
+                 threat_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 threatname: pulumi.Input[Optional[_builtins.str]] = None,
+                 vendors: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  __props__=None):
         """
         AntiSpywareSignature resource
@@ -699,20 +699,20 @@ class AntiSpywareSignature(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 bugtraqs: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 comment: Optional[pulumi.Input[_builtins.str]] = None,
-                 cves: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 default_action: Optional[pulumi.Input[Union['AntiSpywareSignatureDefaultActionArgs', 'AntiSpywareSignatureDefaultActionArgsDict']]] = None,
-                 device: Optional[pulumi.Input[_builtins.str]] = None,
-                 direction: Optional[pulumi.Input[_builtins.str]] = None,
-                 folder: Optional[pulumi.Input[_builtins.str]] = None,
-                 references: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 severity: Optional[pulumi.Input[_builtins.str]] = None,
-                 signature: Optional[pulumi.Input[Union['AntiSpywareSignatureSignatureArgs', 'AntiSpywareSignatureSignatureArgsDict']]] = None,
-                 snippet: Optional[pulumi.Input[_builtins.str]] = None,
-                 threat_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 threatname: Optional[pulumi.Input[_builtins.str]] = None,
-                 vendors: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 bugtraqs: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 comment: pulumi.Input[Optional[_builtins.str]] = None,
+                 cves: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 default_action: pulumi.Input[Optional[Union['AntiSpywareSignatureDefaultActionArgs', 'AntiSpywareSignatureDefaultActionArgsDict']]] = None,
+                 device: pulumi.Input[Optional[_builtins.str]] = None,
+                 direction: pulumi.Input[Optional[_builtins.str]] = None,
+                 folder: pulumi.Input[Optional[_builtins.str]] = None,
+                 references: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 severity: pulumi.Input[Optional[_builtins.str]] = None,
+                 signature: pulumi.Input[Optional[Union['AntiSpywareSignatureSignatureArgs', 'AntiSpywareSignatureSignatureArgsDict']]] = None,
+                 snippet: pulumi.Input[Optional[_builtins.str]] = None,
+                 threat_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 threatname: pulumi.Input[Optional[_builtins.str]] = None,
+                 vendors: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -751,21 +751,21 @@ class AntiSpywareSignature(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            bugtraqs: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-            comment: Optional[pulumi.Input[_builtins.str]] = None,
-            cves: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-            default_action: Optional[pulumi.Input[Union['AntiSpywareSignatureDefaultActionArgs', 'AntiSpywareSignatureDefaultActionArgsDict']]] = None,
-            device: Optional[pulumi.Input[_builtins.str]] = None,
-            direction: Optional[pulumi.Input[_builtins.str]] = None,
-            folder: Optional[pulumi.Input[_builtins.str]] = None,
-            references: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-            severity: Optional[pulumi.Input[_builtins.str]] = None,
-            signature: Optional[pulumi.Input[Union['AntiSpywareSignatureSignatureArgs', 'AntiSpywareSignatureSignatureArgsDict']]] = None,
-            snippet: Optional[pulumi.Input[_builtins.str]] = None,
-            tfid: Optional[pulumi.Input[_builtins.str]] = None,
-            threat_id: Optional[pulumi.Input[_builtins.str]] = None,
-            threatname: Optional[pulumi.Input[_builtins.str]] = None,
-            vendors: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None) -> 'AntiSpywareSignature':
+            bugtraqs: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            comment: pulumi.Input[Optional[_builtins.str]] = None,
+            cves: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            default_action: pulumi.Input[Optional[Union['AntiSpywareSignatureDefaultActionArgs', 'AntiSpywareSignatureDefaultActionArgsDict']]] = None,
+            device: pulumi.Input[Optional[_builtins.str]] = None,
+            direction: pulumi.Input[Optional[_builtins.str]] = None,
+            folder: pulumi.Input[Optional[_builtins.str]] = None,
+            references: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            severity: pulumi.Input[Optional[_builtins.str]] = None,
+            signature: pulumi.Input[Optional[Union['AntiSpywareSignatureSignatureArgs', 'AntiSpywareSignatureSignatureArgsDict']]] = None,
+            snippet: pulumi.Input[Optional[_builtins.str]] = None,
+            tfid: pulumi.Input[Optional[_builtins.str]] = None,
+            threat_id: pulumi.Input[Optional[_builtins.str]] = None,
+            threatname: pulumi.Input[Optional[_builtins.str]] = None,
+            vendors: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None) -> 'AntiSpywareSignature':
         """
         Get an existing AntiSpywareSignature resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

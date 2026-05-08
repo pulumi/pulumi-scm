@@ -132,5 +132,5 @@ export interface GetAutoVpnClusterOutputArgs {
     /**
      * VPN cluster name
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
 }

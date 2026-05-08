@@ -189,8 +189,8 @@ def get_auto_vpn_cluster(id: Optional[_builtins.str] = None,
         name=pulumi.get(__ret__, 'name'),
         tfid=pulumi.get(__ret__, 'tfid'),
         type=pulumi.get(__ret__, 'type'))
-def get_auto_vpn_cluster_output(id: Optional[pulumi.Input[_builtins.str]] = None,
-                                name: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
+def get_auto_vpn_cluster_output(id: pulumi.Input[Optional[_builtins.str]] = None,
+                                name: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
                                 opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetAutoVpnClusterResult]:
     """
     AutoVpnCluster data source

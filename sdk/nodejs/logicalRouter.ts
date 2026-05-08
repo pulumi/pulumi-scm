@@ -284,35 +284,35 @@ export interface LogicalRouterState {
     /**
      * The device in which the resource is defined
      */
-    device?: pulumi.Input<string>;
+    device?: pulumi.Input<string | undefined>;
     /**
      * The folder in which the resource is defined
      *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
-    folder?: pulumi.Input<string>;
+    folder?: pulumi.Input<string | undefined>;
     /**
      * Name
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Routing stack
      */
-    routingStack?: pulumi.Input<string>;
+    routingStack?: pulumi.Input<string | undefined>;
     /**
      * The snippet in which the resource is defined
      *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
-    snippet?: pulumi.Input<string>;
+    snippet?: pulumi.Input<string | undefined>;
     /**
      * The Terraform ID.
      */
-    tfid?: pulumi.Input<string>;
+    tfid?: pulumi.Input<string | undefined>;
     /**
      * Vrf
      */
-    vrves?: pulumi.Input<pulumi.Input<inputs.LogicalRouterVrf>[]>;
+    vrves?: pulumi.Input<pulumi.Input<inputs.LogicalRouterVrf>[] | undefined>;
 }
 
 /**
@@ -322,29 +322,29 @@ export interface LogicalRouterArgs {
     /**
      * The device in which the resource is defined
      */
-    device?: pulumi.Input<string>;
+    device?: pulumi.Input<string | undefined>;
     /**
      * The folder in which the resource is defined
      *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
-    folder?: pulumi.Input<string>;
+    folder?: pulumi.Input<string | undefined>;
     /**
      * Name
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Routing stack
      */
-    routingStack?: pulumi.Input<string>;
+    routingStack?: pulumi.Input<string | undefined>;
     /**
      * The snippet in which the resource is defined
      *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
-    snippet?: pulumi.Input<string>;
+    snippet?: pulumi.Input<string | undefined>;
     /**
      * Vrf
      */
-    vrves?: pulumi.Input<pulumi.Input<inputs.LogicalRouterVrf>[]>;
+    vrves?: pulumi.Input<pulumi.Input<inputs.LogicalRouterVrf>[] | undefined>;
 }

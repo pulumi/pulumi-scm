@@ -24,7 +24,7 @@ namespace Pulumi.Scm
     /// {
     ///     // This file is embedded using go:embed
     ///     // IP addresses only
-    ///     var scmUserLocation1 = new Scm.Index.ForwardingProfileUserLocation("scm_user_location_1", new()
+    ///     var scmUserLocation1 = new Scm.ForwardingProfileUserLocation("scm_user_location_1", new()
     ///     {
     ///         Folder = "Mobile Users",
     ///         Name = "tf_user_location_1",
@@ -37,7 +37,7 @@ namespace Pulumi.Scm
     ///     });
     /// 
     ///     // Internal host detection only
-    ///     var scmUserLocation2 = new Scm.Index.ForwardingProfileUserLocation("scm_user_location_2", new()
+    ///     var scmUserLocation2 = new Scm.ForwardingProfileUserLocation("scm_user_location_2", new()
     ///     {
     ///         Folder = "Mobile Users",
     ///         Name = "tf_user_location_2",
@@ -50,7 +50,7 @@ namespace Pulumi.Scm
     ///     });
     /// 
     ///     // Multiple IP addresses with wildcard
-    ///     var scmUserLocation4 = new Scm.Index.ForwardingProfileUserLocation("scm_user_location_4", new()
+    ///     var scmUserLocation4 = new Scm.ForwardingProfileUserLocation("scm_user_location_4", new()
     ///     {
     ///         Folder = "Mobile Users",
     ///         Name = "tf_user_location_4",

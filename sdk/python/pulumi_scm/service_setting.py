@@ -21,10 +21,10 @@ __all__ = ['ServiceSettingArgs', 'ServiceSetting']
 @pulumi.input_type
 class ServiceSettingArgs:
     def __init__(__self__, *,
-                 device: Optional[pulumi.Input[_builtins.str]] = None,
-                 folder: Optional[pulumi.Input[_builtins.str]] = None,
-                 services: Optional[pulumi.Input['ServiceSettingServicesArgs']] = None,
-                 snippet: Optional[pulumi.Input[_builtins.str]] = None):
+                 device: pulumi.Input[Optional[_builtins.str]] = None,
+                 folder: pulumi.Input[Optional[_builtins.str]] = None,
+                 services: pulumi.Input[Optional['ServiceSettingServicesArgs']] = None,
+                 snippet: pulumi.Input[Optional[_builtins.str]] = None):
         """
         The set of arguments for constructing a ServiceSetting resource.
 
@@ -48,19 +48,19 @@ class ServiceSettingArgs:
 
     @_builtins.property
     @pulumi.getter
-    def device(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def device(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The device in which the resource is defined
         """
         return pulumi.get(self, "device")
 
     @device.setter
-    def device(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def device(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "device", value)
 
     @_builtins.property
     @pulumi.getter
-    def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def folder(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
 
@@ -69,24 +69,24 @@ class ServiceSettingArgs:
         return pulumi.get(self, "folder")
 
     @folder.setter
-    def folder(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def folder(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "folder", value)
 
     @_builtins.property
     @pulumi.getter
-    def services(self) -> Optional[pulumi.Input['ServiceSettingServicesArgs']]:
+    def services(self) -> pulumi.Input[Optional['ServiceSettingServicesArgs']]:
         """
         Services
         """
         return pulumi.get(self, "services")
 
     @services.setter
-    def services(self, value: Optional[pulumi.Input['ServiceSettingServicesArgs']]):
+    def services(self, value: pulumi.Input[Optional['ServiceSettingServicesArgs']]):
         pulumi.set(self, "services", value)
 
     @_builtins.property
     @pulumi.getter
-    def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def snippet(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
 
@@ -95,19 +95,19 @@ class ServiceSettingArgs:
         return pulumi.get(self, "snippet")
 
     @snippet.setter
-    def snippet(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def snippet(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "snippet", value)
 
 
 @pulumi.input_type
 class _ServiceSettingState:
     def __init__(__self__, *,
-                 device: Optional[pulumi.Input[_builtins.str]] = None,
-                 encrypted_values: Optional[pulumi.Input[Mapping[str, pulumi.Input[_builtins.str]]]] = None,
-                 folder: Optional[pulumi.Input[_builtins.str]] = None,
-                 services: Optional[pulumi.Input['ServiceSettingServicesArgs']] = None,
-                 snippet: Optional[pulumi.Input[_builtins.str]] = None,
-                 tfid: Optional[pulumi.Input[_builtins.str]] = None):
+                 device: pulumi.Input[Optional[_builtins.str]] = None,
+                 encrypted_values: pulumi.Input[Optional[Mapping[str, pulumi.Input[_builtins.str]]]] = None,
+                 folder: pulumi.Input[Optional[_builtins.str]] = None,
+                 services: pulumi.Input[Optional['ServiceSettingServicesArgs']] = None,
+                 snippet: pulumi.Input[Optional[_builtins.str]] = None,
+                 tfid: pulumi.Input[Optional[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering ServiceSetting resources.
 
@@ -137,31 +137,31 @@ class _ServiceSettingState:
 
     @_builtins.property
     @pulumi.getter
-    def device(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def device(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The device in which the resource is defined
         """
         return pulumi.get(self, "device")
 
     @device.setter
-    def device(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def device(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "device", value)
 
     @_builtins.property
     @pulumi.getter(name="encryptedValues")
-    def encrypted_values(self) -> Optional[pulumi.Input[Mapping[str, pulumi.Input[_builtins.str]]]]:
+    def encrypted_values(self) -> pulumi.Input[Optional[Mapping[str, pulumi.Input[_builtins.str]]]]:
         """
         Map of sensitive values returned from the API.
         """
         return pulumi.get(self, "encrypted_values")
 
     @encrypted_values.setter
-    def encrypted_values(self, value: Optional[pulumi.Input[Mapping[str, pulumi.Input[_builtins.str]]]]):
+    def encrypted_values(self, value: pulumi.Input[Optional[Mapping[str, pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "encrypted_values", value)
 
     @_builtins.property
     @pulumi.getter
-    def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def folder(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
 
@@ -170,24 +170,24 @@ class _ServiceSettingState:
         return pulumi.get(self, "folder")
 
     @folder.setter
-    def folder(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def folder(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "folder", value)
 
     @_builtins.property
     @pulumi.getter
-    def services(self) -> Optional[pulumi.Input['ServiceSettingServicesArgs']]:
+    def services(self) -> pulumi.Input[Optional['ServiceSettingServicesArgs']]:
         """
         Services
         """
         return pulumi.get(self, "services")
 
     @services.setter
-    def services(self, value: Optional[pulumi.Input['ServiceSettingServicesArgs']]):
+    def services(self, value: pulumi.Input[Optional['ServiceSettingServicesArgs']]):
         pulumi.set(self, "services", value)
 
     @_builtins.property
     @pulumi.getter
-    def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def snippet(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
 
@@ -196,19 +196,19 @@ class _ServiceSettingState:
         return pulumi.get(self, "snippet")
 
     @snippet.setter
-    def snippet(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def snippet(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "snippet", value)
 
     @_builtins.property
     @pulumi.getter
-    def tfid(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def tfid(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The Terraform ID.
         """
         return pulumi.get(self, "tfid")
 
     @tfid.setter
-    def tfid(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def tfid(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "tfid", value)
 
 
@@ -218,10 +218,10 @@ class ServiceSetting(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 device: Optional[pulumi.Input[_builtins.str]] = None,
-                 folder: Optional[pulumi.Input[_builtins.str]] = None,
-                 services: Optional[pulumi.Input[Union['ServiceSettingServicesArgs', 'ServiceSettingServicesArgsDict']]] = None,
-                 snippet: Optional[pulumi.Input[_builtins.str]] = None,
+                 device: pulumi.Input[Optional[_builtins.str]] = None,
+                 folder: pulumi.Input[Optional[_builtins.str]] = None,
+                 services: pulumi.Input[Optional[Union['ServiceSettingServicesArgs', 'ServiceSettingServicesArgsDict']]] = None,
+                 snippet: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
         ServiceSetting resource
@@ -241,8 +241,8 @@ class ServiceSetting(pulumi.CustomResource):
                         "secondary": "10.10.10.11",
                     },
                 },
-                "fqdn_refresh_time": 15,
-                "fqdn_stale_entry_timeout": 1440,
+                "fqdn_refresh_time": float(15),
+                "fqdn_stale_entry_timeout": float(1440),
                 "ntp_servers": {
                     "primary_ntp_server": {
                         "ntp_server_address": "10.10.10.10",
@@ -260,7 +260,7 @@ class ServiceSetting(pulumi.CustomResource):
                 "update_server": "updates.paloaltonetworks.com",
                 "server_verification": True,
                 "secure_proxy_server": "test_proxy_server",
-                "secure_proxy_port": 90,
+                "secure_proxy_port": float(90),
                 "secure_proxy_user": "test_proxy_user",
                 "secure_proxy_password": "test_password",
                 "lcaas_use_proxy": True,
@@ -326,8 +326,8 @@ class ServiceSetting(pulumi.CustomResource):
                         "secondary": "10.10.10.11",
                     },
                 },
-                "fqdn_refresh_time": 15,
-                "fqdn_stale_entry_timeout": 1440,
+                "fqdn_refresh_time": float(15),
+                "fqdn_stale_entry_timeout": float(1440),
                 "ntp_servers": {
                     "primary_ntp_server": {
                         "ntp_server_address": "10.10.10.10",
@@ -345,7 +345,7 @@ class ServiceSetting(pulumi.CustomResource):
                 "update_server": "updates.paloaltonetworks.com",
                 "server_verification": True,
                 "secure_proxy_server": "test_proxy_server",
-                "secure_proxy_port": 90,
+                "secure_proxy_port": float(90),
                 "secure_proxy_user": "test_proxy_user",
                 "secure_proxy_password": "test_password",
                 "lcaas_use_proxy": True,
@@ -391,10 +391,10 @@ class ServiceSetting(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 device: Optional[pulumi.Input[_builtins.str]] = None,
-                 folder: Optional[pulumi.Input[_builtins.str]] = None,
-                 services: Optional[pulumi.Input[Union['ServiceSettingServicesArgs', 'ServiceSettingServicesArgsDict']]] = None,
-                 snippet: Optional[pulumi.Input[_builtins.str]] = None,
+                 device: pulumi.Input[Optional[_builtins.str]] = None,
+                 folder: pulumi.Input[Optional[_builtins.str]] = None,
+                 services: pulumi.Input[Optional[Union['ServiceSettingServicesArgs', 'ServiceSettingServicesArgsDict']]] = None,
+                 snippet: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -422,12 +422,12 @@ class ServiceSetting(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            device: Optional[pulumi.Input[_builtins.str]] = None,
-            encrypted_values: Optional[pulumi.Input[Mapping[str, pulumi.Input[_builtins.str]]]] = None,
-            folder: Optional[pulumi.Input[_builtins.str]] = None,
-            services: Optional[pulumi.Input[Union['ServiceSettingServicesArgs', 'ServiceSettingServicesArgsDict']]] = None,
-            snippet: Optional[pulumi.Input[_builtins.str]] = None,
-            tfid: Optional[pulumi.Input[_builtins.str]] = None) -> 'ServiceSetting':
+            device: pulumi.Input[Optional[_builtins.str]] = None,
+            encrypted_values: pulumi.Input[Optional[Mapping[str, pulumi.Input[_builtins.str]]]] = None,
+            folder: pulumi.Input[Optional[_builtins.str]] = None,
+            services: pulumi.Input[Optional[Union['ServiceSettingServicesArgs', 'ServiceSettingServicesArgsDict']]] = None,
+            snippet: pulumi.Input[Optional[_builtins.str]] = None,
+            tfid: pulumi.Input[Optional[_builtins.str]] = None) -> 'ServiceSetting':
         """
         Get an existing ServiceSetting resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

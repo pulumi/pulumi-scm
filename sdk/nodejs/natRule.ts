@@ -340,83 +340,83 @@ export interface NatRuleState {
     /**
      * Active active device binding
      */
-    activeActiveDeviceBinding?: pulumi.Input<string>;
+    activeActiveDeviceBinding?: pulumi.Input<string | undefined>;
     /**
      * NAT rule description
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * Destination translation
      */
-    destinationTranslation?: pulumi.Input<inputs.NatRuleDestinationTranslation>;
+    destinationTranslation?: pulumi.Input<inputs.NatRuleDestinationTranslation | undefined>;
     /**
      * Destination address(es) of the original packet
      */
-    destinations?: pulumi.Input<pulumi.Input<string>[]>;
+    destinations?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * The device in which the resource is defined
      */
-    device?: pulumi.Input<string>;
+    device?: pulumi.Input<string | undefined>;
     /**
      * Disable NAT rule?
      */
-    disabled?: pulumi.Input<boolean>;
+    disabled?: pulumi.Input<boolean | undefined>;
     /**
      * Dynamic destination translation
      */
-    dynamicDestinationTranslation?: pulumi.Input<inputs.NatRuleDynamicDestinationTranslation>;
+    dynamicDestinationTranslation?: pulumi.Input<inputs.NatRuleDynamicDestinationTranslation | undefined>;
     /**
      * The folder in which the resource is defined
      */
-    folder?: pulumi.Input<string>;
+    folder?: pulumi.Input<string | undefined>;
     /**
      * Source zone(s) of the original packet
      */
-    froms?: pulumi.Input<pulumi.Input<string>[]>;
+    froms?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * NAT rule name
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * NAT type
      */
-    natType?: pulumi.Input<string>;
+    natType?: pulumi.Input<string | undefined>;
     /**
      * The relative position of the rule
      */
-    position?: pulumi.Input<string>;
+    position?: pulumi.Input<string | undefined>;
     /**
      * The service of the original packet
      */
-    service?: pulumi.Input<string>;
+    service?: pulumi.Input<string | undefined>;
     /**
      * The snippet in which the resource is defined
      */
-    snippet?: pulumi.Input<string>;
+    snippet?: pulumi.Input<string | undefined>;
     /**
      * Source translation
      */
-    sourceTranslation?: pulumi.Input<inputs.NatRuleSourceTranslation>;
+    sourceTranslation?: pulumi.Input<inputs.NatRuleSourceTranslation | undefined>;
     /**
      * Source address(es) of the original packet
      */
-    sources?: pulumi.Input<pulumi.Input<string>[]>;
+    sources?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * NAT rule tags
      */
-    tags?: pulumi.Input<pulumi.Input<string>[]>;
+    tags?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * The Terraform ID.
      */
-    tfid?: pulumi.Input<string>;
+    tfid?: pulumi.Input<string | undefined>;
     /**
      * Destination interface of the original packet
      */
-    toInterface?: pulumi.Input<string>;
+    toInterface?: pulumi.Input<string | undefined>;
     /**
      * Destination zone of the original packet
      */
-    tos?: pulumi.Input<pulumi.Input<string>[]>;
+    tos?: pulumi.Input<pulumi.Input<string>[] | undefined>;
 }
 
 /**
@@ -426,15 +426,15 @@ export interface NatRuleArgs {
     /**
      * Active active device binding
      */
-    activeActiveDeviceBinding?: pulumi.Input<string>;
+    activeActiveDeviceBinding?: pulumi.Input<string | undefined>;
     /**
      * NAT rule description
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * Destination translation
      */
-    destinationTranslation?: pulumi.Input<inputs.NatRuleDestinationTranslation>;
+    destinationTranslation?: pulumi.Input<inputs.NatRuleDestinationTranslation | undefined>;
     /**
      * Destination address(es) of the original packet
      */
@@ -442,19 +442,19 @@ export interface NatRuleArgs {
     /**
      * The device in which the resource is defined
      */
-    device?: pulumi.Input<string>;
+    device?: pulumi.Input<string | undefined>;
     /**
      * Disable NAT rule?
      */
-    disabled?: pulumi.Input<boolean>;
+    disabled?: pulumi.Input<boolean | undefined>;
     /**
      * Dynamic destination translation
      */
-    dynamicDestinationTranslation?: pulumi.Input<inputs.NatRuleDynamicDestinationTranslation>;
+    dynamicDestinationTranslation?: pulumi.Input<inputs.NatRuleDynamicDestinationTranslation | undefined>;
     /**
      * The folder in which the resource is defined
      */
-    folder?: pulumi.Input<string>;
+    folder?: pulumi.Input<string | undefined>;
     /**
      * Source zone(s) of the original packet
      */
@@ -462,15 +462,15 @@ export interface NatRuleArgs {
     /**
      * NAT rule name
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * NAT type
      */
-    natType?: pulumi.Input<string>;
+    natType?: pulumi.Input<string | undefined>;
     /**
      * The relative position of the rule
      */
-    position?: pulumi.Input<string>;
+    position?: pulumi.Input<string | undefined>;
     /**
      * The service of the original packet
      */
@@ -478,11 +478,11 @@ export interface NatRuleArgs {
     /**
      * The snippet in which the resource is defined
      */
-    snippet?: pulumi.Input<string>;
+    snippet?: pulumi.Input<string | undefined>;
     /**
      * Source translation
      */
-    sourceTranslation?: pulumi.Input<inputs.NatRuleSourceTranslation>;
+    sourceTranslation?: pulumi.Input<inputs.NatRuleSourceTranslation | undefined>;
     /**
      * Source address(es) of the original packet
      */
@@ -490,11 +490,11 @@ export interface NatRuleArgs {
     /**
      * NAT rule tags
      */
-    tags?: pulumi.Input<pulumi.Input<string>[]>;
+    tags?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Destination interface of the original packet
      */
-    toInterface?: pulumi.Input<string>;
+    toInterface?: pulumi.Input<string | undefined>;
     /**
      * Destination zone of the original packet
      */

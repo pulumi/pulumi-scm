@@ -30,7 +30,7 @@ namespace Pulumi.Scm
         ///     // ------------------------------------------------------------------
         ///     // Data Source List Lookup
         ///     // ------------------------------------------------------------------
-        ///     var allConnectionsInFolder = Scm.Index.GetServiceConnectionList.Invoke(new()
+        ///     var allConnectionsInFolder = Scm.GetServiceConnectionList.Invoke(new()
         ///     {
         ///         Folder = folderScope,
         ///         Limit = 50,
@@ -42,7 +42,7 @@ namespace Pulumi.Scm
         ///         {
         ///             return conn.Name;
         ///         }).ToList(),
-        ///         ["totalConnectionsCount"] = allConnectionsInFolder.Apply(getServiceConnectionListResult =&gt; getServiceConnectionListResult.Datas).Length,
+        ///         ["totalConnectionsCount"] = allConnectionsInFolder.Apply(getServiceConnectionListResult =&gt; getServiceConnectionListResult.Datas).Length(),
         ///     };
         /// });
         /// ```
@@ -69,7 +69,7 @@ namespace Pulumi.Scm
         ///     // ------------------------------------------------------------------
         ///     // Data Source List Lookup
         ///     // ------------------------------------------------------------------
-        ///     var allConnectionsInFolder = Scm.Index.GetServiceConnectionList.Invoke(new()
+        ///     var allConnectionsInFolder = Scm.GetServiceConnectionList.Invoke(new()
         ///     {
         ///         Folder = folderScope,
         ///         Limit = 50,
@@ -81,7 +81,7 @@ namespace Pulumi.Scm
         ///         {
         ///             return conn.Name;
         ///         }).ToList(),
-        ///         ["totalConnectionsCount"] = allConnectionsInFolder.Apply(getServiceConnectionListResult =&gt; getServiceConnectionListResult.Datas).Length,
+        ///         ["totalConnectionsCount"] = allConnectionsInFolder.Apply(getServiceConnectionListResult =&gt; getServiceConnectionListResult.Datas).Length(),
         ///     };
         /// });
         /// ```
@@ -108,7 +108,7 @@ namespace Pulumi.Scm
         ///     // ------------------------------------------------------------------
         ///     // Data Source List Lookup
         ///     // ------------------------------------------------------------------
-        ///     var allConnectionsInFolder = Scm.Index.GetServiceConnectionList.Invoke(new()
+        ///     var allConnectionsInFolder = Scm.GetServiceConnectionList.Invoke(new()
         ///     {
         ///         Folder = folderScope,
         ///         Limit = 50,
@@ -120,7 +120,7 @@ namespace Pulumi.Scm
         ///         {
         ///             return conn.Name;
         ///         }).ToList(),
-        ///         ["totalConnectionsCount"] = allConnectionsInFolder.Apply(getServiceConnectionListResult =&gt; getServiceConnectionListResult.Datas).Length,
+        ///         ["totalConnectionsCount"] = allConnectionsInFolder.Apply(getServiceConnectionListResult =&gt; getServiceConnectionListResult.Datas).Length(),
         ///     };
         /// });
         /// ```

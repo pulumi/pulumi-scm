@@ -13,18 +13,24 @@ namespace Pulumi.Scm
     {
         /// <summary>
         /// Retrieves a listing of config items.
+        /// 
+        /// ## Example Usage
         /// </summary>
         public static Task<GetForwardingProfileSourceApplicationListResult> InvokeAsync(GetForwardingProfileSourceApplicationListArgs? args = null, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.InvokeAsync<GetForwardingProfileSourceApplicationListResult>("scm:index/getForwardingProfileSourceApplicationList:getForwardingProfileSourceApplicationList", args ?? new GetForwardingProfileSourceApplicationListArgs(), options.WithDefaults());
 
         /// <summary>
         /// Retrieves a listing of config items.
+        /// 
+        /// ## Example Usage
         /// </summary>
         public static Output<GetForwardingProfileSourceApplicationListResult> Invoke(GetForwardingProfileSourceApplicationListInvokeArgs? args = null, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetForwardingProfileSourceApplicationListResult>("scm:index/getForwardingProfileSourceApplicationList:getForwardingProfileSourceApplicationList", args ?? new GetForwardingProfileSourceApplicationListInvokeArgs(), options.WithDefaults());
 
         /// <summary>
         /// Retrieves a listing of config items.
+        /// 
+        /// ## Example Usage
         /// </summary>
         public static Output<GetForwardingProfileSourceApplicationListResult> Invoke(GetForwardingProfileSourceApplicationListInvokeArgs args, InvokeOutputOptions options)
             => global::Pulumi.Deployment.Instance.Invoke<GetForwardingProfileSourceApplicationListResult>("scm:index/getForwardingProfileSourceApplicationList:getForwardingProfileSourceApplicationList", args ?? new GetForwardingProfileSourceApplicationListInvokeArgs(), options.WithDefaults());

@@ -343,79 +343,79 @@ export interface EthernetInterfaceState {
     /**
      * Aggregate group
      */
-    aggregateGroup?: pulumi.Input<string>;
+    aggregateGroup?: pulumi.Input<string | undefined>;
     /**
      * Interface description
      */
-    comment?: pulumi.Input<string>;
+    comment?: pulumi.Input<string | undefined>;
     /**
      * Default interface assignment
      */
-    defaultValue?: pulumi.Input<string>;
+    defaultValue?: pulumi.Input<string | undefined>;
     /**
      * The device in which the resource is defined
      *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
-    device?: pulumi.Input<string>;
+    device?: pulumi.Input<string | undefined>;
     /**
      * Map of sensitive values returned from the API.
      */
-    encryptedValues?: pulumi.Input<{[key: string]: pulumi.Input<string>}>;
+    encryptedValues?: pulumi.Input<{[key: string]: pulumi.Input<string>} | undefined>;
     /**
      * The folder in which the resource is defined
      *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
-    folder?: pulumi.Input<string>;
+    folder?: pulumi.Input<string | undefined>;
     /**
      * Layer2
      *
      * > ℹ️ **Note:** You must specify exactly one of `aggregateGroup`, `layer2`, `layer3`, and `tap`.
      */
-    layer2?: pulumi.Input<inputs.EthernetInterfaceLayer2>;
+    layer2?: pulumi.Input<inputs.EthernetInterfaceLayer2 | undefined>;
     /**
      * Ethernet Interface Layer 3 configuration
      *
      * > ℹ️ **Note:** You must specify exactly one of `aggregateGroup`, `layer2`, `layer3`, and `tap`.
      */
-    layer3?: pulumi.Input<inputs.EthernetInterfaceLayer3>;
+    layer3?: pulumi.Input<inputs.EthernetInterfaceLayer3 | undefined>;
     /**
      * Link duplex
      */
-    linkDuplex?: pulumi.Input<string>;
+    linkDuplex?: pulumi.Input<string | undefined>;
     /**
      * Link speed
      */
-    linkSpeed?: pulumi.Input<string>;
+    linkSpeed?: pulumi.Input<string | undefined>;
     /**
      * Link state
      */
-    linkState?: pulumi.Input<string>;
+    linkState?: pulumi.Input<string | undefined>;
     /**
      * Interface name
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Poe
      */
-    poe?: pulumi.Input<inputs.EthernetInterfacePoe>;
+    poe?: pulumi.Input<inputs.EthernetInterfacePoe | undefined>;
     /**
      * The snippet in which the resource is defined
      *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
-    snippet?: pulumi.Input<string>;
+    snippet?: pulumi.Input<string | undefined>;
     /**
      * Tap
      *
      * > ℹ️ **Note:** You must specify exactly one of `aggregateGroup`, `layer2`, `layer3`, and `tap`.
      */
-    tap?: pulumi.Input<inputs.EthernetInterfaceTap>;
+    tap?: pulumi.Input<inputs.EthernetInterfaceTap | undefined>;
     /**
      * The Terraform ID.
      */
-    tfid?: pulumi.Input<string>;
+    tfid?: pulumi.Input<string | undefined>;
 }
 
 /**
@@ -425,69 +425,69 @@ export interface EthernetInterfaceArgs {
     /**
      * Aggregate group
      */
-    aggregateGroup?: pulumi.Input<string>;
+    aggregateGroup?: pulumi.Input<string | undefined>;
     /**
      * Interface description
      */
-    comment?: pulumi.Input<string>;
+    comment?: pulumi.Input<string | undefined>;
     /**
      * Default interface assignment
      */
-    defaultValue?: pulumi.Input<string>;
+    defaultValue?: pulumi.Input<string | undefined>;
     /**
      * The device in which the resource is defined
      *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
-    device?: pulumi.Input<string>;
+    device?: pulumi.Input<string | undefined>;
     /**
      * The folder in which the resource is defined
      *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
-    folder?: pulumi.Input<string>;
+    folder?: pulumi.Input<string | undefined>;
     /**
      * Layer2
      *
      * > ℹ️ **Note:** You must specify exactly one of `aggregateGroup`, `layer2`, `layer3`, and `tap`.
      */
-    layer2?: pulumi.Input<inputs.EthernetInterfaceLayer2>;
+    layer2?: pulumi.Input<inputs.EthernetInterfaceLayer2 | undefined>;
     /**
      * Ethernet Interface Layer 3 configuration
      *
      * > ℹ️ **Note:** You must specify exactly one of `aggregateGroup`, `layer2`, `layer3`, and `tap`.
      */
-    layer3?: pulumi.Input<inputs.EthernetInterfaceLayer3>;
+    layer3?: pulumi.Input<inputs.EthernetInterfaceLayer3 | undefined>;
     /**
      * Link duplex
      */
-    linkDuplex?: pulumi.Input<string>;
+    linkDuplex?: pulumi.Input<string | undefined>;
     /**
      * Link speed
      */
-    linkSpeed?: pulumi.Input<string>;
+    linkSpeed?: pulumi.Input<string | undefined>;
     /**
      * Link state
      */
-    linkState?: pulumi.Input<string>;
+    linkState?: pulumi.Input<string | undefined>;
     /**
      * Interface name
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Poe
      */
-    poe?: pulumi.Input<inputs.EthernetInterfacePoe>;
+    poe?: pulumi.Input<inputs.EthernetInterfacePoe | undefined>;
     /**
      * The snippet in which the resource is defined
      *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
-    snippet?: pulumi.Input<string>;
+    snippet?: pulumi.Input<string | undefined>;
     /**
      * Tap
      *
      * > ℹ️ **Note:** You must specify exactly one of `aggregateGroup`, `layer2`, `layer3`, and `tap`.
      */
-    tap?: pulumi.Input<inputs.EthernetInterfaceTap>;
+    tap?: pulumi.Input<inputs.EthernetInterfaceTap | undefined>;
 }

@@ -21,20 +21,20 @@ __all__ = ['Layer3SubinterfaceArgs', 'Layer3Subinterface']
 @pulumi.input_type
 class Layer3SubinterfaceArgs:
     def __init__(__self__, *,
-                 arps: Optional[pulumi.Input[Sequence[pulumi.Input['Layer3SubinterfaceArpArgs']]]] = None,
-                 comment: Optional[pulumi.Input[_builtins.str]] = None,
-                 ddns_config: Optional[pulumi.Input['Layer3SubinterfaceDdnsConfigArgs']] = None,
-                 device: Optional[pulumi.Input[_builtins.str]] = None,
-                 dhcp_client: Optional[pulumi.Input['Layer3SubinterfaceDhcpClientArgs']] = None,
-                 folder: Optional[pulumi.Input[_builtins.str]] = None,
-                 interface_management_profile: Optional[pulumi.Input[_builtins.str]] = None,
-                 ips: Optional[pulumi.Input[Sequence[pulumi.Input['Layer3SubinterfaceIpArgs']]]] = None,
-                 mtu: Optional[pulumi.Input[_builtins.int]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 netflow_profile: Optional[pulumi.Input[_builtins.str]] = None,
-                 parent_interface: Optional[pulumi.Input[_builtins.str]] = None,
-                 snippet: Optional[pulumi.Input[_builtins.str]] = None,
-                 tag: Optional[pulumi.Input[_builtins.int]] = None):
+                 arps: pulumi.Input[Optional[Sequence[pulumi.Input['Layer3SubinterfaceArpArgs']]]] = None,
+                 comment: pulumi.Input[Optional[_builtins.str]] = None,
+                 ddns_config: pulumi.Input[Optional['Layer3SubinterfaceDdnsConfigArgs']] = None,
+                 device: pulumi.Input[Optional[_builtins.str]] = None,
+                 dhcp_client: pulumi.Input[Optional['Layer3SubinterfaceDhcpClientArgs']] = None,
+                 folder: pulumi.Input[Optional[_builtins.str]] = None,
+                 interface_management_profile: pulumi.Input[Optional[_builtins.str]] = None,
+                 ips: pulumi.Input[Optional[Sequence[pulumi.Input['Layer3SubinterfaceIpArgs']]]] = None,
+                 mtu: pulumi.Input[Optional[_builtins.int]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 netflow_profile: pulumi.Input[Optional[_builtins.str]] = None,
+                 parent_interface: pulumi.Input[Optional[_builtins.str]] = None,
+                 snippet: pulumi.Input[Optional[_builtins.str]] = None,
+                 tag: pulumi.Input[Optional[_builtins.int]] = None):
         """
         The set of arguments for constructing a Layer3Subinterface resource.
 
@@ -92,55 +92,55 @@ class Layer3SubinterfaceArgs:
 
     @_builtins.property
     @pulumi.getter
-    def arps(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['Layer3SubinterfaceArpArgs']]]]:
+    def arps(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['Layer3SubinterfaceArpArgs']]]]:
         """
         Layer 3 sub Interfaces ARP configuration
         """
         return pulumi.get(self, "arps")
 
     @arps.setter
-    def arps(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['Layer3SubinterfaceArpArgs']]]]):
+    def arps(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['Layer3SubinterfaceArpArgs']]]]):
         pulumi.set(self, "arps", value)
 
     @_builtins.property
     @pulumi.getter
-    def comment(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def comment(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Description
         """
         return pulumi.get(self, "comment")
 
     @comment.setter
-    def comment(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def comment(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "comment", value)
 
     @_builtins.property
     @pulumi.getter(name="ddnsConfig")
-    def ddns_config(self) -> Optional[pulumi.Input['Layer3SubinterfaceDdnsConfigArgs']]:
+    def ddns_config(self) -> pulumi.Input[Optional['Layer3SubinterfaceDdnsConfigArgs']]:
         """
         Dynamic DNS configuration specific to the Layer 3 sub Interfaces.
         """
         return pulumi.get(self, "ddns_config")
 
     @ddns_config.setter
-    def ddns_config(self, value: Optional[pulumi.Input['Layer3SubinterfaceDdnsConfigArgs']]):
+    def ddns_config(self, value: pulumi.Input[Optional['Layer3SubinterfaceDdnsConfigArgs']]):
         pulumi.set(self, "ddns_config", value)
 
     @_builtins.property
     @pulumi.getter
-    def device(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def device(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The device in which the resource is defined
         """
         return pulumi.get(self, "device")
 
     @device.setter
-    def device(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def device(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "device", value)
 
     @_builtins.property
     @pulumi.getter(name="dhcpClient")
-    def dhcp_client(self) -> Optional[pulumi.Input['Layer3SubinterfaceDhcpClientArgs']]:
+    def dhcp_client(self) -> pulumi.Input[Optional['Layer3SubinterfaceDhcpClientArgs']]:
         """
         Layer3 sub interfaces DHCP Client Object
 
@@ -149,12 +149,12 @@ class Layer3SubinterfaceArgs:
         return pulumi.get(self, "dhcp_client")
 
     @dhcp_client.setter
-    def dhcp_client(self, value: Optional[pulumi.Input['Layer3SubinterfaceDhcpClientArgs']]):
+    def dhcp_client(self, value: pulumi.Input[Optional['Layer3SubinterfaceDhcpClientArgs']]):
         pulumi.set(self, "dhcp_client", value)
 
     @_builtins.property
     @pulumi.getter
-    def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def folder(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
 
@@ -163,24 +163,24 @@ class Layer3SubinterfaceArgs:
         return pulumi.get(self, "folder")
 
     @folder.setter
-    def folder(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def folder(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "folder", value)
 
     @_builtins.property
     @pulumi.getter(name="interfaceManagementProfile")
-    def interface_management_profile(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def interface_management_profile(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Interface management profile
         """
         return pulumi.get(self, "interface_management_profile")
 
     @interface_management_profile.setter
-    def interface_management_profile(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def interface_management_profile(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "interface_management_profile", value)
 
     @_builtins.property
     @pulumi.getter
-    def ips(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['Layer3SubinterfaceIpArgs']]]]:
+    def ips(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['Layer3SubinterfaceIpArgs']]]]:
         """
         L3 sub-interface IP Parent
 
@@ -189,60 +189,60 @@ class Layer3SubinterfaceArgs:
         return pulumi.get(self, "ips")
 
     @ips.setter
-    def ips(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['Layer3SubinterfaceIpArgs']]]]):
+    def ips(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['Layer3SubinterfaceIpArgs']]]]):
         pulumi.set(self, "ips", value)
 
     @_builtins.property
     @pulumi.getter
-    def mtu(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def mtu(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         MTU
         """
         return pulumi.get(self, "mtu")
 
     @mtu.setter
-    def mtu(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def mtu(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "mtu", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         L3 sub-interface name
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter(name="netflowProfile")
-    def netflow_profile(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def netflow_profile(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Name of Netflow Profile to assign to Interface
         """
         return pulumi.get(self, "netflow_profile")
 
     @netflow_profile.setter
-    def netflow_profile(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def netflow_profile(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "netflow_profile", value)
 
     @_builtins.property
     @pulumi.getter(name="parentInterface")
-    def parent_interface(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def parent_interface(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Parent interface
         """
         return pulumi.get(self, "parent_interface")
 
     @parent_interface.setter
-    def parent_interface(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def parent_interface(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "parent_interface", value)
 
     @_builtins.property
     @pulumi.getter
-    def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def snippet(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
 
@@ -251,40 +251,40 @@ class Layer3SubinterfaceArgs:
         return pulumi.get(self, "snippet")
 
     @snippet.setter
-    def snippet(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def snippet(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "snippet", value)
 
     @_builtins.property
     @pulumi.getter
-    def tag(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def tag(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         VLAN tag
         """
         return pulumi.get(self, "tag")
 
     @tag.setter
-    def tag(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def tag(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "tag", value)
 
 
 @pulumi.input_type
 class _Layer3SubinterfaceState:
     def __init__(__self__, *,
-                 arps: Optional[pulumi.Input[Sequence[pulumi.Input['Layer3SubinterfaceArpArgs']]]] = None,
-                 comment: Optional[pulumi.Input[_builtins.str]] = None,
-                 ddns_config: Optional[pulumi.Input['Layer3SubinterfaceDdnsConfigArgs']] = None,
-                 device: Optional[pulumi.Input[_builtins.str]] = None,
-                 dhcp_client: Optional[pulumi.Input['Layer3SubinterfaceDhcpClientArgs']] = None,
-                 folder: Optional[pulumi.Input[_builtins.str]] = None,
-                 interface_management_profile: Optional[pulumi.Input[_builtins.str]] = None,
-                 ips: Optional[pulumi.Input[Sequence[pulumi.Input['Layer3SubinterfaceIpArgs']]]] = None,
-                 mtu: Optional[pulumi.Input[_builtins.int]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 netflow_profile: Optional[pulumi.Input[_builtins.str]] = None,
-                 parent_interface: Optional[pulumi.Input[_builtins.str]] = None,
-                 snippet: Optional[pulumi.Input[_builtins.str]] = None,
-                 tag: Optional[pulumi.Input[_builtins.int]] = None,
-                 tfid: Optional[pulumi.Input[_builtins.str]] = None):
+                 arps: pulumi.Input[Optional[Sequence[pulumi.Input['Layer3SubinterfaceArpArgs']]]] = None,
+                 comment: pulumi.Input[Optional[_builtins.str]] = None,
+                 ddns_config: pulumi.Input[Optional['Layer3SubinterfaceDdnsConfigArgs']] = None,
+                 device: pulumi.Input[Optional[_builtins.str]] = None,
+                 dhcp_client: pulumi.Input[Optional['Layer3SubinterfaceDhcpClientArgs']] = None,
+                 folder: pulumi.Input[Optional[_builtins.str]] = None,
+                 interface_management_profile: pulumi.Input[Optional[_builtins.str]] = None,
+                 ips: pulumi.Input[Optional[Sequence[pulumi.Input['Layer3SubinterfaceIpArgs']]]] = None,
+                 mtu: pulumi.Input[Optional[_builtins.int]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 netflow_profile: pulumi.Input[Optional[_builtins.str]] = None,
+                 parent_interface: pulumi.Input[Optional[_builtins.str]] = None,
+                 snippet: pulumi.Input[Optional[_builtins.str]] = None,
+                 tag: pulumi.Input[Optional[_builtins.int]] = None,
+                 tfid: pulumi.Input[Optional[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering Layer3Subinterface resources.
 
@@ -345,55 +345,55 @@ class _Layer3SubinterfaceState:
 
     @_builtins.property
     @pulumi.getter
-    def arps(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['Layer3SubinterfaceArpArgs']]]]:
+    def arps(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['Layer3SubinterfaceArpArgs']]]]:
         """
         Layer 3 sub Interfaces ARP configuration
         """
         return pulumi.get(self, "arps")
 
     @arps.setter
-    def arps(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['Layer3SubinterfaceArpArgs']]]]):
+    def arps(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['Layer3SubinterfaceArpArgs']]]]):
         pulumi.set(self, "arps", value)
 
     @_builtins.property
     @pulumi.getter
-    def comment(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def comment(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Description
         """
         return pulumi.get(self, "comment")
 
     @comment.setter
-    def comment(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def comment(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "comment", value)
 
     @_builtins.property
     @pulumi.getter(name="ddnsConfig")
-    def ddns_config(self) -> Optional[pulumi.Input['Layer3SubinterfaceDdnsConfigArgs']]:
+    def ddns_config(self) -> pulumi.Input[Optional['Layer3SubinterfaceDdnsConfigArgs']]:
         """
         Dynamic DNS configuration specific to the Layer 3 sub Interfaces.
         """
         return pulumi.get(self, "ddns_config")
 
     @ddns_config.setter
-    def ddns_config(self, value: Optional[pulumi.Input['Layer3SubinterfaceDdnsConfigArgs']]):
+    def ddns_config(self, value: pulumi.Input[Optional['Layer3SubinterfaceDdnsConfigArgs']]):
         pulumi.set(self, "ddns_config", value)
 
     @_builtins.property
     @pulumi.getter
-    def device(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def device(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The device in which the resource is defined
         """
         return pulumi.get(self, "device")
 
     @device.setter
-    def device(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def device(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "device", value)
 
     @_builtins.property
     @pulumi.getter(name="dhcpClient")
-    def dhcp_client(self) -> Optional[pulumi.Input['Layer3SubinterfaceDhcpClientArgs']]:
+    def dhcp_client(self) -> pulumi.Input[Optional['Layer3SubinterfaceDhcpClientArgs']]:
         """
         Layer3 sub interfaces DHCP Client Object
 
@@ -402,12 +402,12 @@ class _Layer3SubinterfaceState:
         return pulumi.get(self, "dhcp_client")
 
     @dhcp_client.setter
-    def dhcp_client(self, value: Optional[pulumi.Input['Layer3SubinterfaceDhcpClientArgs']]):
+    def dhcp_client(self, value: pulumi.Input[Optional['Layer3SubinterfaceDhcpClientArgs']]):
         pulumi.set(self, "dhcp_client", value)
 
     @_builtins.property
     @pulumi.getter
-    def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def folder(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
 
@@ -416,24 +416,24 @@ class _Layer3SubinterfaceState:
         return pulumi.get(self, "folder")
 
     @folder.setter
-    def folder(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def folder(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "folder", value)
 
     @_builtins.property
     @pulumi.getter(name="interfaceManagementProfile")
-    def interface_management_profile(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def interface_management_profile(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Interface management profile
         """
         return pulumi.get(self, "interface_management_profile")
 
     @interface_management_profile.setter
-    def interface_management_profile(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def interface_management_profile(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "interface_management_profile", value)
 
     @_builtins.property
     @pulumi.getter
-    def ips(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['Layer3SubinterfaceIpArgs']]]]:
+    def ips(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['Layer3SubinterfaceIpArgs']]]]:
         """
         L3 sub-interface IP Parent
 
@@ -442,60 +442,60 @@ class _Layer3SubinterfaceState:
         return pulumi.get(self, "ips")
 
     @ips.setter
-    def ips(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['Layer3SubinterfaceIpArgs']]]]):
+    def ips(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['Layer3SubinterfaceIpArgs']]]]):
         pulumi.set(self, "ips", value)
 
     @_builtins.property
     @pulumi.getter
-    def mtu(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def mtu(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         MTU
         """
         return pulumi.get(self, "mtu")
 
     @mtu.setter
-    def mtu(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def mtu(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "mtu", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         L3 sub-interface name
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter(name="netflowProfile")
-    def netflow_profile(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def netflow_profile(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Name of Netflow Profile to assign to Interface
         """
         return pulumi.get(self, "netflow_profile")
 
     @netflow_profile.setter
-    def netflow_profile(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def netflow_profile(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "netflow_profile", value)
 
     @_builtins.property
     @pulumi.getter(name="parentInterface")
-    def parent_interface(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def parent_interface(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Parent interface
         """
         return pulumi.get(self, "parent_interface")
 
     @parent_interface.setter
-    def parent_interface(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def parent_interface(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "parent_interface", value)
 
     @_builtins.property
     @pulumi.getter
-    def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def snippet(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
 
@@ -504,31 +504,31 @@ class _Layer3SubinterfaceState:
         return pulumi.get(self, "snippet")
 
     @snippet.setter
-    def snippet(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def snippet(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "snippet", value)
 
     @_builtins.property
     @pulumi.getter
-    def tag(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def tag(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         VLAN tag
         """
         return pulumi.get(self, "tag")
 
     @tag.setter
-    def tag(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def tag(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "tag", value)
 
     @_builtins.property
     @pulumi.getter
-    def tfid(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def tfid(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The Terraform ID.
         """
         return pulumi.get(self, "tfid")
 
     @tfid.setter
-    def tfid(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def tfid(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "tfid", value)
 
 
@@ -538,20 +538,20 @@ class Layer3Subinterface(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 arps: Optional[pulumi.Input[Sequence[pulumi.Input[Union['Layer3SubinterfaceArpArgs', 'Layer3SubinterfaceArpArgsDict']]]]] = None,
-                 comment: Optional[pulumi.Input[_builtins.str]] = None,
-                 ddns_config: Optional[pulumi.Input[Union['Layer3SubinterfaceDdnsConfigArgs', 'Layer3SubinterfaceDdnsConfigArgsDict']]] = None,
-                 device: Optional[pulumi.Input[_builtins.str]] = None,
-                 dhcp_client: Optional[pulumi.Input[Union['Layer3SubinterfaceDhcpClientArgs', 'Layer3SubinterfaceDhcpClientArgsDict']]] = None,
-                 folder: Optional[pulumi.Input[_builtins.str]] = None,
-                 interface_management_profile: Optional[pulumi.Input[_builtins.str]] = None,
-                 ips: Optional[pulumi.Input[Sequence[pulumi.Input[Union['Layer3SubinterfaceIpArgs', 'Layer3SubinterfaceIpArgsDict']]]]] = None,
-                 mtu: Optional[pulumi.Input[_builtins.int]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 netflow_profile: Optional[pulumi.Input[_builtins.str]] = None,
-                 parent_interface: Optional[pulumi.Input[_builtins.str]] = None,
-                 snippet: Optional[pulumi.Input[_builtins.str]] = None,
-                 tag: Optional[pulumi.Input[_builtins.int]] = None,
+                 arps: pulumi.Input[Optional[Sequence[pulumi.Input[Union['Layer3SubinterfaceArpArgs', 'Layer3SubinterfaceArpArgsDict']]]]] = None,
+                 comment: pulumi.Input[Optional[_builtins.str]] = None,
+                 ddns_config: pulumi.Input[Optional[Union['Layer3SubinterfaceDdnsConfigArgs', 'Layer3SubinterfaceDdnsConfigArgsDict']]] = None,
+                 device: pulumi.Input[Optional[_builtins.str]] = None,
+                 dhcp_client: pulumi.Input[Optional[Union['Layer3SubinterfaceDhcpClientArgs', 'Layer3SubinterfaceDhcpClientArgsDict']]] = None,
+                 folder: pulumi.Input[Optional[_builtins.str]] = None,
+                 interface_management_profile: pulumi.Input[Optional[_builtins.str]] = None,
+                 ips: pulumi.Input[Optional[Sequence[pulumi.Input[Union['Layer3SubinterfaceIpArgs', 'Layer3SubinterfaceIpArgsDict']]]]] = None,
+                 mtu: pulumi.Input[Optional[_builtins.int]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 netflow_profile: pulumi.Input[Optional[_builtins.str]] = None,
+                 parent_interface: pulumi.Input[Optional[_builtins.str]] = None,
+                 snippet: pulumi.Input[Optional[_builtins.str]] = None,
+                 tag: pulumi.Input[Optional[_builtins.int]] = None,
                  __props__=None):
         """
         Layer3Subinterface resource
@@ -757,20 +757,20 @@ class Layer3Subinterface(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 arps: Optional[pulumi.Input[Sequence[pulumi.Input[Union['Layer3SubinterfaceArpArgs', 'Layer3SubinterfaceArpArgsDict']]]]] = None,
-                 comment: Optional[pulumi.Input[_builtins.str]] = None,
-                 ddns_config: Optional[pulumi.Input[Union['Layer3SubinterfaceDdnsConfigArgs', 'Layer3SubinterfaceDdnsConfigArgsDict']]] = None,
-                 device: Optional[pulumi.Input[_builtins.str]] = None,
-                 dhcp_client: Optional[pulumi.Input[Union['Layer3SubinterfaceDhcpClientArgs', 'Layer3SubinterfaceDhcpClientArgsDict']]] = None,
-                 folder: Optional[pulumi.Input[_builtins.str]] = None,
-                 interface_management_profile: Optional[pulumi.Input[_builtins.str]] = None,
-                 ips: Optional[pulumi.Input[Sequence[pulumi.Input[Union['Layer3SubinterfaceIpArgs', 'Layer3SubinterfaceIpArgsDict']]]]] = None,
-                 mtu: Optional[pulumi.Input[_builtins.int]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 netflow_profile: Optional[pulumi.Input[_builtins.str]] = None,
-                 parent_interface: Optional[pulumi.Input[_builtins.str]] = None,
-                 snippet: Optional[pulumi.Input[_builtins.str]] = None,
-                 tag: Optional[pulumi.Input[_builtins.int]] = None,
+                 arps: pulumi.Input[Optional[Sequence[pulumi.Input[Union['Layer3SubinterfaceArpArgs', 'Layer3SubinterfaceArpArgsDict']]]]] = None,
+                 comment: pulumi.Input[Optional[_builtins.str]] = None,
+                 ddns_config: pulumi.Input[Optional[Union['Layer3SubinterfaceDdnsConfigArgs', 'Layer3SubinterfaceDdnsConfigArgsDict']]] = None,
+                 device: pulumi.Input[Optional[_builtins.str]] = None,
+                 dhcp_client: pulumi.Input[Optional[Union['Layer3SubinterfaceDhcpClientArgs', 'Layer3SubinterfaceDhcpClientArgsDict']]] = None,
+                 folder: pulumi.Input[Optional[_builtins.str]] = None,
+                 interface_management_profile: pulumi.Input[Optional[_builtins.str]] = None,
+                 ips: pulumi.Input[Optional[Sequence[pulumi.Input[Union['Layer3SubinterfaceIpArgs', 'Layer3SubinterfaceIpArgsDict']]]]] = None,
+                 mtu: pulumi.Input[Optional[_builtins.int]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 netflow_profile: pulumi.Input[Optional[_builtins.str]] = None,
+                 parent_interface: pulumi.Input[Optional[_builtins.str]] = None,
+                 snippet: pulumi.Input[Optional[_builtins.str]] = None,
+                 tag: pulumi.Input[Optional[_builtins.int]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -805,21 +805,21 @@ class Layer3Subinterface(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            arps: Optional[pulumi.Input[Sequence[pulumi.Input[Union['Layer3SubinterfaceArpArgs', 'Layer3SubinterfaceArpArgsDict']]]]] = None,
-            comment: Optional[pulumi.Input[_builtins.str]] = None,
-            ddns_config: Optional[pulumi.Input[Union['Layer3SubinterfaceDdnsConfigArgs', 'Layer3SubinterfaceDdnsConfigArgsDict']]] = None,
-            device: Optional[pulumi.Input[_builtins.str]] = None,
-            dhcp_client: Optional[pulumi.Input[Union['Layer3SubinterfaceDhcpClientArgs', 'Layer3SubinterfaceDhcpClientArgsDict']]] = None,
-            folder: Optional[pulumi.Input[_builtins.str]] = None,
-            interface_management_profile: Optional[pulumi.Input[_builtins.str]] = None,
-            ips: Optional[pulumi.Input[Sequence[pulumi.Input[Union['Layer3SubinterfaceIpArgs', 'Layer3SubinterfaceIpArgsDict']]]]] = None,
-            mtu: Optional[pulumi.Input[_builtins.int]] = None,
-            name: Optional[pulumi.Input[_builtins.str]] = None,
-            netflow_profile: Optional[pulumi.Input[_builtins.str]] = None,
-            parent_interface: Optional[pulumi.Input[_builtins.str]] = None,
-            snippet: Optional[pulumi.Input[_builtins.str]] = None,
-            tag: Optional[pulumi.Input[_builtins.int]] = None,
-            tfid: Optional[pulumi.Input[_builtins.str]] = None) -> 'Layer3Subinterface':
+            arps: pulumi.Input[Optional[Sequence[pulumi.Input[Union['Layer3SubinterfaceArpArgs', 'Layer3SubinterfaceArpArgsDict']]]]] = None,
+            comment: pulumi.Input[Optional[_builtins.str]] = None,
+            ddns_config: pulumi.Input[Optional[Union['Layer3SubinterfaceDdnsConfigArgs', 'Layer3SubinterfaceDdnsConfigArgsDict']]] = None,
+            device: pulumi.Input[Optional[_builtins.str]] = None,
+            dhcp_client: pulumi.Input[Optional[Union['Layer3SubinterfaceDhcpClientArgs', 'Layer3SubinterfaceDhcpClientArgsDict']]] = None,
+            folder: pulumi.Input[Optional[_builtins.str]] = None,
+            interface_management_profile: pulumi.Input[Optional[_builtins.str]] = None,
+            ips: pulumi.Input[Optional[Sequence[pulumi.Input[Union['Layer3SubinterfaceIpArgs', 'Layer3SubinterfaceIpArgsDict']]]]] = None,
+            mtu: pulumi.Input[Optional[_builtins.int]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            netflow_profile: pulumi.Input[Optional[_builtins.str]] = None,
+            parent_interface: pulumi.Input[Optional[_builtins.str]] = None,
+            snippet: pulumi.Input[Optional[_builtins.str]] = None,
+            tag: pulumi.Input[Optional[_builtins.int]] = None,
+            tfid: pulumi.Input[Optional[_builtins.str]] = None) -> 'Layer3Subinterface':
         """
         Get an existing Layer3Subinterface resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

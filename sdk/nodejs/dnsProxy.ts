@@ -173,59 +173,59 @@ export interface DnsProxyState {
     /**
      * Cache
      */
-    cache?: pulumi.Input<inputs.DnsProxyCache>;
+    cache?: pulumi.Input<inputs.DnsProxyCache | undefined>;
     /**
      * Default
      */
-    default?: pulumi.Input<inputs.DnsProxyDefault>;
+    default?: pulumi.Input<inputs.DnsProxyDefault | undefined>;
     /**
      * The device in which the resource is defined
      */
-    device?: pulumi.Input<string>;
+    device?: pulumi.Input<string | undefined>;
     /**
      * DNS proxy rules
      */
-    domainServers?: pulumi.Input<pulumi.Input<inputs.DnsProxyDomainServer>[]>;
+    domainServers?: pulumi.Input<pulumi.Input<inputs.DnsProxyDomainServer>[] | undefined>;
     /**
      * Enable DNS proxy?
      */
-    enabled?: pulumi.Input<boolean>;
+    enabled?: pulumi.Input<boolean | undefined>;
     /**
      * The folder in which the resource is defined
      *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
-    folder?: pulumi.Input<string>;
+    folder?: pulumi.Input<string | undefined>;
     /**
      * Interfaces on which to enable DNS proxy service
      */
-    interfaces?: pulumi.Input<pulumi.Input<string>[]>;
+    interfaces?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * DNS proxy name
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * The snippet in which the resource is defined
      *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
-    snippet?: pulumi.Input<string>;
+    snippet?: pulumi.Input<string | undefined>;
     /**
      * Static entries
      */
-    staticEntries?: pulumi.Input<pulumi.Input<inputs.DnsProxyStaticEntry>[]>;
+    staticEntries?: pulumi.Input<pulumi.Input<inputs.DnsProxyStaticEntry>[] | undefined>;
     /**
      * Tcp queries
      */
-    tcpQueries?: pulumi.Input<inputs.DnsProxyTcpQueries>;
+    tcpQueries?: pulumi.Input<inputs.DnsProxyTcpQueries | undefined>;
     /**
      * The Terraform ID.
      */
-    tfid?: pulumi.Input<string>;
+    tfid?: pulumi.Input<string | undefined>;
     /**
      * Udp queries
      */
-    udpQueries?: pulumi.Input<inputs.DnsProxyUdpQueries>;
+    udpQueries?: pulumi.Input<inputs.DnsProxyUdpQueries | undefined>;
 }
 
 /**
@@ -235,7 +235,7 @@ export interface DnsProxyArgs {
     /**
      * Cache
      */
-    cache?: pulumi.Input<inputs.DnsProxyCache>;
+    cache?: pulumi.Input<inputs.DnsProxyCache | undefined>;
     /**
      * Default
      */
@@ -243,45 +243,45 @@ export interface DnsProxyArgs {
     /**
      * The device in which the resource is defined
      */
-    device?: pulumi.Input<string>;
+    device?: pulumi.Input<string | undefined>;
     /**
      * DNS proxy rules
      */
-    domainServers?: pulumi.Input<pulumi.Input<inputs.DnsProxyDomainServer>[]>;
+    domainServers?: pulumi.Input<pulumi.Input<inputs.DnsProxyDomainServer>[] | undefined>;
     /**
      * Enable DNS proxy?
      */
-    enabled?: pulumi.Input<boolean>;
+    enabled?: pulumi.Input<boolean | undefined>;
     /**
      * The folder in which the resource is defined
      *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
-    folder?: pulumi.Input<string>;
+    folder?: pulumi.Input<string | undefined>;
     /**
      * Interfaces on which to enable DNS proxy service
      */
-    interfaces?: pulumi.Input<pulumi.Input<string>[]>;
+    interfaces?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * DNS proxy name
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * The snippet in which the resource is defined
      *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
-    snippet?: pulumi.Input<string>;
+    snippet?: pulumi.Input<string | undefined>;
     /**
      * Static entries
      */
-    staticEntries?: pulumi.Input<pulumi.Input<inputs.DnsProxyStaticEntry>[]>;
+    staticEntries?: pulumi.Input<pulumi.Input<inputs.DnsProxyStaticEntry>[] | undefined>;
     /**
      * Tcp queries
      */
-    tcpQueries?: pulumi.Input<inputs.DnsProxyTcpQueries>;
+    tcpQueries?: pulumi.Input<inputs.DnsProxyTcpQueries | undefined>;
     /**
      * Udp queries
      */
-    udpQueries?: pulumi.Input<inputs.DnsProxyUdpQueries>;
+    udpQueries?: pulumi.Input<inputs.DnsProxyUdpQueries | undefined>;
 }

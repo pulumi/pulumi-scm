@@ -185,35 +185,35 @@ export interface AutoVpnClusterState {
     /**
      * Branches
      */
-    branches?: pulumi.Input<pulumi.Input<inputs.AutoVpnClusterBranch>[]>;
+    branches?: pulumi.Input<pulumi.Input<inputs.AutoVpnClusterBranch>[] | undefined>;
     /**
      * Enable mesh between hubs?
      */
-    enableMeshBetweenHubs?: pulumi.Input<boolean>;
+    enableMeshBetweenHubs?: pulumi.Input<boolean | undefined>;
     /**
      * Enable mesh interconnect?
      */
-    enableMeshInterconnect?: pulumi.Input<boolean>;
+    enableMeshInterconnect?: pulumi.Input<boolean | undefined>;
     /**
      * Enable SD-WAN?
      */
-    enableSdwan?: pulumi.Input<boolean>;
+    enableSdwan?: pulumi.Input<boolean | undefined>;
     /**
      * Hubs
      */
-    gateways?: pulumi.Input<pulumi.Input<inputs.AutoVpnClusterGateway>[]>;
+    gateways?: pulumi.Input<pulumi.Input<inputs.AutoVpnClusterGateway>[] | undefined>;
     /**
      * VPN cluster name
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * The Terraform ID.
      */
-    tfid?: pulumi.Input<string>;
+    tfid?: pulumi.Input<string | undefined>;
     /**
      * VPN cluster type
      */
-    type?: pulumi.Input<string>;
+    type?: pulumi.Input<string | undefined>;
 }
 
 /**
@@ -223,29 +223,29 @@ export interface AutoVpnClusterArgs {
     /**
      * Branches
      */
-    branches?: pulumi.Input<pulumi.Input<inputs.AutoVpnClusterBranch>[]>;
+    branches?: pulumi.Input<pulumi.Input<inputs.AutoVpnClusterBranch>[] | undefined>;
     /**
      * Enable mesh between hubs?
      */
-    enableMeshBetweenHubs?: pulumi.Input<boolean>;
+    enableMeshBetweenHubs?: pulumi.Input<boolean | undefined>;
     /**
      * Enable mesh interconnect?
      */
-    enableMeshInterconnect?: pulumi.Input<boolean>;
+    enableMeshInterconnect?: pulumi.Input<boolean | undefined>;
     /**
      * Enable SD-WAN?
      */
-    enableSdwan?: pulumi.Input<boolean>;
+    enableSdwan?: pulumi.Input<boolean | undefined>;
     /**
      * Hubs
      */
-    gateways?: pulumi.Input<pulumi.Input<inputs.AutoVpnClusterGateway>[]>;
+    gateways?: pulumi.Input<pulumi.Input<inputs.AutoVpnClusterGateway>[] | undefined>;
     /**
      * VPN cluster name
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * VPN cluster type
      */
-    type?: pulumi.Input<string>;
+    type?: pulumi.Input<string | undefined>;
 }

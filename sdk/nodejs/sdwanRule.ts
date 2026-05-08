@@ -254,95 +254,95 @@ export interface SdwanRuleState {
     /**
      * Action
      */
-    action?: pulumi.Input<inputs.SdwanRuleAction>;
+    action?: pulumi.Input<inputs.SdwanRuleAction | undefined>;
     /**
      * List of applications
      */
-    applications?: pulumi.Input<pulumi.Input<string>[]>;
+    applications?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Rule description
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * List of destination addresses
      */
-    destinations?: pulumi.Input<pulumi.Input<string>[]>;
+    destinations?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * The device in which the resource is defined
      */
-    device?: pulumi.Input<string>;
+    device?: pulumi.Input<string | undefined>;
     /**
      * Disable rule?
      */
-    disabled?: pulumi.Input<boolean>;
+    disabled?: pulumi.Input<boolean | undefined>;
     /**
      * Error correction profile
      */
-    errorCorrectionProfile?: pulumi.Input<string>;
+    errorCorrectionProfile?: pulumi.Input<string | undefined>;
     /**
      * The folder in which the resource is defined
      *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
-    folder?: pulumi.Input<string>;
+    folder?: pulumi.Input<string | undefined>;
     /**
      * List of source zones
      */
-    froms?: pulumi.Input<pulumi.Input<string>[]>;
+    froms?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Rule name
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Negate destination address(es)?
      */
-    negateDestination?: pulumi.Input<boolean>;
+    negateDestination?: pulumi.Input<boolean | undefined>;
     /**
      * Negate source address(es)?
      */
-    negateSource?: pulumi.Input<boolean>;
+    negateSource?: pulumi.Input<boolean | undefined>;
     /**
      * Path quality profile
      */
-    pathQualityProfile?: pulumi.Input<string>;
+    pathQualityProfile?: pulumi.Input<string | undefined>;
     /**
      * Rule postion relative to device rules
      */
-    position?: pulumi.Input<string>;
+    position?: pulumi.Input<string | undefined>;
     /**
      * SaaS quality profile
      */
-    saasQualityProfile?: pulumi.Input<string>;
+    saasQualityProfile?: pulumi.Input<string | undefined>;
     /**
      * List of services
      */
-    services?: pulumi.Input<pulumi.Input<string>[]>;
+    services?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * The snippet in which the resource is defined
      *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
-    snippet?: pulumi.Input<string>;
+    snippet?: pulumi.Input<string | undefined>;
     /**
      * List of source users
      */
-    sourceUsers?: pulumi.Input<pulumi.Input<string>[]>;
+    sourceUsers?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * List of source addresses
      */
-    sources?: pulumi.Input<pulumi.Input<string>[]>;
+    sources?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * List of tags
      */
-    tags?: pulumi.Input<pulumi.Input<string>[]>;
+    tags?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * The Terraform ID.
      */
-    tfid?: pulumi.Input<string>;
+    tfid?: pulumi.Input<string | undefined>;
     /**
      * List of destination zones
      */
-    tos?: pulumi.Input<pulumi.Input<string>[]>;
+    tos?: pulumi.Input<pulumi.Input<string>[] | undefined>;
 }
 
 /**
@@ -360,7 +360,7 @@ export interface SdwanRuleArgs {
     /**
      * Rule description
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * List of destination addresses
      */
@@ -368,21 +368,21 @@ export interface SdwanRuleArgs {
     /**
      * The device in which the resource is defined
      */
-    device?: pulumi.Input<string>;
+    device?: pulumi.Input<string | undefined>;
     /**
      * Disable rule?
      */
-    disabled?: pulumi.Input<boolean>;
+    disabled?: pulumi.Input<boolean | undefined>;
     /**
      * Error correction profile
      */
-    errorCorrectionProfile?: pulumi.Input<string>;
+    errorCorrectionProfile?: pulumi.Input<string | undefined>;
     /**
      * The folder in which the resource is defined
      *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
-    folder?: pulumi.Input<string>;
+    folder?: pulumi.Input<string | undefined>;
     /**
      * List of source zones
      */
@@ -390,15 +390,15 @@ export interface SdwanRuleArgs {
     /**
      * Rule name
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Negate destination address(es)?
      */
-    negateDestination?: pulumi.Input<boolean>;
+    negateDestination?: pulumi.Input<boolean | undefined>;
     /**
      * Negate source address(es)?
      */
-    negateSource?: pulumi.Input<boolean>;
+    negateSource?: pulumi.Input<boolean | undefined>;
     /**
      * Path quality profile
      */
@@ -410,7 +410,7 @@ export interface SdwanRuleArgs {
     /**
      * SaaS quality profile
      */
-    saasQualityProfile?: pulumi.Input<string>;
+    saasQualityProfile?: pulumi.Input<string | undefined>;
     /**
      * List of services
      */
@@ -420,7 +420,7 @@ export interface SdwanRuleArgs {
      *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
-    snippet?: pulumi.Input<string>;
+    snippet?: pulumi.Input<string | undefined>;
     /**
      * List of source users
      */
@@ -432,7 +432,7 @@ export interface SdwanRuleArgs {
     /**
      * List of tags
      */
-    tags?: pulumi.Input<pulumi.Input<string>[]>;
+    tags?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * List of destination zones
      */

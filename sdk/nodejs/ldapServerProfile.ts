@@ -306,71 +306,71 @@ export interface LdapServerProfileState {
     /**
      * The base DN
      */
-    base?: pulumi.Input<string>;
+    base?: pulumi.Input<string | undefined>;
     /**
      * The bind DN
      */
-    bindDn?: pulumi.Input<string>;
+    bindDn?: pulumi.Input<string | undefined>;
     /**
      * The bind password
      */
-    bindPassword?: pulumi.Input<string>;
+    bindPassword?: pulumi.Input<string | undefined>;
     /**
      * The bind timeout (seconds)
      */
-    bindTimelimit?: pulumi.Input<string>;
+    bindTimelimit?: pulumi.Input<string | undefined>;
     /**
      * The device in which the resource is defined
      */
-    device?: pulumi.Input<string>;
+    device?: pulumi.Input<string | undefined>;
     /**
      * Map of sensitive values returned from the API.
      */
-    encryptedValues?: pulumi.Input<{[key: string]: pulumi.Input<string>}>;
+    encryptedValues?: pulumi.Input<{[key: string]: pulumi.Input<string>} | undefined>;
     /**
      * The folder in which the resource is defined
      *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
-    folder?: pulumi.Input<string>;
+    folder?: pulumi.Input<string | undefined>;
     /**
      * The LDAP server time
      */
-    ldapType?: pulumi.Input<string>;
+    ldapType?: pulumi.Input<string | undefined>;
     /**
      * The name of the LDAP server profile
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * The search retry interval (seconds)
      */
-    retryInterval?: pulumi.Input<number>;
+    retryInterval?: pulumi.Input<number | undefined>;
     /**
      * The LDAP server configuration
      */
-    servers?: pulumi.Input<pulumi.Input<inputs.LdapServerProfileServer>[]>;
+    servers?: pulumi.Input<pulumi.Input<inputs.LdapServerProfileServer>[] | undefined>;
     /**
      * The snippet in which the resource is defined
      *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
-    snippet?: pulumi.Input<string>;
+    snippet?: pulumi.Input<string | undefined>;
     /**
      * Require SSL/TLS secured connection?
      */
-    ssl?: pulumi.Input<boolean>;
+    ssl?: pulumi.Input<boolean | undefined>;
     /**
      * The Terraform ID.
      */
-    tfid?: pulumi.Input<string>;
+    tfid?: pulumi.Input<string | undefined>;
     /**
      * The search timeout (seconds)
      */
-    timelimit?: pulumi.Input<number>;
+    timelimit?: pulumi.Input<number | undefined>;
     /**
      * Verify server certificate for SSL sessions?
      */
-    verifyServerCertificate?: pulumi.Input<boolean>;
+    verifyServerCertificate?: pulumi.Input<boolean | undefined>;
 }
 
 /**
@@ -380,41 +380,41 @@ export interface LdapServerProfileArgs {
     /**
      * The base DN
      */
-    base?: pulumi.Input<string>;
+    base?: pulumi.Input<string | undefined>;
     /**
      * The bind DN
      */
-    bindDn?: pulumi.Input<string>;
+    bindDn?: pulumi.Input<string | undefined>;
     /**
      * The bind password
      */
-    bindPassword?: pulumi.Input<string>;
+    bindPassword?: pulumi.Input<string | undefined>;
     /**
      * The bind timeout (seconds)
      */
-    bindTimelimit?: pulumi.Input<string>;
+    bindTimelimit?: pulumi.Input<string | undefined>;
     /**
      * The device in which the resource is defined
      */
-    device?: pulumi.Input<string>;
+    device?: pulumi.Input<string | undefined>;
     /**
      * The folder in which the resource is defined
      *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
-    folder?: pulumi.Input<string>;
+    folder?: pulumi.Input<string | undefined>;
     /**
      * The LDAP server time
      */
-    ldapType?: pulumi.Input<string>;
+    ldapType?: pulumi.Input<string | undefined>;
     /**
      * The name of the LDAP server profile
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * The search retry interval (seconds)
      */
-    retryInterval?: pulumi.Input<number>;
+    retryInterval?: pulumi.Input<number | undefined>;
     /**
      * The LDAP server configuration
      */
@@ -424,17 +424,17 @@ export interface LdapServerProfileArgs {
      *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
-    snippet?: pulumi.Input<string>;
+    snippet?: pulumi.Input<string | undefined>;
     /**
      * Require SSL/TLS secured connection?
      */
-    ssl?: pulumi.Input<boolean>;
+    ssl?: pulumi.Input<boolean | undefined>;
     /**
      * The search timeout (seconds)
      */
-    timelimit?: pulumi.Input<number>;
+    timelimit?: pulumi.Input<number | undefined>;
     /**
      * Verify server certificate for SSL sessions?
      */
-    verifyServerCertificate?: pulumi.Input<boolean>;
+    verifyServerCertificate?: pulumi.Input<boolean | undefined>;
 }

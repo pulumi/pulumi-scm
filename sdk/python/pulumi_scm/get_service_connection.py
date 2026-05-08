@@ -307,9 +307,9 @@ def get_service_connection(folder: Optional[_builtins.str] = None,
         source_nat=pulumi.get(__ret__, 'source_nat'),
         subnets=pulumi.get(__ret__, 'subnets'),
         tfid=pulumi.get(__ret__, 'tfid'))
-def get_service_connection_output(folder: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
-                                  id: Optional[pulumi.Input[_builtins.str]] = None,
-                                  name: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
+def get_service_connection_output(folder: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
+                                  id: pulumi.Input[Optional[_builtins.str]] = None,
+                                  name: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
                                   opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetServiceConnectionResult]:
     """
     ServiceConnection data source

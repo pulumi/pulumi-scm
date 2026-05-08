@@ -135,10 +135,10 @@ def get_device_redistribution_collector(device: Optional[_builtins.str] = None,
         redistribution_collector=pulumi.get(__ret__, 'redistribution_collector'),
         snippet=pulumi.get(__ret__, 'snippet'),
         tfid=pulumi.get(__ret__, 'tfid'))
-def get_device_redistribution_collector_output(device: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
-                                               folder: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
-                                               id: Optional[pulumi.Input[_builtins.str]] = None,
-                                               snippet: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
+def get_device_redistribution_collector_output(device: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
+                                               folder: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
+                                               id: pulumi.Input[Optional[_builtins.str]] = None,
+                                               snippet: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
                                                opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetDeviceRedistributionCollectorResult]:
     """
     DeviceRedistributionCollector data source

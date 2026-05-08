@@ -168,6 +168,33 @@ def get_radius_server_profile_list(device: Optional[_builtins.str] = None,
     """
     Retrieves a listing of config items.
 
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_scm as scm
+
+    def try_(*fns):
+        for fn in fns:
+            try:
+                result = fn()
+                return result
+            except:
+                continue
+        return None
+
+
+    paged_profiles_list = scm.get_radius_server_profile_list(folder="All",
+        limit=10)
+    pulumi.export("fetchedProfileListSummary", {
+        "countOfProfilesFetched": paged_profiles_list.total,
+        "firstProfileName": try_(
+            lambda: paged_profiles_list.datas[0].name,
+            lambda: "List is empty"
+        ),
+    })
+    ```
+
 
     :param _builtins.str device: The device of the item.
     :param _builtins.str folder: The folder of the item. Default: Shared.
@@ -197,15 +224,42 @@ def get_radius_server_profile_list(device: Optional[_builtins.str] = None,
         snippet=pulumi.get(__ret__, 'snippet'),
         tfid=pulumi.get(__ret__, 'tfid'),
         total=pulumi.get(__ret__, 'total'))
-def get_radius_server_profile_list_output(device: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
-                                          folder: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
-                                          limit: Optional[pulumi.Input[Optional[_builtins.int]]] = None,
-                                          name: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
-                                          offset: Optional[pulumi.Input[Optional[_builtins.int]]] = None,
-                                          snippet: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
+def get_radius_server_profile_list_output(device: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
+                                          folder: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
+                                          limit: pulumi.Input[Optional[Optional[_builtins.int]]] = None,
+                                          name: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
+                                          offset: pulumi.Input[Optional[Optional[_builtins.int]]] = None,
+                                          snippet: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
                                           opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetRadiusServerProfileListResult]:
     """
     Retrieves a listing of config items.
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_scm as scm
+
+    def try_(*fns):
+        for fn in fns:
+            try:
+                result = fn()
+                return result
+            except:
+                continue
+        return None
+
+
+    paged_profiles_list = scm.get_radius_server_profile_list(folder="All",
+        limit=10)
+    pulumi.export("fetchedProfileListSummary", {
+        "countOfProfilesFetched": paged_profiles_list.total,
+        "firstProfileName": try_(
+            lambda: paged_profiles_list.datas[0].name,
+            lambda: "List is empty"
+        ),
+    })
+    ```
 
 
     :param _builtins.str device: The device of the item.
