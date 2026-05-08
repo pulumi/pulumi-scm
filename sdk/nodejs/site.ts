@@ -263,63 +263,63 @@ export interface SiteState {
     /**
      * The address in which the site exists
      */
-    addressLine1?: pulumi.Input<string>;
+    addressLine1?: pulumi.Input<string | undefined>;
     /**
      * The address in which the site exists (continued)
      */
-    addressLine2?: pulumi.Input<string>;
+    addressLine2?: pulumi.Input<string | undefined>;
     /**
      * The city in which the site exists
      */
-    city?: pulumi.Input<string>;
+    city?: pulumi.Input<string | undefined>;
     /**
      * The country in which the site exists
      */
-    country?: pulumi.Input<string>;
+    country?: pulumi.Input<string | undefined>;
     /**
      * The folder in which the resource is defined
      */
-    folder?: pulumi.Input<string>;
+    folder?: pulumi.Input<string | undefined>;
     /**
      * The latitude coordinate for the site
      */
-    latitude?: pulumi.Input<string>;
+    latitude?: pulumi.Input<string | undefined>;
     /**
      * The license type of the site
      */
-    licenseType?: pulumi.Input<string>;
+    licenseType?: pulumi.Input<string | undefined>;
     /**
      * The longitude coordinate for the site
      */
-    longitude?: pulumi.Input<string>;
+    longitude?: pulumi.Input<string | undefined>;
     /**
      * Members
      */
-    members?: pulumi.Input<pulumi.Input<inputs.SiteMember>[]>;
+    members?: pulumi.Input<pulumi.Input<inputs.SiteMember>[] | undefined>;
     /**
      * The name of the site
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Qos
      */
-    qos?: pulumi.Input<inputs.SiteQos>;
+    qos?: pulumi.Input<inputs.SiteQos | undefined>;
     /**
      * The state in which the site exists
      */
-    state?: pulumi.Input<string>;
+    state?: pulumi.Input<string | undefined>;
     /**
      * The Terraform ID.
      */
-    tfid?: pulumi.Input<string>;
+    tfid?: pulumi.Input<string | undefined>;
     /**
      * The site type
      */
-    type?: pulumi.Input<string>;
+    type?: pulumi.Input<string | undefined>;
     /**
      * The postal code in which the site exists
      */
-    zipCode?: pulumi.Input<string>;
+    zipCode?: pulumi.Input<string | undefined>;
 }
 
 /**
@@ -329,53 +329,53 @@ export interface SiteArgs {
     /**
      * The address in which the site exists
      */
-    addressLine1?: pulumi.Input<string>;
+    addressLine1?: pulumi.Input<string | undefined>;
     /**
      * The address in which the site exists (continued)
      */
-    addressLine2?: pulumi.Input<string>;
+    addressLine2?: pulumi.Input<string | undefined>;
     /**
      * The city in which the site exists
      */
-    city?: pulumi.Input<string>;
+    city?: pulumi.Input<string | undefined>;
     /**
      * The country in which the site exists
      */
-    country?: pulumi.Input<string>;
+    country?: pulumi.Input<string | undefined>;
     /**
      * The latitude coordinate for the site
      */
-    latitude?: pulumi.Input<string>;
+    latitude?: pulumi.Input<string | undefined>;
     /**
      * The license type of the site
      */
-    licenseType?: pulumi.Input<string>;
+    licenseType?: pulumi.Input<string | undefined>;
     /**
      * The longitude coordinate for the site
      */
-    longitude?: pulumi.Input<string>;
+    longitude?: pulumi.Input<string | undefined>;
     /**
      * Members
      */
-    members?: pulumi.Input<pulumi.Input<inputs.SiteMember>[]>;
+    members?: pulumi.Input<pulumi.Input<inputs.SiteMember>[] | undefined>;
     /**
      * The name of the site
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Qos
      */
-    qos?: pulumi.Input<inputs.SiteQos>;
+    qos?: pulumi.Input<inputs.SiteQos | undefined>;
     /**
      * The state in which the site exists
      */
-    state?: pulumi.Input<string>;
+    state?: pulumi.Input<string | undefined>;
     /**
      * The site type
      */
-    type?: pulumi.Input<string>;
+    type?: pulumi.Input<string | undefined>;
     /**
      * The postal code in which the site exists
      */
-    zipCode?: pulumi.Input<string>;
+    zipCode?: pulumi.Input<string | undefined>;
 }

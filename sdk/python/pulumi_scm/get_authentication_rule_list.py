@@ -229,13 +229,13 @@ def get_authentication_rule_list(device: Optional[_builtins.str] = None,
         snippet=pulumi.get(__ret__, 'snippet'),
         tfid=pulumi.get(__ret__, 'tfid'),
         total=pulumi.get(__ret__, 'total'))
-def get_authentication_rule_list_output(device: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
-                                        folder: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
-                                        limit: Optional[pulumi.Input[Optional[_builtins.int]]] = None,
-                                        name: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
-                                        offset: Optional[pulumi.Input[Optional[_builtins.int]]] = None,
-                                        position: Optional[pulumi.Input[_builtins.str]] = None,
-                                        snippet: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
+def get_authentication_rule_list_output(device: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
+                                        folder: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
+                                        limit: pulumi.Input[Optional[Optional[_builtins.int]]] = None,
+                                        name: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
+                                        offset: pulumi.Input[Optional[Optional[_builtins.int]]] = None,
+                                        position: pulumi.Input[Optional[_builtins.str]] = None,
+                                        snippet: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
                                         opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetAuthenticationRuleListResult]:
     """
     Retrieves a listing of config items.

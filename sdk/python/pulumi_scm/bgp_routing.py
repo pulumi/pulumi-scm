@@ -21,12 +21,12 @@ __all__ = ['BgpRoutingArgs', 'BgpRouting']
 @pulumi.input_type
 class BgpRoutingArgs:
     def __init__(__self__, *,
-                 accept_route_over_sc: Optional[pulumi.Input[_builtins.bool]] = None,
-                 add_host_route_to_ike_peer: Optional[pulumi.Input[_builtins.bool]] = None,
-                 backbone_routing: Optional[pulumi.Input[_builtins.str]] = None,
-                 outbound_routes_for_services: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 routing_preference: Optional[pulumi.Input['BgpRoutingRoutingPreferenceArgs']] = None,
-                 withdraw_static_route: Optional[pulumi.Input[_builtins.bool]] = None):
+                 accept_route_over_sc: pulumi.Input[Optional[_builtins.bool]] = None,
+                 add_host_route_to_ike_peer: pulumi.Input[Optional[_builtins.bool]] = None,
+                 backbone_routing: pulumi.Input[Optional[_builtins.str]] = None,
+                 outbound_routes_for_services: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 routing_preference: pulumi.Input[Optional['BgpRoutingRoutingPreferenceArgs']] = None,
+                 withdraw_static_route: pulumi.Input[Optional[_builtins.bool]] = None):
         """
         The set of arguments for constructing a BgpRouting resource.
 
@@ -52,87 +52,87 @@ class BgpRoutingArgs:
 
     @_builtins.property
     @pulumi.getter(name="acceptRouteOverSc")
-    def accept_route_over_sc(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def accept_route_over_sc(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Accept route over s c
         """
         return pulumi.get(self, "accept_route_over_sc")
 
     @accept_route_over_sc.setter
-    def accept_route_over_sc(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def accept_route_over_sc(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "accept_route_over_sc", value)
 
     @_builtins.property
     @pulumi.getter(name="addHostRouteToIkePeer")
-    def add_host_route_to_ike_peer(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def add_host_route_to_ike_peer(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Add host route to ike peer
         """
         return pulumi.get(self, "add_host_route_to_ike_peer")
 
     @add_host_route_to_ike_peer.setter
-    def add_host_route_to_ike_peer(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def add_host_route_to_ike_peer(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "add_host_route_to_ike_peer", value)
 
     @_builtins.property
     @pulumi.getter(name="backboneRouting")
-    def backbone_routing(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def backbone_routing(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Backbone routing
         """
         return pulumi.get(self, "backbone_routing")
 
     @backbone_routing.setter
-    def backbone_routing(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def backbone_routing(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "backbone_routing", value)
 
     @_builtins.property
     @pulumi.getter(name="outboundRoutesForServices")
-    def outbound_routes_for_services(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def outbound_routes_for_services(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         Outbound routes for services
         """
         return pulumi.get(self, "outbound_routes_for_services")
 
     @outbound_routes_for_services.setter
-    def outbound_routes_for_services(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def outbound_routes_for_services(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "outbound_routes_for_services", value)
 
     @_builtins.property
     @pulumi.getter(name="routingPreference")
-    def routing_preference(self) -> Optional[pulumi.Input['BgpRoutingRoutingPreferenceArgs']]:
+    def routing_preference(self) -> pulumi.Input[Optional['BgpRoutingRoutingPreferenceArgs']]:
         """
         Routing preference
         """
         return pulumi.get(self, "routing_preference")
 
     @routing_preference.setter
-    def routing_preference(self, value: Optional[pulumi.Input['BgpRoutingRoutingPreferenceArgs']]):
+    def routing_preference(self, value: pulumi.Input[Optional['BgpRoutingRoutingPreferenceArgs']]):
         pulumi.set(self, "routing_preference", value)
 
     @_builtins.property
     @pulumi.getter(name="withdrawStaticRoute")
-    def withdraw_static_route(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def withdraw_static_route(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Withdraw static route
         """
         return pulumi.get(self, "withdraw_static_route")
 
     @withdraw_static_route.setter
-    def withdraw_static_route(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def withdraw_static_route(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "withdraw_static_route", value)
 
 
 @pulumi.input_type
 class _BgpRoutingState:
     def __init__(__self__, *,
-                 accept_route_over_sc: Optional[pulumi.Input[_builtins.bool]] = None,
-                 add_host_route_to_ike_peer: Optional[pulumi.Input[_builtins.bool]] = None,
-                 backbone_routing: Optional[pulumi.Input[_builtins.str]] = None,
-                 outbound_routes_for_services: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 routing_preference: Optional[pulumi.Input['BgpRoutingRoutingPreferenceArgs']] = None,
-                 tfid: Optional[pulumi.Input[_builtins.str]] = None,
-                 withdraw_static_route: Optional[pulumi.Input[_builtins.bool]] = None):
+                 accept_route_over_sc: pulumi.Input[Optional[_builtins.bool]] = None,
+                 add_host_route_to_ike_peer: pulumi.Input[Optional[_builtins.bool]] = None,
+                 backbone_routing: pulumi.Input[Optional[_builtins.str]] = None,
+                 outbound_routes_for_services: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 routing_preference: pulumi.Input[Optional['BgpRoutingRoutingPreferenceArgs']] = None,
+                 tfid: pulumi.Input[Optional[_builtins.str]] = None,
+                 withdraw_static_route: pulumi.Input[Optional[_builtins.bool]] = None):
         """
         Input properties used for looking up and filtering BgpRouting resources.
 
@@ -161,86 +161,86 @@ class _BgpRoutingState:
 
     @_builtins.property
     @pulumi.getter(name="acceptRouteOverSc")
-    def accept_route_over_sc(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def accept_route_over_sc(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Accept route over s c
         """
         return pulumi.get(self, "accept_route_over_sc")
 
     @accept_route_over_sc.setter
-    def accept_route_over_sc(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def accept_route_over_sc(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "accept_route_over_sc", value)
 
     @_builtins.property
     @pulumi.getter(name="addHostRouteToIkePeer")
-    def add_host_route_to_ike_peer(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def add_host_route_to_ike_peer(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Add host route to ike peer
         """
         return pulumi.get(self, "add_host_route_to_ike_peer")
 
     @add_host_route_to_ike_peer.setter
-    def add_host_route_to_ike_peer(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def add_host_route_to_ike_peer(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "add_host_route_to_ike_peer", value)
 
     @_builtins.property
     @pulumi.getter(name="backboneRouting")
-    def backbone_routing(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def backbone_routing(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Backbone routing
         """
         return pulumi.get(self, "backbone_routing")
 
     @backbone_routing.setter
-    def backbone_routing(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def backbone_routing(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "backbone_routing", value)
 
     @_builtins.property
     @pulumi.getter(name="outboundRoutesForServices")
-    def outbound_routes_for_services(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def outbound_routes_for_services(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         Outbound routes for services
         """
         return pulumi.get(self, "outbound_routes_for_services")
 
     @outbound_routes_for_services.setter
-    def outbound_routes_for_services(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def outbound_routes_for_services(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "outbound_routes_for_services", value)
 
     @_builtins.property
     @pulumi.getter(name="routingPreference")
-    def routing_preference(self) -> Optional[pulumi.Input['BgpRoutingRoutingPreferenceArgs']]:
+    def routing_preference(self) -> pulumi.Input[Optional['BgpRoutingRoutingPreferenceArgs']]:
         """
         Routing preference
         """
         return pulumi.get(self, "routing_preference")
 
     @routing_preference.setter
-    def routing_preference(self, value: Optional[pulumi.Input['BgpRoutingRoutingPreferenceArgs']]):
+    def routing_preference(self, value: pulumi.Input[Optional['BgpRoutingRoutingPreferenceArgs']]):
         pulumi.set(self, "routing_preference", value)
 
     @_builtins.property
     @pulumi.getter
-    def tfid(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def tfid(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The Terraform ID.
         """
         return pulumi.get(self, "tfid")
 
     @tfid.setter
-    def tfid(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def tfid(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "tfid", value)
 
     @_builtins.property
     @pulumi.getter(name="withdrawStaticRoute")
-    def withdraw_static_route(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def withdraw_static_route(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Withdraw static route
         """
         return pulumi.get(self, "withdraw_static_route")
 
     @withdraw_static_route.setter
-    def withdraw_static_route(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def withdraw_static_route(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "withdraw_static_route", value)
 
 
@@ -250,12 +250,12 @@ class BgpRouting(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 accept_route_over_sc: Optional[pulumi.Input[_builtins.bool]] = None,
-                 add_host_route_to_ike_peer: Optional[pulumi.Input[_builtins.bool]] = None,
-                 backbone_routing: Optional[pulumi.Input[_builtins.str]] = None,
-                 outbound_routes_for_services: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 routing_preference: Optional[pulumi.Input[Union['BgpRoutingRoutingPreferenceArgs', 'BgpRoutingRoutingPreferenceArgsDict']]] = None,
-                 withdraw_static_route: Optional[pulumi.Input[_builtins.bool]] = None,
+                 accept_route_over_sc: pulumi.Input[Optional[_builtins.bool]] = None,
+                 add_host_route_to_ike_peer: pulumi.Input[Optional[_builtins.bool]] = None,
+                 backbone_routing: pulumi.Input[Optional[_builtins.str]] = None,
+                 outbound_routes_for_services: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 routing_preference: pulumi.Input[Optional[Union['BgpRoutingRoutingPreferenceArgs', 'BgpRoutingRoutingPreferenceArgsDict']]] = None,
+                 withdraw_static_route: pulumi.Input[Optional[_builtins.bool]] = None,
                  __props__=None):
         """
         **Singleton Resource.** BgpRouting resource
@@ -359,12 +359,12 @@ class BgpRouting(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 accept_route_over_sc: Optional[pulumi.Input[_builtins.bool]] = None,
-                 add_host_route_to_ike_peer: Optional[pulumi.Input[_builtins.bool]] = None,
-                 backbone_routing: Optional[pulumi.Input[_builtins.str]] = None,
-                 outbound_routes_for_services: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 routing_preference: Optional[pulumi.Input[Union['BgpRoutingRoutingPreferenceArgs', 'BgpRoutingRoutingPreferenceArgsDict']]] = None,
-                 withdraw_static_route: Optional[pulumi.Input[_builtins.bool]] = None,
+                 accept_route_over_sc: pulumi.Input[Optional[_builtins.bool]] = None,
+                 add_host_route_to_ike_peer: pulumi.Input[Optional[_builtins.bool]] = None,
+                 backbone_routing: pulumi.Input[Optional[_builtins.str]] = None,
+                 outbound_routes_for_services: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 routing_preference: pulumi.Input[Optional[Union['BgpRoutingRoutingPreferenceArgs', 'BgpRoutingRoutingPreferenceArgsDict']]] = None,
+                 withdraw_static_route: pulumi.Input[Optional[_builtins.bool]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -391,13 +391,13 @@ class BgpRouting(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            accept_route_over_sc: Optional[pulumi.Input[_builtins.bool]] = None,
-            add_host_route_to_ike_peer: Optional[pulumi.Input[_builtins.bool]] = None,
-            backbone_routing: Optional[pulumi.Input[_builtins.str]] = None,
-            outbound_routes_for_services: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-            routing_preference: Optional[pulumi.Input[Union['BgpRoutingRoutingPreferenceArgs', 'BgpRoutingRoutingPreferenceArgsDict']]] = None,
-            tfid: Optional[pulumi.Input[_builtins.str]] = None,
-            withdraw_static_route: Optional[pulumi.Input[_builtins.bool]] = None) -> 'BgpRouting':
+            accept_route_over_sc: pulumi.Input[Optional[_builtins.bool]] = None,
+            add_host_route_to_ike_peer: pulumi.Input[Optional[_builtins.bool]] = None,
+            backbone_routing: pulumi.Input[Optional[_builtins.str]] = None,
+            outbound_routes_for_services: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            routing_preference: pulumi.Input[Optional[Union['BgpRoutingRoutingPreferenceArgs', 'BgpRoutingRoutingPreferenceArgsDict']]] = None,
+            tfid: pulumi.Input[Optional[_builtins.str]] = None,
+            withdraw_static_route: pulumi.Input[Optional[_builtins.bool]] = None) -> 'BgpRouting':
         """
         Get an existing BgpRouting resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

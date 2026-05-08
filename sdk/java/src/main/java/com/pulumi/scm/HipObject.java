@@ -74,8 +74,8 @@ import javax.annotation.Nullable;
  * import com.pulumi.scm.inputs.HipObjectPatchManagementCriteriaMissingPatchesSeverityArgs;
  * import com.pulumi.scm.inputs.HipObjectCustomChecksArgs;
  * import com.pulumi.scm.inputs.HipObjectCustomChecksCriteriaArgs;
- * import java.util.List;
  * import java.util.ArrayList;
+ * import java.util.Arrays;
  * import java.util.Map;
  * import java.io.File;
  * import java.nio.file.Files;
@@ -106,7 +106,7 @@ import javax.annotation.Nullable;
  *                     .build())
  *                 .vendors(HipObjectAntiMalwareVendorArgs.builder()
  *                     .name("Microsoft")
- *                     .product(List.of("Microsoft Defender"))
+ *                     .product(Arrays.asList("Microsoft Defender"))
  *                     .build())
  *                 .build())
  *             .dataLossPrevention(HipObjectDataLossPreventionArgs.builder()
@@ -227,7 +227,7 @@ import javax.annotation.Nullable;
  *                             .build())
  *                     .registryKeys(HipObjectCustomChecksCriteriaRegistryKeyArgs.builder()
  *                         .name("HKEY_LOCAL_MACHINE\\Software\\PaloAltoNetworks")
- *                         .registryValue(List.of(Map.ofEntries(
+ *                         .registryValue(Arrays.asList(Map.ofEntries(
  *                             Map.entry("name", "AllowRemoteAccess"),
  *                             Map.entry("valueData", "false")
  *                         )))

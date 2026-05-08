@@ -163,39 +163,39 @@ export interface LldpProfileState {
     /**
      * The device in which the resource is defined
      */
-    device?: pulumi.Input<string>;
+    device?: pulumi.Input<string | undefined>;
     /**
      * The folder in which the resource is defined
      *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
-    folder?: pulumi.Input<string>;
+    folder?: pulumi.Input<string | undefined>;
     /**
      * LLDP mode
      */
-    mode?: pulumi.Input<string>;
+    mode?: pulumi.Input<string | undefined>;
     /**
      * LLDP profile name
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Option tlvs
      */
-    optionTlvs?: pulumi.Input<inputs.LldpProfileOptionTlvs>;
+    optionTlvs?: pulumi.Input<inputs.LldpProfileOptionTlvs | undefined>;
     /**
      * The snippet in which the resource is defined
      *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
-    snippet?: pulumi.Input<string>;
+    snippet?: pulumi.Input<string | undefined>;
     /**
      * SNMP syslog notification
      */
-    snmpSyslogNotification?: pulumi.Input<boolean>;
+    snmpSyslogNotification?: pulumi.Input<boolean | undefined>;
     /**
      * The Terraform ID.
      */
-    tfid?: pulumi.Input<string>;
+    tfid?: pulumi.Input<string | undefined>;
 }
 
 /**
@@ -205,33 +205,33 @@ export interface LldpProfileArgs {
     /**
      * The device in which the resource is defined
      */
-    device?: pulumi.Input<string>;
+    device?: pulumi.Input<string | undefined>;
     /**
      * The folder in which the resource is defined
      *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
-    folder?: pulumi.Input<string>;
+    folder?: pulumi.Input<string | undefined>;
     /**
      * LLDP mode
      */
-    mode?: pulumi.Input<string>;
+    mode?: pulumi.Input<string | undefined>;
     /**
      * LLDP profile name
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Option tlvs
      */
-    optionTlvs?: pulumi.Input<inputs.LldpProfileOptionTlvs>;
+    optionTlvs?: pulumi.Input<inputs.LldpProfileOptionTlvs | undefined>;
     /**
      * The snippet in which the resource is defined
      *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
-    snippet?: pulumi.Input<string>;
+    snippet?: pulumi.Input<string | undefined>;
     /**
      * SNMP syslog notification
      */
-    snmpSyslogNotification?: pulumi.Input<boolean>;
+    snmpSyslogNotification?: pulumi.Input<boolean | undefined>;
 }

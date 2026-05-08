@@ -148,39 +148,39 @@ export interface TrafficSteeringRuleState {
     /**
      * Action
      */
-    action?: pulumi.Input<inputs.TrafficSteeringRuleAction>;
+    action?: pulumi.Input<inputs.TrafficSteeringRuleAction | undefined>;
     /**
      * Category
      */
-    categories?: pulumi.Input<pulumi.Input<string>[]>;
+    categories?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Destination
      */
-    destinations?: pulumi.Input<pulumi.Input<string>[]>;
+    destinations?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * The folder containing the traffic steering rule
      */
-    folder?: pulumi.Input<string>;
+    folder?: pulumi.Input<string | undefined>;
     /**
      * Name
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Service
      */
-    services?: pulumi.Input<pulumi.Input<string>[]>;
+    services?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Source user
      */
-    sourceUsers?: pulumi.Input<pulumi.Input<string>[]>;
+    sourceUsers?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Source
      */
-    sources?: pulumi.Input<pulumi.Input<string>[]>;
+    sources?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * The Terraform ID.
      */
-    tfid?: pulumi.Input<string>;
+    tfid?: pulumi.Input<string | undefined>;
 }
 
 /**
@@ -190,23 +190,23 @@ export interface TrafficSteeringRuleArgs {
     /**
      * Action
      */
-    action?: pulumi.Input<inputs.TrafficSteeringRuleAction>;
+    action?: pulumi.Input<inputs.TrafficSteeringRuleAction | undefined>;
     /**
      * Category
      */
-    categories?: pulumi.Input<pulumi.Input<string>[]>;
+    categories?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Destination
      */
-    destinations?: pulumi.Input<pulumi.Input<string>[]>;
+    destinations?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * The folder containing the traffic steering rule
      */
-    folder?: pulumi.Input<string>;
+    folder?: pulumi.Input<string | undefined>;
     /**
      * Name
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Service
      */
@@ -214,7 +214,7 @@ export interface TrafficSteeringRuleArgs {
     /**
      * Source user
      */
-    sourceUsers?: pulumi.Input<pulumi.Input<string>[]>;
+    sourceUsers?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Source
      */

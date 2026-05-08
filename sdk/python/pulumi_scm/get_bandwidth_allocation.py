@@ -143,7 +143,7 @@ def get_bandwidth_allocation(name: Optional[_builtins.str] = None,
         qos=pulumi.get(__ret__, 'qos'),
         spn_name_lists=pulumi.get(__ret__, 'spn_name_lists'),
         tfid=pulumi.get(__ret__, 'tfid'))
-def get_bandwidth_allocation_output(name: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
+def get_bandwidth_allocation_output(name: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
                                     opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetBandwidthAllocationResult]:
     """
     BandwidthAllocation data source

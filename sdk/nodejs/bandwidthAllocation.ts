@@ -139,23 +139,23 @@ export interface BandwidthAllocationState {
     /**
      * bandwidth to allocate in Mbps
      */
-    allocatedBandwidth?: pulumi.Input<number>;
+    allocatedBandwidth?: pulumi.Input<number | undefined>;
     /**
      * name of the aggregated bandwidth region
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Qos
      */
-    qos?: pulumi.Input<inputs.BandwidthAllocationQos>;
+    qos?: pulumi.Input<inputs.BandwidthAllocationQos | undefined>;
     /**
      * Spn name list
      */
-    spnNameLists?: pulumi.Input<pulumi.Input<string>[]>;
+    spnNameLists?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * The Terraform ID.
      */
-    tfid?: pulumi.Input<string>;
+    tfid?: pulumi.Input<string | undefined>;
 }
 
 /**
@@ -169,13 +169,13 @@ export interface BandwidthAllocationArgs {
     /**
      * name of the aggregated bandwidth region
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Qos
      */
-    qos?: pulumi.Input<inputs.BandwidthAllocationQos>;
+    qos?: pulumi.Input<inputs.BandwidthAllocationQos | undefined>;
     /**
      * Spn name list
      */
-    spnNameLists?: pulumi.Input<pulumi.Input<string>[]>;
+    spnNameLists?: pulumi.Input<pulumi.Input<string>[] | undefined>;
 }

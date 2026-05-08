@@ -116,5 +116,5 @@ export interface GetSnippetOutputArgs {
     /**
      * The name of the snippet
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
 }

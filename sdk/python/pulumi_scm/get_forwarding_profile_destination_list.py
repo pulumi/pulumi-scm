@@ -218,12 +218,12 @@ def get_forwarding_profile_destination_list(device: Optional[_builtins.str] = No
         snippet=pulumi.get(__ret__, 'snippet'),
         tfid=pulumi.get(__ret__, 'tfid'),
         total=pulumi.get(__ret__, 'total'))
-def get_forwarding_profile_destination_list_output(device: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
-                                                   folder: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
-                                                   limit: Optional[pulumi.Input[Optional[_builtins.int]]] = None,
-                                                   name: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
-                                                   offset: Optional[pulumi.Input[Optional[_builtins.int]]] = None,
-                                                   snippet: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
+def get_forwarding_profile_destination_list_output(device: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
+                                                   folder: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
+                                                   limit: pulumi.Input[Optional[Optional[_builtins.int]]] = None,
+                                                   name: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
+                                                   offset: pulumi.Input[Optional[Optional[_builtins.int]]] = None,
+                                                   snippet: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
                                                    opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetForwardingProfileDestinationListResult]:
     """
     Retrieves a listing of config items.

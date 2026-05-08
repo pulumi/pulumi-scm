@@ -337,170 +337,170 @@ export interface ZoneProtectionProfileState {
      * * `drop` — Drop packets that contain an asymmetric path.
      * * `bypass` — Bypass scanning on packets that contain an asymmetric path.
      */
-    asymmetricPath?: pulumi.Input<string>;
+    asymmetricPath?: pulumi.Input<string | undefined>;
     /**
      * The description of the profile
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * The device in which the resource is defined
      *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
-    device?: pulumi.Input<string>;
+    device?: pulumi.Input<string | undefined>;
     /**
      * Discard ICMP packets that are embedded with an error message.
      */
-    discardIcmpEmbeddedError?: pulumi.Input<boolean>;
+    discardIcmpEmbeddedError?: pulumi.Input<boolean | undefined>;
     /**
      * Flood
      */
-    flood?: pulumi.Input<inputs.ZoneProtectionProfileFlood>;
+    flood?: pulumi.Input<inputs.ZoneProtectionProfileFlood | undefined>;
     /**
      * The folder in which the resource is defined
      *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
-    folder?: pulumi.Input<string>;
+    folder?: pulumi.Input<string | undefined>;
     /**
      * Discard fragmented IP packets.
      */
-    fragmentedTrafficDiscard?: pulumi.Input<boolean>;
+    fragmentedTrafficDiscard?: pulumi.Input<boolean | undefined>;
     /**
      * Discard packets that consist of ICMP fragments.
      */
-    icmpFragDiscard?: pulumi.Input<boolean>;
+    icmpFragDiscard?: pulumi.Input<boolean | undefined>;
     /**
      * Discard ICMP packets that are larger than 1024 bytes.
      */
-    icmpLargePacketDiscard?: pulumi.Input<boolean>;
+    icmpLargePacketDiscard?: pulumi.Input<boolean | undefined>;
     /**
      * Discard packets if the ICMP ping packet has an identifier value of 0.
      */
-    icmpPingZeroIdDiscard?: pulumi.Input<boolean>;
+    icmpPingZeroIdDiscard?: pulumi.Input<boolean | undefined>;
     /**
      * Ipv6
      */
-    ipv6?: pulumi.Input<inputs.ZoneProtectionProfileIpv6>;
+    ipv6?: pulumi.Input<inputs.ZoneProtectionProfileIpv6 | undefined>;
     /**
      * L2 sec group tag protection
      */
-    l2SecGroupTagProtection?: pulumi.Input<inputs.ZoneProtectionProfileL2SecGroupTagProtection>;
+    l2SecGroupTagProtection?: pulumi.Input<inputs.ZoneProtectionProfileL2SecGroupTagProtection | undefined>;
     /**
      * Discard packets with the Loose Source Routing IP option set. Loose Source Routing is an option whereby a source of a datagram provides routing information and a gateway or host is allowed to choose any route of a number of intermediate gateways to get the datagram to the next address in the route.
      */
-    looseSourceRoutingDiscard?: pulumi.Input<boolean>;
+    looseSourceRoutingDiscard?: pulumi.Input<boolean | undefined>;
     /**
      * Discard packets if they have incorrect combinations of class, number, and length based on RFCs 791, 1108, 1393, and 2113.
      */
-    malformedOptionDiscard?: pulumi.Input<boolean>;
+    malformedOptionDiscard?: pulumi.Input<boolean | undefined>;
     /**
      * Drop packets with mismatched overlapping TCP segments.
      */
-    mismatchedOverlappingTcpSegmentDiscard?: pulumi.Input<boolean>;
+    mismatchedOverlappingTcpSegmentDiscard?: pulumi.Input<boolean | undefined>;
     /**
      * MPTCP is an extension of TCP that allows a client to maintain a connection by simultaneously using multiple paths to connect to the destination host. By default, MPTCP support is disabled, based on the global MPTCP setting.  Review or adjust the MPTCP settings for the security zones associated with this profile:
      * * `no` — Enable MPTCP support (do not strip the MPTCP option).
      * * `yes` — Disable MPTCP support (strip the MPTCP option). With this configured, MPTCP connections are converted to standard TCP connections, as MPTCP is backwards compatible with TCP.
      * * `global` — Support MPTCP based on the global MPTCP setting. By default, the global MPTCP setting is set to yes so that MPTCP is disabled (the MPTCP option is stripped from the packet).
      */
-    mptcpOptionStrip?: pulumi.Input<string>;
+    mptcpOptionStrip?: pulumi.Input<string | undefined>;
     /**
      * The profile name
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Non ip protocol
      */
-    nonIpProtocol?: pulumi.Input<inputs.ZoneProtectionProfileNonIpProtocol>;
+    nonIpProtocol?: pulumi.Input<inputs.ZoneProtectionProfileNonIpProtocol | undefined>;
     /**
      * Discard packets with the Record Route IP option set. When a datagram has this option, each router that routes the datagram adds its own IP address to the header, thus providing the path to the recipient.
      */
-    recordRouteDiscard?: pulumi.Input<boolean>;
+    recordRouteDiscard?: pulumi.Input<boolean | undefined>;
     /**
      * Determine whether to reject the packet if the first packet for the TCP session setup is not a SYN packet:
      * * `global` — Use system-wide setting that is assigned through the CLI.
      * * `yes` — Reject non-SYN TCP.
      * * `no` — Accept non-SYN TCP.
      */
-    rejectNonSynTcp?: pulumi.Input<string>;
+    rejectNonSynTcp?: pulumi.Input<string | undefined>;
     /**
      * Scan white list
      */
-    scanWhiteLists?: pulumi.Input<pulumi.Input<inputs.ZoneProtectionProfileScanWhiteList>[]>;
+    scanWhiteLists?: pulumi.Input<pulumi.Input<inputs.ZoneProtectionProfileScanWhiteList>[] | undefined>;
     /**
      * Scan
      */
-    scans?: pulumi.Input<pulumi.Input<inputs.ZoneProtectionProfileScan>[]>;
+    scans?: pulumi.Input<pulumi.Input<inputs.ZoneProtectionProfileScan>[] | undefined>;
     /**
      * Discard packets if the security option is defined.
      */
-    securityDiscard?: pulumi.Input<boolean>;
+    securityDiscard?: pulumi.Input<boolean | undefined>;
     /**
      * The snippet in which the resource is defined
      *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
-    snippet?: pulumi.Input<string>;
+    snippet?: pulumi.Input<string | undefined>;
     /**
      * Check that the source IP address of the ingress packet is routable and the routing interface is in the same zone as the ingress interface. If either condition is not true, discard the packet.
      */
-    spoofedIpDiscard?: pulumi.Input<boolean>;
+    spoofedIpDiscard?: pulumi.Input<boolean | undefined>;
     /**
      * Discard packets if the Stream ID option is defined.
      */
-    streamIdDiscard?: pulumi.Input<boolean>;
+    streamIdDiscard?: pulumi.Input<boolean | undefined>;
     /**
      * Check that both conditions are true:
      * * The source IP address is not the subnet broadcast IP address of the ingress interface.
      * * The source IP address is routable over the exact ingress interface.
      * If either condition is not true, discard the packet.
      */
-    strictIpCheck?: pulumi.Input<boolean>;
+    strictIpCheck?: pulumi.Input<boolean | undefined>;
     /**
      * Discard packets with the Strict Source Routing IP option set. Strict Source Routing is an option whereby a source of a datagram provides routing information through which a gateway or host must send the datagram.
      */
-    strictSourceRoutingDiscard?: pulumi.Input<boolean>;
+    strictSourceRoutingDiscard?: pulumi.Input<boolean | undefined>;
     /**
      * Stop sending ICMP fragmentation needed messages in response to packets that exceed the interface MTU and have the do not fragment (DF) bit set. This setting will interfere with the PMTUD process performed by hosts behind the firewall.
      */
-    suppressIcmpNeedfrag?: pulumi.Input<boolean>;
+    suppressIcmpNeedfrag?: pulumi.Input<boolean | undefined>;
     /**
      * Stop sending ICMP TTL expired messages.
      */
-    suppressIcmpTimeexceeded?: pulumi.Input<boolean>;
+    suppressIcmpTimeexceeded?: pulumi.Input<boolean | undefined>;
     /**
      * Strip the TCP Fast Open option (and data payload, if any) from the TCP SYN or SYN-ACK packet during a TCP three-way handshake.
      */
-    tcpFastOpenAndDataStrip?: pulumi.Input<boolean>;
+    tcpFastOpenAndDataStrip?: pulumi.Input<boolean | undefined>;
     /**
      * Drop packets with split handshakes.
      */
-    tcpHandshakeDiscard?: pulumi.Input<boolean>;
+    tcpHandshakeDiscard?: pulumi.Input<boolean | undefined>;
     /**
      * Prevent a TCP session from being established if the TCP SYN packet contains data during a three-way handshake.
      */
-    tcpSynWithDataDiscard?: pulumi.Input<boolean>;
+    tcpSynWithDataDiscard?: pulumi.Input<boolean | undefined>;
     /**
      * Prevent a TCP session from being established if the TCP SYN-ACK packet contains data during a three-way handshake.
      */
-    tcpSynackWithDataDiscard?: pulumi.Input<boolean>;
+    tcpSynackWithDataDiscard?: pulumi.Input<boolean | undefined>;
     /**
      * Determine whether the packet has a TCP timestamp in the header and, if it does, strip the timestamp from the header.
      */
-    tcpTimestampStrip?: pulumi.Input<boolean>;
+    tcpTimestampStrip?: pulumi.Input<boolean | undefined>;
     /**
      * The Terraform ID.
      */
-    tfid?: pulumi.Input<string>;
+    tfid?: pulumi.Input<string | undefined>;
     /**
      * Discard packets with the Timestamp IP option set.
      */
-    timestampDiscard?: pulumi.Input<boolean>;
+    timestampDiscard?: pulumi.Input<boolean | undefined>;
     /**
      * Discard packets if the class and number are unknown.
      */
-    unknownOptionDiscard?: pulumi.Input<boolean>;
+    unknownOptionDiscard?: pulumi.Input<boolean | undefined>;
 }
 
 /**
@@ -513,164 +513,164 @@ export interface ZoneProtectionProfileArgs {
      * * `drop` — Drop packets that contain an asymmetric path.
      * * `bypass` — Bypass scanning on packets that contain an asymmetric path.
      */
-    asymmetricPath?: pulumi.Input<string>;
+    asymmetricPath?: pulumi.Input<string | undefined>;
     /**
      * The description of the profile
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * The device in which the resource is defined
      *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
-    device?: pulumi.Input<string>;
+    device?: pulumi.Input<string | undefined>;
     /**
      * Discard ICMP packets that are embedded with an error message.
      */
-    discardIcmpEmbeddedError?: pulumi.Input<boolean>;
+    discardIcmpEmbeddedError?: pulumi.Input<boolean | undefined>;
     /**
      * Flood
      */
-    flood?: pulumi.Input<inputs.ZoneProtectionProfileFlood>;
+    flood?: pulumi.Input<inputs.ZoneProtectionProfileFlood | undefined>;
     /**
      * The folder in which the resource is defined
      *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
-    folder?: pulumi.Input<string>;
+    folder?: pulumi.Input<string | undefined>;
     /**
      * Discard fragmented IP packets.
      */
-    fragmentedTrafficDiscard?: pulumi.Input<boolean>;
+    fragmentedTrafficDiscard?: pulumi.Input<boolean | undefined>;
     /**
      * Discard packets that consist of ICMP fragments.
      */
-    icmpFragDiscard?: pulumi.Input<boolean>;
+    icmpFragDiscard?: pulumi.Input<boolean | undefined>;
     /**
      * Discard ICMP packets that are larger than 1024 bytes.
      */
-    icmpLargePacketDiscard?: pulumi.Input<boolean>;
+    icmpLargePacketDiscard?: pulumi.Input<boolean | undefined>;
     /**
      * Discard packets if the ICMP ping packet has an identifier value of 0.
      */
-    icmpPingZeroIdDiscard?: pulumi.Input<boolean>;
+    icmpPingZeroIdDiscard?: pulumi.Input<boolean | undefined>;
     /**
      * Ipv6
      */
-    ipv6?: pulumi.Input<inputs.ZoneProtectionProfileIpv6>;
+    ipv6?: pulumi.Input<inputs.ZoneProtectionProfileIpv6 | undefined>;
     /**
      * L2 sec group tag protection
      */
-    l2SecGroupTagProtection?: pulumi.Input<inputs.ZoneProtectionProfileL2SecGroupTagProtection>;
+    l2SecGroupTagProtection?: pulumi.Input<inputs.ZoneProtectionProfileL2SecGroupTagProtection | undefined>;
     /**
      * Discard packets with the Loose Source Routing IP option set. Loose Source Routing is an option whereby a source of a datagram provides routing information and a gateway or host is allowed to choose any route of a number of intermediate gateways to get the datagram to the next address in the route.
      */
-    looseSourceRoutingDiscard?: pulumi.Input<boolean>;
+    looseSourceRoutingDiscard?: pulumi.Input<boolean | undefined>;
     /**
      * Discard packets if they have incorrect combinations of class, number, and length based on RFCs 791, 1108, 1393, and 2113.
      */
-    malformedOptionDiscard?: pulumi.Input<boolean>;
+    malformedOptionDiscard?: pulumi.Input<boolean | undefined>;
     /**
      * Drop packets with mismatched overlapping TCP segments.
      */
-    mismatchedOverlappingTcpSegmentDiscard?: pulumi.Input<boolean>;
+    mismatchedOverlappingTcpSegmentDiscard?: pulumi.Input<boolean | undefined>;
     /**
      * MPTCP is an extension of TCP that allows a client to maintain a connection by simultaneously using multiple paths to connect to the destination host. By default, MPTCP support is disabled, based on the global MPTCP setting.  Review or adjust the MPTCP settings for the security zones associated with this profile:
      * * `no` — Enable MPTCP support (do not strip the MPTCP option).
      * * `yes` — Disable MPTCP support (strip the MPTCP option). With this configured, MPTCP connections are converted to standard TCP connections, as MPTCP is backwards compatible with TCP.
      * * `global` — Support MPTCP based on the global MPTCP setting. By default, the global MPTCP setting is set to yes so that MPTCP is disabled (the MPTCP option is stripped from the packet).
      */
-    mptcpOptionStrip?: pulumi.Input<string>;
+    mptcpOptionStrip?: pulumi.Input<string | undefined>;
     /**
      * The profile name
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Non ip protocol
      */
-    nonIpProtocol?: pulumi.Input<inputs.ZoneProtectionProfileNonIpProtocol>;
+    nonIpProtocol?: pulumi.Input<inputs.ZoneProtectionProfileNonIpProtocol | undefined>;
     /**
      * Discard packets with the Record Route IP option set. When a datagram has this option, each router that routes the datagram adds its own IP address to the header, thus providing the path to the recipient.
      */
-    recordRouteDiscard?: pulumi.Input<boolean>;
+    recordRouteDiscard?: pulumi.Input<boolean | undefined>;
     /**
      * Determine whether to reject the packet if the first packet for the TCP session setup is not a SYN packet:
      * * `global` — Use system-wide setting that is assigned through the CLI.
      * * `yes` — Reject non-SYN TCP.
      * * `no` — Accept non-SYN TCP.
      */
-    rejectNonSynTcp?: pulumi.Input<string>;
+    rejectNonSynTcp?: pulumi.Input<string | undefined>;
     /**
      * Scan white list
      */
-    scanWhiteLists?: pulumi.Input<pulumi.Input<inputs.ZoneProtectionProfileScanWhiteList>[]>;
+    scanWhiteLists?: pulumi.Input<pulumi.Input<inputs.ZoneProtectionProfileScanWhiteList>[] | undefined>;
     /**
      * Scan
      */
-    scans?: pulumi.Input<pulumi.Input<inputs.ZoneProtectionProfileScan>[]>;
+    scans?: pulumi.Input<pulumi.Input<inputs.ZoneProtectionProfileScan>[] | undefined>;
     /**
      * Discard packets if the security option is defined.
      */
-    securityDiscard?: pulumi.Input<boolean>;
+    securityDiscard?: pulumi.Input<boolean | undefined>;
     /**
      * The snippet in which the resource is defined
      *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
-    snippet?: pulumi.Input<string>;
+    snippet?: pulumi.Input<string | undefined>;
     /**
      * Check that the source IP address of the ingress packet is routable and the routing interface is in the same zone as the ingress interface. If either condition is not true, discard the packet.
      */
-    spoofedIpDiscard?: pulumi.Input<boolean>;
+    spoofedIpDiscard?: pulumi.Input<boolean | undefined>;
     /**
      * Discard packets if the Stream ID option is defined.
      */
-    streamIdDiscard?: pulumi.Input<boolean>;
+    streamIdDiscard?: pulumi.Input<boolean | undefined>;
     /**
      * Check that both conditions are true:
      * * The source IP address is not the subnet broadcast IP address of the ingress interface.
      * * The source IP address is routable over the exact ingress interface.
      * If either condition is not true, discard the packet.
      */
-    strictIpCheck?: pulumi.Input<boolean>;
+    strictIpCheck?: pulumi.Input<boolean | undefined>;
     /**
      * Discard packets with the Strict Source Routing IP option set. Strict Source Routing is an option whereby a source of a datagram provides routing information through which a gateway or host must send the datagram.
      */
-    strictSourceRoutingDiscard?: pulumi.Input<boolean>;
+    strictSourceRoutingDiscard?: pulumi.Input<boolean | undefined>;
     /**
      * Stop sending ICMP fragmentation needed messages in response to packets that exceed the interface MTU and have the do not fragment (DF) bit set. This setting will interfere with the PMTUD process performed by hosts behind the firewall.
      */
-    suppressIcmpNeedfrag?: pulumi.Input<boolean>;
+    suppressIcmpNeedfrag?: pulumi.Input<boolean | undefined>;
     /**
      * Stop sending ICMP TTL expired messages.
      */
-    suppressIcmpTimeexceeded?: pulumi.Input<boolean>;
+    suppressIcmpTimeexceeded?: pulumi.Input<boolean | undefined>;
     /**
      * Strip the TCP Fast Open option (and data payload, if any) from the TCP SYN or SYN-ACK packet during a TCP three-way handshake.
      */
-    tcpFastOpenAndDataStrip?: pulumi.Input<boolean>;
+    tcpFastOpenAndDataStrip?: pulumi.Input<boolean | undefined>;
     /**
      * Drop packets with split handshakes.
      */
-    tcpHandshakeDiscard?: pulumi.Input<boolean>;
+    tcpHandshakeDiscard?: pulumi.Input<boolean | undefined>;
     /**
      * Prevent a TCP session from being established if the TCP SYN packet contains data during a three-way handshake.
      */
-    tcpSynWithDataDiscard?: pulumi.Input<boolean>;
+    tcpSynWithDataDiscard?: pulumi.Input<boolean | undefined>;
     /**
      * Prevent a TCP session from being established if the TCP SYN-ACK packet contains data during a three-way handshake.
      */
-    tcpSynackWithDataDiscard?: pulumi.Input<boolean>;
+    tcpSynackWithDataDiscard?: pulumi.Input<boolean | undefined>;
     /**
      * Determine whether the packet has a TCP timestamp in the header and, if it does, strip the timestamp from the header.
      */
-    tcpTimestampStrip?: pulumi.Input<boolean>;
+    tcpTimestampStrip?: pulumi.Input<boolean | undefined>;
     /**
      * Discard packets with the Timestamp IP option set.
      */
-    timestampDiscard?: pulumi.Input<boolean>;
+    timestampDiscard?: pulumi.Input<boolean | undefined>;
     /**
      * Discard packets if the class and number are unknown.
      */
-    unknownOptionDiscard?: pulumi.Input<boolean>;
+    unknownOptionDiscard?: pulumi.Input<boolean | undefined>;
 }

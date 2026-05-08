@@ -21,17 +21,17 @@ __all__ = ['ZoneArgs', 'Zone']
 @pulumi.input_type
 class ZoneArgs:
     def __init__(__self__, *,
-                 device: Optional[pulumi.Input[_builtins.str]] = None,
-                 device_acl: Optional[pulumi.Input['ZoneDeviceAclArgs']] = None,
-                 dos_log_setting: Optional[pulumi.Input[_builtins.str]] = None,
-                 dos_profile: Optional[pulumi.Input[_builtins.str]] = None,
-                 enable_device_identification: Optional[pulumi.Input[_builtins.bool]] = None,
-                 enable_user_identification: Optional[pulumi.Input[_builtins.bool]] = None,
-                 folder: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 network: Optional[pulumi.Input['ZoneNetworkArgs']] = None,
-                 snippet: Optional[pulumi.Input[_builtins.str]] = None,
-                 user_acl: Optional[pulumi.Input['ZoneUserAclArgs']] = None):
+                 device: pulumi.Input[Optional[_builtins.str]] = None,
+                 device_acl: pulumi.Input[Optional['ZoneDeviceAclArgs']] = None,
+                 dos_log_setting: pulumi.Input[Optional[_builtins.str]] = None,
+                 dos_profile: pulumi.Input[Optional[_builtins.str]] = None,
+                 enable_device_identification: pulumi.Input[Optional[_builtins.bool]] = None,
+                 enable_user_identification: pulumi.Input[Optional[_builtins.bool]] = None,
+                 folder: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 network: pulumi.Input[Optional['ZoneNetworkArgs']] = None,
+                 snippet: pulumi.Input[Optional[_builtins.str]] = None,
+                 user_acl: pulumi.Input[Optional['ZoneUserAclArgs']] = None):
         """
         The set of arguments for constructing a Zone resource.
 
@@ -76,79 +76,79 @@ class ZoneArgs:
 
     @_builtins.property
     @pulumi.getter
-    def device(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def device(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The device in which the resource is defined
         """
         return pulumi.get(self, "device")
 
     @device.setter
-    def device(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def device(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "device", value)
 
     @_builtins.property
     @pulumi.getter(name="deviceAcl")
-    def device_acl(self) -> Optional[pulumi.Input['ZoneDeviceAclArgs']]:
+    def device_acl(self) -> pulumi.Input[Optional['ZoneDeviceAclArgs']]:
         """
         Device acl
         """
         return pulumi.get(self, "device_acl")
 
     @device_acl.setter
-    def device_acl(self, value: Optional[pulumi.Input['ZoneDeviceAclArgs']]):
+    def device_acl(self, value: pulumi.Input[Optional['ZoneDeviceAclArgs']]):
         pulumi.set(self, "device_acl", value)
 
     @_builtins.property
     @pulumi.getter(name="dosLogSetting")
-    def dos_log_setting(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def dos_log_setting(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Dos log setting
         """
         return pulumi.get(self, "dos_log_setting")
 
     @dos_log_setting.setter
-    def dos_log_setting(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def dos_log_setting(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "dos_log_setting", value)
 
     @_builtins.property
     @pulumi.getter(name="dosProfile")
-    def dos_profile(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def dos_profile(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Dos profile
         """
         return pulumi.get(self, "dos_profile")
 
     @dos_profile.setter
-    def dos_profile(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def dos_profile(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "dos_profile", value)
 
     @_builtins.property
     @pulumi.getter(name="enableDeviceIdentification")
-    def enable_device_identification(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def enable_device_identification(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Enable device identification
         """
         return pulumi.get(self, "enable_device_identification")
 
     @enable_device_identification.setter
-    def enable_device_identification(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def enable_device_identification(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "enable_device_identification", value)
 
     @_builtins.property
     @pulumi.getter(name="enableUserIdentification")
-    def enable_user_identification(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def enable_user_identification(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Enable user identification
         """
         return pulumi.get(self, "enable_user_identification")
 
     @enable_user_identification.setter
-    def enable_user_identification(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def enable_user_identification(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "enable_user_identification", value)
 
     @_builtins.property
     @pulumi.getter
-    def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def folder(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Folder
 
@@ -157,36 +157,36 @@ class ZoneArgs:
         return pulumi.get(self, "folder")
 
     @folder.setter
-    def folder(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def folder(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "folder", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Alphanumeric string begin with letter: [0-9a-zA-Z._-]
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter
-    def network(self) -> Optional[pulumi.Input['ZoneNetworkArgs']]:
+    def network(self) -> pulumi.Input[Optional['ZoneNetworkArgs']]:
         """
         Network
         """
         return pulumi.get(self, "network")
 
     @network.setter
-    def network(self, value: Optional[pulumi.Input['ZoneNetworkArgs']]):
+    def network(self, value: pulumi.Input[Optional['ZoneNetworkArgs']]):
         pulumi.set(self, "network", value)
 
     @_builtins.property
     @pulumi.getter
-    def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def snippet(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
 
@@ -195,37 +195,37 @@ class ZoneArgs:
         return pulumi.get(self, "snippet")
 
     @snippet.setter
-    def snippet(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def snippet(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "snippet", value)
 
     @_builtins.property
     @pulumi.getter(name="userAcl")
-    def user_acl(self) -> Optional[pulumi.Input['ZoneUserAclArgs']]:
+    def user_acl(self) -> pulumi.Input[Optional['ZoneUserAclArgs']]:
         """
         User acl
         """
         return pulumi.get(self, "user_acl")
 
     @user_acl.setter
-    def user_acl(self, value: Optional[pulumi.Input['ZoneUserAclArgs']]):
+    def user_acl(self, value: pulumi.Input[Optional['ZoneUserAclArgs']]):
         pulumi.set(self, "user_acl", value)
 
 
 @pulumi.input_type
 class _ZoneState:
     def __init__(__self__, *,
-                 device: Optional[pulumi.Input[_builtins.str]] = None,
-                 device_acl: Optional[pulumi.Input['ZoneDeviceAclArgs']] = None,
-                 dos_log_setting: Optional[pulumi.Input[_builtins.str]] = None,
-                 dos_profile: Optional[pulumi.Input[_builtins.str]] = None,
-                 enable_device_identification: Optional[pulumi.Input[_builtins.bool]] = None,
-                 enable_user_identification: Optional[pulumi.Input[_builtins.bool]] = None,
-                 folder: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 network: Optional[pulumi.Input['ZoneNetworkArgs']] = None,
-                 snippet: Optional[pulumi.Input[_builtins.str]] = None,
-                 tfid: Optional[pulumi.Input[_builtins.str]] = None,
-                 user_acl: Optional[pulumi.Input['ZoneUserAclArgs']] = None):
+                 device: pulumi.Input[Optional[_builtins.str]] = None,
+                 device_acl: pulumi.Input[Optional['ZoneDeviceAclArgs']] = None,
+                 dos_log_setting: pulumi.Input[Optional[_builtins.str]] = None,
+                 dos_profile: pulumi.Input[Optional[_builtins.str]] = None,
+                 enable_device_identification: pulumi.Input[Optional[_builtins.bool]] = None,
+                 enable_user_identification: pulumi.Input[Optional[_builtins.bool]] = None,
+                 folder: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 network: pulumi.Input[Optional['ZoneNetworkArgs']] = None,
+                 snippet: pulumi.Input[Optional[_builtins.str]] = None,
+                 tfid: pulumi.Input[Optional[_builtins.str]] = None,
+                 user_acl: pulumi.Input[Optional['ZoneUserAclArgs']] = None):
         """
         Input properties used for looking up and filtering Zone resources.
 
@@ -273,79 +273,79 @@ class _ZoneState:
 
     @_builtins.property
     @pulumi.getter
-    def device(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def device(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The device in which the resource is defined
         """
         return pulumi.get(self, "device")
 
     @device.setter
-    def device(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def device(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "device", value)
 
     @_builtins.property
     @pulumi.getter(name="deviceAcl")
-    def device_acl(self) -> Optional[pulumi.Input['ZoneDeviceAclArgs']]:
+    def device_acl(self) -> pulumi.Input[Optional['ZoneDeviceAclArgs']]:
         """
         Device acl
         """
         return pulumi.get(self, "device_acl")
 
     @device_acl.setter
-    def device_acl(self, value: Optional[pulumi.Input['ZoneDeviceAclArgs']]):
+    def device_acl(self, value: pulumi.Input[Optional['ZoneDeviceAclArgs']]):
         pulumi.set(self, "device_acl", value)
 
     @_builtins.property
     @pulumi.getter(name="dosLogSetting")
-    def dos_log_setting(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def dos_log_setting(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Dos log setting
         """
         return pulumi.get(self, "dos_log_setting")
 
     @dos_log_setting.setter
-    def dos_log_setting(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def dos_log_setting(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "dos_log_setting", value)
 
     @_builtins.property
     @pulumi.getter(name="dosProfile")
-    def dos_profile(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def dos_profile(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Dos profile
         """
         return pulumi.get(self, "dos_profile")
 
     @dos_profile.setter
-    def dos_profile(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def dos_profile(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "dos_profile", value)
 
     @_builtins.property
     @pulumi.getter(name="enableDeviceIdentification")
-    def enable_device_identification(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def enable_device_identification(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Enable device identification
         """
         return pulumi.get(self, "enable_device_identification")
 
     @enable_device_identification.setter
-    def enable_device_identification(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def enable_device_identification(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "enable_device_identification", value)
 
     @_builtins.property
     @pulumi.getter(name="enableUserIdentification")
-    def enable_user_identification(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def enable_user_identification(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Enable user identification
         """
         return pulumi.get(self, "enable_user_identification")
 
     @enable_user_identification.setter
-    def enable_user_identification(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def enable_user_identification(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "enable_user_identification", value)
 
     @_builtins.property
     @pulumi.getter
-    def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def folder(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Folder
 
@@ -354,36 +354,36 @@ class _ZoneState:
         return pulumi.get(self, "folder")
 
     @folder.setter
-    def folder(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def folder(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "folder", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Alphanumeric string begin with letter: [0-9a-zA-Z._-]
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter
-    def network(self) -> Optional[pulumi.Input['ZoneNetworkArgs']]:
+    def network(self) -> pulumi.Input[Optional['ZoneNetworkArgs']]:
         """
         Network
         """
         return pulumi.get(self, "network")
 
     @network.setter
-    def network(self, value: Optional[pulumi.Input['ZoneNetworkArgs']]):
+    def network(self, value: pulumi.Input[Optional['ZoneNetworkArgs']]):
         pulumi.set(self, "network", value)
 
     @_builtins.property
     @pulumi.getter
-    def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def snippet(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
 
@@ -392,31 +392,31 @@ class _ZoneState:
         return pulumi.get(self, "snippet")
 
     @snippet.setter
-    def snippet(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def snippet(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "snippet", value)
 
     @_builtins.property
     @pulumi.getter
-    def tfid(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def tfid(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The Terraform ID.
         """
         return pulumi.get(self, "tfid")
 
     @tfid.setter
-    def tfid(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def tfid(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "tfid", value)
 
     @_builtins.property
     @pulumi.getter(name="userAcl")
-    def user_acl(self) -> Optional[pulumi.Input['ZoneUserAclArgs']]:
+    def user_acl(self) -> pulumi.Input[Optional['ZoneUserAclArgs']]:
         """
         User acl
         """
         return pulumi.get(self, "user_acl")
 
     @user_acl.setter
-    def user_acl(self, value: Optional[pulumi.Input['ZoneUserAclArgs']]):
+    def user_acl(self, value: pulumi.Input[Optional['ZoneUserAclArgs']]):
         pulumi.set(self, "user_acl", value)
 
 
@@ -426,17 +426,17 @@ class Zone(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 device: Optional[pulumi.Input[_builtins.str]] = None,
-                 device_acl: Optional[pulumi.Input[Union['ZoneDeviceAclArgs', 'ZoneDeviceAclArgsDict']]] = None,
-                 dos_log_setting: Optional[pulumi.Input[_builtins.str]] = None,
-                 dos_profile: Optional[pulumi.Input[_builtins.str]] = None,
-                 enable_device_identification: Optional[pulumi.Input[_builtins.bool]] = None,
-                 enable_user_identification: Optional[pulumi.Input[_builtins.bool]] = None,
-                 folder: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 network: Optional[pulumi.Input[Union['ZoneNetworkArgs', 'ZoneNetworkArgsDict']]] = None,
-                 snippet: Optional[pulumi.Input[_builtins.str]] = None,
-                 user_acl: Optional[pulumi.Input[Union['ZoneUserAclArgs', 'ZoneUserAclArgsDict']]] = None,
+                 device: pulumi.Input[Optional[_builtins.str]] = None,
+                 device_acl: pulumi.Input[Optional[Union['ZoneDeviceAclArgs', 'ZoneDeviceAclArgsDict']]] = None,
+                 dos_log_setting: pulumi.Input[Optional[_builtins.str]] = None,
+                 dos_profile: pulumi.Input[Optional[_builtins.str]] = None,
+                 enable_device_identification: pulumi.Input[Optional[_builtins.bool]] = None,
+                 enable_user_identification: pulumi.Input[Optional[_builtins.bool]] = None,
+                 folder: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 network: pulumi.Input[Optional[Union['ZoneNetworkArgs', 'ZoneNetworkArgsDict']]] = None,
+                 snippet: pulumi.Input[Optional[_builtins.str]] = None,
+                 user_acl: pulumi.Input[Optional[Union['ZoneUserAclArgs', 'ZoneUserAclArgsDict']]] = None,
                  __props__=None):
         """
         Zone resource
@@ -661,17 +661,17 @@ class Zone(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 device: Optional[pulumi.Input[_builtins.str]] = None,
-                 device_acl: Optional[pulumi.Input[Union['ZoneDeviceAclArgs', 'ZoneDeviceAclArgsDict']]] = None,
-                 dos_log_setting: Optional[pulumi.Input[_builtins.str]] = None,
-                 dos_profile: Optional[pulumi.Input[_builtins.str]] = None,
-                 enable_device_identification: Optional[pulumi.Input[_builtins.bool]] = None,
-                 enable_user_identification: Optional[pulumi.Input[_builtins.bool]] = None,
-                 folder: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 network: Optional[pulumi.Input[Union['ZoneNetworkArgs', 'ZoneNetworkArgsDict']]] = None,
-                 snippet: Optional[pulumi.Input[_builtins.str]] = None,
-                 user_acl: Optional[pulumi.Input[Union['ZoneUserAclArgs', 'ZoneUserAclArgsDict']]] = None,
+                 device: pulumi.Input[Optional[_builtins.str]] = None,
+                 device_acl: pulumi.Input[Optional[Union['ZoneDeviceAclArgs', 'ZoneDeviceAclArgsDict']]] = None,
+                 dos_log_setting: pulumi.Input[Optional[_builtins.str]] = None,
+                 dos_profile: pulumi.Input[Optional[_builtins.str]] = None,
+                 enable_device_identification: pulumi.Input[Optional[_builtins.bool]] = None,
+                 enable_user_identification: pulumi.Input[Optional[_builtins.bool]] = None,
+                 folder: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 network: pulumi.Input[Optional[Union['ZoneNetworkArgs', 'ZoneNetworkArgsDict']]] = None,
+                 snippet: pulumi.Input[Optional[_builtins.str]] = None,
+                 user_acl: pulumi.Input[Optional[Union['ZoneUserAclArgs', 'ZoneUserAclArgsDict']]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -703,18 +703,18 @@ class Zone(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            device: Optional[pulumi.Input[_builtins.str]] = None,
-            device_acl: Optional[pulumi.Input[Union['ZoneDeviceAclArgs', 'ZoneDeviceAclArgsDict']]] = None,
-            dos_log_setting: Optional[pulumi.Input[_builtins.str]] = None,
-            dos_profile: Optional[pulumi.Input[_builtins.str]] = None,
-            enable_device_identification: Optional[pulumi.Input[_builtins.bool]] = None,
-            enable_user_identification: Optional[pulumi.Input[_builtins.bool]] = None,
-            folder: Optional[pulumi.Input[_builtins.str]] = None,
-            name: Optional[pulumi.Input[_builtins.str]] = None,
-            network: Optional[pulumi.Input[Union['ZoneNetworkArgs', 'ZoneNetworkArgsDict']]] = None,
-            snippet: Optional[pulumi.Input[_builtins.str]] = None,
-            tfid: Optional[pulumi.Input[_builtins.str]] = None,
-            user_acl: Optional[pulumi.Input[Union['ZoneUserAclArgs', 'ZoneUserAclArgsDict']]] = None) -> 'Zone':
+            device: pulumi.Input[Optional[_builtins.str]] = None,
+            device_acl: pulumi.Input[Optional[Union['ZoneDeviceAclArgs', 'ZoneDeviceAclArgsDict']]] = None,
+            dos_log_setting: pulumi.Input[Optional[_builtins.str]] = None,
+            dos_profile: pulumi.Input[Optional[_builtins.str]] = None,
+            enable_device_identification: pulumi.Input[Optional[_builtins.bool]] = None,
+            enable_user_identification: pulumi.Input[Optional[_builtins.bool]] = None,
+            folder: pulumi.Input[Optional[_builtins.str]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            network: pulumi.Input[Optional[Union['ZoneNetworkArgs', 'ZoneNetworkArgsDict']]] = None,
+            snippet: pulumi.Input[Optional[_builtins.str]] = None,
+            tfid: pulumi.Input[Optional[_builtins.str]] = None,
+            user_acl: pulumi.Input[Optional[Union['ZoneUserAclArgs', 'ZoneUserAclArgsDict']]] = None) -> 'Zone':
         """
         Get an existing Zone resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

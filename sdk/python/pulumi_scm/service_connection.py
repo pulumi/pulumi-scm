@@ -23,18 +23,18 @@ class ServiceConnectionArgs:
     def __init__(__self__, *,
                  ipsec_tunnel: pulumi.Input[_builtins.str],
                  region: pulumi.Input[_builtins.str],
-                 backup_sc: Optional[pulumi.Input[_builtins.str]] = None,
-                 bgp_peer: Optional[pulumi.Input['ServiceConnectionBgpPeerArgs']] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 nat_pool: Optional[pulumi.Input[_builtins.str]] = None,
-                 no_export_community: Optional[pulumi.Input[_builtins.str]] = None,
-                 onboarding_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 protocol: Optional[pulumi.Input['ServiceConnectionProtocolArgs']] = None,
-                 qos: Optional[pulumi.Input['ServiceConnectionQosArgs']] = None,
-                 region_tag: Optional[pulumi.Input[_builtins.str]] = None,
-                 secondary_ipsec_tunnel: Optional[pulumi.Input[_builtins.str]] = None,
-                 source_nat: Optional[pulumi.Input[_builtins.bool]] = None,
-                 subnets: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None):
+                 backup_sc: pulumi.Input[Optional[_builtins.str]] = None,
+                 bgp_peer: pulumi.Input[Optional['ServiceConnectionBgpPeerArgs']] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 nat_pool: pulumi.Input[Optional[_builtins.str]] = None,
+                 no_export_community: pulumi.Input[Optional[_builtins.str]] = None,
+                 onboarding_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 protocol: pulumi.Input[Optional['ServiceConnectionProtocolArgs']] = None,
+                 qos: pulumi.Input[Optional['ServiceConnectionQosArgs']] = None,
+                 region_tag: pulumi.Input[Optional[_builtins.str]] = None,
+                 secondary_ipsec_tunnel: pulumi.Input[Optional[_builtins.str]] = None,
+                 source_nat: pulumi.Input[Optional[_builtins.bool]] = None,
+                 subnets: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None):
         """
         The set of arguments for constructing a ServiceConnection resource.
 
@@ -106,169 +106,169 @@ class ServiceConnectionArgs:
 
     @_builtins.property
     @pulumi.getter(name="backupSc")
-    def backup_sc(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def backup_sc(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Backup s c
         """
         return pulumi.get(self, "backup_sc")
 
     @backup_sc.setter
-    def backup_sc(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def backup_sc(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "backup_sc", value)
 
     @_builtins.property
     @pulumi.getter(name="bgpPeer")
-    def bgp_peer(self) -> Optional[pulumi.Input['ServiceConnectionBgpPeerArgs']]:
+    def bgp_peer(self) -> pulumi.Input[Optional['ServiceConnectionBgpPeerArgs']]:
         """
         Bgp peer
         """
         return pulumi.get(self, "bgp_peer")
 
     @bgp_peer.setter
-    def bgp_peer(self, value: Optional[pulumi.Input['ServiceConnectionBgpPeerArgs']]):
+    def bgp_peer(self, value: pulumi.Input[Optional['ServiceConnectionBgpPeerArgs']]):
         pulumi.set(self, "bgp_peer", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the service connection
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter(name="natPool")
-    def nat_pool(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def nat_pool(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Nat pool
         """
         return pulumi.get(self, "nat_pool")
 
     @nat_pool.setter
-    def nat_pool(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def nat_pool(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "nat_pool", value)
 
     @_builtins.property
     @pulumi.getter(name="noExportCommunity")
-    def no_export_community(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def no_export_community(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         No export community
         """
         return pulumi.get(self, "no_export_community")
 
     @no_export_community.setter
-    def no_export_community(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def no_export_community(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "no_export_community", value)
 
     @_builtins.property
     @pulumi.getter(name="onboardingType")
-    def onboarding_type(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def onboarding_type(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Onboarding type
         """
         return pulumi.get(self, "onboarding_type")
 
     @onboarding_type.setter
-    def onboarding_type(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def onboarding_type(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "onboarding_type", value)
 
     @_builtins.property
     @pulumi.getter
-    def protocol(self) -> Optional[pulumi.Input['ServiceConnectionProtocolArgs']]:
+    def protocol(self) -> pulumi.Input[Optional['ServiceConnectionProtocolArgs']]:
         """
         Protocol
         """
         return pulumi.get(self, "protocol")
 
     @protocol.setter
-    def protocol(self, value: Optional[pulumi.Input['ServiceConnectionProtocolArgs']]):
+    def protocol(self, value: pulumi.Input[Optional['ServiceConnectionProtocolArgs']]):
         pulumi.set(self, "protocol", value)
 
     @_builtins.property
     @pulumi.getter
-    def qos(self) -> Optional[pulumi.Input['ServiceConnectionQosArgs']]:
+    def qos(self) -> pulumi.Input[Optional['ServiceConnectionQosArgs']]:
         """
         Qos
         """
         return pulumi.get(self, "qos")
 
     @qos.setter
-    def qos(self, value: Optional[pulumi.Input['ServiceConnectionQosArgs']]):
+    def qos(self, value: pulumi.Input[Optional['ServiceConnectionQosArgs']]):
         pulumi.set(self, "qos", value)
 
     @_builtins.property
     @pulumi.getter(name="regionTag")
-    def region_tag(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def region_tag(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Region tag
         """
         return pulumi.get(self, "region_tag")
 
     @region_tag.setter
-    def region_tag(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def region_tag(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "region_tag", value)
 
     @_builtins.property
     @pulumi.getter(name="secondaryIpsecTunnel")
-    def secondary_ipsec_tunnel(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def secondary_ipsec_tunnel(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Secondary ipsec tunnel
         """
         return pulumi.get(self, "secondary_ipsec_tunnel")
 
     @secondary_ipsec_tunnel.setter
-    def secondary_ipsec_tunnel(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def secondary_ipsec_tunnel(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "secondary_ipsec_tunnel", value)
 
     @_builtins.property
     @pulumi.getter(name="sourceNat")
-    def source_nat(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def source_nat(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Source nat
         """
         return pulumi.get(self, "source_nat")
 
     @source_nat.setter
-    def source_nat(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def source_nat(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "source_nat", value)
 
     @_builtins.property
     @pulumi.getter
-    def subnets(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def subnets(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         Subnets
         """
         return pulumi.get(self, "subnets")
 
     @subnets.setter
-    def subnets(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def subnets(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "subnets", value)
 
 
 @pulumi.input_type
 class _ServiceConnectionState:
     def __init__(__self__, *,
-                 backup_sc: Optional[pulumi.Input[_builtins.str]] = None,
-                 bgp_peer: Optional[pulumi.Input['ServiceConnectionBgpPeerArgs']] = None,
-                 encrypted_values: Optional[pulumi.Input[Mapping[str, pulumi.Input[_builtins.str]]]] = None,
-                 folder: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipsec_tunnel: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 nat_pool: Optional[pulumi.Input[_builtins.str]] = None,
-                 no_export_community: Optional[pulumi.Input[_builtins.str]] = None,
-                 onboarding_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 protocol: Optional[pulumi.Input['ServiceConnectionProtocolArgs']] = None,
-                 qos: Optional[pulumi.Input['ServiceConnectionQosArgs']] = None,
-                 region: Optional[pulumi.Input[_builtins.str]] = None,
-                 region_tag: Optional[pulumi.Input[_builtins.str]] = None,
-                 secondary_ipsec_tunnel: Optional[pulumi.Input[_builtins.str]] = None,
-                 source_nat: Optional[pulumi.Input[_builtins.bool]] = None,
-                 subnets: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 tfid: Optional[pulumi.Input[_builtins.str]] = None):
+                 backup_sc: pulumi.Input[Optional[_builtins.str]] = None,
+                 bgp_peer: pulumi.Input[Optional['ServiceConnectionBgpPeerArgs']] = None,
+                 encrypted_values: pulumi.Input[Optional[Mapping[str, pulumi.Input[_builtins.str]]]] = None,
+                 folder: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipsec_tunnel: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 nat_pool: pulumi.Input[Optional[_builtins.str]] = None,
+                 no_export_community: pulumi.Input[Optional[_builtins.str]] = None,
+                 onboarding_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 protocol: pulumi.Input[Optional['ServiceConnectionProtocolArgs']] = None,
+                 qos: pulumi.Input[Optional['ServiceConnectionQosArgs']] = None,
+                 region: pulumi.Input[Optional[_builtins.str]] = None,
+                 region_tag: pulumi.Input[Optional[_builtins.str]] = None,
+                 secondary_ipsec_tunnel: pulumi.Input[Optional[_builtins.str]] = None,
+                 source_nat: pulumi.Input[Optional[_builtins.bool]] = None,
+                 subnets: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 tfid: pulumi.Input[Optional[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering ServiceConnection resources.
 
@@ -327,206 +327,206 @@ class _ServiceConnectionState:
 
     @_builtins.property
     @pulumi.getter(name="backupSc")
-    def backup_sc(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def backup_sc(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Backup s c
         """
         return pulumi.get(self, "backup_sc")
 
     @backup_sc.setter
-    def backup_sc(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def backup_sc(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "backup_sc", value)
 
     @_builtins.property
     @pulumi.getter(name="bgpPeer")
-    def bgp_peer(self) -> Optional[pulumi.Input['ServiceConnectionBgpPeerArgs']]:
+    def bgp_peer(self) -> pulumi.Input[Optional['ServiceConnectionBgpPeerArgs']]:
         """
         Bgp peer
         """
         return pulumi.get(self, "bgp_peer")
 
     @bgp_peer.setter
-    def bgp_peer(self, value: Optional[pulumi.Input['ServiceConnectionBgpPeerArgs']]):
+    def bgp_peer(self, value: pulumi.Input[Optional['ServiceConnectionBgpPeerArgs']]):
         pulumi.set(self, "bgp_peer", value)
 
     @_builtins.property
     @pulumi.getter(name="encryptedValues")
-    def encrypted_values(self) -> Optional[pulumi.Input[Mapping[str, pulumi.Input[_builtins.str]]]]:
+    def encrypted_values(self) -> pulumi.Input[Optional[Mapping[str, pulumi.Input[_builtins.str]]]]:
         """
         Map of sensitive values returned from the API.
         """
         return pulumi.get(self, "encrypted_values")
 
     @encrypted_values.setter
-    def encrypted_values(self, value: Optional[pulumi.Input[Mapping[str, pulumi.Input[_builtins.str]]]]):
+    def encrypted_values(self, value: pulumi.Input[Optional[Mapping[str, pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "encrypted_values", value)
 
     @_builtins.property
     @pulumi.getter
-    def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def folder(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
         """
         return pulumi.get(self, "folder")
 
     @folder.setter
-    def folder(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def folder(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "folder", value)
 
     @_builtins.property
     @pulumi.getter(name="ipsecTunnel")
-    def ipsec_tunnel(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ipsec_tunnel(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Ipsec tunnel
         """
         return pulumi.get(self, "ipsec_tunnel")
 
     @ipsec_tunnel.setter
-    def ipsec_tunnel(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ipsec_tunnel(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ipsec_tunnel", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the service connection
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter(name="natPool")
-    def nat_pool(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def nat_pool(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Nat pool
         """
         return pulumi.get(self, "nat_pool")
 
     @nat_pool.setter
-    def nat_pool(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def nat_pool(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "nat_pool", value)
 
     @_builtins.property
     @pulumi.getter(name="noExportCommunity")
-    def no_export_community(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def no_export_community(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         No export community
         """
         return pulumi.get(self, "no_export_community")
 
     @no_export_community.setter
-    def no_export_community(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def no_export_community(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "no_export_community", value)
 
     @_builtins.property
     @pulumi.getter(name="onboardingType")
-    def onboarding_type(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def onboarding_type(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Onboarding type
         """
         return pulumi.get(self, "onboarding_type")
 
     @onboarding_type.setter
-    def onboarding_type(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def onboarding_type(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "onboarding_type", value)
 
     @_builtins.property
     @pulumi.getter
-    def protocol(self) -> Optional[pulumi.Input['ServiceConnectionProtocolArgs']]:
+    def protocol(self) -> pulumi.Input[Optional['ServiceConnectionProtocolArgs']]:
         """
         Protocol
         """
         return pulumi.get(self, "protocol")
 
     @protocol.setter
-    def protocol(self, value: Optional[pulumi.Input['ServiceConnectionProtocolArgs']]):
+    def protocol(self, value: pulumi.Input[Optional['ServiceConnectionProtocolArgs']]):
         pulumi.set(self, "protocol", value)
 
     @_builtins.property
     @pulumi.getter
-    def qos(self) -> Optional[pulumi.Input['ServiceConnectionQosArgs']]:
+    def qos(self) -> pulumi.Input[Optional['ServiceConnectionQosArgs']]:
         """
         Qos
         """
         return pulumi.get(self, "qos")
 
     @qos.setter
-    def qos(self, value: Optional[pulumi.Input['ServiceConnectionQosArgs']]):
+    def qos(self, value: pulumi.Input[Optional['ServiceConnectionQosArgs']]):
         pulumi.set(self, "qos", value)
 
     @_builtins.property
     @pulumi.getter
-    def region(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def region(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Region
         """
         return pulumi.get(self, "region")
 
     @region.setter
-    def region(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def region(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "region", value)
 
     @_builtins.property
     @pulumi.getter(name="regionTag")
-    def region_tag(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def region_tag(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Region tag
         """
         return pulumi.get(self, "region_tag")
 
     @region_tag.setter
-    def region_tag(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def region_tag(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "region_tag", value)
 
     @_builtins.property
     @pulumi.getter(name="secondaryIpsecTunnel")
-    def secondary_ipsec_tunnel(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def secondary_ipsec_tunnel(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Secondary ipsec tunnel
         """
         return pulumi.get(self, "secondary_ipsec_tunnel")
 
     @secondary_ipsec_tunnel.setter
-    def secondary_ipsec_tunnel(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def secondary_ipsec_tunnel(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "secondary_ipsec_tunnel", value)
 
     @_builtins.property
     @pulumi.getter(name="sourceNat")
-    def source_nat(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def source_nat(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Source nat
         """
         return pulumi.get(self, "source_nat")
 
     @source_nat.setter
-    def source_nat(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def source_nat(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "source_nat", value)
 
     @_builtins.property
     @pulumi.getter
-    def subnets(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def subnets(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         Subnets
         """
         return pulumi.get(self, "subnets")
 
     @subnets.setter
-    def subnets(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def subnets(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "subnets", value)
 
     @_builtins.property
     @pulumi.getter
-    def tfid(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def tfid(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The Terraform ID.
         """
         return pulumi.get(self, "tfid")
 
     @tfid.setter
-    def tfid(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def tfid(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "tfid", value)
 
 
@@ -536,20 +536,20 @@ class ServiceConnection(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 backup_sc: Optional[pulumi.Input[_builtins.str]] = None,
-                 bgp_peer: Optional[pulumi.Input[Union['ServiceConnectionBgpPeerArgs', 'ServiceConnectionBgpPeerArgsDict']]] = None,
-                 ipsec_tunnel: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 nat_pool: Optional[pulumi.Input[_builtins.str]] = None,
-                 no_export_community: Optional[pulumi.Input[_builtins.str]] = None,
-                 onboarding_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 protocol: Optional[pulumi.Input[Union['ServiceConnectionProtocolArgs', 'ServiceConnectionProtocolArgsDict']]] = None,
-                 qos: Optional[pulumi.Input[Union['ServiceConnectionQosArgs', 'ServiceConnectionQosArgsDict']]] = None,
-                 region: Optional[pulumi.Input[_builtins.str]] = None,
-                 region_tag: Optional[pulumi.Input[_builtins.str]] = None,
-                 secondary_ipsec_tunnel: Optional[pulumi.Input[_builtins.str]] = None,
-                 source_nat: Optional[pulumi.Input[_builtins.bool]] = None,
-                 subnets: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 backup_sc: pulumi.Input[Optional[_builtins.str]] = None,
+                 bgp_peer: pulumi.Input[Optional[Union['ServiceConnectionBgpPeerArgs', 'ServiceConnectionBgpPeerArgsDict']]] = None,
+                 ipsec_tunnel: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 nat_pool: pulumi.Input[Optional[_builtins.str]] = None,
+                 no_export_community: pulumi.Input[Optional[_builtins.str]] = None,
+                 onboarding_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 protocol: pulumi.Input[Optional[Union['ServiceConnectionProtocolArgs', 'ServiceConnectionProtocolArgsDict']]] = None,
+                 qos: pulumi.Input[Optional[Union['ServiceConnectionQosArgs', 'ServiceConnectionQosArgsDict']]] = None,
+                 region: pulumi.Input[Optional[_builtins.str]] = None,
+                 region_tag: pulumi.Input[Optional[_builtins.str]] = None,
+                 secondary_ipsec_tunnel: pulumi.Input[Optional[_builtins.str]] = None,
+                 source_nat: pulumi.Input[Optional[_builtins.bool]] = None,
+                 subnets: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  __props__=None):
         """
         ServiceConnection resource
@@ -795,20 +795,20 @@ class ServiceConnection(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 backup_sc: Optional[pulumi.Input[_builtins.str]] = None,
-                 bgp_peer: Optional[pulumi.Input[Union['ServiceConnectionBgpPeerArgs', 'ServiceConnectionBgpPeerArgsDict']]] = None,
-                 ipsec_tunnel: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 nat_pool: Optional[pulumi.Input[_builtins.str]] = None,
-                 no_export_community: Optional[pulumi.Input[_builtins.str]] = None,
-                 onboarding_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 protocol: Optional[pulumi.Input[Union['ServiceConnectionProtocolArgs', 'ServiceConnectionProtocolArgsDict']]] = None,
-                 qos: Optional[pulumi.Input[Union['ServiceConnectionQosArgs', 'ServiceConnectionQosArgsDict']]] = None,
-                 region: Optional[pulumi.Input[_builtins.str]] = None,
-                 region_tag: Optional[pulumi.Input[_builtins.str]] = None,
-                 secondary_ipsec_tunnel: Optional[pulumi.Input[_builtins.str]] = None,
-                 source_nat: Optional[pulumi.Input[_builtins.bool]] = None,
-                 subnets: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 backup_sc: pulumi.Input[Optional[_builtins.str]] = None,
+                 bgp_peer: pulumi.Input[Optional[Union['ServiceConnectionBgpPeerArgs', 'ServiceConnectionBgpPeerArgsDict']]] = None,
+                 ipsec_tunnel: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 nat_pool: pulumi.Input[Optional[_builtins.str]] = None,
+                 no_export_community: pulumi.Input[Optional[_builtins.str]] = None,
+                 onboarding_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 protocol: pulumi.Input[Optional[Union['ServiceConnectionProtocolArgs', 'ServiceConnectionProtocolArgsDict']]] = None,
+                 qos: pulumi.Input[Optional[Union['ServiceConnectionQosArgs', 'ServiceConnectionQosArgsDict']]] = None,
+                 region: pulumi.Input[Optional[_builtins.str]] = None,
+                 region_tag: pulumi.Input[Optional[_builtins.str]] = None,
+                 secondary_ipsec_tunnel: pulumi.Input[Optional[_builtins.str]] = None,
+                 source_nat: pulumi.Input[Optional[_builtins.bool]] = None,
+                 subnets: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -851,23 +851,23 @@ class ServiceConnection(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            backup_sc: Optional[pulumi.Input[_builtins.str]] = None,
-            bgp_peer: Optional[pulumi.Input[Union['ServiceConnectionBgpPeerArgs', 'ServiceConnectionBgpPeerArgsDict']]] = None,
-            encrypted_values: Optional[pulumi.Input[Mapping[str, pulumi.Input[_builtins.str]]]] = None,
-            folder: Optional[pulumi.Input[_builtins.str]] = None,
-            ipsec_tunnel: Optional[pulumi.Input[_builtins.str]] = None,
-            name: Optional[pulumi.Input[_builtins.str]] = None,
-            nat_pool: Optional[pulumi.Input[_builtins.str]] = None,
-            no_export_community: Optional[pulumi.Input[_builtins.str]] = None,
-            onboarding_type: Optional[pulumi.Input[_builtins.str]] = None,
-            protocol: Optional[pulumi.Input[Union['ServiceConnectionProtocolArgs', 'ServiceConnectionProtocolArgsDict']]] = None,
-            qos: Optional[pulumi.Input[Union['ServiceConnectionQosArgs', 'ServiceConnectionQosArgsDict']]] = None,
-            region: Optional[pulumi.Input[_builtins.str]] = None,
-            region_tag: Optional[pulumi.Input[_builtins.str]] = None,
-            secondary_ipsec_tunnel: Optional[pulumi.Input[_builtins.str]] = None,
-            source_nat: Optional[pulumi.Input[_builtins.bool]] = None,
-            subnets: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-            tfid: Optional[pulumi.Input[_builtins.str]] = None) -> 'ServiceConnection':
+            backup_sc: pulumi.Input[Optional[_builtins.str]] = None,
+            bgp_peer: pulumi.Input[Optional[Union['ServiceConnectionBgpPeerArgs', 'ServiceConnectionBgpPeerArgsDict']]] = None,
+            encrypted_values: pulumi.Input[Optional[Mapping[str, pulumi.Input[_builtins.str]]]] = None,
+            folder: pulumi.Input[Optional[_builtins.str]] = None,
+            ipsec_tunnel: pulumi.Input[Optional[_builtins.str]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            nat_pool: pulumi.Input[Optional[_builtins.str]] = None,
+            no_export_community: pulumi.Input[Optional[_builtins.str]] = None,
+            onboarding_type: pulumi.Input[Optional[_builtins.str]] = None,
+            protocol: pulumi.Input[Optional[Union['ServiceConnectionProtocolArgs', 'ServiceConnectionProtocolArgsDict']]] = None,
+            qos: pulumi.Input[Optional[Union['ServiceConnectionQosArgs', 'ServiceConnectionQosArgsDict']]] = None,
+            region: pulumi.Input[Optional[_builtins.str]] = None,
+            region_tag: pulumi.Input[Optional[_builtins.str]] = None,
+            secondary_ipsec_tunnel: pulumi.Input[Optional[_builtins.str]] = None,
+            source_nat: pulumi.Input[Optional[_builtins.bool]] = None,
+            subnets: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            tfid: pulumi.Input[Optional[_builtins.str]] = None) -> 'ServiceConnection':
         """
         Get an existing ServiceConnection resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

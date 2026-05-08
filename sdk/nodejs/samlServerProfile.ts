@@ -226,63 +226,63 @@ export interface SamlServerProfileState {
     /**
      * The identity provider certificate
      */
-    certificate?: pulumi.Input<string>;
+    certificate?: pulumi.Input<string | undefined>;
     /**
      * The device in which the resource is defined
      */
-    device?: pulumi.Input<string>;
+    device?: pulumi.Input<string | undefined>;
     /**
      * The identity provider ID
      */
-    entityId?: pulumi.Input<string>;
+    entityId?: pulumi.Input<string | undefined>;
     /**
      * The folder in which the resource is defined
      *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
-    folder?: pulumi.Input<string>;
+    folder?: pulumi.Input<string | undefined>;
     /**
      * Maxiumum clock skew
      */
-    maxClockSkew?: pulumi.Input<number>;
+    maxClockSkew?: pulumi.Input<number | undefined>;
     /**
      * The name of the SAML server profile
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * SAML HTTP binding for SLO requests to the identity provider
      */
-    sloBindings?: pulumi.Input<string>;
+    sloBindings?: pulumi.Input<string | undefined>;
     /**
      * Identity provider SLO URL
      */
-    sloUrl?: pulumi.Input<string>;
+    sloUrl?: pulumi.Input<string | undefined>;
     /**
      * The snippet in which the resource is defined
      *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
-    snippet?: pulumi.Input<string>;
+    snippet?: pulumi.Input<string | undefined>;
     /**
      * SAML HTTP binding for SSO requests to the identity provider
      */
-    ssoBindings?: pulumi.Input<string>;
+    ssoBindings?: pulumi.Input<string | undefined>;
     /**
      * Identity provider SSO URL
      */
-    ssoUrl?: pulumi.Input<string>;
+    ssoUrl?: pulumi.Input<string | undefined>;
     /**
      * The Terraform ID.
      */
-    tfid?: pulumi.Input<string>;
+    tfid?: pulumi.Input<string | undefined>;
     /**
      * Validate the identity provider certificate?
      */
-    validateIdpCertificate?: pulumi.Input<boolean>;
+    validateIdpCertificate?: pulumi.Input<boolean | undefined>;
     /**
      * Sign SAML message to the identity provider?
      */
-    wantAuthRequestsSigned?: pulumi.Input<boolean>;
+    wantAuthRequestsSigned?: pulumi.Input<boolean | undefined>;
 }
 
 /**
@@ -296,7 +296,7 @@ export interface SamlServerProfileArgs {
     /**
      * The device in which the resource is defined
      */
-    device?: pulumi.Input<string>;
+    device?: pulumi.Input<string | undefined>;
     /**
      * The identity provider ID
      */
@@ -306,29 +306,29 @@ export interface SamlServerProfileArgs {
      *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
-    folder?: pulumi.Input<string>;
+    folder?: pulumi.Input<string | undefined>;
     /**
      * Maxiumum clock skew
      */
-    maxClockSkew?: pulumi.Input<number>;
+    maxClockSkew?: pulumi.Input<number | undefined>;
     /**
      * The name of the SAML server profile
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * SAML HTTP binding for SLO requests to the identity provider
      */
-    sloBindings?: pulumi.Input<string>;
+    sloBindings?: pulumi.Input<string | undefined>;
     /**
      * Identity provider SLO URL
      */
-    sloUrl?: pulumi.Input<string>;
+    sloUrl?: pulumi.Input<string | undefined>;
     /**
      * The snippet in which the resource is defined
      *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
-    snippet?: pulumi.Input<string>;
+    snippet?: pulumi.Input<string | undefined>;
     /**
      * SAML HTTP binding for SSO requests to the identity provider
      */
@@ -340,9 +340,9 @@ export interface SamlServerProfileArgs {
     /**
      * Validate the identity provider certificate?
      */
-    validateIdpCertificate?: pulumi.Input<boolean>;
+    validateIdpCertificate?: pulumi.Input<boolean | undefined>;
     /**
      * Sign SAML message to the identity provider?
      */
-    wantAuthRequestsSigned?: pulumi.Input<boolean>;
+    wantAuthRequestsSigned?: pulumi.Input<boolean | undefined>;
 }

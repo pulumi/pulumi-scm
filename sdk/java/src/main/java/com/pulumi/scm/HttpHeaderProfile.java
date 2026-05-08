@@ -31,8 +31,8 @@ import javax.annotation.Nullable;
  * import com.pulumi.scm.HttpHeaderProfile;
  * import com.pulumi.scm.HttpHeaderProfileArgs;
  * import com.pulumi.scm.inputs.HttpHeaderProfileHttpHeaderInsertionArgs;
- * import java.util.List;
  * import java.util.ArrayList;
+ * import java.util.Arrays;
  * import java.util.Map;
  * import java.io.File;
  * import java.nio.file.Files;
@@ -54,10 +54,10 @@ import javax.annotation.Nullable;
  *             .name("simple_http_header_profile_2")
  *             .httpHeaderInsertions(HttpHeaderProfileHttpHeaderInsertionArgs.builder()
  *                 .name("header_one")
- *                 .type(List.of(Map.ofEntries(
+ *                 .type(Arrays.asList(Map.ofEntries(
  *                     Map.entry("name", "Google Apps Access Control"),
- *                     Map.entry("domains", List.of("*.google.com")),
- *                     Map.entry("headers", List.of(Map.ofEntries(
+ *                     Map.entry("domains", Arrays.asList("*.google.com")),
+ *                     Map.entry("headers", Arrays.asList(Map.ofEntries(
  *                         Map.entry("name", "X-GooGAppls-Allowed-Domains"),
  *                         Map.entry("header", "X-GooGAppls-Allowed-Domains"),
  *                         Map.entry("value", "user-allowed")
@@ -72,13 +72,13 @@ import javax.annotation.Nullable;
  *             .httpHeaderInsertions(            
  *                 HttpHeaderProfileHttpHeaderInsertionArgs.builder()
  *                     .name("header_insertion_one")
- *                     .type(List.of(Map.ofEntries(
+ *                     .type(Arrays.asList(Map.ofEntries(
  *                         Map.entry("name", "Dropbox Network Control"),
- *                         Map.entry("domains", List.of(                        
+ *                         Map.entry("domains", Arrays.asList(                        
  *                             "*.db.tt",
  *                             "*.dropbox.com",
  *                             "dropboxformum.com")),
- *                         Map.entry("headers", List.of(                        
+ *                         Map.entry("headers", Arrays.asList(                        
  *                             Map.ofEntries(
  *                                 Map.entry("name", "X-Dropbox-allowed-Team-Ids"),
  *                                 Map.entry("header", "X-Dropbox-allowed-Team-Ids"),
@@ -93,13 +93,13 @@ import javax.annotation.Nullable;
  *                     .build(),
  *                 HttpHeaderProfileHttpHeaderInsertionArgs.builder()
  *                     .name("header_insertion_two")
- *                     .type(List.of(Map.ofEntries(
+ *                     .type(Arrays.asList(Map.ofEntries(
  *                         Map.entry("name", "Microsoft Office365 Tenant Restrictions"),
- *                         Map.entry("domains", List.of(                        
+ *                         Map.entry("domains", Arrays.asList(                        
  *                             "login.mircosoft.com",
  *                             "login.mircosoftonline.com",
  *                             "login.windows.net")),
- *                         Map.entry("headers", List.of(                        
+ *                         Map.entry("headers", Arrays.asList(                        
  *                             Map.ofEntries(
  *                                 Map.entry("name", "Restrict-Access-Context"),
  *                                 Map.entry("header", "Restrict-Access-Context"),
@@ -114,10 +114,10 @@ import javax.annotation.Nullable;
  *                     .build(),
  *                 HttpHeaderProfileHttpHeaderInsertionArgs.builder()
  *                     .name("header_insertion_three")
- *                     .type(List.of(Map.ofEntries(
+ *                     .type(Arrays.asList(Map.ofEntries(
  *                         Map.entry("name", "Dynamic Fields"),
- *                         Map.entry("domains", List.of("custom_domain")),
- *                         Map.entry("headers", List.of(Map.ofEntries(
+ *                         Map.entry("domains", Arrays.asList("custom_domain")),
+ *                         Map.entry("headers", Arrays.asList(Map.ofEntries(
  *                             Map.entry("name", "Authorization"),
  *                             Map.entry("header", "Authorization"),
  *                             Map.entry("value", "auth")
@@ -126,12 +126,12 @@ import javax.annotation.Nullable;
  *                     .build(),
  *                 HttpHeaderProfileHttpHeaderInsertionArgs.builder()
  *                     .name("header_insertion_four")
- *                     .type(List.of(Map.ofEntries(
+ *                     .type(Arrays.asList(Map.ofEntries(
  *                         Map.entry("name", "Youtube Safe Search"),
- *                         Map.entry("domains", List.of(                        
+ *                         Map.entry("domains", Arrays.asList(                        
  *                             "m.youtube.com",
  *                             "www.youtube.com")),
- *                         Map.entry("headers", List.of(Map.ofEntries(
+ *                         Map.entry("headers", Arrays.asList(Map.ofEntries(
  *                             Map.entry("name", "Youtube-Restrict"),
  *                             Map.entry("header", "Youtube-Restrict"),
  *                             Map.entry("value", "denied-youtube")
@@ -140,12 +140,12 @@ import javax.annotation.Nullable;
  *                     .build(),
  *                 HttpHeaderProfileHttpHeaderInsertionArgs.builder()
  *                     .name("header_insertion_five")
- *                     .type(List.of(Map.ofEntries(
+ *                     .type(Arrays.asList(Map.ofEntries(
  *                         Map.entry("name", "Custom"),
- *                         Map.entry("domains", List.of(                        
+ *                         Map.entry("domains", Arrays.asList(                        
  *                             "custom_1",
  *                             "custom_2")),
- *                         Map.entry("headers", List.of(Map.ofEntries(
+ *                         Map.entry("headers", Arrays.asList(Map.ofEntries(
  *                             Map.entry("name", "custom_header"),
  *                             Map.entry("header", "custom_header"),
  *                             Map.entry("value", "custom")

@@ -285,43 +285,43 @@ export interface DecryptionProfileState {
     /**
      * The device in which the resource is defined
      */
-    device?: pulumi.Input<string>;
+    device?: pulumi.Input<string | undefined>;
     /**
      * The folder in which the resource is defined
      *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
-    folder?: pulumi.Input<string>;
+    folder?: pulumi.Input<string | undefined>;
     /**
      * Must start with alphanumeric char and should contain only alphanemeric, underscore, hyphen, dot or space
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * The snippet in which the resource is defined
      *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
-    snippet?: pulumi.Input<string>;
+    snippet?: pulumi.Input<string | undefined>;
     /**
      * Ssl forward proxy
      */
-    sslForwardProxy?: pulumi.Input<inputs.DecryptionProfileSslForwardProxy>;
+    sslForwardProxy?: pulumi.Input<inputs.DecryptionProfileSslForwardProxy | undefined>;
     /**
      * Ssl inbound proxy
      */
-    sslInboundProxy?: pulumi.Input<inputs.DecryptionProfileSslInboundProxy>;
+    sslInboundProxy?: pulumi.Input<inputs.DecryptionProfileSslInboundProxy | undefined>;
     /**
      * Ssl no proxy
      */
-    sslNoProxy?: pulumi.Input<inputs.DecryptionProfileSslNoProxy>;
+    sslNoProxy?: pulumi.Input<inputs.DecryptionProfileSslNoProxy | undefined>;
     /**
      * Ssl protocol settings
      */
-    sslProtocolSettings?: pulumi.Input<inputs.DecryptionProfileSslProtocolSettings>;
+    sslProtocolSettings?: pulumi.Input<inputs.DecryptionProfileSslProtocolSettings | undefined>;
     /**
      * The Terraform ID.
      */
-    tfid?: pulumi.Input<string>;
+    tfid?: pulumi.Input<string | undefined>;
 }
 
 /**
@@ -331,37 +331,37 @@ export interface DecryptionProfileArgs {
     /**
      * The device in which the resource is defined
      */
-    device?: pulumi.Input<string>;
+    device?: pulumi.Input<string | undefined>;
     /**
      * The folder in which the resource is defined
      *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
-    folder?: pulumi.Input<string>;
+    folder?: pulumi.Input<string | undefined>;
     /**
      * Must start with alphanumeric char and should contain only alphanemeric, underscore, hyphen, dot or space
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * The snippet in which the resource is defined
      *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
-    snippet?: pulumi.Input<string>;
+    snippet?: pulumi.Input<string | undefined>;
     /**
      * Ssl forward proxy
      */
-    sslForwardProxy?: pulumi.Input<inputs.DecryptionProfileSslForwardProxy>;
+    sslForwardProxy?: pulumi.Input<inputs.DecryptionProfileSslForwardProxy | undefined>;
     /**
      * Ssl inbound proxy
      */
-    sslInboundProxy?: pulumi.Input<inputs.DecryptionProfileSslInboundProxy>;
+    sslInboundProxy?: pulumi.Input<inputs.DecryptionProfileSslInboundProxy | undefined>;
     /**
      * Ssl no proxy
      */
-    sslNoProxy?: pulumi.Input<inputs.DecryptionProfileSslNoProxy>;
+    sslNoProxy?: pulumi.Input<inputs.DecryptionProfileSslNoProxy | undefined>;
     /**
      * Ssl protocol settings
      */
-    sslProtocolSettings?: pulumi.Input<inputs.DecryptionProfileSslProtocolSettings>;
+    sslProtocolSettings?: pulumi.Input<inputs.DecryptionProfileSslProtocolSettings | undefined>;
 }

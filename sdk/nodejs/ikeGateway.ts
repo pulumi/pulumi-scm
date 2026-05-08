@@ -232,59 +232,59 @@ export interface IkeGatewayState {
     /**
      * Authentication
      */
-    authentication?: pulumi.Input<inputs.IkeGatewayAuthentication>;
+    authentication?: pulumi.Input<inputs.IkeGatewayAuthentication | undefined>;
     /**
      * The device in which the resource is defined
      */
-    device?: pulumi.Input<string>;
+    device?: pulumi.Input<string | undefined>;
     /**
      * Map of sensitive values returned from the API.
      */
-    encryptedValues?: pulumi.Input<{[key: string]: pulumi.Input<string>}>;
+    encryptedValues?: pulumi.Input<{[key: string]: pulumi.Input<string>} | undefined>;
     /**
      * The folder in which the resource is defined
      *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
-    folder?: pulumi.Input<string>;
+    folder?: pulumi.Input<string | undefined>;
     /**
      * Local address
      */
-    localAddress?: pulumi.Input<inputs.IkeGatewayLocalAddress>;
+    localAddress?: pulumi.Input<inputs.IkeGatewayLocalAddress | undefined>;
     /**
      * Local id
      */
-    localId?: pulumi.Input<inputs.IkeGatewayLocalId>;
+    localId?: pulumi.Input<inputs.IkeGatewayLocalId | undefined>;
     /**
      * Alphanumeric string begin with letter: [0-9a-zA-Z._-]
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Peer address
      */
-    peerAddress?: pulumi.Input<inputs.IkeGatewayPeerAddress>;
+    peerAddress?: pulumi.Input<inputs.IkeGatewayPeerAddress | undefined>;
     /**
      * Peer id
      */
-    peerId?: pulumi.Input<inputs.IkeGatewayPeerId>;
+    peerId?: pulumi.Input<inputs.IkeGatewayPeerId | undefined>;
     /**
      * Protocol
      */
-    protocol?: pulumi.Input<inputs.IkeGatewayProtocol>;
+    protocol?: pulumi.Input<inputs.IkeGatewayProtocol | undefined>;
     /**
      * Protocol common
      */
-    protocolCommon?: pulumi.Input<inputs.IkeGatewayProtocolCommon>;
+    protocolCommon?: pulumi.Input<inputs.IkeGatewayProtocolCommon | undefined>;
     /**
      * The snippet in which the resource is defined
      *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
-    snippet?: pulumi.Input<string>;
+    snippet?: pulumi.Input<string | undefined>;
     /**
      * The Terraform ID.
      */
-    tfid?: pulumi.Input<string>;
+    tfid?: pulumi.Input<string | undefined>;
 }
 
 /**
@@ -298,25 +298,25 @@ export interface IkeGatewayArgs {
     /**
      * The device in which the resource is defined
      */
-    device?: pulumi.Input<string>;
+    device?: pulumi.Input<string | undefined>;
     /**
      * The folder in which the resource is defined
      *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
-    folder?: pulumi.Input<string>;
+    folder?: pulumi.Input<string | undefined>;
     /**
      * Local address
      */
-    localAddress?: pulumi.Input<inputs.IkeGatewayLocalAddress>;
+    localAddress?: pulumi.Input<inputs.IkeGatewayLocalAddress | undefined>;
     /**
      * Local id
      */
-    localId?: pulumi.Input<inputs.IkeGatewayLocalId>;
+    localId?: pulumi.Input<inputs.IkeGatewayLocalId | undefined>;
     /**
      * Alphanumeric string begin with letter: [0-9a-zA-Z._-]
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Peer address
      */
@@ -324,7 +324,7 @@ export interface IkeGatewayArgs {
     /**
      * Peer id
      */
-    peerId?: pulumi.Input<inputs.IkeGatewayPeerId>;
+    peerId?: pulumi.Input<inputs.IkeGatewayPeerId | undefined>;
     /**
      * Protocol
      */
@@ -332,11 +332,11 @@ export interface IkeGatewayArgs {
     /**
      * Protocol common
      */
-    protocolCommon?: pulumi.Input<inputs.IkeGatewayProtocolCommon>;
+    protocolCommon?: pulumi.Input<inputs.IkeGatewayProtocolCommon | undefined>;
     /**
      * The snippet in which the resource is defined
      *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
-    snippet?: pulumi.Input<string>;
+    snippet?: pulumi.Input<string | undefined>;
 }

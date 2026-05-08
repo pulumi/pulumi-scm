@@ -176,51 +176,51 @@ export interface AuthenticationPortalState {
     /**
      * The authentication profile
      */
-    authenticationProfile?: pulumi.Input<string>;
+    authenticationProfile?: pulumi.Input<string | undefined>;
     /**
      * The certificate profile
      */
-    certificateProfile?: pulumi.Input<string>;
+    certificateProfile?: pulumi.Input<string | undefined>;
     /**
      * The device in which the resource is defined
      */
-    device?: pulumi.Input<string>;
+    device?: pulumi.Input<string | undefined>;
     /**
      * The folder in which the resource is defined
      *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
-    folder?: pulumi.Input<string>;
+    folder?: pulumi.Input<string | undefined>;
     /**
      * The UDP port for inbound authentication prompts
      */
-    gpUdpPort?: pulumi.Input<number>;
+    gpUdpPort?: pulumi.Input<number | undefined>;
     /**
      * The idle timeout value (minutes)
      */
-    idleTimer?: pulumi.Input<number>;
+    idleTimer?: pulumi.Input<number | undefined>;
     /**
      * The authentication portal IP address or hostname
      */
-    redirectHost?: pulumi.Input<string>;
+    redirectHost?: pulumi.Input<string | undefined>;
     /**
      * The snippet in which the resource is defined
      *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
-    snippet?: pulumi.Input<string>;
+    snippet?: pulumi.Input<string | undefined>;
     /**
      * The Terraform ID.
      */
-    tfid?: pulumi.Input<string>;
+    tfid?: pulumi.Input<string | undefined>;
     /**
      * Timer
      */
-    timer?: pulumi.Input<number>;
+    timer?: pulumi.Input<number | undefined>;
     /**
      * The SSL/TLS service profile
      */
-    tlsServiceProfile?: pulumi.Input<string>;
+    tlsServiceProfile?: pulumi.Input<string | undefined>;
 }
 
 /**
@@ -230,29 +230,29 @@ export interface AuthenticationPortalArgs {
     /**
      * The authentication profile
      */
-    authenticationProfile?: pulumi.Input<string>;
+    authenticationProfile?: pulumi.Input<string | undefined>;
     /**
      * The certificate profile
      */
-    certificateProfile?: pulumi.Input<string>;
+    certificateProfile?: pulumi.Input<string | undefined>;
     /**
      * The device in which the resource is defined
      */
-    device?: pulumi.Input<string>;
+    device?: pulumi.Input<string | undefined>;
     /**
      * The folder in which the resource is defined
      *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
-    folder?: pulumi.Input<string>;
+    folder?: pulumi.Input<string | undefined>;
     /**
      * The UDP port for inbound authentication prompts
      */
-    gpUdpPort?: pulumi.Input<number>;
+    gpUdpPort?: pulumi.Input<number | undefined>;
     /**
      * The idle timeout value (minutes)
      */
-    idleTimer?: pulumi.Input<number>;
+    idleTimer?: pulumi.Input<number | undefined>;
     /**
      * The authentication portal IP address or hostname
      */
@@ -262,13 +262,13 @@ export interface AuthenticationPortalArgs {
      *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
-    snippet?: pulumi.Input<string>;
+    snippet?: pulumi.Input<string | undefined>;
     /**
      * Timer
      */
-    timer?: pulumi.Input<number>;
+    timer?: pulumi.Input<number | undefined>;
     /**
      * The SSL/TLS service profile
      */
-    tlsServiceProfile?: pulumi.Input<string>;
+    tlsServiceProfile?: pulumi.Input<string | undefined>;
 }

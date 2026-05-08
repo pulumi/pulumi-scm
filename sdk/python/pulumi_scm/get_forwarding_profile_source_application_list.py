@@ -168,6 +168,48 @@ def get_forwarding_profile_source_application_list(device: Optional[_builtins.st
     """
     Retrieves a listing of config items.
 
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_scm as scm
+
+    def try_(*fns):
+        for fn in fns:
+            try:
+                result = fn()
+                return result
+            except:
+                continue
+        return None
+
+
+    # This data source will call the "List" API endpoint
+    # and return all forwarding profile source applications in the "Mobile Users" folder.
+    # 1. Use a single data block to fetch ALL forwarding profile source applications in the "Mobile Users" folder.
+    mobile_users = scm.get_forwarding_profile_source_application_list(folder="Mobile Users")
+    pulumi.export("forwardingProfileSourceApplicationsRawData", try_(
+        lambda: mobile_users,
+        lambda: None
+    ))
+    # Simplified pagination example with error handling
+    paginated_example = scm.get_forwarding_profile_source_application_list(folder="Mobile Users",
+        limit=5,
+        offset=0)
+    pulumi.export("paginatedForwardingProfileSourceApplications", try_(
+        lambda: {app.id: app for app in paginated_example.datas},
+        lambda: {}
+    ))
+    pulumi.export("paginationDetails", try_(
+        lambda: {
+            "totalObjectsInFolder": paginated_example.total,
+            "limitUsed": paginated_example.limit,
+            "offsetUsed": paginated_example.offset,
+        },
+        lambda: {}
+    ))
+    ```
+
 
     :param _builtins.str device: The device of the item.
     :param _builtins.str folder: The folder of the item. Default: Shared.
@@ -197,15 +239,57 @@ def get_forwarding_profile_source_application_list(device: Optional[_builtins.st
         snippet=pulumi.get(__ret__, 'snippet'),
         tfid=pulumi.get(__ret__, 'tfid'),
         total=pulumi.get(__ret__, 'total'))
-def get_forwarding_profile_source_application_list_output(device: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
-                                                          folder: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
-                                                          limit: Optional[pulumi.Input[Optional[_builtins.int]]] = None,
-                                                          name: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
-                                                          offset: Optional[pulumi.Input[Optional[_builtins.int]]] = None,
-                                                          snippet: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
+def get_forwarding_profile_source_application_list_output(device: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
+                                                          folder: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
+                                                          limit: pulumi.Input[Optional[Optional[_builtins.int]]] = None,
+                                                          name: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
+                                                          offset: pulumi.Input[Optional[Optional[_builtins.int]]] = None,
+                                                          snippet: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
                                                           opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetForwardingProfileSourceApplicationListResult]:
     """
     Retrieves a listing of config items.
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_scm as scm
+
+    def try_(*fns):
+        for fn in fns:
+            try:
+                result = fn()
+                return result
+            except:
+                continue
+        return None
+
+
+    # This data source will call the "List" API endpoint
+    # and return all forwarding profile source applications in the "Mobile Users" folder.
+    # 1. Use a single data block to fetch ALL forwarding profile source applications in the "Mobile Users" folder.
+    mobile_users = scm.get_forwarding_profile_source_application_list(folder="Mobile Users")
+    pulumi.export("forwardingProfileSourceApplicationsRawData", try_(
+        lambda: mobile_users,
+        lambda: None
+    ))
+    # Simplified pagination example with error handling
+    paginated_example = scm.get_forwarding_profile_source_application_list(folder="Mobile Users",
+        limit=5,
+        offset=0)
+    pulumi.export("paginatedForwardingProfileSourceApplications", try_(
+        lambda: {app.id: app for app in paginated_example.datas},
+        lambda: {}
+    ))
+    pulumi.export("paginationDetails", try_(
+        lambda: {
+            "totalObjectsInFolder": paginated_example.total,
+            "limitUsed": paginated_example.limit,
+            "offsetUsed": paginated_example.offset,
+        },
+        lambda: {}
+    ))
+    ```
 
 
     :param _builtins.str device: The device of the item.

@@ -31,8 +31,8 @@ import javax.annotation.Nullable;
  * import com.pulumi.scm.DnsSecurityProfileArgs;
  * import com.pulumi.scm.inputs.DnsSecurityProfileBotnetDomainsArgs;
  * import com.pulumi.scm.inputs.DnsSecurityProfileBotnetDomainsSinkholeArgs;
- * import java.util.List;
  * import java.util.ArrayList;
+ * import java.util.Arrays;
  * import java.util.Map;
  * import java.io.File;
  * import java.nio.file.Files;
@@ -90,7 +90,7 @@ import javax.annotation.Nullable;
  *             .name("test_dns_lists")
  *             .description("dns security profile w/ dns lists")
  *             .botnetDomains(DnsSecurityProfileBotnetDomainsArgs.builder()
- *                 .dnsLists(List.of(                
+ *                 .dnsLists(Arrays.asList(                
  *                     Map.ofEntries(
  *                         Map.entry("name", "default-paloalto-dns"),
  *                         Map.entry("packetCapture", "disable"),
@@ -145,7 +145,7 @@ import javax.annotation.Nullable;
  *                     .logLevel("low")
  *                     .packetCapture("disable")
  *                     .build())
- *                 .dnsLists(List.of(Map.ofEntries(
+ *                 .dnsLists(Arrays.asList(Map.ofEntries(
  *                     Map.entry("name", "scm_edl_1"),
  *                     Map.entry("packetCapture", "single-packet"),
  *                     Map.entry("action", Map.of("block", Map.ofEntries(

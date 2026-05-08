@@ -260,55 +260,55 @@ export interface RemoteNetworkState {
     /**
      * Ecmp load balancing
      */
-    ecmpLoadBalancing?: pulumi.Input<string>;
+    ecmpLoadBalancing?: pulumi.Input<string | undefined>;
     /**
      * ecmp*tunnels is required when ecmp*load*balancing is enable
      */
-    ecmpTunnels?: pulumi.Input<pulumi.Input<inputs.RemoteNetworkEcmpTunnel>[]>;
+    ecmpTunnels?: pulumi.Input<pulumi.Input<inputs.RemoteNetworkEcmpTunnel>[] | undefined>;
     /**
      * Map of sensitive values returned from the API.
      */
-    encryptedValues?: pulumi.Input<{[key: string]: pulumi.Input<string>}>;
+    encryptedValues?: pulumi.Input<{[key: string]: pulumi.Input<string>} | undefined>;
     /**
      * The folder that contains the remote network
      */
-    folder?: pulumi.Input<string>;
+    folder?: pulumi.Input<string | undefined>;
     /**
      * ipsec*tunnel is required when ecmp*load_balancing is disable
      */
-    ipsecTunnel?: pulumi.Input<string>;
+    ipsecTunnel?: pulumi.Input<string | undefined>;
     /**
      * New customer will only be on aggregate bandwidth licensing
      */
-    licenseType?: pulumi.Input<string>;
+    licenseType?: pulumi.Input<string | undefined>;
     /**
      * The name of the remote network
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * setup the protocol when ecmp*load*balancing is disable
      */
-    protocol?: pulumi.Input<inputs.RemoteNetworkProtocol>;
+    protocol?: pulumi.Input<inputs.RemoteNetworkProtocol | undefined>;
     /**
      * Region
      */
-    region?: pulumi.Input<string>;
+    region?: pulumi.Input<string | undefined>;
     /**
      * specify secondary ipsecTunnel if needed
      */
-    secondaryIpsecTunnel?: pulumi.Input<string>;
+    secondaryIpsecTunnel?: pulumi.Input<string | undefined>;
     /**
      * spn-name is needed when licenseType is FWAAS-AGGREGATE
      */
-    spnName?: pulumi.Input<string>;
+    spnName?: pulumi.Input<string | undefined>;
     /**
      * Subnets
      */
-    subnets?: pulumi.Input<pulumi.Input<string>[]>;
+    subnets?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * The Terraform ID.
      */
-    tfid?: pulumi.Input<string>;
+    tfid?: pulumi.Input<string | undefined>;
 }
 
 /**
@@ -318,11 +318,11 @@ export interface RemoteNetworkArgs {
     /**
      * Ecmp load balancing
      */
-    ecmpLoadBalancing?: pulumi.Input<string>;
+    ecmpLoadBalancing?: pulumi.Input<string | undefined>;
     /**
      * ecmp*tunnels is required when ecmp*load*balancing is enable
      */
-    ecmpTunnels?: pulumi.Input<pulumi.Input<inputs.RemoteNetworkEcmpTunnel>[]>;
+    ecmpTunnels?: pulumi.Input<pulumi.Input<inputs.RemoteNetworkEcmpTunnel>[] | undefined>;
     /**
      * The folder that contains the remote network
      */
@@ -330,7 +330,7 @@ export interface RemoteNetworkArgs {
     /**
      * ipsec*tunnel is required when ecmp*load_balancing is disable
      */
-    ipsecTunnel?: pulumi.Input<string>;
+    ipsecTunnel?: pulumi.Input<string | undefined>;
     /**
      * New customer will only be on aggregate bandwidth licensing
      */
@@ -338,11 +338,11 @@ export interface RemoteNetworkArgs {
     /**
      * The name of the remote network
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * setup the protocol when ecmp*load*balancing is disable
      */
-    protocol?: pulumi.Input<inputs.RemoteNetworkProtocol>;
+    protocol?: pulumi.Input<inputs.RemoteNetworkProtocol | undefined>;
     /**
      * Region
      */
@@ -350,13 +350,13 @@ export interface RemoteNetworkArgs {
     /**
      * specify secondary ipsecTunnel if needed
      */
-    secondaryIpsecTunnel?: pulumi.Input<string>;
+    secondaryIpsecTunnel?: pulumi.Input<string | undefined>;
     /**
      * spn-name is needed when licenseType is FWAAS-AGGREGATE
      */
-    spnName?: pulumi.Input<string>;
+    spnName?: pulumi.Input<string | undefined>;
     /**
      * Subnets
      */
-    subnets?: pulumi.Input<pulumi.Input<string>[]>;
+    subnets?: pulumi.Input<pulumi.Input<string>[] | undefined>;
 }

@@ -287,27 +287,27 @@ export interface ForwardingProfileState {
     /**
      * Enable forwarding rule for forwarding profile
      */
-    definitionMethod?: pulumi.Input<string>;
+    definitionMethod?: pulumi.Input<string | undefined>;
     /**
      * Forwarding profile description
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * The folder in which the resource is defined
      */
-    folder?: pulumi.Input<string>;
+    folder?: pulumi.Input<string | undefined>;
     /**
      * forwarding profile name as an alphanumeric string [ 0-9a-zA-Z._ -]
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * The Terraform ID.
      */
-    tfid?: pulumi.Input<string>;
+    tfid?: pulumi.Input<string | undefined>;
     /**
      * Forwarding profile type configuration (PAC file, GlobalProtect proxy, or ZTNA agent)
      */
-    type?: pulumi.Input<inputs.ForwardingProfileType>;
+    type?: pulumi.Input<inputs.ForwardingProfileType | undefined>;
 }
 
 /**
@@ -317,21 +317,21 @@ export interface ForwardingProfileArgs {
     /**
      * Enable forwarding rule for forwarding profile
      */
-    definitionMethod?: pulumi.Input<string>;
+    definitionMethod?: pulumi.Input<string | undefined>;
     /**
      * Forwarding profile description
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * The folder in which the resource is defined
      */
-    folder?: pulumi.Input<string>;
+    folder?: pulumi.Input<string | undefined>;
     /**
      * forwarding profile name as an alphanumeric string [ 0-9a-zA-Z._ -]
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Forwarding profile type configuration (PAC file, GlobalProtect proxy, or ZTNA agent)
      */
-    type?: pulumi.Input<inputs.ForwardingProfileType>;
+    type?: pulumi.Input<inputs.ForwardingProfileType | undefined>;
 }

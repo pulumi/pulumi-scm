@@ -372,119 +372,119 @@ export interface AuthenticationRuleState {
     /**
      * The authentication profile name
      */
-    authenticationEnforcement?: pulumi.Input<string>;
+    authenticationEnforcement?: pulumi.Input<string | undefined>;
     /**
      * The destination URL categories
      */
-    categories?: pulumi.Input<pulumi.Input<string>[]>;
+    categories?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * The description of the authentication rule
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * The destination Host Integrity Profile (HIP)
      */
-    destinationHips?: pulumi.Input<pulumi.Input<string>[]>;
+    destinationHips?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * The destination addresses
      */
-    destinations?: pulumi.Input<pulumi.Input<string>[]>;
+    destinations?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Device
      */
-    device?: pulumi.Input<string>;
+    device?: pulumi.Input<string | undefined>;
     /**
      * Is the authentication rule disabled?
      */
-    disabled?: pulumi.Input<boolean>;
+    disabled?: pulumi.Input<boolean | undefined>;
     /**
      * Folder
      *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
-    folder?: pulumi.Input<string>;
+    folder?: pulumi.Input<string | undefined>;
     /**
      * The source security zones
      */
-    froms?: pulumi.Input<pulumi.Input<string>[]>;
+    froms?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Group tag
      */
-    groupTag?: pulumi.Input<string>;
+    groupTag?: pulumi.Input<string | undefined>;
     /**
      * The source Host Integrity Profile (HIP)
      */
-    hipProfiles?: pulumi.Input<pulumi.Input<string>[]>;
+    hipProfiles?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Log authentication timeouts?
      */
-    logAuthenticationTimeout?: pulumi.Input<boolean>;
+    logAuthenticationTimeout?: pulumi.Input<boolean | undefined>;
     /**
      * The log forwarding profile name
      */
-    logSetting?: pulumi.Input<string>;
+    logSetting?: pulumi.Input<string | undefined>;
     /**
      * The name of the authentication rule
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Are the destination addresses negated?
      */
-    negateDestination?: pulumi.Input<boolean>;
+    negateDestination?: pulumi.Input<boolean | undefined>;
     /**
      * Are the source addresses negated?
      */
-    negateSource?: pulumi.Input<boolean>;
+    negateSource?: pulumi.Input<boolean | undefined>;
     /**
      * The relative position of the rule
      */
-    position?: pulumi.Input<string>;
+    position?: pulumi.Input<string | undefined>;
     /**
      * Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
      */
-    relativePosition?: pulumi.Input<string>;
+    relativePosition?: pulumi.Input<string | undefined>;
     /**
      * The destination ports
      */
-    services?: pulumi.Input<pulumi.Input<string>[]>;
+    services?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Snippet
      *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
-    snippet?: pulumi.Input<string>;
+    snippet?: pulumi.Input<string | undefined>;
     /**
      * The source Host Integrity Profile (HIP)
      */
-    sourceHips?: pulumi.Input<pulumi.Input<string>[]>;
+    sourceHips?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * The source users
      */
-    sourceUsers?: pulumi.Input<pulumi.Input<string>[]>;
+    sourceUsers?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * The source addresses
      */
-    sources?: pulumi.Input<pulumi.Input<string>[]>;
+    sources?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * The authentication rule tags
      */
-    tags?: pulumi.Input<pulumi.Input<string>[]>;
+    tags?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `"before"` or `"after"`.
      */
-    targetRule?: pulumi.Input<string>;
+    targetRule?: pulumi.Input<string | undefined>;
     /**
      * The Terraform ID.
      */
-    tfid?: pulumi.Input<string>;
+    tfid?: pulumi.Input<string | undefined>;
     /**
      * The authentication session timeout (seconds)
      */
-    timeout?: pulumi.Input<number>;
+    timeout?: pulumi.Input<number | undefined>;
     /**
      * The destination security zones
      */
-    tos?: pulumi.Input<pulumi.Input<string>[]>;
+    tos?: pulumi.Input<pulumi.Input<string>[] | undefined>;
 }
 
 /**
@@ -494,19 +494,19 @@ export interface AuthenticationRuleArgs {
     /**
      * The authentication profile name
      */
-    authenticationEnforcement?: pulumi.Input<string>;
+    authenticationEnforcement?: pulumi.Input<string | undefined>;
     /**
      * The destination URL categories
      */
-    categories?: pulumi.Input<pulumi.Input<string>[]>;
+    categories?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * The description of the authentication rule
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * The destination Host Integrity Profile (HIP)
      */
-    destinationHips?: pulumi.Input<pulumi.Input<string>[]>;
+    destinationHips?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * The destination addresses
      */
@@ -514,17 +514,17 @@ export interface AuthenticationRuleArgs {
     /**
      * Device
      */
-    device?: pulumi.Input<string>;
+    device?: pulumi.Input<string | undefined>;
     /**
      * Is the authentication rule disabled?
      */
-    disabled?: pulumi.Input<boolean>;
+    disabled?: pulumi.Input<boolean | undefined>;
     /**
      * Folder
      *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
-    folder?: pulumi.Input<string>;
+    folder?: pulumi.Input<string | undefined>;
     /**
      * The source security zones
      */
@@ -532,39 +532,39 @@ export interface AuthenticationRuleArgs {
     /**
      * Group tag
      */
-    groupTag?: pulumi.Input<string>;
+    groupTag?: pulumi.Input<string | undefined>;
     /**
      * The source Host Integrity Profile (HIP)
      */
-    hipProfiles?: pulumi.Input<pulumi.Input<string>[]>;
+    hipProfiles?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Log authentication timeouts?
      */
-    logAuthenticationTimeout?: pulumi.Input<boolean>;
+    logAuthenticationTimeout?: pulumi.Input<boolean | undefined>;
     /**
      * The log forwarding profile name
      */
-    logSetting?: pulumi.Input<string>;
+    logSetting?: pulumi.Input<string | undefined>;
     /**
      * The name of the authentication rule
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Are the destination addresses negated?
      */
-    negateDestination?: pulumi.Input<boolean>;
+    negateDestination?: pulumi.Input<boolean | undefined>;
     /**
      * Are the source addresses negated?
      */
-    negateSource?: pulumi.Input<boolean>;
+    negateSource?: pulumi.Input<boolean | undefined>;
     /**
      * The relative position of the rule
      */
-    position?: pulumi.Input<string>;
+    position?: pulumi.Input<string | undefined>;
     /**
      * Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
      */
-    relativePosition?: pulumi.Input<string>;
+    relativePosition?: pulumi.Input<string | undefined>;
     /**
      * The destination ports
      */
@@ -574,15 +574,15 @@ export interface AuthenticationRuleArgs {
      *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
-    snippet?: pulumi.Input<string>;
+    snippet?: pulumi.Input<string | undefined>;
     /**
      * The source Host Integrity Profile (HIP)
      */
-    sourceHips?: pulumi.Input<pulumi.Input<string>[]>;
+    sourceHips?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * The source users
      */
-    sourceUsers?: pulumi.Input<pulumi.Input<string>[]>;
+    sourceUsers?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * The source addresses
      */
@@ -590,15 +590,15 @@ export interface AuthenticationRuleArgs {
     /**
      * The authentication rule tags
      */
-    tags?: pulumi.Input<pulumi.Input<string>[]>;
+    tags?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `"before"` or `"after"`.
      */
-    targetRule?: pulumi.Input<string>;
+    targetRule?: pulumi.Input<string | undefined>;
     /**
      * The authentication session timeout (seconds)
      */
-    timeout?: pulumi.Input<number>;
+    timeout?: pulumi.Input<number | undefined>;
     /**
      * The destination security zones
      */

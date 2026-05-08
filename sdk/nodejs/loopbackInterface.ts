@@ -224,55 +224,55 @@ export interface LoopbackInterfaceState {
     /**
      * Description for loopback interface
      */
-    comment?: pulumi.Input<string>;
+    comment?: pulumi.Input<string | undefined>;
     /**
      * Default interface assignment for loopback interface
      */
-    defaultValue?: pulumi.Input<string>;
+    defaultValue?: pulumi.Input<string | undefined>;
     /**
      * The device in which the resource is defined
      */
-    device?: pulumi.Input<string>;
+    device?: pulumi.Input<string | undefined>;
     /**
      * The folder in which the resource is defined
      *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
-    folder?: pulumi.Input<string>;
+    folder?: pulumi.Input<string | undefined>;
     /**
      * Interface management profile for loopback interface
      */
-    interfaceManagementProfile?: pulumi.Input<string>;
+    interfaceManagementProfile?: pulumi.Input<string | undefined>;
     /**
      * Loopback IP Parent
      */
-    ips?: pulumi.Input<pulumi.Input<inputs.LoopbackInterfaceIp>[]>;
+    ips?: pulumi.Input<pulumi.Input<inputs.LoopbackInterfaceIp>[] | undefined>;
     /**
      * Loopback IPv6 Configuration
      */
-    ipv6?: pulumi.Input<inputs.LoopbackInterfaceIpv6>;
+    ipv6?: pulumi.Input<inputs.LoopbackInterfaceIpv6 | undefined>;
     /**
      * MTU for loopback interface
      */
-    mtu?: pulumi.Input<number>;
+    mtu?: pulumi.Input<number | undefined>;
     /**
      * Loopback Interface name
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Name of Netflow Profile to assign to Interface
      */
-    netflowProfile?: pulumi.Input<string>;
+    netflowProfile?: pulumi.Input<string | undefined>;
     /**
      * The snippet in which the resource is defined
      *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
-    snippet?: pulumi.Input<string>;
+    snippet?: pulumi.Input<string | undefined>;
     /**
      * The Terraform ID.
      */
-    tfid?: pulumi.Input<string>;
+    tfid?: pulumi.Input<string | undefined>;
 }
 
 /**
@@ -282,49 +282,49 @@ export interface LoopbackInterfaceArgs {
     /**
      * Description for loopback interface
      */
-    comment?: pulumi.Input<string>;
+    comment?: pulumi.Input<string | undefined>;
     /**
      * Default interface assignment for loopback interface
      */
-    defaultValue?: pulumi.Input<string>;
+    defaultValue?: pulumi.Input<string | undefined>;
     /**
      * The device in which the resource is defined
      */
-    device?: pulumi.Input<string>;
+    device?: pulumi.Input<string | undefined>;
     /**
      * The folder in which the resource is defined
      *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
-    folder?: pulumi.Input<string>;
+    folder?: pulumi.Input<string | undefined>;
     /**
      * Interface management profile for loopback interface
      */
-    interfaceManagementProfile?: pulumi.Input<string>;
+    interfaceManagementProfile?: pulumi.Input<string | undefined>;
     /**
      * Loopback IP Parent
      */
-    ips?: pulumi.Input<pulumi.Input<inputs.LoopbackInterfaceIp>[]>;
+    ips?: pulumi.Input<pulumi.Input<inputs.LoopbackInterfaceIp>[] | undefined>;
     /**
      * Loopback IPv6 Configuration
      */
-    ipv6?: pulumi.Input<inputs.LoopbackInterfaceIpv6>;
+    ipv6?: pulumi.Input<inputs.LoopbackInterfaceIpv6 | undefined>;
     /**
      * MTU for loopback interface
      */
-    mtu?: pulumi.Input<number>;
+    mtu?: pulumi.Input<number | undefined>;
     /**
      * Loopback Interface name
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Name of Netflow Profile to assign to Interface
      */
-    netflowProfile?: pulumi.Input<string>;
+    netflowProfile?: pulumi.Input<string | undefined>;
     /**
      * The snippet in which the resource is defined
      *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
-    snippet?: pulumi.Input<string>;
+    snippet?: pulumi.Input<string | undefined>;
 }

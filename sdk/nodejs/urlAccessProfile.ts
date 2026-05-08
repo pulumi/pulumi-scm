@@ -236,87 +236,87 @@ export interface UrlAccessProfileState {
     /**
      * Alert
      */
-    alerts?: pulumi.Input<pulumi.Input<string>[]>;
+    alerts?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Allow
      */
-    allows?: pulumi.Input<pulumi.Input<string>[]>;
+    allows?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Block
      */
-    blocks?: pulumi.Input<pulumi.Input<string>[]>;
+    blocks?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Cloud inline cat
      */
-    cloudInlineCat?: pulumi.Input<boolean>;
+    cloudInlineCat?: pulumi.Input<boolean | undefined>;
     /**
      * Continue
      */
-    continues?: pulumi.Input<pulumi.Input<string>[]>;
+    continues?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Credential enforcement
      */
-    credentialEnforcement?: pulumi.Input<inputs.UrlAccessProfileCredentialEnforcement>;
+    credentialEnforcement?: pulumi.Input<inputs.UrlAccessProfileCredentialEnforcement | undefined>;
     /**
      * Description
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * The device in which the resource is defined
      */
-    device?: pulumi.Input<string>;
+    device?: pulumi.Input<string | undefined>;
     /**
      * The folder in which the resource is defined
      *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
-    folder?: pulumi.Input<string>;
+    folder?: pulumi.Input<string | undefined>;
     /**
      * Local inline cat
      */
-    localInlineCat?: pulumi.Input<boolean>;
+    localInlineCat?: pulumi.Input<boolean | undefined>;
     /**
      * Log container page only
      */
-    logContainerPageOnly?: pulumi.Input<boolean>;
+    logContainerPageOnly?: pulumi.Input<boolean | undefined>;
     /**
      * Log http hdr referer
      */
-    logHttpHdrReferer?: pulumi.Input<boolean>;
+    logHttpHdrReferer?: pulumi.Input<boolean | undefined>;
     /**
      * Log http hdr user agent
      */
-    logHttpHdrUserAgent?: pulumi.Input<boolean>;
+    logHttpHdrUserAgent?: pulumi.Input<boolean | undefined>;
     /**
      * Log http hdr xff
      */
-    logHttpHdrXff?: pulumi.Input<boolean>;
+    logHttpHdrXff?: pulumi.Input<boolean | undefined>;
     /**
      * Mlav category exception
      */
-    mlavCategoryExceptions?: pulumi.Input<pulumi.Input<string>[]>;
+    mlavCategoryExceptions?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Name
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Redirect
      */
-    redirects?: pulumi.Input<pulumi.Input<string>[]>;
+    redirects?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Safe search enforcement
      */
-    safeSearchEnforcement?: pulumi.Input<boolean>;
+    safeSearchEnforcement?: pulumi.Input<boolean | undefined>;
     /**
      * The snippet in which the resource is defined
      *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
-    snippet?: pulumi.Input<string>;
+    snippet?: pulumi.Input<string | undefined>;
     /**
      * The Terraform ID.
      */
-    tfid?: pulumi.Input<string>;
+    tfid?: pulumi.Input<string | undefined>;
 }
 
 /**
@@ -326,81 +326,81 @@ export interface UrlAccessProfileArgs {
     /**
      * Alert
      */
-    alerts?: pulumi.Input<pulumi.Input<string>[]>;
+    alerts?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Allow
      */
-    allows?: pulumi.Input<pulumi.Input<string>[]>;
+    allows?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Block
      */
-    blocks?: pulumi.Input<pulumi.Input<string>[]>;
+    blocks?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Cloud inline cat
      */
-    cloudInlineCat?: pulumi.Input<boolean>;
+    cloudInlineCat?: pulumi.Input<boolean | undefined>;
     /**
      * Continue
      */
-    continues?: pulumi.Input<pulumi.Input<string>[]>;
+    continues?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Credential enforcement
      */
-    credentialEnforcement?: pulumi.Input<inputs.UrlAccessProfileCredentialEnforcement>;
+    credentialEnforcement?: pulumi.Input<inputs.UrlAccessProfileCredentialEnforcement | undefined>;
     /**
      * Description
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * The device in which the resource is defined
      */
-    device?: pulumi.Input<string>;
+    device?: pulumi.Input<string | undefined>;
     /**
      * The folder in which the resource is defined
      *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
-    folder?: pulumi.Input<string>;
+    folder?: pulumi.Input<string | undefined>;
     /**
      * Local inline cat
      */
-    localInlineCat?: pulumi.Input<boolean>;
+    localInlineCat?: pulumi.Input<boolean | undefined>;
     /**
      * Log container page only
      */
-    logContainerPageOnly?: pulumi.Input<boolean>;
+    logContainerPageOnly?: pulumi.Input<boolean | undefined>;
     /**
      * Log http hdr referer
      */
-    logHttpHdrReferer?: pulumi.Input<boolean>;
+    logHttpHdrReferer?: pulumi.Input<boolean | undefined>;
     /**
      * Log http hdr user agent
      */
-    logHttpHdrUserAgent?: pulumi.Input<boolean>;
+    logHttpHdrUserAgent?: pulumi.Input<boolean | undefined>;
     /**
      * Log http hdr xff
      */
-    logHttpHdrXff?: pulumi.Input<boolean>;
+    logHttpHdrXff?: pulumi.Input<boolean | undefined>;
     /**
      * Mlav category exception
      */
-    mlavCategoryExceptions?: pulumi.Input<pulumi.Input<string>[]>;
+    mlavCategoryExceptions?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Name
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Redirect
      */
-    redirects?: pulumi.Input<pulumi.Input<string>[]>;
+    redirects?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Safe search enforcement
      */
-    safeSearchEnforcement?: pulumi.Input<boolean>;
+    safeSearchEnforcement?: pulumi.Input<boolean | undefined>;
     /**
      * The snippet in which the resource is defined
      *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
-    snippet?: pulumi.Input<string>;
+    snippet?: pulumi.Input<string | undefined>;
 }

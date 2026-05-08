@@ -229,51 +229,51 @@ export interface IpsecTunnelState {
     /**
      * Enable Anti-Replay check on this tunnel
      */
-    antiReplay?: pulumi.Input<boolean>;
+    antiReplay?: pulumi.Input<boolean | undefined>;
     /**
      * Auto key
      */
-    autoKey?: pulumi.Input<inputs.IpsecTunnelAutoKey>;
+    autoKey?: pulumi.Input<inputs.IpsecTunnelAutoKey | undefined>;
     /**
      * Copy IP TOS bits from inner packet to IPSec packet (not recommended)
      */
-    copyTos?: pulumi.Input<boolean>;
+    copyTos?: pulumi.Input<boolean | undefined>;
     /**
      * The device in which the resource is defined
      */
-    device?: pulumi.Input<string>;
+    device?: pulumi.Input<string | undefined>;
     /**
      * allow GRE over IPSec
      */
-    enableGreEncapsulation?: pulumi.Input<boolean>;
+    enableGreEncapsulation?: pulumi.Input<boolean | undefined>;
     /**
      * The folder in which the resource is defined
      *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
-    folder?: pulumi.Input<string>;
+    folder?: pulumi.Input<string | undefined>;
     /**
      * Alphanumeric string begin with letter: [0-9a-zA-Z._-]
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * The snippet in which the resource is defined
      *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
-    snippet?: pulumi.Input<string>;
+    snippet?: pulumi.Input<string | undefined>;
     /**
      * The Terraform ID.
      */
-    tfid?: pulumi.Input<string>;
+    tfid?: pulumi.Input<string | undefined>;
     /**
      * Tunnel interface variable or hardcoded tunnel. Default will be tunnels.
      */
-    tunnelInterface?: pulumi.Input<string>;
+    tunnelInterface?: pulumi.Input<string | undefined>;
     /**
      * Tunnel monitor
      */
-    tunnelMonitor?: pulumi.Input<inputs.IpsecTunnelTunnelMonitor>;
+    tunnelMonitor?: pulumi.Input<inputs.IpsecTunnelTunnelMonitor | undefined>;
 }
 
 /**
@@ -283,7 +283,7 @@ export interface IpsecTunnelArgs {
     /**
      * Enable Anti-Replay check on this tunnel
      */
-    antiReplay?: pulumi.Input<boolean>;
+    antiReplay?: pulumi.Input<boolean | undefined>;
     /**
      * Auto key
      */
@@ -291,37 +291,37 @@ export interface IpsecTunnelArgs {
     /**
      * Copy IP TOS bits from inner packet to IPSec packet (not recommended)
      */
-    copyTos?: pulumi.Input<boolean>;
+    copyTos?: pulumi.Input<boolean | undefined>;
     /**
      * The device in which the resource is defined
      */
-    device?: pulumi.Input<string>;
+    device?: pulumi.Input<string | undefined>;
     /**
      * allow GRE over IPSec
      */
-    enableGreEncapsulation?: pulumi.Input<boolean>;
+    enableGreEncapsulation?: pulumi.Input<boolean | undefined>;
     /**
      * The folder in which the resource is defined
      *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
-    folder?: pulumi.Input<string>;
+    folder?: pulumi.Input<string | undefined>;
     /**
      * Alphanumeric string begin with letter: [0-9a-zA-Z._-]
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * The snippet in which the resource is defined
      *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
-    snippet?: pulumi.Input<string>;
+    snippet?: pulumi.Input<string | undefined>;
     /**
      * Tunnel interface variable or hardcoded tunnel. Default will be tunnels.
      */
-    tunnelInterface?: pulumi.Input<string>;
+    tunnelInterface?: pulumi.Input<string | undefined>;
     /**
      * Tunnel monitor
      */
-    tunnelMonitor?: pulumi.Input<inputs.IpsecTunnelTunnelMonitor>;
+    tunnelMonitor?: pulumi.Input<inputs.IpsecTunnelTunnelMonitor | undefined>;
 }

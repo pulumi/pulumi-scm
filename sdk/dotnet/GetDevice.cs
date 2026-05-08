@@ -25,7 +25,7 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // Look up a device by id
-        ///     var myDevice = Scm.Index.GetDevice.Invoke(new()
+        ///     var myDevice = Scm.GetDevice.Invoke(new()
         ///     {
         ///         Id = "007099000023642",
         ///     });
@@ -67,7 +67,7 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // Look up a device by id
-        ///     var myDevice = Scm.Index.GetDevice.Invoke(new()
+        ///     var myDevice = Scm.GetDevice.Invoke(new()
         ///     {
         ///         Id = "007099000023642",
         ///     });
@@ -109,7 +109,7 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // Look up a device by id
-        ///     var myDevice = Scm.Index.GetDevice.Invoke(new()
+        ///     var myDevice = Scm.GetDevice.Invoke(new()
         ///     {
         ///         Id = "007099000023642",
         ///     });

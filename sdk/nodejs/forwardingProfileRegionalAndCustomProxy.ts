@@ -252,47 +252,47 @@ export interface ForwardingProfileRegionalAndCustomProxyState {
     /**
      * List of connectivity methods and their enablement status for establishing proxy connections
      */
-    connectivityPreferences?: pulumi.Input<pulumi.Input<inputs.ForwardingProfileRegionalAndCustomProxyConnectivityPreference>[]>;
+    connectivityPreferences?: pulumi.Input<pulumi.Input<inputs.ForwardingProfileRegionalAndCustomProxyConnectivityPreference>[] | undefined>;
     /**
      * regional and custom proxy configuration description
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * Behavior when proxy connection fails - 'fail-open' allows direct internet access, 'fail-safe' blocks traffic until proxy is restored
      */
-    fallbackOption?: pulumi.Input<string>;
+    fallbackOption?: pulumi.Input<string | undefined>;
     /**
      * The folder in which the resource is defined
      */
-    folder?: pulumi.Input<string>;
+    folder?: pulumi.Input<string | undefined>;
     /**
      * Strategy for selecting Prisma Access location - 'best-available-pa-location' automatically selects optimal location, 'specific-pa-location' uses predefined locations
      */
-    locationPreference?: pulumi.Input<string>;
+    locationPreference?: pulumi.Input<string | undefined>;
     /**
      * alphanumeric string [ 0-9a-zA-Z ._-]
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Select Prisma Access location Americas, Europe and Asia-Pacific.
      */
-    prismaAccessLocations?: pulumi.Input<pulumi.Input<inputs.ForwardingProfileRegionalAndCustomProxyPrismaAccessLocation>[]>;
+    prismaAccessLocations?: pulumi.Input<pulumi.Input<inputs.ForwardingProfileRegionalAndCustomProxyPrismaAccessLocation>[] | undefined>;
     /**
      * primary regional and custom proxy
      */
-    proxy1?: pulumi.Input<inputs.ForwardingProfileRegionalAndCustomProxyProxy1>;
+    proxy1?: pulumi.Input<inputs.ForwardingProfileRegionalAndCustomProxyProxy1 | undefined>;
     /**
      * secondary regional and custom proxy
      */
-    proxy2?: pulumi.Input<inputs.ForwardingProfileRegionalAndCustomProxyProxy2>;
+    proxy2?: pulumi.Input<inputs.ForwardingProfileRegionalAndCustomProxyProxy2 | undefined>;
     /**
      * The Terraform ID.
      */
-    tfid?: pulumi.Input<string>;
+    tfid?: pulumi.Input<string | undefined>;
     /**
      * Proxy configuration type - 'gp-and-pac' for GlobalProtect and PAC file forwarding, 'ztna-agent' for ZTNA agent forwarding
      */
-    type?: pulumi.Input<string>;
+    type?: pulumi.Input<string | undefined>;
 }
 
 /**
@@ -302,41 +302,41 @@ export interface ForwardingProfileRegionalAndCustomProxyArgs {
     /**
      * List of connectivity methods and their enablement status for establishing proxy connections
      */
-    connectivityPreferences?: pulumi.Input<pulumi.Input<inputs.ForwardingProfileRegionalAndCustomProxyConnectivityPreference>[]>;
+    connectivityPreferences?: pulumi.Input<pulumi.Input<inputs.ForwardingProfileRegionalAndCustomProxyConnectivityPreference>[] | undefined>;
     /**
      * regional and custom proxy configuration description
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * Behavior when proxy connection fails - 'fail-open' allows direct internet access, 'fail-safe' blocks traffic until proxy is restored
      */
-    fallbackOption?: pulumi.Input<string>;
+    fallbackOption?: pulumi.Input<string | undefined>;
     /**
      * The folder in which the resource is defined
      */
-    folder?: pulumi.Input<string>;
+    folder?: pulumi.Input<string | undefined>;
     /**
      * Strategy for selecting Prisma Access location - 'best-available-pa-location' automatically selects optimal location, 'specific-pa-location' uses predefined locations
      */
-    locationPreference?: pulumi.Input<string>;
+    locationPreference?: pulumi.Input<string | undefined>;
     /**
      * alphanumeric string [ 0-9a-zA-Z ._-]
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Select Prisma Access location Americas, Europe and Asia-Pacific.
      */
-    prismaAccessLocations?: pulumi.Input<pulumi.Input<inputs.ForwardingProfileRegionalAndCustomProxyPrismaAccessLocation>[]>;
+    prismaAccessLocations?: pulumi.Input<pulumi.Input<inputs.ForwardingProfileRegionalAndCustomProxyPrismaAccessLocation>[] | undefined>;
     /**
      * primary regional and custom proxy
      */
-    proxy1?: pulumi.Input<inputs.ForwardingProfileRegionalAndCustomProxyProxy1>;
+    proxy1?: pulumi.Input<inputs.ForwardingProfileRegionalAndCustomProxyProxy1 | undefined>;
     /**
      * secondary regional and custom proxy
      */
-    proxy2?: pulumi.Input<inputs.ForwardingProfileRegionalAndCustomProxyProxy2>;
+    proxy2?: pulumi.Input<inputs.ForwardingProfileRegionalAndCustomProxyProxy2 | undefined>;
     /**
      * Proxy configuration type - 'gp-and-pac' for GlobalProtect and PAC file forwarding, 'ztna-agent' for ZTNA agent forwarding
      */
-    type?: pulumi.Input<string>;
+    type?: pulumi.Input<string | undefined>;
 }

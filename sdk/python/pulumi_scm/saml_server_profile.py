@@ -23,15 +23,15 @@ class SamlServerProfileArgs:
                  entity_id: pulumi.Input[_builtins.str],
                  sso_bindings: pulumi.Input[_builtins.str],
                  sso_url: pulumi.Input[_builtins.str],
-                 device: Optional[pulumi.Input[_builtins.str]] = None,
-                 folder: Optional[pulumi.Input[_builtins.str]] = None,
-                 max_clock_skew: Optional[pulumi.Input[_builtins.int]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 slo_bindings: Optional[pulumi.Input[_builtins.str]] = None,
-                 slo_url: Optional[pulumi.Input[_builtins.str]] = None,
-                 snippet: Optional[pulumi.Input[_builtins.str]] = None,
-                 validate_idp_certificate: Optional[pulumi.Input[_builtins.bool]] = None,
-                 want_auth_requests_signed: Optional[pulumi.Input[_builtins.bool]] = None):
+                 device: pulumi.Input[Optional[_builtins.str]] = None,
+                 folder: pulumi.Input[Optional[_builtins.str]] = None,
+                 max_clock_skew: pulumi.Input[Optional[_builtins.int]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 slo_bindings: pulumi.Input[Optional[_builtins.str]] = None,
+                 slo_url: pulumi.Input[Optional[_builtins.str]] = None,
+                 snippet: pulumi.Input[Optional[_builtins.str]] = None,
+                 validate_idp_certificate: pulumi.Input[Optional[_builtins.bool]] = None,
+                 want_auth_requests_signed: pulumi.Input[Optional[_builtins.bool]] = None):
         """
         The set of arguments for constructing a SamlServerProfile resource.
 
@@ -126,19 +126,19 @@ class SamlServerProfileArgs:
 
     @_builtins.property
     @pulumi.getter
-    def device(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def device(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The device in which the resource is defined
         """
         return pulumi.get(self, "device")
 
     @device.setter
-    def device(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def device(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "device", value)
 
     @_builtins.property
     @pulumi.getter
-    def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def folder(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
 
@@ -147,60 +147,60 @@ class SamlServerProfileArgs:
         return pulumi.get(self, "folder")
 
     @folder.setter
-    def folder(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def folder(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "folder", value)
 
     @_builtins.property
     @pulumi.getter(name="maxClockSkew")
-    def max_clock_skew(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def max_clock_skew(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Maxiumum clock skew
         """
         return pulumi.get(self, "max_clock_skew")
 
     @max_clock_skew.setter
-    def max_clock_skew(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def max_clock_skew(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "max_clock_skew", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the SAML server profile
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter(name="sloBindings")
-    def slo_bindings(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def slo_bindings(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         SAML HTTP binding for SLO requests to the identity provider
         """
         return pulumi.get(self, "slo_bindings")
 
     @slo_bindings.setter
-    def slo_bindings(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def slo_bindings(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "slo_bindings", value)
 
     @_builtins.property
     @pulumi.getter(name="sloUrl")
-    def slo_url(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def slo_url(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Identity provider SLO URL
         """
         return pulumi.get(self, "slo_url")
 
     @slo_url.setter
-    def slo_url(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def slo_url(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "slo_url", value)
 
     @_builtins.property
     @pulumi.getter
-    def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def snippet(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
 
@@ -209,51 +209,51 @@ class SamlServerProfileArgs:
         return pulumi.get(self, "snippet")
 
     @snippet.setter
-    def snippet(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def snippet(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "snippet", value)
 
     @_builtins.property
     @pulumi.getter(name="validateIdpCertificate")
-    def validate_idp_certificate(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def validate_idp_certificate(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Validate the identity provider certificate?
         """
         return pulumi.get(self, "validate_idp_certificate")
 
     @validate_idp_certificate.setter
-    def validate_idp_certificate(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def validate_idp_certificate(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "validate_idp_certificate", value)
 
     @_builtins.property
     @pulumi.getter(name="wantAuthRequestsSigned")
-    def want_auth_requests_signed(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def want_auth_requests_signed(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Sign SAML message to the identity provider?
         """
         return pulumi.get(self, "want_auth_requests_signed")
 
     @want_auth_requests_signed.setter
-    def want_auth_requests_signed(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def want_auth_requests_signed(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "want_auth_requests_signed", value)
 
 
 @pulumi.input_type
 class _SamlServerProfileState:
     def __init__(__self__, *,
-                 certificate: Optional[pulumi.Input[_builtins.str]] = None,
-                 device: Optional[pulumi.Input[_builtins.str]] = None,
-                 entity_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 folder: Optional[pulumi.Input[_builtins.str]] = None,
-                 max_clock_skew: Optional[pulumi.Input[_builtins.int]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 slo_bindings: Optional[pulumi.Input[_builtins.str]] = None,
-                 slo_url: Optional[pulumi.Input[_builtins.str]] = None,
-                 snippet: Optional[pulumi.Input[_builtins.str]] = None,
-                 sso_bindings: Optional[pulumi.Input[_builtins.str]] = None,
-                 sso_url: Optional[pulumi.Input[_builtins.str]] = None,
-                 tfid: Optional[pulumi.Input[_builtins.str]] = None,
-                 validate_idp_certificate: Optional[pulumi.Input[_builtins.bool]] = None,
-                 want_auth_requests_signed: Optional[pulumi.Input[_builtins.bool]] = None):
+                 certificate: pulumi.Input[Optional[_builtins.str]] = None,
+                 device: pulumi.Input[Optional[_builtins.str]] = None,
+                 entity_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 folder: pulumi.Input[Optional[_builtins.str]] = None,
+                 max_clock_skew: pulumi.Input[Optional[_builtins.int]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 slo_bindings: pulumi.Input[Optional[_builtins.str]] = None,
+                 slo_url: pulumi.Input[Optional[_builtins.str]] = None,
+                 snippet: pulumi.Input[Optional[_builtins.str]] = None,
+                 sso_bindings: pulumi.Input[Optional[_builtins.str]] = None,
+                 sso_url: pulumi.Input[Optional[_builtins.str]] = None,
+                 tfid: pulumi.Input[Optional[_builtins.str]] = None,
+                 validate_idp_certificate: pulumi.Input[Optional[_builtins.bool]] = None,
+                 want_auth_requests_signed: pulumi.Input[Optional[_builtins.bool]] = None):
         """
         Input properties used for looking up and filtering SamlServerProfile resources.
 
@@ -307,43 +307,43 @@ class _SamlServerProfileState:
 
     @_builtins.property
     @pulumi.getter
-    def certificate(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def certificate(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The identity provider certificate
         """
         return pulumi.get(self, "certificate")
 
     @certificate.setter
-    def certificate(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def certificate(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "certificate", value)
 
     @_builtins.property
     @pulumi.getter
-    def device(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def device(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The device in which the resource is defined
         """
         return pulumi.get(self, "device")
 
     @device.setter
-    def device(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def device(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "device", value)
 
     @_builtins.property
     @pulumi.getter(name="entityId")
-    def entity_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def entity_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The identity provider ID
         """
         return pulumi.get(self, "entity_id")
 
     @entity_id.setter
-    def entity_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def entity_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "entity_id", value)
 
     @_builtins.property
     @pulumi.getter
-    def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def folder(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
 
@@ -352,60 +352,60 @@ class _SamlServerProfileState:
         return pulumi.get(self, "folder")
 
     @folder.setter
-    def folder(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def folder(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "folder", value)
 
     @_builtins.property
     @pulumi.getter(name="maxClockSkew")
-    def max_clock_skew(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def max_clock_skew(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Maxiumum clock skew
         """
         return pulumi.get(self, "max_clock_skew")
 
     @max_clock_skew.setter
-    def max_clock_skew(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def max_clock_skew(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "max_clock_skew", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the SAML server profile
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter(name="sloBindings")
-    def slo_bindings(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def slo_bindings(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         SAML HTTP binding for SLO requests to the identity provider
         """
         return pulumi.get(self, "slo_bindings")
 
     @slo_bindings.setter
-    def slo_bindings(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def slo_bindings(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "slo_bindings", value)
 
     @_builtins.property
     @pulumi.getter(name="sloUrl")
-    def slo_url(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def slo_url(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Identity provider SLO URL
         """
         return pulumi.get(self, "slo_url")
 
     @slo_url.setter
-    def slo_url(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def slo_url(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "slo_url", value)
 
     @_builtins.property
     @pulumi.getter
-    def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def snippet(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
 
@@ -414,67 +414,67 @@ class _SamlServerProfileState:
         return pulumi.get(self, "snippet")
 
     @snippet.setter
-    def snippet(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def snippet(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "snippet", value)
 
     @_builtins.property
     @pulumi.getter(name="ssoBindings")
-    def sso_bindings(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def sso_bindings(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         SAML HTTP binding for SSO requests to the identity provider
         """
         return pulumi.get(self, "sso_bindings")
 
     @sso_bindings.setter
-    def sso_bindings(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def sso_bindings(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "sso_bindings", value)
 
     @_builtins.property
     @pulumi.getter(name="ssoUrl")
-    def sso_url(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def sso_url(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Identity provider SSO URL
         """
         return pulumi.get(self, "sso_url")
 
     @sso_url.setter
-    def sso_url(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def sso_url(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "sso_url", value)
 
     @_builtins.property
     @pulumi.getter
-    def tfid(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def tfid(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The Terraform ID.
         """
         return pulumi.get(self, "tfid")
 
     @tfid.setter
-    def tfid(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def tfid(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "tfid", value)
 
     @_builtins.property
     @pulumi.getter(name="validateIdpCertificate")
-    def validate_idp_certificate(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def validate_idp_certificate(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Validate the identity provider certificate?
         """
         return pulumi.get(self, "validate_idp_certificate")
 
     @validate_idp_certificate.setter
-    def validate_idp_certificate(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def validate_idp_certificate(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "validate_idp_certificate", value)
 
     @_builtins.property
     @pulumi.getter(name="wantAuthRequestsSigned")
-    def want_auth_requests_signed(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def want_auth_requests_signed(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Sign SAML message to the identity provider?
         """
         return pulumi.get(self, "want_auth_requests_signed")
 
     @want_auth_requests_signed.setter
-    def want_auth_requests_signed(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def want_auth_requests_signed(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "want_auth_requests_signed", value)
 
 
@@ -484,19 +484,19 @@ class SamlServerProfile(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 certificate: Optional[pulumi.Input[_builtins.str]] = None,
-                 device: Optional[pulumi.Input[_builtins.str]] = None,
-                 entity_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 folder: Optional[pulumi.Input[_builtins.str]] = None,
-                 max_clock_skew: Optional[pulumi.Input[_builtins.int]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 slo_bindings: Optional[pulumi.Input[_builtins.str]] = None,
-                 slo_url: Optional[pulumi.Input[_builtins.str]] = None,
-                 snippet: Optional[pulumi.Input[_builtins.str]] = None,
-                 sso_bindings: Optional[pulumi.Input[_builtins.str]] = None,
-                 sso_url: Optional[pulumi.Input[_builtins.str]] = None,
-                 validate_idp_certificate: Optional[pulumi.Input[_builtins.bool]] = None,
-                 want_auth_requests_signed: Optional[pulumi.Input[_builtins.bool]] = None,
+                 certificate: pulumi.Input[Optional[_builtins.str]] = None,
+                 device: pulumi.Input[Optional[_builtins.str]] = None,
+                 entity_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 folder: pulumi.Input[Optional[_builtins.str]] = None,
+                 max_clock_skew: pulumi.Input[Optional[_builtins.int]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 slo_bindings: pulumi.Input[Optional[_builtins.str]] = None,
+                 slo_url: pulumi.Input[Optional[_builtins.str]] = None,
+                 snippet: pulumi.Input[Optional[_builtins.str]] = None,
+                 sso_bindings: pulumi.Input[Optional[_builtins.str]] = None,
+                 sso_url: pulumi.Input[Optional[_builtins.str]] = None,
+                 validate_idp_certificate: pulumi.Input[Optional[_builtins.bool]] = None,
+                 want_auth_requests_signed: pulumi.Input[Optional[_builtins.bool]] = None,
                  __props__=None):
         """
         SamlServerProfile resource
@@ -665,19 +665,19 @@ class SamlServerProfile(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 certificate: Optional[pulumi.Input[_builtins.str]] = None,
-                 device: Optional[pulumi.Input[_builtins.str]] = None,
-                 entity_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 folder: Optional[pulumi.Input[_builtins.str]] = None,
-                 max_clock_skew: Optional[pulumi.Input[_builtins.int]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 slo_bindings: Optional[pulumi.Input[_builtins.str]] = None,
-                 slo_url: Optional[pulumi.Input[_builtins.str]] = None,
-                 snippet: Optional[pulumi.Input[_builtins.str]] = None,
-                 sso_bindings: Optional[pulumi.Input[_builtins.str]] = None,
-                 sso_url: Optional[pulumi.Input[_builtins.str]] = None,
-                 validate_idp_certificate: Optional[pulumi.Input[_builtins.bool]] = None,
-                 want_auth_requests_signed: Optional[pulumi.Input[_builtins.bool]] = None,
+                 certificate: pulumi.Input[Optional[_builtins.str]] = None,
+                 device: pulumi.Input[Optional[_builtins.str]] = None,
+                 entity_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 folder: pulumi.Input[Optional[_builtins.str]] = None,
+                 max_clock_skew: pulumi.Input[Optional[_builtins.int]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 slo_bindings: pulumi.Input[Optional[_builtins.str]] = None,
+                 slo_url: pulumi.Input[Optional[_builtins.str]] = None,
+                 snippet: pulumi.Input[Optional[_builtins.str]] = None,
+                 sso_bindings: pulumi.Input[Optional[_builtins.str]] = None,
+                 sso_url: pulumi.Input[Optional[_builtins.str]] = None,
+                 validate_idp_certificate: pulumi.Input[Optional[_builtins.bool]] = None,
+                 want_auth_requests_signed: pulumi.Input[Optional[_builtins.bool]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -719,20 +719,20 @@ class SamlServerProfile(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            certificate: Optional[pulumi.Input[_builtins.str]] = None,
-            device: Optional[pulumi.Input[_builtins.str]] = None,
-            entity_id: Optional[pulumi.Input[_builtins.str]] = None,
-            folder: Optional[pulumi.Input[_builtins.str]] = None,
-            max_clock_skew: Optional[pulumi.Input[_builtins.int]] = None,
-            name: Optional[pulumi.Input[_builtins.str]] = None,
-            slo_bindings: Optional[pulumi.Input[_builtins.str]] = None,
-            slo_url: Optional[pulumi.Input[_builtins.str]] = None,
-            snippet: Optional[pulumi.Input[_builtins.str]] = None,
-            sso_bindings: Optional[pulumi.Input[_builtins.str]] = None,
-            sso_url: Optional[pulumi.Input[_builtins.str]] = None,
-            tfid: Optional[pulumi.Input[_builtins.str]] = None,
-            validate_idp_certificate: Optional[pulumi.Input[_builtins.bool]] = None,
-            want_auth_requests_signed: Optional[pulumi.Input[_builtins.bool]] = None) -> 'SamlServerProfile':
+            certificate: pulumi.Input[Optional[_builtins.str]] = None,
+            device: pulumi.Input[Optional[_builtins.str]] = None,
+            entity_id: pulumi.Input[Optional[_builtins.str]] = None,
+            folder: pulumi.Input[Optional[_builtins.str]] = None,
+            max_clock_skew: pulumi.Input[Optional[_builtins.int]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            slo_bindings: pulumi.Input[Optional[_builtins.str]] = None,
+            slo_url: pulumi.Input[Optional[_builtins.str]] = None,
+            snippet: pulumi.Input[Optional[_builtins.str]] = None,
+            sso_bindings: pulumi.Input[Optional[_builtins.str]] = None,
+            sso_url: pulumi.Input[Optional[_builtins.str]] = None,
+            tfid: pulumi.Input[Optional[_builtins.str]] = None,
+            validate_idp_certificate: pulumi.Input[Optional[_builtins.bool]] = None,
+            want_auth_requests_signed: pulumi.Input[Optional[_builtins.bool]] = None) -> 'SamlServerProfile':
         """
         Get an existing SamlServerProfile resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

@@ -21,11 +21,11 @@ __all__ = ['ForwardingProfileDestinationArgs', 'ForwardingProfileDestination']
 @pulumi.input_type
 class ForwardingProfileDestinationArgs:
     def __init__(__self__, *,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 folder: Optional[pulumi.Input[_builtins.str]] = None,
-                 fqdns: Optional[pulumi.Input[Sequence[pulumi.Input['ForwardingProfileDestinationFqdnArgs']]]] = None,
-                 ip_addresses: Optional[pulumi.Input[Sequence[pulumi.Input['ForwardingProfileDestinationIpAddressArgs']]]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None):
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 folder: pulumi.Input[Optional[_builtins.str]] = None,
+                 fqdns: pulumi.Input[Optional[Sequence[pulumi.Input['ForwardingProfileDestinationFqdnArgs']]]] = None,
+                 ip_addresses: pulumi.Input[Optional[Sequence[pulumi.Input['ForwardingProfileDestinationIpAddressArgs']]]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None):
         """
         The set of arguments for constructing a ForwardingProfileDestination resource.
 
@@ -48,74 +48,74 @@ class ForwardingProfileDestinationArgs:
 
     @_builtins.property
     @pulumi.getter
-    def description(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def description(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         description of the destination
         """
         return pulumi.get(self, "description")
 
     @description.setter
-    def description(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def description(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "description", value)
 
     @_builtins.property
     @pulumi.getter
-    def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def folder(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
         """
         return pulumi.get(self, "folder")
 
     @folder.setter
-    def folder(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def folder(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "folder", value)
 
     @_builtins.property
     @pulumi.getter
-    def fqdns(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['ForwardingProfileDestinationFqdnArgs']]]]:
+    def fqdns(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['ForwardingProfileDestinationFqdnArgs']]]]:
         """
         List of FQDN based destination entries
         """
         return pulumi.get(self, "fqdns")
 
     @fqdns.setter
-    def fqdns(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['ForwardingProfileDestinationFqdnArgs']]]]):
+    def fqdns(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['ForwardingProfileDestinationFqdnArgs']]]]):
         pulumi.set(self, "fqdns", value)
 
     @_builtins.property
     @pulumi.getter(name="ipAddresses")
-    def ip_addresses(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['ForwardingProfileDestinationIpAddressArgs']]]]:
+    def ip_addresses(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['ForwardingProfileDestinationIpAddressArgs']]]]:
         """
         List of IP address based destination entries
         """
         return pulumi.get(self, "ip_addresses")
 
     @ip_addresses.setter
-    def ip_addresses(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['ForwardingProfileDestinationIpAddressArgs']]]]):
+    def ip_addresses(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['ForwardingProfileDestinationIpAddressArgs']]]]):
         pulumi.set(self, "ip_addresses", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         alphanumeric string [ 0-9a-zA-Z._ -]
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
 
 @pulumi.input_type
 class _ForwardingProfileDestinationState:
     def __init__(__self__, *,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 folder: Optional[pulumi.Input[_builtins.str]] = None,
-                 fqdns: Optional[pulumi.Input[Sequence[pulumi.Input['ForwardingProfileDestinationFqdnArgs']]]] = None,
-                 ip_addresses: Optional[pulumi.Input[Sequence[pulumi.Input['ForwardingProfileDestinationIpAddressArgs']]]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 tfid: Optional[pulumi.Input[_builtins.str]] = None):
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 folder: pulumi.Input[Optional[_builtins.str]] = None,
+                 fqdns: pulumi.Input[Optional[Sequence[pulumi.Input['ForwardingProfileDestinationFqdnArgs']]]] = None,
+                 ip_addresses: pulumi.Input[Optional[Sequence[pulumi.Input['ForwardingProfileDestinationIpAddressArgs']]]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 tfid: pulumi.Input[Optional[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering ForwardingProfileDestination resources.
 
@@ -141,74 +141,74 @@ class _ForwardingProfileDestinationState:
 
     @_builtins.property
     @pulumi.getter
-    def description(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def description(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         description of the destination
         """
         return pulumi.get(self, "description")
 
     @description.setter
-    def description(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def description(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "description", value)
 
     @_builtins.property
     @pulumi.getter
-    def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def folder(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
         """
         return pulumi.get(self, "folder")
 
     @folder.setter
-    def folder(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def folder(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "folder", value)
 
     @_builtins.property
     @pulumi.getter
-    def fqdns(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['ForwardingProfileDestinationFqdnArgs']]]]:
+    def fqdns(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['ForwardingProfileDestinationFqdnArgs']]]]:
         """
         List of FQDN based destination entries
         """
         return pulumi.get(self, "fqdns")
 
     @fqdns.setter
-    def fqdns(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['ForwardingProfileDestinationFqdnArgs']]]]):
+    def fqdns(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['ForwardingProfileDestinationFqdnArgs']]]]):
         pulumi.set(self, "fqdns", value)
 
     @_builtins.property
     @pulumi.getter(name="ipAddresses")
-    def ip_addresses(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['ForwardingProfileDestinationIpAddressArgs']]]]:
+    def ip_addresses(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['ForwardingProfileDestinationIpAddressArgs']]]]:
         """
         List of IP address based destination entries
         """
         return pulumi.get(self, "ip_addresses")
 
     @ip_addresses.setter
-    def ip_addresses(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['ForwardingProfileDestinationIpAddressArgs']]]]):
+    def ip_addresses(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['ForwardingProfileDestinationIpAddressArgs']]]]):
         pulumi.set(self, "ip_addresses", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         alphanumeric string [ 0-9a-zA-Z._ -]
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter
-    def tfid(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def tfid(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The Terraform ID.
         """
         return pulumi.get(self, "tfid")
 
     @tfid.setter
-    def tfid(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def tfid(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "tfid", value)
 
 
@@ -218,11 +218,11 @@ class ForwardingProfileDestination(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 folder: Optional[pulumi.Input[_builtins.str]] = None,
-                 fqdns: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ForwardingProfileDestinationFqdnArgs', 'ForwardingProfileDestinationFqdnArgsDict']]]]] = None,
-                 ip_addresses: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ForwardingProfileDestinationIpAddressArgs', 'ForwardingProfileDestinationIpAddressArgsDict']]]]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 folder: pulumi.Input[Optional[_builtins.str]] = None,
+                 fqdns: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ForwardingProfileDestinationFqdnArgs', 'ForwardingProfileDestinationFqdnArgsDict']]]]] = None,
+                 ip_addresses: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ForwardingProfileDestinationIpAddressArgs', 'ForwardingProfileDestinationIpAddressArgsDict']]]]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
         ForwardingProfileDestination resource
@@ -417,11 +417,11 @@ class ForwardingProfileDestination(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 folder: Optional[pulumi.Input[_builtins.str]] = None,
-                 fqdns: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ForwardingProfileDestinationFqdnArgs', 'ForwardingProfileDestinationFqdnArgsDict']]]]] = None,
-                 ip_addresses: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ForwardingProfileDestinationIpAddressArgs', 'ForwardingProfileDestinationIpAddressArgsDict']]]]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 folder: pulumi.Input[Optional[_builtins.str]] = None,
+                 fqdns: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ForwardingProfileDestinationFqdnArgs', 'ForwardingProfileDestinationFqdnArgsDict']]]]] = None,
+                 ip_addresses: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ForwardingProfileDestinationIpAddressArgs', 'ForwardingProfileDestinationIpAddressArgsDict']]]]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -447,12 +447,12 @@ class ForwardingProfileDestination(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            description: Optional[pulumi.Input[_builtins.str]] = None,
-            folder: Optional[pulumi.Input[_builtins.str]] = None,
-            fqdns: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ForwardingProfileDestinationFqdnArgs', 'ForwardingProfileDestinationFqdnArgsDict']]]]] = None,
-            ip_addresses: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ForwardingProfileDestinationIpAddressArgs', 'ForwardingProfileDestinationIpAddressArgsDict']]]]] = None,
-            name: Optional[pulumi.Input[_builtins.str]] = None,
-            tfid: Optional[pulumi.Input[_builtins.str]] = None) -> 'ForwardingProfileDestination':
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            folder: pulumi.Input[Optional[_builtins.str]] = None,
+            fqdns: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ForwardingProfileDestinationFqdnArgs', 'ForwardingProfileDestinationFqdnArgsDict']]]]] = None,
+            ip_addresses: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ForwardingProfileDestinationIpAddressArgs', 'ForwardingProfileDestinationIpAddressArgsDict']]]]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            tfid: pulumi.Input[Optional[_builtins.str]] = None) -> 'ForwardingProfileDestination':
         """
         Get an existing ForwardingProfileDestination resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

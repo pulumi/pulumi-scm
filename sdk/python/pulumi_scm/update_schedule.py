@@ -21,10 +21,10 @@ __all__ = ['UpdateScheduleArgs', 'UpdateSchedule']
 @pulumi.input_type
 class UpdateScheduleArgs:
     def __init__(__self__, *,
-                 device: Optional[pulumi.Input[_builtins.str]] = None,
-                 folder: Optional[pulumi.Input[_builtins.str]] = None,
-                 snippet: Optional[pulumi.Input[_builtins.str]] = None,
-                 update_schedule: Optional[pulumi.Input['UpdateScheduleUpdateScheduleArgs']] = None):
+                 device: pulumi.Input[Optional[_builtins.str]] = None,
+                 folder: pulumi.Input[Optional[_builtins.str]] = None,
+                 snippet: pulumi.Input[Optional[_builtins.str]] = None,
+                 update_schedule: pulumi.Input[Optional['UpdateScheduleUpdateScheduleArgs']] = None):
         """
         The set of arguments for constructing a UpdateSchedule resource.
 
@@ -48,19 +48,19 @@ class UpdateScheduleArgs:
 
     @_builtins.property
     @pulumi.getter
-    def device(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def device(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The device in which the resource is defined
         """
         return pulumi.get(self, "device")
 
     @device.setter
-    def device(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def device(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "device", value)
 
     @_builtins.property
     @pulumi.getter
-    def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def folder(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
 
@@ -69,12 +69,12 @@ class UpdateScheduleArgs:
         return pulumi.get(self, "folder")
 
     @folder.setter
-    def folder(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def folder(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "folder", value)
 
     @_builtins.property
     @pulumi.getter
-    def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def snippet(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
 
@@ -83,30 +83,30 @@ class UpdateScheduleArgs:
         return pulumi.get(self, "snippet")
 
     @snippet.setter
-    def snippet(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def snippet(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "snippet", value)
 
     @_builtins.property
     @pulumi.getter(name="updateSchedule")
-    def update_schedule(self) -> Optional[pulumi.Input['UpdateScheduleUpdateScheduleArgs']]:
+    def update_schedule(self) -> pulumi.Input[Optional['UpdateScheduleUpdateScheduleArgs']]:
         """
         Update schedule
         """
         return pulumi.get(self, "update_schedule")
 
     @update_schedule.setter
-    def update_schedule(self, value: Optional[pulumi.Input['UpdateScheduleUpdateScheduleArgs']]):
+    def update_schedule(self, value: pulumi.Input[Optional['UpdateScheduleUpdateScheduleArgs']]):
         pulumi.set(self, "update_schedule", value)
 
 
 @pulumi.input_type
 class _UpdateScheduleState:
     def __init__(__self__, *,
-                 device: Optional[pulumi.Input[_builtins.str]] = None,
-                 folder: Optional[pulumi.Input[_builtins.str]] = None,
-                 snippet: Optional[pulumi.Input[_builtins.str]] = None,
-                 tfid: Optional[pulumi.Input[_builtins.str]] = None,
-                 update_schedule: Optional[pulumi.Input['UpdateScheduleUpdateScheduleArgs']] = None):
+                 device: pulumi.Input[Optional[_builtins.str]] = None,
+                 folder: pulumi.Input[Optional[_builtins.str]] = None,
+                 snippet: pulumi.Input[Optional[_builtins.str]] = None,
+                 tfid: pulumi.Input[Optional[_builtins.str]] = None,
+                 update_schedule: pulumi.Input[Optional['UpdateScheduleUpdateScheduleArgs']] = None):
         """
         Input properties used for looking up and filtering UpdateSchedule resources.
 
@@ -133,19 +133,19 @@ class _UpdateScheduleState:
 
     @_builtins.property
     @pulumi.getter
-    def device(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def device(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The device in which the resource is defined
         """
         return pulumi.get(self, "device")
 
     @device.setter
-    def device(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def device(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "device", value)
 
     @_builtins.property
     @pulumi.getter
-    def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def folder(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
 
@@ -154,12 +154,12 @@ class _UpdateScheduleState:
         return pulumi.get(self, "folder")
 
     @folder.setter
-    def folder(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def folder(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "folder", value)
 
     @_builtins.property
     @pulumi.getter
-    def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def snippet(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
 
@@ -168,31 +168,31 @@ class _UpdateScheduleState:
         return pulumi.get(self, "snippet")
 
     @snippet.setter
-    def snippet(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def snippet(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "snippet", value)
 
     @_builtins.property
     @pulumi.getter
-    def tfid(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def tfid(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The Terraform ID.
         """
         return pulumi.get(self, "tfid")
 
     @tfid.setter
-    def tfid(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def tfid(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "tfid", value)
 
     @_builtins.property
     @pulumi.getter(name="updateSchedule")
-    def update_schedule(self) -> Optional[pulumi.Input['UpdateScheduleUpdateScheduleArgs']]:
+    def update_schedule(self) -> pulumi.Input[Optional['UpdateScheduleUpdateScheduleArgs']]:
         """
         Update schedule
         """
         return pulumi.get(self, "update_schedule")
 
     @update_schedule.setter
-    def update_schedule(self, value: Optional[pulumi.Input['UpdateScheduleUpdateScheduleArgs']]):
+    def update_schedule(self, value: pulumi.Input[Optional['UpdateScheduleUpdateScheduleArgs']]):
         pulumi.set(self, "update_schedule", value)
 
 
@@ -202,10 +202,10 @@ class UpdateSchedule(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 device: Optional[pulumi.Input[_builtins.str]] = None,
-                 folder: Optional[pulumi.Input[_builtins.str]] = None,
-                 snippet: Optional[pulumi.Input[_builtins.str]] = None,
-                 update_schedule: Optional[pulumi.Input[Union['UpdateScheduleUpdateScheduleArgs', 'UpdateScheduleUpdateScheduleArgsDict']]] = None,
+                 device: pulumi.Input[Optional[_builtins.str]] = None,
+                 folder: pulumi.Input[Optional[_builtins.str]] = None,
+                 snippet: pulumi.Input[Optional[_builtins.str]] = None,
+                 update_schedule: pulumi.Input[Optional[Union['UpdateScheduleUpdateScheduleArgs', 'UpdateScheduleUpdateScheduleArgsDict']]] = None,
                  __props__=None):
         """
         UpdateSchedule resource
@@ -225,7 +225,7 @@ class UpdateSchedule(pulumi.CustomResource):
                         "new_app_threshold": 300,
                         "sync_to_peer": False,
                         "hourly": {
-                            "at": 30,
+                            "at": float(30),
                             "action": "download-only",
                             "disable_new_content": False,
                         },
@@ -311,7 +311,7 @@ class UpdateSchedule(pulumi.CustomResource):
                         "new_app_threshold": 300,
                         "sync_to_peer": False,
                         "hourly": {
-                            "at": 30,
+                            "at": float(30),
                             "action": "download-only",
                             "disable_new_content": False,
                         },
@@ -377,10 +377,10 @@ class UpdateSchedule(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 device: Optional[pulumi.Input[_builtins.str]] = None,
-                 folder: Optional[pulumi.Input[_builtins.str]] = None,
-                 snippet: Optional[pulumi.Input[_builtins.str]] = None,
-                 update_schedule: Optional[pulumi.Input[Union['UpdateScheduleUpdateScheduleArgs', 'UpdateScheduleUpdateScheduleArgsDict']]] = None,
+                 device: pulumi.Input[Optional[_builtins.str]] = None,
+                 folder: pulumi.Input[Optional[_builtins.str]] = None,
+                 snippet: pulumi.Input[Optional[_builtins.str]] = None,
+                 update_schedule: pulumi.Input[Optional[Union['UpdateScheduleUpdateScheduleArgs', 'UpdateScheduleUpdateScheduleArgsDict']]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -405,11 +405,11 @@ class UpdateSchedule(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            device: Optional[pulumi.Input[_builtins.str]] = None,
-            folder: Optional[pulumi.Input[_builtins.str]] = None,
-            snippet: Optional[pulumi.Input[_builtins.str]] = None,
-            tfid: Optional[pulumi.Input[_builtins.str]] = None,
-            update_schedule: Optional[pulumi.Input[Union['UpdateScheduleUpdateScheduleArgs', 'UpdateScheduleUpdateScheduleArgsDict']]] = None) -> 'UpdateSchedule':
+            device: pulumi.Input[Optional[_builtins.str]] = None,
+            folder: pulumi.Input[Optional[_builtins.str]] = None,
+            snippet: pulumi.Input[Optional[_builtins.str]] = None,
+            tfid: pulumi.Input[Optional[_builtins.str]] = None,
+            update_schedule: pulumi.Input[Optional[Union['UpdateScheduleUpdateScheduleArgs', 'UpdateScheduleUpdateScheduleArgsDict']]] = None) -> 'UpdateSchedule':
         """
         Get an existing UpdateSchedule resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

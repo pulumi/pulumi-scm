@@ -21,19 +21,19 @@ __all__ = ['SiteArgs', 'Site']
 @pulumi.input_type
 class SiteArgs:
     def __init__(__self__, *,
-                 address_line1: Optional[pulumi.Input[_builtins.str]] = None,
-                 address_line2: Optional[pulumi.Input[_builtins.str]] = None,
-                 city: Optional[pulumi.Input[_builtins.str]] = None,
-                 country: Optional[pulumi.Input[_builtins.str]] = None,
-                 latitude: Optional[pulumi.Input[_builtins.str]] = None,
-                 license_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 longitude: Optional[pulumi.Input[_builtins.str]] = None,
-                 members: Optional[pulumi.Input[Sequence[pulumi.Input['SiteMemberArgs']]]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 qos: Optional[pulumi.Input['SiteQosArgs']] = None,
-                 state: Optional[pulumi.Input[_builtins.str]] = None,
-                 type: Optional[pulumi.Input[_builtins.str]] = None,
-                 zip_code: Optional[pulumi.Input[_builtins.str]] = None):
+                 address_line1: pulumi.Input[Optional[_builtins.str]] = None,
+                 address_line2: pulumi.Input[Optional[_builtins.str]] = None,
+                 city: pulumi.Input[Optional[_builtins.str]] = None,
+                 country: pulumi.Input[Optional[_builtins.str]] = None,
+                 latitude: pulumi.Input[Optional[_builtins.str]] = None,
+                 license_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 longitude: pulumi.Input[Optional[_builtins.str]] = None,
+                 members: pulumi.Input[Optional[Sequence[pulumi.Input['SiteMemberArgs']]]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 qos: pulumi.Input[Optional['SiteQosArgs']] = None,
+                 state: pulumi.Input[Optional[_builtins.str]] = None,
+                 type: pulumi.Input[Optional[_builtins.str]] = None,
+                 zip_code: pulumi.Input[Optional[_builtins.str]] = None):
         """
         The set of arguments for constructing a Site resource.
 
@@ -80,179 +80,179 @@ class SiteArgs:
 
     @_builtins.property
     @pulumi.getter(name="addressLine1")
-    def address_line1(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def address_line1(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The address in which the site exists
         """
         return pulumi.get(self, "address_line1")
 
     @address_line1.setter
-    def address_line1(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def address_line1(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "address_line1", value)
 
     @_builtins.property
     @pulumi.getter(name="addressLine2")
-    def address_line2(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def address_line2(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The address in which the site exists (continued)
         """
         return pulumi.get(self, "address_line2")
 
     @address_line2.setter
-    def address_line2(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def address_line2(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "address_line2", value)
 
     @_builtins.property
     @pulumi.getter
-    def city(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def city(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The city in which the site exists
         """
         return pulumi.get(self, "city")
 
     @city.setter
-    def city(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def city(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "city", value)
 
     @_builtins.property
     @pulumi.getter
-    def country(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def country(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The country in which the site exists
         """
         return pulumi.get(self, "country")
 
     @country.setter
-    def country(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def country(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "country", value)
 
     @_builtins.property
     @pulumi.getter
-    def latitude(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def latitude(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The latitude coordinate for the site
         """
         return pulumi.get(self, "latitude")
 
     @latitude.setter
-    def latitude(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def latitude(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "latitude", value)
 
     @_builtins.property
     @pulumi.getter(name="licenseType")
-    def license_type(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def license_type(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The license type of the site
         """
         return pulumi.get(self, "license_type")
 
     @license_type.setter
-    def license_type(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def license_type(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "license_type", value)
 
     @_builtins.property
     @pulumi.getter
-    def longitude(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def longitude(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The longitude coordinate for the site
         """
         return pulumi.get(self, "longitude")
 
     @longitude.setter
-    def longitude(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def longitude(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "longitude", value)
 
     @_builtins.property
     @pulumi.getter
-    def members(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['SiteMemberArgs']]]]:
+    def members(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['SiteMemberArgs']]]]:
         """
         Members
         """
         return pulumi.get(self, "members")
 
     @members.setter
-    def members(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['SiteMemberArgs']]]]):
+    def members(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['SiteMemberArgs']]]]):
         pulumi.set(self, "members", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the site
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter
-    def qos(self) -> Optional[pulumi.Input['SiteQosArgs']]:
+    def qos(self) -> pulumi.Input[Optional['SiteQosArgs']]:
         """
         Qos
         """
         return pulumi.get(self, "qos")
 
     @qos.setter
-    def qos(self, value: Optional[pulumi.Input['SiteQosArgs']]):
+    def qos(self, value: pulumi.Input[Optional['SiteQosArgs']]):
         pulumi.set(self, "qos", value)
 
     @_builtins.property
     @pulumi.getter
-    def state(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def state(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The state in which the site exists
         """
         return pulumi.get(self, "state")
 
     @state.setter
-    def state(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def state(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "state", value)
 
     @_builtins.property
     @pulumi.getter
-    def type(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def type(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The site type
         """
         return pulumi.get(self, "type")
 
     @type.setter
-    def type(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def type(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "type", value)
 
     @_builtins.property
     @pulumi.getter(name="zipCode")
-    def zip_code(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def zip_code(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The postal code in which the site exists
         """
         return pulumi.get(self, "zip_code")
 
     @zip_code.setter
-    def zip_code(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def zip_code(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "zip_code", value)
 
 
 @pulumi.input_type
 class _SiteState:
     def __init__(__self__, *,
-                 address_line1: Optional[pulumi.Input[_builtins.str]] = None,
-                 address_line2: Optional[pulumi.Input[_builtins.str]] = None,
-                 city: Optional[pulumi.Input[_builtins.str]] = None,
-                 country: Optional[pulumi.Input[_builtins.str]] = None,
-                 folder: Optional[pulumi.Input[_builtins.str]] = None,
-                 latitude: Optional[pulumi.Input[_builtins.str]] = None,
-                 license_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 longitude: Optional[pulumi.Input[_builtins.str]] = None,
-                 members: Optional[pulumi.Input[Sequence[pulumi.Input['SiteMemberArgs']]]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 qos: Optional[pulumi.Input['SiteQosArgs']] = None,
-                 state: Optional[pulumi.Input[_builtins.str]] = None,
-                 tfid: Optional[pulumi.Input[_builtins.str]] = None,
-                 type: Optional[pulumi.Input[_builtins.str]] = None,
-                 zip_code: Optional[pulumi.Input[_builtins.str]] = None):
+                 address_line1: pulumi.Input[Optional[_builtins.str]] = None,
+                 address_line2: pulumi.Input[Optional[_builtins.str]] = None,
+                 city: pulumi.Input[Optional[_builtins.str]] = None,
+                 country: pulumi.Input[Optional[_builtins.str]] = None,
+                 folder: pulumi.Input[Optional[_builtins.str]] = None,
+                 latitude: pulumi.Input[Optional[_builtins.str]] = None,
+                 license_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 longitude: pulumi.Input[Optional[_builtins.str]] = None,
+                 members: pulumi.Input[Optional[Sequence[pulumi.Input['SiteMemberArgs']]]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 qos: pulumi.Input[Optional['SiteQosArgs']] = None,
+                 state: pulumi.Input[Optional[_builtins.str]] = None,
+                 tfid: pulumi.Input[Optional[_builtins.str]] = None,
+                 type: pulumi.Input[Optional[_builtins.str]] = None,
+                 zip_code: pulumi.Input[Optional[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering Site resources.
 
@@ -305,182 +305,182 @@ class _SiteState:
 
     @_builtins.property
     @pulumi.getter(name="addressLine1")
-    def address_line1(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def address_line1(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The address in which the site exists
         """
         return pulumi.get(self, "address_line1")
 
     @address_line1.setter
-    def address_line1(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def address_line1(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "address_line1", value)
 
     @_builtins.property
     @pulumi.getter(name="addressLine2")
-    def address_line2(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def address_line2(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The address in which the site exists (continued)
         """
         return pulumi.get(self, "address_line2")
 
     @address_line2.setter
-    def address_line2(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def address_line2(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "address_line2", value)
 
     @_builtins.property
     @pulumi.getter
-    def city(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def city(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The city in which the site exists
         """
         return pulumi.get(self, "city")
 
     @city.setter
-    def city(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def city(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "city", value)
 
     @_builtins.property
     @pulumi.getter
-    def country(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def country(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The country in which the site exists
         """
         return pulumi.get(self, "country")
 
     @country.setter
-    def country(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def country(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "country", value)
 
     @_builtins.property
     @pulumi.getter
-    def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def folder(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
         """
         return pulumi.get(self, "folder")
 
     @folder.setter
-    def folder(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def folder(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "folder", value)
 
     @_builtins.property
     @pulumi.getter
-    def latitude(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def latitude(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The latitude coordinate for the site
         """
         return pulumi.get(self, "latitude")
 
     @latitude.setter
-    def latitude(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def latitude(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "latitude", value)
 
     @_builtins.property
     @pulumi.getter(name="licenseType")
-    def license_type(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def license_type(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The license type of the site
         """
         return pulumi.get(self, "license_type")
 
     @license_type.setter
-    def license_type(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def license_type(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "license_type", value)
 
     @_builtins.property
     @pulumi.getter
-    def longitude(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def longitude(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The longitude coordinate for the site
         """
         return pulumi.get(self, "longitude")
 
     @longitude.setter
-    def longitude(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def longitude(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "longitude", value)
 
     @_builtins.property
     @pulumi.getter
-    def members(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['SiteMemberArgs']]]]:
+    def members(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['SiteMemberArgs']]]]:
         """
         Members
         """
         return pulumi.get(self, "members")
 
     @members.setter
-    def members(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['SiteMemberArgs']]]]):
+    def members(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['SiteMemberArgs']]]]):
         pulumi.set(self, "members", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the site
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter
-    def qos(self) -> Optional[pulumi.Input['SiteQosArgs']]:
+    def qos(self) -> pulumi.Input[Optional['SiteQosArgs']]:
         """
         Qos
         """
         return pulumi.get(self, "qos")
 
     @qos.setter
-    def qos(self, value: Optional[pulumi.Input['SiteQosArgs']]):
+    def qos(self, value: pulumi.Input[Optional['SiteQosArgs']]):
         pulumi.set(self, "qos", value)
 
     @_builtins.property
     @pulumi.getter
-    def state(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def state(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The state in which the site exists
         """
         return pulumi.get(self, "state")
 
     @state.setter
-    def state(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def state(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "state", value)
 
     @_builtins.property
     @pulumi.getter
-    def tfid(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def tfid(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The Terraform ID.
         """
         return pulumi.get(self, "tfid")
 
     @tfid.setter
-    def tfid(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def tfid(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "tfid", value)
 
     @_builtins.property
     @pulumi.getter
-    def type(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def type(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The site type
         """
         return pulumi.get(self, "type")
 
     @type.setter
-    def type(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def type(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "type", value)
 
     @_builtins.property
     @pulumi.getter(name="zipCode")
-    def zip_code(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def zip_code(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The postal code in which the site exists
         """
         return pulumi.get(self, "zip_code")
 
     @zip_code.setter
-    def zip_code(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def zip_code(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "zip_code", value)
 
 
@@ -490,19 +490,19 @@ class Site(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 address_line1: Optional[pulumi.Input[_builtins.str]] = None,
-                 address_line2: Optional[pulumi.Input[_builtins.str]] = None,
-                 city: Optional[pulumi.Input[_builtins.str]] = None,
-                 country: Optional[pulumi.Input[_builtins.str]] = None,
-                 latitude: Optional[pulumi.Input[_builtins.str]] = None,
-                 license_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 longitude: Optional[pulumi.Input[_builtins.str]] = None,
-                 members: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SiteMemberArgs', 'SiteMemberArgsDict']]]]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 qos: Optional[pulumi.Input[Union['SiteQosArgs', 'SiteQosArgsDict']]] = None,
-                 state: Optional[pulumi.Input[_builtins.str]] = None,
-                 type: Optional[pulumi.Input[_builtins.str]] = None,
-                 zip_code: Optional[pulumi.Input[_builtins.str]] = None,
+                 address_line1: pulumi.Input[Optional[_builtins.str]] = None,
+                 address_line2: pulumi.Input[Optional[_builtins.str]] = None,
+                 city: pulumi.Input[Optional[_builtins.str]] = None,
+                 country: pulumi.Input[Optional[_builtins.str]] = None,
+                 latitude: pulumi.Input[Optional[_builtins.str]] = None,
+                 license_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 longitude: pulumi.Input[Optional[_builtins.str]] = None,
+                 members: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SiteMemberArgs', 'SiteMemberArgsDict']]]]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 qos: pulumi.Input[Optional[Union['SiteQosArgs', 'SiteQosArgsDict']]] = None,
+                 state: pulumi.Input[Optional[_builtins.str]] = None,
+                 type: pulumi.Input[Optional[_builtins.str]] = None,
+                 zip_code: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
         Site resource
@@ -595,7 +595,7 @@ class Site(pulumi.CustomResource):
             }],
             qos={
                 "profile": "Default Profile",
-                "cir": 20,
+                "cir": float(20),
             })
         ```
 
@@ -721,7 +721,7 @@ class Site(pulumi.CustomResource):
             }],
             qos={
                 "profile": "Default Profile",
-                "cir": 20,
+                "cir": float(20),
             })
         ```
 
@@ -749,19 +749,19 @@ class Site(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 address_line1: Optional[pulumi.Input[_builtins.str]] = None,
-                 address_line2: Optional[pulumi.Input[_builtins.str]] = None,
-                 city: Optional[pulumi.Input[_builtins.str]] = None,
-                 country: Optional[pulumi.Input[_builtins.str]] = None,
-                 latitude: Optional[pulumi.Input[_builtins.str]] = None,
-                 license_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 longitude: Optional[pulumi.Input[_builtins.str]] = None,
-                 members: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SiteMemberArgs', 'SiteMemberArgsDict']]]]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 qos: Optional[pulumi.Input[Union['SiteQosArgs', 'SiteQosArgsDict']]] = None,
-                 state: Optional[pulumi.Input[_builtins.str]] = None,
-                 type: Optional[pulumi.Input[_builtins.str]] = None,
-                 zip_code: Optional[pulumi.Input[_builtins.str]] = None,
+                 address_line1: pulumi.Input[Optional[_builtins.str]] = None,
+                 address_line2: pulumi.Input[Optional[_builtins.str]] = None,
+                 city: pulumi.Input[Optional[_builtins.str]] = None,
+                 country: pulumi.Input[Optional[_builtins.str]] = None,
+                 latitude: pulumi.Input[Optional[_builtins.str]] = None,
+                 license_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 longitude: pulumi.Input[Optional[_builtins.str]] = None,
+                 members: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SiteMemberArgs', 'SiteMemberArgsDict']]]]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 qos: pulumi.Input[Optional[Union['SiteQosArgs', 'SiteQosArgsDict']]] = None,
+                 state: pulumi.Input[Optional[_builtins.str]] = None,
+                 type: pulumi.Input[Optional[_builtins.str]] = None,
+                 zip_code: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -796,21 +796,21 @@ class Site(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            address_line1: Optional[pulumi.Input[_builtins.str]] = None,
-            address_line2: Optional[pulumi.Input[_builtins.str]] = None,
-            city: Optional[pulumi.Input[_builtins.str]] = None,
-            country: Optional[pulumi.Input[_builtins.str]] = None,
-            folder: Optional[pulumi.Input[_builtins.str]] = None,
-            latitude: Optional[pulumi.Input[_builtins.str]] = None,
-            license_type: Optional[pulumi.Input[_builtins.str]] = None,
-            longitude: Optional[pulumi.Input[_builtins.str]] = None,
-            members: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SiteMemberArgs', 'SiteMemberArgsDict']]]]] = None,
-            name: Optional[pulumi.Input[_builtins.str]] = None,
-            qos: Optional[pulumi.Input[Union['SiteQosArgs', 'SiteQosArgsDict']]] = None,
-            state: Optional[pulumi.Input[_builtins.str]] = None,
-            tfid: Optional[pulumi.Input[_builtins.str]] = None,
-            type: Optional[pulumi.Input[_builtins.str]] = None,
-            zip_code: Optional[pulumi.Input[_builtins.str]] = None) -> 'Site':
+            address_line1: pulumi.Input[Optional[_builtins.str]] = None,
+            address_line2: pulumi.Input[Optional[_builtins.str]] = None,
+            city: pulumi.Input[Optional[_builtins.str]] = None,
+            country: pulumi.Input[Optional[_builtins.str]] = None,
+            folder: pulumi.Input[Optional[_builtins.str]] = None,
+            latitude: pulumi.Input[Optional[_builtins.str]] = None,
+            license_type: pulumi.Input[Optional[_builtins.str]] = None,
+            longitude: pulumi.Input[Optional[_builtins.str]] = None,
+            members: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SiteMemberArgs', 'SiteMemberArgsDict']]]]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            qos: pulumi.Input[Optional[Union['SiteQosArgs', 'SiteQosArgsDict']]] = None,
+            state: pulumi.Input[Optional[_builtins.str]] = None,
+            tfid: pulumi.Input[Optional[_builtins.str]] = None,
+            type: pulumi.Input[Optional[_builtins.str]] = None,
+            zip_code: pulumi.Input[Optional[_builtins.str]] = None) -> 'Site':
         """
         Get an existing Site resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

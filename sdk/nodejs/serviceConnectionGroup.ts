@@ -231,27 +231,27 @@ export interface ServiceConnectionGroupState {
     /**
      * Disable snat
      */
-    disableSnat?: pulumi.Input<boolean>;
+    disableSnat?: pulumi.Input<boolean | undefined>;
     /**
      * The folder in which the resource is defined
      */
-    folder?: pulumi.Input<string>;
+    folder?: pulumi.Input<string | undefined>;
     /**
      * Name
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Pbf only
      */
-    pbfOnly?: pulumi.Input<boolean>;
+    pbfOnly?: pulumi.Input<boolean | undefined>;
     /**
      * Target
      */
-    targets?: pulumi.Input<pulumi.Input<string>[]>;
+    targets?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * The Terraform ID.
      */
-    tfid?: pulumi.Input<string>;
+    tfid?: pulumi.Input<string | undefined>;
 }
 
 /**
@@ -261,15 +261,15 @@ export interface ServiceConnectionGroupArgs {
     /**
      * Disable snat
      */
-    disableSnat?: pulumi.Input<boolean>;
+    disableSnat?: pulumi.Input<boolean | undefined>;
     /**
      * Name
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Pbf only
      */
-    pbfOnly?: pulumi.Input<boolean>;
+    pbfOnly?: pulumi.Input<boolean | undefined>;
     /**
      * Target
      */

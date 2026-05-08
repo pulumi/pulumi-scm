@@ -150,7 +150,7 @@ export interface GetRemoteNetworkOutputArgs {
     /**
      * The folder that contains the remote network
      */
-    folder?: pulumi.Input<string>;
+    folder?: pulumi.Input<string | undefined>;
     /**
      * The UUID of the remote network
      */
@@ -158,5 +158,5 @@ export interface GetRemoteNetworkOutputArgs {
     /**
      * The name of the remote network
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
 }

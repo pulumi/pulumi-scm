@@ -278,7 +278,7 @@ export interface GetDeviceOutputArgs {
     /**
      * The folder containing the device
      */
-    folder?: pulumi.Input<string>;
+    folder?: pulumi.Input<string | undefined>;
     /**
      * The UUID of the device
      */
@@ -286,5 +286,5 @@ export interface GetDeviceOutputArgs {
     /**
      * The name of the device
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
 }

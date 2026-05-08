@@ -23,7 +23,7 @@ namespace Pulumi.Scm
     /// return await Deployment.RunAsync(() =&gt; 
     /// {
     ///     // Basic forwarding profile destination with FQDN
-    ///     var exampleBasicFqdn = new Scm.Index.ForwardingProfileDestination("example_basic_fqdn", new()
+    ///     var exampleBasicFqdn = new Scm.ForwardingProfileDestination("example_basic_fqdn", new()
     ///     {
     ///         Folder = "Mobile Users",
     ///         Name = "example-dest-fqdn",
@@ -38,7 +38,7 @@ namespace Pulumi.Scm
     ///     });
     /// 
     ///     // Forwarding profile destination with IP addresses
-    ///     var exampleIpAddresses = new Scm.Index.ForwardingProfileDestination("example_ip_addresses", new()
+    ///     var exampleIpAddresses = new Scm.ForwardingProfileDestination("example_ip_addresses", new()
     ///     {
     ///         Folder = "Mobile Users",
     ///         Name = "example-dest-ip",
@@ -59,7 +59,7 @@ namespace Pulumi.Scm
     ///     });
     /// 
     ///     // Forwarding profile destination with both FQDN and IP addresses
-    ///     var exampleMixed = new Scm.Index.ForwardingProfileDestination("example_mixed", new()
+    ///     var exampleMixed = new Scm.ForwardingProfileDestination("example_mixed", new()
     ///     {
     ///         Folder = "Mobile Users",
     ///         Name = "corp-destinations",

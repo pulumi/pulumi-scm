@@ -183,27 +183,27 @@ export interface ForwardingProfileDestinationState {
     /**
      * description of the destination
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * The folder in which the resource is defined
      */
-    folder?: pulumi.Input<string>;
+    folder?: pulumi.Input<string | undefined>;
     /**
      * List of FQDN based destination entries
      */
-    fqdns?: pulumi.Input<pulumi.Input<inputs.ForwardingProfileDestinationFqdn>[]>;
+    fqdns?: pulumi.Input<pulumi.Input<inputs.ForwardingProfileDestinationFqdn>[] | undefined>;
     /**
      * List of IP address based destination entries
      */
-    ipAddresses?: pulumi.Input<pulumi.Input<inputs.ForwardingProfileDestinationIpAddress>[]>;
+    ipAddresses?: pulumi.Input<pulumi.Input<inputs.ForwardingProfileDestinationIpAddress>[] | undefined>;
     /**
      * alphanumeric string [ 0-9a-zA-Z._ -]
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * The Terraform ID.
      */
-    tfid?: pulumi.Input<string>;
+    tfid?: pulumi.Input<string | undefined>;
 }
 
 /**
@@ -213,21 +213,21 @@ export interface ForwardingProfileDestinationArgs {
     /**
      * description of the destination
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * The folder in which the resource is defined
      */
-    folder?: pulumi.Input<string>;
+    folder?: pulumi.Input<string | undefined>;
     /**
      * List of FQDN based destination entries
      */
-    fqdns?: pulumi.Input<pulumi.Input<inputs.ForwardingProfileDestinationFqdn>[]>;
+    fqdns?: pulumi.Input<pulumi.Input<inputs.ForwardingProfileDestinationFqdn>[] | undefined>;
     /**
      * List of IP address based destination entries
      */
-    ipAddresses?: pulumi.Input<pulumi.Input<inputs.ForwardingProfileDestinationIpAddress>[]>;
+    ipAddresses?: pulumi.Input<pulumi.Input<inputs.ForwardingProfileDestinationIpAddress>[] | undefined>;
     /**
      * alphanumeric string [ 0-9a-zA-Z._ -]
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
 }

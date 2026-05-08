@@ -352,75 +352,75 @@ export interface HipObjectState {
     /**
      * Anti malware
      */
-    antiMalware?: pulumi.Input<inputs.HipObjectAntiMalware>;
+    antiMalware?: pulumi.Input<inputs.HipObjectAntiMalware | undefined>;
     /**
      * Certificate
      */
-    certificate?: pulumi.Input<inputs.HipObjectCertificate>;
+    certificate?: pulumi.Input<inputs.HipObjectCertificate | undefined>;
     /**
      * Custom checks
      */
-    customChecks?: pulumi.Input<inputs.HipObjectCustomChecks>;
+    customChecks?: pulumi.Input<inputs.HipObjectCustomChecks | undefined>;
     /**
      * Data loss prevention
      */
-    dataLossPrevention?: pulumi.Input<inputs.HipObjectDataLossPrevention>;
+    dataLossPrevention?: pulumi.Input<inputs.HipObjectDataLossPrevention | undefined>;
     /**
      * Description
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * The device in which the resource is defined
      */
-    device?: pulumi.Input<string>;
+    device?: pulumi.Input<string | undefined>;
     /**
      * Disk backup
      */
-    diskBackup?: pulumi.Input<inputs.HipObjectDiskBackup>;
+    diskBackup?: pulumi.Input<inputs.HipObjectDiskBackup | undefined>;
     /**
      * Disk encryption
      */
-    diskEncryption?: pulumi.Input<inputs.HipObjectDiskEncryption>;
+    diskEncryption?: pulumi.Input<inputs.HipObjectDiskEncryption | undefined>;
     /**
      * Firewall
      */
-    firewall?: pulumi.Input<inputs.HipObjectFirewall>;
+    firewall?: pulumi.Input<inputs.HipObjectFirewall | undefined>;
     /**
      * The folder in which the resource is defined
      *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
-    folder?: pulumi.Input<string>;
+    folder?: pulumi.Input<string | undefined>;
     /**
      * Host info
      */
-    hostInfo?: pulumi.Input<inputs.HipObjectHostInfo>;
+    hostInfo?: pulumi.Input<inputs.HipObjectHostInfo | undefined>;
     /**
      * Mobile device
      */
-    mobileDevice?: pulumi.Input<inputs.HipObjectMobileDevice>;
+    mobileDevice?: pulumi.Input<inputs.HipObjectMobileDevice | undefined>;
     /**
      * The name of the HIP object
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Network info
      */
-    networkInfo?: pulumi.Input<inputs.HipObjectNetworkInfo>;
+    networkInfo?: pulumi.Input<inputs.HipObjectNetworkInfo | undefined>;
     /**
      * Patch management
      */
-    patchManagement?: pulumi.Input<inputs.HipObjectPatchManagement>;
+    patchManagement?: pulumi.Input<inputs.HipObjectPatchManagement | undefined>;
     /**
      * The snippet in which the resource is defined
      *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
-    snippet?: pulumi.Input<string>;
+    snippet?: pulumi.Input<string | undefined>;
     /**
      * The Terraform ID.
      */
-    tfid?: pulumi.Input<string>;
+    tfid?: pulumi.Input<string | undefined>;
 }
 
 /**
@@ -430,69 +430,69 @@ export interface HipObjectArgs {
     /**
      * Anti malware
      */
-    antiMalware?: pulumi.Input<inputs.HipObjectAntiMalware>;
+    antiMalware?: pulumi.Input<inputs.HipObjectAntiMalware | undefined>;
     /**
      * Certificate
      */
-    certificate?: pulumi.Input<inputs.HipObjectCertificate>;
+    certificate?: pulumi.Input<inputs.HipObjectCertificate | undefined>;
     /**
      * Custom checks
      */
-    customChecks?: pulumi.Input<inputs.HipObjectCustomChecks>;
+    customChecks?: pulumi.Input<inputs.HipObjectCustomChecks | undefined>;
     /**
      * Data loss prevention
      */
-    dataLossPrevention?: pulumi.Input<inputs.HipObjectDataLossPrevention>;
+    dataLossPrevention?: pulumi.Input<inputs.HipObjectDataLossPrevention | undefined>;
     /**
      * Description
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * The device in which the resource is defined
      */
-    device?: pulumi.Input<string>;
+    device?: pulumi.Input<string | undefined>;
     /**
      * Disk backup
      */
-    diskBackup?: pulumi.Input<inputs.HipObjectDiskBackup>;
+    diskBackup?: pulumi.Input<inputs.HipObjectDiskBackup | undefined>;
     /**
      * Disk encryption
      */
-    diskEncryption?: pulumi.Input<inputs.HipObjectDiskEncryption>;
+    diskEncryption?: pulumi.Input<inputs.HipObjectDiskEncryption | undefined>;
     /**
      * Firewall
      */
-    firewall?: pulumi.Input<inputs.HipObjectFirewall>;
+    firewall?: pulumi.Input<inputs.HipObjectFirewall | undefined>;
     /**
      * The folder in which the resource is defined
      *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
-    folder?: pulumi.Input<string>;
+    folder?: pulumi.Input<string | undefined>;
     /**
      * Host info
      */
-    hostInfo?: pulumi.Input<inputs.HipObjectHostInfo>;
+    hostInfo?: pulumi.Input<inputs.HipObjectHostInfo | undefined>;
     /**
      * Mobile device
      */
-    mobileDevice?: pulumi.Input<inputs.HipObjectMobileDevice>;
+    mobileDevice?: pulumi.Input<inputs.HipObjectMobileDevice | undefined>;
     /**
      * The name of the HIP object
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Network info
      */
-    networkInfo?: pulumi.Input<inputs.HipObjectNetworkInfo>;
+    networkInfo?: pulumi.Input<inputs.HipObjectNetworkInfo | undefined>;
     /**
      * Patch management
      */
-    patchManagement?: pulumi.Input<inputs.HipObjectPatchManagement>;
+    patchManagement?: pulumi.Input<inputs.HipObjectPatchManagement | undefined>;
     /**
      * The snippet in which the resource is defined
      *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
-    snippet?: pulumi.Input<string>;
+    snippet?: pulumi.Input<string | undefined>;
 }

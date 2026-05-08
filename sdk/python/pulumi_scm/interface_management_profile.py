@@ -21,21 +21,21 @@ __all__ = ['InterfaceManagementProfileArgs', 'InterfaceManagementProfile']
 @pulumi.input_type
 class InterfaceManagementProfileArgs:
     def __init__(__self__, *,
-                 device: Optional[pulumi.Input[_builtins.str]] = None,
-                 folder: Optional[pulumi.Input[_builtins.str]] = None,
-                 http: Optional[pulumi.Input[_builtins.bool]] = None,
-                 http_ocsp: Optional[pulumi.Input[_builtins.bool]] = None,
-                 https: Optional[pulumi.Input[_builtins.bool]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 permitted_ips: Optional[pulumi.Input[Sequence[pulumi.Input['InterfaceManagementProfilePermittedIpArgs']]]] = None,
-                 ping: Optional[pulumi.Input[_builtins.bool]] = None,
-                 response_pages: Optional[pulumi.Input[_builtins.bool]] = None,
-                 snippet: Optional[pulumi.Input[_builtins.str]] = None,
-                 ssh: Optional[pulumi.Input[_builtins.bool]] = None,
-                 telnet: Optional[pulumi.Input[_builtins.bool]] = None,
-                 userid_service: Optional[pulumi.Input[_builtins.bool]] = None,
-                 userid_syslog_listener_ssl: Optional[pulumi.Input[_builtins.bool]] = None,
-                 userid_syslog_listener_udp: Optional[pulumi.Input[_builtins.bool]] = None):
+                 device: pulumi.Input[Optional[_builtins.str]] = None,
+                 folder: pulumi.Input[Optional[_builtins.str]] = None,
+                 http: pulumi.Input[Optional[_builtins.bool]] = None,
+                 http_ocsp: pulumi.Input[Optional[_builtins.bool]] = None,
+                 https: pulumi.Input[Optional[_builtins.bool]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 permitted_ips: pulumi.Input[Optional[Sequence[pulumi.Input['InterfaceManagementProfilePermittedIpArgs']]]] = None,
+                 ping: pulumi.Input[Optional[_builtins.bool]] = None,
+                 response_pages: pulumi.Input[Optional[_builtins.bool]] = None,
+                 snippet: pulumi.Input[Optional[_builtins.str]] = None,
+                 ssh: pulumi.Input[Optional[_builtins.bool]] = None,
+                 telnet: pulumi.Input[Optional[_builtins.bool]] = None,
+                 userid_service: pulumi.Input[Optional[_builtins.bool]] = None,
+                 userid_syslog_listener_ssl: pulumi.Input[Optional[_builtins.bool]] = None,
+                 userid_syslog_listener_udp: pulumi.Input[Optional[_builtins.bool]] = None):
         """
         The set of arguments for constructing a InterfaceManagementProfile resource.
 
@@ -92,19 +92,19 @@ class InterfaceManagementProfileArgs:
 
     @_builtins.property
     @pulumi.getter
-    def device(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def device(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The device in which the resource is defined
         """
         return pulumi.get(self, "device")
 
     @device.setter
-    def device(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def device(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "device", value)
 
     @_builtins.property
     @pulumi.getter
-    def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def folder(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
 
@@ -113,96 +113,96 @@ class InterfaceManagementProfileArgs:
         return pulumi.get(self, "folder")
 
     @folder.setter
-    def folder(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def folder(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "folder", value)
 
     @_builtins.property
     @pulumi.getter
-    def http(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def http(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Allow HTTP?
         """
         return pulumi.get(self, "http")
 
     @http.setter
-    def http(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def http(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "http", value)
 
     @_builtins.property
     @pulumi.getter(name="httpOcsp")
-    def http_ocsp(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def http_ocsp(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Allow HTTP OCSP?
         """
         return pulumi.get(self, "http_ocsp")
 
     @http_ocsp.setter
-    def http_ocsp(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def http_ocsp(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "http_ocsp", value)
 
     @_builtins.property
     @pulumi.getter
-    def https(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def https(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Allow HTTPS?
         """
         return pulumi.get(self, "https")
 
     @https.setter
-    def https(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def https(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "https", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Name
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter(name="permittedIps")
-    def permitted_ips(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['InterfaceManagementProfilePermittedIpArgs']]]]:
+    def permitted_ips(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['InterfaceManagementProfilePermittedIpArgs']]]]:
         """
         Allowed IP address(es)
         """
         return pulumi.get(self, "permitted_ips")
 
     @permitted_ips.setter
-    def permitted_ips(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['InterfaceManagementProfilePermittedIpArgs']]]]):
+    def permitted_ips(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['InterfaceManagementProfilePermittedIpArgs']]]]):
         pulumi.set(self, "permitted_ips", value)
 
     @_builtins.property
     @pulumi.getter
-    def ping(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def ping(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Allow ping?
         """
         return pulumi.get(self, "ping")
 
     @ping.setter
-    def ping(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def ping(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "ping", value)
 
     @_builtins.property
     @pulumi.getter(name="responsePages")
-    def response_pages(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def response_pages(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Allow response pages?
         """
         return pulumi.get(self, "response_pages")
 
     @response_pages.setter
-    def response_pages(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def response_pages(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "response_pages", value)
 
     @_builtins.property
     @pulumi.getter
-    def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def snippet(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
 
@@ -211,89 +211,89 @@ class InterfaceManagementProfileArgs:
         return pulumi.get(self, "snippet")
 
     @snippet.setter
-    def snippet(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def snippet(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "snippet", value)
 
     @_builtins.property
     @pulumi.getter
-    def ssh(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def ssh(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Allow SSH?
         """
         return pulumi.get(self, "ssh")
 
     @ssh.setter
-    def ssh(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def ssh(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "ssh", value)
 
     @_builtins.property
     @pulumi.getter
-    def telnet(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def telnet(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Allow telnet? Seriously, why would you do this?!?
         """
         return pulumi.get(self, "telnet")
 
     @telnet.setter
-    def telnet(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def telnet(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "telnet", value)
 
     @_builtins.property
     @pulumi.getter(name="useridService")
-    def userid_service(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def userid_service(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Allow User-ID?
         """
         return pulumi.get(self, "userid_service")
 
     @userid_service.setter
-    def userid_service(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def userid_service(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "userid_service", value)
 
     @_builtins.property
     @pulumi.getter(name="useridSyslogListenerSsl")
-    def userid_syslog_listener_ssl(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def userid_syslog_listener_ssl(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Allow User-ID syslog listener (SSL)?
         """
         return pulumi.get(self, "userid_syslog_listener_ssl")
 
     @userid_syslog_listener_ssl.setter
-    def userid_syslog_listener_ssl(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def userid_syslog_listener_ssl(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "userid_syslog_listener_ssl", value)
 
     @_builtins.property
     @pulumi.getter(name="useridSyslogListenerUdp")
-    def userid_syslog_listener_udp(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def userid_syslog_listener_udp(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Allow User-ID syslog listener (UDP)?
         """
         return pulumi.get(self, "userid_syslog_listener_udp")
 
     @userid_syslog_listener_udp.setter
-    def userid_syslog_listener_udp(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def userid_syslog_listener_udp(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "userid_syslog_listener_udp", value)
 
 
 @pulumi.input_type
 class _InterfaceManagementProfileState:
     def __init__(__self__, *,
-                 device: Optional[pulumi.Input[_builtins.str]] = None,
-                 folder: Optional[pulumi.Input[_builtins.str]] = None,
-                 http: Optional[pulumi.Input[_builtins.bool]] = None,
-                 http_ocsp: Optional[pulumi.Input[_builtins.bool]] = None,
-                 https: Optional[pulumi.Input[_builtins.bool]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 permitted_ips: Optional[pulumi.Input[Sequence[pulumi.Input['InterfaceManagementProfilePermittedIpArgs']]]] = None,
-                 ping: Optional[pulumi.Input[_builtins.bool]] = None,
-                 response_pages: Optional[pulumi.Input[_builtins.bool]] = None,
-                 snippet: Optional[pulumi.Input[_builtins.str]] = None,
-                 ssh: Optional[pulumi.Input[_builtins.bool]] = None,
-                 telnet: Optional[pulumi.Input[_builtins.bool]] = None,
-                 tfid: Optional[pulumi.Input[_builtins.str]] = None,
-                 userid_service: Optional[pulumi.Input[_builtins.bool]] = None,
-                 userid_syslog_listener_ssl: Optional[pulumi.Input[_builtins.bool]] = None,
-                 userid_syslog_listener_udp: Optional[pulumi.Input[_builtins.bool]] = None):
+                 device: pulumi.Input[Optional[_builtins.str]] = None,
+                 folder: pulumi.Input[Optional[_builtins.str]] = None,
+                 http: pulumi.Input[Optional[_builtins.bool]] = None,
+                 http_ocsp: pulumi.Input[Optional[_builtins.bool]] = None,
+                 https: pulumi.Input[Optional[_builtins.bool]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 permitted_ips: pulumi.Input[Optional[Sequence[pulumi.Input['InterfaceManagementProfilePermittedIpArgs']]]] = None,
+                 ping: pulumi.Input[Optional[_builtins.bool]] = None,
+                 response_pages: pulumi.Input[Optional[_builtins.bool]] = None,
+                 snippet: pulumi.Input[Optional[_builtins.str]] = None,
+                 ssh: pulumi.Input[Optional[_builtins.bool]] = None,
+                 telnet: pulumi.Input[Optional[_builtins.bool]] = None,
+                 tfid: pulumi.Input[Optional[_builtins.str]] = None,
+                 userid_service: pulumi.Input[Optional[_builtins.bool]] = None,
+                 userid_syslog_listener_ssl: pulumi.Input[Optional[_builtins.bool]] = None,
+                 userid_syslog_listener_udp: pulumi.Input[Optional[_builtins.bool]] = None):
         """
         Input properties used for looking up and filtering InterfaceManagementProfile resources.
 
@@ -353,19 +353,19 @@ class _InterfaceManagementProfileState:
 
     @_builtins.property
     @pulumi.getter
-    def device(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def device(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The device in which the resource is defined
         """
         return pulumi.get(self, "device")
 
     @device.setter
-    def device(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def device(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "device", value)
 
     @_builtins.property
     @pulumi.getter
-    def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def folder(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
 
@@ -374,96 +374,96 @@ class _InterfaceManagementProfileState:
         return pulumi.get(self, "folder")
 
     @folder.setter
-    def folder(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def folder(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "folder", value)
 
     @_builtins.property
     @pulumi.getter
-    def http(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def http(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Allow HTTP?
         """
         return pulumi.get(self, "http")
 
     @http.setter
-    def http(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def http(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "http", value)
 
     @_builtins.property
     @pulumi.getter(name="httpOcsp")
-    def http_ocsp(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def http_ocsp(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Allow HTTP OCSP?
         """
         return pulumi.get(self, "http_ocsp")
 
     @http_ocsp.setter
-    def http_ocsp(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def http_ocsp(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "http_ocsp", value)
 
     @_builtins.property
     @pulumi.getter
-    def https(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def https(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Allow HTTPS?
         """
         return pulumi.get(self, "https")
 
     @https.setter
-    def https(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def https(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "https", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Name
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter(name="permittedIps")
-    def permitted_ips(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['InterfaceManagementProfilePermittedIpArgs']]]]:
+    def permitted_ips(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['InterfaceManagementProfilePermittedIpArgs']]]]:
         """
         Allowed IP address(es)
         """
         return pulumi.get(self, "permitted_ips")
 
     @permitted_ips.setter
-    def permitted_ips(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['InterfaceManagementProfilePermittedIpArgs']]]]):
+    def permitted_ips(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['InterfaceManagementProfilePermittedIpArgs']]]]):
         pulumi.set(self, "permitted_ips", value)
 
     @_builtins.property
     @pulumi.getter
-    def ping(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def ping(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Allow ping?
         """
         return pulumi.get(self, "ping")
 
     @ping.setter
-    def ping(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def ping(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "ping", value)
 
     @_builtins.property
     @pulumi.getter(name="responsePages")
-    def response_pages(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def response_pages(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Allow response pages?
         """
         return pulumi.get(self, "response_pages")
 
     @response_pages.setter
-    def response_pages(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def response_pages(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "response_pages", value)
 
     @_builtins.property
     @pulumi.getter
-    def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def snippet(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
 
@@ -472,79 +472,79 @@ class _InterfaceManagementProfileState:
         return pulumi.get(self, "snippet")
 
     @snippet.setter
-    def snippet(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def snippet(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "snippet", value)
 
     @_builtins.property
     @pulumi.getter
-    def ssh(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def ssh(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Allow SSH?
         """
         return pulumi.get(self, "ssh")
 
     @ssh.setter
-    def ssh(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def ssh(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "ssh", value)
 
     @_builtins.property
     @pulumi.getter
-    def telnet(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def telnet(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Allow telnet? Seriously, why would you do this?!?
         """
         return pulumi.get(self, "telnet")
 
     @telnet.setter
-    def telnet(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def telnet(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "telnet", value)
 
     @_builtins.property
     @pulumi.getter
-    def tfid(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def tfid(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The Terraform ID.
         """
         return pulumi.get(self, "tfid")
 
     @tfid.setter
-    def tfid(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def tfid(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "tfid", value)
 
     @_builtins.property
     @pulumi.getter(name="useridService")
-    def userid_service(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def userid_service(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Allow User-ID?
         """
         return pulumi.get(self, "userid_service")
 
     @userid_service.setter
-    def userid_service(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def userid_service(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "userid_service", value)
 
     @_builtins.property
     @pulumi.getter(name="useridSyslogListenerSsl")
-    def userid_syslog_listener_ssl(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def userid_syslog_listener_ssl(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Allow User-ID syslog listener (SSL)?
         """
         return pulumi.get(self, "userid_syslog_listener_ssl")
 
     @userid_syslog_listener_ssl.setter
-    def userid_syslog_listener_ssl(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def userid_syslog_listener_ssl(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "userid_syslog_listener_ssl", value)
 
     @_builtins.property
     @pulumi.getter(name="useridSyslogListenerUdp")
-    def userid_syslog_listener_udp(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def userid_syslog_listener_udp(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Allow User-ID syslog listener (UDP)?
         """
         return pulumi.get(self, "userid_syslog_listener_udp")
 
     @userid_syslog_listener_udp.setter
-    def userid_syslog_listener_udp(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def userid_syslog_listener_udp(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "userid_syslog_listener_udp", value)
 
 
@@ -554,21 +554,21 @@ class InterfaceManagementProfile(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 device: Optional[pulumi.Input[_builtins.str]] = None,
-                 folder: Optional[pulumi.Input[_builtins.str]] = None,
-                 http: Optional[pulumi.Input[_builtins.bool]] = None,
-                 http_ocsp: Optional[pulumi.Input[_builtins.bool]] = None,
-                 https: Optional[pulumi.Input[_builtins.bool]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 permitted_ips: Optional[pulumi.Input[Sequence[pulumi.Input[Union['InterfaceManagementProfilePermittedIpArgs', 'InterfaceManagementProfilePermittedIpArgsDict']]]]] = None,
-                 ping: Optional[pulumi.Input[_builtins.bool]] = None,
-                 response_pages: Optional[pulumi.Input[_builtins.bool]] = None,
-                 snippet: Optional[pulumi.Input[_builtins.str]] = None,
-                 ssh: Optional[pulumi.Input[_builtins.bool]] = None,
-                 telnet: Optional[pulumi.Input[_builtins.bool]] = None,
-                 userid_service: Optional[pulumi.Input[_builtins.bool]] = None,
-                 userid_syslog_listener_ssl: Optional[pulumi.Input[_builtins.bool]] = None,
-                 userid_syslog_listener_udp: Optional[pulumi.Input[_builtins.bool]] = None,
+                 device: pulumi.Input[Optional[_builtins.str]] = None,
+                 folder: pulumi.Input[Optional[_builtins.str]] = None,
+                 http: pulumi.Input[Optional[_builtins.bool]] = None,
+                 http_ocsp: pulumi.Input[Optional[_builtins.bool]] = None,
+                 https: pulumi.Input[Optional[_builtins.bool]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 permitted_ips: pulumi.Input[Optional[Sequence[pulumi.Input[Union['InterfaceManagementProfilePermittedIpArgs', 'InterfaceManagementProfilePermittedIpArgsDict']]]]] = None,
+                 ping: pulumi.Input[Optional[_builtins.bool]] = None,
+                 response_pages: pulumi.Input[Optional[_builtins.bool]] = None,
+                 snippet: pulumi.Input[Optional[_builtins.str]] = None,
+                 ssh: pulumi.Input[Optional[_builtins.bool]] = None,
+                 telnet: pulumi.Input[Optional[_builtins.bool]] = None,
+                 userid_service: pulumi.Input[Optional[_builtins.bool]] = None,
+                 userid_syslog_listener_ssl: pulumi.Input[Optional[_builtins.bool]] = None,
+                 userid_syslog_listener_udp: pulumi.Input[Optional[_builtins.bool]] = None,
                  __props__=None):
         """
         InterfaceManagementProfile resource
@@ -723,21 +723,21 @@ class InterfaceManagementProfile(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 device: Optional[pulumi.Input[_builtins.str]] = None,
-                 folder: Optional[pulumi.Input[_builtins.str]] = None,
-                 http: Optional[pulumi.Input[_builtins.bool]] = None,
-                 http_ocsp: Optional[pulumi.Input[_builtins.bool]] = None,
-                 https: Optional[pulumi.Input[_builtins.bool]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 permitted_ips: Optional[pulumi.Input[Sequence[pulumi.Input[Union['InterfaceManagementProfilePermittedIpArgs', 'InterfaceManagementProfilePermittedIpArgsDict']]]]] = None,
-                 ping: Optional[pulumi.Input[_builtins.bool]] = None,
-                 response_pages: Optional[pulumi.Input[_builtins.bool]] = None,
-                 snippet: Optional[pulumi.Input[_builtins.str]] = None,
-                 ssh: Optional[pulumi.Input[_builtins.bool]] = None,
-                 telnet: Optional[pulumi.Input[_builtins.bool]] = None,
-                 userid_service: Optional[pulumi.Input[_builtins.bool]] = None,
-                 userid_syslog_listener_ssl: Optional[pulumi.Input[_builtins.bool]] = None,
-                 userid_syslog_listener_udp: Optional[pulumi.Input[_builtins.bool]] = None,
+                 device: pulumi.Input[Optional[_builtins.str]] = None,
+                 folder: pulumi.Input[Optional[_builtins.str]] = None,
+                 http: pulumi.Input[Optional[_builtins.bool]] = None,
+                 http_ocsp: pulumi.Input[Optional[_builtins.bool]] = None,
+                 https: pulumi.Input[Optional[_builtins.bool]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 permitted_ips: pulumi.Input[Optional[Sequence[pulumi.Input[Union['InterfaceManagementProfilePermittedIpArgs', 'InterfaceManagementProfilePermittedIpArgsDict']]]]] = None,
+                 ping: pulumi.Input[Optional[_builtins.bool]] = None,
+                 response_pages: pulumi.Input[Optional[_builtins.bool]] = None,
+                 snippet: pulumi.Input[Optional[_builtins.str]] = None,
+                 ssh: pulumi.Input[Optional[_builtins.bool]] = None,
+                 telnet: pulumi.Input[Optional[_builtins.bool]] = None,
+                 userid_service: pulumi.Input[Optional[_builtins.bool]] = None,
+                 userid_syslog_listener_ssl: pulumi.Input[Optional[_builtins.bool]] = None,
+                 userid_syslog_listener_udp: pulumi.Input[Optional[_builtins.bool]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -773,22 +773,22 @@ class InterfaceManagementProfile(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            device: Optional[pulumi.Input[_builtins.str]] = None,
-            folder: Optional[pulumi.Input[_builtins.str]] = None,
-            http: Optional[pulumi.Input[_builtins.bool]] = None,
-            http_ocsp: Optional[pulumi.Input[_builtins.bool]] = None,
-            https: Optional[pulumi.Input[_builtins.bool]] = None,
-            name: Optional[pulumi.Input[_builtins.str]] = None,
-            permitted_ips: Optional[pulumi.Input[Sequence[pulumi.Input[Union['InterfaceManagementProfilePermittedIpArgs', 'InterfaceManagementProfilePermittedIpArgsDict']]]]] = None,
-            ping: Optional[pulumi.Input[_builtins.bool]] = None,
-            response_pages: Optional[pulumi.Input[_builtins.bool]] = None,
-            snippet: Optional[pulumi.Input[_builtins.str]] = None,
-            ssh: Optional[pulumi.Input[_builtins.bool]] = None,
-            telnet: Optional[pulumi.Input[_builtins.bool]] = None,
-            tfid: Optional[pulumi.Input[_builtins.str]] = None,
-            userid_service: Optional[pulumi.Input[_builtins.bool]] = None,
-            userid_syslog_listener_ssl: Optional[pulumi.Input[_builtins.bool]] = None,
-            userid_syslog_listener_udp: Optional[pulumi.Input[_builtins.bool]] = None) -> 'InterfaceManagementProfile':
+            device: pulumi.Input[Optional[_builtins.str]] = None,
+            folder: pulumi.Input[Optional[_builtins.str]] = None,
+            http: pulumi.Input[Optional[_builtins.bool]] = None,
+            http_ocsp: pulumi.Input[Optional[_builtins.bool]] = None,
+            https: pulumi.Input[Optional[_builtins.bool]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            permitted_ips: pulumi.Input[Optional[Sequence[pulumi.Input[Union['InterfaceManagementProfilePermittedIpArgs', 'InterfaceManagementProfilePermittedIpArgsDict']]]]] = None,
+            ping: pulumi.Input[Optional[_builtins.bool]] = None,
+            response_pages: pulumi.Input[Optional[_builtins.bool]] = None,
+            snippet: pulumi.Input[Optional[_builtins.str]] = None,
+            ssh: pulumi.Input[Optional[_builtins.bool]] = None,
+            telnet: pulumi.Input[Optional[_builtins.bool]] = None,
+            tfid: pulumi.Input[Optional[_builtins.str]] = None,
+            userid_service: pulumi.Input[Optional[_builtins.bool]] = None,
+            userid_syslog_listener_ssl: pulumi.Input[Optional[_builtins.bool]] = None,
+            userid_syslog_listener_udp: pulumi.Input[Optional[_builtins.bool]] = None) -> 'InterfaceManagementProfile':
         """
         Get an existing InterfaceManagementProfile resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

@@ -425,119 +425,119 @@ export interface DecryptionRuleState {
     /**
      * The action to be taken
      */
-    action?: pulumi.Input<string>;
+    action?: pulumi.Input<string | undefined>;
     /**
      * The destination URL category
      */
-    categories?: pulumi.Input<pulumi.Input<string>[]>;
+    categories?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * The description of the decryption rule
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * The Host Integrity Profile of the destination host
      */
-    destinationHips?: pulumi.Input<pulumi.Input<string>[]>;
+    destinationHips?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * The destination addresses
      */
-    destinations?: pulumi.Input<pulumi.Input<string>[]>;
+    destinations?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * The device in which the resource is defined
      */
-    device?: pulumi.Input<string>;
+    device?: pulumi.Input<string | undefined>;
     /**
      * Is the rule disabled?
      */
-    disabled?: pulumi.Input<boolean>;
+    disabled?: pulumi.Input<boolean | undefined>;
     /**
      * The folder in which the resource is defined
      *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
-    folder?: pulumi.Input<string>;
+    folder?: pulumi.Input<string | undefined>;
     /**
      * The source security zone
      */
-    froms?: pulumi.Input<pulumi.Input<string>[]>;
+    froms?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Log failed decryption events?
      */
-    logFail?: pulumi.Input<boolean>;
+    logFail?: pulumi.Input<boolean | undefined>;
     /**
      * The log settings of the decryption rule
      */
-    logSetting?: pulumi.Input<string>;
+    logSetting?: pulumi.Input<string | undefined>;
     /**
      * Log successful decryption events?
      */
-    logSuccess?: pulumi.Input<boolean>;
+    logSuccess?: pulumi.Input<boolean | undefined>;
     /**
      * The name of the decryption rule
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Negate the destination addresses?
      */
-    negateDestination?: pulumi.Input<boolean>;
+    negateDestination?: pulumi.Input<boolean | undefined>;
     /**
      * Negate the source addresses?
      */
-    negateSource?: pulumi.Input<boolean>;
+    negateSource?: pulumi.Input<boolean | undefined>;
     /**
      * The position of a security rule
      */
-    position?: pulumi.Input<string>;
+    position?: pulumi.Input<string | undefined>;
     /**
      * The decryption profile associated with the decryption rule
      */
-    profile?: pulumi.Input<string>;
+    profile?: pulumi.Input<string | undefined>;
     /**
      * Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
      */
-    relativePosition?: pulumi.Input<string>;
+    relativePosition?: pulumi.Input<string | undefined>;
     /**
      * The destination services and/or service groups
      */
-    services?: pulumi.Input<pulumi.Input<string>[]>;
+    services?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * The snippet in which the resource is defined
      *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
-    snippet?: pulumi.Input<string>;
+    snippet?: pulumi.Input<string | undefined>;
     /**
      * Source hip
      */
-    sourceHips?: pulumi.Input<pulumi.Input<string>[]>;
+    sourceHips?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * List of source users and/or groups.  Reserved words include `any`, `pre-login`, `known-user`, and `unknown`.
      */
-    sourceUsers?: pulumi.Input<pulumi.Input<string>[]>;
+    sourceUsers?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * The source addresses
      */
-    sources?: pulumi.Input<pulumi.Input<string>[]>;
+    sources?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * The tags associated with the decryption rule
      */
-    tags?: pulumi.Input<pulumi.Input<string>[]>;
+    tags?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `"before"` or `"after"`.
      */
-    targetRule?: pulumi.Input<string>;
+    targetRule?: pulumi.Input<string | undefined>;
     /**
      * The Terraform ID.
      */
-    tfid?: pulumi.Input<string>;
+    tfid?: pulumi.Input<string | undefined>;
     /**
      * The destination security zone
      */
-    tos?: pulumi.Input<pulumi.Input<string>[]>;
+    tos?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * The type of decryption
      */
-    type?: pulumi.Input<inputs.DecryptionRuleType>;
+    type?: pulumi.Input<inputs.DecryptionRuleType | undefined>;
 }
 
 /**
@@ -555,11 +555,11 @@ export interface DecryptionRuleArgs {
     /**
      * The description of the decryption rule
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * The Host Integrity Profile of the destination host
      */
-    destinationHips?: pulumi.Input<pulumi.Input<string>[]>;
+    destinationHips?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * The destination addresses
      */
@@ -567,17 +567,17 @@ export interface DecryptionRuleArgs {
     /**
      * The device in which the resource is defined
      */
-    device?: pulumi.Input<string>;
+    device?: pulumi.Input<string | undefined>;
     /**
      * Is the rule disabled?
      */
-    disabled?: pulumi.Input<boolean>;
+    disabled?: pulumi.Input<boolean | undefined>;
     /**
      * The folder in which the resource is defined
      *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
-    folder?: pulumi.Input<string>;
+    folder?: pulumi.Input<string | undefined>;
     /**
      * The source security zone
      */
@@ -585,39 +585,39 @@ export interface DecryptionRuleArgs {
     /**
      * Log failed decryption events?
      */
-    logFail?: pulumi.Input<boolean>;
+    logFail?: pulumi.Input<boolean | undefined>;
     /**
      * The log settings of the decryption rule
      */
-    logSetting?: pulumi.Input<string>;
+    logSetting?: pulumi.Input<string | undefined>;
     /**
      * Log successful decryption events?
      */
-    logSuccess?: pulumi.Input<boolean>;
+    logSuccess?: pulumi.Input<boolean | undefined>;
     /**
      * The name of the decryption rule
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Negate the destination addresses?
      */
-    negateDestination?: pulumi.Input<boolean>;
+    negateDestination?: pulumi.Input<boolean | undefined>;
     /**
      * Negate the source addresses?
      */
-    negateSource?: pulumi.Input<boolean>;
+    negateSource?: pulumi.Input<boolean | undefined>;
     /**
      * The position of a security rule
      */
-    position?: pulumi.Input<string>;
+    position?: pulumi.Input<string | undefined>;
     /**
      * The decryption profile associated with the decryption rule
      */
-    profile?: pulumi.Input<string>;
+    profile?: pulumi.Input<string | undefined>;
     /**
      * Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
      */
-    relativePosition?: pulumi.Input<string>;
+    relativePosition?: pulumi.Input<string | undefined>;
     /**
      * The destination services and/or service groups
      */
@@ -627,11 +627,11 @@ export interface DecryptionRuleArgs {
      *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
-    snippet?: pulumi.Input<string>;
+    snippet?: pulumi.Input<string | undefined>;
     /**
      * Source hip
      */
-    sourceHips?: pulumi.Input<pulumi.Input<string>[]>;
+    sourceHips?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * List of source users and/or groups.  Reserved words include `any`, `pre-login`, `known-user`, and `unknown`.
      */
@@ -643,11 +643,11 @@ export interface DecryptionRuleArgs {
     /**
      * The tags associated with the decryption rule
      */
-    tags?: pulumi.Input<pulumi.Input<string>[]>;
+    tags?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `"before"` or `"after"`.
      */
-    targetRule?: pulumi.Input<string>;
+    targetRule?: pulumi.Input<string | undefined>;
     /**
      * The destination security zone
      */
@@ -655,5 +655,5 @@ export interface DecryptionRuleArgs {
     /**
      * The type of decryption
      */
-    type?: pulumi.Input<inputs.DecryptionRuleType>;
+    type?: pulumi.Input<inputs.DecryptionRuleType | undefined>;
 }

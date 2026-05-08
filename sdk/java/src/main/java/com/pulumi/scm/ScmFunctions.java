@@ -779,8 +779,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetAddressArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -847,8 +847,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetAddressArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -915,8 +915,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetAddressArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -983,8 +983,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetAddressArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1051,8 +1051,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetAddressArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1119,8 +1119,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetAddressGroupArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1167,8 +1167,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetAddressGroupArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1215,8 +1215,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetAddressGroupArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1263,8 +1263,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetAddressGroupArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1311,8 +1311,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetAddressGroupArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1485,8 +1485,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetAggregateInterfaceArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1533,8 +1533,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetAggregateInterfaceArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1581,8 +1581,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetAggregateInterfaceArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1629,8 +1629,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetAggregateInterfaceArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1677,8 +1677,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetAggregateInterfaceArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1788,8 +1788,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetAntiSpywareProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1836,8 +1836,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetAntiSpywareProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1884,8 +1884,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetAntiSpywareProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1932,8 +1932,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetAntiSpywareProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1980,8 +1980,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetAntiSpywareProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -2028,8 +2028,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetAntiSpywareProfileListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -2070,8 +2070,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetAntiSpywareProfileListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -2112,8 +2112,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetAntiSpywareProfileListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -2154,8 +2154,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetAntiSpywareProfileListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -2196,8 +2196,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetAntiSpywareProfileListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -2238,8 +2238,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetAntiSpywareProfileListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -2280,8 +2280,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetAntiSpywareProfileListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -2322,8 +2322,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetAntiSpywareSignatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -2371,8 +2371,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetAntiSpywareSignatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -2420,8 +2420,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetAntiSpywareSignatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -2469,8 +2469,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetAntiSpywareSignatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -2518,8 +2518,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetAntiSpywareSignatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -2567,8 +2567,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetAntiSpywareSignatureListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -2609,8 +2609,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetAntiSpywareSignatureListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -2651,8 +2651,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetAntiSpywareSignatureListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -2693,8 +2693,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetAntiSpywareSignatureListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -2735,8 +2735,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetAntiSpywareSignatureListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -2777,8 +2777,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetAntiSpywareSignatureListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -2819,8 +2819,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetAntiSpywareSignatureListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -2861,8 +2861,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetAppOverrideRuleArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -2902,8 +2902,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetAppOverrideRuleArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -2943,8 +2943,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetAppOverrideRuleArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -2984,8 +2984,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetAppOverrideRuleArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -3025,8 +3025,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetAppOverrideRuleArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -3066,8 +3066,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetAppOverrideRuleListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -3112,8 +3112,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetAppOverrideRuleListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -3158,8 +3158,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetAppOverrideRuleListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -3204,8 +3204,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetAppOverrideRuleListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -3250,8 +3250,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetAppOverrideRuleListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -3296,8 +3296,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetApplicationArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -3339,8 +3339,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetApplicationArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -3382,8 +3382,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetApplicationArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -3425,8 +3425,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetApplicationArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -3468,8 +3468,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetApplicationArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -3511,8 +3511,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetApplicationFilterArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -3552,8 +3552,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetApplicationFilterArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -3593,8 +3593,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetApplicationFilterArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -3634,8 +3634,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetApplicationFilterArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -3675,8 +3675,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetApplicationFilterArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -3705,12 +3705,16 @@ public final class ScmFunctions {
     /**
      * Retrieves a listing of config items.
      * 
+     * ## Example Usage
+     * 
      */
     public static Output<GetApplicationFilterListResult> getApplicationFilterList() {
         return getApplicationFilterList(GetApplicationFilterListArgs.Empty, InvokeOptions.Empty);
     }
     /**
      * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
      * 
      */
     public static CompletableFuture<GetApplicationFilterListResult> getApplicationFilterListPlain() {
@@ -3719,12 +3723,16 @@ public final class ScmFunctions {
     /**
      * Retrieves a listing of config items.
      * 
+     * ## Example Usage
+     * 
      */
     public static Output<GetApplicationFilterListResult> getApplicationFilterList(GetApplicationFilterListArgs args) {
         return getApplicationFilterList(args, InvokeOptions.Empty);
     }
     /**
      * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
      * 
      */
     public static CompletableFuture<GetApplicationFilterListResult> getApplicationFilterListPlain(GetApplicationFilterListPlainArgs args) {
@@ -3733,6 +3741,8 @@ public final class ScmFunctions {
     /**
      * Retrieves a listing of config items.
      * 
+     * ## Example Usage
+     * 
      */
     public static Output<GetApplicationFilterListResult> getApplicationFilterList(GetApplicationFilterListArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("scm:index/getApplicationFilterList:getApplicationFilterList", TypeShape.of(GetApplicationFilterListResult.class), args, Utilities.withVersion(options));
@@ -3740,12 +3750,16 @@ public final class ScmFunctions {
     /**
      * Retrieves a listing of config items.
      * 
+     * ## Example Usage
+     * 
      */
     public static Output<GetApplicationFilterListResult> getApplicationFilterList(GetApplicationFilterListArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("scm:index/getApplicationFilterList:getApplicationFilterList", TypeShape.of(GetApplicationFilterListResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
      * 
      */
     public static CompletableFuture<GetApplicationFilterListResult> getApplicationFilterListPlain(GetApplicationFilterListPlainArgs args, InvokeOptions options) {
@@ -3765,8 +3779,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetApplicationGroupArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -3812,8 +3826,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetApplicationGroupArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -3859,8 +3873,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetApplicationGroupArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -3906,8 +3920,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetApplicationGroupArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -3953,8 +3967,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetApplicationGroupArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -4063,8 +4077,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetApplicationListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -4106,8 +4120,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetApplicationListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -4149,8 +4163,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetApplicationListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -4192,8 +4206,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetApplicationListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -4235,8 +4249,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetApplicationListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -4278,8 +4292,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetApplicationListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -4321,8 +4335,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetApplicationListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -4364,8 +4378,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetAuthenticationProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -4406,8 +4420,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetAuthenticationProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -4448,8 +4462,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetAuthenticationProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -4490,8 +4504,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetAuthenticationProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -4532,8 +4546,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetAuthenticationProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -4574,8 +4588,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetAuthenticationProfileListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -4619,8 +4633,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetAuthenticationProfileListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -4664,8 +4678,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetAuthenticationProfileListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -4709,8 +4723,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetAuthenticationProfileListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -4754,8 +4768,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetAuthenticationProfileListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -4799,8 +4813,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetAuthenticationProfileListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -4844,8 +4858,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetAuthenticationProfileListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -4889,8 +4903,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetAuthenticationRuleArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -4931,8 +4945,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetAuthenticationRuleArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -4973,8 +4987,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetAuthenticationRuleArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -5015,8 +5029,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetAuthenticationRuleArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -5057,8 +5071,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetAuthenticationRuleArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -5099,8 +5113,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetAuthenticationRuleListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -5146,8 +5160,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetAuthenticationRuleListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -5193,8 +5207,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetAuthenticationRuleListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -5240,8 +5254,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetAuthenticationRuleListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -5287,8 +5301,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetAuthenticationRuleListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -5334,8 +5348,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetAuthenticationSequenceArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -5376,8 +5390,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetAuthenticationSequenceArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -5418,8 +5432,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetAuthenticationSequenceArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -5460,8 +5474,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetAuthenticationSequenceArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -5502,8 +5516,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetAuthenticationSequenceArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -5544,8 +5558,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetAuthenticationSequenceListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -5589,8 +5603,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetAuthenticationSequenceListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -5634,8 +5648,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetAuthenticationSequenceListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -5679,8 +5693,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetAuthenticationSequenceListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -5724,8 +5738,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetAuthenticationSequenceListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -5769,8 +5783,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetAuthenticationSequenceListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -5814,8 +5828,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetAuthenticationSequenceListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -5859,8 +5873,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetAuthenticationSettingArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -5900,8 +5914,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetAuthenticationSettingArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -5941,8 +5955,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetAuthenticationSettingArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -5982,8 +5996,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetAuthenticationSettingArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -6023,8 +6037,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetAuthenticationSettingArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -6064,8 +6078,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetAuthenticationSettingListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -6108,8 +6122,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetAuthenticationSettingListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -6152,8 +6166,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetAuthenticationSettingListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -6196,8 +6210,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetAuthenticationSettingListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -6240,8 +6254,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetAuthenticationSettingListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -6284,8 +6298,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetAuthenticationSettingListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -6328,8 +6342,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetAuthenticationSettingListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -6372,8 +6386,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetAutoVpnClusterArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -6420,8 +6434,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetAutoVpnClusterArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -6468,8 +6482,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetAutoVpnClusterArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -6516,8 +6530,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetAutoVpnClusterArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -6564,8 +6578,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetAutoVpnClusterArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -6612,8 +6626,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetAutoVpnClusterListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -6655,8 +6669,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetAutoVpnClusterListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -6698,8 +6712,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetAutoVpnClusterListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -6741,8 +6755,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetAutoVpnClusterListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -6784,8 +6798,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetAutoVpnClusterListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -6827,8 +6841,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetAutoVpnClusterListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -6870,8 +6884,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetAutoVpnClusterListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -6912,8 +6926,8 @@ public final class ScmFunctions {
      * import com.pulumi.Pulumi;
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -6950,8 +6964,8 @@ public final class ScmFunctions {
      * import com.pulumi.Pulumi;
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -6988,8 +7002,8 @@ public final class ScmFunctions {
      * import com.pulumi.Pulumi;
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -7026,8 +7040,8 @@ public final class ScmFunctions {
      * import com.pulumi.Pulumi;
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -7064,8 +7078,8 @@ public final class ScmFunctions {
      * import com.pulumi.Pulumi;
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -7102,8 +7116,8 @@ public final class ScmFunctions {
      * import com.pulumi.Pulumi;
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -7140,8 +7154,8 @@ public final class ScmFunctions {
      * import com.pulumi.Pulumi;
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -7179,8 +7193,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetBandwidthAllocationArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -7223,8 +7237,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetBandwidthAllocationArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -7267,8 +7281,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetBandwidthAllocationArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -7311,8 +7325,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetBandwidthAllocationArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -7355,8 +7369,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetBandwidthAllocationArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -7399,8 +7413,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetBandwidthAllocationArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -7443,8 +7457,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetBandwidthAllocationArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -7487,8 +7501,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetBandwidthAllocationListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -7530,8 +7544,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetBandwidthAllocationListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -7573,8 +7587,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetBandwidthAllocationListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -7616,8 +7630,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetBandwidthAllocationListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -7659,8 +7673,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetBandwidthAllocationListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -7702,8 +7716,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetBandwidthAllocationListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -7745,8 +7759,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetBandwidthAllocationListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -7788,8 +7802,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetBgpAddressFamilyProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -7835,8 +7849,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetBgpAddressFamilyProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -7882,8 +7896,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetBgpAddressFamilyProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -7929,8 +7943,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetBgpAddressFamilyProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -7976,8 +7990,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetBgpAddressFamilyProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -8072,8 +8086,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetBgpAuthProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -8119,8 +8133,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetBgpAuthProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -8166,8 +8180,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetBgpAuthProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -8213,8 +8227,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetBgpAuthProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -8260,8 +8274,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetBgpAuthProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -8454,8 +8468,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetBgpRedistributionProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -8501,8 +8515,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetBgpRedistributionProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -8548,8 +8562,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetBgpRedistributionProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -8595,8 +8609,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetBgpRedistributionProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -8642,8 +8656,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetBgpRedistributionProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -8752,8 +8766,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetBgpRouteMapArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -8799,8 +8813,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetBgpRouteMapArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -8846,8 +8860,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetBgpRouteMapArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -8893,8 +8907,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetBgpRouteMapArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -8940,8 +8954,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetBgpRouteMapArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -9133,8 +9147,8 @@ public final class ScmFunctions {
      * import com.pulumi.Pulumi;
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -9171,8 +9185,8 @@ public final class ScmFunctions {
      * import com.pulumi.Pulumi;
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -9209,8 +9223,8 @@ public final class ScmFunctions {
      * import com.pulumi.Pulumi;
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -9247,8 +9261,8 @@ public final class ScmFunctions {
      * import com.pulumi.Pulumi;
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -9285,8 +9299,8 @@ public final class ScmFunctions {
      * import com.pulumi.Pulumi;
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -9323,8 +9337,8 @@ public final class ScmFunctions {
      * import com.pulumi.Pulumi;
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -9361,8 +9375,8 @@ public final class ScmFunctions {
      * import com.pulumi.Pulumi;
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -9400,8 +9414,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetCertificateProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -9443,8 +9457,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetCertificateProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -9486,8 +9500,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetCertificateProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -9529,8 +9543,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetCertificateProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -9572,8 +9586,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetCertificateProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -9615,8 +9629,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetCertificateProfileListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -9657,8 +9671,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetCertificateProfileListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -9699,8 +9713,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetCertificateProfileListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -9741,8 +9755,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetCertificateProfileListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -9783,8 +9797,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetCertificateProfileListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -9825,8 +9839,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetCertificateProfileListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -9867,8 +9881,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetCertificateProfileListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -9909,8 +9923,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetConfigMatchListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -9951,8 +9965,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetConfigMatchListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -9993,8 +10007,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetConfigMatchListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -10035,8 +10049,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetConfigMatchListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -10077,8 +10091,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetConfigMatchListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -10182,8 +10196,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetContentIdSettingArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -10223,8 +10237,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetContentIdSettingArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -10264,8 +10278,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetContentIdSettingArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -10305,8 +10319,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetContentIdSettingArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -10346,8 +10360,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetContentIdSettingArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -10387,8 +10401,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetContentIdSettingListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -10431,8 +10445,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetContentIdSettingListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -10475,8 +10489,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetContentIdSettingListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -10519,8 +10533,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetContentIdSettingListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -10563,8 +10577,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetContentIdSettingListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -10607,8 +10621,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetContentIdSettingListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -10651,8 +10665,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetContentIdSettingListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -10695,8 +10709,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetDataFilteringProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -10737,8 +10751,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetDataFilteringProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -10779,8 +10793,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetDataFilteringProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -10821,8 +10835,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetDataFilteringProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -10863,8 +10877,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetDataFilteringProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -10905,8 +10919,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetDataFilteringProfileListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -10950,8 +10964,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetDataFilteringProfileListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -10995,8 +11009,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetDataFilteringProfileListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -11040,8 +11054,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetDataFilteringProfileListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -11085,8 +11099,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetDataFilteringProfileListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -11130,8 +11144,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetDataFilteringProfileListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -11175,8 +11189,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetDataFilteringProfileListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -11220,8 +11234,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetDataObjectArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -11262,8 +11276,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetDataObjectArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -11304,8 +11318,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetDataObjectArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -11346,8 +11360,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetDataObjectArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -11388,8 +11402,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetDataObjectArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -11430,8 +11444,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetDataObjectListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -11475,8 +11489,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetDataObjectListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -11520,8 +11534,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetDataObjectListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -11565,8 +11579,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetDataObjectListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -11610,8 +11624,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetDataObjectListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -11655,8 +11669,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetDataObjectListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -11700,8 +11714,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetDataObjectListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -11829,8 +11843,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetDecryptionProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -11878,8 +11892,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetDecryptionProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -11927,8 +11941,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetDecryptionProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -11976,8 +11990,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetDecryptionProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -12025,8 +12039,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetDecryptionProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -12074,8 +12088,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetDecryptionProfileListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -12119,8 +12133,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetDecryptionProfileListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -12164,8 +12178,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetDecryptionProfileListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -12209,8 +12223,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetDecryptionProfileListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -12254,8 +12268,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetDecryptionProfileListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -12299,8 +12313,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetDecryptionProfileListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -12344,8 +12358,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetDecryptionProfileListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -12389,8 +12403,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetDecryptionRuleArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -12431,8 +12445,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetDecryptionRuleArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -12473,8 +12487,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetDecryptionRuleArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -12515,8 +12529,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetDecryptionRuleArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -12557,8 +12571,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetDecryptionRuleArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -12599,8 +12613,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetDecryptionRuleListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -12645,8 +12659,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetDecryptionRuleListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -12691,8 +12705,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetDecryptionRuleListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -12737,8 +12751,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetDecryptionRuleListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -12783,8 +12797,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetDecryptionRuleListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -12829,8 +12843,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetDeviceArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -12883,8 +12897,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetDeviceArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -12937,8 +12951,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetDeviceArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -12991,8 +13005,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetDeviceArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -13045,8 +13059,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetDeviceArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -13162,8 +13176,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetDeviceRedistributionCollectorArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -13203,8 +13217,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetDeviceRedistributionCollectorArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -13244,8 +13258,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetDeviceRedistributionCollectorArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -13285,8 +13299,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetDeviceRedistributionCollectorArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -13326,8 +13340,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetDeviceRedistributionCollectorArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -13367,8 +13381,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetDeviceRedistributionCollectorListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -13411,8 +13425,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetDeviceRedistributionCollectorListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -13455,8 +13469,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetDeviceRedistributionCollectorListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -13499,8 +13513,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetDeviceRedistributionCollectorListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -13543,8 +13557,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetDeviceRedistributionCollectorListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -13587,8 +13601,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetDeviceRedistributionCollectorListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -13631,8 +13645,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetDeviceRedistributionCollectorListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -13675,8 +13689,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetDhcpInterfaceArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -13717,8 +13731,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetDhcpInterfaceArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -13759,8 +13773,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetDhcpInterfaceArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -13801,8 +13815,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetDhcpInterfaceArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -13843,8 +13857,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetDhcpInterfaceArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -13885,8 +13899,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetDhcpInterfaceListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -13930,8 +13944,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetDhcpInterfaceListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -13975,8 +13989,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetDhcpInterfaceListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -14020,8 +14034,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetDhcpInterfaceListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -14065,8 +14079,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetDhcpInterfaceListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -14110,8 +14124,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetDhcpInterfaceListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -14155,8 +14169,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetDhcpInterfaceListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -14284,8 +14298,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetDnsSecurityProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -14333,8 +14347,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetDnsSecurityProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -14382,8 +14396,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetDnsSecurityProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -14431,8 +14445,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetDnsSecurityProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -14480,8 +14494,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetDnsSecurityProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -14529,8 +14543,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetDnsSecurityProfileListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -14574,8 +14588,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetDnsSecurityProfileListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -14619,8 +14633,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetDnsSecurityProfileListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -14664,8 +14678,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetDnsSecurityProfileListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -14709,8 +14723,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetDnsSecurityProfileListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -14754,8 +14768,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetDnsSecurityProfileListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -14799,8 +14813,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetDnsSecurityProfileListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -15012,8 +15026,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetDynamicUserGroupArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -15061,8 +15075,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetDynamicUserGroupArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -15110,8 +15124,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetDynamicUserGroupArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -15159,8 +15173,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetDynamicUserGroupArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -15208,8 +15222,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetDynamicUserGroupArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -15320,8 +15334,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetEthernetInterfaceArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -15368,8 +15382,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetEthernetInterfaceArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -15416,8 +15430,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetEthernetInterfaceArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -15464,8 +15478,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetEthernetInterfaceArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -15512,8 +15526,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetEthernetInterfaceArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -15623,8 +15637,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetExternalDynamicListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -15672,8 +15686,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetExternalDynamicListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -15721,8 +15735,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetExternalDynamicListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -15770,8 +15784,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetExternalDynamicListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -15819,8 +15833,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetExternalDynamicListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -15868,8 +15882,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetExternalDynamicListListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -15922,8 +15936,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetExternalDynamicListListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -15976,8 +15990,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetExternalDynamicListListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -16030,8 +16044,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetExternalDynamicListListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -16084,8 +16098,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetExternalDynamicListListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -16138,8 +16152,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetExternalDynamicListListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -16192,8 +16206,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetExternalDynamicListListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -16246,8 +16260,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetFileBlockingProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -16295,8 +16309,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetFileBlockingProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -16344,8 +16358,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetFileBlockingProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -16393,8 +16407,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetFileBlockingProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -16442,8 +16456,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetFileBlockingProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -16491,8 +16505,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetFileBlockingProfileListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -16536,8 +16550,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetFileBlockingProfileListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -16581,8 +16595,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetFileBlockingProfileListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -16626,8 +16640,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetFileBlockingProfileListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -16671,8 +16685,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetFileBlockingProfileListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -16716,8 +16730,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetFileBlockingProfileListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -16761,8 +16775,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetFileBlockingProfileListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -16806,8 +16820,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetFolderArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -16853,8 +16867,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetFolderArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -16900,8 +16914,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetFolderArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -16947,8 +16961,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetFolderArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -16994,8 +17008,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetFolderArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -17090,8 +17104,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetForwardingProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -17152,8 +17166,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetForwardingProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -17214,8 +17228,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetForwardingProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -17276,8 +17290,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetForwardingProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -17338,8 +17352,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetForwardingProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -17400,8 +17414,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetForwardingProfileDestinationArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -17456,8 +17470,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetForwardingProfileDestinationArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -17512,8 +17526,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetForwardingProfileDestinationArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -17568,8 +17582,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetForwardingProfileDestinationArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -17624,8 +17638,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetForwardingProfileDestinationArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -17806,8 +17820,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetForwardingProfileRegionalAndCustomProxyArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -17868,8 +17882,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetForwardingProfileRegionalAndCustomProxyArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -17930,8 +17944,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetForwardingProfileRegionalAndCustomProxyArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -17992,8 +18006,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetForwardingProfileRegionalAndCustomProxyArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -18054,8 +18068,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetForwardingProfileRegionalAndCustomProxyArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -18179,8 +18193,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetForwardingProfileSourceApplicationArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -18221,8 +18235,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetForwardingProfileSourceApplicationArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -18263,8 +18277,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetForwardingProfileSourceApplicationArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -18305,8 +18319,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetForwardingProfileSourceApplicationArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -18347,8 +18361,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetForwardingProfileSourceApplicationArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -18378,12 +18392,16 @@ public final class ScmFunctions {
     /**
      * Retrieves a listing of config items.
      * 
+     * ## Example Usage
+     * 
      */
     public static Output<GetForwardingProfileSourceApplicationListResult> getForwardingProfileSourceApplicationList() {
         return getForwardingProfileSourceApplicationList(GetForwardingProfileSourceApplicationListArgs.Empty, InvokeOptions.Empty);
     }
     /**
      * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
      * 
      */
     public static CompletableFuture<GetForwardingProfileSourceApplicationListResult> getForwardingProfileSourceApplicationListPlain() {
@@ -18392,12 +18410,16 @@ public final class ScmFunctions {
     /**
      * Retrieves a listing of config items.
      * 
+     * ## Example Usage
+     * 
      */
     public static Output<GetForwardingProfileSourceApplicationListResult> getForwardingProfileSourceApplicationList(GetForwardingProfileSourceApplicationListArgs args) {
         return getForwardingProfileSourceApplicationList(args, InvokeOptions.Empty);
     }
     /**
      * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
      * 
      */
     public static CompletableFuture<GetForwardingProfileSourceApplicationListResult> getForwardingProfileSourceApplicationListPlain(GetForwardingProfileSourceApplicationListPlainArgs args) {
@@ -18406,6 +18428,8 @@ public final class ScmFunctions {
     /**
      * Retrieves a listing of config items.
      * 
+     * ## Example Usage
+     * 
      */
     public static Output<GetForwardingProfileSourceApplicationListResult> getForwardingProfileSourceApplicationList(GetForwardingProfileSourceApplicationListArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("scm:index/getForwardingProfileSourceApplicationList:getForwardingProfileSourceApplicationList", TypeShape.of(GetForwardingProfileSourceApplicationListResult.class), args, Utilities.withVersion(options));
@@ -18413,12 +18437,16 @@ public final class ScmFunctions {
     /**
      * Retrieves a listing of config items.
      * 
+     * ## Example Usage
+     * 
      */
     public static Output<GetForwardingProfileSourceApplicationListResult> getForwardingProfileSourceApplicationList(GetForwardingProfileSourceApplicationListArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("scm:index/getForwardingProfileSourceApplicationList:getForwardingProfileSourceApplicationList", TypeShape.of(GetForwardingProfileSourceApplicationListResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
      * 
      */
     public static CompletableFuture<GetForwardingProfileSourceApplicationListResult> getForwardingProfileSourceApplicationListPlain(GetForwardingProfileSourceApplicationListPlainArgs args, InvokeOptions options) {
@@ -18438,8 +18466,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetForwardingProfileUserLocationArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -18494,8 +18522,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetForwardingProfileUserLocationArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -18550,8 +18578,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetForwardingProfileUserLocationArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -18606,8 +18634,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetForwardingProfileUserLocationArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -18662,8 +18690,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetForwardingProfileUserLocationArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -18781,8 +18809,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetGeneralSettingArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -18822,8 +18850,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetGeneralSettingArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -18863,8 +18891,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetGeneralSettingArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -18904,8 +18932,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetGeneralSettingArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -18945,8 +18973,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetGeneralSettingArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -18986,8 +19014,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetGeneralSettingListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -19030,8 +19058,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetGeneralSettingListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -19074,8 +19102,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetGeneralSettingListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -19118,8 +19146,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetGeneralSettingListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -19162,8 +19190,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetGeneralSettingListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -19206,8 +19234,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetGeneralSettingListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -19250,8 +19278,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetGeneralSettingListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -19294,8 +19322,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetGlobalprotectMatchListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -19336,8 +19364,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetGlobalprotectMatchListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -19378,8 +19406,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetGlobalprotectMatchListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -19420,8 +19448,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetGlobalprotectMatchListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -19462,8 +19490,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetGlobalprotectMatchListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -19567,8 +19595,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetHipObjectArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -19609,8 +19637,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetHipObjectArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -19651,8 +19679,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetHipObjectArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -19693,8 +19721,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetHipObjectArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -19735,8 +19763,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetHipObjectArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -19777,8 +19805,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetHipObjectListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -19827,8 +19855,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetHipObjectListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -19877,8 +19905,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetHipObjectListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -19927,8 +19955,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetHipObjectListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -19977,8 +20005,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetHipObjectListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -20027,8 +20055,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetHipObjectListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -20077,8 +20105,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetHipObjectListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -20127,8 +20155,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetHipProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -20169,8 +20197,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetHipProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -20211,8 +20239,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetHipProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -20253,8 +20281,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetHipProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -20295,8 +20323,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetHipProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -20337,8 +20365,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetHipProfileListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -20387,8 +20415,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetHipProfileListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -20437,8 +20465,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetHipProfileListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -20487,8 +20515,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetHipProfileListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -20537,8 +20565,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetHipProfileListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -20587,8 +20615,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetHipProfileListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -20637,8 +20665,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetHipProfileListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -20687,8 +20715,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetHipmatchMatchListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -20729,8 +20757,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetHipmatchMatchListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -20771,8 +20799,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetHipmatchMatchListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -20813,8 +20841,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetHipmatchMatchListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -20855,8 +20883,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetHipmatchMatchListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -20960,8 +20988,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetHttpHeaderProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -21009,8 +21037,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetHttpHeaderProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -21058,8 +21086,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetHttpHeaderProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -21107,8 +21135,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetHttpHeaderProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -21156,8 +21184,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetHttpHeaderProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -21205,8 +21233,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetHttpHeaderProfileListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -21250,8 +21278,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetHttpHeaderProfileListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -21295,8 +21323,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetHttpHeaderProfileListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -21340,8 +21368,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetHttpHeaderProfileListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -21385,8 +21413,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetHttpHeaderProfileListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -21430,8 +21458,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetHttpHeaderProfileListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -21475,8 +21503,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetHttpHeaderProfileListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -21604,8 +21632,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetIkeCryptoProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -21646,8 +21674,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetIkeCryptoProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -21688,8 +21716,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetIkeCryptoProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -21730,8 +21758,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetIkeCryptoProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -21772,8 +21800,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetIkeCryptoProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -21814,8 +21842,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetIkeCryptoProfileListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -21857,8 +21885,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetIkeCryptoProfileListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -21900,8 +21928,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetIkeCryptoProfileListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -21943,8 +21971,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetIkeCryptoProfileListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -21986,8 +22014,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetIkeCryptoProfileListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -22029,8 +22057,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetIkeCryptoProfileListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -22072,8 +22100,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetIkeCryptoProfileListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -22115,8 +22143,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetIkeGatewayArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -22158,8 +22186,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetIkeGatewayArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -22201,8 +22229,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetIkeGatewayArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -22244,8 +22272,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetIkeGatewayArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -22287,8 +22315,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetIkeGatewayArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -22330,8 +22358,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetIkeGatewayListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -22375,8 +22403,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetIkeGatewayListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -22420,8 +22448,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetIkeGatewayListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -22465,8 +22493,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetIkeGatewayListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -22510,8 +22538,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetIkeGatewayListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -22555,8 +22583,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetIkeGatewayListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -22600,8 +22628,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetIkeGatewayListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -22645,8 +22673,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetInterfaceManagementProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -22687,8 +22715,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetInterfaceManagementProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -22729,8 +22757,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetInterfaceManagementProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -22771,8 +22799,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetInterfaceManagementProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -22813,8 +22841,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetInterfaceManagementProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -22855,8 +22883,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetInterfaceManagementProfileListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -22905,8 +22933,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetInterfaceManagementProfileListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -22955,8 +22983,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetInterfaceManagementProfileListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -23005,8 +23033,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetInterfaceManagementProfileListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -23055,8 +23083,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetInterfaceManagementProfileListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -23105,8 +23133,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetInterfaceManagementProfileListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -23155,8 +23183,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetInterfaceManagementProfileListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -23205,8 +23233,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetIpsecCryptoProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -23247,8 +23275,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetIpsecCryptoProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -23289,8 +23317,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetIpsecCryptoProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -23331,8 +23359,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetIpsecCryptoProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -23373,8 +23401,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetIpsecCryptoProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -23415,8 +23443,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetIpsecCryptoProfileListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -23458,8 +23486,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetIpsecCryptoProfileListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -23501,8 +23529,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetIpsecCryptoProfileListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -23544,8 +23572,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetIpsecCryptoProfileListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -23587,8 +23615,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetIpsecCryptoProfileListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -23630,8 +23658,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetIpsecCryptoProfileListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -23673,8 +23701,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetIpsecCryptoProfileListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -23716,8 +23744,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetIpsecTunnelArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -23758,8 +23786,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetIpsecTunnelArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -23800,8 +23828,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetIpsecTunnelArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -23842,8 +23870,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetIpsecTunnelArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -23884,8 +23912,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetIpsecTunnelArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -23926,8 +23954,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetIpsecTunnelListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -23969,8 +23997,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetIpsecTunnelListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -24012,8 +24040,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetIpsecTunnelListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -24055,8 +24083,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetIpsecTunnelListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -24098,8 +24126,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetIpsecTunnelListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -24141,8 +24169,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetIpsecTunnelListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -24184,8 +24212,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetIpsecTunnelListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -24227,8 +24255,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetIptagMatchListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -24269,8 +24297,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetIptagMatchListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -24311,8 +24339,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetIptagMatchListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -24353,8 +24381,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetIptagMatchListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -24395,8 +24423,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetIptagMatchListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -24500,8 +24528,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetKerberosServerProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -24549,8 +24577,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetKerberosServerProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -24598,8 +24626,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetKerberosServerProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -24647,8 +24675,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetKerberosServerProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -24696,8 +24724,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetKerberosServerProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -24745,8 +24773,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetKerberosServerProfileListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -24790,8 +24818,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetKerberosServerProfileListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -24835,8 +24863,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetKerberosServerProfileListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -24880,8 +24908,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetKerberosServerProfileListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -24925,8 +24953,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetKerberosServerProfileListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -24970,8 +24998,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetKerberosServerProfileListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -25015,8 +25043,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetKerberosServerProfileListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -25144,8 +25172,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetLayer2SubinterfaceArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -25193,8 +25221,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetLayer2SubinterfaceArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -25242,8 +25270,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetLayer2SubinterfaceArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -25291,8 +25319,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetLayer2SubinterfaceArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -25340,8 +25368,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetLayer2SubinterfaceArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -25452,8 +25480,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetLayer3SubinterfaceArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -25502,8 +25530,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetLayer3SubinterfaceArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -25552,8 +25580,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetLayer3SubinterfaceArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -25602,8 +25630,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetLayer3SubinterfaceArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -25652,8 +25680,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetLayer3SubinterfaceArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -25765,8 +25793,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetLdapServerProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -25814,8 +25842,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetLdapServerProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -25863,8 +25891,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetLdapServerProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -25912,8 +25940,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetLdapServerProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -25961,8 +25989,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetLdapServerProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -26157,8 +26185,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetLldpProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -26198,8 +26226,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetLldpProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -26239,8 +26267,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetLldpProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -26280,8 +26308,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetLldpProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -26321,8 +26349,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetLldpProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -26362,8 +26390,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetLldpProfileListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -26406,8 +26434,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetLldpProfileListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -26450,8 +26478,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetLldpProfileListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -26494,8 +26522,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetLldpProfileListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -26538,8 +26566,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetLldpProfileListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -26582,8 +26610,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetLldpProfileListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -26626,8 +26654,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetLldpProfileListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -26838,8 +26866,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetLogForwardingProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -26888,8 +26916,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetLogForwardingProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -26938,8 +26966,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetLogForwardingProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -26988,8 +27016,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetLogForwardingProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -27038,8 +27066,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetLogForwardingProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -27088,8 +27116,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetLogForwardingProfileListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -27133,8 +27161,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetLogForwardingProfileListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -27178,8 +27206,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetLogForwardingProfileListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -27223,8 +27251,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetLogForwardingProfileListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -27268,8 +27296,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetLogForwardingProfileListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -27313,8 +27341,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetLogForwardingProfileListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -27358,8 +27386,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetLogForwardingProfileListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -27403,8 +27431,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetLogicalRouterArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -27451,8 +27479,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetLogicalRouterArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -27499,8 +27527,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetLogicalRouterArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -27547,8 +27575,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetLogicalRouterArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -27595,8 +27623,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetLogicalRouterArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -27706,8 +27734,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetLoopbackInterfaceArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -27754,8 +27782,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetLoopbackInterfaceArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -27802,8 +27830,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetLoopbackInterfaceArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -27850,8 +27878,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetLoopbackInterfaceArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -27898,8 +27926,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetLoopbackInterfaceArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -28009,8 +28037,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetManagementInterfaceArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -28050,8 +28078,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetManagementInterfaceArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -28091,8 +28119,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetManagementInterfaceArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -28132,8 +28160,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetManagementInterfaceArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -28173,8 +28201,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetManagementInterfaceArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -28214,8 +28242,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetManagementInterfaceListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -28258,8 +28286,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetManagementInterfaceListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -28302,8 +28330,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetManagementInterfaceListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -28346,8 +28374,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetManagementInterfaceListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -28390,8 +28418,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetManagementInterfaceListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -28434,8 +28462,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetManagementInterfaceListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -28478,8 +28506,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetManagementInterfaceListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -28522,8 +28550,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetMotdBannerSettingArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -28563,8 +28591,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetMotdBannerSettingArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -28604,8 +28632,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetMotdBannerSettingArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -28645,8 +28673,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetMotdBannerSettingArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -28686,8 +28714,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetMotdBannerSettingArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -28727,8 +28755,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetMotdBannerSettingListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -28771,8 +28799,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetMotdBannerSettingListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -28815,8 +28843,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetMotdBannerSettingListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -28859,8 +28887,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetMotdBannerSettingListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -28903,8 +28931,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetMotdBannerSettingListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -28947,8 +28975,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetMotdBannerSettingListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -28991,8 +29019,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetMotdBannerSettingListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -29035,8 +29063,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetNatRuleArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -29082,8 +29110,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetNatRuleArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -29129,8 +29157,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetNatRuleArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -29176,8 +29204,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetNatRuleArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -29223,8 +29251,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetNatRuleArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -29270,8 +29298,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetNatRuleListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -29318,8 +29346,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetNatRuleListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -29366,8 +29394,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetNatRuleListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -29414,8 +29442,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetNatRuleListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -29462,8 +29490,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetNatRuleListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -29594,8 +29622,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetPbfRuleArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -29640,8 +29668,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetPbfRuleArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -29686,8 +29714,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetPbfRuleArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -29732,8 +29760,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetPbfRuleArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -29778,8 +29806,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetPbfRuleArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -29824,8 +29852,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetPbfRuleListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -29870,8 +29898,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetPbfRuleListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -29916,8 +29944,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetPbfRuleListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -29962,8 +29990,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetPbfRuleListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -30008,8 +30036,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetPbfRuleListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -30054,8 +30082,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetPbfRuleListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -30100,8 +30128,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetPbfRuleListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -30230,8 +30258,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetQosPolicyRuleArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -30271,8 +30299,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetQosPolicyRuleArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -30312,8 +30340,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetQosPolicyRuleArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -30353,8 +30381,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetQosPolicyRuleArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -30394,8 +30422,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetQosPolicyRuleArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -30435,8 +30463,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetQosPolicyRuleListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -30481,8 +30509,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetQosPolicyRuleListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -30527,8 +30555,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetQosPolicyRuleListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -30573,8 +30601,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetQosPolicyRuleListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -30619,8 +30647,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetQosPolicyRuleListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -30665,8 +30693,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetQosProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -30714,8 +30742,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetQosProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -30763,8 +30791,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetQosProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -30812,8 +30840,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetQosProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -30861,8 +30889,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetQosProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -30910,8 +30938,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetQosProfileListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -30956,8 +30984,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetQosProfileListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -31002,8 +31030,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetQosProfileListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -31048,8 +31076,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetQosProfileListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -31094,8 +31122,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetQosProfileListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -31140,8 +31168,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetQosProfileListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -31186,8 +31214,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetQosProfileListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -31232,8 +31260,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetRadiusServerProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -31273,8 +31301,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetRadiusServerProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -31314,8 +31342,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetRadiusServerProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -31355,8 +31383,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetRadiusServerProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -31396,8 +31424,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetRadiusServerProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -31426,12 +31454,16 @@ public final class ScmFunctions {
     /**
      * Retrieves a listing of config items.
      * 
+     * ## Example Usage
+     * 
      */
     public static Output<GetRadiusServerProfileListResult> getRadiusServerProfileList() {
         return getRadiusServerProfileList(GetRadiusServerProfileListArgs.Empty, InvokeOptions.Empty);
     }
     /**
      * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
      * 
      */
     public static CompletableFuture<GetRadiusServerProfileListResult> getRadiusServerProfileListPlain() {
@@ -31440,12 +31472,16 @@ public final class ScmFunctions {
     /**
      * Retrieves a listing of config items.
      * 
+     * ## Example Usage
+     * 
      */
     public static Output<GetRadiusServerProfileListResult> getRadiusServerProfileList(GetRadiusServerProfileListArgs args) {
         return getRadiusServerProfileList(args, InvokeOptions.Empty);
     }
     /**
      * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
      * 
      */
     public static CompletableFuture<GetRadiusServerProfileListResult> getRadiusServerProfileListPlain(GetRadiusServerProfileListPlainArgs args) {
@@ -31454,6 +31490,8 @@ public final class ScmFunctions {
     /**
      * Retrieves a listing of config items.
      * 
+     * ## Example Usage
+     * 
      */
     public static Output<GetRadiusServerProfileListResult> getRadiusServerProfileList(GetRadiusServerProfileListArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("scm:index/getRadiusServerProfileList:getRadiusServerProfileList", TypeShape.of(GetRadiusServerProfileListResult.class), args, Utilities.withVersion(options));
@@ -31461,12 +31499,16 @@ public final class ScmFunctions {
     /**
      * Retrieves a listing of config items.
      * 
+     * ## Example Usage
+     * 
      */
     public static Output<GetRadiusServerProfileListResult> getRadiusServerProfileList(GetRadiusServerProfileListArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("scm:index/getRadiusServerProfileList:getRadiusServerProfileList", TypeShape.of(GetRadiusServerProfileListResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
      * 
      */
     public static CompletableFuture<GetRadiusServerProfileListResult> getRadiusServerProfileListPlain(GetRadiusServerProfileListPlainArgs args, InvokeOptions options) {
@@ -31570,8 +31612,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetRemoteNetworkArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -31616,8 +31658,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetRemoteNetworkArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -31662,8 +31704,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetRemoteNetworkArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -31708,8 +31750,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetRemoteNetworkArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -31754,8 +31796,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetRemoteNetworkArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -32199,8 +32241,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetSamlServerProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -32249,8 +32291,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetSamlServerProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -32299,8 +32341,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetSamlServerProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -32349,8 +32391,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetSamlServerProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -32399,8 +32441,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetSamlServerProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -32449,8 +32491,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetSamlServerProfileListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -32494,8 +32536,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetSamlServerProfileListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -32539,8 +32581,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetSamlServerProfileListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -32584,8 +32626,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetSamlServerProfileListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -32629,8 +32671,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetSamlServerProfileListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -32674,8 +32716,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetSamlServerProfileListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -32719,8 +32761,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetSamlServerProfileListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -32764,8 +32806,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetScepProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -32813,8 +32855,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetScepProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -32862,8 +32904,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetScepProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -32911,8 +32953,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetScepProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -32960,8 +33002,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetScepProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -33009,8 +33051,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetScepProfileListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -33054,8 +33096,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetScepProfileListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -33099,8 +33141,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetScepProfileListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -33144,8 +33186,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetScepProfileListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -33189,8 +33231,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetScepProfileListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -33234,8 +33276,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetScepProfileListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -33279,8 +33321,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetScepProfileListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -33828,8 +33870,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetSecurityRuleArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -33872,8 +33914,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetSecurityRuleArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -33916,8 +33958,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetSecurityRuleArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -33960,8 +34002,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetSecurityRuleArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -34004,8 +34046,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetSecurityRuleArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -34048,8 +34090,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetSecurityRuleListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -34093,8 +34135,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetSecurityRuleListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -34138,8 +34180,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetSecurityRuleListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -34183,8 +34225,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetSecurityRuleListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -34228,8 +34270,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetSecurityRuleListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -34273,8 +34315,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetServiceArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -34321,8 +34363,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetServiceArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -34369,8 +34411,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetServiceArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -34417,8 +34459,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetServiceArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -34465,8 +34507,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetServiceArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -34513,8 +34555,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetServiceConnectionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -34559,8 +34601,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetServiceConnectionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -34605,8 +34647,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetServiceConnectionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -34651,8 +34693,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetServiceConnectionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -34697,8 +34739,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetServiceConnectionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -34743,8 +34785,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetServiceConnectionGroupArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -34787,8 +34829,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetServiceConnectionGroupArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -34831,8 +34873,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetServiceConnectionGroupArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -34875,8 +34917,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetServiceConnectionGroupArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -34919,8 +34961,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetServiceConnectionGroupArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -35089,8 +35131,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetServiceGroupArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -35132,8 +35174,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetServiceGroupArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -35175,8 +35217,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetServiceGroupArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -35218,8 +35260,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetServiceGroupArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -35261,8 +35303,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetServiceGroupArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -35304,8 +35346,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetServiceGroupListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -35347,8 +35389,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetServiceGroupListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -35390,8 +35432,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetServiceGroupListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -35433,8 +35475,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetServiceGroupListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -35476,8 +35518,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetServiceGroupListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -35519,8 +35561,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetServiceGroupListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -35562,8 +35604,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetServiceGroupListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -35668,8 +35710,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetServiceRouteArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -35709,8 +35751,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetServiceRouteArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -35750,8 +35792,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetServiceRouteArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -35791,8 +35833,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetServiceRouteArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -35832,8 +35874,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetServiceRouteArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -35873,8 +35915,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetServiceRouteListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -35917,8 +35959,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetServiceRouteListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -35961,8 +36003,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetServiceRouteListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -36005,8 +36047,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetServiceRouteListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -36049,8 +36091,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetServiceRouteListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -36093,8 +36135,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetServiceRouteListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -36137,8 +36179,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetServiceRouteListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -36181,8 +36223,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetServiceSettingArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -36238,8 +36280,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetServiceSettingArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -36295,8 +36337,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetServiceSettingArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -36352,8 +36394,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetServiceSettingArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -36409,8 +36451,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetServiceSettingArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -36466,8 +36508,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetServiceSettingListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -36510,8 +36552,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetServiceSettingListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -36554,8 +36596,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetServiceSettingListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -36598,8 +36640,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetServiceSettingListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -36642,8 +36684,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetServiceSettingListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -36686,8 +36728,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetServiceSettingListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -36730,8 +36772,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetServiceSettingListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -36774,8 +36816,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetSessionSettingArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -36815,8 +36857,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetSessionSettingArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -36856,8 +36898,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetSessionSettingArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -36897,8 +36939,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetSessionSettingArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -36938,8 +36980,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetSessionSettingArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -36979,8 +37021,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetSessionSettingListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -37023,8 +37065,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetSessionSettingListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -37067,8 +37109,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetSessionSettingListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -37111,8 +37153,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetSessionSettingListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -37155,8 +37197,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetSessionSettingListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -37199,8 +37241,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetSessionSettingListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -37243,8 +37285,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetSessionSettingListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -37287,8 +37329,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetSessionTimeoutArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -37328,8 +37370,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetSessionTimeoutArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -37369,8 +37411,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetSessionTimeoutArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -37410,8 +37452,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetSessionTimeoutArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -37451,8 +37493,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetSessionTimeoutArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -37492,8 +37534,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetSessionTimeoutListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -37536,8 +37578,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetSessionTimeoutListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -37580,8 +37622,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetSessionTimeoutListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -37624,8 +37666,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetSessionTimeoutListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -37668,8 +37710,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetSessionTimeoutListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -37712,8 +37754,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetSessionTimeoutListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -37756,8 +37798,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetSessionTimeoutListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -37800,8 +37842,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetSiteArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -37841,8 +37883,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetSiteArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -37882,8 +37924,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetSiteArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -37923,8 +37965,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetSiteArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -37964,8 +38006,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetSiteArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -38068,8 +38110,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetSnippetArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -38115,8 +38157,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetSnippetArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -38162,8 +38204,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetSnippetArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -38209,8 +38251,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetSnippetArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -38256,8 +38298,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetSnippetArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -38303,8 +38345,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetSnippetListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -38344,8 +38386,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetSnippetListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -38385,8 +38427,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetSnippetListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -38426,8 +38468,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetSnippetListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -38467,8 +38509,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetSnippetListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -38508,8 +38550,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetSnippetListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -38549,8 +38591,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetSnippetListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -38590,8 +38632,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetSyslogServerProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -38639,8 +38681,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetSyslogServerProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -38688,8 +38730,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetSyslogServerProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -38737,8 +38779,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetSyslogServerProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -38786,8 +38828,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetSyslogServerProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -38835,8 +38877,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetSyslogServerProfileListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -38880,8 +38922,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetSyslogServerProfileListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -38925,8 +38967,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetSyslogServerProfileListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -38970,8 +39012,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetSyslogServerProfileListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -39015,8 +39057,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetSyslogServerProfileListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -39060,8 +39102,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetSyslogServerProfileListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -39105,8 +39147,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetSyslogServerProfileListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -39150,8 +39192,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetSystemMatchListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -39192,8 +39234,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetSystemMatchListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -39234,8 +39276,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetSystemMatchListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -39276,8 +39318,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetSystemMatchListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -39318,8 +39360,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetSystemMatchListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -39423,8 +39465,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetTacacsServerProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -39471,8 +39513,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetTacacsServerProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -39519,8 +39561,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetTacacsServerProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -39567,8 +39609,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetTacacsServerProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -39615,8 +39657,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetTacacsServerProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -39726,8 +39768,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetTagArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -39774,8 +39816,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetTagArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -39822,8 +39864,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetTagArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -39870,8 +39912,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetTagArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -39918,8 +39960,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetTagArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -39966,8 +40008,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetTagListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -40009,8 +40051,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetTagListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -40052,8 +40094,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetTagListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -40095,8 +40137,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetTagListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -40138,8 +40180,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetTagListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -40181,8 +40223,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetTagListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -40224,8 +40266,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetTagListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -40267,8 +40309,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetTcpSettingArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -40308,8 +40350,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetTcpSettingArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -40349,8 +40391,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetTcpSettingArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -40390,8 +40432,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetTcpSettingArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -40431,8 +40473,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetTcpSettingArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -40472,8 +40514,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetTcpSettingListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -40516,8 +40558,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetTcpSettingListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -40560,8 +40602,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetTcpSettingListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -40604,8 +40646,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetTcpSettingListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -40648,8 +40690,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetTcpSettingListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -40692,8 +40734,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetTcpSettingListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -40736,8 +40778,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetTcpSettingListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -40780,8 +40822,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetTlsServiceProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -40829,8 +40871,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetTlsServiceProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -40878,8 +40920,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetTlsServiceProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -40927,8 +40969,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetTlsServiceProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -40976,8 +41018,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetTlsServiceProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -41025,8 +41067,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetTlsServiceProfileListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -41070,8 +41112,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetTlsServiceProfileListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -41115,8 +41157,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetTlsServiceProfileListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -41160,8 +41202,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetTlsServiceProfileListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -41205,8 +41247,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetTlsServiceProfileListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -41250,8 +41292,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetTlsServiceProfileListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -41295,8 +41337,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetTlsServiceProfileListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -41424,8 +41466,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetTunnelInterfaceArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -41472,8 +41514,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetTunnelInterfaceArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -41520,8 +41562,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetTunnelInterfaceArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -41568,8 +41610,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetTunnelInterfaceArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -41616,8 +41658,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetTunnelInterfaceArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -41727,8 +41769,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetUpdateScheduleArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -41768,8 +41810,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetUpdateScheduleArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -41809,8 +41851,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetUpdateScheduleArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -41850,8 +41892,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetUpdateScheduleArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -41891,8 +41933,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetUpdateScheduleArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -41932,8 +41974,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetUpdateScheduleListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -41976,8 +42018,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetUpdateScheduleListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -42020,8 +42062,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetUpdateScheduleListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -42064,8 +42106,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetUpdateScheduleListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -42108,8 +42150,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetUpdateScheduleListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -42152,8 +42194,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetUpdateScheduleListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -42196,8 +42238,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetUpdateScheduleListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -42240,8 +42282,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetUrlAccessProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -42285,8 +42327,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetUrlAccessProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -42330,8 +42372,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetUrlAccessProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -42375,8 +42417,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetUrlAccessProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -42420,8 +42462,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetUrlAccessProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -42465,8 +42507,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetUrlAccessProfileListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -42510,8 +42552,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetUrlAccessProfileListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -42555,8 +42597,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetUrlAccessProfileListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -42600,8 +42642,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetUrlAccessProfileListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -42645,8 +42687,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetUrlAccessProfileListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -42690,8 +42732,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetUrlAccessProfileListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -42735,8 +42777,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetUrlAccessProfileListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -42780,8 +42822,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetUrlCategoryArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -42825,8 +42867,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetUrlCategoryArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -42870,8 +42912,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetUrlCategoryArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -42915,8 +42957,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetUrlCategoryArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -42960,8 +43002,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetUrlCategoryArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -43005,8 +43047,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetUrlCategoryListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -43058,8 +43100,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetUrlCategoryListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -43111,8 +43153,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetUrlCategoryListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -43164,8 +43206,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetUrlCategoryListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -43217,8 +43259,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetUrlCategoryListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -43270,8 +43312,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetUrlCategoryListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -43323,8 +43365,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetUrlCategoryListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -43376,8 +43418,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetUseridMatchListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -43418,8 +43460,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetUseridMatchListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -43460,8 +43502,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetUseridMatchListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -43502,8 +43544,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetUseridMatchListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -43544,8 +43586,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetUseridMatchListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -43649,8 +43691,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetVariableArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -43696,8 +43738,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetVariableArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -43743,8 +43785,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetVariableArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -43790,8 +43832,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetVariableArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -43837,8 +43879,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetVariableArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -43884,8 +43926,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetVariableListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -43937,8 +43979,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetVariableListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -43990,8 +44032,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetVariableListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -44043,8 +44085,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetVariableListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -44096,8 +44138,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetVariableListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -44149,8 +44191,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetVariableListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -44202,8 +44244,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetVariableListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -44255,8 +44297,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetVlanInterfaceArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -44304,8 +44346,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetVlanInterfaceArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -44353,8 +44395,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetVlanInterfaceArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -44402,8 +44444,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetVlanInterfaceArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -44451,8 +44493,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetVlanInterfaceArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -44563,8 +44605,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetVpnSettingArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -44604,8 +44646,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetVpnSettingArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -44645,8 +44687,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetVpnSettingArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -44686,8 +44728,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetVpnSettingArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -44727,8 +44769,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetVpnSettingArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -44768,8 +44810,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetVpnSettingListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -44812,8 +44854,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetVpnSettingListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -44856,8 +44898,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetVpnSettingListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -44900,8 +44942,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetVpnSettingListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -44944,8 +44986,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetVpnSettingListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -44988,8 +45030,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetVpnSettingListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -45032,8 +45074,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetVpnSettingListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -45076,8 +45118,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetVulnerabilityProtectionProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -45125,8 +45167,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetVulnerabilityProtectionProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -45174,8 +45216,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetVulnerabilityProtectionProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -45223,8 +45265,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetVulnerabilityProtectionProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -45272,8 +45314,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetVulnerabilityProtectionProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -45321,8 +45363,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetVulnerabilityProtectionProfileListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -45366,8 +45408,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetVulnerabilityProtectionProfileListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -45411,8 +45453,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetVulnerabilityProtectionProfileListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -45456,8 +45498,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetVulnerabilityProtectionProfileListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -45501,8 +45543,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetVulnerabilityProtectionProfileListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -45546,8 +45588,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetVulnerabilityProtectionProfileListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -45591,8 +45633,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetVulnerabilityProtectionProfileListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -45636,8 +45678,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetVulnerabilityProtectionSignatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -45685,8 +45727,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetVulnerabilityProtectionSignatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -45734,8 +45776,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetVulnerabilityProtectionSignatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -45783,8 +45825,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetVulnerabilityProtectionSignatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -45832,8 +45874,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetVulnerabilityProtectionSignatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -45881,8 +45923,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetVulnerabilityProtectionSignatureListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -45926,8 +45968,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetVulnerabilityProtectionSignatureListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -45971,8 +46013,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetVulnerabilityProtectionSignatureListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -46016,8 +46058,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetVulnerabilityProtectionSignatureListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -46061,8 +46103,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetVulnerabilityProtectionSignatureListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -46106,8 +46148,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetVulnerabilityProtectionSignatureListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -46151,8 +46193,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetVulnerabilityProtectionSignatureListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -46280,8 +46322,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetZoneArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -46331,8 +46373,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetZoneArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -46382,8 +46424,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetZoneArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -46433,8 +46475,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetZoneArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -46484,8 +46526,8 @@ public final class ScmFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.scm.ScmFunctions;
      * import com.pulumi.scm.inputs.GetZoneArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;

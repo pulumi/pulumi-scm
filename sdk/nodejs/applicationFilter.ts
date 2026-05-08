@@ -248,99 +248,99 @@ export interface ApplicationFilterState {
     /**
      * Category
      */
-    categories?: pulumi.Input<pulumi.Input<string>[]>;
+    categories?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * The device in which the resource is defined
      */
-    device?: pulumi.Input<string>;
+    device?: pulumi.Input<string | undefined>;
     /**
      * only True is a valid value
      */
-    evasive?: pulumi.Input<boolean>;
+    evasive?: pulumi.Input<boolean | undefined>;
     /**
      * only True is a valid value
      */
-    excessiveBandwidthUse?: pulumi.Input<boolean>;
+    excessiveBandwidthUse?: pulumi.Input<boolean | undefined>;
     /**
      * Exclude
      */
-    excludes?: pulumi.Input<pulumi.Input<string>[]>;
+    excludes?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * The folder in which the resource is defined
      *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
-    folder?: pulumi.Input<string>;
+    folder?: pulumi.Input<string | undefined>;
     /**
      * only True is a valid value
      */
-    hasKnownVulnerabilities?: pulumi.Input<boolean>;
+    hasKnownVulnerabilities?: pulumi.Input<boolean | undefined>;
     /**
      * only True is a valid value
      */
-    isSaas?: pulumi.Input<boolean>;
+    isSaas?: pulumi.Input<boolean | undefined>;
     /**
      * Alphanumeric string [ 0-9a-zA-Z._-]
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * only True is a valid value
      */
-    newAppid?: pulumi.Input<boolean>;
+    newAppid?: pulumi.Input<boolean | undefined>;
     /**
      * only True is a valid value
      */
-    pervasive?: pulumi.Input<boolean>;
+    pervasive?: pulumi.Input<boolean | undefined>;
     /**
      * only True is a valid value
      */
-    proneToMisuse?: pulumi.Input<boolean>;
+    proneToMisuse?: pulumi.Input<boolean | undefined>;
     /**
      * Risk
      */
-    risks?: pulumi.Input<pulumi.Input<number>[]>;
+    risks?: pulumi.Input<pulumi.Input<number>[] | undefined>;
     /**
      * Saas certifications
      */
-    saasCertifications?: pulumi.Input<pulumi.Input<string>[]>;
+    saasCertifications?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Saas risk
      */
-    saasRisks?: pulumi.Input<pulumi.Input<string>[]>;
+    saasRisks?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * The snippet in which the resource is defined
      *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
-    snippet?: pulumi.Input<string>;
+    snippet?: pulumi.Input<string | undefined>;
     /**
      * Subcategory
      */
-    subcategories?: pulumi.Input<pulumi.Input<string>[]>;
+    subcategories?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Tagging
      */
-    tagging?: pulumi.Input<inputs.ApplicationFilterTagging>;
+    tagging?: pulumi.Input<inputs.ApplicationFilterTagging | undefined>;
     /**
      * Technology
      */
-    technologies?: pulumi.Input<pulumi.Input<string>[]>;
+    technologies?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * The Terraform ID.
      */
-    tfid?: pulumi.Input<string>;
+    tfid?: pulumi.Input<string | undefined>;
     /**
      * only True is a valid value
      */
-    transfersFiles?: pulumi.Input<boolean>;
+    transfersFiles?: pulumi.Input<boolean | undefined>;
     /**
      * only True is a valid value
      */
-    tunnelsOtherApps?: pulumi.Input<boolean>;
+    tunnelsOtherApps?: pulumi.Input<boolean | undefined>;
     /**
      * only True is a valid value
      */
-    usedByMalware?: pulumi.Input<boolean>;
+    usedByMalware?: pulumi.Input<boolean | undefined>;
 }
 
 /**
@@ -350,93 +350,93 @@ export interface ApplicationFilterArgs {
     /**
      * Category
      */
-    categories?: pulumi.Input<pulumi.Input<string>[]>;
+    categories?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * The device in which the resource is defined
      */
-    device?: pulumi.Input<string>;
+    device?: pulumi.Input<string | undefined>;
     /**
      * only True is a valid value
      */
-    evasive?: pulumi.Input<boolean>;
+    evasive?: pulumi.Input<boolean | undefined>;
     /**
      * only True is a valid value
      */
-    excessiveBandwidthUse?: pulumi.Input<boolean>;
+    excessiveBandwidthUse?: pulumi.Input<boolean | undefined>;
     /**
      * Exclude
      */
-    excludes?: pulumi.Input<pulumi.Input<string>[]>;
+    excludes?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * The folder in which the resource is defined
      *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
-    folder?: pulumi.Input<string>;
+    folder?: pulumi.Input<string | undefined>;
     /**
      * only True is a valid value
      */
-    hasKnownVulnerabilities?: pulumi.Input<boolean>;
+    hasKnownVulnerabilities?: pulumi.Input<boolean | undefined>;
     /**
      * only True is a valid value
      */
-    isSaas?: pulumi.Input<boolean>;
+    isSaas?: pulumi.Input<boolean | undefined>;
     /**
      * Alphanumeric string [ 0-9a-zA-Z._-]
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * only True is a valid value
      */
-    newAppid?: pulumi.Input<boolean>;
+    newAppid?: pulumi.Input<boolean | undefined>;
     /**
      * only True is a valid value
      */
-    pervasive?: pulumi.Input<boolean>;
+    pervasive?: pulumi.Input<boolean | undefined>;
     /**
      * only True is a valid value
      */
-    proneToMisuse?: pulumi.Input<boolean>;
+    proneToMisuse?: pulumi.Input<boolean | undefined>;
     /**
      * Risk
      */
-    risks?: pulumi.Input<pulumi.Input<number>[]>;
+    risks?: pulumi.Input<pulumi.Input<number>[] | undefined>;
     /**
      * Saas certifications
      */
-    saasCertifications?: pulumi.Input<pulumi.Input<string>[]>;
+    saasCertifications?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Saas risk
      */
-    saasRisks?: pulumi.Input<pulumi.Input<string>[]>;
+    saasRisks?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * The snippet in which the resource is defined
      *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
-    snippet?: pulumi.Input<string>;
+    snippet?: pulumi.Input<string | undefined>;
     /**
      * Subcategory
      */
-    subcategories?: pulumi.Input<pulumi.Input<string>[]>;
+    subcategories?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Tagging
      */
-    tagging?: pulumi.Input<inputs.ApplicationFilterTagging>;
+    tagging?: pulumi.Input<inputs.ApplicationFilterTagging | undefined>;
     /**
      * Technology
      */
-    technologies?: pulumi.Input<pulumi.Input<string>[]>;
+    technologies?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * only True is a valid value
      */
-    transfersFiles?: pulumi.Input<boolean>;
+    transfersFiles?: pulumi.Input<boolean | undefined>;
     /**
      * only True is a valid value
      */
-    tunnelsOtherApps?: pulumi.Input<boolean>;
+    tunnelsOtherApps?: pulumi.Input<boolean | undefined>;
     /**
      * only True is a valid value
      */
-    usedByMalware?: pulumi.Input<boolean>;
+    usedByMalware?: pulumi.Input<boolean | undefined>;
 }

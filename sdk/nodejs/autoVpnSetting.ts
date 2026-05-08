@@ -127,19 +127,19 @@ export interface AutoVpnSettingState {
     /**
      * As range
      */
-    asRange?: pulumi.Input<inputs.AutoVpnSettingAsRange>;
+    asRange?: pulumi.Input<inputs.AutoVpnSettingAsRange | undefined>;
     /**
      * Enable mesh connection between hubs?
      */
-    enableMeshBetweenHubs?: pulumi.Input<boolean>;
+    enableMeshBetweenHubs?: pulumi.Input<boolean | undefined>;
     /**
      * The Terraform ID.
      */
-    tfid?: pulumi.Input<string>;
+    tfid?: pulumi.Input<string | undefined>;
     /**
      * VPN address pool
      */
-    vpnAddressPools?: pulumi.Input<pulumi.Input<string>[]>;
+    vpnAddressPools?: pulumi.Input<pulumi.Input<string>[] | undefined>;
 }
 
 /**
@@ -153,7 +153,7 @@ export interface AutoVpnSettingArgs {
     /**
      * Enable mesh connection between hubs?
      */
-    enableMeshBetweenHubs?: pulumi.Input<boolean>;
+    enableMeshBetweenHubs?: pulumi.Input<boolean | undefined>;
     /**
      * VPN address pool
      */

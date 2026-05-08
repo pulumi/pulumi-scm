@@ -21,10 +21,10 @@ __all__ = ['SessionSettingArgs', 'SessionSetting']
 @pulumi.input_type
 class SessionSettingArgs:
     def __init__(__self__, *,
-                 device: Optional[pulumi.Input[_builtins.str]] = None,
-                 folder: Optional[pulumi.Input[_builtins.str]] = None,
-                 session_settings: Optional[pulumi.Input['SessionSettingSessionSettingsArgs']] = None,
-                 snippet: Optional[pulumi.Input[_builtins.str]] = None):
+                 device: pulumi.Input[Optional[_builtins.str]] = None,
+                 folder: pulumi.Input[Optional[_builtins.str]] = None,
+                 session_settings: pulumi.Input[Optional['SessionSettingSessionSettingsArgs']] = None,
+                 snippet: pulumi.Input[Optional[_builtins.str]] = None):
         """
         The set of arguments for constructing a SessionSetting resource.
 
@@ -48,19 +48,19 @@ class SessionSettingArgs:
 
     @_builtins.property
     @pulumi.getter
-    def device(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def device(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The device in which the resource is defined
         """
         return pulumi.get(self, "device")
 
     @device.setter
-    def device(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def device(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "device", value)
 
     @_builtins.property
     @pulumi.getter
-    def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def folder(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
 
@@ -69,24 +69,24 @@ class SessionSettingArgs:
         return pulumi.get(self, "folder")
 
     @folder.setter
-    def folder(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def folder(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "folder", value)
 
     @_builtins.property
     @pulumi.getter(name="sessionSettings")
-    def session_settings(self) -> Optional[pulumi.Input['SessionSettingSessionSettingsArgs']]:
+    def session_settings(self) -> pulumi.Input[Optional['SessionSettingSessionSettingsArgs']]:
         """
         Session settings
         """
         return pulumi.get(self, "session_settings")
 
     @session_settings.setter
-    def session_settings(self, value: Optional[pulumi.Input['SessionSettingSessionSettingsArgs']]):
+    def session_settings(self, value: pulumi.Input[Optional['SessionSettingSessionSettingsArgs']]):
         pulumi.set(self, "session_settings", value)
 
     @_builtins.property
     @pulumi.getter
-    def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def snippet(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
 
@@ -95,18 +95,18 @@ class SessionSettingArgs:
         return pulumi.get(self, "snippet")
 
     @snippet.setter
-    def snippet(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def snippet(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "snippet", value)
 
 
 @pulumi.input_type
 class _SessionSettingState:
     def __init__(__self__, *,
-                 device: Optional[pulumi.Input[_builtins.str]] = None,
-                 folder: Optional[pulumi.Input[_builtins.str]] = None,
-                 session_settings: Optional[pulumi.Input['SessionSettingSessionSettingsArgs']] = None,
-                 snippet: Optional[pulumi.Input[_builtins.str]] = None,
-                 tfid: Optional[pulumi.Input[_builtins.str]] = None):
+                 device: pulumi.Input[Optional[_builtins.str]] = None,
+                 folder: pulumi.Input[Optional[_builtins.str]] = None,
+                 session_settings: pulumi.Input[Optional['SessionSettingSessionSettingsArgs']] = None,
+                 snippet: pulumi.Input[Optional[_builtins.str]] = None,
+                 tfid: pulumi.Input[Optional[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering SessionSetting resources.
 
@@ -133,19 +133,19 @@ class _SessionSettingState:
 
     @_builtins.property
     @pulumi.getter
-    def device(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def device(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The device in which the resource is defined
         """
         return pulumi.get(self, "device")
 
     @device.setter
-    def device(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def device(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "device", value)
 
     @_builtins.property
     @pulumi.getter
-    def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def folder(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
 
@@ -154,24 +154,24 @@ class _SessionSettingState:
         return pulumi.get(self, "folder")
 
     @folder.setter
-    def folder(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def folder(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "folder", value)
 
     @_builtins.property
     @pulumi.getter(name="sessionSettings")
-    def session_settings(self) -> Optional[pulumi.Input['SessionSettingSessionSettingsArgs']]:
+    def session_settings(self) -> pulumi.Input[Optional['SessionSettingSessionSettingsArgs']]:
         """
         Session settings
         """
         return pulumi.get(self, "session_settings")
 
     @session_settings.setter
-    def session_settings(self, value: Optional[pulumi.Input['SessionSettingSessionSettingsArgs']]):
+    def session_settings(self, value: pulumi.Input[Optional['SessionSettingSessionSettingsArgs']]):
         pulumi.set(self, "session_settings", value)
 
     @_builtins.property
     @pulumi.getter
-    def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def snippet(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
 
@@ -180,19 +180,19 @@ class _SessionSettingState:
         return pulumi.get(self, "snippet")
 
     @snippet.setter
-    def snippet(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def snippet(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "snippet", value)
 
     @_builtins.property
     @pulumi.getter
-    def tfid(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def tfid(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The Terraform ID.
         """
         return pulumi.get(self, "tfid")
 
     @tfid.setter
-    def tfid(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def tfid(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "tfid", value)
 
 
@@ -202,10 +202,10 @@ class SessionSetting(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 device: Optional[pulumi.Input[_builtins.str]] = None,
-                 folder: Optional[pulumi.Input[_builtins.str]] = None,
-                 session_settings: Optional[pulumi.Input[Union['SessionSettingSessionSettingsArgs', 'SessionSettingSessionSettingsArgsDict']]] = None,
-                 snippet: Optional[pulumi.Input[_builtins.str]] = None,
+                 device: pulumi.Input[Optional[_builtins.str]] = None,
+                 folder: pulumi.Input[Optional[_builtins.str]] = None,
+                 session_settings: pulumi.Input[Optional[Union['SessionSettingSessionSettingsArgs', 'SessionSettingSessionSettingsArgsDict']]] = None,
+                 snippet: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
         SessionSetting resource
@@ -225,11 +225,11 @@ class SessionSetting(pulumi.CustomResource):
                 "ipv6_firewalling": True,
                 "rematch": False,
                 "accelerated_aging_enable": True,
-                "accelerated_aging_threshold": 80,
-                "accelerated_aging_scaling_factor": 2,
-                "icmp_unreachable_rate": 200,
+                "accelerated_aging_threshold": float(80),
+                "accelerated_aging_scaling_factor": float(2),
+                "icmp_unreachable_rate": float(200),
                 "multicast_route_setup_buffering": False,
-                "max_pending_mcast_pkts_per_session": 1000,
+                "max_pending_mcast_pkts_per_session": float(1000),
                 "icmpv6_rate_limit": {
                     "bucket_size": 100,
                     "packet_rate": 100,
@@ -249,15 +249,15 @@ class SessionSetting(pulumi.CustomResource):
                 "packet_buffer_protection_enable": False,
                 "packet_buffer_protection_monitor_only": False,
                 "packet_buffer_protection_alert": 50,
-                "packet_buffer_protection_activate": 80,
-                "packet_buffer_protection_block_countdown": 80,
-                "packet_buffer_protection_block_hold_time": 60,
-                "packet_buffer_protection_block_duration_time": 3600,
+                "packet_buffer_protection_activate": float(80),
+                "packet_buffer_protection_block_countdown": float(80),
+                "packet_buffer_protection_block_hold_time": float(60),
+                "packet_buffer_protection_block_duration_time": float(3600),
                 "packet_buffer_protection_use_latency": False,
-                "packet_buffer_protection_latency_alert": 50,
-                "packet_buffer_protection_latency_activate": 200,
-                "packet_buffer_protection_latency_max_tolerate": 500,
-                "packet_buffer_protection_latency_block_countdown": 500,
+                "packet_buffer_protection_latency_alert": float(50),
+                "packet_buffer_protection_latency_activate": float(200),
+                "packet_buffer_protection_latency_max_tolerate": float(500),
+                "packet_buffer_protection_latency_block_countdown": float(500),
             })
         ```
 
@@ -319,11 +319,11 @@ class SessionSetting(pulumi.CustomResource):
                 "ipv6_firewalling": True,
                 "rematch": False,
                 "accelerated_aging_enable": True,
-                "accelerated_aging_threshold": 80,
-                "accelerated_aging_scaling_factor": 2,
-                "icmp_unreachable_rate": 200,
+                "accelerated_aging_threshold": float(80),
+                "accelerated_aging_scaling_factor": float(2),
+                "icmp_unreachable_rate": float(200),
                 "multicast_route_setup_buffering": False,
-                "max_pending_mcast_pkts_per_session": 1000,
+                "max_pending_mcast_pkts_per_session": float(1000),
                 "icmpv6_rate_limit": {
                     "bucket_size": 100,
                     "packet_rate": 100,
@@ -343,15 +343,15 @@ class SessionSetting(pulumi.CustomResource):
                 "packet_buffer_protection_enable": False,
                 "packet_buffer_protection_monitor_only": False,
                 "packet_buffer_protection_alert": 50,
-                "packet_buffer_protection_activate": 80,
-                "packet_buffer_protection_block_countdown": 80,
-                "packet_buffer_protection_block_hold_time": 60,
-                "packet_buffer_protection_block_duration_time": 3600,
+                "packet_buffer_protection_activate": float(80),
+                "packet_buffer_protection_block_countdown": float(80),
+                "packet_buffer_protection_block_hold_time": float(60),
+                "packet_buffer_protection_block_duration_time": float(3600),
                 "packet_buffer_protection_use_latency": False,
-                "packet_buffer_protection_latency_alert": 50,
-                "packet_buffer_protection_latency_activate": 200,
-                "packet_buffer_protection_latency_max_tolerate": 500,
-                "packet_buffer_protection_latency_block_countdown": 500,
+                "packet_buffer_protection_latency_alert": float(50),
+                "packet_buffer_protection_latency_activate": float(200),
+                "packet_buffer_protection_latency_max_tolerate": float(500),
+                "packet_buffer_protection_latency_block_countdown": float(500),
             })
         ```
 
@@ -393,10 +393,10 @@ class SessionSetting(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 device: Optional[pulumi.Input[_builtins.str]] = None,
-                 folder: Optional[pulumi.Input[_builtins.str]] = None,
-                 session_settings: Optional[pulumi.Input[Union['SessionSettingSessionSettingsArgs', 'SessionSettingSessionSettingsArgsDict']]] = None,
-                 snippet: Optional[pulumi.Input[_builtins.str]] = None,
+                 device: pulumi.Input[Optional[_builtins.str]] = None,
+                 folder: pulumi.Input[Optional[_builtins.str]] = None,
+                 session_settings: pulumi.Input[Optional[Union['SessionSettingSessionSettingsArgs', 'SessionSettingSessionSettingsArgsDict']]] = None,
+                 snippet: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -421,11 +421,11 @@ class SessionSetting(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            device: Optional[pulumi.Input[_builtins.str]] = None,
-            folder: Optional[pulumi.Input[_builtins.str]] = None,
-            session_settings: Optional[pulumi.Input[Union['SessionSettingSessionSettingsArgs', 'SessionSettingSessionSettingsArgsDict']]] = None,
-            snippet: Optional[pulumi.Input[_builtins.str]] = None,
-            tfid: Optional[pulumi.Input[_builtins.str]] = None) -> 'SessionSetting':
+            device: pulumi.Input[Optional[_builtins.str]] = None,
+            folder: pulumi.Input[Optional[_builtins.str]] = None,
+            session_settings: pulumi.Input[Optional[Union['SessionSettingSessionSettingsArgs', 'SessionSettingSessionSettingsArgsDict']]] = None,
+            snippet: pulumi.Input[Optional[_builtins.str]] = None,
+            tfid: pulumi.Input[Optional[_builtins.str]] = None) -> 'SessionSetting':
         """
         Get an existing SessionSetting resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

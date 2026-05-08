@@ -276,9 +276,9 @@ def get_site(folder: Optional[_builtins.str] = None,
         tfid=pulumi.get(__ret__, 'tfid'),
         type=pulumi.get(__ret__, 'type'),
         zip_code=pulumi.get(__ret__, 'zip_code'))
-def get_site_output(folder: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
-                    id: Optional[pulumi.Input[_builtins.str]] = None,
-                    name: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
+def get_site_output(folder: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
+                    id: pulumi.Input[Optional[_builtins.str]] = None,
+                    name: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
                     opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetSiteResult]:
     """
     Site data source

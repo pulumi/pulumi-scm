@@ -24,12 +24,12 @@ class IkeCryptoProfileArgs:
                  dh_groups: pulumi.Input[Sequence[pulumi.Input[_builtins.str]]],
                  encryptions: pulumi.Input[Sequence[pulumi.Input[_builtins.str]]],
                  hashes: pulumi.Input[Sequence[pulumi.Input[_builtins.str]]],
-                 authentication_multiple: Optional[pulumi.Input[_builtins.int]] = None,
-                 device: Optional[pulumi.Input[_builtins.str]] = None,
-                 folder: Optional[pulumi.Input[_builtins.str]] = None,
-                 lifetime: Optional[pulumi.Input['IkeCryptoProfileLifetimeArgs']] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 snippet: Optional[pulumi.Input[_builtins.str]] = None):
+                 authentication_multiple: pulumi.Input[Optional[_builtins.int]] = None,
+                 device: pulumi.Input[Optional[_builtins.str]] = None,
+                 folder: pulumi.Input[Optional[_builtins.str]] = None,
+                 lifetime: pulumi.Input[Optional['IkeCryptoProfileLifetimeArgs']] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 snippet: pulumi.Input[Optional[_builtins.str]] = None):
         """
         The set of arguments for constructing a IkeCryptoProfile resource.
 
@@ -101,31 +101,31 @@ class IkeCryptoProfileArgs:
 
     @_builtins.property
     @pulumi.getter(name="authenticationMultiple")
-    def authentication_multiple(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def authentication_multiple(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         IKEv2 SA reauthentication interval equals authetication-multiple * rekey-lifetime; 0 means reauthentication disabled
         """
         return pulumi.get(self, "authentication_multiple")
 
     @authentication_multiple.setter
-    def authentication_multiple(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def authentication_multiple(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "authentication_multiple", value)
 
     @_builtins.property
     @pulumi.getter
-    def device(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def device(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The device in which the resource is defined
         """
         return pulumi.get(self, "device")
 
     @device.setter
-    def device(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def device(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "device", value)
 
     @_builtins.property
     @pulumi.getter
-    def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def folder(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
 
@@ -134,36 +134,36 @@ class IkeCryptoProfileArgs:
         return pulumi.get(self, "folder")
 
     @folder.setter
-    def folder(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def folder(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "folder", value)
 
     @_builtins.property
     @pulumi.getter
-    def lifetime(self) -> Optional[pulumi.Input['IkeCryptoProfileLifetimeArgs']]:
+    def lifetime(self) -> pulumi.Input[Optional['IkeCryptoProfileLifetimeArgs']]:
         """
         Ike crypto profile lifetime
         """
         return pulumi.get(self, "lifetime")
 
     @lifetime.setter
-    def lifetime(self, value: Optional[pulumi.Input['IkeCryptoProfileLifetimeArgs']]):
+    def lifetime(self, value: pulumi.Input[Optional['IkeCryptoProfileLifetimeArgs']]):
         pulumi.set(self, "lifetime", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Alphanumeric string begin with letter: [0-9a-zA-Z._-]
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter
-    def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def snippet(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
 
@@ -172,23 +172,23 @@ class IkeCryptoProfileArgs:
         return pulumi.get(self, "snippet")
 
     @snippet.setter
-    def snippet(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def snippet(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "snippet", value)
 
 
 @pulumi.input_type
 class _IkeCryptoProfileState:
     def __init__(__self__, *,
-                 authentication_multiple: Optional[pulumi.Input[_builtins.int]] = None,
-                 device: Optional[pulumi.Input[_builtins.str]] = None,
-                 dh_groups: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 encryptions: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 folder: Optional[pulumi.Input[_builtins.str]] = None,
-                 hashes: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 lifetime: Optional[pulumi.Input['IkeCryptoProfileLifetimeArgs']] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 snippet: Optional[pulumi.Input[_builtins.str]] = None,
-                 tfid: Optional[pulumi.Input[_builtins.str]] = None):
+                 authentication_multiple: pulumi.Input[Optional[_builtins.int]] = None,
+                 device: pulumi.Input[Optional[_builtins.str]] = None,
+                 dh_groups: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 encryptions: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 folder: pulumi.Input[Optional[_builtins.str]] = None,
+                 hashes: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 lifetime: pulumi.Input[Optional['IkeCryptoProfileLifetimeArgs']] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 snippet: pulumi.Input[Optional[_builtins.str]] = None,
+                 tfid: pulumi.Input[Optional[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering IkeCryptoProfile resources.
 
@@ -230,55 +230,55 @@ class _IkeCryptoProfileState:
 
     @_builtins.property
     @pulumi.getter(name="authenticationMultiple")
-    def authentication_multiple(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def authentication_multiple(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         IKEv2 SA reauthentication interval equals authetication-multiple * rekey-lifetime; 0 means reauthentication disabled
         """
         return pulumi.get(self, "authentication_multiple")
 
     @authentication_multiple.setter
-    def authentication_multiple(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def authentication_multiple(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "authentication_multiple", value)
 
     @_builtins.property
     @pulumi.getter
-    def device(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def device(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The device in which the resource is defined
         """
         return pulumi.get(self, "device")
 
     @device.setter
-    def device(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def device(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "device", value)
 
     @_builtins.property
     @pulumi.getter(name="dhGroups")
-    def dh_groups(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def dh_groups(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         Dh group
         """
         return pulumi.get(self, "dh_groups")
 
     @dh_groups.setter
-    def dh_groups(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def dh_groups(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "dh_groups", value)
 
     @_builtins.property
     @pulumi.getter
-    def encryptions(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def encryptions(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         Encryption algorithm
         """
         return pulumi.get(self, "encryptions")
 
     @encryptions.setter
-    def encryptions(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def encryptions(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "encryptions", value)
 
     @_builtins.property
     @pulumi.getter
-    def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def folder(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
 
@@ -287,48 +287,48 @@ class _IkeCryptoProfileState:
         return pulumi.get(self, "folder")
 
     @folder.setter
-    def folder(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def folder(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "folder", value)
 
     @_builtins.property
     @pulumi.getter
-    def hashes(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def hashes(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         Hash
         """
         return pulumi.get(self, "hashes")
 
     @hashes.setter
-    def hashes(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def hashes(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "hashes", value)
 
     @_builtins.property
     @pulumi.getter
-    def lifetime(self) -> Optional[pulumi.Input['IkeCryptoProfileLifetimeArgs']]:
+    def lifetime(self) -> pulumi.Input[Optional['IkeCryptoProfileLifetimeArgs']]:
         """
         Ike crypto profile lifetime
         """
         return pulumi.get(self, "lifetime")
 
     @lifetime.setter
-    def lifetime(self, value: Optional[pulumi.Input['IkeCryptoProfileLifetimeArgs']]):
+    def lifetime(self, value: pulumi.Input[Optional['IkeCryptoProfileLifetimeArgs']]):
         pulumi.set(self, "lifetime", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Alphanumeric string begin with letter: [0-9a-zA-Z._-]
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter
-    def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def snippet(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
 
@@ -337,19 +337,19 @@ class _IkeCryptoProfileState:
         return pulumi.get(self, "snippet")
 
     @snippet.setter
-    def snippet(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def snippet(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "snippet", value)
 
     @_builtins.property
     @pulumi.getter
-    def tfid(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def tfid(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The Terraform ID.
         """
         return pulumi.get(self, "tfid")
 
     @tfid.setter
-    def tfid(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def tfid(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "tfid", value)
 
 
@@ -359,15 +359,15 @@ class IkeCryptoProfile(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 authentication_multiple: Optional[pulumi.Input[_builtins.int]] = None,
-                 device: Optional[pulumi.Input[_builtins.str]] = None,
-                 dh_groups: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 encryptions: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 folder: Optional[pulumi.Input[_builtins.str]] = None,
-                 hashes: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 lifetime: Optional[pulumi.Input[Union['IkeCryptoProfileLifetimeArgs', 'IkeCryptoProfileLifetimeArgsDict']]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 snippet: Optional[pulumi.Input[_builtins.str]] = None,
+                 authentication_multiple: pulumi.Input[Optional[_builtins.int]] = None,
+                 device: pulumi.Input[Optional[_builtins.str]] = None,
+                 dh_groups: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 encryptions: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 folder: pulumi.Input[Optional[_builtins.str]] = None,
+                 hashes: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 lifetime: pulumi.Input[Optional[Union['IkeCryptoProfileLifetimeArgs', 'IkeCryptoProfileLifetimeArgsDict']]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 snippet: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
         IkeCryptoProfile resource
@@ -514,15 +514,15 @@ class IkeCryptoProfile(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 authentication_multiple: Optional[pulumi.Input[_builtins.int]] = None,
-                 device: Optional[pulumi.Input[_builtins.str]] = None,
-                 dh_groups: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 encryptions: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 folder: Optional[pulumi.Input[_builtins.str]] = None,
-                 hashes: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 lifetime: Optional[pulumi.Input[Union['IkeCryptoProfileLifetimeArgs', 'IkeCryptoProfileLifetimeArgsDict']]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 snippet: Optional[pulumi.Input[_builtins.str]] = None,
+                 authentication_multiple: pulumi.Input[Optional[_builtins.int]] = None,
+                 device: pulumi.Input[Optional[_builtins.str]] = None,
+                 dh_groups: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 encryptions: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 folder: pulumi.Input[Optional[_builtins.str]] = None,
+                 hashes: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 lifetime: pulumi.Input[Optional[Union['IkeCryptoProfileLifetimeArgs', 'IkeCryptoProfileLifetimeArgsDict']]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 snippet: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -558,16 +558,16 @@ class IkeCryptoProfile(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            authentication_multiple: Optional[pulumi.Input[_builtins.int]] = None,
-            device: Optional[pulumi.Input[_builtins.str]] = None,
-            dh_groups: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-            encryptions: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-            folder: Optional[pulumi.Input[_builtins.str]] = None,
-            hashes: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-            lifetime: Optional[pulumi.Input[Union['IkeCryptoProfileLifetimeArgs', 'IkeCryptoProfileLifetimeArgsDict']]] = None,
-            name: Optional[pulumi.Input[_builtins.str]] = None,
-            snippet: Optional[pulumi.Input[_builtins.str]] = None,
-            tfid: Optional[pulumi.Input[_builtins.str]] = None) -> 'IkeCryptoProfile':
+            authentication_multiple: pulumi.Input[Optional[_builtins.int]] = None,
+            device: pulumi.Input[Optional[_builtins.str]] = None,
+            dh_groups: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            encryptions: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            folder: pulumi.Input[Optional[_builtins.str]] = None,
+            hashes: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            lifetime: pulumi.Input[Optional[Union['IkeCryptoProfileLifetimeArgs', 'IkeCryptoProfileLifetimeArgsDict']]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            snippet: pulumi.Input[Optional[_builtins.str]] = None,
+            tfid: pulumi.Input[Optional[_builtins.str]] = None) -> 'IkeCryptoProfile':
         """
         Get an existing IkeCryptoProfile resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

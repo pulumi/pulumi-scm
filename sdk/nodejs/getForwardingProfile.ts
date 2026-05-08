@@ -148,7 +148,7 @@ export interface GetForwardingProfileOutputArgs {
     /**
      * The folder in which the resource is defined
      */
-    folder?: pulumi.Input<string>;
+    folder?: pulumi.Input<string | undefined>;
     /**
      * The UUID of the forwarding profile
      */
@@ -156,5 +156,5 @@ export interface GetForwardingProfileOutputArgs {
     /**
      * forwarding profile name as an alphanumeric string [ 0-9a-zA-Z._ -]
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
 }

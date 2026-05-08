@@ -21,11 +21,11 @@ __all__ = ['ForwardingProfileArgs', 'ForwardingProfile']
 @pulumi.input_type
 class ForwardingProfileArgs:
     def __init__(__self__, *,
-                 definition_method: Optional[pulumi.Input[_builtins.str]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 folder: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 type: Optional[pulumi.Input['ForwardingProfileTypeArgs']] = None):
+                 definition_method: pulumi.Input[Optional[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 folder: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 type: pulumi.Input[Optional['ForwardingProfileTypeArgs']] = None):
         """
         The set of arguments for constructing a ForwardingProfile resource.
 
@@ -48,74 +48,74 @@ class ForwardingProfileArgs:
 
     @_builtins.property
     @pulumi.getter(name="definitionMethod")
-    def definition_method(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def definition_method(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Enable forwarding rule for forwarding profile
         """
         return pulumi.get(self, "definition_method")
 
     @definition_method.setter
-    def definition_method(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def definition_method(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "definition_method", value)
 
     @_builtins.property
     @pulumi.getter
-    def description(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def description(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Forwarding profile description
         """
         return pulumi.get(self, "description")
 
     @description.setter
-    def description(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def description(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "description", value)
 
     @_builtins.property
     @pulumi.getter
-    def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def folder(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
         """
         return pulumi.get(self, "folder")
 
     @folder.setter
-    def folder(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def folder(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "folder", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         forwarding profile name as an alphanumeric string [ 0-9a-zA-Z._ -]
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter
-    def type(self) -> Optional[pulumi.Input['ForwardingProfileTypeArgs']]:
+    def type(self) -> pulumi.Input[Optional['ForwardingProfileTypeArgs']]:
         """
         Forwarding profile type configuration (PAC file, GlobalProtect proxy, or ZTNA agent)
         """
         return pulumi.get(self, "type")
 
     @type.setter
-    def type(self, value: Optional[pulumi.Input['ForwardingProfileTypeArgs']]):
+    def type(self, value: pulumi.Input[Optional['ForwardingProfileTypeArgs']]):
         pulumi.set(self, "type", value)
 
 
 @pulumi.input_type
 class _ForwardingProfileState:
     def __init__(__self__, *,
-                 definition_method: Optional[pulumi.Input[_builtins.str]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 folder: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 tfid: Optional[pulumi.Input[_builtins.str]] = None,
-                 type: Optional[pulumi.Input['ForwardingProfileTypeArgs']] = None):
+                 definition_method: pulumi.Input[Optional[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 folder: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 tfid: pulumi.Input[Optional[_builtins.str]] = None,
+                 type: pulumi.Input[Optional['ForwardingProfileTypeArgs']] = None):
         """
         Input properties used for looking up and filtering ForwardingProfile resources.
 
@@ -141,74 +141,74 @@ class _ForwardingProfileState:
 
     @_builtins.property
     @pulumi.getter(name="definitionMethod")
-    def definition_method(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def definition_method(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Enable forwarding rule for forwarding profile
         """
         return pulumi.get(self, "definition_method")
 
     @definition_method.setter
-    def definition_method(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def definition_method(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "definition_method", value)
 
     @_builtins.property
     @pulumi.getter
-    def description(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def description(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Forwarding profile description
         """
         return pulumi.get(self, "description")
 
     @description.setter
-    def description(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def description(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "description", value)
 
     @_builtins.property
     @pulumi.getter
-    def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def folder(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
         """
         return pulumi.get(self, "folder")
 
     @folder.setter
-    def folder(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def folder(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "folder", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         forwarding profile name as an alphanumeric string [ 0-9a-zA-Z._ -]
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter
-    def tfid(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def tfid(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The Terraform ID.
         """
         return pulumi.get(self, "tfid")
 
     @tfid.setter
-    def tfid(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def tfid(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "tfid", value)
 
     @_builtins.property
     @pulumi.getter
-    def type(self) -> Optional[pulumi.Input['ForwardingProfileTypeArgs']]:
+    def type(self) -> pulumi.Input[Optional['ForwardingProfileTypeArgs']]:
         """
         Forwarding profile type configuration (PAC file, GlobalProtect proxy, or ZTNA agent)
         """
         return pulumi.get(self, "type")
 
     @type.setter
-    def type(self, value: Optional[pulumi.Input['ForwardingProfileTypeArgs']]):
+    def type(self, value: pulumi.Input[Optional['ForwardingProfileTypeArgs']]):
         pulumi.set(self, "type", value)
 
 
@@ -218,11 +218,11 @@ class ForwardingProfile(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 definition_method: Optional[pulumi.Input[_builtins.str]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 folder: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 type: Optional[pulumi.Input[Union['ForwardingProfileTypeArgs', 'ForwardingProfileTypeArgsDict']]] = None,
+                 definition_method: pulumi.Input[Optional[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 folder: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 type: pulumi.Input[Optional[Union['ForwardingProfileTypeArgs', 'ForwardingProfileTypeArgsDict']]] = None,
                  __props__=None):
         """
         ForwardingProfile resource
@@ -611,11 +611,11 @@ class ForwardingProfile(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 definition_method: Optional[pulumi.Input[_builtins.str]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 folder: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 type: Optional[pulumi.Input[Union['ForwardingProfileTypeArgs', 'ForwardingProfileTypeArgsDict']]] = None,
+                 definition_method: pulumi.Input[Optional[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 folder: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 type: pulumi.Input[Optional[Union['ForwardingProfileTypeArgs', 'ForwardingProfileTypeArgsDict']]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -641,12 +641,12 @@ class ForwardingProfile(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            definition_method: Optional[pulumi.Input[_builtins.str]] = None,
-            description: Optional[pulumi.Input[_builtins.str]] = None,
-            folder: Optional[pulumi.Input[_builtins.str]] = None,
-            name: Optional[pulumi.Input[_builtins.str]] = None,
-            tfid: Optional[pulumi.Input[_builtins.str]] = None,
-            type: Optional[pulumi.Input[Union['ForwardingProfileTypeArgs', 'ForwardingProfileTypeArgsDict']]] = None) -> 'ForwardingProfile':
+            definition_method: pulumi.Input[Optional[_builtins.str]] = None,
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            folder: pulumi.Input[Optional[_builtins.str]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            tfid: pulumi.Input[Optional[_builtins.str]] = None,
+            type: pulumi.Input[Optional[Union['ForwardingProfileTypeArgs', 'ForwardingProfileTypeArgsDict']]] = None) -> 'ForwardingProfile':
         """
         Get an existing ForwardingProfile resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

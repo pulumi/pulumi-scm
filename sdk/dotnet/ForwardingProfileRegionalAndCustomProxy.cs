@@ -24,7 +24,7 @@ namespace Pulumi.Scm
     /// {
     ///     // Basic gp-and-pac proxy with a primary proxy server
     ///     // proxy_1 and proxy_2 are only available for gp-and-pac
-    ///     var exampleGpAndPacBasic = new Scm.Index.ForwardingProfileRegionalAndCustomProxy("example_gp_and_pac_basic", new()
+    ///     var exampleGpAndPacBasic = new Scm.ForwardingProfileRegionalAndCustomProxy("example_gp_and_pac_basic", new()
     ///     {
     ///         Folder = "Mobile Users",
     ///         Name = "example-gp-pac-proxy-1",
@@ -38,7 +38,7 @@ namespace Pulumi.Scm
     ///     });
     /// 
     ///     // gp-and-pac with primary and secondary proxy servers for high availability
-    ///     var exampleGpAndPacDualProxy = new Scm.Index.ForwardingProfileRegionalAndCustomProxy("example_gp_and_pac_dual_proxy", new()
+    ///     var exampleGpAndPacDualProxy = new Scm.ForwardingProfileRegionalAndCustomProxy("example_gp_and_pac_dual_proxy", new()
     ///     {
     ///         Folder = "Mobile Users",
     ///         Name = "example-gp-pac-dual-proxy",
@@ -61,7 +61,7 @@ namespace Pulumi.Scm
     ///     // Basic ztna-agent proxy
     ///     // connectivity_preference and fallback_option are only available for ztna-agent
     ///     // At least one connectivity_preference entry must have enabled = true
-    ///     var exampleZtnaBasic = new Scm.Index.ForwardingProfileRegionalAndCustomProxy("example_ztna_basic", new()
+    ///     var exampleZtnaBasic = new Scm.ForwardingProfileRegionalAndCustomProxy("example_ztna_basic", new()
     ///     {
     ///         Folder = "Mobile Users",
     ///         Name = "example-ztna-proxy",
@@ -85,7 +85,7 @@ namespace Pulumi.Scm
     /// 
     ///     // Full ztna-agent with location_preference and Prisma Access locations
     ///     // location_preference is only available for ztna-agent
-    ///     var exampleZtnaFull = new Scm.Index.ForwardingProfileRegionalAndCustomProxy("example_ztna_full", new()
+    ///     var exampleZtnaFull = new Scm.ForwardingProfileRegionalAndCustomProxy("example_ztna_full", new()
     ///     {
     ///         Folder = "Mobile Users",
     ///         Name = "example-ztna-full",

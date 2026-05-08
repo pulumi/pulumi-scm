@@ -24,14 +24,14 @@ class RemoteNetworkArgs:
                  folder: pulumi.Input[_builtins.str],
                  license_type: pulumi.Input[_builtins.str],
                  region: pulumi.Input[_builtins.str],
-                 ecmp_load_balancing: Optional[pulumi.Input[_builtins.str]] = None,
-                 ecmp_tunnels: Optional[pulumi.Input[Sequence[pulumi.Input['RemoteNetworkEcmpTunnelArgs']]]] = None,
-                 ipsec_tunnel: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 protocol: Optional[pulumi.Input['RemoteNetworkProtocolArgs']] = None,
-                 secondary_ipsec_tunnel: Optional[pulumi.Input[_builtins.str]] = None,
-                 spn_name: Optional[pulumi.Input[_builtins.str]] = None,
-                 subnets: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None):
+                 ecmp_load_balancing: pulumi.Input[Optional[_builtins.str]] = None,
+                 ecmp_tunnels: pulumi.Input[Optional[Sequence[pulumi.Input['RemoteNetworkEcmpTunnelArgs']]]] = None,
+                 ipsec_tunnel: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 protocol: pulumi.Input[Optional['RemoteNetworkProtocolArgs']] = None,
+                 secondary_ipsec_tunnel: pulumi.Input[Optional[_builtins.str]] = None,
+                 spn_name: pulumi.Input[Optional[_builtins.str]] = None,
+                 subnets: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None):
         """
         The set of arguments for constructing a RemoteNetwork resource.
 
@@ -105,117 +105,117 @@ class RemoteNetworkArgs:
 
     @_builtins.property
     @pulumi.getter(name="ecmpLoadBalancing")
-    def ecmp_load_balancing(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ecmp_load_balancing(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Ecmp load balancing
         """
         return pulumi.get(self, "ecmp_load_balancing")
 
     @ecmp_load_balancing.setter
-    def ecmp_load_balancing(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ecmp_load_balancing(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ecmp_load_balancing", value)
 
     @_builtins.property
     @pulumi.getter(name="ecmpTunnels")
-    def ecmp_tunnels(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['RemoteNetworkEcmpTunnelArgs']]]]:
+    def ecmp_tunnels(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['RemoteNetworkEcmpTunnelArgs']]]]:
         """
         ecmp*tunnels is required when ecmp*load*balancing is enable
         """
         return pulumi.get(self, "ecmp_tunnels")
 
     @ecmp_tunnels.setter
-    def ecmp_tunnels(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['RemoteNetworkEcmpTunnelArgs']]]]):
+    def ecmp_tunnels(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['RemoteNetworkEcmpTunnelArgs']]]]):
         pulumi.set(self, "ecmp_tunnels", value)
 
     @_builtins.property
     @pulumi.getter(name="ipsecTunnel")
-    def ipsec_tunnel(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ipsec_tunnel(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         ipsec*tunnel is required when ecmp*load_balancing is disable
         """
         return pulumi.get(self, "ipsec_tunnel")
 
     @ipsec_tunnel.setter
-    def ipsec_tunnel(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ipsec_tunnel(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ipsec_tunnel", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the remote network
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter
-    def protocol(self) -> Optional[pulumi.Input['RemoteNetworkProtocolArgs']]:
+    def protocol(self) -> pulumi.Input[Optional['RemoteNetworkProtocolArgs']]:
         """
         setup the protocol when ecmp*load*balancing is disable
         """
         return pulumi.get(self, "protocol")
 
     @protocol.setter
-    def protocol(self, value: Optional[pulumi.Input['RemoteNetworkProtocolArgs']]):
+    def protocol(self, value: pulumi.Input[Optional['RemoteNetworkProtocolArgs']]):
         pulumi.set(self, "protocol", value)
 
     @_builtins.property
     @pulumi.getter(name="secondaryIpsecTunnel")
-    def secondary_ipsec_tunnel(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def secondary_ipsec_tunnel(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         specify secondary ipsec_tunnel if needed
         """
         return pulumi.get(self, "secondary_ipsec_tunnel")
 
     @secondary_ipsec_tunnel.setter
-    def secondary_ipsec_tunnel(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def secondary_ipsec_tunnel(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "secondary_ipsec_tunnel", value)
 
     @_builtins.property
     @pulumi.getter(name="spnName")
-    def spn_name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def spn_name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         spn-name is needed when license_type is FWAAS-AGGREGATE
         """
         return pulumi.get(self, "spn_name")
 
     @spn_name.setter
-    def spn_name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def spn_name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "spn_name", value)
 
     @_builtins.property
     @pulumi.getter
-    def subnets(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def subnets(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         Subnets
         """
         return pulumi.get(self, "subnets")
 
     @subnets.setter
-    def subnets(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def subnets(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "subnets", value)
 
 
 @pulumi.input_type
 class _RemoteNetworkState:
     def __init__(__self__, *,
-                 ecmp_load_balancing: Optional[pulumi.Input[_builtins.str]] = None,
-                 ecmp_tunnels: Optional[pulumi.Input[Sequence[pulumi.Input['RemoteNetworkEcmpTunnelArgs']]]] = None,
-                 encrypted_values: Optional[pulumi.Input[Mapping[str, pulumi.Input[_builtins.str]]]] = None,
-                 folder: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipsec_tunnel: Optional[pulumi.Input[_builtins.str]] = None,
-                 license_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 protocol: Optional[pulumi.Input['RemoteNetworkProtocolArgs']] = None,
-                 region: Optional[pulumi.Input[_builtins.str]] = None,
-                 secondary_ipsec_tunnel: Optional[pulumi.Input[_builtins.str]] = None,
-                 spn_name: Optional[pulumi.Input[_builtins.str]] = None,
-                 subnets: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 tfid: Optional[pulumi.Input[_builtins.str]] = None):
+                 ecmp_load_balancing: pulumi.Input[Optional[_builtins.str]] = None,
+                 ecmp_tunnels: pulumi.Input[Optional[Sequence[pulumi.Input['RemoteNetworkEcmpTunnelArgs']]]] = None,
+                 encrypted_values: pulumi.Input[Optional[Mapping[str, pulumi.Input[_builtins.str]]]] = None,
+                 folder: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipsec_tunnel: pulumi.Input[Optional[_builtins.str]] = None,
+                 license_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 protocol: pulumi.Input[Optional['RemoteNetworkProtocolArgs']] = None,
+                 region: pulumi.Input[Optional[_builtins.str]] = None,
+                 secondary_ipsec_tunnel: pulumi.Input[Optional[_builtins.str]] = None,
+                 spn_name: pulumi.Input[Optional[_builtins.str]] = None,
+                 subnets: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 tfid: pulumi.Input[Optional[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering RemoteNetwork resources.
 
@@ -262,158 +262,158 @@ class _RemoteNetworkState:
 
     @_builtins.property
     @pulumi.getter(name="ecmpLoadBalancing")
-    def ecmp_load_balancing(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ecmp_load_balancing(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Ecmp load balancing
         """
         return pulumi.get(self, "ecmp_load_balancing")
 
     @ecmp_load_balancing.setter
-    def ecmp_load_balancing(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ecmp_load_balancing(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ecmp_load_balancing", value)
 
     @_builtins.property
     @pulumi.getter(name="ecmpTunnels")
-    def ecmp_tunnels(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['RemoteNetworkEcmpTunnelArgs']]]]:
+    def ecmp_tunnels(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['RemoteNetworkEcmpTunnelArgs']]]]:
         """
         ecmp*tunnels is required when ecmp*load*balancing is enable
         """
         return pulumi.get(self, "ecmp_tunnels")
 
     @ecmp_tunnels.setter
-    def ecmp_tunnels(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['RemoteNetworkEcmpTunnelArgs']]]]):
+    def ecmp_tunnels(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['RemoteNetworkEcmpTunnelArgs']]]]):
         pulumi.set(self, "ecmp_tunnels", value)
 
     @_builtins.property
     @pulumi.getter(name="encryptedValues")
-    def encrypted_values(self) -> Optional[pulumi.Input[Mapping[str, pulumi.Input[_builtins.str]]]]:
+    def encrypted_values(self) -> pulumi.Input[Optional[Mapping[str, pulumi.Input[_builtins.str]]]]:
         """
         Map of sensitive values returned from the API.
         """
         return pulumi.get(self, "encrypted_values")
 
     @encrypted_values.setter
-    def encrypted_values(self, value: Optional[pulumi.Input[Mapping[str, pulumi.Input[_builtins.str]]]]):
+    def encrypted_values(self, value: pulumi.Input[Optional[Mapping[str, pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "encrypted_values", value)
 
     @_builtins.property
     @pulumi.getter
-    def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def folder(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The folder that contains the remote network
         """
         return pulumi.get(self, "folder")
 
     @folder.setter
-    def folder(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def folder(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "folder", value)
 
     @_builtins.property
     @pulumi.getter(name="ipsecTunnel")
-    def ipsec_tunnel(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ipsec_tunnel(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         ipsec*tunnel is required when ecmp*load_balancing is disable
         """
         return pulumi.get(self, "ipsec_tunnel")
 
     @ipsec_tunnel.setter
-    def ipsec_tunnel(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ipsec_tunnel(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ipsec_tunnel", value)
 
     @_builtins.property
     @pulumi.getter(name="licenseType")
-    def license_type(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def license_type(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         New customer will only be on aggregate bandwidth licensing
         """
         return pulumi.get(self, "license_type")
 
     @license_type.setter
-    def license_type(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def license_type(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "license_type", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the remote network
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter
-    def protocol(self) -> Optional[pulumi.Input['RemoteNetworkProtocolArgs']]:
+    def protocol(self) -> pulumi.Input[Optional['RemoteNetworkProtocolArgs']]:
         """
         setup the protocol when ecmp*load*balancing is disable
         """
         return pulumi.get(self, "protocol")
 
     @protocol.setter
-    def protocol(self, value: Optional[pulumi.Input['RemoteNetworkProtocolArgs']]):
+    def protocol(self, value: pulumi.Input[Optional['RemoteNetworkProtocolArgs']]):
         pulumi.set(self, "protocol", value)
 
     @_builtins.property
     @pulumi.getter
-    def region(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def region(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Region
         """
         return pulumi.get(self, "region")
 
     @region.setter
-    def region(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def region(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "region", value)
 
     @_builtins.property
     @pulumi.getter(name="secondaryIpsecTunnel")
-    def secondary_ipsec_tunnel(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def secondary_ipsec_tunnel(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         specify secondary ipsec_tunnel if needed
         """
         return pulumi.get(self, "secondary_ipsec_tunnel")
 
     @secondary_ipsec_tunnel.setter
-    def secondary_ipsec_tunnel(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def secondary_ipsec_tunnel(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "secondary_ipsec_tunnel", value)
 
     @_builtins.property
     @pulumi.getter(name="spnName")
-    def spn_name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def spn_name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         spn-name is needed when license_type is FWAAS-AGGREGATE
         """
         return pulumi.get(self, "spn_name")
 
     @spn_name.setter
-    def spn_name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def spn_name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "spn_name", value)
 
     @_builtins.property
     @pulumi.getter
-    def subnets(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def subnets(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         Subnets
         """
         return pulumi.get(self, "subnets")
 
     @subnets.setter
-    def subnets(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def subnets(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "subnets", value)
 
     @_builtins.property
     @pulumi.getter
-    def tfid(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def tfid(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The Terraform ID.
         """
         return pulumi.get(self, "tfid")
 
     @tfid.setter
-    def tfid(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def tfid(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "tfid", value)
 
 
@@ -423,17 +423,17 @@ class RemoteNetwork(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 ecmp_load_balancing: Optional[pulumi.Input[_builtins.str]] = None,
-                 ecmp_tunnels: Optional[pulumi.Input[Sequence[pulumi.Input[Union['RemoteNetworkEcmpTunnelArgs', 'RemoteNetworkEcmpTunnelArgsDict']]]]] = None,
-                 folder: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipsec_tunnel: Optional[pulumi.Input[_builtins.str]] = None,
-                 license_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 protocol: Optional[pulumi.Input[Union['RemoteNetworkProtocolArgs', 'RemoteNetworkProtocolArgsDict']]] = None,
-                 region: Optional[pulumi.Input[_builtins.str]] = None,
-                 secondary_ipsec_tunnel: Optional[pulumi.Input[_builtins.str]] = None,
-                 spn_name: Optional[pulumi.Input[_builtins.str]] = None,
-                 subnets: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 ecmp_load_balancing: pulumi.Input[Optional[_builtins.str]] = None,
+                 ecmp_tunnels: pulumi.Input[Optional[Sequence[pulumi.Input[Union['RemoteNetworkEcmpTunnelArgs', 'RemoteNetworkEcmpTunnelArgsDict']]]]] = None,
+                 folder: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipsec_tunnel: pulumi.Input[Optional[_builtins.str]] = None,
+                 license_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 protocol: pulumi.Input[Optional[Union['RemoteNetworkProtocolArgs', 'RemoteNetworkProtocolArgsDict']]] = None,
+                 region: pulumi.Input[Optional[_builtins.str]] = None,
+                 secondary_ipsec_tunnel: pulumi.Input[Optional[_builtins.str]] = None,
+                 spn_name: pulumi.Input[Optional[_builtins.str]] = None,
+                 subnets: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  __props__=None):
         """
         RemoteNetwork resource
@@ -674,17 +674,17 @@ class RemoteNetwork(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 ecmp_load_balancing: Optional[pulumi.Input[_builtins.str]] = None,
-                 ecmp_tunnels: Optional[pulumi.Input[Sequence[pulumi.Input[Union['RemoteNetworkEcmpTunnelArgs', 'RemoteNetworkEcmpTunnelArgsDict']]]]] = None,
-                 folder: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipsec_tunnel: Optional[pulumi.Input[_builtins.str]] = None,
-                 license_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 protocol: Optional[pulumi.Input[Union['RemoteNetworkProtocolArgs', 'RemoteNetworkProtocolArgsDict']]] = None,
-                 region: Optional[pulumi.Input[_builtins.str]] = None,
-                 secondary_ipsec_tunnel: Optional[pulumi.Input[_builtins.str]] = None,
-                 spn_name: Optional[pulumi.Input[_builtins.str]] = None,
-                 subnets: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 ecmp_load_balancing: pulumi.Input[Optional[_builtins.str]] = None,
+                 ecmp_tunnels: pulumi.Input[Optional[Sequence[pulumi.Input[Union['RemoteNetworkEcmpTunnelArgs', 'RemoteNetworkEcmpTunnelArgsDict']]]]] = None,
+                 folder: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipsec_tunnel: pulumi.Input[Optional[_builtins.str]] = None,
+                 license_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 protocol: pulumi.Input[Optional[Union['RemoteNetworkProtocolArgs', 'RemoteNetworkProtocolArgsDict']]] = None,
+                 region: pulumi.Input[Optional[_builtins.str]] = None,
+                 secondary_ipsec_tunnel: pulumi.Input[Optional[_builtins.str]] = None,
+                 spn_name: pulumi.Input[Optional[_builtins.str]] = None,
+                 subnets: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -725,19 +725,19 @@ class RemoteNetwork(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            ecmp_load_balancing: Optional[pulumi.Input[_builtins.str]] = None,
-            ecmp_tunnels: Optional[pulumi.Input[Sequence[pulumi.Input[Union['RemoteNetworkEcmpTunnelArgs', 'RemoteNetworkEcmpTunnelArgsDict']]]]] = None,
-            encrypted_values: Optional[pulumi.Input[Mapping[str, pulumi.Input[_builtins.str]]]] = None,
-            folder: Optional[pulumi.Input[_builtins.str]] = None,
-            ipsec_tunnel: Optional[pulumi.Input[_builtins.str]] = None,
-            license_type: Optional[pulumi.Input[_builtins.str]] = None,
-            name: Optional[pulumi.Input[_builtins.str]] = None,
-            protocol: Optional[pulumi.Input[Union['RemoteNetworkProtocolArgs', 'RemoteNetworkProtocolArgsDict']]] = None,
-            region: Optional[pulumi.Input[_builtins.str]] = None,
-            secondary_ipsec_tunnel: Optional[pulumi.Input[_builtins.str]] = None,
-            spn_name: Optional[pulumi.Input[_builtins.str]] = None,
-            subnets: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-            tfid: Optional[pulumi.Input[_builtins.str]] = None) -> 'RemoteNetwork':
+            ecmp_load_balancing: pulumi.Input[Optional[_builtins.str]] = None,
+            ecmp_tunnels: pulumi.Input[Optional[Sequence[pulumi.Input[Union['RemoteNetworkEcmpTunnelArgs', 'RemoteNetworkEcmpTunnelArgsDict']]]]] = None,
+            encrypted_values: pulumi.Input[Optional[Mapping[str, pulumi.Input[_builtins.str]]]] = None,
+            folder: pulumi.Input[Optional[_builtins.str]] = None,
+            ipsec_tunnel: pulumi.Input[Optional[_builtins.str]] = None,
+            license_type: pulumi.Input[Optional[_builtins.str]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            protocol: pulumi.Input[Optional[Union['RemoteNetworkProtocolArgs', 'RemoteNetworkProtocolArgsDict']]] = None,
+            region: pulumi.Input[Optional[_builtins.str]] = None,
+            secondary_ipsec_tunnel: pulumi.Input[Optional[_builtins.str]] = None,
+            spn_name: pulumi.Input[Optional[_builtins.str]] = None,
+            subnets: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            tfid: pulumi.Input[Optional[_builtins.str]] = None) -> 'RemoteNetwork':
         """
         Get an existing RemoteNetwork resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

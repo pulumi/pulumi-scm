@@ -23,7 +23,7 @@ class AutoVpnSettingArgs:
     def __init__(__self__, *,
                  as_range: pulumi.Input['AutoVpnSettingAsRangeArgs'],
                  vpn_address_pools: pulumi.Input[Sequence[pulumi.Input[_builtins.str]]],
-                 enable_mesh_between_hubs: Optional[pulumi.Input[_builtins.bool]] = None):
+                 enable_mesh_between_hubs: pulumi.Input[Optional[_builtins.bool]] = None):
         """
         The set of arguments for constructing a AutoVpnSetting resource.
 
@@ -62,24 +62,24 @@ class AutoVpnSettingArgs:
 
     @_builtins.property
     @pulumi.getter(name="enableMeshBetweenHubs")
-    def enable_mesh_between_hubs(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def enable_mesh_between_hubs(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Enable mesh connection between hubs?
         """
         return pulumi.get(self, "enable_mesh_between_hubs")
 
     @enable_mesh_between_hubs.setter
-    def enable_mesh_between_hubs(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def enable_mesh_between_hubs(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "enable_mesh_between_hubs", value)
 
 
 @pulumi.input_type
 class _AutoVpnSettingState:
     def __init__(__self__, *,
-                 as_range: Optional[pulumi.Input['AutoVpnSettingAsRangeArgs']] = None,
-                 enable_mesh_between_hubs: Optional[pulumi.Input[_builtins.bool]] = None,
-                 tfid: Optional[pulumi.Input[_builtins.str]] = None,
-                 vpn_address_pools: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None):
+                 as_range: pulumi.Input[Optional['AutoVpnSettingAsRangeArgs']] = None,
+                 enable_mesh_between_hubs: pulumi.Input[Optional[_builtins.bool]] = None,
+                 tfid: pulumi.Input[Optional[_builtins.str]] = None,
+                 vpn_address_pools: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None):
         """
         Input properties used for looking up and filtering AutoVpnSetting resources.
 
@@ -99,50 +99,50 @@ class _AutoVpnSettingState:
 
     @_builtins.property
     @pulumi.getter(name="asRange")
-    def as_range(self) -> Optional[pulumi.Input['AutoVpnSettingAsRangeArgs']]:
+    def as_range(self) -> pulumi.Input[Optional['AutoVpnSettingAsRangeArgs']]:
         """
         As range
         """
         return pulumi.get(self, "as_range")
 
     @as_range.setter
-    def as_range(self, value: Optional[pulumi.Input['AutoVpnSettingAsRangeArgs']]):
+    def as_range(self, value: pulumi.Input[Optional['AutoVpnSettingAsRangeArgs']]):
         pulumi.set(self, "as_range", value)
 
     @_builtins.property
     @pulumi.getter(name="enableMeshBetweenHubs")
-    def enable_mesh_between_hubs(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def enable_mesh_between_hubs(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Enable mesh connection between hubs?
         """
         return pulumi.get(self, "enable_mesh_between_hubs")
 
     @enable_mesh_between_hubs.setter
-    def enable_mesh_between_hubs(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def enable_mesh_between_hubs(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "enable_mesh_between_hubs", value)
 
     @_builtins.property
     @pulumi.getter
-    def tfid(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def tfid(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The Terraform ID.
         """
         return pulumi.get(self, "tfid")
 
     @tfid.setter
-    def tfid(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def tfid(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "tfid", value)
 
     @_builtins.property
     @pulumi.getter(name="vpnAddressPools")
-    def vpn_address_pools(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def vpn_address_pools(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         VPN address pool
         """
         return pulumi.get(self, "vpn_address_pools")
 
     @vpn_address_pools.setter
-    def vpn_address_pools(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def vpn_address_pools(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "vpn_address_pools", value)
 
 
@@ -152,9 +152,9 @@ class AutoVpnSetting(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 as_range: Optional[pulumi.Input[Union['AutoVpnSettingAsRangeArgs', 'AutoVpnSettingAsRangeArgsDict']]] = None,
-                 enable_mesh_between_hubs: Optional[pulumi.Input[_builtins.bool]] = None,
-                 vpn_address_pools: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 as_range: pulumi.Input[Optional[Union['AutoVpnSettingAsRangeArgs', 'AutoVpnSettingAsRangeArgsDict']]] = None,
+                 enable_mesh_between_hubs: pulumi.Input[Optional[_builtins.bool]] = None,
+                 vpn_address_pools: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  __props__=None):
         """
         **Singleton Resource.** AutoVpnSetting resource
@@ -251,9 +251,9 @@ class AutoVpnSetting(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 as_range: Optional[pulumi.Input[Union['AutoVpnSettingAsRangeArgs', 'AutoVpnSettingAsRangeArgsDict']]] = None,
-                 enable_mesh_between_hubs: Optional[pulumi.Input[_builtins.bool]] = None,
-                 vpn_address_pools: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 as_range: pulumi.Input[Optional[Union['AutoVpnSettingAsRangeArgs', 'AutoVpnSettingAsRangeArgsDict']]] = None,
+                 enable_mesh_between_hubs: pulumi.Input[Optional[_builtins.bool]] = None,
+                 vpn_address_pools: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -281,10 +281,10 @@ class AutoVpnSetting(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            as_range: Optional[pulumi.Input[Union['AutoVpnSettingAsRangeArgs', 'AutoVpnSettingAsRangeArgsDict']]] = None,
-            enable_mesh_between_hubs: Optional[pulumi.Input[_builtins.bool]] = None,
-            tfid: Optional[pulumi.Input[_builtins.str]] = None,
-            vpn_address_pools: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None) -> 'AutoVpnSetting':
+            as_range: pulumi.Input[Optional[Union['AutoVpnSettingAsRangeArgs', 'AutoVpnSettingAsRangeArgsDict']]] = None,
+            enable_mesh_between_hubs: pulumi.Input[Optional[_builtins.bool]] = None,
+            tfid: pulumi.Input[Optional[_builtins.str]] = None,
+            vpn_address_pools: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None) -> 'AutoVpnSetting':
         """
         Get an existing AutoVpnSetting resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

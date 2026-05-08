@@ -19,17 +19,17 @@ __all__ = ['ConfigMatchListArgs', 'ConfigMatchList']
 @pulumi.input_type
 class ConfigMatchListArgs:
     def __init__(__self__, *,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 device: Optional[pulumi.Input[_builtins.str]] = None,
-                 filter: Optional[pulumi.Input[_builtins.str]] = None,
-                 folder: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 send_emails: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 send_https: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 send_snmptraps: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 send_syslogs: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 send_to_panorama: Optional[pulumi.Input[_builtins.bool]] = None,
-                 snippet: Optional[pulumi.Input[_builtins.str]] = None):
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 device: pulumi.Input[Optional[_builtins.str]] = None,
+                 filter: pulumi.Input[Optional[_builtins.str]] = None,
+                 folder: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 send_emails: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 send_https: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 send_snmptraps: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 send_syslogs: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 send_to_panorama: pulumi.Input[Optional[_builtins.bool]] = None,
+                 snippet: pulumi.Input[Optional[_builtins.str]] = None):
         """
         The set of arguments for constructing a ConfigMatchList resource.
 
@@ -74,43 +74,43 @@ class ConfigMatchListArgs:
 
     @_builtins.property
     @pulumi.getter
-    def description(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def description(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Description of the config match list entry
         """
         return pulumi.get(self, "description")
 
     @description.setter
-    def description(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def description(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "description", value)
 
     @_builtins.property
     @pulumi.getter
-    def device(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def device(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The device in which the resource is defined
         """
         return pulumi.get(self, "device")
 
     @device.setter
-    def device(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def device(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "device", value)
 
     @_builtins.property
     @pulumi.getter
-    def filter(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def filter(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Filter of the config match list entry
         """
         return pulumi.get(self, "filter")
 
     @filter.setter
-    def filter(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def filter(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "filter", value)
 
     @_builtins.property
     @pulumi.getter
-    def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def folder(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
 
@@ -119,84 +119,84 @@ class ConfigMatchListArgs:
         return pulumi.get(self, "folder")
 
     @folder.setter
-    def folder(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def folder(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "folder", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Name of the config match list entry
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter(name="sendEmails")
-    def send_emails(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def send_emails(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         Send Email List of the config match list entry
         """
         return pulumi.get(self, "send_emails")
 
     @send_emails.setter
-    def send_emails(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def send_emails(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "send_emails", value)
 
     @_builtins.property
     @pulumi.getter(name="sendHttps")
-    def send_https(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def send_https(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         Send HTTP List of the config match list entry
         """
         return pulumi.get(self, "send_https")
 
     @send_https.setter
-    def send_https(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def send_https(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "send_https", value)
 
     @_builtins.property
     @pulumi.getter(name="sendSnmptraps")
-    def send_snmptraps(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def send_snmptraps(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         Send SNMP Trap List of the config match list entry
         """
         return pulumi.get(self, "send_snmptraps")
 
     @send_snmptraps.setter
-    def send_snmptraps(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def send_snmptraps(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "send_snmptraps", value)
 
     @_builtins.property
     @pulumi.getter(name="sendSyslogs")
-    def send_syslogs(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def send_syslogs(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         Send Sys Log List of the config match list entry
         """
         return pulumi.get(self, "send_syslogs")
 
     @send_syslogs.setter
-    def send_syslogs(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def send_syslogs(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "send_syslogs", value)
 
     @_builtins.property
     @pulumi.getter(name="sendToPanorama")
-    def send_to_panorama(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def send_to_panorama(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Send Panorama Flag of the config match list entry
         """
         return pulumi.get(self, "send_to_panorama")
 
     @send_to_panorama.setter
-    def send_to_panorama(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def send_to_panorama(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "send_to_panorama", value)
 
     @_builtins.property
     @pulumi.getter
-    def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def snippet(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
 
@@ -205,25 +205,25 @@ class ConfigMatchListArgs:
         return pulumi.get(self, "snippet")
 
     @snippet.setter
-    def snippet(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def snippet(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "snippet", value)
 
 
 @pulumi.input_type
 class _ConfigMatchListState:
     def __init__(__self__, *,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 device: Optional[pulumi.Input[_builtins.str]] = None,
-                 filter: Optional[pulumi.Input[_builtins.str]] = None,
-                 folder: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 send_emails: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 send_https: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 send_snmptraps: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 send_syslogs: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 send_to_panorama: Optional[pulumi.Input[_builtins.bool]] = None,
-                 snippet: Optional[pulumi.Input[_builtins.str]] = None,
-                 tfid: Optional[pulumi.Input[_builtins.str]] = None):
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 device: pulumi.Input[Optional[_builtins.str]] = None,
+                 filter: pulumi.Input[Optional[_builtins.str]] = None,
+                 folder: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 send_emails: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 send_https: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 send_snmptraps: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 send_syslogs: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 send_to_panorama: pulumi.Input[Optional[_builtins.bool]] = None,
+                 snippet: pulumi.Input[Optional[_builtins.str]] = None,
+                 tfid: pulumi.Input[Optional[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering ConfigMatchList resources.
 
@@ -271,43 +271,43 @@ class _ConfigMatchListState:
 
     @_builtins.property
     @pulumi.getter
-    def description(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def description(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Description of the config match list entry
         """
         return pulumi.get(self, "description")
 
     @description.setter
-    def description(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def description(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "description", value)
 
     @_builtins.property
     @pulumi.getter
-    def device(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def device(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The device in which the resource is defined
         """
         return pulumi.get(self, "device")
 
     @device.setter
-    def device(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def device(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "device", value)
 
     @_builtins.property
     @pulumi.getter
-    def filter(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def filter(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Filter of the config match list entry
         """
         return pulumi.get(self, "filter")
 
     @filter.setter
-    def filter(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def filter(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "filter", value)
 
     @_builtins.property
     @pulumi.getter
-    def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def folder(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
 
@@ -316,84 +316,84 @@ class _ConfigMatchListState:
         return pulumi.get(self, "folder")
 
     @folder.setter
-    def folder(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def folder(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "folder", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Name of the config match list entry
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter(name="sendEmails")
-    def send_emails(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def send_emails(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         Send Email List of the config match list entry
         """
         return pulumi.get(self, "send_emails")
 
     @send_emails.setter
-    def send_emails(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def send_emails(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "send_emails", value)
 
     @_builtins.property
     @pulumi.getter(name="sendHttps")
-    def send_https(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def send_https(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         Send HTTP List of the config match list entry
         """
         return pulumi.get(self, "send_https")
 
     @send_https.setter
-    def send_https(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def send_https(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "send_https", value)
 
     @_builtins.property
     @pulumi.getter(name="sendSnmptraps")
-    def send_snmptraps(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def send_snmptraps(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         Send SNMP Trap List of the config match list entry
         """
         return pulumi.get(self, "send_snmptraps")
 
     @send_snmptraps.setter
-    def send_snmptraps(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def send_snmptraps(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "send_snmptraps", value)
 
     @_builtins.property
     @pulumi.getter(name="sendSyslogs")
-    def send_syslogs(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def send_syslogs(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         Send Sys Log List of the config match list entry
         """
         return pulumi.get(self, "send_syslogs")
 
     @send_syslogs.setter
-    def send_syslogs(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def send_syslogs(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "send_syslogs", value)
 
     @_builtins.property
     @pulumi.getter(name="sendToPanorama")
-    def send_to_panorama(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def send_to_panorama(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Send Panorama Flag of the config match list entry
         """
         return pulumi.get(self, "send_to_panorama")
 
     @send_to_panorama.setter
-    def send_to_panorama(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def send_to_panorama(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "send_to_panorama", value)
 
     @_builtins.property
     @pulumi.getter
-    def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def snippet(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
 
@@ -402,19 +402,19 @@ class _ConfigMatchListState:
         return pulumi.get(self, "snippet")
 
     @snippet.setter
-    def snippet(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def snippet(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "snippet", value)
 
     @_builtins.property
     @pulumi.getter
-    def tfid(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def tfid(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The Terraform ID.
         """
         return pulumi.get(self, "tfid")
 
     @tfid.setter
-    def tfid(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def tfid(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "tfid", value)
 
 
@@ -424,17 +424,17 @@ class ConfigMatchList(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 device: Optional[pulumi.Input[_builtins.str]] = None,
-                 filter: Optional[pulumi.Input[_builtins.str]] = None,
-                 folder: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 send_emails: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 send_https: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 send_snmptraps: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 send_syslogs: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 send_to_panorama: Optional[pulumi.Input[_builtins.bool]] = None,
-                 snippet: Optional[pulumi.Input[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 device: pulumi.Input[Optional[_builtins.str]] = None,
+                 filter: pulumi.Input[Optional[_builtins.str]] = None,
+                 folder: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 send_emails: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 send_https: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 send_snmptraps: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 send_syslogs: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 send_to_panorama: pulumi.Input[Optional[_builtins.bool]] = None,
+                 snippet: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
         ConfigMatchList resource
@@ -563,17 +563,17 @@ class ConfigMatchList(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 device: Optional[pulumi.Input[_builtins.str]] = None,
-                 filter: Optional[pulumi.Input[_builtins.str]] = None,
-                 folder: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 send_emails: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 send_https: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 send_snmptraps: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 send_syslogs: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 send_to_panorama: Optional[pulumi.Input[_builtins.bool]] = None,
-                 snippet: Optional[pulumi.Input[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 device: pulumi.Input[Optional[_builtins.str]] = None,
+                 filter: pulumi.Input[Optional[_builtins.str]] = None,
+                 folder: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 send_emails: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 send_https: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 send_snmptraps: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 send_syslogs: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 send_to_panorama: pulumi.Input[Optional[_builtins.bool]] = None,
+                 snippet: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -605,18 +605,18 @@ class ConfigMatchList(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            description: Optional[pulumi.Input[_builtins.str]] = None,
-            device: Optional[pulumi.Input[_builtins.str]] = None,
-            filter: Optional[pulumi.Input[_builtins.str]] = None,
-            folder: Optional[pulumi.Input[_builtins.str]] = None,
-            name: Optional[pulumi.Input[_builtins.str]] = None,
-            send_emails: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-            send_https: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-            send_snmptraps: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-            send_syslogs: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-            send_to_panorama: Optional[pulumi.Input[_builtins.bool]] = None,
-            snippet: Optional[pulumi.Input[_builtins.str]] = None,
-            tfid: Optional[pulumi.Input[_builtins.str]] = None) -> 'ConfigMatchList':
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            device: pulumi.Input[Optional[_builtins.str]] = None,
+            filter: pulumi.Input[Optional[_builtins.str]] = None,
+            folder: pulumi.Input[Optional[_builtins.str]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            send_emails: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            send_https: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            send_snmptraps: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            send_syslogs: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            send_to_panorama: pulumi.Input[Optional[_builtins.bool]] = None,
+            snippet: pulumi.Input[Optional[_builtins.str]] = None,
+            tfid: pulumi.Input[Optional[_builtins.str]] = None) -> 'ConfigMatchList':
         """
         Get an existing ConfigMatchList resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

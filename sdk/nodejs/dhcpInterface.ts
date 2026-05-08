@@ -192,39 +192,39 @@ export interface DhcpInterfaceState {
     /**
      * The device in which the resource is defined
      */
-    device?: pulumi.Input<string>;
+    device?: pulumi.Input<string | undefined>;
     /**
      * The folder in which the resource is defined
      *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
-    folder?: pulumi.Input<string>;
+    folder?: pulumi.Input<string | undefined>;
     /**
      * Interface name
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Relay
      *
      * > ℹ️ **Note:** You must specify exactly one of `relay` and `server`.
      */
-    relay?: pulumi.Input<inputs.DhcpInterfaceRelay>;
+    relay?: pulumi.Input<inputs.DhcpInterfaceRelay | undefined>;
     /**
      * Server
      *
      * > ℹ️ **Note:** You must specify exactly one of `relay` and `server`.
      */
-    server?: pulumi.Input<inputs.DhcpInterfaceServer>;
+    server?: pulumi.Input<inputs.DhcpInterfaceServer | undefined>;
     /**
      * The snippet in which the resource is defined
      *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
-    snippet?: pulumi.Input<string>;
+    snippet?: pulumi.Input<string | undefined>;
     /**
      * The Terraform ID.
      */
-    tfid?: pulumi.Input<string>;
+    tfid?: pulumi.Input<string | undefined>;
 }
 
 /**
@@ -234,33 +234,33 @@ export interface DhcpInterfaceArgs {
     /**
      * The device in which the resource is defined
      */
-    device?: pulumi.Input<string>;
+    device?: pulumi.Input<string | undefined>;
     /**
      * The folder in which the resource is defined
      *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
-    folder?: pulumi.Input<string>;
+    folder?: pulumi.Input<string | undefined>;
     /**
      * Interface name
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Relay
      *
      * > ℹ️ **Note:** You must specify exactly one of `relay` and `server`.
      */
-    relay?: pulumi.Input<inputs.DhcpInterfaceRelay>;
+    relay?: pulumi.Input<inputs.DhcpInterfaceRelay | undefined>;
     /**
      * Server
      *
      * > ℹ️ **Note:** You must specify exactly one of `relay` and `server`.
      */
-    server?: pulumi.Input<inputs.DhcpInterfaceServer>;
+    server?: pulumi.Input<inputs.DhcpInterfaceServer | undefined>;
     /**
      * The snippet in which the resource is defined
      *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
-    snippet?: pulumi.Input<string>;
+    snippet?: pulumi.Input<string | undefined>;
 }

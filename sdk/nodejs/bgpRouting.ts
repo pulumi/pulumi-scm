@@ -141,31 +141,31 @@ export interface BgpRoutingState {
     /**
      * Accept route over s c
      */
-    acceptRouteOverSc?: pulumi.Input<boolean>;
+    acceptRouteOverSc?: pulumi.Input<boolean | undefined>;
     /**
      * Add host route to ike peer
      */
-    addHostRouteToIkePeer?: pulumi.Input<boolean>;
+    addHostRouteToIkePeer?: pulumi.Input<boolean | undefined>;
     /**
      * Backbone routing
      */
-    backboneRouting?: pulumi.Input<string>;
+    backboneRouting?: pulumi.Input<string | undefined>;
     /**
      * Outbound routes for services
      */
-    outboundRoutesForServices?: pulumi.Input<pulumi.Input<string>[]>;
+    outboundRoutesForServices?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Routing preference
      */
-    routingPreference?: pulumi.Input<inputs.BgpRoutingRoutingPreference>;
+    routingPreference?: pulumi.Input<inputs.BgpRoutingRoutingPreference | undefined>;
     /**
      * The Terraform ID.
      */
-    tfid?: pulumi.Input<string>;
+    tfid?: pulumi.Input<string | undefined>;
     /**
      * Withdraw static route
      */
-    withdrawStaticRoute?: pulumi.Input<boolean>;
+    withdrawStaticRoute?: pulumi.Input<boolean | undefined>;
 }
 
 /**
@@ -175,25 +175,25 @@ export interface BgpRoutingArgs {
     /**
      * Accept route over s c
      */
-    acceptRouteOverSc?: pulumi.Input<boolean>;
+    acceptRouteOverSc?: pulumi.Input<boolean | undefined>;
     /**
      * Add host route to ike peer
      */
-    addHostRouteToIkePeer?: pulumi.Input<boolean>;
+    addHostRouteToIkePeer?: pulumi.Input<boolean | undefined>;
     /**
      * Backbone routing
      */
-    backboneRouting?: pulumi.Input<string>;
+    backboneRouting?: pulumi.Input<string | undefined>;
     /**
      * Outbound routes for services
      */
-    outboundRoutesForServices?: pulumi.Input<pulumi.Input<string>[]>;
+    outboundRoutesForServices?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Routing preference
      */
-    routingPreference?: pulumi.Input<inputs.BgpRoutingRoutingPreference>;
+    routingPreference?: pulumi.Input<inputs.BgpRoutingRoutingPreference | undefined>;
     /**
      * Withdraw static route
      */
-    withdrawStaticRoute?: pulumi.Input<boolean>;
+    withdrawStaticRoute?: pulumi.Input<boolean | undefined>;
 }

@@ -216,11 +216,11 @@ def get_profile_group(device: Optional[_builtins.str] = None,
         url_filterings=pulumi.get(__ret__, 'url_filterings'),
         virus_and_wildfire_analyses=pulumi.get(__ret__, 'virus_and_wildfire_analyses'),
         vulnerabilities=pulumi.get(__ret__, 'vulnerabilities'))
-def get_profile_group_output(device: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
-                             folder: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
-                             id: Optional[pulumi.Input[_builtins.str]] = None,
-                             name: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
-                             snippet: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
+def get_profile_group_output(device: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
+                             folder: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
+                             id: pulumi.Input[Optional[_builtins.str]] = None,
+                             name: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
+                             snippet: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
                              opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetProfileGroupResult]:
     """
     ProfileGroup data source

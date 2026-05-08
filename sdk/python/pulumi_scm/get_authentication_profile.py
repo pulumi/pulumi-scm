@@ -208,11 +208,11 @@ def get_authentication_profile(device: Optional[_builtins.str] = None,
         tfid=pulumi.get(__ret__, 'tfid'),
         user_domain=pulumi.get(__ret__, 'user_domain'),
         username_modifier=pulumi.get(__ret__, 'username_modifier'))
-def get_authentication_profile_output(device: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
-                                      folder: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
-                                      id: Optional[pulumi.Input[_builtins.str]] = None,
-                                      name: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
-                                      snippet: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
+def get_authentication_profile_output(device: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
+                                      folder: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
+                                      id: pulumi.Input[Optional[_builtins.str]] = None,
+                                      name: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
+                                      snippet: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
                                       opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetAuthenticationProfileResult]:
     """
     AuthenticationProfile data source

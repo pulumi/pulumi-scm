@@ -135,10 +135,10 @@ def get_general_setting(device: Optional[_builtins.str] = None,
         id=pulumi.get(__ret__, 'id'),
         snippet=pulumi.get(__ret__, 'snippet'),
         tfid=pulumi.get(__ret__, 'tfid'))
-def get_general_setting_output(device: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
-                               folder: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
-                               id: Optional[pulumi.Input[_builtins.str]] = None,
-                               snippet: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
+def get_general_setting_output(device: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
+                               folder: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
+                               id: pulumi.Input[Optional[_builtins.str]] = None,
+                               snippet: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
                                opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetGeneralSettingResult]:
     """
     GeneralSetting data source

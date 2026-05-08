@@ -96,11 +96,11 @@ export interface GetSessionSettingOutputArgs {
     /**
      * The device in which the resource is defined
      */
-    device?: pulumi.Input<string>;
-    folder?: pulumi.Input<string>;
+    device?: pulumi.Input<string | undefined>;
+    folder?: pulumi.Input<string | undefined>;
     /**
      * UUID of the resource
      */
     id: pulumi.Input<string>;
-    snippet?: pulumi.Input<string>;
+    snippet?: pulumi.Input<string | undefined>;
 }

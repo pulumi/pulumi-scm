@@ -627,9 +627,9 @@ def get_device(folder: Optional[_builtins.str] = None,
         vm_state=pulumi.get(__ret__, 'vm_state'),
         wf_release_date=pulumi.get(__ret__, 'wf_release_date'),
         wf_ver=pulumi.get(__ret__, 'wf_ver'))
-def get_device_output(folder: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
-                      id: Optional[pulumi.Input[_builtins.str]] = None,
-                      name: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
+def get_device_output(folder: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
+                      id: pulumi.Input[Optional[_builtins.str]] = None,
+                      name: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
                       opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetDeviceResult]:
     """
     Device data source

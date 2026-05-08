@@ -218,71 +218,71 @@ export interface InterfaceManagementProfileState {
     /**
      * The device in which the resource is defined
      */
-    device?: pulumi.Input<string>;
+    device?: pulumi.Input<string | undefined>;
     /**
      * The folder in which the resource is defined
      *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
-    folder?: pulumi.Input<string>;
+    folder?: pulumi.Input<string | undefined>;
     /**
      * Allow HTTP?
      */
-    http?: pulumi.Input<boolean>;
+    http?: pulumi.Input<boolean | undefined>;
     /**
      * Allow HTTP OCSP?
      */
-    httpOcsp?: pulumi.Input<boolean>;
+    httpOcsp?: pulumi.Input<boolean | undefined>;
     /**
      * Allow HTTPS?
      */
-    https?: pulumi.Input<boolean>;
+    https?: pulumi.Input<boolean | undefined>;
     /**
      * Name
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Allowed IP address(es)
      */
-    permittedIps?: pulumi.Input<pulumi.Input<inputs.InterfaceManagementProfilePermittedIp>[]>;
+    permittedIps?: pulumi.Input<pulumi.Input<inputs.InterfaceManagementProfilePermittedIp>[] | undefined>;
     /**
      * Allow ping?
      */
-    ping?: pulumi.Input<boolean>;
+    ping?: pulumi.Input<boolean | undefined>;
     /**
      * Allow response pages?
      */
-    responsePages?: pulumi.Input<boolean>;
+    responsePages?: pulumi.Input<boolean | undefined>;
     /**
      * The snippet in which the resource is defined
      *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
-    snippet?: pulumi.Input<string>;
+    snippet?: pulumi.Input<string | undefined>;
     /**
      * Allow SSH?
      */
-    ssh?: pulumi.Input<boolean>;
+    ssh?: pulumi.Input<boolean | undefined>;
     /**
      * Allow telnet? Seriously, why would you do this?!?
      */
-    telnet?: pulumi.Input<boolean>;
+    telnet?: pulumi.Input<boolean | undefined>;
     /**
      * The Terraform ID.
      */
-    tfid?: pulumi.Input<string>;
+    tfid?: pulumi.Input<string | undefined>;
     /**
      * Allow User-ID?
      */
-    useridService?: pulumi.Input<boolean>;
+    useridService?: pulumi.Input<boolean | undefined>;
     /**
      * Allow User-ID syslog listener (SSL)?
      */
-    useridSyslogListenerSsl?: pulumi.Input<boolean>;
+    useridSyslogListenerSsl?: pulumi.Input<boolean | undefined>;
     /**
      * Allow User-ID syslog listener (UDP)?
      */
-    useridSyslogListenerUdp?: pulumi.Input<boolean>;
+    useridSyslogListenerUdp?: pulumi.Input<boolean | undefined>;
 }
 
 /**
@@ -292,65 +292,65 @@ export interface InterfaceManagementProfileArgs {
     /**
      * The device in which the resource is defined
      */
-    device?: pulumi.Input<string>;
+    device?: pulumi.Input<string | undefined>;
     /**
      * The folder in which the resource is defined
      *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
-    folder?: pulumi.Input<string>;
+    folder?: pulumi.Input<string | undefined>;
     /**
      * Allow HTTP?
      */
-    http?: pulumi.Input<boolean>;
+    http?: pulumi.Input<boolean | undefined>;
     /**
      * Allow HTTP OCSP?
      */
-    httpOcsp?: pulumi.Input<boolean>;
+    httpOcsp?: pulumi.Input<boolean | undefined>;
     /**
      * Allow HTTPS?
      */
-    https?: pulumi.Input<boolean>;
+    https?: pulumi.Input<boolean | undefined>;
     /**
      * Name
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Allowed IP address(es)
      */
-    permittedIps?: pulumi.Input<pulumi.Input<inputs.InterfaceManagementProfilePermittedIp>[]>;
+    permittedIps?: pulumi.Input<pulumi.Input<inputs.InterfaceManagementProfilePermittedIp>[] | undefined>;
     /**
      * Allow ping?
      */
-    ping?: pulumi.Input<boolean>;
+    ping?: pulumi.Input<boolean | undefined>;
     /**
      * Allow response pages?
      */
-    responsePages?: pulumi.Input<boolean>;
+    responsePages?: pulumi.Input<boolean | undefined>;
     /**
      * The snippet in which the resource is defined
      *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
-    snippet?: pulumi.Input<string>;
+    snippet?: pulumi.Input<string | undefined>;
     /**
      * Allow SSH?
      */
-    ssh?: pulumi.Input<boolean>;
+    ssh?: pulumi.Input<boolean | undefined>;
     /**
      * Allow telnet? Seriously, why would you do this?!?
      */
-    telnet?: pulumi.Input<boolean>;
+    telnet?: pulumi.Input<boolean | undefined>;
     /**
      * Allow User-ID?
      */
-    useridService?: pulumi.Input<boolean>;
+    useridService?: pulumi.Input<boolean | undefined>;
     /**
      * Allow User-ID syslog listener (SSL)?
      */
-    useridSyslogListenerSsl?: pulumi.Input<boolean>;
+    useridSyslogListenerSsl?: pulumi.Input<boolean | undefined>;
     /**
      * Allow User-ID syslog listener (UDP)?
      */
-    useridSyslogListenerUdp?: pulumi.Input<boolean>;
+    useridSyslogListenerUdp?: pulumi.Input<boolean | undefined>;
 }

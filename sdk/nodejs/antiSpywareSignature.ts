@@ -224,67 +224,67 @@ export interface AntiSpywareSignatureState {
     /**
      * Bugtraq
      */
-    bugtraqs?: pulumi.Input<pulumi.Input<string>[]>;
+    bugtraqs?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Comment
      */
-    comment?: pulumi.Input<string>;
+    comment?: pulumi.Input<string | undefined>;
     /**
      * Cve
      */
-    cves?: pulumi.Input<pulumi.Input<string>[]>;
+    cves?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * anti spyware signature default action
      */
-    defaultAction?: pulumi.Input<inputs.AntiSpywareSignatureDefaultAction>;
+    defaultAction?: pulumi.Input<inputs.AntiSpywareSignatureDefaultAction | undefined>;
     /**
      * The device in which the resource is defined
      */
-    device?: pulumi.Input<string>;
+    device?: pulumi.Input<string | undefined>;
     /**
      * Direction
      */
-    direction?: pulumi.Input<string>;
+    direction?: pulumi.Input<string | undefined>;
     /**
      * The folder in which the resource is defined
      *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
-    folder?: pulumi.Input<string>;
+    folder?: pulumi.Input<string | undefined>;
     /**
      * Reference
      */
-    references?: pulumi.Input<pulumi.Input<string>[]>;
+    references?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Severity
      */
-    severity?: pulumi.Input<string>;
+    severity?: pulumi.Input<string | undefined>;
     /**
      * anti spyware signature
      */
-    signature?: pulumi.Input<inputs.AntiSpywareSignatureSignature>;
+    signature?: pulumi.Input<inputs.AntiSpywareSignatureSignature | undefined>;
     /**
      * The snippet in which the resource is defined
      *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
-    snippet?: pulumi.Input<string>;
+    snippet?: pulumi.Input<string | undefined>;
     /**
      * The Terraform ID.
      */
-    tfid?: pulumi.Input<string>;
+    tfid?: pulumi.Input<string | undefined>;
     /**
      * threat id range \n\n and \n\n
      */
-    threatId?: pulumi.Input<string>;
+    threatId?: pulumi.Input<string | undefined>;
     /**
      * Threatname
      */
-    threatname?: pulumi.Input<string>;
+    threatname?: pulumi.Input<string | undefined>;
     /**
      * Vendor
      */
-    vendors?: pulumi.Input<pulumi.Input<string>[]>;
+    vendors?: pulumi.Input<pulumi.Input<string>[] | undefined>;
 }
 
 /**
@@ -294,51 +294,51 @@ export interface AntiSpywareSignatureArgs {
     /**
      * Bugtraq
      */
-    bugtraqs?: pulumi.Input<pulumi.Input<string>[]>;
+    bugtraqs?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Comment
      */
-    comment?: pulumi.Input<string>;
+    comment?: pulumi.Input<string | undefined>;
     /**
      * Cve
      */
-    cves?: pulumi.Input<pulumi.Input<string>[]>;
+    cves?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * anti spyware signature default action
      */
-    defaultAction?: pulumi.Input<inputs.AntiSpywareSignatureDefaultAction>;
+    defaultAction?: pulumi.Input<inputs.AntiSpywareSignatureDefaultAction | undefined>;
     /**
      * The device in which the resource is defined
      */
-    device?: pulumi.Input<string>;
+    device?: pulumi.Input<string | undefined>;
     /**
      * Direction
      */
-    direction?: pulumi.Input<string>;
+    direction?: pulumi.Input<string | undefined>;
     /**
      * The folder in which the resource is defined
      *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
-    folder?: pulumi.Input<string>;
+    folder?: pulumi.Input<string | undefined>;
     /**
      * Reference
      */
-    references?: pulumi.Input<pulumi.Input<string>[]>;
+    references?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Severity
      */
-    severity?: pulumi.Input<string>;
+    severity?: pulumi.Input<string | undefined>;
     /**
      * anti spyware signature
      */
-    signature?: pulumi.Input<inputs.AntiSpywareSignatureSignature>;
+    signature?: pulumi.Input<inputs.AntiSpywareSignatureSignature | undefined>;
     /**
      * The snippet in which the resource is defined
      *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
-    snippet?: pulumi.Input<string>;
+    snippet?: pulumi.Input<string | undefined>;
     /**
      * threat id range \n\n and \n\n
      */
@@ -350,5 +350,5 @@ export interface AntiSpywareSignatureArgs {
     /**
      * Vendor
      */
-    vendors?: pulumi.Input<pulumi.Input<string>[]>;
+    vendors?: pulumi.Input<pulumi.Input<string>[] | undefined>;
 }

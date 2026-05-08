@@ -21,43 +21,43 @@ __all__ = ['ZoneProtectionProfileArgs', 'ZoneProtectionProfile']
 @pulumi.input_type
 class ZoneProtectionProfileArgs:
     def __init__(__self__, *,
-                 asymmetric_path: Optional[pulumi.Input[_builtins.str]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 device: Optional[pulumi.Input[_builtins.str]] = None,
-                 discard_icmp_embedded_error: Optional[pulumi.Input[_builtins.bool]] = None,
-                 flood: Optional[pulumi.Input['ZoneProtectionProfileFloodArgs']] = None,
-                 folder: Optional[pulumi.Input[_builtins.str]] = None,
-                 fragmented_traffic_discard: Optional[pulumi.Input[_builtins.bool]] = None,
-                 icmp_frag_discard: Optional[pulumi.Input[_builtins.bool]] = None,
-                 icmp_large_packet_discard: Optional[pulumi.Input[_builtins.bool]] = None,
-                 icmp_ping_zero_id_discard: Optional[pulumi.Input[_builtins.bool]] = None,
-                 ipv6: Optional[pulumi.Input['ZoneProtectionProfileIpv6Args']] = None,
-                 l2_sec_group_tag_protection: Optional[pulumi.Input['ZoneProtectionProfileL2SecGroupTagProtectionArgs']] = None,
-                 loose_source_routing_discard: Optional[pulumi.Input[_builtins.bool]] = None,
-                 malformed_option_discard: Optional[pulumi.Input[_builtins.bool]] = None,
-                 mismatched_overlapping_tcp_segment_discard: Optional[pulumi.Input[_builtins.bool]] = None,
-                 mptcp_option_strip: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 non_ip_protocol: Optional[pulumi.Input['ZoneProtectionProfileNonIpProtocolArgs']] = None,
-                 record_route_discard: Optional[pulumi.Input[_builtins.bool]] = None,
-                 reject_non_syn_tcp: Optional[pulumi.Input[_builtins.str]] = None,
-                 scan_white_lists: Optional[pulumi.Input[Sequence[pulumi.Input['ZoneProtectionProfileScanWhiteListArgs']]]] = None,
-                 scans: Optional[pulumi.Input[Sequence[pulumi.Input['ZoneProtectionProfileScanArgs']]]] = None,
-                 security_discard: Optional[pulumi.Input[_builtins.bool]] = None,
-                 snippet: Optional[pulumi.Input[_builtins.str]] = None,
-                 spoofed_ip_discard: Optional[pulumi.Input[_builtins.bool]] = None,
-                 stream_id_discard: Optional[pulumi.Input[_builtins.bool]] = None,
-                 strict_ip_check: Optional[pulumi.Input[_builtins.bool]] = None,
-                 strict_source_routing_discard: Optional[pulumi.Input[_builtins.bool]] = None,
-                 suppress_icmp_needfrag: Optional[pulumi.Input[_builtins.bool]] = None,
-                 suppress_icmp_timeexceeded: Optional[pulumi.Input[_builtins.bool]] = None,
-                 tcp_fast_open_and_data_strip: Optional[pulumi.Input[_builtins.bool]] = None,
-                 tcp_handshake_discard: Optional[pulumi.Input[_builtins.bool]] = None,
-                 tcp_syn_with_data_discard: Optional[pulumi.Input[_builtins.bool]] = None,
-                 tcp_synack_with_data_discard: Optional[pulumi.Input[_builtins.bool]] = None,
-                 tcp_timestamp_strip: Optional[pulumi.Input[_builtins.bool]] = None,
-                 timestamp_discard: Optional[pulumi.Input[_builtins.bool]] = None,
-                 unknown_option_discard: Optional[pulumi.Input[_builtins.bool]] = None):
+                 asymmetric_path: pulumi.Input[Optional[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 device: pulumi.Input[Optional[_builtins.str]] = None,
+                 discard_icmp_embedded_error: pulumi.Input[Optional[_builtins.bool]] = None,
+                 flood: pulumi.Input[Optional['ZoneProtectionProfileFloodArgs']] = None,
+                 folder: pulumi.Input[Optional[_builtins.str]] = None,
+                 fragmented_traffic_discard: pulumi.Input[Optional[_builtins.bool]] = None,
+                 icmp_frag_discard: pulumi.Input[Optional[_builtins.bool]] = None,
+                 icmp_large_packet_discard: pulumi.Input[Optional[_builtins.bool]] = None,
+                 icmp_ping_zero_id_discard: pulumi.Input[Optional[_builtins.bool]] = None,
+                 ipv6: pulumi.Input[Optional['ZoneProtectionProfileIpv6Args']] = None,
+                 l2_sec_group_tag_protection: pulumi.Input[Optional['ZoneProtectionProfileL2SecGroupTagProtectionArgs']] = None,
+                 loose_source_routing_discard: pulumi.Input[Optional[_builtins.bool]] = None,
+                 malformed_option_discard: pulumi.Input[Optional[_builtins.bool]] = None,
+                 mismatched_overlapping_tcp_segment_discard: pulumi.Input[Optional[_builtins.bool]] = None,
+                 mptcp_option_strip: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 non_ip_protocol: pulumi.Input[Optional['ZoneProtectionProfileNonIpProtocolArgs']] = None,
+                 record_route_discard: pulumi.Input[Optional[_builtins.bool]] = None,
+                 reject_non_syn_tcp: pulumi.Input[Optional[_builtins.str]] = None,
+                 scan_white_lists: pulumi.Input[Optional[Sequence[pulumi.Input['ZoneProtectionProfileScanWhiteListArgs']]]] = None,
+                 scans: pulumi.Input[Optional[Sequence[pulumi.Input['ZoneProtectionProfileScanArgs']]]] = None,
+                 security_discard: pulumi.Input[Optional[_builtins.bool]] = None,
+                 snippet: pulumi.Input[Optional[_builtins.str]] = None,
+                 spoofed_ip_discard: pulumi.Input[Optional[_builtins.bool]] = None,
+                 stream_id_discard: pulumi.Input[Optional[_builtins.bool]] = None,
+                 strict_ip_check: pulumi.Input[Optional[_builtins.bool]] = None,
+                 strict_source_routing_discard: pulumi.Input[Optional[_builtins.bool]] = None,
+                 suppress_icmp_needfrag: pulumi.Input[Optional[_builtins.bool]] = None,
+                 suppress_icmp_timeexceeded: pulumi.Input[Optional[_builtins.bool]] = None,
+                 tcp_fast_open_and_data_strip: pulumi.Input[Optional[_builtins.bool]] = None,
+                 tcp_handshake_discard: pulumi.Input[Optional[_builtins.bool]] = None,
+                 tcp_syn_with_data_discard: pulumi.Input[Optional[_builtins.bool]] = None,
+                 tcp_synack_with_data_discard: pulumi.Input[Optional[_builtins.bool]] = None,
+                 tcp_timestamp_strip: pulumi.Input[Optional[_builtins.bool]] = None,
+                 timestamp_discard: pulumi.Input[Optional[_builtins.bool]] = None,
+                 unknown_option_discard: pulumi.Input[Optional[_builtins.bool]] = None):
         """
         The set of arguments for constructing a ZoneProtectionProfile resource.
 
@@ -194,7 +194,7 @@ class ZoneProtectionProfileArgs:
 
     @_builtins.property
     @pulumi.getter(name="asymmetricPath")
-    def asymmetric_path(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def asymmetric_path(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Determine whether to drop or bypass packets that contain out-of-sync ACKs or out-of-window sequence numbers:
         * `global` — Use system-wide setting that is assigned through TCP Settings or the CLI.
@@ -204,24 +204,24 @@ class ZoneProtectionProfileArgs:
         return pulumi.get(self, "asymmetric_path")
 
     @asymmetric_path.setter
-    def asymmetric_path(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def asymmetric_path(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "asymmetric_path", value)
 
     @_builtins.property
     @pulumi.getter
-    def description(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def description(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The description of the profile
         """
         return pulumi.get(self, "description")
 
     @description.setter
-    def description(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def description(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "description", value)
 
     @_builtins.property
     @pulumi.getter
-    def device(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def device(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The device in which the resource is defined
 
@@ -230,36 +230,36 @@ class ZoneProtectionProfileArgs:
         return pulumi.get(self, "device")
 
     @device.setter
-    def device(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def device(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "device", value)
 
     @_builtins.property
     @pulumi.getter(name="discardIcmpEmbeddedError")
-    def discard_icmp_embedded_error(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def discard_icmp_embedded_error(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Discard ICMP packets that are embedded with an error message.
         """
         return pulumi.get(self, "discard_icmp_embedded_error")
 
     @discard_icmp_embedded_error.setter
-    def discard_icmp_embedded_error(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def discard_icmp_embedded_error(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "discard_icmp_embedded_error", value)
 
     @_builtins.property
     @pulumi.getter
-    def flood(self) -> Optional[pulumi.Input['ZoneProtectionProfileFloodArgs']]:
+    def flood(self) -> pulumi.Input[Optional['ZoneProtectionProfileFloodArgs']]:
         """
         Flood
         """
         return pulumi.get(self, "flood")
 
     @flood.setter
-    def flood(self, value: Optional[pulumi.Input['ZoneProtectionProfileFloodArgs']]):
+    def flood(self, value: pulumi.Input[Optional['ZoneProtectionProfileFloodArgs']]):
         pulumi.set(self, "flood", value)
 
     @_builtins.property
     @pulumi.getter
-    def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def folder(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
 
@@ -268,120 +268,120 @@ class ZoneProtectionProfileArgs:
         return pulumi.get(self, "folder")
 
     @folder.setter
-    def folder(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def folder(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "folder", value)
 
     @_builtins.property
     @pulumi.getter(name="fragmentedTrafficDiscard")
-    def fragmented_traffic_discard(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def fragmented_traffic_discard(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Discard fragmented IP packets.
         """
         return pulumi.get(self, "fragmented_traffic_discard")
 
     @fragmented_traffic_discard.setter
-    def fragmented_traffic_discard(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def fragmented_traffic_discard(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "fragmented_traffic_discard", value)
 
     @_builtins.property
     @pulumi.getter(name="icmpFragDiscard")
-    def icmp_frag_discard(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def icmp_frag_discard(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Discard packets that consist of ICMP fragments.
         """
         return pulumi.get(self, "icmp_frag_discard")
 
     @icmp_frag_discard.setter
-    def icmp_frag_discard(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def icmp_frag_discard(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "icmp_frag_discard", value)
 
     @_builtins.property
     @pulumi.getter(name="icmpLargePacketDiscard")
-    def icmp_large_packet_discard(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def icmp_large_packet_discard(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Discard ICMP packets that are larger than 1024 bytes.
         """
         return pulumi.get(self, "icmp_large_packet_discard")
 
     @icmp_large_packet_discard.setter
-    def icmp_large_packet_discard(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def icmp_large_packet_discard(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "icmp_large_packet_discard", value)
 
     @_builtins.property
     @pulumi.getter(name="icmpPingZeroIdDiscard")
-    def icmp_ping_zero_id_discard(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def icmp_ping_zero_id_discard(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Discard packets if the ICMP ping packet has an identifier value of 0.
         """
         return pulumi.get(self, "icmp_ping_zero_id_discard")
 
     @icmp_ping_zero_id_discard.setter
-    def icmp_ping_zero_id_discard(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def icmp_ping_zero_id_discard(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "icmp_ping_zero_id_discard", value)
 
     @_builtins.property
     @pulumi.getter
-    def ipv6(self) -> Optional[pulumi.Input['ZoneProtectionProfileIpv6Args']]:
+    def ipv6(self) -> pulumi.Input[Optional['ZoneProtectionProfileIpv6Args']]:
         """
         Ipv6
         """
         return pulumi.get(self, "ipv6")
 
     @ipv6.setter
-    def ipv6(self, value: Optional[pulumi.Input['ZoneProtectionProfileIpv6Args']]):
+    def ipv6(self, value: pulumi.Input[Optional['ZoneProtectionProfileIpv6Args']]):
         pulumi.set(self, "ipv6", value)
 
     @_builtins.property
     @pulumi.getter(name="l2SecGroupTagProtection")
-    def l2_sec_group_tag_protection(self) -> Optional[pulumi.Input['ZoneProtectionProfileL2SecGroupTagProtectionArgs']]:
+    def l2_sec_group_tag_protection(self) -> pulumi.Input[Optional['ZoneProtectionProfileL2SecGroupTagProtectionArgs']]:
         """
         L2 sec group tag protection
         """
         return pulumi.get(self, "l2_sec_group_tag_protection")
 
     @l2_sec_group_tag_protection.setter
-    def l2_sec_group_tag_protection(self, value: Optional[pulumi.Input['ZoneProtectionProfileL2SecGroupTagProtectionArgs']]):
+    def l2_sec_group_tag_protection(self, value: pulumi.Input[Optional['ZoneProtectionProfileL2SecGroupTagProtectionArgs']]):
         pulumi.set(self, "l2_sec_group_tag_protection", value)
 
     @_builtins.property
     @pulumi.getter(name="looseSourceRoutingDiscard")
-    def loose_source_routing_discard(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def loose_source_routing_discard(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Discard packets with the Loose Source Routing IP option set. Loose Source Routing is an option whereby a source of a datagram provides routing information and a gateway or host is allowed to choose any route of a number of intermediate gateways to get the datagram to the next address in the route.
         """
         return pulumi.get(self, "loose_source_routing_discard")
 
     @loose_source_routing_discard.setter
-    def loose_source_routing_discard(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def loose_source_routing_discard(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "loose_source_routing_discard", value)
 
     @_builtins.property
     @pulumi.getter(name="malformedOptionDiscard")
-    def malformed_option_discard(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def malformed_option_discard(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Discard packets if they have incorrect combinations of class, number, and length based on RFCs 791, 1108, 1393, and 2113.
         """
         return pulumi.get(self, "malformed_option_discard")
 
     @malformed_option_discard.setter
-    def malformed_option_discard(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def malformed_option_discard(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "malformed_option_discard", value)
 
     @_builtins.property
     @pulumi.getter(name="mismatchedOverlappingTcpSegmentDiscard")
-    def mismatched_overlapping_tcp_segment_discard(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def mismatched_overlapping_tcp_segment_discard(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Drop packets with mismatched overlapping TCP segments.
         """
         return pulumi.get(self, "mismatched_overlapping_tcp_segment_discard")
 
     @mismatched_overlapping_tcp_segment_discard.setter
-    def mismatched_overlapping_tcp_segment_discard(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def mismatched_overlapping_tcp_segment_discard(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "mismatched_overlapping_tcp_segment_discard", value)
 
     @_builtins.property
     @pulumi.getter(name="mptcpOptionStrip")
-    def mptcp_option_strip(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def mptcp_option_strip(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         MPTCP is an extension of TCP that allows a client to maintain a connection by simultaneously using multiple paths to connect to the destination host. By default, MPTCP support is disabled, based on the global MPTCP setting.  Review or adjust the MPTCP settings for the security zones associated with this profile:
         * `no` — Enable MPTCP support (do not strip the MPTCP option).
@@ -391,48 +391,48 @@ class ZoneProtectionProfileArgs:
         return pulumi.get(self, "mptcp_option_strip")
 
     @mptcp_option_strip.setter
-    def mptcp_option_strip(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def mptcp_option_strip(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "mptcp_option_strip", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The profile name
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter(name="nonIpProtocol")
-    def non_ip_protocol(self) -> Optional[pulumi.Input['ZoneProtectionProfileNonIpProtocolArgs']]:
+    def non_ip_protocol(self) -> pulumi.Input[Optional['ZoneProtectionProfileNonIpProtocolArgs']]:
         """
         Non ip protocol
         """
         return pulumi.get(self, "non_ip_protocol")
 
     @non_ip_protocol.setter
-    def non_ip_protocol(self, value: Optional[pulumi.Input['ZoneProtectionProfileNonIpProtocolArgs']]):
+    def non_ip_protocol(self, value: pulumi.Input[Optional['ZoneProtectionProfileNonIpProtocolArgs']]):
         pulumi.set(self, "non_ip_protocol", value)
 
     @_builtins.property
     @pulumi.getter(name="recordRouteDiscard")
-    def record_route_discard(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def record_route_discard(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Discard packets with the Record Route IP option set. When a datagram has this option, each router that routes the datagram adds its own IP address to the header, thus providing the path to the recipient.
         """
         return pulumi.get(self, "record_route_discard")
 
     @record_route_discard.setter
-    def record_route_discard(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def record_route_discard(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "record_route_discard", value)
 
     @_builtins.property
     @pulumi.getter(name="rejectNonSynTcp")
-    def reject_non_syn_tcp(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def reject_non_syn_tcp(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Determine whether to reject the packet if the first packet for the TCP session setup is not a SYN packet:
         * `global` — Use system-wide setting that is assigned through the CLI.
@@ -442,48 +442,48 @@ class ZoneProtectionProfileArgs:
         return pulumi.get(self, "reject_non_syn_tcp")
 
     @reject_non_syn_tcp.setter
-    def reject_non_syn_tcp(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def reject_non_syn_tcp(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "reject_non_syn_tcp", value)
 
     @_builtins.property
     @pulumi.getter(name="scanWhiteLists")
-    def scan_white_lists(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['ZoneProtectionProfileScanWhiteListArgs']]]]:
+    def scan_white_lists(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['ZoneProtectionProfileScanWhiteListArgs']]]]:
         """
         Scan white list
         """
         return pulumi.get(self, "scan_white_lists")
 
     @scan_white_lists.setter
-    def scan_white_lists(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['ZoneProtectionProfileScanWhiteListArgs']]]]):
+    def scan_white_lists(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['ZoneProtectionProfileScanWhiteListArgs']]]]):
         pulumi.set(self, "scan_white_lists", value)
 
     @_builtins.property
     @pulumi.getter
-    def scans(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['ZoneProtectionProfileScanArgs']]]]:
+    def scans(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['ZoneProtectionProfileScanArgs']]]]:
         """
         Scan
         """
         return pulumi.get(self, "scans")
 
     @scans.setter
-    def scans(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['ZoneProtectionProfileScanArgs']]]]):
+    def scans(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['ZoneProtectionProfileScanArgs']]]]):
         pulumi.set(self, "scans", value)
 
     @_builtins.property
     @pulumi.getter(name="securityDiscard")
-    def security_discard(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def security_discard(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Discard packets if the security option is defined.
         """
         return pulumi.get(self, "security_discard")
 
     @security_discard.setter
-    def security_discard(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def security_discard(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "security_discard", value)
 
     @_builtins.property
     @pulumi.getter
-    def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def snippet(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
 
@@ -492,36 +492,36 @@ class ZoneProtectionProfileArgs:
         return pulumi.get(self, "snippet")
 
     @snippet.setter
-    def snippet(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def snippet(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "snippet", value)
 
     @_builtins.property
     @pulumi.getter(name="spoofedIpDiscard")
-    def spoofed_ip_discard(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def spoofed_ip_discard(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Check that the source IP address of the ingress packet is routable and the routing interface is in the same zone as the ingress interface. If either condition is not true, discard the packet.
         """
         return pulumi.get(self, "spoofed_ip_discard")
 
     @spoofed_ip_discard.setter
-    def spoofed_ip_discard(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def spoofed_ip_discard(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "spoofed_ip_discard", value)
 
     @_builtins.property
     @pulumi.getter(name="streamIdDiscard")
-    def stream_id_discard(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def stream_id_discard(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Discard packets if the Stream ID option is defined.
         """
         return pulumi.get(self, "stream_id_discard")
 
     @stream_id_discard.setter
-    def stream_id_discard(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def stream_id_discard(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "stream_id_discard", value)
 
     @_builtins.property
     @pulumi.getter(name="strictIpCheck")
-    def strict_ip_check(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def strict_ip_check(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Check that both conditions are true:
         * The source IP address is not the subnet broadcast IP address of the ingress interface.
@@ -531,171 +531,171 @@ class ZoneProtectionProfileArgs:
         return pulumi.get(self, "strict_ip_check")
 
     @strict_ip_check.setter
-    def strict_ip_check(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def strict_ip_check(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "strict_ip_check", value)
 
     @_builtins.property
     @pulumi.getter(name="strictSourceRoutingDiscard")
-    def strict_source_routing_discard(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def strict_source_routing_discard(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Discard packets with the Strict Source Routing IP option set. Strict Source Routing is an option whereby a source of a datagram provides routing information through which a gateway or host must send the datagram.
         """
         return pulumi.get(self, "strict_source_routing_discard")
 
     @strict_source_routing_discard.setter
-    def strict_source_routing_discard(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def strict_source_routing_discard(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "strict_source_routing_discard", value)
 
     @_builtins.property
     @pulumi.getter(name="suppressIcmpNeedfrag")
-    def suppress_icmp_needfrag(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def suppress_icmp_needfrag(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Stop sending ICMP fragmentation needed messages in response to packets that exceed the interface MTU and have the do not fragment (DF) bit set. This setting will interfere with the PMTUD process performed by hosts behind the firewall.
         """
         return pulumi.get(self, "suppress_icmp_needfrag")
 
     @suppress_icmp_needfrag.setter
-    def suppress_icmp_needfrag(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def suppress_icmp_needfrag(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "suppress_icmp_needfrag", value)
 
     @_builtins.property
     @pulumi.getter(name="suppressIcmpTimeexceeded")
-    def suppress_icmp_timeexceeded(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def suppress_icmp_timeexceeded(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Stop sending ICMP TTL expired messages.
         """
         return pulumi.get(self, "suppress_icmp_timeexceeded")
 
     @suppress_icmp_timeexceeded.setter
-    def suppress_icmp_timeexceeded(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def suppress_icmp_timeexceeded(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "suppress_icmp_timeexceeded", value)
 
     @_builtins.property
     @pulumi.getter(name="tcpFastOpenAndDataStrip")
-    def tcp_fast_open_and_data_strip(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def tcp_fast_open_and_data_strip(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Strip the TCP Fast Open option (and data payload, if any) from the TCP SYN or SYN-ACK packet during a TCP three-way handshake.
         """
         return pulumi.get(self, "tcp_fast_open_and_data_strip")
 
     @tcp_fast_open_and_data_strip.setter
-    def tcp_fast_open_and_data_strip(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def tcp_fast_open_and_data_strip(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "tcp_fast_open_and_data_strip", value)
 
     @_builtins.property
     @pulumi.getter(name="tcpHandshakeDiscard")
-    def tcp_handshake_discard(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def tcp_handshake_discard(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Drop packets with split handshakes.
         """
         return pulumi.get(self, "tcp_handshake_discard")
 
     @tcp_handshake_discard.setter
-    def tcp_handshake_discard(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def tcp_handshake_discard(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "tcp_handshake_discard", value)
 
     @_builtins.property
     @pulumi.getter(name="tcpSynWithDataDiscard")
-    def tcp_syn_with_data_discard(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def tcp_syn_with_data_discard(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Prevent a TCP session from being established if the TCP SYN packet contains data during a three-way handshake.
         """
         return pulumi.get(self, "tcp_syn_with_data_discard")
 
     @tcp_syn_with_data_discard.setter
-    def tcp_syn_with_data_discard(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def tcp_syn_with_data_discard(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "tcp_syn_with_data_discard", value)
 
     @_builtins.property
     @pulumi.getter(name="tcpSynackWithDataDiscard")
-    def tcp_synack_with_data_discard(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def tcp_synack_with_data_discard(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Prevent a TCP session from being established if the TCP SYN-ACK packet contains data during a three-way handshake.
         """
         return pulumi.get(self, "tcp_synack_with_data_discard")
 
     @tcp_synack_with_data_discard.setter
-    def tcp_synack_with_data_discard(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def tcp_synack_with_data_discard(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "tcp_synack_with_data_discard", value)
 
     @_builtins.property
     @pulumi.getter(name="tcpTimestampStrip")
-    def tcp_timestamp_strip(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def tcp_timestamp_strip(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Determine whether the packet has a TCP timestamp in the header and, if it does, strip the timestamp from the header.
         """
         return pulumi.get(self, "tcp_timestamp_strip")
 
     @tcp_timestamp_strip.setter
-    def tcp_timestamp_strip(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def tcp_timestamp_strip(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "tcp_timestamp_strip", value)
 
     @_builtins.property
     @pulumi.getter(name="timestampDiscard")
-    def timestamp_discard(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def timestamp_discard(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Discard packets with the Timestamp IP option set.
         """
         return pulumi.get(self, "timestamp_discard")
 
     @timestamp_discard.setter
-    def timestamp_discard(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def timestamp_discard(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "timestamp_discard", value)
 
     @_builtins.property
     @pulumi.getter(name="unknownOptionDiscard")
-    def unknown_option_discard(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def unknown_option_discard(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Discard packets if the class and number are unknown.
         """
         return pulumi.get(self, "unknown_option_discard")
 
     @unknown_option_discard.setter
-    def unknown_option_discard(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def unknown_option_discard(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "unknown_option_discard", value)
 
 
 @pulumi.input_type
 class _ZoneProtectionProfileState:
     def __init__(__self__, *,
-                 asymmetric_path: Optional[pulumi.Input[_builtins.str]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 device: Optional[pulumi.Input[_builtins.str]] = None,
-                 discard_icmp_embedded_error: Optional[pulumi.Input[_builtins.bool]] = None,
-                 flood: Optional[pulumi.Input['ZoneProtectionProfileFloodArgs']] = None,
-                 folder: Optional[pulumi.Input[_builtins.str]] = None,
-                 fragmented_traffic_discard: Optional[pulumi.Input[_builtins.bool]] = None,
-                 icmp_frag_discard: Optional[pulumi.Input[_builtins.bool]] = None,
-                 icmp_large_packet_discard: Optional[pulumi.Input[_builtins.bool]] = None,
-                 icmp_ping_zero_id_discard: Optional[pulumi.Input[_builtins.bool]] = None,
-                 ipv6: Optional[pulumi.Input['ZoneProtectionProfileIpv6Args']] = None,
-                 l2_sec_group_tag_protection: Optional[pulumi.Input['ZoneProtectionProfileL2SecGroupTagProtectionArgs']] = None,
-                 loose_source_routing_discard: Optional[pulumi.Input[_builtins.bool]] = None,
-                 malformed_option_discard: Optional[pulumi.Input[_builtins.bool]] = None,
-                 mismatched_overlapping_tcp_segment_discard: Optional[pulumi.Input[_builtins.bool]] = None,
-                 mptcp_option_strip: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 non_ip_protocol: Optional[pulumi.Input['ZoneProtectionProfileNonIpProtocolArgs']] = None,
-                 record_route_discard: Optional[pulumi.Input[_builtins.bool]] = None,
-                 reject_non_syn_tcp: Optional[pulumi.Input[_builtins.str]] = None,
-                 scan_white_lists: Optional[pulumi.Input[Sequence[pulumi.Input['ZoneProtectionProfileScanWhiteListArgs']]]] = None,
-                 scans: Optional[pulumi.Input[Sequence[pulumi.Input['ZoneProtectionProfileScanArgs']]]] = None,
-                 security_discard: Optional[pulumi.Input[_builtins.bool]] = None,
-                 snippet: Optional[pulumi.Input[_builtins.str]] = None,
-                 spoofed_ip_discard: Optional[pulumi.Input[_builtins.bool]] = None,
-                 stream_id_discard: Optional[pulumi.Input[_builtins.bool]] = None,
-                 strict_ip_check: Optional[pulumi.Input[_builtins.bool]] = None,
-                 strict_source_routing_discard: Optional[pulumi.Input[_builtins.bool]] = None,
-                 suppress_icmp_needfrag: Optional[pulumi.Input[_builtins.bool]] = None,
-                 suppress_icmp_timeexceeded: Optional[pulumi.Input[_builtins.bool]] = None,
-                 tcp_fast_open_and_data_strip: Optional[pulumi.Input[_builtins.bool]] = None,
-                 tcp_handshake_discard: Optional[pulumi.Input[_builtins.bool]] = None,
-                 tcp_syn_with_data_discard: Optional[pulumi.Input[_builtins.bool]] = None,
-                 tcp_synack_with_data_discard: Optional[pulumi.Input[_builtins.bool]] = None,
-                 tcp_timestamp_strip: Optional[pulumi.Input[_builtins.bool]] = None,
-                 tfid: Optional[pulumi.Input[_builtins.str]] = None,
-                 timestamp_discard: Optional[pulumi.Input[_builtins.bool]] = None,
-                 unknown_option_discard: Optional[pulumi.Input[_builtins.bool]] = None):
+                 asymmetric_path: pulumi.Input[Optional[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 device: pulumi.Input[Optional[_builtins.str]] = None,
+                 discard_icmp_embedded_error: pulumi.Input[Optional[_builtins.bool]] = None,
+                 flood: pulumi.Input[Optional['ZoneProtectionProfileFloodArgs']] = None,
+                 folder: pulumi.Input[Optional[_builtins.str]] = None,
+                 fragmented_traffic_discard: pulumi.Input[Optional[_builtins.bool]] = None,
+                 icmp_frag_discard: pulumi.Input[Optional[_builtins.bool]] = None,
+                 icmp_large_packet_discard: pulumi.Input[Optional[_builtins.bool]] = None,
+                 icmp_ping_zero_id_discard: pulumi.Input[Optional[_builtins.bool]] = None,
+                 ipv6: pulumi.Input[Optional['ZoneProtectionProfileIpv6Args']] = None,
+                 l2_sec_group_tag_protection: pulumi.Input[Optional['ZoneProtectionProfileL2SecGroupTagProtectionArgs']] = None,
+                 loose_source_routing_discard: pulumi.Input[Optional[_builtins.bool]] = None,
+                 malformed_option_discard: pulumi.Input[Optional[_builtins.bool]] = None,
+                 mismatched_overlapping_tcp_segment_discard: pulumi.Input[Optional[_builtins.bool]] = None,
+                 mptcp_option_strip: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 non_ip_protocol: pulumi.Input[Optional['ZoneProtectionProfileNonIpProtocolArgs']] = None,
+                 record_route_discard: pulumi.Input[Optional[_builtins.bool]] = None,
+                 reject_non_syn_tcp: pulumi.Input[Optional[_builtins.str]] = None,
+                 scan_white_lists: pulumi.Input[Optional[Sequence[pulumi.Input['ZoneProtectionProfileScanWhiteListArgs']]]] = None,
+                 scans: pulumi.Input[Optional[Sequence[pulumi.Input['ZoneProtectionProfileScanArgs']]]] = None,
+                 security_discard: pulumi.Input[Optional[_builtins.bool]] = None,
+                 snippet: pulumi.Input[Optional[_builtins.str]] = None,
+                 spoofed_ip_discard: pulumi.Input[Optional[_builtins.bool]] = None,
+                 stream_id_discard: pulumi.Input[Optional[_builtins.bool]] = None,
+                 strict_ip_check: pulumi.Input[Optional[_builtins.bool]] = None,
+                 strict_source_routing_discard: pulumi.Input[Optional[_builtins.bool]] = None,
+                 suppress_icmp_needfrag: pulumi.Input[Optional[_builtins.bool]] = None,
+                 suppress_icmp_timeexceeded: pulumi.Input[Optional[_builtins.bool]] = None,
+                 tcp_fast_open_and_data_strip: pulumi.Input[Optional[_builtins.bool]] = None,
+                 tcp_handshake_discard: pulumi.Input[Optional[_builtins.bool]] = None,
+                 tcp_syn_with_data_discard: pulumi.Input[Optional[_builtins.bool]] = None,
+                 tcp_synack_with_data_discard: pulumi.Input[Optional[_builtins.bool]] = None,
+                 tcp_timestamp_strip: pulumi.Input[Optional[_builtins.bool]] = None,
+                 tfid: pulumi.Input[Optional[_builtins.str]] = None,
+                 timestamp_discard: pulumi.Input[Optional[_builtins.bool]] = None,
+                 unknown_option_discard: pulumi.Input[Optional[_builtins.bool]] = None):
         """
         Input properties used for looking up and filtering ZoneProtectionProfile resources.
 
@@ -835,7 +835,7 @@ class _ZoneProtectionProfileState:
 
     @_builtins.property
     @pulumi.getter(name="asymmetricPath")
-    def asymmetric_path(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def asymmetric_path(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Determine whether to drop or bypass packets that contain out-of-sync ACKs or out-of-window sequence numbers:
         * `global` — Use system-wide setting that is assigned through TCP Settings or the CLI.
@@ -845,24 +845,24 @@ class _ZoneProtectionProfileState:
         return pulumi.get(self, "asymmetric_path")
 
     @asymmetric_path.setter
-    def asymmetric_path(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def asymmetric_path(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "asymmetric_path", value)
 
     @_builtins.property
     @pulumi.getter
-    def description(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def description(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The description of the profile
         """
         return pulumi.get(self, "description")
 
     @description.setter
-    def description(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def description(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "description", value)
 
     @_builtins.property
     @pulumi.getter
-    def device(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def device(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The device in which the resource is defined
 
@@ -871,36 +871,36 @@ class _ZoneProtectionProfileState:
         return pulumi.get(self, "device")
 
     @device.setter
-    def device(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def device(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "device", value)
 
     @_builtins.property
     @pulumi.getter(name="discardIcmpEmbeddedError")
-    def discard_icmp_embedded_error(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def discard_icmp_embedded_error(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Discard ICMP packets that are embedded with an error message.
         """
         return pulumi.get(self, "discard_icmp_embedded_error")
 
     @discard_icmp_embedded_error.setter
-    def discard_icmp_embedded_error(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def discard_icmp_embedded_error(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "discard_icmp_embedded_error", value)
 
     @_builtins.property
     @pulumi.getter
-    def flood(self) -> Optional[pulumi.Input['ZoneProtectionProfileFloodArgs']]:
+    def flood(self) -> pulumi.Input[Optional['ZoneProtectionProfileFloodArgs']]:
         """
         Flood
         """
         return pulumi.get(self, "flood")
 
     @flood.setter
-    def flood(self, value: Optional[pulumi.Input['ZoneProtectionProfileFloodArgs']]):
+    def flood(self, value: pulumi.Input[Optional['ZoneProtectionProfileFloodArgs']]):
         pulumi.set(self, "flood", value)
 
     @_builtins.property
     @pulumi.getter
-    def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def folder(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
 
@@ -909,120 +909,120 @@ class _ZoneProtectionProfileState:
         return pulumi.get(self, "folder")
 
     @folder.setter
-    def folder(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def folder(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "folder", value)
 
     @_builtins.property
     @pulumi.getter(name="fragmentedTrafficDiscard")
-    def fragmented_traffic_discard(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def fragmented_traffic_discard(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Discard fragmented IP packets.
         """
         return pulumi.get(self, "fragmented_traffic_discard")
 
     @fragmented_traffic_discard.setter
-    def fragmented_traffic_discard(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def fragmented_traffic_discard(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "fragmented_traffic_discard", value)
 
     @_builtins.property
     @pulumi.getter(name="icmpFragDiscard")
-    def icmp_frag_discard(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def icmp_frag_discard(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Discard packets that consist of ICMP fragments.
         """
         return pulumi.get(self, "icmp_frag_discard")
 
     @icmp_frag_discard.setter
-    def icmp_frag_discard(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def icmp_frag_discard(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "icmp_frag_discard", value)
 
     @_builtins.property
     @pulumi.getter(name="icmpLargePacketDiscard")
-    def icmp_large_packet_discard(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def icmp_large_packet_discard(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Discard ICMP packets that are larger than 1024 bytes.
         """
         return pulumi.get(self, "icmp_large_packet_discard")
 
     @icmp_large_packet_discard.setter
-    def icmp_large_packet_discard(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def icmp_large_packet_discard(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "icmp_large_packet_discard", value)
 
     @_builtins.property
     @pulumi.getter(name="icmpPingZeroIdDiscard")
-    def icmp_ping_zero_id_discard(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def icmp_ping_zero_id_discard(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Discard packets if the ICMP ping packet has an identifier value of 0.
         """
         return pulumi.get(self, "icmp_ping_zero_id_discard")
 
     @icmp_ping_zero_id_discard.setter
-    def icmp_ping_zero_id_discard(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def icmp_ping_zero_id_discard(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "icmp_ping_zero_id_discard", value)
 
     @_builtins.property
     @pulumi.getter
-    def ipv6(self) -> Optional[pulumi.Input['ZoneProtectionProfileIpv6Args']]:
+    def ipv6(self) -> pulumi.Input[Optional['ZoneProtectionProfileIpv6Args']]:
         """
         Ipv6
         """
         return pulumi.get(self, "ipv6")
 
     @ipv6.setter
-    def ipv6(self, value: Optional[pulumi.Input['ZoneProtectionProfileIpv6Args']]):
+    def ipv6(self, value: pulumi.Input[Optional['ZoneProtectionProfileIpv6Args']]):
         pulumi.set(self, "ipv6", value)
 
     @_builtins.property
     @pulumi.getter(name="l2SecGroupTagProtection")
-    def l2_sec_group_tag_protection(self) -> Optional[pulumi.Input['ZoneProtectionProfileL2SecGroupTagProtectionArgs']]:
+    def l2_sec_group_tag_protection(self) -> pulumi.Input[Optional['ZoneProtectionProfileL2SecGroupTagProtectionArgs']]:
         """
         L2 sec group tag protection
         """
         return pulumi.get(self, "l2_sec_group_tag_protection")
 
     @l2_sec_group_tag_protection.setter
-    def l2_sec_group_tag_protection(self, value: Optional[pulumi.Input['ZoneProtectionProfileL2SecGroupTagProtectionArgs']]):
+    def l2_sec_group_tag_protection(self, value: pulumi.Input[Optional['ZoneProtectionProfileL2SecGroupTagProtectionArgs']]):
         pulumi.set(self, "l2_sec_group_tag_protection", value)
 
     @_builtins.property
     @pulumi.getter(name="looseSourceRoutingDiscard")
-    def loose_source_routing_discard(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def loose_source_routing_discard(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Discard packets with the Loose Source Routing IP option set. Loose Source Routing is an option whereby a source of a datagram provides routing information and a gateway or host is allowed to choose any route of a number of intermediate gateways to get the datagram to the next address in the route.
         """
         return pulumi.get(self, "loose_source_routing_discard")
 
     @loose_source_routing_discard.setter
-    def loose_source_routing_discard(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def loose_source_routing_discard(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "loose_source_routing_discard", value)
 
     @_builtins.property
     @pulumi.getter(name="malformedOptionDiscard")
-    def malformed_option_discard(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def malformed_option_discard(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Discard packets if they have incorrect combinations of class, number, and length based on RFCs 791, 1108, 1393, and 2113.
         """
         return pulumi.get(self, "malformed_option_discard")
 
     @malformed_option_discard.setter
-    def malformed_option_discard(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def malformed_option_discard(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "malformed_option_discard", value)
 
     @_builtins.property
     @pulumi.getter(name="mismatchedOverlappingTcpSegmentDiscard")
-    def mismatched_overlapping_tcp_segment_discard(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def mismatched_overlapping_tcp_segment_discard(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Drop packets with mismatched overlapping TCP segments.
         """
         return pulumi.get(self, "mismatched_overlapping_tcp_segment_discard")
 
     @mismatched_overlapping_tcp_segment_discard.setter
-    def mismatched_overlapping_tcp_segment_discard(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def mismatched_overlapping_tcp_segment_discard(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "mismatched_overlapping_tcp_segment_discard", value)
 
     @_builtins.property
     @pulumi.getter(name="mptcpOptionStrip")
-    def mptcp_option_strip(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def mptcp_option_strip(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         MPTCP is an extension of TCP that allows a client to maintain a connection by simultaneously using multiple paths to connect to the destination host. By default, MPTCP support is disabled, based on the global MPTCP setting.  Review or adjust the MPTCP settings for the security zones associated with this profile:
         * `no` — Enable MPTCP support (do not strip the MPTCP option).
@@ -1032,48 +1032,48 @@ class _ZoneProtectionProfileState:
         return pulumi.get(self, "mptcp_option_strip")
 
     @mptcp_option_strip.setter
-    def mptcp_option_strip(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def mptcp_option_strip(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "mptcp_option_strip", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The profile name
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter(name="nonIpProtocol")
-    def non_ip_protocol(self) -> Optional[pulumi.Input['ZoneProtectionProfileNonIpProtocolArgs']]:
+    def non_ip_protocol(self) -> pulumi.Input[Optional['ZoneProtectionProfileNonIpProtocolArgs']]:
         """
         Non ip protocol
         """
         return pulumi.get(self, "non_ip_protocol")
 
     @non_ip_protocol.setter
-    def non_ip_protocol(self, value: Optional[pulumi.Input['ZoneProtectionProfileNonIpProtocolArgs']]):
+    def non_ip_protocol(self, value: pulumi.Input[Optional['ZoneProtectionProfileNonIpProtocolArgs']]):
         pulumi.set(self, "non_ip_protocol", value)
 
     @_builtins.property
     @pulumi.getter(name="recordRouteDiscard")
-    def record_route_discard(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def record_route_discard(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Discard packets with the Record Route IP option set. When a datagram has this option, each router that routes the datagram adds its own IP address to the header, thus providing the path to the recipient.
         """
         return pulumi.get(self, "record_route_discard")
 
     @record_route_discard.setter
-    def record_route_discard(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def record_route_discard(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "record_route_discard", value)
 
     @_builtins.property
     @pulumi.getter(name="rejectNonSynTcp")
-    def reject_non_syn_tcp(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def reject_non_syn_tcp(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Determine whether to reject the packet if the first packet for the TCP session setup is not a SYN packet:
         * `global` — Use system-wide setting that is assigned through the CLI.
@@ -1083,48 +1083,48 @@ class _ZoneProtectionProfileState:
         return pulumi.get(self, "reject_non_syn_tcp")
 
     @reject_non_syn_tcp.setter
-    def reject_non_syn_tcp(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def reject_non_syn_tcp(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "reject_non_syn_tcp", value)
 
     @_builtins.property
     @pulumi.getter(name="scanWhiteLists")
-    def scan_white_lists(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['ZoneProtectionProfileScanWhiteListArgs']]]]:
+    def scan_white_lists(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['ZoneProtectionProfileScanWhiteListArgs']]]]:
         """
         Scan white list
         """
         return pulumi.get(self, "scan_white_lists")
 
     @scan_white_lists.setter
-    def scan_white_lists(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['ZoneProtectionProfileScanWhiteListArgs']]]]):
+    def scan_white_lists(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['ZoneProtectionProfileScanWhiteListArgs']]]]):
         pulumi.set(self, "scan_white_lists", value)
 
     @_builtins.property
     @pulumi.getter
-    def scans(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['ZoneProtectionProfileScanArgs']]]]:
+    def scans(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['ZoneProtectionProfileScanArgs']]]]:
         """
         Scan
         """
         return pulumi.get(self, "scans")
 
     @scans.setter
-    def scans(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['ZoneProtectionProfileScanArgs']]]]):
+    def scans(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['ZoneProtectionProfileScanArgs']]]]):
         pulumi.set(self, "scans", value)
 
     @_builtins.property
     @pulumi.getter(name="securityDiscard")
-    def security_discard(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def security_discard(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Discard packets if the security option is defined.
         """
         return pulumi.get(self, "security_discard")
 
     @security_discard.setter
-    def security_discard(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def security_discard(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "security_discard", value)
 
     @_builtins.property
     @pulumi.getter
-    def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def snippet(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
 
@@ -1133,36 +1133,36 @@ class _ZoneProtectionProfileState:
         return pulumi.get(self, "snippet")
 
     @snippet.setter
-    def snippet(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def snippet(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "snippet", value)
 
     @_builtins.property
     @pulumi.getter(name="spoofedIpDiscard")
-    def spoofed_ip_discard(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def spoofed_ip_discard(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Check that the source IP address of the ingress packet is routable and the routing interface is in the same zone as the ingress interface. If either condition is not true, discard the packet.
         """
         return pulumi.get(self, "spoofed_ip_discard")
 
     @spoofed_ip_discard.setter
-    def spoofed_ip_discard(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def spoofed_ip_discard(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "spoofed_ip_discard", value)
 
     @_builtins.property
     @pulumi.getter(name="streamIdDiscard")
-    def stream_id_discard(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def stream_id_discard(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Discard packets if the Stream ID option is defined.
         """
         return pulumi.get(self, "stream_id_discard")
 
     @stream_id_discard.setter
-    def stream_id_discard(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def stream_id_discard(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "stream_id_discard", value)
 
     @_builtins.property
     @pulumi.getter(name="strictIpCheck")
-    def strict_ip_check(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def strict_ip_check(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Check that both conditions are true:
         * The source IP address is not the subnet broadcast IP address of the ingress interface.
@@ -1172,139 +1172,139 @@ class _ZoneProtectionProfileState:
         return pulumi.get(self, "strict_ip_check")
 
     @strict_ip_check.setter
-    def strict_ip_check(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def strict_ip_check(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "strict_ip_check", value)
 
     @_builtins.property
     @pulumi.getter(name="strictSourceRoutingDiscard")
-    def strict_source_routing_discard(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def strict_source_routing_discard(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Discard packets with the Strict Source Routing IP option set. Strict Source Routing is an option whereby a source of a datagram provides routing information through which a gateway or host must send the datagram.
         """
         return pulumi.get(self, "strict_source_routing_discard")
 
     @strict_source_routing_discard.setter
-    def strict_source_routing_discard(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def strict_source_routing_discard(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "strict_source_routing_discard", value)
 
     @_builtins.property
     @pulumi.getter(name="suppressIcmpNeedfrag")
-    def suppress_icmp_needfrag(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def suppress_icmp_needfrag(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Stop sending ICMP fragmentation needed messages in response to packets that exceed the interface MTU and have the do not fragment (DF) bit set. This setting will interfere with the PMTUD process performed by hosts behind the firewall.
         """
         return pulumi.get(self, "suppress_icmp_needfrag")
 
     @suppress_icmp_needfrag.setter
-    def suppress_icmp_needfrag(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def suppress_icmp_needfrag(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "suppress_icmp_needfrag", value)
 
     @_builtins.property
     @pulumi.getter(name="suppressIcmpTimeexceeded")
-    def suppress_icmp_timeexceeded(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def suppress_icmp_timeexceeded(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Stop sending ICMP TTL expired messages.
         """
         return pulumi.get(self, "suppress_icmp_timeexceeded")
 
     @suppress_icmp_timeexceeded.setter
-    def suppress_icmp_timeexceeded(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def suppress_icmp_timeexceeded(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "suppress_icmp_timeexceeded", value)
 
     @_builtins.property
     @pulumi.getter(name="tcpFastOpenAndDataStrip")
-    def tcp_fast_open_and_data_strip(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def tcp_fast_open_and_data_strip(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Strip the TCP Fast Open option (and data payload, if any) from the TCP SYN or SYN-ACK packet during a TCP three-way handshake.
         """
         return pulumi.get(self, "tcp_fast_open_and_data_strip")
 
     @tcp_fast_open_and_data_strip.setter
-    def tcp_fast_open_and_data_strip(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def tcp_fast_open_and_data_strip(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "tcp_fast_open_and_data_strip", value)
 
     @_builtins.property
     @pulumi.getter(name="tcpHandshakeDiscard")
-    def tcp_handshake_discard(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def tcp_handshake_discard(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Drop packets with split handshakes.
         """
         return pulumi.get(self, "tcp_handshake_discard")
 
     @tcp_handshake_discard.setter
-    def tcp_handshake_discard(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def tcp_handshake_discard(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "tcp_handshake_discard", value)
 
     @_builtins.property
     @pulumi.getter(name="tcpSynWithDataDiscard")
-    def tcp_syn_with_data_discard(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def tcp_syn_with_data_discard(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Prevent a TCP session from being established if the TCP SYN packet contains data during a three-way handshake.
         """
         return pulumi.get(self, "tcp_syn_with_data_discard")
 
     @tcp_syn_with_data_discard.setter
-    def tcp_syn_with_data_discard(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def tcp_syn_with_data_discard(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "tcp_syn_with_data_discard", value)
 
     @_builtins.property
     @pulumi.getter(name="tcpSynackWithDataDiscard")
-    def tcp_synack_with_data_discard(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def tcp_synack_with_data_discard(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Prevent a TCP session from being established if the TCP SYN-ACK packet contains data during a three-way handshake.
         """
         return pulumi.get(self, "tcp_synack_with_data_discard")
 
     @tcp_synack_with_data_discard.setter
-    def tcp_synack_with_data_discard(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def tcp_synack_with_data_discard(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "tcp_synack_with_data_discard", value)
 
     @_builtins.property
     @pulumi.getter(name="tcpTimestampStrip")
-    def tcp_timestamp_strip(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def tcp_timestamp_strip(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Determine whether the packet has a TCP timestamp in the header and, if it does, strip the timestamp from the header.
         """
         return pulumi.get(self, "tcp_timestamp_strip")
 
     @tcp_timestamp_strip.setter
-    def tcp_timestamp_strip(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def tcp_timestamp_strip(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "tcp_timestamp_strip", value)
 
     @_builtins.property
     @pulumi.getter
-    def tfid(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def tfid(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The Terraform ID.
         """
         return pulumi.get(self, "tfid")
 
     @tfid.setter
-    def tfid(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def tfid(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "tfid", value)
 
     @_builtins.property
     @pulumi.getter(name="timestampDiscard")
-    def timestamp_discard(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def timestamp_discard(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Discard packets with the Timestamp IP option set.
         """
         return pulumi.get(self, "timestamp_discard")
 
     @timestamp_discard.setter
-    def timestamp_discard(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def timestamp_discard(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "timestamp_discard", value)
 
     @_builtins.property
     @pulumi.getter(name="unknownOptionDiscard")
-    def unknown_option_discard(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def unknown_option_discard(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Discard packets if the class and number are unknown.
         """
         return pulumi.get(self, "unknown_option_discard")
 
     @unknown_option_discard.setter
-    def unknown_option_discard(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def unknown_option_discard(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "unknown_option_discard", value)
 
 
@@ -1314,43 +1314,43 @@ class ZoneProtectionProfile(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 asymmetric_path: Optional[pulumi.Input[_builtins.str]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 device: Optional[pulumi.Input[_builtins.str]] = None,
-                 discard_icmp_embedded_error: Optional[pulumi.Input[_builtins.bool]] = None,
-                 flood: Optional[pulumi.Input[Union['ZoneProtectionProfileFloodArgs', 'ZoneProtectionProfileFloodArgsDict']]] = None,
-                 folder: Optional[pulumi.Input[_builtins.str]] = None,
-                 fragmented_traffic_discard: Optional[pulumi.Input[_builtins.bool]] = None,
-                 icmp_frag_discard: Optional[pulumi.Input[_builtins.bool]] = None,
-                 icmp_large_packet_discard: Optional[pulumi.Input[_builtins.bool]] = None,
-                 icmp_ping_zero_id_discard: Optional[pulumi.Input[_builtins.bool]] = None,
-                 ipv6: Optional[pulumi.Input[Union['ZoneProtectionProfileIpv6Args', 'ZoneProtectionProfileIpv6ArgsDict']]] = None,
-                 l2_sec_group_tag_protection: Optional[pulumi.Input[Union['ZoneProtectionProfileL2SecGroupTagProtectionArgs', 'ZoneProtectionProfileL2SecGroupTagProtectionArgsDict']]] = None,
-                 loose_source_routing_discard: Optional[pulumi.Input[_builtins.bool]] = None,
-                 malformed_option_discard: Optional[pulumi.Input[_builtins.bool]] = None,
-                 mismatched_overlapping_tcp_segment_discard: Optional[pulumi.Input[_builtins.bool]] = None,
-                 mptcp_option_strip: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 non_ip_protocol: Optional[pulumi.Input[Union['ZoneProtectionProfileNonIpProtocolArgs', 'ZoneProtectionProfileNonIpProtocolArgsDict']]] = None,
-                 record_route_discard: Optional[pulumi.Input[_builtins.bool]] = None,
-                 reject_non_syn_tcp: Optional[pulumi.Input[_builtins.str]] = None,
-                 scan_white_lists: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ZoneProtectionProfileScanWhiteListArgs', 'ZoneProtectionProfileScanWhiteListArgsDict']]]]] = None,
-                 scans: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ZoneProtectionProfileScanArgs', 'ZoneProtectionProfileScanArgsDict']]]]] = None,
-                 security_discard: Optional[pulumi.Input[_builtins.bool]] = None,
-                 snippet: Optional[pulumi.Input[_builtins.str]] = None,
-                 spoofed_ip_discard: Optional[pulumi.Input[_builtins.bool]] = None,
-                 stream_id_discard: Optional[pulumi.Input[_builtins.bool]] = None,
-                 strict_ip_check: Optional[pulumi.Input[_builtins.bool]] = None,
-                 strict_source_routing_discard: Optional[pulumi.Input[_builtins.bool]] = None,
-                 suppress_icmp_needfrag: Optional[pulumi.Input[_builtins.bool]] = None,
-                 suppress_icmp_timeexceeded: Optional[pulumi.Input[_builtins.bool]] = None,
-                 tcp_fast_open_and_data_strip: Optional[pulumi.Input[_builtins.bool]] = None,
-                 tcp_handshake_discard: Optional[pulumi.Input[_builtins.bool]] = None,
-                 tcp_syn_with_data_discard: Optional[pulumi.Input[_builtins.bool]] = None,
-                 tcp_synack_with_data_discard: Optional[pulumi.Input[_builtins.bool]] = None,
-                 tcp_timestamp_strip: Optional[pulumi.Input[_builtins.bool]] = None,
-                 timestamp_discard: Optional[pulumi.Input[_builtins.bool]] = None,
-                 unknown_option_discard: Optional[pulumi.Input[_builtins.bool]] = None,
+                 asymmetric_path: pulumi.Input[Optional[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 device: pulumi.Input[Optional[_builtins.str]] = None,
+                 discard_icmp_embedded_error: pulumi.Input[Optional[_builtins.bool]] = None,
+                 flood: pulumi.Input[Optional[Union['ZoneProtectionProfileFloodArgs', 'ZoneProtectionProfileFloodArgsDict']]] = None,
+                 folder: pulumi.Input[Optional[_builtins.str]] = None,
+                 fragmented_traffic_discard: pulumi.Input[Optional[_builtins.bool]] = None,
+                 icmp_frag_discard: pulumi.Input[Optional[_builtins.bool]] = None,
+                 icmp_large_packet_discard: pulumi.Input[Optional[_builtins.bool]] = None,
+                 icmp_ping_zero_id_discard: pulumi.Input[Optional[_builtins.bool]] = None,
+                 ipv6: pulumi.Input[Optional[Union['ZoneProtectionProfileIpv6Args', 'ZoneProtectionProfileIpv6ArgsDict']]] = None,
+                 l2_sec_group_tag_protection: pulumi.Input[Optional[Union['ZoneProtectionProfileL2SecGroupTagProtectionArgs', 'ZoneProtectionProfileL2SecGroupTagProtectionArgsDict']]] = None,
+                 loose_source_routing_discard: pulumi.Input[Optional[_builtins.bool]] = None,
+                 malformed_option_discard: pulumi.Input[Optional[_builtins.bool]] = None,
+                 mismatched_overlapping_tcp_segment_discard: pulumi.Input[Optional[_builtins.bool]] = None,
+                 mptcp_option_strip: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 non_ip_protocol: pulumi.Input[Optional[Union['ZoneProtectionProfileNonIpProtocolArgs', 'ZoneProtectionProfileNonIpProtocolArgsDict']]] = None,
+                 record_route_discard: pulumi.Input[Optional[_builtins.bool]] = None,
+                 reject_non_syn_tcp: pulumi.Input[Optional[_builtins.str]] = None,
+                 scan_white_lists: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ZoneProtectionProfileScanWhiteListArgs', 'ZoneProtectionProfileScanWhiteListArgsDict']]]]] = None,
+                 scans: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ZoneProtectionProfileScanArgs', 'ZoneProtectionProfileScanArgsDict']]]]] = None,
+                 security_discard: pulumi.Input[Optional[_builtins.bool]] = None,
+                 snippet: pulumi.Input[Optional[_builtins.str]] = None,
+                 spoofed_ip_discard: pulumi.Input[Optional[_builtins.bool]] = None,
+                 stream_id_discard: pulumi.Input[Optional[_builtins.bool]] = None,
+                 strict_ip_check: pulumi.Input[Optional[_builtins.bool]] = None,
+                 strict_source_routing_discard: pulumi.Input[Optional[_builtins.bool]] = None,
+                 suppress_icmp_needfrag: pulumi.Input[Optional[_builtins.bool]] = None,
+                 suppress_icmp_timeexceeded: pulumi.Input[Optional[_builtins.bool]] = None,
+                 tcp_fast_open_and_data_strip: pulumi.Input[Optional[_builtins.bool]] = None,
+                 tcp_handshake_discard: pulumi.Input[Optional[_builtins.bool]] = None,
+                 tcp_syn_with_data_discard: pulumi.Input[Optional[_builtins.bool]] = None,
+                 tcp_synack_with_data_discard: pulumi.Input[Optional[_builtins.bool]] = None,
+                 tcp_timestamp_strip: pulumi.Input[Optional[_builtins.bool]] = None,
+                 timestamp_discard: pulumi.Input[Optional[_builtins.bool]] = None,
+                 unknown_option_discard: pulumi.Input[Optional[_builtins.bool]] = None,
                  __props__=None):
         """
         ZoneProtectionProfile resource
@@ -1483,43 +1483,43 @@ class ZoneProtectionProfile(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 asymmetric_path: Optional[pulumi.Input[_builtins.str]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 device: Optional[pulumi.Input[_builtins.str]] = None,
-                 discard_icmp_embedded_error: Optional[pulumi.Input[_builtins.bool]] = None,
-                 flood: Optional[pulumi.Input[Union['ZoneProtectionProfileFloodArgs', 'ZoneProtectionProfileFloodArgsDict']]] = None,
-                 folder: Optional[pulumi.Input[_builtins.str]] = None,
-                 fragmented_traffic_discard: Optional[pulumi.Input[_builtins.bool]] = None,
-                 icmp_frag_discard: Optional[pulumi.Input[_builtins.bool]] = None,
-                 icmp_large_packet_discard: Optional[pulumi.Input[_builtins.bool]] = None,
-                 icmp_ping_zero_id_discard: Optional[pulumi.Input[_builtins.bool]] = None,
-                 ipv6: Optional[pulumi.Input[Union['ZoneProtectionProfileIpv6Args', 'ZoneProtectionProfileIpv6ArgsDict']]] = None,
-                 l2_sec_group_tag_protection: Optional[pulumi.Input[Union['ZoneProtectionProfileL2SecGroupTagProtectionArgs', 'ZoneProtectionProfileL2SecGroupTagProtectionArgsDict']]] = None,
-                 loose_source_routing_discard: Optional[pulumi.Input[_builtins.bool]] = None,
-                 malformed_option_discard: Optional[pulumi.Input[_builtins.bool]] = None,
-                 mismatched_overlapping_tcp_segment_discard: Optional[pulumi.Input[_builtins.bool]] = None,
-                 mptcp_option_strip: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 non_ip_protocol: Optional[pulumi.Input[Union['ZoneProtectionProfileNonIpProtocolArgs', 'ZoneProtectionProfileNonIpProtocolArgsDict']]] = None,
-                 record_route_discard: Optional[pulumi.Input[_builtins.bool]] = None,
-                 reject_non_syn_tcp: Optional[pulumi.Input[_builtins.str]] = None,
-                 scan_white_lists: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ZoneProtectionProfileScanWhiteListArgs', 'ZoneProtectionProfileScanWhiteListArgsDict']]]]] = None,
-                 scans: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ZoneProtectionProfileScanArgs', 'ZoneProtectionProfileScanArgsDict']]]]] = None,
-                 security_discard: Optional[pulumi.Input[_builtins.bool]] = None,
-                 snippet: Optional[pulumi.Input[_builtins.str]] = None,
-                 spoofed_ip_discard: Optional[pulumi.Input[_builtins.bool]] = None,
-                 stream_id_discard: Optional[pulumi.Input[_builtins.bool]] = None,
-                 strict_ip_check: Optional[pulumi.Input[_builtins.bool]] = None,
-                 strict_source_routing_discard: Optional[pulumi.Input[_builtins.bool]] = None,
-                 suppress_icmp_needfrag: Optional[pulumi.Input[_builtins.bool]] = None,
-                 suppress_icmp_timeexceeded: Optional[pulumi.Input[_builtins.bool]] = None,
-                 tcp_fast_open_and_data_strip: Optional[pulumi.Input[_builtins.bool]] = None,
-                 tcp_handshake_discard: Optional[pulumi.Input[_builtins.bool]] = None,
-                 tcp_syn_with_data_discard: Optional[pulumi.Input[_builtins.bool]] = None,
-                 tcp_synack_with_data_discard: Optional[pulumi.Input[_builtins.bool]] = None,
-                 tcp_timestamp_strip: Optional[pulumi.Input[_builtins.bool]] = None,
-                 timestamp_discard: Optional[pulumi.Input[_builtins.bool]] = None,
-                 unknown_option_discard: Optional[pulumi.Input[_builtins.bool]] = None,
+                 asymmetric_path: pulumi.Input[Optional[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 device: pulumi.Input[Optional[_builtins.str]] = None,
+                 discard_icmp_embedded_error: pulumi.Input[Optional[_builtins.bool]] = None,
+                 flood: pulumi.Input[Optional[Union['ZoneProtectionProfileFloodArgs', 'ZoneProtectionProfileFloodArgsDict']]] = None,
+                 folder: pulumi.Input[Optional[_builtins.str]] = None,
+                 fragmented_traffic_discard: pulumi.Input[Optional[_builtins.bool]] = None,
+                 icmp_frag_discard: pulumi.Input[Optional[_builtins.bool]] = None,
+                 icmp_large_packet_discard: pulumi.Input[Optional[_builtins.bool]] = None,
+                 icmp_ping_zero_id_discard: pulumi.Input[Optional[_builtins.bool]] = None,
+                 ipv6: pulumi.Input[Optional[Union['ZoneProtectionProfileIpv6Args', 'ZoneProtectionProfileIpv6ArgsDict']]] = None,
+                 l2_sec_group_tag_protection: pulumi.Input[Optional[Union['ZoneProtectionProfileL2SecGroupTagProtectionArgs', 'ZoneProtectionProfileL2SecGroupTagProtectionArgsDict']]] = None,
+                 loose_source_routing_discard: pulumi.Input[Optional[_builtins.bool]] = None,
+                 malformed_option_discard: pulumi.Input[Optional[_builtins.bool]] = None,
+                 mismatched_overlapping_tcp_segment_discard: pulumi.Input[Optional[_builtins.bool]] = None,
+                 mptcp_option_strip: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 non_ip_protocol: pulumi.Input[Optional[Union['ZoneProtectionProfileNonIpProtocolArgs', 'ZoneProtectionProfileNonIpProtocolArgsDict']]] = None,
+                 record_route_discard: pulumi.Input[Optional[_builtins.bool]] = None,
+                 reject_non_syn_tcp: pulumi.Input[Optional[_builtins.str]] = None,
+                 scan_white_lists: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ZoneProtectionProfileScanWhiteListArgs', 'ZoneProtectionProfileScanWhiteListArgsDict']]]]] = None,
+                 scans: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ZoneProtectionProfileScanArgs', 'ZoneProtectionProfileScanArgsDict']]]]] = None,
+                 security_discard: pulumi.Input[Optional[_builtins.bool]] = None,
+                 snippet: pulumi.Input[Optional[_builtins.str]] = None,
+                 spoofed_ip_discard: pulumi.Input[Optional[_builtins.bool]] = None,
+                 stream_id_discard: pulumi.Input[Optional[_builtins.bool]] = None,
+                 strict_ip_check: pulumi.Input[Optional[_builtins.bool]] = None,
+                 strict_source_routing_discard: pulumi.Input[Optional[_builtins.bool]] = None,
+                 suppress_icmp_needfrag: pulumi.Input[Optional[_builtins.bool]] = None,
+                 suppress_icmp_timeexceeded: pulumi.Input[Optional[_builtins.bool]] = None,
+                 tcp_fast_open_and_data_strip: pulumi.Input[Optional[_builtins.bool]] = None,
+                 tcp_handshake_discard: pulumi.Input[Optional[_builtins.bool]] = None,
+                 tcp_syn_with_data_discard: pulumi.Input[Optional[_builtins.bool]] = None,
+                 tcp_synack_with_data_discard: pulumi.Input[Optional[_builtins.bool]] = None,
+                 tcp_timestamp_strip: pulumi.Input[Optional[_builtins.bool]] = None,
+                 timestamp_discard: pulumi.Input[Optional[_builtins.bool]] = None,
+                 unknown_option_discard: pulumi.Input[Optional[_builtins.bool]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -1577,44 +1577,44 @@ class ZoneProtectionProfile(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            asymmetric_path: Optional[pulumi.Input[_builtins.str]] = None,
-            description: Optional[pulumi.Input[_builtins.str]] = None,
-            device: Optional[pulumi.Input[_builtins.str]] = None,
-            discard_icmp_embedded_error: Optional[pulumi.Input[_builtins.bool]] = None,
-            flood: Optional[pulumi.Input[Union['ZoneProtectionProfileFloodArgs', 'ZoneProtectionProfileFloodArgsDict']]] = None,
-            folder: Optional[pulumi.Input[_builtins.str]] = None,
-            fragmented_traffic_discard: Optional[pulumi.Input[_builtins.bool]] = None,
-            icmp_frag_discard: Optional[pulumi.Input[_builtins.bool]] = None,
-            icmp_large_packet_discard: Optional[pulumi.Input[_builtins.bool]] = None,
-            icmp_ping_zero_id_discard: Optional[pulumi.Input[_builtins.bool]] = None,
-            ipv6: Optional[pulumi.Input[Union['ZoneProtectionProfileIpv6Args', 'ZoneProtectionProfileIpv6ArgsDict']]] = None,
-            l2_sec_group_tag_protection: Optional[pulumi.Input[Union['ZoneProtectionProfileL2SecGroupTagProtectionArgs', 'ZoneProtectionProfileL2SecGroupTagProtectionArgsDict']]] = None,
-            loose_source_routing_discard: Optional[pulumi.Input[_builtins.bool]] = None,
-            malformed_option_discard: Optional[pulumi.Input[_builtins.bool]] = None,
-            mismatched_overlapping_tcp_segment_discard: Optional[pulumi.Input[_builtins.bool]] = None,
-            mptcp_option_strip: Optional[pulumi.Input[_builtins.str]] = None,
-            name: Optional[pulumi.Input[_builtins.str]] = None,
-            non_ip_protocol: Optional[pulumi.Input[Union['ZoneProtectionProfileNonIpProtocolArgs', 'ZoneProtectionProfileNonIpProtocolArgsDict']]] = None,
-            record_route_discard: Optional[pulumi.Input[_builtins.bool]] = None,
-            reject_non_syn_tcp: Optional[pulumi.Input[_builtins.str]] = None,
-            scan_white_lists: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ZoneProtectionProfileScanWhiteListArgs', 'ZoneProtectionProfileScanWhiteListArgsDict']]]]] = None,
-            scans: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ZoneProtectionProfileScanArgs', 'ZoneProtectionProfileScanArgsDict']]]]] = None,
-            security_discard: Optional[pulumi.Input[_builtins.bool]] = None,
-            snippet: Optional[pulumi.Input[_builtins.str]] = None,
-            spoofed_ip_discard: Optional[pulumi.Input[_builtins.bool]] = None,
-            stream_id_discard: Optional[pulumi.Input[_builtins.bool]] = None,
-            strict_ip_check: Optional[pulumi.Input[_builtins.bool]] = None,
-            strict_source_routing_discard: Optional[pulumi.Input[_builtins.bool]] = None,
-            suppress_icmp_needfrag: Optional[pulumi.Input[_builtins.bool]] = None,
-            suppress_icmp_timeexceeded: Optional[pulumi.Input[_builtins.bool]] = None,
-            tcp_fast_open_and_data_strip: Optional[pulumi.Input[_builtins.bool]] = None,
-            tcp_handshake_discard: Optional[pulumi.Input[_builtins.bool]] = None,
-            tcp_syn_with_data_discard: Optional[pulumi.Input[_builtins.bool]] = None,
-            tcp_synack_with_data_discard: Optional[pulumi.Input[_builtins.bool]] = None,
-            tcp_timestamp_strip: Optional[pulumi.Input[_builtins.bool]] = None,
-            tfid: Optional[pulumi.Input[_builtins.str]] = None,
-            timestamp_discard: Optional[pulumi.Input[_builtins.bool]] = None,
-            unknown_option_discard: Optional[pulumi.Input[_builtins.bool]] = None) -> 'ZoneProtectionProfile':
+            asymmetric_path: pulumi.Input[Optional[_builtins.str]] = None,
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            device: pulumi.Input[Optional[_builtins.str]] = None,
+            discard_icmp_embedded_error: pulumi.Input[Optional[_builtins.bool]] = None,
+            flood: pulumi.Input[Optional[Union['ZoneProtectionProfileFloodArgs', 'ZoneProtectionProfileFloodArgsDict']]] = None,
+            folder: pulumi.Input[Optional[_builtins.str]] = None,
+            fragmented_traffic_discard: pulumi.Input[Optional[_builtins.bool]] = None,
+            icmp_frag_discard: pulumi.Input[Optional[_builtins.bool]] = None,
+            icmp_large_packet_discard: pulumi.Input[Optional[_builtins.bool]] = None,
+            icmp_ping_zero_id_discard: pulumi.Input[Optional[_builtins.bool]] = None,
+            ipv6: pulumi.Input[Optional[Union['ZoneProtectionProfileIpv6Args', 'ZoneProtectionProfileIpv6ArgsDict']]] = None,
+            l2_sec_group_tag_protection: pulumi.Input[Optional[Union['ZoneProtectionProfileL2SecGroupTagProtectionArgs', 'ZoneProtectionProfileL2SecGroupTagProtectionArgsDict']]] = None,
+            loose_source_routing_discard: pulumi.Input[Optional[_builtins.bool]] = None,
+            malformed_option_discard: pulumi.Input[Optional[_builtins.bool]] = None,
+            mismatched_overlapping_tcp_segment_discard: pulumi.Input[Optional[_builtins.bool]] = None,
+            mptcp_option_strip: pulumi.Input[Optional[_builtins.str]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            non_ip_protocol: pulumi.Input[Optional[Union['ZoneProtectionProfileNonIpProtocolArgs', 'ZoneProtectionProfileNonIpProtocolArgsDict']]] = None,
+            record_route_discard: pulumi.Input[Optional[_builtins.bool]] = None,
+            reject_non_syn_tcp: pulumi.Input[Optional[_builtins.str]] = None,
+            scan_white_lists: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ZoneProtectionProfileScanWhiteListArgs', 'ZoneProtectionProfileScanWhiteListArgsDict']]]]] = None,
+            scans: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ZoneProtectionProfileScanArgs', 'ZoneProtectionProfileScanArgsDict']]]]] = None,
+            security_discard: pulumi.Input[Optional[_builtins.bool]] = None,
+            snippet: pulumi.Input[Optional[_builtins.str]] = None,
+            spoofed_ip_discard: pulumi.Input[Optional[_builtins.bool]] = None,
+            stream_id_discard: pulumi.Input[Optional[_builtins.bool]] = None,
+            strict_ip_check: pulumi.Input[Optional[_builtins.bool]] = None,
+            strict_source_routing_discard: pulumi.Input[Optional[_builtins.bool]] = None,
+            suppress_icmp_needfrag: pulumi.Input[Optional[_builtins.bool]] = None,
+            suppress_icmp_timeexceeded: pulumi.Input[Optional[_builtins.bool]] = None,
+            tcp_fast_open_and_data_strip: pulumi.Input[Optional[_builtins.bool]] = None,
+            tcp_handshake_discard: pulumi.Input[Optional[_builtins.bool]] = None,
+            tcp_syn_with_data_discard: pulumi.Input[Optional[_builtins.bool]] = None,
+            tcp_synack_with_data_discard: pulumi.Input[Optional[_builtins.bool]] = None,
+            tcp_timestamp_strip: pulumi.Input[Optional[_builtins.bool]] = None,
+            tfid: pulumi.Input[Optional[_builtins.str]] = None,
+            timestamp_discard: pulumi.Input[Optional[_builtins.bool]] = None,
+            unknown_option_discard: pulumi.Input[Optional[_builtins.bool]] = None) -> 'ZoneProtectionProfile':
         """
         Get an existing ZoneProtectionProfile resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

@@ -13,18 +13,24 @@ namespace Pulumi.Scm
     {
         /// <summary>
         /// Retrieves a listing of config items.
+        /// 
+        /// ## Example Usage
         /// </summary>
         public static Task<GetRadiusServerProfileListResult> InvokeAsync(GetRadiusServerProfileListArgs? args = null, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.InvokeAsync<GetRadiusServerProfileListResult>("scm:index/getRadiusServerProfileList:getRadiusServerProfileList", args ?? new GetRadiusServerProfileListArgs(), options.WithDefaults());
 
         /// <summary>
         /// Retrieves a listing of config items.
+        /// 
+        /// ## Example Usage
         /// </summary>
         public static Output<GetRadiusServerProfileListResult> Invoke(GetRadiusServerProfileListInvokeArgs? args = null, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetRadiusServerProfileListResult>("scm:index/getRadiusServerProfileList:getRadiusServerProfileList", args ?? new GetRadiusServerProfileListInvokeArgs(), options.WithDefaults());
 
         /// <summary>
         /// Retrieves a listing of config items.
+        /// 
+        /// ## Example Usage
         /// </summary>
         public static Output<GetRadiusServerProfileListResult> Invoke(GetRadiusServerProfileListInvokeArgs args, InvokeOutputOptions options)
             => global::Pulumi.Deployment.Instance.Invoke<GetRadiusServerProfileListResult>("scm:index/getRadiusServerProfileList:getRadiusServerProfileList", args ?? new GetRadiusServerProfileListInvokeArgs(), options.WithDefaults());

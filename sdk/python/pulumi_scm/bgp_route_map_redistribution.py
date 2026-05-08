@@ -21,14 +21,14 @@ __all__ = ['BgpRouteMapRedistributionArgs', 'BgpRouteMapRedistribution']
 @pulumi.input_type
 class BgpRouteMapRedistributionArgs:
     def __init__(__self__, *,
-                 bgp: Optional[pulumi.Input['BgpRouteMapRedistributionBgpArgs']] = None,
-                 connected_static: Optional[pulumi.Input['BgpRouteMapRedistributionConnectedStaticArgs']] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 device: Optional[pulumi.Input[_builtins.str]] = None,
-                 folder: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 ospf: Optional[pulumi.Input['BgpRouteMapRedistributionOspfArgs']] = None,
-                 snippet: Optional[pulumi.Input[_builtins.str]] = None):
+                 bgp: pulumi.Input[Optional['BgpRouteMapRedistributionBgpArgs']] = None,
+                 connected_static: pulumi.Input[Optional['BgpRouteMapRedistributionConnectedStaticArgs']] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 device: pulumi.Input[Optional[_builtins.str]] = None,
+                 folder: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 ospf: pulumi.Input[Optional['BgpRouteMapRedistributionOspfArgs']] = None,
+                 snippet: pulumi.Input[Optional[_builtins.str]] = None):
         """
         The set of arguments for constructing a BgpRouteMapRedistribution resource.
 
@@ -70,19 +70,19 @@ class BgpRouteMapRedistributionArgs:
 
     @_builtins.property
     @pulumi.getter
-    def bgp(self) -> Optional[pulumi.Input['BgpRouteMapRedistributionBgpArgs']]:
+    def bgp(self) -> pulumi.Input[Optional['BgpRouteMapRedistributionBgpArgs']]:
         """
         Bgp
         """
         return pulumi.get(self, "bgp")
 
     @bgp.setter
-    def bgp(self, value: Optional[pulumi.Input['BgpRouteMapRedistributionBgpArgs']]):
+    def bgp(self, value: pulumi.Input[Optional['BgpRouteMapRedistributionBgpArgs']]):
         pulumi.set(self, "bgp", value)
 
     @_builtins.property
     @pulumi.getter(name="connectedStatic")
-    def connected_static(self) -> Optional[pulumi.Input['BgpRouteMapRedistributionConnectedStaticArgs']]:
+    def connected_static(self) -> pulumi.Input[Optional['BgpRouteMapRedistributionConnectedStaticArgs']]:
         """
         Connected static
 
@@ -91,24 +91,24 @@ class BgpRouteMapRedistributionArgs:
         return pulumi.get(self, "connected_static")
 
     @connected_static.setter
-    def connected_static(self, value: Optional[pulumi.Input['BgpRouteMapRedistributionConnectedStaticArgs']]):
+    def connected_static(self, value: pulumi.Input[Optional['BgpRouteMapRedistributionConnectedStaticArgs']]):
         pulumi.set(self, "connected_static", value)
 
     @_builtins.property
     @pulumi.getter
-    def description(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def description(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         BGP Route Map Redistributions Description
         """
         return pulumi.get(self, "description")
 
     @description.setter
-    def description(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def description(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "description", value)
 
     @_builtins.property
     @pulumi.getter
-    def device(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def device(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The device in which the resource is defined
 
@@ -117,12 +117,12 @@ class BgpRouteMapRedistributionArgs:
         return pulumi.get(self, "device")
 
     @device.setter
-    def device(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def device(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "device", value)
 
     @_builtins.property
     @pulumi.getter
-    def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def folder(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
 
@@ -131,24 +131,24 @@ class BgpRouteMapRedistributionArgs:
         return pulumi.get(self, "folder")
 
     @folder.setter
-    def folder(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def folder(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "folder", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         BGP Route Map Redistributions Name
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter
-    def ospf(self) -> Optional[pulumi.Input['BgpRouteMapRedistributionOspfArgs']]:
+    def ospf(self) -> pulumi.Input[Optional['BgpRouteMapRedistributionOspfArgs']]:
         """
         Ospf
 
@@ -157,12 +157,12 @@ class BgpRouteMapRedistributionArgs:
         return pulumi.get(self, "ospf")
 
     @ospf.setter
-    def ospf(self, value: Optional[pulumi.Input['BgpRouteMapRedistributionOspfArgs']]):
+    def ospf(self, value: pulumi.Input[Optional['BgpRouteMapRedistributionOspfArgs']]):
         pulumi.set(self, "ospf", value)
 
     @_builtins.property
     @pulumi.getter
-    def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def snippet(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
 
@@ -171,22 +171,22 @@ class BgpRouteMapRedistributionArgs:
         return pulumi.get(self, "snippet")
 
     @snippet.setter
-    def snippet(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def snippet(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "snippet", value)
 
 
 @pulumi.input_type
 class _BgpRouteMapRedistributionState:
     def __init__(__self__, *,
-                 bgp: Optional[pulumi.Input['BgpRouteMapRedistributionBgpArgs']] = None,
-                 connected_static: Optional[pulumi.Input['BgpRouteMapRedistributionConnectedStaticArgs']] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 device: Optional[pulumi.Input[_builtins.str]] = None,
-                 folder: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 ospf: Optional[pulumi.Input['BgpRouteMapRedistributionOspfArgs']] = None,
-                 snippet: Optional[pulumi.Input[_builtins.str]] = None,
-                 tfid: Optional[pulumi.Input[_builtins.str]] = None):
+                 bgp: pulumi.Input[Optional['BgpRouteMapRedistributionBgpArgs']] = None,
+                 connected_static: pulumi.Input[Optional['BgpRouteMapRedistributionConnectedStaticArgs']] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 device: pulumi.Input[Optional[_builtins.str]] = None,
+                 folder: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 ospf: pulumi.Input[Optional['BgpRouteMapRedistributionOspfArgs']] = None,
+                 snippet: pulumi.Input[Optional[_builtins.str]] = None,
+                 tfid: pulumi.Input[Optional[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering BgpRouteMapRedistribution resources.
 
@@ -231,19 +231,19 @@ class _BgpRouteMapRedistributionState:
 
     @_builtins.property
     @pulumi.getter
-    def bgp(self) -> Optional[pulumi.Input['BgpRouteMapRedistributionBgpArgs']]:
+    def bgp(self) -> pulumi.Input[Optional['BgpRouteMapRedistributionBgpArgs']]:
         """
         Bgp
         """
         return pulumi.get(self, "bgp")
 
     @bgp.setter
-    def bgp(self, value: Optional[pulumi.Input['BgpRouteMapRedistributionBgpArgs']]):
+    def bgp(self, value: pulumi.Input[Optional['BgpRouteMapRedistributionBgpArgs']]):
         pulumi.set(self, "bgp", value)
 
     @_builtins.property
     @pulumi.getter(name="connectedStatic")
-    def connected_static(self) -> Optional[pulumi.Input['BgpRouteMapRedistributionConnectedStaticArgs']]:
+    def connected_static(self) -> pulumi.Input[Optional['BgpRouteMapRedistributionConnectedStaticArgs']]:
         """
         Connected static
 
@@ -252,24 +252,24 @@ class _BgpRouteMapRedistributionState:
         return pulumi.get(self, "connected_static")
 
     @connected_static.setter
-    def connected_static(self, value: Optional[pulumi.Input['BgpRouteMapRedistributionConnectedStaticArgs']]):
+    def connected_static(self, value: pulumi.Input[Optional['BgpRouteMapRedistributionConnectedStaticArgs']]):
         pulumi.set(self, "connected_static", value)
 
     @_builtins.property
     @pulumi.getter
-    def description(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def description(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         BGP Route Map Redistributions Description
         """
         return pulumi.get(self, "description")
 
     @description.setter
-    def description(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def description(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "description", value)
 
     @_builtins.property
     @pulumi.getter
-    def device(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def device(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The device in which the resource is defined
 
@@ -278,12 +278,12 @@ class _BgpRouteMapRedistributionState:
         return pulumi.get(self, "device")
 
     @device.setter
-    def device(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def device(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "device", value)
 
     @_builtins.property
     @pulumi.getter
-    def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def folder(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
 
@@ -292,24 +292,24 @@ class _BgpRouteMapRedistributionState:
         return pulumi.get(self, "folder")
 
     @folder.setter
-    def folder(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def folder(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "folder", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         BGP Route Map Redistributions Name
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter
-    def ospf(self) -> Optional[pulumi.Input['BgpRouteMapRedistributionOspfArgs']]:
+    def ospf(self) -> pulumi.Input[Optional['BgpRouteMapRedistributionOspfArgs']]:
         """
         Ospf
 
@@ -318,12 +318,12 @@ class _BgpRouteMapRedistributionState:
         return pulumi.get(self, "ospf")
 
     @ospf.setter
-    def ospf(self, value: Optional[pulumi.Input['BgpRouteMapRedistributionOspfArgs']]):
+    def ospf(self, value: pulumi.Input[Optional['BgpRouteMapRedistributionOspfArgs']]):
         pulumi.set(self, "ospf", value)
 
     @_builtins.property
     @pulumi.getter
-    def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def snippet(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
 
@@ -332,19 +332,19 @@ class _BgpRouteMapRedistributionState:
         return pulumi.get(self, "snippet")
 
     @snippet.setter
-    def snippet(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def snippet(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "snippet", value)
 
     @_builtins.property
     @pulumi.getter
-    def tfid(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def tfid(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The Terraform ID.
         """
         return pulumi.get(self, "tfid")
 
     @tfid.setter
-    def tfid(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def tfid(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "tfid", value)
 
 
@@ -354,14 +354,14 @@ class BgpRouteMapRedistribution(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 bgp: Optional[pulumi.Input[Union['BgpRouteMapRedistributionBgpArgs', 'BgpRouteMapRedistributionBgpArgsDict']]] = None,
-                 connected_static: Optional[pulumi.Input[Union['BgpRouteMapRedistributionConnectedStaticArgs', 'BgpRouteMapRedistributionConnectedStaticArgsDict']]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 device: Optional[pulumi.Input[_builtins.str]] = None,
-                 folder: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 ospf: Optional[pulumi.Input[Union['BgpRouteMapRedistributionOspfArgs', 'BgpRouteMapRedistributionOspfArgsDict']]] = None,
-                 snippet: Optional[pulumi.Input[_builtins.str]] = None,
+                 bgp: pulumi.Input[Optional[Union['BgpRouteMapRedistributionBgpArgs', 'BgpRouteMapRedistributionBgpArgsDict']]] = None,
+                 connected_static: pulumi.Input[Optional[Union['BgpRouteMapRedistributionConnectedStaticArgs', 'BgpRouteMapRedistributionConnectedStaticArgsDict']]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 device: pulumi.Input[Optional[_builtins.str]] = None,
+                 folder: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 ospf: pulumi.Input[Optional[Union['BgpRouteMapRedistributionOspfArgs', 'BgpRouteMapRedistributionOspfArgsDict']]] = None,
+                 snippet: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
         BgpRouteMapRedistribution resource
@@ -457,14 +457,14 @@ class BgpRouteMapRedistribution(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 bgp: Optional[pulumi.Input[Union['BgpRouteMapRedistributionBgpArgs', 'BgpRouteMapRedistributionBgpArgsDict']]] = None,
-                 connected_static: Optional[pulumi.Input[Union['BgpRouteMapRedistributionConnectedStaticArgs', 'BgpRouteMapRedistributionConnectedStaticArgsDict']]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 device: Optional[pulumi.Input[_builtins.str]] = None,
-                 folder: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 ospf: Optional[pulumi.Input[Union['BgpRouteMapRedistributionOspfArgs', 'BgpRouteMapRedistributionOspfArgsDict']]] = None,
-                 snippet: Optional[pulumi.Input[_builtins.str]] = None,
+                 bgp: pulumi.Input[Optional[Union['BgpRouteMapRedistributionBgpArgs', 'BgpRouteMapRedistributionBgpArgsDict']]] = None,
+                 connected_static: pulumi.Input[Optional[Union['BgpRouteMapRedistributionConnectedStaticArgs', 'BgpRouteMapRedistributionConnectedStaticArgsDict']]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 device: pulumi.Input[Optional[_builtins.str]] = None,
+                 folder: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 ospf: pulumi.Input[Optional[Union['BgpRouteMapRedistributionOspfArgs', 'BgpRouteMapRedistributionOspfArgsDict']]] = None,
+                 snippet: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -493,15 +493,15 @@ class BgpRouteMapRedistribution(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            bgp: Optional[pulumi.Input[Union['BgpRouteMapRedistributionBgpArgs', 'BgpRouteMapRedistributionBgpArgsDict']]] = None,
-            connected_static: Optional[pulumi.Input[Union['BgpRouteMapRedistributionConnectedStaticArgs', 'BgpRouteMapRedistributionConnectedStaticArgsDict']]] = None,
-            description: Optional[pulumi.Input[_builtins.str]] = None,
-            device: Optional[pulumi.Input[_builtins.str]] = None,
-            folder: Optional[pulumi.Input[_builtins.str]] = None,
-            name: Optional[pulumi.Input[_builtins.str]] = None,
-            ospf: Optional[pulumi.Input[Union['BgpRouteMapRedistributionOspfArgs', 'BgpRouteMapRedistributionOspfArgsDict']]] = None,
-            snippet: Optional[pulumi.Input[_builtins.str]] = None,
-            tfid: Optional[pulumi.Input[_builtins.str]] = None) -> 'BgpRouteMapRedistribution':
+            bgp: pulumi.Input[Optional[Union['BgpRouteMapRedistributionBgpArgs', 'BgpRouteMapRedistributionBgpArgsDict']]] = None,
+            connected_static: pulumi.Input[Optional[Union['BgpRouteMapRedistributionConnectedStaticArgs', 'BgpRouteMapRedistributionConnectedStaticArgsDict']]] = None,
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            device: pulumi.Input[Optional[_builtins.str]] = None,
+            folder: pulumi.Input[Optional[_builtins.str]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            ospf: pulumi.Input[Optional[Union['BgpRouteMapRedistributionOspfArgs', 'BgpRouteMapRedistributionOspfArgsDict']]] = None,
+            snippet: pulumi.Input[Optional[_builtins.str]] = None,
+            tfid: pulumi.Input[Optional[_builtins.str]] = None) -> 'BgpRouteMapRedistribution':
         """
         Get an existing BgpRouteMapRedistribution resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

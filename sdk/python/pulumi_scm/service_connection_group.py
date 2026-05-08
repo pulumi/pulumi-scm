@@ -20,9 +20,9 @@ __all__ = ['ServiceConnectionGroupArgs', 'ServiceConnectionGroup']
 class ServiceConnectionGroupArgs:
     def __init__(__self__, *,
                  targets: pulumi.Input[Sequence[pulumi.Input[_builtins.str]]],
-                 disable_snat: Optional[pulumi.Input[_builtins.bool]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 pbf_only: Optional[pulumi.Input[_builtins.bool]] = None):
+                 disable_snat: pulumi.Input[Optional[_builtins.bool]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 pbf_only: pulumi.Input[Optional[_builtins.bool]] = None):
         """
         The set of arguments for constructing a ServiceConnectionGroup resource.
 
@@ -53,50 +53,50 @@ class ServiceConnectionGroupArgs:
 
     @_builtins.property
     @pulumi.getter(name="disableSnat")
-    def disable_snat(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def disable_snat(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Disable snat
         """
         return pulumi.get(self, "disable_snat")
 
     @disable_snat.setter
-    def disable_snat(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def disable_snat(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "disable_snat", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Name
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter(name="pbfOnly")
-    def pbf_only(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def pbf_only(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Pbf only
         """
         return pulumi.get(self, "pbf_only")
 
     @pbf_only.setter
-    def pbf_only(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def pbf_only(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "pbf_only", value)
 
 
 @pulumi.input_type
 class _ServiceConnectionGroupState:
     def __init__(__self__, *,
-                 disable_snat: Optional[pulumi.Input[_builtins.bool]] = None,
-                 folder: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 pbf_only: Optional[pulumi.Input[_builtins.bool]] = None,
-                 targets: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 tfid: Optional[pulumi.Input[_builtins.str]] = None):
+                 disable_snat: pulumi.Input[Optional[_builtins.bool]] = None,
+                 folder: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 pbf_only: pulumi.Input[Optional[_builtins.bool]] = None,
+                 targets: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 tfid: pulumi.Input[Optional[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering ServiceConnectionGroup resources.
 
@@ -122,74 +122,74 @@ class _ServiceConnectionGroupState:
 
     @_builtins.property
     @pulumi.getter(name="disableSnat")
-    def disable_snat(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def disable_snat(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Disable snat
         """
         return pulumi.get(self, "disable_snat")
 
     @disable_snat.setter
-    def disable_snat(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def disable_snat(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "disable_snat", value)
 
     @_builtins.property
     @pulumi.getter
-    def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def folder(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
         """
         return pulumi.get(self, "folder")
 
     @folder.setter
-    def folder(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def folder(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "folder", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Name
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter(name="pbfOnly")
-    def pbf_only(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def pbf_only(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Pbf only
         """
         return pulumi.get(self, "pbf_only")
 
     @pbf_only.setter
-    def pbf_only(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def pbf_only(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "pbf_only", value)
 
     @_builtins.property
     @pulumi.getter
-    def targets(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def targets(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         Target
         """
         return pulumi.get(self, "targets")
 
     @targets.setter
-    def targets(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def targets(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "targets", value)
 
     @_builtins.property
     @pulumi.getter
-    def tfid(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def tfid(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The Terraform ID.
         """
         return pulumi.get(self, "tfid")
 
     @tfid.setter
-    def tfid(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def tfid(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "tfid", value)
 
 
@@ -199,10 +199,10 @@ class ServiceConnectionGroup(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 disable_snat: Optional[pulumi.Input[_builtins.bool]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 pbf_only: Optional[pulumi.Input[_builtins.bool]] = None,
-                 targets: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 disable_snat: pulumi.Input[Optional[_builtins.bool]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 pbf_only: pulumi.Input[Optional[_builtins.bool]] = None,
+                 targets: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  __props__=None):
         """
         ServiceConnectionGroup resource
@@ -484,10 +484,10 @@ class ServiceConnectionGroup(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 disable_snat: Optional[pulumi.Input[_builtins.bool]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 pbf_only: Optional[pulumi.Input[_builtins.bool]] = None,
-                 targets: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 disable_snat: pulumi.Input[Optional[_builtins.bool]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 pbf_only: pulumi.Input[Optional[_builtins.bool]] = None,
+                 targets: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -515,12 +515,12 @@ class ServiceConnectionGroup(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            disable_snat: Optional[pulumi.Input[_builtins.bool]] = None,
-            folder: Optional[pulumi.Input[_builtins.str]] = None,
-            name: Optional[pulumi.Input[_builtins.str]] = None,
-            pbf_only: Optional[pulumi.Input[_builtins.bool]] = None,
-            targets: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-            tfid: Optional[pulumi.Input[_builtins.str]] = None) -> 'ServiceConnectionGroup':
+            disable_snat: pulumi.Input[Optional[_builtins.bool]] = None,
+            folder: pulumi.Input[Optional[_builtins.str]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            pbf_only: pulumi.Input[Optional[_builtins.bool]] = None,
+            targets: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            tfid: pulumi.Input[Optional[_builtins.str]] = None) -> 'ServiceConnectionGroup':
         """
         Get an existing ServiceConnectionGroup resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

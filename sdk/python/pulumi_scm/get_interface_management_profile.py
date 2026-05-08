@@ -248,11 +248,11 @@ def get_interface_management_profile(device: Optional[_builtins.str] = None,
         userid_service=pulumi.get(__ret__, 'userid_service'),
         userid_syslog_listener_ssl=pulumi.get(__ret__, 'userid_syslog_listener_ssl'),
         userid_syslog_listener_udp=pulumi.get(__ret__, 'userid_syslog_listener_udp'))
-def get_interface_management_profile_output(device: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
-                                            folder: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
-                                            id: Optional[pulumi.Input[_builtins.str]] = None,
-                                            name: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
-                                            snippet: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
+def get_interface_management_profile_output(device: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
+                                            folder: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
+                                            id: pulumi.Input[Optional[_builtins.str]] = None,
+                                            name: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
+                                            snippet: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
                                             opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetInterfaceManagementProfileResult]:
     """
     InterfaceManagementProfile data source

@@ -122,23 +122,23 @@ export interface InternalDnsServerState {
     /**
      * The DNS domain name(s)
      */
-    domainNames?: pulumi.Input<pulumi.Input<string>[]>;
+    domainNames?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * The name of the internet DNS server resource
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * The IP address of the primary DNS server
      */
-    primary?: pulumi.Input<string>;
+    primary?: pulumi.Input<string | undefined>;
     /**
      * The IP address of the secondary DNS server
      */
-    secondary?: pulumi.Input<string>;
+    secondary?: pulumi.Input<string | undefined>;
     /**
      * The Terraform ID.
      */
-    tfid?: pulumi.Input<string>;
+    tfid?: pulumi.Input<string | undefined>;
 }
 
 /**
@@ -152,7 +152,7 @@ export interface InternalDnsServerArgs {
     /**
      * The name of the internet DNS server resource
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * The IP address of the primary DNS server
      */
@@ -160,5 +160,5 @@ export interface InternalDnsServerArgs {
     /**
      * The IP address of the secondary DNS server
      */
-    secondary?: pulumi.Input<string>;
+    secondary?: pulumi.Input<string | undefined>;
 }

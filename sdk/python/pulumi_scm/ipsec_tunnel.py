@@ -22,15 +22,15 @@ __all__ = ['IpsecTunnelArgs', 'IpsecTunnel']
 class IpsecTunnelArgs:
     def __init__(__self__, *,
                  auto_key: pulumi.Input['IpsecTunnelAutoKeyArgs'],
-                 anti_replay: Optional[pulumi.Input[_builtins.bool]] = None,
-                 copy_tos: Optional[pulumi.Input[_builtins.bool]] = None,
-                 device: Optional[pulumi.Input[_builtins.str]] = None,
-                 enable_gre_encapsulation: Optional[pulumi.Input[_builtins.bool]] = None,
-                 folder: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 snippet: Optional[pulumi.Input[_builtins.str]] = None,
-                 tunnel_interface: Optional[pulumi.Input[_builtins.str]] = None,
-                 tunnel_monitor: Optional[pulumi.Input['IpsecTunnelTunnelMonitorArgs']] = None):
+                 anti_replay: pulumi.Input[Optional[_builtins.bool]] = None,
+                 copy_tos: pulumi.Input[Optional[_builtins.bool]] = None,
+                 device: pulumi.Input[Optional[_builtins.str]] = None,
+                 enable_gre_encapsulation: pulumi.Input[Optional[_builtins.bool]] = None,
+                 folder: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 snippet: pulumi.Input[Optional[_builtins.str]] = None,
+                 tunnel_interface: pulumi.Input[Optional[_builtins.str]] = None,
+                 tunnel_monitor: pulumi.Input[Optional['IpsecTunnelTunnelMonitorArgs']] = None):
         """
         The set of arguments for constructing a IpsecTunnel resource.
 
@@ -83,55 +83,55 @@ class IpsecTunnelArgs:
 
     @_builtins.property
     @pulumi.getter(name="antiReplay")
-    def anti_replay(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def anti_replay(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Enable Anti-Replay check on this tunnel
         """
         return pulumi.get(self, "anti_replay")
 
     @anti_replay.setter
-    def anti_replay(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def anti_replay(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "anti_replay", value)
 
     @_builtins.property
     @pulumi.getter(name="copyTos")
-    def copy_tos(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def copy_tos(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Copy IP TOS bits from inner packet to IPSec packet (not recommended)
         """
         return pulumi.get(self, "copy_tos")
 
     @copy_tos.setter
-    def copy_tos(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def copy_tos(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "copy_tos", value)
 
     @_builtins.property
     @pulumi.getter
-    def device(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def device(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The device in which the resource is defined
         """
         return pulumi.get(self, "device")
 
     @device.setter
-    def device(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def device(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "device", value)
 
     @_builtins.property
     @pulumi.getter(name="enableGreEncapsulation")
-    def enable_gre_encapsulation(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def enable_gre_encapsulation(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         allow GRE over IPSec
         """
         return pulumi.get(self, "enable_gre_encapsulation")
 
     @enable_gre_encapsulation.setter
-    def enable_gre_encapsulation(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def enable_gre_encapsulation(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "enable_gre_encapsulation", value)
 
     @_builtins.property
     @pulumi.getter
-    def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def folder(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
 
@@ -140,24 +140,24 @@ class IpsecTunnelArgs:
         return pulumi.get(self, "folder")
 
     @folder.setter
-    def folder(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def folder(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "folder", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Alphanumeric string begin with letter: [0-9a-zA-Z._-]
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter
-    def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def snippet(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
 
@@ -166,48 +166,48 @@ class IpsecTunnelArgs:
         return pulumi.get(self, "snippet")
 
     @snippet.setter
-    def snippet(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def snippet(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "snippet", value)
 
     @_builtins.property
     @pulumi.getter(name="tunnelInterface")
-    def tunnel_interface(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def tunnel_interface(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Tunnel interface variable or hardcoded tunnel. Default will be tunnels.
         """
         return pulumi.get(self, "tunnel_interface")
 
     @tunnel_interface.setter
-    def tunnel_interface(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def tunnel_interface(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "tunnel_interface", value)
 
     @_builtins.property
     @pulumi.getter(name="tunnelMonitor")
-    def tunnel_monitor(self) -> Optional[pulumi.Input['IpsecTunnelTunnelMonitorArgs']]:
+    def tunnel_monitor(self) -> pulumi.Input[Optional['IpsecTunnelTunnelMonitorArgs']]:
         """
         Tunnel monitor
         """
         return pulumi.get(self, "tunnel_monitor")
 
     @tunnel_monitor.setter
-    def tunnel_monitor(self, value: Optional[pulumi.Input['IpsecTunnelTunnelMonitorArgs']]):
+    def tunnel_monitor(self, value: pulumi.Input[Optional['IpsecTunnelTunnelMonitorArgs']]):
         pulumi.set(self, "tunnel_monitor", value)
 
 
 @pulumi.input_type
 class _IpsecTunnelState:
     def __init__(__self__, *,
-                 anti_replay: Optional[pulumi.Input[_builtins.bool]] = None,
-                 auto_key: Optional[pulumi.Input['IpsecTunnelAutoKeyArgs']] = None,
-                 copy_tos: Optional[pulumi.Input[_builtins.bool]] = None,
-                 device: Optional[pulumi.Input[_builtins.str]] = None,
-                 enable_gre_encapsulation: Optional[pulumi.Input[_builtins.bool]] = None,
-                 folder: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 snippet: Optional[pulumi.Input[_builtins.str]] = None,
-                 tfid: Optional[pulumi.Input[_builtins.str]] = None,
-                 tunnel_interface: Optional[pulumi.Input[_builtins.str]] = None,
-                 tunnel_monitor: Optional[pulumi.Input['IpsecTunnelTunnelMonitorArgs']] = None):
+                 anti_replay: pulumi.Input[Optional[_builtins.bool]] = None,
+                 auto_key: pulumi.Input[Optional['IpsecTunnelAutoKeyArgs']] = None,
+                 copy_tos: pulumi.Input[Optional[_builtins.bool]] = None,
+                 device: pulumi.Input[Optional[_builtins.str]] = None,
+                 enable_gre_encapsulation: pulumi.Input[Optional[_builtins.bool]] = None,
+                 folder: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 snippet: pulumi.Input[Optional[_builtins.str]] = None,
+                 tfid: pulumi.Input[Optional[_builtins.str]] = None,
+                 tunnel_interface: pulumi.Input[Optional[_builtins.str]] = None,
+                 tunnel_monitor: pulumi.Input[Optional['IpsecTunnelTunnelMonitorArgs']] = None):
         """
         Input properties used for looking up and filtering IpsecTunnel resources.
 
@@ -252,67 +252,67 @@ class _IpsecTunnelState:
 
     @_builtins.property
     @pulumi.getter(name="antiReplay")
-    def anti_replay(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def anti_replay(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Enable Anti-Replay check on this tunnel
         """
         return pulumi.get(self, "anti_replay")
 
     @anti_replay.setter
-    def anti_replay(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def anti_replay(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "anti_replay", value)
 
     @_builtins.property
     @pulumi.getter(name="autoKey")
-    def auto_key(self) -> Optional[pulumi.Input['IpsecTunnelAutoKeyArgs']]:
+    def auto_key(self) -> pulumi.Input[Optional['IpsecTunnelAutoKeyArgs']]:
         """
         Auto key
         """
         return pulumi.get(self, "auto_key")
 
     @auto_key.setter
-    def auto_key(self, value: Optional[pulumi.Input['IpsecTunnelAutoKeyArgs']]):
+    def auto_key(self, value: pulumi.Input[Optional['IpsecTunnelAutoKeyArgs']]):
         pulumi.set(self, "auto_key", value)
 
     @_builtins.property
     @pulumi.getter(name="copyTos")
-    def copy_tos(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def copy_tos(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Copy IP TOS bits from inner packet to IPSec packet (not recommended)
         """
         return pulumi.get(self, "copy_tos")
 
     @copy_tos.setter
-    def copy_tos(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def copy_tos(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "copy_tos", value)
 
     @_builtins.property
     @pulumi.getter
-    def device(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def device(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The device in which the resource is defined
         """
         return pulumi.get(self, "device")
 
     @device.setter
-    def device(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def device(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "device", value)
 
     @_builtins.property
     @pulumi.getter(name="enableGreEncapsulation")
-    def enable_gre_encapsulation(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def enable_gre_encapsulation(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         allow GRE over IPSec
         """
         return pulumi.get(self, "enable_gre_encapsulation")
 
     @enable_gre_encapsulation.setter
-    def enable_gre_encapsulation(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def enable_gre_encapsulation(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "enable_gre_encapsulation", value)
 
     @_builtins.property
     @pulumi.getter
-    def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def folder(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
 
@@ -321,24 +321,24 @@ class _IpsecTunnelState:
         return pulumi.get(self, "folder")
 
     @folder.setter
-    def folder(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def folder(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "folder", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Alphanumeric string begin with letter: [0-9a-zA-Z._-]
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter
-    def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def snippet(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
 
@@ -347,43 +347,43 @@ class _IpsecTunnelState:
         return pulumi.get(self, "snippet")
 
     @snippet.setter
-    def snippet(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def snippet(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "snippet", value)
 
     @_builtins.property
     @pulumi.getter
-    def tfid(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def tfid(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The Terraform ID.
         """
         return pulumi.get(self, "tfid")
 
     @tfid.setter
-    def tfid(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def tfid(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "tfid", value)
 
     @_builtins.property
     @pulumi.getter(name="tunnelInterface")
-    def tunnel_interface(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def tunnel_interface(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Tunnel interface variable or hardcoded tunnel. Default will be tunnels.
         """
         return pulumi.get(self, "tunnel_interface")
 
     @tunnel_interface.setter
-    def tunnel_interface(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def tunnel_interface(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "tunnel_interface", value)
 
     @_builtins.property
     @pulumi.getter(name="tunnelMonitor")
-    def tunnel_monitor(self) -> Optional[pulumi.Input['IpsecTunnelTunnelMonitorArgs']]:
+    def tunnel_monitor(self) -> pulumi.Input[Optional['IpsecTunnelTunnelMonitorArgs']]:
         """
         Tunnel monitor
         """
         return pulumi.get(self, "tunnel_monitor")
 
     @tunnel_monitor.setter
-    def tunnel_monitor(self, value: Optional[pulumi.Input['IpsecTunnelTunnelMonitorArgs']]):
+    def tunnel_monitor(self, value: pulumi.Input[Optional['IpsecTunnelTunnelMonitorArgs']]):
         pulumi.set(self, "tunnel_monitor", value)
 
 
@@ -393,16 +393,16 @@ class IpsecTunnel(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 anti_replay: Optional[pulumi.Input[_builtins.bool]] = None,
-                 auto_key: Optional[pulumi.Input[Union['IpsecTunnelAutoKeyArgs', 'IpsecTunnelAutoKeyArgsDict']]] = None,
-                 copy_tos: Optional[pulumi.Input[_builtins.bool]] = None,
-                 device: Optional[pulumi.Input[_builtins.str]] = None,
-                 enable_gre_encapsulation: Optional[pulumi.Input[_builtins.bool]] = None,
-                 folder: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 snippet: Optional[pulumi.Input[_builtins.str]] = None,
-                 tunnel_interface: Optional[pulumi.Input[_builtins.str]] = None,
-                 tunnel_monitor: Optional[pulumi.Input[Union['IpsecTunnelTunnelMonitorArgs', 'IpsecTunnelTunnelMonitorArgsDict']]] = None,
+                 anti_replay: pulumi.Input[Optional[_builtins.bool]] = None,
+                 auto_key: pulumi.Input[Optional[Union['IpsecTunnelAutoKeyArgs', 'IpsecTunnelAutoKeyArgsDict']]] = None,
+                 copy_tos: pulumi.Input[Optional[_builtins.bool]] = None,
+                 device: pulumi.Input[Optional[_builtins.str]] = None,
+                 enable_gre_encapsulation: pulumi.Input[Optional[_builtins.bool]] = None,
+                 folder: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 snippet: pulumi.Input[Optional[_builtins.str]] = None,
+                 tunnel_interface: pulumi.Input[Optional[_builtins.str]] = None,
+                 tunnel_monitor: pulumi.Input[Optional[Union['IpsecTunnelTunnelMonitorArgs', 'IpsecTunnelTunnelMonitorArgsDict']]] = None,
                  __props__=None):
         """
         IpsecTunnel resource
@@ -620,16 +620,16 @@ class IpsecTunnel(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 anti_replay: Optional[pulumi.Input[_builtins.bool]] = None,
-                 auto_key: Optional[pulumi.Input[Union['IpsecTunnelAutoKeyArgs', 'IpsecTunnelAutoKeyArgsDict']]] = None,
-                 copy_tos: Optional[pulumi.Input[_builtins.bool]] = None,
-                 device: Optional[pulumi.Input[_builtins.str]] = None,
-                 enable_gre_encapsulation: Optional[pulumi.Input[_builtins.bool]] = None,
-                 folder: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 snippet: Optional[pulumi.Input[_builtins.str]] = None,
-                 tunnel_interface: Optional[pulumi.Input[_builtins.str]] = None,
-                 tunnel_monitor: Optional[pulumi.Input[Union['IpsecTunnelTunnelMonitorArgs', 'IpsecTunnelTunnelMonitorArgsDict']]] = None,
+                 anti_replay: pulumi.Input[Optional[_builtins.bool]] = None,
+                 auto_key: pulumi.Input[Optional[Union['IpsecTunnelAutoKeyArgs', 'IpsecTunnelAutoKeyArgsDict']]] = None,
+                 copy_tos: pulumi.Input[Optional[_builtins.bool]] = None,
+                 device: pulumi.Input[Optional[_builtins.str]] = None,
+                 enable_gre_encapsulation: pulumi.Input[Optional[_builtins.bool]] = None,
+                 folder: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 snippet: pulumi.Input[Optional[_builtins.str]] = None,
+                 tunnel_interface: pulumi.Input[Optional[_builtins.str]] = None,
+                 tunnel_monitor: pulumi.Input[Optional[Union['IpsecTunnelTunnelMonitorArgs', 'IpsecTunnelTunnelMonitorArgsDict']]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -662,17 +662,17 @@ class IpsecTunnel(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            anti_replay: Optional[pulumi.Input[_builtins.bool]] = None,
-            auto_key: Optional[pulumi.Input[Union['IpsecTunnelAutoKeyArgs', 'IpsecTunnelAutoKeyArgsDict']]] = None,
-            copy_tos: Optional[pulumi.Input[_builtins.bool]] = None,
-            device: Optional[pulumi.Input[_builtins.str]] = None,
-            enable_gre_encapsulation: Optional[pulumi.Input[_builtins.bool]] = None,
-            folder: Optional[pulumi.Input[_builtins.str]] = None,
-            name: Optional[pulumi.Input[_builtins.str]] = None,
-            snippet: Optional[pulumi.Input[_builtins.str]] = None,
-            tfid: Optional[pulumi.Input[_builtins.str]] = None,
-            tunnel_interface: Optional[pulumi.Input[_builtins.str]] = None,
-            tunnel_monitor: Optional[pulumi.Input[Union['IpsecTunnelTunnelMonitorArgs', 'IpsecTunnelTunnelMonitorArgsDict']]] = None) -> 'IpsecTunnel':
+            anti_replay: pulumi.Input[Optional[_builtins.bool]] = None,
+            auto_key: pulumi.Input[Optional[Union['IpsecTunnelAutoKeyArgs', 'IpsecTunnelAutoKeyArgsDict']]] = None,
+            copy_tos: pulumi.Input[Optional[_builtins.bool]] = None,
+            device: pulumi.Input[Optional[_builtins.str]] = None,
+            enable_gre_encapsulation: pulumi.Input[Optional[_builtins.bool]] = None,
+            folder: pulumi.Input[Optional[_builtins.str]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            snippet: pulumi.Input[Optional[_builtins.str]] = None,
+            tfid: pulumi.Input[Optional[_builtins.str]] = None,
+            tunnel_interface: pulumi.Input[Optional[_builtins.str]] = None,
+            tunnel_monitor: pulumi.Input[Optional[Union['IpsecTunnelTunnelMonitorArgs', 'IpsecTunnelTunnelMonitorArgsDict']]] = None) -> 'IpsecTunnel':
         """
         Get an existing IpsecTunnel resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

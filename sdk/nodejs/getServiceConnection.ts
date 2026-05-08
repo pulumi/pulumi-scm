@@ -166,7 +166,7 @@ export interface GetServiceConnectionOutputArgs {
     /**
      * The folder in which the resource is defined
      */
-    folder?: pulumi.Input<string>;
+    folder?: pulumi.Input<string | undefined>;
     /**
      * The UUID of the service connection
      */
@@ -174,5 +174,5 @@ export interface GetServiceConnectionOutputArgs {
     /**
      * The name of the service connection
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
 }

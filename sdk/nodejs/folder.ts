@@ -171,27 +171,27 @@ export interface FolderState {
     /**
      * The description of the folder
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * Labels assigned to the folder
      */
-    labels?: pulumi.Input<pulumi.Input<string>[]>;
+    labels?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * The name of the folder
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * The parent folder
      */
-    parent?: pulumi.Input<string>;
+    parent?: pulumi.Input<string | undefined>;
     /**
      * Snippets associated with the folder
      */
-    snippets?: pulumi.Input<pulumi.Input<string>[]>;
+    snippets?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * The Terraform ID.
      */
-    tfid?: pulumi.Input<string>;
+    tfid?: pulumi.Input<string | undefined>;
 }
 
 /**
@@ -201,15 +201,15 @@ export interface FolderArgs {
     /**
      * The description of the folder
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * Labels assigned to the folder
      */
-    labels?: pulumi.Input<pulumi.Input<string>[]>;
+    labels?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * The name of the folder
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * The parent folder
      */
@@ -217,5 +217,5 @@ export interface FolderArgs {
     /**
      * Snippets associated with the folder
      */
-    snippets?: pulumi.Input<pulumi.Input<string>[]>;
+    snippets?: pulumi.Input<pulumi.Input<string>[] | undefined>;
 }

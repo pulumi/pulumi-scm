@@ -181,55 +181,55 @@ export interface SystemMatchListState {
     /**
      * Description of the system match list entry
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * The device in which the resource is defined
      */
-    device?: pulumi.Input<string>;
+    device?: pulumi.Input<string | undefined>;
     /**
      * Filter of the system match list entry
      */
-    filter?: pulumi.Input<string>;
+    filter?: pulumi.Input<string | undefined>;
     /**
      * The folder in which the resource is defined
      *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
-    folder?: pulumi.Input<string>;
+    folder?: pulumi.Input<string | undefined>;
     /**
      * Name of the system match list entry
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Send Email List of the system match list entry
      */
-    sendEmails?: pulumi.Input<pulumi.Input<string>[]>;
+    sendEmails?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Send HTTP List of the system match list entry
      */
-    sendHttps?: pulumi.Input<pulumi.Input<string>[]>;
+    sendHttps?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Send SNMP Trap List of the system match list entry
      */
-    sendSnmptraps?: pulumi.Input<pulumi.Input<string>[]>;
+    sendSnmptraps?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Send Sys Log List of the system match list entry
      */
-    sendSyslogs?: pulumi.Input<pulumi.Input<string>[]>;
+    sendSyslogs?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Send to Panorama Flag of the system match list entry
      */
-    sendToPanorama?: pulumi.Input<boolean>;
+    sendToPanorama?: pulumi.Input<boolean | undefined>;
     /**
      * The snippet in which the resource is defined
      *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
-    snippet?: pulumi.Input<string>;
+    snippet?: pulumi.Input<string | undefined>;
     /**
      * The Terraform ID.
      */
-    tfid?: pulumi.Input<string>;
+    tfid?: pulumi.Input<string | undefined>;
 }
 
 /**
@@ -239,49 +239,49 @@ export interface SystemMatchListArgs {
     /**
      * Description of the system match list entry
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * The device in which the resource is defined
      */
-    device?: pulumi.Input<string>;
+    device?: pulumi.Input<string | undefined>;
     /**
      * Filter of the system match list entry
      */
-    filter?: pulumi.Input<string>;
+    filter?: pulumi.Input<string | undefined>;
     /**
      * The folder in which the resource is defined
      *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
-    folder?: pulumi.Input<string>;
+    folder?: pulumi.Input<string | undefined>;
     /**
      * Name of the system match list entry
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Send Email List of the system match list entry
      */
-    sendEmails?: pulumi.Input<pulumi.Input<string>[]>;
+    sendEmails?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Send HTTP List of the system match list entry
      */
-    sendHttps?: pulumi.Input<pulumi.Input<string>[]>;
+    sendHttps?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Send SNMP Trap List of the system match list entry
      */
-    sendSnmptraps?: pulumi.Input<pulumi.Input<string>[]>;
+    sendSnmptraps?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Send Sys Log List of the system match list entry
      */
-    sendSyslogs?: pulumi.Input<pulumi.Input<string>[]>;
+    sendSyslogs?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Send to Panorama Flag of the system match list entry
      */
-    sendToPanorama?: pulumi.Input<boolean>;
+    sendToPanorama?: pulumi.Input<boolean | undefined>;
     /**
      * The snippet in which the resource is defined
      *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
-    snippet?: pulumi.Input<string>;
+    snippet?: pulumi.Input<string | undefined>;
 }
