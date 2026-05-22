@@ -2450,7 +2450,7 @@ class AddressGroupDynamicArgs:
 
 
 class AggregateInterfaceLayer2ArgsDict(TypedDict):
-    lacp: NotRequired[pulumi.Input[Optional['AggregateInterfaceLayer2LacpArgs']]]
+    lacp: NotRequired[pulumi.Input[Optional['AggregateInterfaceLayer2LacpArgsDict']]]
     """
     Lacp
     """
@@ -2648,15 +2648,15 @@ class AggregateInterfaceLayer2LacpArgs:
 
 
 class AggregateInterfaceLayer3ArgsDict(TypedDict):
-    arps: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['AggregateInterfaceLayer3ArpArgs']]]]]
+    arps: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['AggregateInterfaceLayer3ArpArgsDict']]]]]
     """
     Aggregate Ethernet ARP configuration
     """
-    ddns_config: NotRequired[pulumi.Input[Optional['AggregateInterfaceLayer3DdnsConfigArgs']]]
+    ddns_config: NotRequired[pulumi.Input[Optional['AggregateInterfaceLayer3DdnsConfigArgsDict']]]
     """
     Dynamic DNS configuration specific to the Aggregate Interface.
     """
-    dhcp_client: NotRequired[pulumi.Input[Optional['AggregateInterfaceLayer3DhcpClientArgs']]]
+    dhcp_client: NotRequired[pulumi.Input[Optional['AggregateInterfaceLayer3DhcpClientArgsDict']]]
     """
     Aggregate Ethernet DHCP Client Object
     """
@@ -2664,13 +2664,13 @@ class AggregateInterfaceLayer3ArgsDict(TypedDict):
     """
     Interface management profile
     """
-    ips: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['AggregateInterfaceLayer3IpArgs']]]]]
+    ips: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['AggregateInterfaceLayer3IpArgsDict']]]]]
     """
     Aggregate Interface IP addresses
 
     > ℹ️ **Note:** You must specify exactly one of `dhcp_client` and `ip`.
     """
-    lacp: NotRequired[pulumi.Input[Optional['AggregateInterfaceLayer3LacpArgs']]]
+    lacp: NotRequired[pulumi.Input[Optional['AggregateInterfaceLayer3LacpArgsDict']]]
     """
     Lacp
     """
@@ -3029,7 +3029,7 @@ class AggregateInterfaceLayer3DhcpClientArgsDict(TypedDict):
     """
     Enable DHCP?
     """
-    send_hostname: NotRequired[pulumi.Input[Optional['AggregateInterfaceLayer3DhcpClientSendHostnameArgs']]]
+    send_hostname: NotRequired[pulumi.Input[Optional['AggregateInterfaceLayer3DhcpClientSendHostnameArgsDict']]]
     """
     Aggregate Ethernet DHCP Client Send hostname
     """
@@ -3361,7 +3361,7 @@ class AntiSpywareProfileMicaEngineSpywareEnabledArgs:
 
 
 class AntiSpywareProfileRuleArgsDict(TypedDict):
-    action: NotRequired[pulumi.Input[Optional['AntiSpywareProfileRuleActionArgs']]]
+    action: NotRequired[pulumi.Input[Optional['AntiSpywareProfileRuleActionArgsDict']]]
     """
     anti spyware profiles rules default action
     """
@@ -3490,41 +3490,41 @@ class AntiSpywareProfileRuleArgs:
 
 
 class AntiSpywareProfileRuleActionArgsDict(TypedDict):
-    alert: NotRequired[pulumi.Input[Optional['AntiSpywareProfileRuleActionAlertArgs']]]
+    alert: NotRequired[pulumi.Input[Optional['AntiSpywareProfileRuleActionAlertArgsDict']]]
     """
     Alert
     """
-    allow: NotRequired[pulumi.Input[Optional['AntiSpywareProfileRuleActionAllowArgs']]]
+    allow: NotRequired[pulumi.Input[Optional['AntiSpywareProfileRuleActionAllowArgsDict']]]
     """
     Allow
 
     > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `block_ip`, `drop`, `reset_both`, `reset_client`, and `reset_server`.
     """
-    block_ip: NotRequired[pulumi.Input[Optional['AntiSpywareProfileRuleActionBlockIpArgs']]]
+    block_ip: NotRequired[pulumi.Input[Optional['AntiSpywareProfileRuleActionBlockIpArgsDict']]]
     """
     anti spyware profiles rules action block ip
 
     > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `block_ip`, `drop`, `reset_both`, `reset_client`, and `reset_server`.
     """
-    drop: NotRequired[pulumi.Input[Optional['AntiSpywareProfileRuleActionDropArgs']]]
+    drop: NotRequired[pulumi.Input[Optional['AntiSpywareProfileRuleActionDropArgsDict']]]
     """
     Drop
 
     > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `block_ip`, `drop`, `reset_both`, `reset_client`, and `reset_server`.
     """
-    reset_both: NotRequired[pulumi.Input[Optional['AntiSpywareProfileRuleActionResetBothArgs']]]
+    reset_both: NotRequired[pulumi.Input[Optional['AntiSpywareProfileRuleActionResetBothArgsDict']]]
     """
     Reset both
 
     > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `block_ip`, `drop`, `reset_both`, `reset_client`, and `reset_server`.
     """
-    reset_client: NotRequired[pulumi.Input[Optional['AntiSpywareProfileRuleActionResetClientArgs']]]
+    reset_client: NotRequired[pulumi.Input[Optional['AntiSpywareProfileRuleActionResetClientArgsDict']]]
     """
     Reset client
 
     > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `block_ip`, `drop`, `reset_both`, `reset_client`, and `reset_server`.
     """
-    reset_server: NotRequired[pulumi.Input[Optional['AntiSpywareProfileRuleActionResetServerArgs']]]
+    reset_server: NotRequired[pulumi.Input[Optional['AntiSpywareProfileRuleActionResetServerArgsDict']]]
     """
     Reset server
 
@@ -3778,11 +3778,11 @@ class AntiSpywareProfileRuleActionResetServerArgs:
 
 
 class AntiSpywareProfileThreatExceptionArgsDict(TypedDict):
-    action: NotRequired[pulumi.Input[Optional['AntiSpywareProfileThreatExceptionActionArgs']]]
+    action: NotRequired[pulumi.Input[Optional['AntiSpywareProfileThreatExceptionActionArgsDict']]]
     """
     anti spyware profiles threat exception default action
     """
-    exempt_ips: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['AntiSpywareProfileThreatExceptionExemptIpArgs']]]]]
+    exempt_ips: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['AntiSpywareProfileThreatExceptionExemptIpArgsDict']]]]]
     """
     Exempt ip
     """
@@ -3887,47 +3887,47 @@ class AntiSpywareProfileThreatExceptionArgs:
 
 
 class AntiSpywareProfileThreatExceptionActionArgsDict(TypedDict):
-    alert: NotRequired[pulumi.Input[Optional['AntiSpywareProfileThreatExceptionActionAlertArgs']]]
+    alert: NotRequired[pulumi.Input[Optional['AntiSpywareProfileThreatExceptionActionAlertArgsDict']]]
     """
     Alert
     """
-    allow: NotRequired[pulumi.Input[Optional['AntiSpywareProfileThreatExceptionActionAllowArgs']]]
+    allow: NotRequired[pulumi.Input[Optional['AntiSpywareProfileThreatExceptionActionAllowArgsDict']]]
     """
     Allow
 
     > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `block_ip`, `default`, `drop`, `reset_both`, `reset_client`, and `reset_server`.
     """
-    block_ip: NotRequired[pulumi.Input[Optional['AntiSpywareProfileThreatExceptionActionBlockIpArgs']]]
+    block_ip: NotRequired[pulumi.Input[Optional['AntiSpywareProfileThreatExceptionActionBlockIpArgsDict']]]
     """
     anti spyware profiles threat exception action block ip
 
     > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `block_ip`, `default`, `drop`, `reset_both`, `reset_client`, and `reset_server`.
     """
-    default: NotRequired[pulumi.Input[Optional['AntiSpywareProfileThreatExceptionActionDefaultArgs']]]
+    default: NotRequired[pulumi.Input[Optional['AntiSpywareProfileThreatExceptionActionDefaultArgsDict']]]
     """
     Default
 
     > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `block_ip`, `default`, `drop`, `reset_both`, `reset_client`, and `reset_server`.
     """
-    drop: NotRequired[pulumi.Input[Optional['AntiSpywareProfileThreatExceptionActionDropArgs']]]
+    drop: NotRequired[pulumi.Input[Optional['AntiSpywareProfileThreatExceptionActionDropArgsDict']]]
     """
     Drop
 
     > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `block_ip`, `default`, `drop`, `reset_both`, `reset_client`, and `reset_server`.
     """
-    reset_both: NotRequired[pulumi.Input[Optional['AntiSpywareProfileThreatExceptionActionResetBothArgs']]]
+    reset_both: NotRequired[pulumi.Input[Optional['AntiSpywareProfileThreatExceptionActionResetBothArgsDict']]]
     """
     Reset both
 
     > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `block_ip`, `default`, `drop`, `reset_both`, `reset_client`, and `reset_server`.
     """
-    reset_client: NotRequired[pulumi.Input[Optional['AntiSpywareProfileThreatExceptionActionResetClientArgs']]]
+    reset_client: NotRequired[pulumi.Input[Optional['AntiSpywareProfileThreatExceptionActionResetClientArgsDict']]]
     """
     Reset client
 
     > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `block_ip`, `default`, `drop`, `reset_both`, `reset_client`, and `reset_server`.
     """
-    reset_server: NotRequired[pulumi.Input[Optional['AntiSpywareProfileThreatExceptionActionResetServerArgs']]]
+    reset_server: NotRequired[pulumi.Input[Optional['AntiSpywareProfileThreatExceptionActionResetServerArgsDict']]]
     """
     Reset server
 
@@ -4238,41 +4238,41 @@ class AntiSpywareProfileThreatExceptionExemptIpArgs:
 
 
 class AntiSpywareSignatureDefaultActionArgsDict(TypedDict):
-    alert: NotRequired[pulumi.Input[Optional['AntiSpywareSignatureDefaultActionAlertArgs']]]
+    alert: NotRequired[pulumi.Input[Optional['AntiSpywareSignatureDefaultActionAlertArgsDict']]]
     """
     Alert
     """
-    allow: NotRequired[pulumi.Input[Optional['AntiSpywareSignatureDefaultActionAllowArgs']]]
+    allow: NotRequired[pulumi.Input[Optional['AntiSpywareSignatureDefaultActionAllowArgsDict']]]
     """
     Allow
 
     > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `block_ip`, `drop`, `reset_both`, `reset_client`, and `reset_server`.
     """
-    block_ip: NotRequired[pulumi.Input[Optional['AntiSpywareSignatureDefaultActionBlockIpArgs']]]
+    block_ip: NotRequired[pulumi.Input[Optional['AntiSpywareSignatureDefaultActionBlockIpArgsDict']]]
     """
     anti spyware signature block ip
 
     > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `block_ip`, `drop`, `reset_both`, `reset_client`, and `reset_server`.
     """
-    drop: NotRequired[pulumi.Input[Optional['AntiSpywareSignatureDefaultActionDropArgs']]]
+    drop: NotRequired[pulumi.Input[Optional['AntiSpywareSignatureDefaultActionDropArgsDict']]]
     """
     Drop
 
     > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `block_ip`, `drop`, `reset_both`, `reset_client`, and `reset_server`.
     """
-    reset_both: NotRequired[pulumi.Input[Optional['AntiSpywareSignatureDefaultActionResetBothArgs']]]
+    reset_both: NotRequired[pulumi.Input[Optional['AntiSpywareSignatureDefaultActionResetBothArgsDict']]]
     """
     Reset both
 
     > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `block_ip`, `drop`, `reset_both`, `reset_client`, and `reset_server`.
     """
-    reset_client: NotRequired[pulumi.Input[Optional['AntiSpywareSignatureDefaultActionResetClientArgs']]]
+    reset_client: NotRequired[pulumi.Input[Optional['AntiSpywareSignatureDefaultActionResetClientArgsDict']]]
     """
     Reset client
 
     > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `block_ip`, `drop`, `reset_both`, `reset_client`, and `reset_server`.
     """
-    reset_server: NotRequired[pulumi.Input[Optional['AntiSpywareSignatureDefaultActionResetServerArgs']]]
+    reset_server: NotRequired[pulumi.Input[Optional['AntiSpywareSignatureDefaultActionResetServerArgsDict']]]
     """
     Reset server
 
@@ -4526,11 +4526,11 @@ class AntiSpywareSignatureDefaultActionResetServerArgs:
 
 
 class AntiSpywareSignatureSignatureArgsDict(TypedDict):
-    combination: NotRequired[pulumi.Input[Optional['AntiSpywareSignatureSignatureCombinationArgs']]]
+    combination: NotRequired[pulumi.Input[Optional['AntiSpywareSignatureSignatureCombinationArgsDict']]]
     """
     anti spyware signature combination
     """
-    standards: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['AntiSpywareSignatureSignatureStandardArgs']]]]]
+    standards: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['AntiSpywareSignatureSignatureStandardArgsDict']]]]]
     """
     Standard
 
@@ -4581,7 +4581,7 @@ class AntiSpywareSignatureSignatureArgs:
 
 
 class AntiSpywareSignatureSignatureCombinationArgsDict(TypedDict):
-    and_conditions: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['AntiSpywareSignatureSignatureCombinationAndConditionArgs']]]]]
+    and_conditions: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['AntiSpywareSignatureSignatureCombinationAndConditionArgsDict']]]]]
     """
     And condition
     """
@@ -4589,7 +4589,7 @@ class AntiSpywareSignatureSignatureCombinationArgsDict(TypedDict):
     """
     Order free
     """
-    time_attribute: NotRequired[pulumi.Input[Optional['AntiSpywareSignatureSignatureCombinationTimeAttributeArgs']]]
+    time_attribute: NotRequired[pulumi.Input[Optional['AntiSpywareSignatureSignatureCombinationTimeAttributeArgsDict']]]
     """
     anti spyware time attribute
     """
@@ -4654,7 +4654,7 @@ class AntiSpywareSignatureSignatureCombinationAndConditionArgsDict(TypedDict):
     """
     Name
     """
-    or_conditions: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['AntiSpywareSignatureSignatureCombinationAndConditionOrConditionArgs']]]]]
+    or_conditions: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['AntiSpywareSignatureSignatureCombinationAndConditionOrConditionArgsDict']]]]]
     """
     Or condition
     """
@@ -4821,7 +4821,7 @@ class AntiSpywareSignatureSignatureStandardArgsDict(TypedDict):
     """
     Name
     """
-    and_conditions: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['AntiSpywareSignatureSignatureStandardAndConditionArgs']]]]]
+    and_conditions: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['AntiSpywareSignatureSignatureStandardAndConditionArgsDict']]]]]
     """
     And condition
     """
@@ -4929,7 +4929,7 @@ class AntiSpywareSignatureSignatureStandardAndConditionArgsDict(TypedDict):
     """
     Name
     """
-    or_conditions: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['AntiSpywareSignatureSignatureStandardAndConditionOrConditionArgs']]]]]
+    or_conditions: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['AntiSpywareSignatureSignatureStandardAndConditionOrConditionArgsDict']]]]]
     """
     Or condition
     """
@@ -4978,7 +4978,7 @@ class AntiSpywareSignatureSignatureStandardAndConditionOrConditionArgsDict(Typed
     """
     Name
     """
-    operator: NotRequired[pulumi.Input[Optional['AntiSpywareSignatureSignatureStandardAndConditionOrConditionOperatorArgs']]]
+    operator: NotRequired[pulumi.Input[Optional['AntiSpywareSignatureSignatureStandardAndConditionOrConditionOperatorArgsDict']]]
     """
     Operator
     """
@@ -5023,19 +5023,19 @@ class AntiSpywareSignatureSignatureStandardAndConditionOrConditionArgs:
 
 
 class AntiSpywareSignatureSignatureStandardAndConditionOrConditionOperatorArgsDict(TypedDict):
-    equal_to: NotRequired[pulumi.Input[Optional['AntiSpywareSignatureSignatureStandardAndConditionOrConditionOperatorEqualToArgs']]]
+    equal_to: NotRequired[pulumi.Input[Optional['AntiSpywareSignatureSignatureStandardAndConditionOrConditionOperatorEqualToArgsDict']]]
     """
     Equal to
     """
-    greater_than: NotRequired[pulumi.Input[Optional['AntiSpywareSignatureSignatureStandardAndConditionOrConditionOperatorGreaterThanArgs']]]
+    greater_than: NotRequired[pulumi.Input[Optional['AntiSpywareSignatureSignatureStandardAndConditionOrConditionOperatorGreaterThanArgsDict']]]
     """
     Greater than
     """
-    less_than: NotRequired[pulumi.Input[Optional['AntiSpywareSignatureSignatureStandardAndConditionOrConditionOperatorLessThanArgs']]]
+    less_than: NotRequired[pulumi.Input[Optional['AntiSpywareSignatureSignatureStandardAndConditionOrConditionOperatorLessThanArgsDict']]]
     """
     Less than
     """
-    pattern_match: NotRequired[pulumi.Input[Optional['AntiSpywareSignatureSignatureStandardAndConditionOrConditionOperatorPatternMatchArgs']]]
+    pattern_match: NotRequired[pulumi.Input[Optional['AntiSpywareSignatureSignatureStandardAndConditionOrConditionOperatorPatternMatchArgsDict']]]
     """
     Pattern match
     """
@@ -5120,7 +5120,7 @@ class AntiSpywareSignatureSignatureStandardAndConditionOrConditionOperatorEqualT
     """
     Negate
     """
-    qualifiers: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['AntiSpywareSignatureSignatureStandardAndConditionOrConditionOperatorEqualToQualifierArgs']]]]]
+    qualifiers: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['AntiSpywareSignatureSignatureStandardAndConditionOrConditionOperatorEqualToQualifierArgsDict']]]]]
     """
     Qualifier
     """
@@ -5254,7 +5254,7 @@ class AntiSpywareSignatureSignatureStandardAndConditionOrConditionOperatorGreate
     """
     Context
     """
-    qualifiers: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['AntiSpywareSignatureSignatureStandardAndConditionOrConditionOperatorGreaterThanQualifierArgs']]]]]
+    qualifiers: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['AntiSpywareSignatureSignatureStandardAndConditionOrConditionOperatorGreaterThanQualifierArgsDict']]]]]
     """
     Qualifier
     """
@@ -5372,7 +5372,7 @@ class AntiSpywareSignatureSignatureStandardAndConditionOrConditionOperatorLessTh
     """
     Context
     """
-    qualifiers: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['AntiSpywareSignatureSignatureStandardAndConditionOrConditionOperatorLessThanQualifierArgs']]]]]
+    qualifiers: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['AntiSpywareSignatureSignatureStandardAndConditionOrConditionOperatorLessThanQualifierArgsDict']]]]]
     """
     Qualifier
     """
@@ -5498,7 +5498,7 @@ class AntiSpywareSignatureSignatureStandardAndConditionOrConditionOperatorPatter
     """
     Pattern
     """
-    qualifiers: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['AntiSpywareSignatureSignatureStandardAndConditionOrConditionOperatorPatternMatchQualifierArgs']]]]]
+    qualifiers: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['AntiSpywareSignatureSignatureStandardAndConditionOrConditionOperatorPatternMatchQualifierArgsDict']]]]]
     """
     Qualifier
     """
@@ -5624,11 +5624,11 @@ class AntiSpywareSignatureSignatureStandardAndConditionOrConditionOperatorPatter
 
 
 class ApplicationDefaultArgsDict(TypedDict):
-    ident_by_icmp6_type: NotRequired[pulumi.Input[Optional['ApplicationDefaultIdentByIcmp6TypeArgs']]]
+    ident_by_icmp6_type: NotRequired[pulumi.Input[Optional['ApplicationDefaultIdentByIcmp6TypeArgsDict']]]
     """
     Ident by icmp6 type
     """
-    ident_by_icmp_type: NotRequired[pulumi.Input[Optional['ApplicationDefaultIdentByIcmpTypeArgs']]]
+    ident_by_icmp_type: NotRequired[pulumi.Input[Optional['ApplicationDefaultIdentByIcmpTypeArgsDict']]]
     """
     Ident by icmp type
 
@@ -5886,7 +5886,7 @@ class ApplicationSignatureArgsDict(TypedDict):
     """
     Alphanumeric string [ 0-9a-zA-Z._-]
     """
-    and_conditions: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['ApplicationSignatureAndConditionArgs']]]]]
+    and_conditions: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['ApplicationSignatureAndConditionArgsDict']]]]]
     """
     And condition
     """
@@ -5994,7 +5994,7 @@ class ApplicationSignatureAndConditionArgsDict(TypedDict):
     """
     Alphanumeric string [ 0-9a-zA-Z._-]
     """
-    or_conditions: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['ApplicationSignatureAndConditionOrConditionArgs']]]]]
+    or_conditions: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['ApplicationSignatureAndConditionOrConditionArgsDict']]]]]
     """
     Or condition
     """
@@ -6085,23 +6085,23 @@ class ApplicationSignatureAndConditionOrConditionArgs:
 
 
 class ApplicationSignatureAndConditionOrConditionOperatorArgsDict(TypedDict):
-    equal_to: NotRequired[pulumi.Input[Optional['ApplicationSignatureAndConditionOrConditionOperatorEqualToArgs']]]
+    equal_to: NotRequired[pulumi.Input[Optional['ApplicationSignatureAndConditionOrConditionOperatorEqualToArgsDict']]]
     """
     Equal to
     """
-    greater_than: NotRequired[pulumi.Input[Optional['ApplicationSignatureAndConditionOrConditionOperatorGreaterThanArgs']]]
+    greater_than: NotRequired[pulumi.Input[Optional['ApplicationSignatureAndConditionOrConditionOperatorGreaterThanArgsDict']]]
     """
     Greater than
 
     > ℹ️ **Note:** You must specify exactly one of `equal_to`, `greater_than`, `less_than`, and `pattern_match`.
     """
-    less_than: NotRequired[pulumi.Input[Optional['ApplicationSignatureAndConditionOrConditionOperatorLessThanArgs']]]
+    less_than: NotRequired[pulumi.Input[Optional['ApplicationSignatureAndConditionOrConditionOperatorLessThanArgsDict']]]
     """
     Less than
 
     > ℹ️ **Note:** You must specify exactly one of `equal_to`, `greater_than`, `less_than`, and `pattern_match`.
     """
-    pattern_match: NotRequired[pulumi.Input[Optional['ApplicationSignatureAndConditionOrConditionOperatorPatternMatchArgs']]]
+    pattern_match: NotRequired[pulumi.Input[Optional['ApplicationSignatureAndConditionOrConditionOperatorPatternMatchArgsDict']]]
     """
     Pattern match
 
@@ -6287,7 +6287,7 @@ class ApplicationSignatureAndConditionOrConditionOperatorGreaterThanArgsDict(Typ
     """
     Value
     """
-    qualifiers: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['ApplicationSignatureAndConditionOrConditionOperatorGreaterThanQualifierArgs']]]]]
+    qualifiers: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['ApplicationSignatureAndConditionOrConditionOperatorGreaterThanQualifierArgsDict']]]]]
     """
     Qualifier
     """
@@ -6401,7 +6401,7 @@ class ApplicationSignatureAndConditionOrConditionOperatorLessThanArgsDict(TypedD
     """
     Value
     """
-    qualifiers: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['ApplicationSignatureAndConditionOrConditionOperatorLessThanQualifierArgs']]]]]
+    qualifiers: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['ApplicationSignatureAndConditionOrConditionOperatorLessThanQualifierArgsDict']]]]]
     """
     Qualifier
     """
@@ -6515,7 +6515,7 @@ class ApplicationSignatureAndConditionOrConditionOperatorPatternMatchArgsDict(Ty
     """
     Pattern
     """
-    qualifiers: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['ApplicationSignatureAndConditionOrConditionOperatorPatternMatchQualifierArgs']]]]]
+    qualifiers: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['ApplicationSignatureAndConditionOrConditionOperatorPatternMatchQualifierArgsDict']]]]]
     """
     Qualifier
     """
@@ -6670,41 +6670,41 @@ class AuthenticationProfileLockoutArgs:
 
 
 class AuthenticationProfileMethodArgsDict(TypedDict):
-    cloud: NotRequired[pulumi.Input[Optional['AuthenticationProfileMethodCloudArgs']]]
+    cloud: NotRequired[pulumi.Input[Optional['AuthenticationProfileMethodCloudArgsDict']]]
     """
     Cloud
     """
-    kerberos: NotRequired[pulumi.Input[Optional['AuthenticationProfileMethodKerberosArgs']]]
+    kerberos: NotRequired[pulumi.Input[Optional['AuthenticationProfileMethodKerberosArgsDict']]]
     """
     Kerberos
 
     > ℹ️ **Note:** You must specify exactly one of `cloud`, `kerberos`, `ldap`, `local_database`, `radius`, `saml_idp`, and `tacplus`.
     """
-    ldap: NotRequired[pulumi.Input[Optional['AuthenticationProfileMethodLdapArgs']]]
+    ldap: NotRequired[pulumi.Input[Optional['AuthenticationProfileMethodLdapArgsDict']]]
     """
     Ldap
 
     > ℹ️ **Note:** You must specify exactly one of `cloud`, `kerberos`, `ldap`, `local_database`, `radius`, `saml_idp`, and `tacplus`.
     """
-    local_database: NotRequired[pulumi.Input[Optional['AuthenticationProfileMethodLocalDatabaseArgs']]]
+    local_database: NotRequired[pulumi.Input[Optional['AuthenticationProfileMethodLocalDatabaseArgsDict']]]
     """
     Local database
 
     > ℹ️ **Note:** You must specify exactly one of `cloud`, `kerberos`, `ldap`, `local_database`, `radius`, `saml_idp`, and `tacplus`.
     """
-    radius: NotRequired[pulumi.Input[Optional['AuthenticationProfileMethodRadiusArgs']]]
+    radius: NotRequired[pulumi.Input[Optional['AuthenticationProfileMethodRadiusArgsDict']]]
     """
     Radius
 
     > ℹ️ **Note:** You must specify exactly one of `cloud`, `kerberos`, `ldap`, `local_database`, `radius`, `saml_idp`, and `tacplus`.
     """
-    saml_idp: NotRequired[pulumi.Input[Optional['AuthenticationProfileMethodSamlIdpArgs']]]
+    saml_idp: NotRequired[pulumi.Input[Optional['AuthenticationProfileMethodSamlIdpArgsDict']]]
     """
     Saml idp
 
     > ℹ️ **Note:** You must specify exactly one of `cloud`, `kerberos`, `ldap`, `local_database`, `radius`, `saml_idp`, and `tacplus`.
     """
-    tacplus: NotRequired[pulumi.Input[Optional['AuthenticationProfileMethodTacplusArgs']]]
+    tacplus: NotRequired[pulumi.Input[Optional['AuthenticationProfileMethodTacplusArgsDict']]]
     """
     Tacplus
 
@@ -7409,7 +7409,7 @@ class AutoVpnClusterBranchArgsDict(TypedDict):
     """
     BGP redistribution profile
     """
-    interfaces: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['AutoVpnClusterBranchInterfaceArgs']]]]]
+    interfaces: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['AutoVpnClusterBranchInterfaceArgsDict']]]]]
     """
     Interfaces
     """
@@ -7421,7 +7421,7 @@ class AutoVpnClusterBranchArgsDict(TypedDict):
     """
     Branch firewall serial number
     """
-    private_interfaces: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['AutoVpnClusterBranchPrivateInterfaceArgs']]]]]
+    private_interfaces: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['AutoVpnClusterBranchPrivateInterfaceArgsDict']]]]]
     """
     Private interfaces
     """
@@ -7542,7 +7542,7 @@ class AutoVpnClusterBranchInterfaceArgsDict(TypedDict):
     """
     Ethernet interface
     """
-    sdwan_link_settings: NotRequired[pulumi.Input[Optional['AutoVpnClusterBranchInterfaceSdwanLinkSettingsArgs']]]
+    sdwan_link_settings: NotRequired[pulumi.Input[Optional['AutoVpnClusterBranchInterfaceSdwanLinkSettingsArgsDict']]]
     """
     Sdwan link settings
     """
@@ -7611,7 +7611,7 @@ class AutoVpnClusterBranchInterfaceSdwanLinkSettingsArgsDict(TypedDict):
     """
     SD-WAN interface profile
     """
-    upstream_nat: NotRequired[pulumi.Input[Optional['AutoVpnClusterBranchInterfaceSdwanLinkSettingsUpstreamNatArgs']]]
+    upstream_nat: NotRequired[pulumi.Input[Optional['AutoVpnClusterBranchInterfaceSdwanLinkSettingsUpstreamNatArgsDict']]]
     """
     Upstream nat
     """
@@ -7676,7 +7676,7 @@ class AutoVpnClusterBranchInterfaceSdwanLinkSettingsUpstreamNatArgsDict(TypedDic
     """
     Upstream NAT?
     """
-    static_ip: NotRequired[pulumi.Input[Optional['AutoVpnClusterBranchInterfaceSdwanLinkSettingsUpstreamNatStaticIpArgs']]]
+    static_ip: NotRequired[pulumi.Input[Optional['AutoVpnClusterBranchInterfaceSdwanLinkSettingsUpstreamNatStaticIpArgsDict']]]
     """
     Static ip
     """
@@ -7780,7 +7780,7 @@ class AutoVpnClusterBranchPrivateInterfaceArgsDict(TypedDict):
     """
     Ethernet interface
     """
-    sdwan_link_settings: NotRequired[pulumi.Input[Optional['AutoVpnClusterBranchPrivateInterfaceSdwanLinkSettingsArgs']]]
+    sdwan_link_settings: NotRequired[pulumi.Input[Optional['AutoVpnClusterBranchPrivateInterfaceSdwanLinkSettingsArgsDict']]]
     """
     Sdwan link settings
     """
@@ -7833,7 +7833,7 @@ class AutoVpnClusterBranchPrivateInterfaceSdwanLinkSettingsArgsDict(TypedDict):
     """
     SD-WAN interface profile
     """
-    upstream_nat: NotRequired[pulumi.Input[Optional['AutoVpnClusterBranchPrivateInterfaceSdwanLinkSettingsUpstreamNatArgs']]]
+    upstream_nat: NotRequired[pulumi.Input[Optional['AutoVpnClusterBranchPrivateInterfaceSdwanLinkSettingsUpstreamNatArgsDict']]]
     """
     Upstream nat
     """
@@ -7898,7 +7898,7 @@ class AutoVpnClusterBranchPrivateInterfaceSdwanLinkSettingsUpstreamNatArgsDict(T
     """
     Upstream NAT?
     """
-    static_ip: NotRequired[pulumi.Input[Optional['AutoVpnClusterBranchPrivateInterfaceSdwanLinkSettingsUpstreamNatStaticIpArgs']]]
+    static_ip: NotRequired[pulumi.Input[Optional['AutoVpnClusterBranchPrivateInterfaceSdwanLinkSettingsUpstreamNatStaticIpArgsDict']]]
     """
     Static ip
     """
@@ -8006,7 +8006,7 @@ class AutoVpnClusterGatewayArgsDict(TypedDict):
     """
     BGP redistribution file
     """
-    interfaces: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['AutoVpnClusterGatewayInterfaceArgs']]]]]
+    interfaces: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['AutoVpnClusterGatewayInterfaceArgsDict']]]]]
     """
     Interfaces
     """
@@ -8022,7 +8022,7 @@ class AutoVpnClusterGatewayArgsDict(TypedDict):
     """
     Priority
     """
-    private_interfaces: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['AutoVpnClusterGatewayPrivateInterfaceArgs']]]]]
+    private_interfaces: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['AutoVpnClusterGatewayPrivateInterfaceArgsDict']]]]]
     """
     Private interfaces
     """
@@ -8175,7 +8175,7 @@ class AutoVpnClusterGatewayInterfaceArgsDict(TypedDict):
     """
     Ethernet interface
     """
-    sdwan_link_settings: NotRequired[pulumi.Input[Optional['AutoVpnClusterGatewayInterfaceSdwanLinkSettingsArgs']]]
+    sdwan_link_settings: NotRequired[pulumi.Input[Optional['AutoVpnClusterGatewayInterfaceSdwanLinkSettingsArgsDict']]]
     """
     Sdwan link settings
     """
@@ -8244,7 +8244,7 @@ class AutoVpnClusterGatewayInterfaceSdwanLinkSettingsArgsDict(TypedDict):
     """
     SD-WAN interface profile
     """
-    upstream_nat: NotRequired[pulumi.Input[Optional['AutoVpnClusterGatewayInterfaceSdwanLinkSettingsUpstreamNatArgs']]]
+    upstream_nat: NotRequired[pulumi.Input[Optional['AutoVpnClusterGatewayInterfaceSdwanLinkSettingsUpstreamNatArgsDict']]]
     """
     Upstream nat
     """
@@ -8309,7 +8309,7 @@ class AutoVpnClusterGatewayInterfaceSdwanLinkSettingsUpstreamNatArgsDict(TypedDi
     """
     Upstream NAT?
     """
-    static_ip: NotRequired[pulumi.Input[Optional['AutoVpnClusterGatewayInterfaceSdwanLinkSettingsUpstreamNatStaticIpArgs']]]
+    static_ip: NotRequired[pulumi.Input[Optional['AutoVpnClusterGatewayInterfaceSdwanLinkSettingsUpstreamNatStaticIpArgsDict']]]
     """
     Static ip
     """
@@ -8413,7 +8413,7 @@ class AutoVpnClusterGatewayPrivateInterfaceArgsDict(TypedDict):
     """
     Ethernet interface
     """
-    sdwan_link_settings: NotRequired[pulumi.Input[Optional['AutoVpnClusterGatewayPrivateInterfaceSdwanLinkSettingsArgs']]]
+    sdwan_link_settings: NotRequired[pulumi.Input[Optional['AutoVpnClusterGatewayPrivateInterfaceSdwanLinkSettingsArgsDict']]]
     """
     Sdwan link settings
     """
@@ -8466,7 +8466,7 @@ class AutoVpnClusterGatewayPrivateInterfaceSdwanLinkSettingsArgsDict(TypedDict):
     """
     SD-WAN interface profile
     """
-    upstream_nat: NotRequired[pulumi.Input[Optional['AutoVpnClusterGatewayPrivateInterfaceSdwanLinkSettingsUpstreamNatArgs']]]
+    upstream_nat: NotRequired[pulumi.Input[Optional['AutoVpnClusterGatewayPrivateInterfaceSdwanLinkSettingsUpstreamNatArgsDict']]]
     """
     Upstream nat
     """
@@ -8531,7 +8531,7 @@ class AutoVpnClusterGatewayPrivateInterfaceSdwanLinkSettingsUpstreamNatArgsDict(
     """
     Upstream NAT?
     """
-    static_ip: NotRequired[pulumi.Input[Optional['AutoVpnClusterGatewayPrivateInterfaceSdwanLinkSettingsUpstreamNatStaticIpArgs']]]
+    static_ip: NotRequired[pulumi.Input[Optional['AutoVpnClusterGatewayPrivateInterfaceSdwanLinkSettingsUpstreamNatStaticIpArgsDict']]]
     """
     Static ip
     """
@@ -8769,11 +8769,11 @@ class BandwidthAllocationQosArgs:
 
 
 class BgpAddressFamilyProfileIpv4ArgsDict(TypedDict):
-    multicast: NotRequired[pulumi.Input[Optional['BgpAddressFamilyProfileIpv4MulticastArgs']]]
+    multicast: NotRequired[pulumi.Input[Optional['BgpAddressFamilyProfileIpv4MulticastArgsDict']]]
     """
     Multicast
     """
-    unicast: NotRequired[pulumi.Input[Optional['BgpAddressFamilyProfileIpv4UnicastArgs']]]
+    unicast: NotRequired[pulumi.Input[Optional['BgpAddressFamilyProfileIpv4UnicastArgsDict']]]
     """
     Unicast
     """
@@ -8818,11 +8818,11 @@ class BgpAddressFamilyProfileIpv4Args:
 
 
 class BgpAddressFamilyProfileIpv4MulticastArgsDict(TypedDict):
-    add_path: NotRequired[pulumi.Input[Optional['BgpAddressFamilyProfileIpv4MulticastAddPathArgs']]]
+    add_path: NotRequired[pulumi.Input[Optional['BgpAddressFamilyProfileIpv4MulticastAddPathArgsDict']]]
     """
     Add path
     """
-    allowas_in: NotRequired[pulumi.Input[Optional['BgpAddressFamilyProfileIpv4MulticastAllowasInArgs']]]
+    allowas_in: NotRequired[pulumi.Input[Optional['BgpAddressFamilyProfileIpv4MulticastAllowasInArgsDict']]]
     """
     Allowas in
     """
@@ -8842,19 +8842,19 @@ class BgpAddressFamilyProfileIpv4MulticastArgsDict(TypedDict):
     """
     Enable?
     """
-    maximum_prefix: NotRequired[pulumi.Input[Optional['BgpAddressFamilyProfileIpv4MulticastMaximumPrefixArgs']]]
+    maximum_prefix: NotRequired[pulumi.Input[Optional['BgpAddressFamilyProfileIpv4MulticastMaximumPrefixArgsDict']]]
     """
     Maximum prefix
     """
-    next_hop: NotRequired[pulumi.Input[Optional['BgpAddressFamilyProfileIpv4MulticastNextHopArgs']]]
+    next_hop: NotRequired[pulumi.Input[Optional['BgpAddressFamilyProfileIpv4MulticastNextHopArgsDict']]]
     """
     Next hop
     """
-    orf: NotRequired[pulumi.Input[Optional['BgpAddressFamilyProfileIpv4MulticastOrfArgs']]]
+    orf: NotRequired[pulumi.Input[Optional['BgpAddressFamilyProfileIpv4MulticastOrfArgsDict']]]
     """
     Orf
     """
-    remove_private_as: NotRequired[pulumi.Input[Optional['BgpAddressFamilyProfileIpv4MulticastRemovePrivateAsArgs']]]
+    remove_private_as: NotRequired[pulumi.Input[Optional['BgpAddressFamilyProfileIpv4MulticastRemovePrivateAsArgsDict']]]
     """
     Remove private a s
     """
@@ -8862,7 +8862,7 @@ class BgpAddressFamilyProfileIpv4MulticastArgsDict(TypedDict):
     """
     Route reflector client?
     """
-    send_community: NotRequired[pulumi.Input[Optional['BgpAddressFamilyProfileIpv4MulticastSendCommunityArgs']]]
+    send_community: NotRequired[pulumi.Input[Optional['BgpAddressFamilyProfileIpv4MulticastSendCommunityArgsDict']]]
     """
     Send community
     """
@@ -9140,7 +9140,7 @@ class BgpAddressFamilyProfileIpv4MulticastAllowasInArgsDict(TypedDict):
     """
     Number of times the firewalls own AS can be in an AS_PATH
     """
-    origin: NotRequired[pulumi.Input[Optional['BgpAddressFamilyProfileIpv4MulticastAllowasInOriginArgs']]]
+    origin: NotRequired[pulumi.Input[Optional['BgpAddressFamilyProfileIpv4MulticastAllowasInOriginArgsDict']]]
     """
     Origin
 
@@ -9200,7 +9200,7 @@ class BgpAddressFamilyProfileIpv4MulticastAllowasInOriginArgs:
 
 
 class BgpAddressFamilyProfileIpv4MulticastMaximumPrefixArgsDict(TypedDict):
-    action: NotRequired[pulumi.Input[Optional['BgpAddressFamilyProfileIpv4MulticastMaximumPrefixActionArgs']]]
+    action: NotRequired[pulumi.Input[Optional['BgpAddressFamilyProfileIpv4MulticastMaximumPrefixActionArgsDict']]]
     """
     Action
     """
@@ -9269,11 +9269,11 @@ class BgpAddressFamilyProfileIpv4MulticastMaximumPrefixArgs:
 
 
 class BgpAddressFamilyProfileIpv4MulticastMaximumPrefixActionArgsDict(TypedDict):
-    restart: NotRequired[pulumi.Input[Optional['BgpAddressFamilyProfileIpv4MulticastMaximumPrefixActionRestartArgs']]]
+    restart: NotRequired[pulumi.Input[Optional['BgpAddressFamilyProfileIpv4MulticastMaximumPrefixActionRestartArgsDict']]]
     """
     Restart
     """
-    warning_only: NotRequired[pulumi.Input[Optional['BgpAddressFamilyProfileIpv4MulticastMaximumPrefixActionWarningOnlyArgs']]]
+    warning_only: NotRequired[pulumi.Input[Optional['BgpAddressFamilyProfileIpv4MulticastMaximumPrefixActionWarningOnlyArgsDict']]]
     """
     Warning only
 
@@ -9362,11 +9362,11 @@ class BgpAddressFamilyProfileIpv4MulticastMaximumPrefixActionWarningOnlyArgs:
 
 
 class BgpAddressFamilyProfileIpv4MulticastNextHopArgsDict(TypedDict):
-    self: NotRequired[pulumi.Input[Optional['BgpAddressFamilyProfileIpv4MulticastNextHopSelfArgs']]]
+    self: NotRequired[pulumi.Input[Optional['BgpAddressFamilyProfileIpv4MulticastNextHopSelfArgsDict']]]
     """
     Self
     """
-    self_force: NotRequired[pulumi.Input[Optional['BgpAddressFamilyProfileIpv4MulticastNextHopSelfForceArgs']]]
+    self_force: NotRequired[pulumi.Input[Optional['BgpAddressFamilyProfileIpv4MulticastNextHopSelfForceArgsDict']]]
     """
     Self force
 
@@ -9464,11 +9464,11 @@ class BgpAddressFamilyProfileIpv4MulticastOrfArgs:
 
 
 class BgpAddressFamilyProfileIpv4MulticastRemovePrivateAsArgsDict(TypedDict):
-    all: NotRequired[pulumi.Input[Optional['BgpAddressFamilyProfileIpv4MulticastRemovePrivateAsAllArgs']]]
+    all: NotRequired[pulumi.Input[Optional['BgpAddressFamilyProfileIpv4MulticastRemovePrivateAsAllArgsDict']]]
     """
     All
     """
-    replace_as: NotRequired[pulumi.Input[Optional['BgpAddressFamilyProfileIpv4MulticastRemovePrivateAsReplaceAsArgs']]]
+    replace_as: NotRequired[pulumi.Input[Optional['BgpAddressFamilyProfileIpv4MulticastRemovePrivateAsReplaceAsArgsDict']]]
     """
     Replace a s
     """
@@ -9531,29 +9531,29 @@ class BgpAddressFamilyProfileIpv4MulticastRemovePrivateAsReplaceAsArgs:
 
 
 class BgpAddressFamilyProfileIpv4MulticastSendCommunityArgsDict(TypedDict):
-    all: NotRequired[pulumi.Input[Optional['BgpAddressFamilyProfileIpv4MulticastSendCommunityAllArgs']]]
+    all: NotRequired[pulumi.Input[Optional['BgpAddressFamilyProfileIpv4MulticastSendCommunityAllArgsDict']]]
     """
     All
     """
-    both: NotRequired[pulumi.Input[Optional['BgpAddressFamilyProfileIpv4MulticastSendCommunityBothArgs']]]
+    both: NotRequired[pulumi.Input[Optional['BgpAddressFamilyProfileIpv4MulticastSendCommunityBothArgsDict']]]
     """
     Both
 
     > ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
     """
-    extended: NotRequired[pulumi.Input[Optional['BgpAddressFamilyProfileIpv4MulticastSendCommunityExtendedArgs']]]
+    extended: NotRequired[pulumi.Input[Optional['BgpAddressFamilyProfileIpv4MulticastSendCommunityExtendedArgsDict']]]
     """
     Extended
 
     > ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
     """
-    large: NotRequired[pulumi.Input[Optional['BgpAddressFamilyProfileIpv4MulticastSendCommunityLargeArgs']]]
+    large: NotRequired[pulumi.Input[Optional['BgpAddressFamilyProfileIpv4MulticastSendCommunityLargeArgsDict']]]
     """
     Large
 
     > ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
     """
-    standard: NotRequired[pulumi.Input[Optional['BgpAddressFamilyProfileIpv4MulticastSendCommunityStandardArgs']]]
+    standard: NotRequired[pulumi.Input[Optional['BgpAddressFamilyProfileIpv4MulticastSendCommunityStandardArgsDict']]]
     """
     Standard
 
@@ -9709,11 +9709,11 @@ class BgpAddressFamilyProfileIpv4MulticastSendCommunityStandardArgs:
 
 
 class BgpAddressFamilyProfileIpv4UnicastArgsDict(TypedDict):
-    add_path: NotRequired[pulumi.Input[Optional['BgpAddressFamilyProfileIpv4UnicastAddPathArgs']]]
+    add_path: NotRequired[pulumi.Input[Optional['BgpAddressFamilyProfileIpv4UnicastAddPathArgsDict']]]
     """
     Add path
     """
-    allowas_in: NotRequired[pulumi.Input[Optional['BgpAddressFamilyProfileIpv4UnicastAllowasInArgs']]]
+    allowas_in: NotRequired[pulumi.Input[Optional['BgpAddressFamilyProfileIpv4UnicastAllowasInArgsDict']]]
     """
     Allowas in
     """
@@ -9733,19 +9733,19 @@ class BgpAddressFamilyProfileIpv4UnicastArgsDict(TypedDict):
     """
     Enable?
     """
-    maximum_prefix: NotRequired[pulumi.Input[Optional['BgpAddressFamilyProfileIpv4UnicastMaximumPrefixArgs']]]
+    maximum_prefix: NotRequired[pulumi.Input[Optional['BgpAddressFamilyProfileIpv4UnicastMaximumPrefixArgsDict']]]
     """
     Maximum prefix
     """
-    next_hop: NotRequired[pulumi.Input[Optional['BgpAddressFamilyProfileIpv4UnicastNextHopArgs']]]
+    next_hop: NotRequired[pulumi.Input[Optional['BgpAddressFamilyProfileIpv4UnicastNextHopArgsDict']]]
     """
     Next hop
     """
-    orf: NotRequired[pulumi.Input[Optional['BgpAddressFamilyProfileIpv4UnicastOrfArgs']]]
+    orf: NotRequired[pulumi.Input[Optional['BgpAddressFamilyProfileIpv4UnicastOrfArgsDict']]]
     """
     Orf
     """
-    remove_private_as: NotRequired[pulumi.Input[Optional['BgpAddressFamilyProfileIpv4UnicastRemovePrivateAsArgs']]]
+    remove_private_as: NotRequired[pulumi.Input[Optional['BgpAddressFamilyProfileIpv4UnicastRemovePrivateAsArgsDict']]]
     """
     Remove private a s
     """
@@ -9753,7 +9753,7 @@ class BgpAddressFamilyProfileIpv4UnicastArgsDict(TypedDict):
     """
     Route reflector client?
     """
-    send_community: NotRequired[pulumi.Input[Optional['BgpAddressFamilyProfileIpv4UnicastSendCommunityArgs']]]
+    send_community: NotRequired[pulumi.Input[Optional['BgpAddressFamilyProfileIpv4UnicastSendCommunityArgsDict']]]
     """
     Send community
     """
@@ -10031,7 +10031,7 @@ class BgpAddressFamilyProfileIpv4UnicastAllowasInArgsDict(TypedDict):
     """
     Number of times the firewalls own AS can be in an AS_PATH
     """
-    origin: NotRequired[pulumi.Input[Optional['BgpAddressFamilyProfileIpv4UnicastAllowasInOriginArgs']]]
+    origin: NotRequired[pulumi.Input[Optional['BgpAddressFamilyProfileIpv4UnicastAllowasInOriginArgsDict']]]
     """
     Origin
 
@@ -10091,7 +10091,7 @@ class BgpAddressFamilyProfileIpv4UnicastAllowasInOriginArgs:
 
 
 class BgpAddressFamilyProfileIpv4UnicastMaximumPrefixArgsDict(TypedDict):
-    action: NotRequired[pulumi.Input[Optional['BgpAddressFamilyProfileIpv4UnicastMaximumPrefixActionArgs']]]
+    action: NotRequired[pulumi.Input[Optional['BgpAddressFamilyProfileIpv4UnicastMaximumPrefixActionArgsDict']]]
     """
     Action
     """
@@ -10160,11 +10160,11 @@ class BgpAddressFamilyProfileIpv4UnicastMaximumPrefixArgs:
 
 
 class BgpAddressFamilyProfileIpv4UnicastMaximumPrefixActionArgsDict(TypedDict):
-    restart: NotRequired[pulumi.Input[Optional['BgpAddressFamilyProfileIpv4UnicastMaximumPrefixActionRestartArgs']]]
+    restart: NotRequired[pulumi.Input[Optional['BgpAddressFamilyProfileIpv4UnicastMaximumPrefixActionRestartArgsDict']]]
     """
     Restart
     """
-    warning_only: NotRequired[pulumi.Input[Optional['BgpAddressFamilyProfileIpv4UnicastMaximumPrefixActionWarningOnlyArgs']]]
+    warning_only: NotRequired[pulumi.Input[Optional['BgpAddressFamilyProfileIpv4UnicastMaximumPrefixActionWarningOnlyArgsDict']]]
     """
     Warning only
 
@@ -10253,11 +10253,11 @@ class BgpAddressFamilyProfileIpv4UnicastMaximumPrefixActionWarningOnlyArgs:
 
 
 class BgpAddressFamilyProfileIpv4UnicastNextHopArgsDict(TypedDict):
-    self: NotRequired[pulumi.Input[Optional['BgpAddressFamilyProfileIpv4UnicastNextHopSelfArgs']]]
+    self: NotRequired[pulumi.Input[Optional['BgpAddressFamilyProfileIpv4UnicastNextHopSelfArgsDict']]]
     """
     Self
     """
-    self_force: NotRequired[pulumi.Input[Optional['BgpAddressFamilyProfileIpv4UnicastNextHopSelfForceArgs']]]
+    self_force: NotRequired[pulumi.Input[Optional['BgpAddressFamilyProfileIpv4UnicastNextHopSelfForceArgsDict']]]
     """
     Self force
 
@@ -10355,11 +10355,11 @@ class BgpAddressFamilyProfileIpv4UnicastOrfArgs:
 
 
 class BgpAddressFamilyProfileIpv4UnicastRemovePrivateAsArgsDict(TypedDict):
-    all: NotRequired[pulumi.Input[Optional['BgpAddressFamilyProfileIpv4UnicastRemovePrivateAsAllArgs']]]
+    all: NotRequired[pulumi.Input[Optional['BgpAddressFamilyProfileIpv4UnicastRemovePrivateAsAllArgsDict']]]
     """
     All
     """
-    replace_as: NotRequired[pulumi.Input[Optional['BgpAddressFamilyProfileIpv4UnicastRemovePrivateAsReplaceAsArgs']]]
+    replace_as: NotRequired[pulumi.Input[Optional['BgpAddressFamilyProfileIpv4UnicastRemovePrivateAsReplaceAsArgsDict']]]
     """
     Replace a s
     """
@@ -10422,29 +10422,29 @@ class BgpAddressFamilyProfileIpv4UnicastRemovePrivateAsReplaceAsArgs:
 
 
 class BgpAddressFamilyProfileIpv4UnicastSendCommunityArgsDict(TypedDict):
-    all: NotRequired[pulumi.Input[Optional['BgpAddressFamilyProfileIpv4UnicastSendCommunityAllArgs']]]
+    all: NotRequired[pulumi.Input[Optional['BgpAddressFamilyProfileIpv4UnicastSendCommunityAllArgsDict']]]
     """
     All
     """
-    both: NotRequired[pulumi.Input[Optional['BgpAddressFamilyProfileIpv4UnicastSendCommunityBothArgs']]]
+    both: NotRequired[pulumi.Input[Optional['BgpAddressFamilyProfileIpv4UnicastSendCommunityBothArgsDict']]]
     """
     Both
 
     > ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
     """
-    extended: NotRequired[pulumi.Input[Optional['BgpAddressFamilyProfileIpv4UnicastSendCommunityExtendedArgs']]]
+    extended: NotRequired[pulumi.Input[Optional['BgpAddressFamilyProfileIpv4UnicastSendCommunityExtendedArgsDict']]]
     """
     Extended
 
     > ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
     """
-    large: NotRequired[pulumi.Input[Optional['BgpAddressFamilyProfileIpv4UnicastSendCommunityLargeArgs']]]
+    large: NotRequired[pulumi.Input[Optional['BgpAddressFamilyProfileIpv4UnicastSendCommunityLargeArgsDict']]]
     """
     Large
 
     > ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
     """
-    standard: NotRequired[pulumi.Input[Optional['BgpAddressFamilyProfileIpv4UnicastSendCommunityStandardArgs']]]
+    standard: NotRequired[pulumi.Input[Optional['BgpAddressFamilyProfileIpv4UnicastSendCommunityStandardArgsDict']]]
     """
     Standard
 
@@ -10600,11 +10600,11 @@ class BgpAddressFamilyProfileIpv4UnicastSendCommunityStandardArgs:
 
 
 class BgpFilteringProfileIpv4ArgsDict(TypedDict):
-    multicast: NotRequired[pulumi.Input[Optional['BgpFilteringProfileIpv4MulticastArgs']]]
+    multicast: NotRequired[pulumi.Input[Optional['BgpFilteringProfileIpv4MulticastArgsDict']]]
     """
     Multicast
     """
-    unicast: NotRequired[pulumi.Input[Optional['BgpFilteringProfileIpv4UnicastArgs']]]
+    unicast: NotRequired[pulumi.Input[Optional['BgpFilteringProfileIpv4UnicastArgsDict']]]
     """
     Unicast
     """
@@ -10649,15 +10649,15 @@ class BgpFilteringProfileIpv4Args:
 
 
 class BgpFilteringProfileIpv4MulticastArgsDict(TypedDict):
-    conditional_advertisement: NotRequired[pulumi.Input[Optional['BgpFilteringProfileIpv4MulticastConditionalAdvertisementArgs']]]
+    conditional_advertisement: NotRequired[pulumi.Input[Optional['BgpFilteringProfileIpv4MulticastConditionalAdvertisementArgsDict']]]
     """
     Conditional advertisement
     """
-    filter_list: NotRequired[pulumi.Input[Optional['BgpFilteringProfileIpv4MulticastFilterListArgs']]]
+    filter_list: NotRequired[pulumi.Input[Optional['BgpFilteringProfileIpv4MulticastFilterListArgsDict']]]
     """
     Filter list
     """
-    inbound_network_filters: NotRequired[pulumi.Input[Optional['BgpFilteringProfileIpv4MulticastInboundNetworkFiltersArgs']]]
+    inbound_network_filters: NotRequired[pulumi.Input[Optional['BgpFilteringProfileIpv4MulticastInboundNetworkFiltersArgsDict']]]
     """
     Inbound network filters
     """
@@ -10665,11 +10665,11 @@ class BgpFilteringProfileIpv4MulticastArgsDict(TypedDict):
     """
     Inherit from unicast
     """
-    outbound_network_filters: NotRequired[pulumi.Input[Optional['BgpFilteringProfileIpv4MulticastOutboundNetworkFiltersArgs']]]
+    outbound_network_filters: NotRequired[pulumi.Input[Optional['BgpFilteringProfileIpv4MulticastOutboundNetworkFiltersArgsDict']]]
     """
     Outbound network filters
     """
-    route_maps: NotRequired[pulumi.Input[Optional['BgpFilteringProfileIpv4MulticastRouteMapsArgs']]]
+    route_maps: NotRequired[pulumi.Input[Optional['BgpFilteringProfileIpv4MulticastRouteMapsArgsDict']]]
     """
     Route maps
     """
@@ -10798,11 +10798,11 @@ class BgpFilteringProfileIpv4MulticastArgs:
 
 
 class BgpFilteringProfileIpv4MulticastConditionalAdvertisementArgsDict(TypedDict):
-    exist: NotRequired[pulumi.Input[Optional['BgpFilteringProfileIpv4MulticastConditionalAdvertisementExistArgs']]]
+    exist: NotRequired[pulumi.Input[Optional['BgpFilteringProfileIpv4MulticastConditionalAdvertisementExistArgsDict']]]
     """
     Exist
     """
-    non_exist: NotRequired[pulumi.Input[Optional['BgpFilteringProfileIpv4MulticastConditionalAdvertisementNonExistArgs']]]
+    non_exist: NotRequired[pulumi.Input[Optional['BgpFilteringProfileIpv4MulticastConditionalAdvertisementNonExistArgsDict']]]
     """
     Non exist
     """
@@ -11141,23 +11141,23 @@ class BgpFilteringProfileIpv4MulticastRouteMapsArgs:
 
 
 class BgpFilteringProfileIpv4UnicastArgsDict(TypedDict):
-    conditional_advertisement: NotRequired[pulumi.Input[Optional['BgpFilteringProfileIpv4UnicastConditionalAdvertisementArgs']]]
+    conditional_advertisement: NotRequired[pulumi.Input[Optional['BgpFilteringProfileIpv4UnicastConditionalAdvertisementArgsDict']]]
     """
     Conditional advertisement
     """
-    filter_list: NotRequired[pulumi.Input[Optional['BgpFilteringProfileIpv4UnicastFilterListArgs']]]
+    filter_list: NotRequired[pulumi.Input[Optional['BgpFilteringProfileIpv4UnicastFilterListArgsDict']]]
     """
     Filter list
     """
-    inbound_network_filters: NotRequired[pulumi.Input[Optional['BgpFilteringProfileIpv4UnicastInboundNetworkFiltersArgs']]]
+    inbound_network_filters: NotRequired[pulumi.Input[Optional['BgpFilteringProfileIpv4UnicastInboundNetworkFiltersArgsDict']]]
     """
     Inbound network filters
     """
-    outbound_network_filters: NotRequired[pulumi.Input[Optional['BgpFilteringProfileIpv4UnicastOutboundNetworkFiltersArgs']]]
+    outbound_network_filters: NotRequired[pulumi.Input[Optional['BgpFilteringProfileIpv4UnicastOutboundNetworkFiltersArgsDict']]]
     """
     Outbound network filters
     """
-    route_maps: NotRequired[pulumi.Input[Optional['BgpFilteringProfileIpv4UnicastRouteMapsArgs']]]
+    route_maps: NotRequired[pulumi.Input[Optional['BgpFilteringProfileIpv4UnicastRouteMapsArgsDict']]]
     """
     Route maps
     """
@@ -11270,11 +11270,11 @@ class BgpFilteringProfileIpv4UnicastArgs:
 
 
 class BgpFilteringProfileIpv4UnicastConditionalAdvertisementArgsDict(TypedDict):
-    exist: NotRequired[pulumi.Input[Optional['BgpFilteringProfileIpv4UnicastConditionalAdvertisementExistArgs']]]
+    exist: NotRequired[pulumi.Input[Optional['BgpFilteringProfileIpv4UnicastConditionalAdvertisementExistArgsDict']]]
     """
     Exist
     """
-    non_exist: NotRequired[pulumi.Input[Optional['BgpFilteringProfileIpv4UnicastConditionalAdvertisementNonExistArgs']]]
+    non_exist: NotRequired[pulumi.Input[Optional['BgpFilteringProfileIpv4UnicastConditionalAdvertisementNonExistArgsDict']]]
     """
     Non exist
     """
@@ -11613,7 +11613,7 @@ class BgpFilteringProfileIpv4UnicastRouteMapsArgs:
 
 
 class BgpRedistributionProfileIpv4ArgsDict(TypedDict):
-    unicast: NotRequired[pulumi.Input[Optional['BgpRedistributionProfileIpv4UnicastArgs']]]
+    unicast: NotRequired[pulumi.Input[Optional['BgpRedistributionProfileIpv4UnicastArgsDict']]]
     """
     Unicast
     """
@@ -11642,15 +11642,15 @@ class BgpRedistributionProfileIpv4Args:
 
 
 class BgpRedistributionProfileIpv4UnicastArgsDict(TypedDict):
-    connected: NotRequired[pulumi.Input[Optional['BgpRedistributionProfileIpv4UnicastConnectedArgs']]]
+    connected: NotRequired[pulumi.Input[Optional['BgpRedistributionProfileIpv4UnicastConnectedArgsDict']]]
     """
     Connected
     """
-    ospf: NotRequired[pulumi.Input[Optional['BgpRedistributionProfileIpv4UnicastOspfArgs']]]
+    ospf: NotRequired[pulumi.Input[Optional['BgpRedistributionProfileIpv4UnicastOspfArgsDict']]]
     """
     Ospf
     """
-    static: NotRequired[pulumi.Input[Optional['BgpRedistributionProfileIpv4UnicastStaticArgs']]]
+    static: NotRequired[pulumi.Input[Optional['BgpRedistributionProfileIpv4UnicastStaticArgsDict']]]
     """
     Static
     """
@@ -11918,11 +11918,11 @@ class BgpRedistributionProfileIpv4UnicastStaticArgs:
 
 
 class BgpRouteMapRedistributionBgpArgsDict(TypedDict):
-    ospf: NotRequired[pulumi.Input[Optional['BgpRouteMapRedistributionBgpOspfArgs']]]
+    ospf: NotRequired[pulumi.Input[Optional['BgpRouteMapRedistributionBgpOspfArgsDict']]]
     """
     Ospf
     """
-    rib: NotRequired[pulumi.Input[Optional['BgpRouteMapRedistributionBgpRibArgs']]]
+    rib: NotRequired[pulumi.Input[Optional['BgpRouteMapRedistributionBgpRibArgsDict']]]
     """
     BGP Root RIB
 
@@ -11973,7 +11973,7 @@ class BgpRouteMapRedistributionBgpArgs:
 
 
 class BgpRouteMapRedistributionBgpOspfArgsDict(TypedDict):
-    route_maps: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['BgpRouteMapRedistributionBgpOspfRouteMapArgs']]]]]
+    route_maps: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['BgpRouteMapRedistributionBgpOspfRouteMapArgsDict']]]]]
     """
     BGP Root OSPF Route maps
     """
@@ -12010,7 +12010,7 @@ class BgpRouteMapRedistributionBgpOspfRouteMapArgsDict(TypedDict):
     """
     BGP Root OSPF Route maps Description
     """
-    match: NotRequired[pulumi.Input[Optional['BgpRouteMapRedistributionBgpOspfRouteMapMatchArgs']]]
+    match: NotRequired[pulumi.Input[Optional['BgpRouteMapRedistributionBgpOspfRouteMapMatchArgsDict']]]
     """
     Match
     """
@@ -12018,7 +12018,7 @@ class BgpRouteMapRedistributionBgpOspfRouteMapArgsDict(TypedDict):
     """
     BGP Root OSPF Route maps Sequence number
     """
-    set: NotRequired[pulumi.Input[Optional['BgpRouteMapRedistributionBgpOspfRouteMapSetArgs']]]
+    set: NotRequired[pulumi.Input[Optional['BgpRouteMapRedistributionBgpOspfRouteMapSetArgsDict']]]
     """
     BGP Root OSPF Set
     """
@@ -12123,7 +12123,7 @@ class BgpRouteMapRedistributionBgpOspfRouteMapMatchArgsDict(TypedDict):
     """
     BGP Root OSPF Route maps match Interface
     """
-    ipv4: NotRequired[pulumi.Input[Optional['BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4Args']]]
+    ipv4: NotRequired[pulumi.Input[Optional['BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4ArgsDict']]]
     """
     BGP Root OSPF Route maps match bgp-route-map-redistributions ipv4 object
     """
@@ -12340,15 +12340,15 @@ class BgpRouteMapRedistributionBgpOspfRouteMapMatchArgs:
 
 
 class BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4ArgsDict(TypedDict):
-    address: NotRequired[pulumi.Input[Optional['BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4AddressArgs']]]
+    address: NotRequired[pulumi.Input[Optional['BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4AddressArgsDict']]]
     """
     BGP Root OSPF Route maps match bgp-route-map-redistributions ipv4 object address
     """
-    next_hop: NotRequired[pulumi.Input[Optional['BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4NextHopArgs']]]
+    next_hop: NotRequired[pulumi.Input[Optional['BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4NextHopArgsDict']]]
     """
     BGP Root OSPF Route maps match  bgp-route-map-redistributions ipv4 object next*hop
     """
-    route_source: NotRequired[pulumi.Input[Optional['BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4RouteSourceArgs']]]
+    route_source: NotRequired[pulumi.Input[Optional['BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4RouteSourceArgsDict']]]
     """
     BGP Root OSPF Route maps ipv4 bgp-route-map-redistributions ipv4 object route*source
     """
@@ -12556,7 +12556,7 @@ class BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4RouteSourceArgs:
 
 
 class BgpRouteMapRedistributionBgpOspfRouteMapSetArgsDict(TypedDict):
-    metric: NotRequired[pulumi.Input[Optional['BgpRouteMapRedistributionBgpOspfRouteMapSetMetricArgs']]]
+    metric: NotRequired[pulumi.Input[Optional['BgpRouteMapRedistributionBgpOspfRouteMapSetMetricArgsDict']]]
     """
     Metric
     """
@@ -12674,7 +12674,7 @@ class BgpRouteMapRedistributionBgpOspfRouteMapSetMetricArgs:
 
 
 class BgpRouteMapRedistributionBgpRibArgsDict(TypedDict):
-    route_maps: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['BgpRouteMapRedistributionBgpRibRouteMapArgs']]]]]
+    route_maps: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['BgpRouteMapRedistributionBgpRibRouteMapArgsDict']]]]]
     """
     BGP Root RIB Route maps
     """
@@ -12711,7 +12711,7 @@ class BgpRouteMapRedistributionBgpRibRouteMapArgsDict(TypedDict):
     """
     BGP Root RIB Route maps Description
     """
-    match: NotRequired[pulumi.Input[Optional['BgpRouteMapRedistributionBgpRibRouteMapMatchArgs']]]
+    match: NotRequired[pulumi.Input[Optional['BgpRouteMapRedistributionBgpRibRouteMapMatchArgsDict']]]
     """
     match attribute for BG Rib route map
     """
@@ -12719,7 +12719,7 @@ class BgpRouteMapRedistributionBgpRibRouteMapArgsDict(TypedDict):
     """
     BGP Root RIB Route maps Sequence number
     """
-    set: NotRequired[pulumi.Input[Optional['BgpRouteMapRedistributionBgpRibRouteMapSetArgs']]]
+    set: NotRequired[pulumi.Input[Optional['BgpRouteMapRedistributionBgpRibRouteMapSetArgsDict']]]
     """
     Set attributes for BGP route map
     """
@@ -12824,7 +12824,7 @@ class BgpRouteMapRedistributionBgpRibRouteMapMatchArgsDict(TypedDict):
     """
     BGP Root RIB Route maps match Interface
     """
-    ipv4: NotRequired[pulumi.Input[Optional['BgpRouteMapRedistributionBgpRibRouteMapMatchIpv4Args']]]
+    ipv4: NotRequired[pulumi.Input[Optional['BgpRouteMapRedistributionBgpRibRouteMapMatchIpv4ArgsDict']]]
     """
     BGP Route Map Redistributions Root BGP rib Route Map IPv4
     """
@@ -13041,15 +13041,15 @@ class BgpRouteMapRedistributionBgpRibRouteMapMatchArgs:
 
 
 class BgpRouteMapRedistributionBgpRibRouteMapMatchIpv4ArgsDict(TypedDict):
-    address: NotRequired[pulumi.Input[Optional['BgpRouteMapRedistributionBgpRibRouteMapMatchIpv4AddressArgs']]]
+    address: NotRequired[pulumi.Input[Optional['BgpRouteMapRedistributionBgpRibRouteMapMatchIpv4AddressArgsDict']]]
     """
     bgp-route-map-redistributions ipv4 rib object address
     """
-    next_hop: NotRequired[pulumi.Input[Optional['BgpRouteMapRedistributionBgpRibRouteMapMatchIpv4NextHopArgs']]]
+    next_hop: NotRequired[pulumi.Input[Optional['BgpRouteMapRedistributionBgpRibRouteMapMatchIpv4NextHopArgsDict']]]
     """
     bgp-route-map-redistributions ipv4 rib object next*hop
     """
-    route_source: NotRequired[pulumi.Input[Optional['BgpRouteMapRedistributionBgpRibRouteMapMatchIpv4RouteSourceArgs']]]
+    route_source: NotRequired[pulumi.Input[Optional['BgpRouteMapRedistributionBgpRibRouteMapMatchIpv4RouteSourceArgsDict']]]
     """
     Route source
     """
@@ -13286,17 +13286,17 @@ class BgpRouteMapRedistributionBgpRibRouteMapSetArgs:
 
 
 class BgpRouteMapRedistributionConnectedStaticArgsDict(TypedDict):
-    bgp: NotRequired[pulumi.Input[Optional['BgpRouteMapRedistributionConnectedStaticBgpArgs']]]
+    bgp: NotRequired[pulumi.Input[Optional['BgpRouteMapRedistributionConnectedStaticBgpArgsDict']]]
     """
     Connected Static Root BGP
     """
-    ospf: NotRequired[pulumi.Input[Optional['BgpRouteMapRedistributionConnectedStaticOspfArgs']]]
+    ospf: NotRequired[pulumi.Input[Optional['BgpRouteMapRedistributionConnectedStaticOspfArgsDict']]]
     """
     Ospf
 
     > ℹ️ **Note:** You must specify exactly one of `bgp`, `ospf`, and `rib`.
     """
-    rib: NotRequired[pulumi.Input[Optional['BgpRouteMapRedistributionConnectedStaticRibArgs']]]
+    rib: NotRequired[pulumi.Input[Optional['BgpRouteMapRedistributionConnectedStaticRibArgsDict']]]
     """
     Rib
 
@@ -13367,7 +13367,7 @@ class BgpRouteMapRedistributionConnectedStaticArgs:
 
 
 class BgpRouteMapRedistributionConnectedStaticBgpArgsDict(TypedDict):
-    route_maps: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['BgpRouteMapRedistributionConnectedStaticBgpRouteMapArgs']]]]]
+    route_maps: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['BgpRouteMapRedistributionConnectedStaticBgpRouteMapArgsDict']]]]]
     """
     Connected Static BGP Route maps
     """
@@ -13404,7 +13404,7 @@ class BgpRouteMapRedistributionConnectedStaticBgpRouteMapArgsDict(TypedDict):
     """
     Connected Static BGP Route maps Description
     """
-    match: NotRequired[pulumi.Input[Optional['BgpRouteMapRedistributionConnectedStaticBgpRouteMapMatchArgs']]]
+    match: NotRequired[pulumi.Input[Optional['BgpRouteMapRedistributionConnectedStaticBgpRouteMapMatchArgsDict']]]
     """
     Match
     """
@@ -13412,7 +13412,7 @@ class BgpRouteMapRedistributionConnectedStaticBgpRouteMapArgsDict(TypedDict):
     """
     Connected Static BGP Route maps Sequence number
     """
-    set: NotRequired[pulumi.Input[Optional['BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetArgs']]]
+    set: NotRequired[pulumi.Input[Optional['BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetArgsDict']]]
     """
     Set
     """
@@ -13509,7 +13509,7 @@ class BgpRouteMapRedistributionConnectedStaticBgpRouteMapMatchArgsDict(TypedDict
     """
     Connected Static BGP Route maps match Interface
     """
-    ipv4: NotRequired[pulumi.Input[Optional['BgpRouteMapRedistributionConnectedStaticBgpRouteMapMatchIpv4Args']]]
+    ipv4: NotRequired[pulumi.Input[Optional['BgpRouteMapRedistributionConnectedStaticBgpRouteMapMatchIpv4ArgsDict']]]
     """
     bgp-route-map-redistributions connected-static ipv4
     """
@@ -13574,11 +13574,11 @@ class BgpRouteMapRedistributionConnectedStaticBgpRouteMapMatchArgs:
 
 
 class BgpRouteMapRedistributionConnectedStaticBgpRouteMapMatchIpv4ArgsDict(TypedDict):
-    address: NotRequired[pulumi.Input[Optional['BgpRouteMapRedistributionConnectedStaticBgpRouteMapMatchIpv4AddressArgs']]]
+    address: NotRequired[pulumi.Input[Optional['BgpRouteMapRedistributionConnectedStaticBgpRouteMapMatchIpv4AddressArgsDict']]]
     """
     Address
     """
-    next_hop: NotRequired[pulumi.Input[Optional['BgpRouteMapRedistributionConnectedStaticBgpRouteMapMatchIpv4NextHopArgs']]]
+    next_hop: NotRequired[pulumi.Input[Optional['BgpRouteMapRedistributionConnectedStaticBgpRouteMapMatchIpv4NextHopArgsDict']]]
     """
     Next hop
     """
@@ -13721,7 +13721,7 @@ class BgpRouteMapRedistributionConnectedStaticBgpRouteMapMatchIpv4NextHopArgs:
 
 
 class BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetArgsDict(TypedDict):
-    aggregator: NotRequired[pulumi.Input[Optional['BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetAggregatorArgs']]]
+    aggregator: NotRequired[pulumi.Input[Optional['BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetAggregatorArgsDict']]]
     """
     bgp-route-map-redistributions connected*static aggregator
     """
@@ -13733,7 +13733,7 @@ class BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetArgsDict(TypedDict):
     """
     Connected Static BGP Route maps set Enable BGP atomic aggregate?
     """
-    ipv4: NotRequired[pulumi.Input[Optional['BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetIpv4Args']]]
+    ipv4: NotRequired[pulumi.Input[Optional['BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetIpv4ArgsDict']]]
     """
     Ipv4
     """
@@ -13745,7 +13745,7 @@ class BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetArgsDict(TypedDict):
     """
     Connected Static BGP Route maps set Local preference
     """
-    metric: NotRequired[pulumi.Input[Optional['BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetMetricArgs']]]
+    metric: NotRequired[pulumi.Input[Optional['BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetMetricArgsDict']]]
     """
     Metric
     """
@@ -14117,7 +14117,7 @@ class BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetMetricArgs:
 
 
 class BgpRouteMapRedistributionConnectedStaticOspfArgsDict(TypedDict):
-    route_maps: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['BgpRouteMapRedistributionConnectedStaticOspfRouteMapArgs']]]]]
+    route_maps: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['BgpRouteMapRedistributionConnectedStaticOspfRouteMapArgsDict']]]]]
     """
     Connected Static  BGP OSPF Route maps
     """
@@ -14154,7 +14154,7 @@ class BgpRouteMapRedistributionConnectedStaticOspfRouteMapArgsDict(TypedDict):
     """
     Connected Static BGP OSPF Route map Description
     """
-    match: NotRequired[pulumi.Input[Optional['BgpRouteMapRedistributionConnectedStaticOspfRouteMapMatchArgs']]]
+    match: NotRequired[pulumi.Input[Optional['BgpRouteMapRedistributionConnectedStaticOspfRouteMapMatchArgsDict']]]
     """
     Match
     """
@@ -14162,7 +14162,7 @@ class BgpRouteMapRedistributionConnectedStaticOspfRouteMapArgsDict(TypedDict):
     """
     Connected Static BGP OSPF Route map Sequence number
     """
-    set: NotRequired[pulumi.Input[Optional['BgpRouteMapRedistributionConnectedStaticOspfRouteMapSetArgs']]]
+    set: NotRequired[pulumi.Input[Optional['BgpRouteMapRedistributionConnectedStaticOspfRouteMapSetArgsDict']]]
     """
     Connected Static Root OSPF Set
     """
@@ -14259,7 +14259,7 @@ class BgpRouteMapRedistributionConnectedStaticOspfRouteMapMatchArgsDict(TypedDic
     """
     Connected Static BGP OSPF Route map Interface
     """
-    ipv4: NotRequired[pulumi.Input[Optional['BgpRouteMapRedistributionConnectedStaticOspfRouteMapMatchIpv4Args']]]
+    ipv4: NotRequired[pulumi.Input[Optional['BgpRouteMapRedistributionConnectedStaticOspfRouteMapMatchIpv4ArgsDict']]]
     """
     bgp-route-map-redistributions connected-static match ipv4
     """
@@ -14324,11 +14324,11 @@ class BgpRouteMapRedistributionConnectedStaticOspfRouteMapMatchArgs:
 
 
 class BgpRouteMapRedistributionConnectedStaticOspfRouteMapMatchIpv4ArgsDict(TypedDict):
-    address: NotRequired[pulumi.Input[Optional['BgpRouteMapRedistributionConnectedStaticOspfRouteMapMatchIpv4AddressArgs']]]
+    address: NotRequired[pulumi.Input[Optional['BgpRouteMapRedistributionConnectedStaticOspfRouteMapMatchIpv4AddressArgsDict']]]
     """
     Connected Static Root OSPF Address
     """
-    next_hop: NotRequired[pulumi.Input[Optional['BgpRouteMapRedistributionConnectedStaticOspfRouteMapMatchIpv4NextHopArgs']]]
+    next_hop: NotRequired[pulumi.Input[Optional['BgpRouteMapRedistributionConnectedStaticOspfRouteMapMatchIpv4NextHopArgsDict']]]
     """
     Next hop
     """
@@ -14471,7 +14471,7 @@ class BgpRouteMapRedistributionConnectedStaticOspfRouteMapMatchIpv4NextHopArgs:
 
 
 class BgpRouteMapRedistributionConnectedStaticOspfRouteMapSetArgsDict(TypedDict):
-    metric: NotRequired[pulumi.Input[Optional['BgpRouteMapRedistributionConnectedStaticOspfRouteMapSetMetricArgs']]]
+    metric: NotRequired[pulumi.Input[Optional['BgpRouteMapRedistributionConnectedStaticOspfRouteMapSetMetricArgsDict']]]
     """
     Metric
     """
@@ -14589,7 +14589,7 @@ class BgpRouteMapRedistributionConnectedStaticOspfRouteMapSetMetricArgs:
 
 
 class BgpRouteMapRedistributionConnectedStaticRibArgsDict(TypedDict):
-    route_maps: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['BgpRouteMapRedistributionConnectedStaticRibRouteMapArgs']]]]]
+    route_maps: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['BgpRouteMapRedistributionConnectedStaticRibRouteMapArgsDict']]]]]
     """
     Connected Static BGP Rib Route maps
     """
@@ -14626,7 +14626,7 @@ class BgpRouteMapRedistributionConnectedStaticRibRouteMapArgsDict(TypedDict):
     """
     Connected Static BGP Rib Route maps Description
     """
-    match: NotRequired[pulumi.Input[Optional['BgpRouteMapRedistributionConnectedStaticRibRouteMapMatchArgs']]]
+    match: NotRequired[pulumi.Input[Optional['BgpRouteMapRedistributionConnectedStaticRibRouteMapMatchArgsDict']]]
     """
     Match
     """
@@ -14634,7 +14634,7 @@ class BgpRouteMapRedistributionConnectedStaticRibRouteMapArgsDict(TypedDict):
     """
     Connected Static BGP Rib Route maps Sequence number
     """
-    set: NotRequired[pulumi.Input[Optional['BgpRouteMapRedistributionConnectedStaticRibRouteMapSetArgs']]]
+    set: NotRequired[pulumi.Input[Optional['BgpRouteMapRedistributionConnectedStaticRibRouteMapSetArgsDict']]]
     """
     Connected Static Root RIB set
     """
@@ -14731,7 +14731,7 @@ class BgpRouteMapRedistributionConnectedStaticRibRouteMapMatchArgsDict(TypedDict
     """
     Connected Static BGP Rib Route maps Interface
     """
-    ipv4: NotRequired[pulumi.Input[Optional['BgpRouteMapRedistributionConnectedStaticRibRouteMapMatchIpv4Args']]]
+    ipv4: NotRequired[pulumi.Input[Optional['BgpRouteMapRedistributionConnectedStaticRibRouteMapMatchIpv4ArgsDict']]]
     """
     Ipv4
     """
@@ -14796,11 +14796,11 @@ class BgpRouteMapRedistributionConnectedStaticRibRouteMapMatchArgs:
 
 
 class BgpRouteMapRedistributionConnectedStaticRibRouteMapMatchIpv4ArgsDict(TypedDict):
-    address: NotRequired[pulumi.Input[Optional['BgpRouteMapRedistributionConnectedStaticRibRouteMapMatchIpv4AddressArgs']]]
+    address: NotRequired[pulumi.Input[Optional['BgpRouteMapRedistributionConnectedStaticRibRouteMapMatchIpv4AddressArgsDict']]]
     """
     Connected Static BGP Rib Route maps ipv4 address
     """
-    next_hop: NotRequired[pulumi.Input[Optional['BgpRouteMapRedistributionConnectedStaticRibRouteMapMatchIpv4NextHopArgs']]]
+    next_hop: NotRequired[pulumi.Input[Optional['BgpRouteMapRedistributionConnectedStaticRibRouteMapMatchIpv4NextHopArgsDict']]]
     """
     Next hop
     """
@@ -14972,11 +14972,11 @@ class BgpRouteMapRedistributionConnectedStaticRibRouteMapSetArgs:
 
 
 class BgpRouteMapRedistributionOspfArgsDict(TypedDict):
-    bgp: NotRequired[pulumi.Input[Optional['BgpRouteMapRedistributionOspfBgpArgs']]]
+    bgp: NotRequired[pulumi.Input[Optional['BgpRouteMapRedistributionOspfBgpArgsDict']]]
     """
     OSPF Root BGP
     """
-    rib: NotRequired[pulumi.Input[Optional['BgpRouteMapRedistributionOspfRibArgs']]]
+    rib: NotRequired[pulumi.Input[Optional['BgpRouteMapRedistributionOspfRibArgsDict']]]
     """
     Rib
 
@@ -15027,7 +15027,7 @@ class BgpRouteMapRedistributionOspfArgs:
 
 
 class BgpRouteMapRedistributionOspfBgpArgsDict(TypedDict):
-    route_maps: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['BgpRouteMapRedistributionOspfBgpRouteMapArgs']]]]]
+    route_maps: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['BgpRouteMapRedistributionOspfBgpRouteMapArgsDict']]]]]
     """
     OSPF BGP Route maps
     """
@@ -15064,7 +15064,7 @@ class BgpRouteMapRedistributionOspfBgpRouteMapArgsDict(TypedDict):
     """
     OSPF BGP Route maps Description
     """
-    match: NotRequired[pulumi.Input[Optional['BgpRouteMapRedistributionOspfBgpRouteMapMatchArgs']]]
+    match: NotRequired[pulumi.Input[Optional['BgpRouteMapRedistributionOspfBgpRouteMapMatchArgsDict']]]
     """
     Match
     """
@@ -15072,7 +15072,7 @@ class BgpRouteMapRedistributionOspfBgpRouteMapArgsDict(TypedDict):
     """
     OSPF BGP Route maps Sequence number
     """
-    set: NotRequired[pulumi.Input[Optional['BgpRouteMapRedistributionOspfBgpRouteMapSetArgs']]]
+    set: NotRequired[pulumi.Input[Optional['BgpRouteMapRedistributionOspfBgpRouteMapSetArgsDict']]]
     """
     OSPF Root Set
     """
@@ -15165,7 +15165,7 @@ class BgpRouteMapRedistributionOspfBgpRouteMapArgs:
 
 
 class BgpRouteMapRedistributionOspfBgpRouteMapMatchArgsDict(TypedDict):
-    address: NotRequired[pulumi.Input[Optional['BgpRouteMapRedistributionOspfBgpRouteMapMatchAddressArgs']]]
+    address: NotRequired[pulumi.Input[Optional['BgpRouteMapRedistributionOspfBgpRouteMapMatchAddressArgsDict']]]
     """
     bgp-route-map-redistributions ospf address
     """
@@ -15177,7 +15177,7 @@ class BgpRouteMapRedistributionOspfBgpRouteMapMatchArgsDict(TypedDict):
     """
     OSPF BGP Route maps Metric
     """
-    next_hop: NotRequired[pulumi.Input[Optional['BgpRouteMapRedistributionOspfBgpRouteMapMatchNextHopArgs']]]
+    next_hop: NotRequired[pulumi.Input[Optional['BgpRouteMapRedistributionOspfBgpRouteMapMatchNextHopArgsDict']]]
     """
     bgp-route-map-redistributions ospf next*hop
     """
@@ -15372,7 +15372,7 @@ class BgpRouteMapRedistributionOspfBgpRouteMapMatchNextHopArgs:
 
 
 class BgpRouteMapRedistributionOspfBgpRouteMapSetArgsDict(TypedDict):
-    aggregator: NotRequired[pulumi.Input[Optional['BgpRouteMapRedistributionOspfBgpRouteMapSetAggregatorArgs']]]
+    aggregator: NotRequired[pulumi.Input[Optional['BgpRouteMapRedistributionOspfBgpRouteMapSetAggregatorArgsDict']]]
     """
     bgp-route-map-redistributions set aggregator
     """
@@ -15384,7 +15384,7 @@ class BgpRouteMapRedistributionOspfBgpRouteMapSetArgsDict(TypedDict):
     """
     OSPF BGP Route maps set Enable BGP atomic aggregate?
     """
-    ipv4: NotRequired[pulumi.Input[Optional['BgpRouteMapRedistributionOspfBgpRouteMapSetIpv4Args']]]
+    ipv4: NotRequired[pulumi.Input[Optional['BgpRouteMapRedistributionOspfBgpRouteMapSetIpv4ArgsDict']]]
     """
     Ipv4
     """
@@ -15396,7 +15396,7 @@ class BgpRouteMapRedistributionOspfBgpRouteMapSetArgsDict(TypedDict):
     """
     OSPF BGP Route maps set Local preference
     """
-    metric: NotRequired[pulumi.Input[Optional['BgpRouteMapRedistributionOspfBgpRouteMapSetMetricArgs']]]
+    metric: NotRequired[pulumi.Input[Optional['BgpRouteMapRedistributionOspfBgpRouteMapSetMetricArgsDict']]]
     """
     Metric
     """
@@ -15768,7 +15768,7 @@ class BgpRouteMapRedistributionOspfBgpRouteMapSetMetricArgs:
 
 
 class BgpRouteMapRedistributionOspfRibArgsDict(TypedDict):
-    route_maps: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['BgpRouteMapRedistributionOspfRibRouteMapArgs']]]]]
+    route_maps: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['BgpRouteMapRedistributionOspfRibRouteMapArgsDict']]]]]
     """
     OSPF RIB Route maps set Route maps
     """
@@ -15805,7 +15805,7 @@ class BgpRouteMapRedistributionOspfRibRouteMapArgsDict(TypedDict):
     """
     OSPF RIB Route maps Description
     """
-    match: NotRequired[pulumi.Input[Optional['BgpRouteMapRedistributionOspfRibRouteMapMatchArgs']]]
+    match: NotRequired[pulumi.Input[Optional['BgpRouteMapRedistributionOspfRibRouteMapMatchArgsDict']]]
     """
     Match
     """
@@ -15813,7 +15813,7 @@ class BgpRouteMapRedistributionOspfRibRouteMapArgsDict(TypedDict):
     """
     OSPF RIB Route mapsSequence number
     """
-    set: NotRequired[pulumi.Input[Optional['BgpRouteMapRedistributionOspfRibRouteMapSetArgs']]]
+    set: NotRequired[pulumi.Input[Optional['BgpRouteMapRedistributionOspfRibRouteMapSetArgsDict']]]
     """
     OSPF RIB Route maps set
     """
@@ -15906,7 +15906,7 @@ class BgpRouteMapRedistributionOspfRibRouteMapArgs:
 
 
 class BgpRouteMapRedistributionOspfRibRouteMapMatchArgsDict(TypedDict):
-    address: NotRequired[pulumi.Input[Optional['BgpRouteMapRedistributionOspfRibRouteMapMatchAddressArgs']]]
+    address: NotRequired[pulumi.Input[Optional['BgpRouteMapRedistributionOspfRibRouteMapMatchAddressArgsDict']]]
     """
     OSPF RIB Route maps address
     """
@@ -15918,7 +15918,7 @@ class BgpRouteMapRedistributionOspfRibRouteMapMatchArgsDict(TypedDict):
     """
     OSPF RIB Route maps Metric
     """
-    next_hop: NotRequired[pulumi.Input[Optional['BgpRouteMapRedistributionOspfRibRouteMapMatchNextHopArgs']]]
+    next_hop: NotRequired[pulumi.Input[Optional['BgpRouteMapRedistributionOspfRibRouteMapMatchNextHopArgsDict']]]
     """
     OSPF RIB Route maps next*hop
     """
@@ -16150,7 +16150,7 @@ class BgpRouteMapRouteMapArgsDict(TypedDict):
     """
     Description
     """
-    match: NotRequired[pulumi.Input[Optional['BgpRouteMapRouteMapMatchArgs']]]
+    match: NotRequired[pulumi.Input[Optional['BgpRouteMapRouteMapMatchArgsDict']]]
     """
     Match
     """
@@ -16158,7 +16158,7 @@ class BgpRouteMapRouteMapArgsDict(TypedDict):
     """
     Sequence number
     """
-    set: NotRequired[pulumi.Input[Optional['BgpRouteMapRouteMapSetArgs']]]
+    set: NotRequired[pulumi.Input[Optional['BgpRouteMapRouteMapSetArgsDict']]]
     """
     Set
     """
@@ -16263,7 +16263,7 @@ class BgpRouteMapRouteMapMatchArgsDict(TypedDict):
     """
     Interface
     """
-    ipv4: NotRequired[pulumi.Input[Optional['BgpRouteMapRouteMapMatchIpv4Args']]]
+    ipv4: NotRequired[pulumi.Input[Optional['BgpRouteMapRouteMapMatchIpv4ArgsDict']]]
     """
     bgp-route-maps ipv4 object
     """
@@ -16480,15 +16480,15 @@ class BgpRouteMapRouteMapMatchArgs:
 
 
 class BgpRouteMapRouteMapMatchIpv4ArgsDict(TypedDict):
-    address: NotRequired[pulumi.Input[Optional['BgpRouteMapRouteMapMatchIpv4AddressArgs']]]
+    address: NotRequired[pulumi.Input[Optional['BgpRouteMapRouteMapMatchIpv4AddressArgsDict']]]
     """
     Address
     """
-    next_hop: NotRequired[pulumi.Input[Optional['BgpRouteMapRouteMapMatchIpv4NextHopArgs']]]
+    next_hop: NotRequired[pulumi.Input[Optional['BgpRouteMapRouteMapMatchIpv4NextHopArgsDict']]]
     """
     Next hop
     """
-    route_source: NotRequired[pulumi.Input[Optional['BgpRouteMapRouteMapMatchIpv4RouteSourceArgs']]]
+    route_source: NotRequired[pulumi.Input[Optional['BgpRouteMapRouteMapMatchIpv4RouteSourceArgsDict']]]
     """
     Route source
     """
@@ -16696,7 +16696,7 @@ class BgpRouteMapRouteMapMatchIpv4RouteSourceArgs:
 
 
 class BgpRouteMapRouteMapSetArgsDict(TypedDict):
-    aggregator: NotRequired[pulumi.Input[Optional['BgpRouteMapRouteMapSetAggregatorArgs']]]
+    aggregator: NotRequired[pulumi.Input[Optional['BgpRouteMapRouteMapSetAggregatorArgsDict']]]
     """
     bgp-route-maps aggregator
     """
@@ -16712,7 +16712,7 @@ class BgpRouteMapRouteMapSetArgsDict(TypedDict):
     """
     Enable BGP atomic aggregate?
     """
-    ipv4: NotRequired[pulumi.Input[Optional['BgpRouteMapRouteMapSetIpv4Args']]]
+    ipv4: NotRequired[pulumi.Input[Optional['BgpRouteMapRouteMapSetIpv4ArgsDict']]]
     """
     Ipv4
     """
@@ -16724,7 +16724,7 @@ class BgpRouteMapRouteMapSetArgsDict(TypedDict):
     """
     Local preference
     """
-    metric: NotRequired[pulumi.Input[Optional['BgpRouteMapRouteMapSetMetricArgs']]]
+    metric: NotRequired[pulumi.Input[Optional['BgpRouteMapRouteMapSetMetricArgsDict']]]
     """
     Metric
     """
@@ -17192,11 +17192,11 @@ class BgpRouteMapRouteMapSetMetricArgs:
 
 
 class BgpRoutingRoutingPreferenceArgsDict(TypedDict):
-    default: NotRequired[pulumi.Input[Optional['BgpRoutingRoutingPreferenceDefaultArgs']]]
+    default: NotRequired[pulumi.Input[Optional['BgpRoutingRoutingPreferenceDefaultArgsDict']]]
     """
     Default
     """
-    hot_potato_routing: NotRequired[pulumi.Input[Optional['BgpRoutingRoutingPreferenceHotPotatoRoutingArgs']]]
+    hot_potato_routing: NotRequired[pulumi.Input[Optional['BgpRoutingRoutingPreferenceHotPotatoRoutingArgsDict']]]
     """
     Hot potato routing
 
@@ -17410,7 +17410,7 @@ class ContentIdSettingContentIdArgsDict(TypedDict):
     """
     Allow http range
     """
-    application: NotRequired[pulumi.Input[Optional['ContentIdSettingContentIdApplicationArgs']]]
+    application: NotRequired[pulumi.Input[Optional['ContentIdSettingContentIdApplicationArgsDict']]]
     """
     Application
     """
@@ -17769,15 +17769,15 @@ class DataFilteringProfileRuleArgs:
 
 
 class DataObjectPatternTypeArgsDict(TypedDict):
-    file_properties: NotRequired[pulumi.Input[Optional['DataObjectPatternTypeFilePropertiesArgs']]]
+    file_properties: NotRequired[pulumi.Input[Optional['DataObjectPatternTypeFilePropertiesArgsDict']]]
     """
     File properties
     """
-    predefined: NotRequired[pulumi.Input[Optional['DataObjectPatternTypePredefinedArgs']]]
+    predefined: NotRequired[pulumi.Input[Optional['DataObjectPatternTypePredefinedArgsDict']]]
     """
     Predefined
     """
-    regex: NotRequired[pulumi.Input[Optional['DataObjectPatternTypeRegexArgs']]]
+    regex: NotRequired[pulumi.Input[Optional['DataObjectPatternTypeRegexArgsDict']]]
     """
     Regex
     """
@@ -17838,7 +17838,7 @@ class DataObjectPatternTypeArgs:
 
 
 class DataObjectPatternTypeFilePropertiesArgsDict(TypedDict):
-    patterns: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['DataObjectPatternTypeFilePropertiesPatternArgs']]]]]
+    patterns: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['DataObjectPatternTypeFilePropertiesPatternArgsDict']]]]]
     """
     Pattern
     """
@@ -17956,7 +17956,7 @@ class DataObjectPatternTypeFilePropertiesPatternArgs:
 
 
 class DataObjectPatternTypePredefinedArgsDict(TypedDict):
-    patterns: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['DataObjectPatternTypePredefinedPatternArgs']]]]]
+    patterns: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['DataObjectPatternTypePredefinedPatternArgsDict']]]]]
     """
     Pattern
     """
@@ -18034,7 +18034,7 @@ class DataObjectPatternTypePredefinedPatternArgs:
 
 
 class DataObjectPatternTypeRegexArgsDict(TypedDict):
-    patterns: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['DataObjectPatternTypeRegexPatternArgs']]]]]
+    patterns: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['DataObjectPatternTypeRegexPatternArgsDict']]]]]
     """
     Pattern
     """
@@ -18828,11 +18828,11 @@ class DecryptionProfileSslProtocolSettingsArgs:
 
 
 class DecryptionRuleTypeArgsDict(TypedDict):
-    ssl_forward_proxy: NotRequired[pulumi.Input[Optional['DecryptionRuleTypeSslForwardProxyArgs']]]
+    ssl_forward_proxy: NotRequired[pulumi.Input[Optional['DecryptionRuleTypeSslForwardProxyArgsDict']]]
     """
     Ssl forward proxy
     """
-    ssl_inbound_inspection: NotRequired[pulumi.Input[Optional['DecryptionRuleTypeSslInboundInspectionArgs']]]
+    ssl_inbound_inspection: NotRequired[pulumi.Input[Optional['DecryptionRuleTypeSslInboundInspectionArgsDict']]]
     """
     add the certificate name for SSL inbound inspection
 
@@ -19033,7 +19033,7 @@ class DhcpInterfaceServerArgsDict(TypedDict):
     """
     DHCP server mode
     """
-    option: NotRequired[pulumi.Input[Optional['DhcpInterfaceServerOptionArgs']]]
+    option: NotRequired[pulumi.Input[Optional['DhcpInterfaceServerOptionArgsDict']]]
     """
     Option
     """
@@ -19041,7 +19041,7 @@ class DhcpInterfaceServerArgsDict(TypedDict):
     """
     Ping IP before allocating?
     """
-    reserveds: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['DhcpInterfaceServerReservedArgs']]]]]
+    reserveds: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['DhcpInterfaceServerReservedArgsDict']]]]]
     """
     List of IP reservations
     """
@@ -19134,7 +19134,7 @@ class DhcpInterfaceServerArgs:
 
 
 class DhcpInterfaceServerOptionArgsDict(TypedDict):
-    dns: NotRequired[pulumi.Input[Optional['DhcpInterfaceServerOptionDnsArgs']]]
+    dns: NotRequired[pulumi.Input[Optional['DhcpInterfaceServerOptionDnsArgsDict']]]
     """
     Dns
     """
@@ -19146,19 +19146,19 @@ class DhcpInterfaceServerOptionArgsDict(TypedDict):
     """
     Default gateway
     """
-    inheritance: NotRequired[pulumi.Input[Optional['DhcpInterfaceServerOptionInheritanceArgs']]]
+    inheritance: NotRequired[pulumi.Input[Optional['DhcpInterfaceServerOptionInheritanceArgsDict']]]
     """
     Inheritance
     """
-    lease: NotRequired[pulumi.Input[Optional['DhcpInterfaceServerOptionLeaseArgs']]]
+    lease: NotRequired[pulumi.Input[Optional['DhcpInterfaceServerOptionLeaseArgsDict']]]
     """
     Lease
     """
-    nis: NotRequired[pulumi.Input[Optional['DhcpInterfaceServerOptionNisArgs']]]
+    nis: NotRequired[pulumi.Input[Optional['DhcpInterfaceServerOptionNisArgsDict']]]
     """
     Nis
     """
-    ntp: NotRequired[pulumi.Input[Optional['DhcpInterfaceServerOptionNtpArgs']]]
+    ntp: NotRequired[pulumi.Input[Optional['DhcpInterfaceServerOptionNtpArgsDict']]]
     """
     Ntp
     """
@@ -19174,11 +19174,11 @@ class DhcpInterfaceServerOptionArgsDict(TypedDict):
     """
     Subnet mask
     """
-    user_defineds: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['DhcpInterfaceServerOptionUserDefinedArgs']]]]]
+    user_defineds: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['DhcpInterfaceServerOptionUserDefinedArgsDict']]]]]
     """
     Custom DHCP options
     """
-    wins: NotRequired[pulumi.Input[Optional['DhcpInterfaceServerOptionWinsArgs']]]
+    wins: NotRequired[pulumi.Input[Optional['DhcpInterfaceServerOptionWinsArgsDict']]]
     """
     Wins
     """
@@ -19465,7 +19465,7 @@ class DhcpInterfaceServerOptionLeaseArgsDict(TypedDict):
     """
     DHCP lease timeout (minutes)
     """
-    unlimited: NotRequired[pulumi.Input[Optional['DhcpInterfaceServerOptionLeaseUnlimitedArgs']]]
+    unlimited: NotRequired[pulumi.Input[Optional['DhcpInterfaceServerOptionLeaseUnlimitedArgsDict']]]
     """
     Unlimited
 
@@ -19876,7 +19876,7 @@ class DnsProxyCacheArgsDict(TypedDict):
     """
     Cache EDNS UDP response
     """
-    max_ttl: NotRequired[pulumi.Input[Optional['DnsProxyCacheMaxTtlArgs']]]
+    max_ttl: NotRequired[pulumi.Input[Optional['DnsProxyCacheMaxTtlArgsDict']]]
     """
     Max ttl
     """
@@ -19988,7 +19988,7 @@ class DnsProxyDefaultArgsDict(TypedDict):
     """
     Primary DNS Name server IP address
     """
-    inheritance: NotRequired[pulumi.Input[Optional['DnsProxyDefaultInheritanceArgs']]]
+    inheritance: NotRequired[pulumi.Input[Optional['DnsProxyDefaultInheritanceArgsDict']]]
     """
     Inheritance
     """
@@ -20302,7 +20302,7 @@ class DnsProxyTcpQueriesArgs:
 
 
 class DnsProxyUdpQueriesArgsDict(TypedDict):
-    retries: NotRequired[pulumi.Input[Optional['DnsProxyUdpQueriesRetriesArgs']]]
+    retries: NotRequired[pulumi.Input[Optional['DnsProxyUdpQueriesRetriesArgsDict']]]
     """
     Retries
     """
@@ -20380,19 +20380,19 @@ class DnsProxyUdpQueriesRetriesArgs:
 
 
 class DnsSecurityProfileBotnetDomainsArgsDict(TypedDict):
-    dns_security_categories: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['DnsSecurityProfileBotnetDomainsDnsSecurityCategoryArgs']]]]]
+    dns_security_categories: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['DnsSecurityProfileBotnetDomainsDnsSecurityCategoryArgsDict']]]]]
     """
     DNS categories
     """
-    lists: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['DnsSecurityProfileBotnetDomainsListArgs']]]]]
+    lists: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['DnsSecurityProfileBotnetDomainsListArgsDict']]]]]
     """
     Dynamic lists of DNS domains
     """
-    sinkhole: NotRequired[pulumi.Input[Optional['DnsSecurityProfileBotnetDomainsSinkholeArgs']]]
+    sinkhole: NotRequired[pulumi.Input[Optional['DnsSecurityProfileBotnetDomainsSinkholeArgsDict']]]
     """
     DNS sinkhole settings
     """
-    whitelists: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['DnsSecurityProfileBotnetDomainsWhitelistArgs']]]]]
+    whitelists: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['DnsSecurityProfileBotnetDomainsWhitelistArgsDict']]]]]
     """
     DNS security overrides
     """
@@ -20562,7 +20562,7 @@ class DnsSecurityProfileBotnetDomainsListArgsDict(TypedDict):
     """
     Name
     """
-    action: NotRequired[pulumi.Input[Optional['DnsSecurityProfileBotnetDomainsListActionArgs']]]
+    action: NotRequired[pulumi.Input[Optional['DnsSecurityProfileBotnetDomainsListActionArgsDict']]]
     """
     Action
     """
@@ -20626,23 +20626,23 @@ class DnsSecurityProfileBotnetDomainsListArgs:
 
 
 class DnsSecurityProfileBotnetDomainsListActionArgsDict(TypedDict):
-    alert: NotRequired[pulumi.Input[Optional['DnsSecurityProfileBotnetDomainsListActionAlertArgs']]]
+    alert: NotRequired[pulumi.Input[Optional['DnsSecurityProfileBotnetDomainsListActionAlertArgsDict']]]
     """
     Alert
     """
-    allow: NotRequired[pulumi.Input[Optional['DnsSecurityProfileBotnetDomainsListActionAllowArgs']]]
+    allow: NotRequired[pulumi.Input[Optional['DnsSecurityProfileBotnetDomainsListActionAllowArgsDict']]]
     """
     Allow
 
     > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `block`, and `sinkhole`.
     """
-    block: NotRequired[pulumi.Input[Optional['DnsSecurityProfileBotnetDomainsListActionBlockArgs']]]
+    block: NotRequired[pulumi.Input[Optional['DnsSecurityProfileBotnetDomainsListActionBlockArgsDict']]]
     """
     Block
 
     > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `block`, and `sinkhole`.
     """
-    sinkhole: NotRequired[pulumi.Input[Optional['DnsSecurityProfileBotnetDomainsListActionSinkholeArgs']]]
+    sinkhole: NotRequired[pulumi.Input[Optional['DnsSecurityProfileBotnetDomainsListActionSinkholeArgsDict']]]
     """
     Sinkhole
 
@@ -20866,23 +20866,23 @@ class DnsSecurityProfileBotnetDomainsWhitelistArgs:
 
 
 class DosProtectionProfileFloodArgsDict(TypedDict):
-    icmp: NotRequired[pulumi.Input[Optional['DosProtectionProfileFloodIcmpArgs']]]
+    icmp: NotRequired[pulumi.Input[Optional['DosProtectionProfileFloodIcmpArgsDict']]]
     """
     Icmp
     """
-    icmpv6: NotRequired[pulumi.Input[Optional['DosProtectionProfileFloodIcmpv6Args']]]
+    icmpv6: NotRequired[pulumi.Input[Optional['DosProtectionProfileFloodIcmpv6ArgsDict']]]
     """
     Icmpv6
     """
-    other_ip: NotRequired[pulumi.Input[Optional['DosProtectionProfileFloodOtherIpArgs']]]
+    other_ip: NotRequired[pulumi.Input[Optional['DosProtectionProfileFloodOtherIpArgsDict']]]
     """
     Other ip
     """
-    tcp_syn: NotRequired[pulumi.Input[Optional['DosProtectionProfileFloodTcpSynArgs']]]
+    tcp_syn: NotRequired[pulumi.Input[Optional['DosProtectionProfileFloodTcpSynArgsDict']]]
     """
     Tcp syn
     """
-    udp: NotRequired[pulumi.Input[Optional['DosProtectionProfileFloodUdpArgs']]]
+    udp: NotRequired[pulumi.Input[Optional['DosProtectionProfileFloodUdpArgsDict']]]
     """
     Udp
     """
@@ -20979,7 +20979,7 @@ class DosProtectionProfileFloodIcmpArgsDict(TypedDict):
     """
     Enable
     """
-    red: NotRequired[pulumi.Input[Optional['DosProtectionProfileFloodIcmpRedArgs']]]
+    red: NotRequired[pulumi.Input[Optional['DosProtectionProfileFloodIcmpRedArgsDict']]]
     """
     Red
     """
@@ -21032,7 +21032,7 @@ class DosProtectionProfileFloodIcmpRedArgsDict(TypedDict):
     """
     Alarm rate
     """
-    block: NotRequired[pulumi.Input[Optional['DosProtectionProfileFloodIcmpRedBlockArgs']]]
+    block: NotRequired[pulumi.Input[Optional['DosProtectionProfileFloodIcmpRedBlockArgsDict']]]
     """
     Block
     """
@@ -21146,7 +21146,7 @@ class DosProtectionProfileFloodIcmpv6ArgsDict(TypedDict):
     """
     Enable
     """
-    red: NotRequired[pulumi.Input[Optional['DosProtectionProfileFloodIcmpv6RedArgs']]]
+    red: NotRequired[pulumi.Input[Optional['DosProtectionProfileFloodIcmpv6RedArgsDict']]]
     """
     Red
     """
@@ -21199,7 +21199,7 @@ class DosProtectionProfileFloodIcmpv6RedArgsDict(TypedDict):
     """
     Alarm rate
     """
-    block: NotRequired[pulumi.Input[Optional['DosProtectionProfileFloodIcmpv6RedBlockArgs']]]
+    block: NotRequired[pulumi.Input[Optional['DosProtectionProfileFloodIcmpv6RedBlockArgsDict']]]
     """
     Block
     """
@@ -21313,7 +21313,7 @@ class DosProtectionProfileFloodOtherIpArgsDict(TypedDict):
     """
     Enable
     """
-    red: NotRequired[pulumi.Input[Optional['DosProtectionProfileFloodOtherIpRedArgs']]]
+    red: NotRequired[pulumi.Input[Optional['DosProtectionProfileFloodOtherIpRedArgsDict']]]
     """
     Red
     """
@@ -21366,7 +21366,7 @@ class DosProtectionProfileFloodOtherIpRedArgsDict(TypedDict):
     """
     Alarm rate
     """
-    block: NotRequired[pulumi.Input[Optional['DosProtectionProfileFloodOtherIpRedBlockArgs']]]
+    block: NotRequired[pulumi.Input[Optional['DosProtectionProfileFloodOtherIpRedBlockArgsDict']]]
     """
     Block
     """
@@ -21480,11 +21480,11 @@ class DosProtectionProfileFloodTcpSynArgsDict(TypedDict):
     """
     Enable
     """
-    red: NotRequired[pulumi.Input[Optional['DosProtectionProfileFloodTcpSynRedArgs']]]
+    red: NotRequired[pulumi.Input[Optional['DosProtectionProfileFloodTcpSynRedArgsDict']]]
     """
     Red
     """
-    syn_cookies: NotRequired[pulumi.Input[Optional['DosProtectionProfileFloodTcpSynSynCookiesArgs']]]
+    syn_cookies: NotRequired[pulumi.Input[Optional['DosProtectionProfileFloodTcpSynSynCookiesArgsDict']]]
     """
     Syn cookies
     """
@@ -21553,7 +21553,7 @@ class DosProtectionProfileFloodTcpSynRedArgsDict(TypedDict):
     """
     Alarm rate
     """
-    block: NotRequired[pulumi.Input[Optional['DosProtectionProfileFloodTcpSynRedBlockArgs']]]
+    block: NotRequired[pulumi.Input[Optional['DosProtectionProfileFloodTcpSynRedBlockArgsDict']]]
     """
     Block
     """
@@ -21671,7 +21671,7 @@ class DosProtectionProfileFloodTcpSynSynCookiesArgsDict(TypedDict):
     """
     Alarm rate
     """
-    block: NotRequired[pulumi.Input[Optional['DosProtectionProfileFloodTcpSynSynCookiesBlockArgs']]]
+    block: NotRequired[pulumi.Input[Optional['DosProtectionProfileFloodTcpSynSynCookiesBlockArgsDict']]]
     """
     Block
     """
@@ -21785,7 +21785,7 @@ class DosProtectionProfileFloodUdpArgsDict(TypedDict):
     """
     Enable
     """
-    red: NotRequired[pulumi.Input[Optional['DosProtectionProfileFloodUdpRedArgs']]]
+    red: NotRequired[pulumi.Input[Optional['DosProtectionProfileFloodUdpRedArgsDict']]]
     """
     Red
     """
@@ -21838,7 +21838,7 @@ class DosProtectionProfileFloodUdpRedArgsDict(TypedDict):
     """
     Alarm rate
     """
-    block: NotRequired[pulumi.Input[Optional['DosProtectionProfileFloodUdpRedBlockArgs']]]
+    block: NotRequired[pulumi.Input[Optional['DosProtectionProfileFloodUdpRedBlockArgsDict']]]
     """
     Block
     """
@@ -21948,7 +21948,7 @@ class DosProtectionProfileFloodUdpRedBlockArgs:
 
 
 class DosProtectionProfileResourceArgsDict(TypedDict):
-    sessions: NotRequired[pulumi.Input[Optional['DosProtectionProfileResourceSessionsArgs']]]
+    sessions: NotRequired[pulumi.Input[Optional['DosProtectionProfileResourceSessionsArgsDict']]]
     """
     Sessions
     """
@@ -22026,17 +22026,17 @@ class DosProtectionProfileResourceSessionsArgs:
 
 
 class DosProtectionRuleActionArgsDict(TypedDict):
-    allow: NotRequired[pulumi.Input[Optional['DosProtectionRuleActionAllowArgs']]]
+    allow: NotRequired[pulumi.Input[Optional['DosProtectionRuleActionAllowArgsDict']]]
     """
     Allow
     """
-    deny: NotRequired[pulumi.Input[Optional['DosProtectionRuleActionDenyArgs']]]
+    deny: NotRequired[pulumi.Input[Optional['DosProtectionRuleActionDenyArgsDict']]]
     """
     Deny
 
     > ℹ️ **Note:** You must specify exactly one of `allow`, `deny`, and `protect`.
     """
-    protect: NotRequired[pulumi.Input[Optional['DosProtectionRuleActionProtectArgs']]]
+    protect: NotRequired[pulumi.Input[Optional['DosProtectionRuleActionProtectArgsDict']]]
     """
     Protect
 
@@ -22134,11 +22134,11 @@ class DosProtectionRuleActionProtectArgs:
 
 
 class DosProtectionRuleProtectionArgsDict(TypedDict):
-    aggregate: NotRequired[pulumi.Input[Optional['DosProtectionRuleProtectionAggregateArgs']]]
+    aggregate: NotRequired[pulumi.Input[Optional['DosProtectionRuleProtectionAggregateArgsDict']]]
     """
     Aggregate
     """
-    classified: NotRequired[pulumi.Input[Optional['DosProtectionRuleProtectionClassifiedArgs']]]
+    classified: NotRequired[pulumi.Input[Optional['DosProtectionRuleProtectionClassifiedArgsDict']]]
     """
     Classified
 
@@ -22221,7 +22221,7 @@ class DosProtectionRuleProtectionClassifiedArgsDict(TypedDict):
     """
     Classified DoS protection profile
     """
-    classification_criteria: NotRequired[pulumi.Input[Optional['DosProtectionRuleProtectionClassifiedClassificationCriteriaArgs']]]
+    classification_criteria: NotRequired[pulumi.Input[Optional['DosProtectionRuleProtectionClassifiedClassificationCriteriaArgsDict']]]
     """
     Classification criteria
     """
@@ -22294,7 +22294,7 @@ class DosProtectionRuleProtectionClassifiedClassificationCriteriaArgs:
 
 
 class EthernetInterfaceLayer2ArgsDict(TypedDict):
-    lldp: NotRequired[pulumi.Input[Optional['EthernetInterfaceLayer2LldpArgs']]]
+    lldp: NotRequired[pulumi.Input[Optional['EthernetInterfaceLayer2LldpArgsDict']]]
     """
     LLDP Settings
     """
@@ -22391,15 +22391,15 @@ class EthernetInterfaceLayer2LldpArgs:
 
 
 class EthernetInterfaceLayer3ArgsDict(TypedDict):
-    arps: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['EthernetInterfaceLayer3ArpArgs']]]]]
+    arps: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['EthernetInterfaceLayer3ArpArgsDict']]]]]
     """
     Ethernet Interfaces ARP configuration
     """
-    ddns_config: NotRequired[pulumi.Input[Optional['EthernetInterfaceLayer3DdnsConfigArgs']]]
+    ddns_config: NotRequired[pulumi.Input[Optional['EthernetInterfaceLayer3DdnsConfigArgsDict']]]
     """
     Dynamic DNS configuration specific to the Ethernet Interfaces.
     """
-    dhcp_client: NotRequired[pulumi.Input[Optional['EthernetInterfaceLayer3DhcpClientArgs']]]
+    dhcp_client: NotRequired[pulumi.Input[Optional['EthernetInterfaceLayer3DhcpClientArgsDict']]]
     """
     Ethernet Interfaces DHCP Client Object
     """
@@ -22407,7 +22407,7 @@ class EthernetInterfaceLayer3ArgsDict(TypedDict):
     """
     Interface management profile
     """
-    ips: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['EthernetInterfaceLayer3IpArgs']]]]]
+    ips: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['EthernetInterfaceLayer3IpArgsDict']]]]]
     """
     Ethernet Interface IP addresses
 
@@ -22421,7 +22421,7 @@ class EthernetInterfaceLayer3ArgsDict(TypedDict):
     """
     Name of Netflow Profile to assign to Interface
     """
-    pppoe: NotRequired[pulumi.Input[Optional['EthernetInterfaceLayer3PppoeArgs']]]
+    pppoe: NotRequired[pulumi.Input[Optional['EthernetInterfaceLayer3PppoeArgsDict']]]
     """
     Pppoe
 
@@ -22778,7 +22778,7 @@ class EthernetInterfaceLayer3DhcpClientArgsDict(TypedDict):
     """
     Enable DHCP?
     """
-    send_hostname: NotRequired[pulumi.Input[Optional['EthernetInterfaceLayer3DhcpClientSendHostnameArgs']]]
+    send_hostname: NotRequired[pulumi.Input[Optional['EthernetInterfaceLayer3DhcpClientSendHostnameArgsDict']]]
     """
     Ethernet Interfaces DHCP ClientSend hostname
     """
@@ -22956,7 +22956,7 @@ class EthernetInterfaceLayer3PppoeArgsDict(TypedDict):
     """
     Enable
     """
-    passive: NotRequired[pulumi.Input[Optional['EthernetInterfaceLayer3PppoePassiveArgs']]]
+    passive: NotRequired[pulumi.Input[Optional['EthernetInterfaceLayer3PppoePassiveArgsDict']]]
     """
     Passive
     """
@@ -22964,7 +22964,7 @@ class EthernetInterfaceLayer3PppoeArgsDict(TypedDict):
     """
     Service
     """
-    static_address: NotRequired[pulumi.Input[Optional['EthernetInterfaceLayer3PppoeStaticAddressArgs']]]
+    static_address: NotRequired[pulumi.Input[Optional['EthernetInterfaceLayer3PppoeStaticAddressArgsDict']]]
     """
     Static address
     """
@@ -23253,41 +23253,41 @@ class EthernetInterfaceTapArgs:
 
 
 class ExternalDynamicListTypeArgsDict(TypedDict):
-    domain: NotRequired[pulumi.Input[Optional['ExternalDynamicListTypeDomainArgs']]]
+    domain: NotRequired[pulumi.Input[Optional['ExternalDynamicListTypeDomainArgsDict']]]
     """
     Domain settings for Custom Domain type
     """
-    imei: NotRequired[pulumi.Input[Optional['ExternalDynamicListTypeImeiArgs']]]
+    imei: NotRequired[pulumi.Input[Optional['ExternalDynamicListTypeImeiArgsDict']]]
     """
     IMEI Configuration settings
 
     > ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefined_ip`, `predefined_url`, and `url`.
     """
-    imsi: NotRequired[pulumi.Input[Optional['ExternalDynamicListTypeImsiArgs']]]
+    imsi: NotRequired[pulumi.Input[Optional['ExternalDynamicListTypeImsiArgsDict']]]
     """
     IMSI Config for Custom IMSI type
 
     > ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefined_ip`, `predefined_url`, and `url`.
     """
-    ip: NotRequired[pulumi.Input[Optional['ExternalDynamicListTypeIpArgs']]]
+    ip: NotRequired[pulumi.Input[Optional['ExternalDynamicListTypeIpArgsDict']]]
     """
     IP settings for Custom IP type
 
     > ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefined_ip`, `predefined_url`, and `url`.
     """
-    predefined_ip: NotRequired[pulumi.Input[Optional['ExternalDynamicListTypePredefinedIpArgs']]]
+    predefined_ip: NotRequired[pulumi.Input[Optional['ExternalDynamicListTypePredefinedIpArgsDict']]]
     """
     Predefined IP settings for EDL type
 
     > ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefined_ip`, `predefined_url`, and `url`.
     """
-    predefined_url: NotRequired[pulumi.Input[Optional['ExternalDynamicListTypePredefinedUrlArgs']]]
+    predefined_url: NotRequired[pulumi.Input[Optional['ExternalDynamicListTypePredefinedUrlArgsDict']]]
     """
     Predefined URL settings for EDL type
 
     > ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefined_ip`, `predefined_url`, and `url`.
     """
-    url: NotRequired[pulumi.Input[Optional['ExternalDynamicListTypeUrlArgs']]]
+    url: NotRequired[pulumi.Input[Optional['ExternalDynamicListTypeUrlArgsDict']]]
     """
     URL settings for Custom URL type
 
@@ -23446,7 +23446,7 @@ class ExternalDynamicListTypeDomainArgsDict(TypedDict):
     """
     External URL for Custom Domain type
     """
-    auth: NotRequired[pulumi.Input[Optional['ExternalDynamicListTypeDomainAuthArgs']]]
+    auth: NotRequired[pulumi.Input[Optional['ExternalDynamicListTypeDomainAuthArgsDict']]]
     """
     Authentication settings for Custom Domain type
     """
@@ -23632,29 +23632,29 @@ class ExternalDynamicListTypeDomainAuthArgs:
 
 
 class ExternalDynamicListTypeDomainRecurringArgsDict(TypedDict):
-    daily: NotRequired[pulumi.Input[Optional['ExternalDynamicListTypeDomainRecurringDailyArgs']]]
+    daily: NotRequired[pulumi.Input[Optional['ExternalDynamicListTypeDomainRecurringDailyArgsDict']]]
     """
     Daily settings for Domain recurring
     """
-    five_minute: NotRequired[pulumi.Input[Optional['ExternalDynamicListTypeDomainRecurringFiveMinuteArgs']]]
+    five_minute: NotRequired[pulumi.Input[Optional['ExternalDynamicListTypeDomainRecurringFiveMinuteArgsDict']]]
     """
     Five minute settings for Domain recurring
 
     > ℹ️ **Note:** You must specify exactly one of `daily`, `five_minute`, `hourly`, `monthly`, and `weekly`.
     """
-    hourly: NotRequired[pulumi.Input[Optional['ExternalDynamicListTypeDomainRecurringHourlyArgs']]]
+    hourly: NotRequired[pulumi.Input[Optional['ExternalDynamicListTypeDomainRecurringHourlyArgsDict']]]
     """
     Hourly settings for Domain recurring
 
     > ℹ️ **Note:** You must specify exactly one of `daily`, `five_minute`, `hourly`, `monthly`, and `weekly`.
     """
-    monthly: NotRequired[pulumi.Input[Optional['ExternalDynamicListTypeDomainRecurringMonthlyArgs']]]
+    monthly: NotRequired[pulumi.Input[Optional['ExternalDynamicListTypeDomainRecurringMonthlyArgsDict']]]
     """
     Monthly settings for Domain recurring
 
     > ℹ️ **Note:** You must specify exactly one of `daily`, `five_minute`, `hourly`, `monthly`, and `weekly`.
     """
-    weekly: NotRequired[pulumi.Input[Optional['ExternalDynamicListTypeDomainRecurringWeeklyArgs']]]
+    weekly: NotRequired[pulumi.Input[Optional['ExternalDynamicListTypeDomainRecurringWeeklyArgsDict']]]
     """
     Weekly settings for Domain recurring
 
@@ -23913,7 +23913,7 @@ class ExternalDynamicListTypeImeiArgsDict(TypedDict):
     """
     IMEI URL for Custom IMEI type
     """
-    auth: NotRequired[pulumi.Input[Optional['ExternalDynamicListTypeImeiAuthArgs']]]
+    auth: NotRequired[pulumi.Input[Optional['ExternalDynamicListTypeImeiAuthArgsDict']]]
     """
     IMEI Auth Cnfig for Custom IMEI type
     """
@@ -24079,29 +24079,29 @@ class ExternalDynamicListTypeImeiAuthArgs:
 
 
 class ExternalDynamicListTypeImeiRecurringArgsDict(TypedDict):
-    daily: NotRequired[pulumi.Input[Optional['ExternalDynamicListTypeImeiRecurringDailyArgs']]]
+    daily: NotRequired[pulumi.Input[Optional['ExternalDynamicListTypeImeiRecurringDailyArgsDict']]]
     """
     Daily interval settings for IMEI updates
     """
-    five_minute: NotRequired[pulumi.Input[Optional['ExternalDynamicListTypeImeiRecurringFiveMinuteArgs']]]
+    five_minute: NotRequired[pulumi.Input[Optional['ExternalDynamicListTypeImeiRecurringFiveMinuteArgsDict']]]
     """
     Five-minute interval settings for IMEI updates
 
     > ℹ️ **Note:** You must specify exactly one of `daily`, `five_minute`, `hourly`, `monthly`, and `weekly`.
     """
-    hourly: NotRequired[pulumi.Input[Optional['ExternalDynamicListTypeImeiRecurringHourlyArgs']]]
+    hourly: NotRequired[pulumi.Input[Optional['ExternalDynamicListTypeImeiRecurringHourlyArgsDict']]]
     """
     Hourly interval settings for IMEI updates
 
     > ℹ️ **Note:** You must specify exactly one of `daily`, `five_minute`, `hourly`, `monthly`, and `weekly`.
     """
-    monthly: NotRequired[pulumi.Input[Optional['ExternalDynamicListTypeImeiRecurringMonthlyArgs']]]
+    monthly: NotRequired[pulumi.Input[Optional['ExternalDynamicListTypeImeiRecurringMonthlyArgsDict']]]
     """
     Monthly interval settings for IMEI updates
 
     > ℹ️ **Note:** You must specify exactly one of `daily`, `five_minute`, `hourly`, `monthly`, and `weekly`.
     """
-    weekly: NotRequired[pulumi.Input[Optional['ExternalDynamicListTypeImeiRecurringWeeklyArgs']]]
+    weekly: NotRequired[pulumi.Input[Optional['ExternalDynamicListTypeImeiRecurringWeeklyArgsDict']]]
     """
     Weekly interval settings for IMEI updates
 
@@ -24360,7 +24360,7 @@ class ExternalDynamicListTypeImsiArgsDict(TypedDict):
     """
     IMSI URL for Custom IMSI type
     """
-    auth: NotRequired[pulumi.Input[Optional['ExternalDynamicListTypeImsiAuthArgs']]]
+    auth: NotRequired[pulumi.Input[Optional['ExternalDynamicListTypeImsiAuthArgsDict']]]
     """
     IMSI Auth Config for Custom IMSI type
     """
@@ -24526,29 +24526,29 @@ class ExternalDynamicListTypeImsiAuthArgs:
 
 
 class ExternalDynamicListTypeImsiRecurringArgsDict(TypedDict):
-    daily: NotRequired[pulumi.Input[Optional['ExternalDynamicListTypeImsiRecurringDailyArgs']]]
+    daily: NotRequired[pulumi.Input[Optional['ExternalDynamicListTypeImsiRecurringDailyArgsDict']]]
     """
     Daily interval settings for IMSI updates
     """
-    five_minute: NotRequired[pulumi.Input[Optional['ExternalDynamicListTypeImsiRecurringFiveMinuteArgs']]]
+    five_minute: NotRequired[pulumi.Input[Optional['ExternalDynamicListTypeImsiRecurringFiveMinuteArgsDict']]]
     """
     Five-minute interval settings for IMSI updates
 
     > ℹ️ **Note:** You must specify exactly one of `daily`, `five_minute`, `hourly`, `monthly`, and `weekly`.
     """
-    hourly: NotRequired[pulumi.Input[Optional['ExternalDynamicListTypeImsiRecurringHourlyArgs']]]
+    hourly: NotRequired[pulumi.Input[Optional['ExternalDynamicListTypeImsiRecurringHourlyArgsDict']]]
     """
     Hourly interval settings for IMSI updates
 
     > ℹ️ **Note:** You must specify exactly one of `daily`, `five_minute`, `hourly`, `monthly`, and `weekly`.
     """
-    monthly: NotRequired[pulumi.Input[Optional['ExternalDynamicListTypeImsiRecurringMonthlyArgs']]]
+    monthly: NotRequired[pulumi.Input[Optional['ExternalDynamicListTypeImsiRecurringMonthlyArgsDict']]]
     """
     Monthly interval settings for IMSI updates
 
     > ℹ️ **Note:** You must specify exactly one of `daily`, `five_minute`, `hourly`, `monthly`, and `weekly`.
     """
-    weekly: NotRequired[pulumi.Input[Optional['ExternalDynamicListTypeImsiRecurringWeeklyArgs']]]
+    weekly: NotRequired[pulumi.Input[Optional['ExternalDynamicListTypeImsiRecurringWeeklyArgsDict']]]
     """
     Weekly interval settings for IMSI updates
 
@@ -24807,7 +24807,7 @@ class ExternalDynamicListTypeIpArgsDict(TypedDict):
     """
     External URL for Custom IP type
     """
-    auth: NotRequired[pulumi.Input[Optional['ExternalDynamicListTypeIpAuthArgs']]]
+    auth: NotRequired[pulumi.Input[Optional['ExternalDynamicListTypeIpAuthArgsDict']]]
     """
     Authentication settings for Custom IP type
     """
@@ -24973,29 +24973,29 @@ class ExternalDynamicListTypeIpAuthArgs:
 
 
 class ExternalDynamicListTypeIpRecurringArgsDict(TypedDict):
-    daily: NotRequired[pulumi.Input[Optional['ExternalDynamicListTypeIpRecurringDailyArgs']]]
+    daily: NotRequired[pulumi.Input[Optional['ExternalDynamicListTypeIpRecurringDailyArgsDict']]]
     """
     Daily settings for IP recurring
     """
-    five_minute: NotRequired[pulumi.Input[Optional['ExternalDynamicListTypeIpRecurringFiveMinuteArgs']]]
+    five_minute: NotRequired[pulumi.Input[Optional['ExternalDynamicListTypeIpRecurringFiveMinuteArgsDict']]]
     """
     Five minute settings for IP recurring
 
     > ℹ️ **Note:** You must specify exactly one of `daily`, `five_minute`, `hourly`, `monthly`, and `weekly`.
     """
-    hourly: NotRequired[pulumi.Input[Optional['ExternalDynamicListTypeIpRecurringHourlyArgs']]]
+    hourly: NotRequired[pulumi.Input[Optional['ExternalDynamicListTypeIpRecurringHourlyArgsDict']]]
     """
     Hourly settings for IP recurring
 
     > ℹ️ **Note:** You must specify exactly one of `daily`, `five_minute`, `hourly`, `monthly`, and `weekly`.
     """
-    monthly: NotRequired[pulumi.Input[Optional['ExternalDynamicListTypeIpRecurringMonthlyArgs']]]
+    monthly: NotRequired[pulumi.Input[Optional['ExternalDynamicListTypeIpRecurringMonthlyArgsDict']]]
     """
     Monthly settings for IP recurring
 
     > ℹ️ **Note:** You must specify exactly one of `daily`, `five_minute`, `hourly`, `monthly`, and `weekly`.
     """
-    weekly: NotRequired[pulumi.Input[Optional['ExternalDynamicListTypeIpRecurringWeeklyArgs']]]
+    weekly: NotRequired[pulumi.Input[Optional['ExternalDynamicListTypeIpRecurringWeeklyArgsDict']]]
     """
     Weekly settings for IP recurring
 
@@ -25390,7 +25390,7 @@ class ExternalDynamicListTypeUrlArgsDict(TypedDict):
     """
     External URL for Custom URL type
     """
-    auth: NotRequired[pulumi.Input[Optional['ExternalDynamicListTypeUrlAuthArgs']]]
+    auth: NotRequired[pulumi.Input[Optional['ExternalDynamicListTypeUrlAuthArgsDict']]]
     """
     Authentication settings for Custom URL type
     """
@@ -25556,29 +25556,29 @@ class ExternalDynamicListTypeUrlAuthArgs:
 
 
 class ExternalDynamicListTypeUrlRecurringArgsDict(TypedDict):
-    daily: NotRequired[pulumi.Input[Optional['ExternalDynamicListTypeUrlRecurringDailyArgs']]]
+    daily: NotRequired[pulumi.Input[Optional['ExternalDynamicListTypeUrlRecurringDailyArgsDict']]]
     """
     Daily settings for URL recurring
     """
-    five_minute: NotRequired[pulumi.Input[Optional['ExternalDynamicListTypeUrlRecurringFiveMinuteArgs']]]
+    five_minute: NotRequired[pulumi.Input[Optional['ExternalDynamicListTypeUrlRecurringFiveMinuteArgsDict']]]
     """
     Five minute settings for URL recurring
 
     > ℹ️ **Note:** You must specify exactly one of `daily`, `five_minute`, `hourly`, `monthly`, and `weekly`.
     """
-    hourly: NotRequired[pulumi.Input[Optional['ExternalDynamicListTypeUrlRecurringHourlyArgs']]]
+    hourly: NotRequired[pulumi.Input[Optional['ExternalDynamicListTypeUrlRecurringHourlyArgsDict']]]
     """
     Hourly settings for URL recurring
 
     > ℹ️ **Note:** You must specify exactly one of `daily`, `five_minute`, `hourly`, `monthly`, and `weekly`.
     """
-    monthly: NotRequired[pulumi.Input[Optional['ExternalDynamicListTypeUrlRecurringMonthlyArgs']]]
+    monthly: NotRequired[pulumi.Input[Optional['ExternalDynamicListTypeUrlRecurringMonthlyArgsDict']]]
     """
     Monthly settings for URL recurring
 
     > ℹ️ **Note:** You must specify exactly one of `daily`, `five_minute`, `hourly`, `monthly`, and `weekly`.
     """
-    weekly: NotRequired[pulumi.Input[Optional['ExternalDynamicListTypeUrlRecurringWeeklyArgs']]]
+    weekly: NotRequired[pulumi.Input[Optional['ExternalDynamicListTypeUrlRecurringWeeklyArgsDict']]]
     """
     Weekly settings for URL recurring
 
@@ -26263,17 +26263,17 @@ class ForwardingProfileRegionalAndCustomProxyProxy2Args:
 
 
 class ForwardingProfileTypeArgsDict(TypedDict):
-    global_protect_proxy: NotRequired[pulumi.Input[Optional['ForwardingProfileTypeGlobalProtectProxyArgs']]]
+    global_protect_proxy: NotRequired[pulumi.Input[Optional['ForwardingProfileTypeGlobalProtectProxyArgsDict']]]
     """
     Global Protect proxy-based forwarding configuration
     """
-    pac_file: NotRequired[pulumi.Input[Optional['ForwardingProfileTypePacFileArgs']]]
+    pac_file: NotRequired[pulumi.Input[Optional['ForwardingProfileTypePacFileArgsDict']]]
     """
     PAC file based forwarding configuration
 
     > ℹ️ **Note:** You must specify exactly one of `global_protect_proxy`, `pac_file`, and `ztna_agent`.
     """
-    ztna_agent: NotRequired[pulumi.Input[Optional['ForwardingProfileTypeZtnaAgentArgs']]]
+    ztna_agent: NotRequired[pulumi.Input[Optional['ForwardingProfileTypeZtnaAgentArgsDict']]]
     """
     ZTNA agent-based forwarding configuration
 
@@ -26344,11 +26344,11 @@ class ForwardingProfileTypeArgs:
 
 
 class ForwardingProfileTypeGlobalProtectProxyArgsDict(TypedDict):
-    block_rule: NotRequired[pulumi.Input[Optional['ForwardingProfileTypeGlobalProtectProxyBlockRuleArgs']]]
+    block_rule: NotRequired[pulumi.Input[Optional['ForwardingProfileTypeGlobalProtectProxyBlockRuleArgsDict']]]
     """
     Basic block rule configuration for PAC file and GlobalProtect proxy profiles
     """
-    forwarding_rules: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['ForwardingProfileTypeGlobalProtectProxyForwardingRuleArgs']]]]]
+    forwarding_rules: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['ForwardingProfileTypeGlobalProtectProxyForwardingRuleArgsDict']]]]]
     """
     List of GlobalProtect proxy-based forwarding rules
     """
@@ -26413,11 +26413,11 @@ class ForwardingProfileTypeGlobalProtectProxyArgs:
 
 
 class ForwardingProfileTypeGlobalProtectProxyBlockRuleArgsDict(TypedDict):
-    allow_tcp: NotRequired[pulumi.Input[Optional['ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowTcpArgs']]]
+    allow_tcp: NotRequired[pulumi.Input[Optional['ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowTcpArgsDict']]]
     """
     TCP traffic allowlist configuration
     """
-    allow_udp: NotRequired[pulumi.Input[Optional['ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowUdpArgs']]]
+    allow_udp: NotRequired[pulumi.Input[Optional['ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowUdpArgsDict']]]
     """
     UDP traffic allowlist configuration with location and destination support
     """
@@ -26728,11 +26728,11 @@ class ForwardingProfileTypeGlobalProtectProxyForwardingRuleArgs:
 
 
 class ForwardingProfileTypePacFileArgsDict(TypedDict):
-    block_rule: NotRequired[pulumi.Input[Optional['ForwardingProfileTypePacFileBlockRuleArgs']]]
+    block_rule: NotRequired[pulumi.Input[Optional['ForwardingProfileTypePacFileBlockRuleArgsDict']]]
     """
     Basic block rule configuration for PAC file and GlobalProtect proxy profiles
     """
-    forwarding_rules: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['ForwardingProfileTypePacFileForwardingRuleArgs']]]]]
+    forwarding_rules: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['ForwardingProfileTypePacFileForwardingRuleArgsDict']]]]]
     """
     List of PAC file-based forwarding rules
     """
@@ -26797,11 +26797,11 @@ class ForwardingProfileTypePacFileArgs:
 
 
 class ForwardingProfileTypePacFileBlockRuleArgsDict(TypedDict):
-    allow_tcp: NotRequired[pulumi.Input[Optional['ForwardingProfileTypePacFileBlockRuleAllowTcpArgs']]]
+    allow_tcp: NotRequired[pulumi.Input[Optional['ForwardingProfileTypePacFileBlockRuleAllowTcpArgsDict']]]
     """
     TCP traffic allowlist configuration
     """
-    allow_udp: NotRequired[pulumi.Input[Optional['ForwardingProfileTypePacFileBlockRuleAllowUdpArgs']]]
+    allow_udp: NotRequired[pulumi.Input[Optional['ForwardingProfileTypePacFileBlockRuleAllowUdpArgsDict']]]
     """
     UDP traffic allowlist configuration with location and destination support
     """
@@ -27112,11 +27112,11 @@ class ForwardingProfileTypePacFileForwardingRuleArgs:
 
 
 class ForwardingProfileTypeZtnaAgentArgsDict(TypedDict):
-    block_rule: NotRequired[pulumi.Input[Optional['ForwardingProfileTypeZtnaAgentBlockRuleArgs']]]
+    block_rule: NotRequired[pulumi.Input[Optional['ForwardingProfileTypeZtnaAgentBlockRuleArgsDict']]]
     """
     ZTNA block rule configuration
     """
-    forwarding_rules: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['ForwardingProfileTypeZtnaAgentForwardingRuleArgs']]]]]
+    forwarding_rules: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['ForwardingProfileTypeZtnaAgentForwardingRuleArgsDict']]]]]
     """
     List of ZTNA agent-based forwarding rules
     """
@@ -27533,7 +27533,7 @@ class GeneralSettingGeneralArgsDict(TypedDict):
     """
     DNS domain
     """
-    geo_location: NotRequired[pulumi.Input[Optional['GeneralSettingGeneralGeoLocationArgs']]]
+    geo_location: NotRequired[pulumi.Input[Optional['GeneralSettingGeneralGeoLocationArgsDict']]]
     """
     Geographic coordinates
     """
@@ -27545,7 +27545,7 @@ class GeneralSettingGeneralArgsDict(TypedDict):
     """
     Logon banner
     """
-    setting: NotRequired[pulumi.Input[Optional['GeneralSettingGeneralSettingArgs']]]
+    setting: NotRequired[pulumi.Input[Optional['GeneralSettingGeneralSettingArgsDict']]]
     """
     Setting
     """
@@ -27751,7 +27751,7 @@ class GeneralSettingGeneralSettingArgsDict(TypedDict):
     """
     Fail open
     """
-    management: NotRequired[pulumi.Input[Optional['GeneralSettingGeneralSettingManagementArgs']]]
+    management: NotRequired[pulumi.Input[Optional['GeneralSettingGeneralSettingManagementArgsDict']]]
     """
     Management
     """
@@ -27881,7 +27881,7 @@ class GeneralSettingGeneralSettingManagementArgs:
 
 
 class HipObjectAntiMalwareArgsDict(TypedDict):
-    criteria: NotRequired[pulumi.Input[Optional['HipObjectAntiMalwareCriteriaArgs']]]
+    criteria: NotRequired[pulumi.Input[Optional['HipObjectAntiMalwareCriteriaArgsDict']]]
     """
     Criteria
     """
@@ -27889,7 +27889,7 @@ class HipObjectAntiMalwareArgsDict(TypedDict):
     """
     Exclude vendor
     """
-    vendors: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['HipObjectAntiMalwareVendorArgs']]]]]
+    vendors: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['HipObjectAntiMalwareVendorArgsDict']]]]]
     """
     Vendor name
     """
@@ -27954,11 +27954,11 @@ class HipObjectAntiMalwareCriteriaArgsDict(TypedDict):
     """
     Is Installed
     """
-    last_scan_time: NotRequired[pulumi.Input[Optional['HipObjectAntiMalwareCriteriaLastScanTimeArgs']]]
+    last_scan_time: NotRequired[pulumi.Input[Optional['HipObjectAntiMalwareCriteriaLastScanTimeArgsDict']]]
     """
     Last scan time
     """
-    product_version: NotRequired[pulumi.Input[Optional['HipObjectAntiMalwareCriteriaProductVersionArgs']]]
+    product_version: NotRequired[pulumi.Input[Optional['HipObjectAntiMalwareCriteriaProductVersionArgsDict']]]
     """
     Product version
     """
@@ -27966,7 +27966,7 @@ class HipObjectAntiMalwareCriteriaArgsDict(TypedDict):
     """
     real time protection
     """
-    virdef_version: NotRequired[pulumi.Input[Optional['HipObjectAntiMalwareCriteriaVirdefVersionArgs']]]
+    virdef_version: NotRequired[pulumi.Input[Optional['HipObjectAntiMalwareCriteriaVirdefVersionArgsDict']]]
     """
     Virdef version
     """
@@ -28059,17 +28059,17 @@ class HipObjectAntiMalwareCriteriaArgs:
 
 
 class HipObjectAntiMalwareCriteriaLastScanTimeArgsDict(TypedDict):
-    not_available: NotRequired[pulumi.Input[Optional['HipObjectAntiMalwareCriteriaLastScanTimeNotAvailableArgs']]]
+    not_available: NotRequired[pulumi.Input[Optional['HipObjectAntiMalwareCriteriaLastScanTimeNotAvailableArgsDict']]]
     """
     Not available
     """
-    not_within: NotRequired[pulumi.Input[Optional['HipObjectAntiMalwareCriteriaLastScanTimeNotWithinArgs']]]
+    not_within: NotRequired[pulumi.Input[Optional['HipObjectAntiMalwareCriteriaLastScanTimeNotWithinArgsDict']]]
     """
     Not within
 
     > ℹ️ **Note:** You must specify exactly one of `not_available`, `not_within`, and `within`.
     """
-    within: NotRequired[pulumi.Input[Optional['HipObjectAntiMalwareCriteriaLastScanTimeWithinArgs']]]
+    within: NotRequired[pulumi.Input[Optional['HipObjectAntiMalwareCriteriaLastScanTimeWithinArgsDict']]]
     """
     Within
 
@@ -28299,13 +28299,13 @@ class HipObjectAntiMalwareCriteriaProductVersionArgsDict(TypedDict):
 
     > ℹ️ **Note:** You must specify exactly one of `contains`, `greater_equal`, `greater_than`, `is`, `is_not`, `less_equal`, `less_than`, `not_within`, and `within`.
     """
-    not_within: NotRequired[pulumi.Input[Optional['HipObjectAntiMalwareCriteriaProductVersionNotWithinArgs']]]
+    not_within: NotRequired[pulumi.Input[Optional['HipObjectAntiMalwareCriteriaProductVersionNotWithinArgsDict']]]
     """
     Not within
 
     > ℹ️ **Note:** You must specify exactly one of `contains`, `greater_equal`, `greater_than`, `is`, `is_not`, `less_equal`, `less_than`, `not_within`, and `within`.
     """
-    within: NotRequired[pulumi.Input[Optional['HipObjectAntiMalwareCriteriaProductVersionWithinArgs']]]
+    within: NotRequired[pulumi.Input[Optional['HipObjectAntiMalwareCriteriaProductVersionWithinArgsDict']]]
     """
     Within
 
@@ -28552,11 +28552,11 @@ class HipObjectAntiMalwareCriteriaProductVersionWithinArgs:
 
 
 class HipObjectAntiMalwareCriteriaVirdefVersionArgsDict(TypedDict):
-    not_within: NotRequired[pulumi.Input[Optional['HipObjectAntiMalwareCriteriaVirdefVersionNotWithinArgs']]]
+    not_within: NotRequired[pulumi.Input[Optional['HipObjectAntiMalwareCriteriaVirdefVersionNotWithinArgsDict']]]
     """
     Not within
     """
-    within: NotRequired[pulumi.Input[Optional['HipObjectAntiMalwareCriteriaVirdefVersionWithinArgs']]]
+    within: NotRequired[pulumi.Input[Optional['HipObjectAntiMalwareCriteriaVirdefVersionWithinArgsDict']]]
     """
     Within
 
@@ -28765,7 +28765,7 @@ class HipObjectAntiMalwareVendorArgs:
 
 
 class HipObjectCertificateArgsDict(TypedDict):
-    criteria: NotRequired[pulumi.Input[Optional['HipObjectCertificateCriteriaArgs']]]
+    criteria: NotRequired[pulumi.Input[Optional['HipObjectCertificateCriteriaArgsDict']]]
     """
     Criteria
     """
@@ -28794,7 +28794,7 @@ class HipObjectCertificateArgs:
 
 
 class HipObjectCertificateCriteriaArgsDict(TypedDict):
-    certificate_attributes: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['HipObjectCertificateCriteriaCertificateAttributeArgs']]]]]
+    certificate_attributes: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['HipObjectCertificateCriteriaCertificateAttributeArgsDict']]]]]
     """
     Certificate attributes
     """
@@ -28919,15 +28919,15 @@ class HipObjectCustomChecksArgs:
 
 
 class HipObjectCustomChecksCriteriaArgsDict(TypedDict):
-    plists: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['HipObjectCustomChecksCriteriaPlistArgs']]]]]
+    plists: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['HipObjectCustomChecksCriteriaPlistArgsDict']]]]]
     """
     Plist
     """
-    process_lists: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['HipObjectCustomChecksCriteriaProcessListArgs']]]]]
+    process_lists: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['HipObjectCustomChecksCriteriaProcessListArgsDict']]]]]
     """
     Process list
     """
-    registry_keys: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['HipObjectCustomChecksCriteriaRegistryKeyArgs']]]]]
+    registry_keys: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['HipObjectCustomChecksCriteriaRegistryKeyArgsDict']]]]]
     """
     Registry key
     """
@@ -28992,7 +28992,7 @@ class HipObjectCustomChecksCriteriaPlistArgsDict(TypedDict):
     """
     Preference list
     """
-    keys: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['HipObjectCustomChecksCriteriaPlistKeyArgs']]]]]
+    keys: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['HipObjectCustomChecksCriteriaPlistKeyArgsDict']]]]]
     """
     Key
     """
@@ -29184,7 +29184,7 @@ class HipObjectCustomChecksCriteriaRegistryKeyArgsDict(TypedDict):
     """
     Key does not exist or match specified value data
     """
-    registry_values: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['HipObjectCustomChecksCriteriaRegistryKeyRegistryValueArgs']]]]]
+    registry_values: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['HipObjectCustomChecksCriteriaRegistryKeyRegistryValueArgsDict']]]]]
     """
     Registry value
     """
@@ -29328,7 +29328,7 @@ class HipObjectCustomChecksCriteriaRegistryKeyRegistryValueArgs:
 
 
 class HipObjectDataLossPreventionArgsDict(TypedDict):
-    criteria: NotRequired[pulumi.Input[Optional['HipObjectDataLossPreventionCriteriaArgs']]]
+    criteria: NotRequired[pulumi.Input[Optional['HipObjectDataLossPreventionCriteriaArgsDict']]]
     """
     Criteria
     """
@@ -29336,7 +29336,7 @@ class HipObjectDataLossPreventionArgsDict(TypedDict):
     """
     Exclude vendor
     """
-    vendors: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['HipObjectDataLossPreventionVendorArgs']]]]]
+    vendors: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['HipObjectDataLossPreventionVendorArgsDict']]]]]
     """
     Vendor name
     """
@@ -29494,7 +29494,7 @@ class HipObjectDataLossPreventionVendorArgs:
 
 
 class HipObjectDiskBackupArgsDict(TypedDict):
-    criteria: NotRequired[pulumi.Input[Optional['HipObjectDiskBackupCriteriaArgs']]]
+    criteria: NotRequired[pulumi.Input[Optional['HipObjectDiskBackupCriteriaArgsDict']]]
     """
     Criteria
     """
@@ -29502,7 +29502,7 @@ class HipObjectDiskBackupArgsDict(TypedDict):
     """
     Exclude vendor
     """
-    vendors: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['HipObjectDiskBackupVendorArgs']]]]]
+    vendors: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['HipObjectDiskBackupVendorArgsDict']]]]]
     """
     Vendor name
     """
@@ -29567,7 +29567,7 @@ class HipObjectDiskBackupCriteriaArgsDict(TypedDict):
     """
     Is Installed
     """
-    last_backup_time: NotRequired[pulumi.Input[Optional['HipObjectDiskBackupCriteriaLastBackupTimeArgs']]]
+    last_backup_time: NotRequired[pulumi.Input[Optional['HipObjectDiskBackupCriteriaLastBackupTimeArgsDict']]]
     """
     Last backup time
     """
@@ -29612,17 +29612,17 @@ class HipObjectDiskBackupCriteriaArgs:
 
 
 class HipObjectDiskBackupCriteriaLastBackupTimeArgsDict(TypedDict):
-    not_available: NotRequired[pulumi.Input[Optional['HipObjectDiskBackupCriteriaLastBackupTimeNotAvailableArgs']]]
+    not_available: NotRequired[pulumi.Input[Optional['HipObjectDiskBackupCriteriaLastBackupTimeNotAvailableArgsDict']]]
     """
     Not available
     """
-    not_within: NotRequired[pulumi.Input[Optional['HipObjectDiskBackupCriteriaLastBackupTimeNotWithinArgs']]]
+    not_within: NotRequired[pulumi.Input[Optional['HipObjectDiskBackupCriteriaLastBackupTimeNotWithinArgsDict']]]
     """
     Not within
 
     > ℹ️ **Note:** You must specify exactly one of `not_available`, `not_within`, and `within`.
     """
-    within: NotRequired[pulumi.Input[Optional['HipObjectDiskBackupCriteriaLastBackupTimeWithinArgs']]]
+    within: NotRequired[pulumi.Input[Optional['HipObjectDiskBackupCriteriaLastBackupTimeWithinArgsDict']]]
     """
     Within
 
@@ -29860,7 +29860,7 @@ class HipObjectDiskBackupVendorArgs:
 
 
 class HipObjectDiskEncryptionArgsDict(TypedDict):
-    criteria: NotRequired[pulumi.Input[Optional['HipObjectDiskEncryptionCriteriaArgs']]]
+    criteria: NotRequired[pulumi.Input[Optional['HipObjectDiskEncryptionCriteriaArgsDict']]]
     """
     Encryption locations
     """
@@ -29868,7 +29868,7 @@ class HipObjectDiskEncryptionArgsDict(TypedDict):
     """
     Exclude vendor
     """
-    vendors: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['HipObjectDiskEncryptionVendorArgs']]]]]
+    vendors: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['HipObjectDiskEncryptionVendorArgsDict']]]]]
     """
     Vendor name
     """
@@ -29929,7 +29929,7 @@ class HipObjectDiskEncryptionArgs:
 
 
 class HipObjectDiskEncryptionCriteriaArgsDict(TypedDict):
-    encrypted_locations: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['HipObjectDiskEncryptionCriteriaEncryptedLocationArgs']]]]]
+    encrypted_locations: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['HipObjectDiskEncryptionCriteriaEncryptedLocationArgsDict']]]]]
     """
     Encrypted locations
     """
@@ -29982,7 +29982,7 @@ class HipObjectDiskEncryptionCriteriaEncryptedLocationArgsDict(TypedDict):
     """
     Encryption location
     """
-    encryption_state: NotRequired[pulumi.Input[Optional['HipObjectDiskEncryptionCriteriaEncryptedLocationEncryptionStateArgs']]]
+    encryption_state: NotRequired[pulumi.Input[Optional['HipObjectDiskEncryptionCriteriaEncryptedLocationEncryptionStateArgsDict']]]
     """
     Encryption state
     """
@@ -30129,7 +30129,7 @@ class HipObjectDiskEncryptionVendorArgs:
 
 
 class HipObjectFirewallArgsDict(TypedDict):
-    criteria: NotRequired[pulumi.Input[Optional['HipObjectFirewallCriteriaArgs']]]
+    criteria: NotRequired[pulumi.Input[Optional['HipObjectFirewallCriteriaArgsDict']]]
     """
     Criteria
     """
@@ -30137,7 +30137,7 @@ class HipObjectFirewallArgsDict(TypedDict):
     """
     Exclude vendor
     """
-    vendors: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['HipObjectFirewallVendorArgs']]]]]
+    vendors: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['HipObjectFirewallVendorArgsDict']]]]]
     """
     Vendor name
     """
@@ -30323,19 +30323,19 @@ class HipObjectHostInfoArgs:
 
 
 class HipObjectHostInfoCriteriaArgsDict(TypedDict):
-    client_version: NotRequired[pulumi.Input[Optional['HipObjectHostInfoCriteriaClientVersionArgs']]]
+    client_version: NotRequired[pulumi.Input[Optional['HipObjectHostInfoCriteriaClientVersionArgsDict']]]
     """
     Client version
     """
-    domain: NotRequired[pulumi.Input[Optional['HipObjectHostInfoCriteriaDomainArgs']]]
+    domain: NotRequired[pulumi.Input[Optional['HipObjectHostInfoCriteriaDomainArgsDict']]]
     """
     Domain
     """
-    host_id: NotRequired[pulumi.Input[Optional['HipObjectHostInfoCriteriaHostIdArgs']]]
+    host_id: NotRequired[pulumi.Input[Optional['HipObjectHostInfoCriteriaHostIdArgsDict']]]
     """
     Host id
     """
-    host_name: NotRequired[pulumi.Input[Optional['HipObjectHostInfoCriteriaHostNameArgs']]]
+    host_name: NotRequired[pulumi.Input[Optional['HipObjectHostInfoCriteriaHostNameArgsDict']]]
     """
     Host name
     """
@@ -30343,11 +30343,11 @@ class HipObjectHostInfoCriteriaArgsDict(TypedDict):
     """
     If device is managed
     """
-    os: NotRequired[pulumi.Input[Optional['HipObjectHostInfoCriteriaOsArgs']]]
+    os: NotRequired[pulumi.Input[Optional['HipObjectHostInfoCriteriaOsArgsDict']]]
     """
     Os
     """
-    serial_number: NotRequired[pulumi.Input[Optional['HipObjectHostInfoCriteriaSerialNumberArgs']]]
+    serial_number: NotRequired[pulumi.Input[Optional['HipObjectHostInfoCriteriaSerialNumberArgsDict']]]
     """
     Serial number
     """
@@ -30796,7 +30796,7 @@ class HipObjectHostInfoCriteriaHostNameArgs:
 
 
 class HipObjectHostInfoCriteriaOsArgsDict(TypedDict):
-    contains: NotRequired[pulumi.Input[Optional['HipObjectHostInfoCriteriaOsContainsArgs']]]
+    contains: NotRequired[pulumi.Input[Optional['HipObjectHostInfoCriteriaOsContainsArgsDict']]]
     """
     Contains
     """
@@ -31015,7 +31015,7 @@ class HipObjectHostInfoCriteriaSerialNumberArgs:
 
 
 class HipObjectMobileDeviceArgsDict(TypedDict):
-    criteria: NotRequired[pulumi.Input[Optional['HipObjectMobileDeviceCriteriaArgs']]]
+    criteria: NotRequired[pulumi.Input[Optional['HipObjectMobileDeviceCriteriaArgsDict']]]
     """
     Criteria
     """
@@ -31044,7 +31044,7 @@ class HipObjectMobileDeviceArgs:
 
 
 class HipObjectMobileDeviceCriteriaArgsDict(TypedDict):
-    applications: NotRequired[pulumi.Input[Optional['HipObjectMobileDeviceCriteriaApplicationsArgs']]]
+    applications: NotRequired[pulumi.Input[Optional['HipObjectMobileDeviceCriteriaApplicationsArgsDict']]]
     """
     Applications
     """
@@ -31052,7 +31052,7 @@ class HipObjectMobileDeviceCriteriaArgsDict(TypedDict):
     """
     If device's disk is encrypted
     """
-    imei: NotRequired[pulumi.Input[Optional['HipObjectMobileDeviceCriteriaImeiArgs']]]
+    imei: NotRequired[pulumi.Input[Optional['HipObjectMobileDeviceCriteriaImeiArgsDict']]]
     """
     Imei
     """
@@ -31060,11 +31060,11 @@ class HipObjectMobileDeviceCriteriaArgsDict(TypedDict):
     """
     If device is by rooted/jailbroken
     """
-    last_checkin_time: NotRequired[pulumi.Input[Optional['HipObjectMobileDeviceCriteriaLastCheckinTimeArgs']]]
+    last_checkin_time: NotRequired[pulumi.Input[Optional['HipObjectMobileDeviceCriteriaLastCheckinTimeArgsDict']]]
     """
     Last checkin time
     """
-    model: NotRequired[pulumi.Input[Optional['HipObjectMobileDeviceCriteriaModelArgs']]]
+    model: NotRequired[pulumi.Input[Optional['HipObjectMobileDeviceCriteriaModelArgsDict']]]
     """
     Model
     """
@@ -31072,11 +31072,11 @@ class HipObjectMobileDeviceCriteriaArgsDict(TypedDict):
     """
     If device's passcode is present
     """
-    phone_number: NotRequired[pulumi.Input[Optional['HipObjectMobileDeviceCriteriaPhoneNumberArgs']]]
+    phone_number: NotRequired[pulumi.Input[Optional['HipObjectMobileDeviceCriteriaPhoneNumberArgsDict']]]
     """
     Phone number
     """
-    tag: NotRequired[pulumi.Input[Optional['HipObjectMobileDeviceCriteriaTagArgs']]]
+    tag: NotRequired[pulumi.Input[Optional['HipObjectMobileDeviceCriteriaTagArgsDict']]]
     """
     Tag
     """
@@ -31233,7 +31233,7 @@ class HipObjectMobileDeviceCriteriaArgs:
 
 
 class HipObjectMobileDeviceCriteriaApplicationsArgsDict(TypedDict):
-    has_malware: NotRequired[pulumi.Input[Optional['HipObjectMobileDeviceCriteriaApplicationsHasMalwareArgs']]]
+    has_malware: NotRequired[pulumi.Input[Optional['HipObjectMobileDeviceCriteriaApplicationsHasMalwareArgsDict']]]
     """
     Has malware
     """
@@ -31241,7 +31241,7 @@ class HipObjectMobileDeviceCriteriaApplicationsArgsDict(TypedDict):
     """
     Has apps that are not managed
     """
-    includes: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['HipObjectMobileDeviceCriteriaApplicationsIncludeArgs']]]]]
+    includes: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['HipObjectMobileDeviceCriteriaApplicationsIncludeArgsDict']]]]]
     """
     Includes
     """
@@ -31302,11 +31302,11 @@ class HipObjectMobileDeviceCriteriaApplicationsArgs:
 
 
 class HipObjectMobileDeviceCriteriaApplicationsHasMalwareArgsDict(TypedDict):
-    no: NotRequired[pulumi.Input[Optional['HipObjectMobileDeviceCriteriaApplicationsHasMalwareNoArgs']]]
+    no: NotRequired[pulumi.Input[Optional['HipObjectMobileDeviceCriteriaApplicationsHasMalwareNoArgsDict']]]
     """
     No
     """
-    yes: NotRequired[pulumi.Input[Optional['HipObjectMobileDeviceCriteriaApplicationsHasMalwareYesArgs']]]
+    yes: NotRequired[pulumi.Input[Optional['HipObjectMobileDeviceCriteriaApplicationsHasMalwareYesArgsDict']]]
     """
     Yes
 
@@ -31366,7 +31366,7 @@ class HipObjectMobileDeviceCriteriaApplicationsHasMalwareNoArgs:
 
 
 class HipObjectMobileDeviceCriteriaApplicationsHasMalwareYesArgsDict(TypedDict):
-    excludes: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['HipObjectMobileDeviceCriteriaApplicationsHasMalwareYesExcludeArgs']]]]]
+    excludes: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['HipObjectMobileDeviceCriteriaApplicationsHasMalwareYesExcludeArgsDict']]]]]
     """
     Excludes
     """
@@ -31612,11 +31612,11 @@ class HipObjectMobileDeviceCriteriaImeiArgs:
 
 
 class HipObjectMobileDeviceCriteriaLastCheckinTimeArgsDict(TypedDict):
-    not_within: NotRequired[pulumi.Input[Optional['HipObjectMobileDeviceCriteriaLastCheckinTimeNotWithinArgs']]]
+    not_within: NotRequired[pulumi.Input[Optional['HipObjectMobileDeviceCriteriaLastCheckinTimeNotWithinArgsDict']]]
     """
     Not within
     """
-    within: NotRequired[pulumi.Input[Optional['HipObjectMobileDeviceCriteriaLastCheckinTimeWithinArgs']]]
+    within: NotRequired[pulumi.Input[Optional['HipObjectMobileDeviceCriteriaLastCheckinTimeWithinArgsDict']]]
     """
     Within
 
@@ -31966,7 +31966,7 @@ class HipObjectMobileDeviceCriteriaTagArgs:
 
 
 class HipObjectNetworkInfoArgsDict(TypedDict):
-    criteria: NotRequired[pulumi.Input[Optional['HipObjectNetworkInfoCriteriaArgs']]]
+    criteria: NotRequired[pulumi.Input[Optional['HipObjectNetworkInfoCriteriaArgsDict']]]
     """
     Criteria
     """
@@ -31995,7 +31995,7 @@ class HipObjectNetworkInfoArgs:
 
 
 class HipObjectNetworkInfoCriteriaArgsDict(TypedDict):
-    network: NotRequired[pulumi.Input[Optional['HipObjectNetworkInfoCriteriaNetworkArgs']]]
+    network: NotRequired[pulumi.Input[Optional['HipObjectNetworkInfoCriteriaNetworkArgsDict']]]
     """
     Network
     """
@@ -32024,11 +32024,11 @@ class HipObjectNetworkInfoCriteriaArgs:
 
 
 class HipObjectNetworkInfoCriteriaNetworkArgsDict(TypedDict):
-    is_: NotRequired[pulumi.Input[Optional['HipObjectNetworkInfoCriteriaNetworkIsArgs']]]
+    is_: NotRequired[pulumi.Input[Optional['HipObjectNetworkInfoCriteriaNetworkIsArgsDict']]]
     """
     Is
     """
-    is_not: NotRequired[pulumi.Input[Optional['HipObjectNetworkInfoCriteriaNetworkIsNotArgs']]]
+    is_not: NotRequired[pulumi.Input[Optional['HipObjectNetworkInfoCriteriaNetworkIsNotArgsDict']]]
     """
     Is not
 
@@ -32079,17 +32079,17 @@ class HipObjectNetworkInfoCriteriaNetworkArgs:
 
 
 class HipObjectNetworkInfoCriteriaNetworkIsArgsDict(TypedDict):
-    mobile: NotRequired[pulumi.Input[Optional['HipObjectNetworkInfoCriteriaNetworkIsMobileArgs']]]
+    mobile: NotRequired[pulumi.Input[Optional['HipObjectNetworkInfoCriteriaNetworkIsMobileArgsDict']]]
     """
     Mobile
     """
-    unknown: NotRequired[pulumi.Input[Optional['HipObjectNetworkInfoCriteriaNetworkIsUnknownArgs']]]
+    unknown: NotRequired[pulumi.Input[Optional['HipObjectNetworkInfoCriteriaNetworkIsUnknownArgsDict']]]
     """
     Unknown
 
     > ℹ️ **Note:** You must specify exactly one of `mobile`, `unknown`, and `wifi`.
     """
-    wifi: NotRequired[pulumi.Input[Optional['HipObjectNetworkInfoCriteriaNetworkIsWifiArgs']]]
+    wifi: NotRequired[pulumi.Input[Optional['HipObjectNetworkInfoCriteriaNetworkIsWifiArgsDict']]]
     """
     Wifi
 
@@ -32189,23 +32189,23 @@ class HipObjectNetworkInfoCriteriaNetworkIsMobileArgs:
 
 
 class HipObjectNetworkInfoCriteriaNetworkIsNotArgsDict(TypedDict):
-    ethernet: NotRequired[pulumi.Input[Optional['HipObjectNetworkInfoCriteriaNetworkIsNotEthernetArgs']]]
+    ethernet: NotRequired[pulumi.Input[Optional['HipObjectNetworkInfoCriteriaNetworkIsNotEthernetArgsDict']]]
     """
     Ethernet
     """
-    mobile: NotRequired[pulumi.Input[Optional['HipObjectNetworkInfoCriteriaNetworkIsNotMobileArgs']]]
+    mobile: NotRequired[pulumi.Input[Optional['HipObjectNetworkInfoCriteriaNetworkIsNotMobileArgsDict']]]
     """
     Mobile
 
     > ℹ️ **Note:** You must specify exactly one of `ethernet`, `mobile`, `unknown`, and `wifi`.
     """
-    unknown: NotRequired[pulumi.Input[Optional['HipObjectNetworkInfoCriteriaNetworkIsNotUnknownArgs']]]
+    unknown: NotRequired[pulumi.Input[Optional['HipObjectNetworkInfoCriteriaNetworkIsNotUnknownArgsDict']]]
     """
     Unknown
 
     > ℹ️ **Note:** You must specify exactly one of `ethernet`, `mobile`, `unknown`, and `wifi`.
     """
-    wifi: NotRequired[pulumi.Input[Optional['HipObjectNetworkInfoCriteriaNetworkIsNotWifiArgs']]]
+    wifi: NotRequired[pulumi.Input[Optional['HipObjectNetworkInfoCriteriaNetworkIsNotWifiArgsDict']]]
     """
     Wifi
 
@@ -32410,7 +32410,7 @@ class HipObjectNetworkInfoCriteriaNetworkIsWifiArgs:
 
 
 class HipObjectPatchManagementArgsDict(TypedDict):
-    criteria: NotRequired[pulumi.Input[Optional['HipObjectPatchManagementCriteriaArgs']]]
+    criteria: NotRequired[pulumi.Input[Optional['HipObjectPatchManagementCriteriaArgsDict']]]
     """
     Criteria
     """
@@ -32418,7 +32418,7 @@ class HipObjectPatchManagementArgsDict(TypedDict):
     """
     Exclude vendor
     """
-    vendors: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['HipObjectPatchManagementVendorArgs']]]]]
+    vendors: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['HipObjectPatchManagementVendorArgsDict']]]]]
     """
     Vendor name
     """
@@ -32487,7 +32487,7 @@ class HipObjectPatchManagementCriteriaArgsDict(TypedDict):
     """
     Is Installed
     """
-    missing_patches: NotRequired[pulumi.Input[Optional['HipObjectPatchManagementCriteriaMissingPatchesArgs']]]
+    missing_patches: NotRequired[pulumi.Input[Optional['HipObjectPatchManagementCriteriaMissingPatchesArgsDict']]]
     """
     Missing patches
     """
@@ -32556,7 +32556,7 @@ class HipObjectPatchManagementCriteriaMissingPatchesArgsDict(TypedDict):
     """
     Patches
     """
-    severity: NotRequired[pulumi.Input[Optional['HipObjectPatchManagementCriteriaMissingPatchesSeverityArgs']]]
+    severity: NotRequired[pulumi.Input[Optional['HipObjectPatchManagementCriteriaMissingPatchesSeverityArgsDict']]]
     """
     Severity
     """
@@ -33022,71 +33022,71 @@ class HttpHeaderProfileHttpHeaderInsertionTypeHeaderArgs:
 
 
 class HttpServerProfileFormatArgsDict(TypedDict):
-    auth: NotRequired[pulumi.Input[Optional['HttpServerProfileFormatAuthArgs']]]
+    auth: NotRequired[pulumi.Input[Optional['HttpServerProfileFormatAuthArgsDict']]]
     """
     Auth
     """
-    config: NotRequired[pulumi.Input[Optional['HttpServerProfileFormatConfigArgs']]]
+    config: NotRequired[pulumi.Input[Optional['HttpServerProfileFormatConfigArgsDict']]]
     """
     Config
     """
-    correlation: NotRequired[pulumi.Input[Optional['HttpServerProfileFormatCorrelationArgs']]]
+    correlation: NotRequired[pulumi.Input[Optional['HttpServerProfileFormatCorrelationArgsDict']]]
     """
     Correlation
     """
-    data: NotRequired[pulumi.Input[Optional['HttpServerProfileFormatDataArgs']]]
+    data: NotRequired[pulumi.Input[Optional['HttpServerProfileFormatDataArgsDict']]]
     """
     Data
     """
-    decryption: NotRequired[pulumi.Input[Optional['HttpServerProfileFormatDecryptionArgs']]]
+    decryption: NotRequired[pulumi.Input[Optional['HttpServerProfileFormatDecryptionArgsDict']]]
     """
     Decryption
     """
-    globalprotect: NotRequired[pulumi.Input[Optional['HttpServerProfileFormatGlobalprotectArgs']]]
+    globalprotect: NotRequired[pulumi.Input[Optional['HttpServerProfileFormatGlobalprotectArgsDict']]]
     """
     Globalprotect
     """
-    gtp: NotRequired[pulumi.Input[Optional['HttpServerProfileFormatGtpArgs']]]
+    gtp: NotRequired[pulumi.Input[Optional['HttpServerProfileFormatGtpArgsDict']]]
     """
     Gtp
     """
-    hip_match: NotRequired[pulumi.Input[Optional['HttpServerProfileFormatHipMatchArgs']]]
+    hip_match: NotRequired[pulumi.Input[Optional['HttpServerProfileFormatHipMatchArgsDict']]]
     """
     Hip match
     """
-    iptag: NotRequired[pulumi.Input[Optional['HttpServerProfileFormatIptagArgs']]]
+    iptag: NotRequired[pulumi.Input[Optional['HttpServerProfileFormatIptagArgsDict']]]
     """
     Iptag
     """
-    sctp: NotRequired[pulumi.Input[Optional['HttpServerProfileFormatSctpArgs']]]
+    sctp: NotRequired[pulumi.Input[Optional['HttpServerProfileFormatSctpArgsDict']]]
     """
     Sctp
     """
-    system: NotRequired[pulumi.Input[Optional['HttpServerProfileFormatSystemArgs']]]
+    system: NotRequired[pulumi.Input[Optional['HttpServerProfileFormatSystemArgsDict']]]
     """
     System
     """
-    threat: NotRequired[pulumi.Input[Optional['HttpServerProfileFormatThreatArgs']]]
+    threat: NotRequired[pulumi.Input[Optional['HttpServerProfileFormatThreatArgsDict']]]
     """
     Threat
     """
-    traffic: NotRequired[pulumi.Input[Optional['HttpServerProfileFormatTrafficArgs']]]
+    traffic: NotRequired[pulumi.Input[Optional['HttpServerProfileFormatTrafficArgsDict']]]
     """
     Traffic
     """
-    tunnel: NotRequired[pulumi.Input[Optional['HttpServerProfileFormatTunnelArgs']]]
+    tunnel: NotRequired[pulumi.Input[Optional['HttpServerProfileFormatTunnelArgsDict']]]
     """
     Tunnel
     """
-    url: NotRequired[pulumi.Input[Optional['HttpServerProfileFormatUrlArgs']]]
+    url: NotRequired[pulumi.Input[Optional['HttpServerProfileFormatUrlArgsDict']]]
     """
     Url
     """
-    userid: NotRequired[pulumi.Input[Optional['HttpServerProfileFormatUseridArgs']]]
+    userid: NotRequired[pulumi.Input[Optional['HttpServerProfileFormatUseridArgsDict']]]
     """
     Userid
     """
-    wildfire: NotRequired[pulumi.Input[Optional['HttpServerProfileFormatWildfireArgs']]]
+    wildfire: NotRequired[pulumi.Input[Optional['HttpServerProfileFormatWildfireArgsDict']]]
     """
     Wildfire
     """
@@ -33371,7 +33371,7 @@ class HttpServerProfileFormatArgs:
 
 
 class HttpServerProfileFormatAuthArgsDict(TypedDict):
-    headers: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['HttpServerProfileFormatAuthHeaderArgs']]]]]
+    headers: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['HttpServerProfileFormatAuthHeaderArgsDict']]]]]
     """
     Headers
     """
@@ -33379,7 +33379,7 @@ class HttpServerProfileFormatAuthArgsDict(TypedDict):
     """
     The name of the payload format
     """
-    params: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['HttpServerProfileFormatAuthParamArgs']]]]]
+    params: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['HttpServerProfileFormatAuthParamArgsDict']]]]]
     """
     Params
     """
@@ -33578,7 +33578,7 @@ class HttpServerProfileFormatAuthParamArgs:
 
 
 class HttpServerProfileFormatConfigArgsDict(TypedDict):
-    headers: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['HttpServerProfileFormatConfigHeaderArgs']]]]]
+    headers: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['HttpServerProfileFormatConfigHeaderArgsDict']]]]]
     """
     Headers
     """
@@ -33586,7 +33586,7 @@ class HttpServerProfileFormatConfigArgsDict(TypedDict):
     """
     The name of the payload format
     """
-    params: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['HttpServerProfileFormatConfigParamArgs']]]]]
+    params: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['HttpServerProfileFormatConfigParamArgsDict']]]]]
     """
     Params
     """
@@ -33785,7 +33785,7 @@ class HttpServerProfileFormatConfigParamArgs:
 
 
 class HttpServerProfileFormatCorrelationArgsDict(TypedDict):
-    headers: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['HttpServerProfileFormatCorrelationHeaderArgs']]]]]
+    headers: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['HttpServerProfileFormatCorrelationHeaderArgsDict']]]]]
     """
     Headers
     """
@@ -33793,7 +33793,7 @@ class HttpServerProfileFormatCorrelationArgsDict(TypedDict):
     """
     The name of the payload format
     """
-    params: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['HttpServerProfileFormatCorrelationParamArgs']]]]]
+    params: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['HttpServerProfileFormatCorrelationParamArgsDict']]]]]
     """
     Params
     """
@@ -33992,7 +33992,7 @@ class HttpServerProfileFormatCorrelationParamArgs:
 
 
 class HttpServerProfileFormatDataArgsDict(TypedDict):
-    headers: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['HttpServerProfileFormatDataHeaderArgs']]]]]
+    headers: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['HttpServerProfileFormatDataHeaderArgsDict']]]]]
     """
     Headers
     """
@@ -34000,7 +34000,7 @@ class HttpServerProfileFormatDataArgsDict(TypedDict):
     """
     The name of the payload format
     """
-    params: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['HttpServerProfileFormatDataParamArgs']]]]]
+    params: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['HttpServerProfileFormatDataParamArgsDict']]]]]
     """
     Params
     """
@@ -34199,7 +34199,7 @@ class HttpServerProfileFormatDataParamArgs:
 
 
 class HttpServerProfileFormatDecryptionArgsDict(TypedDict):
-    headers: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['HttpServerProfileFormatDecryptionHeaderArgs']]]]]
+    headers: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['HttpServerProfileFormatDecryptionHeaderArgsDict']]]]]
     """
     Headers
     """
@@ -34207,7 +34207,7 @@ class HttpServerProfileFormatDecryptionArgsDict(TypedDict):
     """
     The name of the payload format
     """
-    params: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['HttpServerProfileFormatDecryptionParamArgs']]]]]
+    params: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['HttpServerProfileFormatDecryptionParamArgsDict']]]]]
     """
     Params
     """
@@ -34406,7 +34406,7 @@ class HttpServerProfileFormatDecryptionParamArgs:
 
 
 class HttpServerProfileFormatGlobalprotectArgsDict(TypedDict):
-    headers: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['HttpServerProfileFormatGlobalprotectHeaderArgs']]]]]
+    headers: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['HttpServerProfileFormatGlobalprotectHeaderArgsDict']]]]]
     """
     Headers
     """
@@ -34414,7 +34414,7 @@ class HttpServerProfileFormatGlobalprotectArgsDict(TypedDict):
     """
     The name of the payload format
     """
-    params: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['HttpServerProfileFormatGlobalprotectParamArgs']]]]]
+    params: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['HttpServerProfileFormatGlobalprotectParamArgsDict']]]]]
     """
     Params
     """
@@ -34613,7 +34613,7 @@ class HttpServerProfileFormatGlobalprotectParamArgs:
 
 
 class HttpServerProfileFormatGtpArgsDict(TypedDict):
-    headers: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['HttpServerProfileFormatGtpHeaderArgs']]]]]
+    headers: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['HttpServerProfileFormatGtpHeaderArgsDict']]]]]
     """
     Headers
     """
@@ -34621,7 +34621,7 @@ class HttpServerProfileFormatGtpArgsDict(TypedDict):
     """
     The name of the payload format
     """
-    params: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['HttpServerProfileFormatGtpParamArgs']]]]]
+    params: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['HttpServerProfileFormatGtpParamArgsDict']]]]]
     """
     Params
     """
@@ -34820,7 +34820,7 @@ class HttpServerProfileFormatGtpParamArgs:
 
 
 class HttpServerProfileFormatHipMatchArgsDict(TypedDict):
-    headers: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['HttpServerProfileFormatHipMatchHeaderArgs']]]]]
+    headers: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['HttpServerProfileFormatHipMatchHeaderArgsDict']]]]]
     """
     Headers
     """
@@ -34828,7 +34828,7 @@ class HttpServerProfileFormatHipMatchArgsDict(TypedDict):
     """
     The name of the payload format
     """
-    params: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['HttpServerProfileFormatHipMatchParamArgs']]]]]
+    params: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['HttpServerProfileFormatHipMatchParamArgsDict']]]]]
     """
     Params
     """
@@ -35027,7 +35027,7 @@ class HttpServerProfileFormatHipMatchParamArgs:
 
 
 class HttpServerProfileFormatIptagArgsDict(TypedDict):
-    headers: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['HttpServerProfileFormatIptagHeaderArgs']]]]]
+    headers: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['HttpServerProfileFormatIptagHeaderArgsDict']]]]]
     """
     Headers
     """
@@ -35035,7 +35035,7 @@ class HttpServerProfileFormatIptagArgsDict(TypedDict):
     """
     The name of the payload format
     """
-    params: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['HttpServerProfileFormatIptagParamArgs']]]]]
+    params: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['HttpServerProfileFormatIptagParamArgsDict']]]]]
     """
     Params
     """
@@ -35234,7 +35234,7 @@ class HttpServerProfileFormatIptagParamArgs:
 
 
 class HttpServerProfileFormatSctpArgsDict(TypedDict):
-    headers: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['HttpServerProfileFormatSctpHeaderArgs']]]]]
+    headers: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['HttpServerProfileFormatSctpHeaderArgsDict']]]]]
     """
     Headers
     """
@@ -35242,7 +35242,7 @@ class HttpServerProfileFormatSctpArgsDict(TypedDict):
     """
     The name of the payload format
     """
-    params: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['HttpServerProfileFormatSctpParamArgs']]]]]
+    params: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['HttpServerProfileFormatSctpParamArgsDict']]]]]
     """
     Params
     """
@@ -35441,7 +35441,7 @@ class HttpServerProfileFormatSctpParamArgs:
 
 
 class HttpServerProfileFormatSystemArgsDict(TypedDict):
-    headers: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['HttpServerProfileFormatSystemHeaderArgs']]]]]
+    headers: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['HttpServerProfileFormatSystemHeaderArgsDict']]]]]
     """
     Headers
     """
@@ -35449,7 +35449,7 @@ class HttpServerProfileFormatSystemArgsDict(TypedDict):
     """
     The name of the payload format
     """
-    params: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['HttpServerProfileFormatSystemParamArgs']]]]]
+    params: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['HttpServerProfileFormatSystemParamArgsDict']]]]]
     """
     Params
     """
@@ -35648,7 +35648,7 @@ class HttpServerProfileFormatSystemParamArgs:
 
 
 class HttpServerProfileFormatThreatArgsDict(TypedDict):
-    headers: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['HttpServerProfileFormatThreatHeaderArgs']]]]]
+    headers: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['HttpServerProfileFormatThreatHeaderArgsDict']]]]]
     """
     Headers
     """
@@ -35656,7 +35656,7 @@ class HttpServerProfileFormatThreatArgsDict(TypedDict):
     """
     The name of the payload format
     """
-    params: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['HttpServerProfileFormatThreatParamArgs']]]]]
+    params: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['HttpServerProfileFormatThreatParamArgsDict']]]]]
     """
     Params
     """
@@ -35855,7 +35855,7 @@ class HttpServerProfileFormatThreatParamArgs:
 
 
 class HttpServerProfileFormatTrafficArgsDict(TypedDict):
-    headers: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['HttpServerProfileFormatTrafficHeaderArgs']]]]]
+    headers: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['HttpServerProfileFormatTrafficHeaderArgsDict']]]]]
     """
     Headers
     """
@@ -35863,7 +35863,7 @@ class HttpServerProfileFormatTrafficArgsDict(TypedDict):
     """
     The name of the payload format
     """
-    params: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['HttpServerProfileFormatTrafficParamArgs']]]]]
+    params: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['HttpServerProfileFormatTrafficParamArgsDict']]]]]
     """
     Params
     """
@@ -36062,7 +36062,7 @@ class HttpServerProfileFormatTrafficParamArgs:
 
 
 class HttpServerProfileFormatTunnelArgsDict(TypedDict):
-    headers: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['HttpServerProfileFormatTunnelHeaderArgs']]]]]
+    headers: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['HttpServerProfileFormatTunnelHeaderArgsDict']]]]]
     """
     Headers
     """
@@ -36070,7 +36070,7 @@ class HttpServerProfileFormatTunnelArgsDict(TypedDict):
     """
     The name of the payload format
     """
-    params: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['HttpServerProfileFormatTunnelParamArgs']]]]]
+    params: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['HttpServerProfileFormatTunnelParamArgsDict']]]]]
     """
     Params
     """
@@ -36269,7 +36269,7 @@ class HttpServerProfileFormatTunnelParamArgs:
 
 
 class HttpServerProfileFormatUrlArgsDict(TypedDict):
-    headers: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['HttpServerProfileFormatUrlHeaderArgs']]]]]
+    headers: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['HttpServerProfileFormatUrlHeaderArgsDict']]]]]
     """
     Headers
     """
@@ -36277,7 +36277,7 @@ class HttpServerProfileFormatUrlArgsDict(TypedDict):
     """
     The name of the payload format
     """
-    params: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['HttpServerProfileFormatUrlParamArgs']]]]]
+    params: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['HttpServerProfileFormatUrlParamArgsDict']]]]]
     """
     Params
     """
@@ -36476,7 +36476,7 @@ class HttpServerProfileFormatUrlParamArgs:
 
 
 class HttpServerProfileFormatUseridArgsDict(TypedDict):
-    headers: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['HttpServerProfileFormatUseridHeaderArgs']]]]]
+    headers: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['HttpServerProfileFormatUseridHeaderArgsDict']]]]]
     """
     Headers
     """
@@ -36484,7 +36484,7 @@ class HttpServerProfileFormatUseridArgsDict(TypedDict):
     """
     The name of the payload format
     """
-    params: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['HttpServerProfileFormatUseridParamArgs']]]]]
+    params: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['HttpServerProfileFormatUseridParamArgsDict']]]]]
     """
     Params
     """
@@ -36683,7 +36683,7 @@ class HttpServerProfileFormatUseridParamArgs:
 
 
 class HttpServerProfileFormatWildfireArgsDict(TypedDict):
-    headers: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['HttpServerProfileFormatWildfireHeaderArgs']]]]]
+    headers: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['HttpServerProfileFormatWildfireHeaderArgsDict']]]]]
     """
     Headers
     """
@@ -36691,7 +36691,7 @@ class HttpServerProfileFormatWildfireArgsDict(TypedDict):
     """
     The name of the payload format
     """
-    params: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['HttpServerProfileFormatWildfireParamArgs']]]]]
+    params: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['HttpServerProfileFormatWildfireParamArgsDict']]]]]
     """
     Params
     """
@@ -37146,11 +37146,11 @@ class IkeCryptoProfileLifetimeArgs:
 
 
 class IkeGatewayAuthenticationArgsDict(TypedDict):
-    certificate: NotRequired[pulumi.Input[Optional['IkeGatewayAuthenticationCertificateArgs']]]
+    certificate: NotRequired[pulumi.Input[Optional['IkeGatewayAuthenticationCertificateArgsDict']]]
     """
     Certificate
     """
-    pre_shared_key: NotRequired[pulumi.Input[Optional['IkeGatewayAuthenticationPreSharedKeyArgs']]]
+    pre_shared_key: NotRequired[pulumi.Input[Optional['IkeGatewayAuthenticationPreSharedKeyArgsDict']]]
     """
     Pre shared key
 
@@ -37209,7 +37209,7 @@ class IkeGatewayAuthenticationCertificateArgsDict(TypedDict):
     """
     Certificate profile
     """
-    local_certificate: NotRequired[pulumi.Input[Optional['IkeGatewayAuthenticationCertificateLocalCertificateArgs']]]
+    local_certificate: NotRequired[pulumi.Input[Optional['IkeGatewayAuthenticationCertificateLocalCertificateArgsDict']]]
     """
     Local certificate
     """
@@ -37466,7 +37466,7 @@ class IkeGatewayLocalIdArgs:
 
 
 class IkeGatewayPeerAddressArgsDict(TypedDict):
-    dynamic: NotRequired[pulumi.Input[Optional['IkeGatewayPeerAddressDynamicArgs']]]
+    dynamic: NotRequired[pulumi.Input[Optional['IkeGatewayPeerAddressDynamicArgsDict']]]
     """
     Dynamic
     """
@@ -37605,11 +37605,11 @@ class IkeGatewayPeerIdArgs:
 
 
 class IkeGatewayProtocolArgsDict(TypedDict):
-    ikev1: NotRequired[pulumi.Input[Optional['IkeGatewayProtocolIkev1Args']]]
+    ikev1: NotRequired[pulumi.Input[Optional['IkeGatewayProtocolIkev1ArgsDict']]]
     """
     Ikev1
     """
-    ikev2: NotRequired[pulumi.Input[Optional['IkeGatewayProtocolIkev2Args']]]
+    ikev2: NotRequired[pulumi.Input[Optional['IkeGatewayProtocolIkev2ArgsDict']]]
     """
     Ikev2
     """
@@ -37674,11 +37674,11 @@ class IkeGatewayProtocolArgs:
 
 
 class IkeGatewayProtocolCommonArgsDict(TypedDict):
-    fragmentation: NotRequired[pulumi.Input[Optional['IkeGatewayProtocolCommonFragmentationArgs']]]
+    fragmentation: NotRequired[pulumi.Input[Optional['IkeGatewayProtocolCommonFragmentationArgsDict']]]
     """
     Fragmentation
     """
-    nat_traversal: NotRequired[pulumi.Input[Optional['IkeGatewayProtocolCommonNatTraversalArgs']]]
+    nat_traversal: NotRequired[pulumi.Input[Optional['IkeGatewayProtocolCommonNatTraversalArgsDict']]]
     """
     Enables NAT traversal for the IKE gateway.
     """
@@ -37801,7 +37801,7 @@ class IkeGatewayProtocolCommonNatTraversalArgs:
 
 
 class IkeGatewayProtocolIkev1ArgsDict(TypedDict):
-    dpd: NotRequired[pulumi.Input[Optional['IkeGatewayProtocolIkev1DpdArgs']]]
+    dpd: NotRequired[pulumi.Input[Optional['IkeGatewayProtocolIkev1DpdArgsDict']]]
     """
     Dpd
     """
@@ -37879,7 +37879,7 @@ class IkeGatewayProtocolIkev1DpdArgs:
 
 
 class IkeGatewayProtocolIkev2ArgsDict(TypedDict):
-    dpd: NotRequired[pulumi.Input[Optional['IkeGatewayProtocolIkev2DpdArgs']]]
+    dpd: NotRequired[pulumi.Input[Optional['IkeGatewayProtocolIkev2DpdArgsDict']]]
     """
     Dpd
     """
@@ -38282,11 +38282,11 @@ class IpsecTunnelAutoKeyArgsDict(TypedDict):
     """
     Ipsec crypto profile
     """
-    proxy_id_v6s: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['IpsecTunnelAutoKeyProxyIdV6Args']]]]]
+    proxy_id_v6s: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['IpsecTunnelAutoKeyProxyIdV6ArgsDict']]]]]
     """
     IPv6 type of proxy*id values
     """
-    proxy_ids: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['IpsecTunnelAutoKeyProxyIdArgs']]]]]
+    proxy_ids: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['IpsecTunnelAutoKeyProxyIdArgsDict']]]]]
     """
     IPv4 type of proxy*id values
     """
@@ -38398,7 +38398,7 @@ class IpsecTunnelAutoKeyProxyIdArgsDict(TypedDict):
     """
     Local
     """
-    protocol: NotRequired[pulumi.Input[Optional['IpsecTunnelAutoKeyProxyIdProtocolArgs']]]
+    protocol: NotRequired[pulumi.Input[Optional['IpsecTunnelAutoKeyProxyIdProtocolArgsDict']]]
     """
     IPv4 type of proxy*id protocol values for TCP protocol
     """
@@ -38482,13 +38482,13 @@ class IpsecTunnelAutoKeyProxyIdProtocolArgsDict(TypedDict):
     """
     IP protocol number
     """
-    tcp: NotRequired[pulumi.Input[Optional['IpsecTunnelAutoKeyProxyIdProtocolTcpArgs']]]
+    tcp: NotRequired[pulumi.Input[Optional['IpsecTunnelAutoKeyProxyIdProtocolTcpArgsDict']]]
     """
     IPv4 type of proxy_id protocol values for TCP protocol
 
     > ℹ️ **Note:** You must specify exactly one of `number`, `tcp`, and `udp`.
     """
-    udp: NotRequired[pulumi.Input[Optional['IpsecTunnelAutoKeyProxyIdProtocolUdpArgs']]]
+    udp: NotRequired[pulumi.Input[Optional['IpsecTunnelAutoKeyProxyIdProtocolUdpArgsDict']]]
     """
     IPv6 type of proxy_id protocol values for UDP protocol
 
@@ -38665,7 +38665,7 @@ class IpsecTunnelAutoKeyProxyIdV6ArgsDict(TypedDict):
     """
     Local
     """
-    protocol: NotRequired[pulumi.Input[Optional['IpsecTunnelAutoKeyProxyIdV6ProtocolArgs']]]
+    protocol: NotRequired[pulumi.Input[Optional['IpsecTunnelAutoKeyProxyIdV6ProtocolArgsDict']]]
     """
     IPv6 type of proxy*id protocol values for protocol
     """
@@ -38749,13 +38749,13 @@ class IpsecTunnelAutoKeyProxyIdV6ProtocolArgsDict(TypedDict):
     """
     IP protocol number
     """
-    tcp: NotRequired[pulumi.Input[Optional['IpsecTunnelAutoKeyProxyIdV6ProtocolTcpArgs']]]
+    tcp: NotRequired[pulumi.Input[Optional['IpsecTunnelAutoKeyProxyIdV6ProtocolTcpArgsDict']]]
     """
     IPv6 type of proxy_id protocol values for TCP protocol
 
     > ℹ️ **Note:** You must specify exactly one of `number`, `tcp`, and `udp`.
     """
-    udp: NotRequired[pulumi.Input[Optional['IpsecTunnelAutoKeyProxyIdV6ProtocolUdpArgs']]]
+    udp: NotRequired[pulumi.Input[Optional['IpsecTunnelAutoKeyProxyIdV6ProtocolUdpArgsDict']]]
     """
     IPv6 type of proxy_id protocol values for UDP protocol
 
@@ -39265,7 +39265,7 @@ class Layer3SubinterfaceDhcpClientArgsDict(TypedDict):
     """
     Enable DHCP?
     """
-    send_hostname: NotRequired[pulumi.Input[Optional['Layer3SubinterfaceDhcpClientSendHostnameArgs']]]
+    send_hostname: NotRequired[pulumi.Input[Optional['Layer3SubinterfaceDhcpClientSendHostnameArgsDict']]]
     """
     Layer3 sub interfaces DHCP Client Send hostname
     """
@@ -39488,7 +39488,7 @@ class LdapServerProfileServerArgs:
 
 
 class LldpProfileOptionTlvsArgsDict(TypedDict):
-    management_address: NotRequired[pulumi.Input[Optional['LldpProfileOptionTlvsManagementAddressArgs']]]
+    management_address: NotRequired[pulumi.Input[Optional['LldpProfileOptionTlvsManagementAddressArgsDict']]]
     """
     Management address
     """
@@ -39601,7 +39601,7 @@ class LldpProfileOptionTlvsManagementAddressArgsDict(TypedDict):
     """
     Management address enabled
     """
-    iplists: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['LldpProfileOptionTlvsManagementAddressIplistArgs']]]]]
+    iplists: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['LldpProfileOptionTlvsManagementAddressIplistArgsDict']]]]]
     """
     Iplist
     """
@@ -39905,15 +39905,15 @@ class LogicalRouterVrfArgsDict(TypedDict):
     """
     Name
     """
-    admin_dists: NotRequired[pulumi.Input[Optional['LogicalRouterVrfAdminDistsArgs']]]
+    admin_dists: NotRequired[pulumi.Input[Optional['LogicalRouterVrfAdminDistsArgsDict']]]
     """
     Admin dists
     """
-    bgp: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpArgs']]]
+    bgp: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpArgsDict']]]
     """
     Bgp
     """
-    ecmp: NotRequired[pulumi.Input[Optional['LogicalRouterVrfEcmpArgs']]]
+    ecmp: NotRequired[pulumi.Input[Optional['LogicalRouterVrfEcmpArgsDict']]]
     """
     Ecmp
     """
@@ -39925,27 +39925,27 @@ class LogicalRouterVrfArgsDict(TypedDict):
     """
     Interface
     """
-    multicast: NotRequired[pulumi.Input[Optional['LogicalRouterVrfMulticastArgs']]]
+    multicast: NotRequired[pulumi.Input[Optional['LogicalRouterVrfMulticastArgsDict']]]
     """
     Multicast
     """
-    ospf: NotRequired[pulumi.Input[Optional['LogicalRouterVrfOspfArgs']]]
+    ospf: NotRequired[pulumi.Input[Optional['LogicalRouterVrfOspfArgsDict']]]
     """
     Ospf
     """
-    ospfv3: NotRequired[pulumi.Input[Optional['LogicalRouterVrfOspfv3Args']]]
+    ospfv3: NotRequired[pulumi.Input[Optional['LogicalRouterVrfOspfv3ArgsDict']]]
     """
     Ospfv3
     """
-    rib_filter: NotRequired[pulumi.Input[Optional['LogicalRouterVrfRibFilterArgs']]]
+    rib_filter: NotRequired[pulumi.Input[Optional['LogicalRouterVrfRibFilterArgsDict']]]
     """
     Rib filter
     """
-    rip: NotRequired[pulumi.Input[Optional['LogicalRouterVrfRipArgs']]]
+    rip: NotRequired[pulumi.Input[Optional['LogicalRouterVrfRipArgsDict']]]
     """
     Rip
     """
-    routing_table: NotRequired[pulumi.Input[Optional['LogicalRouterVrfRoutingTableArgs']]]
+    routing_table: NotRequired[pulumi.Input[Optional['LogicalRouterVrfRoutingTableArgsDict']]]
     """
     Routing table
     """
@@ -39953,7 +39953,7 @@ class LogicalRouterVrfArgsDict(TypedDict):
     """
     Sdwan type
     """
-    vr_admin_dists: NotRequired[pulumi.Input[Optional['LogicalRouterVrfVrAdminDistsArgs']]]
+    vr_admin_dists: NotRequired[pulumi.Input[Optional['LogicalRouterVrfVrAdminDistsArgsDict']]]
     """
     Vr admin dists
     """
@@ -40458,15 +40458,15 @@ class LogicalRouterVrfAdminDistsArgs:
 
 
 class LogicalRouterVrfBgpArgsDict(TypedDict):
-    advertise_network: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpAdvertiseNetworkArgs']]]
+    advertise_network: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpAdvertiseNetworkArgsDict']]]
     """
     Advertise network
     """
-    aggregate: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpAggregateArgs']]]
+    aggregate: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpAggregateArgsDict']]]
     """
     Aggregate
     """
-    aggregate_routes: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['LogicalRouterVrfBgpAggregateRouteArgs']]]]]
+    aggregate_routes: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['LogicalRouterVrfBgpAggregateRouteArgsDict']]]]]
     """
     Aggregate routes
     """
@@ -40506,11 +40506,11 @@ class LogicalRouterVrfBgpArgsDict(TypedDict):
     """
     Fast external failover
     """
-    global_bfd: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpGlobalBfdArgs']]]
+    global_bfd: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpGlobalBfdArgsDict']]]
     """
     Global bfd
     """
-    graceful_restart: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpGracefulRestartArgs']]]
+    graceful_restart: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpGracefulRestartArgsDict']]]
     """
     Graceful restart
     """
@@ -40526,23 +40526,23 @@ class LogicalRouterVrfBgpArgsDict(TypedDict):
     """
     Local as
     """
-    med: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpMedArgs']]]
+    med: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpMedArgsDict']]]
     """
     Med
     """
-    peer_groups: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['LogicalRouterVrfBgpPeerGroupArgs']]]]]
+    peer_groups: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['LogicalRouterVrfBgpPeerGroupArgsDict']]]]]
     """
     Peer group
     """
-    policy: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpPolicyArgs']]]
+    policy: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpPolicyArgsDict']]]
     """
     Policy
     """
-    redist_rules: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['LogicalRouterVrfBgpRedistRuleArgs']]]]]
+    redist_rules: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['LogicalRouterVrfBgpRedistRuleArgsDict']]]]]
     """
     Redist rules
     """
-    redistribution_profile: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpRedistributionProfileArgs']]]
+    redistribution_profile: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpRedistributionProfileArgsDict']]]
     """
     Redistribution profile
     """
@@ -40947,11 +40947,11 @@ class LogicalRouterVrfBgpArgs:
 
 
 class LogicalRouterVrfBgpAdvertiseNetworkArgsDict(TypedDict):
-    ipv4: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpAdvertiseNetworkIpv4Args']]]
+    ipv4: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpAdvertiseNetworkIpv4ArgsDict']]]
     """
     Ipv4
     """
-    ipv6: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpAdvertiseNetworkIpv6Args']]]
+    ipv6: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpAdvertiseNetworkIpv6ArgsDict']]]
     """
     Ipv6
     """
@@ -40996,7 +40996,7 @@ class LogicalRouterVrfBgpAdvertiseNetworkArgs:
 
 
 class LogicalRouterVrfBgpAdvertiseNetworkIpv4ArgsDict(TypedDict):
-    networks: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['LogicalRouterVrfBgpAdvertiseNetworkIpv4NetworkArgs']]]]]
+    networks: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['LogicalRouterVrfBgpAdvertiseNetworkIpv4NetworkArgsDict']]]]]
     """
     Network
     """
@@ -41113,7 +41113,7 @@ class LogicalRouterVrfBgpAdvertiseNetworkIpv4NetworkArgs:
 
 
 class LogicalRouterVrfBgpAdvertiseNetworkIpv6ArgsDict(TypedDict):
-    networks: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['LogicalRouterVrfBgpAdvertiseNetworkIpv6NetworkArgs']]]]]
+    networks: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['LogicalRouterVrfBgpAdvertiseNetworkIpv6NetworkArgsDict']]]]]
     """
     Network
     """
@@ -41243,7 +41243,7 @@ class LogicalRouterVrfBgpAggregateRouteArgsDict(TypedDict):
     """
     Summary only
     """
-    type: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpAggregateRouteTypeArgs']]]
+    type: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpAggregateRouteTypeArgsDict']]]
     """
     Type
     """
@@ -41367,11 +41367,11 @@ class LogicalRouterVrfBgpAggregateRouteArgs:
 
 
 class LogicalRouterVrfBgpAggregateRouteTypeArgsDict(TypedDict):
-    ipv4: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpAggregateRouteTypeIpv4Args']]]
+    ipv4: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpAggregateRouteTypeIpv4ArgsDict']]]
     """
     Ipv4
     """
-    ipv6: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpAggregateRouteTypeIpv6Args']]]
+    ipv6: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpAggregateRouteTypeIpv6ArgsDict']]]
     """
     Ipv6
 
@@ -41731,7 +41731,7 @@ class LogicalRouterVrfBgpPeerGroupArgsDict(TypedDict):
     """
     Name
     """
-    address_family: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpPeerGroupAddressFamilyArgs']]]
+    address_family: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpPeerGroupAddressFamilyArgsDict']]]
     """
     Address family
     """
@@ -41739,7 +41739,7 @@ class LogicalRouterVrfBgpPeerGroupArgsDict(TypedDict):
     """
     Aggregated confed as path
     """
-    connection_options: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpPeerGroupConnectionOptionsArgs']]]
+    connection_options: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpPeerGroupConnectionOptionsArgsDict']]]
     """
     Connection options
     """
@@ -41747,11 +41747,11 @@ class LogicalRouterVrfBgpPeerGroupArgsDict(TypedDict):
     """
     Enable
     """
-    filtering_profile: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpPeerGroupFilteringProfileArgs']]]
+    filtering_profile: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpPeerGroupFilteringProfileArgsDict']]]
     """
     Filtering profile
     """
-    peers: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['LogicalRouterVrfBgpPeerGroupPeerArgs']]]]]
+    peers: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['LogicalRouterVrfBgpPeerGroupPeerArgsDict']]]]]
     """
     Peer
     """
@@ -41759,7 +41759,7 @@ class LogicalRouterVrfBgpPeerGroupArgsDict(TypedDict):
     """
     Soft reset with stored info
     """
-    type: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpPeerGroupTypeArgs']]]
+    type: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpPeerGroupTypeArgsDict']]]
     """
     Type
     """
@@ -42106,11 +42106,11 @@ class LogicalRouterVrfBgpPeerGroupPeerArgsDict(TypedDict):
     """
     Name
     """
-    bfd: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpPeerGroupPeerBfdArgs']]]
+    bfd: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpPeerGroupPeerBfdArgsDict']]]
     """
     Bfd
     """
-    connection_options: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpPeerGroupPeerConnectionOptionsArgs']]]
+    connection_options: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpPeerGroupPeerConnectionOptionsArgsDict']]]
     """
     Connection options
     """
@@ -42126,11 +42126,11 @@ class LogicalRouterVrfBgpPeerGroupPeerArgsDict(TypedDict):
     """
     Enable sender side loop detection
     """
-    inherit: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpPeerGroupPeerInheritArgs']]]
+    inherit: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpPeerGroupPeerInheritArgsDict']]]
     """
     Inherit
     """
-    local_address: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpPeerGroupPeerLocalAddressArgs']]]
+    local_address: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpPeerGroupPeerLocalAddressArgsDict']]]
     """
     Local address
     """
@@ -42138,7 +42138,7 @@ class LogicalRouterVrfBgpPeerGroupPeerArgsDict(TypedDict):
     """
     Passive
     """
-    peer_address: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpPeerGroupPeerPeerAddressArgs']]]
+    peer_address: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpPeerGroupPeerPeerAddressArgsDict']]]
     """
     Peer address
     """
@@ -42154,7 +42154,7 @@ class LogicalRouterVrfBgpPeerGroupPeerArgsDict(TypedDict):
     """
     Reflector client
     """
-    subsequent_address_family_identifier: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpPeerGroupPeerSubsequentAddressFamilyIdentifierArgs']]]
+    subsequent_address_family_identifier: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpPeerGroupPeerSubsequentAddressFamilyIdentifierArgsDict']]]
     """
     Subsequent address family identifier
     """
@@ -42390,7 +42390,7 @@ class LogicalRouterVrfBgpPeerGroupPeerArgs:
 
 
 class LogicalRouterVrfBgpPeerGroupPeerBfdArgsDict(TypedDict):
-    multihop: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpPeerGroupPeerBfdMultihopArgs']]]
+    multihop: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpPeerGroupPeerBfdMultihopArgsDict']]]
     """
     Multihop
     """
@@ -42484,7 +42484,7 @@ class LogicalRouterVrfBgpPeerGroupPeerConnectionOptionsArgsDict(TypedDict):
     """
     Idle hold time
     """
-    incoming_bgp_connection: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpPeerGroupPeerConnectionOptionsIncomingBgpConnectionArgs']]]
+    incoming_bgp_connection: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpPeerGroupPeerConnectionOptionsIncomingBgpConnectionArgsDict']]]
     """
     Incoming bgp connection
     """
@@ -42508,7 +42508,7 @@ class LogicalRouterVrfBgpPeerGroupPeerConnectionOptionsArgsDict(TypedDict):
     """
     Open delay time
     """
-    outgoing_bgp_connection: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpPeerGroupPeerConnectionOptionsOutgoingBgpConnectionArgs']]]
+    outgoing_bgp_connection: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpPeerGroupPeerConnectionOptionsOutgoingBgpConnectionArgsDict']]]
     """
     Outgoing bgp connection
     """
@@ -42815,11 +42815,11 @@ class LogicalRouterVrfBgpPeerGroupPeerConnectionOptionsOutgoingBgpConnectionArgs
 
 
 class LogicalRouterVrfBgpPeerGroupPeerInheritArgsDict(TypedDict):
-    no: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpPeerGroupPeerInheritNoArgs']]]
+    no: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpPeerGroupPeerInheritNoArgsDict']]]
     """
     No
     """
-    yes: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpPeerGroupPeerInheritYesArgs']]]
+    yes: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpPeerGroupPeerInheritYesArgsDict']]]
     """
     Yes
 
@@ -42870,11 +42870,11 @@ class LogicalRouterVrfBgpPeerGroupPeerInheritArgs:
 
 
 class LogicalRouterVrfBgpPeerGroupPeerInheritNoArgsDict(TypedDict):
-    address_family: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpPeerGroupPeerInheritNoAddressFamilyArgs']]]
+    address_family: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpPeerGroupPeerInheritNoAddressFamilyArgsDict']]]
     """
     Address family
     """
-    filtering_profile: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpPeerGroupPeerInheritNoFilteringProfileArgs']]]
+    filtering_profile: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpPeerGroupPeerInheritNoFilteringProfileArgsDict']]]
     """
     Filtering profile
     """
@@ -43179,23 +43179,23 @@ class LogicalRouterVrfBgpPeerGroupPeerSubsequentAddressFamilyIdentifierArgs:
 
 
 class LogicalRouterVrfBgpPeerGroupTypeArgsDict(TypedDict):
-    ebgp: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpPeerGroupTypeEbgpArgs']]]
+    ebgp: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpPeerGroupTypeEbgpArgsDict']]]
     """
     Ebgp
     """
-    ebgp_confed: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpPeerGroupTypeEbgpConfedArgs']]]
+    ebgp_confed: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpPeerGroupTypeEbgpConfedArgsDict']]]
     """
     Ebgp confed
 
     > ℹ️ **Note:** You must specify exactly one of `ebgp`, `ebgp_confed`, `ibgp`, and `ibgp_confed`.
     """
-    ibgp: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpPeerGroupTypeIbgpArgs']]]
+    ibgp: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpPeerGroupTypeIbgpArgsDict']]]
     """
     Ibgp
 
     > ℹ️ **Note:** You must specify exactly one of `ebgp`, `ebgp_confed`, `ibgp`, and `ibgp_confed`.
     """
-    ibgp_confed: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpPeerGroupTypeIbgpConfedArgs']]]
+    ibgp_confed: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpPeerGroupTypeIbgpConfedArgsDict']]]
     """
     Ibgp confed
 
@@ -43442,19 +43442,19 @@ class LogicalRouterVrfBgpPeerGroupTypeIbgpConfedArgs:
 
 
 class LogicalRouterVrfBgpPolicyArgsDict(TypedDict):
-    aggregation: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpPolicyAggregationArgs']]]
+    aggregation: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpPolicyAggregationArgsDict']]]
     """
     Aggregation
     """
-    conditional_advertisement: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpPolicyConditionalAdvertisementArgs']]]
+    conditional_advertisement: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpPolicyConditionalAdvertisementArgsDict']]]
     """
     Conditional advertisement
     """
-    export: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpPolicyExportArgs']]]
+    export: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpPolicyExportArgsDict']]]
     """
     Export
     """
-    import_: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpPolicyImportArgs']]]
+    import_: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpPolicyImportArgsDict']]]
     """
     Import
     """
@@ -43531,7 +43531,7 @@ class LogicalRouterVrfBgpPolicyArgs:
 
 
 class LogicalRouterVrfBgpPolicyAggregationArgsDict(TypedDict):
-    addresses: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['LogicalRouterVrfBgpPolicyAggregationAddressArgs']]]]]
+    addresses: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['LogicalRouterVrfBgpPolicyAggregationAddressArgsDict']]]]]
     """
     Address
     """
@@ -43564,11 +43564,11 @@ class LogicalRouterVrfBgpPolicyAggregationAddressArgsDict(TypedDict):
     """
     Name
     """
-    advertise_filters: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['LogicalRouterVrfBgpPolicyAggregationAddressAdvertiseFilterArgs']]]]]
+    advertise_filters: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['LogicalRouterVrfBgpPolicyAggregationAddressAdvertiseFilterArgsDict']]]]]
     """
     Advertise filters
     """
-    aggregate_route_attributes: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesArgs']]]
+    aggregate_route_attributes: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesArgsDict']]]
     """
     Aggregate route attributes
     """
@@ -43588,7 +43588,7 @@ class LogicalRouterVrfBgpPolicyAggregationAddressArgsDict(TypedDict):
     """
     Summary
     """
-    suppress_filters: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['LogicalRouterVrfBgpPolicyAggregationAddressSuppressFilterArgs']]]]]
+    suppress_filters: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['LogicalRouterVrfBgpPolicyAggregationAddressSuppressFilterArgsDict']]]]]
     """
     Suppress filters
     """
@@ -43736,7 +43736,7 @@ class LogicalRouterVrfBgpPolicyAggregationAddressAdvertiseFilterArgsDict(TypedDi
     """
     Enable
     """
-    match: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpPolicyAggregationAddressAdvertiseFilterMatchArgs']]]
+    match: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpPolicyAggregationAddressAdvertiseFilterMatchArgsDict']]]
     """
     Match
     """
@@ -43796,7 +43796,7 @@ class LogicalRouterVrfBgpPolicyAggregationAddressAdvertiseFilterArgs:
 
 
 class LogicalRouterVrfBgpPolicyAggregationAddressAdvertiseFilterMatchArgsDict(TypedDict):
-    address_prefixes: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['LogicalRouterVrfBgpPolicyAggregationAddressAdvertiseFilterMatchAddressPrefixArgs']]]]]
+    address_prefixes: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['LogicalRouterVrfBgpPolicyAggregationAddressAdvertiseFilterMatchAddressPrefixArgsDict']]]]]
     """
     Address prefix
     """
@@ -43804,15 +43804,15 @@ class LogicalRouterVrfBgpPolicyAggregationAddressAdvertiseFilterMatchArgsDict(Ty
     """
     Afi
     """
-    as_path: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpPolicyAggregationAddressAdvertiseFilterMatchAsPathArgs']]]
+    as_path: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpPolicyAggregationAddressAdvertiseFilterMatchAsPathArgsDict']]]
     """
     As path
     """
-    community: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpPolicyAggregationAddressAdvertiseFilterMatchCommunityArgs']]]
+    community: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpPolicyAggregationAddressAdvertiseFilterMatchCommunityArgsDict']]]
     """
     Community
     """
-    extended_community: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpPolicyAggregationAddressAdvertiseFilterMatchExtendedCommunityArgs']]]
+    extended_community: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpPolicyAggregationAddressAdvertiseFilterMatchExtendedCommunityArgsDict']]]
     """
     Extended community
     """
@@ -44140,7 +44140,7 @@ class LogicalRouterVrfBgpPolicyAggregationAddressAdvertiseFilterMatchExtendedCom
 
 
 class LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesArgsDict(TypedDict):
-    as_path: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesAsPathArgs']]]
+    as_path: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesAsPathArgsDict']]]
     """
     As path
     """
@@ -44148,11 +44148,11 @@ class LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesArgsDic
     """
     As path limit
     """
-    community: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesCommunityArgs']]]
+    community: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesCommunityArgsDict']]]
     """
     Community
     """
-    extended_community: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesExtendedCommunityArgs']]]
+    extended_community: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesExtendedCommunityArgsDict']]]
     """
     Extended community
     """
@@ -44329,7 +44329,7 @@ class LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesArgs:
 
 
 class LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesAsPathArgsDict(TypedDict):
-    none: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesAsPathNoneArgs']]]
+    none: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesAsPathNoneArgsDict']]]
     """
     None
     """
@@ -44339,7 +44339,7 @@ class LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesAsPathA
 
     > ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `remove_and_prepend`.
     """
-    remove: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesAsPathRemoveArgs']]]
+    remove: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesAsPathRemoveArgsDict']]]
     """
     Remove
 
@@ -44458,7 +44458,7 @@ class LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesCommuni
     """
     Append
     """
-    none: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesCommunityNoneArgs']]]
+    none: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesCommunityNoneArgsDict']]]
     """
     None
 
@@ -44470,7 +44470,7 @@ class LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesCommuni
 
     > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `remove_all`, and `remove_regex`.
     """
-    remove_all: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesCommunityRemoveAllArgs']]]
+    remove_all: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesCommunityRemoveAllArgsDict']]]
     """
     Remove all
 
@@ -44609,7 +44609,7 @@ class LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesExtende
     """
     Append
     """
-    none: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesExtendedCommunityNoneArgs']]]
+    none: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesExtendedCommunityNoneArgsDict']]]
     """
     None
 
@@ -44621,7 +44621,7 @@ class LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesExtende
 
     > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `remove_all`, and `remove_regex`.
     """
-    remove_all: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesExtendedCommunityRemoveAllArgs']]]
+    remove_all: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesExtendedCommunityRemoveAllArgsDict']]]
     """
     Remove all
 
@@ -44764,7 +44764,7 @@ class LogicalRouterVrfBgpPolicyAggregationAddressSuppressFilterArgsDict(TypedDic
     """
     Enable
     """
-    match: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpPolicyAggregationAddressSuppressFilterMatchArgs']]]
+    match: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpPolicyAggregationAddressSuppressFilterMatchArgsDict']]]
     """
     Match
     """
@@ -44824,7 +44824,7 @@ class LogicalRouterVrfBgpPolicyAggregationAddressSuppressFilterArgs:
 
 
 class LogicalRouterVrfBgpPolicyAggregationAddressSuppressFilterMatchArgsDict(TypedDict):
-    address_prefixes: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['LogicalRouterVrfBgpPolicyAggregationAddressSuppressFilterMatchAddressPrefixArgs']]]]]
+    address_prefixes: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['LogicalRouterVrfBgpPolicyAggregationAddressSuppressFilterMatchAddressPrefixArgsDict']]]]]
     """
     Address prefix
     """
@@ -44832,15 +44832,15 @@ class LogicalRouterVrfBgpPolicyAggregationAddressSuppressFilterMatchArgsDict(Typ
     """
     Afi
     """
-    as_path: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpPolicyAggregationAddressSuppressFilterMatchAsPathArgs']]]
+    as_path: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpPolicyAggregationAddressSuppressFilterMatchAsPathArgsDict']]]
     """
     As path
     """
-    community: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpPolicyAggregationAddressSuppressFilterMatchCommunityArgs']]]
+    community: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpPolicyAggregationAddressSuppressFilterMatchCommunityArgsDict']]]
     """
     Community
     """
-    extended_community: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpPolicyAggregationAddressSuppressFilterMatchExtendedCommunityArgs']]]
+    extended_community: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpPolicyAggregationAddressSuppressFilterMatchExtendedCommunityArgsDict']]]
     """
     Extended community
     """
@@ -45168,7 +45168,7 @@ class LogicalRouterVrfBgpPolicyAggregationAddressSuppressFilterMatchExtendedComm
 
 
 class LogicalRouterVrfBgpPolicyConditionalAdvertisementArgsDict(TypedDict):
-    policies: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['LogicalRouterVrfBgpPolicyConditionalAdvertisementPolicyArgs']]]]]
+    policies: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['LogicalRouterVrfBgpPolicyConditionalAdvertisementPolicyArgsDict']]]]]
     """
     Policy
     """
@@ -45201,7 +45201,7 @@ class LogicalRouterVrfBgpPolicyConditionalAdvertisementPolicyArgsDict(TypedDict)
     """
     Name
     """
-    advertise_filters: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['LogicalRouterVrfBgpPolicyConditionalAdvertisementPolicyAdvertiseFilterArgs']]]]]
+    advertise_filters: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['LogicalRouterVrfBgpPolicyConditionalAdvertisementPolicyAdvertiseFilterArgsDict']]]]]
     """
     Advertise filters
     """
@@ -45209,7 +45209,7 @@ class LogicalRouterVrfBgpPolicyConditionalAdvertisementPolicyArgsDict(TypedDict)
     """
     Enable
     """
-    non_exist_filters: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['LogicalRouterVrfBgpPolicyConditionalAdvertisementPolicyNonExistFilterArgs']]]]]
+    non_exist_filters: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['LogicalRouterVrfBgpPolicyConditionalAdvertisementPolicyNonExistFilterArgsDict']]]]]
     """
     Non exist filters
     """
@@ -45313,7 +45313,7 @@ class LogicalRouterVrfBgpPolicyConditionalAdvertisementPolicyAdvertiseFilterArgs
     """
     Enable
     """
-    match: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpPolicyConditionalAdvertisementPolicyAdvertiseFilterMatchArgs']]]
+    match: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpPolicyConditionalAdvertisementPolicyAdvertiseFilterMatchArgsDict']]]
     """
     Match
     """
@@ -45373,7 +45373,7 @@ class LogicalRouterVrfBgpPolicyConditionalAdvertisementPolicyAdvertiseFilterArgs
 
 
 class LogicalRouterVrfBgpPolicyConditionalAdvertisementPolicyAdvertiseFilterMatchArgsDict(TypedDict):
-    address_prefixes: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['LogicalRouterVrfBgpPolicyConditionalAdvertisementPolicyAdvertiseFilterMatchAddressPrefixArgs']]]]]
+    address_prefixes: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['LogicalRouterVrfBgpPolicyConditionalAdvertisementPolicyAdvertiseFilterMatchAddressPrefixArgsDict']]]]]
     """
     Address prefix
     """
@@ -45381,15 +45381,15 @@ class LogicalRouterVrfBgpPolicyConditionalAdvertisementPolicyAdvertiseFilterMatc
     """
     Afi
     """
-    as_path: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpPolicyConditionalAdvertisementPolicyAdvertiseFilterMatchAsPathArgs']]]
+    as_path: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpPolicyConditionalAdvertisementPolicyAdvertiseFilterMatchAsPathArgsDict']]]
     """
     As path
     """
-    community: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpPolicyConditionalAdvertisementPolicyAdvertiseFilterMatchCommunityArgs']]]
+    community: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpPolicyConditionalAdvertisementPolicyAdvertiseFilterMatchCommunityArgsDict']]]
     """
     Community
     """
-    extended_community: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpPolicyConditionalAdvertisementPolicyAdvertiseFilterMatchExtendedCommunityArgs']]]
+    extended_community: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpPolicyConditionalAdvertisementPolicyAdvertiseFilterMatchExtendedCommunityArgsDict']]]
     """
     Extended community
     """
@@ -45725,7 +45725,7 @@ class LogicalRouterVrfBgpPolicyConditionalAdvertisementPolicyNonExistFilterArgsD
     """
     Enable
     """
-    match: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpPolicyConditionalAdvertisementPolicyNonExistFilterMatchArgs']]]
+    match: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpPolicyConditionalAdvertisementPolicyNonExistFilterMatchArgsDict']]]
     """
     Match
     """
@@ -45785,7 +45785,7 @@ class LogicalRouterVrfBgpPolicyConditionalAdvertisementPolicyNonExistFilterArgs:
 
 
 class LogicalRouterVrfBgpPolicyConditionalAdvertisementPolicyNonExistFilterMatchArgsDict(TypedDict):
-    address_prefixes: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['LogicalRouterVrfBgpPolicyConditionalAdvertisementPolicyNonExistFilterMatchAddressPrefixArgs']]]]]
+    address_prefixes: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['LogicalRouterVrfBgpPolicyConditionalAdvertisementPolicyNonExistFilterMatchAddressPrefixArgsDict']]]]]
     """
     Address prefix
     """
@@ -45793,15 +45793,15 @@ class LogicalRouterVrfBgpPolicyConditionalAdvertisementPolicyNonExistFilterMatch
     """
     Afi
     """
-    as_path: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpPolicyConditionalAdvertisementPolicyNonExistFilterMatchAsPathArgs']]]
+    as_path: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpPolicyConditionalAdvertisementPolicyNonExistFilterMatchAsPathArgsDict']]]
     """
     As path
     """
-    community: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpPolicyConditionalAdvertisementPolicyNonExistFilterMatchCommunityArgs']]]
+    community: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpPolicyConditionalAdvertisementPolicyNonExistFilterMatchCommunityArgsDict']]]
     """
     Community
     """
-    extended_community: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpPolicyConditionalAdvertisementPolicyNonExistFilterMatchExtendedCommunityArgs']]]
+    extended_community: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpPolicyConditionalAdvertisementPolicyNonExistFilterMatchExtendedCommunityArgsDict']]]
     """
     Extended community
     """
@@ -46129,7 +46129,7 @@ class LogicalRouterVrfBgpPolicyConditionalAdvertisementPolicyNonExistFilterMatch
 
 
 class LogicalRouterVrfBgpPolicyExportArgsDict(TypedDict):
-    rules: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['LogicalRouterVrfBgpPolicyExportRuleArgs']]]]]
+    rules: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['LogicalRouterVrfBgpPolicyExportRuleArgsDict']]]]]
     """
     Rules
     """
@@ -46162,7 +46162,7 @@ class LogicalRouterVrfBgpPolicyExportRuleArgsDict(TypedDict):
     """
     Name
     """
-    action: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpPolicyExportRuleActionArgs']]]
+    action: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpPolicyExportRuleActionArgsDict']]]
     """
     Action
     """
@@ -46170,7 +46170,7 @@ class LogicalRouterVrfBgpPolicyExportRuleArgsDict(TypedDict):
     """
     Enable
     """
-    match: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpPolicyExportRuleMatchArgs']]]
+    match: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpPolicyExportRuleMatchArgsDict']]]
     """
     Match
     """
@@ -46266,11 +46266,11 @@ class LogicalRouterVrfBgpPolicyExportRuleArgs:
 
 
 class LogicalRouterVrfBgpPolicyExportRuleActionArgsDict(TypedDict):
-    allow: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpPolicyExportRuleActionAllowArgs']]]
+    allow: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpPolicyExportRuleActionAllowArgsDict']]]
     """
     Allow
     """
-    deny: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpPolicyExportRuleActionDenyArgs']]]
+    deny: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpPolicyExportRuleActionDenyArgsDict']]]
     """
     Deny
 
@@ -46321,7 +46321,7 @@ class LogicalRouterVrfBgpPolicyExportRuleActionArgs:
 
 
 class LogicalRouterVrfBgpPolicyExportRuleActionAllowArgsDict(TypedDict):
-    update: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateArgs']]]
+    update: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateArgsDict']]]
     """
     Update
     """
@@ -46350,7 +46350,7 @@ class LogicalRouterVrfBgpPolicyExportRuleActionAllowArgs:
 
 
 class LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateArgsDict(TypedDict):
-    as_path: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateAsPathArgs']]]
+    as_path: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateAsPathArgsDict']]]
     """
     As path
     """
@@ -46358,11 +46358,11 @@ class LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateArgsDict(TypedDict):
     """
     As path limit
     """
-    community: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateCommunityArgs']]]
+    community: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateCommunityArgsDict']]]
     """
     Community
     """
-    extended_community: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateExtendedCommunityArgs']]]
+    extended_community: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateExtendedCommunityArgsDict']]]
     """
     Extended community
     """
@@ -46519,7 +46519,7 @@ class LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateArgs:
 
 
 class LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateAsPathArgsDict(TypedDict):
-    none: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateAsPathNoneArgs']]]
+    none: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateAsPathNoneArgsDict']]]
     """
     None
     """
@@ -46529,7 +46529,7 @@ class LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateAsPathArgsDict(TypedDi
 
     > ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `remove_and_prepend`.
     """
-    remove: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateAsPathRemoveArgs']]]
+    remove: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateAsPathRemoveArgsDict']]]
     """
     Remove
 
@@ -46648,7 +46648,7 @@ class LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateCommunityArgsDict(Type
     """
     Append
     """
-    none: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateCommunityNoneArgs']]]
+    none: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateCommunityNoneArgsDict']]]
     """
     None
 
@@ -46660,7 +46660,7 @@ class LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateCommunityArgsDict(Type
 
     > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `remove_all`, and `remove_regex`.
     """
-    remove_all: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateCommunityRemoveAllArgs']]]
+    remove_all: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateCommunityRemoveAllArgsDict']]]
     """
     Remove all
 
@@ -46799,7 +46799,7 @@ class LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateExtendedCommunityArgsD
     """
     Append
     """
-    none: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateExtendedCommunityNoneArgs']]]
+    none: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateExtendedCommunityNoneArgsDict']]]
     """
     None
 
@@ -46811,7 +46811,7 @@ class LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateExtendedCommunityArgsD
 
     > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `remove_all`, and `remove_regex`.
     """
-    remove_all: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateExtendedCommunityRemoveAllArgs']]]
+    remove_all: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateExtendedCommunityRemoveAllArgsDict']]]
     """
     Remove all
 
@@ -46955,7 +46955,7 @@ class LogicalRouterVrfBgpPolicyExportRuleActionDenyArgs:
 
 
 class LogicalRouterVrfBgpPolicyExportRuleMatchArgsDict(TypedDict):
-    address_prefixes: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['LogicalRouterVrfBgpPolicyExportRuleMatchAddressPrefixArgs']]]]]
+    address_prefixes: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['LogicalRouterVrfBgpPolicyExportRuleMatchAddressPrefixArgsDict']]]]]
     """
     Address prefix
     """
@@ -46963,15 +46963,15 @@ class LogicalRouterVrfBgpPolicyExportRuleMatchArgsDict(TypedDict):
     """
     Afi
     """
-    as_path: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpPolicyExportRuleMatchAsPathArgs']]]
+    as_path: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpPolicyExportRuleMatchAsPathArgsDict']]]
     """
     As path
     """
-    community: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpPolicyExportRuleMatchCommunityArgs']]]
+    community: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpPolicyExportRuleMatchCommunityArgsDict']]]
     """
     Community
     """
-    extended_community: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpPolicyExportRuleMatchExtendedCommunityArgs']]]
+    extended_community: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpPolicyExportRuleMatchExtendedCommunityArgsDict']]]
     """
     Extended community
     """
@@ -47300,7 +47300,7 @@ class LogicalRouterVrfBgpPolicyExportRuleMatchExtendedCommunityArgs:
 
 
 class LogicalRouterVrfBgpPolicyImportArgsDict(TypedDict):
-    rules: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['LogicalRouterVrfBgpPolicyImportRuleArgs']]]]]
+    rules: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['LogicalRouterVrfBgpPolicyImportRuleArgsDict']]]]]
     """
     Rules
     """
@@ -47333,7 +47333,7 @@ class LogicalRouterVrfBgpPolicyImportRuleArgsDict(TypedDict):
     """
     Name
     """
-    action: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpPolicyImportRuleActionArgs']]]
+    action: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpPolicyImportRuleActionArgsDict']]]
     """
     Action
     """
@@ -47341,7 +47341,7 @@ class LogicalRouterVrfBgpPolicyImportRuleArgsDict(TypedDict):
     """
     Enable
     """
-    match: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpPolicyImportRuleMatchArgs']]]
+    match: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpPolicyImportRuleMatchArgsDict']]]
     """
     Match
     """
@@ -47437,11 +47437,11 @@ class LogicalRouterVrfBgpPolicyImportRuleArgs:
 
 
 class LogicalRouterVrfBgpPolicyImportRuleActionArgsDict(TypedDict):
-    allow: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpPolicyImportRuleActionAllowArgs']]]
+    allow: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpPolicyImportRuleActionAllowArgsDict']]]
     """
     Allow
     """
-    deny: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpPolicyImportRuleActionDenyArgs']]]
+    deny: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpPolicyImportRuleActionDenyArgsDict']]]
     """
     Deny
 
@@ -47496,7 +47496,7 @@ class LogicalRouterVrfBgpPolicyImportRuleActionAllowArgsDict(TypedDict):
     """
     Dampening
     """
-    update: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateArgs']]]
+    update: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateArgsDict']]]
     """
     Update
     """
@@ -47541,7 +47541,7 @@ class LogicalRouterVrfBgpPolicyImportRuleActionAllowArgs:
 
 
 class LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateArgsDict(TypedDict):
-    as_path: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateAsPathArgs']]]
+    as_path: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateAsPathArgsDict']]]
     """
     As path
     """
@@ -47549,11 +47549,11 @@ class LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateArgsDict(TypedDict):
     """
     As path limit
     """
-    community: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateCommunityArgs']]]
+    community: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateCommunityArgsDict']]]
     """
     Community
     """
-    extended_community: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateExtendedCommunityArgs']]]
+    extended_community: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateExtendedCommunityArgsDict']]]
     """
     Extended community
     """
@@ -47730,7 +47730,7 @@ class LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateArgs:
 
 
 class LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateAsPathArgsDict(TypedDict):
-    none: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateAsPathNoneArgs']]]
+    none: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateAsPathNoneArgsDict']]]
     """
     None
     """
@@ -47740,7 +47740,7 @@ class LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateAsPathArgsDict(TypedDi
 
     > ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `remove_and_prepend`.
     """
-    remove: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateAsPathRemoveArgs']]]
+    remove: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateAsPathRemoveArgsDict']]]
     """
     Remove
 
@@ -47859,7 +47859,7 @@ class LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateCommunityArgsDict(Type
     """
     Append
     """
-    none: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateCommunityNoneArgs']]]
+    none: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateCommunityNoneArgsDict']]]
     """
     None
 
@@ -47871,7 +47871,7 @@ class LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateCommunityArgsDict(Type
 
     > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `remove_all`, and `remove_regex`.
     """
-    remove_all: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateCommunityRemoveAllArgs']]]
+    remove_all: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateCommunityRemoveAllArgsDict']]]
     """
     Remove all
 
@@ -48010,7 +48010,7 @@ class LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateExtendedCommunityArgsD
     """
     Append
     """
-    none: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateExtendedCommunityNoneArgs']]]
+    none: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateExtendedCommunityNoneArgsDict']]]
     """
     None
 
@@ -48022,7 +48022,7 @@ class LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateExtendedCommunityArgsD
 
     > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `remove_all`, and `remove_regex`.
     """
-    remove_all: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateExtendedCommunityRemoveAllArgs']]]
+    remove_all: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateExtendedCommunityRemoveAllArgsDict']]]
     """
     Remove all
 
@@ -48166,7 +48166,7 @@ class LogicalRouterVrfBgpPolicyImportRuleActionDenyArgs:
 
 
 class LogicalRouterVrfBgpPolicyImportRuleMatchArgsDict(TypedDict):
-    address_prefixes: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['LogicalRouterVrfBgpPolicyImportRuleMatchAddressPrefixArgs']]]]]
+    address_prefixes: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['LogicalRouterVrfBgpPolicyImportRuleMatchAddressPrefixArgsDict']]]]]
     """
     Address prefix
     """
@@ -48174,15 +48174,15 @@ class LogicalRouterVrfBgpPolicyImportRuleMatchArgsDict(TypedDict):
     """
     Afi
     """
-    as_path: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpPolicyImportRuleMatchAsPathArgs']]]
+    as_path: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpPolicyImportRuleMatchAsPathArgsDict']]]
     """
     As path
     """
-    community: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpPolicyImportRuleMatchCommunityArgs']]]
+    community: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpPolicyImportRuleMatchCommunityArgsDict']]]
     """
     Community
     """
-    extended_community: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpPolicyImportRuleMatchExtendedCommunityArgs']]]
+    extended_community: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpPolicyImportRuleMatchExtendedCommunityArgsDict']]]
     """
     Extended community
     """
@@ -48738,11 +48738,11 @@ class LogicalRouterVrfBgpRedistRuleArgs:
 
 
 class LogicalRouterVrfBgpRedistributionProfileArgsDict(TypedDict):
-    ipv4: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpRedistributionProfileIpv4Args']]]
+    ipv4: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpRedistributionProfileIpv4ArgsDict']]]
     """
     Ipv4
     """
-    ipv6: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpRedistributionProfileIpv6Args']]]
+    ipv6: NotRequired[pulumi.Input[Optional['LogicalRouterVrfBgpRedistributionProfileIpv6ArgsDict']]]
     """
     Ipv6
     """
@@ -48845,7 +48845,7 @@ class LogicalRouterVrfBgpRedistributionProfileIpv6Args:
 
 
 class LogicalRouterVrfEcmpArgsDict(TypedDict):
-    algorithm: NotRequired[pulumi.Input[Optional['LogicalRouterVrfEcmpAlgorithmArgs']]]
+    algorithm: NotRequired[pulumi.Input[Optional['LogicalRouterVrfEcmpAlgorithmArgsDict']]]
     """
     Algorithm
     """
@@ -48954,23 +48954,23 @@ class LogicalRouterVrfEcmpArgs:
 
 
 class LogicalRouterVrfEcmpAlgorithmArgsDict(TypedDict):
-    balanced_round_robin: NotRequired[pulumi.Input[Optional['LogicalRouterVrfEcmpAlgorithmBalancedRoundRobinArgs']]]
+    balanced_round_robin: NotRequired[pulumi.Input[Optional['LogicalRouterVrfEcmpAlgorithmBalancedRoundRobinArgsDict']]]
     """
     Balanced round robin
     """
-    ip_hash: NotRequired[pulumi.Input[Optional['LogicalRouterVrfEcmpAlgorithmIpHashArgs']]]
+    ip_hash: NotRequired[pulumi.Input[Optional['LogicalRouterVrfEcmpAlgorithmIpHashArgsDict']]]
     """
     Ip hash
 
     > ℹ️ **Note:** You must specify exactly one of `balanced_round_robin`, `ip_hash`, `ip_modulo`, and `weighted_round_robin`.
     """
-    ip_modulo: NotRequired[pulumi.Input[Optional['LogicalRouterVrfEcmpAlgorithmIpModuloArgs']]]
+    ip_modulo: NotRequired[pulumi.Input[Optional['LogicalRouterVrfEcmpAlgorithmIpModuloArgsDict']]]
     """
     Ip modulo
 
     > ℹ️ **Note:** You must specify exactly one of `balanced_round_robin`, `ip_hash`, `ip_modulo`, and `weighted_round_robin`.
     """
-    weighted_round_robin: NotRequired[pulumi.Input[Optional['LogicalRouterVrfEcmpAlgorithmWeightedRoundRobinArgs']]]
+    weighted_round_robin: NotRequired[pulumi.Input[Optional['LogicalRouterVrfEcmpAlgorithmWeightedRoundRobinArgsDict']]]
     """
     Weighted round robin
 
@@ -49148,7 +49148,7 @@ class LogicalRouterVrfEcmpAlgorithmIpModuloArgs:
 
 
 class LogicalRouterVrfEcmpAlgorithmWeightedRoundRobinArgsDict(TypedDict):
-    interfaces: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['LogicalRouterVrfEcmpAlgorithmWeightedRoundRobinInterfaceArgs']]]]]
+    interfaces: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['LogicalRouterVrfEcmpAlgorithmWeightedRoundRobinInterfaceArgsDict']]]]]
     """
     Interface
     """
@@ -49233,11 +49233,11 @@ class LogicalRouterVrfMulticastArgsDict(TypedDict):
     """
     Enable v6
     """
-    igmp: NotRequired[pulumi.Input[Optional['LogicalRouterVrfMulticastIgmpArgs']]]
+    igmp: NotRequired[pulumi.Input[Optional['LogicalRouterVrfMulticastIgmpArgsDict']]]
     """
     Igmp
     """
-    interface_groups: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['LogicalRouterVrfMulticastInterfaceGroupArgs']]]]]
+    interface_groups: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['LogicalRouterVrfMulticastInterfaceGroupArgsDict']]]]]
     """
     Interface group
     """
@@ -49245,11 +49245,11 @@ class LogicalRouterVrfMulticastArgsDict(TypedDict):
     """
     Mode
     """
-    msdp: NotRequired[pulumi.Input[Optional['LogicalRouterVrfMulticastMsdpArgs']]]
+    msdp: NotRequired[pulumi.Input[Optional['LogicalRouterVrfMulticastMsdpArgsDict']]]
     """
     Msdp
     """
-    pim: NotRequired[pulumi.Input[Optional['LogicalRouterVrfMulticastPimArgs']]]
+    pim: NotRequired[pulumi.Input[Optional['LogicalRouterVrfMulticastPimArgsDict']]]
     """
     Pim
     """
@@ -49257,19 +49257,19 @@ class LogicalRouterVrfMulticastArgsDict(TypedDict):
     """
     Route ageout time
     """
-    rp: NotRequired[pulumi.Input[Optional['LogicalRouterVrfMulticastRpArgs']]]
+    rp: NotRequired[pulumi.Input[Optional['LogicalRouterVrfMulticastRpArgsDict']]]
     """
     Rp
     """
-    spt_thresholds: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['LogicalRouterVrfMulticastSptThresholdArgs']]]]]
+    spt_thresholds: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['LogicalRouterVrfMulticastSptThresholdArgsDict']]]]]
     """
     Spt threshold
     """
-    ssm_address_spaces: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['LogicalRouterVrfMulticastSsmAddressSpaceArgs']]]]]
+    ssm_address_spaces: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['LogicalRouterVrfMulticastSsmAddressSpaceArgsDict']]]]]
     """
     Ssm address space
     """
-    static_routes: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['LogicalRouterVrfMulticastStaticRouteArgs']]]]]
+    static_routes: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['LogicalRouterVrfMulticastStaticRouteArgsDict']]]]]
     """
     Static route
     """
@@ -49474,7 +49474,7 @@ class LogicalRouterVrfMulticastArgs:
 
 
 class LogicalRouterVrfMulticastIgmpArgsDict(TypedDict):
-    dynamic: NotRequired[pulumi.Input[Optional['LogicalRouterVrfMulticastIgmpDynamicArgs']]]
+    dynamic: NotRequired[pulumi.Input[Optional['LogicalRouterVrfMulticastIgmpDynamicArgsDict']]]
     """
     Dynamic
     """
@@ -49482,7 +49482,7 @@ class LogicalRouterVrfMulticastIgmpArgsDict(TypedDict):
     """
     Enable
     """
-    statics: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['LogicalRouterVrfMulticastIgmpStaticArgs']]]]]
+    statics: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['LogicalRouterVrfMulticastIgmpStaticArgsDict']]]]]
     """
     Static
     """
@@ -49543,7 +49543,7 @@ class LogicalRouterVrfMulticastIgmpArgs:
 
 
 class LogicalRouterVrfMulticastIgmpDynamicArgsDict(TypedDict):
-    interfaces: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['LogicalRouterVrfMulticastIgmpDynamicInterfaceArgs']]]]]
+    interfaces: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['LogicalRouterVrfMulticastIgmpDynamicInterfaceArgsDict']]]]]
     """
     Interface
     """
@@ -49836,11 +49836,11 @@ class LogicalRouterVrfMulticastInterfaceGroupArgsDict(TypedDict):
     """
     Description
     """
-    group_permission: NotRequired[pulumi.Input[Optional['LogicalRouterVrfMulticastInterfaceGroupGroupPermissionArgs']]]
+    group_permission: NotRequired[pulumi.Input[Optional['LogicalRouterVrfMulticastInterfaceGroupGroupPermissionArgsDict']]]
     """
     Group permission
     """
-    igmp: NotRequired[pulumi.Input[Optional['LogicalRouterVrfMulticastInterfaceGroupIgmpArgs']]]
+    igmp: NotRequired[pulumi.Input[Optional['LogicalRouterVrfMulticastInterfaceGroupIgmpArgsDict']]]
     """
     Igmp
     """
@@ -49848,7 +49848,7 @@ class LogicalRouterVrfMulticastInterfaceGroupArgsDict(TypedDict):
     """
     Interface
     """
-    pim: NotRequired[pulumi.Input[Optional['LogicalRouterVrfMulticastInterfaceGroupPimArgs']]]
+    pim: NotRequired[pulumi.Input[Optional['LogicalRouterVrfMulticastInterfaceGroupPimArgsDict']]]
     """
     Pim
     """
@@ -49956,11 +49956,11 @@ class LogicalRouterVrfMulticastInterfaceGroupArgs:
 
 
 class LogicalRouterVrfMulticastInterfaceGroupGroupPermissionArgsDict(TypedDict):
-    any_source_multicasts: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['LogicalRouterVrfMulticastInterfaceGroupGroupPermissionAnySourceMulticastArgs']]]]]
+    any_source_multicasts: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['LogicalRouterVrfMulticastInterfaceGroupGroupPermissionAnySourceMulticastArgsDict']]]]]
     """
     Any source multicast
     """
-    source_specific_multicasts: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['LogicalRouterVrfMulticastInterfaceGroupGroupPermissionSourceSpecificMulticastArgs']]]]]
+    source_specific_multicasts: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['LogicalRouterVrfMulticastInterfaceGroupGroupPermissionSourceSpecificMulticastArgsDict']]]]]
     """
     Source specific multicast
     """
@@ -50390,7 +50390,7 @@ class LogicalRouterVrfMulticastInterfaceGroupIgmpArgs:
 
 
 class LogicalRouterVrfMulticastInterfaceGroupPimArgsDict(TypedDict):
-    allowed_neighbors: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['LogicalRouterVrfMulticastInterfaceGroupPimAllowedNeighborArgs']]]]]
+    allowed_neighbors: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['LogicalRouterVrfMulticastInterfaceGroupPimAllowedNeighborArgsDict']]]]]
     """
     Allowed neighbors
     """
@@ -50579,11 +50579,11 @@ class LogicalRouterVrfMulticastMsdpArgsDict(TypedDict):
     """
     Global timer
     """
-    originator_id: NotRequired[pulumi.Input[Optional['LogicalRouterVrfMulticastMsdpOriginatorIdArgs']]]
+    originator_id: NotRequired[pulumi.Input[Optional['LogicalRouterVrfMulticastMsdpOriginatorIdArgsDict']]]
     """
     Originator id
     """
-    peers: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['LogicalRouterVrfMulticastMsdpPeerArgs']]]]]
+    peers: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['LogicalRouterVrfMulticastMsdpPeerArgsDict']]]]]
     """
     Peer
     """
@@ -50741,7 +50741,7 @@ class LogicalRouterVrfMulticastMsdpPeerArgsDict(TypedDict):
     """
     Inbound sa filter
     """
-    local_address: NotRequired[pulumi.Input[Optional['LogicalRouterVrfMulticastMsdpPeerLocalAddressArgs']]]
+    local_address: NotRequired[pulumi.Input[Optional['LogicalRouterVrfMulticastMsdpPeerLocalAddressArgsDict']]]
     """
     Local address
     """
@@ -50753,7 +50753,7 @@ class LogicalRouterVrfMulticastMsdpPeerArgsDict(TypedDict):
     """
     Outbound sa filter
     """
-    peer_address: NotRequired[pulumi.Input[Optional['LogicalRouterVrfMulticastMsdpPeerPeerAddressArgs']]]
+    peer_address: NotRequired[pulumi.Input[Optional['LogicalRouterVrfMulticastMsdpPeerPeerAddressArgsDict']]]
     """
     Peer address
     """
@@ -51029,7 +51029,7 @@ class LogicalRouterVrfMulticastPimArgsDict(TypedDict):
     """
     If timer global
     """
-    interfaces: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['LogicalRouterVrfMulticastPimInterfaceArgs']]]]]
+    interfaces: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['LogicalRouterVrfMulticastPimInterfaceArgsDict']]]]]
     """
     Interface
     """
@@ -51037,7 +51037,7 @@ class LogicalRouterVrfMulticastPimArgsDict(TypedDict):
     """
     Route ageout time
     """
-    rp: NotRequired[pulumi.Input[Optional['LogicalRouterVrfMulticastPimRpArgs']]]
+    rp: NotRequired[pulumi.Input[Optional['LogicalRouterVrfMulticastPimRpArgsDict']]]
     """
     Rp
     """
@@ -51045,11 +51045,11 @@ class LogicalRouterVrfMulticastPimArgsDict(TypedDict):
     """
     Rpf lookup mode
     """
-    spt_thresholds: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['LogicalRouterVrfMulticastPimSptThresholdArgs']]]]]
+    spt_thresholds: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['LogicalRouterVrfMulticastPimSptThresholdArgsDict']]]]]
     """
     Spt threshold
     """
-    ssm_address_space: NotRequired[pulumi.Input[Optional['LogicalRouterVrfMulticastPimSsmAddressSpaceArgs']]]
+    ssm_address_space: NotRequired[pulumi.Input[Optional['LogicalRouterVrfMulticastPimSsmAddressSpaceArgsDict']]]
     """
     Ssm address space
     """
@@ -51334,11 +51334,11 @@ class LogicalRouterVrfMulticastPimInterfaceArgs:
 
 
 class LogicalRouterVrfMulticastPimRpArgsDict(TypedDict):
-    external_rps: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['LogicalRouterVrfMulticastPimRpExternalRpArgs']]]]]
+    external_rps: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['LogicalRouterVrfMulticastPimRpExternalRpArgsDict']]]]]
     """
     External rp
     """
-    local_rp: NotRequired[pulumi.Input[Optional['LogicalRouterVrfMulticastPimRpLocalRpArgs']]]
+    local_rp: NotRequired[pulumi.Input[Optional['LogicalRouterVrfMulticastPimRpLocalRpArgsDict']]]
     """
     Local rp
     """
@@ -51452,11 +51452,11 @@ class LogicalRouterVrfMulticastPimRpExternalRpArgs:
 
 
 class LogicalRouterVrfMulticastPimRpLocalRpArgsDict(TypedDict):
-    candidate_rp: NotRequired[pulumi.Input[Optional['LogicalRouterVrfMulticastPimRpLocalRpCandidateRpArgs']]]
+    candidate_rp: NotRequired[pulumi.Input[Optional['LogicalRouterVrfMulticastPimRpLocalRpCandidateRpArgsDict']]]
     """
     Candidate rp
     """
-    static_rp: NotRequired[pulumi.Input[Optional['LogicalRouterVrfMulticastPimRpLocalRpStaticRpArgs']]]
+    static_rp: NotRequired[pulumi.Input[Optional['LogicalRouterVrfMulticastPimRpLocalRpStaticRpArgsDict']]]
     """
     Static rp
 
@@ -51782,11 +51782,11 @@ class LogicalRouterVrfMulticastPimSsmAddressSpaceArgs:
 
 
 class LogicalRouterVrfMulticastRpArgsDict(TypedDict):
-    external_rps: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['LogicalRouterVrfMulticastRpExternalRpArgs']]]]]
+    external_rps: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['LogicalRouterVrfMulticastRpExternalRpArgsDict']]]]]
     """
     External rp
     """
-    local_rp: NotRequired[pulumi.Input[Optional['LogicalRouterVrfMulticastRpLocalRpArgs']]]
+    local_rp: NotRequired[pulumi.Input[Optional['LogicalRouterVrfMulticastRpLocalRpArgsDict']]]
     """
     Local rp
     """
@@ -51899,11 +51899,11 @@ class LogicalRouterVrfMulticastRpExternalRpArgs:
 
 
 class LogicalRouterVrfMulticastRpLocalRpArgsDict(TypedDict):
-    candidate_rp: NotRequired[pulumi.Input[Optional['LogicalRouterVrfMulticastRpLocalRpCandidateRpArgs']]]
+    candidate_rp: NotRequired[pulumi.Input[Optional['LogicalRouterVrfMulticastRpLocalRpCandidateRpArgsDict']]]
     """
     Candidate rp
     """
-    static_rp: NotRequired[pulumi.Input[Optional['LogicalRouterVrfMulticastRpLocalRpStaticRpArgs']]]
+    static_rp: NotRequired[pulumi.Input[Optional['LogicalRouterVrfMulticastRpLocalRpStaticRpArgsDict']]]
     """
     Static rp
 
@@ -52280,7 +52280,7 @@ class LogicalRouterVrfMulticastStaticRouteArgsDict(TypedDict):
     """
     Interface
     """
-    nexthop: NotRequired[pulumi.Input[Optional['LogicalRouterVrfMulticastStaticRouteNexthopArgs']]]
+    nexthop: NotRequired[pulumi.Input[Optional['LogicalRouterVrfMulticastStaticRouteNexthopArgsDict']]]
     """
     Nexthop
     """
@@ -52409,11 +52409,11 @@ class LogicalRouterVrfOspfArgsDict(TypedDict):
     """
     Allow redist default route
     """
-    areas: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['LogicalRouterVrfOspfAreaArgs']]]]]
+    areas: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['LogicalRouterVrfOspfAreaArgsDict']]]]]
     """
     Area
     """
-    auth_profiles: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['LogicalRouterVrfOspfAuthProfileArgs']]]]]
+    auth_profiles: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['LogicalRouterVrfOspfAuthProfileArgsDict']]]]]
     """
     Auth profile
     """
@@ -52421,15 +52421,15 @@ class LogicalRouterVrfOspfArgsDict(TypedDict):
     """
     Enable
     """
-    export_rules: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['LogicalRouterVrfOspfExportRuleArgs']]]]]
+    export_rules: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['LogicalRouterVrfOspfExportRuleArgsDict']]]]]
     """
     Export rules
     """
-    flood_prevention: NotRequired[pulumi.Input[Optional['LogicalRouterVrfOspfFloodPreventionArgs']]]
+    flood_prevention: NotRequired[pulumi.Input[Optional['LogicalRouterVrfOspfFloodPreventionArgsDict']]]
     """
     Flood prevention
     """
-    global_bfd: NotRequired[pulumi.Input[Optional['LogicalRouterVrfOspfGlobalBfdArgs']]]
+    global_bfd: NotRequired[pulumi.Input[Optional['LogicalRouterVrfOspfGlobalBfdArgsDict']]]
     """
     Global bfd
     """
@@ -52437,7 +52437,7 @@ class LogicalRouterVrfOspfArgsDict(TypedDict):
     """
     Global if timer
     """
-    graceful_restart: NotRequired[pulumi.Input[Optional['LogicalRouterVrfOspfGracefulRestartArgs']]]
+    graceful_restart: NotRequired[pulumi.Input[Optional['LogicalRouterVrfOspfGracefulRestartArgsDict']]]
     """
     Graceful restart
     """
@@ -52461,7 +52461,7 @@ class LogicalRouterVrfOspfArgsDict(TypedDict):
     """
     Spf timer
     """
-    vr_timers: NotRequired[pulumi.Input[Optional['LogicalRouterVrfOspfVrTimersArgs']]]
+    vr_timers: NotRequired[pulumi.Input[Optional['LogicalRouterVrfOspfVrTimersArgsDict']]]
     """
     Vr timers
     """
@@ -52722,23 +52722,23 @@ class LogicalRouterVrfOspfAreaArgsDict(TypedDict):
     """
     Authentication
     """
-    interfaces: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['LogicalRouterVrfOspfAreaInterfaceArgs']]]]]
+    interfaces: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['LogicalRouterVrfOspfAreaInterfaceArgsDict']]]]]
     """
     Interface
     """
-    ranges: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['LogicalRouterVrfOspfAreaRangeArgs']]]]]
+    ranges: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['LogicalRouterVrfOspfAreaRangeArgsDict']]]]]
     """
     Range
     """
-    type: NotRequired[pulumi.Input[Optional['LogicalRouterVrfOspfAreaTypeArgs']]]
+    type: NotRequired[pulumi.Input[Optional['LogicalRouterVrfOspfAreaTypeArgsDict']]]
     """
     Type
     """
-    virtual_links: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['LogicalRouterVrfOspfAreaVirtualLinkArgs']]]]]
+    virtual_links: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['LogicalRouterVrfOspfAreaVirtualLinkArgsDict']]]]]
     """
     Virtual link
     """
-    vr_ranges: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['LogicalRouterVrfOspfAreaVrRangeArgs']]]]]
+    vr_ranges: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['LogicalRouterVrfOspfAreaVrRangeArgsDict']]]]]
     """
     Vr range
     """
@@ -52870,7 +52870,7 @@ class LogicalRouterVrfOspfAreaInterfaceArgsDict(TypedDict):
     """
     Authentication
     """
-    bfd: NotRequired[pulumi.Input[Optional['LogicalRouterVrfOspfAreaInterfaceBfdArgs']]]
+    bfd: NotRequired[pulumi.Input[Optional['LogicalRouterVrfOspfAreaInterfaceBfdArgsDict']]]
     """
     Bfd
     """
@@ -52878,7 +52878,7 @@ class LogicalRouterVrfOspfAreaInterfaceArgsDict(TypedDict):
     """
     Enable
     """
-    link_type: NotRequired[pulumi.Input[Optional['LogicalRouterVrfOspfAreaInterfaceLinkTypeArgs']]]
+    link_type: NotRequired[pulumi.Input[Optional['LogicalRouterVrfOspfAreaInterfaceLinkTypeArgsDict']]]
     """
     Link type
     """
@@ -52902,7 +52902,7 @@ class LogicalRouterVrfOspfAreaInterfaceArgsDict(TypedDict):
     """
     Timing
     """
-    vr_timing: NotRequired[pulumi.Input[Optional['LogicalRouterVrfOspfAreaInterfaceVrTimingArgs']]]
+    vr_timing: NotRequired[pulumi.Input[Optional['LogicalRouterVrfOspfAreaInterfaceVrTimingArgsDict']]]
     """
     Vr timing
     """
@@ -53119,17 +53119,17 @@ class LogicalRouterVrfOspfAreaInterfaceBfdArgs:
 
 
 class LogicalRouterVrfOspfAreaInterfaceLinkTypeArgsDict(TypedDict):
-    broadcast: NotRequired[pulumi.Input[Optional['LogicalRouterVrfOspfAreaInterfaceLinkTypeBroadcastArgs']]]
+    broadcast: NotRequired[pulumi.Input[Optional['LogicalRouterVrfOspfAreaInterfaceLinkTypeBroadcastArgsDict']]]
     """
     Broadcast
     """
-    p2mp: NotRequired[pulumi.Input[Optional['LogicalRouterVrfOspfAreaInterfaceLinkTypeP2mpArgs']]]
+    p2mp: NotRequired[pulumi.Input[Optional['LogicalRouterVrfOspfAreaInterfaceLinkTypeP2mpArgsDict']]]
     """
     P2mp
 
     > ℹ️ **Note:** You must specify exactly one of `broadcast`, `p2mp`, and `p2p`.
     """
-    p2p: NotRequired[pulumi.Input[Optional['LogicalRouterVrfOspfAreaInterfaceLinkTypeP2pArgs']]]
+    p2p: NotRequired[pulumi.Input[Optional['LogicalRouterVrfOspfAreaInterfaceLinkTypeP2pArgsDict']]]
     """
     P2p
 
@@ -53209,7 +53209,7 @@ class LogicalRouterVrfOspfAreaInterfaceLinkTypeBroadcastArgs:
 
 
 class LogicalRouterVrfOspfAreaInterfaceLinkTypeP2mpArgsDict(TypedDict):
-    neighbors: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['LogicalRouterVrfOspfAreaInterfaceLinkTypeP2mpNeighborArgs']]]]]
+    neighbors: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['LogicalRouterVrfOspfAreaInterfaceLinkTypeP2mpNeighborArgsDict']]]]]
     """
     Neighbor
     """
@@ -53472,17 +53472,17 @@ class LogicalRouterVrfOspfAreaRangeArgs:
 
 
 class LogicalRouterVrfOspfAreaTypeArgsDict(TypedDict):
-    normal: NotRequired[pulumi.Input[Optional['LogicalRouterVrfOspfAreaTypeNormalArgs']]]
+    normal: NotRequired[pulumi.Input[Optional['LogicalRouterVrfOspfAreaTypeNormalArgsDict']]]
     """
     Normal
     """
-    nssa: NotRequired[pulumi.Input[Optional['LogicalRouterVrfOspfAreaTypeNssaArgs']]]
+    nssa: NotRequired[pulumi.Input[Optional['LogicalRouterVrfOspfAreaTypeNssaArgsDict']]]
     """
     Nssa
 
     > ℹ️ **Note:** You must specify exactly one of `normal`, `nssa`, and `stub`.
     """
-    stub: NotRequired[pulumi.Input[Optional['LogicalRouterVrfOspfAreaTypeStubArgs']]]
+    stub: NotRequired[pulumi.Input[Optional['LogicalRouterVrfOspfAreaTypeStubArgsDict']]]
     """
     Stub
 
@@ -53553,7 +53553,7 @@ class LogicalRouterVrfOspfAreaTypeArgs:
 
 
 class LogicalRouterVrfOspfAreaTypeNormalArgsDict(TypedDict):
-    abr: NotRequired[pulumi.Input[Optional['LogicalRouterVrfOspfAreaTypeNormalAbrArgs']]]
+    abr: NotRequired[pulumi.Input[Optional['LogicalRouterVrfOspfAreaTypeNormalAbrArgsDict']]]
     """
     Abr
     """
@@ -53671,7 +53671,7 @@ class LogicalRouterVrfOspfAreaTypeNormalAbrArgs:
 
 
 class LogicalRouterVrfOspfAreaTypeNssaArgsDict(TypedDict):
-    abr: NotRequired[pulumi.Input[Optional['LogicalRouterVrfOspfAreaTypeNssaAbrArgs']]]
+    abr: NotRequired[pulumi.Input[Optional['LogicalRouterVrfOspfAreaTypeNssaAbrArgsDict']]]
     """
     Abr
     """
@@ -53679,11 +53679,11 @@ class LogicalRouterVrfOspfAreaTypeNssaArgsDict(TypedDict):
     """
     Accept summary
     """
-    default_information_originate: NotRequired[pulumi.Input[Optional['LogicalRouterVrfOspfAreaTypeNssaDefaultInformationOriginateArgs']]]
+    default_information_originate: NotRequired[pulumi.Input[Optional['LogicalRouterVrfOspfAreaTypeNssaDefaultInformationOriginateArgsDict']]]
     """
     Default information originate
     """
-    default_route: NotRequired[pulumi.Input[Optional['LogicalRouterVrfOspfAreaTypeNssaDefaultRouteArgs']]]
+    default_route: NotRequired[pulumi.Input[Optional['LogicalRouterVrfOspfAreaTypeNssaDefaultRouteArgsDict']]]
     """
     Default route
     """
@@ -53691,7 +53691,7 @@ class LogicalRouterVrfOspfAreaTypeNssaArgsDict(TypedDict):
     """
     No summary
     """
-    nssa_ext_ranges: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['LogicalRouterVrfOspfAreaTypeNssaNssaExtRangeArgs']]]]]
+    nssa_ext_ranges: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['LogicalRouterVrfOspfAreaTypeNssaNssaExtRangeArgsDict']]]]]
     """
     Nssa ext range
     """
@@ -53812,7 +53812,7 @@ class LogicalRouterVrfOspfAreaTypeNssaAbrArgsDict(TypedDict):
     """
     Inbound filter list
     """
-    nssa_ext_ranges: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['LogicalRouterVrfOspfAreaTypeNssaAbrNssaExtRangeArgs']]]]]
+    nssa_ext_ranges: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['LogicalRouterVrfOspfAreaTypeNssaAbrNssaExtRangeArgsDict']]]]]
     """
     Nssa ext range
     """
@@ -54026,11 +54026,11 @@ class LogicalRouterVrfOspfAreaTypeNssaDefaultInformationOriginateArgs:
 
 
 class LogicalRouterVrfOspfAreaTypeNssaDefaultRouteArgsDict(TypedDict):
-    advertise: NotRequired[pulumi.Input[Optional['LogicalRouterVrfOspfAreaTypeNssaDefaultRouteAdvertiseArgs']]]
+    advertise: NotRequired[pulumi.Input[Optional['LogicalRouterVrfOspfAreaTypeNssaDefaultRouteAdvertiseArgsDict']]]
     """
     Advertise
     """
-    disable: NotRequired[pulumi.Input[Optional['LogicalRouterVrfOspfAreaTypeNssaDefaultRouteDisableArgs']]]
+    disable: NotRequired[pulumi.Input[Optional['LogicalRouterVrfOspfAreaTypeNssaDefaultRouteDisableArgsDict']]]
     """
     Disable
 
@@ -54143,11 +54143,11 @@ class LogicalRouterVrfOspfAreaTypeNssaNssaExtRangeArgsDict(TypedDict):
     """
     Name
     """
-    advertise: NotRequired[pulumi.Input[Optional['LogicalRouterVrfOspfAreaTypeNssaNssaExtRangeAdvertiseArgs']]]
+    advertise: NotRequired[pulumi.Input[Optional['LogicalRouterVrfOspfAreaTypeNssaNssaExtRangeAdvertiseArgsDict']]]
     """
     Advertise
     """
-    suppress: NotRequired[pulumi.Input[Optional['LogicalRouterVrfOspfAreaTypeNssaNssaExtRangeSuppressArgs']]]
+    suppress: NotRequired[pulumi.Input[Optional['LogicalRouterVrfOspfAreaTypeNssaNssaExtRangeSuppressArgsDict']]]
     """
     Suppress
     """
@@ -54225,7 +54225,7 @@ class LogicalRouterVrfOspfAreaTypeNssaNssaExtRangeSuppressArgs:
 
 
 class LogicalRouterVrfOspfAreaTypeStubArgsDict(TypedDict):
-    abr: NotRequired[pulumi.Input[Optional['LogicalRouterVrfOspfAreaTypeStubAbrArgs']]]
+    abr: NotRequired[pulumi.Input[Optional['LogicalRouterVrfOspfAreaTypeStubAbrArgsDict']]]
     """
     Abr
     """
@@ -54233,7 +54233,7 @@ class LogicalRouterVrfOspfAreaTypeStubArgsDict(TypedDict):
     """
     Accept summary
     """
-    default_route: NotRequired[pulumi.Input[Optional['LogicalRouterVrfOspfAreaTypeStubDefaultRouteArgs']]]
+    default_route: NotRequired[pulumi.Input[Optional['LogicalRouterVrfOspfAreaTypeStubDefaultRouteArgsDict']]]
     """
     Default route
     """
@@ -54423,11 +54423,11 @@ class LogicalRouterVrfOspfAreaTypeStubAbrArgs:
 
 
 class LogicalRouterVrfOspfAreaTypeStubDefaultRouteArgsDict(TypedDict):
-    advertise: NotRequired[pulumi.Input[Optional['LogicalRouterVrfOspfAreaTypeStubDefaultRouteAdvertiseArgs']]]
+    advertise: NotRequired[pulumi.Input[Optional['LogicalRouterVrfOspfAreaTypeStubDefaultRouteAdvertiseArgsDict']]]
     """
     Advertise
     """
-    disable: NotRequired[pulumi.Input[Optional['LogicalRouterVrfOspfAreaTypeStubDefaultRouteDisableArgs']]]
+    disable: NotRequired[pulumi.Input[Optional['LogicalRouterVrfOspfAreaTypeStubDefaultRouteDisableArgsDict']]]
     """
     Disable
 
@@ -54524,7 +54524,7 @@ class LogicalRouterVrfOspfAreaVirtualLinkArgsDict(TypedDict):
     """
     Authentication
     """
-    bfd: NotRequired[pulumi.Input[Optional['LogicalRouterVrfOspfAreaVirtualLinkBfdArgs']]]
+    bfd: NotRequired[pulumi.Input[Optional['LogicalRouterVrfOspfAreaVirtualLinkBfdArgsDict']]]
     """
     Bfd
     """
@@ -54556,7 +54556,7 @@ class LogicalRouterVrfOspfAreaVirtualLinkArgsDict(TypedDict):
     """
     Transit area id
     """
-    vr_timing: NotRequired[pulumi.Input[Optional['LogicalRouterVrfOspfAreaVirtualLinkVrTimingArgs']]]
+    vr_timing: NotRequired[pulumi.Input[Optional['LogicalRouterVrfOspfAreaVirtualLinkVrTimingArgsDict']]]
     """
     Vr timing
     """
@@ -54866,11 +54866,11 @@ class LogicalRouterVrfOspfAreaVrRangeArgsDict(TypedDict):
     """
     Name
     """
-    advertise: NotRequired[pulumi.Input[Optional['LogicalRouterVrfOspfAreaVrRangeAdvertiseArgs']]]
+    advertise: NotRequired[pulumi.Input[Optional['LogicalRouterVrfOspfAreaVrRangeAdvertiseArgsDict']]]
     """
     Advertise
     """
-    suppress: NotRequired[pulumi.Input[Optional['LogicalRouterVrfOspfAreaVrRangeSuppressArgs']]]
+    suppress: NotRequired[pulumi.Input[Optional['LogicalRouterVrfOspfAreaVrRangeSuppressArgsDict']]]
     """
     Suppress
     """
@@ -54952,7 +54952,7 @@ class LogicalRouterVrfOspfAuthProfileArgsDict(TypedDict):
     """
     Name
     """
-    md5s: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['LogicalRouterVrfOspfAuthProfileMd5Args']]]]]
+    md5s: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['LogicalRouterVrfOspfAuthProfileMd5ArgsDict']]]]]
     """
     Md5
     """
@@ -55172,11 +55172,11 @@ class LogicalRouterVrfOspfExportRuleArgs:
 
 
 class LogicalRouterVrfOspfFloodPreventionArgsDict(TypedDict):
-    hello: NotRequired[pulumi.Input[Optional['LogicalRouterVrfOspfFloodPreventionHelloArgs']]]
+    hello: NotRequired[pulumi.Input[Optional['LogicalRouterVrfOspfFloodPreventionHelloArgsDict']]]
     """
     Hello
     """
-    lsa: NotRequired[pulumi.Input[Optional['LogicalRouterVrfOspfFloodPreventionLsaArgs']]]
+    lsa: NotRequired[pulumi.Input[Optional['LogicalRouterVrfOspfFloodPreventionLsaArgsDict']]]
     """
     Lsa
     """
@@ -55510,11 +55510,11 @@ class LogicalRouterVrfOspfv3ArgsDict(TypedDict):
     """
     Allow redist default route
     """
-    areas: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['LogicalRouterVrfOspfv3AreaArgs']]]]]
+    areas: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['LogicalRouterVrfOspfv3AreaArgsDict']]]]]
     """
     Area
     """
-    auth_profiles: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['LogicalRouterVrfOspfv3AuthProfileArgs']]]]]
+    auth_profiles: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['LogicalRouterVrfOspfv3AuthProfileArgsDict']]]]]
     """
     Auth profile
     """
@@ -55526,11 +55526,11 @@ class LogicalRouterVrfOspfv3ArgsDict(TypedDict):
     """
     Enable
     """
-    export_rules: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['LogicalRouterVrfOspfv3ExportRuleArgs']]]]]
+    export_rules: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['LogicalRouterVrfOspfv3ExportRuleArgsDict']]]]]
     """
     Export rules
     """
-    global_bfd: NotRequired[pulumi.Input[Optional['LogicalRouterVrfOspfv3GlobalBfdArgs']]]
+    global_bfd: NotRequired[pulumi.Input[Optional['LogicalRouterVrfOspfv3GlobalBfdArgsDict']]]
     """
     Global bfd
     """
@@ -55538,7 +55538,7 @@ class LogicalRouterVrfOspfv3ArgsDict(TypedDict):
     """
     Global if timer
     """
-    graceful_restart: NotRequired[pulumi.Input[Optional['LogicalRouterVrfOspfv3GracefulRestartArgs']]]
+    graceful_restart: NotRequired[pulumi.Input[Optional['LogicalRouterVrfOspfv3GracefulRestartArgsDict']]]
     """
     Graceful restart
     """
@@ -55558,7 +55558,7 @@ class LogicalRouterVrfOspfv3ArgsDict(TypedDict):
     """
     Spf timer
     """
-    vr_timers: NotRequired[pulumi.Input[Optional['LogicalRouterVrfOspfv3VrTimersArgs']]]
+    vr_timers: NotRequired[pulumi.Input[Optional['LogicalRouterVrfOspfv3VrTimersArgsDict']]]
     """
     Vr timers
     """
@@ -55803,23 +55803,23 @@ class LogicalRouterVrfOspfv3AreaArgsDict(TypedDict):
     """
     Authentication
     """
-    interfaces: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['LogicalRouterVrfOspfv3AreaInterfaceArgs']]]]]
+    interfaces: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['LogicalRouterVrfOspfv3AreaInterfaceArgsDict']]]]]
     """
     Interface
     """
-    ranges: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['LogicalRouterVrfOspfv3AreaRangeArgs']]]]]
+    ranges: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['LogicalRouterVrfOspfv3AreaRangeArgsDict']]]]]
     """
     Range
     """
-    type: NotRequired[pulumi.Input[Optional['LogicalRouterVrfOspfv3AreaTypeArgs']]]
+    type: NotRequired[pulumi.Input[Optional['LogicalRouterVrfOspfv3AreaTypeArgsDict']]]
     """
     Type
     """
-    virtual_links: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['LogicalRouterVrfOspfv3AreaVirtualLinkArgs']]]]]
+    virtual_links: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['LogicalRouterVrfOspfv3AreaVirtualLinkArgsDict']]]]]
     """
     Virtual link
     """
-    vr_ranges: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['LogicalRouterVrfOspfv3AreaVrRangeArgs']]]]]
+    vr_ranges: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['LogicalRouterVrfOspfv3AreaVrRangeArgsDict']]]]]
     """
     Vr range
     """
@@ -55951,7 +55951,7 @@ class LogicalRouterVrfOspfv3AreaInterfaceArgsDict(TypedDict):
     """
     Authentication
     """
-    bfd: NotRequired[pulumi.Input[Optional['LogicalRouterVrfOspfv3AreaInterfaceBfdArgs']]]
+    bfd: NotRequired[pulumi.Input[Optional['LogicalRouterVrfOspfv3AreaInterfaceBfdArgsDict']]]
     """
     Bfd
     """
@@ -55963,7 +55963,7 @@ class LogicalRouterVrfOspfv3AreaInterfaceArgsDict(TypedDict):
     """
     Instance id
     """
-    link_type: NotRequired[pulumi.Input[Optional['LogicalRouterVrfOspfv3AreaInterfaceLinkTypeArgs']]]
+    link_type: NotRequired[pulumi.Input[Optional['LogicalRouterVrfOspfv3AreaInterfaceLinkTypeArgsDict']]]
     """
     Link type
     """
@@ -55975,7 +55975,7 @@ class LogicalRouterVrfOspfv3AreaInterfaceArgsDict(TypedDict):
     """
     Mtu ignore
     """
-    neighbors: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['LogicalRouterVrfOspfv3AreaInterfaceNeighborArgs']]]]]
+    neighbors: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['LogicalRouterVrfOspfv3AreaInterfaceNeighborArgsDict']]]]]
     """
     Neighbor
     """
@@ -55991,7 +55991,7 @@ class LogicalRouterVrfOspfv3AreaInterfaceArgsDict(TypedDict):
     """
     Timing
     """
-    vr_timing: NotRequired[pulumi.Input[Optional['LogicalRouterVrfOspfv3AreaInterfaceVrTimingArgs']]]
+    vr_timing: NotRequired[pulumi.Input[Optional['LogicalRouterVrfOspfv3AreaInterfaceVrTimingArgsDict']]]
     """
     Vr timing
     """
@@ -56240,17 +56240,17 @@ class LogicalRouterVrfOspfv3AreaInterfaceBfdArgs:
 
 
 class LogicalRouterVrfOspfv3AreaInterfaceLinkTypeArgsDict(TypedDict):
-    broadcast: NotRequired[pulumi.Input[Optional['LogicalRouterVrfOspfv3AreaInterfaceLinkTypeBroadcastArgs']]]
+    broadcast: NotRequired[pulumi.Input[Optional['LogicalRouterVrfOspfv3AreaInterfaceLinkTypeBroadcastArgsDict']]]
     """
     Broadcast
     """
-    p2mp: NotRequired[pulumi.Input[Optional['LogicalRouterVrfOspfv3AreaInterfaceLinkTypeP2mpArgs']]]
+    p2mp: NotRequired[pulumi.Input[Optional['LogicalRouterVrfOspfv3AreaInterfaceLinkTypeP2mpArgsDict']]]
     """
     P2mp
 
     > ℹ️ **Note:** You must specify exactly one of `broadcast`, `p2mp`, and `p2p`.
     """
-    p2p: NotRequired[pulumi.Input[Optional['LogicalRouterVrfOspfv3AreaInterfaceLinkTypeP2pArgs']]]
+    p2p: NotRequired[pulumi.Input[Optional['LogicalRouterVrfOspfv3AreaInterfaceLinkTypeP2pArgsDict']]]
     """
     P2p
 
@@ -56330,7 +56330,7 @@ class LogicalRouterVrfOspfv3AreaInterfaceLinkTypeBroadcastArgs:
 
 
 class LogicalRouterVrfOspfv3AreaInterfaceLinkTypeP2mpArgsDict(TypedDict):
-    neighbors: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['LogicalRouterVrfOspfv3AreaInterfaceLinkTypeP2mpNeighborArgs']]]]]
+    neighbors: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['LogicalRouterVrfOspfv3AreaInterfaceLinkTypeP2mpNeighborArgsDict']]]]]
     """
     Neighbor
     """
@@ -56601,17 +56601,17 @@ class LogicalRouterVrfOspfv3AreaRangeArgs:
 
 
 class LogicalRouterVrfOspfv3AreaTypeArgsDict(TypedDict):
-    normal: NotRequired[pulumi.Input[Optional['LogicalRouterVrfOspfv3AreaTypeNormalArgs']]]
+    normal: NotRequired[pulumi.Input[Optional['LogicalRouterVrfOspfv3AreaTypeNormalArgsDict']]]
     """
     Normal
     """
-    nssa: NotRequired[pulumi.Input[Optional['LogicalRouterVrfOspfv3AreaTypeNssaArgs']]]
+    nssa: NotRequired[pulumi.Input[Optional['LogicalRouterVrfOspfv3AreaTypeNssaArgsDict']]]
     """
     Nssa
 
     > ℹ️ **Note:** You must specify exactly one of `normal`, `nssa`, and `stub`.
     """
-    stub: NotRequired[pulumi.Input[Optional['LogicalRouterVrfOspfv3AreaTypeStubArgs']]]
+    stub: NotRequired[pulumi.Input[Optional['LogicalRouterVrfOspfv3AreaTypeStubArgsDict']]]
     """
     Stub
 
@@ -56682,7 +56682,7 @@ class LogicalRouterVrfOspfv3AreaTypeArgs:
 
 
 class LogicalRouterVrfOspfv3AreaTypeNormalArgsDict(TypedDict):
-    abr: NotRequired[pulumi.Input[Optional['LogicalRouterVrfOspfv3AreaTypeNormalAbrArgs']]]
+    abr: NotRequired[pulumi.Input[Optional['LogicalRouterVrfOspfv3AreaTypeNormalAbrArgsDict']]]
     """
     Abr
     """
@@ -56800,7 +56800,7 @@ class LogicalRouterVrfOspfv3AreaTypeNormalAbrArgs:
 
 
 class LogicalRouterVrfOspfv3AreaTypeNssaArgsDict(TypedDict):
-    abr: NotRequired[pulumi.Input[Optional['LogicalRouterVrfOspfv3AreaTypeNssaAbrArgs']]]
+    abr: NotRequired[pulumi.Input[Optional['LogicalRouterVrfOspfv3AreaTypeNssaAbrArgsDict']]]
     """
     Abr
     """
@@ -56808,11 +56808,11 @@ class LogicalRouterVrfOspfv3AreaTypeNssaArgsDict(TypedDict):
     """
     Accept summary
     """
-    default_information_originate: NotRequired[pulumi.Input[Optional['LogicalRouterVrfOspfv3AreaTypeNssaDefaultInformationOriginateArgs']]]
+    default_information_originate: NotRequired[pulumi.Input[Optional['LogicalRouterVrfOspfv3AreaTypeNssaDefaultInformationOriginateArgsDict']]]
     """
     Default information originate
     """
-    default_route: NotRequired[pulumi.Input[Optional['LogicalRouterVrfOspfv3AreaTypeNssaDefaultRouteArgs']]]
+    default_route: NotRequired[pulumi.Input[Optional['LogicalRouterVrfOspfv3AreaTypeNssaDefaultRouteArgsDict']]]
     """
     Default route
     """
@@ -56820,7 +56820,7 @@ class LogicalRouterVrfOspfv3AreaTypeNssaArgsDict(TypedDict):
     """
     No summary
     """
-    nssa_ext_ranges: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['LogicalRouterVrfOspfv3AreaTypeNssaNssaExtRangeArgs']]]]]
+    nssa_ext_ranges: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['LogicalRouterVrfOspfv3AreaTypeNssaNssaExtRangeArgsDict']]]]]
     """
     Nssa ext range
     """
@@ -56941,7 +56941,7 @@ class LogicalRouterVrfOspfv3AreaTypeNssaAbrArgsDict(TypedDict):
     """
     Inbound filter list
     """
-    nssa_ext_ranges: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['LogicalRouterVrfOspfv3AreaTypeNssaAbrNssaExtRangeArgs']]]]]
+    nssa_ext_ranges: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['LogicalRouterVrfOspfv3AreaTypeNssaAbrNssaExtRangeArgsDict']]]]]
     """
     Nssa ext range
     """
@@ -57042,7 +57042,7 @@ class LogicalRouterVrfOspfv3AreaTypeNssaAbrNssaExtRangeArgsDict(TypedDict):
     """
     Name
     """
-    advertise: NotRequired[pulumi.Input[Optional['LogicalRouterVrfOspfv3AreaTypeNssaAbrNssaExtRangeAdvertiseArgs']]]
+    advertise: NotRequired[pulumi.Input[Optional['LogicalRouterVrfOspfv3AreaTypeNssaAbrNssaExtRangeAdvertiseArgsDict']]]
     """
     Advertise
     """
@@ -57050,7 +57050,7 @@ class LogicalRouterVrfOspfv3AreaTypeNssaAbrNssaExtRangeArgsDict(TypedDict):
     """
     Route tag
     """
-    suppress: NotRequired[pulumi.Input[Optional['LogicalRouterVrfOspfv3AreaTypeNssaAbrNssaExtRangeSuppressArgs']]]
+    suppress: NotRequired[pulumi.Input[Optional['LogicalRouterVrfOspfv3AreaTypeNssaAbrNssaExtRangeSuppressArgsDict']]]
     """
     Suppress
     """
@@ -57193,11 +57193,11 @@ class LogicalRouterVrfOspfv3AreaTypeNssaDefaultInformationOriginateArgs:
 
 
 class LogicalRouterVrfOspfv3AreaTypeNssaDefaultRouteArgsDict(TypedDict):
-    advertise: NotRequired[pulumi.Input[Optional['LogicalRouterVrfOspfv3AreaTypeNssaDefaultRouteAdvertiseArgs']]]
+    advertise: NotRequired[pulumi.Input[Optional['LogicalRouterVrfOspfv3AreaTypeNssaDefaultRouteAdvertiseArgsDict']]]
     """
     Advertise
     """
-    disable: NotRequired[pulumi.Input[Optional['LogicalRouterVrfOspfv3AreaTypeNssaDefaultRouteDisableArgs']]]
+    disable: NotRequired[pulumi.Input[Optional['LogicalRouterVrfOspfv3AreaTypeNssaDefaultRouteDisableArgsDict']]]
     """
     Disable
 
@@ -57310,7 +57310,7 @@ class LogicalRouterVrfOspfv3AreaTypeNssaNssaExtRangeArgsDict(TypedDict):
     """
     Name
     """
-    advertise: NotRequired[pulumi.Input[Optional['LogicalRouterVrfOspfv3AreaTypeNssaNssaExtRangeAdvertiseArgs']]]
+    advertise: NotRequired[pulumi.Input[Optional['LogicalRouterVrfOspfv3AreaTypeNssaNssaExtRangeAdvertiseArgsDict']]]
     """
     Advertise
     """
@@ -57318,7 +57318,7 @@ class LogicalRouterVrfOspfv3AreaTypeNssaNssaExtRangeArgsDict(TypedDict):
     """
     Route tag
     """
-    suppress: NotRequired[pulumi.Input[Optional['LogicalRouterVrfOspfv3AreaTypeNssaNssaExtRangeSuppressArgs']]]
+    suppress: NotRequired[pulumi.Input[Optional['LogicalRouterVrfOspfv3AreaTypeNssaNssaExtRangeSuppressArgsDict']]]
     """
     Suppress
     """
@@ -57412,7 +57412,7 @@ class LogicalRouterVrfOspfv3AreaTypeNssaNssaExtRangeSuppressArgs:
 
 
 class LogicalRouterVrfOspfv3AreaTypeStubArgsDict(TypedDict):
-    abr: NotRequired[pulumi.Input[Optional['LogicalRouterVrfOspfv3AreaTypeStubAbrArgs']]]
+    abr: NotRequired[pulumi.Input[Optional['LogicalRouterVrfOspfv3AreaTypeStubAbrArgsDict']]]
     """
     Abr
     """
@@ -57420,7 +57420,7 @@ class LogicalRouterVrfOspfv3AreaTypeStubArgsDict(TypedDict):
     """
     Accept summary
     """
-    default_route: NotRequired[pulumi.Input[Optional['LogicalRouterVrfOspfv3AreaTypeStubDefaultRouteArgs']]]
+    default_route: NotRequired[pulumi.Input[Optional['LogicalRouterVrfOspfv3AreaTypeStubDefaultRouteArgsDict']]]
     """
     Default route
     """
@@ -57610,11 +57610,11 @@ class LogicalRouterVrfOspfv3AreaTypeStubAbrArgs:
 
 
 class LogicalRouterVrfOspfv3AreaTypeStubDefaultRouteArgsDict(TypedDict):
-    advertise: NotRequired[pulumi.Input[Optional['LogicalRouterVrfOspfv3AreaTypeStubDefaultRouteAdvertiseArgs']]]
+    advertise: NotRequired[pulumi.Input[Optional['LogicalRouterVrfOspfv3AreaTypeStubDefaultRouteAdvertiseArgsDict']]]
     """
     Advertise
     """
-    disable: NotRequired[pulumi.Input[Optional['LogicalRouterVrfOspfv3AreaTypeStubDefaultRouteDisableArgs']]]
+    disable: NotRequired[pulumi.Input[Optional['LogicalRouterVrfOspfv3AreaTypeStubDefaultRouteDisableArgsDict']]]
     """
     Disable
 
@@ -57711,7 +57711,7 @@ class LogicalRouterVrfOspfv3AreaVirtualLinkArgsDict(TypedDict):
     """
     Authentication
     """
-    bfd: NotRequired[pulumi.Input[Optional['LogicalRouterVrfOspfv3AreaVirtualLinkBfdArgs']]]
+    bfd: NotRequired[pulumi.Input[Optional['LogicalRouterVrfOspfv3AreaVirtualLinkBfdArgsDict']]]
     """
     Bfd
     """
@@ -57743,7 +57743,7 @@ class LogicalRouterVrfOspfv3AreaVirtualLinkArgsDict(TypedDict):
     """
     Transit area id
     """
-    vr_timing: NotRequired[pulumi.Input[Optional['LogicalRouterVrfOspfv3AreaVirtualLinkVrTimingArgs']]]
+    vr_timing: NotRequired[pulumi.Input[Optional['LogicalRouterVrfOspfv3AreaVirtualLinkVrTimingArgsDict']]]
     """
     Vr timing
     """
@@ -58053,11 +58053,11 @@ class LogicalRouterVrfOspfv3AreaVrRangeArgsDict(TypedDict):
     """
     Name
     """
-    advertise: NotRequired[pulumi.Input[Optional['LogicalRouterVrfOspfv3AreaVrRangeAdvertiseArgs']]]
+    advertise: NotRequired[pulumi.Input[Optional['LogicalRouterVrfOspfv3AreaVrRangeAdvertiseArgsDict']]]
     """
     Advertise
     """
-    suppress: NotRequired[pulumi.Input[Optional['LogicalRouterVrfOspfv3AreaVrRangeSuppressArgs']]]
+    suppress: NotRequired[pulumi.Input[Optional['LogicalRouterVrfOspfv3AreaVrRangeSuppressArgsDict']]]
     """
     Suppress
     """
@@ -58139,11 +58139,11 @@ class LogicalRouterVrfOspfv3AuthProfileArgsDict(TypedDict):
     """
     Name
     """
-    ah: NotRequired[pulumi.Input[Optional['LogicalRouterVrfOspfv3AuthProfileAhArgs']]]
+    ah: NotRequired[pulumi.Input[Optional['LogicalRouterVrfOspfv3AuthProfileAhArgsDict']]]
     """
     Ah
     """
-    esp: NotRequired[pulumi.Input[Optional['LogicalRouterVrfOspfv3AuthProfileEspArgs']]]
+    esp: NotRequired[pulumi.Input[Optional['LogicalRouterVrfOspfv3AuthProfileEspArgsDict']]]
     """
     Esp
     """
@@ -58223,29 +58223,29 @@ class LogicalRouterVrfOspfv3AuthProfileArgs:
 
 
 class LogicalRouterVrfOspfv3AuthProfileAhArgsDict(TypedDict):
-    md5: NotRequired[pulumi.Input[Optional['LogicalRouterVrfOspfv3AuthProfileAhMd5Args']]]
+    md5: NotRequired[pulumi.Input[Optional['LogicalRouterVrfOspfv3AuthProfileAhMd5ArgsDict']]]
     """
     Md5
     """
-    sha1: NotRequired[pulumi.Input[Optional['LogicalRouterVrfOspfv3AuthProfileAhSha1Args']]]
+    sha1: NotRequired[pulumi.Input[Optional['LogicalRouterVrfOspfv3AuthProfileAhSha1ArgsDict']]]
     """
     Sha1
 
     > ℹ️ **Note:** You must specify exactly one of `md5`, `sha1`, `sha256`, `sha384`, and `sha512`.
     """
-    sha256: NotRequired[pulumi.Input[Optional['LogicalRouterVrfOspfv3AuthProfileAhSha256Args']]]
+    sha256: NotRequired[pulumi.Input[Optional['LogicalRouterVrfOspfv3AuthProfileAhSha256ArgsDict']]]
     """
     Sha256
 
     > ℹ️ **Note:** You must specify exactly one of `md5`, `sha1`, `sha256`, `sha384`, and `sha512`.
     """
-    sha384: NotRequired[pulumi.Input[Optional['LogicalRouterVrfOspfv3AuthProfileAhSha384Args']]]
+    sha384: NotRequired[pulumi.Input[Optional['LogicalRouterVrfOspfv3AuthProfileAhSha384ArgsDict']]]
     """
     Sha384
 
     > ℹ️ **Note:** You must specify exactly one of `md5`, `sha1`, `sha256`, `sha384`, and `sha512`.
     """
-    sha512: NotRequired[pulumi.Input[Optional['LogicalRouterVrfOspfv3AuthProfileAhSha512Args']]]
+    sha512: NotRequired[pulumi.Input[Optional['LogicalRouterVrfOspfv3AuthProfileAhSha512ArgsDict']]]
     """
     Sha512
 
@@ -58501,11 +58501,11 @@ class LogicalRouterVrfOspfv3AuthProfileAhSha512Args:
 
 
 class LogicalRouterVrfOspfv3AuthProfileEspArgsDict(TypedDict):
-    authentication: NotRequired[pulumi.Input[Optional['LogicalRouterVrfOspfv3AuthProfileEspAuthenticationArgs']]]
+    authentication: NotRequired[pulumi.Input[Optional['LogicalRouterVrfOspfv3AuthProfileEspAuthenticationArgsDict']]]
     """
     Authentication
     """
-    encryption: NotRequired[pulumi.Input[Optional['LogicalRouterVrfOspfv3AuthProfileEspEncryptionArgs']]]
+    encryption: NotRequired[pulumi.Input[Optional['LogicalRouterVrfOspfv3AuthProfileEspEncryptionArgsDict']]]
     """
     Encryption
     """
@@ -58550,35 +58550,35 @@ class LogicalRouterVrfOspfv3AuthProfileEspArgs:
 
 
 class LogicalRouterVrfOspfv3AuthProfileEspAuthenticationArgsDict(TypedDict):
-    md5: NotRequired[pulumi.Input[Optional['LogicalRouterVrfOspfv3AuthProfileEspAuthenticationMd5Args']]]
+    md5: NotRequired[pulumi.Input[Optional['LogicalRouterVrfOspfv3AuthProfileEspAuthenticationMd5ArgsDict']]]
     """
     Md5
     """
-    none: NotRequired[pulumi.Input[Optional['LogicalRouterVrfOspfv3AuthProfileEspAuthenticationNoneArgs']]]
+    none: NotRequired[pulumi.Input[Optional['LogicalRouterVrfOspfv3AuthProfileEspAuthenticationNoneArgsDict']]]
     """
     None
 
     > ℹ️ **Note:** You must specify exactly one of `md5`, `none`, `sha1`, `sha256`, `sha384`, and `sha512`.
     """
-    sha1: NotRequired[pulumi.Input[Optional['LogicalRouterVrfOspfv3AuthProfileEspAuthenticationSha1Args']]]
+    sha1: NotRequired[pulumi.Input[Optional['LogicalRouterVrfOspfv3AuthProfileEspAuthenticationSha1ArgsDict']]]
     """
     Sha1
 
     > ℹ️ **Note:** You must specify exactly one of `md5`, `none`, `sha1`, `sha256`, `sha384`, and `sha512`.
     """
-    sha256: NotRequired[pulumi.Input[Optional['LogicalRouterVrfOspfv3AuthProfileEspAuthenticationSha256Args']]]
+    sha256: NotRequired[pulumi.Input[Optional['LogicalRouterVrfOspfv3AuthProfileEspAuthenticationSha256ArgsDict']]]
     """
     Sha256
 
     > ℹ️ **Note:** You must specify exactly one of `md5`, `none`, `sha1`, `sha256`, `sha384`, and `sha512`.
     """
-    sha384: NotRequired[pulumi.Input[Optional['LogicalRouterVrfOspfv3AuthProfileEspAuthenticationSha384Args']]]
+    sha384: NotRequired[pulumi.Input[Optional['LogicalRouterVrfOspfv3AuthProfileEspAuthenticationSha384ArgsDict']]]
     """
     Sha384
 
     > ℹ️ **Note:** You must specify exactly one of `md5`, `none`, `sha1`, `sha256`, `sha384`, and `sha512`.
     """
-    sha512: NotRequired[pulumi.Input[Optional['LogicalRouterVrfOspfv3AuthProfileEspAuthenticationSha512Args']]]
+    sha512: NotRequired[pulumi.Input[Optional['LogicalRouterVrfOspfv3AuthProfileEspAuthenticationSha512ArgsDict']]]
     """
     Sha512
 
@@ -59187,11 +59187,11 @@ class LogicalRouterVrfOspfv3VrTimersArgs:
 
 
 class LogicalRouterVrfRibFilterArgsDict(TypedDict):
-    ipv4: NotRequired[pulumi.Input[Optional['LogicalRouterVrfRibFilterIpv4Args']]]
+    ipv4: NotRequired[pulumi.Input[Optional['LogicalRouterVrfRibFilterIpv4ArgsDict']]]
     """
     Ipv4
     """
-    ipv6: NotRequired[pulumi.Input[Optional['LogicalRouterVrfRibFilterIpv6Args']]]
+    ipv6: NotRequired[pulumi.Input[Optional['LogicalRouterVrfRibFilterIpv6ArgsDict']]]
     """
     Ipv6
     """
@@ -59236,19 +59236,19 @@ class LogicalRouterVrfRibFilterArgs:
 
 
 class LogicalRouterVrfRibFilterIpv4ArgsDict(TypedDict):
-    bgp: NotRequired[pulumi.Input[Optional['LogicalRouterVrfRibFilterIpv4BgpArgs']]]
+    bgp: NotRequired[pulumi.Input[Optional['LogicalRouterVrfRibFilterIpv4BgpArgsDict']]]
     """
     Bgp
     """
-    ospf: NotRequired[pulumi.Input[Optional['LogicalRouterVrfRibFilterIpv4OspfArgs']]]
+    ospf: NotRequired[pulumi.Input[Optional['LogicalRouterVrfRibFilterIpv4OspfArgsDict']]]
     """
     Ospf
     """
-    rip: NotRequired[pulumi.Input[Optional['LogicalRouterVrfRibFilterIpv4RipArgs']]]
+    rip: NotRequired[pulumi.Input[Optional['LogicalRouterVrfRibFilterIpv4RipArgsDict']]]
     """
     Rip
     """
-    static: NotRequired[pulumi.Input[Optional['LogicalRouterVrfRibFilterIpv4StaticArgs']]]
+    static: NotRequired[pulumi.Input[Optional['LogicalRouterVrfRibFilterIpv4StaticArgsDict']]]
     """
     Static
     """
@@ -59441,15 +59441,15 @@ class LogicalRouterVrfRibFilterIpv4StaticArgs:
 
 
 class LogicalRouterVrfRibFilterIpv6ArgsDict(TypedDict):
-    bgp: NotRequired[pulumi.Input[Optional['LogicalRouterVrfRibFilterIpv6BgpArgs']]]
+    bgp: NotRequired[pulumi.Input[Optional['LogicalRouterVrfRibFilterIpv6BgpArgsDict']]]
     """
     Bgp
     """
-    ospfv3: NotRequired[pulumi.Input[Optional['LogicalRouterVrfRibFilterIpv6Ospfv3Args']]]
+    ospfv3: NotRequired[pulumi.Input[Optional['LogicalRouterVrfRibFilterIpv6Ospfv3ArgsDict']]]
     """
     Ospfv3
     """
-    static: NotRequired[pulumi.Input[Optional['LogicalRouterVrfRibFilterIpv6StaticArgs']]]
+    static: NotRequired[pulumi.Input[Optional['LogicalRouterVrfRibFilterIpv6StaticArgsDict']]]
     """
     Static
     """
@@ -59609,15 +59609,15 @@ class LogicalRouterVrfRipArgsDict(TypedDict):
     """
     Enable
     """
-    global_bfd: NotRequired[pulumi.Input[Optional['LogicalRouterVrfRipGlobalBfdArgs']]]
+    global_bfd: NotRequired[pulumi.Input[Optional['LogicalRouterVrfRipGlobalBfdArgsDict']]]
     """
     Global bfd
     """
-    global_inbound_distribute_list: NotRequired[pulumi.Input[Optional['LogicalRouterVrfRipGlobalInboundDistributeListArgs']]]
+    global_inbound_distribute_list: NotRequired[pulumi.Input[Optional['LogicalRouterVrfRipGlobalInboundDistributeListArgsDict']]]
     """
     Global inbound distribute list
     """
-    global_outbound_distribute_list: NotRequired[pulumi.Input[Optional['LogicalRouterVrfRipGlobalOutboundDistributeListArgs']]]
+    global_outbound_distribute_list: NotRequired[pulumi.Input[Optional['LogicalRouterVrfRipGlobalOutboundDistributeListArgsDict']]]
     """
     Global outbound distribute list
     """
@@ -59625,7 +59625,7 @@ class LogicalRouterVrfRipArgsDict(TypedDict):
     """
     Global timer
     """
-    interfaces: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['LogicalRouterVrfRipInterfaceArgs']]]]]
+    interfaces: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['LogicalRouterVrfRipInterfaceArgsDict']]]]]
     """
     Interface
     """
@@ -59881,7 +59881,7 @@ class LogicalRouterVrfRipInterfaceArgsDict(TypedDict):
     """
     Authentication
     """
-    bfd: NotRequired[pulumi.Input[Optional['LogicalRouterVrfRipInterfaceBfdArgs']]]
+    bfd: NotRequired[pulumi.Input[Optional['LogicalRouterVrfRipInterfaceBfdArgsDict']]]
     """
     Bfd
     """
@@ -59889,11 +59889,11 @@ class LogicalRouterVrfRipInterfaceArgsDict(TypedDict):
     """
     Enable
     """
-    interface_inbound_distribute_list: NotRequired[pulumi.Input[Optional['LogicalRouterVrfRipInterfaceInterfaceInboundDistributeListArgs']]]
+    interface_inbound_distribute_list: NotRequired[pulumi.Input[Optional['LogicalRouterVrfRipInterfaceInterfaceInboundDistributeListArgsDict']]]
     """
     Interface inbound distribute list
     """
-    interface_outbound_distribute_list: NotRequired[pulumi.Input[Optional['LogicalRouterVrfRipInterfaceInterfaceOutboundDistributeListArgs']]]
+    interface_outbound_distribute_list: NotRequired[pulumi.Input[Optional['LogicalRouterVrfRipInterfaceInterfaceOutboundDistributeListArgsDict']]]
     """
     Interface outbound distribute list
     """
@@ -60168,11 +60168,11 @@ class LogicalRouterVrfRipInterfaceInterfaceOutboundDistributeListArgs:
 
 
 class LogicalRouterVrfRoutingTableArgsDict(TypedDict):
-    ip: NotRequired[pulumi.Input[Optional['LogicalRouterVrfRoutingTableIpArgs']]]
+    ip: NotRequired[pulumi.Input[Optional['LogicalRouterVrfRoutingTableIpArgsDict']]]
     """
     Ip
     """
-    ipv6: NotRequired[pulumi.Input[Optional['LogicalRouterVrfRoutingTableIpv6Args']]]
+    ipv6: NotRequired[pulumi.Input[Optional['LogicalRouterVrfRoutingTableIpv6ArgsDict']]]
     """
     Ipv6
     """
@@ -60217,7 +60217,7 @@ class LogicalRouterVrfRoutingTableArgs:
 
 
 class LogicalRouterVrfRoutingTableIpArgsDict(TypedDict):
-    static_routes: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['LogicalRouterVrfRoutingTableIpStaticRouteArgs']]]]]
+    static_routes: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['LogicalRouterVrfRoutingTableIpStaticRouteArgsDict']]]]]
     """
     Static route
     """
@@ -60254,7 +60254,7 @@ class LogicalRouterVrfRoutingTableIpStaticRouteArgsDict(TypedDict):
     """
     Admin dist
     """
-    bfd: NotRequired[pulumi.Input[Optional['LogicalRouterVrfRoutingTableIpStaticRouteBfdArgs']]]
+    bfd: NotRequired[pulumi.Input[Optional['LogicalRouterVrfRoutingTableIpStaticRouteBfdArgsDict']]]
     """
     Bfd
     """
@@ -60270,15 +60270,15 @@ class LogicalRouterVrfRoutingTableIpStaticRouteArgsDict(TypedDict):
     """
     Metric
     """
-    nexthop: NotRequired[pulumi.Input[Optional['LogicalRouterVrfRoutingTableIpStaticRouteNexthopArgs']]]
+    nexthop: NotRequired[pulumi.Input[Optional['LogicalRouterVrfRoutingTableIpStaticRouteNexthopArgsDict']]]
     """
     Nexthop
     """
-    path_monitor: NotRequired[pulumi.Input[Optional['LogicalRouterVrfRoutingTableIpStaticRoutePathMonitorArgs']]]
+    path_monitor: NotRequired[pulumi.Input[Optional['LogicalRouterVrfRoutingTableIpStaticRoutePathMonitorArgsDict']]]
     """
     Path monitor
     """
-    route_table: NotRequired[pulumi.Input[Optional['LogicalRouterVrfRoutingTableIpStaticRouteRouteTableArgs']]]
+    route_table: NotRequired[pulumi.Input[Optional['LogicalRouterVrfRoutingTableIpStaticRouteRouteTableArgsDict']]]
     """
     Route table
     """
@@ -60463,7 +60463,7 @@ class LogicalRouterVrfRoutingTableIpStaticRouteBfdArgs:
 
 
 class LogicalRouterVrfRoutingTableIpStaticRouteNexthopArgsDict(TypedDict):
-    discard: NotRequired[pulumi.Input[Optional['LogicalRouterVrfRoutingTableIpStaticRouteNexthopDiscardArgs']]]
+    discard: NotRequired[pulumi.Input[Optional['LogicalRouterVrfRoutingTableIpStaticRouteNexthopDiscardArgsDict']]]
     """
     Discard
     """
@@ -60497,7 +60497,7 @@ class LogicalRouterVrfRoutingTableIpStaticRouteNexthopArgsDict(TypedDict):
 
     > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ip_address`, `ipv6_address`, `next_lr`, `next_vr`, `receive`, and `tunnel`.
     """
-    receive: NotRequired[pulumi.Input[Optional['LogicalRouterVrfRoutingTableIpStaticRouteNexthopReceiveArgs']]]
+    receive: NotRequired[pulumi.Input[Optional['LogicalRouterVrfRoutingTableIpStaticRouteNexthopReceiveArgsDict']]]
     """
     Receive
 
@@ -60704,7 +60704,7 @@ class LogicalRouterVrfRoutingTableIpStaticRoutePathMonitorArgsDict(TypedDict):
     """
     Hold time
     """
-    monitor_destinations: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['LogicalRouterVrfRoutingTableIpStaticRoutePathMonitorMonitorDestinationArgs']]]]]
+    monitor_destinations: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['LogicalRouterVrfRoutingTableIpStaticRoutePathMonitorMonitorDestinationArgsDict']]]]]
     """
     Monitor destinations
     """
@@ -60929,23 +60929,23 @@ class LogicalRouterVrfRoutingTableIpStaticRoutePathMonitorMonitorDestinationArgs
 
 
 class LogicalRouterVrfRoutingTableIpStaticRouteRouteTableArgsDict(TypedDict):
-    both: NotRequired[pulumi.Input[Optional['LogicalRouterVrfRoutingTableIpStaticRouteRouteTableBothArgs']]]
+    both: NotRequired[pulumi.Input[Optional['LogicalRouterVrfRoutingTableIpStaticRouteRouteTableBothArgsDict']]]
     """
     Both
     """
-    multicast: NotRequired[pulumi.Input[Optional['LogicalRouterVrfRoutingTableIpStaticRouteRouteTableMulticastArgs']]]
+    multicast: NotRequired[pulumi.Input[Optional['LogicalRouterVrfRoutingTableIpStaticRouteRouteTableMulticastArgsDict']]]
     """
     Multicast
 
     > ℹ️ **Note:** You must specify exactly one of `both`, `multicast`, `no_install`, and `unicast`.
     """
-    no_install: NotRequired[pulumi.Input[Optional['LogicalRouterVrfRoutingTableIpStaticRouteRouteTableNoInstallArgs']]]
+    no_install: NotRequired[pulumi.Input[Optional['LogicalRouterVrfRoutingTableIpStaticRouteRouteTableNoInstallArgsDict']]]
     """
     No install
 
     > ℹ️ **Note:** You must specify exactly one of `both`, `multicast`, `no_install`, and `unicast`.
     """
-    unicast: NotRequired[pulumi.Input[Optional['LogicalRouterVrfRoutingTableIpStaticRouteRouteTableUnicastArgs']]]
+    unicast: NotRequired[pulumi.Input[Optional['LogicalRouterVrfRoutingTableIpStaticRouteRouteTableUnicastArgsDict']]]
     """
     Unicast
 
@@ -61072,7 +61072,7 @@ class LogicalRouterVrfRoutingTableIpStaticRouteRouteTableUnicastArgs:
 
 
 class LogicalRouterVrfRoutingTableIpv6ArgsDict(TypedDict):
-    static_routes: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['LogicalRouterVrfRoutingTableIpv6StaticRouteArgs']]]]]
+    static_routes: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['LogicalRouterVrfRoutingTableIpv6StaticRouteArgsDict']]]]]
     """
     Static route
     """
@@ -61109,7 +61109,7 @@ class LogicalRouterVrfRoutingTableIpv6StaticRouteArgsDict(TypedDict):
     """
     Admin dist
     """
-    bfd: NotRequired[pulumi.Input[Optional['LogicalRouterVrfRoutingTableIpv6StaticRouteBfdArgs']]]
+    bfd: NotRequired[pulumi.Input[Optional['LogicalRouterVrfRoutingTableIpv6StaticRouteBfdArgsDict']]]
     """
     Bfd
     """
@@ -61125,19 +61125,19 @@ class LogicalRouterVrfRoutingTableIpv6StaticRouteArgsDict(TypedDict):
     """
     Metric
     """
-    nexthop: NotRequired[pulumi.Input[Optional['LogicalRouterVrfRoutingTableIpv6StaticRouteNexthopArgs']]]
+    nexthop: NotRequired[pulumi.Input[Optional['LogicalRouterVrfRoutingTableIpv6StaticRouteNexthopArgsDict']]]
     """
     Nexthop
     """
-    option: NotRequired[pulumi.Input[Optional['LogicalRouterVrfRoutingTableIpv6StaticRouteOptionArgs']]]
+    option: NotRequired[pulumi.Input[Optional['LogicalRouterVrfRoutingTableIpv6StaticRouteOptionArgsDict']]]
     """
     Option
     """
-    path_monitor: NotRequired[pulumi.Input[Optional['LogicalRouterVrfRoutingTableIpv6StaticRoutePathMonitorArgs']]]
+    path_monitor: NotRequired[pulumi.Input[Optional['LogicalRouterVrfRoutingTableIpv6StaticRoutePathMonitorArgsDict']]]
     """
     Path monitor
     """
-    route_table: NotRequired[pulumi.Input[Optional['LogicalRouterVrfRoutingTableIpv6StaticRouteRouteTableArgs']]]
+    route_table: NotRequired[pulumi.Input[Optional['LogicalRouterVrfRoutingTableIpv6StaticRouteRouteTableArgsDict']]]
     """
     Route table
     """
@@ -61338,7 +61338,7 @@ class LogicalRouterVrfRoutingTableIpv6StaticRouteBfdArgs:
 
 
 class LogicalRouterVrfRoutingTableIpv6StaticRouteNexthopArgsDict(TypedDict):
-    discard: NotRequired[pulumi.Input[Optional['LogicalRouterVrfRoutingTableIpv6StaticRouteNexthopDiscardArgs']]]
+    discard: NotRequired[pulumi.Input[Optional['LogicalRouterVrfRoutingTableIpv6StaticRouteNexthopDiscardArgsDict']]]
     """
     Discard
     """
@@ -61366,7 +61366,7 @@ class LogicalRouterVrfRoutingTableIpv6StaticRouteNexthopArgsDict(TypedDict):
 
     > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipv6_address`, `next_lr`, `next_vr`, `receive`, and `tunnel`.
     """
-    receive: NotRequired[pulumi.Input[Optional['LogicalRouterVrfRoutingTableIpv6StaticRouteNexthopReceiveArgs']]]
+    receive: NotRequired[pulumi.Input[Optional['LogicalRouterVrfRoutingTableIpv6StaticRouteNexthopReceiveArgsDict']]]
     """
     Receive
 
@@ -61541,7 +61541,7 @@ class LogicalRouterVrfRoutingTableIpv6StaticRouteNexthopReceiveArgs:
 
 
 class LogicalRouterVrfRoutingTableIpv6StaticRouteOptionArgsDict(TypedDict):
-    passive: NotRequired[pulumi.Input[Optional['LogicalRouterVrfRoutingTableIpv6StaticRouteOptionPassiveArgs']]]
+    passive: NotRequired[pulumi.Input[Optional['LogicalRouterVrfRoutingTableIpv6StaticRouteOptionPassiveArgsDict']]]
     """
     Passive
     """
@@ -61591,7 +61591,7 @@ class LogicalRouterVrfRoutingTableIpv6StaticRoutePathMonitorArgsDict(TypedDict):
     """
     Hold time
     """
-    monitor_destinations: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['LogicalRouterVrfRoutingTableIpv6StaticRoutePathMonitorMonitorDestinationArgs']]]]]
+    monitor_destinations: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['LogicalRouterVrfRoutingTableIpv6StaticRoutePathMonitorMonitorDestinationArgsDict']]]]]
     """
     Monitor destinations
     """
@@ -61816,19 +61816,19 @@ class LogicalRouterVrfRoutingTableIpv6StaticRoutePathMonitorMonitorDestinationAr
 
 
 class LogicalRouterVrfRoutingTableIpv6StaticRouteRouteTableArgsDict(TypedDict):
-    both: NotRequired[pulumi.Input[Optional['LogicalRouterVrfRoutingTableIpv6StaticRouteRouteTableBothArgs']]]
+    both: NotRequired[pulumi.Input[Optional['LogicalRouterVrfRoutingTableIpv6StaticRouteRouteTableBothArgsDict']]]
     """
     Both
     """
-    multicast: NotRequired[pulumi.Input[Optional['LogicalRouterVrfRoutingTableIpv6StaticRouteRouteTableMulticastArgs']]]
+    multicast: NotRequired[pulumi.Input[Optional['LogicalRouterVrfRoutingTableIpv6StaticRouteRouteTableMulticastArgsDict']]]
     """
     Multicast
     """
-    no_install: NotRequired[pulumi.Input[Optional['LogicalRouterVrfRoutingTableIpv6StaticRouteRouteTableNoInstallArgs']]]
+    no_install: NotRequired[pulumi.Input[Optional['LogicalRouterVrfRoutingTableIpv6StaticRouteRouteTableNoInstallArgsDict']]]
     """
     No install
     """
-    unicast: NotRequired[pulumi.Input[Optional['LogicalRouterVrfRoutingTableIpv6StaticRouteRouteTableUnicastArgs']]]
+    unicast: NotRequired[pulumi.Input[Optional['LogicalRouterVrfRoutingTableIpv6StaticRouteRouteTableUnicastArgsDict']]]
     """
     Unicast
     """
@@ -62158,7 +62158,7 @@ class LoopbackInterfaceIpArgs:
 
 
 class LoopbackInterfaceIpv6ArgsDict(TypedDict):
-    addresses: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['LoopbackInterfaceIpv6AddressArgs']]]]]
+    addresses: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['LoopbackInterfaceIpv6AddressArgsDict']]]]]
     """
     IPv6 Address Parent for loopback interface
     """
@@ -62227,7 +62227,7 @@ class LoopbackInterfaceIpv6Args:
 
 
 class LoopbackInterfaceIpv6AddressArgsDict(TypedDict):
-    anycast: NotRequired[pulumi.Input[Optional['LoopbackInterfaceIpv6AddressAnycastArgs']]]
+    anycast: NotRequired[pulumi.Input[Optional['LoopbackInterfaceIpv6AddressAnycastArgsDict']]]
     """
     Anycast for loopback interface
     """
@@ -62239,7 +62239,7 @@ class LoopbackInterfaceIpv6AddressArgsDict(TypedDict):
     """
     IPv6 Address for loopback interface
     """
-    prefix: NotRequired[pulumi.Input[Optional['LoopbackInterfaceIpv6AddressPrefixArgs']]]
+    prefix: NotRequired[pulumi.Input[Optional['LoopbackInterfaceIpv6AddressPrefixArgsDict']]]
     """
     Use interface ID as host portion for loopback interface
     """
@@ -62342,7 +62342,7 @@ class ManagementInterfaceManagementInterfaceArgsDict(TypedDict):
     """
     IP address
     """
-    mgmt_type: NotRequired[pulumi.Input[Optional['ManagementInterfaceManagementInterfaceMgmtTypeArgs']]]
+    mgmt_type: NotRequired[pulumi.Input[Optional['ManagementInterfaceManagementInterfaceMgmtTypeArgsDict']]]
     """
     IP type
     """
@@ -62354,11 +62354,11 @@ class ManagementInterfaceManagementInterfaceArgsDict(TypedDict):
     """
     Netmask
     """
-    permitted_ips: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['ManagementInterfaceManagementInterfacePermittedIpArgs']]]]]
+    permitted_ips: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['ManagementInterfaceManagementInterfacePermittedIpArgsDict']]]]]
     """
     Permitting IP addresses
     """
-    service: NotRequired[pulumi.Input[Optional['ManagementInterfaceManagementInterfaceServiceArgs']]]
+    service: NotRequired[pulumi.Input[Optional['ManagementInterfaceManagementInterfaceServiceArgsDict']]]
     """
     Network services
     """
@@ -62503,11 +62503,11 @@ class ManagementInterfaceManagementInterfaceArgs:
 
 
 class ManagementInterfaceManagementInterfaceMgmtTypeArgsDict(TypedDict):
-    dhcp_client: NotRequired[pulumi.Input[Optional['ManagementInterfaceManagementInterfaceMgmtTypeDhcpClientArgs']]]
+    dhcp_client: NotRequired[pulumi.Input[Optional['ManagementInterfaceManagementInterfaceMgmtTypeDhcpClientArgsDict']]]
     """
     Dhcp client
     """
-    static: NotRequired[pulumi.Input[Optional['ManagementInterfaceManagementInterfaceMgmtTypeStaticArgs']]]
+    static: NotRequired[pulumi.Input[Optional['ManagementInterfaceManagementInterfaceMgmtTypeStaticArgsDict']]]
     """
     Static
 
@@ -62914,23 +62914,23 @@ class ManagementInterfaceManagementInterfaceServiceArgs:
 
 
 class MfaServerMfaVendorTypeArgsDict(TypedDict):
-    duo_security_v2: NotRequired[pulumi.Input[Optional['MfaServerMfaVendorTypeDuoSecurityV2Args']]]
+    duo_security_v2: NotRequired[pulumi.Input[Optional['MfaServerMfaVendorTypeDuoSecurityV2ArgsDict']]]
     """
     Integration with [Duo Security](https://duo.com/product)
     """
-    okta_adaptive_v1: NotRequired[pulumi.Input[Optional['MfaServerMfaVendorTypeOktaAdaptiveV1Args']]]
+    okta_adaptive_v1: NotRequired[pulumi.Input[Optional['MfaServerMfaVendorTypeOktaAdaptiveV1ArgsDict']]]
     """
     Integration with [Okta Adaptive MFA](https://www.okta.com/products/adaptive-multi-factor-authentication)
 
     > ℹ️ **Note:** You must specify exactly one of `duo_security_v2`, `okta_adaptive_v1`, `ping_identity_v1`, and `rsa_securid_access_v1`.
     """
-    ping_identity_v1: NotRequired[pulumi.Input[Optional['MfaServerMfaVendorTypePingIdentityV1Args']]]
+    ping_identity_v1: NotRequired[pulumi.Input[Optional['MfaServerMfaVendorTypePingIdentityV1ArgsDict']]]
     """
     Integation with [Ping Identity](https://www.pingidentity.com/en/platform.html)
 
     > ℹ️ **Note:** You must specify exactly one of `duo_security_v2`, `okta_adaptive_v1`, `ping_identity_v1`, and `rsa_securid_access_v1`.
     """
-    rsa_securid_access_v1: NotRequired[pulumi.Input[Optional['MfaServerMfaVendorTypeRsaSecuridAccessV1Args']]]
+    rsa_securid_access_v1: NotRequired[pulumi.Input[Optional['MfaServerMfaVendorTypeRsaSecuridAccessV1ArgsDict']]]
     """
     Integration with [RSA SecurID](https://www.rsa.com/products/securid/)
 
@@ -63751,7 +63751,7 @@ class MotdBannerSettingMotdAndBannerArgs:
 
 
 class NatRuleDestinationTranslationArgsDict(TypedDict):
-    dns_rewrite: NotRequired[pulumi.Input[Optional['NatRuleDestinationTranslationDnsRewriteArgs']]]
+    dns_rewrite: NotRequired[pulumi.Input[Optional['NatRuleDestinationTranslationDnsRewriteArgsDict']]]
     """
     DNS rewrite
     """
@@ -63918,15 +63918,15 @@ class NatRuleDynamicDestinationTranslationArgs:
 
 
 class NatRuleSourceTranslationArgsDict(TypedDict):
-    dynamic_ip: NotRequired[pulumi.Input[Optional['NatRuleSourceTranslationDynamicIpArgs']]]
+    dynamic_ip: NotRequired[pulumi.Input[Optional['NatRuleSourceTranslationDynamicIpArgsDict']]]
     """
     Dynamic IP
     """
-    dynamic_ip_and_port: NotRequired[pulumi.Input[Optional['NatRuleSourceTranslationDynamicIpAndPortArgs']]]
+    dynamic_ip_and_port: NotRequired[pulumi.Input[Optional['NatRuleSourceTranslationDynamicIpAndPortArgsDict']]]
     """
     Dynamic IP and port
     """
-    static_ip: NotRequired[pulumi.Input[Optional['NatRuleSourceTranslationStaticIpArgs']]]
+    static_ip: NotRequired[pulumi.Input[Optional['NatRuleSourceTranslationStaticIpArgsDict']]]
     """
     Static IP
     """
@@ -63987,7 +63987,7 @@ class NatRuleSourceTranslationArgs:
 
 
 class NatRuleSourceTranslationDynamicIpArgsDict(TypedDict):
-    fallback: NotRequired[pulumi.Input[Optional['NatRuleSourceTranslationDynamicIpFallbackArgs']]]
+    fallback: NotRequired[pulumi.Input[Optional['NatRuleSourceTranslationDynamicIpFallbackArgsDict']]]
     """
     Fallback
     """
@@ -64036,7 +64036,7 @@ class NatRuleSourceTranslationDynamicIpArgs:
 
 
 class NatRuleSourceTranslationDynamicIpAndPortArgsDict(TypedDict):
-    interface_address: NotRequired[pulumi.Input[Optional['NatRuleSourceTranslationDynamicIpAndPortInterfaceAddressArgs']]]
+    interface_address: NotRequired[pulumi.Input[Optional['NatRuleSourceTranslationDynamicIpAndPortInterfaceAddressArgsDict']]]
     """
     Translated source interface
     """
@@ -64154,7 +64154,7 @@ class NatRuleSourceTranslationDynamicIpAndPortInterfaceAddressArgs:
 
 
 class NatRuleSourceTranslationDynamicIpFallbackArgsDict(TypedDict):
-    interface_address: NotRequired[pulumi.Input[Optional['NatRuleSourceTranslationDynamicIpFallbackInterfaceAddressArgs']]]
+    interface_address: NotRequired[pulumi.Input[Optional['NatRuleSourceTranslationDynamicIpFallbackInterfaceAddressArgsDict']]]
     """
     Fallback interface
     """
@@ -64390,17 +64390,17 @@ class OspfAuthProfileMd5Args:
 
 
 class PbfRuleActionArgsDict(TypedDict):
-    discard: NotRequired[pulumi.Input[Optional['PbfRuleActionDiscardArgs']]]
+    discard: NotRequired[pulumi.Input[Optional['PbfRuleActionDiscardArgsDict']]]
     """
     Discard
     """
-    forward: NotRequired[pulumi.Input[Optional['PbfRuleActionForwardArgs']]]
+    forward: NotRequired[pulumi.Input[Optional['PbfRuleActionForwardArgsDict']]]
     """
     Forward
 
     > ℹ️ **Note:** You must specify exactly one of `discard`, `forward`, and `no_pbf`.
     """
-    no_pbf: NotRequired[pulumi.Input[Optional['PbfRuleActionNoPbfArgs']]]
+    no_pbf: NotRequired[pulumi.Input[Optional['PbfRuleActionNoPbfArgsDict']]]
     """
     No pbf
 
@@ -64484,11 +64484,11 @@ class PbfRuleActionForwardArgsDict(TypedDict):
     """
     Egress interface
     """
-    monitor: NotRequired[pulumi.Input[Optional['PbfRuleActionForwardMonitorArgs']]]
+    monitor: NotRequired[pulumi.Input[Optional['PbfRuleActionForwardMonitorArgsDict']]]
     """
     Monitor
     """
-    nexthop: NotRequired[pulumi.Input[Optional['PbfRuleActionForwardNexthopArgs']]]
+    nexthop: NotRequired[pulumi.Input[Optional['PbfRuleActionForwardNexthopArgsDict']]]
     """
     Nexthop
     """
@@ -64686,7 +64686,7 @@ class PbfRuleEnforceSymmetricReturnArgsDict(TypedDict):
     """
     Enforce symmetric return?
     """
-    nexthop_address_lists: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['PbfRuleEnforceSymmetricReturnNexthopAddressListArgs']]]]]
+    nexthop_address_lists: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['PbfRuleEnforceSymmetricReturnNexthopAddressListArgsDict']]]]]
     """
     Next hop IP addresses
     """
@@ -64844,7 +64844,7 @@ class QosPolicyRuleActionArgs:
 
 
 class QosPolicyRuleDscpTosArgsDict(TypedDict):
-    codepoints: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['QosPolicyRuleDscpTosCodepointArgs']]]]]
+    codepoints: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['QosPolicyRuleDscpTosCodepointArgsDict']]]]]
     """
     Codepoints
     """
@@ -64877,7 +64877,7 @@ class QosPolicyRuleDscpTosCodepointArgsDict(TypedDict):
     """
     Name
     """
-    type: NotRequired[pulumi.Input[Optional['QosPolicyRuleDscpTosCodepointTypeArgs']]]
+    type: NotRequired[pulumi.Input[Optional['QosPolicyRuleDscpTosCodepointTypeArgsDict']]]
     """
     Type
     """
@@ -64922,29 +64922,29 @@ class QosPolicyRuleDscpTosCodepointArgs:
 
 
 class QosPolicyRuleDscpTosCodepointTypeArgsDict(TypedDict):
-    af: NotRequired[pulumi.Input[Optional['QosPolicyRuleDscpTosCodepointTypeAfArgs']]]
+    af: NotRequired[pulumi.Input[Optional['QosPolicyRuleDscpTosCodepointTypeAfArgsDict']]]
     """
     Af
     """
-    cs: NotRequired[pulumi.Input[Optional['QosPolicyRuleDscpTosCodepointTypeCsArgs']]]
+    cs: NotRequired[pulumi.Input[Optional['QosPolicyRuleDscpTosCodepointTypeCsArgsDict']]]
     """
     Cs
 
     > ℹ️ **Note:** You must specify exactly one of `af`, `cs`, `custom`, `ef`, and `tos`.
     """
-    custom: NotRequired[pulumi.Input[Optional['QosPolicyRuleDscpTosCodepointTypeCustomArgs']]]
+    custom: NotRequired[pulumi.Input[Optional['QosPolicyRuleDscpTosCodepointTypeCustomArgsDict']]]
     """
     Custom
 
     > ℹ️ **Note:** You must specify exactly one of `af`, `cs`, `custom`, `ef`, and `tos`.
     """
-    ef: NotRequired[pulumi.Input[Optional['QosPolicyRuleDscpTosCodepointTypeEfArgs']]]
+    ef: NotRequired[pulumi.Input[Optional['QosPolicyRuleDscpTosCodepointTypeEfArgsDict']]]
     """
     Ef
 
     > ℹ️ **Note:** You must specify exactly one of `af`, `cs`, `custom`, `ef`, and `tos`.
     """
-    tos: NotRequired[pulumi.Input[Optional['QosPolicyRuleDscpTosCodepointTypeTosArgs']]]
+    tos: NotRequired[pulumi.Input[Optional['QosPolicyRuleDscpTosCodepointTypeTosArgsDict']]]
     """
     Tos
 
@@ -65113,7 +65113,7 @@ class QosPolicyRuleDscpTosCodepointTypeCsArgs:
 
 
 class QosPolicyRuleDscpTosCodepointTypeCustomArgsDict(TypedDict):
-    codepoint: NotRequired[pulumi.Input[Optional['QosPolicyRuleDscpTosCodepointTypeCustomCodepointArgs']]]
+    codepoint: NotRequired[pulumi.Input[Optional['QosPolicyRuleDscpTosCodepointTypeCustomCodepointArgsDict']]]
     """
     Codepoint
     """
@@ -65278,11 +65278,11 @@ class QosProfileAggregateBandwidthArgs:
 
 
 class QosProfileClassBandwidthTypeArgsDict(TypedDict):
-    mbps: NotRequired[pulumi.Input[Optional['QosProfileClassBandwidthTypeMbpsArgs']]]
+    mbps: NotRequired[pulumi.Input[Optional['QosProfileClassBandwidthTypeMbpsArgsDict']]]
     """
     Mbps
     """
-    percentage: NotRequired[pulumi.Input[Optional['QosProfileClassBandwidthTypePercentageArgs']]]
+    percentage: NotRequired[pulumi.Input[Optional['QosProfileClassBandwidthTypePercentageArgsDict']]]
     """
     Percentage
 
@@ -65333,7 +65333,7 @@ class QosProfileClassBandwidthTypeArgs:
 
 
 class QosProfileClassBandwidthTypeMbpsArgsDict(TypedDict):
-    classes: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['QosProfileClassBandwidthTypeMbpsClassArgs']]]]]
+    classes: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['QosProfileClassBandwidthTypeMbpsClassArgsDict']]]]]
     """
     QoS setting for traffic classes
     """
@@ -65362,7 +65362,7 @@ class QosProfileClassBandwidthTypeMbpsArgs:
 
 
 class QosProfileClassBandwidthTypeMbpsClassArgsDict(TypedDict):
-    class_bandwidth: NotRequired[pulumi.Input[Optional['QosProfileClassBandwidthTypeMbpsClassClassBandwidthArgs']]]
+    class_bandwidth: NotRequired[pulumi.Input[Optional['QosProfileClassBandwidthTypeMbpsClassClassBandwidthArgsDict']]]
     """
     Class bandwidth
     """
@@ -65480,7 +65480,7 @@ class QosProfileClassBandwidthTypeMbpsClassClassBandwidthArgs:
 
 
 class QosProfileClassBandwidthTypePercentageArgsDict(TypedDict):
-    classes: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['QosProfileClassBandwidthTypePercentageClassArgs']]]]]
+    classes: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['QosProfileClassBandwidthTypePercentageClassArgsDict']]]]]
     """
     QoS setting for traffic classes
     """
@@ -65509,7 +65509,7 @@ class QosProfileClassBandwidthTypePercentageArgs:
 
 
 class QosProfileClassBandwidthTypePercentageClassArgsDict(TypedDict):
-    class_bandwidth: NotRequired[pulumi.Input[Optional['QosProfileClassBandwidthTypePercentageClassClassBandwidthArgs']]]
+    class_bandwidth: NotRequired[pulumi.Input[Optional['QosProfileClassBandwidthTypePercentageClassClassBandwidthArgsDict']]]
     """
     Class bandwidth
     """
@@ -65627,23 +65627,23 @@ class QosProfileClassBandwidthTypePercentageClassClassBandwidthArgs:
 
 
 class RadiusServerProfileProtocolArgsDict(TypedDict):
-    chap: NotRequired[pulumi.Input[Optional['RadiusServerProfileProtocolChapArgs']]]
+    chap: NotRequired[pulumi.Input[Optional['RadiusServerProfileProtocolChapArgsDict']]]
     """
     C h a p
     """
-    eap_ttls_with_pap: NotRequired[pulumi.Input[Optional['RadiusServerProfileProtocolEapTtlsWithPapArgs']]]
+    eap_ttls_with_pap: NotRequired[pulumi.Input[Optional['RadiusServerProfileProtocolEapTtlsWithPapArgsDict']]]
     """
     E a p t t l s with p a p
     """
-    pap: NotRequired[pulumi.Input[Optional['RadiusServerProfileProtocolPapArgs']]]
+    pap: NotRequired[pulumi.Input[Optional['RadiusServerProfileProtocolPapArgsDict']]]
     """
     P a p
     """
-    peap_mscha_pv2: NotRequired[pulumi.Input[Optional['RadiusServerProfileProtocolPeapMschaPv2Args']]]
+    peap_mscha_pv2: NotRequired[pulumi.Input[Optional['RadiusServerProfileProtocolPeapMschaPv2ArgsDict']]]
     """
     P e a p m s c h a pv2
     """
-    peap_with_gtc: NotRequired[pulumi.Input[Optional['RadiusServerProfileProtocolPeapWithGtcArgs']]]
+    peap_with_gtc: NotRequired[pulumi.Input[Optional['RadiusServerProfileProtocolPeapWithGtcArgsDict']]]
     """
     P e a p with g t c
     """
@@ -66123,7 +66123,7 @@ class RemoteNetworkEcmpTunnelArgs:
 
 
 class RemoteNetworkEcmpTunnelProtocolArgsDict(TypedDict):
-    bgp: NotRequired[pulumi.Input[Optional['RemoteNetworkEcmpTunnelProtocolBgpArgs']]]
+    bgp: NotRequired[pulumi.Input[Optional['RemoteNetworkEcmpTunnelProtocolBgpArgsDict']]]
     """
     Bgp
     """
@@ -66341,11 +66341,11 @@ class RemoteNetworkEcmpTunnelProtocolBgpArgs:
 
 
 class RemoteNetworkProtocolArgsDict(TypedDict):
-    bgp: NotRequired[pulumi.Input[Optional['RemoteNetworkProtocolBgpArgs']]]
+    bgp: NotRequired[pulumi.Input[Optional['RemoteNetworkProtocolBgpArgsDict']]]
     """
     Bgp
     """
-    bgp_peer: NotRequired[pulumi.Input[Optional['RemoteNetworkProtocolBgpPeerArgs']]]
+    bgp_peer: NotRequired[pulumi.Input[Optional['RemoteNetworkProtocolBgpPeerArgsDict']]]
     """
     secondary bgp routing as bgp*peer
     """
@@ -66668,7 +66668,7 @@ class RemoteNetworkProtocolBgpPeerArgs:
 
 
 class RouteAccessListTypeArgsDict(TypedDict):
-    ipv4: NotRequired[pulumi.Input[Optional['RouteAccessListTypeIpv4Args']]]
+    ipv4: NotRequired[pulumi.Input[Optional['RouteAccessListTypeIpv4ArgsDict']]]
     """
     Ipv4
     """
@@ -66697,7 +66697,7 @@ class RouteAccessListTypeArgs:
 
 
 class RouteAccessListTypeIpv4ArgsDict(TypedDict):
-    ipv4_entries: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['RouteAccessListTypeIpv4Ipv4EntryArgs']]]]]
+    ipv4_entries: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['RouteAccessListTypeIpv4Ipv4EntryArgsDict']]]]]
     """
     IPv4 access lists
     """
@@ -66730,7 +66730,7 @@ class RouteAccessListTypeIpv4Ipv4EntryArgsDict(TypedDict):
     """
     Action
     """
-    destination_address: NotRequired[pulumi.Input[Optional['RouteAccessListTypeIpv4Ipv4EntryDestinationAddressArgs']]]
+    destination_address: NotRequired[pulumi.Input[Optional['RouteAccessListTypeIpv4Ipv4EntryDestinationAddressArgsDict']]]
     """
     Destination address
     """
@@ -66738,7 +66738,7 @@ class RouteAccessListTypeIpv4Ipv4EntryArgsDict(TypedDict):
     """
     Sequence number
     """
-    source_address: NotRequired[pulumi.Input[Optional['RouteAccessListTypeIpv4Ipv4EntrySourceAddressArgs']]]
+    source_address: NotRequired[pulumi.Input[Optional['RouteAccessListTypeIpv4Ipv4EntrySourceAddressArgsDict']]]
     """
     Source address
     """
@@ -66819,7 +66819,7 @@ class RouteAccessListTypeIpv4Ipv4EntryDestinationAddressArgsDict(TypedDict):
     """
     Destination IP address
     """
-    entry: NotRequired[pulumi.Input[Optional['RouteAccessListTypeIpv4Ipv4EntryDestinationAddressEntryArgs']]]
+    entry: NotRequired[pulumi.Input[Optional['RouteAccessListTypeIpv4Ipv4EntryDestinationAddressEntryArgsDict']]]
     """
     Entry
     """
@@ -66917,7 +66917,7 @@ class RouteAccessListTypeIpv4Ipv4EntrySourceAddressArgsDict(TypedDict):
     """
     Source IP address
     """
-    entry: NotRequired[pulumi.Input[Optional['RouteAccessListTypeIpv4Ipv4EntrySourceAddressEntryArgs']]]
+    entry: NotRequired[pulumi.Input[Optional['RouteAccessListTypeIpv4Ipv4EntrySourceAddressEntryArgsDict']]]
     """
     Entry
     """
@@ -67011,17 +67011,17 @@ class RouteAccessListTypeIpv4Ipv4EntrySourceAddressEntryArgs:
 
 
 class RouteCommunityListTypeArgsDict(TypedDict):
-    extended: NotRequired[pulumi.Input[Optional['RouteCommunityListTypeExtendedArgs']]]
+    extended: NotRequired[pulumi.Input[Optional['RouteCommunityListTypeExtendedArgsDict']]]
     """
     Extended
     """
-    large: NotRequired[pulumi.Input[Optional['RouteCommunityListTypeLargeArgs']]]
+    large: NotRequired[pulumi.Input[Optional['RouteCommunityListTypeLargeArgsDict']]]
     """
     Large
 
     > ℹ️ **Note:** You must specify exactly one of `extended`, `large`, and `regular`.
     """
-    regular: NotRequired[pulumi.Input[Optional['RouteCommunityListTypeRegularArgs']]]
+    regular: NotRequired[pulumi.Input[Optional['RouteCommunityListTypeRegularArgsDict']]]
     """
     Regular
 
@@ -67092,7 +67092,7 @@ class RouteCommunityListTypeArgs:
 
 
 class RouteCommunityListTypeExtendedArgsDict(TypedDict):
-    extended_entries: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['RouteCommunityListTypeExtendedExtendedEntryArgs']]]]]
+    extended_entries: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['RouteCommunityListTypeExtendedExtendedEntryArgsDict']]]]]
     """
     Extended community lists
     """
@@ -67190,7 +67190,7 @@ class RouteCommunityListTypeExtendedExtendedEntryArgs:
 
 
 class RouteCommunityListTypeLargeArgsDict(TypedDict):
-    large_entries: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['RouteCommunityListTypeLargeLargeEntryArgs']]]]]
+    large_entries: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['RouteCommunityListTypeLargeLargeEntryArgsDict']]]]]
     """
     Large community lists
     """
@@ -67288,7 +67288,7 @@ class RouteCommunityListTypeLargeLargeEntryArgs:
 
 
 class RouteCommunityListTypeRegularArgsDict(TypedDict):
-    regular_entries: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['RouteCommunityListTypeRegularRegularEntryArgs']]]]]
+    regular_entries: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['RouteCommunityListTypeRegularRegularEntryArgsDict']]]]]
     """
     Regular community lists
     """
@@ -67483,7 +67483,7 @@ class RoutePrefixListTypeArgs:
 
 
 class RoutePrefixListTypeIpv4ArgsDict(TypedDict):
-    ipv4_entries: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['RoutePrefixListTypeIpv4Ipv4EntryArgs']]]]]
+    ipv4_entries: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['RoutePrefixListTypeIpv4Ipv4EntryArgsDict']]]]]
     """
     IPv4 prefix lists
     """
@@ -67520,7 +67520,7 @@ class RoutePrefixListTypeIpv4Ipv4EntryArgsDict(TypedDict):
     """
     Sequence number
     """
-    prefix: NotRequired[pulumi.Input[Optional['RoutePrefixListTypeIpv4Ipv4EntryPrefixArgs']]]
+    prefix: NotRequired[pulumi.Input[Optional['RoutePrefixListTypeIpv4Ipv4EntryPrefixArgsDict']]]
     """
     Prefix
     """
@@ -67581,7 +67581,7 @@ class RoutePrefixListTypeIpv4Ipv4EntryArgs:
 
 
 class RoutePrefixListTypeIpv4Ipv4EntryPrefixArgsDict(TypedDict):
-    entry: NotRequired[pulumi.Input[Optional['RoutePrefixListTypeIpv4Ipv4EntryPrefixEntryArgs']]]
+    entry: NotRequired[pulumi.Input[Optional['RoutePrefixListTypeIpv4Ipv4EntryPrefixEntryArgsDict']]]
     """
     Entry
     """
@@ -67842,7 +67842,7 @@ class ScepProfileCertificateAttributesArgs:
 
 
 class ScepProfileScepChallengeArgsDict(TypedDict):
-    dynamic: NotRequired[pulumi.Input[Optional['ScepProfileScepChallengeDynamicArgs']]]
+    dynamic: NotRequired[pulumi.Input[Optional['ScepProfileScepChallengeDynamicArgsDict']]]
     """
     Dynamic
     """
@@ -67852,7 +67852,7 @@ class ScepProfileScepChallengeArgsDict(TypedDict):
 
     > ℹ️ **Note:** You must specify exactly one of `dynamic`, `fixed`, and `none`.
     """
-    none: NotRequired[pulumi.Input[Optional['ScepProfileScepChallengeNoneArgs']]]
+    none: NotRequired[pulumi.Input[Optional['ScepProfileScepChallengeNoneArgsDict']]]
     """
     No OTP
 
@@ -68005,7 +68005,7 @@ class ScheduleScheduleTypeArgsDict(TypedDict):
     """
     Non recurring
     """
-    recurring: NotRequired[pulumi.Input[Optional['ScheduleScheduleTypeRecurringArgs']]]
+    recurring: NotRequired[pulumi.Input[Optional['ScheduleScheduleTypeRecurringArgsDict']]]
     """
     Recurring
 
@@ -68060,7 +68060,7 @@ class ScheduleScheduleTypeRecurringArgsDict(TypedDict):
     """
     Daily
     """
-    weekly: NotRequired[pulumi.Input[Optional['ScheduleScheduleTypeRecurringWeeklyArgs']]]
+    weekly: NotRequired[pulumi.Input[Optional['ScheduleScheduleTypeRecurringWeeklyArgsDict']]]
     """
     Weekly
 
@@ -68260,11 +68260,11 @@ class ScheduleScheduleTypeRecurringWeeklyArgs:
 
 
 class SdwanErrorCorrectionProfileModeArgsDict(TypedDict):
-    forward_error_correction: NotRequired[pulumi.Input[Optional['SdwanErrorCorrectionProfileModeForwardErrorCorrectionArgs']]]
+    forward_error_correction: NotRequired[pulumi.Input[Optional['SdwanErrorCorrectionProfileModeForwardErrorCorrectionArgsDict']]]
     """
     Forward error correction
     """
-    packet_duplication: NotRequired[pulumi.Input[Optional['SdwanErrorCorrectionProfileModePacketDuplicationArgs']]]
+    packet_duplication: NotRequired[pulumi.Input[Optional['SdwanErrorCorrectionProfileModePacketDuplicationArgsDict']]]
     """
     Packet duplication
 
@@ -68398,7 +68398,7 @@ class SdwanPathQualityProfileMetricArgsDict(TypedDict):
     """
     Latency
     """
-    pkt_loss: NotRequired[pulumi.Input[Optional['SdwanPathQualityProfileMetricPktLossArgs']]]
+    pkt_loss: NotRequired[pulumi.Input[Optional['SdwanPathQualityProfileMetricPktLossArgsDict']]]
     """
     Pkt loss
     """
@@ -68626,17 +68626,17 @@ class SdwanRuleActionArgs:
 
 
 class SdwanSaasQualityProfileMonitorModeArgsDict(TypedDict):
-    adaptive: NotRequired[pulumi.Input[Optional['SdwanSaasQualityProfileMonitorModeAdaptiveArgs']]]
+    adaptive: NotRequired[pulumi.Input[Optional['SdwanSaasQualityProfileMonitorModeAdaptiveArgsDict']]]
     """
     Adaptive
     """
-    http_https: NotRequired[pulumi.Input[Optional['SdwanSaasQualityProfileMonitorModeHttpHttpsArgs']]]
+    http_https: NotRequired[pulumi.Input[Optional['SdwanSaasQualityProfileMonitorModeHttpHttpsArgsDict']]]
     """
     Http https
 
     > ℹ️ **Note:** You must specify exactly one of `adaptive`, `http_https`, and `static_ip`.
     """
-    static_ip: NotRequired[pulumi.Input[Optional['SdwanSaasQualityProfileMonitorModeStaticIpArgs']]]
+    static_ip: NotRequired[pulumi.Input[Optional['SdwanSaasQualityProfileMonitorModeStaticIpArgsDict']]]
     """
     Static ip
 
@@ -68763,11 +68763,11 @@ class SdwanSaasQualityProfileMonitorModeHttpHttpsArgs:
 
 
 class SdwanSaasQualityProfileMonitorModeStaticIpArgsDict(TypedDict):
-    fqdn: NotRequired[pulumi.Input[Optional['SdwanSaasQualityProfileMonitorModeStaticIpFqdnArgs']]]
+    fqdn: NotRequired[pulumi.Input[Optional['SdwanSaasQualityProfileMonitorModeStaticIpFqdnArgsDict']]]
     """
     Fqdn
     """
-    ip_addresses: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['SdwanSaasQualityProfileMonitorModeStaticIpIpAddressArgs']]]]]
+    ip_addresses: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['SdwanSaasQualityProfileMonitorModeStaticIpIpAddressArgsDict']]]]]
     """
     List of IP addresses
 
@@ -68976,7 +68976,7 @@ class SecurityRuleAllowUrlCategoryArgsDict(TypedDict):
     """
     Dlp
     """
-    file_control: NotRequired[pulumi.Input[Optional['SecurityRuleAllowUrlCategoryFileControlArgs']]]
+    file_control: NotRequired[pulumi.Input[Optional['SecurityRuleAllowUrlCategoryFileControlArgsDict']]]
     """
     File control
     """
@@ -69170,7 +69170,7 @@ class SecurityRuleAllowWebApplicationArgsDict(TypedDict):
     """
     Dlp
     """
-    file_control: NotRequired[pulumi.Input[Optional['SecurityRuleAllowWebApplicationFileControlArgs']]]
+    file_control: NotRequired[pulumi.Input[Optional['SecurityRuleAllowWebApplicationFileControlArgsDict']]]
     """
     File control
     """
@@ -69178,7 +69178,7 @@ class SecurityRuleAllowWebApplicationArgsDict(TypedDict):
     """
     Name
     """
-    saas_enterprise_control: NotRequired[pulumi.Input[Optional['SecurityRuleAllowWebApplicationSaasEnterpriseControlArgs']]]
+    saas_enterprise_control: NotRequired[pulumi.Input[Optional['SecurityRuleAllowWebApplicationSaasEnterpriseControlArgsDict']]]
     """
     Saas enterprise control
     """
@@ -69190,7 +69190,7 @@ class SecurityRuleAllowWebApplicationArgsDict(TypedDict):
     """
     Saas user list
     """
-    tenant_control: NotRequired[pulumi.Input[Optional['SecurityRuleAllowWebApplicationTenantControlArgs']]]
+    tenant_control: NotRequired[pulumi.Input[Optional['SecurityRuleAllowWebApplicationTenantControlArgsDict']]]
     """
     Tenant control
     """
@@ -69416,11 +69416,11 @@ class SecurityRuleAllowWebApplicationFileControlArgs:
 
 
 class SecurityRuleAllowWebApplicationSaasEnterpriseControlArgsDict(TypedDict):
-    consumer_access: NotRequired[pulumi.Input[Optional['SecurityRuleAllowWebApplicationSaasEnterpriseControlConsumerAccessArgs']]]
+    consumer_access: NotRequired[pulumi.Input[Optional['SecurityRuleAllowWebApplicationSaasEnterpriseControlConsumerAccessArgsDict']]]
     """
     Consumer access
     """
-    enterprise_access: NotRequired[pulumi.Input[Optional['SecurityRuleAllowWebApplicationSaasEnterpriseControlEnterpriseAccessArgs']]]
+    enterprise_access: NotRequired[pulumi.Input[Optional['SecurityRuleAllowWebApplicationSaasEnterpriseControlEnterpriseAccessArgsDict']]]
     """
     Enterprise access
     """
@@ -69636,7 +69636,7 @@ class SecurityRuleDefaultProfileSettingsArgsDict(TypedDict):
     """
     Dlp
     """
-    file_control: NotRequired[pulumi.Input[Optional['SecurityRuleDefaultProfileSettingsFileControlArgs']]]
+    file_control: NotRequired[pulumi.Input[Optional['SecurityRuleDefaultProfileSettingsFileControlArgsDict']]]
     """
     File control
     """
@@ -69986,7 +69986,7 @@ class ServiceConnectionBgpPeerArgs:
 
 
 class ServiceConnectionProtocolArgsDict(TypedDict):
-    bgp: NotRequired[pulumi.Input[Optional['ServiceConnectionProtocolBgpArgs']]]
+    bgp: NotRequired[pulumi.Input[Optional['ServiceConnectionProtocolBgpArgsDict']]]
     """
     Bgp
     """
@@ -70252,11 +70252,11 @@ class ServiceConnectionQosArgs:
 
 
 class ServiceProtocolArgsDict(TypedDict):
-    tcp: NotRequired[pulumi.Input[Optional['ServiceProtocolTcpArgs']]]
+    tcp: NotRequired[pulumi.Input[Optional['ServiceProtocolTcpArgsDict']]]
     """
     Tcp
     """
-    udp: NotRequired[pulumi.Input[Optional['ServiceProtocolUdpArgs']]]
+    udp: NotRequired[pulumi.Input[Optional['ServiceProtocolUdpArgsDict']]]
     """
     Udp
 
@@ -70311,7 +70311,7 @@ class ServiceProtocolTcpArgsDict(TypedDict):
     """
     Port
     """
-    override: NotRequired[pulumi.Input[Optional['ServiceProtocolTcpOverrideArgs']]]
+    override: NotRequired[pulumi.Input[Optional['ServiceProtocolTcpOverrideArgsDict']]]
     """
     Override
     """
@@ -70448,7 +70448,7 @@ class ServiceProtocolUdpArgsDict(TypedDict):
     """
     Port
     """
-    override: NotRequired[pulumi.Input[Optional['ServiceProtocolUdpOverrideArgs']]]
+    override: NotRequired[pulumi.Input[Optional['ServiceProtocolUdpOverrideArgsDict']]]
     """
     Override
     """
@@ -70541,11 +70541,11 @@ class ServiceProtocolUdpOverrideArgs:
 
 
 class ServiceRouteRouteArgsDict(TypedDict):
-    destinations: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['ServiceRouteRouteDestinationArgs']]]]]
+    destinations: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['ServiceRouteRouteDestinationArgsDict']]]]]
     """
     Destination
     """
-    services: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['ServiceRouteRouteServiceArgs']]]]]
+    services: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['ServiceRouteRouteServiceArgsDict']]]]]
     """
     Service
     """
@@ -70594,7 +70594,7 @@ class ServiceRouteRouteDestinationArgsDict(TypedDict):
     """
     Name
     """
-    source: NotRequired[pulumi.Input[Optional['ServiceRouteRouteDestinationSourceArgs']]]
+    source: NotRequired[pulumi.Input[Optional['ServiceRouteRouteDestinationSourceArgsDict']]]
     """
     Source
     """
@@ -70692,11 +70692,11 @@ class ServiceRouteRouteServiceArgsDict(TypedDict):
     """
     The follow list details the accepted `name` values and their corresponding service description.
     """
-    source: NotRequired[pulumi.Input[Optional['ServiceRouteRouteServiceSourceArgs']]]
+    source: NotRequired[pulumi.Input[Optional['ServiceRouteRouteServiceSourceArgsDict']]]
     """
     Source
     """
-    source_v6: NotRequired[pulumi.Input[Optional['ServiceRouteRouteServiceSourceV6Args']]]
+    source_v6: NotRequired[pulumi.Input[Optional['ServiceRouteRouteServiceSourceV6ArgsDict']]]
     """
     Source v6
     """
@@ -70855,7 +70855,7 @@ class ServiceRouteRouteServiceSourceV6Args:
 
 
 class ServiceSettingServicesArgsDict(TypedDict):
-    dns_setting: NotRequired[pulumi.Input[Optional['ServiceSettingServicesDnsSettingArgs']]]
+    dns_setting: NotRequired[pulumi.Input[Optional['ServiceSettingServicesDnsSettingArgsDict']]]
     """
     Dns setting
     """
@@ -70875,7 +70875,7 @@ class ServiceSettingServicesArgsDict(TypedDict):
     """
     Lcaas use proxy
     """
-    ntp_servers: NotRequired[pulumi.Input[Optional['ServiceSettingServicesNtpServersArgs']]]
+    ntp_servers: NotRequired[pulumi.Input[Optional['ServiceSettingServicesNtpServersArgsDict']]]
     """
     Ntp servers
     """
@@ -71108,7 +71108,7 @@ class ServiceSettingServicesDnsSettingArgsDict(TypedDict):
     """
     Dns proxy object
     """
-    servers: NotRequired[pulumi.Input[Optional['ServiceSettingServicesDnsSettingServersArgs']]]
+    servers: NotRequired[pulumi.Input[Optional['ServiceSettingServicesDnsSettingServersArgsDict']]]
     """
     Servers
 
@@ -71208,11 +71208,11 @@ class ServiceSettingServicesDnsSettingServersArgs:
 
 
 class ServiceSettingServicesNtpServersArgsDict(TypedDict):
-    primary_ntp_server: NotRequired[pulumi.Input[Optional['ServiceSettingServicesNtpServersPrimaryNtpServerArgs']]]
+    primary_ntp_server: NotRequired[pulumi.Input[Optional['ServiceSettingServicesNtpServersPrimaryNtpServerArgsDict']]]
     """
     Primary ntp server
     """
-    secondary_ntp_server: NotRequired[pulumi.Input[Optional['ServiceSettingServicesNtpServersSecondaryNtpServerArgs']]]
+    secondary_ntp_server: NotRequired[pulumi.Input[Optional['ServiceSettingServicesNtpServersSecondaryNtpServerArgsDict']]]
     """
     Secondary ntp server
     """
@@ -71257,7 +71257,7 @@ class ServiceSettingServicesNtpServersArgs:
 
 
 class ServiceSettingServicesNtpServersPrimaryNtpServerArgsDict(TypedDict):
-    authentication_type: NotRequired[pulumi.Input[Optional['ServiceSettingServicesNtpServersPrimaryNtpServerAuthenticationTypeArgs']]]
+    authentication_type: NotRequired[pulumi.Input[Optional['ServiceSettingServicesNtpServersPrimaryNtpServerAuthenticationTypeArgsDict']]]
     """
     Authentication type
     """
@@ -71306,17 +71306,17 @@ class ServiceSettingServicesNtpServersPrimaryNtpServerArgs:
 
 
 class ServiceSettingServicesNtpServersPrimaryNtpServerAuthenticationTypeArgsDict(TypedDict):
-    autokey: NotRequired[pulumi.Input[Optional['ServiceSettingServicesNtpServersPrimaryNtpServerAuthenticationTypeAutokeyArgs']]]
+    autokey: NotRequired[pulumi.Input[Optional['ServiceSettingServicesNtpServersPrimaryNtpServerAuthenticationTypeAutokeyArgsDict']]]
     """
     Autokey
     """
-    none: NotRequired[pulumi.Input[Optional['ServiceSettingServicesNtpServersPrimaryNtpServerAuthenticationTypeNoneArgs']]]
+    none: NotRequired[pulumi.Input[Optional['ServiceSettingServicesNtpServersPrimaryNtpServerAuthenticationTypeNoneArgsDict']]]
     """
     None
 
     > ℹ️ **Note:** You must specify exactly one of `autokey`, `none`, and `symmetric_key`.
     """
-    symmetric_key: NotRequired[pulumi.Input[Optional['ServiceSettingServicesNtpServersPrimaryNtpServerAuthenticationTypeSymmetricKeyArgs']]]
+    symmetric_key: NotRequired[pulumi.Input[Optional['ServiceSettingServicesNtpServersPrimaryNtpServerAuthenticationTypeSymmetricKeyArgsDict']]]
     """
     Symmetric key
 
@@ -71405,7 +71405,7 @@ class ServiceSettingServicesNtpServersPrimaryNtpServerAuthenticationTypeNoneArgs
 
 
 class ServiceSettingServicesNtpServersPrimaryNtpServerAuthenticationTypeSymmetricKeyArgsDict(TypedDict):
-    algorithm: NotRequired[pulumi.Input[Optional['ServiceSettingServicesNtpServersPrimaryNtpServerAuthenticationTypeSymmetricKeyAlgorithmArgs']]]
+    algorithm: NotRequired[pulumi.Input[Optional['ServiceSettingServicesNtpServersPrimaryNtpServerAuthenticationTypeSymmetricKeyAlgorithmArgsDict']]]
     """
     Algorithm
     """
@@ -71454,11 +71454,11 @@ class ServiceSettingServicesNtpServersPrimaryNtpServerAuthenticationTypeSymmetri
 
 
 class ServiceSettingServicesNtpServersPrimaryNtpServerAuthenticationTypeSymmetricKeyAlgorithmArgsDict(TypedDict):
-    md5: NotRequired[pulumi.Input[Optional['ServiceSettingServicesNtpServersPrimaryNtpServerAuthenticationTypeSymmetricKeyAlgorithmMd5Args']]]
+    md5: NotRequired[pulumi.Input[Optional['ServiceSettingServicesNtpServersPrimaryNtpServerAuthenticationTypeSymmetricKeyAlgorithmMd5ArgsDict']]]
     """
     Md5
     """
-    sha1: NotRequired[pulumi.Input[Optional['ServiceSettingServicesNtpServersPrimaryNtpServerAuthenticationTypeSymmetricKeyAlgorithmSha1Args']]]
+    sha1: NotRequired[pulumi.Input[Optional['ServiceSettingServicesNtpServersPrimaryNtpServerAuthenticationTypeSymmetricKeyAlgorithmSha1ArgsDict']]]
     """
     Sha1
     """
@@ -71561,7 +71561,7 @@ class ServiceSettingServicesNtpServersPrimaryNtpServerAuthenticationTypeSymmetri
 
 
 class ServiceSettingServicesNtpServersSecondaryNtpServerArgsDict(TypedDict):
-    authentication_type: NotRequired[pulumi.Input[Optional['ServiceSettingServicesNtpServersSecondaryNtpServerAuthenticationTypeArgs']]]
+    authentication_type: NotRequired[pulumi.Input[Optional['ServiceSettingServicesNtpServersSecondaryNtpServerAuthenticationTypeArgsDict']]]
     """
     Authentication type
     """
@@ -71610,17 +71610,17 @@ class ServiceSettingServicesNtpServersSecondaryNtpServerArgs:
 
 
 class ServiceSettingServicesNtpServersSecondaryNtpServerAuthenticationTypeArgsDict(TypedDict):
-    autokey: NotRequired[pulumi.Input[Optional['ServiceSettingServicesNtpServersSecondaryNtpServerAuthenticationTypeAutokeyArgs']]]
+    autokey: NotRequired[pulumi.Input[Optional['ServiceSettingServicesNtpServersSecondaryNtpServerAuthenticationTypeAutokeyArgsDict']]]
     """
     Autokey
     """
-    none: NotRequired[pulumi.Input[Optional['ServiceSettingServicesNtpServersSecondaryNtpServerAuthenticationTypeNoneArgs']]]
+    none: NotRequired[pulumi.Input[Optional['ServiceSettingServicesNtpServersSecondaryNtpServerAuthenticationTypeNoneArgsDict']]]
     """
     None
 
     > ℹ️ **Note:** You must specify exactly one of `autokey`, `none`, and `symmetric_key`.
     """
-    symmetric_key: NotRequired[pulumi.Input[Optional['ServiceSettingServicesNtpServersSecondaryNtpServerAuthenticationTypeSymmetricKeyArgs']]]
+    symmetric_key: NotRequired[pulumi.Input[Optional['ServiceSettingServicesNtpServersSecondaryNtpServerAuthenticationTypeSymmetricKeyArgsDict']]]
     """
     Symmetric key
 
@@ -71709,7 +71709,7 @@ class ServiceSettingServicesNtpServersSecondaryNtpServerAuthenticationTypeNoneAr
 
 
 class ServiceSettingServicesNtpServersSecondaryNtpServerAuthenticationTypeSymmetricKeyArgsDict(TypedDict):
-    algorithm: NotRequired[pulumi.Input[Optional['ServiceSettingServicesNtpServersSecondaryNtpServerAuthenticationTypeSymmetricKeyAlgorithmArgs']]]
+    algorithm: NotRequired[pulumi.Input[Optional['ServiceSettingServicesNtpServersSecondaryNtpServerAuthenticationTypeSymmetricKeyAlgorithmArgsDict']]]
     """
     Algorithm
     """
@@ -71758,11 +71758,11 @@ class ServiceSettingServicesNtpServersSecondaryNtpServerAuthenticationTypeSymmet
 
 
 class ServiceSettingServicesNtpServersSecondaryNtpServerAuthenticationTypeSymmetricKeyAlgorithmArgsDict(TypedDict):
-    md5: NotRequired[pulumi.Input[Optional['ServiceSettingServicesNtpServersSecondaryNtpServerAuthenticationTypeSymmetricKeyAlgorithmMd5Args']]]
+    md5: NotRequired[pulumi.Input[Optional['ServiceSettingServicesNtpServersSecondaryNtpServerAuthenticationTypeSymmetricKeyAlgorithmMd5ArgsDict']]]
     """
     Md5
     """
-    sha1: NotRequired[pulumi.Input[Optional['ServiceSettingServicesNtpServersSecondaryNtpServerAuthenticationTypeSymmetricKeyAlgorithmSha1Args']]]
+    sha1: NotRequired[pulumi.Input[Optional['ServiceSettingServicesNtpServersSecondaryNtpServerAuthenticationTypeSymmetricKeyAlgorithmSha1ArgsDict']]]
     """
     Sha1
     """
@@ -71877,7 +71877,7 @@ class SessionSettingSessionSettingsArgsDict(TypedDict):
     """
     Accelerated aging threshold
     """
-    config: NotRequired[pulumi.Input[Optional['SessionSettingSessionSettingsConfigArgs']]]
+    config: NotRequired[pulumi.Input[Optional['SessionSettingSessionSettingsConfigArgsDict']]]
     """
     Config
     """
@@ -71893,7 +71893,7 @@ class SessionSettingSessionSettingsArgsDict(TypedDict):
     """
     ICMP unreachable packet rate (per second)
     """
-    icmpv6_rate_limit: NotRequired[pulumi.Input[Optional['SessionSettingSessionSettingsIcmpv6RateLimitArgs']]]
+    icmpv6_rate_limit: NotRequired[pulumi.Input[Optional['SessionSettingSessionSettingsIcmpv6RateLimitArgsDict']]]
     """
     ICMPv6 rate limiting
     """
@@ -71901,7 +71901,7 @@ class SessionSettingSessionSettingsArgsDict(TypedDict):
     """
     Enable IPv6 firewalling
     """
-    jumbo_frame: NotRequired[pulumi.Input[Optional['SessionSettingSessionSettingsJumboFrameArgs']]]
+    jumbo_frame: NotRequired[pulumi.Input[Optional['SessionSettingSessionSettingsJumboFrameArgsDict']]]
     """
     Enable jumbo frame support
     """
@@ -71913,11 +71913,11 @@ class SessionSettingSessionSettingsArgsDict(TypedDict):
     """
     Multicast route setup buffering
     """
-    nat: NotRequired[pulumi.Input[Optional['SessionSettingSessionSettingsNatArgs']]]
+    nat: NotRequired[pulumi.Input[Optional['SessionSettingSessionSettingsNatArgsDict']]]
     """
     Nat
     """
-    nat64: NotRequired[pulumi.Input[Optional['SessionSettingSessionSettingsNat64Args']]]
+    nat64: NotRequired[pulumi.Input[Optional['SessionSettingSessionSettingsNat64ArgsDict']]]
     """
     Nat64
     """
@@ -73024,7 +73024,7 @@ class SyslogServerProfileFormatArgsDict(TypedDict):
     """
     Decryption
     """
-    escaping: NotRequired[pulumi.Input[Optional['SyslogServerProfileFormatEscapingArgs']]]
+    escaping: NotRequired[pulumi.Input[Optional['SyslogServerProfileFormatEscapingArgsDict']]]
     """
     Escaping
     """
@@ -74078,7 +74078,7 @@ class TlsServiceProfileProtocolSettingsArgs:
 
 
 class TrafficSteeringRuleActionArgsDict(TypedDict):
-    forward: NotRequired[pulumi.Input[Optional['TrafficSteeringRuleActionForwardArgs']]]
+    forward: NotRequired[pulumi.Input[Optional['TrafficSteeringRuleActionForwardArgsDict']]]
     """
     Forward
     """
@@ -74107,11 +74107,11 @@ class TrafficSteeringRuleActionArgs:
 
 
 class TrafficSteeringRuleActionForwardArgsDict(TypedDict):
-    forward: NotRequired[pulumi.Input[Optional['TrafficSteeringRuleActionForwardForwardArgs']]]
+    forward: NotRequired[pulumi.Input[Optional['TrafficSteeringRuleActionForwardForwardArgsDict']]]
     """
     Forward
     """
-    no_pbf: NotRequired[pulumi.Input[Optional['TrafficSteeringRuleActionForwardNoPbfArgs']]]
+    no_pbf: NotRequired[pulumi.Input[Optional['TrafficSteeringRuleActionForwardNoPbfArgsDict']]]
     """
     No pbf
     """
@@ -74222,7 +74222,7 @@ class TunnelInterfaceIpArgs:
 
 
 class TunnelInterfaceIpv6ArgsDict(TypedDict):
-    addresses: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['TunnelInterfaceIpv6AddressArgs']]]]]
+    addresses: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['TunnelInterfaceIpv6AddressArgsDict']]]]]
     """
     IPv6 Address Parent for tunnel interface
     """
@@ -74291,7 +74291,7 @@ class TunnelInterfaceIpv6Args:
 
 
 class TunnelInterfaceIpv6AddressArgsDict(TypedDict):
-    anycast: NotRequired[pulumi.Input[Optional['TunnelInterfaceIpv6AddressAnycastArgs']]]
+    anycast: NotRequired[pulumi.Input[Optional['TunnelInterfaceIpv6AddressAnycastArgsDict']]]
     """
     Anycast for tunnel interface
     """
@@ -74303,7 +74303,7 @@ class TunnelInterfaceIpv6AddressArgsDict(TypedDict):
     """
     IPv6 Address for tunnel interface
     """
-    prefix: NotRequired[pulumi.Input[Optional['TunnelInterfaceIpv6AddressPrefixArgs']]]
+    prefix: NotRequired[pulumi.Input[Optional['TunnelInterfaceIpv6AddressPrefixArgsDict']]]
     """
     Use interface ID as host portion for tunnel interface
     """
@@ -74496,17 +74496,17 @@ class UpdateScheduleUpdateScheduleAntiVirusRecurringArgsDict(TypedDict):
     """
     Sync to peer
     """
-    daily: NotRequired[pulumi.Input[Optional['UpdateScheduleUpdateScheduleAntiVirusRecurringDailyArgs']]]
+    daily: NotRequired[pulumi.Input[Optional['UpdateScheduleUpdateScheduleAntiVirusRecurringDailyArgsDict']]]
     """
     Daily
     """
-    hourly: NotRequired[pulumi.Input[Optional['UpdateScheduleUpdateScheduleAntiVirusRecurringHourlyArgs']]]
+    hourly: NotRequired[pulumi.Input[Optional['UpdateScheduleUpdateScheduleAntiVirusRecurringHourlyArgsDict']]]
     """
     Hourly
 
     > ℹ️ **Note:** You must specify exactly one of `daily`, `hourly`, `none`, and `weekly`.
     """
-    none: NotRequired[pulumi.Input[Optional['UpdateScheduleUpdateScheduleAntiVirusRecurringNoneArgs']]]
+    none: NotRequired[pulumi.Input[Optional['UpdateScheduleUpdateScheduleAntiVirusRecurringNoneArgsDict']]]
     """
     None
 
@@ -74516,7 +74516,7 @@ class UpdateScheduleUpdateScheduleAntiVirusRecurringArgsDict(TypedDict):
     """
     Threshold
     """
-    weekly: NotRequired[pulumi.Input[Optional['UpdateScheduleUpdateScheduleAntiVirusRecurringWeeklyArgs']]]
+    weekly: NotRequired[pulumi.Input[Optional['UpdateScheduleUpdateScheduleAntiVirusRecurringWeeklyArgsDict']]]
     """
     Weekly
 
@@ -74844,17 +74844,17 @@ class UpdateScheduleUpdateScheduleThreatsRecurringArgsDict(TypedDict):
     """
     Sync to peer
     """
-    daily: NotRequired[pulumi.Input[Optional['UpdateScheduleUpdateScheduleThreatsRecurringDailyArgs']]]
+    daily: NotRequired[pulumi.Input[Optional['UpdateScheduleUpdateScheduleThreatsRecurringDailyArgsDict']]]
     """
     Daily
     """
-    every30_mins: NotRequired[pulumi.Input[Optional['UpdateScheduleUpdateScheduleThreatsRecurringEvery30MinsArgs']]]
+    every30_mins: NotRequired[pulumi.Input[Optional['UpdateScheduleUpdateScheduleThreatsRecurringEvery30MinsArgsDict']]]
     """
     Every30 mins
 
     > ℹ️ **Note:** You must specify exactly one of `daily`, `every_30_mins`, `hourly`, `none`, and `weekly`.
     """
-    hourly: NotRequired[pulumi.Input[Optional['UpdateScheduleUpdateScheduleThreatsRecurringHourlyArgs']]]
+    hourly: NotRequired[pulumi.Input[Optional['UpdateScheduleUpdateScheduleThreatsRecurringHourlyArgsDict']]]
     """
     Hourly
 
@@ -74864,7 +74864,7 @@ class UpdateScheduleUpdateScheduleThreatsRecurringArgsDict(TypedDict):
     """
     New app threshold
     """
-    none: NotRequired[pulumi.Input[Optional['UpdateScheduleUpdateScheduleThreatsRecurringNoneArgs']]]
+    none: NotRequired[pulumi.Input[Optional['UpdateScheduleUpdateScheduleThreatsRecurringNoneArgsDict']]]
     """
     None
 
@@ -74874,7 +74874,7 @@ class UpdateScheduleUpdateScheduleThreatsRecurringArgsDict(TypedDict):
     """
     Threshold
     """
-    weekly: NotRequired[pulumi.Input[Optional['UpdateScheduleUpdateScheduleThreatsRecurringWeeklyArgs']]]
+    weekly: NotRequired[pulumi.Input[Optional['UpdateScheduleUpdateScheduleThreatsRecurringWeeklyArgsDict']]]
     """
     Weekly
 
@@ -75361,35 +75361,35 @@ class UpdateScheduleUpdateScheduleWildfireArgs:
 
 
 class UpdateScheduleUpdateScheduleWildfireRecurringArgsDict(TypedDict):
-    every15_mins: NotRequired[pulumi.Input[Optional['UpdateScheduleUpdateScheduleWildfireRecurringEvery15MinsArgs']]]
+    every15_mins: NotRequired[pulumi.Input[Optional['UpdateScheduleUpdateScheduleWildfireRecurringEvery15MinsArgsDict']]]
     """
     Every15 mins
     """
-    every30_mins: NotRequired[pulumi.Input[Optional['UpdateScheduleUpdateScheduleWildfireRecurringEvery30MinsArgs']]]
+    every30_mins: NotRequired[pulumi.Input[Optional['UpdateScheduleUpdateScheduleWildfireRecurringEvery30MinsArgsDict']]]
     """
     Every30 mins
 
     > ℹ️ **Note:** You must specify exactly one of `every_15_mins`, `every_30_mins`, `every_hour`, `every_min`, `none`, and `real_time`.
     """
-    every_hour: NotRequired[pulumi.Input[Optional['UpdateScheduleUpdateScheduleWildfireRecurringEveryHourArgs']]]
+    every_hour: NotRequired[pulumi.Input[Optional['UpdateScheduleUpdateScheduleWildfireRecurringEveryHourArgsDict']]]
     """
     Every hour
 
     > ℹ️ **Note:** You must specify exactly one of `every_15_mins`, `every_30_mins`, `every_hour`, `every_min`, `none`, and `real_time`.
     """
-    every_min: NotRequired[pulumi.Input[Optional['UpdateScheduleUpdateScheduleWildfireRecurringEveryMinArgs']]]
+    every_min: NotRequired[pulumi.Input[Optional['UpdateScheduleUpdateScheduleWildfireRecurringEveryMinArgsDict']]]
     """
     Every min
 
     > ℹ️ **Note:** You must specify exactly one of `every_15_mins`, `every_30_mins`, `every_hour`, `every_min`, `none`, and `real_time`.
     """
-    none: NotRequired[pulumi.Input[Optional['UpdateScheduleUpdateScheduleWildfireRecurringNoneArgs']]]
+    none: NotRequired[pulumi.Input[Optional['UpdateScheduleUpdateScheduleWildfireRecurringNoneArgsDict']]]
     """
     None
 
     > ℹ️ **Note:** You must specify exactly one of `every_15_mins`, `every_30_mins`, `every_hour`, `every_min`, `none`, and `real_time`.
     """
-    real_time: NotRequired[pulumi.Input[Optional['UpdateScheduleUpdateScheduleWildfireRecurringRealTimeArgs']]]
+    real_time: NotRequired[pulumi.Input[Optional['UpdateScheduleUpdateScheduleWildfireRecurringRealTimeArgsDict']]]
     """
     Real time
 
@@ -75814,7 +75814,7 @@ class UrlAccessProfileCredentialEnforcementArgsDict(TypedDict):
     """
     Log severity
     """
-    mode: NotRequired[pulumi.Input[Optional['UrlAccessProfileCredentialEnforcementModeArgs']]]
+    mode: NotRequired[pulumi.Input[Optional['UrlAccessProfileCredentialEnforcementModeArgsDict']]]
     """
     Mode
     """
@@ -75923,11 +75923,11 @@ class UrlAccessProfileCredentialEnforcementArgs:
 
 
 class UrlAccessProfileCredentialEnforcementModeArgsDict(TypedDict):
-    disabled: NotRequired[pulumi.Input[Optional['UrlAccessProfileCredentialEnforcementModeDisabledArgs']]]
+    disabled: NotRequired[pulumi.Input[Optional['UrlAccessProfileCredentialEnforcementModeDisabledArgsDict']]]
     """
     Disabled
     """
-    domain_credentials: NotRequired[pulumi.Input[Optional['UrlAccessProfileCredentialEnforcementModeDomainCredentialsArgs']]]
+    domain_credentials: NotRequired[pulumi.Input[Optional['UrlAccessProfileCredentialEnforcementModeDomainCredentialsArgsDict']]]
     """
     Domain credentials
     """
@@ -75935,7 +75935,7 @@ class UrlAccessProfileCredentialEnforcementModeArgsDict(TypedDict):
     """
     Group mapping
     """
-    ip_user: NotRequired[pulumi.Input[Optional['UrlAccessProfileCredentialEnforcementModeIpUserArgs']]]
+    ip_user: NotRequired[pulumi.Input[Optional['UrlAccessProfileCredentialEnforcementModeIpUserArgsDict']]]
     """
     Ip user
     """
@@ -76265,7 +76265,7 @@ class VlanInterfaceDhcpClientArgsDict(TypedDict):
     """
     Enable DHCP?
     """
-    send_hostname: NotRequired[pulumi.Input[Optional['VlanInterfaceDhcpClientSendHostnameArgs']]]
+    send_hostname: NotRequired[pulumi.Input[Optional['VlanInterfaceDhcpClientSendHostnameArgsDict']]]
     """
     Send hostname
     """
@@ -76419,7 +76419,7 @@ class VlanInterfaceIpArgs:
 
 
 class VpnSettingVpnArgsDict(TypedDict):
-    ikev2: NotRequired[pulumi.Input[Optional['VpnSettingVpnIkev2Args']]]
+    ikev2: NotRequired[pulumi.Input[Optional['VpnSettingVpnIkev2ArgsDict']]]
     """
     Ikev2
     """
@@ -76517,7 +76517,7 @@ class VpnSettingVpnIkev2Args:
 
 
 class VulnerabilityProtectionProfileRuleArgsDict(TypedDict):
-    action: NotRequired[pulumi.Input[Optional['VulnerabilityProtectionProfileRuleActionArgs']]]
+    action: NotRequired[pulumi.Input[Optional['VulnerabilityProtectionProfileRuleActionArgsDict']]]
     """
     vulnerability profiles threat exception default action
     """
@@ -76706,47 +76706,47 @@ class VulnerabilityProtectionProfileRuleArgs:
 
 
 class VulnerabilityProtectionProfileRuleActionArgsDict(TypedDict):
-    alert: NotRequired[pulumi.Input[Optional['VulnerabilityProtectionProfileRuleActionAlertArgs']]]
+    alert: NotRequired[pulumi.Input[Optional['VulnerabilityProtectionProfileRuleActionAlertArgsDict']]]
     """
     Alert
     """
-    allow: NotRequired[pulumi.Input[Optional['VulnerabilityProtectionProfileRuleActionAllowArgs']]]
+    allow: NotRequired[pulumi.Input[Optional['VulnerabilityProtectionProfileRuleActionAllowArgsDict']]]
     """
     Allow
 
     > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `block_ip`, `default`, `drop`, `reset_both`, `reset_client`, and `reset_server`.
     """
-    block_ip: NotRequired[pulumi.Input[Optional['VulnerabilityProtectionProfileRuleActionBlockIpArgs']]]
+    block_ip: NotRequired[pulumi.Input[Optional['VulnerabilityProtectionProfileRuleActionBlockIpArgsDict']]]
     """
     vulnerability protection block ip
 
     > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `block_ip`, `default`, `drop`, `reset_both`, `reset_client`, and `reset_server`.
     """
-    default: NotRequired[pulumi.Input[Optional['VulnerabilityProtectionProfileRuleActionDefaultArgs']]]
+    default: NotRequired[pulumi.Input[Optional['VulnerabilityProtectionProfileRuleActionDefaultArgsDict']]]
     """
     Default
 
     > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `block_ip`, `default`, `drop`, `reset_both`, `reset_client`, and `reset_server`.
     """
-    drop: NotRequired[pulumi.Input[Optional['VulnerabilityProtectionProfileRuleActionDropArgs']]]
+    drop: NotRequired[pulumi.Input[Optional['VulnerabilityProtectionProfileRuleActionDropArgsDict']]]
     """
     Drop
 
     > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `block_ip`, `default`, `drop`, `reset_both`, `reset_client`, and `reset_server`.
     """
-    reset_both: NotRequired[pulumi.Input[Optional['VulnerabilityProtectionProfileRuleActionResetBothArgs']]]
+    reset_both: NotRequired[pulumi.Input[Optional['VulnerabilityProtectionProfileRuleActionResetBothArgsDict']]]
     """
     Reset both
 
     > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `block_ip`, `default`, `drop`, `reset_both`, `reset_client`, and `reset_server`.
     """
-    reset_client: NotRequired[pulumi.Input[Optional['VulnerabilityProtectionProfileRuleActionResetClientArgs']]]
+    reset_client: NotRequired[pulumi.Input[Optional['VulnerabilityProtectionProfileRuleActionResetClientArgsDict']]]
     """
     Reset client
 
     > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `block_ip`, `default`, `drop`, `reset_both`, `reset_client`, and `reset_server`.
     """
-    reset_server: NotRequired[pulumi.Input[Optional['VulnerabilityProtectionProfileRuleActionResetServerArgs']]]
+    reset_server: NotRequired[pulumi.Input[Optional['VulnerabilityProtectionProfileRuleActionResetServerArgsDict']]]
     """
     Reset server
 
@@ -77029,11 +77029,11 @@ class VulnerabilityProtectionProfileRuleActionResetServerArgs:
 
 
 class VulnerabilityProtectionProfileThreatExceptionArgsDict(TypedDict):
-    action: NotRequired[pulumi.Input[Optional['VulnerabilityProtectionProfileThreatExceptionActionArgs']]]
+    action: NotRequired[pulumi.Input[Optional['VulnerabilityProtectionProfileThreatExceptionActionArgsDict']]]
     """
     vulnerability threat exception default action
     """
-    exempt_ips: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['VulnerabilityProtectionProfileThreatExceptionExemptIpArgs']]]]]
+    exempt_ips: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['VulnerabilityProtectionProfileThreatExceptionExemptIpArgsDict']]]]]
     """
     Exempt ip
     """
@@ -77049,7 +77049,7 @@ class VulnerabilityProtectionProfileThreatExceptionArgsDict(TypedDict):
     """
     Packet capture
     """
-    time_attribute: NotRequired[pulumi.Input[Optional['VulnerabilityProtectionProfileThreatExceptionTimeAttributeArgs']]]
+    time_attribute: NotRequired[pulumi.Input[Optional['VulnerabilityProtectionProfileThreatExceptionTimeAttributeArgsDict']]]
     """
     vulnerability time attribute
     """
@@ -77158,47 +77158,47 @@ class VulnerabilityProtectionProfileThreatExceptionArgs:
 
 
 class VulnerabilityProtectionProfileThreatExceptionActionArgsDict(TypedDict):
-    alert: NotRequired[pulumi.Input[Optional['VulnerabilityProtectionProfileThreatExceptionActionAlertArgs']]]
+    alert: NotRequired[pulumi.Input[Optional['VulnerabilityProtectionProfileThreatExceptionActionAlertArgsDict']]]
     """
     Alert
     """
-    allow: NotRequired[pulumi.Input[Optional['VulnerabilityProtectionProfileThreatExceptionActionAllowArgs']]]
+    allow: NotRequired[pulumi.Input[Optional['VulnerabilityProtectionProfileThreatExceptionActionAllowArgsDict']]]
     """
     Allow
 
     > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `block_ip`, `default`, `drop`, `reset_both`, `reset_client`, and `reset_server`.
     """
-    block_ip: NotRequired[pulumi.Input[Optional['VulnerabilityProtectionProfileThreatExceptionActionBlockIpArgs']]]
+    block_ip: NotRequired[pulumi.Input[Optional['VulnerabilityProtectionProfileThreatExceptionActionBlockIpArgsDict']]]
     """
     vulnerability protection threat exception block ip
 
     > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `block_ip`, `default`, `drop`, `reset_both`, `reset_client`, and `reset_server`.
     """
-    default: NotRequired[pulumi.Input[Optional['VulnerabilityProtectionProfileThreatExceptionActionDefaultArgs']]]
+    default: NotRequired[pulumi.Input[Optional['VulnerabilityProtectionProfileThreatExceptionActionDefaultArgsDict']]]
     """
     Default
 
     > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `block_ip`, `default`, `drop`, `reset_both`, `reset_client`, and `reset_server`.
     """
-    drop: NotRequired[pulumi.Input[Optional['VulnerabilityProtectionProfileThreatExceptionActionDropArgs']]]
+    drop: NotRequired[pulumi.Input[Optional['VulnerabilityProtectionProfileThreatExceptionActionDropArgsDict']]]
     """
     Drop
 
     > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `block_ip`, `default`, `drop`, `reset_both`, `reset_client`, and `reset_server`.
     """
-    reset_both: NotRequired[pulumi.Input[Optional['VulnerabilityProtectionProfileThreatExceptionActionResetBothArgs']]]
+    reset_both: NotRequired[pulumi.Input[Optional['VulnerabilityProtectionProfileThreatExceptionActionResetBothArgsDict']]]
     """
     Reset both
 
     > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `block_ip`, `default`, `drop`, `reset_both`, `reset_client`, and `reset_server`.
     """
-    reset_client: NotRequired[pulumi.Input[Optional['VulnerabilityProtectionProfileThreatExceptionActionResetClientArgs']]]
+    reset_client: NotRequired[pulumi.Input[Optional['VulnerabilityProtectionProfileThreatExceptionActionResetClientArgsDict']]]
     """
     Reset client
 
     > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `block_ip`, `default`, `drop`, `reset_both`, `reset_client`, and `reset_server`.
     """
-    reset_server: NotRequired[pulumi.Input[Optional['VulnerabilityProtectionProfileThreatExceptionActionResetServerArgs']]]
+    reset_server: NotRequired[pulumi.Input[Optional['VulnerabilityProtectionProfileThreatExceptionActionResetServerArgsDict']]]
     """
     Reset server
 
@@ -77633,41 +77633,41 @@ class VulnerabilityProtectionSignatureAffectedHostArgs:
 
 
 class VulnerabilityProtectionSignatureDefaultActionArgsDict(TypedDict):
-    alert: NotRequired[pulumi.Input[Optional['VulnerabilityProtectionSignatureDefaultActionAlertArgs']]]
+    alert: NotRequired[pulumi.Input[Optional['VulnerabilityProtectionSignatureDefaultActionAlertArgsDict']]]
     """
     Alert
     """
-    allow: NotRequired[pulumi.Input[Optional['VulnerabilityProtectionSignatureDefaultActionAllowArgs']]]
+    allow: NotRequired[pulumi.Input[Optional['VulnerabilityProtectionSignatureDefaultActionAllowArgsDict']]]
     """
     Allow
 
     > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `block_ip`, `drop`, `reset_both`, `reset_client`, and `reset_server`.
     """
-    block_ip: NotRequired[pulumi.Input[Optional['VulnerabilityProtectionSignatureDefaultActionBlockIpArgs']]]
+    block_ip: NotRequired[pulumi.Input[Optional['VulnerabilityProtectionSignatureDefaultActionBlockIpArgsDict']]]
     """
     vulnerability protection bugtraq block ip
 
     > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `block_ip`, `drop`, `reset_both`, `reset_client`, and `reset_server`.
     """
-    drop: NotRequired[pulumi.Input[Optional['VulnerabilityProtectionSignatureDefaultActionDropArgs']]]
+    drop: NotRequired[pulumi.Input[Optional['VulnerabilityProtectionSignatureDefaultActionDropArgsDict']]]
     """
     Drop
 
     > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `block_ip`, `drop`, `reset_both`, `reset_client`, and `reset_server`.
     """
-    reset_both: NotRequired[pulumi.Input[Optional['VulnerabilityProtectionSignatureDefaultActionResetBothArgs']]]
+    reset_both: NotRequired[pulumi.Input[Optional['VulnerabilityProtectionSignatureDefaultActionResetBothArgsDict']]]
     """
     Reset both
 
     > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `block_ip`, `drop`, `reset_both`, `reset_client`, and `reset_server`.
     """
-    reset_client: NotRequired[pulumi.Input[Optional['VulnerabilityProtectionSignatureDefaultActionResetClientArgs']]]
+    reset_client: NotRequired[pulumi.Input[Optional['VulnerabilityProtectionSignatureDefaultActionResetClientArgsDict']]]
     """
     Reset client
 
     > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `block_ip`, `drop`, `reset_both`, `reset_client`, and `reset_server`.
     """
-    reset_server: NotRequired[pulumi.Input[Optional['VulnerabilityProtectionSignatureDefaultActionResetServerArgs']]]
+    reset_server: NotRequired[pulumi.Input[Optional['VulnerabilityProtectionSignatureDefaultActionResetServerArgsDict']]]
     """
     Reset server
 
@@ -77921,11 +77921,11 @@ class VulnerabilityProtectionSignatureDefaultActionResetServerArgs:
 
 
 class VulnerabilityProtectionSignatureSignatureArgsDict(TypedDict):
-    combination: NotRequired[pulumi.Input[Optional['VulnerabilityProtectionSignatureSignatureCombinationArgs']]]
+    combination: NotRequired[pulumi.Input[Optional['VulnerabilityProtectionSignatureSignatureCombinationArgsDict']]]
     """
     vulnerability protection signature combination object
     """
-    standards: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['VulnerabilityProtectionSignatureSignatureStandardArgs']]]]]
+    standards: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['VulnerabilityProtectionSignatureSignatureStandardArgsDict']]]]]
     """
     vulnerability protection signature standard array
 
@@ -77976,7 +77976,7 @@ class VulnerabilityProtectionSignatureSignatureArgs:
 
 
 class VulnerabilityProtectionSignatureSignatureCombinationArgsDict(TypedDict):
-    and_conditions: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['VulnerabilityProtectionSignatureSignatureCombinationAndConditionArgs']]]]]
+    and_conditions: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['VulnerabilityProtectionSignatureSignatureCombinationAndConditionArgsDict']]]]]
     """
     vulnerability protection signature combination object and condition
     """
@@ -77984,7 +77984,7 @@ class VulnerabilityProtectionSignatureSignatureCombinationArgsDict(TypedDict):
     """
     Order free
     """
-    time_attribute: NotRequired[pulumi.Input[Optional['VulnerabilityProtectionSignatureSignatureCombinationTimeAttributeArgs']]]
+    time_attribute: NotRequired[pulumi.Input[Optional['VulnerabilityProtectionSignatureSignatureCombinationTimeAttributeArgsDict']]]
     """
     Time attribute
     """
@@ -78049,7 +78049,7 @@ class VulnerabilityProtectionSignatureSignatureCombinationAndConditionArgsDict(T
     """
     Name
     """
-    or_conditions: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['VulnerabilityProtectionSignatureSignatureCombinationAndConditionOrConditionArgs']]]]]
+    or_conditions: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['VulnerabilityProtectionSignatureSignatureCombinationAndConditionOrConditionArgsDict']]]]]
     """
     vulnerability protection signature combination object and condition object or condition
     """
@@ -78216,7 +78216,7 @@ class VulnerabilityProtectionSignatureSignatureStandardArgsDict(TypedDict):
     """
     Name
     """
-    and_conditions: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['VulnerabilityProtectionSignatureSignatureStandardAndConditionArgs']]]]]
+    and_conditions: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['VulnerabilityProtectionSignatureSignatureStandardAndConditionArgsDict']]]]]
     """
     vulnerability protection signature standard object and condition
     """
@@ -78324,7 +78324,7 @@ class VulnerabilityProtectionSignatureSignatureStandardAndConditionArgsDict(Type
     """
     Name
     """
-    or_conditions: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['VulnerabilityProtectionSignatureSignatureStandardAndConditionOrConditionArgs']]]]]
+    or_conditions: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['VulnerabilityProtectionSignatureSignatureStandardAndConditionOrConditionArgsDict']]]]]
     """
     vulnerability protection signature standard object and condition object or condition
     """
@@ -78373,7 +78373,7 @@ class VulnerabilityProtectionSignatureSignatureStandardAndConditionOrConditionAr
     """
     Name
     """
-    operator: NotRequired[pulumi.Input[Optional['VulnerabilityProtectionSignatureSignatureStandardAndConditionOrConditionOperatorArgs']]]
+    operator: NotRequired[pulumi.Input[Optional['VulnerabilityProtectionSignatureSignatureStandardAndConditionOrConditionOperatorArgsDict']]]
     """
     vulnerability protection signature standard object and condition object or condition object operators
     """
@@ -78418,19 +78418,19 @@ class VulnerabilityProtectionSignatureSignatureStandardAndConditionOrConditionAr
 
 
 class VulnerabilityProtectionSignatureSignatureStandardAndConditionOrConditionOperatorArgsDict(TypedDict):
-    equal_to: NotRequired[pulumi.Input[Optional['VulnerabilityProtectionSignatureSignatureStandardAndConditionOrConditionOperatorEqualToArgs']]]
+    equal_to: NotRequired[pulumi.Input[Optional['VulnerabilityProtectionSignatureSignatureStandardAndConditionOrConditionOperatorEqualToArgsDict']]]
     """
     vulnerability protection signature standard object and condition object or condition object operators equal*to
     """
-    greater_than: NotRequired[pulumi.Input[Optional['VulnerabilityProtectionSignatureSignatureStandardAndConditionOrConditionOperatorGreaterThanArgs']]]
+    greater_than: NotRequired[pulumi.Input[Optional['VulnerabilityProtectionSignatureSignatureStandardAndConditionOrConditionOperatorGreaterThanArgsDict']]]
     """
     vulnerability protection signature standard object and condition object or condition object operators greater*than
     """
-    less_than: NotRequired[pulumi.Input[Optional['VulnerabilityProtectionSignatureSignatureStandardAndConditionOrConditionOperatorLessThanArgs']]]
+    less_than: NotRequired[pulumi.Input[Optional['VulnerabilityProtectionSignatureSignatureStandardAndConditionOrConditionOperatorLessThanArgsDict']]]
     """
     vulnerability protection signature standard object and condition object or condition object operators less*than
     """
-    pattern_match: NotRequired[pulumi.Input[Optional['VulnerabilityProtectionSignatureSignatureStandardAndConditionOrConditionOperatorPatternMatchArgs']]]
+    pattern_match: NotRequired[pulumi.Input[Optional['VulnerabilityProtectionSignatureSignatureStandardAndConditionOrConditionOperatorPatternMatchArgsDict']]]
     """
     vulnerability protection signature standard object and condition object or condition object operators pattern match
     """
@@ -78515,7 +78515,7 @@ class VulnerabilityProtectionSignatureSignatureStandardAndConditionOrConditionOp
     """
     Negate
     """
-    qualifiers: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['VulnerabilityProtectionSignatureSignatureStandardAndConditionOrConditionOperatorEqualToQualifierArgs']]]]]
+    qualifiers: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['VulnerabilityProtectionSignatureSignatureStandardAndConditionOrConditionOperatorEqualToQualifierArgsDict']]]]]
     """
     vulnerability protection signature standard object and condition object or condition object operators equal*to qualifier array
     """
@@ -78649,7 +78649,7 @@ class VulnerabilityProtectionSignatureSignatureStandardAndConditionOrConditionOp
     """
     Context
     """
-    qualifiers: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['VulnerabilityProtectionSignatureSignatureStandardAndConditionOrConditionOperatorGreaterThanQualifierArgs']]]]]
+    qualifiers: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['VulnerabilityProtectionSignatureSignatureStandardAndConditionOrConditionOperatorGreaterThanQualifierArgsDict']]]]]
     """
     vulnerability protection signature standard object and condition object or condition object operators greater*than qualifier
     """
@@ -78767,7 +78767,7 @@ class VulnerabilityProtectionSignatureSignatureStandardAndConditionOrConditionOp
     """
     Context
     """
-    qualifiers: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['VulnerabilityProtectionSignatureSignatureStandardAndConditionOrConditionOperatorLessThanQualifierArgs']]]]]
+    qualifiers: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['VulnerabilityProtectionSignatureSignatureStandardAndConditionOrConditionOperatorLessThanQualifierArgsDict']]]]]
     """
     vulnerability protection signature standard object and condition object or condition object operators less*than array
     """
@@ -78893,7 +78893,7 @@ class VulnerabilityProtectionSignatureSignatureStandardAndConditionOrConditionOp
     """
     Pattern
     """
-    qualifiers: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['VulnerabilityProtectionSignatureSignatureStandardAndConditionOrConditionOperatorPatternMatchQualifierArgs']]]]]
+    qualifiers: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['VulnerabilityProtectionSignatureSignatureStandardAndConditionOrConditionOperatorPatternMatchQualifierArgsDict']]]]]
     """
     vulnerability protection signature standard object and condition object or condition object operators pattern match qualifier
     """
@@ -79319,7 +79319,7 @@ class ZoneNetworkArgsDict(TypedDict):
     """
     Tap
     """
-    tunnel: NotRequired[pulumi.Input[Optional['ZoneNetworkTunnelArgs']]]
+    tunnel: NotRequired[pulumi.Input[Optional['ZoneNetworkTunnelArgsDict']]]
     """
     Tunnel
     """
@@ -79493,27 +79493,27 @@ class ZoneNetworkTunnelArgs:
 
 
 class ZoneProtectionProfileFloodArgsDict(TypedDict):
-    icmp: NotRequired[pulumi.Input[Optional['ZoneProtectionProfileFloodIcmpArgs']]]
+    icmp: NotRequired[pulumi.Input[Optional['ZoneProtectionProfileFloodIcmpArgsDict']]]
     """
     Icmp
     """
-    icmpv6: NotRequired[pulumi.Input[Optional['ZoneProtectionProfileFloodIcmpv6Args']]]
+    icmpv6: NotRequired[pulumi.Input[Optional['ZoneProtectionProfileFloodIcmpv6ArgsDict']]]
     """
     Icmpv6
     """
-    other_ip: NotRequired[pulumi.Input[Optional['ZoneProtectionProfileFloodOtherIpArgs']]]
+    other_ip: NotRequired[pulumi.Input[Optional['ZoneProtectionProfileFloodOtherIpArgsDict']]]
     """
     Other ip
     """
-    sctp_init: NotRequired[pulumi.Input[Optional['ZoneProtectionProfileFloodSctpInitArgs']]]
+    sctp_init: NotRequired[pulumi.Input[Optional['ZoneProtectionProfileFloodSctpInitArgsDict']]]
     """
     Sctp init
     """
-    tcp_syn: NotRequired[pulumi.Input[Optional['ZoneProtectionProfileFloodTcpSynArgs']]]
+    tcp_syn: NotRequired[pulumi.Input[Optional['ZoneProtectionProfileFloodTcpSynArgsDict']]]
     """
     Tcp syn
     """
-    udp: NotRequired[pulumi.Input[Optional['ZoneProtectionProfileFloodUdpArgs']]]
+    udp: NotRequired[pulumi.Input[Optional['ZoneProtectionProfileFloodUdpArgsDict']]]
     """
     Udp
     """
@@ -79626,7 +79626,7 @@ class ZoneProtectionProfileFloodIcmpArgsDict(TypedDict):
     """
     Enable protection against ICMP floods?
     """
-    red: NotRequired[pulumi.Input[Optional['ZoneProtectionProfileFloodIcmpRedArgs']]]
+    red: NotRequired[pulumi.Input[Optional['ZoneProtectionProfileFloodIcmpRedArgsDict']]]
     """
     Red
     """
@@ -79741,7 +79741,7 @@ class ZoneProtectionProfileFloodIcmpv6ArgsDict(TypedDict):
     """
     Enable protection against ICMPv6 floods?
     """
-    red: NotRequired[pulumi.Input[Optional['ZoneProtectionProfileFloodIcmpv6RedArgs']]]
+    red: NotRequired[pulumi.Input[Optional['ZoneProtectionProfileFloodIcmpv6RedArgsDict']]]
     """
     Red
     """
@@ -79856,7 +79856,7 @@ class ZoneProtectionProfileFloodOtherIpArgsDict(TypedDict):
     """
     Enable protection against other IP (non-TCP, non-ICMP, non-ICMPv6, non-SCTP, and non-UDP) floods?
     """
-    red: NotRequired[pulumi.Input[Optional['ZoneProtectionProfileFloodOtherIpRedArgs']]]
+    red: NotRequired[pulumi.Input[Optional['ZoneProtectionProfileFloodOtherIpRedArgsDict']]]
     """
     Red
     """
@@ -79971,7 +79971,7 @@ class ZoneProtectionProfileFloodSctpInitArgsDict(TypedDict):
     """
     Enable protection against floods of Stream Control Transmission Protocol (SCTP) packets that contain an Initiation (INIT) chunk?
     """
-    red: NotRequired[pulumi.Input[Optional['ZoneProtectionProfileFloodSctpInitRedArgs']]]
+    red: NotRequired[pulumi.Input[Optional['ZoneProtectionProfileFloodSctpInitRedArgsDict']]]
     """
     Red
     """
@@ -80086,11 +80086,11 @@ class ZoneProtectionProfileFloodTcpSynArgsDict(TypedDict):
     """
     Enable protection against SYN floods?
     """
-    red: NotRequired[pulumi.Input[Optional['ZoneProtectionProfileFloodTcpSynRedArgs']]]
+    red: NotRequired[pulumi.Input[Optional['ZoneProtectionProfileFloodTcpSynRedArgsDict']]]
     """
     Red
     """
-    syn_cookies: NotRequired[pulumi.Input[Optional['ZoneProtectionProfileFloodTcpSynSynCookiesArgs']]]
+    syn_cookies: NotRequired[pulumi.Input[Optional['ZoneProtectionProfileFloodTcpSynSynCookiesArgsDict']]]
     """
     Syn cookies
     """
@@ -80287,7 +80287,7 @@ class ZoneProtectionProfileFloodUdpArgsDict(TypedDict):
     """
     Enable protection against UDP floods?
     """
-    red: NotRequired[pulumi.Input[Optional['ZoneProtectionProfileFloodUdpRedArgs']]]
+    red: NotRequired[pulumi.Input[Optional['ZoneProtectionProfileFloodUdpRedArgsDict']]]
     """
     Red
     """
@@ -80402,7 +80402,7 @@ class ZoneProtectionProfileIpv6ArgsDict(TypedDict):
     """
     Discard IPv6 packets that contain an anycast source address.
     """
-    filter_ext_hdr: NotRequired[pulumi.Input[Optional['ZoneProtectionProfileIpv6FilterExtHdrArgs']]]
+    filter_ext_hdr: NotRequired[pulumi.Input[Optional['ZoneProtectionProfileIpv6FilterExtHdrArgsDict']]]
     """
     Filter ext hdr
     """
@@ -80410,7 +80410,7 @@ class ZoneProtectionProfileIpv6ArgsDict(TypedDict):
     """
     Discard IPv6 packets that contain a Packet Too Big ICMPv6 message when the maximum transmission unit (MTU) is less than 1,280 bytes.
     """
-    ignore_inv_pkt: NotRequired[pulumi.Input[Optional['ZoneProtectionProfileIpv6IgnoreInvPktArgs']]]
+    ignore_inv_pkt: NotRequired[pulumi.Input[Optional['ZoneProtectionProfileIpv6IgnoreInvPktArgsDict']]]
     """
     Ignore inv pkt
     """
@@ -80885,7 +80885,7 @@ class ZoneProtectionProfileIpv6IgnoreInvPktArgs:
 
 
 class ZoneProtectionProfileL2SecGroupTagProtectionArgsDict(TypedDict):
-    tags: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['ZoneProtectionProfileL2SecGroupTagProtectionTagArgs']]]]]
+    tags: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['ZoneProtectionProfileL2SecGroupTagProtectionTagArgsDict']]]]]
     """
     Tags
     """
@@ -80987,7 +80987,7 @@ class ZoneProtectionProfileNonIpProtocolArgsDict(TypedDict):
     * Include List—Only the protocols on the list are allowed—in addition to IPv4 (0x0800), IPv6 (0x86DD), ARP (0x0806), and VLAN tagged frames (0x8100). All other protocols are implicitly denied (blocked).
     * Exclude List—Only the protocols on the list are denied; all other protocols are implicitly allowed. You cannot exclude IPv4 (0x0800), IPv6 (0x86DD), ARP (0x0806), or VLAN tagged frames (0x8100).
     """
-    protocols: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['ZoneProtectionProfileNonIpProtocolProtocolArgs']]]]]
+    protocols: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['ZoneProtectionProfileNonIpProtocolProtocolArgsDict']]]]]
     """
     Protocol
     """
@@ -81120,7 +81120,7 @@ class ZoneProtectionProfileScanArgsDict(TypedDict):
     * "8003" - UDP Port Scan
     * "8006" - Port Scan
     """
-    action: NotRequired[pulumi.Input[Optional['ZoneProtectionProfileScanActionArgs']]]
+    action: NotRequired[pulumi.Input[Optional['ZoneProtectionProfileScanActionArgsDict']]]
     """
     Action
     """
@@ -81212,19 +81212,19 @@ class ZoneProtectionProfileScanArgs:
 
 
 class ZoneProtectionProfileScanActionArgsDict(TypedDict):
-    alert: NotRequired[pulumi.Input[Optional['ZoneProtectionProfileScanActionAlertArgs']]]
+    alert: NotRequired[pulumi.Input[Optional['ZoneProtectionProfileScanActionAlertArgsDict']]]
     """
     Alert
     """
-    allow: NotRequired[pulumi.Input[Optional['ZoneProtectionProfileScanActionAllowArgs']]]
+    allow: NotRequired[pulumi.Input[Optional['ZoneProtectionProfileScanActionAllowArgsDict']]]
     """
     Allow
     """
-    block: NotRequired[pulumi.Input[Optional['ZoneProtectionProfileScanActionBlockArgs']]]
+    block: NotRequired[pulumi.Input[Optional['ZoneProtectionProfileScanActionBlockArgsDict']]]
     """
     Block
     """
-    block_ip: NotRequired[pulumi.Input[Optional['ZoneProtectionProfileScanActionBlockIpArgs']]]
+    block_ip: NotRequired[pulumi.Input[Optional['ZoneProtectionProfileScanActionBlockIpArgsDict']]]
     """
     Block ip
     """
