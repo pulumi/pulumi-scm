@@ -21,17 +21,12 @@ The `scm` provider provides resources and functions to manage and query Strata C
 
 This provider covers the following aspects of Strata Cloud Manager:
 * NGFW & Prisma Access
-## Beta Release Disclaimer
-
-**This software is a pre-release version and is not ready for production use.**
-
-* **No Warranty:** This software is provided "as is," without any warranty of any kind, either expressed or implied, including, but not limited to, the implied warranties of merchantability and fitness for a particular purpose.
-* **Instability:** The beta software may contain defects, may not operate correctly, and may be substantially modified or withdrawn at any time.
-* **Limitation of Liability:** In no event shall the authors or copyright holders be liable for any claim, damages, or other liability, whether in an action of contract, tort, or otherwise, arising from, out of, or in connection with the beta software or the use or other dealings in the beta software.
-* **Feedback:** We encourage and appreciate your feedback and bug reports. However, you acknowledge that any feedback you provide is non-confidential.
-
-By using this software, you agree to these terms.
 ## Release Notes
+### v1.0.11
+#### FEATURES
+
+* Introduced beta release stream for early access to new features
+* Beta versions (v1.0.11-beta.1) are now available for testing before GA release
 ### v1.0.10
 #### FEATURES
 * resources/scm_forwarding_profile: Added Support, examples and tests (resources, data-source)
