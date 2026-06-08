@@ -35,6 +35,7 @@ import javax.annotation.Nullable;
  * import com.pulumi.scm.inputs.AntiSpywareSignatureDefaultActionAlertArgs;
  * import com.pulumi.scm.inputs.AntiSpywareSignatureSignatureArgs;
  * import com.pulumi.scm.inputs.AntiSpywareSignatureSignatureCombinationArgs;
+ * import com.pulumi.scm.inputs.AntiSpywareSignatureSignatureCombinationAndConditionArgs;
  * import com.pulumi.scm.inputs.AntiSpywareSignatureSignatureCombinationTimeAttributeArgs;
  * import java.util.ArrayList;
  * import java.util.Arrays;

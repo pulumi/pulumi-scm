@@ -33,6 +33,7 @@ import javax.annotation.Nullable;
  * import com.pulumi.scm.inputs.ManagementInterfaceManagementInterfaceMgmtTypeArgs;
  * import com.pulumi.scm.inputs.ManagementInterfaceManagementInterfaceMgmtTypeDhcpClientArgs;
  * import com.pulumi.scm.inputs.ManagementInterfaceManagementInterfaceServiceArgs;
+ * import com.pulumi.scm.inputs.ManagementInterfaceManagementInterfacePermittedIpArgs;
  * import com.pulumi.scm.inputs.ManagementInterfaceManagementInterfaceMgmtTypeStaticArgs;
  * import java.util.ArrayList;
  * import java.util.Arrays;

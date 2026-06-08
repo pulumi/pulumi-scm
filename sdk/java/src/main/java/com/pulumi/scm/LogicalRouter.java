@@ -33,6 +33,7 @@ import javax.annotation.Nullable;
  * import com.pulumi.scm.EthernetInterface;
  * import com.pulumi.scm.EthernetInterfaceArgs;
  * import com.pulumi.scm.inputs.EthernetInterfaceLayer3Args;
+ * import com.pulumi.scm.inputs.EthernetInterfaceLayer3IpArgs;
  * import com.pulumi.scm.BgpAuthProfile;
  * import com.pulumi.scm.BgpAuthProfileArgs;
  * import com.pulumi.scm.LogicalRouter;

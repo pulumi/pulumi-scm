@@ -36,6 +36,8 @@ import javax.annotation.Nullable;
  * import com.pulumi.scm.Variable;
  * import com.pulumi.scm.VariableArgs;
  * import com.pulumi.scm.inputs.LoopbackInterfaceIpv6Args;
+ * import com.pulumi.scm.inputs.LoopbackInterfaceIpv6AddressArgs;
+ * import com.pulumi.scm.inputs.LoopbackInterfaceIpv6AddressPrefixArgs;
  * import com.pulumi.resources.CustomResourceOptions;
  * import java.util.ArrayList;
  * import java.util.Arrays;

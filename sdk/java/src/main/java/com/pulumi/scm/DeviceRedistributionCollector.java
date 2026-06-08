@@ -30,6 +30,7 @@ import javax.annotation.Nullable;
  * import com.pulumi.scm.EthernetInterface;
  * import com.pulumi.scm.EthernetInterfaceArgs;
  * import com.pulumi.scm.inputs.EthernetInterfaceLayer3Args;
+ * import com.pulumi.scm.inputs.EthernetInterfaceLayer3IpArgs;
  * import com.pulumi.scm.DeviceRedistributionCollector;
  * import com.pulumi.scm.DeviceRedistributionCollectorArgs;
  * import com.pulumi.scm.inputs.DeviceRedistributionCollectorRedistributionCollectorArgs;

@@ -40,6 +40,7 @@ import javax.annotation.Nullable;
  * import com.pulumi.scm.inputs.EthernetInterfaceLayer2Args;
  * import com.pulumi.scm.inputs.EthernetInterfaceTapArgs;
  * import com.pulumi.scm.inputs.EthernetInterfaceLayer3Args;
+ * import com.pulumi.scm.inputs.EthernetInterfaceLayer3IpArgs;
  * import com.pulumi.scm.inputs.EthernetInterfaceLayer3DhcpClientArgs;
  * import com.pulumi.scm.inputs.EthernetInterfaceLayer3PppoeArgs;
  * import com.pulumi.resources.CustomResourceOptions;

@@ -32,6 +32,8 @@ import javax.annotation.Nullable;
  * import com.pulumi.scm.RoutePrefixListArgs;
  * import com.pulumi.scm.inputs.RoutePrefixListTypeArgs;
  * import com.pulumi.scm.inputs.RoutePrefixListTypeIpv4Args;
+ * import com.pulumi.scm.inputs.RoutePrefixListTypeIpv4Ipv4EntryArgs;
+ * import com.pulumi.scm.inputs.RoutePrefixListTypeIpv4Ipv4EntryPrefixArgs;
  * import com.pulumi.scm.BgpRouteMap;
  * import com.pulumi.scm.BgpRouteMapArgs;
  * import com.pulumi.scm.inputs.BgpRouteMapRouteMapArgs;
