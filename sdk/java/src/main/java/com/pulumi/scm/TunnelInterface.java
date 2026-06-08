@@ -36,6 +36,8 @@ import javax.annotation.Nullable;
  * import com.pulumi.scm.Variable;
  * import com.pulumi.scm.VariableArgs;
  * import com.pulumi.scm.inputs.TunnelInterfaceIpv6Args;
+ * import com.pulumi.scm.inputs.TunnelInterfaceIpv6AddressArgs;
+ * import com.pulumi.scm.inputs.TunnelInterfaceIpv6AddressPrefixArgs;
  * import com.pulumi.resources.CustomResourceOptions;
  * import java.util.ArrayList;
  * import java.util.Arrays;

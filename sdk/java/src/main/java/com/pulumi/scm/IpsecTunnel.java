@@ -45,6 +45,7 @@ import javax.annotation.Nullable;
  * import com.pulumi.scm.IpsecTunnel;
  * import com.pulumi.scm.IpsecTunnelArgs;
  * import com.pulumi.scm.inputs.IpsecTunnelAutoKeyArgs;
+ * import com.pulumi.scm.inputs.IpsecTunnelAutoKeyIkeGatewayArgs;
  * import com.pulumi.resources.CustomResourceOptions;
  * import java.util.ArrayList;
  * import java.util.Arrays;

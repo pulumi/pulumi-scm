@@ -37,6 +37,8 @@ import javax.annotation.Nullable;
  * import com.pulumi.scm.inputs.DhcpInterfaceServerOptionNtpArgs;
  * import com.pulumi.scm.inputs.DhcpInterfaceServerOptionWinsArgs;
  * import com.pulumi.scm.inputs.DhcpInterfaceServerOptionNisArgs;
+ * import com.pulumi.scm.inputs.DhcpInterfaceServerOptionUserDefinedArgs;
+ * import com.pulumi.scm.inputs.DhcpInterfaceServerReservedArgs;
  * import java.util.ArrayList;
  * import java.util.Arrays;
  * import java.util.Map;

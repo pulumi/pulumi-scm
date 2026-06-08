@@ -33,6 +33,7 @@ import javax.annotation.Nullable;
  * import com.pulumi.scm.inputs.AggregateInterfaceLayer2Args;
  * import com.pulumi.scm.inputs.AggregateInterfaceLayer2LacpArgs;
  * import com.pulumi.scm.inputs.AggregateInterfaceLayer3Args;
+ * import com.pulumi.scm.inputs.AggregateInterfaceLayer3IpArgs;
  * import com.pulumi.scm.inputs.AggregateInterfaceLayer3LacpArgs;
  * import com.pulumi.scm.inputs.AggregateInterfaceLayer3DhcpClientArgs;
  * import java.util.ArrayList;

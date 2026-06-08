@@ -33,6 +33,7 @@ import javax.annotation.Nullable;
  * import com.pulumi.scm.DataObjectArgs;
  * import com.pulumi.scm.inputs.DataObjectPatternTypeArgs;
  * import com.pulumi.scm.inputs.DataObjectPatternTypePredefinedArgs;
+ * import com.pulumi.scm.inputs.DataObjectPatternTypePredefinedPatternArgs;
  * import com.pulumi.scm.DataFilteringProfile;
  * import com.pulumi.scm.DataFilteringProfileArgs;
  * import com.pulumi.scm.inputs.DataFilteringProfileRuleArgs;

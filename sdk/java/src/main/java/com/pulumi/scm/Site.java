@@ -45,6 +45,7 @@ import javax.annotation.Nullable;
  * import com.pulumi.scm.IpsecTunnel;
  * import com.pulumi.scm.IpsecTunnelArgs;
  * import com.pulumi.scm.inputs.IpsecTunnelAutoKeyArgs;
+ * import com.pulumi.scm.inputs.IpsecTunnelAutoKeyIkeGatewayArgs;
  * import com.pulumi.scm.RemoteNetwork;
  * import com.pulumi.scm.RemoteNetworkArgs;
  * import com.pulumi.scm.Site;
