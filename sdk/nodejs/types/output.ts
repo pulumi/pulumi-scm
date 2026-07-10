@@ -46340,7 +46340,7 @@ export interface GetZoneProtectionProfileListData {
      * Check that both conditions are true:
      * * The source IP address is not the subnet broadcast IP address of the ingress interface.
      * * The source IP address is routable over the exact ingress interface.
-     * If either condition is not true, discard the packet.
+     *   If either condition is not true, discard the packet.
      */
     strictIpCheck: boolean;
     /**
