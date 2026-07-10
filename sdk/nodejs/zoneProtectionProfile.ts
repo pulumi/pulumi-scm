@@ -182,7 +182,7 @@ export class ZoneProtectionProfile extends pulumi.CustomResource {
      * Check that both conditions are true:
      * * The source IP address is not the subnet broadcast IP address of the ingress interface.
      * * The source IP address is routable over the exact ingress interface.
-     * If either condition is not true, discard the packet.
+     *   If either condition is not true, discard the packet.
      */
     declare public readonly strictIpCheck: pulumi.Output<boolean | undefined>;
     /**
@@ -454,7 +454,7 @@ export interface ZoneProtectionProfileState {
      * Check that both conditions are true:
      * * The source IP address is not the subnet broadcast IP address of the ingress interface.
      * * The source IP address is routable over the exact ingress interface.
-     * If either condition is not true, discard the packet.
+     *   If either condition is not true, discard the packet.
      */
     strictIpCheck?: pulumi.Input<boolean | undefined>;
     /**
@@ -630,7 +630,7 @@ export interface ZoneProtectionProfileArgs {
      * Check that both conditions are true:
      * * The source IP address is not the subnet broadcast IP address of the ingress interface.
      * * The source IP address is routable over the exact ingress interface.
-     * If either condition is not true, discard the packet.
+     *   If either condition is not true, discard the packet.
      */
     strictIpCheck?: pulumi.Input<boolean | undefined>;
     /**

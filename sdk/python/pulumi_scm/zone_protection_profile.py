@@ -105,7 +105,7 @@ class ZoneProtectionProfileArgs:
         :param pulumi.Input[_builtins.bool] strict_ip_check: Check that both conditions are true:
                * The source IP address is not the subnet broadcast IP address of the ingress interface.
                * The source IP address is routable over the exact ingress interface.
-               If either condition is not true, discard the packet.
+                 If either condition is not true, discard the packet.
         :param pulumi.Input[_builtins.bool] strict_source_routing_discard: Discard packets with the Strict Source Routing IP option set. Strict Source Routing is an option whereby a source of a datagram provides routing information through which a gateway or host must send the datagram.
         :param pulumi.Input[_builtins.bool] suppress_icmp_needfrag: Stop sending ICMP fragmentation needed messages in response to packets that exceed the interface MTU and have the do not fragment (DF) bit set. This setting will interfere with the PMTUD process performed by hosts behind the firewall.
         :param pulumi.Input[_builtins.bool] suppress_icmp_timeexceeded: Stop sending ICMP TTL expired messages.
@@ -526,7 +526,7 @@ class ZoneProtectionProfileArgs:
         Check that both conditions are true:
         * The source IP address is not the subnet broadcast IP address of the ingress interface.
         * The source IP address is routable over the exact ingress interface.
-        If either condition is not true, discard the packet.
+          If either condition is not true, discard the packet.
         """
         return pulumi.get(self, "strict_ip_check")
 
@@ -743,7 +743,7 @@ class _ZoneProtectionProfileState:
         :param pulumi.Input[_builtins.bool] strict_ip_check: Check that both conditions are true:
                * The source IP address is not the subnet broadcast IP address of the ingress interface.
                * The source IP address is routable over the exact ingress interface.
-               If either condition is not true, discard the packet.
+                 If either condition is not true, discard the packet.
         :param pulumi.Input[_builtins.bool] strict_source_routing_discard: Discard packets with the Strict Source Routing IP option set. Strict Source Routing is an option whereby a source of a datagram provides routing information through which a gateway or host must send the datagram.
         :param pulumi.Input[_builtins.bool] suppress_icmp_needfrag: Stop sending ICMP fragmentation needed messages in response to packets that exceed the interface MTU and have the do not fragment (DF) bit set. This setting will interfere with the PMTUD process performed by hosts behind the firewall.
         :param pulumi.Input[_builtins.bool] suppress_icmp_timeexceeded: Stop sending ICMP TTL expired messages.
@@ -1167,7 +1167,7 @@ class _ZoneProtectionProfileState:
         Check that both conditions are true:
         * The source IP address is not the subnet broadcast IP address of the ingress interface.
         * The source IP address is routable over the exact ingress interface.
-        If either condition is not true, discard the packet.
+          If either condition is not true, discard the packet.
         """
         return pulumi.get(self, "strict_ip_check")
 
@@ -1424,7 +1424,7 @@ class ZoneProtectionProfile(pulumi.CustomResource):
         :param pulumi.Input[_builtins.bool] strict_ip_check: Check that both conditions are true:
                * The source IP address is not the subnet broadcast IP address of the ingress interface.
                * The source IP address is routable over the exact ingress interface.
-               If either condition is not true, discard the packet.
+                 If either condition is not true, discard the packet.
         :param pulumi.Input[_builtins.bool] strict_source_routing_discard: Discard packets with the Strict Source Routing IP option set. Strict Source Routing is an option whereby a source of a datagram provides routing information through which a gateway or host must send the datagram.
         :param pulumi.Input[_builtins.bool] suppress_icmp_needfrag: Stop sending ICMP fragmentation needed messages in response to packets that exceed the interface MTU and have the do not fragment (DF) bit set. This setting will interfere with the PMTUD process performed by hosts behind the firewall.
         :param pulumi.Input[_builtins.bool] suppress_icmp_timeexceeded: Stop sending ICMP TTL expired messages.
@@ -1666,7 +1666,7 @@ class ZoneProtectionProfile(pulumi.CustomResource):
         :param pulumi.Input[_builtins.bool] strict_ip_check: Check that both conditions are true:
                * The source IP address is not the subnet broadcast IP address of the ingress interface.
                * The source IP address is routable over the exact ingress interface.
-               If either condition is not true, discard the packet.
+                 If either condition is not true, discard the packet.
         :param pulumi.Input[_builtins.bool] strict_source_routing_discard: Discard packets with the Strict Source Routing IP option set. Strict Source Routing is an option whereby a source of a datagram provides routing information through which a gateway or host must send the datagram.
         :param pulumi.Input[_builtins.bool] suppress_icmp_needfrag: Stop sending ICMP fragmentation needed messages in response to packets that exceed the interface MTU and have the do not fragment (DF) bit set. This setting will interfere with the PMTUD process performed by hosts behind the firewall.
         :param pulumi.Input[_builtins.bool] suppress_icmp_timeexceeded: Stop sending ICMP TTL expired messages.
@@ -1953,7 +1953,7 @@ class ZoneProtectionProfile(pulumi.CustomResource):
         Check that both conditions are true:
         * The source IP address is not the subnet broadcast IP address of the ingress interface.
         * The source IP address is routable over the exact ingress interface.
-        If either condition is not true, discard the packet.
+          If either condition is not true, discard the packet.
         """
         return pulumi.get(self, "strict_ip_check")
 
