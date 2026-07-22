@@ -55,8 +55,6 @@ type LookupBgpRoutingResult struct {
 	AddHostRouteToIkePeer bool `pulumi:"addHostRouteToIkePeer"`
 	// Backbone routing
 	BackboneRouting string `pulumi:"backboneRouting"`
-	// The provider-assigned unique ID for this managed resource.
-	Id string `pulumi:"id"`
 	// Outbound routes for services
 	OutboundRoutesForServices []string `pulumi:"outboundRoutesForServices"`
 	// Routing preference
@@ -102,11 +100,6 @@ func (o LookupBgpRoutingResultOutput) AddHostRouteToIkePeer() pulumi.BoolOutput 
 // Backbone routing
 func (o LookupBgpRoutingResultOutput) BackboneRouting() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupBgpRoutingResult) string { return v.BackboneRouting }).(pulumi.StringOutput)
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o LookupBgpRoutingResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v LookupBgpRoutingResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 // Outbound routes for services

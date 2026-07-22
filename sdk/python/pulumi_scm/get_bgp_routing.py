@@ -27,7 +27,7 @@ class GetBgpRoutingResult:
     """
     A collection of values returned by getBgpRouting.
     """
-    def __init__(__self__, accept_route_over_sc=None, add_host_route_to_ike_peer=None, backbone_routing=None, id=None, outbound_routes_for_services=None, routing_preference=None, tfid=None, withdraw_static_route=None):
+    def __init__(__self__, accept_route_over_sc=None, add_host_route_to_ike_peer=None, backbone_routing=None, outbound_routes_for_services=None, routing_preference=None, tfid=None, withdraw_static_route=None):
         if accept_route_over_sc and not isinstance(accept_route_over_sc, bool):
             raise TypeError("Expected argument 'accept_route_over_sc' to be a bool")
         pulumi.set(__self__, "accept_route_over_sc", accept_route_over_sc)
@@ -37,9 +37,6 @@ class GetBgpRoutingResult:
         if backbone_routing and not isinstance(backbone_routing, str):
             raise TypeError("Expected argument 'backbone_routing' to be a str")
         pulumi.set(__self__, "backbone_routing", backbone_routing)
-        if id and not isinstance(id, str):
-            raise TypeError("Expected argument 'id' to be a str")
-        pulumi.set(__self__, "id", id)
         if outbound_routes_for_services and not isinstance(outbound_routes_for_services, list):
             raise TypeError("Expected argument 'outbound_routes_for_services' to be a list")
         pulumi.set(__self__, "outbound_routes_for_services", outbound_routes_for_services)
@@ -76,14 +73,6 @@ class GetBgpRoutingResult:
         Backbone routing
         """
         return pulumi.get(self, "backbone_routing")
-
-    @_builtins.property
-    @pulumi.getter
-    def id(self) -> _builtins.str:
-        """
-        The provider-assigned unique ID for this managed resource.
-        """
-        return pulumi.get(self, "id")
 
     @_builtins.property
     @pulumi.getter(name="outboundRoutesForServices")
@@ -127,7 +116,6 @@ class AwaitableGetBgpRoutingResult(GetBgpRoutingResult):
             accept_route_over_sc=self.accept_route_over_sc,
             add_host_route_to_ike_peer=self.add_host_route_to_ike_peer,
             backbone_routing=self.backbone_routing,
-            id=self.id,
             outbound_routes_for_services=self.outbound_routes_for_services,
             routing_preference=self.routing_preference,
             tfid=self.tfid,
@@ -156,7 +144,6 @@ def get_bgp_routing(opts: Optional[pulumi.InvokeOptions] = None) -> AwaitableGet
         accept_route_over_sc=pulumi.get(__ret__, 'accept_route_over_sc'),
         add_host_route_to_ike_peer=pulumi.get(__ret__, 'add_host_route_to_ike_peer'),
         backbone_routing=pulumi.get(__ret__, 'backbone_routing'),
-        id=pulumi.get(__ret__, 'id'),
         outbound_routes_for_services=pulumi.get(__ret__, 'outbound_routes_for_services'),
         routing_preference=pulumi.get(__ret__, 'routing_preference'),
         tfid=pulumi.get(__ret__, 'tfid'),
@@ -182,7 +169,6 @@ def get_bgp_routing_output(opts: Optional[Union[pulumi.InvokeOptions, pulumi.Inv
         accept_route_over_sc=pulumi.get(__response__, 'accept_route_over_sc'),
         add_host_route_to_ike_peer=pulumi.get(__response__, 'add_host_route_to_ike_peer'),
         backbone_routing=pulumi.get(__response__, 'backbone_routing'),
-        id=pulumi.get(__response__, 'id'),
         outbound_routes_for_services=pulumi.get(__response__, 'outbound_routes_for_services'),
         routing_preference=pulumi.get(__response__, 'routing_preference'),
         tfid=pulumi.get(__response__, 'tfid'),

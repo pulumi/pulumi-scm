@@ -34,17 +34,15 @@ type GetZoneProtectionProfileListArgs struct {
 
 // A collection of values returned by getZoneProtectionProfileList.
 type GetZoneProtectionProfileListResult struct {
-	Datas  []GetZoneProtectionProfileListData `pulumi:"datas"`
-	Device *string                            `pulumi:"device"`
-	Folder *string                            `pulumi:"folder"`
-	// The provider-assigned unique ID for this managed resource.
-	Id      string  `pulumi:"id"`
-	Limit   *int    `pulumi:"limit"`
-	Name    *string `pulumi:"name"`
-	Offset  *int    `pulumi:"offset"`
-	Snippet *string `pulumi:"snippet"`
-	Tfid    string  `pulumi:"tfid"`
-	Total   int     `pulumi:"total"`
+	Datas   []GetZoneProtectionProfileListData `pulumi:"datas"`
+	Device  *string                            `pulumi:"device"`
+	Folder  *string                            `pulumi:"folder"`
+	Limit   *int                               `pulumi:"limit"`
+	Name    *string                            `pulumi:"name"`
+	Offset  *int                               `pulumi:"offset"`
+	Snippet *string                            `pulumi:"snippet"`
+	Tfid    string                             `pulumi:"tfid"`
+	Total   int                                `pulumi:"total"`
 }
 
 func GetZoneProtectionProfileListOutput(ctx *pulumi.Context, args GetZoneProtectionProfileListOutputArgs, opts ...pulumi.InvokeOption) GetZoneProtectionProfileListResultOutput {
@@ -95,11 +93,6 @@ func (o GetZoneProtectionProfileListResultOutput) Device() pulumi.StringPtrOutpu
 
 func (o GetZoneProtectionProfileListResultOutput) Folder() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v GetZoneProtectionProfileListResult) *string { return v.Folder }).(pulumi.StringPtrOutput)
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o GetZoneProtectionProfileListResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v GetZoneProtectionProfileListResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 func (o GetZoneProtectionProfileListResultOutput) Limit() pulumi.IntPtrOutput {

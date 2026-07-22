@@ -38,10 +38,6 @@ export interface GetAutoVpnSettingResult {
      */
     readonly enableMeshBetweenHubs: boolean;
     /**
-     * The provider-assigned unique ID for this managed resource.
-     */
-    readonly id: string;
-    /**
      * The Terraform ID.
      */
     readonly tfid: string;

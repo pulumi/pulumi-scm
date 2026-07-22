@@ -27,16 +27,13 @@ class GetAutoVpnSettingResult:
     """
     A collection of values returned by getAutoVpnSetting.
     """
-    def __init__(__self__, as_range=None, enable_mesh_between_hubs=None, id=None, tfid=None, vpn_address_pools=None):
+    def __init__(__self__, as_range=None, enable_mesh_between_hubs=None, tfid=None, vpn_address_pools=None):
         if as_range and not isinstance(as_range, dict):
             raise TypeError("Expected argument 'as_range' to be a dict")
         pulumi.set(__self__, "as_range", as_range)
         if enable_mesh_between_hubs and not isinstance(enable_mesh_between_hubs, bool):
             raise TypeError("Expected argument 'enable_mesh_between_hubs' to be a bool")
         pulumi.set(__self__, "enable_mesh_between_hubs", enable_mesh_between_hubs)
-        if id and not isinstance(id, str):
-            raise TypeError("Expected argument 'id' to be a str")
-        pulumi.set(__self__, "id", id)
         if tfid and not isinstance(tfid, str):
             raise TypeError("Expected argument 'tfid' to be a str")
         pulumi.set(__self__, "tfid", tfid)
@@ -59,14 +56,6 @@ class GetAutoVpnSettingResult:
         Enable mesh connection between hubs?
         """
         return pulumi.get(self, "enable_mesh_between_hubs")
-
-    @_builtins.property
-    @pulumi.getter
-    def id(self) -> _builtins.str:
-        """
-        The provider-assigned unique ID for this managed resource.
-        """
-        return pulumi.get(self, "id")
 
     @_builtins.property
     @pulumi.getter
@@ -93,7 +82,6 @@ class AwaitableGetAutoVpnSettingResult(GetAutoVpnSettingResult):
         return GetAutoVpnSettingResult(
             as_range=self.as_range,
             enable_mesh_between_hubs=self.enable_mesh_between_hubs,
-            id=self.id,
             tfid=self.tfid,
             vpn_address_pools=self.vpn_address_pools)
 
@@ -119,7 +107,6 @@ def get_auto_vpn_setting(opts: Optional[pulumi.InvokeOptions] = None) -> Awaitab
     return AwaitableGetAutoVpnSettingResult(
         as_range=pulumi.get(__ret__, 'as_range'),
         enable_mesh_between_hubs=pulumi.get(__ret__, 'enable_mesh_between_hubs'),
-        id=pulumi.get(__ret__, 'id'),
         tfid=pulumi.get(__ret__, 'tfid'),
         vpn_address_pools=pulumi.get(__ret__, 'vpn_address_pools'))
 def get_auto_vpn_setting_output(opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetAutoVpnSettingResult]:
@@ -142,6 +129,5 @@ def get_auto_vpn_setting_output(opts: Optional[Union[pulumi.InvokeOptions, pulum
     return __ret__.apply(lambda __response__: GetAutoVpnSettingResult(
         as_range=pulumi.get(__response__, 'as_range'),
         enable_mesh_between_hubs=pulumi.get(__response__, 'enable_mesh_between_hubs'),
-        id=pulumi.get(__response__, 'id'),
         tfid=pulumi.get(__response__, 'tfid'),
         vpn_address_pools=pulumi.get(__response__, 'vpn_address_pools')))

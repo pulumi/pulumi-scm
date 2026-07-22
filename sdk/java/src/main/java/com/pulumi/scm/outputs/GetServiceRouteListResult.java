@@ -31,11 +31,6 @@ public final class GetServiceRouteListResult {
      */
     private @Nullable String folder;
     /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    private String id;
-    /**
      * @return The max number of items to return. Default: 200.
      * 
      */
@@ -87,13 +82,6 @@ public final class GetServiceRouteListResult {
      */
     public Optional<String> folder() {
         return Optional.ofNullable(this.folder);
-    }
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    public String id() {
-        return this.id;
     }
     /**
      * @return The max number of items to return. Default: 200.
@@ -150,7 +138,6 @@ public final class GetServiceRouteListResult {
         private List<GetServiceRouteListData> datas;
         private @Nullable String device;
         private @Nullable String folder;
-        private String id;
         private @Nullable Integer limit;
         private @Nullable String name;
         private @Nullable Integer offset;
@@ -163,7 +150,6 @@ public final class GetServiceRouteListResult {
     	      this.datas = defaults.datas;
     	      this.device = defaults.device;
     	      this.folder = defaults.folder;
-    	      this.id = defaults.id;
     	      this.limit = defaults.limit;
     	      this.name = defaults.name;
     	      this.offset = defaults.offset;
@@ -193,14 +179,6 @@ public final class GetServiceRouteListResult {
         public Builder folder(@Nullable String folder) {
 
             this.folder = folder;
-            return this;
-        }
-        @CustomType.Setter
-        public Builder id(String id) {
-            if (id == null) {
-              throw new MissingRequiredPropertyException("GetServiceRouteListResult", "id");
-            }
-            this.id = id;
             return this;
         }
         @CustomType.Setter
@@ -248,7 +226,6 @@ public final class GetServiceRouteListResult {
             _resultValue.datas = datas;
             _resultValue.device = device;
             _resultValue.folder = folder;
-            _resultValue.id = id;
             _resultValue.limit = limit;
             _resultValue.name = name;
             _resultValue.offset = offset;

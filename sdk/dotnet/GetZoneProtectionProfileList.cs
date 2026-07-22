@@ -90,10 +90,6 @@ namespace Pulumi.Scm
         public readonly ImmutableArray<Outputs.GetZoneProtectionProfileListDataResult> Datas;
         public readonly string? Device;
         public readonly string? Folder;
-        /// <summary>
-        /// The provider-assigned unique ID for this managed resource.
-        /// </summary>
-        public readonly string Id;
         public readonly int? Limit;
         public readonly string? Name;
         public readonly int? Offset;
@@ -108,8 +104,6 @@ namespace Pulumi.Scm
             string? device,
 
             string? folder,
-
-            string id,
 
             int? limit,
 
@@ -126,7 +120,6 @@ namespace Pulumi.Scm
             Datas = datas;
             Device = device;
             Folder = folder;
-            Id = id;
             Limit = limit;
             Name = name;
             Offset = offset;

@@ -27,7 +27,7 @@ class GetRoutePrefixListListResult:
     """
     A collection of values returned by getRoutePrefixListList.
     """
-    def __init__(__self__, datas=None, device=None, folder=None, id=None, limit=None, name=None, offset=None, snippet=None, tfid=None, total=None):
+    def __init__(__self__, datas=None, device=None, folder=None, limit=None, name=None, offset=None, snippet=None, tfid=None, total=None):
         if datas and not isinstance(datas, list):
             raise TypeError("Expected argument 'datas' to be a list")
         pulumi.set(__self__, "datas", datas)
@@ -37,9 +37,6 @@ class GetRoutePrefixListListResult:
         if folder and not isinstance(folder, str):
             raise TypeError("Expected argument 'folder' to be a str")
         pulumi.set(__self__, "folder", folder)
-        if id and not isinstance(id, str):
-            raise TypeError("Expected argument 'id' to be a str")
-        pulumi.set(__self__, "id", id)
         if limit and not isinstance(limit, int):
             raise TypeError("Expected argument 'limit' to be a int")
         pulumi.set(__self__, "limit", limit)
@@ -82,14 +79,6 @@ class GetRoutePrefixListListResult:
         The folder of the item. Default: Shared.
         """
         return pulumi.get(self, "folder")
-
-    @_builtins.property
-    @pulumi.getter
-    def id(self) -> _builtins.str:
-        """
-        The provider-assigned unique ID for this managed resource.
-        """
-        return pulumi.get(self, "id")
 
     @_builtins.property
     @pulumi.getter
@@ -149,7 +138,6 @@ class AwaitableGetRoutePrefixListListResult(GetRoutePrefixListListResult):
             datas=self.datas,
             device=self.device,
             folder=self.folder,
-            id=self.id,
             limit=self.limit,
             name=self.name,
             offset=self.offset,
@@ -190,7 +178,6 @@ def get_route_prefix_list_list(device: Optional[_builtins.str] = None,
         datas=pulumi.get(__ret__, 'datas'),
         device=pulumi.get(__ret__, 'device'),
         folder=pulumi.get(__ret__, 'folder'),
-        id=pulumi.get(__ret__, 'id'),
         limit=pulumi.get(__ret__, 'limit'),
         name=pulumi.get(__ret__, 'name'),
         offset=pulumi.get(__ret__, 'offset'),
@@ -228,7 +215,6 @@ def get_route_prefix_list_list_output(device: pulumi.Input[Optional[Optional[_bu
         datas=pulumi.get(__response__, 'datas'),
         device=pulumi.get(__response__, 'device'),
         folder=pulumi.get(__response__, 'folder'),
-        id=pulumi.get(__response__, 'id'),
         limit=pulumi.get(__response__, 'limit'),
         name=pulumi.get(__response__, 'name'),
         offset=pulumi.get(__response__, 'offset'),

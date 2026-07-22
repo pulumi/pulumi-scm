@@ -41,10 +41,6 @@ export interface GetZoneProtectionProfileListResult {
     readonly datas: outputs.GetZoneProtectionProfileListData[];
     readonly device?: string;
     readonly folder?: string;
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     */
-    readonly id: string;
     readonly limit?: number;
     readonly name?: string;
     readonly offset?: number;

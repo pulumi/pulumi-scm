@@ -100,10 +100,6 @@ namespace Pulumi.Scm
         /// </summary>
         public readonly bool EnableMeshBetweenHubs;
         /// <summary>
-        /// The provider-assigned unique ID for this managed resource.
-        /// </summary>
-        public readonly string Id;
-        /// <summary>
         /// The Terraform ID.
         /// </summary>
         public readonly string Tfid;
@@ -118,15 +114,12 @@ namespace Pulumi.Scm
 
             bool enableMeshBetweenHubs,
 
-            string id,
-
             string tfid,
 
             ImmutableArray<string> vpnAddressPools)
         {
             AsRange = asRange;
             EnableMeshBetweenHubs = enableMeshBetweenHubs;
-            Id = id;
             Tfid = tfid;
             VpnAddressPools = vpnAddressPools;
         }

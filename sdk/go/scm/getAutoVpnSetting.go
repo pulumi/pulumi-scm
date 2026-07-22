@@ -53,8 +53,6 @@ type LookupAutoVpnSettingResult struct {
 	AsRange GetAutoVpnSettingAsRange `pulumi:"asRange"`
 	// Enable mesh connection between hubs?
 	EnableMeshBetweenHubs bool `pulumi:"enableMeshBetweenHubs"`
-	// The provider-assigned unique ID for this managed resource.
-	Id string `pulumi:"id"`
 	// The Terraform ID.
 	Tfid string `pulumi:"tfid"`
 	// VPN address pool
@@ -91,11 +89,6 @@ func (o LookupAutoVpnSettingResultOutput) AsRange() GetAutoVpnSettingAsRangeOutp
 // Enable mesh connection between hubs?
 func (o LookupAutoVpnSettingResultOutput) EnableMeshBetweenHubs() pulumi.BoolOutput {
 	return o.ApplyT(func(v LookupAutoVpnSettingResult) bool { return v.EnableMeshBetweenHubs }).(pulumi.BoolOutput)
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o LookupAutoVpnSettingResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v LookupAutoVpnSettingResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 // The Terraform ID.

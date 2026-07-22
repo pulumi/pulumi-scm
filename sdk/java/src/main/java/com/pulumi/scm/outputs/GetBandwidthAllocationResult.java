@@ -19,11 +19,6 @@ public final class GetBandwidthAllocationResult {
      */
     private Integer allocatedBandwidth;
     /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    private String id;
-    /**
      * @return name of the aggregated bandwidth region
      * 
      */
@@ -51,13 +46,6 @@ public final class GetBandwidthAllocationResult {
      */
     public Integer allocatedBandwidth() {
         return this.allocatedBandwidth;
-    }
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    public String id() {
-        return this.id;
     }
     /**
      * @return name of the aggregated bandwidth region
@@ -98,7 +86,6 @@ public final class GetBandwidthAllocationResult {
     @CustomType.Builder
     public static final class Builder {
         private Integer allocatedBandwidth;
-        private String id;
         private String name;
         private GetBandwidthAllocationQos qos;
         private List<String> spnNameLists;
@@ -107,7 +94,6 @@ public final class GetBandwidthAllocationResult {
         public Builder(GetBandwidthAllocationResult defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.allocatedBandwidth = defaults.allocatedBandwidth;
-    	      this.id = defaults.id;
     	      this.name = defaults.name;
     	      this.qos = defaults.qos;
     	      this.spnNameLists = defaults.spnNameLists;
@@ -120,14 +106,6 @@ public final class GetBandwidthAllocationResult {
               throw new MissingRequiredPropertyException("GetBandwidthAllocationResult", "allocatedBandwidth");
             }
             this.allocatedBandwidth = allocatedBandwidth;
-            return this;
-        }
-        @CustomType.Setter
-        public Builder id(String id) {
-            if (id == null) {
-              throw new MissingRequiredPropertyException("GetBandwidthAllocationResult", "id");
-            }
-            this.id = id;
             return this;
         }
         @CustomType.Setter
@@ -168,7 +146,6 @@ public final class GetBandwidthAllocationResult {
         public GetBandwidthAllocationResult build() {
             final var _resultValue = new GetBandwidthAllocationResult();
             _resultValue.allocatedBandwidth = allocatedBandwidth;
-            _resultValue.id = id;
             _resultValue.name = name;
             _resultValue.qos = qos;
             _resultValue.spnNameLists = spnNameLists;

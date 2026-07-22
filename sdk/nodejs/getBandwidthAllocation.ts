@@ -51,10 +51,6 @@ export interface GetBandwidthAllocationResult {
      */
     readonly allocatedBandwidth: number;
     /**
-     * The provider-assigned unique ID for this managed resource.
-     */
-    readonly id: string;
-    /**
      * name of the aggregated bandwidth region
      */
     readonly name: string;

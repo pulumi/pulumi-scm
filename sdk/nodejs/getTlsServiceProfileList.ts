@@ -85,10 +85,6 @@ export interface GetTlsServiceProfileListResult {
      */
     readonly folder?: string;
     /**
-     * The provider-assigned unique ID for this managed resource.
-     */
-    readonly id: string;
-    /**
      * The max number of items to return. Default: 200.
      */
     readonly limit?: number;
