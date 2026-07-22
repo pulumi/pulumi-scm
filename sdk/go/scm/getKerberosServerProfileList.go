@@ -76,8 +76,6 @@ type GetKerberosServerProfileListResult struct {
 	Device *string `pulumi:"device"`
 	// The folder of the item. Default: Shared.
 	Folder *string `pulumi:"folder"`
-	// The provider-assigned unique ID for this managed resource.
-	Id string `pulumi:"id"`
 	// The max number of items to return. Default: 200.
 	Limit *int `pulumi:"limit"`
 	// The name of the item.
@@ -149,11 +147,6 @@ func (o GetKerberosServerProfileListResultOutput) Device() pulumi.StringPtrOutpu
 // The folder of the item. Default: Shared.
 func (o GetKerberosServerProfileListResultOutput) Folder() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v GetKerberosServerProfileListResult) *string { return v.Folder }).(pulumi.StringPtrOutput)
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o GetKerberosServerProfileListResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v GetKerberosServerProfileListResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 // The max number of items to return. Default: 200.

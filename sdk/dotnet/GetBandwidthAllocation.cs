@@ -143,10 +143,6 @@ namespace Pulumi.Scm
         /// </summary>
         public readonly int AllocatedBandwidth;
         /// <summary>
-        /// The provider-assigned unique ID for this managed resource.
-        /// </summary>
-        public readonly string Id;
-        /// <summary>
         /// name of the aggregated bandwidth region
         /// </summary>
         public readonly string Name;
@@ -167,8 +163,6 @@ namespace Pulumi.Scm
         private GetBandwidthAllocationResult(
             int allocatedBandwidth,
 
-            string id,
-
             string name,
 
             Outputs.GetBandwidthAllocationQosResult qos,
@@ -178,7 +172,6 @@ namespace Pulumi.Scm
             string tfid)
         {
             AllocatedBandwidth = allocatedBandwidth;
-            Id = id;
             Name = name;
             Qos = qos;
             SpnNameLists = spnNameLists;

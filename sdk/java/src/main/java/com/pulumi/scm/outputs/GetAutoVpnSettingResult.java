@@ -24,11 +24,6 @@ public final class GetAutoVpnSettingResult {
      */
     private Boolean enableMeshBetweenHubs;
     /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    private String id;
-    /**
      * @return The Terraform ID.
      * 
      */
@@ -53,13 +48,6 @@ public final class GetAutoVpnSettingResult {
      */
     public Boolean enableMeshBetweenHubs() {
         return this.enableMeshBetweenHubs;
-    }
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    public String id() {
-        return this.id;
     }
     /**
      * @return The Terraform ID.
@@ -87,7 +75,6 @@ public final class GetAutoVpnSettingResult {
     public static final class Builder {
         private GetAutoVpnSettingAsRange asRange;
         private Boolean enableMeshBetweenHubs;
-        private String id;
         private String tfid;
         private List<String> vpnAddressPools;
         public Builder() {}
@@ -95,7 +82,6 @@ public final class GetAutoVpnSettingResult {
     	      Objects.requireNonNull(defaults);
     	      this.asRange = defaults.asRange;
     	      this.enableMeshBetweenHubs = defaults.enableMeshBetweenHubs;
-    	      this.id = defaults.id;
     	      this.tfid = defaults.tfid;
     	      this.vpnAddressPools = defaults.vpnAddressPools;
         }
@@ -114,14 +100,6 @@ public final class GetAutoVpnSettingResult {
               throw new MissingRequiredPropertyException("GetAutoVpnSettingResult", "enableMeshBetweenHubs");
             }
             this.enableMeshBetweenHubs = enableMeshBetweenHubs;
-            return this;
-        }
-        @CustomType.Setter
-        public Builder id(String id) {
-            if (id == null) {
-              throw new MissingRequiredPropertyException("GetAutoVpnSettingResult", "id");
-            }
-            this.id = id;
             return this;
         }
         @CustomType.Setter
@@ -147,7 +125,6 @@ public final class GetAutoVpnSettingResult {
             final var _resultValue = new GetAutoVpnSettingResult();
             _resultValue.asRange = asRange;
             _resultValue.enableMeshBetweenHubs = enableMeshBetweenHubs;
-            _resultValue.id = id;
             _resultValue.tfid = tfid;
             _resultValue.vpnAddressPools = vpnAddressPools;
             return _resultValue;

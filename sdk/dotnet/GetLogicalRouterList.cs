@@ -220,10 +220,6 @@ namespace Pulumi.Scm
         /// </summary>
         public readonly string? Folder;
         /// <summary>
-        /// The provider-assigned unique ID for this managed resource.
-        /// </summary>
-        public readonly string Id;
-        /// <summary>
         /// The max number of items to return. Default: 200.
         /// </summary>
         public readonly int? Limit;
@@ -260,8 +256,6 @@ namespace Pulumi.Scm
 
             string? folder,
 
-            string id,
-
             int? limit,
 
             string? name,
@@ -279,7 +273,6 @@ namespace Pulumi.Scm
             Datas = datas;
             Device = device;
             Folder = folder;
-            Id = id;
             Limit = limit;
             Name = name;
             Offset = offset;

@@ -104,10 +104,6 @@ namespace Pulumi.Scm
         /// </summary>
         public readonly string BackboneRouting;
         /// <summary>
-        /// The provider-assigned unique ID for this managed resource.
-        /// </summary>
-        public readonly string Id;
-        /// <summary>
         /// Outbound routes for services
         /// </summary>
         public readonly ImmutableArray<string> OutboundRoutesForServices;
@@ -132,8 +128,6 @@ namespace Pulumi.Scm
 
             string backboneRouting,
 
-            string id,
-
             ImmutableArray<string> outboundRoutesForServices,
 
             Outputs.GetBgpRoutingRoutingPreferenceResult routingPreference,
@@ -145,7 +139,6 @@ namespace Pulumi.Scm
             AcceptRouteOverSc = acceptRouteOverSc;
             AddHostRouteToIkePeer = addHostRouteToIkePeer;
             BackboneRouting = backboneRouting;
-            Id = id;
             OutboundRoutesForServices = outboundRoutesForServices;
             RoutingPreference = routingPreference;
             Tfid = tfid;

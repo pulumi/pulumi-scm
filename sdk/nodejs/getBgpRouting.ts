@@ -42,10 +42,6 @@ export interface GetBgpRoutingResult {
      */
     readonly backboneRouting: string;
     /**
-     * The provider-assigned unique ID for this managed resource.
-     */
-    readonly id: string;
-    /**
      * Outbound routes for services
      */
     readonly outboundRoutesForServices: string[];

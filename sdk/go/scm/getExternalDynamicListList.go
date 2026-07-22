@@ -88,8 +88,6 @@ type GetExternalDynamicListListResult struct {
 	Device *string `pulumi:"device"`
 	// The folder of the item. Default: Shared.
 	Folder *string `pulumi:"folder"`
-	// The provider-assigned unique ID for this managed resource.
-	Id string `pulumi:"id"`
 	// The max number of items to return. Default: 200.
 	Limit *int `pulumi:"limit"`
 	// The name of the item.
@@ -161,11 +159,6 @@ func (o GetExternalDynamicListListResultOutput) Device() pulumi.StringPtrOutput 
 // The folder of the item. Default: Shared.
 func (o GetExternalDynamicListListResultOutput) Folder() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v GetExternalDynamicListListResult) *string { return v.Folder }).(pulumi.StringPtrOutput)
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o GetExternalDynamicListListResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v GetExternalDynamicListListResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 // The max number of items to return. Default: 200.

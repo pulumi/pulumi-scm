@@ -27,13 +27,10 @@ class GetBandwidthAllocationResult:
     """
     A collection of values returned by getBandwidthAllocation.
     """
-    def __init__(__self__, allocated_bandwidth=None, id=None, name=None, qos=None, spn_name_lists=None, tfid=None):
+    def __init__(__self__, allocated_bandwidth=None, name=None, qos=None, spn_name_lists=None, tfid=None):
         if allocated_bandwidth and not isinstance(allocated_bandwidth, int):
             raise TypeError("Expected argument 'allocated_bandwidth' to be a int")
         pulumi.set(__self__, "allocated_bandwidth", allocated_bandwidth)
-        if id and not isinstance(id, str):
-            raise TypeError("Expected argument 'id' to be a str")
-        pulumi.set(__self__, "id", id)
         if name and not isinstance(name, str):
             raise TypeError("Expected argument 'name' to be a str")
         pulumi.set(__self__, "name", name)
@@ -54,14 +51,6 @@ class GetBandwidthAllocationResult:
         bandwidth to allocate in Mbps
         """
         return pulumi.get(self, "allocated_bandwidth")
-
-    @_builtins.property
-    @pulumi.getter
-    def id(self) -> _builtins.str:
-        """
-        The provider-assigned unique ID for this managed resource.
-        """
-        return pulumi.get(self, "id")
 
     @_builtins.property
     @pulumi.getter
@@ -103,7 +92,6 @@ class AwaitableGetBandwidthAllocationResult(GetBandwidthAllocationResult):
             yield self
         return GetBandwidthAllocationResult(
             allocated_bandwidth=self.allocated_bandwidth,
-            id=self.id,
             name=self.name,
             qos=self.qos,
             spn_name_lists=self.spn_name_lists,
@@ -138,7 +126,6 @@ def get_bandwidth_allocation(name: Optional[_builtins.str] = None,
 
     return AwaitableGetBandwidthAllocationResult(
         allocated_bandwidth=pulumi.get(__ret__, 'allocated_bandwidth'),
-        id=pulumi.get(__ret__, 'id'),
         name=pulumi.get(__ret__, 'name'),
         qos=pulumi.get(__ret__, 'qos'),
         spn_name_lists=pulumi.get(__ret__, 'spn_name_lists'),
@@ -170,7 +157,6 @@ def get_bandwidth_allocation_output(name: pulumi.Input[Optional[Optional[_builti
     __ret__ = pulumi.runtime.invoke_output('scm:index/getBandwidthAllocation:getBandwidthAllocation', __args__, opts=opts, typ=GetBandwidthAllocationResult)
     return __ret__.apply(lambda __response__: GetBandwidthAllocationResult(
         allocated_bandwidth=pulumi.get(__response__, 'allocated_bandwidth'),
-        id=pulumi.get(__response__, 'id'),
         name=pulumi.get(__response__, 'name'),
         qos=pulumi.get(__response__, 'qos'),
         spn_name_lists=pulumi.get(__response__, 'spn_name_lists'),

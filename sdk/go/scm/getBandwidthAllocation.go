@@ -62,8 +62,6 @@ type LookupBandwidthAllocationArgs struct {
 type LookupBandwidthAllocationResult struct {
 	// bandwidth to allocate in Mbps
 	AllocatedBandwidth int `pulumi:"allocatedBandwidth"`
-	// The provider-assigned unique ID for this managed resource.
-	Id string `pulumi:"id"`
 	// name of the aggregated bandwidth region
 	Name string `pulumi:"name"`
 	// Qos
@@ -111,11 +109,6 @@ func (o LookupBandwidthAllocationResultOutput) ToLookupBandwidthAllocationResult
 // bandwidth to allocate in Mbps
 func (o LookupBandwidthAllocationResultOutput) AllocatedBandwidth() pulumi.IntOutput {
 	return o.ApplyT(func(v LookupBandwidthAllocationResult) int { return v.AllocatedBandwidth }).(pulumi.IntOutput)
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o LookupBandwidthAllocationResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v LookupBandwidthAllocationResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 // name of the aggregated bandwidth region

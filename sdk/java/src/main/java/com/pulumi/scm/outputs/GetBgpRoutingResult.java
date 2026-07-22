@@ -29,11 +29,6 @@ public final class GetBgpRoutingResult {
      */
     private String backboneRouting;
     /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    private String id;
-    /**
      * @return Outbound routes for services
      * 
      */
@@ -77,13 +72,6 @@ public final class GetBgpRoutingResult {
         return this.backboneRouting;
     }
     /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    public String id() {
-        return this.id;
-    }
-    /**
      * @return Outbound routes for services
      * 
      */
@@ -124,7 +112,6 @@ public final class GetBgpRoutingResult {
         private Boolean acceptRouteOverSc;
         private Boolean addHostRouteToIkePeer;
         private String backboneRouting;
-        private String id;
         private List<String> outboundRoutesForServices;
         private GetBgpRoutingRoutingPreference routingPreference;
         private String tfid;
@@ -135,7 +122,6 @@ public final class GetBgpRoutingResult {
     	      this.acceptRouteOverSc = defaults.acceptRouteOverSc;
     	      this.addHostRouteToIkePeer = defaults.addHostRouteToIkePeer;
     	      this.backboneRouting = defaults.backboneRouting;
-    	      this.id = defaults.id;
     	      this.outboundRoutesForServices = defaults.outboundRoutesForServices;
     	      this.routingPreference = defaults.routingPreference;
     	      this.tfid = defaults.tfid;
@@ -164,14 +150,6 @@ public final class GetBgpRoutingResult {
               throw new MissingRequiredPropertyException("GetBgpRoutingResult", "backboneRouting");
             }
             this.backboneRouting = backboneRouting;
-            return this;
-        }
-        @CustomType.Setter
-        public Builder id(String id) {
-            if (id == null) {
-              throw new MissingRequiredPropertyException("GetBgpRoutingResult", "id");
-            }
-            this.id = id;
             return this;
         }
         @CustomType.Setter
@@ -214,7 +192,6 @@ public final class GetBgpRoutingResult {
             _resultValue.acceptRouteOverSc = acceptRouteOverSc;
             _resultValue.addHostRouteToIkePeer = addHostRouteToIkePeer;
             _resultValue.backboneRouting = backboneRouting;
-            _resultValue.id = id;
             _resultValue.outboundRoutesForServices = outboundRoutesForServices;
             _resultValue.routingPreference = routingPreference;
             _resultValue.tfid = tfid;
