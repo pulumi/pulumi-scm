@@ -184,8 +184,8 @@ import (
 //						RegistryKeys: scm.HipObjectCustomChecksCriteriaRegistryKeyArray{
 //							&scm.HipObjectCustomChecksCriteriaRegistryKeyArgs{
 //								Name: pulumi.String("HKEY_LOCAL_MACHINE\\Software\\PaloAltoNetworks"),
-//								RegistryValue: []map[string]interface{}{
-//									map[string]interface{}{
+//								RegistryValue: []map[string]string{
+//									{
 //										"name":      "AllowRemoteAccess",
 //										"valueData": "false",
 //									},

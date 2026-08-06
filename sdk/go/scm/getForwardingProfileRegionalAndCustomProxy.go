@@ -55,7 +55,7 @@ import (
 //			if err != nil {
 //				return err
 //			}
-//			ctx.Export("forwardingProfileRegionalAndCustomProxyDataSourceResults", scm.GetForwardingProfileRegionalAndCustomProxyResultMap{
+//			ctx.Export("forwardingProfileRegionalAndCustomProxyDataSourceResults", scm.GetForwardingProfileRegionalAndCustomProxyResultArgsMap{
 //				"gpAndPacBasicProxy":  scmForwardingProfileRegionalAndCustomProxy1Ds,
 //				"gpAndPacDualProxy":   scmForwardingProfileRegionalAndCustomProxy2Ds,
 //				"ztnaAgentBasicProxy": scmForwardingProfileRegionalAndCustomProxy3Ds,

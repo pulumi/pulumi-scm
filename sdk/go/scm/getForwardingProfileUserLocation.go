@@ -48,7 +48,7 @@ import (
 //			if err != nil {
 //				return err
 //			}
-//			ctx.Export("forwardingProfileUserLocationDataSourceResults", scm.GetForwardingProfileUserLocationResultMap{
+//			ctx.Export("forwardingProfileUserLocationDataSourceResults", scm.GetForwardingProfileUserLocationResultArgsMap{
 //				"ipAddressesObject":           scmForwardingProfileUserLocation1Ds,
 //				"internalHostDetectionObject": scmForwardingProfileUserLocation2Ds,
 //				"multiIpRangeObject":          scmForwardingProfileUserLocation4Ds,

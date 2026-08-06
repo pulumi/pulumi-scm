@@ -48,7 +48,7 @@ import (
 //			if err != nil {
 //				return err
 //			}
-//			ctx.Export("forwardingProfileDestinationDataSourceResults", scm.GetForwardingProfileDestinationResultMap{
+//			ctx.Export("forwardingProfileDestinationDataSourceResults", scm.GetForwardingProfileDestinationResultArgsMap{
 //				"fqdnDestination":  scmForwardingProfileDestination1Ds,
 //				"ipDestination":    scmForwardingProfileDestination2Ds,
 //				"mixedDestination": scmForwardingProfileDestination3Ds,

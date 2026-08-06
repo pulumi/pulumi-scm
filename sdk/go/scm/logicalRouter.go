@@ -104,7 +104,7 @@ import (
 //										"name":        "default-route",
 //										"destination": "0.0.0.0/0",
 //										"preference":  10,
-//										"nexthop": map[string]interface{}{
+//										"nexthop": map[string]string{
 //											"ipAddress": "198.18.1.1",
 //										},
 //									},
@@ -113,7 +113,7 @@ import (
 //										"interface":   "$scm_ethernet_interface",
 //										"destination": "192.168.1.0/24",
 //										"preference":  1,
-//										"nexthop": map[string]interface{}{
+//										"nexthop": map[string]string{
 //											"ipAddress": "$scm_next_hop",
 //										},
 //									},
@@ -122,10 +122,10 @@ import (
 //										"interface":   "$scm_ethernet_interface",
 //										"destination": "192.168.2.0/24",
 //										"preference":  1,
-//										"nexthop": map[string]interface{}{
+//										"nexthop": map[string]string{
 //											"fqdn": "$scm_next_hop",
 //										},
-//										"bfd": map[string]interface{}{
+//										"bfd": map[string]string{
 //											"profile": "default",
 //										},
 //									},
@@ -162,10 +162,10 @@ import (
 //							PeerGroup: []map[string]interface{}{
 //								map[string]interface{}{
 //									"name": "prisma-access",
-//									"addressFamily": map[string]interface{}{
+//									"addressFamily": map[string]string{
 //										"ipv4": "default",
 //									},
-//									"connectionOptions": map[string]interface{}{
+//									"connectionOptions": map[string]string{
 //										"authentication": "bgp_auth_profile",
 //									},
 //									"peer": []map[string]interface{}{
@@ -173,13 +173,13 @@ import (
 //											"name":   "primary-access-primary",
 //											"enable": true,
 //											"peerAs": 65515,
-//											"peerAddress": map[string]interface{}{
+//											"peerAddress": map[string]string{
 //												"ip": "198.18.1.100",
 //											},
-//											"localAddress": map[string]interface{}{
+//											"localAddress": map[string]string{
 //												"interface": "$scm_bgp_interface",
 //											},
-//											"connectionOptions": map[string]interface{}{
+//											"connectionOptions": map[string]string{
 //												"multihop": "3",
 //											},
 //										},

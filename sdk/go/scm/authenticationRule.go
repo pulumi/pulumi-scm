@@ -149,7 +149,7 @@ import (
 //				Folder:           pulumi.String("ngfw-shared"),
 //				Position:         pulumi.String("pre"),
 //				RelativePosition: pulumi.String("before"),
-//				TargetRule:       anchorRule.ID(),
+//				TargetRule:       anchorRule.ID().ToIDOutput().ToStringOutput(),
 //				Destinations: pulumi.StringArray{
 //					pulumi.String("any"),
 //				},
@@ -178,7 +178,7 @@ import (
 //				Folder:           pulumi.String("ngfw-shared"),
 //				Position:         pulumi.String("pre"),
 //				RelativePosition: pulumi.String("after"),
-//				TargetRule:       anchorRule.ID(),
+//				TargetRule:       anchorRule.ID().ToIDOutput().ToStringOutput(),
 //				Destinations: pulumi.StringArray{
 //					pulumi.String("any"),
 //				},
