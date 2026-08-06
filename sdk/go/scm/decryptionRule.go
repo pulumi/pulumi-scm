@@ -162,7 +162,7 @@ import (
 //				Position:         pulumi.String("pre"),
 //				Action:           pulumi.String("decrypt"),
 //				RelativePosition: pulumi.String("before"),
-//				TargetRule:       anchorDecryptionRule.ID(),
+//				TargetRule:       anchorDecryptionRule.ID().ToIDOutput().ToStringOutput(),
 //				Froms: pulumi.StringArray{
 //					pulumi.String("trust"),
 //				},
@@ -198,7 +198,7 @@ import (
 //				Position:         pulumi.String("pre"),
 //				Action:           pulumi.String("decrypt"),
 //				RelativePosition: pulumi.String("after"),
-//				TargetRule:       anchorDecryptionRule.ID(),
+//				TargetRule:       anchorDecryptionRule.ID().ToIDOutput().ToStringOutput(),
 //				Froms: pulumi.StringArray{
 //					pulumi.String("any"),
 //				},

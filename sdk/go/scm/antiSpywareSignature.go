@@ -43,8 +43,8 @@ import (
 //						AndConditions: scm.AntiSpywareSignatureSignatureCombinationAndConditionArray{
 //							&scm.AntiSpywareSignatureSignatureCombinationAndConditionArgs{
 //								Name: pulumi.String("And Condition 1"),
-//								OrCondition: []map[string]interface{}{
-//									map[string]interface{}{
+//								OrCondition: []map[string]string{
+//									{
 //										"name":      "Test",
 //										"threat_id": "10001",
 //									},

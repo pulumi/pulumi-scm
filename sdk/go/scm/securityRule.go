@@ -222,7 +222,7 @@ import (
 //				Name:             pulumi.String("Allow OS Updates Before Web143"),
 //				Description:      pulumi.String("Allow specific OS update traffic before general web access."),
 //				RelativePosition: pulumi.String("before"),
-//				TargetRule:       standardWebAccess.ID(),
+//				TargetRule:       standardWebAccess.ID().ToIDOutput().ToStringOutput(),
 //				Action:           pulumi.String("allow"),
 //				Froms: pulumi.StringArray{
 //					pulumi.String("trust"),
@@ -263,7 +263,7 @@ import (
 //				Name:             pulumi.String("Allow Corp Apps After Web143"),
 //				Description:      pulumi.String("Allow access to specific corporate apps after general web access."),
 //				RelativePosition: pulumi.String("after"),
-//				TargetRule:       standardWebAccess.ID(),
+//				TargetRule:       standardWebAccess.ID().ToIDOutput().ToStringOutput(),
 //				Action:           pulumi.String("allow"),
 //				Froms: pulumi.StringArray{
 //					pulumi.String("trust"),

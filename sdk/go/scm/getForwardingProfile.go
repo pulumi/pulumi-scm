@@ -55,7 +55,7 @@ import (
 //			if err != nil {
 //				return err
 //			}
-//			ctx.Export("forwardingProfileDataSourceResults", scm.GetForwardingProfileResultMap{
+//			ctx.Export("forwardingProfileDataSourceResults", scm.GetForwardingProfileResultArgsMap{
 //				"gpProxyBasicObject": gpProxyBasic,
 //				"gpProxyFullObject":  gpProxyFull,
 //				"pacFileObject":      pacFile,

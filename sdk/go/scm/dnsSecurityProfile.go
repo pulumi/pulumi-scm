@@ -82,14 +82,14 @@ import (
 //						map[string]interface{}{
 //							"name":          "default-paloalto-dns",
 //							"packetCapture": "disable",
-//							"action": map[string]interface{}{
+//							"action": map[string]map[string]interface{}{
 //								"alert": map[string]interface{}{},
 //							},
 //						},
 //						map[string]interface{}{
 //							"name":          "update-edl",
 //							"packetCapture": "extended-capture",
-//							"action": map[string]interface{}{
+//							"action": map[string]map[string]interface{}{
 //								"allow": map[string]interface{}{},
 //							},
 //						},
@@ -149,7 +149,7 @@ import (
 //						map[string]interface{}{
 //							"name":          "scm_edl_1",
 //							"packetCapture": "single-packet",
-//							"action": map[string]interface{}{
+//							"action": map[string]map[string]interface{}{
 //								"block": map[string]interface{}{},
 //							},
 //						},

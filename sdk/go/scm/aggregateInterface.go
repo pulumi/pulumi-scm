@@ -50,7 +50,7 @@ import (
 //						SystenPriority:   32768,
 //						TransmissionRate: pulumi.String("fast"),
 //					},
-//					Lldp: map[string]interface{}{
+//					Lldp: map[string]bool{
 //						"enable": false,
 //					},
 //				},

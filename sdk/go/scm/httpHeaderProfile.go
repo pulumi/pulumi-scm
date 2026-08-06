@@ -46,8 +46,8 @@ import (
 //								"domains": []string{
 //									"*.google.com",
 //								},
-//								"headers": []map[string]interface{}{
-//									map[string]interface{}{
+//								"headers": []map[string]string{
+//									{
 //										"name":   "X-GooGAppls-Allowed-Domains",
 //										"header": "X-GooGAppls-Allowed-Domains",
 //										"value":  "user-allowed",
@@ -75,13 +75,13 @@ import (
 //									"*.dropbox.com",
 //									"dropboxformum.com",
 //								},
-//								"headers": []map[string]interface{}{
-//									map[string]interface{}{
+//								"headers": []map[string]string{
+//									{
 //										"name":   "X-Dropbox-allowed-Team-Ids",
 //										"header": "X-Dropbox-allowed-Team-Ids",
 //										"value":  "dropbox-users",
 //									},
-//									map[string]interface{}{
+//									{
 //										"name":   "custom_header",
 //										"header": "custom_header",
 //										"value":  "10-header",
@@ -100,13 +100,13 @@ import (
 //									"login.mircosoftonline.com",
 //									"login.windows.net",
 //								},
-//								"headers": []map[string]interface{}{
-//									map[string]interface{}{
+//								"headers": []map[string]string{
+//									{
 //										"name":   "Restrict-Access-Context",
 //										"header": "Restrict-Access-Context",
 //										"value":  "denied-context",
 //									},
-//									map[string]interface{}{
+//									{
 //										"name":   "Restrict-Access-To-Tenants",
 //										"header": "Restrict-Access-To-Tenants",
 //										"value":  "denied-tenants",
@@ -123,8 +123,8 @@ import (
 //								"domains": []string{
 //									"custom_domain",
 //								},
-//								"headers": []map[string]interface{}{
-//									map[string]interface{}{
+//								"headers": []map[string]string{
+//									{
 //										"name":   "Authorization",
 //										"header": "Authorization",
 //										"value":  "auth",
@@ -142,8 +142,8 @@ import (
 //									"m.youtube.com",
 //									"www.youtube.com",
 //								},
-//								"headers": []map[string]interface{}{
-//									map[string]interface{}{
+//								"headers": []map[string]string{
+//									{
 //										"name":   "Youtube-Restrict",
 //										"header": "Youtube-Restrict",
 //										"value":  "denied-youtube",
@@ -161,8 +161,8 @@ import (
 //									"custom_1",
 //									"custom_2",
 //								},
-//								"headers": []map[string]interface{}{
-//									map[string]interface{}{
+//								"headers": []map[string]string{
+//									{
 //										"name":   "custom_header",
 //										"header": "custom_header",
 //										"value":  "custom",

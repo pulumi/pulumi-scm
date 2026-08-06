@@ -90,8 +90,8 @@ import (
 //						AndCondition: []map[string]interface{}{
 //							map[string]interface{}{
 //								"name": "Example Condition",
-//								"operator": map[string]interface{}{
-//									"patternMatch": map[string]interface{}{
+//								"operator": map[string]map[string]string{
+//									"patternMatch": map[string]string{
 //										"context": "file-data",
 //										"pattern": "^malware$",
 //									},

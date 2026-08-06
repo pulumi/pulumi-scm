@@ -62,7 +62,7 @@ import (
 //			if err != nil {
 //				return err
 //			}
-//			ctx.Export("addressDataSourceResults", scm.GetAddressResultMap{
+//			ctx.Export("addressDataSourceResults", scm.GetAddressResultArgsMap{
 //				"netmaskObject":        scmAddress1Ds,
 //				"ipRangeObject":        scmAddress2Ds,
 //				"fqdnObject":           scmAddress3Ds,
