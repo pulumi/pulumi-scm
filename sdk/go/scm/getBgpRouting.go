@@ -66,10 +66,8 @@ type LookupBgpRoutingResult struct {
 }
 
 func LookupBgpRoutingOutput(ctx *pulumi.Context, opts ...pulumi.InvokeOption) LookupBgpRoutingResultOutput {
-	return pulumi.ToOutput(0).ApplyT(func(int) (LookupBgpRoutingResultOutput, error) {
-		options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-		return ctx.InvokeOutput("scm:index/getBgpRouting:getBgpRouting", nil, LookupBgpRoutingResultOutput{}, options).(LookupBgpRoutingResultOutput), nil
-	}).(LookupBgpRoutingResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("scm:index/getBgpRouting:getBgpRouting", nil, LookupBgpRoutingResultOutput{}, options).(LookupBgpRoutingResultOutput)
 }
 
 // A collection of values returned by getBgpRouting.

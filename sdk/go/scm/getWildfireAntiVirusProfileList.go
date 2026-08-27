@@ -61,12 +61,8 @@ type GetWildfireAntiVirusProfileListResult struct {
 }
 
 func GetWildfireAntiVirusProfileListOutput(ctx *pulumi.Context, args GetWildfireAntiVirusProfileListOutputArgs, opts ...pulumi.InvokeOption) GetWildfireAntiVirusProfileListResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (GetWildfireAntiVirusProfileListResultOutput, error) {
-			args := v.(GetWildfireAntiVirusProfileListArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("scm:index/getWildfireAntiVirusProfileList:getWildfireAntiVirusProfileList", args, GetWildfireAntiVirusProfileListResultOutput{}, options).(GetWildfireAntiVirusProfileListResultOutput), nil
-		}).(GetWildfireAntiVirusProfileListResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("scm:index/getWildfireAntiVirusProfileList:getWildfireAntiVirusProfileList", args, GetWildfireAntiVirusProfileListResultOutput{}, options).(GetWildfireAntiVirusProfileListResultOutput)
 }
 
 // A collection of arguments for invoking getWildfireAntiVirusProfileList.

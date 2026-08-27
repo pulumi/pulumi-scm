@@ -97,12 +97,8 @@ type GetDecryptionRuleListResult struct {
 }
 
 func GetDecryptionRuleListOutput(ctx *pulumi.Context, args GetDecryptionRuleListOutputArgs, opts ...pulumi.InvokeOption) GetDecryptionRuleListResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (GetDecryptionRuleListResultOutput, error) {
-			args := v.(GetDecryptionRuleListArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("scm:index/getDecryptionRuleList:getDecryptionRuleList", args, GetDecryptionRuleListResultOutput{}, options).(GetDecryptionRuleListResultOutput), nil
-		}).(GetDecryptionRuleListResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("scm:index/getDecryptionRuleList:getDecryptionRuleList", args, GetDecryptionRuleListResultOutput{}, options).(GetDecryptionRuleListResultOutput)
 }
 
 // A collection of arguments for invoking getDecryptionRuleList.

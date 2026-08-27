@@ -91,12 +91,8 @@ type GetLogForwardingProfileListResult struct {
 }
 
 func GetLogForwardingProfileListOutput(ctx *pulumi.Context, args GetLogForwardingProfileListOutputArgs, opts ...pulumi.InvokeOption) GetLogForwardingProfileListResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (GetLogForwardingProfileListResultOutput, error) {
-			args := v.(GetLogForwardingProfileListArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("scm:index/getLogForwardingProfileList:getLogForwardingProfileList", args, GetLogForwardingProfileListResultOutput{}, options).(GetLogForwardingProfileListResultOutput), nil
-		}).(GetLogForwardingProfileListResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("scm:index/getLogForwardingProfileList:getLogForwardingProfileList", args, GetLogForwardingProfileListResultOutput{}, options).(GetLogForwardingProfileListResultOutput)
 }
 
 // A collection of arguments for invoking getLogForwardingProfileList.

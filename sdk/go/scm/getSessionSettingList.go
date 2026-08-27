@@ -91,12 +91,8 @@ type GetSessionSettingListResult struct {
 }
 
 func GetSessionSettingListOutput(ctx *pulumi.Context, args GetSessionSettingListOutputArgs, opts ...pulumi.InvokeOption) GetSessionSettingListResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (GetSessionSettingListResultOutput, error) {
-			args := v.(GetSessionSettingListArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("scm:index/getSessionSettingList:getSessionSettingList", args, GetSessionSettingListResultOutput{}, options).(GetSessionSettingListResultOutput), nil
-		}).(GetSessionSettingListResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("scm:index/getSessionSettingList:getSessionSettingList", args, GetSessionSettingListResultOutput{}, options).(GetSessionSettingListResultOutput)
 }
 
 // A collection of arguments for invoking getSessionSettingList.

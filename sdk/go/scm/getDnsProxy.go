@@ -54,12 +54,8 @@ type LookupDnsProxyResult struct {
 }
 
 func LookupDnsProxyOutput(ctx *pulumi.Context, args LookupDnsProxyOutputArgs, opts ...pulumi.InvokeOption) LookupDnsProxyResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupDnsProxyResultOutput, error) {
-			args := v.(LookupDnsProxyArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("scm:index/getDnsProxy:getDnsProxy", args, LookupDnsProxyResultOutput{}, options).(LookupDnsProxyResultOutput), nil
-		}).(LookupDnsProxyResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("scm:index/getDnsProxy:getDnsProxy", args, LookupDnsProxyResultOutput{}, options).(LookupDnsProxyResultOutput)
 }
 
 // A collection of arguments for invoking getDnsProxy.

@@ -91,12 +91,8 @@ type GetAuthenticationSettingListResult struct {
 }
 
 func GetAuthenticationSettingListOutput(ctx *pulumi.Context, args GetAuthenticationSettingListOutputArgs, opts ...pulumi.InvokeOption) GetAuthenticationSettingListResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (GetAuthenticationSettingListResultOutput, error) {
-			args := v.(GetAuthenticationSettingListArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("scm:index/getAuthenticationSettingList:getAuthenticationSettingList", args, GetAuthenticationSettingListResultOutput{}, options).(GetAuthenticationSettingListResultOutput), nil
-		}).(GetAuthenticationSettingListResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("scm:index/getAuthenticationSettingList:getAuthenticationSettingList", args, GetAuthenticationSettingListResultOutput{}, options).(GetAuthenticationSettingListResultOutput)
 }
 
 // A collection of arguments for invoking getAuthenticationSettingList.

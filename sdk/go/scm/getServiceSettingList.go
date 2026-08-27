@@ -91,12 +91,8 @@ type GetServiceSettingListResult struct {
 }
 
 func GetServiceSettingListOutput(ctx *pulumi.Context, args GetServiceSettingListOutputArgs, opts ...pulumi.InvokeOption) GetServiceSettingListResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (GetServiceSettingListResultOutput, error) {
-			args := v.(GetServiceSettingListArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("scm:index/getServiceSettingList:getServiceSettingList", args, GetServiceSettingListResultOutput{}, options).(GetServiceSettingListResultOutput), nil
-		}).(GetServiceSettingListResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("scm:index/getServiceSettingList:getServiceSettingList", args, GetServiceSettingListResultOutput{}, options).(GetServiceSettingListResultOutput)
 }
 
 // A collection of arguments for invoking getServiceSettingList.

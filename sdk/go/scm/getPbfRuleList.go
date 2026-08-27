@@ -93,12 +93,8 @@ type GetPbfRuleListResult struct {
 }
 
 func GetPbfRuleListOutput(ctx *pulumi.Context, args GetPbfRuleListOutputArgs, opts ...pulumi.InvokeOption) GetPbfRuleListResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (GetPbfRuleListResultOutput, error) {
-			args := v.(GetPbfRuleListArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("scm:index/getPbfRuleList:getPbfRuleList", args, GetPbfRuleListResultOutput{}, options).(GetPbfRuleListResultOutput), nil
-		}).(GetPbfRuleListResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("scm:index/getPbfRuleList:getPbfRuleList", args, GetPbfRuleListResultOutput{}, options).(GetPbfRuleListResultOutput)
 }
 
 // A collection of arguments for invoking getPbfRuleList.

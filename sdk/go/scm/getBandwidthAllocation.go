@@ -73,12 +73,8 @@ type LookupBandwidthAllocationResult struct {
 }
 
 func LookupBandwidthAllocationOutput(ctx *pulumi.Context, args LookupBandwidthAllocationOutputArgs, opts ...pulumi.InvokeOption) LookupBandwidthAllocationResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupBandwidthAllocationResultOutput, error) {
-			args := v.(LookupBandwidthAllocationArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("scm:index/getBandwidthAllocation:getBandwidthAllocation", args, LookupBandwidthAllocationResultOutput{}, options).(LookupBandwidthAllocationResultOutput), nil
-		}).(LookupBandwidthAllocationResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("scm:index/getBandwidthAllocation:getBandwidthAllocation", args, LookupBandwidthAllocationResultOutput{}, options).(LookupBandwidthAllocationResultOutput)
 }
 
 // A collection of arguments for invoking getBandwidthAllocation.

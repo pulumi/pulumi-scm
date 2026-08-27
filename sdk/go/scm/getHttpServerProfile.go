@@ -49,12 +49,8 @@ type LookupHttpServerProfileResult struct {
 }
 
 func LookupHttpServerProfileOutput(ctx *pulumi.Context, args LookupHttpServerProfileOutputArgs, opts ...pulumi.InvokeOption) LookupHttpServerProfileResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupHttpServerProfileResultOutput, error) {
-			args := v.(LookupHttpServerProfileArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("scm:index/getHttpServerProfile:getHttpServerProfile", args, LookupHttpServerProfileResultOutput{}, options).(LookupHttpServerProfileResultOutput), nil
-		}).(LookupHttpServerProfileResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("scm:index/getHttpServerProfile:getHttpServerProfile", args, LookupHttpServerProfileResultOutput{}, options).(LookupHttpServerProfileResultOutput)
 }
 
 // A collection of arguments for invoking getHttpServerProfile.

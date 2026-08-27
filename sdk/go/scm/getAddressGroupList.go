@@ -63,12 +63,8 @@ type GetAddressGroupListResult struct {
 }
 
 func GetAddressGroupListOutput(ctx *pulumi.Context, args GetAddressGroupListOutputArgs, opts ...pulumi.InvokeOption) GetAddressGroupListResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (GetAddressGroupListResultOutput, error) {
-			args := v.(GetAddressGroupListArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("scm:index/getAddressGroupList:getAddressGroupList", args, GetAddressGroupListResultOutput{}, options).(GetAddressGroupListResultOutput), nil
-		}).(GetAddressGroupListResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("scm:index/getAddressGroupList:getAddressGroupList", args, GetAddressGroupListResultOutput{}, options).(GetAddressGroupListResultOutput)
 }
 
 // A collection of arguments for invoking getAddressGroupList.

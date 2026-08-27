@@ -87,12 +87,8 @@ type LookupCertificateProfileResult struct {
 }
 
 func LookupCertificateProfileOutput(ctx *pulumi.Context, args LookupCertificateProfileOutputArgs, opts ...pulumi.InvokeOption) LookupCertificateProfileResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupCertificateProfileResultOutput, error) {
-			args := v.(LookupCertificateProfileArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("scm:index/getCertificateProfile:getCertificateProfile", args, LookupCertificateProfileResultOutput{}, options).(LookupCertificateProfileResultOutput), nil
-		}).(LookupCertificateProfileResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("scm:index/getCertificateProfile:getCertificateProfile", args, LookupCertificateProfileResultOutput{}, options).(LookupCertificateProfileResultOutput)
 }
 
 // A collection of arguments for invoking getCertificateProfile.

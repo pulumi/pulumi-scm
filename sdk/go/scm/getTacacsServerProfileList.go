@@ -63,12 +63,8 @@ type GetTacacsServerProfileListResult struct {
 }
 
 func GetTacacsServerProfileListOutput(ctx *pulumi.Context, args GetTacacsServerProfileListOutputArgs, opts ...pulumi.InvokeOption) GetTacacsServerProfileListResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (GetTacacsServerProfileListResultOutput, error) {
-			args := v.(GetTacacsServerProfileListArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("scm:index/getTacacsServerProfileList:getTacacsServerProfileList", args, GetTacacsServerProfileListResultOutput{}, options).(GetTacacsServerProfileListResultOutput), nil
-		}).(GetTacacsServerProfileListResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("scm:index/getTacacsServerProfileList:getTacacsServerProfileList", args, GetTacacsServerProfileListResultOutput{}, options).(GetTacacsServerProfileListResultOutput)
 }
 
 // A collection of arguments for invoking getTacacsServerProfileList.

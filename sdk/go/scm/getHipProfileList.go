@@ -99,12 +99,8 @@ type GetHipProfileListResult struct {
 }
 
 func GetHipProfileListOutput(ctx *pulumi.Context, args GetHipProfileListOutputArgs, opts ...pulumi.InvokeOption) GetHipProfileListResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (GetHipProfileListResultOutput, error) {
-			args := v.(GetHipProfileListArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("scm:index/getHipProfileList:getHipProfileList", args, GetHipProfileListResultOutput{}, options).(GetHipProfileListResultOutput), nil
-		}).(GetHipProfileListResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("scm:index/getHipProfileList:getHipProfileList", args, GetHipProfileListResultOutput{}, options).(GetHipProfileListResultOutput)
 }
 
 // A collection of arguments for invoking getHipProfileList.

@@ -72,12 +72,8 @@ type LookupDeviceRedistributionCollectorResult struct {
 }
 
 func LookupDeviceRedistributionCollectorOutput(ctx *pulumi.Context, args LookupDeviceRedistributionCollectorOutputArgs, opts ...pulumi.InvokeOption) LookupDeviceRedistributionCollectorResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupDeviceRedistributionCollectorResultOutput, error) {
-			args := v.(LookupDeviceRedistributionCollectorArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("scm:index/getDeviceRedistributionCollector:getDeviceRedistributionCollector", args, LookupDeviceRedistributionCollectorResultOutput{}, options).(LookupDeviceRedistributionCollectorResultOutput), nil
-		}).(LookupDeviceRedistributionCollectorResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("scm:index/getDeviceRedistributionCollector:getDeviceRedistributionCollector", args, LookupDeviceRedistributionCollectorResultOutput{}, options).(LookupDeviceRedistributionCollectorResultOutput)
 }
 
 // A collection of arguments for invoking getDeviceRedistributionCollector.

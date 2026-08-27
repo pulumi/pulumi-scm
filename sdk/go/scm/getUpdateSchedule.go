@@ -72,12 +72,8 @@ type LookupUpdateScheduleResult struct {
 }
 
 func LookupUpdateScheduleOutput(ctx *pulumi.Context, args LookupUpdateScheduleOutputArgs, opts ...pulumi.InvokeOption) LookupUpdateScheduleResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupUpdateScheduleResultOutput, error) {
-			args := v.(LookupUpdateScheduleArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("scm:index/getUpdateSchedule:getUpdateSchedule", args, LookupUpdateScheduleResultOutput{}, options).(LookupUpdateScheduleResultOutput), nil
-		}).(LookupUpdateScheduleResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("scm:index/getUpdateSchedule:getUpdateSchedule", args, LookupUpdateScheduleResultOutput{}, options).(LookupUpdateScheduleResultOutput)
 }
 
 // A collection of arguments for invoking getUpdateSchedule.

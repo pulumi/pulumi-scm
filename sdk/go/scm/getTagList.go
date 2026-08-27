@@ -90,12 +90,8 @@ type GetTagListResult struct {
 }
 
 func GetTagListOutput(ctx *pulumi.Context, args GetTagListOutputArgs, opts ...pulumi.InvokeOption) GetTagListResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (GetTagListResultOutput, error) {
-			args := v.(GetTagListArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("scm:index/getTagList:getTagList", args, GetTagListResultOutput{}, options).(GetTagListResultOutput), nil
-		}).(GetTagListResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("scm:index/getTagList:getTagList", args, GetTagListResultOutput{}, options).(GetTagListResultOutput)
 }
 
 // A collection of arguments for invoking getTagList.

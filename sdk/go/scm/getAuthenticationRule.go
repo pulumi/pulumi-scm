@@ -97,12 +97,8 @@ type LookupAuthenticationRuleResult struct {
 }
 
 func LookupAuthenticationRuleOutput(ctx *pulumi.Context, args LookupAuthenticationRuleOutputArgs, opts ...pulumi.InvokeOption) LookupAuthenticationRuleResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupAuthenticationRuleResultOutput, error) {
-			args := v.(LookupAuthenticationRuleArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("scm:index/getAuthenticationRule:getAuthenticationRule", args, LookupAuthenticationRuleResultOutput{}, options).(LookupAuthenticationRuleResultOutput), nil
-		}).(LookupAuthenticationRuleResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("scm:index/getAuthenticationRule:getAuthenticationRule", args, LookupAuthenticationRuleResultOutput{}, options).(LookupAuthenticationRuleResultOutput)
 }
 
 // A collection of arguments for invoking getAuthenticationRule.

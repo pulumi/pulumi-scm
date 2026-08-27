@@ -63,12 +63,8 @@ type GetConfigMatchListListResult struct {
 }
 
 func GetConfigMatchListListOutput(ctx *pulumi.Context, args GetConfigMatchListListOutputArgs, opts ...pulumi.InvokeOption) GetConfigMatchListListResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (GetConfigMatchListListResultOutput, error) {
-			args := v.(GetConfigMatchListListArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("scm:index/getConfigMatchListList:getConfigMatchListList", args, GetConfigMatchListListResultOutput{}, options).(GetConfigMatchListListResultOutput), nil
-		}).(GetConfigMatchListListResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("scm:index/getConfigMatchListList:getConfigMatchListList", args, GetConfigMatchListListResultOutput{}, options).(GetConfigMatchListListResultOutput)
 }
 
 // A collection of arguments for invoking getConfigMatchListList.

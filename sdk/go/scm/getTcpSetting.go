@@ -72,12 +72,8 @@ type LookupTcpSettingResult struct {
 }
 
 func LookupTcpSettingOutput(ctx *pulumi.Context, args LookupTcpSettingOutputArgs, opts ...pulumi.InvokeOption) LookupTcpSettingResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupTcpSettingResultOutput, error) {
-			args := v.(LookupTcpSettingArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("scm:index/getTcpSetting:getTcpSetting", args, LookupTcpSettingResultOutput{}, options).(LookupTcpSettingResultOutput), nil
-		}).(LookupTcpSettingResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("scm:index/getTcpSetting:getTcpSetting", args, LookupTcpSettingResultOutput{}, options).(LookupTcpSettingResultOutput)
 }
 
 // A collection of arguments for invoking getTcpSetting.

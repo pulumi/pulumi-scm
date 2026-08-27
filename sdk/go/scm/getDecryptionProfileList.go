@@ -91,12 +91,8 @@ type GetDecryptionProfileListResult struct {
 }
 
 func GetDecryptionProfileListOutput(ctx *pulumi.Context, args GetDecryptionProfileListOutputArgs, opts ...pulumi.InvokeOption) GetDecryptionProfileListResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (GetDecryptionProfileListResultOutput, error) {
-			args := v.(GetDecryptionProfileListArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("scm:index/getDecryptionProfileList:getDecryptionProfileList", args, GetDecryptionProfileListResultOutput{}, options).(GetDecryptionProfileListResultOutput), nil
-		}).(GetDecryptionProfileListResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("scm:index/getDecryptionProfileList:getDecryptionProfileList", args, GetDecryptionProfileListResultOutput{}, options).(GetDecryptionProfileListResultOutput)
 }
 
 // A collection of arguments for invoking getDecryptionProfileList.

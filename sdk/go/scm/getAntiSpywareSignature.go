@@ -90,12 +90,8 @@ type LookupAntiSpywareSignatureResult struct {
 }
 
 func LookupAntiSpywareSignatureOutput(ctx *pulumi.Context, args LookupAntiSpywareSignatureOutputArgs, opts ...pulumi.InvokeOption) LookupAntiSpywareSignatureResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupAntiSpywareSignatureResultOutput, error) {
-			args := v.(LookupAntiSpywareSignatureArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("scm:index/getAntiSpywareSignature:getAntiSpywareSignature", args, LookupAntiSpywareSignatureResultOutput{}, options).(LookupAntiSpywareSignatureResultOutput), nil
-		}).(LookupAntiSpywareSignatureResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("scm:index/getAntiSpywareSignature:getAntiSpywareSignature", args, LookupAntiSpywareSignatureResultOutput{}, options).(LookupAntiSpywareSignatureResultOutput)
 }
 
 // A collection of arguments for invoking getAntiSpywareSignature.

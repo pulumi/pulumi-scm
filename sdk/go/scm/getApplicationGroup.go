@@ -80,12 +80,8 @@ type LookupApplicationGroupResult struct {
 }
 
 func LookupApplicationGroupOutput(ctx *pulumi.Context, args LookupApplicationGroupOutputArgs, opts ...pulumi.InvokeOption) LookupApplicationGroupResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupApplicationGroupResultOutput, error) {
-			args := v.(LookupApplicationGroupArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("scm:index/getApplicationGroup:getApplicationGroup", args, LookupApplicationGroupResultOutput{}, options).(LookupApplicationGroupResultOutput), nil
-		}).(LookupApplicationGroupResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("scm:index/getApplicationGroup:getApplicationGroup", args, LookupApplicationGroupResultOutput{}, options).(LookupApplicationGroupResultOutput)
 }
 
 // A collection of arguments for invoking getApplicationGroup.

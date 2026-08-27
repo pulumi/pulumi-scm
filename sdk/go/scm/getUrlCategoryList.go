@@ -101,12 +101,8 @@ type GetUrlCategoryListResult struct {
 }
 
 func GetUrlCategoryListOutput(ctx *pulumi.Context, args GetUrlCategoryListOutputArgs, opts ...pulumi.InvokeOption) GetUrlCategoryListResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (GetUrlCategoryListResultOutput, error) {
-			args := v.(GetUrlCategoryListArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("scm:index/getUrlCategoryList:getUrlCategoryList", args, GetUrlCategoryListResultOutput{}, options).(GetUrlCategoryListResultOutput), nil
-		}).(GetUrlCategoryListResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("scm:index/getUrlCategoryList:getUrlCategoryList", args, GetUrlCategoryListResultOutput{}, options).(GetUrlCategoryListResultOutput)
 }
 
 // A collection of arguments for invoking getUrlCategoryList.

@@ -61,12 +61,8 @@ type GetRouteCommunityListListResult struct {
 }
 
 func GetRouteCommunityListListOutput(ctx *pulumi.Context, args GetRouteCommunityListListOutputArgs, opts ...pulumi.InvokeOption) GetRouteCommunityListListResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (GetRouteCommunityListListResultOutput, error) {
-			args := v.(GetRouteCommunityListListArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("scm:index/getRouteCommunityListList:getRouteCommunityListList", args, GetRouteCommunityListListResultOutput{}, options).(GetRouteCommunityListListResultOutput), nil
-		}).(GetRouteCommunityListListResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("scm:index/getRouteCommunityListList:getRouteCommunityListList", args, GetRouteCommunityListListResultOutput{}, options).(GetRouteCommunityListListResultOutput)
 }
 
 // A collection of arguments for invoking getRouteCommunityListList.

@@ -85,12 +85,8 @@ type LookupInterfaceManagementProfileResult struct {
 }
 
 func LookupInterfaceManagementProfileOutput(ctx *pulumi.Context, args LookupInterfaceManagementProfileOutputArgs, opts ...pulumi.InvokeOption) LookupInterfaceManagementProfileResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupInterfaceManagementProfileResultOutput, error) {
-			args := v.(LookupInterfaceManagementProfileArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("scm:index/getInterfaceManagementProfile:getInterfaceManagementProfile", args, LookupInterfaceManagementProfileResultOutput{}, options).(LookupInterfaceManagementProfileResultOutput), nil
-		}).(LookupInterfaceManagementProfileResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("scm:index/getInterfaceManagementProfile:getInterfaceManagementProfile", args, LookupInterfaceManagementProfileResultOutput{}, options).(LookupInterfaceManagementProfileResultOutput)
 }
 
 // A collection of arguments for invoking getInterfaceManagementProfile.

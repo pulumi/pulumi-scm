@@ -91,12 +91,8 @@ type GetGeneralSettingListResult struct {
 }
 
 func GetGeneralSettingListOutput(ctx *pulumi.Context, args GetGeneralSettingListOutputArgs, opts ...pulumi.InvokeOption) GetGeneralSettingListResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (GetGeneralSettingListResultOutput, error) {
-			args := v.(GetGeneralSettingListArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("scm:index/getGeneralSettingList:getGeneralSettingList", args, GetGeneralSettingListResultOutput{}, options).(GetGeneralSettingListResultOutput), nil
-		}).(GetGeneralSettingListResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("scm:index/getGeneralSettingList:getGeneralSettingList", args, GetGeneralSettingListResultOutput{}, options).(GetGeneralSettingListResultOutput)
 }
 
 // A collection of arguments for invoking getGeneralSettingList.

@@ -63,12 +63,8 @@ type GetLayer2SubinterfaceListResult struct {
 }
 
 func GetLayer2SubinterfaceListOutput(ctx *pulumi.Context, args GetLayer2SubinterfaceListOutputArgs, opts ...pulumi.InvokeOption) GetLayer2SubinterfaceListResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (GetLayer2SubinterfaceListResultOutput, error) {
-			args := v.(GetLayer2SubinterfaceListArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("scm:index/getLayer2SubinterfaceList:getLayer2SubinterfaceList", args, GetLayer2SubinterfaceListResultOutput{}, options).(GetLayer2SubinterfaceListResultOutput), nil
-		}).(GetLayer2SubinterfaceListResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("scm:index/getLayer2SubinterfaceList:getLayer2SubinterfaceList", args, GetLayer2SubinterfaceListResultOutput{}, options).(GetLayer2SubinterfaceListResultOutput)
 }
 
 // A collection of arguments for invoking getLayer2SubinterfaceList.

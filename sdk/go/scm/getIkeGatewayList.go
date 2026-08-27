@@ -92,12 +92,8 @@ type GetIkeGatewayListResult struct {
 }
 
 func GetIkeGatewayListOutput(ctx *pulumi.Context, args GetIkeGatewayListOutputArgs, opts ...pulumi.InvokeOption) GetIkeGatewayListResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (GetIkeGatewayListResultOutput, error) {
-			args := v.(GetIkeGatewayListArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("scm:index/getIkeGatewayList:getIkeGatewayList", args, GetIkeGatewayListResultOutput{}, options).(GetIkeGatewayListResultOutput), nil
-		}).(GetIkeGatewayListResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("scm:index/getIkeGatewayList:getIkeGatewayList", args, GetIkeGatewayListResultOutput{}, options).(GetIkeGatewayListResultOutput)
 }
 
 // A collection of arguments for invoking getIkeGatewayList.

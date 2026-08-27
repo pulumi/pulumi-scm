@@ -63,12 +63,8 @@ type GetAggregateInterfaceListResult struct {
 }
 
 func GetAggregateInterfaceListOutput(ctx *pulumi.Context, args GetAggregateInterfaceListOutputArgs, opts ...pulumi.InvokeOption) GetAggregateInterfaceListResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (GetAggregateInterfaceListResultOutput, error) {
-			args := v.(GetAggregateInterfaceListArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("scm:index/getAggregateInterfaceList:getAggregateInterfaceList", args, GetAggregateInterfaceListResultOutput{}, options).(GetAggregateInterfaceListResultOutput), nil
-		}).(GetAggregateInterfaceListResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("scm:index/getAggregateInterfaceList:getAggregateInterfaceList", args, GetAggregateInterfaceListResultOutput{}, options).(GetAggregateInterfaceListResultOutput)
 }
 
 // A collection of arguments for invoking getAggregateInterfaceList.

@@ -82,12 +82,8 @@ type LookupHttpHeaderProfileResult struct {
 }
 
 func LookupHttpHeaderProfileOutput(ctx *pulumi.Context, args LookupHttpHeaderProfileOutputArgs, opts ...pulumi.InvokeOption) LookupHttpHeaderProfileResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupHttpHeaderProfileResultOutput, error) {
-			args := v.(LookupHttpHeaderProfileArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("scm:index/getHttpHeaderProfile:getHttpHeaderProfile", args, LookupHttpHeaderProfileResultOutput{}, options).(LookupHttpHeaderProfileResultOutput), nil
-		}).(LookupHttpHeaderProfileResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("scm:index/getHttpHeaderProfile:getHttpHeaderProfile", args, LookupHttpHeaderProfileResultOutput{}, options).(LookupHttpHeaderProfileResultOutput)
 }
 
 // A collection of arguments for invoking getHttpHeaderProfile.

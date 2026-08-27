@@ -48,12 +48,8 @@ type LookupRoutePrefixListResult struct {
 }
 
 func LookupRoutePrefixListOutput(ctx *pulumi.Context, args LookupRoutePrefixListOutputArgs, opts ...pulumi.InvokeOption) LookupRoutePrefixListResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupRoutePrefixListResultOutput, error) {
-			args := v.(LookupRoutePrefixListArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("scm:index/getRoutePrefixList:getRoutePrefixList", args, LookupRoutePrefixListResultOutput{}, options).(LookupRoutePrefixListResultOutput), nil
-		}).(LookupRoutePrefixListResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("scm:index/getRoutePrefixList:getRoutePrefixList", args, LookupRoutePrefixListResultOutput{}, options).(LookupRoutePrefixListResultOutput)
 }
 
 // A collection of arguments for invoking getRoutePrefixList.

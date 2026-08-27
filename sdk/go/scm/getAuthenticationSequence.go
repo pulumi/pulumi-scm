@@ -76,12 +76,8 @@ type LookupAuthenticationSequenceResult struct {
 }
 
 func LookupAuthenticationSequenceOutput(ctx *pulumi.Context, args LookupAuthenticationSequenceOutputArgs, opts ...pulumi.InvokeOption) LookupAuthenticationSequenceResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupAuthenticationSequenceResultOutput, error) {
-			args := v.(LookupAuthenticationSequenceArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("scm:index/getAuthenticationSequence:getAuthenticationSequence", args, LookupAuthenticationSequenceResultOutput{}, options).(LookupAuthenticationSequenceResultOutput), nil
-		}).(LookupAuthenticationSequenceResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("scm:index/getAuthenticationSequence:getAuthenticationSequence", args, LookupAuthenticationSequenceResultOutput{}, options).(LookupAuthenticationSequenceResultOutput)
 }
 
 // A collection of arguments for invoking getAuthenticationSequence.

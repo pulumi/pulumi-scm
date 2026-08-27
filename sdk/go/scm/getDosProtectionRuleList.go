@@ -61,12 +61,8 @@ type GetDosProtectionRuleListResult struct {
 }
 
 func GetDosProtectionRuleListOutput(ctx *pulumi.Context, args GetDosProtectionRuleListOutputArgs, opts ...pulumi.InvokeOption) GetDosProtectionRuleListResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (GetDosProtectionRuleListResultOutput, error) {
-			args := v.(GetDosProtectionRuleListArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("scm:index/getDosProtectionRuleList:getDosProtectionRuleList", args, GetDosProtectionRuleListResultOutput{}, options).(GetDosProtectionRuleListResultOutput), nil
-		}).(GetDosProtectionRuleListResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("scm:index/getDosProtectionRuleList:getDosProtectionRuleList", args, GetDosProtectionRuleListResultOutput{}, options).(GetDosProtectionRuleListResultOutput)
 }
 
 // A collection of arguments for invoking getDosProtectionRuleList.

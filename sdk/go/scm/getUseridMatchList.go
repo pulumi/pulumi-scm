@@ -82,12 +82,8 @@ type LookupUseridMatchListResult struct {
 }
 
 func LookupUseridMatchListOutput(ctx *pulumi.Context, args LookupUseridMatchListOutputArgs, opts ...pulumi.InvokeOption) LookupUseridMatchListResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupUseridMatchListResultOutput, error) {
-			args := v.(LookupUseridMatchListArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("scm:index/getUseridMatchList:getUseridMatchList", args, LookupUseridMatchListResultOutput{}, options).(LookupUseridMatchListResultOutput), nil
-		}).(LookupUseridMatchListResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("scm:index/getUseridMatchList:getUseridMatchList", args, LookupUseridMatchListResultOutput{}, options).(LookupUseridMatchListResultOutput)
 }
 
 // A collection of arguments for invoking getUseridMatchList.

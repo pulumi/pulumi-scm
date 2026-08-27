@@ -61,12 +61,8 @@ type GetBgpFilteringProfileListResult struct {
 }
 
 func GetBgpFilteringProfileListOutput(ctx *pulumi.Context, args GetBgpFilteringProfileListOutputArgs, opts ...pulumi.InvokeOption) GetBgpFilteringProfileListResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (GetBgpFilteringProfileListResultOutput, error) {
-			args := v.(GetBgpFilteringProfileListArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("scm:index/getBgpFilteringProfileList:getBgpFilteringProfileList", args, GetBgpFilteringProfileListResultOutput{}, options).(GetBgpFilteringProfileListResultOutput), nil
-		}).(GetBgpFilteringProfileListResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("scm:index/getBgpFilteringProfileList:getBgpFilteringProfileList", args, GetBgpFilteringProfileListResultOutput{}, options).(GetBgpFilteringProfileListResultOutput)
 }
 
 // A collection of arguments for invoking getBgpFilteringProfileList.

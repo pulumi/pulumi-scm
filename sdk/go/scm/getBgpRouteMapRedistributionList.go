@@ -61,12 +61,8 @@ type GetBgpRouteMapRedistributionListResult struct {
 }
 
 func GetBgpRouteMapRedistributionListOutput(ctx *pulumi.Context, args GetBgpRouteMapRedistributionListOutputArgs, opts ...pulumi.InvokeOption) GetBgpRouteMapRedistributionListResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (GetBgpRouteMapRedistributionListResultOutput, error) {
-			args := v.(GetBgpRouteMapRedistributionListArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("scm:index/getBgpRouteMapRedistributionList:getBgpRouteMapRedistributionList", args, GetBgpRouteMapRedistributionListResultOutput{}, options).(GetBgpRouteMapRedistributionListResultOutput), nil
-		}).(GetBgpRouteMapRedistributionListResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("scm:index/getBgpRouteMapRedistributionList:getBgpRouteMapRedistributionList", args, GetBgpRouteMapRedistributionListResultOutput{}, options).(GetBgpRouteMapRedistributionListResultOutput)
 }
 
 // A collection of arguments for invoking getBgpRouteMapRedistributionList.

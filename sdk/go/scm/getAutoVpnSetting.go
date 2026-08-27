@@ -60,10 +60,8 @@ type LookupAutoVpnSettingResult struct {
 }
 
 func LookupAutoVpnSettingOutput(ctx *pulumi.Context, opts ...pulumi.InvokeOption) LookupAutoVpnSettingResultOutput {
-	return pulumi.ToOutput(0).ApplyT(func(int) (LookupAutoVpnSettingResultOutput, error) {
-		options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-		return ctx.InvokeOutput("scm:index/getAutoVpnSetting:getAutoVpnSetting", nil, LookupAutoVpnSettingResultOutput{}, options).(LookupAutoVpnSettingResultOutput), nil
-	}).(LookupAutoVpnSettingResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("scm:index/getAutoVpnSetting:getAutoVpnSetting", nil, LookupAutoVpnSettingResultOutput{}, options).(LookupAutoVpnSettingResultOutput)
 }
 
 // A collection of values returned by getAutoVpnSetting.

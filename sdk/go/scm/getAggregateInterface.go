@@ -84,12 +84,8 @@ type LookupAggregateInterfaceResult struct {
 }
 
 func LookupAggregateInterfaceOutput(ctx *pulumi.Context, args LookupAggregateInterfaceOutputArgs, opts ...pulumi.InvokeOption) LookupAggregateInterfaceResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupAggregateInterfaceResultOutput, error) {
-			args := v.(LookupAggregateInterfaceArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("scm:index/getAggregateInterface:getAggregateInterface", args, LookupAggregateInterfaceResultOutput{}, options).(LookupAggregateInterfaceResultOutput), nil
-		}).(LookupAggregateInterfaceResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("scm:index/getAggregateInterface:getAggregateInterface", args, LookupAggregateInterfaceResultOutput{}, options).(LookupAggregateInterfaceResultOutput)
 }
 
 // A collection of arguments for invoking getAggregateInterface.

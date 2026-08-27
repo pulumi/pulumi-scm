@@ -89,12 +89,8 @@ type LookupPbfRuleResult struct {
 }
 
 func LookupPbfRuleOutput(ctx *pulumi.Context, args LookupPbfRuleOutputArgs, opts ...pulumi.InvokeOption) LookupPbfRuleResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupPbfRuleResultOutput, error) {
-			args := v.(LookupPbfRuleArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("scm:index/getPbfRule:getPbfRule", args, LookupPbfRuleResultOutput{}, options).(LookupPbfRuleResultOutput), nil
-		}).(LookupPbfRuleResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("scm:index/getPbfRule:getPbfRule", args, LookupPbfRuleResultOutput{}, options).(LookupPbfRuleResultOutput)
 }
 
 // A collection of arguments for invoking getPbfRule.

@@ -63,12 +63,8 @@ type GetBgpRedistributionProfileListResult struct {
 }
 
 func GetBgpRedistributionProfileListOutput(ctx *pulumi.Context, args GetBgpRedistributionProfileListOutputArgs, opts ...pulumi.InvokeOption) GetBgpRedistributionProfileListResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (GetBgpRedistributionProfileListResultOutput, error) {
-			args := v.(GetBgpRedistributionProfileListArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("scm:index/getBgpRedistributionProfileList:getBgpRedistributionProfileList", args, GetBgpRedistributionProfileListResultOutput{}, options).(GetBgpRedistributionProfileListResultOutput), nil
-		}).(GetBgpRedistributionProfileListResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("scm:index/getBgpRedistributionProfileList:getBgpRedistributionProfileList", args, GetBgpRedistributionProfileListResultOutput{}, options).(GetBgpRedistributionProfileListResultOutput)
 }
 
 // A collection of arguments for invoking getBgpRedistributionProfileList.

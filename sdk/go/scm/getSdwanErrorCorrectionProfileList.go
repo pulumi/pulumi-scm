@@ -61,12 +61,8 @@ type GetSdwanErrorCorrectionProfileListResult struct {
 }
 
 func GetSdwanErrorCorrectionProfileListOutput(ctx *pulumi.Context, args GetSdwanErrorCorrectionProfileListOutputArgs, opts ...pulumi.InvokeOption) GetSdwanErrorCorrectionProfileListResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (GetSdwanErrorCorrectionProfileListResultOutput, error) {
-			args := v.(GetSdwanErrorCorrectionProfileListArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("scm:index/getSdwanErrorCorrectionProfileList:getSdwanErrorCorrectionProfileList", args, GetSdwanErrorCorrectionProfileListResultOutput{}, options).(GetSdwanErrorCorrectionProfileListResultOutput), nil
-		}).(GetSdwanErrorCorrectionProfileListResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("scm:index/getSdwanErrorCorrectionProfileList:getSdwanErrorCorrectionProfileList", args, GetSdwanErrorCorrectionProfileListResultOutput{}, options).(GetSdwanErrorCorrectionProfileListResultOutput)
 }
 
 // A collection of arguments for invoking getSdwanErrorCorrectionProfileList.

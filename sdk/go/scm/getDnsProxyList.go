@@ -61,12 +61,8 @@ type GetDnsProxyListResult struct {
 }
 
 func GetDnsProxyListOutput(ctx *pulumi.Context, args GetDnsProxyListOutputArgs, opts ...pulumi.InvokeOption) GetDnsProxyListResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (GetDnsProxyListResultOutput, error) {
-			args := v.(GetDnsProxyListArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("scm:index/getDnsProxyList:getDnsProxyList", args, GetDnsProxyListResultOutput{}, options).(GetDnsProxyListResultOutput), nil
-		}).(GetDnsProxyListResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("scm:index/getDnsProxyList:getDnsProxyList", args, GetDnsProxyListResultOutput{}, options).(GetDnsProxyListResultOutput)
 }
 
 // A collection of arguments for invoking getDnsProxyList.

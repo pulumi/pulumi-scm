@@ -61,12 +61,8 @@ type GetSdwanRuleListResult struct {
 }
 
 func GetSdwanRuleListOutput(ctx *pulumi.Context, args GetSdwanRuleListOutputArgs, opts ...pulumi.InvokeOption) GetSdwanRuleListResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (GetSdwanRuleListResultOutput, error) {
-			args := v.(GetSdwanRuleListArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("scm:index/getSdwanRuleList:getSdwanRuleList", args, GetSdwanRuleListResultOutput{}, options).(GetSdwanRuleListResultOutput), nil
-		}).(GetSdwanRuleListResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("scm:index/getSdwanRuleList:getSdwanRuleList", args, GetSdwanRuleListResultOutput{}, options).(GetSdwanRuleListResultOutput)
 }
 
 // A collection of arguments for invoking getSdwanRuleList.

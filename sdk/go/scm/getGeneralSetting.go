@@ -72,12 +72,8 @@ type LookupGeneralSettingResult struct {
 }
 
 func LookupGeneralSettingOutput(ctx *pulumi.Context, args LookupGeneralSettingOutputArgs, opts ...pulumi.InvokeOption) LookupGeneralSettingResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupGeneralSettingResultOutput, error) {
-			args := v.(LookupGeneralSettingArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("scm:index/getGeneralSetting:getGeneralSetting", args, LookupGeneralSettingResultOutput{}, options).(LookupGeneralSettingResultOutput), nil
-		}).(LookupGeneralSettingResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("scm:index/getGeneralSetting:getGeneralSetting", args, LookupGeneralSettingResultOutput{}, options).(LookupGeneralSettingResultOutput)
 }
 
 // A collection of arguments for invoking getGeneralSetting.

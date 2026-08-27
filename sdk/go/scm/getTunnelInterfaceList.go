@@ -63,12 +63,8 @@ type GetTunnelInterfaceListResult struct {
 }
 
 func GetTunnelInterfaceListOutput(ctx *pulumi.Context, args GetTunnelInterfaceListOutputArgs, opts ...pulumi.InvokeOption) GetTunnelInterfaceListResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (GetTunnelInterfaceListResultOutput, error) {
-			args := v.(GetTunnelInterfaceListArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("scm:index/getTunnelInterfaceList:getTunnelInterfaceList", args, GetTunnelInterfaceListResultOutput{}, options).(GetTunnelInterfaceListResultOutput), nil
-		}).(GetTunnelInterfaceListResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("scm:index/getTunnelInterfaceList:getTunnelInterfaceList", args, GetTunnelInterfaceListResultOutput{}, options).(GetTunnelInterfaceListResultOutput)
 }
 
 // A collection of arguments for invoking getTunnelInterfaceList.

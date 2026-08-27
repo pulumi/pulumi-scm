@@ -75,12 +75,8 @@ type LookupZoneProtectionProfileResult struct {
 }
 
 func LookupZoneProtectionProfileOutput(ctx *pulumi.Context, args LookupZoneProtectionProfileOutputArgs, opts ...pulumi.InvokeOption) LookupZoneProtectionProfileResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupZoneProtectionProfileResultOutput, error) {
-			args := v.(LookupZoneProtectionProfileArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("scm:index/getZoneProtectionProfile:getZoneProtectionProfile", args, LookupZoneProtectionProfileResultOutput{}, options).(LookupZoneProtectionProfileResultOutput), nil
-		}).(LookupZoneProtectionProfileResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("scm:index/getZoneProtectionProfile:getZoneProtectionProfile", args, LookupZoneProtectionProfileResultOutput{}, options).(LookupZoneProtectionProfileResultOutput)
 }
 
 // A collection of arguments for invoking getZoneProtectionProfile.

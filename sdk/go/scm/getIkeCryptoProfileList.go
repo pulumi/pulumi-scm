@@ -90,12 +90,8 @@ type GetIkeCryptoProfileListResult struct {
 }
 
 func GetIkeCryptoProfileListOutput(ctx *pulumi.Context, args GetIkeCryptoProfileListOutputArgs, opts ...pulumi.InvokeOption) GetIkeCryptoProfileListResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (GetIkeCryptoProfileListResultOutput, error) {
-			args := v.(GetIkeCryptoProfileListArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("scm:index/getIkeCryptoProfileList:getIkeCryptoProfileList", args, GetIkeCryptoProfileListResultOutput{}, options).(GetIkeCryptoProfileListResultOutput), nil
-		}).(GetIkeCryptoProfileListResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("scm:index/getIkeCryptoProfileList:getIkeCryptoProfileList", args, GetIkeCryptoProfileListResultOutput{}, options).(GetIkeCryptoProfileListResultOutput)
 }
 
 // A collection of arguments for invoking getIkeCryptoProfileList.

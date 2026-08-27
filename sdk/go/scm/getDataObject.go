@@ -77,12 +77,8 @@ type LookupDataObjectResult struct {
 }
 
 func LookupDataObjectOutput(ctx *pulumi.Context, args LookupDataObjectOutputArgs, opts ...pulumi.InvokeOption) LookupDataObjectResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupDataObjectResultOutput, error) {
-			args := v.(LookupDataObjectArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("scm:index/getDataObject:getDataObject", args, LookupDataObjectResultOutput{}, options).(LookupDataObjectResultOutput), nil
-		}).(LookupDataObjectResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("scm:index/getDataObject:getDataObject", args, LookupDataObjectResultOutput{}, options).(LookupDataObjectResultOutput)
 }
 
 // A collection of arguments for invoking getDataObject.

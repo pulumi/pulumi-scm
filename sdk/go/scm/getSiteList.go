@@ -63,12 +63,8 @@ type GetSiteListResult struct {
 }
 
 func GetSiteListOutput(ctx *pulumi.Context, args GetSiteListOutputArgs, opts ...pulumi.InvokeOption) GetSiteListResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (GetSiteListResultOutput, error) {
-			args := v.(GetSiteListArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("scm:index/getSiteList:getSiteList", args, GetSiteListResultOutput{}, options).(GetSiteListResultOutput), nil
-		}).(GetSiteListResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("scm:index/getSiteList:getSiteList", args, GetSiteListResultOutput{}, options).(GetSiteListResultOutput)
 }
 
 // A collection of arguments for invoking getSiteList.

@@ -72,12 +72,8 @@ type LookupContentIdSettingResult struct {
 }
 
 func LookupContentIdSettingOutput(ctx *pulumi.Context, args LookupContentIdSettingOutputArgs, opts ...pulumi.InvokeOption) LookupContentIdSettingResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupContentIdSettingResultOutput, error) {
-			args := v.(LookupContentIdSettingArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("scm:index/getContentIdSetting:getContentIdSetting", args, LookupContentIdSettingResultOutput{}, options).(LookupContentIdSettingResultOutput), nil
-		}).(LookupContentIdSettingResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("scm:index/getContentIdSetting:getContentIdSetting", args, LookupContentIdSettingResultOutput{}, options).(LookupContentIdSettingResultOutput)
 }
 
 // A collection of arguments for invoking getContentIdSetting.

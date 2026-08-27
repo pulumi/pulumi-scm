@@ -86,12 +86,8 @@ type LookupHipObjectResult struct {
 }
 
 func LookupHipObjectOutput(ctx *pulumi.Context, args LookupHipObjectOutputArgs, opts ...pulumi.InvokeOption) LookupHipObjectResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupHipObjectResultOutput, error) {
-			args := v.(LookupHipObjectArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("scm:index/getHipObject:getHipObject", args, LookupHipObjectResultOutput{}, options).(LookupHipObjectResultOutput), nil
-		}).(LookupHipObjectResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("scm:index/getHipObject:getHipObject", args, LookupHipObjectResultOutput{}, options).(LookupHipObjectResultOutput)
 }
 
 // A collection of arguments for invoking getHipObject.

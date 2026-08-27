@@ -63,12 +63,8 @@ type GetZoneListResult struct {
 }
 
 func GetZoneListOutput(ctx *pulumi.Context, args GetZoneListOutputArgs, opts ...pulumi.InvokeOption) GetZoneListResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (GetZoneListResultOutput, error) {
-			args := v.(GetZoneListArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("scm:index/getZoneList:getZoneList", args, GetZoneListResultOutput{}, options).(GetZoneListResultOutput), nil
-		}).(GetZoneListResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("scm:index/getZoneList:getZoneList", args, GetZoneListResultOutput{}, options).(GetZoneListResultOutput)
 }
 
 // A collection of arguments for invoking getZoneList.

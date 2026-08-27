@@ -103,12 +103,8 @@ type GetExternalDynamicListListResult struct {
 }
 
 func GetExternalDynamicListListOutput(ctx *pulumi.Context, args GetExternalDynamicListListOutputArgs, opts ...pulumi.InvokeOption) GetExternalDynamicListListResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (GetExternalDynamicListListResultOutput, error) {
-			args := v.(GetExternalDynamicListListArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("scm:index/getExternalDynamicListList:getExternalDynamicListList", args, GetExternalDynamicListListResultOutput{}, options).(GetExternalDynamicListListResultOutput), nil
-		}).(GetExternalDynamicListListResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("scm:index/getExternalDynamicListList:getExternalDynamicListList", args, GetExternalDynamicListListResultOutput{}, options).(GetExternalDynamicListListResultOutput)
 }
 
 // A collection of arguments for invoking getExternalDynamicListList.

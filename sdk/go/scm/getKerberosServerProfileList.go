@@ -91,12 +91,8 @@ type GetKerberosServerProfileListResult struct {
 }
 
 func GetKerberosServerProfileListOutput(ctx *pulumi.Context, args GetKerberosServerProfileListOutputArgs, opts ...pulumi.InvokeOption) GetKerberosServerProfileListResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (GetKerberosServerProfileListResultOutput, error) {
-			args := v.(GetKerberosServerProfileListArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("scm:index/getKerberosServerProfileList:getKerberosServerProfileList", args, GetKerberosServerProfileListResultOutput{}, options).(GetKerberosServerProfileListResultOutput), nil
-		}).(GetKerberosServerProfileListResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("scm:index/getKerberosServerProfileList:getKerberosServerProfileList", args, GetKerberosServerProfileListResultOutput{}, options).(GetKerberosServerProfileListResultOutput)
 }
 
 // A collection of arguments for invoking getKerberosServerProfileList.

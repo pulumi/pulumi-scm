@@ -63,12 +63,8 @@ type GetHipmatchMatchListListResult struct {
 }
 
 func GetHipmatchMatchListListOutput(ctx *pulumi.Context, args GetHipmatchMatchListListOutputArgs, opts ...pulumi.InvokeOption) GetHipmatchMatchListListResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (GetHipmatchMatchListListResultOutput, error) {
-			args := v.(GetHipmatchMatchListListArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("scm:index/getHipmatchMatchListList:getHipmatchMatchListList", args, GetHipmatchMatchListListResultOutput{}, options).(GetHipmatchMatchListListResultOutput), nil
-		}).(GetHipmatchMatchListListResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("scm:index/getHipmatchMatchListList:getHipmatchMatchListList", args, GetHipmatchMatchListListResultOutput{}, options).(GetHipmatchMatchListListResultOutput)
 }
 
 // A collection of arguments for invoking getHipmatchMatchListList.

@@ -55,12 +55,8 @@ type LookupProfileGroupResult struct {
 }
 
 func LookupProfileGroupOutput(ctx *pulumi.Context, args LookupProfileGroupOutputArgs, opts ...pulumi.InvokeOption) LookupProfileGroupResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupProfileGroupResultOutput, error) {
-			args := v.(LookupProfileGroupArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("scm:index/getProfileGroup:getProfileGroup", args, LookupProfileGroupResultOutput{}, options).(LookupProfileGroupResultOutput), nil
-		}).(LookupProfileGroupResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("scm:index/getProfileGroup:getProfileGroup", args, LookupProfileGroupResultOutput{}, options).(LookupProfileGroupResultOutput)
 }
 
 // A collection of arguments for invoking getProfileGroup.

@@ -90,12 +90,8 @@ type GetBandwidthAllocationListResult struct {
 }
 
 func GetBandwidthAllocationListOutput(ctx *pulumi.Context, args GetBandwidthAllocationListOutputArgs, opts ...pulumi.InvokeOption) GetBandwidthAllocationListResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (GetBandwidthAllocationListResultOutput, error) {
-			args := v.(GetBandwidthAllocationListArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("scm:index/getBandwidthAllocationList:getBandwidthAllocationList", args, GetBandwidthAllocationListResultOutput{}, options).(GetBandwidthAllocationListResultOutput), nil
-		}).(GetBandwidthAllocationListResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("scm:index/getBandwidthAllocationList:getBandwidthAllocationList", args, GetBandwidthAllocationListResultOutput{}, options).(GetBandwidthAllocationListResultOutput)
 }
 
 // A collection of arguments for invoking getBandwidthAllocationList.
