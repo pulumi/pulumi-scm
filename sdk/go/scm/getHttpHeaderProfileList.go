@@ -91,12 +91,8 @@ type GetHttpHeaderProfileListResult struct {
 }
 
 func GetHttpHeaderProfileListOutput(ctx *pulumi.Context, args GetHttpHeaderProfileListOutputArgs, opts ...pulumi.InvokeOption) GetHttpHeaderProfileListResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (GetHttpHeaderProfileListResultOutput, error) {
-			args := v.(GetHttpHeaderProfileListArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("scm:index/getHttpHeaderProfileList:getHttpHeaderProfileList", args, GetHttpHeaderProfileListResultOutput{}, options).(GetHttpHeaderProfileListResultOutput), nil
-		}).(GetHttpHeaderProfileListResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("scm:index/getHttpHeaderProfileList:getHttpHeaderProfileList", args, GetHttpHeaderProfileListResultOutput{}, options).(GetHttpHeaderProfileListResultOutput)
 }
 
 // A collection of arguments for invoking getHttpHeaderProfileList.

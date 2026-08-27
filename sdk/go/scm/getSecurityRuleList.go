@@ -96,12 +96,8 @@ type GetSecurityRuleListResult struct {
 }
 
 func GetSecurityRuleListOutput(ctx *pulumi.Context, args GetSecurityRuleListOutputArgs, opts ...pulumi.InvokeOption) GetSecurityRuleListResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (GetSecurityRuleListResultOutput, error) {
-			args := v.(GetSecurityRuleListArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("scm:index/getSecurityRuleList:getSecurityRuleList", args, GetSecurityRuleListResultOutput{}, options).(GetSecurityRuleListResultOutput), nil
-		}).(GetSecurityRuleListResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("scm:index/getSecurityRuleList:getSecurityRuleList", args, GetSecurityRuleListResultOutput{}, options).(GetSecurityRuleListResultOutput)
 }
 
 // A collection of arguments for invoking getSecurityRuleList.

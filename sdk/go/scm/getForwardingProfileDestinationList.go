@@ -63,12 +63,8 @@ type GetForwardingProfileDestinationListResult struct {
 }
 
 func GetForwardingProfileDestinationListOutput(ctx *pulumi.Context, args GetForwardingProfileDestinationListOutputArgs, opts ...pulumi.InvokeOption) GetForwardingProfileDestinationListResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (GetForwardingProfileDestinationListResultOutput, error) {
-			args := v.(GetForwardingProfileDestinationListArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("scm:index/getForwardingProfileDestinationList:getForwardingProfileDestinationList", args, GetForwardingProfileDestinationListResultOutput{}, options).(GetForwardingProfileDestinationListResultOutput), nil
-		}).(GetForwardingProfileDestinationListResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("scm:index/getForwardingProfileDestinationList:getForwardingProfileDestinationList", args, GetForwardingProfileDestinationListResultOutput{}, options).(GetForwardingProfileDestinationListResultOutput)
 }
 
 // A collection of arguments for invoking getForwardingProfileDestinationList.

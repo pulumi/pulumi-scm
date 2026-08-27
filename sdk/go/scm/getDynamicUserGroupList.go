@@ -63,12 +63,8 @@ type GetDynamicUserGroupListResult struct {
 }
 
 func GetDynamicUserGroupListOutput(ctx *pulumi.Context, args GetDynamicUserGroupListOutputArgs, opts ...pulumi.InvokeOption) GetDynamicUserGroupListResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (GetDynamicUserGroupListResultOutput, error) {
-			args := v.(GetDynamicUserGroupListArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("scm:index/getDynamicUserGroupList:getDynamicUserGroupList", args, GetDynamicUserGroupListResultOutput{}, options).(GetDynamicUserGroupListResultOutput), nil
-		}).(GetDynamicUserGroupListResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("scm:index/getDynamicUserGroupList:getDynamicUserGroupList", args, GetDynamicUserGroupListResultOutput{}, options).(GetDynamicUserGroupListResultOutput)
 }
 
 // A collection of arguments for invoking getDynamicUserGroupList.

@@ -91,12 +91,8 @@ type GetFileBlockingProfileListResult struct {
 }
 
 func GetFileBlockingProfileListOutput(ctx *pulumi.Context, args GetFileBlockingProfileListOutputArgs, opts ...pulumi.InvokeOption) GetFileBlockingProfileListResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (GetFileBlockingProfileListResultOutput, error) {
-			args := v.(GetFileBlockingProfileListArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("scm:index/getFileBlockingProfileList:getFileBlockingProfileList", args, GetFileBlockingProfileListResultOutput{}, options).(GetFileBlockingProfileListResultOutput), nil
-		}).(GetFileBlockingProfileListResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("scm:index/getFileBlockingProfileList:getFileBlockingProfileList", args, GetFileBlockingProfileListResultOutput{}, options).(GetFileBlockingProfileListResultOutput)
 }
 
 // A collection of arguments for invoking getFileBlockingProfileList.

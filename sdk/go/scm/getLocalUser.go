@@ -49,12 +49,8 @@ type LookupLocalUserResult struct {
 }
 
 func LookupLocalUserOutput(ctx *pulumi.Context, args LookupLocalUserOutputArgs, opts ...pulumi.InvokeOption) LookupLocalUserResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupLocalUserResultOutput, error) {
-			args := v.(LookupLocalUserArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("scm:index/getLocalUser:getLocalUser", args, LookupLocalUserResultOutput{}, options).(LookupLocalUserResultOutput), nil
-		}).(LookupLocalUserResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("scm:index/getLocalUser:getLocalUser", args, LookupLocalUserResultOutput{}, options).(LookupLocalUserResultOutput)
 }
 
 // A collection of arguments for invoking getLocalUser.

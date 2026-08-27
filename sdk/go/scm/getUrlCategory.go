@@ -79,12 +79,8 @@ type LookupUrlCategoryResult struct {
 }
 
 func LookupUrlCategoryOutput(ctx *pulumi.Context, args LookupUrlCategoryOutputArgs, opts ...pulumi.InvokeOption) LookupUrlCategoryResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupUrlCategoryResultOutput, error) {
-			args := v.(LookupUrlCategoryArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("scm:index/getUrlCategory:getUrlCategory", args, LookupUrlCategoryResultOutput{}, options).(LookupUrlCategoryResultOutput), nil
-		}).(LookupUrlCategoryResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("scm:index/getUrlCategory:getUrlCategory", args, LookupUrlCategoryResultOutput{}, options).(LookupUrlCategoryResultOutput)
 }
 
 // A collection of arguments for invoking getUrlCategory.

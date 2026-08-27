@@ -92,12 +92,8 @@ type GetDhcpInterfaceListResult struct {
 }
 
 func GetDhcpInterfaceListOutput(ctx *pulumi.Context, args GetDhcpInterfaceListOutputArgs, opts ...pulumi.InvokeOption) GetDhcpInterfaceListResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (GetDhcpInterfaceListResultOutput, error) {
-			args := v.(GetDhcpInterfaceListArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("scm:index/getDhcpInterfaceList:getDhcpInterfaceList", args, GetDhcpInterfaceListResultOutput{}, options).(GetDhcpInterfaceListResultOutput), nil
-		}).(GetDhcpInterfaceListResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("scm:index/getDhcpInterfaceList:getDhcpInterfaceList", args, GetDhcpInterfaceListResultOutput{}, options).(GetDhcpInterfaceListResultOutput)
 }
 
 // A collection of arguments for invoking getDhcpInterfaceList.

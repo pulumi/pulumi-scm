@@ -99,12 +99,8 @@ type GetNatRuleListResult struct {
 }
 
 func GetNatRuleListOutput(ctx *pulumi.Context, args GetNatRuleListOutputArgs, opts ...pulumi.InvokeOption) GetNatRuleListResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (GetNatRuleListResultOutput, error) {
-			args := v.(GetNatRuleListArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("scm:index/getNatRuleList:getNatRuleList", args, GetNatRuleListResultOutput{}, options).(GetNatRuleListResultOutput), nil
-		}).(GetNatRuleListResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("scm:index/getNatRuleList:getNatRuleList", args, GetNatRuleListResultOutput{}, options).(GetNatRuleListResultOutput)
 }
 
 // A collection of arguments for invoking getNatRuleList.

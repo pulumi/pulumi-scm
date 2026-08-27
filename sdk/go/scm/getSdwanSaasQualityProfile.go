@@ -47,12 +47,8 @@ type LookupSdwanSaasQualityProfileResult struct {
 }
 
 func LookupSdwanSaasQualityProfileOutput(ctx *pulumi.Context, args LookupSdwanSaasQualityProfileOutputArgs, opts ...pulumi.InvokeOption) LookupSdwanSaasQualityProfileResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupSdwanSaasQualityProfileResultOutput, error) {
-			args := v.(LookupSdwanSaasQualityProfileArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("scm:index/getSdwanSaasQualityProfile:getSdwanSaasQualityProfile", args, LookupSdwanSaasQualityProfileResultOutput{}, options).(LookupSdwanSaasQualityProfileResultOutput), nil
-		}).(LookupSdwanSaasQualityProfileResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("scm:index/getSdwanSaasQualityProfile:getSdwanSaasQualityProfile", args, LookupSdwanSaasQualityProfileResultOutput{}, options).(LookupSdwanSaasQualityProfileResultOutput)
 }
 
 // A collection of arguments for invoking getSdwanSaasQualityProfile.

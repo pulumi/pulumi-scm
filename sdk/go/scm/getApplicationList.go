@@ -90,12 +90,8 @@ type GetApplicationListResult struct {
 }
 
 func GetApplicationListOutput(ctx *pulumi.Context, args GetApplicationListOutputArgs, opts ...pulumi.InvokeOption) GetApplicationListResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (GetApplicationListResultOutput, error) {
-			args := v.(GetApplicationListArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("scm:index/getApplicationList:getApplicationList", args, GetApplicationListResultOutput{}, options).(GetApplicationListResultOutput), nil
-		}).(GetApplicationListResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("scm:index/getApplicationList:getApplicationList", args, GetApplicationListResultOutput{}, options).(GetApplicationListResultOutput)
 }
 
 // A collection of arguments for invoking getApplicationList.

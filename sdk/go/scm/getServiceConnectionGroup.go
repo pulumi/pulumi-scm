@@ -81,12 +81,8 @@ type LookupServiceConnectionGroupResult struct {
 }
 
 func LookupServiceConnectionGroupOutput(ctx *pulumi.Context, args LookupServiceConnectionGroupOutputArgs, opts ...pulumi.InvokeOption) LookupServiceConnectionGroupResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupServiceConnectionGroupResultOutput, error) {
-			args := v.(LookupServiceConnectionGroupArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("scm:index/getServiceConnectionGroup:getServiceConnectionGroup", args, LookupServiceConnectionGroupResultOutput{}, options).(LookupServiceConnectionGroupResultOutput), nil
-		}).(LookupServiceConnectionGroupResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("scm:index/getServiceConnectionGroup:getServiceConnectionGroup", args, LookupServiceConnectionGroupResultOutput{}, options).(LookupServiceConnectionGroupResultOutput)
 }
 
 // A collection of arguments for invoking getServiceConnectionGroup.

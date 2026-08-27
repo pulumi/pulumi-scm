@@ -81,12 +81,8 @@ type LookupAuthenticationProfileResult struct {
 }
 
 func LookupAuthenticationProfileOutput(ctx *pulumi.Context, args LookupAuthenticationProfileOutputArgs, opts ...pulumi.InvokeOption) LookupAuthenticationProfileResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupAuthenticationProfileResultOutput, error) {
-			args := v.(LookupAuthenticationProfileArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("scm:index/getAuthenticationProfile:getAuthenticationProfile", args, LookupAuthenticationProfileResultOutput{}, options).(LookupAuthenticationProfileResultOutput), nil
-		}).(LookupAuthenticationProfileResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("scm:index/getAuthenticationProfile:getAuthenticationProfile", args, LookupAuthenticationProfileResultOutput{}, options).(LookupAuthenticationProfileResultOutput)
 }
 
 // A collection of arguments for invoking getAuthenticationProfile.

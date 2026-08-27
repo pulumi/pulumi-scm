@@ -63,12 +63,8 @@ type GetForwardingProfileRegionalAndCustomProxyListResult struct {
 }
 
 func GetForwardingProfileRegionalAndCustomProxyListOutput(ctx *pulumi.Context, args GetForwardingProfileRegionalAndCustomProxyListOutputArgs, opts ...pulumi.InvokeOption) GetForwardingProfileRegionalAndCustomProxyListResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (GetForwardingProfileRegionalAndCustomProxyListResultOutput, error) {
-			args := v.(GetForwardingProfileRegionalAndCustomProxyListArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("scm:index/getForwardingProfileRegionalAndCustomProxyList:getForwardingProfileRegionalAndCustomProxyList", args, GetForwardingProfileRegionalAndCustomProxyListResultOutput{}, options).(GetForwardingProfileRegionalAndCustomProxyListResultOutput), nil
-		}).(GetForwardingProfileRegionalAndCustomProxyListResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("scm:index/getForwardingProfileRegionalAndCustomProxyList:getForwardingProfileRegionalAndCustomProxyList", args, GetForwardingProfileRegionalAndCustomProxyListResultOutput{}, options).(GetForwardingProfileRegionalAndCustomProxyListResultOutput)
 }
 
 // A collection of arguments for invoking getForwardingProfileRegionalAndCustomProxyList.

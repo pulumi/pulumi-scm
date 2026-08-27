@@ -63,12 +63,8 @@ type GetApplicationFilterListResult struct {
 }
 
 func GetApplicationFilterListOutput(ctx *pulumi.Context, args GetApplicationFilterListOutputArgs, opts ...pulumi.InvokeOption) GetApplicationFilterListResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (GetApplicationFilterListResultOutput, error) {
-			args := v.(GetApplicationFilterListArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("scm:index/getApplicationFilterList:getApplicationFilterList", args, GetApplicationFilterListResultOutput{}, options).(GetApplicationFilterListResultOutput), nil
-		}).(GetApplicationFilterListResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("scm:index/getApplicationFilterList:getApplicationFilterList", args, GetApplicationFilterListResultOutput{}, options).(GetApplicationFilterListResultOutput)
 }
 
 // A collection of arguments for invoking getApplicationFilterList.

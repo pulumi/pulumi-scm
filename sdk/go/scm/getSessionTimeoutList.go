@@ -91,12 +91,8 @@ type GetSessionTimeoutListResult struct {
 }
 
 func GetSessionTimeoutListOutput(ctx *pulumi.Context, args GetSessionTimeoutListOutputArgs, opts ...pulumi.InvokeOption) GetSessionTimeoutListResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (GetSessionTimeoutListResultOutput, error) {
-			args := v.(GetSessionTimeoutListArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("scm:index/getSessionTimeoutList:getSessionTimeoutList", args, GetSessionTimeoutListResultOutput{}, options).(GetSessionTimeoutListResultOutput), nil
-		}).(GetSessionTimeoutListResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("scm:index/getSessionTimeoutList:getSessionTimeoutList", args, GetSessionTimeoutListResultOutput{}, options).(GetSessionTimeoutListResultOutput)
 }
 
 // A collection of arguments for invoking getSessionTimeoutList.

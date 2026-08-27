@@ -91,12 +91,8 @@ type LookupApplicationFilterResult struct {
 }
 
 func LookupApplicationFilterOutput(ctx *pulumi.Context, args LookupApplicationFilterOutputArgs, opts ...pulumi.InvokeOption) LookupApplicationFilterResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupApplicationFilterResultOutput, error) {
-			args := v.(LookupApplicationFilterArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("scm:index/getApplicationFilter:getApplicationFilter", args, LookupApplicationFilterResultOutput{}, options).(LookupApplicationFilterResultOutput), nil
-		}).(LookupApplicationFilterResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("scm:index/getApplicationFilter:getApplicationFilter", args, LookupApplicationFilterResultOutput{}, options).(LookupApplicationFilterResultOutput)
 }
 
 // A collection of arguments for invoking getApplicationFilter.

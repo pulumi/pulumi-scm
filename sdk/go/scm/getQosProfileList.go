@@ -92,12 +92,8 @@ type GetQosProfileListResult struct {
 }
 
 func GetQosProfileListOutput(ctx *pulumi.Context, args GetQosProfileListOutputArgs, opts ...pulumi.InvokeOption) GetQosProfileListResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (GetQosProfileListResultOutput, error) {
-			args := v.(GetQosProfileListArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("scm:index/getQosProfileList:getQosProfileList", args, GetQosProfileListResultOutput{}, options).(GetQosProfileListResultOutput), nil
-		}).(GetQosProfileListResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("scm:index/getQosProfileList:getQosProfileList", args, GetQosProfileListResultOutput{}, options).(GetQosProfileListResultOutput)
 }
 
 // A collection of arguments for invoking getQosProfileList.

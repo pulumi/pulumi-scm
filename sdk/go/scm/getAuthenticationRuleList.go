@@ -98,12 +98,8 @@ type GetAuthenticationRuleListResult struct {
 }
 
 func GetAuthenticationRuleListOutput(ctx *pulumi.Context, args GetAuthenticationRuleListOutputArgs, opts ...pulumi.InvokeOption) GetAuthenticationRuleListResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (GetAuthenticationRuleListResultOutput, error) {
-			args := v.(GetAuthenticationRuleListArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("scm:index/getAuthenticationRuleList:getAuthenticationRuleList", args, GetAuthenticationRuleListResultOutput{}, options).(GetAuthenticationRuleListResultOutput), nil
-		}).(GetAuthenticationRuleListResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("scm:index/getAuthenticationRuleList:getAuthenticationRuleList", args, GetAuthenticationRuleListResultOutput{}, options).(GetAuthenticationRuleListResultOutput)
 }
 
 // A collection of arguments for invoking getAuthenticationRuleList.

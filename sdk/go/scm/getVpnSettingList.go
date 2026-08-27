@@ -91,12 +91,8 @@ type GetVpnSettingListResult struct {
 }
 
 func GetVpnSettingListOutput(ctx *pulumi.Context, args GetVpnSettingListOutputArgs, opts ...pulumi.InvokeOption) GetVpnSettingListResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (GetVpnSettingListResultOutput, error) {
-			args := v.(GetVpnSettingListArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("scm:index/getVpnSettingList:getVpnSettingList", args, GetVpnSettingListResultOutput{}, options).(GetVpnSettingListResultOutput), nil
-		}).(GetVpnSettingListResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("scm:index/getVpnSettingList:getVpnSettingList", args, GetVpnSettingListResultOutput{}, options).(GetVpnSettingListResultOutput)
 }
 
 // A collection of arguments for invoking getVpnSettingList.

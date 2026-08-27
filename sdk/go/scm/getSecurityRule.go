@@ -153,12 +153,8 @@ type LookupSecurityRuleResult struct {
 }
 
 func LookupSecurityRuleOutput(ctx *pulumi.Context, args LookupSecurityRuleOutputArgs, opts ...pulumi.InvokeOption) LookupSecurityRuleResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupSecurityRuleResultOutput, error) {
-			args := v.(LookupSecurityRuleArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("scm:index/getSecurityRule:getSecurityRule", args, LookupSecurityRuleResultOutput{}, options).(LookupSecurityRuleResultOutput), nil
-		}).(LookupSecurityRuleResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("scm:index/getSecurityRule:getSecurityRule", args, LookupSecurityRuleResultOutput{}, options).(LookupSecurityRuleResultOutput)
 }
 
 // A collection of arguments for invoking getSecurityRule.

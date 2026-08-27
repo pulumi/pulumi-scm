@@ -76,12 +76,8 @@ type LookupLldpProfileResult struct {
 }
 
 func LookupLldpProfileOutput(ctx *pulumi.Context, args LookupLldpProfileOutputArgs, opts ...pulumi.InvokeOption) LookupLldpProfileResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupLldpProfileResultOutput, error) {
-			args := v.(LookupLldpProfileArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("scm:index/getLldpProfile:getLldpProfile", args, LookupLldpProfileResultOutput{}, options).(LookupLldpProfileResultOutput), nil
-		}).(LookupLldpProfileResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("scm:index/getLldpProfile:getLldpProfile", args, LookupLldpProfileResultOutput{}, options).(LookupLldpProfileResultOutput)
 }
 
 // A collection of arguments for invoking getLldpProfile.

@@ -101,12 +101,8 @@ type GetVariableListResult struct {
 }
 
 func GetVariableListOutput(ctx *pulumi.Context, args GetVariableListOutputArgs, opts ...pulumi.InvokeOption) GetVariableListResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (GetVariableListResultOutput, error) {
-			args := v.(GetVariableListArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("scm:index/getVariableList:getVariableList", args, GetVariableListResultOutput{}, options).(GetVariableListResultOutput), nil
-		}).(GetVariableListResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("scm:index/getVariableList:getVariableList", args, GetVariableListResultOutput{}, options).(GetVariableListResultOutput)
 }
 
 // A collection of arguments for invoking getVariableList.

@@ -83,12 +83,8 @@ type LookupLogForwardingProfileResult struct {
 }
 
 func LookupLogForwardingProfileOutput(ctx *pulumi.Context, args LookupLogForwardingProfileOutputArgs, opts ...pulumi.InvokeOption) LookupLogForwardingProfileResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupLogForwardingProfileResultOutput, error) {
-			args := v.(LookupLogForwardingProfileArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("scm:index/getLogForwardingProfile:getLogForwardingProfile", args, LookupLogForwardingProfileResultOutput{}, options).(LookupLogForwardingProfileResultOutput), nil
-		}).(LookupLogForwardingProfileResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("scm:index/getLogForwardingProfile:getLogForwardingProfile", args, LookupLogForwardingProfileResultOutput{}, options).(LookupLogForwardingProfileResultOutput)
 }
 
 // A collection of arguments for invoking getLogForwardingProfile.

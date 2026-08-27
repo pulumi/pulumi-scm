@@ -61,12 +61,8 @@ type GetLocalUserListResult struct {
 }
 
 func GetLocalUserListOutput(ctx *pulumi.Context, args GetLocalUserListOutputArgs, opts ...pulumi.InvokeOption) GetLocalUserListResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (GetLocalUserListResultOutput, error) {
-			args := v.(GetLocalUserListArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("scm:index/getLocalUserList:getLocalUserList", args, GetLocalUserListResultOutput{}, options).(GetLocalUserListResultOutput), nil
-		}).(GetLocalUserListResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("scm:index/getLocalUserList:getLocalUserList", args, GetLocalUserListResultOutput{}, options).(GetLocalUserListResultOutput)
 }
 
 // A collection of arguments for invoking getLocalUserList.

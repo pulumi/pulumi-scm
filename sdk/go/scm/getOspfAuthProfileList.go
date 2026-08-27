@@ -61,12 +61,8 @@ type GetOspfAuthProfileListResult struct {
 }
 
 func GetOspfAuthProfileListOutput(ctx *pulumi.Context, args GetOspfAuthProfileListOutputArgs, opts ...pulumi.InvokeOption) GetOspfAuthProfileListResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (GetOspfAuthProfileListResultOutput, error) {
-			args := v.(GetOspfAuthProfileListArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("scm:index/getOspfAuthProfileList:getOspfAuthProfileList", args, GetOspfAuthProfileListResultOutput{}, options).(GetOspfAuthProfileListResultOutput), nil
-		}).(GetOspfAuthProfileListResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("scm:index/getOspfAuthProfileList:getOspfAuthProfileList", args, GetOspfAuthProfileListResultOutput{}, options).(GetOspfAuthProfileListResultOutput)
 }
 
 // A collection of arguments for invoking getOspfAuthProfileList.

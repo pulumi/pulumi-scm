@@ -82,12 +82,8 @@ type LookupDnsSecurityProfileResult struct {
 }
 
 func LookupDnsSecurityProfileOutput(ctx *pulumi.Context, args LookupDnsSecurityProfileOutputArgs, opts ...pulumi.InvokeOption) LookupDnsSecurityProfileResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupDnsSecurityProfileResultOutput, error) {
-			args := v.(LookupDnsSecurityProfileArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("scm:index/getDnsSecurityProfile:getDnsSecurityProfile", args, LookupDnsSecurityProfileResultOutput{}, options).(LookupDnsSecurityProfileResultOutput), nil
-		}).(LookupDnsSecurityProfileResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("scm:index/getDnsSecurityProfile:getDnsSecurityProfile", args, LookupDnsSecurityProfileResultOutput{}, options).(LookupDnsSecurityProfileResultOutput)
 }
 
 // A collection of arguments for invoking getDnsSecurityProfile.

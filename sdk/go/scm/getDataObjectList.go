@@ -91,12 +91,8 @@ type GetDataObjectListResult struct {
 }
 
 func GetDataObjectListOutput(ctx *pulumi.Context, args GetDataObjectListOutputArgs, opts ...pulumi.InvokeOption) GetDataObjectListResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (GetDataObjectListResultOutput, error) {
-			args := v.(GetDataObjectListArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("scm:index/getDataObjectList:getDataObjectList", args, GetDataObjectListResultOutput{}, options).(GetDataObjectListResultOutput), nil
-		}).(GetDataObjectListResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("scm:index/getDataObjectList:getDataObjectList", args, GetDataObjectListResultOutput{}, options).(GetDataObjectListResultOutput)
 }
 
 // A collection of arguments for invoking getDataObjectList.

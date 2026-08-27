@@ -63,12 +63,8 @@ type GetServiceConnectionListResult struct {
 }
 
 func GetServiceConnectionListOutput(ctx *pulumi.Context, args GetServiceConnectionListOutputArgs, opts ...pulumi.InvokeOption) GetServiceConnectionListResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (GetServiceConnectionListResultOutput, error) {
-			args := v.(GetServiceConnectionListArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("scm:index/getServiceConnectionList:getServiceConnectionList", args, GetServiceConnectionListResultOutput{}, options).(GetServiceConnectionListResultOutput), nil
-		}).(GetServiceConnectionListResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("scm:index/getServiceConnectionList:getServiceConnectionList", args, GetServiceConnectionListResultOutput{}, options).(GetServiceConnectionListResultOutput)
 }
 
 // A collection of arguments for invoking getServiceConnectionList.

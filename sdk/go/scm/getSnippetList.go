@@ -88,12 +88,8 @@ type GetSnippetListResult struct {
 }
 
 func GetSnippetListOutput(ctx *pulumi.Context, args GetSnippetListOutputArgs, opts ...pulumi.InvokeOption) GetSnippetListResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (GetSnippetListResultOutput, error) {
-			args := v.(GetSnippetListArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("scm:index/getSnippetList:getSnippetList", args, GetSnippetListResultOutput{}, options).(GetSnippetListResultOutput), nil
-		}).(GetSnippetListResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("scm:index/getSnippetList:getSnippetList", args, GetSnippetListResultOutput{}, options).(GetSnippetListResultOutput)
 }
 
 // A collection of arguments for invoking getSnippetList.

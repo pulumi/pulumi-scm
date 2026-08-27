@@ -63,12 +63,8 @@ type GetRadiusServerProfileListResult struct {
 }
 
 func GetRadiusServerProfileListOutput(ctx *pulumi.Context, args GetRadiusServerProfileListOutputArgs, opts ...pulumi.InvokeOption) GetRadiusServerProfileListResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (GetRadiusServerProfileListResultOutput, error) {
-			args := v.(GetRadiusServerProfileListArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("scm:index/getRadiusServerProfileList:getRadiusServerProfileList", args, GetRadiusServerProfileListResultOutput{}, options).(GetRadiusServerProfileListResultOutput), nil
-		}).(GetRadiusServerProfileListResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("scm:index/getRadiusServerProfileList:getRadiusServerProfileList", args, GetRadiusServerProfileListResultOutput{}, options).(GetRadiusServerProfileListResultOutput)
 }
 
 // A collection of arguments for invoking getRadiusServerProfileList.

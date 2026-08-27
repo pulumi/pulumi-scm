@@ -87,12 +87,8 @@ type LookupLoopbackInterfaceResult struct {
 }
 
 func LookupLoopbackInterfaceOutput(ctx *pulumi.Context, args LookupLoopbackInterfaceOutputArgs, opts ...pulumi.InvokeOption) LookupLoopbackInterfaceResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupLoopbackInterfaceResultOutput, error) {
-			args := v.(LookupLoopbackInterfaceArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("scm:index/getLoopbackInterface:getLoopbackInterface", args, LookupLoopbackInterfaceResultOutput{}, options).(LookupLoopbackInterfaceResultOutput), nil
-		}).(LookupLoopbackInterfaceResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("scm:index/getLoopbackInterface:getLoopbackInterface", args, LookupLoopbackInterfaceResultOutput{}, options).(LookupLoopbackInterfaceResultOutput)
 }
 
 // A collection of arguments for invoking getLoopbackInterface.

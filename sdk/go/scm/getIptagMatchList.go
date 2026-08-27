@@ -82,12 +82,8 @@ type LookupIptagMatchListResult struct {
 }
 
 func LookupIptagMatchListOutput(ctx *pulumi.Context, args LookupIptagMatchListOutputArgs, opts ...pulumi.InvokeOption) LookupIptagMatchListResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupIptagMatchListResultOutput, error) {
-			args := v.(LookupIptagMatchListArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("scm:index/getIptagMatchList:getIptagMatchList", args, LookupIptagMatchListResultOutput{}, options).(LookupIptagMatchListResultOutput), nil
-		}).(LookupIptagMatchListResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("scm:index/getIptagMatchList:getIptagMatchList", args, LookupIptagMatchListResultOutput{}, options).(LookupIptagMatchListResultOutput)
 }
 
 // A collection of arguments for invoking getIptagMatchList.

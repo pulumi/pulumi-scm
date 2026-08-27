@@ -91,12 +91,8 @@ type LookupUrlAccessProfileResult struct {
 }
 
 func LookupUrlAccessProfileOutput(ctx *pulumi.Context, args LookupUrlAccessProfileOutputArgs, opts ...pulumi.InvokeOption) LookupUrlAccessProfileResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupUrlAccessProfileResultOutput, error) {
-			args := v.(LookupUrlAccessProfileArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("scm:index/getUrlAccessProfile:getUrlAccessProfile", args, LookupUrlAccessProfileResultOutput{}, options).(LookupUrlAccessProfileResultOutput), nil
-		}).(LookupUrlAccessProfileResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("scm:index/getUrlAccessProfile:getUrlAccessProfile", args, LookupUrlAccessProfileResultOutput{}, options).(LookupUrlAccessProfileResultOutput)
 }
 
 // A collection of arguments for invoking getUrlAccessProfile.

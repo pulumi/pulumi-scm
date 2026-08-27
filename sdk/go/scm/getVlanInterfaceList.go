@@ -63,12 +63,8 @@ type GetVlanInterfaceListResult struct {
 }
 
 func GetVlanInterfaceListOutput(ctx *pulumi.Context, args GetVlanInterfaceListOutputArgs, opts ...pulumi.InvokeOption) GetVlanInterfaceListResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (GetVlanInterfaceListResultOutput, error) {
-			args := v.(GetVlanInterfaceListArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("scm:index/getVlanInterfaceList:getVlanInterfaceList", args, GetVlanInterfaceListResultOutput{}, options).(GetVlanInterfaceListResultOutput), nil
-		}).(GetVlanInterfaceListResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("scm:index/getVlanInterfaceList:getVlanInterfaceList", args, GetVlanInterfaceListResultOutput{}, options).(GetVlanInterfaceListResultOutput)
 }
 
 // A collection of arguments for invoking getVlanInterfaceList.

@@ -72,12 +72,8 @@ type LookupMotdBannerSettingResult struct {
 }
 
 func LookupMotdBannerSettingOutput(ctx *pulumi.Context, args LookupMotdBannerSettingOutputArgs, opts ...pulumi.InvokeOption) LookupMotdBannerSettingResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupMotdBannerSettingResultOutput, error) {
-			args := v.(LookupMotdBannerSettingArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("scm:index/getMotdBannerSetting:getMotdBannerSetting", args, LookupMotdBannerSettingResultOutput{}, options).(LookupMotdBannerSettingResultOutput), nil
-		}).(LookupMotdBannerSettingResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("scm:index/getMotdBannerSetting:getMotdBannerSetting", args, LookupMotdBannerSettingResultOutput{}, options).(LookupMotdBannerSettingResultOutput)
 }
 
 // A collection of arguments for invoking getMotdBannerSetting.

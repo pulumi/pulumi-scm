@@ -96,12 +96,8 @@ type LookupRemoteNetworkResult struct {
 }
 
 func LookupRemoteNetworkOutput(ctx *pulumi.Context, args LookupRemoteNetworkOutputArgs, opts ...pulumi.InvokeOption) LookupRemoteNetworkResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupRemoteNetworkResultOutput, error) {
-			args := v.(LookupRemoteNetworkArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("scm:index/getRemoteNetwork:getRemoteNetwork", args, LookupRemoteNetworkResultOutput{}, options).(LookupRemoteNetworkResultOutput), nil
-		}).(LookupRemoteNetworkResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("scm:index/getRemoteNetwork:getRemoteNetwork", args, LookupRemoteNetworkResultOutput{}, options).(LookupRemoteNetworkResultOutput)
 }
 
 // A collection of arguments for invoking getRemoteNetwork.

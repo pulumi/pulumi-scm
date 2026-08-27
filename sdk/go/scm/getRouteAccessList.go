@@ -48,12 +48,8 @@ type LookupRouteAccessListResult struct {
 }
 
 func LookupRouteAccessListOutput(ctx *pulumi.Context, args LookupRouteAccessListOutputArgs, opts ...pulumi.InvokeOption) LookupRouteAccessListResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupRouteAccessListResultOutput, error) {
-			args := v.(LookupRouteAccessListArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("scm:index/getRouteAccessList:getRouteAccessList", args, LookupRouteAccessListResultOutput{}, options).(LookupRouteAccessListResultOutput), nil
-		}).(LookupRouteAccessListResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("scm:index/getRouteAccessList:getRouteAccessList", args, LookupRouteAccessListResultOutput{}, options).(LookupRouteAccessListResultOutput)
 }
 
 // A collection of arguments for invoking getRouteAccessList.

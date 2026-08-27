@@ -72,12 +72,8 @@ type LookupServiceRouteResult struct {
 }
 
 func LookupServiceRouteOutput(ctx *pulumi.Context, args LookupServiceRouteOutputArgs, opts ...pulumi.InvokeOption) LookupServiceRouteResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupServiceRouteResultOutput, error) {
-			args := v.(LookupServiceRouteArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("scm:index/getServiceRoute:getServiceRoute", args, LookupServiceRouteResultOutput{}, options).(LookupServiceRouteResultOutput), nil
-		}).(LookupServiceRouteResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("scm:index/getServiceRoute:getServiceRoute", args, LookupServiceRouteResultOutput{}, options).(LookupServiceRouteResultOutput)
 }
 
 // A collection of arguments for invoking getServiceRoute.

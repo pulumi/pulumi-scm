@@ -63,12 +63,8 @@ type GetLdapServerProfileListResult struct {
 }
 
 func GetLdapServerProfileListOutput(ctx *pulumi.Context, args GetLdapServerProfileListOutputArgs, opts ...pulumi.InvokeOption) GetLdapServerProfileListResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (GetLdapServerProfileListResultOutput, error) {
-			args := v.(GetLdapServerProfileListArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("scm:index/getLdapServerProfileList:getLdapServerProfileList", args, GetLdapServerProfileListResultOutput{}, options).(GetLdapServerProfileListResultOutput), nil
-		}).(GetLdapServerProfileListResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("scm:index/getLdapServerProfileList:getLdapServerProfileList", args, GetLdapServerProfileListResultOutput{}, options).(GetLdapServerProfileListResultOutput)
 }
 
 // A collection of arguments for invoking getLdapServerProfileList.

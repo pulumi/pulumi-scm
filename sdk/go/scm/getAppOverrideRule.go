@@ -89,12 +89,8 @@ type LookupAppOverrideRuleResult struct {
 }
 
 func LookupAppOverrideRuleOutput(ctx *pulumi.Context, args LookupAppOverrideRuleOutputArgs, opts ...pulumi.InvokeOption) LookupAppOverrideRuleResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupAppOverrideRuleResultOutput, error) {
-			args := v.(LookupAppOverrideRuleArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("scm:index/getAppOverrideRule:getAppOverrideRule", args, LookupAppOverrideRuleResultOutput{}, options).(LookupAppOverrideRuleResultOutput), nil
-		}).(LookupAppOverrideRuleResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("scm:index/getAppOverrideRule:getAppOverrideRule", args, LookupAppOverrideRuleResultOutput{}, options).(LookupAppOverrideRuleResultOutput)
 }
 
 // A collection of arguments for invoking getAppOverrideRule.

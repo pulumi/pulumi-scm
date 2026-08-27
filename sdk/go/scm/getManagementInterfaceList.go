@@ -91,12 +91,8 @@ type GetManagementInterfaceListResult struct {
 }
 
 func GetManagementInterfaceListOutput(ctx *pulumi.Context, args GetManagementInterfaceListOutputArgs, opts ...pulumi.InvokeOption) GetManagementInterfaceListResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (GetManagementInterfaceListResultOutput, error) {
-			args := v.(GetManagementInterfaceListArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("scm:index/getManagementInterfaceList:getManagementInterfaceList", args, GetManagementInterfaceListResultOutput{}, options).(GetManagementInterfaceListResultOutput), nil
-		}).(GetManagementInterfaceListResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("scm:index/getManagementInterfaceList:getManagementInterfaceList", args, GetManagementInterfaceListResultOutput{}, options).(GetManagementInterfaceListResultOutput)
 }
 
 // A collection of arguments for invoking getManagementInterfaceList.

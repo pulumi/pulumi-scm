@@ -82,12 +82,8 @@ type LookupGlobalprotectMatchListResult struct {
 }
 
 func LookupGlobalprotectMatchListOutput(ctx *pulumi.Context, args LookupGlobalprotectMatchListOutputArgs, opts ...pulumi.InvokeOption) LookupGlobalprotectMatchListResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupGlobalprotectMatchListResultOutput, error) {
-			args := v.(LookupGlobalprotectMatchListArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("scm:index/getGlobalprotectMatchList:getGlobalprotectMatchList", args, LookupGlobalprotectMatchListResultOutput{}, options).(LookupGlobalprotectMatchListResultOutput), nil
-		}).(LookupGlobalprotectMatchListResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("scm:index/getGlobalprotectMatchList:getGlobalprotectMatchList", args, LookupGlobalprotectMatchListResultOutput{}, options).(LookupGlobalprotectMatchListResultOutput)
 }
 
 // A collection of arguments for invoking getGlobalprotectMatchList.

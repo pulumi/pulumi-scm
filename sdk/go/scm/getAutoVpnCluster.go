@@ -87,12 +87,8 @@ type LookupAutoVpnClusterResult struct {
 }
 
 func LookupAutoVpnClusterOutput(ctx *pulumi.Context, args LookupAutoVpnClusterOutputArgs, opts ...pulumi.InvokeOption) LookupAutoVpnClusterResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupAutoVpnClusterResultOutput, error) {
-			args := v.(LookupAutoVpnClusterArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("scm:index/getAutoVpnCluster:getAutoVpnCluster", args, LookupAutoVpnClusterResultOutput{}, options).(LookupAutoVpnClusterResultOutput), nil
-		}).(LookupAutoVpnClusterResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("scm:index/getAutoVpnCluster:getAutoVpnCluster", args, LookupAutoVpnClusterResultOutput{}, options).(LookupAutoVpnClusterResultOutput)
 }
 
 // A collection of arguments for invoking getAutoVpnCluster.

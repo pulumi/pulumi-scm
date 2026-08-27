@@ -99,12 +99,8 @@ type GetHipObjectListResult struct {
 }
 
 func GetHipObjectListOutput(ctx *pulumi.Context, args GetHipObjectListOutputArgs, opts ...pulumi.InvokeOption) GetHipObjectListResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (GetHipObjectListResultOutput, error) {
-			args := v.(GetHipObjectListArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("scm:index/getHipObjectList:getHipObjectList", args, GetHipObjectListResultOutput{}, options).(GetHipObjectListResultOutput), nil
-		}).(GetHipObjectListResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("scm:index/getHipObjectList:getHipObjectList", args, GetHipObjectListResultOutput{}, options).(GetHipObjectListResultOutput)
 }
 
 // A collection of arguments for invoking getHipObjectList.

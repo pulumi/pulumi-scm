@@ -82,12 +82,8 @@ type LookupLogicalRouterResult struct {
 }
 
 func LookupLogicalRouterOutput(ctx *pulumi.Context, args LookupLogicalRouterOutputArgs, opts ...pulumi.InvokeOption) LookupLogicalRouterResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupLogicalRouterResultOutput, error) {
-			args := v.(LookupLogicalRouterArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("scm:index/getLogicalRouter:getLogicalRouter", args, LookupLogicalRouterResultOutput{}, options).(LookupLogicalRouterResultOutput), nil
-		}).(LookupLogicalRouterResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("scm:index/getLogicalRouter:getLogicalRouter", args, LookupLogicalRouterResultOutput{}, options).(LookupLogicalRouterResultOutput)
 }
 
 // A collection of arguments for invoking getLogicalRouter.

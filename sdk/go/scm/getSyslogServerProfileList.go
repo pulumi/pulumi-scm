@@ -91,12 +91,8 @@ type GetSyslogServerProfileListResult struct {
 }
 
 func GetSyslogServerProfileListOutput(ctx *pulumi.Context, args GetSyslogServerProfileListOutputArgs, opts ...pulumi.InvokeOption) GetSyslogServerProfileListResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (GetSyslogServerProfileListResultOutput, error) {
-			args := v.(GetSyslogServerProfileListArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("scm:index/getSyslogServerProfileList:getSyslogServerProfileList", args, GetSyslogServerProfileListResultOutput{}, options).(GetSyslogServerProfileListResultOutput), nil
-		}).(GetSyslogServerProfileListResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("scm:index/getSyslogServerProfileList:getSyslogServerProfileList", args, GetSyslogServerProfileListResultOutput{}, options).(GetSyslogServerProfileListResultOutput)
 }
 
 // A collection of arguments for invoking getSyslogServerProfileList.

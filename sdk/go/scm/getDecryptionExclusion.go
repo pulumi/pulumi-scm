@@ -47,12 +47,8 @@ type LookupDecryptionExclusionResult struct {
 }
 
 func LookupDecryptionExclusionOutput(ctx *pulumi.Context, args LookupDecryptionExclusionOutputArgs, opts ...pulumi.InvokeOption) LookupDecryptionExclusionResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupDecryptionExclusionResultOutput, error) {
-			args := v.(LookupDecryptionExclusionArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("scm:index/getDecryptionExclusion:getDecryptionExclusion", args, LookupDecryptionExclusionResultOutput{}, options).(LookupDecryptionExclusionResultOutput), nil
-		}).(LookupDecryptionExclusionResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("scm:index/getDecryptionExclusion:getDecryptionExclusion", args, LookupDecryptionExclusionResultOutput{}, options).(LookupDecryptionExclusionResultOutput)
 }
 
 // A collection of arguments for invoking getDecryptionExclusion.

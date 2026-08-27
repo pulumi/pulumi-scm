@@ -48,12 +48,8 @@ type LookupSdwanTrafficDistributionProfileResult struct {
 }
 
 func LookupSdwanTrafficDistributionProfileOutput(ctx *pulumi.Context, args LookupSdwanTrafficDistributionProfileOutputArgs, opts ...pulumi.InvokeOption) LookupSdwanTrafficDistributionProfileResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupSdwanTrafficDistributionProfileResultOutput, error) {
-			args := v.(LookupSdwanTrafficDistributionProfileArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("scm:index/getSdwanTrafficDistributionProfile:getSdwanTrafficDistributionProfile", args, LookupSdwanTrafficDistributionProfileResultOutput{}, options).(LookupSdwanTrafficDistributionProfileResultOutput), nil
-		}).(LookupSdwanTrafficDistributionProfileResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("scm:index/getSdwanTrafficDistributionProfile:getSdwanTrafficDistributionProfile", args, LookupSdwanTrafficDistributionProfileResultOutput{}, options).(LookupSdwanTrafficDistributionProfileResultOutput)
 }
 
 // A collection of arguments for invoking getSdwanTrafficDistributionProfile.

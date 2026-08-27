@@ -61,12 +61,8 @@ type GetDecryptionExclusionListResult struct {
 }
 
 func GetDecryptionExclusionListOutput(ctx *pulumi.Context, args GetDecryptionExclusionListOutputArgs, opts ...pulumi.InvokeOption) GetDecryptionExclusionListResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (GetDecryptionExclusionListResultOutput, error) {
-			args := v.(GetDecryptionExclusionListArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("scm:index/getDecryptionExclusionList:getDecryptionExclusionList", args, GetDecryptionExclusionListResultOutput{}, options).(GetDecryptionExclusionListResultOutput), nil
-		}).(GetDecryptionExclusionListResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("scm:index/getDecryptionExclusionList:getDecryptionExclusionList", args, GetDecryptionExclusionListResultOutput{}, options).(GetDecryptionExclusionListResultOutput)
 }
 
 // A collection of arguments for invoking getDecryptionExclusionList.

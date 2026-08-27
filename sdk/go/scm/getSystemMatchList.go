@@ -81,12 +81,8 @@ type LookupSystemMatchListResult struct {
 }
 
 func LookupSystemMatchListOutput(ctx *pulumi.Context, args LookupSystemMatchListOutputArgs, opts ...pulumi.InvokeOption) LookupSystemMatchListResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupSystemMatchListResultOutput, error) {
-			args := v.(LookupSystemMatchListArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("scm:index/getSystemMatchList:getSystemMatchList", args, LookupSystemMatchListResultOutput{}, options).(LookupSystemMatchListResultOutput), nil
-		}).(LookupSystemMatchListResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("scm:index/getSystemMatchList:getSystemMatchList", args, LookupSystemMatchListResultOutput{}, options).(LookupSystemMatchListResultOutput)
 }
 
 // A collection of arguments for invoking getSystemMatchList.

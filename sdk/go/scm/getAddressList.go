@@ -63,12 +63,8 @@ type GetAddressListResult struct {
 }
 
 func GetAddressListOutput(ctx *pulumi.Context, args GetAddressListOutputArgs, opts ...pulumi.InvokeOption) GetAddressListResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (GetAddressListResultOutput, error) {
-			args := v.(GetAddressListArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("scm:index/getAddressList:getAddressList", args, GetAddressListResultOutput{}, options).(GetAddressListResultOutput), nil
-		}).(GetAddressListResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("scm:index/getAddressList:getAddressList", args, GetAddressListResultOutput{}, options).(GetAddressListResultOutput)
 }
 
 // A collection of arguments for invoking getAddressList.

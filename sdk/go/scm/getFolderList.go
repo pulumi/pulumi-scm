@@ -61,12 +61,8 @@ type GetFolderListResult struct {
 }
 
 func GetFolderListOutput(ctx *pulumi.Context, args GetFolderListOutputArgs, opts ...pulumi.InvokeOption) GetFolderListResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (GetFolderListResultOutput, error) {
-			args := v.(GetFolderListArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("scm:index/getFolderList:getFolderList", args, GetFolderListResultOutput{}, options).(GetFolderListResultOutput), nil
-		}).(GetFolderListResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("scm:index/getFolderList:getFolderList", args, GetFolderListResultOutput{}, options).(GetFolderListResultOutput)
 }
 
 // A collection of arguments for invoking getFolderList.

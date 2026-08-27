@@ -67,12 +67,8 @@ type GetDeviceListResult struct {
 }
 
 func GetDeviceListOutput(ctx *pulumi.Context, args GetDeviceListOutputArgs, opts ...pulumi.InvokeOption) GetDeviceListResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (GetDeviceListResultOutput, error) {
-			args := v.(GetDeviceListArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("scm:index/getDeviceList:getDeviceList", args, GetDeviceListResultOutput{}, options).(GetDeviceListResultOutput), nil
-		}).(GetDeviceListResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("scm:index/getDeviceList:getDeviceList", args, GetDeviceListResultOutput{}, options).(GetDeviceListResultOutput)
 }
 
 // A collection of arguments for invoking getDeviceList.

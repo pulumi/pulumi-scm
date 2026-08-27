@@ -90,12 +90,8 @@ type LookupSamlServerProfileResult struct {
 }
 
 func LookupSamlServerProfileOutput(ctx *pulumi.Context, args LookupSamlServerProfileOutputArgs, opts ...pulumi.InvokeOption) LookupSamlServerProfileResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupSamlServerProfileResultOutput, error) {
-			args := v.(LookupSamlServerProfileArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("scm:index/getSamlServerProfile:getSamlServerProfile", args, LookupSamlServerProfileResultOutput{}, options).(LookupSamlServerProfileResultOutput), nil
-		}).(LookupSamlServerProfileResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("scm:index/getSamlServerProfile:getSamlServerProfile", args, LookupSamlServerProfileResultOutput{}, options).(LookupSamlServerProfileResultOutput)
 }
 
 // A collection of arguments for invoking getSamlServerProfile.

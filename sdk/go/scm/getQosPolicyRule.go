@@ -80,12 +80,8 @@ type LookupQosPolicyRuleResult struct {
 }
 
 func LookupQosPolicyRuleOutput(ctx *pulumi.Context, args LookupQosPolicyRuleOutputArgs, opts ...pulumi.InvokeOption) LookupQosPolicyRuleResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupQosPolicyRuleResultOutput, error) {
-			args := v.(LookupQosPolicyRuleArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("scm:index/getQosPolicyRule:getQosPolicyRule", args, LookupQosPolicyRuleResultOutput{}, options).(LookupQosPolicyRuleResultOutput), nil
-		}).(LookupQosPolicyRuleResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("scm:index/getQosPolicyRule:getQosPolicyRule", args, LookupQosPolicyRuleResultOutput{}, options).(LookupQosPolicyRuleResultOutput)
 }
 
 // A collection of arguments for invoking getQosPolicyRule.

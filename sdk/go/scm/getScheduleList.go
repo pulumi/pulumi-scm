@@ -61,12 +61,8 @@ type GetScheduleListResult struct {
 }
 
 func GetScheduleListOutput(ctx *pulumi.Context, args GetScheduleListOutputArgs, opts ...pulumi.InvokeOption) GetScheduleListResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (GetScheduleListResultOutput, error) {
-			args := v.(GetScheduleListArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("scm:index/getScheduleList:getScheduleList", args, GetScheduleListResultOutput{}, options).(GetScheduleListResultOutput), nil
-		}).(GetScheduleListResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("scm:index/getScheduleList:getScheduleList", args, GetScheduleListResultOutput{}, options).(GetScheduleListResultOutput)
 }
 
 // A collection of arguments for invoking getScheduleList.

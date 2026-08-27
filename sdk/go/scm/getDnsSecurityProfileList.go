@@ -91,12 +91,8 @@ type GetDnsSecurityProfileListResult struct {
 }
 
 func GetDnsSecurityProfileListOutput(ctx *pulumi.Context, args GetDnsSecurityProfileListOutputArgs, opts ...pulumi.InvokeOption) GetDnsSecurityProfileListResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (GetDnsSecurityProfileListResultOutput, error) {
-			args := v.(GetDnsSecurityProfileListArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("scm:index/getDnsSecurityProfileList:getDnsSecurityProfileList", args, GetDnsSecurityProfileListResultOutput{}, options).(GetDnsSecurityProfileListResultOutput), nil
-		}).(GetDnsSecurityProfileListResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("scm:index/getDnsSecurityProfileList:getDnsSecurityProfileList", args, GetDnsSecurityProfileListResultOutput{}, options).(GetDnsSecurityProfileListResultOutput)
 }
 
 // A collection of arguments for invoking getDnsSecurityProfileList.

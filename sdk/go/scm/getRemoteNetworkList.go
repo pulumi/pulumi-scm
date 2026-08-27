@@ -63,12 +63,8 @@ type GetRemoteNetworkListResult struct {
 }
 
 func GetRemoteNetworkListOutput(ctx *pulumi.Context, args GetRemoteNetworkListOutputArgs, opts ...pulumi.InvokeOption) GetRemoteNetworkListResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (GetRemoteNetworkListResultOutput, error) {
-			args := v.(GetRemoteNetworkListArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("scm:index/getRemoteNetworkList:getRemoteNetworkList", args, GetRemoteNetworkListResultOutput{}, options).(GetRemoteNetworkListResultOutput), nil
-		}).(GetRemoteNetworkListResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("scm:index/getRemoteNetworkList:getRemoteNetworkList", args, GetRemoteNetworkListResultOutput{}, options).(GetRemoteNetworkListResultOutput)
 }
 
 // A collection of arguments for invoking getRemoteNetworkList.

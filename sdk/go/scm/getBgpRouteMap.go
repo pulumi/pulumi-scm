@@ -81,12 +81,8 @@ type LookupBgpRouteMapResult struct {
 }
 
 func LookupBgpRouteMapOutput(ctx *pulumi.Context, args LookupBgpRouteMapOutputArgs, opts ...pulumi.InvokeOption) LookupBgpRouteMapResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupBgpRouteMapResultOutput, error) {
-			args := v.(LookupBgpRouteMapArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("scm:index/getBgpRouteMap:getBgpRouteMap", args, LookupBgpRouteMapResultOutput{}, options).(LookupBgpRouteMapResultOutput), nil
-		}).(LookupBgpRouteMapResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("scm:index/getBgpRouteMap:getBgpRouteMap", args, LookupBgpRouteMapResultOutput{}, options).(LookupBgpRouteMapResultOutput)
 }
 
 // A collection of arguments for invoking getBgpRouteMap.

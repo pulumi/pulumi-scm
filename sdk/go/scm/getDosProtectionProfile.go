@@ -50,12 +50,8 @@ type LookupDosProtectionProfileResult struct {
 }
 
 func LookupDosProtectionProfileOutput(ctx *pulumi.Context, args LookupDosProtectionProfileOutputArgs, opts ...pulumi.InvokeOption) LookupDosProtectionProfileResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupDosProtectionProfileResultOutput, error) {
-			args := v.(LookupDosProtectionProfileArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("scm:index/getDosProtectionProfile:getDosProtectionProfile", args, LookupDosProtectionProfileResultOutput{}, options).(LookupDosProtectionProfileResultOutput), nil
-		}).(LookupDosProtectionProfileResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("scm:index/getDosProtectionProfile:getDosProtectionProfile", args, LookupDosProtectionProfileResultOutput{}, options).(LookupDosProtectionProfileResultOutput)
 }
 
 // A collection of arguments for invoking getDosProtectionProfile.

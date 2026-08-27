@@ -48,12 +48,8 @@ type LookupLinkTagResult struct {
 }
 
 func LookupLinkTagOutput(ctx *pulumi.Context, args LookupLinkTagOutputArgs, opts ...pulumi.InvokeOption) LookupLinkTagResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupLinkTagResultOutput, error) {
-			args := v.(LookupLinkTagArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("scm:index/getLinkTag:getLinkTag", args, LookupLinkTagResultOutput{}, options).(LookupLinkTagResultOutput), nil
-		}).(LookupLinkTagResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("scm:index/getLinkTag:getLinkTag", args, LookupLinkTagResultOutput{}, options).(LookupLinkTagResultOutput)
 }
 
 // A collection of arguments for invoking getLinkTag.

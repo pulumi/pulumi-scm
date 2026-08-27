@@ -87,12 +87,8 @@ type LookupTunnelInterfaceResult struct {
 }
 
 func LookupTunnelInterfaceOutput(ctx *pulumi.Context, args LookupTunnelInterfaceOutputArgs, opts ...pulumi.InvokeOption) LookupTunnelInterfaceResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupTunnelInterfaceResultOutput, error) {
-			args := v.(LookupTunnelInterfaceArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("scm:index/getTunnelInterface:getTunnelInterface", args, LookupTunnelInterfaceResultOutput{}, options).(LookupTunnelInterfaceResultOutput), nil
-		}).(LookupTunnelInterfaceResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("scm:index/getTunnelInterface:getTunnelInterface", args, LookupTunnelInterfaceResultOutput{}, options).(LookupTunnelInterfaceResultOutput)
 }
 
 // A collection of arguments for invoking getTunnelInterface.

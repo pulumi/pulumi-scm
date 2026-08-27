@@ -61,12 +61,8 @@ type GetRegionListResult struct {
 }
 
 func GetRegionListOutput(ctx *pulumi.Context, args GetRegionListOutputArgs, opts ...pulumi.InvokeOption) GetRegionListResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (GetRegionListResultOutput, error) {
-			args := v.(GetRegionListArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("scm:index/getRegionList:getRegionList", args, GetRegionListResultOutput{}, options).(GetRegionListResultOutput), nil
-		}).(GetRegionListResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("scm:index/getRegionList:getRegionList", args, GetRegionListResultOutput{}, options).(GetRegionListResultOutput)
 }
 
 // A collection of arguments for invoking getRegionList.

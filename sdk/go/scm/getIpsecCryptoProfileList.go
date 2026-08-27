@@ -90,12 +90,8 @@ type GetIpsecCryptoProfileListResult struct {
 }
 
 func GetIpsecCryptoProfileListOutput(ctx *pulumi.Context, args GetIpsecCryptoProfileListOutputArgs, opts ...pulumi.InvokeOption) GetIpsecCryptoProfileListResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (GetIpsecCryptoProfileListResultOutput, error) {
-			args := v.(GetIpsecCryptoProfileListArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("scm:index/getIpsecCryptoProfileList:getIpsecCryptoProfileList", args, GetIpsecCryptoProfileListResultOutput{}, options).(GetIpsecCryptoProfileListResultOutput), nil
-		}).(GetIpsecCryptoProfileListResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("scm:index/getIpsecCryptoProfileList:getIpsecCryptoProfileList", args, GetIpsecCryptoProfileListResultOutput{}, options).(GetIpsecCryptoProfileListResultOutput)
 }
 
 // A collection of arguments for invoking getIpsecCryptoProfileList.

@@ -48,12 +48,8 @@ type LookupRouteCommunityListResult struct {
 }
 
 func LookupRouteCommunityListOutput(ctx *pulumi.Context, args LookupRouteCommunityListOutputArgs, opts ...pulumi.InvokeOption) LookupRouteCommunityListResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupRouteCommunityListResultOutput, error) {
-			args := v.(LookupRouteCommunityListArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("scm:index/getRouteCommunityList:getRouteCommunityList", args, LookupRouteCommunityListResultOutput{}, options).(LookupRouteCommunityListResultOutput), nil
-		}).(LookupRouteCommunityListResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("scm:index/getRouteCommunityList:getRouteCommunityList", args, LookupRouteCommunityListResultOutput{}, options).(LookupRouteCommunityListResultOutput)
 }
 
 // A collection of arguments for invoking getRouteCommunityList.

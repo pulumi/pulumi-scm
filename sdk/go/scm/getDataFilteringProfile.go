@@ -78,12 +78,8 @@ type LookupDataFilteringProfileResult struct {
 }
 
 func LookupDataFilteringProfileOutput(ctx *pulumi.Context, args LookupDataFilteringProfileOutputArgs, opts ...pulumi.InvokeOption) LookupDataFilteringProfileResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupDataFilteringProfileResultOutput, error) {
-			args := v.(LookupDataFilteringProfileArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("scm:index/getDataFilteringProfile:getDataFilteringProfile", args, LookupDataFilteringProfileResultOutput{}, options).(LookupDataFilteringProfileResultOutput), nil
-		}).(LookupDataFilteringProfileResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("scm:index/getDataFilteringProfile:getDataFilteringProfile", args, LookupDataFilteringProfileResultOutput{}, options).(LookupDataFilteringProfileResultOutput)
 }
 
 // A collection of arguments for invoking getDataFilteringProfile.

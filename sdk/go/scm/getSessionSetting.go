@@ -72,12 +72,8 @@ type LookupSessionSettingResult struct {
 }
 
 func LookupSessionSettingOutput(ctx *pulumi.Context, args LookupSessionSettingOutputArgs, opts ...pulumi.InvokeOption) LookupSessionSettingResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupSessionSettingResultOutput, error) {
-			args := v.(LookupSessionSettingArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("scm:index/getSessionSetting:getSessionSetting", args, LookupSessionSettingResultOutput{}, options).(LookupSessionSettingResultOutput), nil
-		}).(LookupSessionSettingResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("scm:index/getSessionSetting:getSessionSetting", args, LookupSessionSettingResultOutput{}, options).(LookupSessionSettingResultOutput)
 }
 
 // A collection of arguments for invoking getSessionSetting.

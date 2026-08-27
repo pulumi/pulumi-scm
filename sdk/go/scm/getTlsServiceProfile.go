@@ -82,12 +82,8 @@ type LookupTlsServiceProfileResult struct {
 }
 
 func LookupTlsServiceProfileOutput(ctx *pulumi.Context, args LookupTlsServiceProfileOutputArgs, opts ...pulumi.InvokeOption) LookupTlsServiceProfileResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupTlsServiceProfileResultOutput, error) {
-			args := v.(LookupTlsServiceProfileArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("scm:index/getTlsServiceProfile:getTlsServiceProfile", args, LookupTlsServiceProfileResultOutput{}, options).(LookupTlsServiceProfileResultOutput), nil
-		}).(LookupTlsServiceProfileResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("scm:index/getTlsServiceProfile:getTlsServiceProfile", args, LookupTlsServiceProfileResultOutput{}, options).(LookupTlsServiceProfileResultOutput)
 }
 
 // A collection of arguments for invoking getTlsServiceProfile.

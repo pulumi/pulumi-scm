@@ -61,12 +61,8 @@ type GetSdwanPathQualityProfileListResult struct {
 }
 
 func GetSdwanPathQualityProfileListOutput(ctx *pulumi.Context, args GetSdwanPathQualityProfileListOutputArgs, opts ...pulumi.InvokeOption) GetSdwanPathQualityProfileListResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (GetSdwanPathQualityProfileListResultOutput, error) {
-			args := v.(GetSdwanPathQualityProfileListArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("scm:index/getSdwanPathQualityProfileList:getSdwanPathQualityProfileList", args, GetSdwanPathQualityProfileListResultOutput{}, options).(GetSdwanPathQualityProfileListResultOutput), nil
-		}).(GetSdwanPathQualityProfileListResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("scm:index/getSdwanPathQualityProfileList:getSdwanPathQualityProfileList", args, GetSdwanPathQualityProfileListResultOutput{}, options).(GetSdwanPathQualityProfileListResultOutput)
 }
 
 // A collection of arguments for invoking getSdwanPathQualityProfileList.

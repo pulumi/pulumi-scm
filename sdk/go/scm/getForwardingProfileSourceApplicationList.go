@@ -63,12 +63,8 @@ type GetForwardingProfileSourceApplicationListResult struct {
 }
 
 func GetForwardingProfileSourceApplicationListOutput(ctx *pulumi.Context, args GetForwardingProfileSourceApplicationListOutputArgs, opts ...pulumi.InvokeOption) GetForwardingProfileSourceApplicationListResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (GetForwardingProfileSourceApplicationListResultOutput, error) {
-			args := v.(GetForwardingProfileSourceApplicationListArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("scm:index/getForwardingProfileSourceApplicationList:getForwardingProfileSourceApplicationList", args, GetForwardingProfileSourceApplicationListResultOutput{}, options).(GetForwardingProfileSourceApplicationListResultOutput), nil
-		}).(GetForwardingProfileSourceApplicationListResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("scm:index/getForwardingProfileSourceApplicationList:getForwardingProfileSourceApplicationList", args, GetForwardingProfileSourceApplicationListResultOutput{}, options).(GetForwardingProfileSourceApplicationListResultOutput)
 }
 
 // A collection of arguments for invoking getForwardingProfileSourceApplicationList.

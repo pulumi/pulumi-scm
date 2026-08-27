@@ -81,12 +81,8 @@ type LookupBgpAuthProfileResult struct {
 }
 
 func LookupBgpAuthProfileOutput(ctx *pulumi.Context, args LookupBgpAuthProfileOutputArgs, opts ...pulumi.InvokeOption) LookupBgpAuthProfileResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupBgpAuthProfileResultOutput, error) {
-			args := v.(LookupBgpAuthProfileArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("scm:index/getBgpAuthProfile:getBgpAuthProfile", args, LookupBgpAuthProfileResultOutput{}, options).(LookupBgpAuthProfileResultOutput), nil
-		}).(LookupBgpAuthProfileResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("scm:index/getBgpAuthProfile:getBgpAuthProfile", args, LookupBgpAuthProfileResultOutput{}, options).(LookupBgpAuthProfileResultOutput)
 }
 
 // A collection of arguments for invoking getBgpAuthProfile.

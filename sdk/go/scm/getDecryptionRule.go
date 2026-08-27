@@ -97,12 +97,8 @@ type LookupDecryptionRuleResult struct {
 }
 
 func LookupDecryptionRuleOutput(ctx *pulumi.Context, args LookupDecryptionRuleOutputArgs, opts ...pulumi.InvokeOption) LookupDecryptionRuleResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupDecryptionRuleResultOutput, error) {
-			args := v.(LookupDecryptionRuleArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("scm:index/getDecryptionRule:getDecryptionRule", args, LookupDecryptionRuleResultOutput{}, options).(LookupDecryptionRuleResultOutput), nil
-		}).(LookupDecryptionRuleResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("scm:index/getDecryptionRule:getDecryptionRule", args, LookupDecryptionRuleResultOutput{}, options).(LookupDecryptionRuleResultOutput)
 }
 
 // A collection of arguments for invoking getDecryptionRule.

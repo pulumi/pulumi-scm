@@ -93,12 +93,8 @@ type LookupScepProfileResult struct {
 }
 
 func LookupScepProfileOutput(ctx *pulumi.Context, args LookupScepProfileOutputArgs, opts ...pulumi.InvokeOption) LookupScepProfileResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupScepProfileResultOutput, error) {
-			args := v.(LookupScepProfileArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("scm:index/getScepProfile:getScepProfile", args, LookupScepProfileResultOutput{}, options).(LookupScepProfileResultOutput), nil
-		}).(LookupScepProfileResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("scm:index/getScepProfile:getScepProfile", args, LookupScepProfileResultOutput{}, options).(LookupScepProfileResultOutput)
 }
 
 // A collection of arguments for invoking getScepProfile.

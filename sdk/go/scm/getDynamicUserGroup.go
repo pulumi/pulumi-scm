@@ -84,12 +84,8 @@ type LookupDynamicUserGroupResult struct {
 }
 
 func LookupDynamicUserGroupOutput(ctx *pulumi.Context, args LookupDynamicUserGroupOutputArgs, opts ...pulumi.InvokeOption) LookupDynamicUserGroupResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupDynamicUserGroupResultOutput, error) {
-			args := v.(LookupDynamicUserGroupArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("scm:index/getDynamicUserGroup:getDynamicUserGroup", args, LookupDynamicUserGroupResultOutput{}, options).(LookupDynamicUserGroupResultOutput), nil
-		}).(LookupDynamicUserGroupResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("scm:index/getDynamicUserGroup:getDynamicUserGroup", args, LookupDynamicUserGroupResultOutput{}, options).(LookupDynamicUserGroupResultOutput)
 }
 
 // A collection of arguments for invoking getDynamicUserGroup.

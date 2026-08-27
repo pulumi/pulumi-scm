@@ -91,12 +91,8 @@ type GetServiceRouteListResult struct {
 }
 
 func GetServiceRouteListOutput(ctx *pulumi.Context, args GetServiceRouteListOutputArgs, opts ...pulumi.InvokeOption) GetServiceRouteListResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (GetServiceRouteListResultOutput, error) {
-			args := v.(GetServiceRouteListArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("scm:index/getServiceRouteList:getServiceRouteList", args, GetServiceRouteListResultOutput{}, options).(GetServiceRouteListResultOutput), nil
-		}).(GetServiceRouteListResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("scm:index/getServiceRouteList:getServiceRouteList", args, GetServiceRouteListResultOutput{}, options).(GetServiceRouteListResultOutput)
 }
 
 // A collection of arguments for invoking getServiceRouteList.

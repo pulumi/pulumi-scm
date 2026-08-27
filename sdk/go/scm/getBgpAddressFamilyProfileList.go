@@ -61,12 +61,8 @@ type GetBgpAddressFamilyProfileListResult struct {
 }
 
 func GetBgpAddressFamilyProfileListOutput(ctx *pulumi.Context, args GetBgpAddressFamilyProfileListOutputArgs, opts ...pulumi.InvokeOption) GetBgpAddressFamilyProfileListResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (GetBgpAddressFamilyProfileListResultOutput, error) {
-			args := v.(GetBgpAddressFamilyProfileListArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("scm:index/getBgpAddressFamilyProfileList:getBgpAddressFamilyProfileList", args, GetBgpAddressFamilyProfileListResultOutput{}, options).(GetBgpAddressFamilyProfileListResultOutput), nil
-		}).(GetBgpAddressFamilyProfileListResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("scm:index/getBgpAddressFamilyProfileList:getBgpAddressFamilyProfileList", args, GetBgpAddressFamilyProfileListResultOutput{}, options).(GetBgpAddressFamilyProfileListResultOutput)
 }
 
 // A collection of arguments for invoking getBgpAddressFamilyProfileList.

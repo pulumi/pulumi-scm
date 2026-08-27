@@ -91,12 +91,8 @@ type LookupEthernetInterfaceResult struct {
 }
 
 func LookupEthernetInterfaceOutput(ctx *pulumi.Context, args LookupEthernetInterfaceOutputArgs, opts ...pulumi.InvokeOption) LookupEthernetInterfaceResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupEthernetInterfaceResultOutput, error) {
-			args := v.(LookupEthernetInterfaceArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("scm:index/getEthernetInterface:getEthernetInterface", args, LookupEthernetInterfaceResultOutput{}, options).(LookupEthernetInterfaceResultOutput), nil
-		}).(LookupEthernetInterfaceResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("scm:index/getEthernetInterface:getEthernetInterface", args, LookupEthernetInterfaceResultOutput{}, options).(LookupEthernetInterfaceResultOutput)
 }
 
 // A collection of arguments for invoking getEthernetInterface.

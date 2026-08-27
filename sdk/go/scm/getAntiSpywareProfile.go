@@ -87,12 +87,8 @@ type LookupAntiSpywareProfileResult struct {
 }
 
 func LookupAntiSpywareProfileOutput(ctx *pulumi.Context, args LookupAntiSpywareProfileOutputArgs, opts ...pulumi.InvokeOption) LookupAntiSpywareProfileResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupAntiSpywareProfileResultOutput, error) {
-			args := v.(LookupAntiSpywareProfileArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("scm:index/getAntiSpywareProfile:getAntiSpywareProfile", args, LookupAntiSpywareProfileResultOutput{}, options).(LookupAntiSpywareProfileResultOutput), nil
-		}).(LookupAntiSpywareProfileResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("scm:index/getAntiSpywareProfile:getAntiSpywareProfile", args, LookupAntiSpywareProfileResultOutput{}, options).(LookupAntiSpywareProfileResultOutput)
 }
 
 // A collection of arguments for invoking getAntiSpywareProfile.

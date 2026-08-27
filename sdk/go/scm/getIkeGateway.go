@@ -83,12 +83,8 @@ type LookupIkeGatewayResult struct {
 }
 
 func LookupIkeGatewayOutput(ctx *pulumi.Context, args LookupIkeGatewayOutputArgs, opts ...pulumi.InvokeOption) LookupIkeGatewayResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupIkeGatewayResultOutput, error) {
-			args := v.(LookupIkeGatewayArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("scm:index/getIkeGateway:getIkeGateway", args, LookupIkeGatewayResultOutput{}, options).(LookupIkeGatewayResultOutput), nil
-		}).(LookupIkeGatewayResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("scm:index/getIkeGateway:getIkeGateway", args, LookupIkeGatewayResultOutput{}, options).(LookupIkeGatewayResultOutput)
 }
 
 // A collection of arguments for invoking getIkeGateway.
