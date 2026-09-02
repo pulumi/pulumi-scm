@@ -67,6 +67,7 @@ func Provider() tfbridge.ProviderInfo {
 			"pulumi",
 			"scm",
 			"paloaltonetworks",
+			"prisma",
 			"category/network",
 		},
 		License:    "Apache-2.0",
