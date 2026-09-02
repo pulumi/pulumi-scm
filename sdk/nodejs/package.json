@@ -6,6 +6,7 @@
         "pulumi",
         "scm",
         "paloaltonetworks",
+        "prisma",
         "category/network"
     ],
     "homepage": "https://pulumi.com",
