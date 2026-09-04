@@ -2,7 +2,7 @@
   name = "pulumi_scm"
   description = "A Pulumi package for managing resources on Strata Cloud Manager."
   dependencies = ["parver>=0.2.1", "pulumi>=3.231.0,<4.0.0", "semver>=2.8.1", "typing-extensions>=4.11,<5; python_version < \"3.11\""]
-  keywords = ["pulumi", "scm", "paloaltonetworks", "category/network"]
+  keywords = ["pulumi", "scm", "paloaltonetworks", "prisma", "category/network"]
   readme = "README.md"
   requires-python = ">=3.9"
   version = "1.0.0a0+dev"
