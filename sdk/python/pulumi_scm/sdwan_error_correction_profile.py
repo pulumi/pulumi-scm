@@ -267,7 +267,7 @@ class SdwanErrorCorrectionProfile(pulumi.CustomResource):
                  activation_threshold: pulumi.Input[Optional[_builtins.int]] = None,
                  device: pulumi.Input[Optional[_builtins.str]] = None,
                  folder: pulumi.Input[Optional[_builtins.str]] = None,
-                 mode: pulumi.Input[Optional[Union['SdwanErrorCorrectionProfileModeArgs', 'SdwanErrorCorrectionProfileModeArgsDict']]] = None,
+                 mode: pulumi.Input[Optional[Union['SdwanErrorCorrectionProfileModeArgs', 'SdwanErrorCorrectionProfileModeArgsDict', 'outputs.SdwanErrorCorrectionProfileMode']]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
                  snippet: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
@@ -304,7 +304,7 @@ class SdwanErrorCorrectionProfile(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
                
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-        :param pulumi.Input[Union['SdwanErrorCorrectionProfileModeArgs', 'SdwanErrorCorrectionProfileModeArgsDict']] mode: Mode
+        :param pulumi.Input[Union['SdwanErrorCorrectionProfileModeArgs', 'SdwanErrorCorrectionProfileModeArgsDict', 'outputs.SdwanErrorCorrectionProfileMode']] mode: Mode
         :param pulumi.Input[_builtins.str] name: Name
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
                
@@ -360,7 +360,7 @@ class SdwanErrorCorrectionProfile(pulumi.CustomResource):
                  activation_threshold: pulumi.Input[Optional[_builtins.int]] = None,
                  device: pulumi.Input[Optional[_builtins.str]] = None,
                  folder: pulumi.Input[Optional[_builtins.str]] = None,
-                 mode: pulumi.Input[Optional[Union['SdwanErrorCorrectionProfileModeArgs', 'SdwanErrorCorrectionProfileModeArgsDict']]] = None,
+                 mode: pulumi.Input[Optional[Union['SdwanErrorCorrectionProfileModeArgs', 'SdwanErrorCorrectionProfileModeArgsDict', 'outputs.SdwanErrorCorrectionProfileMode']]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
                  snippet: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
@@ -396,7 +396,7 @@ class SdwanErrorCorrectionProfile(pulumi.CustomResource):
             activation_threshold: pulumi.Input[Optional[_builtins.int]] = None,
             device: pulumi.Input[Optional[_builtins.str]] = None,
             folder: pulumi.Input[Optional[_builtins.str]] = None,
-            mode: pulumi.Input[Optional[Union['SdwanErrorCorrectionProfileModeArgs', 'SdwanErrorCorrectionProfileModeArgsDict']]] = None,
+            mode: pulumi.Input[Optional[Union['SdwanErrorCorrectionProfileModeArgs', 'SdwanErrorCorrectionProfileModeArgsDict', 'outputs.SdwanErrorCorrectionProfileMode']]] = None,
             name: pulumi.Input[Optional[_builtins.str]] = None,
             snippet: pulumi.Input[Optional[_builtins.str]] = None,
             tfid: pulumi.Input[Optional[_builtins.str]] = None) -> 'SdwanErrorCorrectionProfile':
@@ -412,7 +412,7 @@ class SdwanErrorCorrectionProfile(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
                
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-        :param pulumi.Input[Union['SdwanErrorCorrectionProfileModeArgs', 'SdwanErrorCorrectionProfileModeArgsDict']] mode: Mode
+        :param pulumi.Input[Union['SdwanErrorCorrectionProfileModeArgs', 'SdwanErrorCorrectionProfileModeArgsDict', 'outputs.SdwanErrorCorrectionProfileMode']] mode: Mode
         :param pulumi.Input[_builtins.str] name: Name
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
                

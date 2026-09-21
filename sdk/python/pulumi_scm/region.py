@@ -269,7 +269,7 @@ class Region(pulumi.CustomResource):
                  addresses: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  device: pulumi.Input[Optional[_builtins.str]] = None,
                  folder: pulumi.Input[Optional[_builtins.str]] = None,
-                 geo_location: pulumi.Input[Optional[Union['RegionGeoLocationArgs', 'RegionGeoLocationArgsDict']]] = None,
+                 geo_location: pulumi.Input[Optional[Union['RegionGeoLocationArgs', 'RegionGeoLocationArgsDict', 'outputs.RegionGeoLocation']]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
                  snippet: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
@@ -306,7 +306,7 @@ class Region(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
                
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-        :param pulumi.Input[Union['RegionGeoLocationArgs', 'RegionGeoLocationArgsDict']] geo_location: Geo location
+        :param pulumi.Input[Union['RegionGeoLocationArgs', 'RegionGeoLocationArgsDict', 'outputs.RegionGeoLocation']] geo_location: Geo location
         :param pulumi.Input[_builtins.str] name: The name of the region
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
                
@@ -362,7 +362,7 @@ class Region(pulumi.CustomResource):
                  addresses: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  device: pulumi.Input[Optional[_builtins.str]] = None,
                  folder: pulumi.Input[Optional[_builtins.str]] = None,
-                 geo_location: pulumi.Input[Optional[Union['RegionGeoLocationArgs', 'RegionGeoLocationArgsDict']]] = None,
+                 geo_location: pulumi.Input[Optional[Union['RegionGeoLocationArgs', 'RegionGeoLocationArgsDict', 'outputs.RegionGeoLocation']]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
                  snippet: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
@@ -394,7 +394,7 @@ class Region(pulumi.CustomResource):
             addresses: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
             device: pulumi.Input[Optional[_builtins.str]] = None,
             folder: pulumi.Input[Optional[_builtins.str]] = None,
-            geo_location: pulumi.Input[Optional[Union['RegionGeoLocationArgs', 'RegionGeoLocationArgsDict']]] = None,
+            geo_location: pulumi.Input[Optional[Union['RegionGeoLocationArgs', 'RegionGeoLocationArgsDict', 'outputs.RegionGeoLocation']]] = None,
             name: pulumi.Input[Optional[_builtins.str]] = None,
             snippet: pulumi.Input[Optional[_builtins.str]] = None,
             tfid: pulumi.Input[Optional[_builtins.str]] = None) -> 'Region':
@@ -410,7 +410,7 @@ class Region(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
                
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-        :param pulumi.Input[Union['RegionGeoLocationArgs', 'RegionGeoLocationArgsDict']] geo_location: Geo location
+        :param pulumi.Input[Union['RegionGeoLocationArgs', 'RegionGeoLocationArgsDict', 'outputs.RegionGeoLocation']] geo_location: Geo location
         :param pulumi.Input[_builtins.str] name: The name of the region
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
                

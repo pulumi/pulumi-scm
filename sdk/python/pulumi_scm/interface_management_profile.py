@@ -560,7 +560,7 @@ class InterfaceManagementProfile(pulumi.CustomResource):
                  http_ocsp: pulumi.Input[Optional[_builtins.bool]] = None,
                  https: pulumi.Input[Optional[_builtins.bool]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
-                 permitted_ips: pulumi.Input[Optional[Sequence[pulumi.Input[Union['InterfaceManagementProfilePermittedIpArgs', 'InterfaceManagementProfilePermittedIpArgsDict']]]]] = None,
+                 permitted_ips: pulumi.Input[Optional[Sequence[pulumi.Input[Union['InterfaceManagementProfilePermittedIpArgs', 'InterfaceManagementProfilePermittedIpArgsDict', 'outputs.InterfaceManagementProfilePermittedIp']]]]] = None,
                  ping: pulumi.Input[Optional[_builtins.bool]] = None,
                  response_pages: pulumi.Input[Optional[_builtins.bool]] = None,
                  snippet: pulumi.Input[Optional[_builtins.str]] = None,
@@ -635,7 +635,7 @@ class InterfaceManagementProfile(pulumi.CustomResource):
         :param pulumi.Input[_builtins.bool] http_ocsp: Allow HTTP OCSP?
         :param pulumi.Input[_builtins.bool] https: Allow HTTPS?
         :param pulumi.Input[_builtins.str] name: Name
-        :param pulumi.Input[Sequence[pulumi.Input[Union['InterfaceManagementProfilePermittedIpArgs', 'InterfaceManagementProfilePermittedIpArgsDict']]]] permitted_ips: Allowed IP address(es)
+        :param pulumi.Input[Sequence[pulumi.Input[Union['InterfaceManagementProfilePermittedIpArgs', 'InterfaceManagementProfilePermittedIpArgsDict', 'outputs.InterfaceManagementProfilePermittedIp']]]] permitted_ips: Allowed IP address(es)
         :param pulumi.Input[_builtins.bool] ping: Allow ping?
         :param pulumi.Input[_builtins.bool] response_pages: Allow response pages?
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
@@ -729,7 +729,7 @@ class InterfaceManagementProfile(pulumi.CustomResource):
                  http_ocsp: pulumi.Input[Optional[_builtins.bool]] = None,
                  https: pulumi.Input[Optional[_builtins.bool]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
-                 permitted_ips: pulumi.Input[Optional[Sequence[pulumi.Input[Union['InterfaceManagementProfilePermittedIpArgs', 'InterfaceManagementProfilePermittedIpArgsDict']]]]] = None,
+                 permitted_ips: pulumi.Input[Optional[Sequence[pulumi.Input[Union['InterfaceManagementProfilePermittedIpArgs', 'InterfaceManagementProfilePermittedIpArgsDict', 'outputs.InterfaceManagementProfilePermittedIp']]]]] = None,
                  ping: pulumi.Input[Optional[_builtins.bool]] = None,
                  response_pages: pulumi.Input[Optional[_builtins.bool]] = None,
                  snippet: pulumi.Input[Optional[_builtins.str]] = None,
@@ -779,7 +779,7 @@ class InterfaceManagementProfile(pulumi.CustomResource):
             http_ocsp: pulumi.Input[Optional[_builtins.bool]] = None,
             https: pulumi.Input[Optional[_builtins.bool]] = None,
             name: pulumi.Input[Optional[_builtins.str]] = None,
-            permitted_ips: pulumi.Input[Optional[Sequence[pulumi.Input[Union['InterfaceManagementProfilePermittedIpArgs', 'InterfaceManagementProfilePermittedIpArgsDict']]]]] = None,
+            permitted_ips: pulumi.Input[Optional[Sequence[pulumi.Input[Union['InterfaceManagementProfilePermittedIpArgs', 'InterfaceManagementProfilePermittedIpArgsDict', 'outputs.InterfaceManagementProfilePermittedIp']]]]] = None,
             ping: pulumi.Input[Optional[_builtins.bool]] = None,
             response_pages: pulumi.Input[Optional[_builtins.bool]] = None,
             snippet: pulumi.Input[Optional[_builtins.str]] = None,
@@ -804,7 +804,7 @@ class InterfaceManagementProfile(pulumi.CustomResource):
         :param pulumi.Input[_builtins.bool] http_ocsp: Allow HTTP OCSP?
         :param pulumi.Input[_builtins.bool] https: Allow HTTPS?
         :param pulumi.Input[_builtins.str] name: Name
-        :param pulumi.Input[Sequence[pulumi.Input[Union['InterfaceManagementProfilePermittedIpArgs', 'InterfaceManagementProfilePermittedIpArgsDict']]]] permitted_ips: Allowed IP address(es)
+        :param pulumi.Input[Sequence[pulumi.Input[Union['InterfaceManagementProfilePermittedIpArgs', 'InterfaceManagementProfilePermittedIpArgsDict', 'outputs.InterfaceManagementProfilePermittedIp']]]] permitted_ips: Allowed IP address(es)
         :param pulumi.Input[_builtins.bool] ping: Allow ping?
         :param pulumi.Input[_builtins.bool] response_pages: Allow response pages?
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined

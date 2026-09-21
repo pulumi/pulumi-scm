@@ -378,15 +378,15 @@ class ForwardingProfileRegionalAndCustomProxy(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 connectivity_preferences: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ForwardingProfileRegionalAndCustomProxyConnectivityPreferenceArgs', 'ForwardingProfileRegionalAndCustomProxyConnectivityPreferenceArgsDict']]]]] = None,
+                 connectivity_preferences: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ForwardingProfileRegionalAndCustomProxyConnectivityPreferenceArgs', 'ForwardingProfileRegionalAndCustomProxyConnectivityPreferenceArgsDict', 'outputs.ForwardingProfileRegionalAndCustomProxyConnectivityPreference']]]]] = None,
                  description: pulumi.Input[Optional[_builtins.str]] = None,
                  fallback_option: pulumi.Input[Optional[_builtins.str]] = None,
                  folder: pulumi.Input[Optional[_builtins.str]] = None,
                  location_preference: pulumi.Input[Optional[_builtins.str]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
-                 prisma_access_locations: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ForwardingProfileRegionalAndCustomProxyPrismaAccessLocationArgs', 'ForwardingProfileRegionalAndCustomProxyPrismaAccessLocationArgsDict']]]]] = None,
-                 proxy1: pulumi.Input[Optional[Union['ForwardingProfileRegionalAndCustomProxyProxy1Args', 'ForwardingProfileRegionalAndCustomProxyProxy1ArgsDict']]] = None,
-                 proxy2: pulumi.Input[Optional[Union['ForwardingProfileRegionalAndCustomProxyProxy2Args', 'ForwardingProfileRegionalAndCustomProxyProxy2ArgsDict']]] = None,
+                 prisma_access_locations: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ForwardingProfileRegionalAndCustomProxyPrismaAccessLocationArgs', 'ForwardingProfileRegionalAndCustomProxyPrismaAccessLocationArgsDict', 'outputs.ForwardingProfileRegionalAndCustomProxyPrismaAccessLocation']]]]] = None,
+                 proxy1: pulumi.Input[Optional[Union['ForwardingProfileRegionalAndCustomProxyProxy1Args', 'ForwardingProfileRegionalAndCustomProxyProxy1ArgsDict', 'outputs.ForwardingProfileRegionalAndCustomProxyProxy1']]] = None,
+                 proxy2: pulumi.Input[Optional[Union['ForwardingProfileRegionalAndCustomProxyProxy2Args', 'ForwardingProfileRegionalAndCustomProxyProxy2ArgsDict', 'outputs.ForwardingProfileRegionalAndCustomProxyProxy2']]] = None,
                  type: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
@@ -511,15 +511,15 @@ class ForwardingProfileRegionalAndCustomProxy(pulumi.CustomResource):
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[Sequence[pulumi.Input[Union['ForwardingProfileRegionalAndCustomProxyConnectivityPreferenceArgs', 'ForwardingProfileRegionalAndCustomProxyConnectivityPreferenceArgsDict']]]] connectivity_preferences: List of connectivity methods and their enablement status for establishing proxy connections
+        :param pulumi.Input[Sequence[pulumi.Input[Union['ForwardingProfileRegionalAndCustomProxyConnectivityPreferenceArgs', 'ForwardingProfileRegionalAndCustomProxyConnectivityPreferenceArgsDict', 'outputs.ForwardingProfileRegionalAndCustomProxyConnectivityPreference']]]] connectivity_preferences: List of connectivity methods and their enablement status for establishing proxy connections
         :param pulumi.Input[_builtins.str] description: regional and custom proxy configuration description
         :param pulumi.Input[_builtins.str] fallback_option: Behavior when proxy connection fails - 'fail-open' allows direct internet access, 'fail-safe' blocks traffic until proxy is restored
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
         :param pulumi.Input[_builtins.str] location_preference: Strategy for selecting Prisma Access location - 'best-available-pa-location' automatically selects optimal location, 'specific-pa-location' uses predefined locations
         :param pulumi.Input[_builtins.str] name: alphanumeric string [ 0-9a-zA-Z ._-]
-        :param pulumi.Input[Sequence[pulumi.Input[Union['ForwardingProfileRegionalAndCustomProxyPrismaAccessLocationArgs', 'ForwardingProfileRegionalAndCustomProxyPrismaAccessLocationArgsDict']]]] prisma_access_locations: Select Prisma Access location Americas, Europe and Asia-Pacific.
-        :param pulumi.Input[Union['ForwardingProfileRegionalAndCustomProxyProxy1Args', 'ForwardingProfileRegionalAndCustomProxyProxy1ArgsDict']] proxy1: primary regional and custom proxy
-        :param pulumi.Input[Union['ForwardingProfileRegionalAndCustomProxyProxy2Args', 'ForwardingProfileRegionalAndCustomProxyProxy2ArgsDict']] proxy2: secondary regional and custom proxy
+        :param pulumi.Input[Sequence[pulumi.Input[Union['ForwardingProfileRegionalAndCustomProxyPrismaAccessLocationArgs', 'ForwardingProfileRegionalAndCustomProxyPrismaAccessLocationArgsDict', 'outputs.ForwardingProfileRegionalAndCustomProxyPrismaAccessLocation']]]] prisma_access_locations: Select Prisma Access location Americas, Europe and Asia-Pacific.
+        :param pulumi.Input[Union['ForwardingProfileRegionalAndCustomProxyProxy1Args', 'ForwardingProfileRegionalAndCustomProxyProxy1ArgsDict', 'outputs.ForwardingProfileRegionalAndCustomProxyProxy1']] proxy1: primary regional and custom proxy
+        :param pulumi.Input[Union['ForwardingProfileRegionalAndCustomProxyProxy2Args', 'ForwardingProfileRegionalAndCustomProxyProxy2ArgsDict', 'outputs.ForwardingProfileRegionalAndCustomProxyProxy2']] proxy2: secondary regional and custom proxy
         :param pulumi.Input[_builtins.str] type: Proxy configuration type - 'gp-and-pac' for GlobalProtect and PAC file forwarding, 'ztna-agent' for ZTNA agent forwarding
         """
         ...
@@ -663,15 +663,15 @@ class ForwardingProfileRegionalAndCustomProxy(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 connectivity_preferences: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ForwardingProfileRegionalAndCustomProxyConnectivityPreferenceArgs', 'ForwardingProfileRegionalAndCustomProxyConnectivityPreferenceArgsDict']]]]] = None,
+                 connectivity_preferences: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ForwardingProfileRegionalAndCustomProxyConnectivityPreferenceArgs', 'ForwardingProfileRegionalAndCustomProxyConnectivityPreferenceArgsDict', 'outputs.ForwardingProfileRegionalAndCustomProxyConnectivityPreference']]]]] = None,
                  description: pulumi.Input[Optional[_builtins.str]] = None,
                  fallback_option: pulumi.Input[Optional[_builtins.str]] = None,
                  folder: pulumi.Input[Optional[_builtins.str]] = None,
                  location_preference: pulumi.Input[Optional[_builtins.str]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
-                 prisma_access_locations: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ForwardingProfileRegionalAndCustomProxyPrismaAccessLocationArgs', 'ForwardingProfileRegionalAndCustomProxyPrismaAccessLocationArgsDict']]]]] = None,
-                 proxy1: pulumi.Input[Optional[Union['ForwardingProfileRegionalAndCustomProxyProxy1Args', 'ForwardingProfileRegionalAndCustomProxyProxy1ArgsDict']]] = None,
-                 proxy2: pulumi.Input[Optional[Union['ForwardingProfileRegionalAndCustomProxyProxy2Args', 'ForwardingProfileRegionalAndCustomProxyProxy2ArgsDict']]] = None,
+                 prisma_access_locations: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ForwardingProfileRegionalAndCustomProxyPrismaAccessLocationArgs', 'ForwardingProfileRegionalAndCustomProxyPrismaAccessLocationArgsDict', 'outputs.ForwardingProfileRegionalAndCustomProxyPrismaAccessLocation']]]]] = None,
+                 proxy1: pulumi.Input[Optional[Union['ForwardingProfileRegionalAndCustomProxyProxy1Args', 'ForwardingProfileRegionalAndCustomProxyProxy1ArgsDict', 'outputs.ForwardingProfileRegionalAndCustomProxyProxy1']]] = None,
+                 proxy2: pulumi.Input[Optional[Union['ForwardingProfileRegionalAndCustomProxyProxy2Args', 'ForwardingProfileRegionalAndCustomProxyProxy2ArgsDict', 'outputs.ForwardingProfileRegionalAndCustomProxyProxy2']]] = None,
                  type: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
@@ -703,15 +703,15 @@ class ForwardingProfileRegionalAndCustomProxy(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            connectivity_preferences: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ForwardingProfileRegionalAndCustomProxyConnectivityPreferenceArgs', 'ForwardingProfileRegionalAndCustomProxyConnectivityPreferenceArgsDict']]]]] = None,
+            connectivity_preferences: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ForwardingProfileRegionalAndCustomProxyConnectivityPreferenceArgs', 'ForwardingProfileRegionalAndCustomProxyConnectivityPreferenceArgsDict', 'outputs.ForwardingProfileRegionalAndCustomProxyConnectivityPreference']]]]] = None,
             description: pulumi.Input[Optional[_builtins.str]] = None,
             fallback_option: pulumi.Input[Optional[_builtins.str]] = None,
             folder: pulumi.Input[Optional[_builtins.str]] = None,
             location_preference: pulumi.Input[Optional[_builtins.str]] = None,
             name: pulumi.Input[Optional[_builtins.str]] = None,
-            prisma_access_locations: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ForwardingProfileRegionalAndCustomProxyPrismaAccessLocationArgs', 'ForwardingProfileRegionalAndCustomProxyPrismaAccessLocationArgsDict']]]]] = None,
-            proxy1: pulumi.Input[Optional[Union['ForwardingProfileRegionalAndCustomProxyProxy1Args', 'ForwardingProfileRegionalAndCustomProxyProxy1ArgsDict']]] = None,
-            proxy2: pulumi.Input[Optional[Union['ForwardingProfileRegionalAndCustomProxyProxy2Args', 'ForwardingProfileRegionalAndCustomProxyProxy2ArgsDict']]] = None,
+            prisma_access_locations: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ForwardingProfileRegionalAndCustomProxyPrismaAccessLocationArgs', 'ForwardingProfileRegionalAndCustomProxyPrismaAccessLocationArgsDict', 'outputs.ForwardingProfileRegionalAndCustomProxyPrismaAccessLocation']]]]] = None,
+            proxy1: pulumi.Input[Optional[Union['ForwardingProfileRegionalAndCustomProxyProxy1Args', 'ForwardingProfileRegionalAndCustomProxyProxy1ArgsDict', 'outputs.ForwardingProfileRegionalAndCustomProxyProxy1']]] = None,
+            proxy2: pulumi.Input[Optional[Union['ForwardingProfileRegionalAndCustomProxyProxy2Args', 'ForwardingProfileRegionalAndCustomProxyProxy2ArgsDict', 'outputs.ForwardingProfileRegionalAndCustomProxyProxy2']]] = None,
             tfid: pulumi.Input[Optional[_builtins.str]] = None,
             type: pulumi.Input[Optional[_builtins.str]] = None) -> 'ForwardingProfileRegionalAndCustomProxy':
         """
@@ -721,15 +721,15 @@ class ForwardingProfileRegionalAndCustomProxy(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[Sequence[pulumi.Input[Union['ForwardingProfileRegionalAndCustomProxyConnectivityPreferenceArgs', 'ForwardingProfileRegionalAndCustomProxyConnectivityPreferenceArgsDict']]]] connectivity_preferences: List of connectivity methods and their enablement status for establishing proxy connections
+        :param pulumi.Input[Sequence[pulumi.Input[Union['ForwardingProfileRegionalAndCustomProxyConnectivityPreferenceArgs', 'ForwardingProfileRegionalAndCustomProxyConnectivityPreferenceArgsDict', 'outputs.ForwardingProfileRegionalAndCustomProxyConnectivityPreference']]]] connectivity_preferences: List of connectivity methods and their enablement status for establishing proxy connections
         :param pulumi.Input[_builtins.str] description: regional and custom proxy configuration description
         :param pulumi.Input[_builtins.str] fallback_option: Behavior when proxy connection fails - 'fail-open' allows direct internet access, 'fail-safe' blocks traffic until proxy is restored
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
         :param pulumi.Input[_builtins.str] location_preference: Strategy for selecting Prisma Access location - 'best-available-pa-location' automatically selects optimal location, 'specific-pa-location' uses predefined locations
         :param pulumi.Input[_builtins.str] name: alphanumeric string [ 0-9a-zA-Z ._-]
-        :param pulumi.Input[Sequence[pulumi.Input[Union['ForwardingProfileRegionalAndCustomProxyPrismaAccessLocationArgs', 'ForwardingProfileRegionalAndCustomProxyPrismaAccessLocationArgsDict']]]] prisma_access_locations: Select Prisma Access location Americas, Europe and Asia-Pacific.
-        :param pulumi.Input[Union['ForwardingProfileRegionalAndCustomProxyProxy1Args', 'ForwardingProfileRegionalAndCustomProxyProxy1ArgsDict']] proxy1: primary regional and custom proxy
-        :param pulumi.Input[Union['ForwardingProfileRegionalAndCustomProxyProxy2Args', 'ForwardingProfileRegionalAndCustomProxyProxy2ArgsDict']] proxy2: secondary regional and custom proxy
+        :param pulumi.Input[Sequence[pulumi.Input[Union['ForwardingProfileRegionalAndCustomProxyPrismaAccessLocationArgs', 'ForwardingProfileRegionalAndCustomProxyPrismaAccessLocationArgsDict', 'outputs.ForwardingProfileRegionalAndCustomProxyPrismaAccessLocation']]]] prisma_access_locations: Select Prisma Access location Americas, Europe and Asia-Pacific.
+        :param pulumi.Input[Union['ForwardingProfileRegionalAndCustomProxyProxy1Args', 'ForwardingProfileRegionalAndCustomProxyProxy1ArgsDict', 'outputs.ForwardingProfileRegionalAndCustomProxyProxy1']] proxy1: primary regional and custom proxy
+        :param pulumi.Input[Union['ForwardingProfileRegionalAndCustomProxyProxy2Args', 'ForwardingProfileRegionalAndCustomProxyProxy2ArgsDict', 'outputs.ForwardingProfileRegionalAndCustomProxyProxy2']] proxy2: secondary regional and custom proxy
         :param pulumi.Input[_builtins.str] tfid: The Terraform ID.
         :param pulumi.Input[_builtins.str] type: Proxy configuration type - 'gp-and-pac' for GlobalProtect and PAC file forwarding, 'ztna-agent' for ZTNA agent forwarding
         """

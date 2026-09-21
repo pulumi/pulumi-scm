@@ -795,7 +795,7 @@ class ApplicationFilter(pulumi.CustomResource):
                  saas_risks: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  snippet: pulumi.Input[Optional[_builtins.str]] = None,
                  subcategories: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 tagging: pulumi.Input[Optional[Union['ApplicationFilterTaggingArgs', 'ApplicationFilterTaggingArgsDict']]] = None,
+                 tagging: pulumi.Input[Optional[Union['ApplicationFilterTaggingArgs', 'ApplicationFilterTaggingArgsDict', 'outputs.ApplicationFilterTagging']]] = None,
                  technologies: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  transfers_files: pulumi.Input[Optional[_builtins.bool]] = None,
                  tunnels_other_apps: pulumi.Input[Optional[_builtins.bool]] = None,
@@ -867,7 +867,7 @@ class ApplicationFilter(pulumi.CustomResource):
                
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] subcategories: Subcategory
-        :param pulumi.Input[Union['ApplicationFilterTaggingArgs', 'ApplicationFilterTaggingArgsDict']] tagging: Tagging
+        :param pulumi.Input[Union['ApplicationFilterTaggingArgs', 'ApplicationFilterTaggingArgsDict', 'outputs.ApplicationFilterTagging']] tagging: Tagging
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] technologies: Technology
         :param pulumi.Input[_builtins.bool] transfers_files: only True is a valid value
         :param pulumi.Input[_builtins.bool] tunnels_other_apps: only True is a valid value
@@ -954,7 +954,7 @@ class ApplicationFilter(pulumi.CustomResource):
                  saas_risks: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  snippet: pulumi.Input[Optional[_builtins.str]] = None,
                  subcategories: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 tagging: pulumi.Input[Optional[Union['ApplicationFilterTaggingArgs', 'ApplicationFilterTaggingArgsDict']]] = None,
+                 tagging: pulumi.Input[Optional[Union['ApplicationFilterTaggingArgs', 'ApplicationFilterTaggingArgsDict', 'outputs.ApplicationFilterTagging']]] = None,
                  technologies: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  transfers_files: pulumi.Input[Optional[_builtins.bool]] = None,
                  tunnels_other_apps: pulumi.Input[Optional[_builtins.bool]] = None,
@@ -1018,7 +1018,7 @@ class ApplicationFilter(pulumi.CustomResource):
             saas_risks: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
             snippet: pulumi.Input[Optional[_builtins.str]] = None,
             subcategories: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
-            tagging: pulumi.Input[Optional[Union['ApplicationFilterTaggingArgs', 'ApplicationFilterTaggingArgsDict']]] = None,
+            tagging: pulumi.Input[Optional[Union['ApplicationFilterTaggingArgs', 'ApplicationFilterTaggingArgsDict', 'outputs.ApplicationFilterTagging']]] = None,
             technologies: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
             tfid: pulumi.Input[Optional[_builtins.str]] = None,
             transfers_files: pulumi.Input[Optional[_builtins.bool]] = None,
@@ -1052,7 +1052,7 @@ class ApplicationFilter(pulumi.CustomResource):
                
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] subcategories: Subcategory
-        :param pulumi.Input[Union['ApplicationFilterTaggingArgs', 'ApplicationFilterTaggingArgsDict']] tagging: Tagging
+        :param pulumi.Input[Union['ApplicationFilterTaggingArgs', 'ApplicationFilterTaggingArgsDict', 'outputs.ApplicationFilterTagging']] tagging: Tagging
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] technologies: Technology
         :param pulumi.Input[_builtins.str] tfid: The Terraform ID.
         :param pulumi.Input[_builtins.bool] transfers_files: only True is a valid value

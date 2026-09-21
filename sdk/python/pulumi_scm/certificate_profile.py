@@ -589,7 +589,7 @@ class CertificateProfile(pulumi.CustomResource):
                  block_timeout_cert: pulumi.Input[Optional[_builtins.bool]] = None,
                  block_unauthenticated_cert: pulumi.Input[Optional[_builtins.bool]] = None,
                  block_unknown_cert: pulumi.Input[Optional[_builtins.bool]] = None,
-                 ca_certificates: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CertificateProfileCaCertificateArgs', 'CertificateProfileCaCertificateArgsDict']]]]] = None,
+                 ca_certificates: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CertificateProfileCaCertificateArgs', 'CertificateProfileCaCertificateArgsDict', 'outputs.CertificateProfileCaCertificate']]]]] = None,
                  cert_status_timeout: pulumi.Input[Optional[_builtins.str]] = None,
                  crl_receive_timeout: pulumi.Input[Optional[_builtins.str]] = None,
                  device: pulumi.Input[Optional[_builtins.str]] = None,
@@ -600,7 +600,7 @@ class CertificateProfile(pulumi.CustomResource):
                  snippet: pulumi.Input[Optional[_builtins.str]] = None,
                  use_crl: pulumi.Input[Optional[_builtins.bool]] = None,
                  use_ocsp: pulumi.Input[Optional[_builtins.bool]] = None,
-                 username_field: pulumi.Input[Optional[Union['CertificateProfileUsernameFieldArgs', 'CertificateProfileUsernameFieldArgsDict']]] = None,
+                 username_field: pulumi.Input[Optional[Union['CertificateProfileUsernameFieldArgs', 'CertificateProfileUsernameFieldArgsDict', 'outputs.CertificateProfileUsernameField']]] = None,
                  __props__=None):
         """
         CertificateProfile resource
@@ -664,7 +664,7 @@ class CertificateProfile(pulumi.CustomResource):
         :param pulumi.Input[_builtins.bool] block_timeout_cert: Block session if certificate status cannot be retrieved within timeout?
         :param pulumi.Input[_builtins.bool] block_unauthenticated_cert: Block session if the certificate was not issued to the authenticating device?
         :param pulumi.Input[_builtins.bool] block_unknown_cert: Block session if certificate status is unknown?
-        :param pulumi.Input[Sequence[pulumi.Input[Union['CertificateProfileCaCertificateArgs', 'CertificateProfileCaCertificateArgsDict']]]] ca_certificates: An ordered list of CA certificates
+        :param pulumi.Input[Sequence[pulumi.Input[Union['CertificateProfileCaCertificateArgs', 'CertificateProfileCaCertificateArgsDict', 'outputs.CertificateProfileCaCertificate']]]] ca_certificates: An ordered list of CA certificates
         :param pulumi.Input[_builtins.str] cert_status_timeout: Certificate status timeout
         :param pulumi.Input[_builtins.str] crl_receive_timeout: CRL receive timeout (seconds)
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
@@ -679,7 +679,7 @@ class CertificateProfile(pulumi.CustomResource):
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.bool] use_crl: Use CRL?
         :param pulumi.Input[_builtins.bool] use_ocsp: Use OCSP?
-        :param pulumi.Input[Union['CertificateProfileUsernameFieldArgs', 'CertificateProfileUsernameFieldArgsDict']] username_field: Certificate username field
+        :param pulumi.Input[Union['CertificateProfileUsernameFieldArgs', 'CertificateProfileUsernameFieldArgsDict', 'outputs.CertificateProfileUsernameField']] username_field: Certificate username field
         """
         ...
     @overload
@@ -762,7 +762,7 @@ class CertificateProfile(pulumi.CustomResource):
                  block_timeout_cert: pulumi.Input[Optional[_builtins.bool]] = None,
                  block_unauthenticated_cert: pulumi.Input[Optional[_builtins.bool]] = None,
                  block_unknown_cert: pulumi.Input[Optional[_builtins.bool]] = None,
-                 ca_certificates: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CertificateProfileCaCertificateArgs', 'CertificateProfileCaCertificateArgsDict']]]]] = None,
+                 ca_certificates: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CertificateProfileCaCertificateArgs', 'CertificateProfileCaCertificateArgsDict', 'outputs.CertificateProfileCaCertificate']]]]] = None,
                  cert_status_timeout: pulumi.Input[Optional[_builtins.str]] = None,
                  crl_receive_timeout: pulumi.Input[Optional[_builtins.str]] = None,
                  device: pulumi.Input[Optional[_builtins.str]] = None,
@@ -773,7 +773,7 @@ class CertificateProfile(pulumi.CustomResource):
                  snippet: pulumi.Input[Optional[_builtins.str]] = None,
                  use_crl: pulumi.Input[Optional[_builtins.bool]] = None,
                  use_ocsp: pulumi.Input[Optional[_builtins.bool]] = None,
-                 username_field: pulumi.Input[Optional[Union['CertificateProfileUsernameFieldArgs', 'CertificateProfileUsernameFieldArgsDict']]] = None,
+                 username_field: pulumi.Input[Optional[Union['CertificateProfileUsernameFieldArgs', 'CertificateProfileUsernameFieldArgsDict', 'outputs.CertificateProfileUsernameField']]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -816,7 +816,7 @@ class CertificateProfile(pulumi.CustomResource):
             block_timeout_cert: pulumi.Input[Optional[_builtins.bool]] = None,
             block_unauthenticated_cert: pulumi.Input[Optional[_builtins.bool]] = None,
             block_unknown_cert: pulumi.Input[Optional[_builtins.bool]] = None,
-            ca_certificates: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CertificateProfileCaCertificateArgs', 'CertificateProfileCaCertificateArgsDict']]]]] = None,
+            ca_certificates: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CertificateProfileCaCertificateArgs', 'CertificateProfileCaCertificateArgsDict', 'outputs.CertificateProfileCaCertificate']]]]] = None,
             cert_status_timeout: pulumi.Input[Optional[_builtins.str]] = None,
             crl_receive_timeout: pulumi.Input[Optional[_builtins.str]] = None,
             device: pulumi.Input[Optional[_builtins.str]] = None,
@@ -828,7 +828,7 @@ class CertificateProfile(pulumi.CustomResource):
             tfid: pulumi.Input[Optional[_builtins.str]] = None,
             use_crl: pulumi.Input[Optional[_builtins.bool]] = None,
             use_ocsp: pulumi.Input[Optional[_builtins.bool]] = None,
-            username_field: pulumi.Input[Optional[Union['CertificateProfileUsernameFieldArgs', 'CertificateProfileUsernameFieldArgsDict']]] = None) -> 'CertificateProfile':
+            username_field: pulumi.Input[Optional[Union['CertificateProfileUsernameFieldArgs', 'CertificateProfileUsernameFieldArgsDict', 'outputs.CertificateProfileUsernameField']]] = None) -> 'CertificateProfile':
         """
         Get an existing CertificateProfile resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.
@@ -840,7 +840,7 @@ class CertificateProfile(pulumi.CustomResource):
         :param pulumi.Input[_builtins.bool] block_timeout_cert: Block session if certificate status cannot be retrieved within timeout?
         :param pulumi.Input[_builtins.bool] block_unauthenticated_cert: Block session if the certificate was not issued to the authenticating device?
         :param pulumi.Input[_builtins.bool] block_unknown_cert: Block session if certificate status is unknown?
-        :param pulumi.Input[Sequence[pulumi.Input[Union['CertificateProfileCaCertificateArgs', 'CertificateProfileCaCertificateArgsDict']]]] ca_certificates: An ordered list of CA certificates
+        :param pulumi.Input[Sequence[pulumi.Input[Union['CertificateProfileCaCertificateArgs', 'CertificateProfileCaCertificateArgsDict', 'outputs.CertificateProfileCaCertificate']]]] ca_certificates: An ordered list of CA certificates
         :param pulumi.Input[_builtins.str] cert_status_timeout: Certificate status timeout
         :param pulumi.Input[_builtins.str] crl_receive_timeout: CRL receive timeout (seconds)
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
@@ -856,7 +856,7 @@ class CertificateProfile(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] tfid: The Terraform ID.
         :param pulumi.Input[_builtins.bool] use_crl: Use CRL?
         :param pulumi.Input[_builtins.bool] use_ocsp: Use OCSP?
-        :param pulumi.Input[Union['CertificateProfileUsernameFieldArgs', 'CertificateProfileUsernameFieldArgsDict']] username_field: Certificate username field
+        :param pulumi.Input[Union['CertificateProfileUsernameFieldArgs', 'CertificateProfileUsernameFieldArgsDict', 'outputs.CertificateProfileUsernameField']] username_field: Certificate username field
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
 

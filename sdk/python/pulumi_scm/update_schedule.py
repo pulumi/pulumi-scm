@@ -205,7 +205,7 @@ class UpdateSchedule(pulumi.CustomResource):
                  device: pulumi.Input[Optional[_builtins.str]] = None,
                  folder: pulumi.Input[Optional[_builtins.str]] = None,
                  snippet: pulumi.Input[Optional[_builtins.str]] = None,
-                 update_schedule: pulumi.Input[Optional[Union['UpdateScheduleUpdateScheduleArgs', 'UpdateScheduleUpdateScheduleArgsDict']]] = None,
+                 update_schedule: pulumi.Input[Optional[Union['UpdateScheduleUpdateScheduleArgs', 'UpdateScheduleUpdateScheduleArgsDict', 'outputs.UpdateScheduleUpdateSchedule']]] = None,
                  __props__=None):
         """
         UpdateSchedule resource
@@ -285,7 +285,7 @@ class UpdateSchedule(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
                
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-        :param pulumi.Input[Union['UpdateScheduleUpdateScheduleArgs', 'UpdateScheduleUpdateScheduleArgsDict']] update_schedule: Update schedule
+        :param pulumi.Input[Union['UpdateScheduleUpdateScheduleArgs', 'UpdateScheduleUpdateScheduleArgsDict', 'outputs.UpdateScheduleUpdateSchedule']] update_schedule: Update schedule
         """
         ...
     @overload
@@ -380,7 +380,7 @@ class UpdateSchedule(pulumi.CustomResource):
                  device: pulumi.Input[Optional[_builtins.str]] = None,
                  folder: pulumi.Input[Optional[_builtins.str]] = None,
                  snippet: pulumi.Input[Optional[_builtins.str]] = None,
-                 update_schedule: pulumi.Input[Optional[Union['UpdateScheduleUpdateScheduleArgs', 'UpdateScheduleUpdateScheduleArgsDict']]] = None,
+                 update_schedule: pulumi.Input[Optional[Union['UpdateScheduleUpdateScheduleArgs', 'UpdateScheduleUpdateScheduleArgsDict', 'outputs.UpdateScheduleUpdateSchedule']]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -409,7 +409,7 @@ class UpdateSchedule(pulumi.CustomResource):
             folder: pulumi.Input[Optional[_builtins.str]] = None,
             snippet: pulumi.Input[Optional[_builtins.str]] = None,
             tfid: pulumi.Input[Optional[_builtins.str]] = None,
-            update_schedule: pulumi.Input[Optional[Union['UpdateScheduleUpdateScheduleArgs', 'UpdateScheduleUpdateScheduleArgsDict']]] = None) -> 'UpdateSchedule':
+            update_schedule: pulumi.Input[Optional[Union['UpdateScheduleUpdateScheduleArgs', 'UpdateScheduleUpdateScheduleArgsDict', 'outputs.UpdateScheduleUpdateSchedule']]] = None) -> 'UpdateSchedule':
         """
         Get an existing UpdateSchedule resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.
@@ -425,7 +425,7 @@ class UpdateSchedule(pulumi.CustomResource):
                
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] tfid: The Terraform ID.
-        :param pulumi.Input[Union['UpdateScheduleUpdateScheduleArgs', 'UpdateScheduleUpdateScheduleArgsDict']] update_schedule: Update schedule
+        :param pulumi.Input[Union['UpdateScheduleUpdateScheduleArgs', 'UpdateScheduleUpdateScheduleArgsDict', 'outputs.UpdateScheduleUpdateSchedule']] update_schedule: Update schedule
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
 

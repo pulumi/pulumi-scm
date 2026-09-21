@@ -312,7 +312,7 @@ class TrafficSteeringRule(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 action: pulumi.Input[Optional[Union['TrafficSteeringRuleActionArgs', 'TrafficSteeringRuleActionArgsDict']]] = None,
+                 action: pulumi.Input[Optional[Union['TrafficSteeringRuleActionArgs', 'TrafficSteeringRuleActionArgsDict', 'outputs.TrafficSteeringRuleAction']]] = None,
                  categories: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  destinations: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  folder: pulumi.Input[Optional[_builtins.str]] = None,
@@ -349,7 +349,7 @@ class TrafficSteeringRule(pulumi.CustomResource):
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[Union['TrafficSteeringRuleActionArgs', 'TrafficSteeringRuleActionArgsDict']] action: Action
+        :param pulumi.Input[Union['TrafficSteeringRuleActionArgs', 'TrafficSteeringRuleActionArgsDict', 'outputs.TrafficSteeringRuleAction']] action: Action
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] categories: Category
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] destinations: Destination
         :param pulumi.Input[_builtins.str] folder: The folder containing the traffic steering rule
@@ -405,7 +405,7 @@ class TrafficSteeringRule(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 action: pulumi.Input[Optional[Union['TrafficSteeringRuleActionArgs', 'TrafficSteeringRuleActionArgsDict']]] = None,
+                 action: pulumi.Input[Optional[Union['TrafficSteeringRuleActionArgs', 'TrafficSteeringRuleActionArgsDict', 'outputs.TrafficSteeringRuleAction']]] = None,
                  categories: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  destinations: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  folder: pulumi.Input[Optional[_builtins.str]] = None,
@@ -445,7 +445,7 @@ class TrafficSteeringRule(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            action: pulumi.Input[Optional[Union['TrafficSteeringRuleActionArgs', 'TrafficSteeringRuleActionArgsDict']]] = None,
+            action: pulumi.Input[Optional[Union['TrafficSteeringRuleActionArgs', 'TrafficSteeringRuleActionArgsDict', 'outputs.TrafficSteeringRuleAction']]] = None,
             categories: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
             destinations: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
             folder: pulumi.Input[Optional[_builtins.str]] = None,
@@ -461,7 +461,7 @@ class TrafficSteeringRule(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[Union['TrafficSteeringRuleActionArgs', 'TrafficSteeringRuleActionArgsDict']] action: Action
+        :param pulumi.Input[Union['TrafficSteeringRuleActionArgs', 'TrafficSteeringRuleActionArgsDict', 'outputs.TrafficSteeringRuleAction']] action: Action
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] categories: Category
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] destinations: Destination
         :param pulumi.Input[_builtins.str] folder: The folder containing the traffic steering rule

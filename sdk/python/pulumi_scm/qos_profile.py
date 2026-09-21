@@ -266,8 +266,8 @@ class QosProfile(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 aggregate_bandwidth: pulumi.Input[Optional[Union['QosProfileAggregateBandwidthArgs', 'QosProfileAggregateBandwidthArgsDict']]] = None,
-                 class_bandwidth_type: pulumi.Input[Optional[Union['QosProfileClassBandwidthTypeArgs', 'QosProfileClassBandwidthTypeArgsDict']]] = None,
+                 aggregate_bandwidth: pulumi.Input[Optional[Union['QosProfileAggregateBandwidthArgs', 'QosProfileAggregateBandwidthArgsDict', 'outputs.QosProfileAggregateBandwidth']]] = None,
+                 class_bandwidth_type: pulumi.Input[Optional[Union['QosProfileClassBandwidthTypeArgs', 'QosProfileClassBandwidthTypeArgsDict', 'outputs.QosProfileClassBandwidthType']]] = None,
                  device: pulumi.Input[Optional[_builtins.str]] = None,
                  folder: pulumi.Input[Optional[_builtins.str]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
@@ -401,8 +401,8 @@ class QosProfile(pulumi.CustomResource):
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[Union['QosProfileAggregateBandwidthArgs', 'QosProfileAggregateBandwidthArgsDict']] aggregate_bandwidth: Aggregate bandwidth
-        :param pulumi.Input[Union['QosProfileClassBandwidthTypeArgs', 'QosProfileClassBandwidthTypeArgsDict']] class_bandwidth_type: Class bandwidth type
+        :param pulumi.Input[Union['QosProfileAggregateBandwidthArgs', 'QosProfileAggregateBandwidthArgsDict', 'outputs.QosProfileAggregateBandwidth']] aggregate_bandwidth: Aggregate bandwidth
+        :param pulumi.Input[Union['QosProfileClassBandwidthTypeArgs', 'QosProfileClassBandwidthTypeArgsDict', 'outputs.QosProfileClassBandwidthType']] class_bandwidth_type: Class bandwidth type
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
                
@@ -559,8 +559,8 @@ class QosProfile(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 aggregate_bandwidth: pulumi.Input[Optional[Union['QosProfileAggregateBandwidthArgs', 'QosProfileAggregateBandwidthArgsDict']]] = None,
-                 class_bandwidth_type: pulumi.Input[Optional[Union['QosProfileClassBandwidthTypeArgs', 'QosProfileClassBandwidthTypeArgsDict']]] = None,
+                 aggregate_bandwidth: pulumi.Input[Optional[Union['QosProfileAggregateBandwidthArgs', 'QosProfileAggregateBandwidthArgsDict', 'outputs.QosProfileAggregateBandwidth']]] = None,
+                 class_bandwidth_type: pulumi.Input[Optional[Union['QosProfileClassBandwidthTypeArgs', 'QosProfileClassBandwidthTypeArgsDict', 'outputs.QosProfileClassBandwidthType']]] = None,
                  device: pulumi.Input[Optional[_builtins.str]] = None,
                  folder: pulumi.Input[Optional[_builtins.str]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
@@ -591,8 +591,8 @@ class QosProfile(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            aggregate_bandwidth: pulumi.Input[Optional[Union['QosProfileAggregateBandwidthArgs', 'QosProfileAggregateBandwidthArgsDict']]] = None,
-            class_bandwidth_type: pulumi.Input[Optional[Union['QosProfileClassBandwidthTypeArgs', 'QosProfileClassBandwidthTypeArgsDict']]] = None,
+            aggregate_bandwidth: pulumi.Input[Optional[Union['QosProfileAggregateBandwidthArgs', 'QosProfileAggregateBandwidthArgsDict', 'outputs.QosProfileAggregateBandwidth']]] = None,
+            class_bandwidth_type: pulumi.Input[Optional[Union['QosProfileClassBandwidthTypeArgs', 'QosProfileClassBandwidthTypeArgsDict', 'outputs.QosProfileClassBandwidthType']]] = None,
             device: pulumi.Input[Optional[_builtins.str]] = None,
             folder: pulumi.Input[Optional[_builtins.str]] = None,
             name: pulumi.Input[Optional[_builtins.str]] = None,
@@ -605,8 +605,8 @@ class QosProfile(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[Union['QosProfileAggregateBandwidthArgs', 'QosProfileAggregateBandwidthArgsDict']] aggregate_bandwidth: Aggregate bandwidth
-        :param pulumi.Input[Union['QosProfileClassBandwidthTypeArgs', 'QosProfileClassBandwidthTypeArgsDict']] class_bandwidth_type: Class bandwidth type
+        :param pulumi.Input[Union['QosProfileAggregateBandwidthArgs', 'QosProfileAggregateBandwidthArgsDict', 'outputs.QosProfileAggregateBandwidth']] aggregate_bandwidth: Aggregate bandwidth
+        :param pulumi.Input[Union['QosProfileClassBandwidthTypeArgs', 'QosProfileClassBandwidthTypeArgsDict', 'outputs.QosProfileClassBandwidthType']] class_bandwidth_type: Class bandwidth type
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
                

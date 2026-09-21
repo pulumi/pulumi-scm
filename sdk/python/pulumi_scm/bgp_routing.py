@@ -254,7 +254,7 @@ class BgpRouting(pulumi.CustomResource):
                  add_host_route_to_ike_peer: pulumi.Input[Optional[_builtins.bool]] = None,
                  backbone_routing: pulumi.Input[Optional[_builtins.str]] = None,
                  outbound_routes_for_services: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 routing_preference: pulumi.Input[Optional[Union['BgpRoutingRoutingPreferenceArgs', 'BgpRoutingRoutingPreferenceArgsDict']]] = None,
+                 routing_preference: pulumi.Input[Optional[Union['BgpRoutingRoutingPreferenceArgs', 'BgpRoutingRoutingPreferenceArgsDict', 'outputs.BgpRoutingRoutingPreference']]] = None,
                  withdraw_static_route: pulumi.Input[Optional[_builtins.bool]] = None,
                  __props__=None):
         """
@@ -299,7 +299,7 @@ class BgpRouting(pulumi.CustomResource):
         :param pulumi.Input[_builtins.bool] add_host_route_to_ike_peer: Add host route to ike peer
         :param pulumi.Input[_builtins.str] backbone_routing: Backbone routing
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] outbound_routes_for_services: Outbound routes for services
-        :param pulumi.Input[Union['BgpRoutingRoutingPreferenceArgs', 'BgpRoutingRoutingPreferenceArgsDict']] routing_preference: Routing preference
+        :param pulumi.Input[Union['BgpRoutingRoutingPreferenceArgs', 'BgpRoutingRoutingPreferenceArgsDict', 'outputs.BgpRoutingRoutingPreference']] routing_preference: Routing preference
         :param pulumi.Input[_builtins.bool] withdraw_static_route: Withdraw static route
         """
         ...
@@ -363,7 +363,7 @@ class BgpRouting(pulumi.CustomResource):
                  add_host_route_to_ike_peer: pulumi.Input[Optional[_builtins.bool]] = None,
                  backbone_routing: pulumi.Input[Optional[_builtins.str]] = None,
                  outbound_routes_for_services: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 routing_preference: pulumi.Input[Optional[Union['BgpRoutingRoutingPreferenceArgs', 'BgpRoutingRoutingPreferenceArgsDict']]] = None,
+                 routing_preference: pulumi.Input[Optional[Union['BgpRoutingRoutingPreferenceArgs', 'BgpRoutingRoutingPreferenceArgsDict', 'outputs.BgpRoutingRoutingPreference']]] = None,
                  withdraw_static_route: pulumi.Input[Optional[_builtins.bool]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
@@ -395,7 +395,7 @@ class BgpRouting(pulumi.CustomResource):
             add_host_route_to_ike_peer: pulumi.Input[Optional[_builtins.bool]] = None,
             backbone_routing: pulumi.Input[Optional[_builtins.str]] = None,
             outbound_routes_for_services: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
-            routing_preference: pulumi.Input[Optional[Union['BgpRoutingRoutingPreferenceArgs', 'BgpRoutingRoutingPreferenceArgsDict']]] = None,
+            routing_preference: pulumi.Input[Optional[Union['BgpRoutingRoutingPreferenceArgs', 'BgpRoutingRoutingPreferenceArgsDict', 'outputs.BgpRoutingRoutingPreference']]] = None,
             tfid: pulumi.Input[Optional[_builtins.str]] = None,
             withdraw_static_route: pulumi.Input[Optional[_builtins.bool]] = None) -> 'BgpRouting':
         """
@@ -409,7 +409,7 @@ class BgpRouting(pulumi.CustomResource):
         :param pulumi.Input[_builtins.bool] add_host_route_to_ike_peer: Add host route to ike peer
         :param pulumi.Input[_builtins.str] backbone_routing: Backbone routing
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] outbound_routes_for_services: Outbound routes for services
-        :param pulumi.Input[Union['BgpRoutingRoutingPreferenceArgs', 'BgpRoutingRoutingPreferenceArgsDict']] routing_preference: Routing preference
+        :param pulumi.Input[Union['BgpRoutingRoutingPreferenceArgs', 'BgpRoutingRoutingPreferenceArgsDict', 'outputs.BgpRoutingRoutingPreference']] routing_preference: Routing preference
         :param pulumi.Input[_builtins.str] tfid: The Terraform ID.
         :param pulumi.Input[_builtins.bool] withdraw_static_route: Withdraw static route
         """

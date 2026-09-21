@@ -348,7 +348,7 @@ class AddressGroup(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None,
                  description: pulumi.Input[Optional[_builtins.str]] = None,
                  device: pulumi.Input[Optional[_builtins.str]] = None,
-                 dynamic: pulumi.Input[Optional[Union['AddressGroupDynamicArgs', 'AddressGroupDynamicArgsDict']]] = None,
+                 dynamic: pulumi.Input[Optional[Union['AddressGroupDynamicArgs', 'AddressGroupDynamicArgsDict', 'outputs.AddressGroupDynamic']]] = None,
                  folder: pulumi.Input[Optional[_builtins.str]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
                  snippet: pulumi.Input[Optional[_builtins.str]] = None,
@@ -433,7 +433,7 @@ class AddressGroup(pulumi.CustomResource):
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] description: Description
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
-        :param pulumi.Input[Union['AddressGroupDynamicArgs', 'AddressGroupDynamicArgsDict']] dynamic: Dynamic
+        :param pulumi.Input[Union['AddressGroupDynamicArgs', 'AddressGroupDynamicArgsDict', 'outputs.AddressGroupDynamic']] dynamic: Dynamic
                
                > ℹ️ **Note:** You must specify exactly one of `dynamic` and `static`.
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
@@ -545,7 +545,7 @@ class AddressGroup(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None,
                  description: pulumi.Input[Optional[_builtins.str]] = None,
                  device: pulumi.Input[Optional[_builtins.str]] = None,
-                 dynamic: pulumi.Input[Optional[Union['AddressGroupDynamicArgs', 'AddressGroupDynamicArgsDict']]] = None,
+                 dynamic: pulumi.Input[Optional[Union['AddressGroupDynamicArgs', 'AddressGroupDynamicArgsDict', 'outputs.AddressGroupDynamic']]] = None,
                  folder: pulumi.Input[Optional[_builtins.str]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
                  snippet: pulumi.Input[Optional[_builtins.str]] = None,
@@ -581,7 +581,7 @@ class AddressGroup(pulumi.CustomResource):
             opts: Optional[pulumi.ResourceOptions] = None,
             description: pulumi.Input[Optional[_builtins.str]] = None,
             device: pulumi.Input[Optional[_builtins.str]] = None,
-            dynamic: pulumi.Input[Optional[Union['AddressGroupDynamicArgs', 'AddressGroupDynamicArgsDict']]] = None,
+            dynamic: pulumi.Input[Optional[Union['AddressGroupDynamicArgs', 'AddressGroupDynamicArgsDict', 'outputs.AddressGroupDynamic']]] = None,
             folder: pulumi.Input[Optional[_builtins.str]] = None,
             name: pulumi.Input[Optional[_builtins.str]] = None,
             snippet: pulumi.Input[Optional[_builtins.str]] = None,
@@ -597,7 +597,7 @@ class AddressGroup(pulumi.CustomResource):
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] description: Description
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
-        :param pulumi.Input[Union['AddressGroupDynamicArgs', 'AddressGroupDynamicArgsDict']] dynamic: Dynamic
+        :param pulumi.Input[Union['AddressGroupDynamicArgs', 'AddressGroupDynamicArgsDict', 'outputs.AddressGroupDynamic']] dynamic: Dynamic
                
                > ℹ️ **Note:** You must specify exactly one of `dynamic` and `static`.
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined

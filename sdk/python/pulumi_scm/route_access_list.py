@@ -271,7 +271,7 @@ class RouteAccessList(pulumi.CustomResource):
                  folder: pulumi.Input[Optional[_builtins.str]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
                  snippet: pulumi.Input[Optional[_builtins.str]] = None,
-                 type: pulumi.Input[Optional[Union['RouteAccessListTypeArgs', 'RouteAccessListTypeArgsDict']]] = None,
+                 type: pulumi.Input[Optional[Union['RouteAccessListTypeArgs', 'RouteAccessListTypeArgsDict', 'outputs.RouteAccessListType']]] = None,
                  __props__=None):
         """
         RouteAccessList resource
@@ -310,7 +310,7 @@ class RouteAccessList(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
                
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-        :param pulumi.Input[Union['RouteAccessListTypeArgs', 'RouteAccessListTypeArgsDict']] type: Type
+        :param pulumi.Input[Union['RouteAccessListTypeArgs', 'RouteAccessListTypeArgsDict', 'outputs.RouteAccessListType']] type: Type
         """
         ...
     @overload
@@ -364,7 +364,7 @@ class RouteAccessList(pulumi.CustomResource):
                  folder: pulumi.Input[Optional[_builtins.str]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
                  snippet: pulumi.Input[Optional[_builtins.str]] = None,
-                 type: pulumi.Input[Optional[Union['RouteAccessListTypeArgs', 'RouteAccessListTypeArgsDict']]] = None,
+                 type: pulumi.Input[Optional[Union['RouteAccessListTypeArgs', 'RouteAccessListTypeArgsDict', 'outputs.RouteAccessListType']]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -397,7 +397,7 @@ class RouteAccessList(pulumi.CustomResource):
             name: pulumi.Input[Optional[_builtins.str]] = None,
             snippet: pulumi.Input[Optional[_builtins.str]] = None,
             tfid: pulumi.Input[Optional[_builtins.str]] = None,
-            type: pulumi.Input[Optional[Union['RouteAccessListTypeArgs', 'RouteAccessListTypeArgsDict']]] = None) -> 'RouteAccessList':
+            type: pulumi.Input[Optional[Union['RouteAccessListTypeArgs', 'RouteAccessListTypeArgsDict', 'outputs.RouteAccessListType']]] = None) -> 'RouteAccessList':
         """
         Get an existing RouteAccessList resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.
@@ -415,7 +415,7 @@ class RouteAccessList(pulumi.CustomResource):
                
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] tfid: The Terraform ID.
-        :param pulumi.Input[Union['RouteAccessListTypeArgs', 'RouteAccessListTypeArgsDict']] type: Type
+        :param pulumi.Input[Union['RouteAccessListTypeArgs', 'RouteAccessListTypeArgsDict', 'outputs.RouteAccessListType']] type: Type
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
 

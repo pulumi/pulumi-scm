@@ -575,15 +575,15 @@ class EthernetInterface(pulumi.CustomResource):
                  default_value: pulumi.Input[Optional[_builtins.str]] = None,
                  device: pulumi.Input[Optional[_builtins.str]] = None,
                  folder: pulumi.Input[Optional[_builtins.str]] = None,
-                 layer2: pulumi.Input[Optional[Union['EthernetInterfaceLayer2Args', 'EthernetInterfaceLayer2ArgsDict']]] = None,
-                 layer3: pulumi.Input[Optional[Union['EthernetInterfaceLayer3Args', 'EthernetInterfaceLayer3ArgsDict']]] = None,
+                 layer2: pulumi.Input[Optional[Union['EthernetInterfaceLayer2Args', 'EthernetInterfaceLayer2ArgsDict', 'outputs.EthernetInterfaceLayer2']]] = None,
+                 layer3: pulumi.Input[Optional[Union['EthernetInterfaceLayer3Args', 'EthernetInterfaceLayer3ArgsDict', 'outputs.EthernetInterfaceLayer3']]] = None,
                  link_duplex: pulumi.Input[Optional[_builtins.str]] = None,
                  link_speed: pulumi.Input[Optional[_builtins.str]] = None,
                  link_state: pulumi.Input[Optional[_builtins.str]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
-                 poe: pulumi.Input[Optional[Union['EthernetInterfacePoeArgs', 'EthernetInterfacePoeArgsDict']]] = None,
+                 poe: pulumi.Input[Optional[Union['EthernetInterfacePoeArgs', 'EthernetInterfacePoeArgsDict', 'outputs.EthernetInterfacePoe']]] = None,
                  snippet: pulumi.Input[Optional[_builtins.str]] = None,
-                 tap: pulumi.Input[Optional[Union['EthernetInterfaceTapArgs', 'EthernetInterfaceTapArgsDict']]] = None,
+                 tap: pulumi.Input[Optional[Union['EthernetInterfaceTapArgs', 'EthernetInterfaceTapArgsDict', 'outputs.EthernetInterfaceTap']]] = None,
                  __props__=None):
         """
         EthernetInterface resource
@@ -755,21 +755,21 @@ class EthernetInterface(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
                
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-        :param pulumi.Input[Union['EthernetInterfaceLayer2Args', 'EthernetInterfaceLayer2ArgsDict']] layer2: Layer2
+        :param pulumi.Input[Union['EthernetInterfaceLayer2Args', 'EthernetInterfaceLayer2ArgsDict', 'outputs.EthernetInterfaceLayer2']] layer2: Layer2
                
                > ℹ️ **Note:** You must specify exactly one of `aggregate_group`, `layer2`, `layer3`, and `tap`.
-        :param pulumi.Input[Union['EthernetInterfaceLayer3Args', 'EthernetInterfaceLayer3ArgsDict']] layer3: Ethernet Interface Layer 3 configuration
+        :param pulumi.Input[Union['EthernetInterfaceLayer3Args', 'EthernetInterfaceLayer3ArgsDict', 'outputs.EthernetInterfaceLayer3']] layer3: Ethernet Interface Layer 3 configuration
                
                > ℹ️ **Note:** You must specify exactly one of `aggregate_group`, `layer2`, `layer3`, and `tap`.
         :param pulumi.Input[_builtins.str] link_duplex: Link duplex
         :param pulumi.Input[_builtins.str] link_speed: Link speed
         :param pulumi.Input[_builtins.str] link_state: Link state
         :param pulumi.Input[_builtins.str] name: Interface name
-        :param pulumi.Input[Union['EthernetInterfacePoeArgs', 'EthernetInterfacePoeArgsDict']] poe: Poe
+        :param pulumi.Input[Union['EthernetInterfacePoeArgs', 'EthernetInterfacePoeArgsDict', 'outputs.EthernetInterfacePoe']] poe: Poe
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
                
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-        :param pulumi.Input[Union['EthernetInterfaceTapArgs', 'EthernetInterfaceTapArgsDict']] tap: Tap
+        :param pulumi.Input[Union['EthernetInterfaceTapArgs', 'EthernetInterfaceTapArgsDict', 'outputs.EthernetInterfaceTap']] tap: Tap
                
                > ℹ️ **Note:** You must specify exactly one of `aggregate_group`, `layer2`, `layer3`, and `tap`.
         """
@@ -958,15 +958,15 @@ class EthernetInterface(pulumi.CustomResource):
                  default_value: pulumi.Input[Optional[_builtins.str]] = None,
                  device: pulumi.Input[Optional[_builtins.str]] = None,
                  folder: pulumi.Input[Optional[_builtins.str]] = None,
-                 layer2: pulumi.Input[Optional[Union['EthernetInterfaceLayer2Args', 'EthernetInterfaceLayer2ArgsDict']]] = None,
-                 layer3: pulumi.Input[Optional[Union['EthernetInterfaceLayer3Args', 'EthernetInterfaceLayer3ArgsDict']]] = None,
+                 layer2: pulumi.Input[Optional[Union['EthernetInterfaceLayer2Args', 'EthernetInterfaceLayer2ArgsDict', 'outputs.EthernetInterfaceLayer2']]] = None,
+                 layer3: pulumi.Input[Optional[Union['EthernetInterfaceLayer3Args', 'EthernetInterfaceLayer3ArgsDict', 'outputs.EthernetInterfaceLayer3']]] = None,
                  link_duplex: pulumi.Input[Optional[_builtins.str]] = None,
                  link_speed: pulumi.Input[Optional[_builtins.str]] = None,
                  link_state: pulumi.Input[Optional[_builtins.str]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
-                 poe: pulumi.Input[Optional[Union['EthernetInterfacePoeArgs', 'EthernetInterfacePoeArgsDict']]] = None,
+                 poe: pulumi.Input[Optional[Union['EthernetInterfacePoeArgs', 'EthernetInterfacePoeArgsDict', 'outputs.EthernetInterfacePoe']]] = None,
                  snippet: pulumi.Input[Optional[_builtins.str]] = None,
-                 tap: pulumi.Input[Optional[Union['EthernetInterfaceTapArgs', 'EthernetInterfaceTapArgsDict']]] = None,
+                 tap: pulumi.Input[Optional[Union['EthernetInterfaceTapArgs', 'EthernetInterfaceTapArgsDict', 'outputs.EthernetInterfaceTap']]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -1010,15 +1010,15 @@ class EthernetInterface(pulumi.CustomResource):
             device: pulumi.Input[Optional[_builtins.str]] = None,
             encrypted_values: pulumi.Input[Optional[Mapping[str, pulumi.Input[_builtins.str]]]] = None,
             folder: pulumi.Input[Optional[_builtins.str]] = None,
-            layer2: pulumi.Input[Optional[Union['EthernetInterfaceLayer2Args', 'EthernetInterfaceLayer2ArgsDict']]] = None,
-            layer3: pulumi.Input[Optional[Union['EthernetInterfaceLayer3Args', 'EthernetInterfaceLayer3ArgsDict']]] = None,
+            layer2: pulumi.Input[Optional[Union['EthernetInterfaceLayer2Args', 'EthernetInterfaceLayer2ArgsDict', 'outputs.EthernetInterfaceLayer2']]] = None,
+            layer3: pulumi.Input[Optional[Union['EthernetInterfaceLayer3Args', 'EthernetInterfaceLayer3ArgsDict', 'outputs.EthernetInterfaceLayer3']]] = None,
             link_duplex: pulumi.Input[Optional[_builtins.str]] = None,
             link_speed: pulumi.Input[Optional[_builtins.str]] = None,
             link_state: pulumi.Input[Optional[_builtins.str]] = None,
             name: pulumi.Input[Optional[_builtins.str]] = None,
-            poe: pulumi.Input[Optional[Union['EthernetInterfacePoeArgs', 'EthernetInterfacePoeArgsDict']]] = None,
+            poe: pulumi.Input[Optional[Union['EthernetInterfacePoeArgs', 'EthernetInterfacePoeArgsDict', 'outputs.EthernetInterfacePoe']]] = None,
             snippet: pulumi.Input[Optional[_builtins.str]] = None,
-            tap: pulumi.Input[Optional[Union['EthernetInterfaceTapArgs', 'EthernetInterfaceTapArgsDict']]] = None,
+            tap: pulumi.Input[Optional[Union['EthernetInterfaceTapArgs', 'EthernetInterfaceTapArgsDict', 'outputs.EthernetInterfaceTap']]] = None,
             tfid: pulumi.Input[Optional[_builtins.str]] = None) -> 'EthernetInterface':
         """
         Get an existing EthernetInterface resource's state with the given name, id, and optional extra
@@ -1037,21 +1037,21 @@ class EthernetInterface(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
                
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-        :param pulumi.Input[Union['EthernetInterfaceLayer2Args', 'EthernetInterfaceLayer2ArgsDict']] layer2: Layer2
+        :param pulumi.Input[Union['EthernetInterfaceLayer2Args', 'EthernetInterfaceLayer2ArgsDict', 'outputs.EthernetInterfaceLayer2']] layer2: Layer2
                
                > ℹ️ **Note:** You must specify exactly one of `aggregate_group`, `layer2`, `layer3`, and `tap`.
-        :param pulumi.Input[Union['EthernetInterfaceLayer3Args', 'EthernetInterfaceLayer3ArgsDict']] layer3: Ethernet Interface Layer 3 configuration
+        :param pulumi.Input[Union['EthernetInterfaceLayer3Args', 'EthernetInterfaceLayer3ArgsDict', 'outputs.EthernetInterfaceLayer3']] layer3: Ethernet Interface Layer 3 configuration
                
                > ℹ️ **Note:** You must specify exactly one of `aggregate_group`, `layer2`, `layer3`, and `tap`.
         :param pulumi.Input[_builtins.str] link_duplex: Link duplex
         :param pulumi.Input[_builtins.str] link_speed: Link speed
         :param pulumi.Input[_builtins.str] link_state: Link state
         :param pulumi.Input[_builtins.str] name: Interface name
-        :param pulumi.Input[Union['EthernetInterfacePoeArgs', 'EthernetInterfacePoeArgsDict']] poe: Poe
+        :param pulumi.Input[Union['EthernetInterfacePoeArgs', 'EthernetInterfacePoeArgsDict', 'outputs.EthernetInterfacePoe']] poe: Poe
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
                
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-        :param pulumi.Input[Union['EthernetInterfaceTapArgs', 'EthernetInterfaceTapArgsDict']] tap: Tap
+        :param pulumi.Input[Union['EthernetInterfaceTapArgs', 'EthernetInterfaceTapArgsDict', 'outputs.EthernetInterfaceTap']] tap: Tap
                
                > ℹ️ **Note:** You must specify exactly one of `aggregate_group`, `layer2`, `layer3`, and `tap`.
         :param pulumi.Input[_builtins.str] tfid: The Terraform ID.

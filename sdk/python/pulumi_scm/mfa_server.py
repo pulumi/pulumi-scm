@@ -284,7 +284,7 @@ class MfaServer(pulumi.CustomResource):
                  device: pulumi.Input[Optional[_builtins.str]] = None,
                  folder: pulumi.Input[Optional[_builtins.str]] = None,
                  mfa_cert_profile: pulumi.Input[Optional[_builtins.str]] = None,
-                 mfa_vendor_type: pulumi.Input[Optional[Union['MfaServerMfaVendorTypeArgs', 'MfaServerMfaVendorTypeArgsDict']]] = None,
+                 mfa_vendor_type: pulumi.Input[Optional[Union['MfaServerMfaVendorTypeArgs', 'MfaServerMfaVendorTypeArgsDict', 'outputs.MfaServerMfaVendorType']]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
                  snippet: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
@@ -321,7 +321,7 @@ class MfaServer(pulumi.CustomResource):
                
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] mfa_cert_profile: The MFA server certificate profile
-        :param pulumi.Input[Union['MfaServerMfaVendorTypeArgs', 'MfaServerMfaVendorTypeArgsDict']] mfa_vendor_type: The MFA vendor type
+        :param pulumi.Input[Union['MfaServerMfaVendorTypeArgs', 'MfaServerMfaVendorTypeArgsDict', 'outputs.MfaServerMfaVendorType']] mfa_vendor_type: The MFA vendor type
         :param pulumi.Input[_builtins.str] name: The name of the MFA server profile
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
                
@@ -377,7 +377,7 @@ class MfaServer(pulumi.CustomResource):
                  device: pulumi.Input[Optional[_builtins.str]] = None,
                  folder: pulumi.Input[Optional[_builtins.str]] = None,
                  mfa_cert_profile: pulumi.Input[Optional[_builtins.str]] = None,
-                 mfa_vendor_type: pulumi.Input[Optional[Union['MfaServerMfaVendorTypeArgs', 'MfaServerMfaVendorTypeArgsDict']]] = None,
+                 mfa_vendor_type: pulumi.Input[Optional[Union['MfaServerMfaVendorTypeArgs', 'MfaServerMfaVendorTypeArgsDict', 'outputs.MfaServerMfaVendorType']]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
                  snippet: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
@@ -415,7 +415,7 @@ class MfaServer(pulumi.CustomResource):
             encrypted_values: pulumi.Input[Optional[Mapping[str, pulumi.Input[_builtins.str]]]] = None,
             folder: pulumi.Input[Optional[_builtins.str]] = None,
             mfa_cert_profile: pulumi.Input[Optional[_builtins.str]] = None,
-            mfa_vendor_type: pulumi.Input[Optional[Union['MfaServerMfaVendorTypeArgs', 'MfaServerMfaVendorTypeArgsDict']]] = None,
+            mfa_vendor_type: pulumi.Input[Optional[Union['MfaServerMfaVendorTypeArgs', 'MfaServerMfaVendorTypeArgsDict', 'outputs.MfaServerMfaVendorType']]] = None,
             name: pulumi.Input[Optional[_builtins.str]] = None,
             snippet: pulumi.Input[Optional[_builtins.str]] = None,
             tfid: pulumi.Input[Optional[_builtins.str]] = None) -> 'MfaServer':
@@ -432,7 +432,7 @@ class MfaServer(pulumi.CustomResource):
                
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] mfa_cert_profile: The MFA server certificate profile
-        :param pulumi.Input[Union['MfaServerMfaVendorTypeArgs', 'MfaServerMfaVendorTypeArgsDict']] mfa_vendor_type: The MFA vendor type
+        :param pulumi.Input[Union['MfaServerMfaVendorTypeArgs', 'MfaServerMfaVendorTypeArgsDict', 'outputs.MfaServerMfaVendorType']] mfa_vendor_type: The MFA vendor type
         :param pulumi.Input[_builtins.str] name: The name of the MFA server profile
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
                

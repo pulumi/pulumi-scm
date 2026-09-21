@@ -187,7 +187,7 @@ class BandwidthAllocation(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None,
                  allocated_bandwidth: pulumi.Input[Optional[_builtins.int]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
-                 qos: pulumi.Input[Optional[Union['BandwidthAllocationQosArgs', 'BandwidthAllocationQosArgsDict']]] = None,
+                 qos: pulumi.Input[Optional[Union['BandwidthAllocationQosArgs', 'BandwidthAllocationQosArgsDict', 'outputs.BandwidthAllocationQos']]] = None,
                  spn_name_lists: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  __props__=None):
         """
@@ -237,7 +237,7 @@ class BandwidthAllocation(pulumi.CustomResource):
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.int] allocated_bandwidth: bandwidth to allocate in Mbps
         :param pulumi.Input[_builtins.str] name: name of the aggregated bandwidth region
-        :param pulumi.Input[Union['BandwidthAllocationQosArgs', 'BandwidthAllocationQosArgsDict']] qos: Qos
+        :param pulumi.Input[Union['BandwidthAllocationQosArgs', 'BandwidthAllocationQosArgsDict', 'outputs.BandwidthAllocationQos']] qos: Qos
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] spn_name_lists: Spn name list
         """
         ...
@@ -306,7 +306,7 @@ class BandwidthAllocation(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None,
                  allocated_bandwidth: pulumi.Input[Optional[_builtins.int]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
-                 qos: pulumi.Input[Optional[Union['BandwidthAllocationQosArgs', 'BandwidthAllocationQosArgsDict']]] = None,
+                 qos: pulumi.Input[Optional[Union['BandwidthAllocationQosArgs', 'BandwidthAllocationQosArgsDict', 'outputs.BandwidthAllocationQos']]] = None,
                  spn_name_lists: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
@@ -336,7 +336,7 @@ class BandwidthAllocation(pulumi.CustomResource):
             opts: Optional[pulumi.ResourceOptions] = None,
             allocated_bandwidth: pulumi.Input[Optional[_builtins.int]] = None,
             name: pulumi.Input[Optional[_builtins.str]] = None,
-            qos: pulumi.Input[Optional[Union['BandwidthAllocationQosArgs', 'BandwidthAllocationQosArgsDict']]] = None,
+            qos: pulumi.Input[Optional[Union['BandwidthAllocationQosArgs', 'BandwidthAllocationQosArgsDict', 'outputs.BandwidthAllocationQos']]] = None,
             spn_name_lists: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
             tfid: pulumi.Input[Optional[_builtins.str]] = None) -> 'BandwidthAllocation':
         """
@@ -348,7 +348,7 @@ class BandwidthAllocation(pulumi.CustomResource):
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.int] allocated_bandwidth: bandwidth to allocate in Mbps
         :param pulumi.Input[_builtins.str] name: name of the aggregated bandwidth region
-        :param pulumi.Input[Union['BandwidthAllocationQosArgs', 'BandwidthAllocationQosArgsDict']] qos: Qos
+        :param pulumi.Input[Union['BandwidthAllocationQosArgs', 'BandwidthAllocationQosArgsDict', 'outputs.BandwidthAllocationQos']] qos: Qos
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] spn_name_lists: Spn name list
         :param pulumi.Input[_builtins.str] tfid: The Terraform ID.
         """

@@ -204,7 +204,7 @@ class GeneralSetting(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None,
                  device: pulumi.Input[Optional[_builtins.str]] = None,
                  folder: pulumi.Input[Optional[_builtins.str]] = None,
-                 general: pulumi.Input[Optional[Union['GeneralSettingGeneralArgs', 'GeneralSettingGeneralArgsDict']]] = None,
+                 general: pulumi.Input[Optional[Union['GeneralSettingGeneralArgs', 'GeneralSettingGeneralArgsDict', 'outputs.GeneralSettingGeneral']]] = None,
                  snippet: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
@@ -269,7 +269,7 @@ class GeneralSetting(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
                
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-        :param pulumi.Input[Union['GeneralSettingGeneralArgs', 'GeneralSettingGeneralArgsDict']] general: General
+        :param pulumi.Input[Union['GeneralSettingGeneralArgs', 'GeneralSettingGeneralArgsDict', 'outputs.GeneralSettingGeneral']] general: General
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
                
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
@@ -353,7 +353,7 @@ class GeneralSetting(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None,
                  device: pulumi.Input[Optional[_builtins.str]] = None,
                  folder: pulumi.Input[Optional[_builtins.str]] = None,
-                 general: pulumi.Input[Optional[Union['GeneralSettingGeneralArgs', 'GeneralSettingGeneralArgsDict']]] = None,
+                 general: pulumi.Input[Optional[Union['GeneralSettingGeneralArgs', 'GeneralSettingGeneralArgsDict', 'outputs.GeneralSettingGeneral']]] = None,
                  snippet: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
@@ -381,7 +381,7 @@ class GeneralSetting(pulumi.CustomResource):
             opts: Optional[pulumi.ResourceOptions] = None,
             device: pulumi.Input[Optional[_builtins.str]] = None,
             folder: pulumi.Input[Optional[_builtins.str]] = None,
-            general: pulumi.Input[Optional[Union['GeneralSettingGeneralArgs', 'GeneralSettingGeneralArgsDict']]] = None,
+            general: pulumi.Input[Optional[Union['GeneralSettingGeneralArgs', 'GeneralSettingGeneralArgsDict', 'outputs.GeneralSettingGeneral']]] = None,
             snippet: pulumi.Input[Optional[_builtins.str]] = None,
             tfid: pulumi.Input[Optional[_builtins.str]] = None) -> 'GeneralSetting':
         """
@@ -395,7 +395,7 @@ class GeneralSetting(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
                
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-        :param pulumi.Input[Union['GeneralSettingGeneralArgs', 'GeneralSettingGeneralArgsDict']] general: General
+        :param pulumi.Input[Union['GeneralSettingGeneralArgs', 'GeneralSettingGeneralArgsDict', 'outputs.GeneralSettingGeneral']] general: General
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
                
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.

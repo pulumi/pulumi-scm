@@ -1069,7 +1069,7 @@ class Application(pulumi.CustomResource):
                  category: pulumi.Input[Optional[_builtins.str]] = None,
                  consume_big_bandwidth: pulumi.Input[Optional[_builtins.bool]] = None,
                  data_ident: pulumi.Input[Optional[_builtins.bool]] = None,
-                 default: pulumi.Input[Optional[Union['ApplicationDefaultArgs', 'ApplicationDefaultArgsDict']]] = None,
+                 default: pulumi.Input[Optional[Union['ApplicationDefaultArgs', 'ApplicationDefaultArgsDict', 'outputs.ApplicationDefault']]] = None,
                  description: pulumi.Input[Optional[_builtins.str]] = None,
                  device: pulumi.Input[Optional[_builtins.str]] = None,
                  evasive_behavior: pulumi.Input[Optional[_builtins.bool]] = None,
@@ -1082,7 +1082,7 @@ class Application(pulumi.CustomResource):
                  pervasive_use: pulumi.Input[Optional[_builtins.bool]] = None,
                  prone_to_misuse: pulumi.Input[Optional[_builtins.bool]] = None,
                  risk: pulumi.Input[Optional[_builtins.str]] = None,
-                 signatures: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ApplicationSignatureArgs', 'ApplicationSignatureArgsDict']]]]] = None,
+                 signatures: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ApplicationSignatureArgs', 'ApplicationSignatureArgsDict', 'outputs.ApplicationSignature']]]]] = None,
                  snippet: pulumi.Input[Optional[_builtins.str]] = None,
                  subcategory: pulumi.Input[Optional[_builtins.str]] = None,
                  tcp_half_closed_timeout: pulumi.Input[Optional[_builtins.int]] = None,
@@ -1197,7 +1197,7 @@ class Application(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] category: Category
         :param pulumi.Input[_builtins.bool] consume_big_bandwidth: Consume big bandwidth
         :param pulumi.Input[_builtins.bool] data_ident: Data ident
-        :param pulumi.Input[Union['ApplicationDefaultArgs', 'ApplicationDefaultArgsDict']] default: Default
+        :param pulumi.Input[Union['ApplicationDefaultArgs', 'ApplicationDefaultArgsDict', 'outputs.ApplicationDefault']] default: Default
         :param pulumi.Input[_builtins.str] description: Description
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input[_builtins.bool] evasive_behavior: Evasive behavior
@@ -1212,7 +1212,7 @@ class Application(pulumi.CustomResource):
         :param pulumi.Input[_builtins.bool] pervasive_use: Pervasive use
         :param pulumi.Input[_builtins.bool] prone_to_misuse: Prone to misuse
         :param pulumi.Input[_builtins.str] risk: Risk
-        :param pulumi.Input[Sequence[pulumi.Input[Union['ApplicationSignatureArgs', 'ApplicationSignatureArgsDict']]]] signatures: Signature
+        :param pulumi.Input[Sequence[pulumi.Input[Union['ApplicationSignatureArgs', 'ApplicationSignatureArgsDict', 'outputs.ApplicationSignature']]]] signatures: Signature
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
                
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
@@ -1348,7 +1348,7 @@ class Application(pulumi.CustomResource):
                  category: pulumi.Input[Optional[_builtins.str]] = None,
                  consume_big_bandwidth: pulumi.Input[Optional[_builtins.bool]] = None,
                  data_ident: pulumi.Input[Optional[_builtins.bool]] = None,
-                 default: pulumi.Input[Optional[Union['ApplicationDefaultArgs', 'ApplicationDefaultArgsDict']]] = None,
+                 default: pulumi.Input[Optional[Union['ApplicationDefaultArgs', 'ApplicationDefaultArgsDict', 'outputs.ApplicationDefault']]] = None,
                  description: pulumi.Input[Optional[_builtins.str]] = None,
                  device: pulumi.Input[Optional[_builtins.str]] = None,
                  evasive_behavior: pulumi.Input[Optional[_builtins.bool]] = None,
@@ -1361,7 +1361,7 @@ class Application(pulumi.CustomResource):
                  pervasive_use: pulumi.Input[Optional[_builtins.bool]] = None,
                  prone_to_misuse: pulumi.Input[Optional[_builtins.bool]] = None,
                  risk: pulumi.Input[Optional[_builtins.str]] = None,
-                 signatures: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ApplicationSignatureArgs', 'ApplicationSignatureArgsDict']]]]] = None,
+                 signatures: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ApplicationSignatureArgs', 'ApplicationSignatureArgsDict', 'outputs.ApplicationSignature']]]]] = None,
                  snippet: pulumi.Input[Optional[_builtins.str]] = None,
                  subcategory: pulumi.Input[Optional[_builtins.str]] = None,
                  tcp_half_closed_timeout: pulumi.Input[Optional[_builtins.int]] = None,
@@ -1434,7 +1434,7 @@ class Application(pulumi.CustomResource):
             category: pulumi.Input[Optional[_builtins.str]] = None,
             consume_big_bandwidth: pulumi.Input[Optional[_builtins.bool]] = None,
             data_ident: pulumi.Input[Optional[_builtins.bool]] = None,
-            default: pulumi.Input[Optional[Union['ApplicationDefaultArgs', 'ApplicationDefaultArgsDict']]] = None,
+            default: pulumi.Input[Optional[Union['ApplicationDefaultArgs', 'ApplicationDefaultArgsDict', 'outputs.ApplicationDefault']]] = None,
             description: pulumi.Input[Optional[_builtins.str]] = None,
             device: pulumi.Input[Optional[_builtins.str]] = None,
             evasive_behavior: pulumi.Input[Optional[_builtins.bool]] = None,
@@ -1447,7 +1447,7 @@ class Application(pulumi.CustomResource):
             pervasive_use: pulumi.Input[Optional[_builtins.bool]] = None,
             prone_to_misuse: pulumi.Input[Optional[_builtins.bool]] = None,
             risk: pulumi.Input[Optional[_builtins.str]] = None,
-            signatures: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ApplicationSignatureArgs', 'ApplicationSignatureArgsDict']]]]] = None,
+            signatures: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ApplicationSignatureArgs', 'ApplicationSignatureArgsDict', 'outputs.ApplicationSignature']]]]] = None,
             snippet: pulumi.Input[Optional[_builtins.str]] = None,
             subcategory: pulumi.Input[Optional[_builtins.str]] = None,
             tcp_half_closed_timeout: pulumi.Input[Optional[_builtins.int]] = None,
@@ -1473,7 +1473,7 @@ class Application(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] category: Category
         :param pulumi.Input[_builtins.bool] consume_big_bandwidth: Consume big bandwidth
         :param pulumi.Input[_builtins.bool] data_ident: Data ident
-        :param pulumi.Input[Union['ApplicationDefaultArgs', 'ApplicationDefaultArgsDict']] default: Default
+        :param pulumi.Input[Union['ApplicationDefaultArgs', 'ApplicationDefaultArgsDict', 'outputs.ApplicationDefault']] default: Default
         :param pulumi.Input[_builtins.str] description: Description
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input[_builtins.bool] evasive_behavior: Evasive behavior
@@ -1488,7 +1488,7 @@ class Application(pulumi.CustomResource):
         :param pulumi.Input[_builtins.bool] pervasive_use: Pervasive use
         :param pulumi.Input[_builtins.bool] prone_to_misuse: Prone to misuse
         :param pulumi.Input[_builtins.str] risk: Risk
-        :param pulumi.Input[Sequence[pulumi.Input[Union['ApplicationSignatureArgs', 'ApplicationSignatureArgsDict']]]] signatures: Signature
+        :param pulumi.Input[Sequence[pulumi.Input[Union['ApplicationSignatureArgs', 'ApplicationSignatureArgsDict', 'outputs.ApplicationSignature']]]] signatures: Signature
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
                
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.

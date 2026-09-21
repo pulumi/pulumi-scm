@@ -268,7 +268,7 @@ class SdwanTrafficDistributionProfile(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None,
                  device: pulumi.Input[Optional[_builtins.str]] = None,
                  folder: pulumi.Input[Optional[_builtins.str]] = None,
-                 link_tags: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SdwanTrafficDistributionProfileLinkTagArgs', 'SdwanTrafficDistributionProfileLinkTagArgsDict']]]]] = None,
+                 link_tags: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SdwanTrafficDistributionProfileLinkTagArgs', 'SdwanTrafficDistributionProfileLinkTagArgsDict', 'outputs.SdwanTrafficDistributionProfileLinkTag']]]]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
                  snippet: pulumi.Input[Optional[_builtins.str]] = None,
                  traffic_distribution: pulumi.Input[Optional[_builtins.str]] = None,
@@ -305,7 +305,7 @@ class SdwanTrafficDistributionProfile(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
                
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-        :param pulumi.Input[Sequence[pulumi.Input[Union['SdwanTrafficDistributionProfileLinkTagArgs', 'SdwanTrafficDistributionProfileLinkTagArgsDict']]]] link_tags: Link-Tags for interfaces identified by defined tags
+        :param pulumi.Input[Sequence[pulumi.Input[Union['SdwanTrafficDistributionProfileLinkTagArgs', 'SdwanTrafficDistributionProfileLinkTagArgsDict', 'outputs.SdwanTrafficDistributionProfileLinkTag']]]] link_tags: Link-Tags for interfaces identified by defined tags
         :param pulumi.Input[_builtins.str] name: Profile name
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
                
@@ -361,7 +361,7 @@ class SdwanTrafficDistributionProfile(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None,
                  device: pulumi.Input[Optional[_builtins.str]] = None,
                  folder: pulumi.Input[Optional[_builtins.str]] = None,
-                 link_tags: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SdwanTrafficDistributionProfileLinkTagArgs', 'SdwanTrafficDistributionProfileLinkTagArgsDict']]]]] = None,
+                 link_tags: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SdwanTrafficDistributionProfileLinkTagArgs', 'SdwanTrafficDistributionProfileLinkTagArgsDict', 'outputs.SdwanTrafficDistributionProfileLinkTag']]]]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
                  snippet: pulumi.Input[Optional[_builtins.str]] = None,
                  traffic_distribution: pulumi.Input[Optional[_builtins.str]] = None,
@@ -393,7 +393,7 @@ class SdwanTrafficDistributionProfile(pulumi.CustomResource):
             opts: Optional[pulumi.ResourceOptions] = None,
             device: pulumi.Input[Optional[_builtins.str]] = None,
             folder: pulumi.Input[Optional[_builtins.str]] = None,
-            link_tags: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SdwanTrafficDistributionProfileLinkTagArgs', 'SdwanTrafficDistributionProfileLinkTagArgsDict']]]]] = None,
+            link_tags: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SdwanTrafficDistributionProfileLinkTagArgs', 'SdwanTrafficDistributionProfileLinkTagArgsDict', 'outputs.SdwanTrafficDistributionProfileLinkTag']]]]] = None,
             name: pulumi.Input[Optional[_builtins.str]] = None,
             snippet: pulumi.Input[Optional[_builtins.str]] = None,
             tfid: pulumi.Input[Optional[_builtins.str]] = None,
@@ -409,7 +409,7 @@ class SdwanTrafficDistributionProfile(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
                
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-        :param pulumi.Input[Sequence[pulumi.Input[Union['SdwanTrafficDistributionProfileLinkTagArgs', 'SdwanTrafficDistributionProfileLinkTagArgsDict']]]] link_tags: Link-Tags for interfaces identified by defined tags
+        :param pulumi.Input[Sequence[pulumi.Input[Union['SdwanTrafficDistributionProfileLinkTagArgs', 'SdwanTrafficDistributionProfileLinkTagArgsDict', 'outputs.SdwanTrafficDistributionProfileLinkTag']]]] link_tags: Link-Tags for interfaces identified by defined tags
         :param pulumi.Input[_builtins.str] name: Profile name
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
                

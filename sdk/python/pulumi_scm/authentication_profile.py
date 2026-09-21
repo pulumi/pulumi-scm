@@ -429,11 +429,11 @@ class AuthenticationProfile(pulumi.CustomResource):
                  allow_lists: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  device: pulumi.Input[Optional[_builtins.str]] = None,
                  folder: pulumi.Input[Optional[_builtins.str]] = None,
-                 lockout: pulumi.Input[Optional[Union['AuthenticationProfileLockoutArgs', 'AuthenticationProfileLockoutArgsDict']]] = None,
-                 method: pulumi.Input[Optional[Union['AuthenticationProfileMethodArgs', 'AuthenticationProfileMethodArgsDict']]] = None,
-                 multi_factor_auth: pulumi.Input[Optional[Union['AuthenticationProfileMultiFactorAuthArgs', 'AuthenticationProfileMultiFactorAuthArgsDict']]] = None,
+                 lockout: pulumi.Input[Optional[Union['AuthenticationProfileLockoutArgs', 'AuthenticationProfileLockoutArgsDict', 'outputs.AuthenticationProfileLockout']]] = None,
+                 method: pulumi.Input[Optional[Union['AuthenticationProfileMethodArgs', 'AuthenticationProfileMethodArgsDict', 'outputs.AuthenticationProfileMethod']]] = None,
+                 multi_factor_auth: pulumi.Input[Optional[Union['AuthenticationProfileMultiFactorAuthArgs', 'AuthenticationProfileMultiFactorAuthArgsDict', 'outputs.AuthenticationProfileMultiFactorAuth']]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
-                 single_sign_on: pulumi.Input[Optional[Union['AuthenticationProfileSingleSignOnArgs', 'AuthenticationProfileSingleSignOnArgsDict']]] = None,
+                 single_sign_on: pulumi.Input[Optional[Union['AuthenticationProfileSingleSignOnArgs', 'AuthenticationProfileSingleSignOnArgsDict', 'outputs.AuthenticationProfileSingleSignOn']]] = None,
                  snippet: pulumi.Input[Optional[_builtins.str]] = None,
                  user_domain: pulumi.Input[Optional[_builtins.str]] = None,
                  username_modifier: pulumi.Input[Optional[_builtins.str]] = None,
@@ -528,11 +528,11 @@ class AuthenticationProfile(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
                
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-        :param pulumi.Input[Union['AuthenticationProfileLockoutArgs', 'AuthenticationProfileLockoutArgsDict']] lockout: Lockout object of the authentication profile
-        :param pulumi.Input[Union['AuthenticationProfileMethodArgs', 'AuthenticationProfileMethodArgsDict']] method: method object of authentication profile
-        :param pulumi.Input[Union['AuthenticationProfileMultiFactorAuthArgs', 'AuthenticationProfileMultiFactorAuthArgsDict']] multi_factor_auth: Multi factor auth
+        :param pulumi.Input[Union['AuthenticationProfileLockoutArgs', 'AuthenticationProfileLockoutArgsDict', 'outputs.AuthenticationProfileLockout']] lockout: Lockout object of the authentication profile
+        :param pulumi.Input[Union['AuthenticationProfileMethodArgs', 'AuthenticationProfileMethodArgsDict', 'outputs.AuthenticationProfileMethod']] method: method object of authentication profile
+        :param pulumi.Input[Union['AuthenticationProfileMultiFactorAuthArgs', 'AuthenticationProfileMultiFactorAuthArgsDict', 'outputs.AuthenticationProfileMultiFactorAuth']] multi_factor_auth: Multi factor auth
         :param pulumi.Input[_builtins.str] name: The name of the authentication profile
-        :param pulumi.Input[Union['AuthenticationProfileSingleSignOnArgs', 'AuthenticationProfileSingleSignOnArgsDict']] single_sign_on: Single sign on
+        :param pulumi.Input[Union['AuthenticationProfileSingleSignOnArgs', 'AuthenticationProfileSingleSignOnArgsDict', 'outputs.AuthenticationProfileSingleSignOn']] single_sign_on: Single sign on
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
                
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
@@ -646,11 +646,11 @@ class AuthenticationProfile(pulumi.CustomResource):
                  allow_lists: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  device: pulumi.Input[Optional[_builtins.str]] = None,
                  folder: pulumi.Input[Optional[_builtins.str]] = None,
-                 lockout: pulumi.Input[Optional[Union['AuthenticationProfileLockoutArgs', 'AuthenticationProfileLockoutArgsDict']]] = None,
-                 method: pulumi.Input[Optional[Union['AuthenticationProfileMethodArgs', 'AuthenticationProfileMethodArgsDict']]] = None,
-                 multi_factor_auth: pulumi.Input[Optional[Union['AuthenticationProfileMultiFactorAuthArgs', 'AuthenticationProfileMultiFactorAuthArgsDict']]] = None,
+                 lockout: pulumi.Input[Optional[Union['AuthenticationProfileLockoutArgs', 'AuthenticationProfileLockoutArgsDict', 'outputs.AuthenticationProfileLockout']]] = None,
+                 method: pulumi.Input[Optional[Union['AuthenticationProfileMethodArgs', 'AuthenticationProfileMethodArgsDict', 'outputs.AuthenticationProfileMethod']]] = None,
+                 multi_factor_auth: pulumi.Input[Optional[Union['AuthenticationProfileMultiFactorAuthArgs', 'AuthenticationProfileMultiFactorAuthArgsDict', 'outputs.AuthenticationProfileMultiFactorAuth']]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
-                 single_sign_on: pulumi.Input[Optional[Union['AuthenticationProfileSingleSignOnArgs', 'AuthenticationProfileSingleSignOnArgsDict']]] = None,
+                 single_sign_on: pulumi.Input[Optional[Union['AuthenticationProfileSingleSignOnArgs', 'AuthenticationProfileSingleSignOnArgsDict', 'outputs.AuthenticationProfileSingleSignOn']]] = None,
                  snippet: pulumi.Input[Optional[_builtins.str]] = None,
                  user_domain: pulumi.Input[Optional[_builtins.str]] = None,
                  username_modifier: pulumi.Input[Optional[_builtins.str]] = None,
@@ -688,11 +688,11 @@ class AuthenticationProfile(pulumi.CustomResource):
             allow_lists: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
             device: pulumi.Input[Optional[_builtins.str]] = None,
             folder: pulumi.Input[Optional[_builtins.str]] = None,
-            lockout: pulumi.Input[Optional[Union['AuthenticationProfileLockoutArgs', 'AuthenticationProfileLockoutArgsDict']]] = None,
-            method: pulumi.Input[Optional[Union['AuthenticationProfileMethodArgs', 'AuthenticationProfileMethodArgsDict']]] = None,
-            multi_factor_auth: pulumi.Input[Optional[Union['AuthenticationProfileMultiFactorAuthArgs', 'AuthenticationProfileMultiFactorAuthArgsDict']]] = None,
+            lockout: pulumi.Input[Optional[Union['AuthenticationProfileLockoutArgs', 'AuthenticationProfileLockoutArgsDict', 'outputs.AuthenticationProfileLockout']]] = None,
+            method: pulumi.Input[Optional[Union['AuthenticationProfileMethodArgs', 'AuthenticationProfileMethodArgsDict', 'outputs.AuthenticationProfileMethod']]] = None,
+            multi_factor_auth: pulumi.Input[Optional[Union['AuthenticationProfileMultiFactorAuthArgs', 'AuthenticationProfileMultiFactorAuthArgsDict', 'outputs.AuthenticationProfileMultiFactorAuth']]] = None,
             name: pulumi.Input[Optional[_builtins.str]] = None,
-            single_sign_on: pulumi.Input[Optional[Union['AuthenticationProfileSingleSignOnArgs', 'AuthenticationProfileSingleSignOnArgsDict']]] = None,
+            single_sign_on: pulumi.Input[Optional[Union['AuthenticationProfileSingleSignOnArgs', 'AuthenticationProfileSingleSignOnArgsDict', 'outputs.AuthenticationProfileSingleSignOn']]] = None,
             snippet: pulumi.Input[Optional[_builtins.str]] = None,
             tfid: pulumi.Input[Optional[_builtins.str]] = None,
             user_domain: pulumi.Input[Optional[_builtins.str]] = None,
@@ -709,11 +709,11 @@ class AuthenticationProfile(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
                
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-        :param pulumi.Input[Union['AuthenticationProfileLockoutArgs', 'AuthenticationProfileLockoutArgsDict']] lockout: Lockout object of the authentication profile
-        :param pulumi.Input[Union['AuthenticationProfileMethodArgs', 'AuthenticationProfileMethodArgsDict']] method: method object of authentication profile
-        :param pulumi.Input[Union['AuthenticationProfileMultiFactorAuthArgs', 'AuthenticationProfileMultiFactorAuthArgsDict']] multi_factor_auth: Multi factor auth
+        :param pulumi.Input[Union['AuthenticationProfileLockoutArgs', 'AuthenticationProfileLockoutArgsDict', 'outputs.AuthenticationProfileLockout']] lockout: Lockout object of the authentication profile
+        :param pulumi.Input[Union['AuthenticationProfileMethodArgs', 'AuthenticationProfileMethodArgsDict', 'outputs.AuthenticationProfileMethod']] method: method object of authentication profile
+        :param pulumi.Input[Union['AuthenticationProfileMultiFactorAuthArgs', 'AuthenticationProfileMultiFactorAuthArgsDict', 'outputs.AuthenticationProfileMultiFactorAuth']] multi_factor_auth: Multi factor auth
         :param pulumi.Input[_builtins.str] name: The name of the authentication profile
-        :param pulumi.Input[Union['AuthenticationProfileSingleSignOnArgs', 'AuthenticationProfileSingleSignOnArgsDict']] single_sign_on: Single sign on
+        :param pulumi.Input[Union['AuthenticationProfileSingleSignOnArgs', 'AuthenticationProfileSingleSignOnArgsDict', 'outputs.AuthenticationProfileSingleSignOn']] single_sign_on: Single sign on
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
                
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.

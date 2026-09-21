@@ -204,7 +204,7 @@ class ServiceRoute(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None,
                  device: pulumi.Input[Optional[_builtins.str]] = None,
                  folder: pulumi.Input[Optional[_builtins.str]] = None,
-                 route: pulumi.Input[Optional[Union['ServiceRouteRouteArgs', 'ServiceRouteRouteArgsDict']]] = None,
+                 route: pulumi.Input[Optional[Union['ServiceRouteRouteArgs', 'ServiceRouteRouteArgsDict', 'outputs.ServiceRouteRoute']]] = None,
                  snippet: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
@@ -288,7 +288,7 @@ class ServiceRoute(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
                
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-        :param pulumi.Input[Union['ServiceRouteRouteArgs', 'ServiceRouteRouteArgsDict']] route: Route
+        :param pulumi.Input[Union['ServiceRouteRouteArgs', 'ServiceRouteRouteArgsDict', 'outputs.ServiceRouteRoute']] route: Route
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
                
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
@@ -391,7 +391,7 @@ class ServiceRoute(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None,
                  device: pulumi.Input[Optional[_builtins.str]] = None,
                  folder: pulumi.Input[Optional[_builtins.str]] = None,
-                 route: pulumi.Input[Optional[Union['ServiceRouteRouteArgs', 'ServiceRouteRouteArgsDict']]] = None,
+                 route: pulumi.Input[Optional[Union['ServiceRouteRouteArgs', 'ServiceRouteRouteArgsDict', 'outputs.ServiceRouteRoute']]] = None,
                  snippet: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
@@ -419,7 +419,7 @@ class ServiceRoute(pulumi.CustomResource):
             opts: Optional[pulumi.ResourceOptions] = None,
             device: pulumi.Input[Optional[_builtins.str]] = None,
             folder: pulumi.Input[Optional[_builtins.str]] = None,
-            route: pulumi.Input[Optional[Union['ServiceRouteRouteArgs', 'ServiceRouteRouteArgsDict']]] = None,
+            route: pulumi.Input[Optional[Union['ServiceRouteRouteArgs', 'ServiceRouteRouteArgsDict', 'outputs.ServiceRouteRoute']]] = None,
             snippet: pulumi.Input[Optional[_builtins.str]] = None,
             tfid: pulumi.Input[Optional[_builtins.str]] = None) -> 'ServiceRoute':
         """
@@ -433,7 +433,7 @@ class ServiceRoute(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
                
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-        :param pulumi.Input[Union['ServiceRouteRouteArgs', 'ServiceRouteRouteArgsDict']] route: Route
+        :param pulumi.Input[Union['ServiceRouteRouteArgs', 'ServiceRouteRouteArgsDict', 'outputs.ServiceRouteRoute']] route: Route
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
                
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.

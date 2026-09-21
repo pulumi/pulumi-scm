@@ -457,18 +457,18 @@ class DnsProxy(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 cache: pulumi.Input[Optional[Union['DnsProxyCacheArgs', 'DnsProxyCacheArgsDict']]] = None,
-                 default: pulumi.Input[Optional[Union['DnsProxyDefaultArgs', 'DnsProxyDefaultArgsDict']]] = None,
+                 cache: pulumi.Input[Optional[Union['DnsProxyCacheArgs', 'DnsProxyCacheArgsDict', 'outputs.DnsProxyCache']]] = None,
+                 default: pulumi.Input[Optional[Union['DnsProxyDefaultArgs', 'DnsProxyDefaultArgsDict', 'outputs.DnsProxyDefault']]] = None,
                  device: pulumi.Input[Optional[_builtins.str]] = None,
-                 domain_servers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['DnsProxyDomainServerArgs', 'DnsProxyDomainServerArgsDict']]]]] = None,
+                 domain_servers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['DnsProxyDomainServerArgs', 'DnsProxyDomainServerArgsDict', 'outputs.DnsProxyDomainServer']]]]] = None,
                  enabled: pulumi.Input[Optional[_builtins.bool]] = None,
                  folder: pulumi.Input[Optional[_builtins.str]] = None,
                  interfaces: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
                  snippet: pulumi.Input[Optional[_builtins.str]] = None,
-                 static_entries: pulumi.Input[Optional[Sequence[pulumi.Input[Union['DnsProxyStaticEntryArgs', 'DnsProxyStaticEntryArgsDict']]]]] = None,
-                 tcp_queries: pulumi.Input[Optional[Union['DnsProxyTcpQueriesArgs', 'DnsProxyTcpQueriesArgsDict']]] = None,
-                 udp_queries: pulumi.Input[Optional[Union['DnsProxyUdpQueriesArgs', 'DnsProxyUdpQueriesArgsDict']]] = None,
+                 static_entries: pulumi.Input[Optional[Sequence[pulumi.Input[Union['DnsProxyStaticEntryArgs', 'DnsProxyStaticEntryArgsDict', 'outputs.DnsProxyStaticEntry']]]]] = None,
+                 tcp_queries: pulumi.Input[Optional[Union['DnsProxyTcpQueriesArgs', 'DnsProxyTcpQueriesArgsDict', 'outputs.DnsProxyTcpQueries']]] = None,
+                 udp_queries: pulumi.Input[Optional[Union['DnsProxyUdpQueriesArgs', 'DnsProxyUdpQueriesArgsDict', 'outputs.DnsProxyUdpQueries']]] = None,
                  __props__=None):
         """
         DnsProxy resource
@@ -498,10 +498,10 @@ class DnsProxy(pulumi.CustomResource):
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[Union['DnsProxyCacheArgs', 'DnsProxyCacheArgsDict']] cache: Cache
-        :param pulumi.Input[Union['DnsProxyDefaultArgs', 'DnsProxyDefaultArgsDict']] default: Default
+        :param pulumi.Input[Union['DnsProxyCacheArgs', 'DnsProxyCacheArgsDict', 'outputs.DnsProxyCache']] cache: Cache
+        :param pulumi.Input[Union['DnsProxyDefaultArgs', 'DnsProxyDefaultArgsDict', 'outputs.DnsProxyDefault']] default: Default
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
-        :param pulumi.Input[Sequence[pulumi.Input[Union['DnsProxyDomainServerArgs', 'DnsProxyDomainServerArgsDict']]]] domain_servers: DNS proxy rules
+        :param pulumi.Input[Sequence[pulumi.Input[Union['DnsProxyDomainServerArgs', 'DnsProxyDomainServerArgsDict', 'outputs.DnsProxyDomainServer']]]] domain_servers: DNS proxy rules
         :param pulumi.Input[_builtins.bool] enabled: Enable DNS proxy?
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
                
@@ -511,9 +511,9 @@ class DnsProxy(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
                
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-        :param pulumi.Input[Sequence[pulumi.Input[Union['DnsProxyStaticEntryArgs', 'DnsProxyStaticEntryArgsDict']]]] static_entries: Static entries
-        :param pulumi.Input[Union['DnsProxyTcpQueriesArgs', 'DnsProxyTcpQueriesArgsDict']] tcp_queries: Tcp queries
-        :param pulumi.Input[Union['DnsProxyUdpQueriesArgs', 'DnsProxyUdpQueriesArgsDict']] udp_queries: Udp queries
+        :param pulumi.Input[Sequence[pulumi.Input[Union['DnsProxyStaticEntryArgs', 'DnsProxyStaticEntryArgsDict', 'outputs.DnsProxyStaticEntry']]]] static_entries: Static entries
+        :param pulumi.Input[Union['DnsProxyTcpQueriesArgs', 'DnsProxyTcpQueriesArgsDict', 'outputs.DnsProxyTcpQueries']] tcp_queries: Tcp queries
+        :param pulumi.Input[Union['DnsProxyUdpQueriesArgs', 'DnsProxyUdpQueriesArgsDict', 'outputs.DnsProxyUdpQueries']] udp_queries: Udp queries
         """
         ...
     @overload
@@ -562,18 +562,18 @@ class DnsProxy(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 cache: pulumi.Input[Optional[Union['DnsProxyCacheArgs', 'DnsProxyCacheArgsDict']]] = None,
-                 default: pulumi.Input[Optional[Union['DnsProxyDefaultArgs', 'DnsProxyDefaultArgsDict']]] = None,
+                 cache: pulumi.Input[Optional[Union['DnsProxyCacheArgs', 'DnsProxyCacheArgsDict', 'outputs.DnsProxyCache']]] = None,
+                 default: pulumi.Input[Optional[Union['DnsProxyDefaultArgs', 'DnsProxyDefaultArgsDict', 'outputs.DnsProxyDefault']]] = None,
                  device: pulumi.Input[Optional[_builtins.str]] = None,
-                 domain_servers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['DnsProxyDomainServerArgs', 'DnsProxyDomainServerArgsDict']]]]] = None,
+                 domain_servers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['DnsProxyDomainServerArgs', 'DnsProxyDomainServerArgsDict', 'outputs.DnsProxyDomainServer']]]]] = None,
                  enabled: pulumi.Input[Optional[_builtins.bool]] = None,
                  folder: pulumi.Input[Optional[_builtins.str]] = None,
                  interfaces: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
                  snippet: pulumi.Input[Optional[_builtins.str]] = None,
-                 static_entries: pulumi.Input[Optional[Sequence[pulumi.Input[Union['DnsProxyStaticEntryArgs', 'DnsProxyStaticEntryArgsDict']]]]] = None,
-                 tcp_queries: pulumi.Input[Optional[Union['DnsProxyTcpQueriesArgs', 'DnsProxyTcpQueriesArgsDict']]] = None,
-                 udp_queries: pulumi.Input[Optional[Union['DnsProxyUdpQueriesArgs', 'DnsProxyUdpQueriesArgsDict']]] = None,
+                 static_entries: pulumi.Input[Optional[Sequence[pulumi.Input[Union['DnsProxyStaticEntryArgs', 'DnsProxyStaticEntryArgsDict', 'outputs.DnsProxyStaticEntry']]]]] = None,
+                 tcp_queries: pulumi.Input[Optional[Union['DnsProxyTcpQueriesArgs', 'DnsProxyTcpQueriesArgsDict', 'outputs.DnsProxyTcpQueries']]] = None,
+                 udp_queries: pulumi.Input[Optional[Union['DnsProxyUdpQueriesArgs', 'DnsProxyUdpQueriesArgsDict', 'outputs.DnsProxyUdpQueries']]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -608,19 +608,19 @@ class DnsProxy(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            cache: pulumi.Input[Optional[Union['DnsProxyCacheArgs', 'DnsProxyCacheArgsDict']]] = None,
-            default: pulumi.Input[Optional[Union['DnsProxyDefaultArgs', 'DnsProxyDefaultArgsDict']]] = None,
+            cache: pulumi.Input[Optional[Union['DnsProxyCacheArgs', 'DnsProxyCacheArgsDict', 'outputs.DnsProxyCache']]] = None,
+            default: pulumi.Input[Optional[Union['DnsProxyDefaultArgs', 'DnsProxyDefaultArgsDict', 'outputs.DnsProxyDefault']]] = None,
             device: pulumi.Input[Optional[_builtins.str]] = None,
-            domain_servers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['DnsProxyDomainServerArgs', 'DnsProxyDomainServerArgsDict']]]]] = None,
+            domain_servers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['DnsProxyDomainServerArgs', 'DnsProxyDomainServerArgsDict', 'outputs.DnsProxyDomainServer']]]]] = None,
             enabled: pulumi.Input[Optional[_builtins.bool]] = None,
             folder: pulumi.Input[Optional[_builtins.str]] = None,
             interfaces: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
             name: pulumi.Input[Optional[_builtins.str]] = None,
             snippet: pulumi.Input[Optional[_builtins.str]] = None,
-            static_entries: pulumi.Input[Optional[Sequence[pulumi.Input[Union['DnsProxyStaticEntryArgs', 'DnsProxyStaticEntryArgsDict']]]]] = None,
-            tcp_queries: pulumi.Input[Optional[Union['DnsProxyTcpQueriesArgs', 'DnsProxyTcpQueriesArgsDict']]] = None,
+            static_entries: pulumi.Input[Optional[Sequence[pulumi.Input[Union['DnsProxyStaticEntryArgs', 'DnsProxyStaticEntryArgsDict', 'outputs.DnsProxyStaticEntry']]]]] = None,
+            tcp_queries: pulumi.Input[Optional[Union['DnsProxyTcpQueriesArgs', 'DnsProxyTcpQueriesArgsDict', 'outputs.DnsProxyTcpQueries']]] = None,
             tfid: pulumi.Input[Optional[_builtins.str]] = None,
-            udp_queries: pulumi.Input[Optional[Union['DnsProxyUdpQueriesArgs', 'DnsProxyUdpQueriesArgsDict']]] = None) -> 'DnsProxy':
+            udp_queries: pulumi.Input[Optional[Union['DnsProxyUdpQueriesArgs', 'DnsProxyUdpQueriesArgsDict', 'outputs.DnsProxyUdpQueries']]] = None) -> 'DnsProxy':
         """
         Get an existing DnsProxy resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.
@@ -628,10 +628,10 @@ class DnsProxy(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[Union['DnsProxyCacheArgs', 'DnsProxyCacheArgsDict']] cache: Cache
-        :param pulumi.Input[Union['DnsProxyDefaultArgs', 'DnsProxyDefaultArgsDict']] default: Default
+        :param pulumi.Input[Union['DnsProxyCacheArgs', 'DnsProxyCacheArgsDict', 'outputs.DnsProxyCache']] cache: Cache
+        :param pulumi.Input[Union['DnsProxyDefaultArgs', 'DnsProxyDefaultArgsDict', 'outputs.DnsProxyDefault']] default: Default
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
-        :param pulumi.Input[Sequence[pulumi.Input[Union['DnsProxyDomainServerArgs', 'DnsProxyDomainServerArgsDict']]]] domain_servers: DNS proxy rules
+        :param pulumi.Input[Sequence[pulumi.Input[Union['DnsProxyDomainServerArgs', 'DnsProxyDomainServerArgsDict', 'outputs.DnsProxyDomainServer']]]] domain_servers: DNS proxy rules
         :param pulumi.Input[_builtins.bool] enabled: Enable DNS proxy?
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
                
@@ -641,10 +641,10 @@ class DnsProxy(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
                
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-        :param pulumi.Input[Sequence[pulumi.Input[Union['DnsProxyStaticEntryArgs', 'DnsProxyStaticEntryArgsDict']]]] static_entries: Static entries
-        :param pulumi.Input[Union['DnsProxyTcpQueriesArgs', 'DnsProxyTcpQueriesArgsDict']] tcp_queries: Tcp queries
+        :param pulumi.Input[Sequence[pulumi.Input[Union['DnsProxyStaticEntryArgs', 'DnsProxyStaticEntryArgsDict', 'outputs.DnsProxyStaticEntry']]]] static_entries: Static entries
+        :param pulumi.Input[Union['DnsProxyTcpQueriesArgs', 'DnsProxyTcpQueriesArgsDict', 'outputs.DnsProxyTcpQueries']] tcp_queries: Tcp queries
         :param pulumi.Input[_builtins.str] tfid: The Terraform ID.
-        :param pulumi.Input[Union['DnsProxyUdpQueriesArgs', 'DnsProxyUdpQueriesArgsDict']] udp_queries: Udp queries
+        :param pulumi.Input[Union['DnsProxyUdpQueriesArgs', 'DnsProxyUdpQueriesArgsDict', 'outputs.DnsProxyUdpQueries']] udp_queries: Udp queries
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
 

@@ -431,8 +431,8 @@ class LoopbackInterface(pulumi.CustomResource):
                  device: pulumi.Input[Optional[_builtins.str]] = None,
                  folder: pulumi.Input[Optional[_builtins.str]] = None,
                  interface_management_profile: pulumi.Input[Optional[_builtins.str]] = None,
-                 ips: pulumi.Input[Optional[Sequence[pulumi.Input[Union['LoopbackInterfaceIpArgs', 'LoopbackInterfaceIpArgsDict']]]]] = None,
-                 ipv6: pulumi.Input[Optional[Union['LoopbackInterfaceIpv6Args', 'LoopbackInterfaceIpv6ArgsDict']]] = None,
+                 ips: pulumi.Input[Optional[Sequence[pulumi.Input[Union['LoopbackInterfaceIpArgs', 'LoopbackInterfaceIpArgsDict', 'outputs.LoopbackInterfaceIp']]]]] = None,
+                 ipv6: pulumi.Input[Optional[Union['LoopbackInterfaceIpv6Args', 'LoopbackInterfaceIpv6ArgsDict', 'outputs.LoopbackInterfaceIpv6']]] = None,
                  mtu: pulumi.Input[Optional[_builtins.int]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
                  netflow_profile: pulumi.Input[Optional[_builtins.str]] = None,
@@ -528,8 +528,8 @@ class LoopbackInterface(pulumi.CustomResource):
                
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] interface_management_profile: Interface management profile for loopback interface
-        :param pulumi.Input[Sequence[pulumi.Input[Union['LoopbackInterfaceIpArgs', 'LoopbackInterfaceIpArgsDict']]]] ips: Loopback IP Parent
-        :param pulumi.Input[Union['LoopbackInterfaceIpv6Args', 'LoopbackInterfaceIpv6ArgsDict']] ipv6: Loopback IPv6 Configuration
+        :param pulumi.Input[Sequence[pulumi.Input[Union['LoopbackInterfaceIpArgs', 'LoopbackInterfaceIpArgsDict', 'outputs.LoopbackInterfaceIp']]]] ips: Loopback IP Parent
+        :param pulumi.Input[Union['LoopbackInterfaceIpv6Args', 'LoopbackInterfaceIpv6ArgsDict', 'outputs.LoopbackInterfaceIpv6']] ipv6: Loopback IPv6 Configuration
         :param pulumi.Input[_builtins.int] mtu: MTU for loopback interface
         :param pulumi.Input[_builtins.str] name: Loopback Interface name
         :param pulumi.Input[_builtins.str] netflow_profile: Name of Netflow Profile to assign to Interface
@@ -644,8 +644,8 @@ class LoopbackInterface(pulumi.CustomResource):
                  device: pulumi.Input[Optional[_builtins.str]] = None,
                  folder: pulumi.Input[Optional[_builtins.str]] = None,
                  interface_management_profile: pulumi.Input[Optional[_builtins.str]] = None,
-                 ips: pulumi.Input[Optional[Sequence[pulumi.Input[Union['LoopbackInterfaceIpArgs', 'LoopbackInterfaceIpArgsDict']]]]] = None,
-                 ipv6: pulumi.Input[Optional[Union['LoopbackInterfaceIpv6Args', 'LoopbackInterfaceIpv6ArgsDict']]] = None,
+                 ips: pulumi.Input[Optional[Sequence[pulumi.Input[Union['LoopbackInterfaceIpArgs', 'LoopbackInterfaceIpArgsDict', 'outputs.LoopbackInterfaceIp']]]]] = None,
+                 ipv6: pulumi.Input[Optional[Union['LoopbackInterfaceIpv6Args', 'LoopbackInterfaceIpv6ArgsDict', 'outputs.LoopbackInterfaceIpv6']]] = None,
                  mtu: pulumi.Input[Optional[_builtins.int]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
                  netflow_profile: pulumi.Input[Optional[_builtins.str]] = None,
@@ -686,8 +686,8 @@ class LoopbackInterface(pulumi.CustomResource):
             device: pulumi.Input[Optional[_builtins.str]] = None,
             folder: pulumi.Input[Optional[_builtins.str]] = None,
             interface_management_profile: pulumi.Input[Optional[_builtins.str]] = None,
-            ips: pulumi.Input[Optional[Sequence[pulumi.Input[Union['LoopbackInterfaceIpArgs', 'LoopbackInterfaceIpArgsDict']]]]] = None,
-            ipv6: pulumi.Input[Optional[Union['LoopbackInterfaceIpv6Args', 'LoopbackInterfaceIpv6ArgsDict']]] = None,
+            ips: pulumi.Input[Optional[Sequence[pulumi.Input[Union['LoopbackInterfaceIpArgs', 'LoopbackInterfaceIpArgsDict', 'outputs.LoopbackInterfaceIp']]]]] = None,
+            ipv6: pulumi.Input[Optional[Union['LoopbackInterfaceIpv6Args', 'LoopbackInterfaceIpv6ArgsDict', 'outputs.LoopbackInterfaceIpv6']]] = None,
             mtu: pulumi.Input[Optional[_builtins.int]] = None,
             name: pulumi.Input[Optional[_builtins.str]] = None,
             netflow_profile: pulumi.Input[Optional[_builtins.str]] = None,
@@ -707,8 +707,8 @@ class LoopbackInterface(pulumi.CustomResource):
                
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] interface_management_profile: Interface management profile for loopback interface
-        :param pulumi.Input[Sequence[pulumi.Input[Union['LoopbackInterfaceIpArgs', 'LoopbackInterfaceIpArgsDict']]]] ips: Loopback IP Parent
-        :param pulumi.Input[Union['LoopbackInterfaceIpv6Args', 'LoopbackInterfaceIpv6ArgsDict']] ipv6: Loopback IPv6 Configuration
+        :param pulumi.Input[Sequence[pulumi.Input[Union['LoopbackInterfaceIpArgs', 'LoopbackInterfaceIpArgsDict', 'outputs.LoopbackInterfaceIp']]]] ips: Loopback IP Parent
+        :param pulumi.Input[Union['LoopbackInterfaceIpv6Args', 'LoopbackInterfaceIpv6ArgsDict', 'outputs.LoopbackInterfaceIpv6']] ipv6: Loopback IPv6 Configuration
         :param pulumi.Input[_builtins.int] mtu: MTU for loopback interface
         :param pulumi.Input[_builtins.str] name: Loopback Interface name
         :param pulumi.Input[_builtins.str] netflow_profile: Name of Netflow Profile to assign to Interface

@@ -1318,24 +1318,24 @@ class ZoneProtectionProfile(pulumi.CustomResource):
                  description: pulumi.Input[Optional[_builtins.str]] = None,
                  device: pulumi.Input[Optional[_builtins.str]] = None,
                  discard_icmp_embedded_error: pulumi.Input[Optional[_builtins.bool]] = None,
-                 flood: pulumi.Input[Optional[Union['ZoneProtectionProfileFloodArgs', 'ZoneProtectionProfileFloodArgsDict']]] = None,
+                 flood: pulumi.Input[Optional[Union['ZoneProtectionProfileFloodArgs', 'ZoneProtectionProfileFloodArgsDict', 'outputs.ZoneProtectionProfileFlood']]] = None,
                  folder: pulumi.Input[Optional[_builtins.str]] = None,
                  fragmented_traffic_discard: pulumi.Input[Optional[_builtins.bool]] = None,
                  icmp_frag_discard: pulumi.Input[Optional[_builtins.bool]] = None,
                  icmp_large_packet_discard: pulumi.Input[Optional[_builtins.bool]] = None,
                  icmp_ping_zero_id_discard: pulumi.Input[Optional[_builtins.bool]] = None,
-                 ipv6: pulumi.Input[Optional[Union['ZoneProtectionProfileIpv6Args', 'ZoneProtectionProfileIpv6ArgsDict']]] = None,
-                 l2_sec_group_tag_protection: pulumi.Input[Optional[Union['ZoneProtectionProfileL2SecGroupTagProtectionArgs', 'ZoneProtectionProfileL2SecGroupTagProtectionArgsDict']]] = None,
+                 ipv6: pulumi.Input[Optional[Union['ZoneProtectionProfileIpv6Args', 'ZoneProtectionProfileIpv6ArgsDict', 'outputs.ZoneProtectionProfileIpv6']]] = None,
+                 l2_sec_group_tag_protection: pulumi.Input[Optional[Union['ZoneProtectionProfileL2SecGroupTagProtectionArgs', 'ZoneProtectionProfileL2SecGroupTagProtectionArgsDict', 'outputs.ZoneProtectionProfileL2SecGroupTagProtection']]] = None,
                  loose_source_routing_discard: pulumi.Input[Optional[_builtins.bool]] = None,
                  malformed_option_discard: pulumi.Input[Optional[_builtins.bool]] = None,
                  mismatched_overlapping_tcp_segment_discard: pulumi.Input[Optional[_builtins.bool]] = None,
                  mptcp_option_strip: pulumi.Input[Optional[_builtins.str]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
-                 non_ip_protocol: pulumi.Input[Optional[Union['ZoneProtectionProfileNonIpProtocolArgs', 'ZoneProtectionProfileNonIpProtocolArgsDict']]] = None,
+                 non_ip_protocol: pulumi.Input[Optional[Union['ZoneProtectionProfileNonIpProtocolArgs', 'ZoneProtectionProfileNonIpProtocolArgsDict', 'outputs.ZoneProtectionProfileNonIpProtocol']]] = None,
                  record_route_discard: pulumi.Input[Optional[_builtins.bool]] = None,
                  reject_non_syn_tcp: pulumi.Input[Optional[_builtins.str]] = None,
-                 scan_white_lists: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ZoneProtectionProfileScanWhiteListArgs', 'ZoneProtectionProfileScanWhiteListArgsDict']]]]] = None,
-                 scans: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ZoneProtectionProfileScanArgs', 'ZoneProtectionProfileScanArgsDict']]]]] = None,
+                 scan_white_lists: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ZoneProtectionProfileScanWhiteListArgs', 'ZoneProtectionProfileScanWhiteListArgsDict', 'outputs.ZoneProtectionProfileScanWhiteList']]]]] = None,
+                 scans: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ZoneProtectionProfileScanArgs', 'ZoneProtectionProfileScanArgsDict', 'outputs.ZoneProtectionProfileScan']]]]] = None,
                  security_discard: pulumi.Input[Optional[_builtins.bool]] = None,
                  snippet: pulumi.Input[Optional[_builtins.str]] = None,
                  spoofed_ip_discard: pulumi.Input[Optional[_builtins.bool]] = None,
@@ -1389,7 +1389,7 @@ class ZoneProtectionProfile(pulumi.CustomResource):
                
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.bool] discard_icmp_embedded_error: Discard ICMP packets that are embedded with an error message.
-        :param pulumi.Input[Union['ZoneProtectionProfileFloodArgs', 'ZoneProtectionProfileFloodArgsDict']] flood: Flood
+        :param pulumi.Input[Union['ZoneProtectionProfileFloodArgs', 'ZoneProtectionProfileFloodArgsDict', 'outputs.ZoneProtectionProfileFlood']] flood: Flood
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
                
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
@@ -1397,8 +1397,8 @@ class ZoneProtectionProfile(pulumi.CustomResource):
         :param pulumi.Input[_builtins.bool] icmp_frag_discard: Discard packets that consist of ICMP fragments.
         :param pulumi.Input[_builtins.bool] icmp_large_packet_discard: Discard ICMP packets that are larger than 1024 bytes.
         :param pulumi.Input[_builtins.bool] icmp_ping_zero_id_discard: Discard packets if the ICMP ping packet has an identifier value of 0.
-        :param pulumi.Input[Union['ZoneProtectionProfileIpv6Args', 'ZoneProtectionProfileIpv6ArgsDict']] ipv6: Ipv6
-        :param pulumi.Input[Union['ZoneProtectionProfileL2SecGroupTagProtectionArgs', 'ZoneProtectionProfileL2SecGroupTagProtectionArgsDict']] l2_sec_group_tag_protection: L2 sec group tag protection
+        :param pulumi.Input[Union['ZoneProtectionProfileIpv6Args', 'ZoneProtectionProfileIpv6ArgsDict', 'outputs.ZoneProtectionProfileIpv6']] ipv6: Ipv6
+        :param pulumi.Input[Union['ZoneProtectionProfileL2SecGroupTagProtectionArgs', 'ZoneProtectionProfileL2SecGroupTagProtectionArgsDict', 'outputs.ZoneProtectionProfileL2SecGroupTagProtection']] l2_sec_group_tag_protection: L2 sec group tag protection
         :param pulumi.Input[_builtins.bool] loose_source_routing_discard: Discard packets with the Loose Source Routing IP option set. Loose Source Routing is an option whereby a source of a datagram provides routing information and a gateway or host is allowed to choose any route of a number of intermediate gateways to get the datagram to the next address in the route.
         :param pulumi.Input[_builtins.bool] malformed_option_discard: Discard packets if they have incorrect combinations of class, number, and length based on RFCs 791, 1108, 1393, and 2113.
         :param pulumi.Input[_builtins.bool] mismatched_overlapping_tcp_segment_discard: Drop packets with mismatched overlapping TCP segments.
@@ -1407,14 +1407,14 @@ class ZoneProtectionProfile(pulumi.CustomResource):
                * `yes` — Disable MPTCP support (strip the MPTCP option). With this configured, MPTCP connections are converted to standard TCP connections, as MPTCP is backwards compatible with TCP.
                * `global` — Support MPTCP based on the global MPTCP setting. By default, the global MPTCP setting is set to yes so that MPTCP is disabled (the MPTCP option is stripped from the packet).
         :param pulumi.Input[_builtins.str] name: The profile name
-        :param pulumi.Input[Union['ZoneProtectionProfileNonIpProtocolArgs', 'ZoneProtectionProfileNonIpProtocolArgsDict']] non_ip_protocol: Non ip protocol
+        :param pulumi.Input[Union['ZoneProtectionProfileNonIpProtocolArgs', 'ZoneProtectionProfileNonIpProtocolArgsDict', 'outputs.ZoneProtectionProfileNonIpProtocol']] non_ip_protocol: Non ip protocol
         :param pulumi.Input[_builtins.bool] record_route_discard: Discard packets with the Record Route IP option set. When a datagram has this option, each router that routes the datagram adds its own IP address to the header, thus providing the path to the recipient.
         :param pulumi.Input[_builtins.str] reject_non_syn_tcp: Determine whether to reject the packet if the first packet for the TCP session setup is not a SYN packet:
                * `global` — Use system-wide setting that is assigned through the CLI.
                * `yes` — Reject non-SYN TCP.
                * `no` — Accept non-SYN TCP.
-        :param pulumi.Input[Sequence[pulumi.Input[Union['ZoneProtectionProfileScanWhiteListArgs', 'ZoneProtectionProfileScanWhiteListArgsDict']]]] scan_white_lists: Scan white list
-        :param pulumi.Input[Sequence[pulumi.Input[Union['ZoneProtectionProfileScanArgs', 'ZoneProtectionProfileScanArgsDict']]]] scans: Scan
+        :param pulumi.Input[Sequence[pulumi.Input[Union['ZoneProtectionProfileScanWhiteListArgs', 'ZoneProtectionProfileScanWhiteListArgsDict', 'outputs.ZoneProtectionProfileScanWhiteList']]]] scan_white_lists: Scan white list
+        :param pulumi.Input[Sequence[pulumi.Input[Union['ZoneProtectionProfileScanArgs', 'ZoneProtectionProfileScanArgsDict', 'outputs.ZoneProtectionProfileScan']]]] scans: Scan
         :param pulumi.Input[_builtins.bool] security_discard: Discard packets if the security option is defined.
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
                
@@ -1487,24 +1487,24 @@ class ZoneProtectionProfile(pulumi.CustomResource):
                  description: pulumi.Input[Optional[_builtins.str]] = None,
                  device: pulumi.Input[Optional[_builtins.str]] = None,
                  discard_icmp_embedded_error: pulumi.Input[Optional[_builtins.bool]] = None,
-                 flood: pulumi.Input[Optional[Union['ZoneProtectionProfileFloodArgs', 'ZoneProtectionProfileFloodArgsDict']]] = None,
+                 flood: pulumi.Input[Optional[Union['ZoneProtectionProfileFloodArgs', 'ZoneProtectionProfileFloodArgsDict', 'outputs.ZoneProtectionProfileFlood']]] = None,
                  folder: pulumi.Input[Optional[_builtins.str]] = None,
                  fragmented_traffic_discard: pulumi.Input[Optional[_builtins.bool]] = None,
                  icmp_frag_discard: pulumi.Input[Optional[_builtins.bool]] = None,
                  icmp_large_packet_discard: pulumi.Input[Optional[_builtins.bool]] = None,
                  icmp_ping_zero_id_discard: pulumi.Input[Optional[_builtins.bool]] = None,
-                 ipv6: pulumi.Input[Optional[Union['ZoneProtectionProfileIpv6Args', 'ZoneProtectionProfileIpv6ArgsDict']]] = None,
-                 l2_sec_group_tag_protection: pulumi.Input[Optional[Union['ZoneProtectionProfileL2SecGroupTagProtectionArgs', 'ZoneProtectionProfileL2SecGroupTagProtectionArgsDict']]] = None,
+                 ipv6: pulumi.Input[Optional[Union['ZoneProtectionProfileIpv6Args', 'ZoneProtectionProfileIpv6ArgsDict', 'outputs.ZoneProtectionProfileIpv6']]] = None,
+                 l2_sec_group_tag_protection: pulumi.Input[Optional[Union['ZoneProtectionProfileL2SecGroupTagProtectionArgs', 'ZoneProtectionProfileL2SecGroupTagProtectionArgsDict', 'outputs.ZoneProtectionProfileL2SecGroupTagProtection']]] = None,
                  loose_source_routing_discard: pulumi.Input[Optional[_builtins.bool]] = None,
                  malformed_option_discard: pulumi.Input[Optional[_builtins.bool]] = None,
                  mismatched_overlapping_tcp_segment_discard: pulumi.Input[Optional[_builtins.bool]] = None,
                  mptcp_option_strip: pulumi.Input[Optional[_builtins.str]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
-                 non_ip_protocol: pulumi.Input[Optional[Union['ZoneProtectionProfileNonIpProtocolArgs', 'ZoneProtectionProfileNonIpProtocolArgsDict']]] = None,
+                 non_ip_protocol: pulumi.Input[Optional[Union['ZoneProtectionProfileNonIpProtocolArgs', 'ZoneProtectionProfileNonIpProtocolArgsDict', 'outputs.ZoneProtectionProfileNonIpProtocol']]] = None,
                  record_route_discard: pulumi.Input[Optional[_builtins.bool]] = None,
                  reject_non_syn_tcp: pulumi.Input[Optional[_builtins.str]] = None,
-                 scan_white_lists: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ZoneProtectionProfileScanWhiteListArgs', 'ZoneProtectionProfileScanWhiteListArgsDict']]]]] = None,
-                 scans: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ZoneProtectionProfileScanArgs', 'ZoneProtectionProfileScanArgsDict']]]]] = None,
+                 scan_white_lists: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ZoneProtectionProfileScanWhiteListArgs', 'ZoneProtectionProfileScanWhiteListArgsDict', 'outputs.ZoneProtectionProfileScanWhiteList']]]]] = None,
+                 scans: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ZoneProtectionProfileScanArgs', 'ZoneProtectionProfileScanArgsDict', 'outputs.ZoneProtectionProfileScan']]]]] = None,
                  security_discard: pulumi.Input[Optional[_builtins.bool]] = None,
                  snippet: pulumi.Input[Optional[_builtins.str]] = None,
                  spoofed_ip_discard: pulumi.Input[Optional[_builtins.bool]] = None,
@@ -1581,24 +1581,24 @@ class ZoneProtectionProfile(pulumi.CustomResource):
             description: pulumi.Input[Optional[_builtins.str]] = None,
             device: pulumi.Input[Optional[_builtins.str]] = None,
             discard_icmp_embedded_error: pulumi.Input[Optional[_builtins.bool]] = None,
-            flood: pulumi.Input[Optional[Union['ZoneProtectionProfileFloodArgs', 'ZoneProtectionProfileFloodArgsDict']]] = None,
+            flood: pulumi.Input[Optional[Union['ZoneProtectionProfileFloodArgs', 'ZoneProtectionProfileFloodArgsDict', 'outputs.ZoneProtectionProfileFlood']]] = None,
             folder: pulumi.Input[Optional[_builtins.str]] = None,
             fragmented_traffic_discard: pulumi.Input[Optional[_builtins.bool]] = None,
             icmp_frag_discard: pulumi.Input[Optional[_builtins.bool]] = None,
             icmp_large_packet_discard: pulumi.Input[Optional[_builtins.bool]] = None,
             icmp_ping_zero_id_discard: pulumi.Input[Optional[_builtins.bool]] = None,
-            ipv6: pulumi.Input[Optional[Union['ZoneProtectionProfileIpv6Args', 'ZoneProtectionProfileIpv6ArgsDict']]] = None,
-            l2_sec_group_tag_protection: pulumi.Input[Optional[Union['ZoneProtectionProfileL2SecGroupTagProtectionArgs', 'ZoneProtectionProfileL2SecGroupTagProtectionArgsDict']]] = None,
+            ipv6: pulumi.Input[Optional[Union['ZoneProtectionProfileIpv6Args', 'ZoneProtectionProfileIpv6ArgsDict', 'outputs.ZoneProtectionProfileIpv6']]] = None,
+            l2_sec_group_tag_protection: pulumi.Input[Optional[Union['ZoneProtectionProfileL2SecGroupTagProtectionArgs', 'ZoneProtectionProfileL2SecGroupTagProtectionArgsDict', 'outputs.ZoneProtectionProfileL2SecGroupTagProtection']]] = None,
             loose_source_routing_discard: pulumi.Input[Optional[_builtins.bool]] = None,
             malformed_option_discard: pulumi.Input[Optional[_builtins.bool]] = None,
             mismatched_overlapping_tcp_segment_discard: pulumi.Input[Optional[_builtins.bool]] = None,
             mptcp_option_strip: pulumi.Input[Optional[_builtins.str]] = None,
             name: pulumi.Input[Optional[_builtins.str]] = None,
-            non_ip_protocol: pulumi.Input[Optional[Union['ZoneProtectionProfileNonIpProtocolArgs', 'ZoneProtectionProfileNonIpProtocolArgsDict']]] = None,
+            non_ip_protocol: pulumi.Input[Optional[Union['ZoneProtectionProfileNonIpProtocolArgs', 'ZoneProtectionProfileNonIpProtocolArgsDict', 'outputs.ZoneProtectionProfileNonIpProtocol']]] = None,
             record_route_discard: pulumi.Input[Optional[_builtins.bool]] = None,
             reject_non_syn_tcp: pulumi.Input[Optional[_builtins.str]] = None,
-            scan_white_lists: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ZoneProtectionProfileScanWhiteListArgs', 'ZoneProtectionProfileScanWhiteListArgsDict']]]]] = None,
-            scans: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ZoneProtectionProfileScanArgs', 'ZoneProtectionProfileScanArgsDict']]]]] = None,
+            scan_white_lists: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ZoneProtectionProfileScanWhiteListArgs', 'ZoneProtectionProfileScanWhiteListArgsDict', 'outputs.ZoneProtectionProfileScanWhiteList']]]]] = None,
+            scans: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ZoneProtectionProfileScanArgs', 'ZoneProtectionProfileScanArgsDict', 'outputs.ZoneProtectionProfileScan']]]]] = None,
             security_discard: pulumi.Input[Optional[_builtins.bool]] = None,
             snippet: pulumi.Input[Optional[_builtins.str]] = None,
             spoofed_ip_discard: pulumi.Input[Optional[_builtins.bool]] = None,
@@ -1631,7 +1631,7 @@ class ZoneProtectionProfile(pulumi.CustomResource):
                
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.bool] discard_icmp_embedded_error: Discard ICMP packets that are embedded with an error message.
-        :param pulumi.Input[Union['ZoneProtectionProfileFloodArgs', 'ZoneProtectionProfileFloodArgsDict']] flood: Flood
+        :param pulumi.Input[Union['ZoneProtectionProfileFloodArgs', 'ZoneProtectionProfileFloodArgsDict', 'outputs.ZoneProtectionProfileFlood']] flood: Flood
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
                
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
@@ -1639,8 +1639,8 @@ class ZoneProtectionProfile(pulumi.CustomResource):
         :param pulumi.Input[_builtins.bool] icmp_frag_discard: Discard packets that consist of ICMP fragments.
         :param pulumi.Input[_builtins.bool] icmp_large_packet_discard: Discard ICMP packets that are larger than 1024 bytes.
         :param pulumi.Input[_builtins.bool] icmp_ping_zero_id_discard: Discard packets if the ICMP ping packet has an identifier value of 0.
-        :param pulumi.Input[Union['ZoneProtectionProfileIpv6Args', 'ZoneProtectionProfileIpv6ArgsDict']] ipv6: Ipv6
-        :param pulumi.Input[Union['ZoneProtectionProfileL2SecGroupTagProtectionArgs', 'ZoneProtectionProfileL2SecGroupTagProtectionArgsDict']] l2_sec_group_tag_protection: L2 sec group tag protection
+        :param pulumi.Input[Union['ZoneProtectionProfileIpv6Args', 'ZoneProtectionProfileIpv6ArgsDict', 'outputs.ZoneProtectionProfileIpv6']] ipv6: Ipv6
+        :param pulumi.Input[Union['ZoneProtectionProfileL2SecGroupTagProtectionArgs', 'ZoneProtectionProfileL2SecGroupTagProtectionArgsDict', 'outputs.ZoneProtectionProfileL2SecGroupTagProtection']] l2_sec_group_tag_protection: L2 sec group tag protection
         :param pulumi.Input[_builtins.bool] loose_source_routing_discard: Discard packets with the Loose Source Routing IP option set. Loose Source Routing is an option whereby a source of a datagram provides routing information and a gateway or host is allowed to choose any route of a number of intermediate gateways to get the datagram to the next address in the route.
         :param pulumi.Input[_builtins.bool] malformed_option_discard: Discard packets if they have incorrect combinations of class, number, and length based on RFCs 791, 1108, 1393, and 2113.
         :param pulumi.Input[_builtins.bool] mismatched_overlapping_tcp_segment_discard: Drop packets with mismatched overlapping TCP segments.
@@ -1649,14 +1649,14 @@ class ZoneProtectionProfile(pulumi.CustomResource):
                * `yes` — Disable MPTCP support (strip the MPTCP option). With this configured, MPTCP connections are converted to standard TCP connections, as MPTCP is backwards compatible with TCP.
                * `global` — Support MPTCP based on the global MPTCP setting. By default, the global MPTCP setting is set to yes so that MPTCP is disabled (the MPTCP option is stripped from the packet).
         :param pulumi.Input[_builtins.str] name: The profile name
-        :param pulumi.Input[Union['ZoneProtectionProfileNonIpProtocolArgs', 'ZoneProtectionProfileNonIpProtocolArgsDict']] non_ip_protocol: Non ip protocol
+        :param pulumi.Input[Union['ZoneProtectionProfileNonIpProtocolArgs', 'ZoneProtectionProfileNonIpProtocolArgsDict', 'outputs.ZoneProtectionProfileNonIpProtocol']] non_ip_protocol: Non ip protocol
         :param pulumi.Input[_builtins.bool] record_route_discard: Discard packets with the Record Route IP option set. When a datagram has this option, each router that routes the datagram adds its own IP address to the header, thus providing the path to the recipient.
         :param pulumi.Input[_builtins.str] reject_non_syn_tcp: Determine whether to reject the packet if the first packet for the TCP session setup is not a SYN packet:
                * `global` — Use system-wide setting that is assigned through the CLI.
                * `yes` — Reject non-SYN TCP.
                * `no` — Accept non-SYN TCP.
-        :param pulumi.Input[Sequence[pulumi.Input[Union['ZoneProtectionProfileScanWhiteListArgs', 'ZoneProtectionProfileScanWhiteListArgsDict']]]] scan_white_lists: Scan white list
-        :param pulumi.Input[Sequence[pulumi.Input[Union['ZoneProtectionProfileScanArgs', 'ZoneProtectionProfileScanArgsDict']]]] scans: Scan
+        :param pulumi.Input[Sequence[pulumi.Input[Union['ZoneProtectionProfileScanWhiteListArgs', 'ZoneProtectionProfileScanWhiteListArgsDict', 'outputs.ZoneProtectionProfileScanWhiteList']]]] scan_white_lists: Scan white list
+        :param pulumi.Input[Sequence[pulumi.Input[Union['ZoneProtectionProfileScanArgs', 'ZoneProtectionProfileScanArgsDict', 'outputs.ZoneProtectionProfileScan']]]] scans: Scan
         :param pulumi.Input[_builtins.bool] security_discard: Discard packets if the security option is defined.
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
                

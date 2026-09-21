@@ -336,7 +336,7 @@ class DataFilteringProfile(pulumi.CustomResource):
                  disable_override: pulumi.Input[Optional[_builtins.str]] = None,
                  folder: pulumi.Input[Optional[_builtins.str]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
-                 rules: pulumi.Input[Optional[Sequence[pulumi.Input[Union['DataFilteringProfileRuleArgs', 'DataFilteringProfileRuleArgsDict']]]]] = None,
+                 rules: pulumi.Input[Optional[Sequence[pulumi.Input[Union['DataFilteringProfileRuleArgs', 'DataFilteringProfileRuleArgsDict', 'outputs.DataFilteringProfileRule']]]]] = None,
                  snippet: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
@@ -409,7 +409,7 @@ class DataFilteringProfile(pulumi.CustomResource):
                
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] name: The name of the data filtering profile
-        :param pulumi.Input[Sequence[pulumi.Input[Union['DataFilteringProfileRuleArgs', 'DataFilteringProfileRuleArgsDict']]]] rules: Rules
+        :param pulumi.Input[Sequence[pulumi.Input[Union['DataFilteringProfileRuleArgs', 'DataFilteringProfileRuleArgsDict', 'outputs.DataFilteringProfileRule']]]] rules: Rules
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
                
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
@@ -501,7 +501,7 @@ class DataFilteringProfile(pulumi.CustomResource):
                  disable_override: pulumi.Input[Optional[_builtins.str]] = None,
                  folder: pulumi.Input[Optional[_builtins.str]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
-                 rules: pulumi.Input[Optional[Sequence[pulumi.Input[Union['DataFilteringProfileRuleArgs', 'DataFilteringProfileRuleArgsDict']]]]] = None,
+                 rules: pulumi.Input[Optional[Sequence[pulumi.Input[Union['DataFilteringProfileRuleArgs', 'DataFilteringProfileRuleArgsDict', 'outputs.DataFilteringProfileRule']]]]] = None,
                  snippet: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
@@ -537,7 +537,7 @@ class DataFilteringProfile(pulumi.CustomResource):
             disable_override: pulumi.Input[Optional[_builtins.str]] = None,
             folder: pulumi.Input[Optional[_builtins.str]] = None,
             name: pulumi.Input[Optional[_builtins.str]] = None,
-            rules: pulumi.Input[Optional[Sequence[pulumi.Input[Union['DataFilteringProfileRuleArgs', 'DataFilteringProfileRuleArgsDict']]]]] = None,
+            rules: pulumi.Input[Optional[Sequence[pulumi.Input[Union['DataFilteringProfileRuleArgs', 'DataFilteringProfileRuleArgsDict', 'outputs.DataFilteringProfileRule']]]]] = None,
             snippet: pulumi.Input[Optional[_builtins.str]] = None,
             tfid: pulumi.Input[Optional[_builtins.str]] = None) -> 'DataFilteringProfile':
         """
@@ -555,7 +555,7 @@ class DataFilteringProfile(pulumi.CustomResource):
                
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] name: The name of the data filtering profile
-        :param pulumi.Input[Sequence[pulumi.Input[Union['DataFilteringProfileRuleArgs', 'DataFilteringProfileRuleArgsDict']]]] rules: Rules
+        :param pulumi.Input[Sequence[pulumi.Input[Union['DataFilteringProfileRuleArgs', 'DataFilteringProfileRuleArgsDict', 'outputs.DataFilteringProfileRule']]]] rules: Rules
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
                
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.

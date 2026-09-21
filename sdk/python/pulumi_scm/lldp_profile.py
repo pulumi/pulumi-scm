@@ -302,7 +302,7 @@ class LldpProfile(pulumi.CustomResource):
                  folder: pulumi.Input[Optional[_builtins.str]] = None,
                  mode: pulumi.Input[Optional[_builtins.str]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
-                 option_tlvs: pulumi.Input[Optional[Union['LldpProfileOptionTlvsArgs', 'LldpProfileOptionTlvsArgsDict']]] = None,
+                 option_tlvs: pulumi.Input[Optional[Union['LldpProfileOptionTlvsArgs', 'LldpProfileOptionTlvsArgsDict', 'outputs.LldpProfileOptionTlvs']]] = None,
                  snippet: pulumi.Input[Optional[_builtins.str]] = None,
                  snmp_syslog_notification: pulumi.Input[Optional[_builtins.bool]] = None,
                  __props__=None):
@@ -362,7 +362,7 @@ class LldpProfile(pulumi.CustomResource):
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] mode: LLDP mode
         :param pulumi.Input[_builtins.str] name: LLDP profile name
-        :param pulumi.Input[Union['LldpProfileOptionTlvsArgs', 'LldpProfileOptionTlvsArgsDict']] option_tlvs: Option tlvs
+        :param pulumi.Input[Union['LldpProfileOptionTlvsArgs', 'LldpProfileOptionTlvsArgsDict', 'outputs.LldpProfileOptionTlvs']] option_tlvs: Option tlvs
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
                
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
@@ -441,7 +441,7 @@ class LldpProfile(pulumi.CustomResource):
                  folder: pulumi.Input[Optional[_builtins.str]] = None,
                  mode: pulumi.Input[Optional[_builtins.str]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
-                 option_tlvs: pulumi.Input[Optional[Union['LldpProfileOptionTlvsArgs', 'LldpProfileOptionTlvsArgsDict']]] = None,
+                 option_tlvs: pulumi.Input[Optional[Union['LldpProfileOptionTlvsArgs', 'LldpProfileOptionTlvsArgsDict', 'outputs.LldpProfileOptionTlvs']]] = None,
                  snippet: pulumi.Input[Optional[_builtins.str]] = None,
                  snmp_syslog_notification: pulumi.Input[Optional[_builtins.bool]] = None,
                  __props__=None):
@@ -475,7 +475,7 @@ class LldpProfile(pulumi.CustomResource):
             folder: pulumi.Input[Optional[_builtins.str]] = None,
             mode: pulumi.Input[Optional[_builtins.str]] = None,
             name: pulumi.Input[Optional[_builtins.str]] = None,
-            option_tlvs: pulumi.Input[Optional[Union['LldpProfileOptionTlvsArgs', 'LldpProfileOptionTlvsArgsDict']]] = None,
+            option_tlvs: pulumi.Input[Optional[Union['LldpProfileOptionTlvsArgs', 'LldpProfileOptionTlvsArgsDict', 'outputs.LldpProfileOptionTlvs']]] = None,
             snippet: pulumi.Input[Optional[_builtins.str]] = None,
             snmp_syslog_notification: pulumi.Input[Optional[_builtins.bool]] = None,
             tfid: pulumi.Input[Optional[_builtins.str]] = None) -> 'LldpProfile':
@@ -492,7 +492,7 @@ class LldpProfile(pulumi.CustomResource):
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] mode: LLDP mode
         :param pulumi.Input[_builtins.str] name: LLDP profile name
-        :param pulumi.Input[Union['LldpProfileOptionTlvsArgs', 'LldpProfileOptionTlvsArgsDict']] option_tlvs: Option tlvs
+        :param pulumi.Input[Union['LldpProfileOptionTlvsArgs', 'LldpProfileOptionTlvsArgsDict', 'outputs.LldpProfileOptionTlvs']] option_tlvs: Option tlvs
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
                
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.

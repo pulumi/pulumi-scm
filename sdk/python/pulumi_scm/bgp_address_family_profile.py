@@ -236,7 +236,7 @@ class BgpAddressFamilyProfile(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None,
                  device: pulumi.Input[Optional[_builtins.str]] = None,
                  folder: pulumi.Input[Optional[_builtins.str]] = None,
-                 ipv4: pulumi.Input[Optional[Union['BgpAddressFamilyProfileIpv4Args', 'BgpAddressFamilyProfileIpv4ArgsDict']]] = None,
+                 ipv4: pulumi.Input[Optional[Union['BgpAddressFamilyProfileIpv4Args', 'BgpAddressFamilyProfileIpv4ArgsDict', 'outputs.BgpAddressFamilyProfileIpv4']]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
                  snippet: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
@@ -294,7 +294,7 @@ class BgpAddressFamilyProfile(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
                
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-        :param pulumi.Input[Union['BgpAddressFamilyProfileIpv4Args', 'BgpAddressFamilyProfileIpv4ArgsDict']] ipv4: IPv4 Address Family
+        :param pulumi.Input[Union['BgpAddressFamilyProfileIpv4Args', 'BgpAddressFamilyProfileIpv4ArgsDict', 'outputs.BgpAddressFamilyProfileIpv4']] ipv4: IPv4 Address Family
         :param pulumi.Input[_builtins.str] name: Name
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
                
@@ -371,7 +371,7 @@ class BgpAddressFamilyProfile(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None,
                  device: pulumi.Input[Optional[_builtins.str]] = None,
                  folder: pulumi.Input[Optional[_builtins.str]] = None,
-                 ipv4: pulumi.Input[Optional[Union['BgpAddressFamilyProfileIpv4Args', 'BgpAddressFamilyProfileIpv4ArgsDict']]] = None,
+                 ipv4: pulumi.Input[Optional[Union['BgpAddressFamilyProfileIpv4Args', 'BgpAddressFamilyProfileIpv4ArgsDict', 'outputs.BgpAddressFamilyProfileIpv4']]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
                  snippet: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
@@ -401,7 +401,7 @@ class BgpAddressFamilyProfile(pulumi.CustomResource):
             opts: Optional[pulumi.ResourceOptions] = None,
             device: pulumi.Input[Optional[_builtins.str]] = None,
             folder: pulumi.Input[Optional[_builtins.str]] = None,
-            ipv4: pulumi.Input[Optional[Union['BgpAddressFamilyProfileIpv4Args', 'BgpAddressFamilyProfileIpv4ArgsDict']]] = None,
+            ipv4: pulumi.Input[Optional[Union['BgpAddressFamilyProfileIpv4Args', 'BgpAddressFamilyProfileIpv4ArgsDict', 'outputs.BgpAddressFamilyProfileIpv4']]] = None,
             name: pulumi.Input[Optional[_builtins.str]] = None,
             snippet: pulumi.Input[Optional[_builtins.str]] = None,
             tfid: pulumi.Input[Optional[_builtins.str]] = None) -> 'BgpAddressFamilyProfile':
@@ -416,7 +416,7 @@ class BgpAddressFamilyProfile(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
                
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-        :param pulumi.Input[Union['BgpAddressFamilyProfileIpv4Args', 'BgpAddressFamilyProfileIpv4ArgsDict']] ipv4: IPv4 Address Family
+        :param pulumi.Input[Union['BgpAddressFamilyProfileIpv4Args', 'BgpAddressFamilyProfileIpv4ArgsDict', 'outputs.BgpAddressFamilyProfileIpv4']] ipv4: IPv4 Address Family
         :param pulumi.Input[_builtins.str] name: Name
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
                

@@ -497,9 +497,9 @@ class Site(pulumi.CustomResource):
                  latitude: pulumi.Input[Optional[_builtins.str]] = None,
                  license_type: pulumi.Input[Optional[_builtins.str]] = None,
                  longitude: pulumi.Input[Optional[_builtins.str]] = None,
-                 members: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SiteMemberArgs', 'SiteMemberArgsDict']]]]] = None,
+                 members: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SiteMemberArgs', 'SiteMemberArgsDict', 'outputs.SiteMember']]]]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
-                 qos: pulumi.Input[Optional[Union['SiteQosArgs', 'SiteQosArgsDict']]] = None,
+                 qos: pulumi.Input[Optional[Union['SiteQosArgs', 'SiteQosArgsDict', 'outputs.SiteQos']]] = None,
                  state: pulumi.Input[Optional[_builtins.str]] = None,
                  type: pulumi.Input[Optional[_builtins.str]] = None,
                  zip_code: pulumi.Input[Optional[_builtins.str]] = None,
@@ -617,9 +617,9 @@ class Site(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] latitude: The latitude coordinate for the site
         :param pulumi.Input[_builtins.str] license_type: The license type of the site
         :param pulumi.Input[_builtins.str] longitude: The longitude coordinate for the site
-        :param pulumi.Input[Sequence[pulumi.Input[Union['SiteMemberArgs', 'SiteMemberArgsDict']]]] members: Members
+        :param pulumi.Input[Sequence[pulumi.Input[Union['SiteMemberArgs', 'SiteMemberArgsDict', 'outputs.SiteMember']]]] members: Members
         :param pulumi.Input[_builtins.str] name: The name of the site
-        :param pulumi.Input[Union['SiteQosArgs', 'SiteQosArgsDict']] qos: Qos
+        :param pulumi.Input[Union['SiteQosArgs', 'SiteQosArgsDict', 'outputs.SiteQos']] qos: Qos
         :param pulumi.Input[_builtins.str] state: The state in which the site exists
         :param pulumi.Input[_builtins.str] type: The site type
         :param pulumi.Input[_builtins.str] zip_code: The postal code in which the site exists
@@ -756,9 +756,9 @@ class Site(pulumi.CustomResource):
                  latitude: pulumi.Input[Optional[_builtins.str]] = None,
                  license_type: pulumi.Input[Optional[_builtins.str]] = None,
                  longitude: pulumi.Input[Optional[_builtins.str]] = None,
-                 members: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SiteMemberArgs', 'SiteMemberArgsDict']]]]] = None,
+                 members: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SiteMemberArgs', 'SiteMemberArgsDict', 'outputs.SiteMember']]]]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
-                 qos: pulumi.Input[Optional[Union['SiteQosArgs', 'SiteQosArgsDict']]] = None,
+                 qos: pulumi.Input[Optional[Union['SiteQosArgs', 'SiteQosArgsDict', 'outputs.SiteQos']]] = None,
                  state: pulumi.Input[Optional[_builtins.str]] = None,
                  type: pulumi.Input[Optional[_builtins.str]] = None,
                  zip_code: pulumi.Input[Optional[_builtins.str]] = None,
@@ -804,9 +804,9 @@ class Site(pulumi.CustomResource):
             latitude: pulumi.Input[Optional[_builtins.str]] = None,
             license_type: pulumi.Input[Optional[_builtins.str]] = None,
             longitude: pulumi.Input[Optional[_builtins.str]] = None,
-            members: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SiteMemberArgs', 'SiteMemberArgsDict']]]]] = None,
+            members: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SiteMemberArgs', 'SiteMemberArgsDict', 'outputs.SiteMember']]]]] = None,
             name: pulumi.Input[Optional[_builtins.str]] = None,
-            qos: pulumi.Input[Optional[Union['SiteQosArgs', 'SiteQosArgsDict']]] = None,
+            qos: pulumi.Input[Optional[Union['SiteQosArgs', 'SiteQosArgsDict', 'outputs.SiteQos']]] = None,
             state: pulumi.Input[Optional[_builtins.str]] = None,
             tfid: pulumi.Input[Optional[_builtins.str]] = None,
             type: pulumi.Input[Optional[_builtins.str]] = None,
@@ -826,9 +826,9 @@ class Site(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] latitude: The latitude coordinate for the site
         :param pulumi.Input[_builtins.str] license_type: The license type of the site
         :param pulumi.Input[_builtins.str] longitude: The longitude coordinate for the site
-        :param pulumi.Input[Sequence[pulumi.Input[Union['SiteMemberArgs', 'SiteMemberArgsDict']]]] members: Members
+        :param pulumi.Input[Sequence[pulumi.Input[Union['SiteMemberArgs', 'SiteMemberArgsDict', 'outputs.SiteMember']]]] members: Members
         :param pulumi.Input[_builtins.str] name: The name of the site
-        :param pulumi.Input[Union['SiteQosArgs', 'SiteQosArgsDict']] qos: Qos
+        :param pulumi.Input[Union['SiteQosArgs', 'SiteQosArgsDict', 'outputs.SiteQos']] qos: Qos
         :param pulumi.Input[_builtins.str] state: The state in which the site exists
         :param pulumi.Input[_builtins.str] tfid: The Terraform ID.
         :param pulumi.Input[_builtins.str] type: The site type

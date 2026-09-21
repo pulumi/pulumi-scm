@@ -268,7 +268,7 @@ class LogForwardingProfile(pulumi.CustomResource):
                  description: pulumi.Input[Optional[_builtins.str]] = None,
                  device: pulumi.Input[Optional[_builtins.str]] = None,
                  folder: pulumi.Input[Optional[_builtins.str]] = None,
-                 match_lists: pulumi.Input[Optional[Sequence[pulumi.Input[Union['LogForwardingProfileMatchListArgs', 'LogForwardingProfileMatchListArgsDict']]]]] = None,
+                 match_lists: pulumi.Input[Optional[Sequence[pulumi.Input[Union['LogForwardingProfileMatchListArgs', 'LogForwardingProfileMatchListArgsDict', 'outputs.LogForwardingProfileMatchList']]]]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
                  snippet: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
@@ -387,7 +387,7 @@ class LogForwardingProfile(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
                
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-        :param pulumi.Input[Sequence[pulumi.Input[Union['LogForwardingProfileMatchListArgs', 'LogForwardingProfileMatchListArgsDict']]]] match_lists: Match list
+        :param pulumi.Input[Sequence[pulumi.Input[Union['LogForwardingProfileMatchListArgs', 'LogForwardingProfileMatchListArgsDict', 'outputs.LogForwardingProfileMatchList']]]] match_lists: Match list
         :param pulumi.Input[_builtins.str] name: The name of the log forwarding profile
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
                
@@ -525,7 +525,7 @@ class LogForwardingProfile(pulumi.CustomResource):
                  description: pulumi.Input[Optional[_builtins.str]] = None,
                  device: pulumi.Input[Optional[_builtins.str]] = None,
                  folder: pulumi.Input[Optional[_builtins.str]] = None,
-                 match_lists: pulumi.Input[Optional[Sequence[pulumi.Input[Union['LogForwardingProfileMatchListArgs', 'LogForwardingProfileMatchListArgsDict']]]]] = None,
+                 match_lists: pulumi.Input[Optional[Sequence[pulumi.Input[Union['LogForwardingProfileMatchListArgs', 'LogForwardingProfileMatchListArgsDict', 'outputs.LogForwardingProfileMatchList']]]]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
                  snippet: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
@@ -559,7 +559,7 @@ class LogForwardingProfile(pulumi.CustomResource):
             description: pulumi.Input[Optional[_builtins.str]] = None,
             device: pulumi.Input[Optional[_builtins.str]] = None,
             folder: pulumi.Input[Optional[_builtins.str]] = None,
-            match_lists: pulumi.Input[Optional[Sequence[pulumi.Input[Union['LogForwardingProfileMatchListArgs', 'LogForwardingProfileMatchListArgsDict']]]]] = None,
+            match_lists: pulumi.Input[Optional[Sequence[pulumi.Input[Union['LogForwardingProfileMatchListArgs', 'LogForwardingProfileMatchListArgsDict', 'outputs.LogForwardingProfileMatchList']]]]] = None,
             name: pulumi.Input[Optional[_builtins.str]] = None,
             snippet: pulumi.Input[Optional[_builtins.str]] = None,
             tfid: pulumi.Input[Optional[_builtins.str]] = None) -> 'LogForwardingProfile':
@@ -575,7 +575,7 @@ class LogForwardingProfile(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
                
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-        :param pulumi.Input[Sequence[pulumi.Input[Union['LogForwardingProfileMatchListArgs', 'LogForwardingProfileMatchListArgsDict']]]] match_lists: Match list
+        :param pulumi.Input[Sequence[pulumi.Input[Union['LogForwardingProfileMatchListArgs', 'LogForwardingProfileMatchListArgsDict', 'outputs.LogForwardingProfileMatchList']]]] match_lists: Match list
         :param pulumi.Input[_builtins.str] name: The name of the log forwarding profile
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
                

@@ -427,16 +427,16 @@ class Zone(pulumi.CustomResource):
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
                  device: pulumi.Input[Optional[_builtins.str]] = None,
-                 device_acl: pulumi.Input[Optional[Union['ZoneDeviceAclArgs', 'ZoneDeviceAclArgsDict']]] = None,
+                 device_acl: pulumi.Input[Optional[Union['ZoneDeviceAclArgs', 'ZoneDeviceAclArgsDict', 'outputs.ZoneDeviceAcl']]] = None,
                  dos_log_setting: pulumi.Input[Optional[_builtins.str]] = None,
                  dos_profile: pulumi.Input[Optional[_builtins.str]] = None,
                  enable_device_identification: pulumi.Input[Optional[_builtins.bool]] = None,
                  enable_user_identification: pulumi.Input[Optional[_builtins.bool]] = None,
                  folder: pulumi.Input[Optional[_builtins.str]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
-                 network: pulumi.Input[Optional[Union['ZoneNetworkArgs', 'ZoneNetworkArgsDict']]] = None,
+                 network: pulumi.Input[Optional[Union['ZoneNetworkArgs', 'ZoneNetworkArgsDict', 'outputs.ZoneNetwork']]] = None,
                  snippet: pulumi.Input[Optional[_builtins.str]] = None,
-                 user_acl: pulumi.Input[Optional[Union['ZoneUserAclArgs', 'ZoneUserAclArgsDict']]] = None,
+                 user_acl: pulumi.Input[Optional[Union['ZoneUserAclArgs', 'ZoneUserAclArgsDict', 'outputs.ZoneUserAcl']]] = None,
                  __props__=None):
         """
         Zone resource
@@ -533,7 +533,7 @@ class Zone(pulumi.CustomResource):
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
-        :param pulumi.Input[Union['ZoneDeviceAclArgs', 'ZoneDeviceAclArgsDict']] device_acl: Device acl
+        :param pulumi.Input[Union['ZoneDeviceAclArgs', 'ZoneDeviceAclArgsDict', 'outputs.ZoneDeviceAcl']] device_acl: Device acl
         :param pulumi.Input[_builtins.str] dos_log_setting: Dos log setting
         :param pulumi.Input[_builtins.str] dos_profile: Dos profile
         :param pulumi.Input[_builtins.bool] enable_device_identification: Enable device identification
@@ -542,11 +542,11 @@ class Zone(pulumi.CustomResource):
                
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] name: Alphanumeric string begin with letter: [0-9a-zA-Z._-]
-        :param pulumi.Input[Union['ZoneNetworkArgs', 'ZoneNetworkArgsDict']] network: Network
+        :param pulumi.Input[Union['ZoneNetworkArgs', 'ZoneNetworkArgsDict', 'outputs.ZoneNetwork']] network: Network
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
                
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-        :param pulumi.Input[Union['ZoneUserAclArgs', 'ZoneUserAclArgsDict']] user_acl: User acl
+        :param pulumi.Input[Union['ZoneUserAclArgs', 'ZoneUserAclArgsDict', 'outputs.ZoneUserAcl']] user_acl: User acl
         """
         ...
     @overload
@@ -662,16 +662,16 @@ class Zone(pulumi.CustomResource):
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
                  device: pulumi.Input[Optional[_builtins.str]] = None,
-                 device_acl: pulumi.Input[Optional[Union['ZoneDeviceAclArgs', 'ZoneDeviceAclArgsDict']]] = None,
+                 device_acl: pulumi.Input[Optional[Union['ZoneDeviceAclArgs', 'ZoneDeviceAclArgsDict', 'outputs.ZoneDeviceAcl']]] = None,
                  dos_log_setting: pulumi.Input[Optional[_builtins.str]] = None,
                  dos_profile: pulumi.Input[Optional[_builtins.str]] = None,
                  enable_device_identification: pulumi.Input[Optional[_builtins.bool]] = None,
                  enable_user_identification: pulumi.Input[Optional[_builtins.bool]] = None,
                  folder: pulumi.Input[Optional[_builtins.str]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
-                 network: pulumi.Input[Optional[Union['ZoneNetworkArgs', 'ZoneNetworkArgsDict']]] = None,
+                 network: pulumi.Input[Optional[Union['ZoneNetworkArgs', 'ZoneNetworkArgsDict', 'outputs.ZoneNetwork']]] = None,
                  snippet: pulumi.Input[Optional[_builtins.str]] = None,
-                 user_acl: pulumi.Input[Optional[Union['ZoneUserAclArgs', 'ZoneUserAclArgsDict']]] = None,
+                 user_acl: pulumi.Input[Optional[Union['ZoneUserAclArgs', 'ZoneUserAclArgsDict', 'outputs.ZoneUserAcl']]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -704,17 +704,17 @@ class Zone(pulumi.CustomResource):
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
             device: pulumi.Input[Optional[_builtins.str]] = None,
-            device_acl: pulumi.Input[Optional[Union['ZoneDeviceAclArgs', 'ZoneDeviceAclArgsDict']]] = None,
+            device_acl: pulumi.Input[Optional[Union['ZoneDeviceAclArgs', 'ZoneDeviceAclArgsDict', 'outputs.ZoneDeviceAcl']]] = None,
             dos_log_setting: pulumi.Input[Optional[_builtins.str]] = None,
             dos_profile: pulumi.Input[Optional[_builtins.str]] = None,
             enable_device_identification: pulumi.Input[Optional[_builtins.bool]] = None,
             enable_user_identification: pulumi.Input[Optional[_builtins.bool]] = None,
             folder: pulumi.Input[Optional[_builtins.str]] = None,
             name: pulumi.Input[Optional[_builtins.str]] = None,
-            network: pulumi.Input[Optional[Union['ZoneNetworkArgs', 'ZoneNetworkArgsDict']]] = None,
+            network: pulumi.Input[Optional[Union['ZoneNetworkArgs', 'ZoneNetworkArgsDict', 'outputs.ZoneNetwork']]] = None,
             snippet: pulumi.Input[Optional[_builtins.str]] = None,
             tfid: pulumi.Input[Optional[_builtins.str]] = None,
-            user_acl: pulumi.Input[Optional[Union['ZoneUserAclArgs', 'ZoneUserAclArgsDict']]] = None) -> 'Zone':
+            user_acl: pulumi.Input[Optional[Union['ZoneUserAclArgs', 'ZoneUserAclArgsDict', 'outputs.ZoneUserAcl']]] = None) -> 'Zone':
         """
         Get an existing Zone resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.
@@ -723,7 +723,7 @@ class Zone(pulumi.CustomResource):
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
-        :param pulumi.Input[Union['ZoneDeviceAclArgs', 'ZoneDeviceAclArgsDict']] device_acl: Device acl
+        :param pulumi.Input[Union['ZoneDeviceAclArgs', 'ZoneDeviceAclArgsDict', 'outputs.ZoneDeviceAcl']] device_acl: Device acl
         :param pulumi.Input[_builtins.str] dos_log_setting: Dos log setting
         :param pulumi.Input[_builtins.str] dos_profile: Dos profile
         :param pulumi.Input[_builtins.bool] enable_device_identification: Enable device identification
@@ -732,12 +732,12 @@ class Zone(pulumi.CustomResource):
                
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] name: Alphanumeric string begin with letter: [0-9a-zA-Z._-]
-        :param pulumi.Input[Union['ZoneNetworkArgs', 'ZoneNetworkArgsDict']] network: Network
+        :param pulumi.Input[Union['ZoneNetworkArgs', 'ZoneNetworkArgsDict', 'outputs.ZoneNetwork']] network: Network
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
                
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] tfid: The Terraform ID.
-        :param pulumi.Input[Union['ZoneUserAclArgs', 'ZoneUserAclArgsDict']] user_acl: User acl
+        :param pulumi.Input[Union['ZoneUserAclArgs', 'ZoneUserAclArgsDict', 'outputs.ZoneUserAcl']] user_acl: User acl
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
 

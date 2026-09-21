@@ -425,10 +425,10 @@ class QosPolicyRule(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 action: pulumi.Input[Optional[Union['QosPolicyRuleActionArgs', 'QosPolicyRuleActionArgsDict']]] = None,
+                 action: pulumi.Input[Optional[Union['QosPolicyRuleActionArgs', 'QosPolicyRuleActionArgsDict', 'outputs.QosPolicyRuleAction']]] = None,
                  description: pulumi.Input[Optional[_builtins.str]] = None,
                  device: pulumi.Input[Optional[_builtins.str]] = None,
-                 dscp_tos: pulumi.Input[Optional[Union['QosPolicyRuleDscpTosArgs', 'QosPolicyRuleDscpTosArgsDict']]] = None,
+                 dscp_tos: pulumi.Input[Optional[Union['QosPolicyRuleDscpTosArgs', 'QosPolicyRuleDscpTosArgsDict', 'outputs.QosPolicyRuleDscpTos']]] = None,
                  folder: pulumi.Input[Optional[_builtins.str]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
                  position: pulumi.Input[Optional[_builtins.str]] = None,
@@ -531,10 +531,10 @@ class QosPolicyRule(pulumi.CustomResource):
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[Union['QosPolicyRuleActionArgs', 'QosPolicyRuleActionArgsDict']] action: Action
+        :param pulumi.Input[Union['QosPolicyRuleActionArgs', 'QosPolicyRuleActionArgsDict', 'outputs.QosPolicyRuleAction']] action: Action
         :param pulumi.Input[_builtins.str] description: Description
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
-        :param pulumi.Input[Union['QosPolicyRuleDscpTosArgs', 'QosPolicyRuleDscpTosArgsDict']] dscp_tos: Dscp tos
+        :param pulumi.Input[Union['QosPolicyRuleDscpTosArgs', 'QosPolicyRuleDscpTosArgsDict', 'outputs.QosPolicyRuleDscpTos']] dscp_tos: Dscp tos
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
                
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
@@ -660,10 +660,10 @@ class QosPolicyRule(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 action: pulumi.Input[Optional[Union['QosPolicyRuleActionArgs', 'QosPolicyRuleActionArgsDict']]] = None,
+                 action: pulumi.Input[Optional[Union['QosPolicyRuleActionArgs', 'QosPolicyRuleActionArgsDict', 'outputs.QosPolicyRuleAction']]] = None,
                  description: pulumi.Input[Optional[_builtins.str]] = None,
                  device: pulumi.Input[Optional[_builtins.str]] = None,
-                 dscp_tos: pulumi.Input[Optional[Union['QosPolicyRuleDscpTosArgs', 'QosPolicyRuleDscpTosArgsDict']]] = None,
+                 dscp_tos: pulumi.Input[Optional[Union['QosPolicyRuleDscpTosArgs', 'QosPolicyRuleDscpTosArgsDict', 'outputs.QosPolicyRuleDscpTos']]] = None,
                  folder: pulumi.Input[Optional[_builtins.str]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
                  position: pulumi.Input[Optional[_builtins.str]] = None,
@@ -704,10 +704,10 @@ class QosPolicyRule(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            action: pulumi.Input[Optional[Union['QosPolicyRuleActionArgs', 'QosPolicyRuleActionArgsDict']]] = None,
+            action: pulumi.Input[Optional[Union['QosPolicyRuleActionArgs', 'QosPolicyRuleActionArgsDict', 'outputs.QosPolicyRuleAction']]] = None,
             description: pulumi.Input[Optional[_builtins.str]] = None,
             device: pulumi.Input[Optional[_builtins.str]] = None,
-            dscp_tos: pulumi.Input[Optional[Union['QosPolicyRuleDscpTosArgs', 'QosPolicyRuleDscpTosArgsDict']]] = None,
+            dscp_tos: pulumi.Input[Optional[Union['QosPolicyRuleDscpTosArgs', 'QosPolicyRuleDscpTosArgsDict', 'outputs.QosPolicyRuleDscpTos']]] = None,
             folder: pulumi.Input[Optional[_builtins.str]] = None,
             name: pulumi.Input[Optional[_builtins.str]] = None,
             position: pulumi.Input[Optional[_builtins.str]] = None,
@@ -723,10 +723,10 @@ class QosPolicyRule(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[Union['QosPolicyRuleActionArgs', 'QosPolicyRuleActionArgsDict']] action: Action
+        :param pulumi.Input[Union['QosPolicyRuleActionArgs', 'QosPolicyRuleActionArgsDict', 'outputs.QosPolicyRuleAction']] action: Action
         :param pulumi.Input[_builtins.str] description: Description
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
-        :param pulumi.Input[Union['QosPolicyRuleDscpTosArgs', 'QosPolicyRuleDscpTosArgsDict']] dscp_tos: Dscp tos
+        :param pulumi.Input[Union['QosPolicyRuleDscpTosArgs', 'QosPolicyRuleDscpTosArgsDict', 'outputs.QosPolicyRuleDscpTos']] dscp_tos: Dscp tos
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
                
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.

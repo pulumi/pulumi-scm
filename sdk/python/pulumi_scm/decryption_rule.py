@@ -956,7 +956,7 @@ class DecryptionRule(pulumi.CustomResource):
                  tags: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  target_rule: pulumi.Input[Optional[_builtins.str]] = None,
                  tos: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 type: pulumi.Input[Optional[Union['DecryptionRuleTypeArgs', 'DecryptionRuleTypeArgsDict']]] = None,
+                 type: pulumi.Input[Optional[Union['DecryptionRuleTypeArgs', 'DecryptionRuleTypeArgsDict', 'outputs.DecryptionRuleType']]] = None,
                  __props__=None):
         """
         DecryptionRule resource
@@ -1150,7 +1150,7 @@ class DecryptionRule(pulumi.CustomResource):
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tags: The tags associated with the decryption rule
         :param pulumi.Input[_builtins.str] target_rule: The name or UUID of the rule to position this rule relative to. Required when `relative_position` is `"before"` or `"after"`.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tos: The destination security zone
-        :param pulumi.Input[Union['DecryptionRuleTypeArgs', 'DecryptionRuleTypeArgsDict']] type: The type of decryption
+        :param pulumi.Input[Union['DecryptionRuleTypeArgs', 'DecryptionRuleTypeArgsDict', 'outputs.DecryptionRuleType']] type: The type of decryption
         """
         ...
     @overload
@@ -1359,7 +1359,7 @@ class DecryptionRule(pulumi.CustomResource):
                  tags: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  target_rule: pulumi.Input[Optional[_builtins.str]] = None,
                  tos: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 type: pulumi.Input[Optional[Union['DecryptionRuleTypeArgs', 'DecryptionRuleTypeArgsDict']]] = None,
+                 type: pulumi.Input[Optional[Union['DecryptionRuleTypeArgs', 'DecryptionRuleTypeArgsDict', 'outputs.DecryptionRuleType']]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -1450,7 +1450,7 @@ class DecryptionRule(pulumi.CustomResource):
             target_rule: pulumi.Input[Optional[_builtins.str]] = None,
             tfid: pulumi.Input[Optional[_builtins.str]] = None,
             tos: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
-            type: pulumi.Input[Optional[Union['DecryptionRuleTypeArgs', 'DecryptionRuleTypeArgsDict']]] = None) -> 'DecryptionRule':
+            type: pulumi.Input[Optional[Union['DecryptionRuleTypeArgs', 'DecryptionRuleTypeArgsDict', 'outputs.DecryptionRuleType']]] = None) -> 'DecryptionRule':
         """
         Get an existing DecryptionRule resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.
@@ -1489,7 +1489,7 @@ class DecryptionRule(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] target_rule: The name or UUID of the rule to position this rule relative to. Required when `relative_position` is `"before"` or `"after"`.
         :param pulumi.Input[_builtins.str] tfid: The Terraform ID.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tos: The destination security zone
-        :param pulumi.Input[Union['DecryptionRuleTypeArgs', 'DecryptionRuleTypeArgsDict']] type: The type of decryption
+        :param pulumi.Input[Union['DecryptionRuleTypeArgs', 'DecryptionRuleTypeArgsDict', 'outputs.DecryptionRuleType']] type: The type of decryption
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
 

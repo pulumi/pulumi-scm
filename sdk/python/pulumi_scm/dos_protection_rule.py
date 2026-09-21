@@ -650,7 +650,7 @@ class DosProtectionRule(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 action: pulumi.Input[Optional[Union['DosProtectionRuleActionArgs', 'DosProtectionRuleActionArgsDict']]] = None,
+                 action: pulumi.Input[Optional[Union['DosProtectionRuleActionArgs', 'DosProtectionRuleActionArgsDict', 'outputs.DosProtectionRuleAction']]] = None,
                  description: pulumi.Input[Optional[_builtins.str]] = None,
                  destinations: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  device: pulumi.Input[Optional[_builtins.str]] = None,
@@ -660,7 +660,7 @@ class DosProtectionRule(pulumi.CustomResource):
                  log_setting: pulumi.Input[Optional[_builtins.str]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
                  position: pulumi.Input[Optional[_builtins.str]] = None,
-                 protection: pulumi.Input[Optional[Union['DosProtectionRuleProtectionArgs', 'DosProtectionRuleProtectionArgsDict']]] = None,
+                 protection: pulumi.Input[Optional[Union['DosProtectionRuleProtectionArgs', 'DosProtectionRuleProtectionArgsDict', 'outputs.DosProtectionRuleProtection']]] = None,
                  schedule: pulumi.Input[Optional[_builtins.str]] = None,
                  services: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  snippet: pulumi.Input[Optional[_builtins.str]] = None,
@@ -697,7 +697,7 @@ class DosProtectionRule(pulumi.CustomResource):
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[Union['DosProtectionRuleActionArgs', 'DosProtectionRuleActionArgsDict']] action: The action to take on rule match
+        :param pulumi.Input[Union['DosProtectionRuleActionArgs', 'DosProtectionRuleActionArgsDict', 'outputs.DosProtectionRuleAction']] action: The action to take on rule match
         :param pulumi.Input[_builtins.str] description: Description
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] destinations: List of destination addresses
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
@@ -709,7 +709,7 @@ class DosProtectionRule(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] log_setting: Log forwarding profile name
         :param pulumi.Input[_builtins.str] name: Rule name
         :param pulumi.Input[_builtins.str] position: Position relative to local device rules
-        :param pulumi.Input[Union['DosProtectionRuleProtectionArgs', 'DosProtectionRuleProtectionArgsDict']] protection: Protection
+        :param pulumi.Input[Union['DosProtectionRuleProtectionArgs', 'DosProtectionRuleProtectionArgsDict', 'outputs.DosProtectionRuleProtection']] protection: Protection
         :param pulumi.Input[_builtins.str] schedule: Schedule on which to enforce the rule
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] services: List of services
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
@@ -767,7 +767,7 @@ class DosProtectionRule(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 action: pulumi.Input[Optional[Union['DosProtectionRuleActionArgs', 'DosProtectionRuleActionArgsDict']]] = None,
+                 action: pulumi.Input[Optional[Union['DosProtectionRuleActionArgs', 'DosProtectionRuleActionArgsDict', 'outputs.DosProtectionRuleAction']]] = None,
                  description: pulumi.Input[Optional[_builtins.str]] = None,
                  destinations: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  device: pulumi.Input[Optional[_builtins.str]] = None,
@@ -777,7 +777,7 @@ class DosProtectionRule(pulumi.CustomResource):
                  log_setting: pulumi.Input[Optional[_builtins.str]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
                  position: pulumi.Input[Optional[_builtins.str]] = None,
-                 protection: pulumi.Input[Optional[Union['DosProtectionRuleProtectionArgs', 'DosProtectionRuleProtectionArgsDict']]] = None,
+                 protection: pulumi.Input[Optional[Union['DosProtectionRuleProtectionArgs', 'DosProtectionRuleProtectionArgsDict', 'outputs.DosProtectionRuleProtection']]] = None,
                  schedule: pulumi.Input[Optional[_builtins.str]] = None,
                  services: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  snippet: pulumi.Input[Optional[_builtins.str]] = None,
@@ -823,7 +823,7 @@ class DosProtectionRule(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            action: pulumi.Input[Optional[Union['DosProtectionRuleActionArgs', 'DosProtectionRuleActionArgsDict']]] = None,
+            action: pulumi.Input[Optional[Union['DosProtectionRuleActionArgs', 'DosProtectionRuleActionArgsDict', 'outputs.DosProtectionRuleAction']]] = None,
             description: pulumi.Input[Optional[_builtins.str]] = None,
             destinations: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
             device: pulumi.Input[Optional[_builtins.str]] = None,
@@ -833,7 +833,7 @@ class DosProtectionRule(pulumi.CustomResource):
             log_setting: pulumi.Input[Optional[_builtins.str]] = None,
             name: pulumi.Input[Optional[_builtins.str]] = None,
             position: pulumi.Input[Optional[_builtins.str]] = None,
-            protection: pulumi.Input[Optional[Union['DosProtectionRuleProtectionArgs', 'DosProtectionRuleProtectionArgsDict']]] = None,
+            protection: pulumi.Input[Optional[Union['DosProtectionRuleProtectionArgs', 'DosProtectionRuleProtectionArgsDict', 'outputs.DosProtectionRuleProtection']]] = None,
             schedule: pulumi.Input[Optional[_builtins.str]] = None,
             services: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
             snippet: pulumi.Input[Optional[_builtins.str]] = None,
@@ -849,7 +849,7 @@ class DosProtectionRule(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[Union['DosProtectionRuleActionArgs', 'DosProtectionRuleActionArgsDict']] action: The action to take on rule match
+        :param pulumi.Input[Union['DosProtectionRuleActionArgs', 'DosProtectionRuleActionArgsDict', 'outputs.DosProtectionRuleAction']] action: The action to take on rule match
         :param pulumi.Input[_builtins.str] description: Description
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] destinations: List of destination addresses
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
@@ -861,7 +861,7 @@ class DosProtectionRule(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] log_setting: Log forwarding profile name
         :param pulumi.Input[_builtins.str] name: Rule name
         :param pulumi.Input[_builtins.str] position: Position relative to local device rules
-        :param pulumi.Input[Union['DosProtectionRuleProtectionArgs', 'DosProtectionRuleProtectionArgsDict']] protection: Protection
+        :param pulumi.Input[Union['DosProtectionRuleProtectionArgs', 'DosProtectionRuleProtectionArgsDict', 'outputs.DosProtectionRuleProtection']] protection: Protection
         :param pulumi.Input[_builtins.str] schedule: Schedule on which to enforce the rule
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] services: List of services
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined

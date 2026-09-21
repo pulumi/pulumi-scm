@@ -267,9 +267,9 @@ class SyslogServerProfile(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None,
                  device: pulumi.Input[Optional[_builtins.str]] = None,
                  folder: pulumi.Input[Optional[_builtins.str]] = None,
-                 format: pulumi.Input[Optional[Union['SyslogServerProfileFormatArgs', 'SyslogServerProfileFormatArgsDict']]] = None,
+                 format: pulumi.Input[Optional[Union['SyslogServerProfileFormatArgs', 'SyslogServerProfileFormatArgsDict', 'outputs.SyslogServerProfileFormat']]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
-                 servers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SyslogServerProfileServerArgs', 'SyslogServerProfileServerArgsDict']]]]] = None,
+                 servers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SyslogServerProfileServerArgs', 'SyslogServerProfileServerArgsDict', 'outputs.SyslogServerProfileServer']]]]] = None,
                  snippet: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
@@ -387,9 +387,9 @@ class SyslogServerProfile(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
                
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-        :param pulumi.Input[Union['SyslogServerProfileFormatArgs', 'SyslogServerProfileFormatArgsDict']] format: Format
+        :param pulumi.Input[Union['SyslogServerProfileFormatArgs', 'SyslogServerProfileFormatArgsDict', 'outputs.SyslogServerProfileFormat']] format: Format
         :param pulumi.Input[_builtins.str] name: The name of the syslog server profile
-        :param pulumi.Input[Sequence[pulumi.Input[Union['SyslogServerProfileServerArgs', 'SyslogServerProfileServerArgsDict']]]] servers: A list of syslog server configurations. At least one server is required.
+        :param pulumi.Input[Sequence[pulumi.Input[Union['SyslogServerProfileServerArgs', 'SyslogServerProfileServerArgsDict', 'outputs.SyslogServerProfileServer']]]] servers: A list of syslog server configurations. At least one server is required.
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
                
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
@@ -526,9 +526,9 @@ class SyslogServerProfile(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None,
                  device: pulumi.Input[Optional[_builtins.str]] = None,
                  folder: pulumi.Input[Optional[_builtins.str]] = None,
-                 format: pulumi.Input[Optional[Union['SyslogServerProfileFormatArgs', 'SyslogServerProfileFormatArgsDict']]] = None,
+                 format: pulumi.Input[Optional[Union['SyslogServerProfileFormatArgs', 'SyslogServerProfileFormatArgsDict', 'outputs.SyslogServerProfileFormat']]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
-                 servers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SyslogServerProfileServerArgs', 'SyslogServerProfileServerArgsDict']]]]] = None,
+                 servers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SyslogServerProfileServerArgs', 'SyslogServerProfileServerArgsDict', 'outputs.SyslogServerProfileServer']]]]] = None,
                  snippet: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
@@ -560,9 +560,9 @@ class SyslogServerProfile(pulumi.CustomResource):
             opts: Optional[pulumi.ResourceOptions] = None,
             device: pulumi.Input[Optional[_builtins.str]] = None,
             folder: pulumi.Input[Optional[_builtins.str]] = None,
-            format: pulumi.Input[Optional[Union['SyslogServerProfileFormatArgs', 'SyslogServerProfileFormatArgsDict']]] = None,
+            format: pulumi.Input[Optional[Union['SyslogServerProfileFormatArgs', 'SyslogServerProfileFormatArgsDict', 'outputs.SyslogServerProfileFormat']]] = None,
             name: pulumi.Input[Optional[_builtins.str]] = None,
-            servers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SyslogServerProfileServerArgs', 'SyslogServerProfileServerArgsDict']]]]] = None,
+            servers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SyslogServerProfileServerArgs', 'SyslogServerProfileServerArgsDict', 'outputs.SyslogServerProfileServer']]]]] = None,
             snippet: pulumi.Input[Optional[_builtins.str]] = None,
             tfid: pulumi.Input[Optional[_builtins.str]] = None) -> 'SyslogServerProfile':
         """
@@ -576,9 +576,9 @@ class SyslogServerProfile(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
                
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-        :param pulumi.Input[Union['SyslogServerProfileFormatArgs', 'SyslogServerProfileFormatArgsDict']] format: Format
+        :param pulumi.Input[Union['SyslogServerProfileFormatArgs', 'SyslogServerProfileFormatArgsDict', 'outputs.SyslogServerProfileFormat']] format: Format
         :param pulumi.Input[_builtins.str] name: The name of the syslog server profile
-        :param pulumi.Input[Sequence[pulumi.Input[Union['SyslogServerProfileServerArgs', 'SyslogServerProfileServerArgsDict']]]] servers: A list of syslog server configurations. At least one server is required.
+        :param pulumi.Input[Sequence[pulumi.Input[Union['SyslogServerProfileServerArgs', 'SyslogServerProfileServerArgsDict', 'outputs.SyslogServerProfileServer']]]] servers: A list of syslog server configurations. At least one server is required.
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
                
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.

@@ -546,7 +546,7 @@ class LdapServerProfile(pulumi.CustomResource):
                  ldap_type: pulumi.Input[Optional[_builtins.str]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
                  retry_interval: pulumi.Input[Optional[_builtins.int]] = None,
-                 servers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['LdapServerProfileServerArgs', 'LdapServerProfileServerArgsDict']]]]] = None,
+                 servers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['LdapServerProfileServerArgs', 'LdapServerProfileServerArgsDict', 'outputs.LdapServerProfileServer']]]]] = None,
                  snippet: pulumi.Input[Optional[_builtins.str]] = None,
                  ssl: pulumi.Input[Optional[_builtins.bool]] = None,
                  timelimit: pulumi.Input[Optional[_builtins.int]] = None,
@@ -699,7 +699,7 @@ class LdapServerProfile(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] ldap_type: The LDAP server time
         :param pulumi.Input[_builtins.str] name: The name of the LDAP server profile
         :param pulumi.Input[_builtins.int] retry_interval: The search retry interval (seconds)
-        :param pulumi.Input[Sequence[pulumi.Input[Union['LdapServerProfileServerArgs', 'LdapServerProfileServerArgsDict']]]] servers: The LDAP server configuration
+        :param pulumi.Input[Sequence[pulumi.Input[Union['LdapServerProfileServerArgs', 'LdapServerProfileServerArgsDict', 'outputs.LdapServerProfileServer']]]] servers: The LDAP server configuration
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
                
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
@@ -871,7 +871,7 @@ class LdapServerProfile(pulumi.CustomResource):
                  ldap_type: pulumi.Input[Optional[_builtins.str]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
                  retry_interval: pulumi.Input[Optional[_builtins.int]] = None,
-                 servers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['LdapServerProfileServerArgs', 'LdapServerProfileServerArgsDict']]]]] = None,
+                 servers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['LdapServerProfileServerArgs', 'LdapServerProfileServerArgsDict', 'outputs.LdapServerProfileServer']]]]] = None,
                  snippet: pulumi.Input[Optional[_builtins.str]] = None,
                  ssl: pulumi.Input[Optional[_builtins.bool]] = None,
                  timelimit: pulumi.Input[Optional[_builtins.int]] = None,
@@ -925,7 +925,7 @@ class LdapServerProfile(pulumi.CustomResource):
             ldap_type: pulumi.Input[Optional[_builtins.str]] = None,
             name: pulumi.Input[Optional[_builtins.str]] = None,
             retry_interval: pulumi.Input[Optional[_builtins.int]] = None,
-            servers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['LdapServerProfileServerArgs', 'LdapServerProfileServerArgsDict']]]]] = None,
+            servers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['LdapServerProfileServerArgs', 'LdapServerProfileServerArgsDict', 'outputs.LdapServerProfileServer']]]]] = None,
             snippet: pulumi.Input[Optional[_builtins.str]] = None,
             ssl: pulumi.Input[Optional[_builtins.bool]] = None,
             tfid: pulumi.Input[Optional[_builtins.str]] = None,
@@ -950,7 +950,7 @@ class LdapServerProfile(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] ldap_type: The LDAP server time
         :param pulumi.Input[_builtins.str] name: The name of the LDAP server profile
         :param pulumi.Input[_builtins.int] retry_interval: The search retry interval (seconds)
-        :param pulumi.Input[Sequence[pulumi.Input[Union['LdapServerProfileServerArgs', 'LdapServerProfileServerArgsDict']]]] servers: The LDAP server configuration
+        :param pulumi.Input[Sequence[pulumi.Input[Union['LdapServerProfileServerArgs', 'LdapServerProfileServerArgsDict', 'outputs.LdapServerProfileServer']]]] servers: The LDAP server configuration
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
                
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.

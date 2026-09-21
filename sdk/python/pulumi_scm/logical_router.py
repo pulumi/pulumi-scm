@@ -271,7 +271,7 @@ class LogicalRouter(pulumi.CustomResource):
                  name: pulumi.Input[Optional[_builtins.str]] = None,
                  routing_stack: pulumi.Input[Optional[_builtins.str]] = None,
                  snippet: pulumi.Input[Optional[_builtins.str]] = None,
-                 vrves: pulumi.Input[Optional[Sequence[pulumi.Input[Union['LogicalRouterVrfArgs', 'LogicalRouterVrfArgsDict']]]]] = None,
+                 vrves: pulumi.Input[Optional[Sequence[pulumi.Input[Union['LogicalRouterVrfArgs', 'LogicalRouterVrfArgsDict', 'outputs.LogicalRouterVrf']]]]] = None,
                  __props__=None):
         """
         LogicalRouter resource
@@ -451,7 +451,7 @@ class LogicalRouter(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
                
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-        :param pulumi.Input[Sequence[pulumi.Input[Union['LogicalRouterVrfArgs', 'LogicalRouterVrfArgsDict']]]] vrves: Vrf
+        :param pulumi.Input[Sequence[pulumi.Input[Union['LogicalRouterVrfArgs', 'LogicalRouterVrfArgsDict', 'outputs.LogicalRouterVrf']]]] vrves: Vrf
         """
         ...
     @overload
@@ -646,7 +646,7 @@ class LogicalRouter(pulumi.CustomResource):
                  name: pulumi.Input[Optional[_builtins.str]] = None,
                  routing_stack: pulumi.Input[Optional[_builtins.str]] = None,
                  snippet: pulumi.Input[Optional[_builtins.str]] = None,
-                 vrves: pulumi.Input[Optional[Sequence[pulumi.Input[Union['LogicalRouterVrfArgs', 'LogicalRouterVrfArgsDict']]]]] = None,
+                 vrves: pulumi.Input[Optional[Sequence[pulumi.Input[Union['LogicalRouterVrfArgs', 'LogicalRouterVrfArgsDict', 'outputs.LogicalRouterVrf']]]]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -679,7 +679,7 @@ class LogicalRouter(pulumi.CustomResource):
             routing_stack: pulumi.Input[Optional[_builtins.str]] = None,
             snippet: pulumi.Input[Optional[_builtins.str]] = None,
             tfid: pulumi.Input[Optional[_builtins.str]] = None,
-            vrves: pulumi.Input[Optional[Sequence[pulumi.Input[Union['LogicalRouterVrfArgs', 'LogicalRouterVrfArgsDict']]]]] = None) -> 'LogicalRouter':
+            vrves: pulumi.Input[Optional[Sequence[pulumi.Input[Union['LogicalRouterVrfArgs', 'LogicalRouterVrfArgsDict', 'outputs.LogicalRouterVrf']]]]] = None) -> 'LogicalRouter':
         """
         Get an existing LogicalRouter resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.
@@ -697,7 +697,7 @@ class LogicalRouter(pulumi.CustomResource):
                
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] tfid: The Terraform ID.
-        :param pulumi.Input[Sequence[pulumi.Input[Union['LogicalRouterVrfArgs', 'LogicalRouterVrfArgsDict']]]] vrves: Vrf
+        :param pulumi.Input[Sequence[pulumi.Input[Union['LogicalRouterVrfArgs', 'LogicalRouterVrfArgsDict', 'outputs.LogicalRouterVrf']]]] vrves: Vrf
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
 

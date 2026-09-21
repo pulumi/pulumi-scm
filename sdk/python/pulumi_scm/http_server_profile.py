@@ -300,9 +300,9 @@ class HttpServerProfile(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None,
                  device: pulumi.Input[Optional[_builtins.str]] = None,
                  folder: pulumi.Input[Optional[_builtins.str]] = None,
-                 format: pulumi.Input[Optional[Union['HttpServerProfileFormatArgs', 'HttpServerProfileFormatArgsDict']]] = None,
+                 format: pulumi.Input[Optional[Union['HttpServerProfileFormatArgs', 'HttpServerProfileFormatArgsDict', 'outputs.HttpServerProfileFormat']]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
-                 servers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['HttpServerProfileServerArgs', 'HttpServerProfileServerArgsDict']]]]] = None,
+                 servers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['HttpServerProfileServerArgs', 'HttpServerProfileServerArgsDict', 'outputs.HttpServerProfileServer']]]]] = None,
                  snippet: pulumi.Input[Optional[_builtins.str]] = None,
                  tag_registration: pulumi.Input[Optional[_builtins.bool]] = None,
                  __props__=None):
@@ -338,9 +338,9 @@ class HttpServerProfile(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
                
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-        :param pulumi.Input[Union['HttpServerProfileFormatArgs', 'HttpServerProfileFormatArgsDict']] format: Format
+        :param pulumi.Input[Union['HttpServerProfileFormatArgs', 'HttpServerProfileFormatArgsDict', 'outputs.HttpServerProfileFormat']] format: Format
         :param pulumi.Input[_builtins.str] name: The name of the profile
-        :param pulumi.Input[Sequence[pulumi.Input[Union['HttpServerProfileServerArgs', 'HttpServerProfileServerArgsDict']]]] servers: Server
+        :param pulumi.Input[Sequence[pulumi.Input[Union['HttpServerProfileServerArgs', 'HttpServerProfileServerArgsDict', 'outputs.HttpServerProfileServer']]]] servers: Server
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
                
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
@@ -395,9 +395,9 @@ class HttpServerProfile(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None,
                  device: pulumi.Input[Optional[_builtins.str]] = None,
                  folder: pulumi.Input[Optional[_builtins.str]] = None,
-                 format: pulumi.Input[Optional[Union['HttpServerProfileFormatArgs', 'HttpServerProfileFormatArgsDict']]] = None,
+                 format: pulumi.Input[Optional[Union['HttpServerProfileFormatArgs', 'HttpServerProfileFormatArgsDict', 'outputs.HttpServerProfileFormat']]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
-                 servers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['HttpServerProfileServerArgs', 'HttpServerProfileServerArgsDict']]]]] = None,
+                 servers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['HttpServerProfileServerArgs', 'HttpServerProfileServerArgsDict', 'outputs.HttpServerProfileServer']]]]] = None,
                  snippet: pulumi.Input[Optional[_builtins.str]] = None,
                  tag_registration: pulumi.Input[Optional[_builtins.bool]] = None,
                  __props__=None):
@@ -429,9 +429,9 @@ class HttpServerProfile(pulumi.CustomResource):
             opts: Optional[pulumi.ResourceOptions] = None,
             device: pulumi.Input[Optional[_builtins.str]] = None,
             folder: pulumi.Input[Optional[_builtins.str]] = None,
-            format: pulumi.Input[Optional[Union['HttpServerProfileFormatArgs', 'HttpServerProfileFormatArgsDict']]] = None,
+            format: pulumi.Input[Optional[Union['HttpServerProfileFormatArgs', 'HttpServerProfileFormatArgsDict', 'outputs.HttpServerProfileFormat']]] = None,
             name: pulumi.Input[Optional[_builtins.str]] = None,
-            servers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['HttpServerProfileServerArgs', 'HttpServerProfileServerArgsDict']]]]] = None,
+            servers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['HttpServerProfileServerArgs', 'HttpServerProfileServerArgsDict', 'outputs.HttpServerProfileServer']]]]] = None,
             snippet: pulumi.Input[Optional[_builtins.str]] = None,
             tag_registration: pulumi.Input[Optional[_builtins.bool]] = None,
             tfid: pulumi.Input[Optional[_builtins.str]] = None) -> 'HttpServerProfile':
@@ -446,9 +446,9 @@ class HttpServerProfile(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
                
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-        :param pulumi.Input[Union['HttpServerProfileFormatArgs', 'HttpServerProfileFormatArgsDict']] format: Format
+        :param pulumi.Input[Union['HttpServerProfileFormatArgs', 'HttpServerProfileFormatArgsDict', 'outputs.HttpServerProfileFormat']] format: Format
         :param pulumi.Input[_builtins.str] name: The name of the profile
-        :param pulumi.Input[Sequence[pulumi.Input[Union['HttpServerProfileServerArgs', 'HttpServerProfileServerArgsDict']]]] servers: Server
+        :param pulumi.Input[Sequence[pulumi.Input[Union['HttpServerProfileServerArgs', 'HttpServerProfileServerArgsDict', 'outputs.HttpServerProfileServer']]]] servers: Server
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
                
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.

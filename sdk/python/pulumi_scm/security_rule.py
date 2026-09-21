@@ -1307,13 +1307,13 @@ class SecurityRule(pulumi.CustomResource):
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
                  action: pulumi.Input[Optional[_builtins.str]] = None,
-                 allow_url_categories: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SecurityRuleAllowUrlCategoryArgs', 'SecurityRuleAllowUrlCategoryArgsDict']]]]] = None,
-                 allow_web_applications: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SecurityRuleAllowWebApplicationArgs', 'SecurityRuleAllowWebApplicationArgsDict']]]]] = None,
+                 allow_url_categories: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SecurityRuleAllowUrlCategoryArgs', 'SecurityRuleAllowUrlCategoryArgsDict', 'outputs.SecurityRuleAllowUrlCategory']]]]] = None,
+                 allow_web_applications: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SecurityRuleAllowWebApplicationArgs', 'SecurityRuleAllowWebApplicationArgsDict', 'outputs.SecurityRuleAllowWebApplication']]]]] = None,
                  applications: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  block_url_categories: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  block_web_applications: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  categories: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 default_profile_settings: pulumi.Input[Optional[Union['SecurityRuleDefaultProfileSettingsArgs', 'SecurityRuleDefaultProfileSettingsArgsDict']]] = None,
+                 default_profile_settings: pulumi.Input[Optional[Union['SecurityRuleDefaultProfileSettingsArgs', 'SecurityRuleDefaultProfileSettingsArgsDict', 'outputs.SecurityRuleDefaultProfileSettings']]] = None,
                  description: pulumi.Input[Optional[_builtins.str]] = None,
                  destination_hips: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  destinations: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
@@ -1324,7 +1324,7 @@ class SecurityRule(pulumi.CustomResource):
                  froms: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  log_end: pulumi.Input[Optional[_builtins.bool]] = None,
                  log_setting: pulumi.Input[Optional[_builtins.str]] = None,
-                 log_settings: pulumi.Input[Optional[Union['SecurityRuleLogSettingsArgs', 'SecurityRuleLogSettingsArgsDict']]] = None,
+                 log_settings: pulumi.Input[Optional[Union['SecurityRuleLogSettingsArgs', 'SecurityRuleLogSettingsArgsDict', 'outputs.SecurityRuleLogSettings']]] = None,
                  log_start: pulumi.Input[Optional[_builtins.bool]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
                  negate_destination: pulumi.Input[Optional[_builtins.bool]] = None,
@@ -1332,10 +1332,10 @@ class SecurityRule(pulumi.CustomResource):
                  negate_user: pulumi.Input[Optional[_builtins.bool]] = None,
                  policy_type: pulumi.Input[Optional[_builtins.str]] = None,
                  position: pulumi.Input[Optional[_builtins.str]] = None,
-                 profile_setting: pulumi.Input[Optional[Union['SecurityRuleProfileSettingArgs', 'SecurityRuleProfileSettingArgsDict']]] = None,
+                 profile_setting: pulumi.Input[Optional[Union['SecurityRuleProfileSettingArgs', 'SecurityRuleProfileSettingArgsDict', 'outputs.SecurityRuleProfileSetting']]] = None,
                  relative_position: pulumi.Input[Optional[_builtins.str]] = None,
                  schedule: pulumi.Input[Optional[_builtins.str]] = None,
-                 security_settings: pulumi.Input[Optional[Union['SecurityRuleSecuritySettingsArgs', 'SecurityRuleSecuritySettingsArgsDict']]] = None,
+                 security_settings: pulumi.Input[Optional[Union['SecurityRuleSecuritySettingsArgs', 'SecurityRuleSecuritySettingsArgsDict', 'outputs.SecurityRuleSecuritySettings']]] = None,
                  services: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  snippet: pulumi.Input[Optional[_builtins.str]] = None,
                  source_hips: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
@@ -1552,13 +1552,13 @@ class SecurityRule(pulumi.CustomResource):
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] action: The action to be taken when the rule is matched
-        :param pulumi.Input[Sequence[pulumi.Input[Union['SecurityRuleAllowUrlCategoryArgs', 'SecurityRuleAllowUrlCategoryArgsDict']]]] allow_url_categories: Allow url category
-        :param pulumi.Input[Sequence[pulumi.Input[Union['SecurityRuleAllowWebApplicationArgs', 'SecurityRuleAllowWebApplicationArgsDict']]]] allow_web_applications: Allow web application
+        :param pulumi.Input[Sequence[pulumi.Input[Union['SecurityRuleAllowUrlCategoryArgs', 'SecurityRuleAllowUrlCategoryArgsDict', 'outputs.SecurityRuleAllowUrlCategory']]]] allow_url_categories: Allow url category
+        :param pulumi.Input[Sequence[pulumi.Input[Union['SecurityRuleAllowWebApplicationArgs', 'SecurityRuleAllowWebApplicationArgsDict', 'outputs.SecurityRuleAllowWebApplication']]]] allow_web_applications: Allow web application
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] applications: The application(s) being accessed
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] block_url_categories: Block url category
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] block_web_applications: Block web application
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] categories: The URL categories being accessed
-        :param pulumi.Input[Union['SecurityRuleDefaultProfileSettingsArgs', 'SecurityRuleDefaultProfileSettingsArgsDict']] default_profile_settings: Default profile settings
+        :param pulumi.Input[Union['SecurityRuleDefaultProfileSettingsArgs', 'SecurityRuleDefaultProfileSettingsArgsDict', 'outputs.SecurityRuleDefaultProfileSettings']] default_profile_settings: Default profile settings
         :param pulumi.Input[_builtins.str] description: The description of the security rule
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] destination_hips: The destination Host Integrity Profile(s)
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] destinations: The destination address(es)
@@ -1569,7 +1569,7 @@ class SecurityRule(pulumi.CustomResource):
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] froms: The source security zone(s)
         :param pulumi.Input[_builtins.bool] log_end: Log at session end?
         :param pulumi.Input[_builtins.str] log_setting: The external log forwarding profile
-        :param pulumi.Input[Union['SecurityRuleLogSettingsArgs', 'SecurityRuleLogSettingsArgsDict']] log_settings: Log settings
+        :param pulumi.Input[Union['SecurityRuleLogSettingsArgs', 'SecurityRuleLogSettingsArgsDict', 'outputs.SecurityRuleLogSettings']] log_settings: Log settings
         :param pulumi.Input[_builtins.bool] log_start: Log at session start?
         :param pulumi.Input[_builtins.str] name: The name of the security rule
         :param pulumi.Input[_builtins.bool] negate_destination: Negate the destination addresses(es)?
@@ -1577,10 +1577,10 @@ class SecurityRule(pulumi.CustomResource):
         :param pulumi.Input[_builtins.bool] negate_user: Negate user
         :param pulumi.Input[_builtins.str] policy_type: Policy type
         :param pulumi.Input[_builtins.str] position: The position of a security rule
-        :param pulumi.Input[Union['SecurityRuleProfileSettingArgs', 'SecurityRuleProfileSettingArgsDict']] profile_setting: The security profile object
+        :param pulumi.Input[Union['SecurityRuleProfileSettingArgs', 'SecurityRuleProfileSettingArgsDict', 'outputs.SecurityRuleProfileSetting']] profile_setting: The security profile object
         :param pulumi.Input[_builtins.str] relative_position: Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
         :param pulumi.Input[_builtins.str] schedule: Schedule in which this rule will be applied
-        :param pulumi.Input[Union['SecurityRuleSecuritySettingsArgs', 'SecurityRuleSecuritySettingsArgsDict']] security_settings: Security settings
+        :param pulumi.Input[Union['SecurityRuleSecuritySettingsArgs', 'SecurityRuleSecuritySettingsArgsDict', 'outputs.SecurityRuleSecuritySettings']] security_settings: Security settings
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] services: The service(s) being accessed
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] source_hips: The source Host Integrity Profile(s)
@@ -1816,13 +1816,13 @@ class SecurityRule(pulumi.CustomResource):
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
                  action: pulumi.Input[Optional[_builtins.str]] = None,
-                 allow_url_categories: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SecurityRuleAllowUrlCategoryArgs', 'SecurityRuleAllowUrlCategoryArgsDict']]]]] = None,
-                 allow_web_applications: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SecurityRuleAllowWebApplicationArgs', 'SecurityRuleAllowWebApplicationArgsDict']]]]] = None,
+                 allow_url_categories: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SecurityRuleAllowUrlCategoryArgs', 'SecurityRuleAllowUrlCategoryArgsDict', 'outputs.SecurityRuleAllowUrlCategory']]]]] = None,
+                 allow_web_applications: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SecurityRuleAllowWebApplicationArgs', 'SecurityRuleAllowWebApplicationArgsDict', 'outputs.SecurityRuleAllowWebApplication']]]]] = None,
                  applications: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  block_url_categories: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  block_web_applications: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  categories: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 default_profile_settings: pulumi.Input[Optional[Union['SecurityRuleDefaultProfileSettingsArgs', 'SecurityRuleDefaultProfileSettingsArgsDict']]] = None,
+                 default_profile_settings: pulumi.Input[Optional[Union['SecurityRuleDefaultProfileSettingsArgs', 'SecurityRuleDefaultProfileSettingsArgsDict', 'outputs.SecurityRuleDefaultProfileSettings']]] = None,
                  description: pulumi.Input[Optional[_builtins.str]] = None,
                  destination_hips: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  destinations: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
@@ -1833,7 +1833,7 @@ class SecurityRule(pulumi.CustomResource):
                  froms: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  log_end: pulumi.Input[Optional[_builtins.bool]] = None,
                  log_setting: pulumi.Input[Optional[_builtins.str]] = None,
-                 log_settings: pulumi.Input[Optional[Union['SecurityRuleLogSettingsArgs', 'SecurityRuleLogSettingsArgsDict']]] = None,
+                 log_settings: pulumi.Input[Optional[Union['SecurityRuleLogSettingsArgs', 'SecurityRuleLogSettingsArgsDict', 'outputs.SecurityRuleLogSettings']]] = None,
                  log_start: pulumi.Input[Optional[_builtins.bool]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
                  negate_destination: pulumi.Input[Optional[_builtins.bool]] = None,
@@ -1841,10 +1841,10 @@ class SecurityRule(pulumi.CustomResource):
                  negate_user: pulumi.Input[Optional[_builtins.bool]] = None,
                  policy_type: pulumi.Input[Optional[_builtins.str]] = None,
                  position: pulumi.Input[Optional[_builtins.str]] = None,
-                 profile_setting: pulumi.Input[Optional[Union['SecurityRuleProfileSettingArgs', 'SecurityRuleProfileSettingArgsDict']]] = None,
+                 profile_setting: pulumi.Input[Optional[Union['SecurityRuleProfileSettingArgs', 'SecurityRuleProfileSettingArgsDict', 'outputs.SecurityRuleProfileSetting']]] = None,
                  relative_position: pulumi.Input[Optional[_builtins.str]] = None,
                  schedule: pulumi.Input[Optional[_builtins.str]] = None,
-                 security_settings: pulumi.Input[Optional[Union['SecurityRuleSecuritySettingsArgs', 'SecurityRuleSecuritySettingsArgsDict']]] = None,
+                 security_settings: pulumi.Input[Optional[Union['SecurityRuleSecuritySettingsArgs', 'SecurityRuleSecuritySettingsArgsDict', 'outputs.SecurityRuleSecuritySettings']]] = None,
                  services: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  snippet: pulumi.Input[Optional[_builtins.str]] = None,
                  source_hips: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
@@ -1914,13 +1914,13 @@ class SecurityRule(pulumi.CustomResource):
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
             action: pulumi.Input[Optional[_builtins.str]] = None,
-            allow_url_categories: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SecurityRuleAllowUrlCategoryArgs', 'SecurityRuleAllowUrlCategoryArgsDict']]]]] = None,
-            allow_web_applications: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SecurityRuleAllowWebApplicationArgs', 'SecurityRuleAllowWebApplicationArgsDict']]]]] = None,
+            allow_url_categories: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SecurityRuleAllowUrlCategoryArgs', 'SecurityRuleAllowUrlCategoryArgsDict', 'outputs.SecurityRuleAllowUrlCategory']]]]] = None,
+            allow_web_applications: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SecurityRuleAllowWebApplicationArgs', 'SecurityRuleAllowWebApplicationArgsDict', 'outputs.SecurityRuleAllowWebApplication']]]]] = None,
             applications: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
             block_url_categories: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
             block_web_applications: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
             categories: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
-            default_profile_settings: pulumi.Input[Optional[Union['SecurityRuleDefaultProfileSettingsArgs', 'SecurityRuleDefaultProfileSettingsArgsDict']]] = None,
+            default_profile_settings: pulumi.Input[Optional[Union['SecurityRuleDefaultProfileSettingsArgs', 'SecurityRuleDefaultProfileSettingsArgsDict', 'outputs.SecurityRuleDefaultProfileSettings']]] = None,
             description: pulumi.Input[Optional[_builtins.str]] = None,
             destination_hips: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
             destinations: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
@@ -1931,7 +1931,7 @@ class SecurityRule(pulumi.CustomResource):
             froms: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
             log_end: pulumi.Input[Optional[_builtins.bool]] = None,
             log_setting: pulumi.Input[Optional[_builtins.str]] = None,
-            log_settings: pulumi.Input[Optional[Union['SecurityRuleLogSettingsArgs', 'SecurityRuleLogSettingsArgsDict']]] = None,
+            log_settings: pulumi.Input[Optional[Union['SecurityRuleLogSettingsArgs', 'SecurityRuleLogSettingsArgsDict', 'outputs.SecurityRuleLogSettings']]] = None,
             log_start: pulumi.Input[Optional[_builtins.bool]] = None,
             name: pulumi.Input[Optional[_builtins.str]] = None,
             negate_destination: pulumi.Input[Optional[_builtins.bool]] = None,
@@ -1939,10 +1939,10 @@ class SecurityRule(pulumi.CustomResource):
             negate_user: pulumi.Input[Optional[_builtins.bool]] = None,
             policy_type: pulumi.Input[Optional[_builtins.str]] = None,
             position: pulumi.Input[Optional[_builtins.str]] = None,
-            profile_setting: pulumi.Input[Optional[Union['SecurityRuleProfileSettingArgs', 'SecurityRuleProfileSettingArgsDict']]] = None,
+            profile_setting: pulumi.Input[Optional[Union['SecurityRuleProfileSettingArgs', 'SecurityRuleProfileSettingArgsDict', 'outputs.SecurityRuleProfileSetting']]] = None,
             relative_position: pulumi.Input[Optional[_builtins.str]] = None,
             schedule: pulumi.Input[Optional[_builtins.str]] = None,
-            security_settings: pulumi.Input[Optional[Union['SecurityRuleSecuritySettingsArgs', 'SecurityRuleSecuritySettingsArgsDict']]] = None,
+            security_settings: pulumi.Input[Optional[Union['SecurityRuleSecuritySettingsArgs', 'SecurityRuleSecuritySettingsArgsDict', 'outputs.SecurityRuleSecuritySettings']]] = None,
             services: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
             snippet: pulumi.Input[Optional[_builtins.str]] = None,
             source_hips: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
@@ -1961,13 +1961,13 @@ class SecurityRule(pulumi.CustomResource):
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] action: The action to be taken when the rule is matched
-        :param pulumi.Input[Sequence[pulumi.Input[Union['SecurityRuleAllowUrlCategoryArgs', 'SecurityRuleAllowUrlCategoryArgsDict']]]] allow_url_categories: Allow url category
-        :param pulumi.Input[Sequence[pulumi.Input[Union['SecurityRuleAllowWebApplicationArgs', 'SecurityRuleAllowWebApplicationArgsDict']]]] allow_web_applications: Allow web application
+        :param pulumi.Input[Sequence[pulumi.Input[Union['SecurityRuleAllowUrlCategoryArgs', 'SecurityRuleAllowUrlCategoryArgsDict', 'outputs.SecurityRuleAllowUrlCategory']]]] allow_url_categories: Allow url category
+        :param pulumi.Input[Sequence[pulumi.Input[Union['SecurityRuleAllowWebApplicationArgs', 'SecurityRuleAllowWebApplicationArgsDict', 'outputs.SecurityRuleAllowWebApplication']]]] allow_web_applications: Allow web application
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] applications: The application(s) being accessed
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] block_url_categories: Block url category
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] block_web_applications: Block web application
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] categories: The URL categories being accessed
-        :param pulumi.Input[Union['SecurityRuleDefaultProfileSettingsArgs', 'SecurityRuleDefaultProfileSettingsArgsDict']] default_profile_settings: Default profile settings
+        :param pulumi.Input[Union['SecurityRuleDefaultProfileSettingsArgs', 'SecurityRuleDefaultProfileSettingsArgsDict', 'outputs.SecurityRuleDefaultProfileSettings']] default_profile_settings: Default profile settings
         :param pulumi.Input[_builtins.str] description: The description of the security rule
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] destination_hips: The destination Host Integrity Profile(s)
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] destinations: The destination address(es)
@@ -1978,7 +1978,7 @@ class SecurityRule(pulumi.CustomResource):
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] froms: The source security zone(s)
         :param pulumi.Input[_builtins.bool] log_end: Log at session end?
         :param pulumi.Input[_builtins.str] log_setting: The external log forwarding profile
-        :param pulumi.Input[Union['SecurityRuleLogSettingsArgs', 'SecurityRuleLogSettingsArgsDict']] log_settings: Log settings
+        :param pulumi.Input[Union['SecurityRuleLogSettingsArgs', 'SecurityRuleLogSettingsArgsDict', 'outputs.SecurityRuleLogSettings']] log_settings: Log settings
         :param pulumi.Input[_builtins.bool] log_start: Log at session start?
         :param pulumi.Input[_builtins.str] name: The name of the security rule
         :param pulumi.Input[_builtins.bool] negate_destination: Negate the destination addresses(es)?
@@ -1986,10 +1986,10 @@ class SecurityRule(pulumi.CustomResource):
         :param pulumi.Input[_builtins.bool] negate_user: Negate user
         :param pulumi.Input[_builtins.str] policy_type: Policy type
         :param pulumi.Input[_builtins.str] position: The position of a security rule
-        :param pulumi.Input[Union['SecurityRuleProfileSettingArgs', 'SecurityRuleProfileSettingArgsDict']] profile_setting: The security profile object
+        :param pulumi.Input[Union['SecurityRuleProfileSettingArgs', 'SecurityRuleProfileSettingArgsDict', 'outputs.SecurityRuleProfileSetting']] profile_setting: The security profile object
         :param pulumi.Input[_builtins.str] relative_position: Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
         :param pulumi.Input[_builtins.str] schedule: Schedule in which this rule will be applied
-        :param pulumi.Input[Union['SecurityRuleSecuritySettingsArgs', 'SecurityRuleSecuritySettingsArgsDict']] security_settings: Security settings
+        :param pulumi.Input[Union['SecurityRuleSecuritySettingsArgs', 'SecurityRuleSecuritySettingsArgsDict', 'outputs.SecurityRuleSecuritySettings']] security_settings: Security settings
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] services: The service(s) being accessed
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] source_hips: The source Host Integrity Profile(s)

@@ -303,7 +303,7 @@ class DataObject(pulumi.CustomResource):
                  disable_override: pulumi.Input[Optional[_builtins.str]] = None,
                  folder: pulumi.Input[Optional[_builtins.str]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
-                 pattern_type: pulumi.Input[Optional[Union['DataObjectPatternTypeArgs', 'DataObjectPatternTypeArgsDict']]] = None,
+                 pattern_type: pulumi.Input[Optional[Union['DataObjectPatternTypeArgs', 'DataObjectPatternTypeArgsDict', 'outputs.DataObjectPatternType']]] = None,
                  snippet: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
@@ -373,7 +373,7 @@ class DataObject(pulumi.CustomResource):
                
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] name: The name of the data object
-        :param pulumi.Input[Union['DataObjectPatternTypeArgs', 'DataObjectPatternTypeArgsDict']] pattern_type: Pattern type
+        :param pulumi.Input[Union['DataObjectPatternTypeArgs', 'DataObjectPatternTypeArgsDict', 'outputs.DataObjectPatternType']] pattern_type: Pattern type
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
                
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
@@ -462,7 +462,7 @@ class DataObject(pulumi.CustomResource):
                  disable_override: pulumi.Input[Optional[_builtins.str]] = None,
                  folder: pulumi.Input[Optional[_builtins.str]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
-                 pattern_type: pulumi.Input[Optional[Union['DataObjectPatternTypeArgs', 'DataObjectPatternTypeArgsDict']]] = None,
+                 pattern_type: pulumi.Input[Optional[Union['DataObjectPatternTypeArgs', 'DataObjectPatternTypeArgsDict', 'outputs.DataObjectPatternType']]] = None,
                  snippet: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
@@ -496,7 +496,7 @@ class DataObject(pulumi.CustomResource):
             disable_override: pulumi.Input[Optional[_builtins.str]] = None,
             folder: pulumi.Input[Optional[_builtins.str]] = None,
             name: pulumi.Input[Optional[_builtins.str]] = None,
-            pattern_type: pulumi.Input[Optional[Union['DataObjectPatternTypeArgs', 'DataObjectPatternTypeArgsDict']]] = None,
+            pattern_type: pulumi.Input[Optional[Union['DataObjectPatternTypeArgs', 'DataObjectPatternTypeArgsDict', 'outputs.DataObjectPatternType']]] = None,
             snippet: pulumi.Input[Optional[_builtins.str]] = None,
             tfid: pulumi.Input[Optional[_builtins.str]] = None) -> 'DataObject':
         """
@@ -513,7 +513,7 @@ class DataObject(pulumi.CustomResource):
                
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] name: The name of the data object
-        :param pulumi.Input[Union['DataObjectPatternTypeArgs', 'DataObjectPatternTypeArgsDict']] pattern_type: Pattern type
+        :param pulumi.Input[Union['DataObjectPatternTypeArgs', 'DataObjectPatternTypeArgsDict', 'outputs.DataObjectPatternType']] pattern_type: Pattern type
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
                
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.

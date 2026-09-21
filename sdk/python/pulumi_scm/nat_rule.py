@@ -663,11 +663,11 @@ class NatRule(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None,
                  active_active_device_binding: pulumi.Input[Optional[_builtins.str]] = None,
                  description: pulumi.Input[Optional[_builtins.str]] = None,
-                 destination_translation: pulumi.Input[Optional[Union['NatRuleDestinationTranslationArgs', 'NatRuleDestinationTranslationArgsDict']]] = None,
+                 destination_translation: pulumi.Input[Optional[Union['NatRuleDestinationTranslationArgs', 'NatRuleDestinationTranslationArgsDict', 'outputs.NatRuleDestinationTranslation']]] = None,
                  destinations: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  device: pulumi.Input[Optional[_builtins.str]] = None,
                  disabled: pulumi.Input[Optional[_builtins.bool]] = None,
-                 dynamic_destination_translation: pulumi.Input[Optional[Union['NatRuleDynamicDestinationTranslationArgs', 'NatRuleDynamicDestinationTranslationArgsDict']]] = None,
+                 dynamic_destination_translation: pulumi.Input[Optional[Union['NatRuleDynamicDestinationTranslationArgs', 'NatRuleDynamicDestinationTranslationArgsDict', 'outputs.NatRuleDynamicDestinationTranslation']]] = None,
                  folder: pulumi.Input[Optional[_builtins.str]] = None,
                  froms: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
@@ -675,7 +675,7 @@ class NatRule(pulumi.CustomResource):
                  position: pulumi.Input[Optional[_builtins.str]] = None,
                  service: pulumi.Input[Optional[_builtins.str]] = None,
                  snippet: pulumi.Input[Optional[_builtins.str]] = None,
-                 source_translation: pulumi.Input[Optional[Union['NatRuleSourceTranslationArgs', 'NatRuleSourceTranslationArgsDict']]] = None,
+                 source_translation: pulumi.Input[Optional[Union['NatRuleSourceTranslationArgs', 'NatRuleSourceTranslationArgsDict', 'outputs.NatRuleSourceTranslation']]] = None,
                  sources: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  tags: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  to_interface: pulumi.Input[Optional[_builtins.str]] = None,
@@ -823,11 +823,11 @@ class NatRule(pulumi.CustomResource):
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] active_active_device_binding: Active active device binding
         :param pulumi.Input[_builtins.str] description: NAT rule description
-        :param pulumi.Input[Union['NatRuleDestinationTranslationArgs', 'NatRuleDestinationTranslationArgsDict']] destination_translation: Destination translation
+        :param pulumi.Input[Union['NatRuleDestinationTranslationArgs', 'NatRuleDestinationTranslationArgsDict', 'outputs.NatRuleDestinationTranslation']] destination_translation: Destination translation
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] destinations: Destination address(es) of the original packet
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input[_builtins.bool] disabled: Disable NAT rule?
-        :param pulumi.Input[Union['NatRuleDynamicDestinationTranslationArgs', 'NatRuleDynamicDestinationTranslationArgsDict']] dynamic_destination_translation: Dynamic destination translation
+        :param pulumi.Input[Union['NatRuleDynamicDestinationTranslationArgs', 'NatRuleDynamicDestinationTranslationArgsDict', 'outputs.NatRuleDynamicDestinationTranslation']] dynamic_destination_translation: Dynamic destination translation
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] froms: Source zone(s) of the original packet
         :param pulumi.Input[_builtins.str] name: NAT rule name
@@ -835,7 +835,7 @@ class NatRule(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] position: The relative position of the rule
         :param pulumi.Input[_builtins.str] service: The service of the original packet
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-        :param pulumi.Input[Union['NatRuleSourceTranslationArgs', 'NatRuleSourceTranslationArgsDict']] source_translation: Source translation
+        :param pulumi.Input[Union['NatRuleSourceTranslationArgs', 'NatRuleSourceTranslationArgsDict', 'outputs.NatRuleSourceTranslation']] source_translation: Source translation
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] sources: Source address(es) of the original packet
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tags: NAT rule tags
         :param pulumi.Input[_builtins.str] to_interface: Destination interface of the original packet
@@ -1002,11 +1002,11 @@ class NatRule(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None,
                  active_active_device_binding: pulumi.Input[Optional[_builtins.str]] = None,
                  description: pulumi.Input[Optional[_builtins.str]] = None,
-                 destination_translation: pulumi.Input[Optional[Union['NatRuleDestinationTranslationArgs', 'NatRuleDestinationTranslationArgsDict']]] = None,
+                 destination_translation: pulumi.Input[Optional[Union['NatRuleDestinationTranslationArgs', 'NatRuleDestinationTranslationArgsDict', 'outputs.NatRuleDestinationTranslation']]] = None,
                  destinations: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  device: pulumi.Input[Optional[_builtins.str]] = None,
                  disabled: pulumi.Input[Optional[_builtins.bool]] = None,
-                 dynamic_destination_translation: pulumi.Input[Optional[Union['NatRuleDynamicDestinationTranslationArgs', 'NatRuleDynamicDestinationTranslationArgsDict']]] = None,
+                 dynamic_destination_translation: pulumi.Input[Optional[Union['NatRuleDynamicDestinationTranslationArgs', 'NatRuleDynamicDestinationTranslationArgsDict', 'outputs.NatRuleDynamicDestinationTranslation']]] = None,
                  folder: pulumi.Input[Optional[_builtins.str]] = None,
                  froms: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
@@ -1014,7 +1014,7 @@ class NatRule(pulumi.CustomResource):
                  position: pulumi.Input[Optional[_builtins.str]] = None,
                  service: pulumi.Input[Optional[_builtins.str]] = None,
                  snippet: pulumi.Input[Optional[_builtins.str]] = None,
-                 source_translation: pulumi.Input[Optional[Union['NatRuleSourceTranslationArgs', 'NatRuleSourceTranslationArgsDict']]] = None,
+                 source_translation: pulumi.Input[Optional[Union['NatRuleSourceTranslationArgs', 'NatRuleSourceTranslationArgsDict', 'outputs.NatRuleSourceTranslation']]] = None,
                  sources: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  tags: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  to_interface: pulumi.Input[Optional[_builtins.str]] = None,
@@ -1070,11 +1070,11 @@ class NatRule(pulumi.CustomResource):
             opts: Optional[pulumi.ResourceOptions] = None,
             active_active_device_binding: pulumi.Input[Optional[_builtins.str]] = None,
             description: pulumi.Input[Optional[_builtins.str]] = None,
-            destination_translation: pulumi.Input[Optional[Union['NatRuleDestinationTranslationArgs', 'NatRuleDestinationTranslationArgsDict']]] = None,
+            destination_translation: pulumi.Input[Optional[Union['NatRuleDestinationTranslationArgs', 'NatRuleDestinationTranslationArgsDict', 'outputs.NatRuleDestinationTranslation']]] = None,
             destinations: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
             device: pulumi.Input[Optional[_builtins.str]] = None,
             disabled: pulumi.Input[Optional[_builtins.bool]] = None,
-            dynamic_destination_translation: pulumi.Input[Optional[Union['NatRuleDynamicDestinationTranslationArgs', 'NatRuleDynamicDestinationTranslationArgsDict']]] = None,
+            dynamic_destination_translation: pulumi.Input[Optional[Union['NatRuleDynamicDestinationTranslationArgs', 'NatRuleDynamicDestinationTranslationArgsDict', 'outputs.NatRuleDynamicDestinationTranslation']]] = None,
             folder: pulumi.Input[Optional[_builtins.str]] = None,
             froms: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
             name: pulumi.Input[Optional[_builtins.str]] = None,
@@ -1082,7 +1082,7 @@ class NatRule(pulumi.CustomResource):
             position: pulumi.Input[Optional[_builtins.str]] = None,
             service: pulumi.Input[Optional[_builtins.str]] = None,
             snippet: pulumi.Input[Optional[_builtins.str]] = None,
-            source_translation: pulumi.Input[Optional[Union['NatRuleSourceTranslationArgs', 'NatRuleSourceTranslationArgsDict']]] = None,
+            source_translation: pulumi.Input[Optional[Union['NatRuleSourceTranslationArgs', 'NatRuleSourceTranslationArgsDict', 'outputs.NatRuleSourceTranslation']]] = None,
             sources: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
             tags: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
             tfid: pulumi.Input[Optional[_builtins.str]] = None,
@@ -1097,11 +1097,11 @@ class NatRule(pulumi.CustomResource):
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] active_active_device_binding: Active active device binding
         :param pulumi.Input[_builtins.str] description: NAT rule description
-        :param pulumi.Input[Union['NatRuleDestinationTranslationArgs', 'NatRuleDestinationTranslationArgsDict']] destination_translation: Destination translation
+        :param pulumi.Input[Union['NatRuleDestinationTranslationArgs', 'NatRuleDestinationTranslationArgsDict', 'outputs.NatRuleDestinationTranslation']] destination_translation: Destination translation
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] destinations: Destination address(es) of the original packet
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input[_builtins.bool] disabled: Disable NAT rule?
-        :param pulumi.Input[Union['NatRuleDynamicDestinationTranslationArgs', 'NatRuleDynamicDestinationTranslationArgsDict']] dynamic_destination_translation: Dynamic destination translation
+        :param pulumi.Input[Union['NatRuleDynamicDestinationTranslationArgs', 'NatRuleDynamicDestinationTranslationArgsDict', 'outputs.NatRuleDynamicDestinationTranslation']] dynamic_destination_translation: Dynamic destination translation
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] froms: Source zone(s) of the original packet
         :param pulumi.Input[_builtins.str] name: NAT rule name
@@ -1109,7 +1109,7 @@ class NatRule(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] position: The relative position of the rule
         :param pulumi.Input[_builtins.str] service: The service of the original packet
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-        :param pulumi.Input[Union['NatRuleSourceTranslationArgs', 'NatRuleSourceTranslationArgsDict']] source_translation: Source translation
+        :param pulumi.Input[Union['NatRuleSourceTranslationArgs', 'NatRuleSourceTranslationArgsDict', 'outputs.NatRuleSourceTranslation']] source_translation: Source translation
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] sources: Source address(es) of the original packet
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tags: NAT rule tags
         :param pulumi.Input[_builtins.str] tfid: The Terraform ID.

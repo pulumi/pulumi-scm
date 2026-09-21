@@ -271,7 +271,7 @@ class RoutePrefixList(pulumi.CustomResource):
                  folder: pulumi.Input[Optional[_builtins.str]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
                  snippet: pulumi.Input[Optional[_builtins.str]] = None,
-                 type: pulumi.Input[Optional[Union['RoutePrefixListTypeArgs', 'RoutePrefixListTypeArgsDict']]] = None,
+                 type: pulumi.Input[Optional[Union['RoutePrefixListTypeArgs', 'RoutePrefixListTypeArgsDict', 'outputs.RoutePrefixListType']]] = None,
                  __props__=None):
         """
         RoutePrefixList resource
@@ -334,7 +334,7 @@ class RoutePrefixList(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
                
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-        :param pulumi.Input[Union['RoutePrefixListTypeArgs', 'RoutePrefixListTypeArgsDict']] type: Address Family Type
+        :param pulumi.Input[Union['RoutePrefixListTypeArgs', 'RoutePrefixListTypeArgsDict', 'outputs.RoutePrefixListType']] type: Address Family Type
         """
         ...
     @overload
@@ -412,7 +412,7 @@ class RoutePrefixList(pulumi.CustomResource):
                  folder: pulumi.Input[Optional[_builtins.str]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
                  snippet: pulumi.Input[Optional[_builtins.str]] = None,
-                 type: pulumi.Input[Optional[Union['RoutePrefixListTypeArgs', 'RoutePrefixListTypeArgsDict']]] = None,
+                 type: pulumi.Input[Optional[Union['RoutePrefixListTypeArgs', 'RoutePrefixListTypeArgsDict', 'outputs.RoutePrefixListType']]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -445,7 +445,7 @@ class RoutePrefixList(pulumi.CustomResource):
             name: pulumi.Input[Optional[_builtins.str]] = None,
             snippet: pulumi.Input[Optional[_builtins.str]] = None,
             tfid: pulumi.Input[Optional[_builtins.str]] = None,
-            type: pulumi.Input[Optional[Union['RoutePrefixListTypeArgs', 'RoutePrefixListTypeArgsDict']]] = None) -> 'RoutePrefixList':
+            type: pulumi.Input[Optional[Union['RoutePrefixListTypeArgs', 'RoutePrefixListTypeArgsDict', 'outputs.RoutePrefixListType']]] = None) -> 'RoutePrefixList':
         """
         Get an existing RoutePrefixList resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.
@@ -463,7 +463,7 @@ class RoutePrefixList(pulumi.CustomResource):
                
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] tfid: The Terraform ID.
-        :param pulumi.Input[Union['RoutePrefixListTypeArgs', 'RoutePrefixListTypeArgsDict']] type: Address Family Type
+        :param pulumi.Input[Union['RoutePrefixListTypeArgs', 'RoutePrefixListTypeArgsDict', 'outputs.RoutePrefixListType']] type: Address Family Type
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
 
