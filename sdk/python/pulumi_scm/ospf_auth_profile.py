@@ -300,7 +300,7 @@ class OspfAuthProfile(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None,
                  device: pulumi.Input[Optional[_builtins.str]] = None,
                  folder: pulumi.Input[Optional[_builtins.str]] = None,
-                 md5s: pulumi.Input[Optional[Sequence[pulumi.Input[Union['OspfAuthProfileMd5Args', 'OspfAuthProfileMd5ArgsDict']]]]] = None,
+                 md5s: pulumi.Input[Optional[Sequence[pulumi.Input[Union['OspfAuthProfileMd5Args', 'OspfAuthProfileMd5ArgsDict', 'outputs.OspfAuthProfileMd5']]]]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
                  password: pulumi.Input[Optional[_builtins.str]] = None,
                  snippet: pulumi.Input[Optional[_builtins.str]] = None,
@@ -337,7 +337,7 @@ class OspfAuthProfile(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
                
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-        :param pulumi.Input[Sequence[pulumi.Input[Union['OspfAuthProfileMd5Args', 'OspfAuthProfileMd5ArgsDict']]]] md5s: MD5s
+        :param pulumi.Input[Sequence[pulumi.Input[Union['OspfAuthProfileMd5Args', 'OspfAuthProfileMd5ArgsDict', 'outputs.OspfAuthProfileMd5']]]] md5s: MD5s
                
                > ℹ️ **Note:** You must specify exactly one of `md5` and `password`.
         :param pulumi.Input[_builtins.str] name: Profile name
@@ -397,7 +397,7 @@ class OspfAuthProfile(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None,
                  device: pulumi.Input[Optional[_builtins.str]] = None,
                  folder: pulumi.Input[Optional[_builtins.str]] = None,
-                 md5s: pulumi.Input[Optional[Sequence[pulumi.Input[Union['OspfAuthProfileMd5Args', 'OspfAuthProfileMd5ArgsDict']]]]] = None,
+                 md5s: pulumi.Input[Optional[Sequence[pulumi.Input[Union['OspfAuthProfileMd5Args', 'OspfAuthProfileMd5ArgsDict', 'outputs.OspfAuthProfileMd5']]]]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
                  password: pulumi.Input[Optional[_builtins.str]] = None,
                  snippet: pulumi.Input[Optional[_builtins.str]] = None,
@@ -433,7 +433,7 @@ class OspfAuthProfile(pulumi.CustomResource):
             device: pulumi.Input[Optional[_builtins.str]] = None,
             encrypted_values: pulumi.Input[Optional[Mapping[str, pulumi.Input[_builtins.str]]]] = None,
             folder: pulumi.Input[Optional[_builtins.str]] = None,
-            md5s: pulumi.Input[Optional[Sequence[pulumi.Input[Union['OspfAuthProfileMd5Args', 'OspfAuthProfileMd5ArgsDict']]]]] = None,
+            md5s: pulumi.Input[Optional[Sequence[pulumi.Input[Union['OspfAuthProfileMd5Args', 'OspfAuthProfileMd5ArgsDict', 'outputs.OspfAuthProfileMd5']]]]] = None,
             name: pulumi.Input[Optional[_builtins.str]] = None,
             password: pulumi.Input[Optional[_builtins.str]] = None,
             snippet: pulumi.Input[Optional[_builtins.str]] = None,
@@ -450,7 +450,7 @@ class OspfAuthProfile(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
                
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-        :param pulumi.Input[Sequence[pulumi.Input[Union['OspfAuthProfileMd5Args', 'OspfAuthProfileMd5ArgsDict']]]] md5s: MD5s
+        :param pulumi.Input[Sequence[pulumi.Input[Union['OspfAuthProfileMd5Args', 'OspfAuthProfileMd5ArgsDict', 'outputs.OspfAuthProfileMd5']]]] md5s: MD5s
                
                > ℹ️ **Note:** You must specify exactly one of `md5` and `password`.
         :param pulumi.Input[_builtins.str] name: Profile name

@@ -268,7 +268,7 @@ class TlsServiceProfile(pulumi.CustomResource):
                  device: pulumi.Input[Optional[_builtins.str]] = None,
                  folder: pulumi.Input[Optional[_builtins.str]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
-                 protocol_settings: pulumi.Input[Optional[Union['TlsServiceProfileProtocolSettingsArgs', 'TlsServiceProfileProtocolSettingsArgsDict']]] = None,
+                 protocol_settings: pulumi.Input[Optional[Union['TlsServiceProfileProtocolSettingsArgs', 'TlsServiceProfileProtocolSettingsArgsDict', 'outputs.TlsServiceProfileProtocolSettings']]] = None,
                  snippet: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
@@ -348,7 +348,7 @@ class TlsServiceProfile(pulumi.CustomResource):
                
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] name: TLS service profile name. The value is `muCustomDomainSSLProfile` when it is used on mobile-agent infra settings.
-        :param pulumi.Input[Union['TlsServiceProfileProtocolSettingsArgs', 'TlsServiceProfileProtocolSettingsArgsDict']] protocol_settings: Protocol settings
+        :param pulumi.Input[Union['TlsServiceProfileProtocolSettingsArgs', 'TlsServiceProfileProtocolSettingsArgsDict', 'outputs.TlsServiceProfileProtocolSettings']] protocol_settings: Protocol settings
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
                
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
@@ -447,7 +447,7 @@ class TlsServiceProfile(pulumi.CustomResource):
                  device: pulumi.Input[Optional[_builtins.str]] = None,
                  folder: pulumi.Input[Optional[_builtins.str]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
-                 protocol_settings: pulumi.Input[Optional[Union['TlsServiceProfileProtocolSettingsArgs', 'TlsServiceProfileProtocolSettingsArgsDict']]] = None,
+                 protocol_settings: pulumi.Input[Optional[Union['TlsServiceProfileProtocolSettingsArgs', 'TlsServiceProfileProtocolSettingsArgsDict', 'outputs.TlsServiceProfileProtocolSettings']]] = None,
                  snippet: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
@@ -483,7 +483,7 @@ class TlsServiceProfile(pulumi.CustomResource):
             device: pulumi.Input[Optional[_builtins.str]] = None,
             folder: pulumi.Input[Optional[_builtins.str]] = None,
             name: pulumi.Input[Optional[_builtins.str]] = None,
-            protocol_settings: pulumi.Input[Optional[Union['TlsServiceProfileProtocolSettingsArgs', 'TlsServiceProfileProtocolSettingsArgsDict']]] = None,
+            protocol_settings: pulumi.Input[Optional[Union['TlsServiceProfileProtocolSettingsArgs', 'TlsServiceProfileProtocolSettingsArgsDict', 'outputs.TlsServiceProfileProtocolSettings']]] = None,
             snippet: pulumi.Input[Optional[_builtins.str]] = None,
             tfid: pulumi.Input[Optional[_builtins.str]] = None) -> 'TlsServiceProfile':
         """
@@ -499,7 +499,7 @@ class TlsServiceProfile(pulumi.CustomResource):
                
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] name: TLS service profile name. The value is `muCustomDomainSSLProfile` when it is used on mobile-agent infra settings.
-        :param pulumi.Input[Union['TlsServiceProfileProtocolSettingsArgs', 'TlsServiceProfileProtocolSettingsArgsDict']] protocol_settings: Protocol settings
+        :param pulumi.Input[Union['TlsServiceProfileProtocolSettingsArgs', 'TlsServiceProfileProtocolSettingsArgsDict', 'outputs.TlsServiceProfileProtocolSettings']] protocol_settings: Protocol settings
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
                
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.

@@ -331,10 +331,10 @@ class DosProtectionProfile(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None,
                  description: pulumi.Input[Optional[_builtins.str]] = None,
                  device: pulumi.Input[Optional[_builtins.str]] = None,
-                 flood: pulumi.Input[Optional[Union['DosProtectionProfileFloodArgs', 'DosProtectionProfileFloodArgsDict']]] = None,
+                 flood: pulumi.Input[Optional[Union['DosProtectionProfileFloodArgs', 'DosProtectionProfileFloodArgsDict', 'outputs.DosProtectionProfileFlood']]] = None,
                  folder: pulumi.Input[Optional[_builtins.str]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
-                 resource: pulumi.Input[Optional[Union['DosProtectionProfileResourceArgs', 'DosProtectionProfileResourceArgsDict']]] = None,
+                 resource: pulumi.Input[Optional[Union['DosProtectionProfileResourceArgs', 'DosProtectionProfileResourceArgsDict', 'outputs.DosProtectionProfileResource']]] = None,
                  snippet: pulumi.Input[Optional[_builtins.str]] = None,
                  type: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
@@ -368,12 +368,12 @@ class DosProtectionProfile(pulumi.CustomResource):
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] description: Description
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
-        :param pulumi.Input[Union['DosProtectionProfileFloodArgs', 'DosProtectionProfileFloodArgsDict']] flood: Flood
+        :param pulumi.Input[Union['DosProtectionProfileFloodArgs', 'DosProtectionProfileFloodArgsDict', 'outputs.DosProtectionProfileFlood']] flood: Flood
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
                
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] name: Profile name
-        :param pulumi.Input[Union['DosProtectionProfileResourceArgs', 'DosProtectionProfileResourceArgsDict']] resource: Resource
+        :param pulumi.Input[Union['DosProtectionProfileResourceArgs', 'DosProtectionProfileResourceArgsDict', 'outputs.DosProtectionProfileResource']] resource: Resource
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
                
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
@@ -428,10 +428,10 @@ class DosProtectionProfile(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None,
                  description: pulumi.Input[Optional[_builtins.str]] = None,
                  device: pulumi.Input[Optional[_builtins.str]] = None,
-                 flood: pulumi.Input[Optional[Union['DosProtectionProfileFloodArgs', 'DosProtectionProfileFloodArgsDict']]] = None,
+                 flood: pulumi.Input[Optional[Union['DosProtectionProfileFloodArgs', 'DosProtectionProfileFloodArgsDict', 'outputs.DosProtectionProfileFlood']]] = None,
                  folder: pulumi.Input[Optional[_builtins.str]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
-                 resource: pulumi.Input[Optional[Union['DosProtectionProfileResourceArgs', 'DosProtectionProfileResourceArgsDict']]] = None,
+                 resource: pulumi.Input[Optional[Union['DosProtectionProfileResourceArgs', 'DosProtectionProfileResourceArgsDict', 'outputs.DosProtectionProfileResource']]] = None,
                  snippet: pulumi.Input[Optional[_builtins.str]] = None,
                  type: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
@@ -466,10 +466,10 @@ class DosProtectionProfile(pulumi.CustomResource):
             opts: Optional[pulumi.ResourceOptions] = None,
             description: pulumi.Input[Optional[_builtins.str]] = None,
             device: pulumi.Input[Optional[_builtins.str]] = None,
-            flood: pulumi.Input[Optional[Union['DosProtectionProfileFloodArgs', 'DosProtectionProfileFloodArgsDict']]] = None,
+            flood: pulumi.Input[Optional[Union['DosProtectionProfileFloodArgs', 'DosProtectionProfileFloodArgsDict', 'outputs.DosProtectionProfileFlood']]] = None,
             folder: pulumi.Input[Optional[_builtins.str]] = None,
             name: pulumi.Input[Optional[_builtins.str]] = None,
-            resource: pulumi.Input[Optional[Union['DosProtectionProfileResourceArgs', 'DosProtectionProfileResourceArgsDict']]] = None,
+            resource: pulumi.Input[Optional[Union['DosProtectionProfileResourceArgs', 'DosProtectionProfileResourceArgsDict', 'outputs.DosProtectionProfileResource']]] = None,
             snippet: pulumi.Input[Optional[_builtins.str]] = None,
             tfid: pulumi.Input[Optional[_builtins.str]] = None,
             type: pulumi.Input[Optional[_builtins.str]] = None) -> 'DosProtectionProfile':
@@ -482,12 +482,12 @@ class DosProtectionProfile(pulumi.CustomResource):
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] description: Description
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
-        :param pulumi.Input[Union['DosProtectionProfileFloodArgs', 'DosProtectionProfileFloodArgsDict']] flood: Flood
+        :param pulumi.Input[Union['DosProtectionProfileFloodArgs', 'DosProtectionProfileFloodArgsDict', 'outputs.DosProtectionProfileFlood']] flood: Flood
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
                
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] name: Profile name
-        :param pulumi.Input[Union['DosProtectionProfileResourceArgs', 'DosProtectionProfileResourceArgsDict']] resource: Resource
+        :param pulumi.Input[Union['DosProtectionProfileResourceArgs', 'DosProtectionProfileResourceArgsDict', 'outputs.DosProtectionProfileResource']] resource: Resource
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
                
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.

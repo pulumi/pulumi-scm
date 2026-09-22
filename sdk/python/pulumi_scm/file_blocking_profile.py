@@ -270,7 +270,7 @@ class FileBlockingProfile(pulumi.CustomResource):
                  device: pulumi.Input[Optional[_builtins.str]] = None,
                  folder: pulumi.Input[Optional[_builtins.str]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
-                 rules: pulumi.Input[Optional[Sequence[pulumi.Input[Union['FileBlockingProfileRuleArgs', 'FileBlockingProfileRuleArgsDict']]]]] = None,
+                 rules: pulumi.Input[Optional[Sequence[pulumi.Input[Union['FileBlockingProfileRuleArgs', 'FileBlockingProfileRuleArgsDict', 'outputs.FileBlockingProfileRule']]]]] = None,
                  snippet: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
@@ -379,7 +379,7 @@ class FileBlockingProfile(pulumi.CustomResource):
                
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] name: The name of the file blocking profile
-        :param pulumi.Input[Sequence[pulumi.Input[Union['FileBlockingProfileRuleArgs', 'FileBlockingProfileRuleArgsDict']]]] rules: A list of file blocking rules
+        :param pulumi.Input[Sequence[pulumi.Input[Union['FileBlockingProfileRuleArgs', 'FileBlockingProfileRuleArgsDict', 'outputs.FileBlockingProfileRule']]]] rules: A list of file blocking rules
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
                
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
@@ -507,7 +507,7 @@ class FileBlockingProfile(pulumi.CustomResource):
                  device: pulumi.Input[Optional[_builtins.str]] = None,
                  folder: pulumi.Input[Optional[_builtins.str]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
-                 rules: pulumi.Input[Optional[Sequence[pulumi.Input[Union['FileBlockingProfileRuleArgs', 'FileBlockingProfileRuleArgsDict']]]]] = None,
+                 rules: pulumi.Input[Optional[Sequence[pulumi.Input[Union['FileBlockingProfileRuleArgs', 'FileBlockingProfileRuleArgsDict', 'outputs.FileBlockingProfileRule']]]]] = None,
                  snippet: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
@@ -539,7 +539,7 @@ class FileBlockingProfile(pulumi.CustomResource):
             device: pulumi.Input[Optional[_builtins.str]] = None,
             folder: pulumi.Input[Optional[_builtins.str]] = None,
             name: pulumi.Input[Optional[_builtins.str]] = None,
-            rules: pulumi.Input[Optional[Sequence[pulumi.Input[Union['FileBlockingProfileRuleArgs', 'FileBlockingProfileRuleArgsDict']]]]] = None,
+            rules: pulumi.Input[Optional[Sequence[pulumi.Input[Union['FileBlockingProfileRuleArgs', 'FileBlockingProfileRuleArgsDict', 'outputs.FileBlockingProfileRule']]]]] = None,
             snippet: pulumi.Input[Optional[_builtins.str]] = None,
             tfid: pulumi.Input[Optional[_builtins.str]] = None) -> 'FileBlockingProfile':
         """
@@ -555,7 +555,7 @@ class FileBlockingProfile(pulumi.CustomResource):
                
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] name: The name of the file blocking profile
-        :param pulumi.Input[Sequence[pulumi.Input[Union['FileBlockingProfileRuleArgs', 'FileBlockingProfileRuleArgsDict']]]] rules: A list of file blocking rules
+        :param pulumi.Input[Sequence[pulumi.Input[Union['FileBlockingProfileRuleArgs', 'FileBlockingProfileRuleArgsDict', 'outputs.FileBlockingProfileRule']]]] rules: A list of file blocking rules
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
                
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.

@@ -282,11 +282,11 @@ class AutoVpnCluster(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 branches: pulumi.Input[Optional[Sequence[pulumi.Input[Union['AutoVpnClusterBranchArgs', 'AutoVpnClusterBranchArgsDict']]]]] = None,
+                 branches: pulumi.Input[Optional[Sequence[pulumi.Input[Union['AutoVpnClusterBranchArgs', 'AutoVpnClusterBranchArgsDict', 'outputs.AutoVpnClusterBranch']]]]] = None,
                  enable_mesh_between_hubs: pulumi.Input[Optional[_builtins.bool]] = None,
                  enable_mesh_interconnect: pulumi.Input[Optional[_builtins.bool]] = None,
                  enable_sdwan: pulumi.Input[Optional[_builtins.bool]] = None,
-                 gateways: pulumi.Input[Optional[Sequence[pulumi.Input[Union['AutoVpnClusterGatewayArgs', 'AutoVpnClusterGatewayArgsDict']]]]] = None,
+                 gateways: pulumi.Input[Optional[Sequence[pulumi.Input[Union['AutoVpnClusterGatewayArgs', 'AutoVpnClusterGatewayArgsDict', 'outputs.AutoVpnClusterGateway']]]]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
                  type: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
@@ -366,11 +366,11 @@ class AutoVpnCluster(pulumi.CustomResource):
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[Sequence[pulumi.Input[Union['AutoVpnClusterBranchArgs', 'AutoVpnClusterBranchArgsDict']]]] branches: Branches
+        :param pulumi.Input[Sequence[pulumi.Input[Union['AutoVpnClusterBranchArgs', 'AutoVpnClusterBranchArgsDict', 'outputs.AutoVpnClusterBranch']]]] branches: Branches
         :param pulumi.Input[_builtins.bool] enable_mesh_between_hubs: Enable mesh between hubs?
         :param pulumi.Input[_builtins.bool] enable_mesh_interconnect: Enable mesh interconnect?
         :param pulumi.Input[_builtins.bool] enable_sdwan: Enable SD-WAN?
-        :param pulumi.Input[Sequence[pulumi.Input[Union['AutoVpnClusterGatewayArgs', 'AutoVpnClusterGatewayArgsDict']]]] gateways: Hubs
+        :param pulumi.Input[Sequence[pulumi.Input[Union['AutoVpnClusterGatewayArgs', 'AutoVpnClusterGatewayArgsDict', 'outputs.AutoVpnClusterGateway']]]] gateways: Hubs
         :param pulumi.Input[_builtins.str] name: VPN cluster name
         :param pulumi.Input[_builtins.str] type: VPN cluster type
         """
@@ -469,11 +469,11 @@ class AutoVpnCluster(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 branches: pulumi.Input[Optional[Sequence[pulumi.Input[Union['AutoVpnClusterBranchArgs', 'AutoVpnClusterBranchArgsDict']]]]] = None,
+                 branches: pulumi.Input[Optional[Sequence[pulumi.Input[Union['AutoVpnClusterBranchArgs', 'AutoVpnClusterBranchArgsDict', 'outputs.AutoVpnClusterBranch']]]]] = None,
                  enable_mesh_between_hubs: pulumi.Input[Optional[_builtins.bool]] = None,
                  enable_mesh_interconnect: pulumi.Input[Optional[_builtins.bool]] = None,
                  enable_sdwan: pulumi.Input[Optional[_builtins.bool]] = None,
-                 gateways: pulumi.Input[Optional[Sequence[pulumi.Input[Union['AutoVpnClusterGatewayArgs', 'AutoVpnClusterGatewayArgsDict']]]]] = None,
+                 gateways: pulumi.Input[Optional[Sequence[pulumi.Input[Union['AutoVpnClusterGatewayArgs', 'AutoVpnClusterGatewayArgsDict', 'outputs.AutoVpnClusterGateway']]]]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
                  type: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
@@ -503,11 +503,11 @@ class AutoVpnCluster(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            branches: pulumi.Input[Optional[Sequence[pulumi.Input[Union['AutoVpnClusterBranchArgs', 'AutoVpnClusterBranchArgsDict']]]]] = None,
+            branches: pulumi.Input[Optional[Sequence[pulumi.Input[Union['AutoVpnClusterBranchArgs', 'AutoVpnClusterBranchArgsDict', 'outputs.AutoVpnClusterBranch']]]]] = None,
             enable_mesh_between_hubs: pulumi.Input[Optional[_builtins.bool]] = None,
             enable_mesh_interconnect: pulumi.Input[Optional[_builtins.bool]] = None,
             enable_sdwan: pulumi.Input[Optional[_builtins.bool]] = None,
-            gateways: pulumi.Input[Optional[Sequence[pulumi.Input[Union['AutoVpnClusterGatewayArgs', 'AutoVpnClusterGatewayArgsDict']]]]] = None,
+            gateways: pulumi.Input[Optional[Sequence[pulumi.Input[Union['AutoVpnClusterGatewayArgs', 'AutoVpnClusterGatewayArgsDict', 'outputs.AutoVpnClusterGateway']]]]] = None,
             name: pulumi.Input[Optional[_builtins.str]] = None,
             tfid: pulumi.Input[Optional[_builtins.str]] = None,
             type: pulumi.Input[Optional[_builtins.str]] = None) -> 'AutoVpnCluster':
@@ -518,11 +518,11 @@ class AutoVpnCluster(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[Sequence[pulumi.Input[Union['AutoVpnClusterBranchArgs', 'AutoVpnClusterBranchArgsDict']]]] branches: Branches
+        :param pulumi.Input[Sequence[pulumi.Input[Union['AutoVpnClusterBranchArgs', 'AutoVpnClusterBranchArgsDict', 'outputs.AutoVpnClusterBranch']]]] branches: Branches
         :param pulumi.Input[_builtins.bool] enable_mesh_between_hubs: Enable mesh between hubs?
         :param pulumi.Input[_builtins.bool] enable_mesh_interconnect: Enable mesh interconnect?
         :param pulumi.Input[_builtins.bool] enable_sdwan: Enable SD-WAN?
-        :param pulumi.Input[Sequence[pulumi.Input[Union['AutoVpnClusterGatewayArgs', 'AutoVpnClusterGatewayArgsDict']]]] gateways: Hubs
+        :param pulumi.Input[Sequence[pulumi.Input[Union['AutoVpnClusterGatewayArgs', 'AutoVpnClusterGatewayArgsDict', 'outputs.AutoVpnClusterGateway']]]] gateways: Hubs
         :param pulumi.Input[_builtins.str] name: VPN cluster name
         :param pulumi.Input[_builtins.str] tfid: The Terraform ID.
         :param pulumi.Input[_builtins.str] type: VPN cluster type

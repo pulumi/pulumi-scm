@@ -271,7 +271,7 @@ class RouteCommunityList(pulumi.CustomResource):
                  folder: pulumi.Input[Optional[_builtins.str]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
                  snippet: pulumi.Input[Optional[_builtins.str]] = None,
-                 type: pulumi.Input[Optional[Union['RouteCommunityListTypeArgs', 'RouteCommunityListTypeArgsDict']]] = None,
+                 type: pulumi.Input[Optional[Union['RouteCommunityListTypeArgs', 'RouteCommunityListTypeArgsDict', 'outputs.RouteCommunityListType']]] = None,
                  __props__=None):
         """
         RouteCommunityList resource
@@ -310,7 +310,7 @@ class RouteCommunityList(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
                
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-        :param pulumi.Input[Union['RouteCommunityListTypeArgs', 'RouteCommunityListTypeArgsDict']] type: Type
+        :param pulumi.Input[Union['RouteCommunityListTypeArgs', 'RouteCommunityListTypeArgsDict', 'outputs.RouteCommunityListType']] type: Type
         """
         ...
     @overload
@@ -364,7 +364,7 @@ class RouteCommunityList(pulumi.CustomResource):
                  folder: pulumi.Input[Optional[_builtins.str]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
                  snippet: pulumi.Input[Optional[_builtins.str]] = None,
-                 type: pulumi.Input[Optional[Union['RouteCommunityListTypeArgs', 'RouteCommunityListTypeArgsDict']]] = None,
+                 type: pulumi.Input[Optional[Union['RouteCommunityListTypeArgs', 'RouteCommunityListTypeArgsDict', 'outputs.RouteCommunityListType']]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -397,7 +397,7 @@ class RouteCommunityList(pulumi.CustomResource):
             name: pulumi.Input[Optional[_builtins.str]] = None,
             snippet: pulumi.Input[Optional[_builtins.str]] = None,
             tfid: pulumi.Input[Optional[_builtins.str]] = None,
-            type: pulumi.Input[Optional[Union['RouteCommunityListTypeArgs', 'RouteCommunityListTypeArgsDict']]] = None) -> 'RouteCommunityList':
+            type: pulumi.Input[Optional[Union['RouteCommunityListTypeArgs', 'RouteCommunityListTypeArgsDict', 'outputs.RouteCommunityListType']]] = None) -> 'RouteCommunityList':
         """
         Get an existing RouteCommunityList resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.
@@ -415,7 +415,7 @@ class RouteCommunityList(pulumi.CustomResource):
                
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] tfid: The Terraform ID.
-        :param pulumi.Input[Union['RouteCommunityListTypeArgs', 'RouteCommunityListTypeArgsDict']] type: Type
+        :param pulumi.Input[Union['RouteCommunityListTypeArgs', 'RouteCommunityListTypeArgsDict', 'outputs.RouteCommunityListType']] type: Type
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
 

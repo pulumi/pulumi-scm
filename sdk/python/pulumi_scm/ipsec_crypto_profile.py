@@ -377,13 +377,13 @@ class IpsecCryptoProfile(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 ah: pulumi.Input[Optional[Union['IpsecCryptoProfileAhArgs', 'IpsecCryptoProfileAhArgsDict']]] = None,
+                 ah: pulumi.Input[Optional[Union['IpsecCryptoProfileAhArgs', 'IpsecCryptoProfileAhArgsDict', 'outputs.IpsecCryptoProfileAh']]] = None,
                  device: pulumi.Input[Optional[_builtins.str]] = None,
                  dh_group: pulumi.Input[Optional[_builtins.str]] = None,
-                 esp: pulumi.Input[Optional[Union['IpsecCryptoProfileEspArgs', 'IpsecCryptoProfileEspArgsDict']]] = None,
+                 esp: pulumi.Input[Optional[Union['IpsecCryptoProfileEspArgs', 'IpsecCryptoProfileEspArgsDict', 'outputs.IpsecCryptoProfileEsp']]] = None,
                  folder: pulumi.Input[Optional[_builtins.str]] = None,
-                 lifesize: pulumi.Input[Optional[Union['IpsecCryptoProfileLifesizeArgs', 'IpsecCryptoProfileLifesizeArgsDict']]] = None,
-                 lifetime: pulumi.Input[Optional[Union['IpsecCryptoProfileLifetimeArgs', 'IpsecCryptoProfileLifetimeArgsDict']]] = None,
+                 lifesize: pulumi.Input[Optional[Union['IpsecCryptoProfileLifesizeArgs', 'IpsecCryptoProfileLifesizeArgsDict', 'outputs.IpsecCryptoProfileLifesize']]] = None,
+                 lifetime: pulumi.Input[Optional[Union['IpsecCryptoProfileLifetimeArgs', 'IpsecCryptoProfileLifetimeArgsDict', 'outputs.IpsecCryptoProfileLifetime']]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
                  snippet: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
@@ -444,19 +444,19 @@ class IpsecCryptoProfile(pulumi.CustomResource):
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[Union['IpsecCryptoProfileAhArgs', 'IpsecCryptoProfileAhArgsDict']] ah: Ah
+        :param pulumi.Input[Union['IpsecCryptoProfileAhArgs', 'IpsecCryptoProfileAhArgsDict', 'outputs.IpsecCryptoProfileAh']] ah: Ah
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
                
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] dh_group: phase-2 DH group (PFS DH group)
-        :param pulumi.Input[Union['IpsecCryptoProfileEspArgs', 'IpsecCryptoProfileEspArgsDict']] esp: Esp
+        :param pulumi.Input[Union['IpsecCryptoProfileEspArgs', 'IpsecCryptoProfileEspArgsDict', 'outputs.IpsecCryptoProfileEsp']] esp: Esp
                
                > ℹ️ **Note:** You must specify exactly one of `ah` and `esp`.
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
                
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-        :param pulumi.Input[Union['IpsecCryptoProfileLifesizeArgs', 'IpsecCryptoProfileLifesizeArgsDict']] lifesize: Lifesize
-        :param pulumi.Input[Union['IpsecCryptoProfileLifetimeArgs', 'IpsecCryptoProfileLifetimeArgsDict']] lifetime: Ipsec crypto profile lifetime
+        :param pulumi.Input[Union['IpsecCryptoProfileLifesizeArgs', 'IpsecCryptoProfileLifesizeArgsDict', 'outputs.IpsecCryptoProfileLifesize']] lifesize: Lifesize
+        :param pulumi.Input[Union['IpsecCryptoProfileLifetimeArgs', 'IpsecCryptoProfileLifetimeArgsDict', 'outputs.IpsecCryptoProfileLifetime']] lifetime: Ipsec crypto profile lifetime
         :param pulumi.Input[_builtins.str] name: Alphanumeric string begin with letter: [0-9a-zA-Z._-]
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
                
@@ -538,13 +538,13 @@ class IpsecCryptoProfile(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 ah: pulumi.Input[Optional[Union['IpsecCryptoProfileAhArgs', 'IpsecCryptoProfileAhArgsDict']]] = None,
+                 ah: pulumi.Input[Optional[Union['IpsecCryptoProfileAhArgs', 'IpsecCryptoProfileAhArgsDict', 'outputs.IpsecCryptoProfileAh']]] = None,
                  device: pulumi.Input[Optional[_builtins.str]] = None,
                  dh_group: pulumi.Input[Optional[_builtins.str]] = None,
-                 esp: pulumi.Input[Optional[Union['IpsecCryptoProfileEspArgs', 'IpsecCryptoProfileEspArgsDict']]] = None,
+                 esp: pulumi.Input[Optional[Union['IpsecCryptoProfileEspArgs', 'IpsecCryptoProfileEspArgsDict', 'outputs.IpsecCryptoProfileEsp']]] = None,
                  folder: pulumi.Input[Optional[_builtins.str]] = None,
-                 lifesize: pulumi.Input[Optional[Union['IpsecCryptoProfileLifesizeArgs', 'IpsecCryptoProfileLifesizeArgsDict']]] = None,
-                 lifetime: pulumi.Input[Optional[Union['IpsecCryptoProfileLifetimeArgs', 'IpsecCryptoProfileLifetimeArgsDict']]] = None,
+                 lifesize: pulumi.Input[Optional[Union['IpsecCryptoProfileLifesizeArgs', 'IpsecCryptoProfileLifesizeArgsDict', 'outputs.IpsecCryptoProfileLifesize']]] = None,
+                 lifetime: pulumi.Input[Optional[Union['IpsecCryptoProfileLifetimeArgs', 'IpsecCryptoProfileLifetimeArgsDict', 'outputs.IpsecCryptoProfileLifetime']]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
                  snippet: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
@@ -578,13 +578,13 @@ class IpsecCryptoProfile(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            ah: pulumi.Input[Optional[Union['IpsecCryptoProfileAhArgs', 'IpsecCryptoProfileAhArgsDict']]] = None,
+            ah: pulumi.Input[Optional[Union['IpsecCryptoProfileAhArgs', 'IpsecCryptoProfileAhArgsDict', 'outputs.IpsecCryptoProfileAh']]] = None,
             device: pulumi.Input[Optional[_builtins.str]] = None,
             dh_group: pulumi.Input[Optional[_builtins.str]] = None,
-            esp: pulumi.Input[Optional[Union['IpsecCryptoProfileEspArgs', 'IpsecCryptoProfileEspArgsDict']]] = None,
+            esp: pulumi.Input[Optional[Union['IpsecCryptoProfileEspArgs', 'IpsecCryptoProfileEspArgsDict', 'outputs.IpsecCryptoProfileEsp']]] = None,
             folder: pulumi.Input[Optional[_builtins.str]] = None,
-            lifesize: pulumi.Input[Optional[Union['IpsecCryptoProfileLifesizeArgs', 'IpsecCryptoProfileLifesizeArgsDict']]] = None,
-            lifetime: pulumi.Input[Optional[Union['IpsecCryptoProfileLifetimeArgs', 'IpsecCryptoProfileLifetimeArgsDict']]] = None,
+            lifesize: pulumi.Input[Optional[Union['IpsecCryptoProfileLifesizeArgs', 'IpsecCryptoProfileLifesizeArgsDict', 'outputs.IpsecCryptoProfileLifesize']]] = None,
+            lifetime: pulumi.Input[Optional[Union['IpsecCryptoProfileLifetimeArgs', 'IpsecCryptoProfileLifetimeArgsDict', 'outputs.IpsecCryptoProfileLifetime']]] = None,
             name: pulumi.Input[Optional[_builtins.str]] = None,
             snippet: pulumi.Input[Optional[_builtins.str]] = None,
             tfid: pulumi.Input[Optional[_builtins.str]] = None) -> 'IpsecCryptoProfile':
@@ -595,19 +595,19 @@ class IpsecCryptoProfile(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[Union['IpsecCryptoProfileAhArgs', 'IpsecCryptoProfileAhArgsDict']] ah: Ah
+        :param pulumi.Input[Union['IpsecCryptoProfileAhArgs', 'IpsecCryptoProfileAhArgsDict', 'outputs.IpsecCryptoProfileAh']] ah: Ah
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
                
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] dh_group: phase-2 DH group (PFS DH group)
-        :param pulumi.Input[Union['IpsecCryptoProfileEspArgs', 'IpsecCryptoProfileEspArgsDict']] esp: Esp
+        :param pulumi.Input[Union['IpsecCryptoProfileEspArgs', 'IpsecCryptoProfileEspArgsDict', 'outputs.IpsecCryptoProfileEsp']] esp: Esp
                
                > ℹ️ **Note:** You must specify exactly one of `ah` and `esp`.
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
                
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-        :param pulumi.Input[Union['IpsecCryptoProfileLifesizeArgs', 'IpsecCryptoProfileLifesizeArgsDict']] lifesize: Lifesize
-        :param pulumi.Input[Union['IpsecCryptoProfileLifetimeArgs', 'IpsecCryptoProfileLifetimeArgsDict']] lifetime: Ipsec crypto profile lifetime
+        :param pulumi.Input[Union['IpsecCryptoProfileLifesizeArgs', 'IpsecCryptoProfileLifesizeArgsDict', 'outputs.IpsecCryptoProfileLifesize']] lifesize: Lifesize
+        :param pulumi.Input[Union['IpsecCryptoProfileLifetimeArgs', 'IpsecCryptoProfileLifetimeArgsDict', 'outputs.IpsecCryptoProfileLifetime']] lifetime: Ipsec crypto profile lifetime
         :param pulumi.Input[_builtins.str] name: Alphanumeric string begin with letter: [0-9a-zA-Z._-]
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
                

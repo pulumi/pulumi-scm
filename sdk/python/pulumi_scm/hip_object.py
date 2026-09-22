@@ -586,21 +586,21 @@ class HipObject(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 anti_malware: pulumi.Input[Optional[Union['HipObjectAntiMalwareArgs', 'HipObjectAntiMalwareArgsDict']]] = None,
-                 certificate: pulumi.Input[Optional[Union['HipObjectCertificateArgs', 'HipObjectCertificateArgsDict']]] = None,
-                 custom_checks: pulumi.Input[Optional[Union['HipObjectCustomChecksArgs', 'HipObjectCustomChecksArgsDict']]] = None,
-                 data_loss_prevention: pulumi.Input[Optional[Union['HipObjectDataLossPreventionArgs', 'HipObjectDataLossPreventionArgsDict']]] = None,
+                 anti_malware: pulumi.Input[Optional[Union['HipObjectAntiMalwareArgs', 'HipObjectAntiMalwareArgsDict', 'outputs.HipObjectAntiMalware']]] = None,
+                 certificate: pulumi.Input[Optional[Union['HipObjectCertificateArgs', 'HipObjectCertificateArgsDict', 'outputs.HipObjectCertificate']]] = None,
+                 custom_checks: pulumi.Input[Optional[Union['HipObjectCustomChecksArgs', 'HipObjectCustomChecksArgsDict', 'outputs.HipObjectCustomChecks']]] = None,
+                 data_loss_prevention: pulumi.Input[Optional[Union['HipObjectDataLossPreventionArgs', 'HipObjectDataLossPreventionArgsDict', 'outputs.HipObjectDataLossPrevention']]] = None,
                  description: pulumi.Input[Optional[_builtins.str]] = None,
                  device: pulumi.Input[Optional[_builtins.str]] = None,
-                 disk_backup: pulumi.Input[Optional[Union['HipObjectDiskBackupArgs', 'HipObjectDiskBackupArgsDict']]] = None,
-                 disk_encryption: pulumi.Input[Optional[Union['HipObjectDiskEncryptionArgs', 'HipObjectDiskEncryptionArgsDict']]] = None,
-                 firewall: pulumi.Input[Optional[Union['HipObjectFirewallArgs', 'HipObjectFirewallArgsDict']]] = None,
+                 disk_backup: pulumi.Input[Optional[Union['HipObjectDiskBackupArgs', 'HipObjectDiskBackupArgsDict', 'outputs.HipObjectDiskBackup']]] = None,
+                 disk_encryption: pulumi.Input[Optional[Union['HipObjectDiskEncryptionArgs', 'HipObjectDiskEncryptionArgsDict', 'outputs.HipObjectDiskEncryption']]] = None,
+                 firewall: pulumi.Input[Optional[Union['HipObjectFirewallArgs', 'HipObjectFirewallArgsDict', 'outputs.HipObjectFirewall']]] = None,
                  folder: pulumi.Input[Optional[_builtins.str]] = None,
-                 host_info: pulumi.Input[Optional[Union['HipObjectHostInfoArgs', 'HipObjectHostInfoArgsDict']]] = None,
-                 mobile_device: pulumi.Input[Optional[Union['HipObjectMobileDeviceArgs', 'HipObjectMobileDeviceArgsDict']]] = None,
+                 host_info: pulumi.Input[Optional[Union['HipObjectHostInfoArgs', 'HipObjectHostInfoArgsDict', 'outputs.HipObjectHostInfo']]] = None,
+                 mobile_device: pulumi.Input[Optional[Union['HipObjectMobileDeviceArgs', 'HipObjectMobileDeviceArgsDict', 'outputs.HipObjectMobileDevice']]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
-                 network_info: pulumi.Input[Optional[Union['HipObjectNetworkInfoArgs', 'HipObjectNetworkInfoArgsDict']]] = None,
-                 patch_management: pulumi.Input[Optional[Union['HipObjectPatchManagementArgs', 'HipObjectPatchManagementArgsDict']]] = None,
+                 network_info: pulumi.Input[Optional[Union['HipObjectNetworkInfoArgs', 'HipObjectNetworkInfoArgsDict', 'outputs.HipObjectNetworkInfo']]] = None,
+                 patch_management: pulumi.Input[Optional[Union['HipObjectPatchManagementArgs', 'HipObjectPatchManagementArgsDict', 'outputs.HipObjectPatchManagement']]] = None,
                  snippet: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
@@ -788,23 +788,23 @@ class HipObject(pulumi.CustomResource):
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[Union['HipObjectAntiMalwareArgs', 'HipObjectAntiMalwareArgsDict']] anti_malware: Anti malware
-        :param pulumi.Input[Union['HipObjectCertificateArgs', 'HipObjectCertificateArgsDict']] certificate: Certificate
-        :param pulumi.Input[Union['HipObjectCustomChecksArgs', 'HipObjectCustomChecksArgsDict']] custom_checks: Custom checks
-        :param pulumi.Input[Union['HipObjectDataLossPreventionArgs', 'HipObjectDataLossPreventionArgsDict']] data_loss_prevention: Data loss prevention
+        :param pulumi.Input[Union['HipObjectAntiMalwareArgs', 'HipObjectAntiMalwareArgsDict', 'outputs.HipObjectAntiMalware']] anti_malware: Anti malware
+        :param pulumi.Input[Union['HipObjectCertificateArgs', 'HipObjectCertificateArgsDict', 'outputs.HipObjectCertificate']] certificate: Certificate
+        :param pulumi.Input[Union['HipObjectCustomChecksArgs', 'HipObjectCustomChecksArgsDict', 'outputs.HipObjectCustomChecks']] custom_checks: Custom checks
+        :param pulumi.Input[Union['HipObjectDataLossPreventionArgs', 'HipObjectDataLossPreventionArgsDict', 'outputs.HipObjectDataLossPrevention']] data_loss_prevention: Data loss prevention
         :param pulumi.Input[_builtins.str] description: Description
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
-        :param pulumi.Input[Union['HipObjectDiskBackupArgs', 'HipObjectDiskBackupArgsDict']] disk_backup: Disk backup
-        :param pulumi.Input[Union['HipObjectDiskEncryptionArgs', 'HipObjectDiskEncryptionArgsDict']] disk_encryption: Disk encryption
-        :param pulumi.Input[Union['HipObjectFirewallArgs', 'HipObjectFirewallArgsDict']] firewall: Firewall
+        :param pulumi.Input[Union['HipObjectDiskBackupArgs', 'HipObjectDiskBackupArgsDict', 'outputs.HipObjectDiskBackup']] disk_backup: Disk backup
+        :param pulumi.Input[Union['HipObjectDiskEncryptionArgs', 'HipObjectDiskEncryptionArgsDict', 'outputs.HipObjectDiskEncryption']] disk_encryption: Disk encryption
+        :param pulumi.Input[Union['HipObjectFirewallArgs', 'HipObjectFirewallArgsDict', 'outputs.HipObjectFirewall']] firewall: Firewall
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
                
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-        :param pulumi.Input[Union['HipObjectHostInfoArgs', 'HipObjectHostInfoArgsDict']] host_info: Host info
-        :param pulumi.Input[Union['HipObjectMobileDeviceArgs', 'HipObjectMobileDeviceArgsDict']] mobile_device: Mobile device
+        :param pulumi.Input[Union['HipObjectHostInfoArgs', 'HipObjectHostInfoArgsDict', 'outputs.HipObjectHostInfo']] host_info: Host info
+        :param pulumi.Input[Union['HipObjectMobileDeviceArgs', 'HipObjectMobileDeviceArgsDict', 'outputs.HipObjectMobileDevice']] mobile_device: Mobile device
         :param pulumi.Input[_builtins.str] name: The name of the HIP object
-        :param pulumi.Input[Union['HipObjectNetworkInfoArgs', 'HipObjectNetworkInfoArgsDict']] network_info: Network info
-        :param pulumi.Input[Union['HipObjectPatchManagementArgs', 'HipObjectPatchManagementArgsDict']] patch_management: Patch management
+        :param pulumi.Input[Union['HipObjectNetworkInfoArgs', 'HipObjectNetworkInfoArgsDict', 'outputs.HipObjectNetworkInfo']] network_info: Network info
+        :param pulumi.Input[Union['HipObjectPatchManagementArgs', 'HipObjectPatchManagementArgsDict', 'outputs.HipObjectPatchManagement']] patch_management: Patch management
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
                
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
@@ -1013,21 +1013,21 @@ class HipObject(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 anti_malware: pulumi.Input[Optional[Union['HipObjectAntiMalwareArgs', 'HipObjectAntiMalwareArgsDict']]] = None,
-                 certificate: pulumi.Input[Optional[Union['HipObjectCertificateArgs', 'HipObjectCertificateArgsDict']]] = None,
-                 custom_checks: pulumi.Input[Optional[Union['HipObjectCustomChecksArgs', 'HipObjectCustomChecksArgsDict']]] = None,
-                 data_loss_prevention: pulumi.Input[Optional[Union['HipObjectDataLossPreventionArgs', 'HipObjectDataLossPreventionArgsDict']]] = None,
+                 anti_malware: pulumi.Input[Optional[Union['HipObjectAntiMalwareArgs', 'HipObjectAntiMalwareArgsDict', 'outputs.HipObjectAntiMalware']]] = None,
+                 certificate: pulumi.Input[Optional[Union['HipObjectCertificateArgs', 'HipObjectCertificateArgsDict', 'outputs.HipObjectCertificate']]] = None,
+                 custom_checks: pulumi.Input[Optional[Union['HipObjectCustomChecksArgs', 'HipObjectCustomChecksArgsDict', 'outputs.HipObjectCustomChecks']]] = None,
+                 data_loss_prevention: pulumi.Input[Optional[Union['HipObjectDataLossPreventionArgs', 'HipObjectDataLossPreventionArgsDict', 'outputs.HipObjectDataLossPrevention']]] = None,
                  description: pulumi.Input[Optional[_builtins.str]] = None,
                  device: pulumi.Input[Optional[_builtins.str]] = None,
-                 disk_backup: pulumi.Input[Optional[Union['HipObjectDiskBackupArgs', 'HipObjectDiskBackupArgsDict']]] = None,
-                 disk_encryption: pulumi.Input[Optional[Union['HipObjectDiskEncryptionArgs', 'HipObjectDiskEncryptionArgsDict']]] = None,
-                 firewall: pulumi.Input[Optional[Union['HipObjectFirewallArgs', 'HipObjectFirewallArgsDict']]] = None,
+                 disk_backup: pulumi.Input[Optional[Union['HipObjectDiskBackupArgs', 'HipObjectDiskBackupArgsDict', 'outputs.HipObjectDiskBackup']]] = None,
+                 disk_encryption: pulumi.Input[Optional[Union['HipObjectDiskEncryptionArgs', 'HipObjectDiskEncryptionArgsDict', 'outputs.HipObjectDiskEncryption']]] = None,
+                 firewall: pulumi.Input[Optional[Union['HipObjectFirewallArgs', 'HipObjectFirewallArgsDict', 'outputs.HipObjectFirewall']]] = None,
                  folder: pulumi.Input[Optional[_builtins.str]] = None,
-                 host_info: pulumi.Input[Optional[Union['HipObjectHostInfoArgs', 'HipObjectHostInfoArgsDict']]] = None,
-                 mobile_device: pulumi.Input[Optional[Union['HipObjectMobileDeviceArgs', 'HipObjectMobileDeviceArgsDict']]] = None,
+                 host_info: pulumi.Input[Optional[Union['HipObjectHostInfoArgs', 'HipObjectHostInfoArgsDict', 'outputs.HipObjectHostInfo']]] = None,
+                 mobile_device: pulumi.Input[Optional[Union['HipObjectMobileDeviceArgs', 'HipObjectMobileDeviceArgsDict', 'outputs.HipObjectMobileDevice']]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
-                 network_info: pulumi.Input[Optional[Union['HipObjectNetworkInfoArgs', 'HipObjectNetworkInfoArgsDict']]] = None,
-                 patch_management: pulumi.Input[Optional[Union['HipObjectPatchManagementArgs', 'HipObjectPatchManagementArgsDict']]] = None,
+                 network_info: pulumi.Input[Optional[Union['HipObjectNetworkInfoArgs', 'HipObjectNetworkInfoArgsDict', 'outputs.HipObjectNetworkInfo']]] = None,
+                 patch_management: pulumi.Input[Optional[Union['HipObjectPatchManagementArgs', 'HipObjectPatchManagementArgsDict', 'outputs.HipObjectPatchManagement']]] = None,
                  snippet: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
@@ -1065,21 +1065,21 @@ class HipObject(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            anti_malware: pulumi.Input[Optional[Union['HipObjectAntiMalwareArgs', 'HipObjectAntiMalwareArgsDict']]] = None,
-            certificate: pulumi.Input[Optional[Union['HipObjectCertificateArgs', 'HipObjectCertificateArgsDict']]] = None,
-            custom_checks: pulumi.Input[Optional[Union['HipObjectCustomChecksArgs', 'HipObjectCustomChecksArgsDict']]] = None,
-            data_loss_prevention: pulumi.Input[Optional[Union['HipObjectDataLossPreventionArgs', 'HipObjectDataLossPreventionArgsDict']]] = None,
+            anti_malware: pulumi.Input[Optional[Union['HipObjectAntiMalwareArgs', 'HipObjectAntiMalwareArgsDict', 'outputs.HipObjectAntiMalware']]] = None,
+            certificate: pulumi.Input[Optional[Union['HipObjectCertificateArgs', 'HipObjectCertificateArgsDict', 'outputs.HipObjectCertificate']]] = None,
+            custom_checks: pulumi.Input[Optional[Union['HipObjectCustomChecksArgs', 'HipObjectCustomChecksArgsDict', 'outputs.HipObjectCustomChecks']]] = None,
+            data_loss_prevention: pulumi.Input[Optional[Union['HipObjectDataLossPreventionArgs', 'HipObjectDataLossPreventionArgsDict', 'outputs.HipObjectDataLossPrevention']]] = None,
             description: pulumi.Input[Optional[_builtins.str]] = None,
             device: pulumi.Input[Optional[_builtins.str]] = None,
-            disk_backup: pulumi.Input[Optional[Union['HipObjectDiskBackupArgs', 'HipObjectDiskBackupArgsDict']]] = None,
-            disk_encryption: pulumi.Input[Optional[Union['HipObjectDiskEncryptionArgs', 'HipObjectDiskEncryptionArgsDict']]] = None,
-            firewall: pulumi.Input[Optional[Union['HipObjectFirewallArgs', 'HipObjectFirewallArgsDict']]] = None,
+            disk_backup: pulumi.Input[Optional[Union['HipObjectDiskBackupArgs', 'HipObjectDiskBackupArgsDict', 'outputs.HipObjectDiskBackup']]] = None,
+            disk_encryption: pulumi.Input[Optional[Union['HipObjectDiskEncryptionArgs', 'HipObjectDiskEncryptionArgsDict', 'outputs.HipObjectDiskEncryption']]] = None,
+            firewall: pulumi.Input[Optional[Union['HipObjectFirewallArgs', 'HipObjectFirewallArgsDict', 'outputs.HipObjectFirewall']]] = None,
             folder: pulumi.Input[Optional[_builtins.str]] = None,
-            host_info: pulumi.Input[Optional[Union['HipObjectHostInfoArgs', 'HipObjectHostInfoArgsDict']]] = None,
-            mobile_device: pulumi.Input[Optional[Union['HipObjectMobileDeviceArgs', 'HipObjectMobileDeviceArgsDict']]] = None,
+            host_info: pulumi.Input[Optional[Union['HipObjectHostInfoArgs', 'HipObjectHostInfoArgsDict', 'outputs.HipObjectHostInfo']]] = None,
+            mobile_device: pulumi.Input[Optional[Union['HipObjectMobileDeviceArgs', 'HipObjectMobileDeviceArgsDict', 'outputs.HipObjectMobileDevice']]] = None,
             name: pulumi.Input[Optional[_builtins.str]] = None,
-            network_info: pulumi.Input[Optional[Union['HipObjectNetworkInfoArgs', 'HipObjectNetworkInfoArgsDict']]] = None,
-            patch_management: pulumi.Input[Optional[Union['HipObjectPatchManagementArgs', 'HipObjectPatchManagementArgsDict']]] = None,
+            network_info: pulumi.Input[Optional[Union['HipObjectNetworkInfoArgs', 'HipObjectNetworkInfoArgsDict', 'outputs.HipObjectNetworkInfo']]] = None,
+            patch_management: pulumi.Input[Optional[Union['HipObjectPatchManagementArgs', 'HipObjectPatchManagementArgsDict', 'outputs.HipObjectPatchManagement']]] = None,
             snippet: pulumi.Input[Optional[_builtins.str]] = None,
             tfid: pulumi.Input[Optional[_builtins.str]] = None) -> 'HipObject':
         """
@@ -1089,23 +1089,23 @@ class HipObject(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[Union['HipObjectAntiMalwareArgs', 'HipObjectAntiMalwareArgsDict']] anti_malware: Anti malware
-        :param pulumi.Input[Union['HipObjectCertificateArgs', 'HipObjectCertificateArgsDict']] certificate: Certificate
-        :param pulumi.Input[Union['HipObjectCustomChecksArgs', 'HipObjectCustomChecksArgsDict']] custom_checks: Custom checks
-        :param pulumi.Input[Union['HipObjectDataLossPreventionArgs', 'HipObjectDataLossPreventionArgsDict']] data_loss_prevention: Data loss prevention
+        :param pulumi.Input[Union['HipObjectAntiMalwareArgs', 'HipObjectAntiMalwareArgsDict', 'outputs.HipObjectAntiMalware']] anti_malware: Anti malware
+        :param pulumi.Input[Union['HipObjectCertificateArgs', 'HipObjectCertificateArgsDict', 'outputs.HipObjectCertificate']] certificate: Certificate
+        :param pulumi.Input[Union['HipObjectCustomChecksArgs', 'HipObjectCustomChecksArgsDict', 'outputs.HipObjectCustomChecks']] custom_checks: Custom checks
+        :param pulumi.Input[Union['HipObjectDataLossPreventionArgs', 'HipObjectDataLossPreventionArgsDict', 'outputs.HipObjectDataLossPrevention']] data_loss_prevention: Data loss prevention
         :param pulumi.Input[_builtins.str] description: Description
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
-        :param pulumi.Input[Union['HipObjectDiskBackupArgs', 'HipObjectDiskBackupArgsDict']] disk_backup: Disk backup
-        :param pulumi.Input[Union['HipObjectDiskEncryptionArgs', 'HipObjectDiskEncryptionArgsDict']] disk_encryption: Disk encryption
-        :param pulumi.Input[Union['HipObjectFirewallArgs', 'HipObjectFirewallArgsDict']] firewall: Firewall
+        :param pulumi.Input[Union['HipObjectDiskBackupArgs', 'HipObjectDiskBackupArgsDict', 'outputs.HipObjectDiskBackup']] disk_backup: Disk backup
+        :param pulumi.Input[Union['HipObjectDiskEncryptionArgs', 'HipObjectDiskEncryptionArgsDict', 'outputs.HipObjectDiskEncryption']] disk_encryption: Disk encryption
+        :param pulumi.Input[Union['HipObjectFirewallArgs', 'HipObjectFirewallArgsDict', 'outputs.HipObjectFirewall']] firewall: Firewall
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
                
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-        :param pulumi.Input[Union['HipObjectHostInfoArgs', 'HipObjectHostInfoArgsDict']] host_info: Host info
-        :param pulumi.Input[Union['HipObjectMobileDeviceArgs', 'HipObjectMobileDeviceArgsDict']] mobile_device: Mobile device
+        :param pulumi.Input[Union['HipObjectHostInfoArgs', 'HipObjectHostInfoArgsDict', 'outputs.HipObjectHostInfo']] host_info: Host info
+        :param pulumi.Input[Union['HipObjectMobileDeviceArgs', 'HipObjectMobileDeviceArgsDict', 'outputs.HipObjectMobileDevice']] mobile_device: Mobile device
         :param pulumi.Input[_builtins.str] name: The name of the HIP object
-        :param pulumi.Input[Union['HipObjectNetworkInfoArgs', 'HipObjectNetworkInfoArgsDict']] network_info: Network info
-        :param pulumi.Input[Union['HipObjectPatchManagementArgs', 'HipObjectPatchManagementArgsDict']] patch_management: Patch management
+        :param pulumi.Input[Union['HipObjectNetworkInfoArgs', 'HipObjectNetworkInfoArgsDict', 'outputs.HipObjectNetworkInfo']] network_info: Network info
+        :param pulumi.Input[Union['HipObjectPatchManagementArgs', 'HipObjectPatchManagementArgsDict', 'outputs.HipObjectPatchManagement']] patch_management: Patch management
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
                
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.

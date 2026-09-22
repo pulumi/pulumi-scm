@@ -554,14 +554,14 @@ class PbfRule(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 action: pulumi.Input[Optional[Union['PbfRuleActionArgs', 'PbfRuleActionArgsDict']]] = None,
+                 action: pulumi.Input[Optional[Union['PbfRuleActionArgs', 'PbfRuleActionArgsDict', 'outputs.PbfRuleAction']]] = None,
                  applications: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  description: pulumi.Input[Optional[_builtins.str]] = None,
                  destinations: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  device: pulumi.Input[Optional[_builtins.str]] = None,
-                 enforce_symmetric_return: pulumi.Input[Optional[Union['PbfRuleEnforceSymmetricReturnArgs', 'PbfRuleEnforceSymmetricReturnArgsDict']]] = None,
+                 enforce_symmetric_return: pulumi.Input[Optional[Union['PbfRuleEnforceSymmetricReturnArgs', 'PbfRuleEnforceSymmetricReturnArgsDict', 'outputs.PbfRuleEnforceSymmetricReturn']]] = None,
                  folder: pulumi.Input[Optional[_builtins.str]] = None,
-                 from_: pulumi.Input[Optional[Union['PbfRuleFromArgs', 'PbfRuleFromArgsDict']]] = None,
+                 from_: pulumi.Input[Optional[Union['PbfRuleFromArgs', 'PbfRuleFromArgsDict', 'outputs.PbfRuleFrom']]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
                  schedule: pulumi.Input[Optional[_builtins.str]] = None,
                  services: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
@@ -683,16 +683,16 @@ class PbfRule(pulumi.CustomResource):
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[Union['PbfRuleActionArgs', 'PbfRuleActionArgsDict']] action: Action
+        :param pulumi.Input[Union['PbfRuleActionArgs', 'PbfRuleActionArgsDict', 'outputs.PbfRuleAction']] action: Action
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] applications: Applications
         :param pulumi.Input[_builtins.str] description: Description
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] destinations: Destination addresses
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
-        :param pulumi.Input[Union['PbfRuleEnforceSymmetricReturnArgs', 'PbfRuleEnforceSymmetricReturnArgsDict']] enforce_symmetric_return: Enforce symmetric return
+        :param pulumi.Input[Union['PbfRuleEnforceSymmetricReturnArgs', 'PbfRuleEnforceSymmetricReturnArgsDict', 'outputs.PbfRuleEnforceSymmetricReturn']] enforce_symmetric_return: Enforce symmetric return
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
                
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-        :param pulumi.Input[Union['PbfRuleFromArgs', 'PbfRuleFromArgsDict']] from_: From
+        :param pulumi.Input[Union['PbfRuleFromArgs', 'PbfRuleFromArgsDict', 'outputs.PbfRuleFrom']] from_: From
         :param pulumi.Input[_builtins.str] name: PBF rule name
         :param pulumi.Input[_builtins.str] schedule: Schedule
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] services: Services
@@ -835,14 +835,14 @@ class PbfRule(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 action: pulumi.Input[Optional[Union['PbfRuleActionArgs', 'PbfRuleActionArgsDict']]] = None,
+                 action: pulumi.Input[Optional[Union['PbfRuleActionArgs', 'PbfRuleActionArgsDict', 'outputs.PbfRuleAction']]] = None,
                  applications: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  description: pulumi.Input[Optional[_builtins.str]] = None,
                  destinations: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  device: pulumi.Input[Optional[_builtins.str]] = None,
-                 enforce_symmetric_return: pulumi.Input[Optional[Union['PbfRuleEnforceSymmetricReturnArgs', 'PbfRuleEnforceSymmetricReturnArgsDict']]] = None,
+                 enforce_symmetric_return: pulumi.Input[Optional[Union['PbfRuleEnforceSymmetricReturnArgs', 'PbfRuleEnforceSymmetricReturnArgsDict', 'outputs.PbfRuleEnforceSymmetricReturn']]] = None,
                  folder: pulumi.Input[Optional[_builtins.str]] = None,
-                 from_: pulumi.Input[Optional[Union['PbfRuleFromArgs', 'PbfRuleFromArgsDict']]] = None,
+                 from_: pulumi.Input[Optional[Union['PbfRuleFromArgs', 'PbfRuleFromArgsDict', 'outputs.PbfRuleFrom']]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
                  schedule: pulumi.Input[Optional[_builtins.str]] = None,
                  services: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
@@ -885,14 +885,14 @@ class PbfRule(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            action: pulumi.Input[Optional[Union['PbfRuleActionArgs', 'PbfRuleActionArgsDict']]] = None,
+            action: pulumi.Input[Optional[Union['PbfRuleActionArgs', 'PbfRuleActionArgsDict', 'outputs.PbfRuleAction']]] = None,
             applications: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
             description: pulumi.Input[Optional[_builtins.str]] = None,
             destinations: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
             device: pulumi.Input[Optional[_builtins.str]] = None,
-            enforce_symmetric_return: pulumi.Input[Optional[Union['PbfRuleEnforceSymmetricReturnArgs', 'PbfRuleEnforceSymmetricReturnArgsDict']]] = None,
+            enforce_symmetric_return: pulumi.Input[Optional[Union['PbfRuleEnforceSymmetricReturnArgs', 'PbfRuleEnforceSymmetricReturnArgsDict', 'outputs.PbfRuleEnforceSymmetricReturn']]] = None,
             folder: pulumi.Input[Optional[_builtins.str]] = None,
-            from_: pulumi.Input[Optional[Union['PbfRuleFromArgs', 'PbfRuleFromArgsDict']]] = None,
+            from_: pulumi.Input[Optional[Union['PbfRuleFromArgs', 'PbfRuleFromArgsDict', 'outputs.PbfRuleFrom']]] = None,
             name: pulumi.Input[Optional[_builtins.str]] = None,
             schedule: pulumi.Input[Optional[_builtins.str]] = None,
             services: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
@@ -908,16 +908,16 @@ class PbfRule(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[Union['PbfRuleActionArgs', 'PbfRuleActionArgsDict']] action: Action
+        :param pulumi.Input[Union['PbfRuleActionArgs', 'PbfRuleActionArgsDict', 'outputs.PbfRuleAction']] action: Action
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] applications: Applications
         :param pulumi.Input[_builtins.str] description: Description
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] destinations: Destination addresses
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
-        :param pulumi.Input[Union['PbfRuleEnforceSymmetricReturnArgs', 'PbfRuleEnforceSymmetricReturnArgsDict']] enforce_symmetric_return: Enforce symmetric return
+        :param pulumi.Input[Union['PbfRuleEnforceSymmetricReturnArgs', 'PbfRuleEnforceSymmetricReturnArgsDict', 'outputs.PbfRuleEnforceSymmetricReturn']] enforce_symmetric_return: Enforce symmetric return
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
                
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-        :param pulumi.Input[Union['PbfRuleFromArgs', 'PbfRuleFromArgsDict']] from_: From
+        :param pulumi.Input[Union['PbfRuleFromArgs', 'PbfRuleFromArgsDict', 'outputs.PbfRuleFrom']] from_: From
         :param pulumi.Input[_builtins.str] name: PBF rule name
         :param pulumi.Input[_builtins.str] schedule: Schedule
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] services: Services

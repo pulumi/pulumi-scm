@@ -365,7 +365,7 @@ class IkeCryptoProfile(pulumi.CustomResource):
                  encryptions: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  folder: pulumi.Input[Optional[_builtins.str]] = None,
                  hashes: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 lifetime: pulumi.Input[Optional[Union['IkeCryptoProfileLifetimeArgs', 'IkeCryptoProfileLifetimeArgsDict']]] = None,
+                 lifetime: pulumi.Input[Optional[Union['IkeCryptoProfileLifetimeArgs', 'IkeCryptoProfileLifetimeArgsDict', 'outputs.IkeCryptoProfileLifetime']]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
                  snippet: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
@@ -433,7 +433,7 @@ class IkeCryptoProfile(pulumi.CustomResource):
                
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] hashes: Hash
-        :param pulumi.Input[Union['IkeCryptoProfileLifetimeArgs', 'IkeCryptoProfileLifetimeArgsDict']] lifetime: Ike crypto profile lifetime
+        :param pulumi.Input[Union['IkeCryptoProfileLifetimeArgs', 'IkeCryptoProfileLifetimeArgsDict', 'outputs.IkeCryptoProfileLifetime']] lifetime: Ike crypto profile lifetime
         :param pulumi.Input[_builtins.str] name: Alphanumeric string begin with letter: [0-9a-zA-Z._-]
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
                
@@ -520,7 +520,7 @@ class IkeCryptoProfile(pulumi.CustomResource):
                  encryptions: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  folder: pulumi.Input[Optional[_builtins.str]] = None,
                  hashes: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 lifetime: pulumi.Input[Optional[Union['IkeCryptoProfileLifetimeArgs', 'IkeCryptoProfileLifetimeArgsDict']]] = None,
+                 lifetime: pulumi.Input[Optional[Union['IkeCryptoProfileLifetimeArgs', 'IkeCryptoProfileLifetimeArgsDict', 'outputs.IkeCryptoProfileLifetime']]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
                  snippet: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
@@ -564,7 +564,7 @@ class IkeCryptoProfile(pulumi.CustomResource):
             encryptions: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
             folder: pulumi.Input[Optional[_builtins.str]] = None,
             hashes: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
-            lifetime: pulumi.Input[Optional[Union['IkeCryptoProfileLifetimeArgs', 'IkeCryptoProfileLifetimeArgsDict']]] = None,
+            lifetime: pulumi.Input[Optional[Union['IkeCryptoProfileLifetimeArgs', 'IkeCryptoProfileLifetimeArgsDict', 'outputs.IkeCryptoProfileLifetime']]] = None,
             name: pulumi.Input[Optional[_builtins.str]] = None,
             snippet: pulumi.Input[Optional[_builtins.str]] = None,
             tfid: pulumi.Input[Optional[_builtins.str]] = None) -> 'IkeCryptoProfile':
@@ -583,7 +583,7 @@ class IkeCryptoProfile(pulumi.CustomResource):
                
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] hashes: Hash
-        :param pulumi.Input[Union['IkeCryptoProfileLifetimeArgs', 'IkeCryptoProfileLifetimeArgsDict']] lifetime: Ike crypto profile lifetime
+        :param pulumi.Input[Union['IkeCryptoProfileLifetimeArgs', 'IkeCryptoProfileLifetimeArgsDict', 'outputs.IkeCryptoProfileLifetime']] lifetime: Ike crypto profile lifetime
         :param pulumi.Input[_builtins.str] name: Alphanumeric string begin with letter: [0-9a-zA-Z._-]
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
                

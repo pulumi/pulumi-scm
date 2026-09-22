@@ -222,7 +222,7 @@ class ForwardingProfile(pulumi.CustomResource):
                  description: pulumi.Input[Optional[_builtins.str]] = None,
                  folder: pulumi.Input[Optional[_builtins.str]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
-                 type: pulumi.Input[Optional[Union['ForwardingProfileTypeArgs', 'ForwardingProfileTypeArgsDict']]] = None,
+                 type: pulumi.Input[Optional[Union['ForwardingProfileTypeArgs', 'ForwardingProfileTypeArgsDict', 'outputs.ForwardingProfileType']]] = None,
                  __props__=None):
         """
         ForwardingProfile resource
@@ -409,7 +409,7 @@ class ForwardingProfile(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] description: Forwarding profile description
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
         :param pulumi.Input[_builtins.str] name: forwarding profile name as an alphanumeric string [ 0-9a-zA-Z._ -]
-        :param pulumi.Input[Union['ForwardingProfileTypeArgs', 'ForwardingProfileTypeArgsDict']] type: Forwarding profile type configuration (PAC file, GlobalProtect proxy, or ZTNA agent)
+        :param pulumi.Input[Union['ForwardingProfileTypeArgs', 'ForwardingProfileTypeArgsDict', 'outputs.ForwardingProfileType']] type: Forwarding profile type configuration (PAC file, GlobalProtect proxy, or ZTNA agent)
         """
         ...
     @overload
@@ -615,7 +615,7 @@ class ForwardingProfile(pulumi.CustomResource):
                  description: pulumi.Input[Optional[_builtins.str]] = None,
                  folder: pulumi.Input[Optional[_builtins.str]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
-                 type: pulumi.Input[Optional[Union['ForwardingProfileTypeArgs', 'ForwardingProfileTypeArgsDict']]] = None,
+                 type: pulumi.Input[Optional[Union['ForwardingProfileTypeArgs', 'ForwardingProfileTypeArgsDict', 'outputs.ForwardingProfileType']]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -646,7 +646,7 @@ class ForwardingProfile(pulumi.CustomResource):
             folder: pulumi.Input[Optional[_builtins.str]] = None,
             name: pulumi.Input[Optional[_builtins.str]] = None,
             tfid: pulumi.Input[Optional[_builtins.str]] = None,
-            type: pulumi.Input[Optional[Union['ForwardingProfileTypeArgs', 'ForwardingProfileTypeArgsDict']]] = None) -> 'ForwardingProfile':
+            type: pulumi.Input[Optional[Union['ForwardingProfileTypeArgs', 'ForwardingProfileTypeArgsDict', 'outputs.ForwardingProfileType']]] = None) -> 'ForwardingProfile':
         """
         Get an existing ForwardingProfile resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.
@@ -659,7 +659,7 @@ class ForwardingProfile(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
         :param pulumi.Input[_builtins.str] name: forwarding profile name as an alphanumeric string [ 0-9a-zA-Z._ -]
         :param pulumi.Input[_builtins.str] tfid: The Terraform ID.
-        :param pulumi.Input[Union['ForwardingProfileTypeArgs', 'ForwardingProfileTypeArgsDict']] type: Forwarding profile type configuration (PAC file, GlobalProtect proxy, or ZTNA agent)
+        :param pulumi.Input[Union['ForwardingProfileTypeArgs', 'ForwardingProfileTypeArgsDict', 'outputs.ForwardingProfileType']] type: Forwarding profile type configuration (PAC file, GlobalProtect proxy, or ZTNA agent)
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
 

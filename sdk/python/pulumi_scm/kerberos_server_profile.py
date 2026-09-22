@@ -236,7 +236,7 @@ class KerberosServerProfile(pulumi.CustomResource):
                  device: pulumi.Input[Optional[_builtins.str]] = None,
                  folder: pulumi.Input[Optional[_builtins.str]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
-                 servers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['KerberosServerProfileServerArgs', 'KerberosServerProfileServerArgsDict']]]]] = None,
+                 servers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['KerberosServerProfileServerArgs', 'KerberosServerProfileServerArgsDict', 'outputs.KerberosServerProfileServer']]]]] = None,
                  snippet: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
@@ -315,7 +315,7 @@ class KerberosServerProfile(pulumi.CustomResource):
                
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] name: The name of the Kerberos server profile
-        :param pulumi.Input[Sequence[pulumi.Input[Union['KerberosServerProfileServerArgs', 'KerberosServerProfileServerArgsDict']]]] servers: The Kerberos server configuration
+        :param pulumi.Input[Sequence[pulumi.Input[Union['KerberosServerProfileServerArgs', 'KerberosServerProfileServerArgsDict', 'outputs.KerberosServerProfileServer']]]] servers: The Kerberos server configuration
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
                
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
@@ -413,7 +413,7 @@ class KerberosServerProfile(pulumi.CustomResource):
                  device: pulumi.Input[Optional[_builtins.str]] = None,
                  folder: pulumi.Input[Optional[_builtins.str]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
-                 servers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['KerberosServerProfileServerArgs', 'KerberosServerProfileServerArgsDict']]]]] = None,
+                 servers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['KerberosServerProfileServerArgs', 'KerberosServerProfileServerArgsDict', 'outputs.KerberosServerProfileServer']]]]] = None,
                  snippet: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
@@ -445,7 +445,7 @@ class KerberosServerProfile(pulumi.CustomResource):
             device: pulumi.Input[Optional[_builtins.str]] = None,
             folder: pulumi.Input[Optional[_builtins.str]] = None,
             name: pulumi.Input[Optional[_builtins.str]] = None,
-            servers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['KerberosServerProfileServerArgs', 'KerberosServerProfileServerArgsDict']]]]] = None,
+            servers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['KerberosServerProfileServerArgs', 'KerberosServerProfileServerArgsDict', 'outputs.KerberosServerProfileServer']]]]] = None,
             snippet: pulumi.Input[Optional[_builtins.str]] = None,
             tfid: pulumi.Input[Optional[_builtins.str]] = None) -> 'KerberosServerProfile':
         """
@@ -460,7 +460,7 @@ class KerberosServerProfile(pulumi.CustomResource):
                
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] name: The name of the Kerberos server profile
-        :param pulumi.Input[Sequence[pulumi.Input[Union['KerberosServerProfileServerArgs', 'KerberosServerProfileServerArgsDict']]]] servers: The Kerberos server configuration
+        :param pulumi.Input[Sequence[pulumi.Input[Union['KerberosServerProfileServerArgs', 'KerberosServerProfileServerArgsDict', 'outputs.KerberosServerProfileServer']]]] servers: The Kerberos server configuration
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
                
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.

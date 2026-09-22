@@ -254,7 +254,7 @@ class ExternalDynamicList(pulumi.CustomResource):
                  folder: pulumi.Input[Optional[_builtins.str]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
                  snippet: pulumi.Input[Optional[_builtins.str]] = None,
-                 type: pulumi.Input[Optional[Union['ExternalDynamicListTypeArgs', 'ExternalDynamicListTypeArgsDict']]] = None,
+                 type: pulumi.Input[Optional[Union['ExternalDynamicListTypeArgs', 'ExternalDynamicListTypeArgsDict', 'outputs.ExternalDynamicListType']]] = None,
                  __props__=None):
         """
         ExternalDynamicList resource
@@ -369,7 +369,7 @@ class ExternalDynamicList(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
                
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-        :param pulumi.Input[Union['ExternalDynamicListTypeArgs', 'ExternalDynamicListTypeArgsDict']] type: Type configuration for External Dynamic List
+        :param pulumi.Input[Union['ExternalDynamicListTypeArgs', 'ExternalDynamicListTypeArgsDict', 'outputs.ExternalDynamicListType']] type: Type configuration for External Dynamic List
         """
         ...
     @overload
@@ -499,7 +499,7 @@ class ExternalDynamicList(pulumi.CustomResource):
                  folder: pulumi.Input[Optional[_builtins.str]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
                  snippet: pulumi.Input[Optional[_builtins.str]] = None,
-                 type: pulumi.Input[Optional[Union['ExternalDynamicListTypeArgs', 'ExternalDynamicListTypeArgsDict']]] = None,
+                 type: pulumi.Input[Optional[Union['ExternalDynamicListTypeArgs', 'ExternalDynamicListTypeArgsDict', 'outputs.ExternalDynamicListType']]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -534,7 +534,7 @@ class ExternalDynamicList(pulumi.CustomResource):
             name: pulumi.Input[Optional[_builtins.str]] = None,
             snippet: pulumi.Input[Optional[_builtins.str]] = None,
             tfid: pulumi.Input[Optional[_builtins.str]] = None,
-            type: pulumi.Input[Optional[Union['ExternalDynamicListTypeArgs', 'ExternalDynamicListTypeArgsDict']]] = None) -> 'ExternalDynamicList':
+            type: pulumi.Input[Optional[Union['ExternalDynamicListTypeArgs', 'ExternalDynamicListTypeArgsDict', 'outputs.ExternalDynamicListType']]] = None) -> 'ExternalDynamicList':
         """
         Get an existing ExternalDynamicList resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.
@@ -552,7 +552,7 @@ class ExternalDynamicList(pulumi.CustomResource):
                
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] tfid: The Terraform ID.
-        :param pulumi.Input[Union['ExternalDynamicListTypeArgs', 'ExternalDynamicListTypeArgsDict']] type: Type configuration for External Dynamic List
+        :param pulumi.Input[Union['ExternalDynamicListTypeArgs', 'ExternalDynamicListTypeArgsDict', 'outputs.ExternalDynamicListType']] type: Type configuration for External Dynamic List
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
 

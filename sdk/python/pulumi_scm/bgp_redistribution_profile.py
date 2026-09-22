@@ -235,7 +235,7 @@ class BgpRedistributionProfile(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None,
                  device: pulumi.Input[Optional[_builtins.str]] = None,
                  folder: pulumi.Input[Optional[_builtins.str]] = None,
-                 ipv4: pulumi.Input[Optional[Union['BgpRedistributionProfileIpv4Args', 'BgpRedistributionProfileIpv4ArgsDict']]] = None,
+                 ipv4: pulumi.Input[Optional[Union['BgpRedistributionProfileIpv4Args', 'BgpRedistributionProfileIpv4ArgsDict', 'outputs.BgpRedistributionProfileIpv4']]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
                  snippet: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
@@ -297,7 +297,7 @@ class BgpRedistributionProfile(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
                
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-        :param pulumi.Input[Union['BgpRedistributionProfileIpv4Args', 'BgpRedistributionProfileIpv4ArgsDict']] ipv4: Ipv4
+        :param pulumi.Input[Union['BgpRedistributionProfileIpv4Args', 'BgpRedistributionProfileIpv4ArgsDict', 'outputs.BgpRedistributionProfileIpv4']] ipv4: Ipv4
         :param pulumi.Input[_builtins.str] name: Name
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
                
@@ -378,7 +378,7 @@ class BgpRedistributionProfile(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None,
                  device: pulumi.Input[Optional[_builtins.str]] = None,
                  folder: pulumi.Input[Optional[_builtins.str]] = None,
-                 ipv4: pulumi.Input[Optional[Union['BgpRedistributionProfileIpv4Args', 'BgpRedistributionProfileIpv4ArgsDict']]] = None,
+                 ipv4: pulumi.Input[Optional[Union['BgpRedistributionProfileIpv4Args', 'BgpRedistributionProfileIpv4ArgsDict', 'outputs.BgpRedistributionProfileIpv4']]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
                  snippet: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
@@ -410,7 +410,7 @@ class BgpRedistributionProfile(pulumi.CustomResource):
             opts: Optional[pulumi.ResourceOptions] = None,
             device: pulumi.Input[Optional[_builtins.str]] = None,
             folder: pulumi.Input[Optional[_builtins.str]] = None,
-            ipv4: pulumi.Input[Optional[Union['BgpRedistributionProfileIpv4Args', 'BgpRedistributionProfileIpv4ArgsDict']]] = None,
+            ipv4: pulumi.Input[Optional[Union['BgpRedistributionProfileIpv4Args', 'BgpRedistributionProfileIpv4ArgsDict', 'outputs.BgpRedistributionProfileIpv4']]] = None,
             name: pulumi.Input[Optional[_builtins.str]] = None,
             snippet: pulumi.Input[Optional[_builtins.str]] = None,
             tfid: pulumi.Input[Optional[_builtins.str]] = None) -> 'BgpRedistributionProfile':
@@ -425,7 +425,7 @@ class BgpRedistributionProfile(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
                
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-        :param pulumi.Input[Union['BgpRedistributionProfileIpv4Args', 'BgpRedistributionProfileIpv4ArgsDict']] ipv4: Ipv4
+        :param pulumi.Input[Union['BgpRedistributionProfileIpv4Args', 'BgpRedistributionProfileIpv4ArgsDict', 'outputs.BgpRedistributionProfileIpv4']] ipv4: Ipv4
         :param pulumi.Input[_builtins.str] name: Name
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
                

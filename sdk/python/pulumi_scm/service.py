@@ -302,7 +302,7 @@ class Service(pulumi.CustomResource):
                  device: pulumi.Input[Optional[_builtins.str]] = None,
                  folder: pulumi.Input[Optional[_builtins.str]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
-                 protocol: pulumi.Input[Optional[Union['ServiceProtocolArgs', 'ServiceProtocolArgsDict']]] = None,
+                 protocol: pulumi.Input[Optional[Union['ServiceProtocolArgs', 'ServiceProtocolArgsDict', 'outputs.ServiceProtocol']]] = None,
                  snippet: pulumi.Input[Optional[_builtins.str]] = None,
                  tags: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  __props__=None):
@@ -387,7 +387,7 @@ class Service(pulumi.CustomResource):
                
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] name: The name of the service
-        :param pulumi.Input[Union['ServiceProtocolArgs', 'ServiceProtocolArgsDict']] protocol: Protocol
+        :param pulumi.Input[Union['ServiceProtocolArgs', 'ServiceProtocolArgsDict', 'outputs.ServiceProtocol']] protocol: Protocol
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
                
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
@@ -491,7 +491,7 @@ class Service(pulumi.CustomResource):
                  device: pulumi.Input[Optional[_builtins.str]] = None,
                  folder: pulumi.Input[Optional[_builtins.str]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
-                 protocol: pulumi.Input[Optional[Union['ServiceProtocolArgs', 'ServiceProtocolArgsDict']]] = None,
+                 protocol: pulumi.Input[Optional[Union['ServiceProtocolArgs', 'ServiceProtocolArgsDict', 'outputs.ServiceProtocol']]] = None,
                  snippet: pulumi.Input[Optional[_builtins.str]] = None,
                  tags: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  __props__=None):
@@ -525,7 +525,7 @@ class Service(pulumi.CustomResource):
             device: pulumi.Input[Optional[_builtins.str]] = None,
             folder: pulumi.Input[Optional[_builtins.str]] = None,
             name: pulumi.Input[Optional[_builtins.str]] = None,
-            protocol: pulumi.Input[Optional[Union['ServiceProtocolArgs', 'ServiceProtocolArgsDict']]] = None,
+            protocol: pulumi.Input[Optional[Union['ServiceProtocolArgs', 'ServiceProtocolArgsDict', 'outputs.ServiceProtocol']]] = None,
             snippet: pulumi.Input[Optional[_builtins.str]] = None,
             tags: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
             tfid: pulumi.Input[Optional[_builtins.str]] = None) -> 'Service':
@@ -542,7 +542,7 @@ class Service(pulumi.CustomResource):
                
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] name: The name of the service
-        :param pulumi.Input[Union['ServiceProtocolArgs', 'ServiceProtocolArgsDict']] protocol: Protocol
+        :param pulumi.Input[Union['ServiceProtocolArgs', 'ServiceProtocolArgsDict', 'outputs.ServiceProtocol']] protocol: Protocol
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
                
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.

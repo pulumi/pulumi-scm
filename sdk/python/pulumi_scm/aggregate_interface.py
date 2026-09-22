@@ -350,8 +350,8 @@ class AggregateInterface(pulumi.CustomResource):
                  default_value: pulumi.Input[Optional[_builtins.str]] = None,
                  device: pulumi.Input[Optional[_builtins.str]] = None,
                  folder: pulumi.Input[Optional[_builtins.str]] = None,
-                 layer2: pulumi.Input[Optional[Union['AggregateInterfaceLayer2Args', 'AggregateInterfaceLayer2ArgsDict']]] = None,
-                 layer3: pulumi.Input[Optional[Union['AggregateInterfaceLayer3Args', 'AggregateInterfaceLayer3ArgsDict']]] = None,
+                 layer2: pulumi.Input[Optional[Union['AggregateInterfaceLayer2Args', 'AggregateInterfaceLayer2ArgsDict', 'outputs.AggregateInterfaceLayer2']]] = None,
+                 layer3: pulumi.Input[Optional[Union['AggregateInterfaceLayer3Args', 'AggregateInterfaceLayer3ArgsDict', 'outputs.AggregateInterfaceLayer3']]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
                  snippet: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
@@ -478,10 +478,10 @@ class AggregateInterface(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
                
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-        :param pulumi.Input[Union['AggregateInterfaceLayer2Args', 'AggregateInterfaceLayer2ArgsDict']] layer2: Layer2
+        :param pulumi.Input[Union['AggregateInterfaceLayer2Args', 'AggregateInterfaceLayer2ArgsDict', 'outputs.AggregateInterfaceLayer2']] layer2: Layer2
                
                > ℹ️ **Note:** You must specify exactly one of `layer2` and `layer3`.
-        :param pulumi.Input[Union['AggregateInterfaceLayer3Args', 'AggregateInterfaceLayer3ArgsDict']] layer3: Aggregate Interface Layer 3 configuration
+        :param pulumi.Input[Union['AggregateInterfaceLayer3Args', 'AggregateInterfaceLayer3ArgsDict', 'outputs.AggregateInterfaceLayer3']] layer3: Aggregate Interface Layer 3 configuration
                
                > ℹ️ **Note:** You must specify exactly one of `layer2` and `layer3`.
         :param pulumi.Input[_builtins.str] name: Aggregate interface name
@@ -629,8 +629,8 @@ class AggregateInterface(pulumi.CustomResource):
                  default_value: pulumi.Input[Optional[_builtins.str]] = None,
                  device: pulumi.Input[Optional[_builtins.str]] = None,
                  folder: pulumi.Input[Optional[_builtins.str]] = None,
-                 layer2: pulumi.Input[Optional[Union['AggregateInterfaceLayer2Args', 'AggregateInterfaceLayer2ArgsDict']]] = None,
-                 layer3: pulumi.Input[Optional[Union['AggregateInterfaceLayer3Args', 'AggregateInterfaceLayer3ArgsDict']]] = None,
+                 layer2: pulumi.Input[Optional[Union['AggregateInterfaceLayer2Args', 'AggregateInterfaceLayer2ArgsDict', 'outputs.AggregateInterfaceLayer2']]] = None,
+                 layer3: pulumi.Input[Optional[Union['AggregateInterfaceLayer3Args', 'AggregateInterfaceLayer3ArgsDict', 'outputs.AggregateInterfaceLayer3']]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
                  snippet: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
@@ -665,8 +665,8 @@ class AggregateInterface(pulumi.CustomResource):
             default_value: pulumi.Input[Optional[_builtins.str]] = None,
             device: pulumi.Input[Optional[_builtins.str]] = None,
             folder: pulumi.Input[Optional[_builtins.str]] = None,
-            layer2: pulumi.Input[Optional[Union['AggregateInterfaceLayer2Args', 'AggregateInterfaceLayer2ArgsDict']]] = None,
-            layer3: pulumi.Input[Optional[Union['AggregateInterfaceLayer3Args', 'AggregateInterfaceLayer3ArgsDict']]] = None,
+            layer2: pulumi.Input[Optional[Union['AggregateInterfaceLayer2Args', 'AggregateInterfaceLayer2ArgsDict', 'outputs.AggregateInterfaceLayer2']]] = None,
+            layer3: pulumi.Input[Optional[Union['AggregateInterfaceLayer3Args', 'AggregateInterfaceLayer3ArgsDict', 'outputs.AggregateInterfaceLayer3']]] = None,
             name: pulumi.Input[Optional[_builtins.str]] = None,
             snippet: pulumi.Input[Optional[_builtins.str]] = None,
             tfid: pulumi.Input[Optional[_builtins.str]] = None) -> 'AggregateInterface':
@@ -683,10 +683,10 @@ class AggregateInterface(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
                
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-        :param pulumi.Input[Union['AggregateInterfaceLayer2Args', 'AggregateInterfaceLayer2ArgsDict']] layer2: Layer2
+        :param pulumi.Input[Union['AggregateInterfaceLayer2Args', 'AggregateInterfaceLayer2ArgsDict', 'outputs.AggregateInterfaceLayer2']] layer2: Layer2
                
                > ℹ️ **Note:** You must specify exactly one of `layer2` and `layer3`.
-        :param pulumi.Input[Union['AggregateInterfaceLayer3Args', 'AggregateInterfaceLayer3ArgsDict']] layer3: Aggregate Interface Layer 3 configuration
+        :param pulumi.Input[Union['AggregateInterfaceLayer3Args', 'AggregateInterfaceLayer3ArgsDict', 'outputs.AggregateInterfaceLayer3']] layer3: Aggregate Interface Layer 3 configuration
                
                > ℹ️ **Note:** You must specify exactly one of `layer2` and `layer3`.
         :param pulumi.Input[_builtins.str] name: Aggregate interface name

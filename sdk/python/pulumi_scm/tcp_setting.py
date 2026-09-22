@@ -205,7 +205,7 @@ class TcpSetting(pulumi.CustomResource):
                  device: pulumi.Input[Optional[_builtins.str]] = None,
                  folder: pulumi.Input[Optional[_builtins.str]] = None,
                  snippet: pulumi.Input[Optional[_builtins.str]] = None,
-                 tcp: pulumi.Input[Optional[Union['TcpSettingTcpArgs', 'TcpSettingTcpArgsDict']]] = None,
+                 tcp: pulumi.Input[Optional[Union['TcpSettingTcpArgs', 'TcpSettingTcpArgsDict', 'outputs.TcpSettingTcp']]] = None,
                  __props__=None):
         """
         TcpSetting resource
@@ -263,7 +263,7 @@ class TcpSetting(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
                
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-        :param pulumi.Input[Union['TcpSettingTcpArgs', 'TcpSettingTcpArgsDict']] tcp: Tcp
+        :param pulumi.Input[Union['TcpSettingTcpArgs', 'TcpSettingTcpArgsDict', 'outputs.TcpSettingTcp']] tcp: Tcp
         """
         ...
     @overload
@@ -336,7 +336,7 @@ class TcpSetting(pulumi.CustomResource):
                  device: pulumi.Input[Optional[_builtins.str]] = None,
                  folder: pulumi.Input[Optional[_builtins.str]] = None,
                  snippet: pulumi.Input[Optional[_builtins.str]] = None,
-                 tcp: pulumi.Input[Optional[Union['TcpSettingTcpArgs', 'TcpSettingTcpArgsDict']]] = None,
+                 tcp: pulumi.Input[Optional[Union['TcpSettingTcpArgs', 'TcpSettingTcpArgsDict', 'outputs.TcpSettingTcp']]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -364,7 +364,7 @@ class TcpSetting(pulumi.CustomResource):
             device: pulumi.Input[Optional[_builtins.str]] = None,
             folder: pulumi.Input[Optional[_builtins.str]] = None,
             snippet: pulumi.Input[Optional[_builtins.str]] = None,
-            tcp: pulumi.Input[Optional[Union['TcpSettingTcpArgs', 'TcpSettingTcpArgsDict']]] = None,
+            tcp: pulumi.Input[Optional[Union['TcpSettingTcpArgs', 'TcpSettingTcpArgsDict', 'outputs.TcpSettingTcp']]] = None,
             tfid: pulumi.Input[Optional[_builtins.str]] = None) -> 'TcpSetting':
         """
         Get an existing TcpSetting resource's state with the given name, id, and optional extra
@@ -380,7 +380,7 @@ class TcpSetting(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
                
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-        :param pulumi.Input[Union['TcpSettingTcpArgs', 'TcpSettingTcpArgsDict']] tcp: Tcp
+        :param pulumi.Input[Union['TcpSettingTcpArgs', 'TcpSettingTcpArgsDict', 'outputs.TcpSettingTcp']] tcp: Tcp
         :param pulumi.Input[_builtins.str] tfid: The Terraform ID.
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))

@@ -394,7 +394,7 @@ class IpsecTunnel(pulumi.CustomResource):
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
                  anti_replay: pulumi.Input[Optional[_builtins.bool]] = None,
-                 auto_key: pulumi.Input[Optional[Union['IpsecTunnelAutoKeyArgs', 'IpsecTunnelAutoKeyArgsDict']]] = None,
+                 auto_key: pulumi.Input[Optional[Union['IpsecTunnelAutoKeyArgs', 'IpsecTunnelAutoKeyArgsDict', 'outputs.IpsecTunnelAutoKey']]] = None,
                  copy_tos: pulumi.Input[Optional[_builtins.bool]] = None,
                  device: pulumi.Input[Optional[_builtins.str]] = None,
                  enable_gre_encapsulation: pulumi.Input[Optional[_builtins.bool]] = None,
@@ -402,7 +402,7 @@ class IpsecTunnel(pulumi.CustomResource):
                  name: pulumi.Input[Optional[_builtins.str]] = None,
                  snippet: pulumi.Input[Optional[_builtins.str]] = None,
                  tunnel_interface: pulumi.Input[Optional[_builtins.str]] = None,
-                 tunnel_monitor: pulumi.Input[Optional[Union['IpsecTunnelTunnelMonitorArgs', 'IpsecTunnelTunnelMonitorArgsDict']]] = None,
+                 tunnel_monitor: pulumi.Input[Optional[Union['IpsecTunnelTunnelMonitorArgs', 'IpsecTunnelTunnelMonitorArgsDict', 'outputs.IpsecTunnelTunnelMonitor']]] = None,
                  __props__=None):
         """
         IpsecTunnel resource
@@ -496,7 +496,7 @@ class IpsecTunnel(pulumi.CustomResource):
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.bool] anti_replay: Enable Anti-Replay check on this tunnel
-        :param pulumi.Input[Union['IpsecTunnelAutoKeyArgs', 'IpsecTunnelAutoKeyArgsDict']] auto_key: Auto key
+        :param pulumi.Input[Union['IpsecTunnelAutoKeyArgs', 'IpsecTunnelAutoKeyArgsDict', 'outputs.IpsecTunnelAutoKey']] auto_key: Auto key
         :param pulumi.Input[_builtins.bool] copy_tos: Copy IP TOS bits from inner packet to IPSec packet (not recommended)
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input[_builtins.bool] enable_gre_encapsulation: allow GRE over IPSec
@@ -508,7 +508,7 @@ class IpsecTunnel(pulumi.CustomResource):
                
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] tunnel_interface: Tunnel interface variable or hardcoded tunnel. Default will be tunnels.
-        :param pulumi.Input[Union['IpsecTunnelTunnelMonitorArgs', 'IpsecTunnelTunnelMonitorArgsDict']] tunnel_monitor: Tunnel monitor
+        :param pulumi.Input[Union['IpsecTunnelTunnelMonitorArgs', 'IpsecTunnelTunnelMonitorArgsDict', 'outputs.IpsecTunnelTunnelMonitor']] tunnel_monitor: Tunnel monitor
         """
         ...
     @overload
@@ -621,7 +621,7 @@ class IpsecTunnel(pulumi.CustomResource):
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
                  anti_replay: pulumi.Input[Optional[_builtins.bool]] = None,
-                 auto_key: pulumi.Input[Optional[Union['IpsecTunnelAutoKeyArgs', 'IpsecTunnelAutoKeyArgsDict']]] = None,
+                 auto_key: pulumi.Input[Optional[Union['IpsecTunnelAutoKeyArgs', 'IpsecTunnelAutoKeyArgsDict', 'outputs.IpsecTunnelAutoKey']]] = None,
                  copy_tos: pulumi.Input[Optional[_builtins.bool]] = None,
                  device: pulumi.Input[Optional[_builtins.str]] = None,
                  enable_gre_encapsulation: pulumi.Input[Optional[_builtins.bool]] = None,
@@ -629,7 +629,7 @@ class IpsecTunnel(pulumi.CustomResource):
                  name: pulumi.Input[Optional[_builtins.str]] = None,
                  snippet: pulumi.Input[Optional[_builtins.str]] = None,
                  tunnel_interface: pulumi.Input[Optional[_builtins.str]] = None,
-                 tunnel_monitor: pulumi.Input[Optional[Union['IpsecTunnelTunnelMonitorArgs', 'IpsecTunnelTunnelMonitorArgsDict']]] = None,
+                 tunnel_monitor: pulumi.Input[Optional[Union['IpsecTunnelTunnelMonitorArgs', 'IpsecTunnelTunnelMonitorArgsDict', 'outputs.IpsecTunnelTunnelMonitor']]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -663,7 +663,7 @@ class IpsecTunnel(pulumi.CustomResource):
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
             anti_replay: pulumi.Input[Optional[_builtins.bool]] = None,
-            auto_key: pulumi.Input[Optional[Union['IpsecTunnelAutoKeyArgs', 'IpsecTunnelAutoKeyArgsDict']]] = None,
+            auto_key: pulumi.Input[Optional[Union['IpsecTunnelAutoKeyArgs', 'IpsecTunnelAutoKeyArgsDict', 'outputs.IpsecTunnelAutoKey']]] = None,
             copy_tos: pulumi.Input[Optional[_builtins.bool]] = None,
             device: pulumi.Input[Optional[_builtins.str]] = None,
             enable_gre_encapsulation: pulumi.Input[Optional[_builtins.bool]] = None,
@@ -672,7 +672,7 @@ class IpsecTunnel(pulumi.CustomResource):
             snippet: pulumi.Input[Optional[_builtins.str]] = None,
             tfid: pulumi.Input[Optional[_builtins.str]] = None,
             tunnel_interface: pulumi.Input[Optional[_builtins.str]] = None,
-            tunnel_monitor: pulumi.Input[Optional[Union['IpsecTunnelTunnelMonitorArgs', 'IpsecTunnelTunnelMonitorArgsDict']]] = None) -> 'IpsecTunnel':
+            tunnel_monitor: pulumi.Input[Optional[Union['IpsecTunnelTunnelMonitorArgs', 'IpsecTunnelTunnelMonitorArgsDict', 'outputs.IpsecTunnelTunnelMonitor']]] = None) -> 'IpsecTunnel':
         """
         Get an existing IpsecTunnel resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.
@@ -681,7 +681,7 @@ class IpsecTunnel(pulumi.CustomResource):
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.bool] anti_replay: Enable Anti-Replay check on this tunnel
-        :param pulumi.Input[Union['IpsecTunnelAutoKeyArgs', 'IpsecTunnelAutoKeyArgsDict']] auto_key: Auto key
+        :param pulumi.Input[Union['IpsecTunnelAutoKeyArgs', 'IpsecTunnelAutoKeyArgsDict', 'outputs.IpsecTunnelAutoKey']] auto_key: Auto key
         :param pulumi.Input[_builtins.bool] copy_tos: Copy IP TOS bits from inner packet to IPSec packet (not recommended)
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input[_builtins.bool] enable_gre_encapsulation: allow GRE over IPSec
@@ -694,7 +694,7 @@ class IpsecTunnel(pulumi.CustomResource):
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] tfid: The Terraform ID.
         :param pulumi.Input[_builtins.str] tunnel_interface: Tunnel interface variable or hardcoded tunnel. Default will be tunnels.
-        :param pulumi.Input[Union['IpsecTunnelTunnelMonitorArgs', 'IpsecTunnelTunnelMonitorArgsDict']] tunnel_monitor: Tunnel monitor
+        :param pulumi.Input[Union['IpsecTunnelTunnelMonitorArgs', 'IpsecTunnelTunnelMonitorArgsDict', 'outputs.IpsecTunnelTunnelMonitor']] tunnel_monitor: Tunnel monitor
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
 

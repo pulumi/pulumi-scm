@@ -204,7 +204,7 @@ class SessionSetting(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None,
                  device: pulumi.Input[Optional[_builtins.str]] = None,
                  folder: pulumi.Input[Optional[_builtins.str]] = None,
-                 session_settings: pulumi.Input[Optional[Union['SessionSettingSessionSettingsArgs', 'SessionSettingSessionSettingsArgsDict']]] = None,
+                 session_settings: pulumi.Input[Optional[Union['SessionSettingSessionSettingsArgs', 'SessionSettingSessionSettingsArgsDict', 'outputs.SessionSettingSessionSettings']]] = None,
                  snippet: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
@@ -290,7 +290,7 @@ class SessionSetting(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
                
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-        :param pulumi.Input[Union['SessionSettingSessionSettingsArgs', 'SessionSettingSessionSettingsArgsDict']] session_settings: Session settings
+        :param pulumi.Input[Union['SessionSettingSessionSettingsArgs', 'SessionSettingSessionSettingsArgsDict', 'outputs.SessionSettingSessionSettings']] session_settings: Session settings
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
                
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
@@ -395,7 +395,7 @@ class SessionSetting(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None,
                  device: pulumi.Input[Optional[_builtins.str]] = None,
                  folder: pulumi.Input[Optional[_builtins.str]] = None,
-                 session_settings: pulumi.Input[Optional[Union['SessionSettingSessionSettingsArgs', 'SessionSettingSessionSettingsArgsDict']]] = None,
+                 session_settings: pulumi.Input[Optional[Union['SessionSettingSessionSettingsArgs', 'SessionSettingSessionSettingsArgsDict', 'outputs.SessionSettingSessionSettings']]] = None,
                  snippet: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
@@ -423,7 +423,7 @@ class SessionSetting(pulumi.CustomResource):
             opts: Optional[pulumi.ResourceOptions] = None,
             device: pulumi.Input[Optional[_builtins.str]] = None,
             folder: pulumi.Input[Optional[_builtins.str]] = None,
-            session_settings: pulumi.Input[Optional[Union['SessionSettingSessionSettingsArgs', 'SessionSettingSessionSettingsArgsDict']]] = None,
+            session_settings: pulumi.Input[Optional[Union['SessionSettingSessionSettingsArgs', 'SessionSettingSessionSettingsArgsDict', 'outputs.SessionSettingSessionSettings']]] = None,
             snippet: pulumi.Input[Optional[_builtins.str]] = None,
             tfid: pulumi.Input[Optional[_builtins.str]] = None) -> 'SessionSetting':
         """
@@ -437,7 +437,7 @@ class SessionSetting(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
                
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-        :param pulumi.Input[Union['SessionSettingSessionSettingsArgs', 'SessionSettingSessionSettingsArgsDict']] session_settings: Session settings
+        :param pulumi.Input[Union['SessionSettingSessionSettingsArgs', 'SessionSettingSessionSettingsArgsDict', 'outputs.SessionSettingSessionSettings']] session_settings: Session settings
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
                
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.

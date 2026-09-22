@@ -204,7 +204,7 @@ class SessionTimeout(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None,
                  device: pulumi.Input[Optional[_builtins.str]] = None,
                  folder: pulumi.Input[Optional[_builtins.str]] = None,
-                 session_timeouts: pulumi.Input[Optional[Union['SessionTimeoutSessionTimeoutsArgs', 'SessionTimeoutSessionTimeoutsArgsDict']]] = None,
+                 session_timeouts: pulumi.Input[Optional[Union['SessionTimeoutSessionTimeoutsArgs', 'SessionTimeoutSessionTimeoutsArgsDict', 'outputs.SessionTimeoutSessionTimeouts']]] = None,
                  snippet: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
@@ -265,7 +265,7 @@ class SessionTimeout(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
                
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-        :param pulumi.Input[Union['SessionTimeoutSessionTimeoutsArgs', 'SessionTimeoutSessionTimeoutsArgsDict']] session_timeouts: Session timeouts
+        :param pulumi.Input[Union['SessionTimeoutSessionTimeoutsArgs', 'SessionTimeoutSessionTimeoutsArgsDict', 'outputs.SessionTimeoutSessionTimeouts']] session_timeouts: Session timeouts
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
                
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
@@ -345,7 +345,7 @@ class SessionTimeout(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None,
                  device: pulumi.Input[Optional[_builtins.str]] = None,
                  folder: pulumi.Input[Optional[_builtins.str]] = None,
-                 session_timeouts: pulumi.Input[Optional[Union['SessionTimeoutSessionTimeoutsArgs', 'SessionTimeoutSessionTimeoutsArgsDict']]] = None,
+                 session_timeouts: pulumi.Input[Optional[Union['SessionTimeoutSessionTimeoutsArgs', 'SessionTimeoutSessionTimeoutsArgsDict', 'outputs.SessionTimeoutSessionTimeouts']]] = None,
                  snippet: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
@@ -373,7 +373,7 @@ class SessionTimeout(pulumi.CustomResource):
             opts: Optional[pulumi.ResourceOptions] = None,
             device: pulumi.Input[Optional[_builtins.str]] = None,
             folder: pulumi.Input[Optional[_builtins.str]] = None,
-            session_timeouts: pulumi.Input[Optional[Union['SessionTimeoutSessionTimeoutsArgs', 'SessionTimeoutSessionTimeoutsArgsDict']]] = None,
+            session_timeouts: pulumi.Input[Optional[Union['SessionTimeoutSessionTimeoutsArgs', 'SessionTimeoutSessionTimeoutsArgsDict', 'outputs.SessionTimeoutSessionTimeouts']]] = None,
             snippet: pulumi.Input[Optional[_builtins.str]] = None,
             tfid: pulumi.Input[Optional[_builtins.str]] = None) -> 'SessionTimeout':
         """
@@ -387,7 +387,7 @@ class SessionTimeout(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
                
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-        :param pulumi.Input[Union['SessionTimeoutSessionTimeoutsArgs', 'SessionTimeoutSessionTimeoutsArgsDict']] session_timeouts: Session timeouts
+        :param pulumi.Input[Union['SessionTimeoutSessionTimeoutsArgs', 'SessionTimeoutSessionTimeoutsArgsDict', 'outputs.SessionTimeoutSessionTimeouts']] session_timeouts: Session timeouts
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
                
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.

@@ -202,7 +202,7 @@ class ContentIdSetting(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 content_id: pulumi.Input[Optional[Union['ContentIdSettingContentIdArgs', 'ContentIdSettingContentIdArgsDict']]] = None,
+                 content_id: pulumi.Input[Optional[Union['ContentIdSettingContentIdArgs', 'ContentIdSettingContentIdArgsDict', 'outputs.ContentIdSettingContentId']]] = None,
                  device: pulumi.Input[Optional[_builtins.str]] = None,
                  folder: pulumi.Input[Optional[_builtins.str]] = None,
                  snippet: pulumi.Input[Optional[_builtins.str]] = None,
@@ -257,7 +257,7 @@ class ContentIdSetting(pulumi.CustomResource):
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[Union['ContentIdSettingContentIdArgs', 'ContentIdSettingContentIdArgsDict']] content_id: Content id
+        :param pulumi.Input[Union['ContentIdSettingContentIdArgs', 'ContentIdSettingContentIdArgsDict', 'outputs.ContentIdSettingContentId']] content_id: Content id
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
                
@@ -335,7 +335,7 @@ class ContentIdSetting(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 content_id: pulumi.Input[Optional[Union['ContentIdSettingContentIdArgs', 'ContentIdSettingContentIdArgsDict']]] = None,
+                 content_id: pulumi.Input[Optional[Union['ContentIdSettingContentIdArgs', 'ContentIdSettingContentIdArgsDict', 'outputs.ContentIdSettingContentId']]] = None,
                  device: pulumi.Input[Optional[_builtins.str]] = None,
                  folder: pulumi.Input[Optional[_builtins.str]] = None,
                  snippet: pulumi.Input[Optional[_builtins.str]] = None,
@@ -363,7 +363,7 @@ class ContentIdSetting(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            content_id: pulumi.Input[Optional[Union['ContentIdSettingContentIdArgs', 'ContentIdSettingContentIdArgsDict']]] = None,
+            content_id: pulumi.Input[Optional[Union['ContentIdSettingContentIdArgs', 'ContentIdSettingContentIdArgsDict', 'outputs.ContentIdSettingContentId']]] = None,
             device: pulumi.Input[Optional[_builtins.str]] = None,
             folder: pulumi.Input[Optional[_builtins.str]] = None,
             snippet: pulumi.Input[Optional[_builtins.str]] = None,
@@ -375,7 +375,7 @@ class ContentIdSetting(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[Union['ContentIdSettingContentIdArgs', 'ContentIdSettingContentIdArgsDict']] content_id: Content id
+        :param pulumi.Input[Union['ContentIdSettingContentIdArgs', 'ContentIdSettingContentIdArgsDict', 'outputs.ContentIdSettingContentId']] content_id: Content id
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
                

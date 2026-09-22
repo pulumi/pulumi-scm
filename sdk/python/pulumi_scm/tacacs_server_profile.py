@@ -348,7 +348,7 @@ class TacacsServerProfile(pulumi.CustomResource):
                  folder: pulumi.Input[Optional[_builtins.str]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
                  protocol: pulumi.Input[Optional[_builtins.str]] = None,
-                 servers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TacacsServerProfileServerArgs', 'TacacsServerProfileServerArgsDict']]]]] = None,
+                 servers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TacacsServerProfileServerArgs', 'TacacsServerProfileServerArgsDict', 'outputs.TacacsServerProfileServer']]]]] = None,
                  snippet: pulumi.Input[Optional[_builtins.str]] = None,
                  timeout: pulumi.Input[Optional[_builtins.int]] = None,
                  use_single_connection: pulumi.Input[Optional[_builtins.bool]] = None,
@@ -421,7 +421,7 @@ class TacacsServerProfile(pulumi.CustomResource):
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] name: The name of the TACACS+ server profile
         :param pulumi.Input[_builtins.str] protocol: The TACACS+ authentication protocol
-        :param pulumi.Input[Sequence[pulumi.Input[Union['TacacsServerProfileServerArgs', 'TacacsServerProfileServerArgsDict']]]] servers: The TACACS+ server configuration
+        :param pulumi.Input[Sequence[pulumi.Input[Union['TacacsServerProfileServerArgs', 'TacacsServerProfileServerArgsDict', 'outputs.TacacsServerProfileServer']]]] servers: The TACACS+ server configuration
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
                
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
@@ -513,7 +513,7 @@ class TacacsServerProfile(pulumi.CustomResource):
                  folder: pulumi.Input[Optional[_builtins.str]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
                  protocol: pulumi.Input[Optional[_builtins.str]] = None,
-                 servers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TacacsServerProfileServerArgs', 'TacacsServerProfileServerArgsDict']]]]] = None,
+                 servers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TacacsServerProfileServerArgs', 'TacacsServerProfileServerArgsDict', 'outputs.TacacsServerProfileServer']]]]] = None,
                  snippet: pulumi.Input[Optional[_builtins.str]] = None,
                  timeout: pulumi.Input[Optional[_builtins.int]] = None,
                  use_single_connection: pulumi.Input[Optional[_builtins.bool]] = None,
@@ -557,7 +557,7 @@ class TacacsServerProfile(pulumi.CustomResource):
             folder: pulumi.Input[Optional[_builtins.str]] = None,
             name: pulumi.Input[Optional[_builtins.str]] = None,
             protocol: pulumi.Input[Optional[_builtins.str]] = None,
-            servers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TacacsServerProfileServerArgs', 'TacacsServerProfileServerArgsDict']]]]] = None,
+            servers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TacacsServerProfileServerArgs', 'TacacsServerProfileServerArgsDict', 'outputs.TacacsServerProfileServer']]]]] = None,
             snippet: pulumi.Input[Optional[_builtins.str]] = None,
             tfid: pulumi.Input[Optional[_builtins.str]] = None,
             timeout: pulumi.Input[Optional[_builtins.int]] = None,
@@ -576,7 +576,7 @@ class TacacsServerProfile(pulumi.CustomResource):
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] name: The name of the TACACS+ server profile
         :param pulumi.Input[_builtins.str] protocol: The TACACS+ authentication protocol
-        :param pulumi.Input[Sequence[pulumi.Input[Union['TacacsServerProfileServerArgs', 'TacacsServerProfileServerArgsDict']]]] servers: The TACACS+ server configuration
+        :param pulumi.Input[Sequence[pulumi.Input[Union['TacacsServerProfileServerArgs', 'TacacsServerProfileServerArgsDict', 'outputs.TacacsServerProfileServer']]]] servers: The TACACS+ server configuration
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
                
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.

@@ -204,7 +204,7 @@ class DeviceRedistributionCollector(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None,
                  device: pulumi.Input[Optional[_builtins.str]] = None,
                  folder: pulumi.Input[Optional[_builtins.str]] = None,
-                 redistribution_collector: pulumi.Input[Optional[Union['DeviceRedistributionCollectorRedistributionCollectorArgs', 'DeviceRedistributionCollectorRedistributionCollectorArgsDict']]] = None,
+                 redistribution_collector: pulumi.Input[Optional[Union['DeviceRedistributionCollectorRedistributionCollectorArgs', 'DeviceRedistributionCollectorRedistributionCollectorArgsDict', 'outputs.DeviceRedistributionCollectorRedistributionCollector']]] = None,
                  snippet: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
@@ -264,7 +264,7 @@ class DeviceRedistributionCollector(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
                
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-        :param pulumi.Input[Union['DeviceRedistributionCollectorRedistributionCollectorArgs', 'DeviceRedistributionCollectorRedistributionCollectorArgsDict']] redistribution_collector: Redistribution collector
+        :param pulumi.Input[Union['DeviceRedistributionCollectorRedistributionCollectorArgs', 'DeviceRedistributionCollectorRedistributionCollectorArgsDict', 'outputs.DeviceRedistributionCollectorRedistributionCollector']] redistribution_collector: Redistribution collector
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
                
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
@@ -343,7 +343,7 @@ class DeviceRedistributionCollector(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None,
                  device: pulumi.Input[Optional[_builtins.str]] = None,
                  folder: pulumi.Input[Optional[_builtins.str]] = None,
-                 redistribution_collector: pulumi.Input[Optional[Union['DeviceRedistributionCollectorRedistributionCollectorArgs', 'DeviceRedistributionCollectorRedistributionCollectorArgsDict']]] = None,
+                 redistribution_collector: pulumi.Input[Optional[Union['DeviceRedistributionCollectorRedistributionCollectorArgs', 'DeviceRedistributionCollectorRedistributionCollectorArgsDict', 'outputs.DeviceRedistributionCollectorRedistributionCollector']]] = None,
                  snippet: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
@@ -371,7 +371,7 @@ class DeviceRedistributionCollector(pulumi.CustomResource):
             opts: Optional[pulumi.ResourceOptions] = None,
             device: pulumi.Input[Optional[_builtins.str]] = None,
             folder: pulumi.Input[Optional[_builtins.str]] = None,
-            redistribution_collector: pulumi.Input[Optional[Union['DeviceRedistributionCollectorRedistributionCollectorArgs', 'DeviceRedistributionCollectorRedistributionCollectorArgsDict']]] = None,
+            redistribution_collector: pulumi.Input[Optional[Union['DeviceRedistributionCollectorRedistributionCollectorArgs', 'DeviceRedistributionCollectorRedistributionCollectorArgsDict', 'outputs.DeviceRedistributionCollectorRedistributionCollector']]] = None,
             snippet: pulumi.Input[Optional[_builtins.str]] = None,
             tfid: pulumi.Input[Optional[_builtins.str]] = None) -> 'DeviceRedistributionCollector':
         """
@@ -385,7 +385,7 @@ class DeviceRedistributionCollector(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
                
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-        :param pulumi.Input[Union['DeviceRedistributionCollectorRedistributionCollectorArgs', 'DeviceRedistributionCollectorRedistributionCollectorArgsDict']] redistribution_collector: Redistribution collector
+        :param pulumi.Input[Union['DeviceRedistributionCollectorRedistributionCollectorArgs', 'DeviceRedistributionCollectorRedistributionCollectorArgsDict', 'outputs.DeviceRedistributionCollectorRedistributionCollector']] redistribution_collector: Redistribution collector
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
                
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.

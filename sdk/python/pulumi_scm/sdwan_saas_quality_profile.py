@@ -235,7 +235,7 @@ class SdwanSaasQualityProfile(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None,
                  device: pulumi.Input[Optional[_builtins.str]] = None,
                  folder: pulumi.Input[Optional[_builtins.str]] = None,
-                 monitor_mode: pulumi.Input[Optional[Union['SdwanSaasQualityProfileMonitorModeArgs', 'SdwanSaasQualityProfileMonitorModeArgsDict']]] = None,
+                 monitor_mode: pulumi.Input[Optional[Union['SdwanSaasQualityProfileMonitorModeArgs', 'SdwanSaasQualityProfileMonitorModeArgsDict', 'outputs.SdwanSaasQualityProfileMonitorMode']]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
                  snippet: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
@@ -271,7 +271,7 @@ class SdwanSaasQualityProfile(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
                
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-        :param pulumi.Input[Union['SdwanSaasQualityProfileMonitorModeArgs', 'SdwanSaasQualityProfileMonitorModeArgsDict']] monitor_mode: Monitor mode
+        :param pulumi.Input[Union['SdwanSaasQualityProfileMonitorModeArgs', 'SdwanSaasQualityProfileMonitorModeArgsDict', 'outputs.SdwanSaasQualityProfileMonitorMode']] monitor_mode: Monitor mode
         :param pulumi.Input[_builtins.str] name: Profile name
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
                
@@ -326,7 +326,7 @@ class SdwanSaasQualityProfile(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None,
                  device: pulumi.Input[Optional[_builtins.str]] = None,
                  folder: pulumi.Input[Optional[_builtins.str]] = None,
-                 monitor_mode: pulumi.Input[Optional[Union['SdwanSaasQualityProfileMonitorModeArgs', 'SdwanSaasQualityProfileMonitorModeArgsDict']]] = None,
+                 monitor_mode: pulumi.Input[Optional[Union['SdwanSaasQualityProfileMonitorModeArgs', 'SdwanSaasQualityProfileMonitorModeArgsDict', 'outputs.SdwanSaasQualityProfileMonitorMode']]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
                  snippet: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
@@ -358,7 +358,7 @@ class SdwanSaasQualityProfile(pulumi.CustomResource):
             opts: Optional[pulumi.ResourceOptions] = None,
             device: pulumi.Input[Optional[_builtins.str]] = None,
             folder: pulumi.Input[Optional[_builtins.str]] = None,
-            monitor_mode: pulumi.Input[Optional[Union['SdwanSaasQualityProfileMonitorModeArgs', 'SdwanSaasQualityProfileMonitorModeArgsDict']]] = None,
+            monitor_mode: pulumi.Input[Optional[Union['SdwanSaasQualityProfileMonitorModeArgs', 'SdwanSaasQualityProfileMonitorModeArgsDict', 'outputs.SdwanSaasQualityProfileMonitorMode']]] = None,
             name: pulumi.Input[Optional[_builtins.str]] = None,
             snippet: pulumi.Input[Optional[_builtins.str]] = None,
             tfid: pulumi.Input[Optional[_builtins.str]] = None) -> 'SdwanSaasQualityProfile':
@@ -373,7 +373,7 @@ class SdwanSaasQualityProfile(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
                
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-        :param pulumi.Input[Union['SdwanSaasQualityProfileMonitorModeArgs', 'SdwanSaasQualityProfileMonitorModeArgsDict']] monitor_mode: Monitor mode
+        :param pulumi.Input[Union['SdwanSaasQualityProfileMonitorModeArgs', 'SdwanSaasQualityProfileMonitorModeArgsDict', 'outputs.SdwanSaasQualityProfileMonitorMode']] monitor_mode: Monitor mode
         :param pulumi.Input[_builtins.str] name: Profile name
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
                

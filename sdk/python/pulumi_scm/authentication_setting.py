@@ -202,7 +202,7 @@ class AuthenticationSetting(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 authentication: pulumi.Input[Optional[Union['AuthenticationSettingAuthenticationArgs', 'AuthenticationSettingAuthenticationArgsDict']]] = None,
+                 authentication: pulumi.Input[Optional[Union['AuthenticationSettingAuthenticationArgs', 'AuthenticationSettingAuthenticationArgsDict', 'outputs.AuthenticationSettingAuthentication']]] = None,
                  device: pulumi.Input[Optional[_builtins.str]] = None,
                  folder: pulumi.Input[Optional[_builtins.str]] = None,
                  snippet: pulumi.Input[Optional[_builtins.str]] = None,
@@ -265,7 +265,7 @@ class AuthenticationSetting(pulumi.CustomResource):
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[Union['AuthenticationSettingAuthenticationArgs', 'AuthenticationSettingAuthenticationArgsDict']] authentication: Authentication
+        :param pulumi.Input[Union['AuthenticationSettingAuthenticationArgs', 'AuthenticationSettingAuthenticationArgsDict', 'outputs.AuthenticationSettingAuthentication']] authentication: Authentication
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
                
@@ -351,7 +351,7 @@ class AuthenticationSetting(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 authentication: pulumi.Input[Optional[Union['AuthenticationSettingAuthenticationArgs', 'AuthenticationSettingAuthenticationArgsDict']]] = None,
+                 authentication: pulumi.Input[Optional[Union['AuthenticationSettingAuthenticationArgs', 'AuthenticationSettingAuthenticationArgsDict', 'outputs.AuthenticationSettingAuthentication']]] = None,
                  device: pulumi.Input[Optional[_builtins.str]] = None,
                  folder: pulumi.Input[Optional[_builtins.str]] = None,
                  snippet: pulumi.Input[Optional[_builtins.str]] = None,
@@ -379,7 +379,7 @@ class AuthenticationSetting(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            authentication: pulumi.Input[Optional[Union['AuthenticationSettingAuthenticationArgs', 'AuthenticationSettingAuthenticationArgsDict']]] = None,
+            authentication: pulumi.Input[Optional[Union['AuthenticationSettingAuthenticationArgs', 'AuthenticationSettingAuthenticationArgsDict', 'outputs.AuthenticationSettingAuthentication']]] = None,
             device: pulumi.Input[Optional[_builtins.str]] = None,
             folder: pulumi.Input[Optional[_builtins.str]] = None,
             snippet: pulumi.Input[Optional[_builtins.str]] = None,
@@ -391,7 +391,7 @@ class AuthenticationSetting(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[Union['AuthenticationSettingAuthenticationArgs', 'AuthenticationSettingAuthenticationArgsDict']] authentication: Authentication
+        :param pulumi.Input[Union['AuthenticationSettingAuthenticationArgs', 'AuthenticationSettingAuthenticationArgsDict', 'outputs.AuthenticationSettingAuthentication']] authentication: Authentication
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
                

@@ -523,13 +523,13 @@ class AntiSpywareSignature(pulumi.CustomResource):
                  bugtraqs: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  comment: pulumi.Input[Optional[_builtins.str]] = None,
                  cves: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 default_action: pulumi.Input[Optional[Union['AntiSpywareSignatureDefaultActionArgs', 'AntiSpywareSignatureDefaultActionArgsDict']]] = None,
+                 default_action: pulumi.Input[Optional[Union['AntiSpywareSignatureDefaultActionArgs', 'AntiSpywareSignatureDefaultActionArgsDict', 'outputs.AntiSpywareSignatureDefaultAction']]] = None,
                  device: pulumi.Input[Optional[_builtins.str]] = None,
                  direction: pulumi.Input[Optional[_builtins.str]] = None,
                  folder: pulumi.Input[Optional[_builtins.str]] = None,
                  references: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  severity: pulumi.Input[Optional[_builtins.str]] = None,
-                 signature: pulumi.Input[Optional[Union['AntiSpywareSignatureSignatureArgs', 'AntiSpywareSignatureSignatureArgsDict']]] = None,
+                 signature: pulumi.Input[Optional[Union['AntiSpywareSignatureSignatureArgs', 'AntiSpywareSignatureSignatureArgsDict', 'outputs.AntiSpywareSignatureSignature']]] = None,
                  snippet: pulumi.Input[Optional[_builtins.str]] = None,
                  threat_id: pulumi.Input[Optional[_builtins.str]] = None,
                  threatname: pulumi.Input[Optional[_builtins.str]] = None,
@@ -601,7 +601,7 @@ class AntiSpywareSignature(pulumi.CustomResource):
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] bugtraqs: Bugtraq
         :param pulumi.Input[_builtins.str] comment: Comment
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] cves: Cve
-        :param pulumi.Input[Union['AntiSpywareSignatureDefaultActionArgs', 'AntiSpywareSignatureDefaultActionArgsDict']] default_action: anti spyware signature default action
+        :param pulumi.Input[Union['AntiSpywareSignatureDefaultActionArgs', 'AntiSpywareSignatureDefaultActionArgsDict', 'outputs.AntiSpywareSignatureDefaultAction']] default_action: anti spyware signature default action
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input[_builtins.str] direction: Direction
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
@@ -609,7 +609,7 @@ class AntiSpywareSignature(pulumi.CustomResource):
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] references: Reference
         :param pulumi.Input[_builtins.str] severity: Severity
-        :param pulumi.Input[Union['AntiSpywareSignatureSignatureArgs', 'AntiSpywareSignatureSignatureArgsDict']] signature: anti spyware signature
+        :param pulumi.Input[Union['AntiSpywareSignatureSignatureArgs', 'AntiSpywareSignatureSignatureArgsDict', 'outputs.AntiSpywareSignatureSignature']] signature: anti spyware signature
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
                
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
@@ -702,13 +702,13 @@ class AntiSpywareSignature(pulumi.CustomResource):
                  bugtraqs: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  comment: pulumi.Input[Optional[_builtins.str]] = None,
                  cves: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 default_action: pulumi.Input[Optional[Union['AntiSpywareSignatureDefaultActionArgs', 'AntiSpywareSignatureDefaultActionArgsDict']]] = None,
+                 default_action: pulumi.Input[Optional[Union['AntiSpywareSignatureDefaultActionArgs', 'AntiSpywareSignatureDefaultActionArgsDict', 'outputs.AntiSpywareSignatureDefaultAction']]] = None,
                  device: pulumi.Input[Optional[_builtins.str]] = None,
                  direction: pulumi.Input[Optional[_builtins.str]] = None,
                  folder: pulumi.Input[Optional[_builtins.str]] = None,
                  references: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  severity: pulumi.Input[Optional[_builtins.str]] = None,
-                 signature: pulumi.Input[Optional[Union['AntiSpywareSignatureSignatureArgs', 'AntiSpywareSignatureSignatureArgsDict']]] = None,
+                 signature: pulumi.Input[Optional[Union['AntiSpywareSignatureSignatureArgs', 'AntiSpywareSignatureSignatureArgsDict', 'outputs.AntiSpywareSignatureSignature']]] = None,
                  snippet: pulumi.Input[Optional[_builtins.str]] = None,
                  threat_id: pulumi.Input[Optional[_builtins.str]] = None,
                  threatname: pulumi.Input[Optional[_builtins.str]] = None,
@@ -754,13 +754,13 @@ class AntiSpywareSignature(pulumi.CustomResource):
             bugtraqs: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
             comment: pulumi.Input[Optional[_builtins.str]] = None,
             cves: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
-            default_action: pulumi.Input[Optional[Union['AntiSpywareSignatureDefaultActionArgs', 'AntiSpywareSignatureDefaultActionArgsDict']]] = None,
+            default_action: pulumi.Input[Optional[Union['AntiSpywareSignatureDefaultActionArgs', 'AntiSpywareSignatureDefaultActionArgsDict', 'outputs.AntiSpywareSignatureDefaultAction']]] = None,
             device: pulumi.Input[Optional[_builtins.str]] = None,
             direction: pulumi.Input[Optional[_builtins.str]] = None,
             folder: pulumi.Input[Optional[_builtins.str]] = None,
             references: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
             severity: pulumi.Input[Optional[_builtins.str]] = None,
-            signature: pulumi.Input[Optional[Union['AntiSpywareSignatureSignatureArgs', 'AntiSpywareSignatureSignatureArgsDict']]] = None,
+            signature: pulumi.Input[Optional[Union['AntiSpywareSignatureSignatureArgs', 'AntiSpywareSignatureSignatureArgsDict', 'outputs.AntiSpywareSignatureSignature']]] = None,
             snippet: pulumi.Input[Optional[_builtins.str]] = None,
             tfid: pulumi.Input[Optional[_builtins.str]] = None,
             threat_id: pulumi.Input[Optional[_builtins.str]] = None,
@@ -776,7 +776,7 @@ class AntiSpywareSignature(pulumi.CustomResource):
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] bugtraqs: Bugtraq
         :param pulumi.Input[_builtins.str] comment: Comment
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] cves: Cve
-        :param pulumi.Input[Union['AntiSpywareSignatureDefaultActionArgs', 'AntiSpywareSignatureDefaultActionArgsDict']] default_action: anti spyware signature default action
+        :param pulumi.Input[Union['AntiSpywareSignatureDefaultActionArgs', 'AntiSpywareSignatureDefaultActionArgsDict', 'outputs.AntiSpywareSignatureDefaultAction']] default_action: anti spyware signature default action
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input[_builtins.str] direction: Direction
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
@@ -784,7 +784,7 @@ class AntiSpywareSignature(pulumi.CustomResource):
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] references: Reference
         :param pulumi.Input[_builtins.str] severity: Severity
-        :param pulumi.Input[Union['AntiSpywareSignatureSignatureArgs', 'AntiSpywareSignatureSignatureArgsDict']] signature: anti spyware signature
+        :param pulumi.Input[Union['AntiSpywareSignatureSignatureArgs', 'AntiSpywareSignatureSignatureArgsDict', 'outputs.AntiSpywareSignatureSignature']] signature: anti spyware signature
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
                
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.

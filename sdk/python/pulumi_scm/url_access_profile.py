@@ -687,7 +687,7 @@ class UrlAccessProfile(pulumi.CustomResource):
                  blocks: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  cloud_inline_cat: pulumi.Input[Optional[_builtins.bool]] = None,
                  continues: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 credential_enforcement: pulumi.Input[Optional[Union['UrlAccessProfileCredentialEnforcementArgs', 'UrlAccessProfileCredentialEnforcementArgsDict']]] = None,
+                 credential_enforcement: pulumi.Input[Optional[Union['UrlAccessProfileCredentialEnforcementArgs', 'UrlAccessProfileCredentialEnforcementArgsDict', 'outputs.UrlAccessProfileCredentialEnforcement']]] = None,
                  description: pulumi.Input[Optional[_builtins.str]] = None,
                  device: pulumi.Input[Optional[_builtins.str]] = None,
                  folder: pulumi.Input[Optional[_builtins.str]] = None,
@@ -758,7 +758,7 @@ class UrlAccessProfile(pulumi.CustomResource):
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] blocks: Block
         :param pulumi.Input[_builtins.bool] cloud_inline_cat: Cloud inline cat
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] continues: Continue
-        :param pulumi.Input[Union['UrlAccessProfileCredentialEnforcementArgs', 'UrlAccessProfileCredentialEnforcementArgsDict']] credential_enforcement: Credential enforcement
+        :param pulumi.Input[Union['UrlAccessProfileCredentialEnforcementArgs', 'UrlAccessProfileCredentialEnforcementArgsDict', 'outputs.UrlAccessProfileCredentialEnforcement']] credential_enforcement: Credential enforcement
         :param pulumi.Input[_builtins.str] description: Description
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
@@ -852,7 +852,7 @@ class UrlAccessProfile(pulumi.CustomResource):
                  blocks: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  cloud_inline_cat: pulumi.Input[Optional[_builtins.bool]] = None,
                  continues: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 credential_enforcement: pulumi.Input[Optional[Union['UrlAccessProfileCredentialEnforcementArgs', 'UrlAccessProfileCredentialEnforcementArgsDict']]] = None,
+                 credential_enforcement: pulumi.Input[Optional[Union['UrlAccessProfileCredentialEnforcementArgs', 'UrlAccessProfileCredentialEnforcementArgsDict', 'outputs.UrlAccessProfileCredentialEnforcement']]] = None,
                  description: pulumi.Input[Optional[_builtins.str]] = None,
                  device: pulumi.Input[Optional[_builtins.str]] = None,
                  folder: pulumi.Input[Optional[_builtins.str]] = None,
@@ -910,7 +910,7 @@ class UrlAccessProfile(pulumi.CustomResource):
             blocks: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
             cloud_inline_cat: pulumi.Input[Optional[_builtins.bool]] = None,
             continues: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
-            credential_enforcement: pulumi.Input[Optional[Union['UrlAccessProfileCredentialEnforcementArgs', 'UrlAccessProfileCredentialEnforcementArgsDict']]] = None,
+            credential_enforcement: pulumi.Input[Optional[Union['UrlAccessProfileCredentialEnforcementArgs', 'UrlAccessProfileCredentialEnforcementArgsDict', 'outputs.UrlAccessProfileCredentialEnforcement']]] = None,
             description: pulumi.Input[Optional[_builtins.str]] = None,
             device: pulumi.Input[Optional[_builtins.str]] = None,
             folder: pulumi.Input[Optional[_builtins.str]] = None,
@@ -937,7 +937,7 @@ class UrlAccessProfile(pulumi.CustomResource):
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] blocks: Block
         :param pulumi.Input[_builtins.bool] cloud_inline_cat: Cloud inline cat
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] continues: Continue
-        :param pulumi.Input[Union['UrlAccessProfileCredentialEnforcementArgs', 'UrlAccessProfileCredentialEnforcementArgsDict']] credential_enforcement: Credential enforcement
+        :param pulumi.Input[Union['UrlAccessProfileCredentialEnforcementArgs', 'UrlAccessProfileCredentialEnforcementArgsDict', 'outputs.UrlAccessProfileCredentialEnforcement']] credential_enforcement: Credential enforcement
         :param pulumi.Input[_builtins.str] description: Description
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined

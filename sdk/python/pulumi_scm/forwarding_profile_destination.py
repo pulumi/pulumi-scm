@@ -220,8 +220,8 @@ class ForwardingProfileDestination(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None,
                  description: pulumi.Input[Optional[_builtins.str]] = None,
                  folder: pulumi.Input[Optional[_builtins.str]] = None,
-                 fqdns: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ForwardingProfileDestinationFqdnArgs', 'ForwardingProfileDestinationFqdnArgsDict']]]]] = None,
-                 ip_addresses: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ForwardingProfileDestinationIpAddressArgs', 'ForwardingProfileDestinationIpAddressArgsDict']]]]] = None,
+                 fqdns: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ForwardingProfileDestinationFqdnArgs', 'ForwardingProfileDestinationFqdnArgsDict', 'outputs.ForwardingProfileDestinationFqdn']]]]] = None,
+                 ip_addresses: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ForwardingProfileDestinationIpAddressArgs', 'ForwardingProfileDestinationIpAddressArgsDict', 'outputs.ForwardingProfileDestinationIpAddress']]]]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
@@ -310,8 +310,8 @@ class ForwardingProfileDestination(pulumi.CustomResource):
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] description: description of the destination
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-        :param pulumi.Input[Sequence[pulumi.Input[Union['ForwardingProfileDestinationFqdnArgs', 'ForwardingProfileDestinationFqdnArgsDict']]]] fqdns: List of FQDN based destination entries
-        :param pulumi.Input[Sequence[pulumi.Input[Union['ForwardingProfileDestinationIpAddressArgs', 'ForwardingProfileDestinationIpAddressArgsDict']]]] ip_addresses: List of IP address based destination entries
+        :param pulumi.Input[Sequence[pulumi.Input[Union['ForwardingProfileDestinationFqdnArgs', 'ForwardingProfileDestinationFqdnArgsDict', 'outputs.ForwardingProfileDestinationFqdn']]]] fqdns: List of FQDN based destination entries
+        :param pulumi.Input[Sequence[pulumi.Input[Union['ForwardingProfileDestinationIpAddressArgs', 'ForwardingProfileDestinationIpAddressArgsDict', 'outputs.ForwardingProfileDestinationIpAddress']]]] ip_addresses: List of IP address based destination entries
         :param pulumi.Input[_builtins.str] name: alphanumeric string [ 0-9a-zA-Z._ -]
         """
         ...
@@ -419,8 +419,8 @@ class ForwardingProfileDestination(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None,
                  description: pulumi.Input[Optional[_builtins.str]] = None,
                  folder: pulumi.Input[Optional[_builtins.str]] = None,
-                 fqdns: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ForwardingProfileDestinationFqdnArgs', 'ForwardingProfileDestinationFqdnArgsDict']]]]] = None,
-                 ip_addresses: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ForwardingProfileDestinationIpAddressArgs', 'ForwardingProfileDestinationIpAddressArgsDict']]]]] = None,
+                 fqdns: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ForwardingProfileDestinationFqdnArgs', 'ForwardingProfileDestinationFqdnArgsDict', 'outputs.ForwardingProfileDestinationFqdn']]]]] = None,
+                 ip_addresses: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ForwardingProfileDestinationIpAddressArgs', 'ForwardingProfileDestinationIpAddressArgsDict', 'outputs.ForwardingProfileDestinationIpAddress']]]]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
@@ -449,8 +449,8 @@ class ForwardingProfileDestination(pulumi.CustomResource):
             opts: Optional[pulumi.ResourceOptions] = None,
             description: pulumi.Input[Optional[_builtins.str]] = None,
             folder: pulumi.Input[Optional[_builtins.str]] = None,
-            fqdns: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ForwardingProfileDestinationFqdnArgs', 'ForwardingProfileDestinationFqdnArgsDict']]]]] = None,
-            ip_addresses: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ForwardingProfileDestinationIpAddressArgs', 'ForwardingProfileDestinationIpAddressArgsDict']]]]] = None,
+            fqdns: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ForwardingProfileDestinationFqdnArgs', 'ForwardingProfileDestinationFqdnArgsDict', 'outputs.ForwardingProfileDestinationFqdn']]]]] = None,
+            ip_addresses: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ForwardingProfileDestinationIpAddressArgs', 'ForwardingProfileDestinationIpAddressArgsDict', 'outputs.ForwardingProfileDestinationIpAddress']]]]] = None,
             name: pulumi.Input[Optional[_builtins.str]] = None,
             tfid: pulumi.Input[Optional[_builtins.str]] = None) -> 'ForwardingProfileDestination':
         """
@@ -462,8 +462,8 @@ class ForwardingProfileDestination(pulumi.CustomResource):
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] description: description of the destination
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-        :param pulumi.Input[Sequence[pulumi.Input[Union['ForwardingProfileDestinationFqdnArgs', 'ForwardingProfileDestinationFqdnArgsDict']]]] fqdns: List of FQDN based destination entries
-        :param pulumi.Input[Sequence[pulumi.Input[Union['ForwardingProfileDestinationIpAddressArgs', 'ForwardingProfileDestinationIpAddressArgsDict']]]] ip_addresses: List of IP address based destination entries
+        :param pulumi.Input[Sequence[pulumi.Input[Union['ForwardingProfileDestinationFqdnArgs', 'ForwardingProfileDestinationFqdnArgsDict', 'outputs.ForwardingProfileDestinationFqdn']]]] fqdns: List of FQDN based destination entries
+        :param pulumi.Input[Sequence[pulumi.Input[Union['ForwardingProfileDestinationIpAddressArgs', 'ForwardingProfileDestinationIpAddressArgsDict', 'outputs.ForwardingProfileDestinationIpAddress']]]] ip_addresses: List of IP address based destination entries
         :param pulumi.Input[_builtins.str] name: alphanumeric string [ 0-9a-zA-Z._ -]
         :param pulumi.Input[_builtins.str] tfid: The Terraform ID.
         """

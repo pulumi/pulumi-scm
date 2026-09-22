@@ -736,7 +736,7 @@ class SdwanRule(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 action: pulumi.Input[Optional[Union['SdwanRuleActionArgs', 'SdwanRuleActionArgsDict']]] = None,
+                 action: pulumi.Input[Optional[Union['SdwanRuleActionArgs', 'SdwanRuleActionArgsDict', 'outputs.SdwanRuleAction']]] = None,
                  applications: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  description: pulumi.Input[Optional[_builtins.str]] = None,
                  destinations: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
@@ -786,7 +786,7 @@ class SdwanRule(pulumi.CustomResource):
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[Union['SdwanRuleActionArgs', 'SdwanRuleActionArgsDict']] action: Action
+        :param pulumi.Input[Union['SdwanRuleActionArgs', 'SdwanRuleActionArgsDict', 'outputs.SdwanRuleAction']] action: Action
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] applications: List of applications
         :param pulumi.Input[_builtins.str] description: Rule description
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] destinations: List of destination addresses
@@ -859,7 +859,7 @@ class SdwanRule(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 action: pulumi.Input[Optional[Union['SdwanRuleActionArgs', 'SdwanRuleActionArgsDict']]] = None,
+                 action: pulumi.Input[Optional[Union['SdwanRuleActionArgs', 'SdwanRuleActionArgsDict', 'outputs.SdwanRuleAction']]] = None,
                  applications: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  description: pulumi.Input[Optional[_builtins.str]] = None,
                  destinations: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
@@ -941,7 +941,7 @@ class SdwanRule(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            action: pulumi.Input[Optional[Union['SdwanRuleActionArgs', 'SdwanRuleActionArgsDict']]] = None,
+            action: pulumi.Input[Optional[Union['SdwanRuleActionArgs', 'SdwanRuleActionArgsDict', 'outputs.SdwanRuleAction']]] = None,
             applications: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
             description: pulumi.Input[Optional[_builtins.str]] = None,
             destinations: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
@@ -970,7 +970,7 @@ class SdwanRule(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[Union['SdwanRuleActionArgs', 'SdwanRuleActionArgsDict']] action: Action
+        :param pulumi.Input[Union['SdwanRuleActionArgs', 'SdwanRuleActionArgsDict', 'outputs.SdwanRuleAction']] action: Action
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] applications: List of applications
         :param pulumi.Input[_builtins.str] description: Rule description
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] destinations: List of destination addresses

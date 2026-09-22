@@ -537,14 +537,14 @@ class ServiceConnection(pulumi.CustomResource):
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
                  backup_sc: pulumi.Input[Optional[_builtins.str]] = None,
-                 bgp_peer: pulumi.Input[Optional[Union['ServiceConnectionBgpPeerArgs', 'ServiceConnectionBgpPeerArgsDict']]] = None,
+                 bgp_peer: pulumi.Input[Optional[Union['ServiceConnectionBgpPeerArgs', 'ServiceConnectionBgpPeerArgsDict', 'outputs.ServiceConnectionBgpPeer']]] = None,
                  ipsec_tunnel: pulumi.Input[Optional[_builtins.str]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
                  nat_pool: pulumi.Input[Optional[_builtins.str]] = None,
                  no_export_community: pulumi.Input[Optional[_builtins.str]] = None,
                  onboarding_type: pulumi.Input[Optional[_builtins.str]] = None,
-                 protocol: pulumi.Input[Optional[Union['ServiceConnectionProtocolArgs', 'ServiceConnectionProtocolArgsDict']]] = None,
-                 qos: pulumi.Input[Optional[Union['ServiceConnectionQosArgs', 'ServiceConnectionQosArgsDict']]] = None,
+                 protocol: pulumi.Input[Optional[Union['ServiceConnectionProtocolArgs', 'ServiceConnectionProtocolArgsDict', 'outputs.ServiceConnectionProtocol']]] = None,
+                 qos: pulumi.Input[Optional[Union['ServiceConnectionQosArgs', 'ServiceConnectionQosArgsDict', 'outputs.ServiceConnectionQos']]] = None,
                  region: pulumi.Input[Optional[_builtins.str]] = None,
                  region_tag: pulumi.Input[Optional[_builtins.str]] = None,
                  secondary_ipsec_tunnel: pulumi.Input[Optional[_builtins.str]] = None,
@@ -657,14 +657,14 @@ class ServiceConnection(pulumi.CustomResource):
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] backup_sc: Backup s c
-        :param pulumi.Input[Union['ServiceConnectionBgpPeerArgs', 'ServiceConnectionBgpPeerArgsDict']] bgp_peer: Bgp peer
+        :param pulumi.Input[Union['ServiceConnectionBgpPeerArgs', 'ServiceConnectionBgpPeerArgsDict', 'outputs.ServiceConnectionBgpPeer']] bgp_peer: Bgp peer
         :param pulumi.Input[_builtins.str] ipsec_tunnel: Ipsec tunnel
         :param pulumi.Input[_builtins.str] name: The name of the service connection
         :param pulumi.Input[_builtins.str] nat_pool: Nat pool
         :param pulumi.Input[_builtins.str] no_export_community: No export community
         :param pulumi.Input[_builtins.str] onboarding_type: Onboarding type
-        :param pulumi.Input[Union['ServiceConnectionProtocolArgs', 'ServiceConnectionProtocolArgsDict']] protocol: Protocol
-        :param pulumi.Input[Union['ServiceConnectionQosArgs', 'ServiceConnectionQosArgsDict']] qos: Qos
+        :param pulumi.Input[Union['ServiceConnectionProtocolArgs', 'ServiceConnectionProtocolArgsDict', 'outputs.ServiceConnectionProtocol']] protocol: Protocol
+        :param pulumi.Input[Union['ServiceConnectionQosArgs', 'ServiceConnectionQosArgsDict', 'outputs.ServiceConnectionQos']] qos: Qos
         :param pulumi.Input[_builtins.str] region: Region
         :param pulumi.Input[_builtins.str] region_tag: Region tag
         :param pulumi.Input[_builtins.str] secondary_ipsec_tunnel: Secondary ipsec tunnel
@@ -796,14 +796,14 @@ class ServiceConnection(pulumi.CustomResource):
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
                  backup_sc: pulumi.Input[Optional[_builtins.str]] = None,
-                 bgp_peer: pulumi.Input[Optional[Union['ServiceConnectionBgpPeerArgs', 'ServiceConnectionBgpPeerArgsDict']]] = None,
+                 bgp_peer: pulumi.Input[Optional[Union['ServiceConnectionBgpPeerArgs', 'ServiceConnectionBgpPeerArgsDict', 'outputs.ServiceConnectionBgpPeer']]] = None,
                  ipsec_tunnel: pulumi.Input[Optional[_builtins.str]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
                  nat_pool: pulumi.Input[Optional[_builtins.str]] = None,
                  no_export_community: pulumi.Input[Optional[_builtins.str]] = None,
                  onboarding_type: pulumi.Input[Optional[_builtins.str]] = None,
-                 protocol: pulumi.Input[Optional[Union['ServiceConnectionProtocolArgs', 'ServiceConnectionProtocolArgsDict']]] = None,
-                 qos: pulumi.Input[Optional[Union['ServiceConnectionQosArgs', 'ServiceConnectionQosArgsDict']]] = None,
+                 protocol: pulumi.Input[Optional[Union['ServiceConnectionProtocolArgs', 'ServiceConnectionProtocolArgsDict', 'outputs.ServiceConnectionProtocol']]] = None,
+                 qos: pulumi.Input[Optional[Union['ServiceConnectionQosArgs', 'ServiceConnectionQosArgsDict', 'outputs.ServiceConnectionQos']]] = None,
                  region: pulumi.Input[Optional[_builtins.str]] = None,
                  region_tag: pulumi.Input[Optional[_builtins.str]] = None,
                  secondary_ipsec_tunnel: pulumi.Input[Optional[_builtins.str]] = None,
@@ -852,7 +852,7 @@ class ServiceConnection(pulumi.CustomResource):
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
             backup_sc: pulumi.Input[Optional[_builtins.str]] = None,
-            bgp_peer: pulumi.Input[Optional[Union['ServiceConnectionBgpPeerArgs', 'ServiceConnectionBgpPeerArgsDict']]] = None,
+            bgp_peer: pulumi.Input[Optional[Union['ServiceConnectionBgpPeerArgs', 'ServiceConnectionBgpPeerArgsDict', 'outputs.ServiceConnectionBgpPeer']]] = None,
             encrypted_values: pulumi.Input[Optional[Mapping[str, pulumi.Input[_builtins.str]]]] = None,
             folder: pulumi.Input[Optional[_builtins.str]] = None,
             ipsec_tunnel: pulumi.Input[Optional[_builtins.str]] = None,
@@ -860,8 +860,8 @@ class ServiceConnection(pulumi.CustomResource):
             nat_pool: pulumi.Input[Optional[_builtins.str]] = None,
             no_export_community: pulumi.Input[Optional[_builtins.str]] = None,
             onboarding_type: pulumi.Input[Optional[_builtins.str]] = None,
-            protocol: pulumi.Input[Optional[Union['ServiceConnectionProtocolArgs', 'ServiceConnectionProtocolArgsDict']]] = None,
-            qos: pulumi.Input[Optional[Union['ServiceConnectionQosArgs', 'ServiceConnectionQosArgsDict']]] = None,
+            protocol: pulumi.Input[Optional[Union['ServiceConnectionProtocolArgs', 'ServiceConnectionProtocolArgsDict', 'outputs.ServiceConnectionProtocol']]] = None,
+            qos: pulumi.Input[Optional[Union['ServiceConnectionQosArgs', 'ServiceConnectionQosArgsDict', 'outputs.ServiceConnectionQos']]] = None,
             region: pulumi.Input[Optional[_builtins.str]] = None,
             region_tag: pulumi.Input[Optional[_builtins.str]] = None,
             secondary_ipsec_tunnel: pulumi.Input[Optional[_builtins.str]] = None,
@@ -876,7 +876,7 @@ class ServiceConnection(pulumi.CustomResource):
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] backup_sc: Backup s c
-        :param pulumi.Input[Union['ServiceConnectionBgpPeerArgs', 'ServiceConnectionBgpPeerArgsDict']] bgp_peer: Bgp peer
+        :param pulumi.Input[Union['ServiceConnectionBgpPeerArgs', 'ServiceConnectionBgpPeerArgsDict', 'outputs.ServiceConnectionBgpPeer']] bgp_peer: Bgp peer
         :param pulumi.Input[Mapping[str, pulumi.Input[_builtins.str]]] encrypted_values: Map of sensitive values returned from the API.
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
         :param pulumi.Input[_builtins.str] ipsec_tunnel: Ipsec tunnel
@@ -884,8 +884,8 @@ class ServiceConnection(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] nat_pool: Nat pool
         :param pulumi.Input[_builtins.str] no_export_community: No export community
         :param pulumi.Input[_builtins.str] onboarding_type: Onboarding type
-        :param pulumi.Input[Union['ServiceConnectionProtocolArgs', 'ServiceConnectionProtocolArgsDict']] protocol: Protocol
-        :param pulumi.Input[Union['ServiceConnectionQosArgs', 'ServiceConnectionQosArgsDict']] qos: Qos
+        :param pulumi.Input[Union['ServiceConnectionProtocolArgs', 'ServiceConnectionProtocolArgsDict', 'outputs.ServiceConnectionProtocol']] protocol: Protocol
+        :param pulumi.Input[Union['ServiceConnectionQosArgs', 'ServiceConnectionQosArgsDict', 'outputs.ServiceConnectionQos']] qos: Qos
         :param pulumi.Input[_builtins.str] region: Region
         :param pulumi.Input[_builtins.str] region_tag: Region tag
         :param pulumi.Input[_builtins.str] secondary_ipsec_tunnel: Secondary ipsec tunnel

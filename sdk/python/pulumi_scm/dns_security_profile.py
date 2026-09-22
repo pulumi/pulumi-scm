@@ -266,7 +266,7 @@ class DnsSecurityProfile(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 botnet_domains: pulumi.Input[Optional[Union['DnsSecurityProfileBotnetDomainsArgs', 'DnsSecurityProfileBotnetDomainsArgsDict']]] = None,
+                 botnet_domains: pulumi.Input[Optional[Union['DnsSecurityProfileBotnetDomainsArgs', 'DnsSecurityProfileBotnetDomainsArgsDict', 'outputs.DnsSecurityProfileBotnetDomains']]] = None,
                  description: pulumi.Input[Optional[_builtins.str]] = None,
                  device: pulumi.Input[Optional[_builtins.str]] = None,
                  folder: pulumi.Input[Optional[_builtins.str]] = None,
@@ -421,7 +421,7 @@ class DnsSecurityProfile(pulumi.CustomResource):
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[Union['DnsSecurityProfileBotnetDomainsArgs', 'DnsSecurityProfileBotnetDomainsArgsDict']] botnet_domains: Botnet domains
+        :param pulumi.Input[Union['DnsSecurityProfileBotnetDomainsArgs', 'DnsSecurityProfileBotnetDomainsArgsDict', 'outputs.DnsSecurityProfileBotnetDomains']] botnet_domains: Botnet domains
         :param pulumi.Input[_builtins.str] description: The description of the DNS security profile
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
@@ -599,7 +599,7 @@ class DnsSecurityProfile(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 botnet_domains: pulumi.Input[Optional[Union['DnsSecurityProfileBotnetDomainsArgs', 'DnsSecurityProfileBotnetDomainsArgsDict']]] = None,
+                 botnet_domains: pulumi.Input[Optional[Union['DnsSecurityProfileBotnetDomainsArgs', 'DnsSecurityProfileBotnetDomainsArgsDict', 'outputs.DnsSecurityProfileBotnetDomains']]] = None,
                  description: pulumi.Input[Optional[_builtins.str]] = None,
                  device: pulumi.Input[Optional[_builtins.str]] = None,
                  folder: pulumi.Input[Optional[_builtins.str]] = None,
@@ -631,7 +631,7 @@ class DnsSecurityProfile(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            botnet_domains: pulumi.Input[Optional[Union['DnsSecurityProfileBotnetDomainsArgs', 'DnsSecurityProfileBotnetDomainsArgsDict']]] = None,
+            botnet_domains: pulumi.Input[Optional[Union['DnsSecurityProfileBotnetDomainsArgs', 'DnsSecurityProfileBotnetDomainsArgsDict', 'outputs.DnsSecurityProfileBotnetDomains']]] = None,
             description: pulumi.Input[Optional[_builtins.str]] = None,
             device: pulumi.Input[Optional[_builtins.str]] = None,
             folder: pulumi.Input[Optional[_builtins.str]] = None,
@@ -645,7 +645,7 @@ class DnsSecurityProfile(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[Union['DnsSecurityProfileBotnetDomainsArgs', 'DnsSecurityProfileBotnetDomainsArgsDict']] botnet_domains: Botnet domains
+        :param pulumi.Input[Union['DnsSecurityProfileBotnetDomainsArgs', 'DnsSecurityProfileBotnetDomainsArgsDict', 'outputs.DnsSecurityProfileBotnetDomains']] botnet_domains: Botnet domains
         :param pulumi.Input[_builtins.str] description: The description of the DNS security profile
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined

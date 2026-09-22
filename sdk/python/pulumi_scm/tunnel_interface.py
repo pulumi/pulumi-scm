@@ -431,8 +431,8 @@ class TunnelInterface(pulumi.CustomResource):
                  device: pulumi.Input[Optional[_builtins.str]] = None,
                  folder: pulumi.Input[Optional[_builtins.str]] = None,
                  interface_management_profile: pulumi.Input[Optional[_builtins.str]] = None,
-                 ips: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TunnelInterfaceIpArgs', 'TunnelInterfaceIpArgsDict']]]]] = None,
-                 ipv6: pulumi.Input[Optional[Union['TunnelInterfaceIpv6Args', 'TunnelInterfaceIpv6ArgsDict']]] = None,
+                 ips: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TunnelInterfaceIpArgs', 'TunnelInterfaceIpArgsDict', 'outputs.TunnelInterfaceIp']]]]] = None,
+                 ipv6: pulumi.Input[Optional[Union['TunnelInterfaceIpv6Args', 'TunnelInterfaceIpv6ArgsDict', 'outputs.TunnelInterfaceIpv6']]] = None,
                  mtu: pulumi.Input[Optional[_builtins.int]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
                  netflow_profile: pulumi.Input[Optional[_builtins.str]] = None,
@@ -527,8 +527,8 @@ class TunnelInterface(pulumi.CustomResource):
                
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] interface_management_profile: Interface management profile for tunnel interface
-        :param pulumi.Input[Sequence[pulumi.Input[Union['TunnelInterfaceIpArgs', 'TunnelInterfaceIpArgsDict']]]] ips: Tunnel Interface IP Parent
-        :param pulumi.Input[Union['TunnelInterfaceIpv6Args', 'TunnelInterfaceIpv6ArgsDict']] ipv6: Tunnel Interface IPv6 Configuration
+        :param pulumi.Input[Sequence[pulumi.Input[Union['TunnelInterfaceIpArgs', 'TunnelInterfaceIpArgsDict', 'outputs.TunnelInterfaceIp']]]] ips: Tunnel Interface IP Parent
+        :param pulumi.Input[Union['TunnelInterfaceIpv6Args', 'TunnelInterfaceIpv6ArgsDict', 'outputs.TunnelInterfaceIpv6']] ipv6: Tunnel Interface IPv6 Configuration
         :param pulumi.Input[_builtins.int] mtu: MTU for tunnel interface
         :param pulumi.Input[_builtins.str] name: L3 sub-interface name for tunnel interface
         :param pulumi.Input[_builtins.str] netflow_profile: Name of Netflow Profile to assign to Interface
@@ -642,8 +642,8 @@ class TunnelInterface(pulumi.CustomResource):
                  device: pulumi.Input[Optional[_builtins.str]] = None,
                  folder: pulumi.Input[Optional[_builtins.str]] = None,
                  interface_management_profile: pulumi.Input[Optional[_builtins.str]] = None,
-                 ips: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TunnelInterfaceIpArgs', 'TunnelInterfaceIpArgsDict']]]]] = None,
-                 ipv6: pulumi.Input[Optional[Union['TunnelInterfaceIpv6Args', 'TunnelInterfaceIpv6ArgsDict']]] = None,
+                 ips: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TunnelInterfaceIpArgs', 'TunnelInterfaceIpArgsDict', 'outputs.TunnelInterfaceIp']]]]] = None,
+                 ipv6: pulumi.Input[Optional[Union['TunnelInterfaceIpv6Args', 'TunnelInterfaceIpv6ArgsDict', 'outputs.TunnelInterfaceIpv6']]] = None,
                  mtu: pulumi.Input[Optional[_builtins.int]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
                  netflow_profile: pulumi.Input[Optional[_builtins.str]] = None,
@@ -684,8 +684,8 @@ class TunnelInterface(pulumi.CustomResource):
             device: pulumi.Input[Optional[_builtins.str]] = None,
             folder: pulumi.Input[Optional[_builtins.str]] = None,
             interface_management_profile: pulumi.Input[Optional[_builtins.str]] = None,
-            ips: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TunnelInterfaceIpArgs', 'TunnelInterfaceIpArgsDict']]]]] = None,
-            ipv6: pulumi.Input[Optional[Union['TunnelInterfaceIpv6Args', 'TunnelInterfaceIpv6ArgsDict']]] = None,
+            ips: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TunnelInterfaceIpArgs', 'TunnelInterfaceIpArgsDict', 'outputs.TunnelInterfaceIp']]]]] = None,
+            ipv6: pulumi.Input[Optional[Union['TunnelInterfaceIpv6Args', 'TunnelInterfaceIpv6ArgsDict', 'outputs.TunnelInterfaceIpv6']]] = None,
             mtu: pulumi.Input[Optional[_builtins.int]] = None,
             name: pulumi.Input[Optional[_builtins.str]] = None,
             netflow_profile: pulumi.Input[Optional[_builtins.str]] = None,
@@ -705,8 +705,8 @@ class TunnelInterface(pulumi.CustomResource):
                
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] interface_management_profile: Interface management profile for tunnel interface
-        :param pulumi.Input[Sequence[pulumi.Input[Union['TunnelInterfaceIpArgs', 'TunnelInterfaceIpArgsDict']]]] ips: Tunnel Interface IP Parent
-        :param pulumi.Input[Union['TunnelInterfaceIpv6Args', 'TunnelInterfaceIpv6ArgsDict']] ipv6: Tunnel Interface IPv6 Configuration
+        :param pulumi.Input[Sequence[pulumi.Input[Union['TunnelInterfaceIpArgs', 'TunnelInterfaceIpArgsDict', 'outputs.TunnelInterfaceIp']]]] ips: Tunnel Interface IP Parent
+        :param pulumi.Input[Union['TunnelInterfaceIpv6Args', 'TunnelInterfaceIpv6ArgsDict', 'outputs.TunnelInterfaceIpv6']] ipv6: Tunnel Interface IPv6 Configuration
         :param pulumi.Input[_builtins.int] mtu: MTU for tunnel interface
         :param pulumi.Input[_builtins.str] name: L3 sub-interface name for tunnel interface
         :param pulumi.Input[_builtins.str] netflow_profile: Name of Netflow Profile to assign to Interface

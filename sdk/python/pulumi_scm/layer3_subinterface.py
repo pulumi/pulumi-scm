@@ -538,14 +538,14 @@ class Layer3Subinterface(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 arps: pulumi.Input[Optional[Sequence[pulumi.Input[Union['Layer3SubinterfaceArpArgs', 'Layer3SubinterfaceArpArgsDict']]]]] = None,
+                 arps: pulumi.Input[Optional[Sequence[pulumi.Input[Union['Layer3SubinterfaceArpArgs', 'Layer3SubinterfaceArpArgsDict', 'outputs.Layer3SubinterfaceArp']]]]] = None,
                  comment: pulumi.Input[Optional[_builtins.str]] = None,
-                 ddns_config: pulumi.Input[Optional[Union['Layer3SubinterfaceDdnsConfigArgs', 'Layer3SubinterfaceDdnsConfigArgsDict']]] = None,
+                 ddns_config: pulumi.Input[Optional[Union['Layer3SubinterfaceDdnsConfigArgs', 'Layer3SubinterfaceDdnsConfigArgsDict', 'outputs.Layer3SubinterfaceDdnsConfig']]] = None,
                  device: pulumi.Input[Optional[_builtins.str]] = None,
-                 dhcp_client: pulumi.Input[Optional[Union['Layer3SubinterfaceDhcpClientArgs', 'Layer3SubinterfaceDhcpClientArgsDict']]] = None,
+                 dhcp_client: pulumi.Input[Optional[Union['Layer3SubinterfaceDhcpClientArgs', 'Layer3SubinterfaceDhcpClientArgsDict', 'outputs.Layer3SubinterfaceDhcpClient']]] = None,
                  folder: pulumi.Input[Optional[_builtins.str]] = None,
                  interface_management_profile: pulumi.Input[Optional[_builtins.str]] = None,
-                 ips: pulumi.Input[Optional[Sequence[pulumi.Input[Union['Layer3SubinterfaceIpArgs', 'Layer3SubinterfaceIpArgsDict']]]]] = None,
+                 ips: pulumi.Input[Optional[Sequence[pulumi.Input[Union['Layer3SubinterfaceIpArgs', 'Layer3SubinterfaceIpArgsDict', 'outputs.Layer3SubinterfaceIp']]]]] = None,
                  mtu: pulumi.Input[Optional[_builtins.int]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
                  netflow_profile: pulumi.Input[Optional[_builtins.str]] = None,
@@ -634,18 +634,18 @@ class Layer3Subinterface(pulumi.CustomResource):
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[Sequence[pulumi.Input[Union['Layer3SubinterfaceArpArgs', 'Layer3SubinterfaceArpArgsDict']]]] arps: Layer 3 sub Interfaces ARP configuration
+        :param pulumi.Input[Sequence[pulumi.Input[Union['Layer3SubinterfaceArpArgs', 'Layer3SubinterfaceArpArgsDict', 'outputs.Layer3SubinterfaceArp']]]] arps: Layer 3 sub Interfaces ARP configuration
         :param pulumi.Input[_builtins.str] comment: Description
-        :param pulumi.Input[Union['Layer3SubinterfaceDdnsConfigArgs', 'Layer3SubinterfaceDdnsConfigArgsDict']] ddns_config: Dynamic DNS configuration specific to the Layer 3 sub Interfaces.
+        :param pulumi.Input[Union['Layer3SubinterfaceDdnsConfigArgs', 'Layer3SubinterfaceDdnsConfigArgsDict', 'outputs.Layer3SubinterfaceDdnsConfig']] ddns_config: Dynamic DNS configuration specific to the Layer 3 sub Interfaces.
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
-        :param pulumi.Input[Union['Layer3SubinterfaceDhcpClientArgs', 'Layer3SubinterfaceDhcpClientArgsDict']] dhcp_client: Layer3 sub interfaces DHCP Client Object
+        :param pulumi.Input[Union['Layer3SubinterfaceDhcpClientArgs', 'Layer3SubinterfaceDhcpClientArgsDict', 'outputs.Layer3SubinterfaceDhcpClient']] dhcp_client: Layer3 sub interfaces DHCP Client Object
                
                > ℹ️ **Note:** You must specify exactly one of `dhcp_client` and `ip`.
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
                
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] interface_management_profile: Interface management profile
-        :param pulumi.Input[Sequence[pulumi.Input[Union['Layer3SubinterfaceIpArgs', 'Layer3SubinterfaceIpArgsDict']]]] ips: L3 sub-interface IP Parent
+        :param pulumi.Input[Sequence[pulumi.Input[Union['Layer3SubinterfaceIpArgs', 'Layer3SubinterfaceIpArgsDict', 'outputs.Layer3SubinterfaceIp']]]] ips: L3 sub-interface IP Parent
                
                > ℹ️ **Note:** You must specify exactly one of `dhcp_client` and `ip`.
         :param pulumi.Input[_builtins.int] mtu: MTU
@@ -757,14 +757,14 @@ class Layer3Subinterface(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 arps: pulumi.Input[Optional[Sequence[pulumi.Input[Union['Layer3SubinterfaceArpArgs', 'Layer3SubinterfaceArpArgsDict']]]]] = None,
+                 arps: pulumi.Input[Optional[Sequence[pulumi.Input[Union['Layer3SubinterfaceArpArgs', 'Layer3SubinterfaceArpArgsDict', 'outputs.Layer3SubinterfaceArp']]]]] = None,
                  comment: pulumi.Input[Optional[_builtins.str]] = None,
-                 ddns_config: pulumi.Input[Optional[Union['Layer3SubinterfaceDdnsConfigArgs', 'Layer3SubinterfaceDdnsConfigArgsDict']]] = None,
+                 ddns_config: pulumi.Input[Optional[Union['Layer3SubinterfaceDdnsConfigArgs', 'Layer3SubinterfaceDdnsConfigArgsDict', 'outputs.Layer3SubinterfaceDdnsConfig']]] = None,
                  device: pulumi.Input[Optional[_builtins.str]] = None,
-                 dhcp_client: pulumi.Input[Optional[Union['Layer3SubinterfaceDhcpClientArgs', 'Layer3SubinterfaceDhcpClientArgsDict']]] = None,
+                 dhcp_client: pulumi.Input[Optional[Union['Layer3SubinterfaceDhcpClientArgs', 'Layer3SubinterfaceDhcpClientArgsDict', 'outputs.Layer3SubinterfaceDhcpClient']]] = None,
                  folder: pulumi.Input[Optional[_builtins.str]] = None,
                  interface_management_profile: pulumi.Input[Optional[_builtins.str]] = None,
-                 ips: pulumi.Input[Optional[Sequence[pulumi.Input[Union['Layer3SubinterfaceIpArgs', 'Layer3SubinterfaceIpArgsDict']]]]] = None,
+                 ips: pulumi.Input[Optional[Sequence[pulumi.Input[Union['Layer3SubinterfaceIpArgs', 'Layer3SubinterfaceIpArgsDict', 'outputs.Layer3SubinterfaceIp']]]]] = None,
                  mtu: pulumi.Input[Optional[_builtins.int]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
                  netflow_profile: pulumi.Input[Optional[_builtins.str]] = None,
@@ -805,14 +805,14 @@ class Layer3Subinterface(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            arps: pulumi.Input[Optional[Sequence[pulumi.Input[Union['Layer3SubinterfaceArpArgs', 'Layer3SubinterfaceArpArgsDict']]]]] = None,
+            arps: pulumi.Input[Optional[Sequence[pulumi.Input[Union['Layer3SubinterfaceArpArgs', 'Layer3SubinterfaceArpArgsDict', 'outputs.Layer3SubinterfaceArp']]]]] = None,
             comment: pulumi.Input[Optional[_builtins.str]] = None,
-            ddns_config: pulumi.Input[Optional[Union['Layer3SubinterfaceDdnsConfigArgs', 'Layer3SubinterfaceDdnsConfigArgsDict']]] = None,
+            ddns_config: pulumi.Input[Optional[Union['Layer3SubinterfaceDdnsConfigArgs', 'Layer3SubinterfaceDdnsConfigArgsDict', 'outputs.Layer3SubinterfaceDdnsConfig']]] = None,
             device: pulumi.Input[Optional[_builtins.str]] = None,
-            dhcp_client: pulumi.Input[Optional[Union['Layer3SubinterfaceDhcpClientArgs', 'Layer3SubinterfaceDhcpClientArgsDict']]] = None,
+            dhcp_client: pulumi.Input[Optional[Union['Layer3SubinterfaceDhcpClientArgs', 'Layer3SubinterfaceDhcpClientArgsDict', 'outputs.Layer3SubinterfaceDhcpClient']]] = None,
             folder: pulumi.Input[Optional[_builtins.str]] = None,
             interface_management_profile: pulumi.Input[Optional[_builtins.str]] = None,
-            ips: pulumi.Input[Optional[Sequence[pulumi.Input[Union['Layer3SubinterfaceIpArgs', 'Layer3SubinterfaceIpArgsDict']]]]] = None,
+            ips: pulumi.Input[Optional[Sequence[pulumi.Input[Union['Layer3SubinterfaceIpArgs', 'Layer3SubinterfaceIpArgsDict', 'outputs.Layer3SubinterfaceIp']]]]] = None,
             mtu: pulumi.Input[Optional[_builtins.int]] = None,
             name: pulumi.Input[Optional[_builtins.str]] = None,
             netflow_profile: pulumi.Input[Optional[_builtins.str]] = None,
@@ -827,18 +827,18 @@ class Layer3Subinterface(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[Sequence[pulumi.Input[Union['Layer3SubinterfaceArpArgs', 'Layer3SubinterfaceArpArgsDict']]]] arps: Layer 3 sub Interfaces ARP configuration
+        :param pulumi.Input[Sequence[pulumi.Input[Union['Layer3SubinterfaceArpArgs', 'Layer3SubinterfaceArpArgsDict', 'outputs.Layer3SubinterfaceArp']]]] arps: Layer 3 sub Interfaces ARP configuration
         :param pulumi.Input[_builtins.str] comment: Description
-        :param pulumi.Input[Union['Layer3SubinterfaceDdnsConfigArgs', 'Layer3SubinterfaceDdnsConfigArgsDict']] ddns_config: Dynamic DNS configuration specific to the Layer 3 sub Interfaces.
+        :param pulumi.Input[Union['Layer3SubinterfaceDdnsConfigArgs', 'Layer3SubinterfaceDdnsConfigArgsDict', 'outputs.Layer3SubinterfaceDdnsConfig']] ddns_config: Dynamic DNS configuration specific to the Layer 3 sub Interfaces.
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
-        :param pulumi.Input[Union['Layer3SubinterfaceDhcpClientArgs', 'Layer3SubinterfaceDhcpClientArgsDict']] dhcp_client: Layer3 sub interfaces DHCP Client Object
+        :param pulumi.Input[Union['Layer3SubinterfaceDhcpClientArgs', 'Layer3SubinterfaceDhcpClientArgsDict', 'outputs.Layer3SubinterfaceDhcpClient']] dhcp_client: Layer3 sub interfaces DHCP Client Object
                
                > ℹ️ **Note:** You must specify exactly one of `dhcp_client` and `ip`.
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
                
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] interface_management_profile: Interface management profile
-        :param pulumi.Input[Sequence[pulumi.Input[Union['Layer3SubinterfaceIpArgs', 'Layer3SubinterfaceIpArgsDict']]]] ips: L3 sub-interface IP Parent
+        :param pulumi.Input[Sequence[pulumi.Input[Union['Layer3SubinterfaceIpArgs', 'Layer3SubinterfaceIpArgsDict', 'outputs.Layer3SubinterfaceIp']]]] ips: L3 sub-interface IP Parent
                
                > ℹ️ **Note:** You must specify exactly one of `dhcp_client` and `ip`.
         :param pulumi.Input[_builtins.int] mtu: MTU

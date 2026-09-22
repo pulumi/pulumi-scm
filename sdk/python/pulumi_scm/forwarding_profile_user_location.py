@@ -220,7 +220,7 @@ class ForwardingProfileUserLocation(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None,
                  description: pulumi.Input[Optional[_builtins.str]] = None,
                  folder: pulumi.Input[Optional[_builtins.str]] = None,
-                 internal_host_detection: pulumi.Input[Optional[Union['ForwardingProfileUserLocationInternalHostDetectionArgs', 'ForwardingProfileUserLocationInternalHostDetectionArgsDict']]] = None,
+                 internal_host_detection: pulumi.Input[Optional[Union['ForwardingProfileUserLocationInternalHostDetectionArgs', 'ForwardingProfileUserLocationInternalHostDetectionArgsDict', 'outputs.ForwardingProfileUserLocationInternalHostDetection']]] = None,
                  ip_addresses: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
@@ -292,7 +292,7 @@ class ForwardingProfileUserLocation(pulumi.CustomResource):
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] description: Description of the user location
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-        :param pulumi.Input[Union['ForwardingProfileUserLocationInternalHostDetectionArgs', 'ForwardingProfileUserLocationInternalHostDetectionArgsDict']] internal_host_detection: Configuration for detecting internal hosts using IP address and FQDN
+        :param pulumi.Input[Union['ForwardingProfileUserLocationInternalHostDetectionArgs', 'ForwardingProfileUserLocationInternalHostDetectionArgsDict', 'outputs.ForwardingProfileUserLocationInternalHostDetection']] internal_host_detection: Configuration for detecting internal hosts using IP address and FQDN
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] ip_addresses: List of IP addresses that define the user location
         :param pulumi.Input[_builtins.str] name: alphanumeric string [ 0-9a-zA-Z._-]
         """
@@ -383,7 +383,7 @@ class ForwardingProfileUserLocation(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None,
                  description: pulumi.Input[Optional[_builtins.str]] = None,
                  folder: pulumi.Input[Optional[_builtins.str]] = None,
-                 internal_host_detection: pulumi.Input[Optional[Union['ForwardingProfileUserLocationInternalHostDetectionArgs', 'ForwardingProfileUserLocationInternalHostDetectionArgsDict']]] = None,
+                 internal_host_detection: pulumi.Input[Optional[Union['ForwardingProfileUserLocationInternalHostDetectionArgs', 'ForwardingProfileUserLocationInternalHostDetectionArgsDict', 'outputs.ForwardingProfileUserLocationInternalHostDetection']]] = None,
                  ip_addresses: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
@@ -413,7 +413,7 @@ class ForwardingProfileUserLocation(pulumi.CustomResource):
             opts: Optional[pulumi.ResourceOptions] = None,
             description: pulumi.Input[Optional[_builtins.str]] = None,
             folder: pulumi.Input[Optional[_builtins.str]] = None,
-            internal_host_detection: pulumi.Input[Optional[Union['ForwardingProfileUserLocationInternalHostDetectionArgs', 'ForwardingProfileUserLocationInternalHostDetectionArgsDict']]] = None,
+            internal_host_detection: pulumi.Input[Optional[Union['ForwardingProfileUserLocationInternalHostDetectionArgs', 'ForwardingProfileUserLocationInternalHostDetectionArgsDict', 'outputs.ForwardingProfileUserLocationInternalHostDetection']]] = None,
             ip_addresses: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
             name: pulumi.Input[Optional[_builtins.str]] = None,
             tfid: pulumi.Input[Optional[_builtins.str]] = None) -> 'ForwardingProfileUserLocation':
@@ -426,7 +426,7 @@ class ForwardingProfileUserLocation(pulumi.CustomResource):
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] description: Description of the user location
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-        :param pulumi.Input[Union['ForwardingProfileUserLocationInternalHostDetectionArgs', 'ForwardingProfileUserLocationInternalHostDetectionArgsDict']] internal_host_detection: Configuration for detecting internal hosts using IP address and FQDN
+        :param pulumi.Input[Union['ForwardingProfileUserLocationInternalHostDetectionArgs', 'ForwardingProfileUserLocationInternalHostDetectionArgsDict', 'outputs.ForwardingProfileUserLocationInternalHostDetection']] internal_host_detection: Configuration for detecting internal hosts using IP address and FQDN
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] ip_addresses: List of IP addresses that define the user location
         :param pulumi.Input[_builtins.str] name: alphanumeric string [ 0-9a-zA-Z._-]
         :param pulumi.Input[_builtins.str] tfid: The Terraform ID.

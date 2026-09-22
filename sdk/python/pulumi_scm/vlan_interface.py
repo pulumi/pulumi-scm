@@ -538,15 +538,15 @@ class VlanInterface(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 arps: pulumi.Input[Optional[Sequence[pulumi.Input[Union['VlanInterfaceArpArgs', 'VlanInterfaceArpArgsDict']]]]] = None,
+                 arps: pulumi.Input[Optional[Sequence[pulumi.Input[Union['VlanInterfaceArpArgs', 'VlanInterfaceArpArgsDict', 'outputs.VlanInterfaceArp']]]]] = None,
                  comment: pulumi.Input[Optional[_builtins.str]] = None,
-                 ddns_config: pulumi.Input[Optional[Union['VlanInterfaceDdnsConfigArgs', 'VlanInterfaceDdnsConfigArgsDict']]] = None,
+                 ddns_config: pulumi.Input[Optional[Union['VlanInterfaceDdnsConfigArgs', 'VlanInterfaceDdnsConfigArgsDict', 'outputs.VlanInterfaceDdnsConfig']]] = None,
                  default_value: pulumi.Input[Optional[_builtins.str]] = None,
                  device: pulumi.Input[Optional[_builtins.str]] = None,
-                 dhcp_client: pulumi.Input[Optional[Union['VlanInterfaceDhcpClientArgs', 'VlanInterfaceDhcpClientArgsDict']]] = None,
+                 dhcp_client: pulumi.Input[Optional[Union['VlanInterfaceDhcpClientArgs', 'VlanInterfaceDhcpClientArgsDict', 'outputs.VlanInterfaceDhcpClient']]] = None,
                  folder: pulumi.Input[Optional[_builtins.str]] = None,
                  interface_management_profile: pulumi.Input[Optional[_builtins.str]] = None,
-                 ips: pulumi.Input[Optional[Sequence[pulumi.Input[Union['VlanInterfaceIpArgs', 'VlanInterfaceIpArgsDict']]]]] = None,
+                 ips: pulumi.Input[Optional[Sequence[pulumi.Input[Union['VlanInterfaceIpArgs', 'VlanInterfaceIpArgsDict', 'outputs.VlanInterfaceIp']]]]] = None,
                  mtu: pulumi.Input[Optional[_builtins.int]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
                  netflow_profile: pulumi.Input[Optional[_builtins.str]] = None,
@@ -600,19 +600,19 @@ class VlanInterface(pulumi.CustomResource):
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[Sequence[pulumi.Input[Union['VlanInterfaceArpArgs', 'VlanInterfaceArpArgsDict']]]] arps: ARP configuration
+        :param pulumi.Input[Sequence[pulumi.Input[Union['VlanInterfaceArpArgs', 'VlanInterfaceArpArgsDict', 'outputs.VlanInterfaceArp']]]] arps: ARP configuration
         :param pulumi.Input[_builtins.str] comment: Description
-        :param pulumi.Input[Union['VlanInterfaceDdnsConfigArgs', 'VlanInterfaceDdnsConfigArgsDict']] ddns_config: Dynamic DNS configuration specific to the Vlan Interfaces.
+        :param pulumi.Input[Union['VlanInterfaceDdnsConfigArgs', 'VlanInterfaceDdnsConfigArgsDict', 'outputs.VlanInterfaceDdnsConfig']] ddns_config: Dynamic DNS configuration specific to the Vlan Interfaces.
         :param pulumi.Input[_builtins.str] default_value: Default interface assignment
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
-        :param pulumi.Input[Union['VlanInterfaceDhcpClientArgs', 'VlanInterfaceDhcpClientArgsDict']] dhcp_client: Vlan interfaces DHCP Client Object
+        :param pulumi.Input[Union['VlanInterfaceDhcpClientArgs', 'VlanInterfaceDhcpClientArgsDict', 'outputs.VlanInterfaceDhcpClient']] dhcp_client: Vlan interfaces DHCP Client Object
                
                > ℹ️ **Note:** You must specify exactly one of `dhcp_client` and `ip`.
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
                
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] interface_management_profile: Interface management profile
-        :param pulumi.Input[Sequence[pulumi.Input[Union['VlanInterfaceIpArgs', 'VlanInterfaceIpArgsDict']]]] ips: VLAN Interface IP Parent
+        :param pulumi.Input[Sequence[pulumi.Input[Union['VlanInterfaceIpArgs', 'VlanInterfaceIpArgsDict', 'outputs.VlanInterfaceIp']]]] ips: VLAN Interface IP Parent
                
                > ℹ️ **Note:** You must specify exactly one of `dhcp_client` and `ip`.
         :param pulumi.Input[_builtins.int] mtu: MTU
@@ -689,15 +689,15 @@ class VlanInterface(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 arps: pulumi.Input[Optional[Sequence[pulumi.Input[Union['VlanInterfaceArpArgs', 'VlanInterfaceArpArgsDict']]]]] = None,
+                 arps: pulumi.Input[Optional[Sequence[pulumi.Input[Union['VlanInterfaceArpArgs', 'VlanInterfaceArpArgsDict', 'outputs.VlanInterfaceArp']]]]] = None,
                  comment: pulumi.Input[Optional[_builtins.str]] = None,
-                 ddns_config: pulumi.Input[Optional[Union['VlanInterfaceDdnsConfigArgs', 'VlanInterfaceDdnsConfigArgsDict']]] = None,
+                 ddns_config: pulumi.Input[Optional[Union['VlanInterfaceDdnsConfigArgs', 'VlanInterfaceDdnsConfigArgsDict', 'outputs.VlanInterfaceDdnsConfig']]] = None,
                  default_value: pulumi.Input[Optional[_builtins.str]] = None,
                  device: pulumi.Input[Optional[_builtins.str]] = None,
-                 dhcp_client: pulumi.Input[Optional[Union['VlanInterfaceDhcpClientArgs', 'VlanInterfaceDhcpClientArgsDict']]] = None,
+                 dhcp_client: pulumi.Input[Optional[Union['VlanInterfaceDhcpClientArgs', 'VlanInterfaceDhcpClientArgsDict', 'outputs.VlanInterfaceDhcpClient']]] = None,
                  folder: pulumi.Input[Optional[_builtins.str]] = None,
                  interface_management_profile: pulumi.Input[Optional[_builtins.str]] = None,
-                 ips: pulumi.Input[Optional[Sequence[pulumi.Input[Union['VlanInterfaceIpArgs', 'VlanInterfaceIpArgsDict']]]]] = None,
+                 ips: pulumi.Input[Optional[Sequence[pulumi.Input[Union['VlanInterfaceIpArgs', 'VlanInterfaceIpArgsDict', 'outputs.VlanInterfaceIp']]]]] = None,
                  mtu: pulumi.Input[Optional[_builtins.int]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
                  netflow_profile: pulumi.Input[Optional[_builtins.str]] = None,
@@ -737,15 +737,15 @@ class VlanInterface(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            arps: pulumi.Input[Optional[Sequence[pulumi.Input[Union['VlanInterfaceArpArgs', 'VlanInterfaceArpArgsDict']]]]] = None,
+            arps: pulumi.Input[Optional[Sequence[pulumi.Input[Union['VlanInterfaceArpArgs', 'VlanInterfaceArpArgsDict', 'outputs.VlanInterfaceArp']]]]] = None,
             comment: pulumi.Input[Optional[_builtins.str]] = None,
-            ddns_config: pulumi.Input[Optional[Union['VlanInterfaceDdnsConfigArgs', 'VlanInterfaceDdnsConfigArgsDict']]] = None,
+            ddns_config: pulumi.Input[Optional[Union['VlanInterfaceDdnsConfigArgs', 'VlanInterfaceDdnsConfigArgsDict', 'outputs.VlanInterfaceDdnsConfig']]] = None,
             default_value: pulumi.Input[Optional[_builtins.str]] = None,
             device: pulumi.Input[Optional[_builtins.str]] = None,
-            dhcp_client: pulumi.Input[Optional[Union['VlanInterfaceDhcpClientArgs', 'VlanInterfaceDhcpClientArgsDict']]] = None,
+            dhcp_client: pulumi.Input[Optional[Union['VlanInterfaceDhcpClientArgs', 'VlanInterfaceDhcpClientArgsDict', 'outputs.VlanInterfaceDhcpClient']]] = None,
             folder: pulumi.Input[Optional[_builtins.str]] = None,
             interface_management_profile: pulumi.Input[Optional[_builtins.str]] = None,
-            ips: pulumi.Input[Optional[Sequence[pulumi.Input[Union['VlanInterfaceIpArgs', 'VlanInterfaceIpArgsDict']]]]] = None,
+            ips: pulumi.Input[Optional[Sequence[pulumi.Input[Union['VlanInterfaceIpArgs', 'VlanInterfaceIpArgsDict', 'outputs.VlanInterfaceIp']]]]] = None,
             mtu: pulumi.Input[Optional[_builtins.int]] = None,
             name: pulumi.Input[Optional[_builtins.str]] = None,
             netflow_profile: pulumi.Input[Optional[_builtins.str]] = None,
@@ -759,19 +759,19 @@ class VlanInterface(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[Sequence[pulumi.Input[Union['VlanInterfaceArpArgs', 'VlanInterfaceArpArgsDict']]]] arps: ARP configuration
+        :param pulumi.Input[Sequence[pulumi.Input[Union['VlanInterfaceArpArgs', 'VlanInterfaceArpArgsDict', 'outputs.VlanInterfaceArp']]]] arps: ARP configuration
         :param pulumi.Input[_builtins.str] comment: Description
-        :param pulumi.Input[Union['VlanInterfaceDdnsConfigArgs', 'VlanInterfaceDdnsConfigArgsDict']] ddns_config: Dynamic DNS configuration specific to the Vlan Interfaces.
+        :param pulumi.Input[Union['VlanInterfaceDdnsConfigArgs', 'VlanInterfaceDdnsConfigArgsDict', 'outputs.VlanInterfaceDdnsConfig']] ddns_config: Dynamic DNS configuration specific to the Vlan Interfaces.
         :param pulumi.Input[_builtins.str] default_value: Default interface assignment
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
-        :param pulumi.Input[Union['VlanInterfaceDhcpClientArgs', 'VlanInterfaceDhcpClientArgsDict']] dhcp_client: Vlan interfaces DHCP Client Object
+        :param pulumi.Input[Union['VlanInterfaceDhcpClientArgs', 'VlanInterfaceDhcpClientArgsDict', 'outputs.VlanInterfaceDhcpClient']] dhcp_client: Vlan interfaces DHCP Client Object
                
                > ℹ️ **Note:** You must specify exactly one of `dhcp_client` and `ip`.
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
                
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] interface_management_profile: Interface management profile
-        :param pulumi.Input[Sequence[pulumi.Input[Union['VlanInterfaceIpArgs', 'VlanInterfaceIpArgsDict']]]] ips: VLAN Interface IP Parent
+        :param pulumi.Input[Sequence[pulumi.Input[Union['VlanInterfaceIpArgs', 'VlanInterfaceIpArgsDict', 'outputs.VlanInterfaceIp']]]] ips: VLAN Interface IP Parent
                
                > ℹ️ **Note:** You must specify exactly one of `dhcp_client` and `ip`.
         :param pulumi.Input[_builtins.int] mtu: MTU

@@ -347,9 +347,9 @@ class RadiusServerProfile(pulumi.CustomResource):
                  device: pulumi.Input[Optional[_builtins.str]] = None,
                  folder: pulumi.Input[Optional[_builtins.str]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
-                 protocol: pulumi.Input[Optional[Union['RadiusServerProfileProtocolArgs', 'RadiusServerProfileProtocolArgsDict']]] = None,
+                 protocol: pulumi.Input[Optional[Union['RadiusServerProfileProtocolArgs', 'RadiusServerProfileProtocolArgsDict', 'outputs.RadiusServerProfileProtocol']]] = None,
                  retries: pulumi.Input[Optional[_builtins.int]] = None,
-                 servers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['RadiusServerProfileServerArgs', 'RadiusServerProfileServerArgsDict']]]]] = None,
+                 servers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['RadiusServerProfileServerArgs', 'RadiusServerProfileServerArgsDict', 'outputs.RadiusServerProfileServer']]]]] = None,
                  snippet: pulumi.Input[Optional[_builtins.str]] = None,
                  timeout: pulumi.Input[Optional[_builtins.int]] = None,
                  __props__=None):
@@ -422,9 +422,9 @@ class RadiusServerProfile(pulumi.CustomResource):
                
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] name: The name of the RADIUS server profile
-        :param pulumi.Input[Union['RadiusServerProfileProtocolArgs', 'RadiusServerProfileProtocolArgsDict']] protocol: The RADIUS authentication protocol
+        :param pulumi.Input[Union['RadiusServerProfileProtocolArgs', 'RadiusServerProfileProtocolArgsDict', 'outputs.RadiusServerProfileProtocol']] protocol: The RADIUS authentication protocol
         :param pulumi.Input[_builtins.int] retries: The number of RADIUS server retries
-        :param pulumi.Input[Sequence[pulumi.Input[Union['RadiusServerProfileServerArgs', 'RadiusServerProfileServerArgsDict']]]] servers: Server
+        :param pulumi.Input[Sequence[pulumi.Input[Union['RadiusServerProfileServerArgs', 'RadiusServerProfileServerArgsDict', 'outputs.RadiusServerProfileServer']]]] servers: Server
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
                
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
@@ -516,9 +516,9 @@ class RadiusServerProfile(pulumi.CustomResource):
                  device: pulumi.Input[Optional[_builtins.str]] = None,
                  folder: pulumi.Input[Optional[_builtins.str]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
-                 protocol: pulumi.Input[Optional[Union['RadiusServerProfileProtocolArgs', 'RadiusServerProfileProtocolArgsDict']]] = None,
+                 protocol: pulumi.Input[Optional[Union['RadiusServerProfileProtocolArgs', 'RadiusServerProfileProtocolArgsDict', 'outputs.RadiusServerProfileProtocol']]] = None,
                  retries: pulumi.Input[Optional[_builtins.int]] = None,
-                 servers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['RadiusServerProfileServerArgs', 'RadiusServerProfileServerArgsDict']]]]] = None,
+                 servers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['RadiusServerProfileServerArgs', 'RadiusServerProfileServerArgsDict', 'outputs.RadiusServerProfileServer']]]]] = None,
                  snippet: pulumi.Input[Optional[_builtins.str]] = None,
                  timeout: pulumi.Input[Optional[_builtins.int]] = None,
                  __props__=None):
@@ -560,9 +560,9 @@ class RadiusServerProfile(pulumi.CustomResource):
             encrypted_values: pulumi.Input[Optional[Mapping[str, pulumi.Input[_builtins.str]]]] = None,
             folder: pulumi.Input[Optional[_builtins.str]] = None,
             name: pulumi.Input[Optional[_builtins.str]] = None,
-            protocol: pulumi.Input[Optional[Union['RadiusServerProfileProtocolArgs', 'RadiusServerProfileProtocolArgsDict']]] = None,
+            protocol: pulumi.Input[Optional[Union['RadiusServerProfileProtocolArgs', 'RadiusServerProfileProtocolArgsDict', 'outputs.RadiusServerProfileProtocol']]] = None,
             retries: pulumi.Input[Optional[_builtins.int]] = None,
-            servers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['RadiusServerProfileServerArgs', 'RadiusServerProfileServerArgsDict']]]]] = None,
+            servers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['RadiusServerProfileServerArgs', 'RadiusServerProfileServerArgsDict', 'outputs.RadiusServerProfileServer']]]]] = None,
             snippet: pulumi.Input[Optional[_builtins.str]] = None,
             tfid: pulumi.Input[Optional[_builtins.str]] = None,
             timeout: pulumi.Input[Optional[_builtins.int]] = None) -> 'RadiusServerProfile':
@@ -579,9 +579,9 @@ class RadiusServerProfile(pulumi.CustomResource):
                
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] name: The name of the RADIUS server profile
-        :param pulumi.Input[Union['RadiusServerProfileProtocolArgs', 'RadiusServerProfileProtocolArgsDict']] protocol: The RADIUS authentication protocol
+        :param pulumi.Input[Union['RadiusServerProfileProtocolArgs', 'RadiusServerProfileProtocolArgsDict', 'outputs.RadiusServerProfileProtocol']] protocol: The RADIUS authentication protocol
         :param pulumi.Input[_builtins.int] retries: The number of RADIUS server retries
-        :param pulumi.Input[Sequence[pulumi.Input[Union['RadiusServerProfileServerArgs', 'RadiusServerProfileServerArgsDict']]]] servers: Server
+        :param pulumi.Input[Sequence[pulumi.Input[Union['RadiusServerProfileServerArgs', 'RadiusServerProfileServerArgsDict', 'outputs.RadiusServerProfileServer']]]] servers: Server
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
                
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.

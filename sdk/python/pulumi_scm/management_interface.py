@@ -204,7 +204,7 @@ class ManagementInterface(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None,
                  device: pulumi.Input[Optional[_builtins.str]] = None,
                  folder: pulumi.Input[Optional[_builtins.str]] = None,
-                 management_interface: pulumi.Input[Optional[Union['ManagementInterfaceManagementInterfaceArgs', 'ManagementInterfaceManagementInterfaceArgsDict']]] = None,
+                 management_interface: pulumi.Input[Optional[Union['ManagementInterfaceManagementInterfaceArgs', 'ManagementInterfaceManagementInterfaceArgsDict', 'outputs.ManagementInterfaceManagementInterface']]] = None,
                  snippet: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
@@ -305,7 +305,7 @@ class ManagementInterface(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
                
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-        :param pulumi.Input[Union['ManagementInterfaceManagementInterfaceArgs', 'ManagementInterfaceManagementInterfaceArgsDict']] management_interface: Management interface
+        :param pulumi.Input[Union['ManagementInterfaceManagementInterfaceArgs', 'ManagementInterfaceManagementInterfaceArgsDict', 'outputs.ManagementInterfaceManagementInterface']] management_interface: Management interface
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
                
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
@@ -425,7 +425,7 @@ class ManagementInterface(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None,
                  device: pulumi.Input[Optional[_builtins.str]] = None,
                  folder: pulumi.Input[Optional[_builtins.str]] = None,
-                 management_interface: pulumi.Input[Optional[Union['ManagementInterfaceManagementInterfaceArgs', 'ManagementInterfaceManagementInterfaceArgsDict']]] = None,
+                 management_interface: pulumi.Input[Optional[Union['ManagementInterfaceManagementInterfaceArgs', 'ManagementInterfaceManagementInterfaceArgsDict', 'outputs.ManagementInterfaceManagementInterface']]] = None,
                  snippet: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
@@ -453,7 +453,7 @@ class ManagementInterface(pulumi.CustomResource):
             opts: Optional[pulumi.ResourceOptions] = None,
             device: pulumi.Input[Optional[_builtins.str]] = None,
             folder: pulumi.Input[Optional[_builtins.str]] = None,
-            management_interface: pulumi.Input[Optional[Union['ManagementInterfaceManagementInterfaceArgs', 'ManagementInterfaceManagementInterfaceArgsDict']]] = None,
+            management_interface: pulumi.Input[Optional[Union['ManagementInterfaceManagementInterfaceArgs', 'ManagementInterfaceManagementInterfaceArgsDict', 'outputs.ManagementInterfaceManagementInterface']]] = None,
             snippet: pulumi.Input[Optional[_builtins.str]] = None,
             tfid: pulumi.Input[Optional[_builtins.str]] = None) -> 'ManagementInterface':
         """
@@ -467,7 +467,7 @@ class ManagementInterface(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
                
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-        :param pulumi.Input[Union['ManagementInterfaceManagementInterfaceArgs', 'ManagementInterfaceManagementInterfaceArgsDict']] management_interface: Management interface
+        :param pulumi.Input[Union['ManagementInterfaceManagementInterfaceArgs', 'ManagementInterfaceManagementInterfaceArgsDict', 'outputs.ManagementInterfaceManagementInterface']] management_interface: Management interface
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
                
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
