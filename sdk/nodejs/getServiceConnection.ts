@@ -62,10 +62,6 @@ export interface GetServiceConnectionResult {
      */
     readonly backupSc: string;
     /**
-     * Bgp peer
-     */
-    readonly bgpPeer: outputs.GetServiceConnectionBgpPeer;
-    /**
      * Map of sensitive values returned from the API.
      */
     readonly encryptedValues: {[key: string]: string};
@@ -90,11 +86,11 @@ export interface GetServiceConnectionResult {
      */
     readonly natPool: string;
     /**
-     * No export community
+     * No export community. Possible values are `Disabled`, `Enabled-In`, `Enabled-Out` and `Enabled-Both`.
      */
     readonly noExportCommunity: string;
     /**
-     * Onboarding type
+     * Onboarding type. Possible values are `classic`.
      */
     readonly onboardingType: string;
     /**

@@ -21,7 +21,7 @@ public final class GetHipProfileListData {
      */
     private String device;
     /**
-     * @return The folder of the item. Default: Shared.
+     * @return The folder in which the resource is defined
      * 
      */
     private String folder;
@@ -36,12 +36,12 @@ public final class GetHipProfileListData {
      */
     private String match;
     /**
-     * @return The name of the item.
+     * @return The name of the HIP profile
      * 
      */
     private String name;
     /**
-     * @return The snippet of the item.
+     * @return The snippet in which the resource is defined
      * 
      */
     private String snippet;
@@ -67,7 +67,7 @@ public final class GetHipProfileListData {
         return this.device;
     }
     /**
-     * @return The folder of the item. Default: Shared.
+     * @return The folder in which the resource is defined
      * 
      */
     public String folder() {
@@ -88,14 +88,14 @@ public final class GetHipProfileListData {
         return this.match;
     }
     /**
-     * @return The name of the item.
+     * @return The name of the HIP profile
      * 
      */
     public String name() {
         return this.name;
     }
     /**
-     * @return The snippet of the item.
+     * @return The snippet in which the resource is defined
      * 
      */
     public String snippet() {

@@ -14,7 +14,7 @@ import java.util.Objects;
 @CustomType
 public final class GetRouteAccessListTypeIpv4Ipv4Entry {
     /**
-     * @return Action
+     * @return Action. Possible values are `deny` and `permit`.
      * 
      */
     private String action;
@@ -36,7 +36,7 @@ public final class GetRouteAccessListTypeIpv4Ipv4Entry {
 
     private GetRouteAccessListTypeIpv4Ipv4Entry() {}
     /**
-     * @return Action
+     * @return Action. Possible values are `deny` and `permit`.
      * 
      */
     public String action() {

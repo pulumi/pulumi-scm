@@ -35,16 +35,12 @@ public final class ScheduleScheduleTypeArgs extends com.pulumi.resources.Resourc
     /**
      * Recurring
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `nonRecurring` and `recurring`.
-     * 
      */
     @Import(name="recurring")
     private @Nullable Output<ScheduleScheduleTypeRecurringArgs> recurring;
 
     /**
      * @return Recurring
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `nonRecurring` and `recurring`.
      * 
      */
     public Optional<Output<ScheduleScheduleTypeRecurringArgs>> recurring() {
@@ -110,8 +106,6 @@ public final class ScheduleScheduleTypeArgs extends com.pulumi.resources.Resourc
         /**
          * @param recurring Recurring
          * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `nonRecurring` and `recurring`.
-         * 
          * @return builder
          * 
          */
@@ -122,8 +116,6 @@ public final class ScheduleScheduleTypeArgs extends com.pulumi.resources.Resourc
 
         /**
          * @param recurring Recurring
-         * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `nonRecurring` and `recurring`.
          * 
          * @return builder
          * 

@@ -12,7 +12,7 @@ import java.util.Objects;
 @CustomType
 public final class GetForwardingProfileResult {
     /**
-     * @return Enable forwarding rule for forwarding profile
+     * @return Enable forwarding rule for forwarding profile. Possible values are `rules` and `pac-file`.
      * 
      */
     private String definitionMethod;
@@ -22,7 +22,7 @@ public final class GetForwardingProfileResult {
      */
     private String description;
     /**
-     * @return The folder in which the resource is defined
+     * @return The folder in which the resource is defined. Possible values are `Mobile Users`.
      * 
      */
     private String folder;
@@ -49,7 +49,7 @@ public final class GetForwardingProfileResult {
 
     private GetForwardingProfileResult() {}
     /**
-     * @return Enable forwarding rule for forwarding profile
+     * @return Enable forwarding rule for forwarding profile. Possible values are `rules` and `pac-file`.
      * 
      */
     public String definitionMethod() {
@@ -63,7 +63,7 @@ public final class GetForwardingProfileResult {
         return this.description;
     }
     /**
-     * @return The folder in which the resource is defined
+     * @return The folder in which the resource is defined. Possible values are `Mobile Users`.
      * 
      */
     public String folder() {

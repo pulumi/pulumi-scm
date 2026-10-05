@@ -60,10 +60,13 @@ func LookupKerberosServerProfile(ctx *pulumi.Context, args *LookupKerberosServer
 type LookupKerberosServerProfileArgs struct {
 	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
+	// The folder in which the resource is defined
 	Folder *string `pulumi:"folder"`
 	// The UUID of the Kerberos server profile
-	Id      string  `pulumi:"id"`
-	Name    *string `pulumi:"name"`
+	Id string `pulumi:"id"`
+	// The name of the Kerberos server profile
+	Name *string `pulumi:"name"`
+	// The snippet in which the resource is defined
 	Snippet *string `pulumi:"snippet"`
 }
 
@@ -71,13 +74,18 @@ type LookupKerberosServerProfileArgs struct {
 type LookupKerberosServerProfileResult struct {
 	// The device in which the resource is defined
 	Device string `pulumi:"device"`
+	// The folder in which the resource is defined
 	Folder string `pulumi:"folder"`
 	// The UUID of the Kerberos server profile
-	Id      string                           `pulumi:"id"`
-	Name    string                           `pulumi:"name"`
+	Id string `pulumi:"id"`
+	// The name of the Kerberos server profile
+	Name string `pulumi:"name"`
+	// The Kerberos server configuration
 	Servers []GetKerberosServerProfileServer `pulumi:"servers"`
-	Snippet string                           `pulumi:"snippet"`
-	Tfid    string                           `pulumi:"tfid"`
+	// The snippet in which the resource is defined
+	Snippet string `pulumi:"snippet"`
+	// The Terraform ID.
+	Tfid string `pulumi:"tfid"`
 }
 
 func LookupKerberosServerProfileOutput(ctx *pulumi.Context, args LookupKerberosServerProfileOutputArgs, opts ...pulumi.InvokeOption) LookupKerberosServerProfileResultOutput {
@@ -89,10 +97,13 @@ func LookupKerberosServerProfileOutput(ctx *pulumi.Context, args LookupKerberosS
 type LookupKerberosServerProfileOutputArgs struct {
 	// The device in which the resource is defined
 	Device pulumi.StringPtrInput `pulumi:"device"`
+	// The folder in which the resource is defined
 	Folder pulumi.StringPtrInput `pulumi:"folder"`
 	// The UUID of the Kerberos server profile
-	Id      pulumi.StringInput    `pulumi:"id"`
-	Name    pulumi.StringPtrInput `pulumi:"name"`
+	Id pulumi.StringInput `pulumi:"id"`
+	// The name of the Kerberos server profile
+	Name pulumi.StringPtrInput `pulumi:"name"`
+	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrInput `pulumi:"snippet"`
 }
 
@@ -120,6 +131,7 @@ func (o LookupKerberosServerProfileResultOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupKerberosServerProfileResult) string { return v.Device }).(pulumi.StringOutput)
 }
 
+// The folder in which the resource is defined
 func (o LookupKerberosServerProfileResultOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupKerberosServerProfileResult) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -129,18 +141,22 @@ func (o LookupKerberosServerProfileResultOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupKerberosServerProfileResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
+// The name of the Kerberos server profile
 func (o LookupKerberosServerProfileResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupKerberosServerProfileResult) string { return v.Name }).(pulumi.StringOutput)
 }
 
+// The Kerberos server configuration
 func (o LookupKerberosServerProfileResultOutput) Servers() GetKerberosServerProfileServerArrayOutput {
 	return o.ApplyT(func(v LookupKerberosServerProfileResult) []GetKerberosServerProfileServer { return v.Servers }).(GetKerberosServerProfileServerArrayOutput)
 }
 
+// The snippet in which the resource is defined
 func (o LookupKerberosServerProfileResultOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupKerberosServerProfileResult) string { return v.Snippet }).(pulumi.StringOutput)
 }
 
+// The Terraform ID.
 func (o LookupKerberosServerProfileResultOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupKerberosServerProfileResult) string { return v.Tfid }).(pulumi.StringOutput)
 }

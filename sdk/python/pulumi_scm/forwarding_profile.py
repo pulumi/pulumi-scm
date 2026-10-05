@@ -29,9 +29,9 @@ class ForwardingProfileArgs:
         """
         The set of arguments for constructing a ForwardingProfile resource.
 
-        :param pulumi.Input[_builtins.str] definition_method: Enable forwarding rule for forwarding profile
+        :param pulumi.Input[_builtins.str] definition_method: Enable forwarding rule for forwarding profile. Possible values are `rules` and `pac-file`.
         :param pulumi.Input[_builtins.str] description: Forwarding profile description
-        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined. Possible values are `Mobile Users`.
         :param pulumi.Input[_builtins.str] name: forwarding profile name as an alphanumeric string [ 0-9a-zA-Z._ -]
         :param pulumi.Input['ForwardingProfileTypeArgs'] type: Forwarding profile type configuration (PAC file, GlobalProtect proxy, or ZTNA agent)
         """
@@ -50,7 +50,7 @@ class ForwardingProfileArgs:
     @pulumi.getter(name="definitionMethod")
     def definition_method(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
-        Enable forwarding rule for forwarding profile
+        Enable forwarding rule for forwarding profile. Possible values are `rules` and `pac-file`.
         """
         return pulumi.get(self, "definition_method")
 
@@ -74,7 +74,7 @@ class ForwardingProfileArgs:
     @pulumi.getter
     def folder(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
-        The folder in which the resource is defined
+        The folder in which the resource is defined. Possible values are `Mobile Users`.
         """
         return pulumi.get(self, "folder")
 
@@ -119,9 +119,9 @@ class _ForwardingProfileState:
         """
         Input properties used for looking up and filtering ForwardingProfile resources.
 
-        :param pulumi.Input[_builtins.str] definition_method: Enable forwarding rule for forwarding profile
+        :param pulumi.Input[_builtins.str] definition_method: Enable forwarding rule for forwarding profile. Possible values are `rules` and `pac-file`.
         :param pulumi.Input[_builtins.str] description: Forwarding profile description
-        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined. Possible values are `Mobile Users`.
         :param pulumi.Input[_builtins.str] name: forwarding profile name as an alphanumeric string [ 0-9a-zA-Z._ -]
         :param pulumi.Input[_builtins.str] tfid: The Terraform ID.
         :param pulumi.Input['ForwardingProfileTypeArgs'] type: Forwarding profile type configuration (PAC file, GlobalProtect proxy, or ZTNA agent)
@@ -143,7 +143,7 @@ class _ForwardingProfileState:
     @pulumi.getter(name="definitionMethod")
     def definition_method(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
-        Enable forwarding rule for forwarding profile
+        Enable forwarding rule for forwarding profile. Possible values are `rules` and `pac-file`.
         """
         return pulumi.get(self, "definition_method")
 
@@ -167,7 +167,7 @@ class _ForwardingProfileState:
     @pulumi.getter
     def folder(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
-        The folder in which the resource is defined
+        The folder in which the resource is defined. Possible values are `Mobile Users`.
         """
         return pulumi.get(self, "folder")
 
@@ -405,9 +405,9 @@ class ForwardingProfile(pulumi.CustomResource):
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[_builtins.str] definition_method: Enable forwarding rule for forwarding profile
+        :param pulumi.Input[_builtins.str] definition_method: Enable forwarding rule for forwarding profile. Possible values are `rules` and `pac-file`.
         :param pulumi.Input[_builtins.str] description: Forwarding profile description
-        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined. Possible values are `Mobile Users`.
         :param pulumi.Input[_builtins.str] name: forwarding profile name as an alphanumeric string [ 0-9a-zA-Z._ -]
         :param pulumi.Input[Union['ForwardingProfileTypeArgs', 'ForwardingProfileTypeArgsDict', 'outputs.ForwardingProfileType']] type: Forwarding profile type configuration (PAC file, GlobalProtect proxy, or ZTNA agent)
         """
@@ -654,9 +654,9 @@ class ForwardingProfile(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[_builtins.str] definition_method: Enable forwarding rule for forwarding profile
+        :param pulumi.Input[_builtins.str] definition_method: Enable forwarding rule for forwarding profile. Possible values are `rules` and `pac-file`.
         :param pulumi.Input[_builtins.str] description: Forwarding profile description
-        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined. Possible values are `Mobile Users`.
         :param pulumi.Input[_builtins.str] name: forwarding profile name as an alphanumeric string [ 0-9a-zA-Z._ -]
         :param pulumi.Input[_builtins.str] tfid: The Terraform ID.
         :param pulumi.Input[Union['ForwardingProfileTypeArgs', 'ForwardingProfileTypeArgsDict', 'outputs.ForwardingProfileType']] type: Forwarding profile type configuration (PAC file, GlobalProtect proxy, or ZTNA agent)
@@ -677,7 +677,7 @@ class ForwardingProfile(pulumi.CustomResource):
     @pulumi.getter(name="definitionMethod")
     def definition_method(self) -> pulumi.Output[_builtins.str]:
         """
-        Enable forwarding rule for forwarding profile
+        Enable forwarding rule for forwarding profile. Possible values are `rules` and `pac-file`.
         """
         return pulumi.get(self, "definition_method")
 
@@ -693,7 +693,7 @@ class ForwardingProfile(pulumi.CustomResource):
     @pulumi.getter
     def folder(self) -> pulumi.Output[_builtins.str]:
         """
-        The folder in which the resource is defined
+        The folder in which the resource is defined. Possible values are `Mobile Users`.
         """
         return pulumi.get(self, "folder")
 

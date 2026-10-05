@@ -20,32 +20,24 @@ namespace Pulumi.Scm.Inputs
 
         /// <summary>
         /// Five-minute interval settings for IMEI updates
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Daily`, `FiveMinute`, `Hourly`, `Monthly`, and `Weekly`.
         /// </summary>
         [Input("fiveMinute")]
         public Input<Inputs.ExternalDynamicListTypeImeiRecurringFiveMinuteArgs>? FiveMinute { get; set; }
 
         /// <summary>
         /// Hourly interval settings for IMEI updates
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Daily`, `FiveMinute`, `Hourly`, `Monthly`, and `Weekly`.
         /// </summary>
         [Input("hourly")]
         public Input<Inputs.ExternalDynamicListTypeImeiRecurringHourlyArgs>? Hourly { get; set; }
 
         /// <summary>
         /// Monthly interval settings for IMEI updates
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Daily`, `FiveMinute`, `Hourly`, `Monthly`, and `Weekly`.
         /// </summary>
         [Input("monthly")]
         public Input<Inputs.ExternalDynamicListTypeImeiRecurringMonthlyArgs>? Monthly { get; set; }
 
         /// <summary>
         /// Weekly interval settings for IMEI updates
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Daily`, `FiveMinute`, `Hourly`, `Monthly`, and `Weekly`.
         /// </summary>
         [Input("weekly")]
         public Input<Inputs.ExternalDynamicListTypeImeiRecurringWeeklyArgs>? Weekly { get; set; }

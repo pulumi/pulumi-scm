@@ -250,7 +250,7 @@ namespace Pulumi.Scm
     public partial class NatRule : global::Pulumi.CustomResource
     {
         /// <summary>
-        /// Active active device binding
+        /// Active active device binding. Possible values are `Primary`, `Both`, `0` and `1`.
         /// </summary>
         [Output("activeActiveDeviceBinding")]
         public Output<string?> ActiveActiveDeviceBinding { get; private set; } = null!;
@@ -310,13 +310,13 @@ namespace Pulumi.Scm
         public Output<string> Name { get; private set; } = null!;
 
         /// <summary>
-        /// NAT type
+        /// NAT type. Possible values are `Ipv4`, `Nat64` and `Nptv6`.
         /// </summary>
         [Output("natType")]
         public Output<string> NatType { get; private set; } = null!;
 
         /// <summary>
-        /// The relative position of the rule
+        /// The relative position of the rule. Possible values are `Pre` and `Post`.
         /// </summary>
         [Output("position")]
         public Output<string> Position { get; private set; } = null!;
@@ -416,7 +416,7 @@ namespace Pulumi.Scm
     public sealed class NatRuleArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Active active device binding
+        /// Active active device binding. Possible values are `Primary`, `Both`, `0` and `1`.
         /// </summary>
         [Input("activeActiveDeviceBinding")]
         public Input<string>? ActiveActiveDeviceBinding { get; set; }
@@ -488,13 +488,13 @@ namespace Pulumi.Scm
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// NAT type
+        /// NAT type. Possible values are `Ipv4`, `Nat64` and `Nptv6`.
         /// </summary>
         [Input("natType")]
         public Input<string>? NatType { get; set; }
 
         /// <summary>
-        /// The relative position of the rule
+        /// The relative position of the rule. Possible values are `Pre` and `Post`.
         /// </summary>
         [Input("position")]
         public Input<string>? Position { get; set; }
@@ -568,7 +568,7 @@ namespace Pulumi.Scm
     public sealed class NatRuleState : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Active active device binding
+        /// Active active device binding. Possible values are `Primary`, `Both`, `0` and `1`.
         /// </summary>
         [Input("activeActiveDeviceBinding")]
         public Input<string>? ActiveActiveDeviceBinding { get; set; }
@@ -640,13 +640,13 @@ namespace Pulumi.Scm
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// NAT type
+        /// NAT type. Possible values are `Ipv4`, `Nat64` and `Nptv6`.
         /// </summary>
         [Input("natType")]
         public Input<string>? NatType { get; set; }
 
         /// <summary>
-        /// The relative position of the rule
+        /// The relative position of the rule. Possible values are `Pre` and `Post`.
         /// </summary>
         [Input("position")]
         public Input<string>? Position { get; set; }

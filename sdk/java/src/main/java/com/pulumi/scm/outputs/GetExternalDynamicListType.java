@@ -24,42 +24,30 @@ public final class GetExternalDynamicListType {
     /**
      * @return IMEI Configuration settings
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
-     * 
      */
     private GetExternalDynamicListTypeImei imei;
     /**
      * @return IMSI Config for Custom IMSI type
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
      * 
      */
     private GetExternalDynamicListTypeImsi imsi;
     /**
      * @return IP settings for Custom IP type
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
-     * 
      */
     private GetExternalDynamicListTypeIp ip;
     /**
      * @return Predefined IP settings for EDL type
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
      * 
      */
     private GetExternalDynamicListTypePredefinedIp predefinedIp;
     /**
      * @return Predefined URL settings for EDL type
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
-     * 
      */
     private GetExternalDynamicListTypePredefinedUrl predefinedUrl;
     /**
      * @return URL settings for Custom URL type
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
      * 
      */
     private GetExternalDynamicListTypeUrl url;
@@ -75,16 +63,12 @@ public final class GetExternalDynamicListType {
     /**
      * @return IMEI Configuration settings
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
-     * 
      */
     public GetExternalDynamicListTypeImei imei() {
         return this.imei;
     }
     /**
      * @return IMSI Config for Custom IMSI type
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
      * 
      */
     public GetExternalDynamicListTypeImsi imsi() {
@@ -93,16 +77,12 @@ public final class GetExternalDynamicListType {
     /**
      * @return IP settings for Custom IP type
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
-     * 
      */
     public GetExternalDynamicListTypeIp ip() {
         return this.ip;
     }
     /**
      * @return Predefined IP settings for EDL type
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
      * 
      */
     public GetExternalDynamicListTypePredefinedIp predefinedIp() {
@@ -111,16 +91,12 @@ public final class GetExternalDynamicListType {
     /**
      * @return Predefined URL settings for EDL type
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
-     * 
      */
     public GetExternalDynamicListTypePredefinedUrl predefinedUrl() {
         return this.predefinedUrl;
     }
     /**
      * @return URL settings for Custom URL type
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
      * 
      */
     public GetExternalDynamicListTypeUrl url() {

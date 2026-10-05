@@ -54,28 +54,40 @@ func LookupIkeCryptoProfile(ctx *pulumi.Context, args *LookupIkeCryptoProfileArg
 type LookupIkeCryptoProfileArgs struct {
 	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
+	// The folder in which the resource is defined
 	Folder *string `pulumi:"folder"`
 	// UUID of the resource
-	Id      string  `pulumi:"id"`
-	Name    *string `pulumi:"name"`
+	Id string `pulumi:"id"`
+	// Alphanumeric string begin with letter: [0-9a-zA-Z._-]
+	Name *string `pulumi:"name"`
+	// The snippet in which the resource is defined
 	Snippet *string `pulumi:"snippet"`
 }
 
 // A collection of values returned by getIkeCryptoProfile.
 type LookupIkeCryptoProfileResult struct {
+	// IKEv2 SA reauthentication interval equals authetication-multiple * rekey-lifetime; 0 means reauthentication disabled
 	AuthenticationMultiple int `pulumi:"authenticationMultiple"`
 	// The device in which the resource is defined
-	Device      string   `pulumi:"device"`
-	DhGroups    []string `pulumi:"dhGroups"`
+	Device string `pulumi:"device"`
+	// Dh group. Possible values are `group1`, `group2`, `group5`, `group14`, `group19`, `group20`, `group21`, `ml-kem-512`, `ml-kem-768` and `ml-kem-1024`.
+	DhGroups []string `pulumi:"dhGroups"`
+	// Encryption algorithm. Possible values are `des`, `3des`, `aes-128-cbc`, `aes-192-cbc`, `aes-256-cbc`, `aes-128-gcm` and `aes-256-gcm`.
 	Encryptions []string `pulumi:"encryptions"`
-	Folder      string   `pulumi:"folder"`
-	Hashes      []string `pulumi:"hashes"`
+	// The folder in which the resource is defined
+	Folder string `pulumi:"folder"`
+	// Hash. Possible values are `md5`, `sha1`, `sha256`, `sha384`, `sha512` and `non-auth`.
+	Hashes []string `pulumi:"hashes"`
 	// UUID of the resource
-	Id       string                      `pulumi:"id"`
+	Id string `pulumi:"id"`
+	// Ike crypto profile lifetime
 	Lifetime GetIkeCryptoProfileLifetime `pulumi:"lifetime"`
-	Name     string                      `pulumi:"name"`
-	Snippet  string                      `pulumi:"snippet"`
-	Tfid     string                      `pulumi:"tfid"`
+	// Alphanumeric string begin with letter: [0-9a-zA-Z._-]
+	Name string `pulumi:"name"`
+	// The snippet in which the resource is defined
+	Snippet string `pulumi:"snippet"`
+	// The Terraform ID.
+	Tfid string `pulumi:"tfid"`
 }
 
 func LookupIkeCryptoProfileOutput(ctx *pulumi.Context, args LookupIkeCryptoProfileOutputArgs, opts ...pulumi.InvokeOption) LookupIkeCryptoProfileResultOutput {
@@ -87,10 +99,13 @@ func LookupIkeCryptoProfileOutput(ctx *pulumi.Context, args LookupIkeCryptoProfi
 type LookupIkeCryptoProfileOutputArgs struct {
 	// The device in which the resource is defined
 	Device pulumi.StringPtrInput `pulumi:"device"`
+	// The folder in which the resource is defined
 	Folder pulumi.StringPtrInput `pulumi:"folder"`
 	// UUID of the resource
-	Id      pulumi.StringInput    `pulumi:"id"`
-	Name    pulumi.StringPtrInput `pulumi:"name"`
+	Id pulumi.StringInput `pulumi:"id"`
+	// Alphanumeric string begin with letter: [0-9a-zA-Z._-]
+	Name pulumi.StringPtrInput `pulumi:"name"`
+	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrInput `pulumi:"snippet"`
 }
 
@@ -113,6 +128,7 @@ func (o LookupIkeCryptoProfileResultOutput) ToLookupIkeCryptoProfileResultOutput
 	return o
 }
 
+// IKEv2 SA reauthentication interval equals authetication-multiple * rekey-lifetime; 0 means reauthentication disabled
 func (o LookupIkeCryptoProfileResultOutput) AuthenticationMultiple() pulumi.IntOutput {
 	return o.ApplyT(func(v LookupIkeCryptoProfileResult) int { return v.AuthenticationMultiple }).(pulumi.IntOutput)
 }
@@ -122,18 +138,22 @@ func (o LookupIkeCryptoProfileResultOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupIkeCryptoProfileResult) string { return v.Device }).(pulumi.StringOutput)
 }
 
+// Dh group. Possible values are `group1`, `group2`, `group5`, `group14`, `group19`, `group20`, `group21`, `ml-kem-512`, `ml-kem-768` and `ml-kem-1024`.
 func (o LookupIkeCryptoProfileResultOutput) DhGroups() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupIkeCryptoProfileResult) []string { return v.DhGroups }).(pulumi.StringArrayOutput)
 }
 
+// Encryption algorithm. Possible values are `des`, `3des`, `aes-128-cbc`, `aes-192-cbc`, `aes-256-cbc`, `aes-128-gcm` and `aes-256-gcm`.
 func (o LookupIkeCryptoProfileResultOutput) Encryptions() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupIkeCryptoProfileResult) []string { return v.Encryptions }).(pulumi.StringArrayOutput)
 }
 
+// The folder in which the resource is defined
 func (o LookupIkeCryptoProfileResultOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupIkeCryptoProfileResult) string { return v.Folder }).(pulumi.StringOutput)
 }
 
+// Hash. Possible values are `md5`, `sha1`, `sha256`, `sha384`, `sha512` and `non-auth`.
 func (o LookupIkeCryptoProfileResultOutput) Hashes() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupIkeCryptoProfileResult) []string { return v.Hashes }).(pulumi.StringArrayOutput)
 }
@@ -143,18 +163,22 @@ func (o LookupIkeCryptoProfileResultOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupIkeCryptoProfileResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
+// Ike crypto profile lifetime
 func (o LookupIkeCryptoProfileResultOutput) Lifetime() GetIkeCryptoProfileLifetimeOutput {
 	return o.ApplyT(func(v LookupIkeCryptoProfileResult) GetIkeCryptoProfileLifetime { return v.Lifetime }).(GetIkeCryptoProfileLifetimeOutput)
 }
 
+// Alphanumeric string begin with letter: [0-9a-zA-Z._-]
 func (o LookupIkeCryptoProfileResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupIkeCryptoProfileResult) string { return v.Name }).(pulumi.StringOutput)
 }
 
+// The snippet in which the resource is defined
 func (o LookupIkeCryptoProfileResultOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupIkeCryptoProfileResult) string { return v.Snippet }).(pulumi.StringOutput)
 }
 
+// The Terraform ID.
 func (o LookupIkeCryptoProfileResultOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupIkeCryptoProfileResult) string { return v.Tfid }).(pulumi.StringOutput)
 }

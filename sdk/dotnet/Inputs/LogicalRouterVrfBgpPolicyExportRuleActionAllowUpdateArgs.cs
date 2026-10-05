@@ -55,7 +55,7 @@ namespace Pulumi.Scm.Inputs
         public Input<string>? Nexthop { get; set; }
 
         /// <summary>
-        /// Origin
+        /// Origin. Possible values are `Igp`, `Egp` and `Multicast`.
         /// </summary>
         [Input("origin")]
         public Input<string>? Origin { get; set; }

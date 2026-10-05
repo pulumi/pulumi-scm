@@ -17,14 +17,14 @@ public final class EthernetInterfaceLayer2Args extends com.pulumi.resources.Reso
     public static final EthernetInterfaceLayer2Args Empty = new EthernetInterfaceLayer2Args();
 
     /**
-     * LLDP Settings
+     * LLDP settings for the interface
      * 
      */
     @Import(name="lldp")
     private @Nullable Output<EthernetInterfaceLayer2LldpArgs> lldp;
 
     /**
-     * @return LLDP Settings
+     * @return LLDP settings for the interface
      * 
      */
     public Optional<Output<EthernetInterfaceLayer2LldpArgs>> lldp() {
@@ -88,7 +88,7 @@ public final class EthernetInterfaceLayer2Args extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param lldp LLDP Settings
+         * @param lldp LLDP settings for the interface
          * 
          * @return builder
          * 
@@ -99,7 +99,7 @@ public final class EthernetInterfaceLayer2Args extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param lldp LLDP Settings
+         * @param lldp LLDP settings for the interface
          * 
          * @return builder
          * 

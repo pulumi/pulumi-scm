@@ -110,16 +110,12 @@ type DataFilteringProfile struct {
 	// Disable override
 	DisableOverride pulumi.StringPtrOutput `pulumi:"disableOverride"`
 	// The folder in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrOutput `pulumi:"folder"`
 	// The name of the data filtering profile
 	Name pulumi.StringOutput `pulumi:"name"`
 	// Rules
 	Rules DataFilteringProfileRuleArrayOutput `pulumi:"rules"`
 	// The snippet in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
 	// The Terraform ID.
 	Tfid pulumi.StringOutput `pulumi:"tfid"`
@@ -164,16 +160,12 @@ type dataFilteringProfileState struct {
 	// Disable override
 	DisableOverride *string `pulumi:"disableOverride"`
 	// The folder in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// The name of the data filtering profile
 	Name *string `pulumi:"name"`
 	// Rules
 	Rules []DataFilteringProfileRule `pulumi:"rules"`
 	// The snippet in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	// The Terraform ID.
 	Tfid *string `pulumi:"tfid"`
@@ -189,16 +181,12 @@ type DataFilteringProfileState struct {
 	// Disable override
 	DisableOverride pulumi.StringPtrInput
 	// The folder in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// The name of the data filtering profile
 	Name pulumi.StringPtrInput
 	// Rules
 	Rules DataFilteringProfileRuleArrayInput
 	// The snippet in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	// The Terraform ID.
 	Tfid pulumi.StringPtrInput
@@ -218,16 +206,12 @@ type dataFilteringProfileArgs struct {
 	// Disable override
 	DisableOverride *string `pulumi:"disableOverride"`
 	// The folder in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// The name of the data filtering profile
 	Name *string `pulumi:"name"`
 	// Rules
 	Rules []DataFilteringProfileRule `pulumi:"rules"`
 	// The snippet in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 }
 
@@ -242,16 +226,12 @@ type DataFilteringProfileArgs struct {
 	// Disable override
 	DisableOverride pulumi.StringPtrInput
 	// The folder in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// The name of the data filtering profile
 	Name pulumi.StringPtrInput
 	// Rules
 	Rules DataFilteringProfileRuleArrayInput
 	// The snippet in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 }
 
@@ -363,8 +343,6 @@ func (o DataFilteringProfileOutput) DisableOverride() pulumi.StringPtrOutput {
 }
 
 // The folder in which the resource is defined
-//
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o DataFilteringProfileOutput) Folder() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *DataFilteringProfile) pulumi.StringPtrOutput { return v.Folder }).(pulumi.StringPtrOutput)
 }
@@ -380,8 +358,6 @@ func (o DataFilteringProfileOutput) Rules() DataFilteringProfileRuleArrayOutput 
 }
 
 // The snippet in which the resource is defined
-//
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o DataFilteringProfileOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *DataFilteringProfile) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)
 }

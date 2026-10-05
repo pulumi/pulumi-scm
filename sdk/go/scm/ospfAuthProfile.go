@@ -42,22 +42,14 @@ type OspfAuthProfile struct {
 	// Map of sensitive values returned from the API.
 	EncryptedValues pulumi.StringMapOutput `pulumi:"encryptedValues"`
 	// The folder in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrOutput `pulumi:"folder"`
 	// MD5s
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `md5` and `password`.
 	Md5s OspfAuthProfileMd5ArrayOutput `pulumi:"md5s"`
 	// Profile name
 	Name pulumi.StringOutput `pulumi:"name"`
 	// Password
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `md5` and `password`.
 	Password pulumi.StringPtrOutput `pulumi:"password"`
 	// The snippet in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
 	// The Terraform ID.
 	Tfid pulumi.StringOutput `pulumi:"tfid"`
@@ -106,22 +98,14 @@ type ospfAuthProfileState struct {
 	// Map of sensitive values returned from the API.
 	EncryptedValues map[string]string `pulumi:"encryptedValues"`
 	// The folder in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// MD5s
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `md5` and `password`.
 	Md5s []OspfAuthProfileMd5 `pulumi:"md5s"`
 	// Profile name
 	Name *string `pulumi:"name"`
 	// Password
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `md5` and `password`.
 	Password *string `pulumi:"password"`
 	// The snippet in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	// The Terraform ID.
 	Tfid *string `pulumi:"tfid"`
@@ -133,22 +117,14 @@ type OspfAuthProfileState struct {
 	// Map of sensitive values returned from the API.
 	EncryptedValues pulumi.StringMapInput
 	// The folder in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// MD5s
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `md5` and `password`.
 	Md5s OspfAuthProfileMd5ArrayInput
 	// Profile name
 	Name pulumi.StringPtrInput
 	// Password
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `md5` and `password`.
 	Password pulumi.StringPtrInput
 	// The snippet in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	// The Terraform ID.
 	Tfid pulumi.StringPtrInput
@@ -162,22 +138,14 @@ type ospfAuthProfileArgs struct {
 	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
 	// The folder in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// MD5s
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `md5` and `password`.
 	Md5s []OspfAuthProfileMd5 `pulumi:"md5s"`
 	// Profile name
 	Name *string `pulumi:"name"`
 	// Password
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `md5` and `password`.
 	Password *string `pulumi:"password"`
 	// The snippet in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 }
 
@@ -186,22 +154,14 @@ type OspfAuthProfileArgs struct {
 	// The device in which the resource is defined
 	Device pulumi.StringPtrInput
 	// The folder in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// MD5s
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `md5` and `password`.
 	Md5s OspfAuthProfileMd5ArrayInput
 	// Profile name
 	Name pulumi.StringPtrInput
 	// Password
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `md5` and `password`.
 	Password pulumi.StringPtrInput
 	// The snippet in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 }
 
@@ -303,15 +263,11 @@ func (o OspfAuthProfileOutput) EncryptedValues() pulumi.StringMapOutput {
 }
 
 // The folder in which the resource is defined
-//
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o OspfAuthProfileOutput) Folder() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *OspfAuthProfile) pulumi.StringPtrOutput { return v.Folder }).(pulumi.StringPtrOutput)
 }
 
 // MD5s
-//
-// > ℹ️ **Note:** You must specify exactly one of `md5` and `password`.
 func (o OspfAuthProfileOutput) Md5s() OspfAuthProfileMd5ArrayOutput {
 	return o.ApplyT(func(v *OspfAuthProfile) OspfAuthProfileMd5ArrayOutput { return v.Md5s }).(OspfAuthProfileMd5ArrayOutput)
 }
@@ -322,15 +278,11 @@ func (o OspfAuthProfileOutput) Name() pulumi.StringOutput {
 }
 
 // Password
-//
-// > ℹ️ **Note:** You must specify exactly one of `md5` and `password`.
 func (o OspfAuthProfileOutput) Password() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *OspfAuthProfile) pulumi.StringPtrOutput { return v.Password }).(pulumi.StringPtrOutput)
 }
 
 // The snippet in which the resource is defined
-//
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o OspfAuthProfileOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *OspfAuthProfile) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)
 }

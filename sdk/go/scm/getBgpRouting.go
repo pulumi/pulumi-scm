@@ -53,7 +53,7 @@ type LookupBgpRoutingResult struct {
 	AcceptRouteOverSc bool `pulumi:"acceptRouteOverSc"`
 	// Add host route to ike peer
 	AddHostRouteToIkePeer bool `pulumi:"addHostRouteToIkePeer"`
-	// Backbone routing
+	// Backbone routing. Possible values are `no-asymmetric-routing`, `asymmetric-routing-only` and `asymmetric-routing-with-load-share`.
 	BackboneRouting string `pulumi:"backboneRouting"`
 	// Outbound routes for services
 	OutboundRoutesForServices []string `pulumi:"outboundRoutesForServices"`
@@ -95,7 +95,7 @@ func (o LookupBgpRoutingResultOutput) AddHostRouteToIkePeer() pulumi.BoolOutput 
 	return o.ApplyT(func(v LookupBgpRoutingResult) bool { return v.AddHostRouteToIkePeer }).(pulumi.BoolOutput)
 }
 
-// Backbone routing
+// Backbone routing. Possible values are `no-asymmetric-routing`, `asymmetric-routing-only` and `asymmetric-routing-with-load-share`.
 func (o LookupBgpRoutingResultOutput) BackboneRouting() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupBgpRoutingResult) string { return v.BackboneRouting }).(pulumi.StringOutput)
 }

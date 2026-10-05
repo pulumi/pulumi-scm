@@ -22,7 +22,7 @@ public final class GetAntiSpywareSignatureListDataSignatureCombinationTimeAttrib
      */
     private Integer threshold;
     /**
-     * @return Track by
+     * @return Track by. Possible values are `source-and-destination`, `source` and `destination`.
      * 
      */
     private String trackBy;
@@ -43,7 +43,7 @@ public final class GetAntiSpywareSignatureListDataSignatureCombinationTimeAttrib
         return this.threshold;
     }
     /**
-     * @return Track by
+     * @return Track by. Possible values are `source-and-destination`, `source` and `destination`.
      * 
      */
     public String trackBy() {

@@ -41,13 +41,9 @@ class ProfileGroupArgs:
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] dns_securities: Dns security
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] file_blockings: File blocking
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] name: The name of the profile group
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] saas_securities: Saas security
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] spywares: Spyware
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] url_filterings: Url filtering
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] virus_and_wildfire_analyses: Virus and wildfire analysis
@@ -145,8 +141,6 @@ class ProfileGroupArgs:
     def folder(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
-
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
 
@@ -183,8 +177,6 @@ class ProfileGroupArgs:
     def snippet(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
-
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
 
@@ -267,13 +259,9 @@ class _ProfileGroupState:
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] dns_securities: Dns security
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] file_blockings: File blocking
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] name: The name of the profile group
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] saas_securities: Saas security
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] spywares: Spyware
         :param pulumi.Input[_builtins.str] tfid: The Terraform ID.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] url_filterings: Url filtering
@@ -374,8 +362,6 @@ class _ProfileGroupState:
     def folder(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
-
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
 
@@ -412,8 +398,6 @@ class _ProfileGroupState:
     def snippet(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
-
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
 
@@ -536,13 +520,9 @@ class ProfileGroup(pulumi.CustomResource):
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] dns_securities: Dns security
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] file_blockings: File blocking
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] name: The name of the profile group
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] saas_securities: Saas security
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] spywares: Spyware
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] url_filterings: Url filtering
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] virus_and_wildfire_analyses: Virus and wildfire analysis
@@ -668,13 +648,9 @@ class ProfileGroup(pulumi.CustomResource):
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] dns_securities: Dns security
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] file_blockings: File blocking
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] name: The name of the profile group
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] saas_securities: Saas security
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] spywares: Spyware
         :param pulumi.Input[_builtins.str] tfid: The Terraform ID.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] url_filterings: Url filtering
@@ -746,8 +722,6 @@ class ProfileGroup(pulumi.CustomResource):
     def folder(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
-
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
 
@@ -772,8 +746,6 @@ class ProfileGroup(pulumi.CustomResource):
     def snippet(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
-
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
 

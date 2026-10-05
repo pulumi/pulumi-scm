@@ -17,8 +17,6 @@ public final class GetIpsecCryptoProfileListData {
     /**
      * @return Ah
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `ah` and `esp`.
-     * 
      */
     private GetIpsecCryptoProfileListDataAh ah;
     /**
@@ -27,19 +25,17 @@ public final class GetIpsecCryptoProfileListData {
      */
     private String device;
     /**
-     * @return phase-2 DH group (PFS DH group)
+     * @return phase-2 DH group (PFS DH group). Possible values are `no-pfs`, `group1`, `group2`, `group5`, `group14`, `group19`, `group20`, `group21`, `ml-kem-512`, `ml-kem-768` and `ml-kem-1024`.
      * 
      */
     private String dhGroup;
     /**
      * @return Esp
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `ah` and `esp`.
-     * 
      */
     private GetIpsecCryptoProfileListDataEsp esp;
     /**
-     * @return The folder of the item. Default: Shared.
+     * @return The folder in which the resource is defined
      * 
      */
     private String folder;
@@ -59,12 +55,12 @@ public final class GetIpsecCryptoProfileListData {
      */
     private GetIpsecCryptoProfileListDataLifetime lifetime;
     /**
-     * @return The name of the item.
+     * @return Alphanumeric string begin with letter: [0-9a-zA-Z._-]
      * 
      */
     private String name;
     /**
-     * @return The snippet of the item.
+     * @return The snippet in which the resource is defined
      * 
      */
     private String snippet;
@@ -78,8 +74,6 @@ public final class GetIpsecCryptoProfileListData {
     /**
      * @return Ah
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `ah` and `esp`.
-     * 
      */
     public GetIpsecCryptoProfileListDataAh ah() {
         return this.ah;
@@ -92,7 +86,7 @@ public final class GetIpsecCryptoProfileListData {
         return this.device;
     }
     /**
-     * @return phase-2 DH group (PFS DH group)
+     * @return phase-2 DH group (PFS DH group). Possible values are `no-pfs`, `group1`, `group2`, `group5`, `group14`, `group19`, `group20`, `group21`, `ml-kem-512`, `ml-kem-768` and `ml-kem-1024`.
      * 
      */
     public String dhGroup() {
@@ -101,14 +95,12 @@ public final class GetIpsecCryptoProfileListData {
     /**
      * @return Esp
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `ah` and `esp`.
-     * 
      */
     public GetIpsecCryptoProfileListDataEsp esp() {
         return this.esp;
     }
     /**
-     * @return The folder of the item. Default: Shared.
+     * @return The folder in which the resource is defined
      * 
      */
     public String folder() {
@@ -136,14 +128,14 @@ public final class GetIpsecCryptoProfileListData {
         return this.lifetime;
     }
     /**
-     * @return The name of the item.
+     * @return Alphanumeric string begin with letter: [0-9a-zA-Z._-]
      * 
      */
     public String name() {
         return this.name;
     }
     /**
-     * @return The snippet of the item.
+     * @return The snippet in which the resource is defined
      * 
      */
     public String snippet() {

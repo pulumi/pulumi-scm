@@ -17,15 +17,35 @@ public final class GetKerberosServerProfileResult {
      * 
      */
     private String device;
+    /**
+     * @return The folder in which the resource is defined
+     * 
+     */
     private String folder;
     /**
      * @return The UUID of the Kerberos server profile
      * 
      */
     private String id;
+    /**
+     * @return The name of the Kerberos server profile
+     * 
+     */
     private String name;
+    /**
+     * @return The Kerberos server configuration
+     * 
+     */
     private List<GetKerberosServerProfileServer> servers;
+    /**
+     * @return The snippet in which the resource is defined
+     * 
+     */
     private String snippet;
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     private String tfid;
 
     private GetKerberosServerProfileResult() {}
@@ -36,6 +56,10 @@ public final class GetKerberosServerProfileResult {
     public String device() {
         return this.device;
     }
+    /**
+     * @return The folder in which the resource is defined
+     * 
+     */
     public String folder() {
         return this.folder;
     }
@@ -46,15 +70,31 @@ public final class GetKerberosServerProfileResult {
     public String id() {
         return this.id;
     }
+    /**
+     * @return The name of the Kerberos server profile
+     * 
+     */
     public String name() {
         return this.name;
     }
+    /**
+     * @return The Kerberos server configuration
+     * 
+     */
     public List<GetKerberosServerProfileServer> servers() {
         return this.servers;
     }
+    /**
+     * @return The snippet in which the resource is defined
+     * 
+     */
     public String snippet() {
         return this.snippet;
     }
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     public String tfid() {
         return this.tfid;
     }

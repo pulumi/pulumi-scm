@@ -148,8 +148,6 @@ export class QosPolicyRule extends pulumi.CustomResource {
     declare public readonly dscpTos: pulumi.Output<outputs.QosPolicyRuleDscpTos | undefined>;
     /**
      * The folder in which the resource is defined
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly folder: pulumi.Output<string | undefined>;
     /**
@@ -157,7 +155,7 @@ export class QosPolicyRule extends pulumi.CustomResource {
      */
     declare public readonly name: pulumi.Output<string>;
     /**
-     * The relative position of the rule
+     * The relative position of the rule. Possible values are `pre` and `post`.
      */
     declare public readonly position: pulumi.Output<string>;
     /**
@@ -170,12 +168,10 @@ export class QosPolicyRule extends pulumi.CustomResource {
     declare public readonly schedule: pulumi.Output<string | undefined>;
     /**
      * The snippet in which the resource is defined
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly snippet: pulumi.Output<string | undefined>;
     /**
-     * The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `"before"` or `"after"`.
+     * UUID of the rule to position this rule relative to. Required when `relativePosition` is `"before"` or `"after"`.
      */
     declare public readonly targetRule: pulumi.Output<string | undefined>;
     /**
@@ -253,8 +249,6 @@ export interface QosPolicyRuleState {
     dscpTos?: pulumi.Input<inputs.QosPolicyRuleDscpTos | undefined>;
     /**
      * The folder in which the resource is defined
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     folder?: pulumi.Input<string | undefined>;
     /**
@@ -262,7 +256,7 @@ export interface QosPolicyRuleState {
      */
     name?: pulumi.Input<string | undefined>;
     /**
-     * The relative position of the rule
+     * The relative position of the rule. Possible values are `pre` and `post`.
      */
     position?: pulumi.Input<string | undefined>;
     /**
@@ -275,12 +269,10 @@ export interface QosPolicyRuleState {
     schedule?: pulumi.Input<string | undefined>;
     /**
      * The snippet in which the resource is defined
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     snippet?: pulumi.Input<string | undefined>;
     /**
-     * The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `"before"` or `"after"`.
+     * UUID of the rule to position this rule relative to. Required when `relativePosition` is `"before"` or `"after"`.
      */
     targetRule?: pulumi.Input<string | undefined>;
     /**
@@ -311,8 +303,6 @@ export interface QosPolicyRuleArgs {
     dscpTos?: pulumi.Input<inputs.QosPolicyRuleDscpTos | undefined>;
     /**
      * The folder in which the resource is defined
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     folder?: pulumi.Input<string | undefined>;
     /**
@@ -320,7 +310,7 @@ export interface QosPolicyRuleArgs {
      */
     name?: pulumi.Input<string | undefined>;
     /**
-     * The relative position of the rule
+     * The relative position of the rule. Possible values are `pre` and `post`.
      */
     position?: pulumi.Input<string | undefined>;
     /**
@@ -333,12 +323,10 @@ export interface QosPolicyRuleArgs {
     schedule?: pulumi.Input<string | undefined>;
     /**
      * The snippet in which the resource is defined
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     snippet?: pulumi.Input<string | undefined>;
     /**
-     * The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `"before"` or `"after"`.
+     * UUID of the rule to position this rule relative to. Required when `relativePosition` is `"before"` or `"after"`.
      */
     targetRule?: pulumi.Input<string | undefined>;
 }

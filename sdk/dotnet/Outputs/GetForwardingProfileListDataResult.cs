@@ -14,7 +14,7 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetForwardingProfileListDataResult
     {
         /// <summary>
-        /// Enable forwarding rule for forwarding profile
+        /// Enable forwarding rule for forwarding profile. Possible values are `Rules` and `pac-file`.
         /// </summary>
         public readonly string DefinitionMethod;
         /// <summary>
@@ -22,7 +22,7 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly string Description;
         /// <summary>
-        /// The folder in which the resource is defined
+        /// The folder in which the resource is defined. Possible values are `Mobile Users`.
         /// </summary>
         public readonly string Folder;
         /// <summary>

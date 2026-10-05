@@ -227,14 +227,14 @@ public final class DecryptionProfileSslProtocolSettingsArgs extends com.pulumi.r
     }
 
     /**
-     * Max version
+     * Max version. Possible values are `sslv3`, `tls1-0`, `tls1-1`, `tls1-2`, `tls1-3` and `max`.
      * 
      */
     @Import(name="maxVersion")
     private @Nullable Output<String> maxVersion;
 
     /**
-     * @return Max version
+     * @return Max version. Possible values are `sslv3`, `tls1-0`, `tls1-1`, `tls1-2`, `tls1-3` and `max`.
      * 
      */
     public Optional<Output<String>> maxVersion() {
@@ -242,14 +242,14 @@ public final class DecryptionProfileSslProtocolSettingsArgs extends com.pulumi.r
     }
 
     /**
-     * Min version
+     * Min version. Possible values are `sslv3`, `tls1-0`, `tls1-1`, `tls1-2` and `tls1-3`.
      * 
      */
     @Import(name="minVersion")
     private @Nullable Output<String> minVersion;
 
     /**
-     * @return Min version
+     * @return Min version. Possible values are `sslv3`, `tls1-0`, `tls1-1`, `tls1-2` and `tls1-3`.
      * 
      */
     public Optional<Output<String>> minVersion() {
@@ -590,7 +590,7 @@ public final class DecryptionProfileSslProtocolSettingsArgs extends com.pulumi.r
         }
 
         /**
-         * @param maxVersion Max version
+         * @param maxVersion Max version. Possible values are `sslv3`, `tls1-0`, `tls1-1`, `tls1-2`, `tls1-3` and `max`.
          * 
          * @return builder
          * 
@@ -601,7 +601,7 @@ public final class DecryptionProfileSslProtocolSettingsArgs extends com.pulumi.r
         }
 
         /**
-         * @param maxVersion Max version
+         * @param maxVersion Max version. Possible values are `sslv3`, `tls1-0`, `tls1-1`, `tls1-2`, `tls1-3` and `max`.
          * 
          * @return builder
          * 
@@ -611,7 +611,7 @@ public final class DecryptionProfileSslProtocolSettingsArgs extends com.pulumi.r
         }
 
         /**
-         * @param minVersion Min version
+         * @param minVersion Min version. Possible values are `sslv3`, `tls1-0`, `tls1-1`, `tls1-2` and `tls1-3`.
          * 
          * @return builder
          * 
@@ -622,7 +622,7 @@ public final class DecryptionProfileSslProtocolSettingsArgs extends com.pulumi.r
         }
 
         /**
-         * @param minVersion Min version
+         * @param minVersion Min version. Possible values are `sslv3`, `tls1-0`, `tls1-1`, `tls1-2` and `tls1-3`.
          * 
          * @return builder
          * 

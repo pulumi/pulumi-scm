@@ -47,14 +47,14 @@ public final class HttpHeaderProfileHttpHeaderInsertionTypeArgs extends com.pulu
     }
 
     /**
-     * The HTTP header insertion type
+     * The HTTP header insertion type. Possible values are `Custom`, `Dropbox Network Control`, `Dynamic Fields`, `Google Apps Access Control`, `Microsoft Office365 Tenant Restrictions` and `Youtube Safe Search`.
      * 
      */
     @Import(name="name", required=true)
     private Output<String> name;
 
     /**
-     * @return The HTTP header insertion type
+     * @return The HTTP header insertion type. Possible values are `Custom`, `Dropbox Network Control`, `Dynamic Fields`, `Google Apps Access Control`, `Microsoft Office365 Tenant Restrictions` and `Youtube Safe Search`.
      * 
      */
     public Output<String> name() {
@@ -150,7 +150,7 @@ public final class HttpHeaderProfileHttpHeaderInsertionTypeArgs extends com.pulu
         }
 
         /**
-         * @param name The HTTP header insertion type
+         * @param name The HTTP header insertion type. Possible values are `Custom`, `Dropbox Network Control`, `Dynamic Fields`, `Google Apps Access Control`, `Microsoft Office365 Tenant Restrictions` and `Youtube Safe Search`.
          * 
          * @return builder
          * 
@@ -161,7 +161,7 @@ public final class HttpHeaderProfileHttpHeaderInsertionTypeArgs extends com.pulu
         }
 
         /**
-         * @param name The HTTP header insertion type
+         * @param name The HTTP header insertion type. Possible values are `Custom`, `Dropbox Network Control`, `Dynamic Fields`, `Google Apps Access Control`, `Microsoft Office365 Tenant Restrictions` and `Youtube Safe Search`.
          * 
          * @return builder
          * 

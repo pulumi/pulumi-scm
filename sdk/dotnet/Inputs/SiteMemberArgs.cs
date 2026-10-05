@@ -19,7 +19,7 @@ namespace Pulumi.Scm.Inputs
         public Input<string>? Id { get; set; }
 
         /// <summary>
-        /// The mode of the remote network
+        /// The mode of the remote network. Possible values are `Active` and `Backup`.
         /// </summary>
         [Input("mode", required: true)]
         public Input<string> Mode { get; set; } = null!;

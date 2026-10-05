@@ -18,12 +18,12 @@ public final class QosProfileClassBandwidthTypePercentageClass {
      */
     private @Nullable QosProfileClassBandwidthTypePercentageClassClassBandwidth classBandwidth;
     /**
-     * @return Traffic class
+     * @return Traffic class. Possible values are `class1`, `class2`, `class3`, `class4`, `class5`, `class6`, `class7` and `class8`.
      * 
      */
     private @Nullable String name;
     /**
-     * @return traffic class priority
+     * @return traffic class priority. Possible values are `real-time`, `high`, `medium` and `low`.
      * 
      */
     private @Nullable String priority;
@@ -37,14 +37,14 @@ public final class QosProfileClassBandwidthTypePercentageClass {
         return Optional.ofNullable(this.classBandwidth);
     }
     /**
-     * @return Traffic class
+     * @return Traffic class. Possible values are `class1`, `class2`, `class3`, `class4`, `class5`, `class6`, `class7` and `class8`.
      * 
      */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * @return traffic class priority
+     * @return traffic class priority. Possible values are `real-time`, `high`, `medium` and `low`.
      * 
      */
     public Optional<String> priority() {

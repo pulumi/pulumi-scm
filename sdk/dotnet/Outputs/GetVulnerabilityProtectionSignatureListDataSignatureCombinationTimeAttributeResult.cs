@@ -22,7 +22,7 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly int Threshold;
         /// <summary>
-        /// Track by
+        /// Track by. Possible values are `source-and-destination`, `Source` and `Destination`.
         /// </summary>
         public readonly string TrackBy;
 

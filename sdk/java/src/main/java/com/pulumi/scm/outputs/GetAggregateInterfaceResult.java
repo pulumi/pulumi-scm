@@ -12,29 +12,69 @@ import java.util.Objects;
 
 @CustomType
 public final class GetAggregateInterfaceResult {
+    /**
+     * @return Aggregate interface description
+     * 
+     */
     private String comment;
+    /**
+     * @return Default interface assignment
+     * 
+     */
     private String defaultValue;
     /**
      * @return The device in which the resource is defined
      * 
      */
     private String device;
+    /**
+     * @return The folder in which the resource is defined
+     * 
+     */
     private String folder;
     /**
      * @return UUID of the resource
      * 
      */
     private String id;
+    /**
+     * @return Layer2
+     * 
+     */
     private GetAggregateInterfaceLayer2 layer2;
+    /**
+     * @return Aggregate Interface Layer 3 configuration
+     * 
+     */
     private GetAggregateInterfaceLayer3 layer3;
+    /**
+     * @return Aggregate interface name
+     * 
+     */
     private String name;
+    /**
+     * @return The snippet in which the resource is defined
+     * 
+     */
     private String snippet;
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     private String tfid;
 
     private GetAggregateInterfaceResult() {}
+    /**
+     * @return Aggregate interface description
+     * 
+     */
     public String comment() {
         return this.comment;
     }
+    /**
+     * @return Default interface assignment
+     * 
+     */
     public String defaultValue() {
         return this.defaultValue;
     }
@@ -45,6 +85,10 @@ public final class GetAggregateInterfaceResult {
     public String device() {
         return this.device;
     }
+    /**
+     * @return The folder in which the resource is defined
+     * 
+     */
     public String folder() {
         return this.folder;
     }
@@ -55,18 +99,38 @@ public final class GetAggregateInterfaceResult {
     public String id() {
         return this.id;
     }
+    /**
+     * @return Layer2
+     * 
+     */
     public GetAggregateInterfaceLayer2 layer2() {
         return this.layer2;
     }
+    /**
+     * @return Aggregate Interface Layer 3 configuration
+     * 
+     */
     public GetAggregateInterfaceLayer3 layer3() {
         return this.layer3;
     }
+    /**
+     * @return Aggregate interface name
+     * 
+     */
     public String name() {
         return this.name;
     }
+    /**
+     * @return The snippet in which the resource is defined
+     * 
+     */
     public String snippet() {
         return this.snippet;
     }
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     public String tfid() {
         return this.tfid;
     }

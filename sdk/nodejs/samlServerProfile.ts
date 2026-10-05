@@ -111,8 +111,6 @@ export class SamlServerProfile extends pulumi.CustomResource {
     declare public readonly entityId: pulumi.Output<string>;
     /**
      * The folder in which the resource is defined
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly folder: pulumi.Output<string | undefined>;
     /**
@@ -124,7 +122,7 @@ export class SamlServerProfile extends pulumi.CustomResource {
      */
     declare public readonly name: pulumi.Output<string>;
     /**
-     * SAML HTTP binding for SLO requests to the identity provider
+     * SAML HTTP binding for SLO requests to the identity provider. Possible values are `post` and `redirect`.
      */
     declare public readonly sloBindings: pulumi.Output<string | undefined>;
     /**
@@ -133,12 +131,10 @@ export class SamlServerProfile extends pulumi.CustomResource {
     declare public readonly sloUrl: pulumi.Output<string | undefined>;
     /**
      * The snippet in which the resource is defined
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly snippet: pulumi.Output<string | undefined>;
     /**
-     * SAML HTTP binding for SSO requests to the identity provider
+     * SAML HTTP binding for SSO requests to the identity provider. Possible values are `post` and `redirect`.
      */
     declare public readonly ssoBindings: pulumi.Output<string>;
     /**
@@ -237,8 +233,6 @@ export interface SamlServerProfileState {
     entityId?: pulumi.Input<string | undefined>;
     /**
      * The folder in which the resource is defined
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     folder?: pulumi.Input<string | undefined>;
     /**
@@ -250,7 +244,7 @@ export interface SamlServerProfileState {
      */
     name?: pulumi.Input<string | undefined>;
     /**
-     * SAML HTTP binding for SLO requests to the identity provider
+     * SAML HTTP binding for SLO requests to the identity provider. Possible values are `post` and `redirect`.
      */
     sloBindings?: pulumi.Input<string | undefined>;
     /**
@@ -259,12 +253,10 @@ export interface SamlServerProfileState {
     sloUrl?: pulumi.Input<string | undefined>;
     /**
      * The snippet in which the resource is defined
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     snippet?: pulumi.Input<string | undefined>;
     /**
-     * SAML HTTP binding for SSO requests to the identity provider
+     * SAML HTTP binding for SSO requests to the identity provider. Possible values are `post` and `redirect`.
      */
     ssoBindings?: pulumi.Input<string | undefined>;
     /**
@@ -303,8 +295,6 @@ export interface SamlServerProfileArgs {
     entityId: pulumi.Input<string>;
     /**
      * The folder in which the resource is defined
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     folder?: pulumi.Input<string | undefined>;
     /**
@@ -316,7 +306,7 @@ export interface SamlServerProfileArgs {
      */
     name?: pulumi.Input<string | undefined>;
     /**
-     * SAML HTTP binding for SLO requests to the identity provider
+     * SAML HTTP binding for SLO requests to the identity provider. Possible values are `post` and `redirect`.
      */
     sloBindings?: pulumi.Input<string | undefined>;
     /**
@@ -325,12 +315,10 @@ export interface SamlServerProfileArgs {
     sloUrl?: pulumi.Input<string | undefined>;
     /**
      * The snippet in which the resource is defined
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     snippet?: pulumi.Input<string | undefined>;
     /**
-     * SAML HTTP binding for SSO requests to the identity provider
+     * SAML HTTP binding for SSO requests to the identity provider. Possible values are `post` and `redirect`.
      */
     ssoBindings: pulumi.Input<string>;
     /**

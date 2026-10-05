@@ -19,8 +19,6 @@ namespace Pulumi.Scm.Outputs
         public readonly int? Occurrence;
         /// <summary>
         /// Origin
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Occurrence` and `Origin`.
         /// </summary>
         public readonly Outputs.BgpAddressFamilyProfileIpv4MulticastAllowasInOrigin? Origin;
 

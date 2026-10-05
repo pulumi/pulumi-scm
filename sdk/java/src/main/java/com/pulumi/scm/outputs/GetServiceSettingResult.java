@@ -17,15 +17,35 @@ public final class GetServiceSettingResult {
      * 
      */
     private String device;
+    /**
+     * @return Map of sensitive values returned from the API.
+     * 
+     */
     private Map<String,String> encryptedValues;
+    /**
+     * @return The folder in which the resource is defined
+     * 
+     */
     private String folder;
     /**
      * @return UUID of the resource
      * 
      */
     private String id;
+    /**
+     * @return Services
+     * 
+     */
     private GetServiceSettingServices services;
+    /**
+     * @return The snippet in which the resource is defined
+     * 
+     */
     private String snippet;
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     private String tfid;
 
     private GetServiceSettingResult() {}
@@ -36,9 +56,17 @@ public final class GetServiceSettingResult {
     public String device() {
         return this.device;
     }
+    /**
+     * @return Map of sensitive values returned from the API.
+     * 
+     */
     public Map<String,String> encryptedValues() {
         return this.encryptedValues;
     }
+    /**
+     * @return The folder in which the resource is defined
+     * 
+     */
     public String folder() {
         return this.folder;
     }
@@ -49,12 +77,24 @@ public final class GetServiceSettingResult {
     public String id() {
         return this.id;
     }
+    /**
+     * @return Services
+     * 
+     */
     public GetServiceSettingServices services() {
         return this.services;
     }
+    /**
+     * @return The snippet in which the resource is defined
+     * 
+     */
     public String snippet() {
         return this.snippet;
     }
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     public String tfid() {
         return this.tfid;
     }

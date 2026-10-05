@@ -12,6 +12,47 @@ namespace Pulumi.Scm
     /// <summary>
     /// RouteAccessList resource
     /// 
+    /// ## Example Usage
+    /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Scm = Pulumi.Scm;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Scm.RouteAccessList("example", new()
+    ///     {
+    ///         Folder = "ngfw-shared",
+    ///         Name = "EXAMPLE-ACL",
+    ///         Type = new Scm.Inputs.RouteAccessListTypeArgs
+    ///         {
+    ///             Ipv4 = new Scm.Inputs.RouteAccessListTypeIpv4Args
+    ///             {
+    ///                 Ipv4Entries = new[]
+    ///                 {
+    ///                     new Scm.Inputs.RouteAccessListTypeIpv4Ipv4EntryArgs
+    ///                     {
+    ///                         Name = 10,
+    ///                         Action = "permit",
+    ///                         DestinationAddress = new Scm.Inputs.RouteAccessListTypeIpv4Ipv4EntryDestinationAddressArgs
+    ///                         {
+    ///                             Entry = new Scm.Inputs.RouteAccessListTypeIpv4Ipv4EntryDestinationAddressEntryArgs
+    ///                             {
+    ///                                 Address = "10.0.0.0",
+    ///                                 Wildcard = "0.0.0.7",
+    ///                             },
+    ///                         },
+    ///                     },
+    ///                 },
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// The following command can be used to import a resource not managed by Terraform:
@@ -51,8 +92,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The folder in which the resource is defined
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Output("folder")]
         public Output<string?> Folder { get; private set; } = null!;
@@ -65,8 +104,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The snippet in which the resource is defined
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Output("snippet")]
         public Output<string?> Snippet { get; private set; } = null!;
@@ -143,8 +180,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The folder in which the resource is defined
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("folder")]
         public Input<string>? Folder { get; set; }
@@ -157,8 +192,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The snippet in which the resource is defined
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("snippet")]
         public Input<string>? Snippet { get; set; }
@@ -191,8 +224,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The folder in which the resource is defined
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("folder")]
         public Input<string>? Folder { get; set; }
@@ -205,8 +236,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The snippet in which the resource is defined
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("snippet")]
         public Input<string>? Snippet { get; set; }

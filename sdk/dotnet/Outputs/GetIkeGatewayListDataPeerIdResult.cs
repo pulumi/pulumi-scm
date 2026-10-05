@@ -18,7 +18,7 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly string Id;
         /// <summary>
-        /// Type
+        /// Type. Possible values are `Ipaddr`, `Keyid`, `Fqdn` and `Ufqdn`.
         /// </summary>
         public readonly string Type;
 

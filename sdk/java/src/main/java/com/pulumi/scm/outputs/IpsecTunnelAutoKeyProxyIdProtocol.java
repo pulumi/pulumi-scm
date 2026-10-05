@@ -21,14 +21,10 @@ public final class IpsecTunnelAutoKeyProxyIdProtocol {
     /**
      * @return IPv4 type of proxyId protocol values for TCP protocol
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `number`, `tcp`, and `udp`.
-     * 
      */
     private @Nullable IpsecTunnelAutoKeyProxyIdProtocolTcp tcp;
     /**
      * @return IPv6 type of proxyId protocol values for UDP protocol
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `number`, `tcp`, and `udp`.
      * 
      */
     private @Nullable IpsecTunnelAutoKeyProxyIdProtocolUdp udp;
@@ -44,16 +40,12 @@ public final class IpsecTunnelAutoKeyProxyIdProtocol {
     /**
      * @return IPv4 type of proxyId protocol values for TCP protocol
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `number`, `tcp`, and `udp`.
-     * 
      */
     public Optional<IpsecTunnelAutoKeyProxyIdProtocolTcp> tcp() {
         return Optional.ofNullable(this.tcp);
     }
     /**
      * @return IPv6 type of proxyId protocol values for UDP protocol
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `number`, `tcp`, and `udp`.
      * 
      */
     public Optional<IpsecTunnelAutoKeyProxyIdProtocolUdp> udp() {

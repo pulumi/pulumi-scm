@@ -65,16 +65,12 @@ public final class AggregateInterfaceArgs extends com.pulumi.resources.ResourceA
     /**
      * The folder in which the resource is defined
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
      */
     @Import(name="folder")
     private @Nullable Output<String> folder;
 
     /**
      * @return The folder in which the resource is defined
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public Optional<Output<String>> folder() {
@@ -84,16 +80,12 @@ public final class AggregateInterfaceArgs extends com.pulumi.resources.ResourceA
     /**
      * Layer2
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `layer2` and `layer3`.
-     * 
      */
     @Import(name="layer2")
     private @Nullable Output<AggregateInterfaceLayer2Args> layer2;
 
     /**
      * @return Layer2
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `layer2` and `layer3`.
      * 
      */
     public Optional<Output<AggregateInterfaceLayer2Args>> layer2() {
@@ -103,16 +95,12 @@ public final class AggregateInterfaceArgs extends com.pulumi.resources.ResourceA
     /**
      * Aggregate Interface Layer 3 configuration
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `layer2` and `layer3`.
-     * 
      */
     @Import(name="layer3")
     private @Nullable Output<AggregateInterfaceLayer3Args> layer3;
 
     /**
      * @return Aggregate Interface Layer 3 configuration
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `layer2` and `layer3`.
      * 
      */
     public Optional<Output<AggregateInterfaceLayer3Args>> layer3() {
@@ -137,16 +125,12 @@ public final class AggregateInterfaceArgs extends com.pulumi.resources.ResourceA
     /**
      * The snippet in which the resource is defined
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
      */
     @Import(name="snippet")
     private @Nullable Output<String> snippet;
 
     /**
      * @return The snippet in which the resource is defined
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public Optional<Output<String>> snippet() {
@@ -250,8 +234,6 @@ public final class AggregateInterfaceArgs extends com.pulumi.resources.ResourceA
         /**
          * @param folder The folder in which the resource is defined
          * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-         * 
          * @return builder
          * 
          */
@@ -263,8 +245,6 @@ public final class AggregateInterfaceArgs extends com.pulumi.resources.ResourceA
         /**
          * @param folder The folder in which the resource is defined
          * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-         * 
          * @return builder
          * 
          */
@@ -274,8 +254,6 @@ public final class AggregateInterfaceArgs extends com.pulumi.resources.ResourceA
 
         /**
          * @param layer2 Layer2
-         * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `layer2` and `layer3`.
          * 
          * @return builder
          * 
@@ -288,8 +266,6 @@ public final class AggregateInterfaceArgs extends com.pulumi.resources.ResourceA
         /**
          * @param layer2 Layer2
          * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `layer2` and `layer3`.
-         * 
          * @return builder
          * 
          */
@@ -299,8 +275,6 @@ public final class AggregateInterfaceArgs extends com.pulumi.resources.ResourceA
 
         /**
          * @param layer3 Aggregate Interface Layer 3 configuration
-         * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `layer2` and `layer3`.
          * 
          * @return builder
          * 
@@ -312,8 +286,6 @@ public final class AggregateInterfaceArgs extends com.pulumi.resources.ResourceA
 
         /**
          * @param layer3 Aggregate Interface Layer 3 configuration
-         * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `layer2` and `layer3`.
          * 
          * @return builder
          * 
@@ -346,8 +318,6 @@ public final class AggregateInterfaceArgs extends com.pulumi.resources.ResourceA
         /**
          * @param snippet The snippet in which the resource is defined
          * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-         * 
          * @return builder
          * 
          */
@@ -358,8 +328,6 @@ public final class AggregateInterfaceArgs extends com.pulumi.resources.ResourceA
 
         /**
          * @param snippet The snippet in which the resource is defined
-         * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
          * 
          * @return builder
          * 

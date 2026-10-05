@@ -61,8 +61,6 @@ class AuthenticationRuleArgs:
         :param pulumi.Input[_builtins.str] device: Device
         :param pulumi.Input[_builtins.bool] disabled: Is the authentication rule disabled?
         :param pulumi.Input[_builtins.str] folder: Folder
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] group_tag: Group tag
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] hip_profiles: The source Host Integrity Profile (HIP)
         :param pulumi.Input[_builtins.bool] log_authentication_timeout: Log authentication timeouts?
@@ -70,15 +68,13 @@ class AuthenticationRuleArgs:
         :param pulumi.Input[_builtins.str] name: The name of the authentication rule
         :param pulumi.Input[_builtins.bool] negate_destination: Are the destination addresses negated?
         :param pulumi.Input[_builtins.bool] negate_source: Are the source addresses negated?
-        :param pulumi.Input[_builtins.str] position: The relative position of the rule
+        :param pulumi.Input[_builtins.str] position: The relative position of the rule. Possible values are `pre` and `post`.
         :param pulumi.Input[_builtins.str] relative_position: Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
         :param pulumi.Input[_builtins.str] snippet: Snippet
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] source_hips: The source Host Integrity Profile (HIP)
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] source_users: The source users
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tags: The authentication rule tags
-        :param pulumi.Input[_builtins.str] target_rule: The name or UUID of the rule to position this rule relative to. Required when `relative_position` is `"before"` or `"after"`.
+        :param pulumi.Input[_builtins.str] target_rule: UUID of the rule to position this rule relative to. Required when `relative_position` is `"before"` or `"after"`.
         :param pulumi.Input[_builtins.int] timeout: The authentication session timeout (seconds)
         """
         pulumi.set(__self__, "destinations", destinations)
@@ -268,8 +264,6 @@ class AuthenticationRuleArgs:
     def folder(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Folder
-
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
 
@@ -365,7 +359,7 @@ class AuthenticationRuleArgs:
     @pulumi.getter
     def position(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
-        The relative position of the rule
+        The relative position of the rule. Possible values are `pre` and `post`.
         """
         return pulumi.get(self, "position")
 
@@ -390,8 +384,6 @@ class AuthenticationRuleArgs:
     def snippet(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Snippet
-
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
 
@@ -439,7 +431,7 @@ class AuthenticationRuleArgs:
     @pulumi.getter(name="targetRule")
     def target_rule(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
-        The name or UUID of the rule to position this rule relative to. Required when `relative_position` is `"before"` or `"after"`.
+        UUID of the rule to position this rule relative to. Required when `relative_position` is `"before"` or `"after"`.
         """
         return pulumi.get(self, "target_rule")
 
@@ -502,8 +494,6 @@ class _AuthenticationRuleState:
         :param pulumi.Input[_builtins.str] device: Device
         :param pulumi.Input[_builtins.bool] disabled: Is the authentication rule disabled?
         :param pulumi.Input[_builtins.str] folder: Folder
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] froms: The source security zones
         :param pulumi.Input[_builtins.str] group_tag: Group tag
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] hip_profiles: The source Host Integrity Profile (HIP)
@@ -512,17 +502,15 @@ class _AuthenticationRuleState:
         :param pulumi.Input[_builtins.str] name: The name of the authentication rule
         :param pulumi.Input[_builtins.bool] negate_destination: Are the destination addresses negated?
         :param pulumi.Input[_builtins.bool] negate_source: Are the source addresses negated?
-        :param pulumi.Input[_builtins.str] position: The relative position of the rule
+        :param pulumi.Input[_builtins.str] position: The relative position of the rule. Possible values are `pre` and `post`.
         :param pulumi.Input[_builtins.str] relative_position: Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] services: The destination ports
         :param pulumi.Input[_builtins.str] snippet: Snippet
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] source_hips: The source Host Integrity Profile (HIP)
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] source_users: The source users
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] sources: The source addresses
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tags: The authentication rule tags
-        :param pulumi.Input[_builtins.str] target_rule: The name or UUID of the rule to position this rule relative to. Required when `relative_position` is `"before"` or `"after"`.
+        :param pulumi.Input[_builtins.str] target_rule: UUID of the rule to position this rule relative to. Required when `relative_position` is `"before"` or `"after"`.
         :param pulumi.Input[_builtins.str] tfid: The Terraform ID.
         :param pulumi.Input[_builtins.int] timeout: The authentication session timeout (seconds)
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tos: The destination security zones
@@ -673,8 +661,6 @@ class _AuthenticationRuleState:
     def folder(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Folder
-
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
 
@@ -782,7 +768,7 @@ class _AuthenticationRuleState:
     @pulumi.getter
     def position(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
-        The relative position of the rule
+        The relative position of the rule. Possible values are `pre` and `post`.
         """
         return pulumi.get(self, "position")
 
@@ -819,8 +805,6 @@ class _AuthenticationRuleState:
     def snippet(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Snippet
-
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
 
@@ -880,7 +864,7 @@ class _AuthenticationRuleState:
     @pulumi.getter(name="targetRule")
     def target_rule(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
-        The name or UUID of the rule to position this rule relative to. Required when `relative_position` is `"before"` or `"after"`.
+        UUID of the rule to position this rule relative to. Required when `relative_position` is `"before"` or `"after"`.
         """
         return pulumi.get(self, "target_rule")
 
@@ -989,6 +973,7 @@ class AuthenticationRule(pulumi.CustomResource):
                 "service-https",
             ],
             source_users=["any"],
+            authentication_enforcement="default-no-captive-portal",
             timeout=1200,
             negate_source=False,
             negate_destination=False,
@@ -1011,7 +996,8 @@ class AuthenticationRule(pulumi.CustomResource):
             tos=["trust"],
             sources=["any"],
             services=["any"],
-            source_users=["any"])
+            source_users=["any"],
+            authentication_enforcement="default-no-captive-portal")
         rule_bottom_of_list = scm.AuthenticationRule("rule_bottom_of_list",
             name="test_bottom_rule_25",
             description="Placed at the very bottom of the 'pre' rulebase.",
@@ -1023,7 +1009,8 @@ class AuthenticationRule(pulumi.CustomResource):
             tos=["any"],
             sources=["any"],
             services=["any"],
-            source_users=["any"])
+            source_users=["any"],
+            authentication_enforcement="default-no-captive-portal")
         # -----------------------------------------------------------------------------
         # 4. RELATIVE POSITIONING Examples ("before" and "after")
         # -----------------------------------------------------------------------------
@@ -1039,7 +1026,8 @@ class AuthenticationRule(pulumi.CustomResource):
             tos=["any"],
             sources=["any"],
             services=["any"],
-            source_users=["any"])
+            source_users=["any"],
+            authentication_enforcement="default-no-captive-portal")
         rule_after_anchor = scm.AuthenticationRule("rule_after_anchor",
             name="test_after_rule_25",
             description="Positioned immediately AFTER the anchor_rule.",
@@ -1052,7 +1040,8 @@ class AuthenticationRule(pulumi.CustomResource):
             tos=["any"],
             sources=["any"],
             services=["any"],
-            source_users=["any"])
+            source_users=["any"],
+            authentication_enforcement="default-no-captive-portal")
         ```
 
         ## Import
@@ -1088,8 +1077,6 @@ class AuthenticationRule(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] device: Device
         :param pulumi.Input[_builtins.bool] disabled: Is the authentication rule disabled?
         :param pulumi.Input[_builtins.str] folder: Folder
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] froms: The source security zones
         :param pulumi.Input[_builtins.str] group_tag: Group tag
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] hip_profiles: The source Host Integrity Profile (HIP)
@@ -1098,17 +1085,15 @@ class AuthenticationRule(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] name: The name of the authentication rule
         :param pulumi.Input[_builtins.bool] negate_destination: Are the destination addresses negated?
         :param pulumi.Input[_builtins.bool] negate_source: Are the source addresses negated?
-        :param pulumi.Input[_builtins.str] position: The relative position of the rule
+        :param pulumi.Input[_builtins.str] position: The relative position of the rule. Possible values are `pre` and `post`.
         :param pulumi.Input[_builtins.str] relative_position: Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] services: The destination ports
         :param pulumi.Input[_builtins.str] snippet: Snippet
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] source_hips: The source Host Integrity Profile (HIP)
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] source_users: The source users
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] sources: The source addresses
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tags: The authentication rule tags
-        :param pulumi.Input[_builtins.str] target_rule: The name or UUID of the rule to position this rule relative to. Required when `relative_position` is `"before"` or `"after"`.
+        :param pulumi.Input[_builtins.str] target_rule: UUID of the rule to position this rule relative to. Required when `relative_position` is `"before"` or `"after"`.
         :param pulumi.Input[_builtins.int] timeout: The authentication session timeout (seconds)
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tos: The destination security zones
         """
@@ -1148,6 +1133,7 @@ class AuthenticationRule(pulumi.CustomResource):
                 "service-https",
             ],
             source_users=["any"],
+            authentication_enforcement="default-no-captive-portal",
             timeout=1200,
             negate_source=False,
             negate_destination=False,
@@ -1170,7 +1156,8 @@ class AuthenticationRule(pulumi.CustomResource):
             tos=["trust"],
             sources=["any"],
             services=["any"],
-            source_users=["any"])
+            source_users=["any"],
+            authentication_enforcement="default-no-captive-portal")
         rule_bottom_of_list = scm.AuthenticationRule("rule_bottom_of_list",
             name="test_bottom_rule_25",
             description="Placed at the very bottom of the 'pre' rulebase.",
@@ -1182,7 +1169,8 @@ class AuthenticationRule(pulumi.CustomResource):
             tos=["any"],
             sources=["any"],
             services=["any"],
-            source_users=["any"])
+            source_users=["any"],
+            authentication_enforcement="default-no-captive-portal")
         # -----------------------------------------------------------------------------
         # 4. RELATIVE POSITIONING Examples ("before" and "after")
         # -----------------------------------------------------------------------------
@@ -1198,7 +1186,8 @@ class AuthenticationRule(pulumi.CustomResource):
             tos=["any"],
             sources=["any"],
             services=["any"],
-            source_users=["any"])
+            source_users=["any"],
+            authentication_enforcement="default-no-captive-portal")
         rule_after_anchor = scm.AuthenticationRule("rule_after_anchor",
             name="test_after_rule_25",
             description="Positioned immediately AFTER the anchor_rule.",
@@ -1211,7 +1200,8 @@ class AuthenticationRule(pulumi.CustomResource):
             tos=["any"],
             sources=["any"],
             services=["any"],
-            source_users=["any"])
+            source_users=["any"],
+            authentication_enforcement="default-no-captive-portal")
         ```
 
         ## Import
@@ -1379,8 +1369,6 @@ class AuthenticationRule(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] device: Device
         :param pulumi.Input[_builtins.bool] disabled: Is the authentication rule disabled?
         :param pulumi.Input[_builtins.str] folder: Folder
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] froms: The source security zones
         :param pulumi.Input[_builtins.str] group_tag: Group tag
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] hip_profiles: The source Host Integrity Profile (HIP)
@@ -1389,17 +1377,15 @@ class AuthenticationRule(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] name: The name of the authentication rule
         :param pulumi.Input[_builtins.bool] negate_destination: Are the destination addresses negated?
         :param pulumi.Input[_builtins.bool] negate_source: Are the source addresses negated?
-        :param pulumi.Input[_builtins.str] position: The relative position of the rule
+        :param pulumi.Input[_builtins.str] position: The relative position of the rule. Possible values are `pre` and `post`.
         :param pulumi.Input[_builtins.str] relative_position: Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] services: The destination ports
         :param pulumi.Input[_builtins.str] snippet: Snippet
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] source_hips: The source Host Integrity Profile (HIP)
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] source_users: The source users
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] sources: The source addresses
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tags: The authentication rule tags
-        :param pulumi.Input[_builtins.str] target_rule: The name or UUID of the rule to position this rule relative to. Required when `relative_position` is `"before"` or `"after"`.
+        :param pulumi.Input[_builtins.str] target_rule: UUID of the rule to position this rule relative to. Required when `relative_position` is `"before"` or `"after"`.
         :param pulumi.Input[_builtins.str] tfid: The Terraform ID.
         :param pulumi.Input[_builtins.int] timeout: The authentication session timeout (seconds)
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tos: The destination security zones
@@ -1440,7 +1426,7 @@ class AuthenticationRule(pulumi.CustomResource):
 
     @_builtins.property
     @pulumi.getter(name="authenticationEnforcement")
-    def authentication_enforcement(self) -> pulumi.Output[Optional[_builtins.str]]:
+    def authentication_enforcement(self) -> pulumi.Output[_builtins.str]:
         """
         The authentication profile name
         """
@@ -1499,8 +1485,6 @@ class AuthenticationRule(pulumi.CustomResource):
     def folder(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         Folder
-
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
 
@@ -1572,7 +1556,7 @@ class AuthenticationRule(pulumi.CustomResource):
     @pulumi.getter
     def position(self) -> pulumi.Output[_builtins.str]:
         """
-        The relative position of the rule
+        The relative position of the rule. Possible values are `pre` and `post`.
         """
         return pulumi.get(self, "position")
 
@@ -1597,8 +1581,6 @@ class AuthenticationRule(pulumi.CustomResource):
     def snippet(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         Snippet
-
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
 
@@ -1638,7 +1620,7 @@ class AuthenticationRule(pulumi.CustomResource):
     @pulumi.getter(name="targetRule")
     def target_rule(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The name or UUID of the rule to position this rule relative to. Required when `relative_position` is `"before"` or `"after"`.
+        UUID of the rule to position this rule relative to. Required when `relative_position` is `"before"` or `"after"`.
         """
         return pulumi.get(self, "target_rule")
 

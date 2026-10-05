@@ -37,6 +37,12 @@ namespace Pulumi.Scm
     ///                 Name = "198.18.1.1/32",
     ///             },
     ///         },
+    ///         AdjustTcpMss = new Scm.Inputs.LoopbackInterfaceAdjustTcpMssArgs
+    ///         {
+    ///             Enable = true,
+    ///             Ipv4MssAdjustment = 40,
+    ///             Ipv6MssAdjustment = 60,
+    ///         },
     ///     });
     /// 
     ///     //
@@ -128,6 +134,12 @@ namespace Pulumi.Scm
     public partial class LoopbackInterface : global::Pulumi.CustomResource
     {
         /// <summary>
+        /// TCP MSS adjustment settings for the interface
+        /// </summary>
+        [Output("adjustTcpMss")]
+        public Output<Outputs.LoopbackInterfaceAdjustTcpMss?> AdjustTcpMss { get; private set; } = null!;
+
+        /// <summary>
         /// Description for loopback interface
         /// </summary>
         [Output("comment")]
@@ -147,8 +159,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The folder in which the resource is defined
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Output("folder")]
         public Output<string?> Folder { get; private set; } = null!;
@@ -191,8 +201,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The snippet in which the resource is defined
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Output("snippet")]
         public Output<string?> Snippet { get; private set; } = null!;
@@ -250,6 +258,12 @@ namespace Pulumi.Scm
     public sealed class LoopbackInterfaceArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
+        /// TCP MSS adjustment settings for the interface
+        /// </summary>
+        [Input("adjustTcpMss")]
+        public Input<Inputs.LoopbackInterfaceAdjustTcpMssArgs>? AdjustTcpMss { get; set; }
+
+        /// <summary>
         /// Description for loopback interface
         /// </summary>
         [Input("comment")]
@@ -269,8 +283,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The folder in which the resource is defined
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("folder")]
         public Input<string>? Folder { get; set; }
@@ -319,8 +331,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The snippet in which the resource is defined
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("snippet")]
         public Input<string>? Snippet { get; set; }
@@ -333,6 +343,12 @@ namespace Pulumi.Scm
 
     public sealed class LoopbackInterfaceState : global::Pulumi.ResourceArgs
     {
+        /// <summary>
+        /// TCP MSS adjustment settings for the interface
+        /// </summary>
+        [Input("adjustTcpMss")]
+        public Input<Inputs.LoopbackInterfaceAdjustTcpMssGetArgs>? AdjustTcpMss { get; set; }
+
         /// <summary>
         /// Description for loopback interface
         /// </summary>
@@ -353,8 +369,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The folder in which the resource is defined
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("folder")]
         public Input<string>? Folder { get; set; }
@@ -403,8 +417,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The snippet in which the resource is defined
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("snippet")]
         public Input<string>? Snippet { get; set; }

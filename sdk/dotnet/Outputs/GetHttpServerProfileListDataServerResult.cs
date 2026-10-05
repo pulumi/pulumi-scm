@@ -22,7 +22,7 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly string CertificateProfile;
         /// <summary>
-        /// HTTP operation to perform
+        /// HTTP operation to perform. Possible values are `GET`, `POST`, `PUT` and `DELETE`.
         /// </summary>
         public readonly string HttpMethod;
         /// <summary>
@@ -34,11 +34,11 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly int Port;
         /// <summary>
-        /// HTTP server protocol
+        /// HTTP server protocol. Possible values are `HTTP` and `HTTPS`.
         /// </summary>
         public readonly string Protocol;
         /// <summary>
-        /// HTTP server TLS version
+        /// HTTP server TLS version. Possible values are `1.0`, `1.1`, `1.2` and `1.3`.
         /// </summary>
         public readonly string TlsVersion;
 

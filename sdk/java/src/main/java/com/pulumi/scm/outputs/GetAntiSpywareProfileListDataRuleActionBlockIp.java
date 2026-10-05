@@ -17,7 +17,7 @@ public final class GetAntiSpywareProfileListDataRuleActionBlockIp {
      */
     private Integer duration;
     /**
-     * @return Track by
+     * @return Track by. Possible values are `source-and-destination` and `source`.
      * 
      */
     private String trackBy;
@@ -31,7 +31,7 @@ public final class GetAntiSpywareProfileListDataRuleActionBlockIp {
         return this.duration;
     }
     /**
-     * @return Track by
+     * @return Track by. Possible values are `source-and-destination` and `source`.
      * 
      */
     public String trackBy() {

@@ -49,12 +49,21 @@ export interface GetLogForwardingProfileArgs {
      * The device in which the resource is defined
      */
     device?: string;
+    /**
+     * The folder in which the resource is defined
+     */
     folder?: string;
     /**
      * The UUID of the log server profile
      */
     id: string;
+    /**
+     * The name of the log forwarding profile
+     */
     name?: string;
+    /**
+     * The snippet in which the resource is defined
+     */
     snippet?: string;
 }
 
@@ -62,19 +71,37 @@ export interface GetLogForwardingProfileArgs {
  * A collection of values returned by getLogForwardingProfile.
  */
 export interface GetLogForwardingProfileResult {
+    /**
+     * Log forwarding profile description
+     */
     readonly description: string;
     /**
      * The device in which the resource is defined
      */
     readonly device: string;
+    /**
+     * The folder in which the resource is defined
+     */
     readonly folder: string;
     /**
      * The UUID of the log server profile
      */
     readonly id: string;
+    /**
+     * Match list
+     */
     readonly matchLists: outputs.GetLogForwardingProfileMatchList[];
+    /**
+     * The name of the log forwarding profile
+     */
     readonly name: string;
+    /**
+     * The snippet in which the resource is defined
+     */
     readonly snippet: string;
+    /**
+     * The Terraform ID.
+     */
     readonly tfid: string;
 }
 /**
@@ -120,11 +147,20 @@ export interface GetLogForwardingProfileOutputArgs {
      * The device in which the resource is defined
      */
     device?: pulumi.Input<string | undefined>;
+    /**
+     * The folder in which the resource is defined
+     */
     folder?: pulumi.Input<string | undefined>;
     /**
      * The UUID of the log server profile
      */
     id: pulumi.Input<string>;
+    /**
+     * The name of the log forwarding profile
+     */
     name?: pulumi.Input<string | undefined>;
+    /**
+     * The snippet in which the resource is defined
+     */
     snippet?: pulumi.Input<string | undefined>;
 }

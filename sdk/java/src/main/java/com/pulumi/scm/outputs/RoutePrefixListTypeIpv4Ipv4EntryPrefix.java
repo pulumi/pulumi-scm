@@ -18,9 +18,7 @@ public final class RoutePrefixListTypeIpv4Ipv4EntryPrefix {
      */
     private @Nullable RoutePrefixListTypeIpv4Ipv4EntryPrefixEntry entry;
     /**
-     * @return Network
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `entry` and `network`.
+     * @return Network. Possible values are `any`.
      * 
      */
     private @Nullable String network;
@@ -34,9 +32,7 @@ public final class RoutePrefixListTypeIpv4Ipv4EntryPrefix {
         return Optional.ofNullable(this.entry);
     }
     /**
-     * @return Network
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `entry` and `network`.
+     * @return Network. Possible values are `any`.
      * 
      */
     public Optional<String> network() {

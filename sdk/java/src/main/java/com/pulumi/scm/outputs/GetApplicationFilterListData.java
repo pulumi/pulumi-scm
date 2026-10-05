@@ -40,7 +40,7 @@ public final class GetApplicationFilterListData {
      */
     private List<String> excludes;
     /**
-     * @return The folder of the item. Default: Shared.
+     * @return The folder in which the resource is defined
      * 
      */
     private String folder;
@@ -60,7 +60,7 @@ public final class GetApplicationFilterListData {
      */
     private Boolean isSaas;
     /**
-     * @return The name of the item.
+     * @return Alphanumeric string [ 0-9a-zA-Z._-]
      * 
      */
     private String name;
@@ -95,7 +95,7 @@ public final class GetApplicationFilterListData {
      */
     private List<String> saasRisks;
     /**
-     * @return The snippet of the item.
+     * @return The snippet in which the resource is defined
      * 
      */
     private String snippet;
@@ -172,7 +172,7 @@ public final class GetApplicationFilterListData {
         return this.excludes;
     }
     /**
-     * @return The folder of the item. Default: Shared.
+     * @return The folder in which the resource is defined
      * 
      */
     public String folder() {
@@ -200,7 +200,7 @@ public final class GetApplicationFilterListData {
         return this.isSaas;
     }
     /**
-     * @return The name of the item.
+     * @return Alphanumeric string [ 0-9a-zA-Z._-]
      * 
      */
     public String name() {
@@ -249,7 +249,7 @@ public final class GetApplicationFilterListData {
         return this.saasRisks;
     }
     /**
-     * @return The snippet of the item.
+     * @return The snippet in which the resource is defined
      * 
      */
     public String snippet() {

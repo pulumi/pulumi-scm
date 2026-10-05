@@ -18,6 +18,10 @@ export interface AggregateInterfaceLayer2 {
      */
     lacp?: outputs.AggregateInterfaceLayer2Lacp;
     /**
+     * LLDP settings for the interface
+     */
+    lldp?: outputs.AggregateInterfaceLayer2Lldp;
+    /**
      * Name of Netflow Profile to assign to Interface
      */
     netflowProfile?: string;
@@ -37,11 +41,15 @@ export interface AggregateInterfaceLayer2Lacp {
      */
     fastFailover: boolean;
     /**
+     * High Availability settings
+     */
+    highAvailability?: outputs.AggregateInterfaceLayer2LacpHighAvailability;
+    /**
      * Maximum number of physical ports bundled in the LAG
      */
     maxPorts: number;
     /**
-     * Mode
+     * Mode. Possible values are `passive` and `active`.
      */
     mode: string;
     /**
@@ -49,12 +57,45 @@ export interface AggregateInterfaceLayer2Lacp {
      */
     systemPriority: number;
     /**
-     * Transmission mode
+     * Transmission mode. Possible values are `fast` and `slow`.
      */
     transmissionRate: string;
 }
 
+export interface AggregateInterfaceLayer2LacpHighAvailability {
+    /**
+     * Passive pre negotiation
+     */
+    passivePreNegotiation: boolean;
+}
+
+export interface AggregateInterfaceLayer2Lldp {
+    /**
+     * Enable LLDP on Interface
+     */
+    enable: boolean;
+    /**
+     * LLDP high availability settings
+     */
+    highAvailability?: outputs.AggregateInterfaceLayer2LldpHighAvailability;
+    /**
+     * Name of the LLDP profile to assign to the interface
+     */
+    profile?: string;
+}
+
+export interface AggregateInterfaceLayer2LldpHighAvailability {
+    /**
+     * Passive pre negotiation
+     */
+    passivePreNegotiation: boolean;
+}
+
 export interface AggregateInterfaceLayer3 {
+    /**
+     * TCP MSS adjustment settings for the interface
+     */
+    adjustTcpMss?: outputs.AggregateInterfaceLayer3AdjustTcpMss;
     /**
      * Aggregate Ethernet ARP configuration
      */
@@ -73,14 +114,16 @@ export interface AggregateInterfaceLayer3 {
     interfaceManagementProfile?: string;
     /**
      * Aggregate Interface IP addresses
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
      */
     ips?: outputs.AggregateInterfaceLayer3Ip[];
     /**
      * Lacp
      */
     lacp?: outputs.AggregateInterfaceLayer3Lacp;
+    /**
+     * LLDP settings for the interface
+     */
+    lldp?: outputs.AggregateInterfaceLayer3Lldp;
     /**
      * MTU
      */
@@ -89,6 +132,21 @@ export interface AggregateInterfaceLayer3 {
      * Name of Netflow Profile to assign to Interface
      */
     netflowProfile?: string;
+}
+
+export interface AggregateInterfaceLayer3AdjustTcpMss {
+    /**
+     * Enable TCP MSS adjustment on the interface
+     */
+    enable?: boolean;
+    /**
+     * IPv4 MSS adjustment size in bytes
+     */
+    ipv4MssAdjustment?: number;
+    /**
+     * IPv6 MSS adjustment size in bytes
+     */
+    ipv6MssAdjustment?: number;
 }
 
 export interface AggregateInterfaceLayer3Arp {
@@ -180,11 +238,15 @@ export interface AggregateInterfaceLayer3Lacp {
      */
     fastFailover: boolean;
     /**
+     * High Availability settings
+     */
+    highAvailability?: outputs.AggregateInterfaceLayer3LacpHighAvailability;
+    /**
      * Maximum number of physical ports bundled in the LAG
      */
     maxPorts: number;
     /**
-     * Mode
+     * Mode. Possible values are `passive` and `active`.
      */
     mode: string;
     /**
@@ -192,14 +254,43 @@ export interface AggregateInterfaceLayer3Lacp {
      */
     systemPriority: number;
     /**
-     * Transmission mode
+     * Transmission mode. Possible values are `fast` and `slow`.
      */
     transmissionRate: string;
 }
 
+export interface AggregateInterfaceLayer3LacpHighAvailability {
+    /**
+     * Passive pre negotiation
+     */
+    passivePreNegotiation: boolean;
+}
+
+export interface AggregateInterfaceLayer3Lldp {
+    /**
+     * Enable LLDP on Interface
+     */
+    enable: boolean;
+    /**
+     * LLDP high availability settings
+     */
+    highAvailability?: outputs.AggregateInterfaceLayer3LldpHighAvailability;
+    /**
+     * Name of the LLDP profile to assign to the interface
+     */
+    profile?: string;
+}
+
+export interface AggregateInterfaceLayer3LldpHighAvailability {
+    /**
+     * Passive pre negotiation
+     */
+    passivePreNegotiation: boolean;
+}
+
 export interface AntiSpywareProfileMicaEngineSpywareEnabled {
     /**
-     * Inline policy action
+     * Inline policy action. Possible values are `alert`, `allow`, `drop`, `reset-both`, `reset-client` and `reset-server`.
      */
     inlinePolicyAction: string;
     /**
@@ -214,7 +305,7 @@ export interface AntiSpywareProfileRule {
      */
     action?: outputs.AntiSpywareProfileRuleAction;
     /**
-     * Category
+     * Category. Possible values are `adns-adtracking`, `adns-benign`, `adns-c2`, `adns-ddns`, `adns-dnsmisconfig`, `adns-grayware`, `adns-hijacking`, `adns-malware`, `adns-new-domain`, `adns-parked`, `adns-phishing`, `adns-proxy`, `adware`, `any`, `autogen`, `backdoor`, `botnet`, `browser-hijack`, `command-and-control`, `cryptominer`, `data-theft`, `dns`, `dns-adtracking`, `dns-benign`, `dns-c2`, `dns-ddns`, `dns-grayware`, `dns-malware`, `dns-new-domain`, `dns-parked`, `dns-phishing`, `dns-proxy`, `dns-security`, `dns-wildfire`, `domain-edl`, `downloader`, `fraud`, `hacktool`, `inline-cloud-c2`, `keylogger`, `net-worm`, `p2p-communication`, `phishing-kit`, `post-exploitation`, `spyware`, `tls-fingerprint` and `webshell`.
      */
     category?: string;
     /**
@@ -222,7 +313,7 @@ export interface AntiSpywareProfileRule {
      */
     name?: string;
     /**
-     * Packet capture
+     * Packet capture. Possible values are `disable`, `single-packet` and `extended-capture`.
      */
     packetCapture?: string;
     /**
@@ -242,38 +333,26 @@ export interface AntiSpywareProfileRuleAction {
     alert?: outputs.AntiSpywareProfileRuleActionAlert;
     /**
      * Allow
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      */
     allow?: outputs.AntiSpywareProfileRuleActionAllow;
     /**
      * anti spyware profiles rules action block ip
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      */
     blockIp?: outputs.AntiSpywareProfileRuleActionBlockIp;
     /**
      * Drop
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      */
     drop?: outputs.AntiSpywareProfileRuleActionDrop;
     /**
      * Reset both
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      */
     resetBoth?: outputs.AntiSpywareProfileRuleActionResetBoth;
     /**
      * Reset client
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      */
     resetClient?: outputs.AntiSpywareProfileRuleActionResetClient;
     /**
      * Reset server
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      */
     resetServer?: outputs.AntiSpywareProfileRuleActionResetServer;
 }
@@ -290,7 +369,7 @@ export interface AntiSpywareProfileRuleActionBlockIp {
      */
     duration?: number;
     /**
-     * Track by
+     * Track by. Possible values are `source-and-destination` and `source`.
      */
     trackBy?: string;
 }
@@ -325,7 +404,7 @@ export interface AntiSpywareProfileThreatException {
      */
     notes?: string;
     /**
-     * Packet capture
+     * Packet capture. Possible values are `disable`, `single-packet` and `extended-capture`.
      */
     packetCapture?: string;
 }
@@ -337,44 +416,30 @@ export interface AntiSpywareProfileThreatExceptionAction {
     alert?: outputs.AntiSpywareProfileThreatExceptionActionAlert;
     /**
      * Allow
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      */
     allow?: outputs.AntiSpywareProfileThreatExceptionActionAllow;
     /**
      * anti spyware profiles threat exception action block ip
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      */
     blockIp?: outputs.AntiSpywareProfileThreatExceptionActionBlockIp;
     /**
      * Default
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      */
     default?: outputs.AntiSpywareProfileThreatExceptionActionDefault;
     /**
      * Drop
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      */
     drop?: outputs.AntiSpywareProfileThreatExceptionActionDrop;
     /**
      * Reset both
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      */
     resetBoth?: outputs.AntiSpywareProfileThreatExceptionActionResetBoth;
     /**
      * Reset client
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      */
     resetClient?: outputs.AntiSpywareProfileThreatExceptionActionResetClient;
     /**
      * Reset server
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      */
     resetServer?: outputs.AntiSpywareProfileThreatExceptionActionResetServer;
 }
@@ -391,7 +456,7 @@ export interface AntiSpywareProfileThreatExceptionActionBlockIp {
      */
     duration?: number;
     /**
-     * Track by
+     * Track by. Possible values are `source-and-destination` and `source`.
      */
     trackBy?: string;
 }
@@ -425,38 +490,26 @@ export interface AntiSpywareSignatureDefaultAction {
     alert?: outputs.AntiSpywareSignatureDefaultActionAlert;
     /**
      * Allow
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      */
     allow?: outputs.AntiSpywareSignatureDefaultActionAllow;
     /**
      * anti spyware signature block ip
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      */
     blockIp?: outputs.AntiSpywareSignatureDefaultActionBlockIp;
     /**
      * Drop
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      */
     drop?: outputs.AntiSpywareSignatureDefaultActionDrop;
     /**
      * Reset both
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      */
     resetBoth?: outputs.AntiSpywareSignatureDefaultActionResetBoth;
     /**
      * Reset client
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      */
     resetClient?: outputs.AntiSpywareSignatureDefaultActionResetClient;
     /**
      * Reset server
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      */
     resetServer?: outputs.AntiSpywareSignatureDefaultActionResetServer;
 }
@@ -473,7 +526,7 @@ export interface AntiSpywareSignatureDefaultActionBlockIp {
      */
     duration?: number;
     /**
-     * Track by
+     * Track by. Possible values are `source-and-destination` and `source`.
      */
     trackBy?: string;
 }
@@ -497,8 +550,6 @@ export interface AntiSpywareSignatureSignature {
     combination?: outputs.AntiSpywareSignatureSignatureCombination;
     /**
      * Standard
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `combination` and `standard`.
      */
     standards?: outputs.AntiSpywareSignatureSignatureStandard[];
 }
@@ -550,7 +601,7 @@ export interface AntiSpywareSignatureSignatureCombinationTimeAttribute {
      */
     threshold?: number;
     /**
-     * Track by
+     * Track by. Possible values are `source-and-destination`, `source` and `destination`.
      */
     trackBy?: string;
 }
@@ -573,7 +624,7 @@ export interface AntiSpywareSignatureSignatureStandard {
      */
     orderFree: boolean;
     /**
-     * Scope
+     * Scope. Possible values are `protocol-data-unit` and `session`.
      */
     scope?: string;
 }
@@ -738,20 +789,14 @@ export interface ApplicationDefault {
     identByIcmp6Type?: outputs.ApplicationDefaultIdentByIcmp6Type;
     /**
      * Ident by icmp type
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `identByIcmp6Type`, `identByIcmpType`, `identByIpProtocol`, and `port`.
      */
     identByIcmpType?: outputs.ApplicationDefaultIdentByIcmpType;
     /**
      * Ident by ip protocol
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `identByIcmp6Type`, `identByIcmpType`, `identByIpProtocol`, and `port`.
      */
     identByIpProtocol?: string;
     /**
      * Port
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `identByIcmp6Type`, `identByIcmpType`, `identByIpProtocol`, and `port`.
      */
     ports?: string[];
 }
@@ -785,8 +830,6 @@ export interface ApplicationFilterTagging {
     noTag?: boolean;
     /**
      * Tag
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `noTag` and `tag`.
      */
     tags?: string[];
 }
@@ -809,7 +852,7 @@ export interface ApplicationSignature {
      */
     orderFree: boolean;
     /**
-     * Scope
+     * Scope. Possible values are `protocol-data-unit` and `session`.
      */
     scope: string;
 }
@@ -843,20 +886,14 @@ export interface ApplicationSignatureAndConditionOrConditionOperator {
     equalTo?: outputs.ApplicationSignatureAndConditionOrConditionOperatorEqualTo;
     /**
      * Greater than
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `equalTo`, `greaterThan`, `lessThan`, and `patternMatch`.
      */
     greaterThan?: outputs.ApplicationSignatureAndConditionOrConditionOperatorGreaterThan;
     /**
      * Less than
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `equalTo`, `greaterThan`, `lessThan`, and `patternMatch`.
      */
     lessThan?: outputs.ApplicationSignatureAndConditionOrConditionOperatorLessThan;
     /**
      * Pattern match
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `equalTo`, `greaterThan`, `lessThan`, and `patternMatch`.
      */
     patternMatch?: outputs.ApplicationSignatureAndConditionOrConditionOperatorPatternMatch;
 }
@@ -976,38 +1013,26 @@ export interface AuthenticationProfileMethod {
     cloud?: outputs.AuthenticationProfileMethodCloud;
     /**
      * Kerberos
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `cloud`, `kerberos`, `ldap`, `localDatabase`, `radius`, `samlIdp`, and `tacplus`.
      */
     kerberos?: outputs.AuthenticationProfileMethodKerberos;
     /**
      * Ldap
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `cloud`, `kerberos`, `ldap`, `localDatabase`, `radius`, `samlIdp`, and `tacplus`.
      */
     ldap?: outputs.AuthenticationProfileMethodLdap;
     /**
      * Local database
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `cloud`, `kerberos`, `ldap`, `localDatabase`, `radius`, `samlIdp`, and `tacplus`.
      */
     localDatabase?: outputs.AuthenticationProfileMethodLocalDatabase;
     /**
      * Radius
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `cloud`, `kerberos`, `ldap`, `localDatabase`, `radius`, `samlIdp`, and `tacplus`.
      */
     radius?: outputs.AuthenticationProfileMethodRadius;
     /**
      * Saml idp
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `cloud`, `kerberos`, `ldap`, `localDatabase`, `radius`, `samlIdp`, and `tacplus`.
      */
     samlIdp?: outputs.AuthenticationProfileMethodSamlIdp;
     /**
      * Tacplus
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `cloud`, `kerberos`, `ldap`, `localDatabase`, `radius`, `samlIdp`, and `tacplus`.
      */
     tacplus?: outputs.AuthenticationProfileMethodTacplus;
 }
@@ -1209,8 +1234,6 @@ export interface AutoVpnClusterBranchInterfaceSdwanLinkSettingsUpstreamNatStatic
     fqdn?: string;
     /**
      * IP address
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `fqdn` and `ipAddress`.
      */
     ipAddress?: string;
 }
@@ -1259,8 +1282,6 @@ export interface AutoVpnClusterBranchPrivateInterfaceSdwanLinkSettingsUpstreamNa
     fqdn?: string;
     /**
      * IP address
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `fqdn` and `ipAddress`.
      */
     ipAddress?: string;
 }
@@ -1287,7 +1308,7 @@ export interface AutoVpnClusterGateway {
      */
     name?: string;
     /**
-     * Priority
+     * Priority. Possible values are `1`, `2`, `3`, `4`, `5`, `6`, `7` and `8`.
      */
     priority?: string;
     /**
@@ -1348,8 +1369,6 @@ export interface AutoVpnClusterGatewayInterfaceSdwanLinkSettingsUpstreamNatStati
     fqdn?: string;
     /**
      * IP address
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `fqdn` and `ipAddress`.
      */
     ipAddress?: string;
 }
@@ -1398,8 +1417,6 @@ export interface AutoVpnClusterGatewayPrivateInterfaceSdwanLinkSettingsUpstreamN
     fqdn?: string;
     /**
      * IP address
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `fqdn` and `ipAddress`.
      */
     ipAddress?: string;
 }
@@ -1518,8 +1535,6 @@ export interface BgpAddressFamilyProfileIpv4MulticastAllowasIn {
     occurrence?: number;
     /**
      * Origin
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `occurrence` and `origin`.
      */
     origin?: outputs.BgpAddressFamilyProfileIpv4MulticastAllowasInOrigin;
 }
@@ -1549,8 +1564,6 @@ export interface BgpAddressFamilyProfileIpv4MulticastMaximumPrefixAction {
     restart?: outputs.BgpAddressFamilyProfileIpv4MulticastMaximumPrefixActionRestart;
     /**
      * Warning only
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `restart` and `warningOnly`.
      */
     warningOnly?: outputs.BgpAddressFamilyProfileIpv4MulticastMaximumPrefixActionWarningOnly;
 }
@@ -1572,8 +1585,6 @@ export interface BgpAddressFamilyProfileIpv4MulticastNextHop {
     self?: outputs.BgpAddressFamilyProfileIpv4MulticastNextHopSelf;
     /**
      * Self force
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `self` and `selfForce`.
      */
     selfForce?: outputs.BgpAddressFamilyProfileIpv4MulticastNextHopSelfForce;
 }
@@ -1586,7 +1597,7 @@ export interface BgpAddressFamilyProfileIpv4MulticastNextHopSelfForce {
 
 export interface BgpAddressFamilyProfileIpv4MulticastOrf {
     /**
-     * ORF prefix list
+     * ORF prefix list. Possible values are `none`, `both`, `receive` and `send`.
      */
     orfPrefixList?: string;
 }
@@ -1615,26 +1626,18 @@ export interface BgpAddressFamilyProfileIpv4MulticastSendCommunity {
     all?: outputs.BgpAddressFamilyProfileIpv4MulticastSendCommunityAll;
     /**
      * Both
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
      */
     both?: outputs.BgpAddressFamilyProfileIpv4MulticastSendCommunityBoth;
     /**
      * Extended
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
      */
     extended?: outputs.BgpAddressFamilyProfileIpv4MulticastSendCommunityExtended;
     /**
      * Large
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
      */
     large?: outputs.BgpAddressFamilyProfileIpv4MulticastSendCommunityLarge;
     /**
      * Standard
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
      */
     standard?: outputs.BgpAddressFamilyProfileIpv4MulticastSendCommunityStandard;
 }
@@ -1727,8 +1730,6 @@ export interface BgpAddressFamilyProfileIpv4UnicastAllowasIn {
     occurrence?: number;
     /**
      * Origin
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `occurrence` and `origin`.
      */
     origin?: outputs.BgpAddressFamilyProfileIpv4UnicastAllowasInOrigin;
 }
@@ -1758,8 +1759,6 @@ export interface BgpAddressFamilyProfileIpv4UnicastMaximumPrefixAction {
     restart?: outputs.BgpAddressFamilyProfileIpv4UnicastMaximumPrefixActionRestart;
     /**
      * Warning only
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `restart` and `warningOnly`.
      */
     warningOnly?: outputs.BgpAddressFamilyProfileIpv4UnicastMaximumPrefixActionWarningOnly;
 }
@@ -1781,8 +1780,6 @@ export interface BgpAddressFamilyProfileIpv4UnicastNextHop {
     self?: outputs.BgpAddressFamilyProfileIpv4UnicastNextHopSelf;
     /**
      * Self force
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `self` and `selfForce`.
      */
     selfForce?: outputs.BgpAddressFamilyProfileIpv4UnicastNextHopSelfForce;
 }
@@ -1795,7 +1792,7 @@ export interface BgpAddressFamilyProfileIpv4UnicastNextHopSelfForce {
 
 export interface BgpAddressFamilyProfileIpv4UnicastOrf {
     /**
-     * ORF prefix list
+     * ORF prefix list. Possible values are `none`, `both`, `receive` and `send`.
      */
     orfPrefixList?: string;
 }
@@ -1824,26 +1821,18 @@ export interface BgpAddressFamilyProfileIpv4UnicastSendCommunity {
     all?: outputs.BgpAddressFamilyProfileIpv4UnicastSendCommunityAll;
     /**
      * Both
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
      */
     both?: outputs.BgpAddressFamilyProfileIpv4UnicastSendCommunityBoth;
     /**
      * Extended
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
      */
     extended?: outputs.BgpAddressFamilyProfileIpv4UnicastSendCommunityExtended;
     /**
      * Large
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
      */
     large?: outputs.BgpAddressFamilyProfileIpv4UnicastSendCommunityLarge;
     /**
      * Standard
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
      */
     standard?: outputs.BgpAddressFamilyProfileIpv4UnicastSendCommunityStandard;
 }
@@ -2160,8 +2149,6 @@ export interface BgpRouteMapRedistributionBgp {
     ospf?: outputs.BgpRouteMapRedistributionBgpOspf;
     /**
      * BGP Root RIB
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `ospf` and `rib`.
      */
     rib?: outputs.BgpRouteMapRedistributionBgpRib;
 }
@@ -2175,7 +2162,7 @@ export interface BgpRouteMapRedistributionBgpOspf {
 
 export interface BgpRouteMapRedistributionBgpOspfRouteMap {
     /**
-     * BGP Root OSPF Route maps Action
+     * BGP Root OSPF Route maps Action. Possible values are `permit` and `deny`.
      */
     action?: string;
     /**
@@ -2230,7 +2217,7 @@ export interface BgpRouteMapRedistributionBgpOspfRouteMapMatch {
      */
     origin?: string;
     /**
-     * BGP Root OSPF Route maps match Peer
+     * BGP Root OSPF Route maps match Peer. Possible values are `local` and `none`.
      */
     peer?: string;
     /**
@@ -2297,7 +2284,7 @@ export interface BgpRouteMapRedistributionBgpOspfRouteMapSet {
      */
     metric?: outputs.BgpRouteMapRedistributionBgpOspfRouteMapSetMetric;
     /**
-     * BGP Root OSPF Route maps set Metric type
+     * BGP Root OSPF Route maps set Metric type. Possible values are `type-1` and `type-2`.
      */
     metricType?: string;
     /**
@@ -2308,7 +2295,7 @@ export interface BgpRouteMapRedistributionBgpOspfRouteMapSet {
 
 export interface BgpRouteMapRedistributionBgpOspfRouteMapSetMetric {
     /**
-     * BGP Root OSPF Route maps set Metric action
+     * BGP Root OSPF Route maps set Metric action. Possible values are `set`, `add` and `subtract`.
      */
     action?: string;
     /**
@@ -2326,7 +2313,7 @@ export interface BgpRouteMapRedistributionBgpRib {
 
 export interface BgpRouteMapRedistributionBgpRibRouteMap {
     /**
-     * BGP Root RIB Route maps Action
+     * BGP Root RIB Route maps Action. Possible values are `permit` and `deny`.
      */
     action?: string;
     /**
@@ -2381,7 +2368,7 @@ export interface BgpRouteMapRedistributionBgpRibRouteMapMatch {
      */
     origin?: string;
     /**
-     * BGP Root RIB Route maps match Peer
+     * BGP Root RIB Route maps match Peer. Possible values are `local` and `none`.
      */
     peer?: string;
     /**
@@ -2456,14 +2443,10 @@ export interface BgpRouteMapRedistributionConnectedStatic {
     bgp?: outputs.BgpRouteMapRedistributionConnectedStaticBgp;
     /**
      * Ospf
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `bgp`, `ospf`, and `rib`.
      */
     ospf?: outputs.BgpRouteMapRedistributionConnectedStaticOspf;
     /**
      * Rib
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `bgp`, `ospf`, and `rib`.
      */
     rib?: outputs.BgpRouteMapRedistributionConnectedStaticRib;
 }
@@ -2477,7 +2460,7 @@ export interface BgpRouteMapRedistributionConnectedStaticBgp {
 
 export interface BgpRouteMapRedistributionConnectedStaticBgpRouteMap {
     /**
-     * Connected Static BGP Route maps Action
+     * Connected Static BGP Route maps Action. Possible values are `permit` and `deny`.
      */
     action?: string;
     /**
@@ -2576,7 +2559,7 @@ export interface BgpRouteMapRedistributionConnectedStaticBgpRouteMapSet {
      */
     metric?: outputs.BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetMetric;
     /**
-     * Connected Static BGP Route maps set Origin
+     * Connected Static BGP Route maps set Origin. Possible values are `none`, `egp`, `igp` and `incomplete`.
      */
     origin?: string;
     /**
@@ -2621,7 +2604,7 @@ export interface BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetIpv4 {
 
 export interface BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetMetric {
     /**
-     * Connected Static BGP Route maps set Metric action
+     * Connected Static BGP Route maps set Metric action. Possible values are `set`, `add` and `substract`.
      */
     action?: string;
     /**
@@ -2639,7 +2622,7 @@ export interface BgpRouteMapRedistributionConnectedStaticOspf {
 
 export interface BgpRouteMapRedistributionConnectedStaticOspfRouteMap {
     /**
-     * Connected Static BGP OSPF Route map Action
+     * Connected Static BGP OSPF Route map Action. Possible values are `permit` and `deny`.
      */
     action?: string;
     /**
@@ -2714,7 +2697,7 @@ export interface BgpRouteMapRedistributionConnectedStaticOspfRouteMapSet {
      */
     metric?: outputs.BgpRouteMapRedistributionConnectedStaticOspfRouteMapSetMetric;
     /**
-     * Connected Static BGP OSPF Route map set Metric type
+     * Connected Static BGP OSPF Route map set Metric type. Possible values are `type-1` and `type-2`.
      */
     metricType?: string;
     /**
@@ -2725,7 +2708,7 @@ export interface BgpRouteMapRedistributionConnectedStaticOspfRouteMapSet {
 
 export interface BgpRouteMapRedistributionConnectedStaticOspfRouteMapSetMetric {
     /**
-     * Connected Static BGP OSPF Route map set Metric action
+     * Connected Static BGP OSPF Route map set Metric action. Possible values are `set`, `add` and `substract`.
      */
     action?: string;
     /**
@@ -2743,7 +2726,7 @@ export interface BgpRouteMapRedistributionConnectedStaticRib {
 
 export interface BgpRouteMapRedistributionConnectedStaticRibRouteMap {
     /**
-     * Connected Static BGP Rib Route maps Action
+     * Connected Static BGP Rib Route maps Action. Possible values are `permit` and `deny`.
      */
     action?: string;
     /**
@@ -2826,8 +2809,6 @@ export interface BgpRouteMapRedistributionOspf {
     bgp?: outputs.BgpRouteMapRedistributionOspfBgp;
     /**
      * Rib
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `bgp` and `rib`.
      */
     rib?: outputs.BgpRouteMapRedistributionOspfRib;
 }
@@ -2841,7 +2822,7 @@ export interface BgpRouteMapRedistributionOspfBgp {
 
 export interface BgpRouteMapRedistributionOspfBgpRouteMap {
     /**
-     * OSPF BGP Route maps Action
+     * OSPF BGP Route maps Action. Possible values are `permit` and `deny`.
      */
     action?: string;
     /**
@@ -2937,7 +2918,7 @@ export interface BgpRouteMapRedistributionOspfBgpRouteMapSet {
      */
     metric?: outputs.BgpRouteMapRedistributionOspfBgpRouteMapSetMetric;
     /**
-     * OSPF BGP Route maps set Origin
+     * OSPF BGP Route maps set Origin. Possible values are `none`, `egp`, `igp` and `incomplete`.
      */
     origin?: string;
     /**
@@ -2982,7 +2963,7 @@ export interface BgpRouteMapRedistributionOspfBgpRouteMapSetIpv4 {
 
 export interface BgpRouteMapRedistributionOspfBgpRouteMapSetMetric {
     /**
-     * OSPF BGP Route maps set Metric action
+     * OSPF BGP Route maps set Metric action. Possible values are `set`, `add` and `substract`.
      */
     action?: string;
     /**
@@ -3000,7 +2981,7 @@ export interface BgpRouteMapRedistributionOspfRib {
 
 export interface BgpRouteMapRedistributionOspfRibRouteMap {
     /**
-     * OSPF RIB Route maps Action
+     * OSPF RIB Route maps Action. Possible values are `permit` and `deny`.
      */
     action?: string;
     /**
@@ -3075,7 +3056,7 @@ export interface BgpRouteMapRedistributionOspfRibRouteMapSet {
 
 export interface BgpRouteMapRouteMap {
     /**
-     * Action
+     * Action. Possible values are `permit` and `deny`.
      */
     action?: string;
     /**
@@ -3130,7 +3111,7 @@ export interface BgpRouteMapRouteMapMatch {
      */
     origin?: string;
     /**
-     * Peer
+     * Peer. Possible values are `local` and `none`.
      */
     peer?: string;
     /**
@@ -3225,7 +3206,7 @@ export interface BgpRouteMapRouteMapSet {
      */
     metric?: outputs.BgpRouteMapRouteMapSetMetric;
     /**
-     * Origin
+     * Origin. Possible values are `none`, `egp`, `igp` and `incomplete`.
      */
     origin?: string;
     /**
@@ -3241,7 +3222,7 @@ export interface BgpRouteMapRouteMapSet {
      */
     overwriteRegularCommunity?: boolean;
     /**
-     * Regular community
+     * Regular community. Possible values are `none`, `blackhole`, `no-peer`, `graceful-shutdown`, `accept-own`, `local-as`, `route-filter-v4`, `route-filter-v6`, `no-advertise`, `no-export` and `internet`.
      */
     regularCommunities?: string[];
     /**
@@ -3286,7 +3267,7 @@ export interface BgpRouteMapRouteMapSetIpv4 {
 
 export interface BgpRouteMapRouteMapSetMetric {
     /**
-     * Metric action
+     * Metric action. Possible values are `set`, `add` and `substract`.
      */
     action?: string;
     /**
@@ -3302,8 +3283,6 @@ export interface BgpRoutingRoutingPreference {
     default?: outputs.BgpRoutingRoutingPreferenceDefault;
     /**
      * Hot potato routing
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `default` and `hotPotatoRouting`.
      */
     hotPotatoRouting?: outputs.BgpRoutingRoutingPreferenceHotPotatoRouting;
 }
@@ -3335,11 +3314,11 @@ export interface CertificateProfileCaCertificate {
 
 export interface CertificateProfileUsernameField {
     /**
-     * Common name
+     * Common name. Possible values are `common-name`.
      */
     subject?: string;
     /**
-     * Email address
+     * Email address. Possible values are `email`.
      */
     subjectAlt?: string;
 }
@@ -3637,11 +3616,11 @@ export interface DecryptionProfileSslProtocolSettings {
      */
     keyxchgAlgoRsa: boolean;
     /**
-     * Max version
+     * Max version. Possible values are `sslv3`, `tls1-0`, `tls1-1`, `tls1-2`, `tls1-3` and `max`.
      */
     maxVersion: string;
     /**
-     * Min version
+     * Min version. Possible values are `sslv3`, `tls1-0`, `tls1-1`, `tls1-2` and `tls1-3`.
      */
     minVersion: string;
 }
@@ -3653,8 +3632,6 @@ export interface DecryptionRuleType {
     sslForwardProxy?: outputs.DecryptionRuleTypeSslForwardProxy;
     /**
      * add the certificate name for SSL inbound inspection
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `sslForwardProxy` and `sslInboundInspection`.
      */
     sslInboundInspection?: outputs.DecryptionRuleTypeSslInboundInspection;
 }
@@ -3700,7 +3677,7 @@ export interface DhcpInterfaceServer {
      */
     ipPools?: string[];
     /**
-     * DHCP server mode
+     * DHCP server mode. Possible values are `auto`, `enabled` and `disabled`.
      */
     mode?: string;
     /**
@@ -3793,8 +3770,6 @@ export interface DhcpInterfaceServerOptionLease {
     timeout?: number;
     /**
      * Unlimited
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `timeout` and `unlimited`.
      */
     unlimited?: outputs.DhcpInterfaceServerOptionLeaseUnlimited;
 }
@@ -4013,11 +3988,11 @@ export interface DnsSecurityProfileBotnetDomains {
 
 export interface DnsSecurityProfileBotnetDomainsDnsSecurityCategory {
     /**
-     * Action
+     * Action. Possible values are `default`, `allow`, `block` and `sinkhole`.
      */
     action: string;
     /**
-     * Log level
+     * Log level. Possible values are `default`, `none`, `low`, `informational`, `medium`, `high` and `critical`.
      */
     logLevel: string;
     /**
@@ -4025,7 +4000,7 @@ export interface DnsSecurityProfileBotnetDomainsDnsSecurityCategory {
      */
     name?: string;
     /**
-     * Packet capture
+     * Packet capture. Possible values are `disable`, `single-packet` and `extended-capture`.
      */
     packetCapture?: string;
 }
@@ -4040,7 +4015,7 @@ export interface DnsSecurityProfileBotnetDomainsList {
      */
     name: string;
     /**
-     * Packet capture
+     * Packet capture. Possible values are `disable`, `single-packet` and `extended-capture`.
      */
     packetCapture?: string;
 }
@@ -4052,20 +4027,14 @@ export interface DnsSecurityProfileBotnetDomainsListAction {
     alert?: outputs.DnsSecurityProfileBotnetDomainsListActionAlert;
     /**
      * Allow
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `block`, and `sinkhole`.
      */
     allow?: outputs.DnsSecurityProfileBotnetDomainsListActionAllow;
     /**
      * Block
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `block`, and `sinkhole`.
      */
     block?: outputs.DnsSecurityProfileBotnetDomainsListActionBlock;
     /**
      * Sinkhole
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `block`, and `sinkhole`.
      */
     sinkhole?: outputs.DnsSecurityProfileBotnetDomainsListActionSinkhole;
 }
@@ -4084,11 +4053,11 @@ export interface DnsSecurityProfileBotnetDomainsListActionSinkhole {
 
 export interface DnsSecurityProfileBotnetDomainsSinkhole {
     /**
-     * Ipv4 address
+     * Ipv4 address. Possible values are `127.0.0.1` and `pan-sinkhole-default-ip`.
      */
     ipv4Address?: string;
     /**
-     * Ipv6 address
+     * Ipv6 address. Possible values are `::1`.
      */
     ipv6Address?: string;
 }
@@ -4367,14 +4336,10 @@ export interface DosProtectionRuleAction {
     allow?: outputs.DosProtectionRuleActionAllow;
     /**
      * Deny
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `allow`, `deny`, and `protect`.
      */
     deny?: outputs.DosProtectionRuleActionDeny;
     /**
      * Protect
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `allow`, `deny`, and `protect`.
      */
     protect?: outputs.DosProtectionRuleActionProtect;
 }
@@ -4388,6 +4353,17 @@ export interface DosProtectionRuleActionDeny {
 export interface DosProtectionRuleActionProtect {
 }
 
+export interface DosProtectionRuleFrom {
+    /**
+     * Interface
+     */
+    interfaces?: string[];
+    /**
+     * Zone
+     */
+    zones?: string[];
+}
+
 export interface DosProtectionRuleProtection {
     /**
      * Aggregate
@@ -4395,8 +4371,6 @@ export interface DosProtectionRuleProtection {
     aggregate?: outputs.DosProtectionRuleProtectionAggregate;
     /**
      * Classified
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `aggregate` and `classified`.
      */
     classified?: outputs.DosProtectionRuleProtectionClassified;
 }
@@ -4426,9 +4400,20 @@ export interface DosProtectionRuleProtectionClassifiedClassificationCriteria {
     address?: string;
 }
 
+export interface DosProtectionRuleTo {
+    /**
+     * Interface
+     */
+    interfaces?: string[];
+    /**
+     * Zone
+     */
+    zones?: string[];
+}
+
 export interface EthernetInterfaceLayer2 {
     /**
-     * LLDP Settings
+     * LLDP settings for the interface
      */
     lldp?: outputs.EthernetInterfaceLayer2Lldp;
     /**
@@ -4446,9 +4431,28 @@ export interface EthernetInterfaceLayer2Lldp {
      * Enable LLDP on Interface
      */
     enable: boolean;
+    /**
+     * LLDP high availability settings
+     */
+    highAvailability?: outputs.EthernetInterfaceLayer2LldpHighAvailability;
+    /**
+     * Name of the LLDP profile to assign to the interface
+     */
+    profile?: string;
+}
+
+export interface EthernetInterfaceLayer2LldpHighAvailability {
+    /**
+     * Passive pre negotiation
+     */
+    passivePreNegotiation: boolean;
 }
 
 export interface EthernetInterfaceLayer3 {
+    /**
+     * TCP MSS adjustment settings for the interface
+     */
+    adjustTcpMss?: outputs.EthernetInterfaceLayer3AdjustTcpMss;
     /**
      * Ethernet Interfaces ARP configuration
      */
@@ -4467,10 +4471,12 @@ export interface EthernetInterfaceLayer3 {
     interfaceManagementProfile?: string;
     /**
      * Ethernet Interface IP addresses
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `dhcpClient`, `ip`, and `pppoe`.
      */
     ips?: outputs.EthernetInterfaceLayer3Ip[];
+    /**
+     * LLDP settings for the interface
+     */
+    lldp?: outputs.EthernetInterfaceLayer3Lldp;
     /**
      * MTU
      */
@@ -4480,11 +4486,24 @@ export interface EthernetInterfaceLayer3 {
      */
     netflowProfile?: string;
     /**
-     * Pppoe
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `dhcpClient`, `ip`, and `pppoe`.
+     * PPPoE configuration for the interface
      */
     pppoe?: outputs.EthernetInterfaceLayer3Pppoe;
+}
+
+export interface EthernetInterfaceLayer3AdjustTcpMss {
+    /**
+     * Enable TCP MSS adjustment on the interface
+     */
+    enable?: boolean;
+    /**
+     * IPv4 MSS adjustment size in bytes
+     */
+    ipv4MssAdjustment?: number;
+    /**
+     * IPv6 MSS adjustment size in bytes
+     */
+    ipv6MssAdjustment?: number;
 }
 
 export interface EthernetInterfaceLayer3Arp {
@@ -4566,13 +4585,35 @@ export interface EthernetInterfaceLayer3Ip {
     name: string;
 }
 
+export interface EthernetInterfaceLayer3Lldp {
+    /**
+     * Enable LLDP on Interface
+     */
+    enable: boolean;
+    /**
+     * LLDP high availability settings
+     */
+    highAvailability?: outputs.EthernetInterfaceLayer3LldpHighAvailability;
+    /**
+     * Name of the LLDP profile to assign to the interface
+     */
+    profile?: string;
+}
+
+export interface EthernetInterfaceLayer3LldpHighAvailability {
+    /**
+     * Passive pre negotiation
+     */
+    passivePreNegotiation: boolean;
+}
+
 export interface EthernetInterfaceLayer3Pppoe {
     /**
      * Access concentrator
      */
     accessConcentrator?: string;
     /**
-     * Authentication protocol
+     * Authentication protocol. Possible values are `CHAP`, `PAP` and `auto`.
      */
     authentication?: string;
     /**
@@ -4580,7 +4621,7 @@ export interface EthernetInterfaceLayer3Pppoe {
      */
     defaultRouteMetric: number;
     /**
-     * Enable
+     * Enable PPPoE on the interface
      */
     enable: boolean;
     /**
@@ -4644,38 +4685,26 @@ export interface ExternalDynamicListType {
     domain?: outputs.ExternalDynamicListTypeDomain;
     /**
      * IMEI Configuration settings
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
      */
     imei?: outputs.ExternalDynamicListTypeImei;
     /**
      * IMSI Config for Custom IMSI type
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
      */
     imsi?: outputs.ExternalDynamicListTypeImsi;
     /**
      * IP settings for Custom IP type
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
      */
     ip?: outputs.ExternalDynamicListTypeIp;
     /**
      * Predefined IP settings for EDL type
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
      */
     predefinedIp?: outputs.ExternalDynamicListTypePredefinedIp;
     /**
      * Predefined URL settings for EDL type
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
      */
     predefinedUrl?: outputs.ExternalDynamicListTypePredefinedUrl;
     /**
      * URL settings for Custom URL type
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
      */
     url?: outputs.ExternalDynamicListTypeUrl;
 }
@@ -4729,26 +4758,18 @@ export interface ExternalDynamicListTypeDomainRecurring {
     daily?: outputs.ExternalDynamicListTypeDomainRecurringDaily;
     /**
      * Five minute settings for Domain recurring
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
      */
     fiveMinute?: outputs.ExternalDynamicListTypeDomainRecurringFiveMinute;
     /**
      * Hourly settings for Domain recurring
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
      */
     hourly?: outputs.ExternalDynamicListTypeDomainRecurringHourly;
     /**
      * Monthly settings for Domain recurring
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
      */
     monthly?: outputs.ExternalDynamicListTypeDomainRecurringMonthly;
     /**
      * Weekly settings for Domain recurring
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
      */
     weekly?: outputs.ExternalDynamicListTypeDomainRecurringWeekly;
 }
@@ -4783,7 +4804,7 @@ export interface ExternalDynamicListTypeDomainRecurringWeekly {
      */
     at: string;
     /**
-     * Day of week
+     * Day of week. Possible values are `sunday`, `monday`, `tuesday`, `wednesday`, `thursday`, `friday` and `saturday`.
      */
     dayOfWeek: string;
 }
@@ -4833,26 +4854,18 @@ export interface ExternalDynamicListTypeImeiRecurring {
     daily?: outputs.ExternalDynamicListTypeImeiRecurringDaily;
     /**
      * Five-minute interval settings for IMEI updates
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
      */
     fiveMinute?: outputs.ExternalDynamicListTypeImeiRecurringFiveMinute;
     /**
      * Hourly interval settings for IMEI updates
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
      */
     hourly?: outputs.ExternalDynamicListTypeImeiRecurringHourly;
     /**
      * Monthly interval settings for IMEI updates
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
      */
     monthly?: outputs.ExternalDynamicListTypeImeiRecurringMonthly;
     /**
      * Weekly interval settings for IMEI updates
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
      */
     weekly?: outputs.ExternalDynamicListTypeImeiRecurringWeekly;
 }
@@ -4887,7 +4900,7 @@ export interface ExternalDynamicListTypeImeiRecurringWeekly {
      */
     at: string;
     /**
-     * Day of week
+     * Day of week. Possible values are `sunday`, `monday`, `tuesday`, `wednesday`, `thursday`, `friday` and `saturday`.
      */
     dayOfWeek: string;
 }
@@ -4937,26 +4950,18 @@ export interface ExternalDynamicListTypeImsiRecurring {
     daily?: outputs.ExternalDynamicListTypeImsiRecurringDaily;
     /**
      * Five-minute interval settings for IMSI updates
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
      */
     fiveMinute?: outputs.ExternalDynamicListTypeImsiRecurringFiveMinute;
     /**
      * Hourly interval settings for IMSI updates
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
      */
     hourly?: outputs.ExternalDynamicListTypeImsiRecurringHourly;
     /**
      * Monthly interval settings for IMSI updates
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
      */
     monthly?: outputs.ExternalDynamicListTypeImsiRecurringMonthly;
     /**
      * Weekly interval settings for IMSI updates
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
      */
     weekly?: outputs.ExternalDynamicListTypeImsiRecurringWeekly;
 }
@@ -4991,7 +4996,7 @@ export interface ExternalDynamicListTypeImsiRecurringWeekly {
      */
     at: string;
     /**
-     * Day of week
+     * Day of week. Possible values are `sunday`, `monday`, `tuesday`, `wednesday`, `thursday`, `friday` and `saturday`.
      */
     dayOfWeek: string;
 }
@@ -5041,26 +5046,18 @@ export interface ExternalDynamicListTypeIpRecurring {
     daily?: outputs.ExternalDynamicListTypeIpRecurringDaily;
     /**
      * Five minute settings for IP recurring
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
      */
     fiveMinute?: outputs.ExternalDynamicListTypeIpRecurringFiveMinute;
     /**
      * Hourly settings for IP recurring
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
      */
     hourly?: outputs.ExternalDynamicListTypeIpRecurringHourly;
     /**
      * Monthly settings for IP recurring
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
      */
     monthly?: outputs.ExternalDynamicListTypeIpRecurringMonthly;
     /**
      * Weekly settings for IP recurring
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
      */
     weekly?: outputs.ExternalDynamicListTypeIpRecurringWeekly;
 }
@@ -5095,7 +5092,7 @@ export interface ExternalDynamicListTypeIpRecurringWeekly {
      */
     at: string;
     /**
-     * Day of week
+     * Day of week. Possible values are `sunday`, `monday`, `tuesday`, `wednesday`, `thursday`, `friday` and `saturday`.
      */
     dayOfWeek: string;
 }
@@ -5175,26 +5172,18 @@ export interface ExternalDynamicListTypeUrlRecurring {
     daily?: outputs.ExternalDynamicListTypeUrlRecurringDaily;
     /**
      * Five minute settings for URL recurring
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
      */
     fiveMinute?: outputs.ExternalDynamicListTypeUrlRecurringFiveMinute;
     /**
      * Hourly settings for URL recurring
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
      */
     hourly?: outputs.ExternalDynamicListTypeUrlRecurringHourly;
     /**
      * Monthly settings for URL recurring
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
      */
     monthly?: outputs.ExternalDynamicListTypeUrlRecurringMonthly;
     /**
      * Weekly settings for URL recurring
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
      */
     weekly?: outputs.ExternalDynamicListTypeUrlRecurringWeekly;
 }
@@ -5229,26 +5218,26 @@ export interface ExternalDynamicListTypeUrlRecurringWeekly {
      */
     at: string;
     /**
-     * Day of week
+     * Day of week. Possible values are `sunday`, `monday`, `tuesday`, `wednesday`, `thursday`, `friday` and `saturday`.
      */
     dayOfWeek: string;
 }
 
 export interface FileBlockingProfileRule {
     /**
-     * The action to take when the rule match criteria is met
+     * The action to take when the rule match criteria is met. Possible values are `alert`, `block` and `continue`.
      */
     action: string;
     /**
-     * The application transferring the files (App-ID naming)
+     * The application transferring the files (App-ID naming). Possible values are `any`, `axifile`, `dl-free`, `facebook-mail`, `file.io`, `giphy-base`, `glassdoor-uploading`, `http-proxy`, `redbooth`, `send-anywhere` and `zoho-mail`.
      */
     applications: string[];
     /**
-     * The direction of the file transfer
+     * The direction of the file transfer. Possible values are `download`, `upload` and `both`.
      */
     direction: string;
     /**
-     * The file type
+     * The file type. Possible values are `7z`, `Multi-Level-Encoding`, `PE`, `access-shortcut`, `ace`, `ade`, `adp`, `ai`, `aip-encrypted-docx`, `aip-encrypted-pptx`, `aip-encrypted-xlsx`, `any`, `apk`, `arj`, `asp`, `avi`, `avi-divx`, `avi-xvid`, `bas`, `bat`, `bmp`, `bmp-upload`, `bzip2`, `cab`, `catpart`, `cdr`, `chm`, `cin`, `class`, `cmd`, `com`, `cpl`, `csv`, `deflate64-zip`, `der`, `dll`, `dmg`, `doc`, `docm`, `docx`, `dpx`, `dsn`, `dwf`, `dwg`, `dxf`, `edif`, `elf`, `emf`, `encrypted-7z`, `encrypted-doc`, `encrypted-docx`, `encrypted-office2007`, `encrypted-pdf`, `encrypted-ppt`, `encrypted-pptx`, `encrypted-rar`, `encrypted-xls`, `encrypted-xlsx`, `encrypted-zip`, `eps`, `exe`, `exr`, `flash`, `flv`, `gds`, `gif`, `gif-upload`, `gzip`, `hlp`, `hta`, `hwp`, `hwpx`, `ichitaro`, `iff`, `inf`, `ins`, `iqy`, `iso`, `its`, `iwork-keynote`, `iwork-numbers`, `iwork-pages`, `jar`, `jpeg`, `jpeg-upload`, `js`, `jse`, `lnk`, `lzh`, `ma`, `macapp`, `mach-o`, `mb`, `mda`, `mdb`, `mdi`, `mdt`, `mdw`, `mdz`, `mht`, `microsoft-shell`, `mif`, `mkv`, `mov`, `mp3`, `mp4`, `mpeg`, `mpeg-ts`, `mpkg`, `msc`, `msi`, `msoffice`, `msp`, `ocx`, `pbix`, `pbm`, `pcl`, `pdf`, `pem`, `pgp`, `pif`, `pkg`, `pl`, `png`, `png-upload`, `powershell`, `ppt`, `pptx`, `prg`, `psd`, `py`, `rar`, `reg`, `renamed-zip`, `rla`, `rm`, `rpf`, `rtf`, `scf`, `scr`, `sgi`, `sh`, `shk`, `shs`, `slk`, `softimg`, `split-cab`, `split-rar`, `stp`, `svg`, `sys`, `tar`, `tdb`, `tif`, `tiff`, `tmp`, `torrent`, `url`, `vb`, `vbe`, `vbs`, `vxd`, `webm`, `wmf`, `wmv`, `wri`, `wsf`, `wsh`, `xll`, `xls`, `xlsx`, `xpm`, `zcompressed` and `zip`.
      */
     fileTypes: string[];
     /**
@@ -5285,7 +5274,7 @@ export interface ForwardingProfileRegionalAndCustomProxyConnectivityPreference {
      */
     enabled: boolean;
     /**
-     * Connectivity method type - 'tunnel' for VPN tunnels, 'proxy' for HTTP/HTTPS proxies, 'adns' for authenticated DNS, 'masque' for MASQUE protocol
+     * Connectivity method type - 'tunnel' for VPN tunnels, 'proxy' for HTTP/HTTPS proxies, 'adns' for authenticated DNS, 'masque' for MASQUE protocol. Possible values are `tunnel`, `proxy`, `adns` and `masque`.
      */
     name: string;
 }
@@ -5338,14 +5327,10 @@ export interface ForwardingProfileType {
     globalProtectProxy?: outputs.ForwardingProfileTypeGlobalProtectProxy;
     /**
      * PAC file based forwarding configuration
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `globalProtectProxy`, `pacFile`, and `ztnaAgent`.
      */
     pacFile?: outputs.ForwardingProfileTypePacFile;
     /**
      * ZTNA agent-based forwarding configuration
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `globalProtectProxy`, `pacFile`, and `ztnaAgent`.
      */
     ztnaAgent?: outputs.ForwardingProfileTypeZtnaAgent;
 }
@@ -5584,7 +5569,7 @@ export interface ForwardingProfileTypeZtnaAgentForwardingRule {
      */
     sourceApplications: string;
     /**
-     * Type of traffic this ZTNA rule applies to (dns, network, or both)
+     * Type of traffic this ZTNA rule applies to (dns, network, or both). Possible values are `dns`, `dns-and-network-traffic` and `network-traffic`.
      */
     trafficType: string;
     /**
@@ -5618,7 +5603,7 @@ export interface GeneralSettingGeneral {
      */
     geoLocation?: outputs.GeneralSettingGeneralGeoLocation;
     /**
-     * Locale
+     * Locale. Possible values are `en`, `es`, `ja`, `fr`, `zh_CN` and `zh_TW`.
      */
     locale: string;
     /**
@@ -5698,12 +5683,10 @@ export interface GetAddressGroupListData {
     device: string;
     /**
      * Dynamic
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `dynamic` and `static`.
      */
     dynamic: outputs.GetAddressGroupListDataDynamic;
     /**
-     * The folder of the item. Default: Shared.
+     * The folder in which the resource is defined
      */
     folder: string;
     /**
@@ -5711,17 +5694,15 @@ export interface GetAddressGroupListData {
      */
     id: string;
     /**
-     * The name of the item.
+     * The name of the address group
      */
     name: string;
     /**
-     * The snippet of the item.
+     * The snippet in which the resource is defined
      */
     snippet: string;
     /**
      * Static
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `dynamic` and `static`.
      */
     statics: string[];
     /**
@@ -5751,13 +5732,11 @@ export interface GetAddressListData {
      */
     device: string;
     /**
-     * The folder of the item. Default: Shared.
+     * The folder in which the resource is defined
      */
     folder: string;
     /**
      * Fully qualified domain name
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `fqdn`, `ipNetmask`, `ipRange`, and `ipWildcard`.
      */
     fqdn: string;
     /**
@@ -5766,28 +5745,22 @@ export interface GetAddressListData {
     id: string;
     /**
      * IP address with or without CIDR notation
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `fqdn`, `ipNetmask`, `ipRange`, and `ipWildcard`.
      */
     ipNetmask: string;
     /**
      * Ip range
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `fqdn`, `ipNetmask`, `ipRange`, and `ipWildcard`.
      */
     ipRange: string;
     /**
      * IP wildcard mask
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `fqdn`, `ipNetmask`, `ipRange`, and `ipWildcard`.
      */
     ipWildcard: string;
     /**
-     * The name of the item.
+     * The name of the address object
      */
     name: string;
     /**
-     * The snippet of the item.
+     * The snippet in which the resource is defined
      */
     snippet: string;
     /**
@@ -5805,6 +5778,10 @@ export interface GetAggregateInterfaceLayer2 {
      * Lacp
      */
     lacp: outputs.GetAggregateInterfaceLayer2Lacp;
+    /**
+     * LLDP settings for the interface
+     */
+    lldp: outputs.GetAggregateInterfaceLayer2Lldp;
     /**
      * Name of Netflow Profile to assign to Interface
      */
@@ -5825,11 +5802,15 @@ export interface GetAggregateInterfaceLayer2Lacp {
      */
     fastFailover: boolean;
     /**
+     * High Availability settings
+     */
+    highAvailability: outputs.GetAggregateInterfaceLayer2LacpHighAvailability;
+    /**
      * Maximum number of physical ports bundled in the LAG
      */
     maxPorts: number;
     /**
-     * Mode
+     * Mode. Possible values are `passive` and `active`.
      */
     mode: string;
     /**
@@ -5837,12 +5818,45 @@ export interface GetAggregateInterfaceLayer2Lacp {
      */
     systemPriority: number;
     /**
-     * Transmission mode
+     * Transmission mode. Possible values are `fast` and `slow`.
      */
     transmissionRate: string;
 }
 
+export interface GetAggregateInterfaceLayer2LacpHighAvailability {
+    /**
+     * Passive pre negotiation
+     */
+    passivePreNegotiation: boolean;
+}
+
+export interface GetAggregateInterfaceLayer2Lldp {
+    /**
+     * Enable LLDP on Interface
+     */
+    enable: boolean;
+    /**
+     * LLDP high availability settings
+     */
+    highAvailability: outputs.GetAggregateInterfaceLayer2LldpHighAvailability;
+    /**
+     * Name of the LLDP profile to assign to the interface
+     */
+    profile: string;
+}
+
+export interface GetAggregateInterfaceLayer2LldpHighAvailability {
+    /**
+     * Passive pre negotiation
+     */
+    passivePreNegotiation: boolean;
+}
+
 export interface GetAggregateInterfaceLayer3 {
+    /**
+     * TCP MSS adjustment settings for the interface
+     */
+    adjustTcpMss: outputs.GetAggregateInterfaceLayer3AdjustTcpMss;
     /**
      * Aggregate Ethernet ARP configuration
      */
@@ -5861,14 +5875,16 @@ export interface GetAggregateInterfaceLayer3 {
     interfaceManagementProfile: string;
     /**
      * Aggregate Interface IP addresses
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
      */
     ips: outputs.GetAggregateInterfaceLayer3Ip[];
     /**
      * Lacp
      */
     lacp: outputs.GetAggregateInterfaceLayer3Lacp;
+    /**
+     * LLDP settings for the interface
+     */
+    lldp: outputs.GetAggregateInterfaceLayer3Lldp;
     /**
      * MTU
      */
@@ -5877,6 +5893,21 @@ export interface GetAggregateInterfaceLayer3 {
      * Name of Netflow Profile to assign to Interface
      */
     netflowProfile: string;
+}
+
+export interface GetAggregateInterfaceLayer3AdjustTcpMss {
+    /**
+     * Enable TCP MSS adjustment on the interface
+     */
+    enable: boolean;
+    /**
+     * IPv4 MSS adjustment size in bytes
+     */
+    ipv4MssAdjustment: number;
+    /**
+     * IPv6 MSS adjustment size in bytes
+     */
+    ipv6MssAdjustment: number;
 }
 
 export interface GetAggregateInterfaceLayer3Arp {
@@ -5968,11 +5999,15 @@ export interface GetAggregateInterfaceLayer3Lacp {
      */
     fastFailover: boolean;
     /**
+     * High Availability settings
+     */
+    highAvailability: outputs.GetAggregateInterfaceLayer3LacpHighAvailability;
+    /**
      * Maximum number of physical ports bundled in the LAG
      */
     maxPorts: number;
     /**
-     * Mode
+     * Mode. Possible values are `passive` and `active`.
      */
     mode: string;
     /**
@@ -5980,9 +6015,38 @@ export interface GetAggregateInterfaceLayer3Lacp {
      */
     systemPriority: number;
     /**
-     * Transmission mode
+     * Transmission mode. Possible values are `fast` and `slow`.
      */
     transmissionRate: string;
+}
+
+export interface GetAggregateInterfaceLayer3LacpHighAvailability {
+    /**
+     * Passive pre negotiation
+     */
+    passivePreNegotiation: boolean;
+}
+
+export interface GetAggregateInterfaceLayer3Lldp {
+    /**
+     * Enable LLDP on Interface
+     */
+    enable: boolean;
+    /**
+     * LLDP high availability settings
+     */
+    highAvailability: outputs.GetAggregateInterfaceLayer3LldpHighAvailability;
+    /**
+     * Name of the LLDP profile to assign to the interface
+     */
+    profile: string;
+}
+
+export interface GetAggregateInterfaceLayer3LldpHighAvailability {
+    /**
+     * Passive pre negotiation
+     */
+    passivePreNegotiation: boolean;
 }
 
 export interface GetAggregateInterfaceListData {
@@ -5999,7 +6063,7 @@ export interface GetAggregateInterfaceListData {
      */
     device: string;
     /**
-     * The folder of the item. Default: Shared.
+     * The folder in which the resource is defined
      */
     folder: string;
     /**
@@ -6008,22 +6072,18 @@ export interface GetAggregateInterfaceListData {
     id: string;
     /**
      * Layer2
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `layer2` and `layer3`.
      */
     layer2: outputs.GetAggregateInterfaceListDataLayer2;
     /**
      * Aggregate Interface Layer 3 configuration
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `layer2` and `layer3`.
      */
     layer3: outputs.GetAggregateInterfaceListDataLayer3;
     /**
-     * The name of the item.
+     * Aggregate interface name
      */
     name: string;
     /**
-     * The snippet of the item.
+     * The snippet in which the resource is defined
      */
     snippet: string;
     /**
@@ -6037,6 +6097,10 @@ export interface GetAggregateInterfaceListDataLayer2 {
      * Lacp
      */
     lacp: outputs.GetAggregateInterfaceListDataLayer2Lacp;
+    /**
+     * LLDP settings for the interface
+     */
+    lldp: outputs.GetAggregateInterfaceListDataLayer2Lldp;
     /**
      * Name of Netflow Profile to assign to Interface
      */
@@ -6057,11 +6121,15 @@ export interface GetAggregateInterfaceListDataLayer2Lacp {
      */
     fastFailover: boolean;
     /**
+     * High Availability settings
+     */
+    highAvailability: outputs.GetAggregateInterfaceListDataLayer2LacpHighAvailability;
+    /**
      * Maximum number of physical ports bundled in the LAG
      */
     maxPorts: number;
     /**
-     * Mode
+     * Mode. Possible values are `passive` and `active`.
      */
     mode: string;
     /**
@@ -6069,12 +6137,45 @@ export interface GetAggregateInterfaceListDataLayer2Lacp {
      */
     systemPriority: number;
     /**
-     * Transmission mode
+     * Transmission mode. Possible values are `fast` and `slow`.
      */
     transmissionRate: string;
 }
 
+export interface GetAggregateInterfaceListDataLayer2LacpHighAvailability {
+    /**
+     * Passive pre negotiation
+     */
+    passivePreNegotiation: boolean;
+}
+
+export interface GetAggregateInterfaceListDataLayer2Lldp {
+    /**
+     * Enable LLDP on Interface
+     */
+    enable: boolean;
+    /**
+     * LLDP high availability settings
+     */
+    highAvailability: outputs.GetAggregateInterfaceListDataLayer2LldpHighAvailability;
+    /**
+     * Name of the LLDP profile to assign to the interface
+     */
+    profile: string;
+}
+
+export interface GetAggregateInterfaceListDataLayer2LldpHighAvailability {
+    /**
+     * Passive pre negotiation
+     */
+    passivePreNegotiation: boolean;
+}
+
 export interface GetAggregateInterfaceListDataLayer3 {
+    /**
+     * TCP MSS adjustment settings for the interface
+     */
+    adjustTcpMss: outputs.GetAggregateInterfaceListDataLayer3AdjustTcpMss;
     /**
      * Aggregate Ethernet ARP configuration
      */
@@ -6093,14 +6194,16 @@ export interface GetAggregateInterfaceListDataLayer3 {
     interfaceManagementProfile: string;
     /**
      * Aggregate Interface IP addresses
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
      */
     ips: outputs.GetAggregateInterfaceListDataLayer3Ip[];
     /**
      * Lacp
      */
     lacp: outputs.GetAggregateInterfaceListDataLayer3Lacp;
+    /**
+     * LLDP settings for the interface
+     */
+    lldp: outputs.GetAggregateInterfaceListDataLayer3Lldp;
     /**
      * MTU
      */
@@ -6109,6 +6212,21 @@ export interface GetAggregateInterfaceListDataLayer3 {
      * Name of Netflow Profile to assign to Interface
      */
     netflowProfile: string;
+}
+
+export interface GetAggregateInterfaceListDataLayer3AdjustTcpMss {
+    /**
+     * Enable TCP MSS adjustment on the interface
+     */
+    enable: boolean;
+    /**
+     * IPv4 MSS adjustment size in bytes
+     */
+    ipv4MssAdjustment: number;
+    /**
+     * IPv6 MSS adjustment size in bytes
+     */
+    ipv6MssAdjustment: number;
 }
 
 export interface GetAggregateInterfaceListDataLayer3Arp {
@@ -6200,11 +6318,15 @@ export interface GetAggregateInterfaceListDataLayer3Lacp {
      */
     fastFailover: boolean;
     /**
+     * High Availability settings
+     */
+    highAvailability: outputs.GetAggregateInterfaceListDataLayer3LacpHighAvailability;
+    /**
      * Maximum number of physical ports bundled in the LAG
      */
     maxPorts: number;
     /**
-     * Mode
+     * Mode. Possible values are `passive` and `active`.
      */
     mode: string;
     /**
@@ -6212,9 +6334,38 @@ export interface GetAggregateInterfaceListDataLayer3Lacp {
      */
     systemPriority: number;
     /**
-     * Transmission mode
+     * Transmission mode. Possible values are `fast` and `slow`.
      */
     transmissionRate: string;
+}
+
+export interface GetAggregateInterfaceListDataLayer3LacpHighAvailability {
+    /**
+     * Passive pre negotiation
+     */
+    passivePreNegotiation: boolean;
+}
+
+export interface GetAggregateInterfaceListDataLayer3Lldp {
+    /**
+     * Enable LLDP on Interface
+     */
+    enable: boolean;
+    /**
+     * LLDP high availability settings
+     */
+    highAvailability: outputs.GetAggregateInterfaceListDataLayer3LldpHighAvailability;
+    /**
+     * Name of the LLDP profile to assign to the interface
+     */
+    profile: string;
+}
+
+export interface GetAggregateInterfaceListDataLayer3LldpHighAvailability {
+    /**
+     * Passive pre negotiation
+     */
+    passivePreNegotiation: boolean;
 }
 
 export interface GetAntiSpywareProfileListData {
@@ -6231,7 +6382,7 @@ export interface GetAntiSpywareProfileListData {
      */
     device: string;
     /**
-     * The folder of the item. Default: Shared.
+     * The folder in which the resource is defined
      */
     folder: string;
     /**
@@ -6251,7 +6402,7 @@ export interface GetAntiSpywareProfileListData {
      */
     micaEngineSpywareEnableds: outputs.GetAntiSpywareProfileListDataMicaEngineSpywareEnabled[];
     /**
-     * The name of the item.
+     * The name of the anti-spyware profile
      */
     name: string;
     /**
@@ -6259,7 +6410,7 @@ export interface GetAntiSpywareProfileListData {
      */
     rules: outputs.GetAntiSpywareProfileListDataRule[];
     /**
-     * The snippet of the item.
+     * The snippet in which the resource is defined
      */
     snippet: string;
     /**
@@ -6274,7 +6425,7 @@ export interface GetAntiSpywareProfileListData {
 
 export interface GetAntiSpywareProfileListDataMicaEngineSpywareEnabled {
     /**
-     * Inline policy action
+     * Inline policy action. Possible values are `alert`, `allow`, `drop`, `reset-both`, `reset-client` and `reset-server`.
      */
     inlinePolicyAction: string;
     /**
@@ -6289,7 +6440,7 @@ export interface GetAntiSpywareProfileListDataRule {
      */
     action: outputs.GetAntiSpywareProfileListDataRuleAction;
     /**
-     * Category
+     * Category. Possible values are `adns-adtracking`, `adns-benign`, `adns-c2`, `adns-ddns`, `adns-dnsmisconfig`, `adns-grayware`, `adns-hijacking`, `adns-malware`, `adns-new-domain`, `adns-parked`, `adns-phishing`, `adns-proxy`, `adware`, `any`, `autogen`, `backdoor`, `botnet`, `browser-hijack`, `command-and-control`, `cryptominer`, `data-theft`, `dns`, `dns-adtracking`, `dns-benign`, `dns-c2`, `dns-ddns`, `dns-grayware`, `dns-malware`, `dns-new-domain`, `dns-parked`, `dns-phishing`, `dns-proxy`, `dns-security`, `dns-wildfire`, `domain-edl`, `downloader`, `fraud`, `hacktool`, `inline-cloud-c2`, `keylogger`, `net-worm`, `p2p-communication`, `phishing-kit`, `post-exploitation`, `spyware`, `tls-fingerprint` and `webshell`.
      */
     category: string;
     /**
@@ -6297,7 +6448,7 @@ export interface GetAntiSpywareProfileListDataRule {
      */
     name: string;
     /**
-     * Packet capture
+     * Packet capture. Possible values are `disable`, `single-packet` and `extended-capture`.
      */
     packetCapture: string;
     /**
@@ -6317,38 +6468,26 @@ export interface GetAntiSpywareProfileListDataRuleAction {
     alert: outputs.GetAntiSpywareProfileListDataRuleActionAlert;
     /**
      * Allow
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      */
     allow: outputs.GetAntiSpywareProfileListDataRuleActionAllow;
     /**
      * anti spyware profiles rules action block ip
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      */
     blockIp: outputs.GetAntiSpywareProfileListDataRuleActionBlockIp;
     /**
      * Drop
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      */
     drop: outputs.GetAntiSpywareProfileListDataRuleActionDrop;
     /**
      * Reset both
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      */
     resetBoth: outputs.GetAntiSpywareProfileListDataRuleActionResetBoth;
     /**
      * Reset client
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      */
     resetClient: outputs.GetAntiSpywareProfileListDataRuleActionResetClient;
     /**
      * Reset server
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      */
     resetServer: outputs.GetAntiSpywareProfileListDataRuleActionResetServer;
 }
@@ -6365,7 +6504,7 @@ export interface GetAntiSpywareProfileListDataRuleActionBlockIp {
      */
     duration: number;
     /**
-     * Track by
+     * Track by. Possible values are `source-and-destination` and `source`.
      */
     trackBy: string;
 }
@@ -6400,7 +6539,7 @@ export interface GetAntiSpywareProfileListDataThreatException {
      */
     notes: string;
     /**
-     * Packet capture
+     * Packet capture. Possible values are `disable`, `single-packet` and `extended-capture`.
      */
     packetCapture: string;
 }
@@ -6412,44 +6551,30 @@ export interface GetAntiSpywareProfileListDataThreatExceptionAction {
     alert: outputs.GetAntiSpywareProfileListDataThreatExceptionActionAlert;
     /**
      * Allow
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      */
     allow: outputs.GetAntiSpywareProfileListDataThreatExceptionActionAllow;
     /**
      * anti spyware profiles threat exception action block ip
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      */
     blockIp: outputs.GetAntiSpywareProfileListDataThreatExceptionActionBlockIp;
     /**
      * Default
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      */
     default: outputs.GetAntiSpywareProfileListDataThreatExceptionActionDefault;
     /**
      * Drop
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      */
     drop: outputs.GetAntiSpywareProfileListDataThreatExceptionActionDrop;
     /**
      * Reset both
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      */
     resetBoth: outputs.GetAntiSpywareProfileListDataThreatExceptionActionResetBoth;
     /**
      * Reset client
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      */
     resetClient: outputs.GetAntiSpywareProfileListDataThreatExceptionActionResetClient;
     /**
      * Reset server
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      */
     resetServer: outputs.GetAntiSpywareProfileListDataThreatExceptionActionResetServer;
 }
@@ -6466,7 +6591,7 @@ export interface GetAntiSpywareProfileListDataThreatExceptionActionBlockIp {
      */
     duration: number;
     /**
-     * Track by
+     * Track by. Possible values are `source-and-destination` and `source`.
      */
     trackBy: string;
 }
@@ -6495,7 +6620,7 @@ export interface GetAntiSpywareProfileListDataThreatExceptionExemptIp {
 
 export interface GetAntiSpywareProfileMicaEngineSpywareEnabled {
     /**
-     * Inline policy action
+     * Inline policy action. Possible values are `alert`, `allow`, `drop`, `reset-both`, `reset-client` and `reset-server`.
      */
     inlinePolicyAction: string;
     /**
@@ -6510,7 +6635,7 @@ export interface GetAntiSpywareProfileRule {
      */
     action: outputs.GetAntiSpywareProfileRuleAction;
     /**
-     * Category
+     * Category. Possible values are `adns-adtracking`, `adns-benign`, `adns-c2`, `adns-ddns`, `adns-dnsmisconfig`, `adns-grayware`, `adns-hijacking`, `adns-malware`, `adns-new-domain`, `adns-parked`, `adns-phishing`, `adns-proxy`, `adware`, `any`, `autogen`, `backdoor`, `botnet`, `browser-hijack`, `command-and-control`, `cryptominer`, `data-theft`, `dns`, `dns-adtracking`, `dns-benign`, `dns-c2`, `dns-ddns`, `dns-grayware`, `dns-malware`, `dns-new-domain`, `dns-parked`, `dns-phishing`, `dns-proxy`, `dns-security`, `dns-wildfire`, `domain-edl`, `downloader`, `fraud`, `hacktool`, `inline-cloud-c2`, `keylogger`, `net-worm`, `p2p-communication`, `phishing-kit`, `post-exploitation`, `spyware`, `tls-fingerprint` and `webshell`.
      */
     category: string;
     /**
@@ -6518,7 +6643,7 @@ export interface GetAntiSpywareProfileRule {
      */
     name: string;
     /**
-     * Packet capture
+     * Packet capture. Possible values are `disable`, `single-packet` and `extended-capture`.
      */
     packetCapture: string;
     /**
@@ -6538,38 +6663,26 @@ export interface GetAntiSpywareProfileRuleAction {
     alert: outputs.GetAntiSpywareProfileRuleActionAlert;
     /**
      * Allow
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      */
     allow: outputs.GetAntiSpywareProfileRuleActionAllow;
     /**
      * anti spyware profiles rules action block ip
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      */
     blockIp: outputs.GetAntiSpywareProfileRuleActionBlockIp;
     /**
      * Drop
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      */
     drop: outputs.GetAntiSpywareProfileRuleActionDrop;
     /**
      * Reset both
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      */
     resetBoth: outputs.GetAntiSpywareProfileRuleActionResetBoth;
     /**
      * Reset client
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      */
     resetClient: outputs.GetAntiSpywareProfileRuleActionResetClient;
     /**
      * Reset server
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      */
     resetServer: outputs.GetAntiSpywareProfileRuleActionResetServer;
 }
@@ -6586,7 +6699,7 @@ export interface GetAntiSpywareProfileRuleActionBlockIp {
      */
     duration: number;
     /**
-     * Track by
+     * Track by. Possible values are `source-and-destination` and `source`.
      */
     trackBy: string;
 }
@@ -6621,7 +6734,7 @@ export interface GetAntiSpywareProfileThreatException {
      */
     notes: string;
     /**
-     * Packet capture
+     * Packet capture. Possible values are `disable`, `single-packet` and `extended-capture`.
      */
     packetCapture: string;
 }
@@ -6633,44 +6746,30 @@ export interface GetAntiSpywareProfileThreatExceptionAction {
     alert: outputs.GetAntiSpywareProfileThreatExceptionActionAlert;
     /**
      * Allow
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      */
     allow: outputs.GetAntiSpywareProfileThreatExceptionActionAllow;
     /**
      * anti spyware profiles threat exception action block ip
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      */
     blockIp: outputs.GetAntiSpywareProfileThreatExceptionActionBlockIp;
     /**
      * Default
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      */
     default: outputs.GetAntiSpywareProfileThreatExceptionActionDefault;
     /**
      * Drop
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      */
     drop: outputs.GetAntiSpywareProfileThreatExceptionActionDrop;
     /**
      * Reset both
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      */
     resetBoth: outputs.GetAntiSpywareProfileThreatExceptionActionResetBoth;
     /**
      * Reset client
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      */
     resetClient: outputs.GetAntiSpywareProfileThreatExceptionActionResetClient;
     /**
      * Reset server
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      */
     resetServer: outputs.GetAntiSpywareProfileThreatExceptionActionResetServer;
 }
@@ -6687,7 +6786,7 @@ export interface GetAntiSpywareProfileThreatExceptionActionBlockIp {
      */
     duration: number;
     /**
-     * Track by
+     * Track by. Possible values are `source-and-destination` and `source`.
      */
     trackBy: string;
 }
@@ -6721,38 +6820,26 @@ export interface GetAntiSpywareSignatureDefaultAction {
     alert: outputs.GetAntiSpywareSignatureDefaultActionAlert;
     /**
      * Allow
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      */
     allow: outputs.GetAntiSpywareSignatureDefaultActionAllow;
     /**
      * anti spyware signature block ip
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      */
     blockIp: outputs.GetAntiSpywareSignatureDefaultActionBlockIp;
     /**
      * Drop
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      */
     drop: outputs.GetAntiSpywareSignatureDefaultActionDrop;
     /**
      * Reset both
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      */
     resetBoth: outputs.GetAntiSpywareSignatureDefaultActionResetBoth;
     /**
      * Reset client
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      */
     resetClient: outputs.GetAntiSpywareSignatureDefaultActionResetClient;
     /**
      * Reset server
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      */
     resetServer: outputs.GetAntiSpywareSignatureDefaultActionResetServer;
 }
@@ -6769,7 +6856,7 @@ export interface GetAntiSpywareSignatureDefaultActionBlockIp {
      */
     duration: number;
     /**
-     * Track by
+     * Track by. Possible values are `source-and-destination` and `source`.
      */
     trackBy: string;
 }
@@ -6808,11 +6895,11 @@ export interface GetAntiSpywareSignatureListData {
      */
     device: string;
     /**
-     * Direction
+     * Direction. Possible values are `client2server`, `server2client` and `both`.
      */
     direction: string;
     /**
-     * The folder of the item. Default: Shared.
+     * The folder in which the resource is defined
      */
     folder: string;
     /**
@@ -6824,7 +6911,7 @@ export interface GetAntiSpywareSignatureListData {
      */
     references: string[];
     /**
-     * Severity
+     * Severity. Possible values are `critical`, `low`, `high`, `medium` and `informational`.
      */
     severity: string;
     /**
@@ -6832,7 +6919,7 @@ export interface GetAntiSpywareSignatureListData {
      */
     signature: outputs.GetAntiSpywareSignatureListDataSignature;
     /**
-     * The snippet of the item.
+     * The snippet in which the resource is defined
      */
     snippet: string;
     /**
@@ -6840,7 +6927,7 @@ export interface GetAntiSpywareSignatureListData {
      */
     tfid: string;
     /**
-     * threat id range <15000-18000> and <6900001-7000000>
+     * threat id range \n\n and \n\n
      */
     threatId: string;
     /**
@@ -6860,38 +6947,26 @@ export interface GetAntiSpywareSignatureListDataDefaultAction {
     alert: outputs.GetAntiSpywareSignatureListDataDefaultActionAlert;
     /**
      * Allow
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      */
     allow: outputs.GetAntiSpywareSignatureListDataDefaultActionAllow;
     /**
      * anti spyware signature block ip
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      */
     blockIp: outputs.GetAntiSpywareSignatureListDataDefaultActionBlockIp;
     /**
      * Drop
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      */
     drop: outputs.GetAntiSpywareSignatureListDataDefaultActionDrop;
     /**
      * Reset both
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      */
     resetBoth: outputs.GetAntiSpywareSignatureListDataDefaultActionResetBoth;
     /**
      * Reset client
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      */
     resetClient: outputs.GetAntiSpywareSignatureListDataDefaultActionResetClient;
     /**
      * Reset server
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      */
     resetServer: outputs.GetAntiSpywareSignatureListDataDefaultActionResetServer;
 }
@@ -6908,7 +6983,7 @@ export interface GetAntiSpywareSignatureListDataDefaultActionBlockIp {
      */
     duration: number;
     /**
-     * Track by
+     * Track by. Possible values are `source-and-destination` and `source`.
      */
     trackBy: string;
 }
@@ -6932,8 +7007,6 @@ export interface GetAntiSpywareSignatureListDataSignature {
     combination: outputs.GetAntiSpywareSignatureListDataSignatureCombination;
     /**
      * Standard
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `combination` and `standard`.
      */
     standards: outputs.GetAntiSpywareSignatureListDataSignatureStandard[];
 }
@@ -6985,7 +7058,7 @@ export interface GetAntiSpywareSignatureListDataSignatureCombinationTimeAttribut
      */
     threshold: number;
     /**
-     * Track by
+     * Track by. Possible values are `source-and-destination`, `source` and `destination`.
      */
     trackBy: string;
 }
@@ -7008,7 +7081,7 @@ export interface GetAntiSpywareSignatureListDataSignatureStandard {
      */
     orderFree: boolean;
     /**
-     * Scope
+     * Scope. Possible values are `protocol-data-unit` and `session`.
      */
     scope: string;
 }
@@ -7173,8 +7246,6 @@ export interface GetAntiSpywareSignatureSignature {
     combination: outputs.GetAntiSpywareSignatureSignatureCombination;
     /**
      * Standard
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `combination` and `standard`.
      */
     standards: outputs.GetAntiSpywareSignatureSignatureStandard[];
 }
@@ -7226,7 +7297,7 @@ export interface GetAntiSpywareSignatureSignatureCombinationTimeAttribute {
      */
     threshold: number;
     /**
-     * Track by
+     * Track by. Possible values are `source-and-destination`, `source` and `destination`.
      */
     trackBy: string;
 }
@@ -7249,7 +7320,7 @@ export interface GetAntiSpywareSignatureSignatureStandard {
      */
     orderFree: boolean;
     /**
-     * Scope
+     * Scope. Possible values are `protocol-data-unit` and `session`.
      */
     scope: string;
 }
@@ -7429,7 +7500,7 @@ export interface GetAppOverrideRuleListData {
      */
     disabled: boolean;
     /**
-     * The folder of the item. Default: Shared.
+     * The folder in which the resource is defined
      */
     folder: string;
     /**
@@ -7445,7 +7516,7 @@ export interface GetAppOverrideRuleListData {
      */
     id: string;
     /**
-     * The name of the item.
+     * Name
      */
     name: string;
     /**
@@ -7461,11 +7532,11 @@ export interface GetAppOverrideRuleListData {
      */
     port: string;
     /**
-     * The position of a security rule
+     * The position of a security rule. Possible values are `pre` and `post`.
      */
     position: string;
     /**
-     * Protocol
+     * Protocol. Possible values are `tcp` and `udp`.
      */
     protocol: string;
     /**
@@ -7473,7 +7544,7 @@ export interface GetAppOverrideRuleListData {
      */
     relativePosition: string;
     /**
-     * The snippet of the item.
+     * The snippet in which the resource is defined
      */
     snippet: string;
     /**
@@ -7485,7 +7556,7 @@ export interface GetAppOverrideRuleListData {
      */
     tags: string[];
     /**
-     * The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `"before"` or `"after"`.
+     * UUID of the rule to position this rule relative to. Required when `relativePosition` is `"before"` or `"after"`.
      */
     targetRule: string;
     /**
@@ -7505,20 +7576,14 @@ export interface GetApplicationDefault {
     identByIcmp6Type: outputs.GetApplicationDefaultIdentByIcmp6Type;
     /**
      * Ident by icmp type
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `identByIcmp6Type`, `identByIcmpType`, `identByIpProtocol`, and `port`.
      */
     identByIcmpType: outputs.GetApplicationDefaultIdentByIcmpType;
     /**
      * Ident by ip protocol
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `identByIcmp6Type`, `identByIcmpType`, `identByIpProtocol`, and `port`.
      */
     identByIpProtocol: string;
     /**
      * Port
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `identByIcmp6Type`, `identByIcmpType`, `identByIpProtocol`, and `port`.
      */
     ports: string[];
 }
@@ -7567,7 +7632,7 @@ export interface GetApplicationFilterListData {
      */
     excludes: string[];
     /**
-     * The folder of the item. Default: Shared.
+     * The folder in which the resource is defined
      */
     folder: string;
     /**
@@ -7583,7 +7648,7 @@ export interface GetApplicationFilterListData {
      */
     isSaas: boolean;
     /**
-     * The name of the item.
+     * Alphanumeric string [ 0-9a-zA-Z._-]
      */
     name: string;
     /**
@@ -7611,7 +7676,7 @@ export interface GetApplicationFilterListData {
      */
     saasRisks: string[];
     /**
-     * The snippet of the item.
+     * The snippet in which the resource is defined
      */
     snippet: string;
     /**
@@ -7651,8 +7716,6 @@ export interface GetApplicationFilterListDataTagging {
     noTag: boolean;
     /**
      * Tag
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `noTag` and `tag`.
      */
     tags: string[];
 }
@@ -7664,8 +7727,6 @@ export interface GetApplicationFilterTagging {
     noTag: boolean;
     /**
      * Tag
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `noTag` and `tag`.
      */
     tags: string[];
 }
@@ -7676,7 +7737,7 @@ export interface GetApplicationGroupListData {
      */
     device: string;
     /**
-     * The folder of the item. Default: Shared.
+     * The folder in which the resource is defined
      */
     folder: string;
     /**
@@ -7688,11 +7749,11 @@ export interface GetApplicationGroupListData {
      */
     members: string[];
     /**
-     * The name of the item.
+     * Alphanumeric string [ 0-9a-zA-Z._-]
      */
     name: string;
     /**
-     * The snippet of the item.
+     * The snippet in which the resource is defined
      */
     snippet: string;
     /**
@@ -7743,7 +7804,7 @@ export interface GetApplicationListData {
      */
     fileTypeIdent: boolean;
     /**
-     * The folder of the item. Default: Shared.
+     * The folder in which the resource is defined
      */
     folder: string;
     /**
@@ -7755,7 +7816,7 @@ export interface GetApplicationListData {
      */
     id: string;
     /**
-     * The name of the item.
+     * The name of the application
      */
     name: string;
     /**
@@ -7783,7 +7844,7 @@ export interface GetApplicationListData {
      */
     signatures: outputs.GetApplicationListDataSignature[];
     /**
-     * The snippet of the item.
+     * The snippet in which the resource is defined
      */
     snippet: string;
     /**
@@ -7843,20 +7904,14 @@ export interface GetApplicationListDataDefault {
     identByIcmp6Type: outputs.GetApplicationListDataDefaultIdentByIcmp6Type;
     /**
      * Ident by icmp type
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `identByIcmp6Type`, `identByIcmpType`, `identByIpProtocol`, and `port`.
      */
     identByIcmpType: outputs.GetApplicationListDataDefaultIdentByIcmpType;
     /**
      * Ident by ip protocol
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `identByIcmp6Type`, `identByIcmpType`, `identByIpProtocol`, and `port`.
      */
     identByIpProtocol: string;
     /**
      * Port
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `identByIcmp6Type`, `identByIcmpType`, `identByIpProtocol`, and `port`.
      */
     ports: string[];
 }
@@ -7901,7 +7956,7 @@ export interface GetApplicationListDataSignature {
      */
     orderFree: boolean;
     /**
-     * Scope
+     * Scope. Possible values are `protocol-data-unit` and `session`.
      */
     scope: string;
 }
@@ -7935,20 +7990,14 @@ export interface GetApplicationListDataSignatureAndConditionOrConditionOperator 
     equalTo: outputs.GetApplicationListDataSignatureAndConditionOrConditionOperatorEqualTo;
     /**
      * Greater than
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `equalTo`, `greaterThan`, `lessThan`, and `patternMatch`.
      */
     greaterThan: outputs.GetApplicationListDataSignatureAndConditionOrConditionOperatorGreaterThan;
     /**
      * Less than
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `equalTo`, `greaterThan`, `lessThan`, and `patternMatch`.
      */
     lessThan: outputs.GetApplicationListDataSignatureAndConditionOrConditionOperatorLessThan;
     /**
      * Pattern match
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `equalTo`, `greaterThan`, `lessThan`, and `patternMatch`.
      */
     patternMatch: outputs.GetApplicationListDataSignatureAndConditionOrConditionOperatorPatternMatch;
 }
@@ -8068,7 +8117,7 @@ export interface GetApplicationSignature {
      */
     orderFree: boolean;
     /**
-     * Scope
+     * Scope. Possible values are `protocol-data-unit` and `session`.
      */
     scope: string;
 }
@@ -8102,20 +8151,14 @@ export interface GetApplicationSignatureAndConditionOrConditionOperator {
     equalTo: outputs.GetApplicationSignatureAndConditionOrConditionOperatorEqualTo;
     /**
      * Greater than
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `equalTo`, `greaterThan`, `lessThan`, and `patternMatch`.
      */
     greaterThan: outputs.GetApplicationSignatureAndConditionOrConditionOperatorGreaterThan;
     /**
      * Less than
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `equalTo`, `greaterThan`, `lessThan`, and `patternMatch`.
      */
     lessThan: outputs.GetApplicationSignatureAndConditionOrConditionOperatorLessThan;
     /**
      * Pattern match
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `equalTo`, `greaterThan`, `lessThan`, and `patternMatch`.
      */
     patternMatch: outputs.GetApplicationSignatureAndConditionOrConditionOperatorPatternMatch;
 }
@@ -8227,7 +8270,7 @@ export interface GetAuthenticationProfileListData {
      */
     device: string;
     /**
-     * The folder of the item. Default: Shared.
+     * The folder in which the resource is defined
      */
     folder: string;
     /**
@@ -8247,7 +8290,7 @@ export interface GetAuthenticationProfileListData {
      */
     multiFactorAuth: outputs.GetAuthenticationProfileListDataMultiFactorAuth;
     /**
-     * The name of the item.
+     * The name of the authentication profile
      */
     name: string;
     /**
@@ -8255,7 +8298,7 @@ export interface GetAuthenticationProfileListData {
      */
     singleSignOn: outputs.GetAuthenticationProfileListDataSingleSignOn;
     /**
-     * The snippet of the item.
+     * The snippet in which the resource is defined
      */
     snippet: string;
     /**
@@ -8267,7 +8310,7 @@ export interface GetAuthenticationProfileListData {
      */
     userDomain: string;
     /**
-     * Username modifier
+     * Username modifier. Possible values are `%USERINPUT%`, `%USERINPUT%@%USERDOMAIN%` and `%USERDOMAIN%\\%USERINPUT%`.
      */
     usernameModifier: string;
 }
@@ -8290,38 +8333,26 @@ export interface GetAuthenticationProfileListDataMethod {
     cloud: outputs.GetAuthenticationProfileListDataMethodCloud;
     /**
      * Kerberos
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `cloud`, `kerberos`, `ldap`, `localDatabase`, `radius`, `samlIdp`, and `tacplus`.
      */
     kerberos: outputs.GetAuthenticationProfileListDataMethodKerberos;
     /**
      * Ldap
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `cloud`, `kerberos`, `ldap`, `localDatabase`, `radius`, `samlIdp`, and `tacplus`.
      */
     ldap: outputs.GetAuthenticationProfileListDataMethodLdap;
     /**
      * Local database
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `cloud`, `kerberos`, `ldap`, `localDatabase`, `radius`, `samlIdp`, and `tacplus`.
      */
     localDatabase: outputs.GetAuthenticationProfileListDataMethodLocalDatabase;
     /**
      * Radius
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `cloud`, `kerberos`, `ldap`, `localDatabase`, `radius`, `samlIdp`, and `tacplus`.
      */
     radius: outputs.GetAuthenticationProfileListDataMethodRadius;
     /**
      * Saml idp
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `cloud`, `kerberos`, `ldap`, `localDatabase`, `radius`, `samlIdp`, and `tacplus`.
      */
     samlIdp: outputs.GetAuthenticationProfileListDataMethodSamlIdp;
     /**
      * Tacplus
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `cloud`, `kerberos`, `ldap`, `localDatabase`, `radius`, `samlIdp`, and `tacplus`.
      */
     tacplus: outputs.GetAuthenticationProfileListDataMethodTacplus;
 }
@@ -8451,38 +8482,26 @@ export interface GetAuthenticationProfileMethod {
     cloud: outputs.GetAuthenticationProfileMethodCloud;
     /**
      * Kerberos
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `cloud`, `kerberos`, `ldap`, `localDatabase`, `radius`, `samlIdp`, and `tacplus`.
      */
     kerberos: outputs.GetAuthenticationProfileMethodKerberos;
     /**
      * Ldap
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `cloud`, `kerberos`, `ldap`, `localDatabase`, `radius`, `samlIdp`, and `tacplus`.
      */
     ldap: outputs.GetAuthenticationProfileMethodLdap;
     /**
      * Local database
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `cloud`, `kerberos`, `ldap`, `localDatabase`, `radius`, `samlIdp`, and `tacplus`.
      */
     localDatabase: outputs.GetAuthenticationProfileMethodLocalDatabase;
     /**
      * Radius
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `cloud`, `kerberos`, `ldap`, `localDatabase`, `radius`, `samlIdp`, and `tacplus`.
      */
     radius: outputs.GetAuthenticationProfileMethodRadius;
     /**
      * Saml idp
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `cloud`, `kerberos`, `ldap`, `localDatabase`, `radius`, `samlIdp`, and `tacplus`.
      */
     samlIdp: outputs.GetAuthenticationProfileMethodSamlIdp;
     /**
      * Tacplus
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `cloud`, `kerberos`, `ldap`, `localDatabase`, `radius`, `samlIdp`, and `tacplus`.
      */
     tacplus: outputs.GetAuthenticationProfileMethodTacplus;
 }
@@ -8624,7 +8643,7 @@ export interface GetAuthenticationRuleListData {
      */
     disabled: boolean;
     /**
-     * The folder of the item. Default: Shared.
+     * Folder
      */
     folder: string;
     /**
@@ -8652,7 +8671,7 @@ export interface GetAuthenticationRuleListData {
      */
     logSetting: string;
     /**
-     * The name of the item.
+     * The name of the authentication rule
      */
     name: string;
     /**
@@ -8664,7 +8683,7 @@ export interface GetAuthenticationRuleListData {
      */
     negateSource: boolean;
     /**
-     * The relative position of the rule
+     * The relative position of the rule. Possible values are `pre` and `post`.
      */
     position: string;
     /**
@@ -8676,7 +8695,7 @@ export interface GetAuthenticationRuleListData {
      */
     services: string[];
     /**
-     * The snippet of the item.
+     * Snippet
      */
     snippet: string;
     /**
@@ -8696,7 +8715,7 @@ export interface GetAuthenticationRuleListData {
      */
     tags: string[];
     /**
-     * The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `"before"` or `"after"`.
+     * UUID of the rule to position this rule relative to. Required when `relativePosition` is `"before"` or `"after"`.
      */
     targetRule: string;
     /**
@@ -8723,7 +8742,7 @@ export interface GetAuthenticationSequenceListData {
      */
     device: string;
     /**
-     * The folder of the item. Default: Shared.
+     * The folder in which the resource is defined
      */
     folder: string;
     /**
@@ -8731,11 +8750,11 @@ export interface GetAuthenticationSequenceListData {
      */
     id: string;
     /**
-     * The name of the item.
+     * The name of the authentication sequence
      */
     name: string;
     /**
-     * The snippet of the item.
+     * The snippet in which the resource is defined
      */
     snippet: string;
     /**
@@ -8773,7 +8792,7 @@ export interface GetAuthenticationSettingListData {
      */
     device: string;
     /**
-     * The folder of the item. Default: Shared.
+     * The folder in which the resource is defined
      */
     folder: string;
     /**
@@ -8781,7 +8800,7 @@ export interface GetAuthenticationSettingListData {
      */
     id: string;
     /**
-     * The snippet of the item.
+     * The snippet in which the resource is defined
      */
     snippet: string;
     /**
@@ -8880,8 +8899,6 @@ export interface GetAutoVpnClusterBranchInterfaceSdwanLinkSettingsUpstreamNatSta
     fqdn: string;
     /**
      * IP address
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `fqdn` and `ipAddress`.
      */
     ipAddress: string;
 }
@@ -8930,8 +8947,6 @@ export interface GetAutoVpnClusterBranchPrivateInterfaceSdwanLinkSettingsUpstrea
     fqdn: string;
     /**
      * IP address
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `fqdn` and `ipAddress`.
      */
     ipAddress: string;
 }
@@ -8958,7 +8973,7 @@ export interface GetAutoVpnClusterGateway {
      */
     name: string;
     /**
-     * Priority
+     * Priority. Possible values are `1`, `2`, `3`, `4`, `5`, `6`, `7` and `8`.
      */
     priority: string;
     /**
@@ -9019,8 +9034,6 @@ export interface GetAutoVpnClusterGatewayInterfaceSdwanLinkSettingsUpstreamNatSt
     fqdn: string;
     /**
      * IP address
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `fqdn` and `ipAddress`.
      */
     ipAddress: string;
 }
@@ -9069,8 +9082,6 @@ export interface GetAutoVpnClusterGatewayPrivateInterfaceSdwanLinkSettingsUpstre
     fqdn: string;
     /**
      * IP address
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `fqdn` and `ipAddress`.
      */
     ipAddress: string;
 }
@@ -9109,7 +9120,7 @@ export interface GetAutoVpnClusterListData {
      */
     tfid: string;
     /**
-     * VPN cluster type
+     * VPN cluster type. Possible values are `hub-spoke` and `mesh`.
      */
     type: string;
 }
@@ -9189,8 +9200,6 @@ export interface GetAutoVpnClusterListDataBranchInterfaceSdwanLinkSettingsUpstre
     fqdn: string;
     /**
      * IP address
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `fqdn` and `ipAddress`.
      */
     ipAddress: string;
 }
@@ -9239,8 +9248,6 @@ export interface GetAutoVpnClusterListDataBranchPrivateInterfaceSdwanLinkSetting
     fqdn: string;
     /**
      * IP address
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `fqdn` and `ipAddress`.
      */
     ipAddress: string;
 }
@@ -9267,7 +9274,7 @@ export interface GetAutoVpnClusterListDataGateway {
      */
     name: string;
     /**
-     * Priority
+     * Priority. Possible values are `1`, `2`, `3`, `4`, `5`, `6`, `7` and `8`.
      */
     priority: string;
     /**
@@ -9328,8 +9335,6 @@ export interface GetAutoVpnClusterListDataGatewayInterfaceSdwanLinkSettingsUpstr
     fqdn: string;
     /**
      * IP address
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `fqdn` and `ipAddress`.
      */
     ipAddress: string;
 }
@@ -9378,8 +9383,6 @@ export interface GetAutoVpnClusterListDataGatewayPrivateInterfaceSdwanLinkSettin
     fqdn: string;
     /**
      * IP address
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `fqdn` and `ipAddress`.
      */
     ipAddress: string;
 }
@@ -9540,8 +9543,6 @@ export interface GetBgpAddressFamilyProfileIpv4MulticastAllowasIn {
     occurrence: number;
     /**
      * Origin
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `occurrence` and `origin`.
      */
     origin: outputs.GetBgpAddressFamilyProfileIpv4MulticastAllowasInOrigin;
 }
@@ -9571,8 +9572,6 @@ export interface GetBgpAddressFamilyProfileIpv4MulticastMaximumPrefixAction {
     restart: outputs.GetBgpAddressFamilyProfileIpv4MulticastMaximumPrefixActionRestart;
     /**
      * Warning only
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `restart` and `warningOnly`.
      */
     warningOnly: outputs.GetBgpAddressFamilyProfileIpv4MulticastMaximumPrefixActionWarningOnly;
 }
@@ -9594,8 +9593,6 @@ export interface GetBgpAddressFamilyProfileIpv4MulticastNextHop {
     self: outputs.GetBgpAddressFamilyProfileIpv4MulticastNextHopSelf;
     /**
      * Self force
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `self` and `selfForce`.
      */
     selfForce: outputs.GetBgpAddressFamilyProfileIpv4MulticastNextHopSelfForce;
 }
@@ -9608,7 +9605,7 @@ export interface GetBgpAddressFamilyProfileIpv4MulticastNextHopSelfForce {
 
 export interface GetBgpAddressFamilyProfileIpv4MulticastOrf {
     /**
-     * ORF prefix list
+     * ORF prefix list. Possible values are `none`, `both`, `receive` and `send`.
      */
     orfPrefixList: string;
 }
@@ -9637,26 +9634,18 @@ export interface GetBgpAddressFamilyProfileIpv4MulticastSendCommunity {
     all: outputs.GetBgpAddressFamilyProfileIpv4MulticastSendCommunityAll;
     /**
      * Both
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
      */
     both: outputs.GetBgpAddressFamilyProfileIpv4MulticastSendCommunityBoth;
     /**
      * Extended
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
      */
     extended: outputs.GetBgpAddressFamilyProfileIpv4MulticastSendCommunityExtended;
     /**
      * Large
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
      */
     large: outputs.GetBgpAddressFamilyProfileIpv4MulticastSendCommunityLarge;
     /**
      * Standard
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
      */
     standard: outputs.GetBgpAddressFamilyProfileIpv4MulticastSendCommunityStandard;
 }
@@ -9749,8 +9738,6 @@ export interface GetBgpAddressFamilyProfileIpv4UnicastAllowasIn {
     occurrence: number;
     /**
      * Origin
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `occurrence` and `origin`.
      */
     origin: outputs.GetBgpAddressFamilyProfileIpv4UnicastAllowasInOrigin;
 }
@@ -9780,8 +9767,6 @@ export interface GetBgpAddressFamilyProfileIpv4UnicastMaximumPrefixAction {
     restart: outputs.GetBgpAddressFamilyProfileIpv4UnicastMaximumPrefixActionRestart;
     /**
      * Warning only
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `restart` and `warningOnly`.
      */
     warningOnly: outputs.GetBgpAddressFamilyProfileIpv4UnicastMaximumPrefixActionWarningOnly;
 }
@@ -9803,8 +9788,6 @@ export interface GetBgpAddressFamilyProfileIpv4UnicastNextHop {
     self: outputs.GetBgpAddressFamilyProfileIpv4UnicastNextHopSelf;
     /**
      * Self force
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `self` and `selfForce`.
      */
     selfForce: outputs.GetBgpAddressFamilyProfileIpv4UnicastNextHopSelfForce;
 }
@@ -9817,7 +9800,7 @@ export interface GetBgpAddressFamilyProfileIpv4UnicastNextHopSelfForce {
 
 export interface GetBgpAddressFamilyProfileIpv4UnicastOrf {
     /**
-     * ORF prefix list
+     * ORF prefix list. Possible values are `none`, `both`, `receive` and `send`.
      */
     orfPrefixList: string;
 }
@@ -9846,26 +9829,18 @@ export interface GetBgpAddressFamilyProfileIpv4UnicastSendCommunity {
     all: outputs.GetBgpAddressFamilyProfileIpv4UnicastSendCommunityAll;
     /**
      * Both
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
      */
     both: outputs.GetBgpAddressFamilyProfileIpv4UnicastSendCommunityBoth;
     /**
      * Extended
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
      */
     extended: outputs.GetBgpAddressFamilyProfileIpv4UnicastSendCommunityExtended;
     /**
      * Large
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
      */
     large: outputs.GetBgpAddressFamilyProfileIpv4UnicastSendCommunityLarge;
     /**
      * Standard
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
      */
     standard: outputs.GetBgpAddressFamilyProfileIpv4UnicastSendCommunityStandard;
 }
@@ -9891,7 +9866,7 @@ export interface GetBgpAddressFamilyProfileListData {
      */
     device: string;
     /**
-     * The folder of the item. Default: Shared.
+     * The folder in which the resource is defined
      */
     folder: string;
     /**
@@ -9903,11 +9878,11 @@ export interface GetBgpAddressFamilyProfileListData {
      */
     ipv4: outputs.GetBgpAddressFamilyProfileListDataIpv4;
     /**
-     * The name of the item.
+     * Name
      */
     name: string;
     /**
-     * The snippet of the item.
+     * The snippet in which the resource is defined
      */
     snippet: string;
     /**
@@ -10000,8 +9975,6 @@ export interface GetBgpAddressFamilyProfileListDataIpv4MulticastAllowasIn {
     occurrence: number;
     /**
      * Origin
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `occurrence` and `origin`.
      */
     origin: outputs.GetBgpAddressFamilyProfileListDataIpv4MulticastAllowasInOrigin;
 }
@@ -10031,8 +10004,6 @@ export interface GetBgpAddressFamilyProfileListDataIpv4MulticastMaximumPrefixAct
     restart: outputs.GetBgpAddressFamilyProfileListDataIpv4MulticastMaximumPrefixActionRestart;
     /**
      * Warning only
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `restart` and `warningOnly`.
      */
     warningOnly: outputs.GetBgpAddressFamilyProfileListDataIpv4MulticastMaximumPrefixActionWarningOnly;
 }
@@ -10054,8 +10025,6 @@ export interface GetBgpAddressFamilyProfileListDataIpv4MulticastNextHop {
     self: outputs.GetBgpAddressFamilyProfileListDataIpv4MulticastNextHopSelf;
     /**
      * Self force
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `self` and `selfForce`.
      */
     selfForce: outputs.GetBgpAddressFamilyProfileListDataIpv4MulticastNextHopSelfForce;
 }
@@ -10068,7 +10037,7 @@ export interface GetBgpAddressFamilyProfileListDataIpv4MulticastNextHopSelfForce
 
 export interface GetBgpAddressFamilyProfileListDataIpv4MulticastOrf {
     /**
-     * ORF prefix list
+     * ORF prefix list. Possible values are `none`, `both`, `receive` and `send`.
      */
     orfPrefixList: string;
 }
@@ -10097,26 +10066,18 @@ export interface GetBgpAddressFamilyProfileListDataIpv4MulticastSendCommunity {
     all: outputs.GetBgpAddressFamilyProfileListDataIpv4MulticastSendCommunityAll;
     /**
      * Both
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
      */
     both: outputs.GetBgpAddressFamilyProfileListDataIpv4MulticastSendCommunityBoth;
     /**
      * Extended
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
      */
     extended: outputs.GetBgpAddressFamilyProfileListDataIpv4MulticastSendCommunityExtended;
     /**
      * Large
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
      */
     large: outputs.GetBgpAddressFamilyProfileListDataIpv4MulticastSendCommunityLarge;
     /**
      * Standard
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
      */
     standard: outputs.GetBgpAddressFamilyProfileListDataIpv4MulticastSendCommunityStandard;
 }
@@ -10209,8 +10170,6 @@ export interface GetBgpAddressFamilyProfileListDataIpv4UnicastAllowasIn {
     occurrence: number;
     /**
      * Origin
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `occurrence` and `origin`.
      */
     origin: outputs.GetBgpAddressFamilyProfileListDataIpv4UnicastAllowasInOrigin;
 }
@@ -10240,8 +10199,6 @@ export interface GetBgpAddressFamilyProfileListDataIpv4UnicastMaximumPrefixActio
     restart: outputs.GetBgpAddressFamilyProfileListDataIpv4UnicastMaximumPrefixActionRestart;
     /**
      * Warning only
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `restart` and `warningOnly`.
      */
     warningOnly: outputs.GetBgpAddressFamilyProfileListDataIpv4UnicastMaximumPrefixActionWarningOnly;
 }
@@ -10263,8 +10220,6 @@ export interface GetBgpAddressFamilyProfileListDataIpv4UnicastNextHop {
     self: outputs.GetBgpAddressFamilyProfileListDataIpv4UnicastNextHopSelf;
     /**
      * Self force
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `self` and `selfForce`.
      */
     selfForce: outputs.GetBgpAddressFamilyProfileListDataIpv4UnicastNextHopSelfForce;
 }
@@ -10277,7 +10232,7 @@ export interface GetBgpAddressFamilyProfileListDataIpv4UnicastNextHopSelfForce {
 
 export interface GetBgpAddressFamilyProfileListDataIpv4UnicastOrf {
     /**
-     * ORF prefix list
+     * ORF prefix list. Possible values are `none`, `both`, `receive` and `send`.
      */
     orfPrefixList: string;
 }
@@ -10306,26 +10261,18 @@ export interface GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunity {
     all: outputs.GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityAll;
     /**
      * Both
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
      */
     both: outputs.GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityBoth;
     /**
      * Extended
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
      */
     extended: outputs.GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityExtended;
     /**
      * Large
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
      */
     large: outputs.GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityLarge;
     /**
      * Standard
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
      */
     standard: outputs.GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityStandard;
 }
@@ -10355,7 +10302,7 @@ export interface GetBgpAuthProfileListData {
      */
     encryptedValues: {[key: string]: string};
     /**
-     * The folder of the item. Default: Shared.
+     * The folder in which the resource is defined
      */
     folder: string;
     /**
@@ -10363,7 +10310,7 @@ export interface GetBgpAuthProfileListData {
      */
     id: string;
     /**
-     * The name of the item.
+     * Profile name
      */
     name: string;
     /**
@@ -10371,7 +10318,7 @@ export interface GetBgpAuthProfileListData {
      */
     secret: string;
     /**
-     * The snippet of the item.
+     * The snippet in which the resource is defined
      */
     snippet: string;
     /**
@@ -10613,7 +10560,7 @@ export interface GetBgpFilteringProfileListData {
      */
     device: string;
     /**
-     * The folder of the item. Default: Shared.
+     * The folder in which the resource is defined
      */
     folder: string;
     /**
@@ -10625,11 +10572,11 @@ export interface GetBgpFilteringProfileListData {
      */
     ipv4: outputs.GetBgpFilteringProfileListDataIpv4;
     /**
-     * The name of the item.
+     * Name
      */
     name: string;
     /**
-     * The snippet of the item.
+     * The snippet in which the resource is defined
      */
     snippet: string;
     /**
@@ -10934,7 +10881,7 @@ export interface GetBgpRedistributionProfileListData {
      */
     device: string;
     /**
-     * The folder of the item. Default: Shared.
+     * The folder in which the resource is defined
      */
     folder: string;
     /**
@@ -10946,11 +10893,11 @@ export interface GetBgpRedistributionProfileListData {
      */
     ipv4: outputs.GetBgpRedistributionProfileListDataIpv4;
     /**
-     * The name of the item.
+     * Name
      */
     name: string;
     /**
-     * The snippet of the item.
+     * The snippet in which the resource is defined
      */
     snippet: string;
     /**
@@ -11036,7 +10983,7 @@ export interface GetBgpRouteMapListData {
      */
     device: string;
     /**
-     * The folder of the item. Default: Shared.
+     * The folder in which the resource is defined
      */
     folder: string;
     /**
@@ -11044,7 +10991,7 @@ export interface GetBgpRouteMapListData {
      */
     id: string;
     /**
-     * The name of the item.
+     * Name
      */
     name: string;
     /**
@@ -11052,7 +10999,7 @@ export interface GetBgpRouteMapListData {
      */
     routeMaps: outputs.GetBgpRouteMapListDataRouteMap[];
     /**
-     * The snippet of the item.
+     * The snippet in which the resource is defined
      */
     snippet: string;
     /**
@@ -11063,7 +11010,7 @@ export interface GetBgpRouteMapListData {
 
 export interface GetBgpRouteMapListDataRouteMap {
     /**
-     * Action
+     * Action. Possible values are `permit` and `deny`.
      */
     action: string;
     /**
@@ -11118,7 +11065,7 @@ export interface GetBgpRouteMapListDataRouteMapMatch {
      */
     origin: string;
     /**
-     * Peer
+     * Peer. Possible values are `local` and `none`.
      */
     peer: string;
     /**
@@ -11213,7 +11160,7 @@ export interface GetBgpRouteMapListDataRouteMapSet {
      */
     metric: outputs.GetBgpRouteMapListDataRouteMapSetMetric;
     /**
-     * Origin
+     * Origin. Possible values are `none`, `egp`, `igp` and `incomplete`.
      */
     origin: string;
     /**
@@ -11229,7 +11176,7 @@ export interface GetBgpRouteMapListDataRouteMapSet {
      */
     overwriteRegularCommunity: boolean;
     /**
-     * Regular community
+     * Regular community. Possible values are `none`, `blackhole`, `no-peer`, `graceful-shutdown`, `accept-own`, `local-as`, `route-filter-v4`, `route-filter-v6`, `no-advertise`, `no-export` and `internet`.
      */
     regularCommunities: string[];
     /**
@@ -11274,7 +11221,7 @@ export interface GetBgpRouteMapListDataRouteMapSetIpv4 {
 
 export interface GetBgpRouteMapListDataRouteMapSetMetric {
     /**
-     * Metric action
+     * Metric action. Possible values are `set`, `add` and `substract`.
      */
     action: string;
     /**
@@ -11290,8 +11237,6 @@ export interface GetBgpRouteMapRedistributionBgp {
     ospf: outputs.GetBgpRouteMapRedistributionBgpOspf;
     /**
      * BGP Root RIB
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `ospf` and `rib`.
      */
     rib: outputs.GetBgpRouteMapRedistributionBgpRib;
 }
@@ -11305,7 +11250,7 @@ export interface GetBgpRouteMapRedistributionBgpOspf {
 
 export interface GetBgpRouteMapRedistributionBgpOspfRouteMap {
     /**
-     * BGP Root OSPF Route maps Action
+     * BGP Root OSPF Route maps Action. Possible values are `permit` and `deny`.
      */
     action: string;
     /**
@@ -11360,7 +11305,7 @@ export interface GetBgpRouteMapRedistributionBgpOspfRouteMapMatch {
      */
     origin: string;
     /**
-     * BGP Root OSPF Route maps match Peer
+     * BGP Root OSPF Route maps match Peer. Possible values are `local` and `none`.
      */
     peer: string;
     /**
@@ -11427,7 +11372,7 @@ export interface GetBgpRouteMapRedistributionBgpOspfRouteMapSet {
      */
     metric: outputs.GetBgpRouteMapRedistributionBgpOspfRouteMapSetMetric;
     /**
-     * BGP Root OSPF Route maps set Metric type
+     * BGP Root OSPF Route maps set Metric type. Possible values are `type-1` and `type-2`.
      */
     metricType: string;
     /**
@@ -11438,7 +11383,7 @@ export interface GetBgpRouteMapRedistributionBgpOspfRouteMapSet {
 
 export interface GetBgpRouteMapRedistributionBgpOspfRouteMapSetMetric {
     /**
-     * BGP Root OSPF Route maps set Metric action
+     * BGP Root OSPF Route maps set Metric action. Possible values are `set`, `add` and `subtract`.
      */
     action: string;
     /**
@@ -11456,7 +11401,7 @@ export interface GetBgpRouteMapRedistributionBgpRib {
 
 export interface GetBgpRouteMapRedistributionBgpRibRouteMap {
     /**
-     * BGP Root RIB Route maps Action
+     * BGP Root RIB Route maps Action. Possible values are `permit` and `deny`.
      */
     action: string;
     /**
@@ -11511,7 +11456,7 @@ export interface GetBgpRouteMapRedistributionBgpRibRouteMapMatch {
      */
     origin: string;
     /**
-     * BGP Root RIB Route maps match Peer
+     * BGP Root RIB Route maps match Peer. Possible values are `local` and `none`.
      */
     peer: string;
     /**
@@ -11586,14 +11531,10 @@ export interface GetBgpRouteMapRedistributionConnectedStatic {
     bgp: outputs.GetBgpRouteMapRedistributionConnectedStaticBgp;
     /**
      * Ospf
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `bgp`, `ospf`, and `rib`.
      */
     ospf: outputs.GetBgpRouteMapRedistributionConnectedStaticOspf;
     /**
      * Rib
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `bgp`, `ospf`, and `rib`.
      */
     rib: outputs.GetBgpRouteMapRedistributionConnectedStaticRib;
 }
@@ -11607,7 +11548,7 @@ export interface GetBgpRouteMapRedistributionConnectedStaticBgp {
 
 export interface GetBgpRouteMapRedistributionConnectedStaticBgpRouteMap {
     /**
-     * Connected Static BGP Route maps Action
+     * Connected Static BGP Route maps Action. Possible values are `permit` and `deny`.
      */
     action: string;
     /**
@@ -11706,7 +11647,7 @@ export interface GetBgpRouteMapRedistributionConnectedStaticBgpRouteMapSet {
      */
     metric: outputs.GetBgpRouteMapRedistributionConnectedStaticBgpRouteMapSetMetric;
     /**
-     * Connected Static BGP Route maps set Origin
+     * Connected Static BGP Route maps set Origin. Possible values are `none`, `egp`, `igp` and `incomplete`.
      */
     origin: string;
     /**
@@ -11751,7 +11692,7 @@ export interface GetBgpRouteMapRedistributionConnectedStaticBgpRouteMapSetIpv4 {
 
 export interface GetBgpRouteMapRedistributionConnectedStaticBgpRouteMapSetMetric {
     /**
-     * Connected Static BGP Route maps set Metric action
+     * Connected Static BGP Route maps set Metric action. Possible values are `set`, `add` and `substract`.
      */
     action: string;
     /**
@@ -11769,7 +11710,7 @@ export interface GetBgpRouteMapRedistributionConnectedStaticOspf {
 
 export interface GetBgpRouteMapRedistributionConnectedStaticOspfRouteMap {
     /**
-     * Connected Static BGP OSPF Route map Action
+     * Connected Static BGP OSPF Route map Action. Possible values are `permit` and `deny`.
      */
     action: string;
     /**
@@ -11844,7 +11785,7 @@ export interface GetBgpRouteMapRedistributionConnectedStaticOspfRouteMapSet {
      */
     metric: outputs.GetBgpRouteMapRedistributionConnectedStaticOspfRouteMapSetMetric;
     /**
-     * Connected Static BGP OSPF Route map set Metric type
+     * Connected Static BGP OSPF Route map set Metric type. Possible values are `type-1` and `type-2`.
      */
     metricType: string;
     /**
@@ -11855,7 +11796,7 @@ export interface GetBgpRouteMapRedistributionConnectedStaticOspfRouteMapSet {
 
 export interface GetBgpRouteMapRedistributionConnectedStaticOspfRouteMapSetMetric {
     /**
-     * Connected Static BGP OSPF Route map set Metric action
+     * Connected Static BGP OSPF Route map set Metric action. Possible values are `set`, `add` and `substract`.
      */
     action: string;
     /**
@@ -11873,7 +11814,7 @@ export interface GetBgpRouteMapRedistributionConnectedStaticRib {
 
 export interface GetBgpRouteMapRedistributionConnectedStaticRibRouteMap {
     /**
-     * Connected Static BGP Rib Route maps Action
+     * Connected Static BGP Rib Route maps Action. Possible values are `permit` and `deny`.
      */
     action: string;
     /**
@@ -11952,14 +11893,10 @@ export interface GetBgpRouteMapRedistributionConnectedStaticRibRouteMapSet {
 export interface GetBgpRouteMapRedistributionListData {
     /**
      * Bgp
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `bgp`, `connectedStatic`, and `ospf`.
      */
     bgp: outputs.GetBgpRouteMapRedistributionListDataBgp;
     /**
      * Connected static
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `bgp`, `connectedStatic`, and `ospf`.
      */
     connectedStatic: outputs.GetBgpRouteMapRedistributionListDataConnectedStatic;
     /**
@@ -11971,7 +11908,7 @@ export interface GetBgpRouteMapRedistributionListData {
      */
     device: string;
     /**
-     * The folder of the item. Default: Shared.
+     * The folder in which the resource is defined
      */
     folder: string;
     /**
@@ -11979,17 +11916,15 @@ export interface GetBgpRouteMapRedistributionListData {
      */
     id: string;
     /**
-     * The name of the item.
+     * BGP Route Map Redistributions Name
      */
     name: string;
     /**
      * Ospf
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `bgp`, `connectedStatic`, and `ospf`.
      */
     ospf: outputs.GetBgpRouteMapRedistributionListDataOspf;
     /**
-     * The snippet of the item.
+     * The snippet in which the resource is defined
      */
     snippet: string;
     /**
@@ -12005,8 +11940,6 @@ export interface GetBgpRouteMapRedistributionListDataBgp {
     ospf: outputs.GetBgpRouteMapRedistributionListDataBgpOspf;
     /**
      * BGP Root RIB
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `ospf` and `rib`.
      */
     rib: outputs.GetBgpRouteMapRedistributionListDataBgpRib;
 }
@@ -12020,7 +11953,7 @@ export interface GetBgpRouteMapRedistributionListDataBgpOspf {
 
 export interface GetBgpRouteMapRedistributionListDataBgpOspfRouteMap {
     /**
-     * BGP Root OSPF Route maps Action
+     * BGP Root OSPF Route maps Action. Possible values are `permit` and `deny`.
      */
     action: string;
     /**
@@ -12075,7 +12008,7 @@ export interface GetBgpRouteMapRedistributionListDataBgpOspfRouteMapMatch {
      */
     origin: string;
     /**
-     * BGP Root OSPF Route maps match Peer
+     * BGP Root OSPF Route maps match Peer. Possible values are `local` and `none`.
      */
     peer: string;
     /**
@@ -12142,7 +12075,7 @@ export interface GetBgpRouteMapRedistributionListDataBgpOspfRouteMapSet {
      */
     metric: outputs.GetBgpRouteMapRedistributionListDataBgpOspfRouteMapSetMetric;
     /**
-     * BGP Root OSPF Route maps set Metric type
+     * BGP Root OSPF Route maps set Metric type. Possible values are `type-1` and `type-2`.
      */
     metricType: string;
     /**
@@ -12153,7 +12086,7 @@ export interface GetBgpRouteMapRedistributionListDataBgpOspfRouteMapSet {
 
 export interface GetBgpRouteMapRedistributionListDataBgpOspfRouteMapSetMetric {
     /**
-     * BGP Root OSPF Route maps set Metric action
+     * BGP Root OSPF Route maps set Metric action. Possible values are `set`, `add` and `subtract`.
      */
     action: string;
     /**
@@ -12171,7 +12104,7 @@ export interface GetBgpRouteMapRedistributionListDataBgpRib {
 
 export interface GetBgpRouteMapRedistributionListDataBgpRibRouteMap {
     /**
-     * BGP Root RIB Route maps Action
+     * BGP Root RIB Route maps Action. Possible values are `permit` and `deny`.
      */
     action: string;
     /**
@@ -12226,7 +12159,7 @@ export interface GetBgpRouteMapRedistributionListDataBgpRibRouteMapMatch {
      */
     origin: string;
     /**
-     * BGP Root RIB Route maps match Peer
+     * BGP Root RIB Route maps match Peer. Possible values are `local` and `none`.
      */
     peer: string;
     /**
@@ -12301,14 +12234,10 @@ export interface GetBgpRouteMapRedistributionListDataConnectedStatic {
     bgp: outputs.GetBgpRouteMapRedistributionListDataConnectedStaticBgp;
     /**
      * Ospf
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `bgp`, `ospf`, and `rib`.
      */
     ospf: outputs.GetBgpRouteMapRedistributionListDataConnectedStaticOspf;
     /**
      * Rib
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `bgp`, `ospf`, and `rib`.
      */
     rib: outputs.GetBgpRouteMapRedistributionListDataConnectedStaticRib;
 }
@@ -12322,7 +12251,7 @@ export interface GetBgpRouteMapRedistributionListDataConnectedStaticBgp {
 
 export interface GetBgpRouteMapRedistributionListDataConnectedStaticBgpRouteMap {
     /**
-     * Connected Static BGP Route maps Action
+     * Connected Static BGP Route maps Action. Possible values are `permit` and `deny`.
      */
     action: string;
     /**
@@ -12421,7 +12350,7 @@ export interface GetBgpRouteMapRedistributionListDataConnectedStaticBgpRouteMapS
      */
     metric: outputs.GetBgpRouteMapRedistributionListDataConnectedStaticBgpRouteMapSetMetric;
     /**
-     * Connected Static BGP Route maps set Origin
+     * Connected Static BGP Route maps set Origin. Possible values are `none`, `egp`, `igp` and `incomplete`.
      */
     origin: string;
     /**
@@ -12466,7 +12395,7 @@ export interface GetBgpRouteMapRedistributionListDataConnectedStaticBgpRouteMapS
 
 export interface GetBgpRouteMapRedistributionListDataConnectedStaticBgpRouteMapSetMetric {
     /**
-     * Connected Static BGP Route maps set Metric action
+     * Connected Static BGP Route maps set Metric action. Possible values are `set`, `add` and `substract`.
      */
     action: string;
     /**
@@ -12484,7 +12413,7 @@ export interface GetBgpRouteMapRedistributionListDataConnectedStaticOspf {
 
 export interface GetBgpRouteMapRedistributionListDataConnectedStaticOspfRouteMap {
     /**
-     * Connected Static BGP OSPF Route map Action
+     * Connected Static BGP OSPF Route map Action. Possible values are `permit` and `deny`.
      */
     action: string;
     /**
@@ -12559,7 +12488,7 @@ export interface GetBgpRouteMapRedistributionListDataConnectedStaticOspfRouteMap
      */
     metric: outputs.GetBgpRouteMapRedistributionListDataConnectedStaticOspfRouteMapSetMetric;
     /**
-     * Connected Static BGP OSPF Route map set Metric type
+     * Connected Static BGP OSPF Route map set Metric type. Possible values are `type-1` and `type-2`.
      */
     metricType: string;
     /**
@@ -12570,7 +12499,7 @@ export interface GetBgpRouteMapRedistributionListDataConnectedStaticOspfRouteMap
 
 export interface GetBgpRouteMapRedistributionListDataConnectedStaticOspfRouteMapSetMetric {
     /**
-     * Connected Static BGP OSPF Route map set Metric action
+     * Connected Static BGP OSPF Route map set Metric action. Possible values are `set`, `add` and `substract`.
      */
     action: string;
     /**
@@ -12588,7 +12517,7 @@ export interface GetBgpRouteMapRedistributionListDataConnectedStaticRib {
 
 export interface GetBgpRouteMapRedistributionListDataConnectedStaticRibRouteMap {
     /**
-     * Connected Static BGP Rib Route maps Action
+     * Connected Static BGP Rib Route maps Action. Possible values are `permit` and `deny`.
      */
     action: string;
     /**
@@ -12671,8 +12600,6 @@ export interface GetBgpRouteMapRedistributionListDataOspf {
     bgp: outputs.GetBgpRouteMapRedistributionListDataOspfBgp;
     /**
      * Rib
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `bgp` and `rib`.
      */
     rib: outputs.GetBgpRouteMapRedistributionListDataOspfRib;
 }
@@ -12686,7 +12613,7 @@ export interface GetBgpRouteMapRedistributionListDataOspfBgp {
 
 export interface GetBgpRouteMapRedistributionListDataOspfBgpRouteMap {
     /**
-     * OSPF BGP Route maps Action
+     * OSPF BGP Route maps Action. Possible values are `permit` and `deny`.
      */
     action: string;
     /**
@@ -12782,7 +12709,7 @@ export interface GetBgpRouteMapRedistributionListDataOspfBgpRouteMapSet {
      */
     metric: outputs.GetBgpRouteMapRedistributionListDataOspfBgpRouteMapSetMetric;
     /**
-     * OSPF BGP Route maps set Origin
+     * OSPF BGP Route maps set Origin. Possible values are `none`, `egp`, `igp` and `incomplete`.
      */
     origin: string;
     /**
@@ -12827,7 +12754,7 @@ export interface GetBgpRouteMapRedistributionListDataOspfBgpRouteMapSetIpv4 {
 
 export interface GetBgpRouteMapRedistributionListDataOspfBgpRouteMapSetMetric {
     /**
-     * OSPF BGP Route maps set Metric action
+     * OSPF BGP Route maps set Metric action. Possible values are `set`, `add` and `substract`.
      */
     action: string;
     /**
@@ -12845,7 +12772,7 @@ export interface GetBgpRouteMapRedistributionListDataOspfRib {
 
 export interface GetBgpRouteMapRedistributionListDataOspfRibRouteMap {
     /**
-     * OSPF RIB Route maps Action
+     * OSPF RIB Route maps Action. Possible values are `permit` and `deny`.
      */
     action: string;
     /**
@@ -12925,8 +12852,6 @@ export interface GetBgpRouteMapRedistributionOspf {
     bgp: outputs.GetBgpRouteMapRedistributionOspfBgp;
     /**
      * Rib
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `bgp` and `rib`.
      */
     rib: outputs.GetBgpRouteMapRedistributionOspfRib;
 }
@@ -12940,7 +12865,7 @@ export interface GetBgpRouteMapRedistributionOspfBgp {
 
 export interface GetBgpRouteMapRedistributionOspfBgpRouteMap {
     /**
-     * OSPF BGP Route maps Action
+     * OSPF BGP Route maps Action. Possible values are `permit` and `deny`.
      */
     action: string;
     /**
@@ -13036,7 +12961,7 @@ export interface GetBgpRouteMapRedistributionOspfBgpRouteMapSet {
      */
     metric: outputs.GetBgpRouteMapRedistributionOspfBgpRouteMapSetMetric;
     /**
-     * OSPF BGP Route maps set Origin
+     * OSPF BGP Route maps set Origin. Possible values are `none`, `egp`, `igp` and `incomplete`.
      */
     origin: string;
     /**
@@ -13081,7 +13006,7 @@ export interface GetBgpRouteMapRedistributionOspfBgpRouteMapSetIpv4 {
 
 export interface GetBgpRouteMapRedistributionOspfBgpRouteMapSetMetric {
     /**
-     * OSPF BGP Route maps set Metric action
+     * OSPF BGP Route maps set Metric action. Possible values are `set`, `add` and `substract`.
      */
     action: string;
     /**
@@ -13099,7 +13024,7 @@ export interface GetBgpRouteMapRedistributionOspfRib {
 
 export interface GetBgpRouteMapRedistributionOspfRibRouteMap {
     /**
-     * OSPF RIB Route maps Action
+     * OSPF RIB Route maps Action. Possible values are `permit` and `deny`.
      */
     action: string;
     /**
@@ -13174,7 +13099,7 @@ export interface GetBgpRouteMapRedistributionOspfRibRouteMapSet {
 
 export interface GetBgpRouteMapRouteMap {
     /**
-     * Action
+     * Action. Possible values are `permit` and `deny`.
      */
     action: string;
     /**
@@ -13229,7 +13154,7 @@ export interface GetBgpRouteMapRouteMapMatch {
      */
     origin: string;
     /**
-     * Peer
+     * Peer. Possible values are `local` and `none`.
      */
     peer: string;
     /**
@@ -13324,7 +13249,7 @@ export interface GetBgpRouteMapRouteMapSet {
      */
     metric: outputs.GetBgpRouteMapRouteMapSetMetric;
     /**
-     * Origin
+     * Origin. Possible values are `none`, `egp`, `igp` and `incomplete`.
      */
     origin: string;
     /**
@@ -13340,7 +13265,7 @@ export interface GetBgpRouteMapRouteMapSet {
      */
     overwriteRegularCommunity: boolean;
     /**
-     * Regular community
+     * Regular community. Possible values are `none`, `blackhole`, `no-peer`, `graceful-shutdown`, `accept-own`, `local-as`, `route-filter-v4`, `route-filter-v6`, `no-advertise`, `no-export` and `internet`.
      */
     regularCommunities: string[];
     /**
@@ -13385,7 +13310,7 @@ export interface GetBgpRouteMapRouteMapSetIpv4 {
 
 export interface GetBgpRouteMapRouteMapSetMetric {
     /**
-     * Metric action
+     * Metric action. Possible values are `set`, `add` and `substract`.
      */
     action: string;
     /**
@@ -13401,8 +13326,6 @@ export interface GetBgpRoutingRoutingPreference {
     default: outputs.GetBgpRoutingRoutingPreferenceDefault;
     /**
      * Hot potato routing
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `default` and `hotPotatoRouting`.
      */
     hotPotatoRouting: outputs.GetBgpRoutingRoutingPreferenceHotPotatoRouting;
 }
@@ -13470,7 +13393,7 @@ export interface GetCertificateProfileListData {
      */
     domain: string;
     /**
-     * The folder of the item. Default: Shared.
+     * The folder in which the resource is defined
      */
     folder: string;
     /**
@@ -13478,7 +13401,7 @@ export interface GetCertificateProfileListData {
      */
     id: string;
     /**
-     * The name of the item.
+     * The name of the certificate profile
      */
     name: string;
     /**
@@ -13486,7 +13409,7 @@ export interface GetCertificateProfileListData {
      */
     ocspReceiveTimeout: string;
     /**
-     * The snippet of the item.
+     * The snippet in which the resource is defined
      */
     snippet: string;
     /**
@@ -13528,22 +13451,22 @@ export interface GetCertificateProfileListDataCaCertificate {
 
 export interface GetCertificateProfileListDataUsernameField {
     /**
-     * Common name
+     * Common name. Possible values are `common-name`.
      */
     subject: string;
     /**
-     * Email address
+     * Email address. Possible values are `email`.
      */
     subjectAlt: string;
 }
 
 export interface GetCertificateProfileUsernameField {
     /**
-     * Common name
+     * Common name. Possible values are `common-name`.
      */
     subject: string;
     /**
-     * Email address
+     * Email address. Possible values are `email`.
      */
     subjectAlt: string;
 }
@@ -13562,7 +13485,7 @@ export interface GetConfigMatchListListData {
      */
     filter: string;
     /**
-     * The folder of the item. Default: Shared.
+     * The folder in which the resource is defined
      */
     folder: string;
     /**
@@ -13570,7 +13493,7 @@ export interface GetConfigMatchListListData {
      */
     id: string;
     /**
-     * The name of the item.
+     * Name of the config match list entry
      */
     name: string;
     /**
@@ -13594,7 +13517,7 @@ export interface GetConfigMatchListListData {
      */
     sendToPanorama: boolean;
     /**
-     * The snippet of the item.
+     * The snippet in which the resource is defined
      */
     snippet: string;
     /**
@@ -13655,7 +13578,7 @@ export interface GetContentIdSettingListData {
      */
     device: string;
     /**
-     * The folder of the item. Default: Shared.
+     * The folder in which the resource is defined
      */
     folder: string;
     /**
@@ -13663,7 +13586,7 @@ export interface GetContentIdSettingListData {
      */
     id: string;
     /**
-     * The snippet of the item.
+     * The snippet in which the resource is defined
      */
     snippet: string;
     /**
@@ -13732,7 +13655,7 @@ export interface GetDataFilteringProfileListData {
      */
     disableOverride: string;
     /**
-     * The folder of the item. Default: Shared.
+     * The folder in which the resource is defined
      */
     folder: string;
     /**
@@ -13740,7 +13663,7 @@ export interface GetDataFilteringProfileListData {
      */
     id: string;
     /**
-     * The name of the item.
+     * The name of the data filtering profile
      */
     name: string;
     /**
@@ -13748,7 +13671,7 @@ export interface GetDataFilteringProfileListData {
      */
     rules: outputs.GetDataFilteringProfileListDataRule[];
     /**
-     * The snippet of the item.
+     * The snippet in which the resource is defined
      */
     snippet: string;
     /**
@@ -13841,7 +13764,7 @@ export interface GetDataObjectListData {
      */
     disableOverride: string;
     /**
-     * The folder of the item. Default: Shared.
+     * The folder in which the resource is defined
      */
     folder: string;
     /**
@@ -13849,7 +13772,7 @@ export interface GetDataObjectListData {
      */
     id: string;
     /**
-     * The name of the item.
+     * The name of the data object
      */
     name: string;
     /**
@@ -13857,7 +13780,7 @@ export interface GetDataObjectListData {
      */
     patternType: outputs.GetDataObjectListDataPatternType;
     /**
-     * The snippet of the item.
+     * The snippet in which the resource is defined
      */
     snippet: string;
     /**
@@ -14038,7 +13961,7 @@ export interface GetDecryptionExclusionListData {
      */
     device: string;
     /**
-     * The folder of the item. Default: Shared.
+     * The folder in which the resource is defined
      */
     folder: string;
     /**
@@ -14046,11 +13969,11 @@ export interface GetDecryptionExclusionListData {
      */
     id: string;
     /**
-     * The name of the item.
+     * Name
      */
     name: string;
     /**
-     * The snippet of the item.
+     * The snippet in which the resource is defined
      */
     snippet: string;
     /**
@@ -14065,7 +13988,7 @@ export interface GetDecryptionProfileListData {
      */
     device: string;
     /**
-     * The folder of the item. Default: Shared.
+     * The folder in which the resource is defined
      */
     folder: string;
     /**
@@ -14073,11 +13996,11 @@ export interface GetDecryptionProfileListData {
      */
     id: string;
     /**
-     * The name of the item.
+     * Must start with alphanumeric char and should contain only alphanemeric, underscore, hyphen, dot or space
      */
     name: string;
     /**
-     * The snippet of the item.
+     * The snippet in which the resource is defined
      */
     snippet: string;
     /**
@@ -14237,11 +14160,11 @@ export interface GetDecryptionProfileListDataSslProtocolSettings {
      */
     keyxchgAlgoRsa: boolean;
     /**
-     * Max version
+     * Max version. Possible values are `sslv3`, `tls1-0`, `tls1-1`, `tls1-2`, `tls1-3` and `max`.
      */
     maxVersion: string;
     /**
-     * Min version
+     * Min version. Possible values are `sslv3`, `tls1-0`, `tls1-1`, `tls1-2` and `tls1-3`.
      */
     minVersion: string;
 }
@@ -14381,18 +14304,18 @@ export interface GetDecryptionProfileSslProtocolSettings {
      */
     keyxchgAlgoRsa: boolean;
     /**
-     * Max version
+     * Max version. Possible values are `sslv3`, `tls1-0`, `tls1-1`, `tls1-2`, `tls1-3` and `max`.
      */
     maxVersion: string;
     /**
-     * Min version
+     * Min version. Possible values are `sslv3`, `tls1-0`, `tls1-1`, `tls1-2` and `tls1-3`.
      */
     minVersion: string;
 }
 
 export interface GetDecryptionRuleListData {
     /**
-     * The action to be taken
+     * The action to be taken. Possible values are `decrypt` and `no-decrypt`.
      */
     action: string;
     /**
@@ -14420,7 +14343,7 @@ export interface GetDecryptionRuleListData {
      */
     disabled: boolean;
     /**
-     * The folder of the item. Default: Shared.
+     * The folder in which the resource is defined
      */
     folder: string;
     /**
@@ -14444,7 +14367,7 @@ export interface GetDecryptionRuleListData {
      */
     logSuccess: boolean;
     /**
-     * The name of the item.
+     * The name of the decryption rule
      */
     name: string;
     /**
@@ -14456,7 +14379,7 @@ export interface GetDecryptionRuleListData {
      */
     negateSource: boolean;
     /**
-     * The position of a security rule
+     * The position of a security rule. Possible values are `pre` and `post`.
      */
     position: string;
     /**
@@ -14472,7 +14395,7 @@ export interface GetDecryptionRuleListData {
      */
     services: string[];
     /**
-     * The snippet of the item.
+     * The snippet in which the resource is defined
      */
     snippet: string;
     /**
@@ -14492,7 +14415,7 @@ export interface GetDecryptionRuleListData {
      */
     tags: string[];
     /**
-     * The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `"before"` or `"after"`.
+     * UUID of the rule to position this rule relative to. Required when `relativePosition` is `"before"` or `"after"`.
      */
     targetRule: string;
     /**
@@ -14516,8 +14439,6 @@ export interface GetDecryptionRuleListDataType {
     sslForwardProxy: outputs.GetDecryptionRuleListDataTypeSslForwardProxy;
     /**
      * add the certificate name for SSL inbound inspection
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `sslForwardProxy` and `sslInboundInspection`.
      */
     sslInboundInspection: outputs.GetDecryptionRuleListDataTypeSslInboundInspection;
 }
@@ -14539,8 +14460,6 @@ export interface GetDecryptionRuleType {
     sslForwardProxy: outputs.GetDecryptionRuleTypeSslForwardProxy;
     /**
      * add the certificate name for SSL inbound inspection
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `sslForwardProxy` and `sslInboundInspection`.
      */
     sslInboundInspection: outputs.GetDecryptionRuleTypeSslInboundInspection;
 }
@@ -14816,7 +14735,7 @@ export interface GetDeviceRedistributionCollectorListData {
      */
     device: string;
     /**
-     * The folder of the item. Default: Shared.
+     * The folder in which the resource is defined
      */
     folder: string;
     /**
@@ -14828,7 +14747,7 @@ export interface GetDeviceRedistributionCollectorListData {
      */
     redistributionCollector: outputs.GetDeviceRedistributionCollectorListDataRedistributionCollector;
     /**
-     * The snippet of the item.
+     * The snippet in which the resource is defined
      */
     snippet: string;
     /**
@@ -14857,7 +14776,7 @@ export interface GetDhcpInterfaceListData {
      */
     device: string;
     /**
-     * The folder of the item. Default: Shared.
+     * The folder in which the resource is defined
      */
     folder: string;
     /**
@@ -14865,23 +14784,19 @@ export interface GetDhcpInterfaceListData {
      */
     id: string;
     /**
-     * The name of the item.
+     * Interface name
      */
     name: string;
     /**
      * Relay
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `relay` and `server`.
      */
     relay: outputs.GetDhcpInterfaceListDataRelay;
     /**
      * Server
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `relay` and `server`.
      */
     server: outputs.GetDhcpInterfaceListDataServer;
     /**
-     * The snippet of the item.
+     * The snippet in which the resource is defined
      */
     snippet: string;
     /**
@@ -14914,7 +14829,7 @@ export interface GetDhcpInterfaceListDataServer {
      */
     ipPools: string[];
     /**
-     * DHCP server mode
+     * DHCP server mode. Possible values are `auto`, `enabled` and `disabled`.
      */
     mode: string;
     /**
@@ -15007,8 +14922,6 @@ export interface GetDhcpInterfaceListDataServerOptionLease {
     timeout: number;
     /**
      * Unlimited
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `timeout` and `unlimited`.
      */
     unlimited: outputs.GetDhcpInterfaceListDataServerOptionLeaseUnlimited;
 }
@@ -15115,7 +15028,7 @@ export interface GetDhcpInterfaceServer {
      */
     ipPools: string[];
     /**
-     * DHCP server mode
+     * DHCP server mode. Possible values are `auto`, `enabled` and `disabled`.
      */
     mode: string;
     /**
@@ -15208,8 +15121,6 @@ export interface GetDhcpInterfaceServerOptionLease {
     timeout: number;
     /**
      * Unlimited
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `timeout` and `unlimited`.
      */
     unlimited: outputs.GetDhcpInterfaceServerOptionLeaseUnlimited;
 }
@@ -15385,7 +15296,7 @@ export interface GetDnsProxyListData {
      */
     enabled: boolean;
     /**
-     * The folder of the item. Default: Shared.
+     * The folder in which the resource is defined
      */
     folder: string;
     /**
@@ -15397,11 +15308,11 @@ export interface GetDnsProxyListData {
      */
     interfaces: string[];
     /**
-     * The name of the item.
+     * DNS proxy name
      */
     name: string;
     /**
-     * The snippet of the item.
+     * The snippet in which the resource is defined
      */
     snippet: string;
     /**
@@ -15602,11 +15513,11 @@ export interface GetDnsSecurityProfileBotnetDomains {
 
 export interface GetDnsSecurityProfileBotnetDomainsDnsSecurityCategory {
     /**
-     * Action
+     * Action. Possible values are `default`, `allow`, `block` and `sinkhole`.
      */
     action: string;
     /**
-     * Log level
+     * Log level. Possible values are `default`, `none`, `low`, `informational`, `medium`, `high` and `critical`.
      */
     logLevel: string;
     /**
@@ -15614,7 +15525,7 @@ export interface GetDnsSecurityProfileBotnetDomainsDnsSecurityCategory {
      */
     name: string;
     /**
-     * Packet capture
+     * Packet capture. Possible values are `disable`, `single-packet` and `extended-capture`.
      */
     packetCapture: string;
 }
@@ -15629,7 +15540,7 @@ export interface GetDnsSecurityProfileBotnetDomainsList {
      */
     name: string;
     /**
-     * Packet capture
+     * Packet capture. Possible values are `disable`, `single-packet` and `extended-capture`.
      */
     packetCapture: string;
 }
@@ -15641,20 +15552,14 @@ export interface GetDnsSecurityProfileBotnetDomainsListAction {
     alert: outputs.GetDnsSecurityProfileBotnetDomainsListActionAlert;
     /**
      * Allow
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `block`, and `sinkhole`.
      */
     allow: outputs.GetDnsSecurityProfileBotnetDomainsListActionAllow;
     /**
      * Block
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `block`, and `sinkhole`.
      */
     block: outputs.GetDnsSecurityProfileBotnetDomainsListActionBlock;
     /**
      * Sinkhole
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `block`, and `sinkhole`.
      */
     sinkhole: outputs.GetDnsSecurityProfileBotnetDomainsListActionSinkhole;
 }
@@ -15673,11 +15578,11 @@ export interface GetDnsSecurityProfileBotnetDomainsListActionSinkhole {
 
 export interface GetDnsSecurityProfileBotnetDomainsSinkhole {
     /**
-     * Ipv4 address
+     * Ipv4 address. Possible values are `127.0.0.1` and `pan-sinkhole-default-ip`.
      */
     ipv4Address: string;
     /**
-     * Ipv6 address
+     * Ipv6 address. Possible values are `::1`.
      */
     ipv6Address: string;
 }
@@ -15707,7 +15612,7 @@ export interface GetDnsSecurityProfileListData {
      */
     device: string;
     /**
-     * The folder of the item. Default: Shared.
+     * The folder in which the resource is defined
      */
     folder: string;
     /**
@@ -15715,11 +15620,11 @@ export interface GetDnsSecurityProfileListData {
      */
     id: string;
     /**
-     * The name of the item.
+     * The name of the DNS security profile
      */
     name: string;
     /**
-     * The snippet of the item.
+     * The snippet in which the resource is defined
      */
     snippet: string;
     /**
@@ -15749,11 +15654,11 @@ export interface GetDnsSecurityProfileListDataBotnetDomains {
 
 export interface GetDnsSecurityProfileListDataBotnetDomainsDnsSecurityCategory {
     /**
-     * Action
+     * Action. Possible values are `default`, `allow`, `block` and `sinkhole`.
      */
     action: string;
     /**
-     * Log level
+     * Log level. Possible values are `default`, `none`, `low`, `informational`, `medium`, `high` and `critical`.
      */
     logLevel: string;
     /**
@@ -15761,7 +15666,7 @@ export interface GetDnsSecurityProfileListDataBotnetDomainsDnsSecurityCategory {
      */
     name: string;
     /**
-     * Packet capture
+     * Packet capture. Possible values are `disable`, `single-packet` and `extended-capture`.
      */
     packetCapture: string;
 }
@@ -15776,7 +15681,7 @@ export interface GetDnsSecurityProfileListDataBotnetDomainsList {
      */
     name: string;
     /**
-     * Packet capture
+     * Packet capture. Possible values are `disable`, `single-packet` and `extended-capture`.
      */
     packetCapture: string;
 }
@@ -15788,20 +15693,14 @@ export interface GetDnsSecurityProfileListDataBotnetDomainsListAction {
     alert: outputs.GetDnsSecurityProfileListDataBotnetDomainsListActionAlert;
     /**
      * Allow
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `block`, and `sinkhole`.
      */
     allow: outputs.GetDnsSecurityProfileListDataBotnetDomainsListActionAllow;
     /**
      * Block
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `block`, and `sinkhole`.
      */
     block: outputs.GetDnsSecurityProfileListDataBotnetDomainsListActionBlock;
     /**
      * Sinkhole
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `block`, and `sinkhole`.
      */
     sinkhole: outputs.GetDnsSecurityProfileListDataBotnetDomainsListActionSinkhole;
 }
@@ -15820,11 +15719,11 @@ export interface GetDnsSecurityProfileListDataBotnetDomainsListActionSinkhole {
 
 export interface GetDnsSecurityProfileListDataBotnetDomainsSinkhole {
     /**
-     * Ipv4 address
+     * Ipv4 address. Possible values are `127.0.0.1` and `pan-sinkhole-default-ip`.
      */
     ipv4Address: string;
     /**
-     * Ipv6 address
+     * Ipv6 address. Possible values are `::1`.
      */
     ipv6Address: string;
 }
@@ -16092,7 +15991,7 @@ export interface GetDosProtectionProfileListData {
      */
     flood: outputs.GetDosProtectionProfileListDataFlood;
     /**
-     * The folder of the item. Default: Shared.
+     * The folder in which the resource is defined
      */
     folder: string;
     /**
@@ -16100,7 +15999,7 @@ export interface GetDosProtectionProfileListData {
      */
     id: string;
     /**
-     * The name of the item.
+     * Profile name
      */
     name: string;
     /**
@@ -16108,7 +16007,7 @@ export interface GetDosProtectionProfileListData {
      */
     resource: outputs.GetDosProtectionProfileListDataResource;
     /**
-     * The snippet of the item.
+     * The snippet in which the resource is defined
      */
     snippet: string;
     /**
@@ -16116,7 +16015,7 @@ export interface GetDosProtectionProfileListData {
      */
     tfid: string;
     /**
-     * Type
+     * Type. Possible values are `aggregate` and `classified`.
      */
     type: string;
 }
@@ -16402,14 +16301,10 @@ export interface GetDosProtectionRuleAction {
     allow: outputs.GetDosProtectionRuleActionAllow;
     /**
      * Deny
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `allow`, `deny`, and `protect`.
      */
     deny: outputs.GetDosProtectionRuleActionDeny;
     /**
      * Protect
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `allow`, `deny`, and `protect`.
      */
     protect: outputs.GetDosProtectionRuleActionProtect;
 }
@@ -16421,6 +16316,17 @@ export interface GetDosProtectionRuleActionDeny {
 }
 
 export interface GetDosProtectionRuleActionProtect {
+}
+
+export interface GetDosProtectionRuleFrom {
+    /**
+     * Interface
+     */
+    interfaces: string[];
+    /**
+     * Zone
+     */
+    zones: string[];
 }
 
 export interface GetDosProtectionRuleListData {
@@ -16445,13 +16351,13 @@ export interface GetDosProtectionRuleListData {
      */
     disabled: boolean;
     /**
-     * The folder of the item. Default: Shared.
+     * The folder in which the resource is defined
      */
     folder: string;
     /**
-     * List of source zones
+     * Source zones and interfaces
      */
-    froms: string[];
+    from: outputs.GetDosProtectionRuleListDataFrom;
     /**
      * The UUID of the DNS security profile
      */
@@ -16461,11 +16367,11 @@ export interface GetDosProtectionRuleListData {
      */
     logSetting: string;
     /**
-     * The name of the item.
+     * Rule name
      */
     name: string;
     /**
-     * Position relative to local device rules
+     * Position relative to local device rules. Possible values are `pre` and `post`.
      */
     position: string;
     /**
@@ -16481,7 +16387,7 @@ export interface GetDosProtectionRuleListData {
      */
     services: string[];
     /**
-     * The snippet of the item.
+     * The snippet in which the resource is defined
      */
     snippet: string;
     /**
@@ -16501,9 +16407,9 @@ export interface GetDosProtectionRuleListData {
      */
     tfid: string;
     /**
-     * List of destination zones
+     * Destination zones and interfaces
      */
-    tos: string[];
+    to: outputs.GetDosProtectionRuleListDataTo;
 }
 
 export interface GetDosProtectionRuleListDataAction {
@@ -16513,14 +16419,10 @@ export interface GetDosProtectionRuleListDataAction {
     allow: outputs.GetDosProtectionRuleListDataActionAllow;
     /**
      * Deny
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `allow`, `deny`, and `protect`.
      */
     deny: outputs.GetDosProtectionRuleListDataActionDeny;
     /**
      * Protect
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `allow`, `deny`, and `protect`.
      */
     protect: outputs.GetDosProtectionRuleListDataActionProtect;
 }
@@ -16534,6 +16436,17 @@ export interface GetDosProtectionRuleListDataActionDeny {
 export interface GetDosProtectionRuleListDataActionProtect {
 }
 
+export interface GetDosProtectionRuleListDataFrom {
+    /**
+     * Interface
+     */
+    interfaces: string[];
+    /**
+     * Zone
+     */
+    zones: string[];
+}
+
 export interface GetDosProtectionRuleListDataProtection {
     /**
      * Aggregate
@@ -16541,8 +16454,6 @@ export interface GetDosProtectionRuleListDataProtection {
     aggregate: outputs.GetDosProtectionRuleListDataProtectionAggregate;
     /**
      * Classified
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `aggregate` and `classified`.
      */
     classified: outputs.GetDosProtectionRuleListDataProtectionClassified;
 }
@@ -16572,6 +16483,17 @@ export interface GetDosProtectionRuleListDataProtectionClassifiedClassificationC
     address: string;
 }
 
+export interface GetDosProtectionRuleListDataTo {
+    /**
+     * Interface
+     */
+    interfaces: string[];
+    /**
+     * Zone
+     */
+    zones: string[];
+}
+
 export interface GetDosProtectionRuleProtection {
     /**
      * Aggregate
@@ -16579,8 +16501,6 @@ export interface GetDosProtectionRuleProtection {
     aggregate: outputs.GetDosProtectionRuleProtectionAggregate;
     /**
      * Classified
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `aggregate` and `classified`.
      */
     classified: outputs.GetDosProtectionRuleProtectionClassified;
 }
@@ -16610,6 +16530,17 @@ export interface GetDosProtectionRuleProtectionClassifiedClassificationCriteria 
     address: string;
 }
 
+export interface GetDosProtectionRuleTo {
+    /**
+     * Interface
+     */
+    interfaces: string[];
+    /**
+     * Zone
+     */
+    zones: string[];
+}
+
 export interface GetDynamicUserGroupListData {
     /**
      * The description of the dynamic address group
@@ -16624,7 +16555,7 @@ export interface GetDynamicUserGroupListData {
      */
     filter: string;
     /**
-     * The folder of the item. Default: Shared.
+     * The folder in which the resource is defined
      */
     folder: string;
     /**
@@ -16632,11 +16563,11 @@ export interface GetDynamicUserGroupListData {
      */
     id: string;
     /**
-     * The name of the item.
+     * The name of the dynamic address group
      */
     name: string;
     /**
-     * The snippet of the item.
+     * The snippet in which the resource is defined
      */
     snippet: string;
     /**
@@ -16651,7 +16582,7 @@ export interface GetDynamicUserGroupListData {
 
 export interface GetEthernetInterfaceLayer2 {
     /**
-     * LLDP Settings
+     * LLDP settings for the interface
      */
     lldp: outputs.GetEthernetInterfaceLayer2Lldp;
     /**
@@ -16669,9 +16600,28 @@ export interface GetEthernetInterfaceLayer2Lldp {
      * Enable LLDP on Interface
      */
     enable: boolean;
+    /**
+     * LLDP high availability settings
+     */
+    highAvailability: outputs.GetEthernetInterfaceLayer2LldpHighAvailability;
+    /**
+     * Name of the LLDP profile to assign to the interface
+     */
+    profile: string;
+}
+
+export interface GetEthernetInterfaceLayer2LldpHighAvailability {
+    /**
+     * Passive pre negotiation
+     */
+    passivePreNegotiation: boolean;
 }
 
 export interface GetEthernetInterfaceLayer3 {
+    /**
+     * TCP MSS adjustment settings for the interface
+     */
+    adjustTcpMss: outputs.GetEthernetInterfaceLayer3AdjustTcpMss;
     /**
      * Ethernet Interfaces ARP configuration
      */
@@ -16690,10 +16640,12 @@ export interface GetEthernetInterfaceLayer3 {
     interfaceManagementProfile: string;
     /**
      * Ethernet Interface IP addresses
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `dhcpClient`, `ip`, and `pppoe`.
      */
     ips: outputs.GetEthernetInterfaceLayer3Ip[];
+    /**
+     * LLDP settings for the interface
+     */
+    lldp: outputs.GetEthernetInterfaceLayer3Lldp;
     /**
      * MTU
      */
@@ -16703,11 +16655,24 @@ export interface GetEthernetInterfaceLayer3 {
      */
     netflowProfile: string;
     /**
-     * Pppoe
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `dhcpClient`, `ip`, and `pppoe`.
+     * PPPoE configuration for the interface
      */
     pppoe: outputs.GetEthernetInterfaceLayer3Pppoe;
+}
+
+export interface GetEthernetInterfaceLayer3AdjustTcpMss {
+    /**
+     * Enable TCP MSS adjustment on the interface
+     */
+    enable: boolean;
+    /**
+     * IPv4 MSS adjustment size in bytes
+     */
+    ipv4MssAdjustment: number;
+    /**
+     * IPv6 MSS adjustment size in bytes
+     */
+    ipv6MssAdjustment: number;
 }
 
 export interface GetEthernetInterfaceLayer3Arp {
@@ -16789,13 +16754,35 @@ export interface GetEthernetInterfaceLayer3Ip {
     name: string;
 }
 
+export interface GetEthernetInterfaceLayer3Lldp {
+    /**
+     * Enable LLDP on Interface
+     */
+    enable: boolean;
+    /**
+     * LLDP high availability settings
+     */
+    highAvailability: outputs.GetEthernetInterfaceLayer3LldpHighAvailability;
+    /**
+     * Name of the LLDP profile to assign to the interface
+     */
+    profile: string;
+}
+
+export interface GetEthernetInterfaceLayer3LldpHighAvailability {
+    /**
+     * Passive pre negotiation
+     */
+    passivePreNegotiation: boolean;
+}
+
 export interface GetEthernetInterfaceLayer3Pppoe {
     /**
      * Access concentrator
      */
     accessConcentrator: string;
     /**
-     * Authentication protocol
+     * Authentication protocol. Possible values are `CHAP`, `PAP` and `auto`.
      */
     authentication: string;
     /**
@@ -16803,7 +16790,7 @@ export interface GetEthernetInterfaceLayer3Pppoe {
      */
     defaultRouteMetric: number;
     /**
-     * Enable
+     * Enable PPPoE on the interface
      */
     enable: boolean;
     /**
@@ -16845,8 +16832,6 @@ export interface GetEthernetInterfaceLayer3PppoeStaticAddress {
 export interface GetEthernetInterfaceListData {
     /**
      * Aggregate group
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `aggregateGroup`, `layer2`, `layer3`, and `tap`.
      */
     aggregateGroup: string;
     /**
@@ -16866,7 +16851,7 @@ export interface GetEthernetInterfaceListData {
      */
     encryptedValues: {[key: string]: string};
     /**
-     * The folder of the item. Default: Shared.
+     * The folder in which the resource is defined
      */
     folder: string;
     /**
@@ -16875,30 +16860,26 @@ export interface GetEthernetInterfaceListData {
     id: string;
     /**
      * Layer2
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `aggregateGroup`, `layer2`, `layer3`, and `tap`.
      */
     layer2: outputs.GetEthernetInterfaceListDataLayer2;
     /**
      * Ethernet Interface Layer 3 configuration
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `aggregateGroup`, `layer2`, `layer3`, and `tap`.
      */
     layer3: outputs.GetEthernetInterfaceListDataLayer3;
     /**
-     * Link duplex
+     * Link duplex. Possible values are `auto`, `half` and `full`.
      */
     linkDuplex: string;
     /**
-     * Link speed
+     * Link speed. Possible values are `auto`, `10`, `100`, `1000`, `10000`, `40000` and `100000`.
      */
     linkSpeed: string;
     /**
-     * Link state
+     * Link state. Possible values are `auto`, `up` and `down`.
      */
     linkState: string;
     /**
-     * The name of the item.
+     * Interface name
      */
     name: string;
     /**
@@ -16906,13 +16887,11 @@ export interface GetEthernetInterfaceListData {
      */
     poe: outputs.GetEthernetInterfaceListDataPoe;
     /**
-     * The snippet of the item.
+     * The snippet in which the resource is defined
      */
     snippet: string;
     /**
      * Tap
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `aggregateGroup`, `layer2`, `layer3`, and `tap`.
      */
     tap: outputs.GetEthernetInterfaceListDataTap;
     /**
@@ -16923,7 +16902,7 @@ export interface GetEthernetInterfaceListData {
 
 export interface GetEthernetInterfaceListDataLayer2 {
     /**
-     * LLDP Settings
+     * LLDP settings for the interface
      */
     lldp: outputs.GetEthernetInterfaceListDataLayer2Lldp;
     /**
@@ -16941,9 +16920,28 @@ export interface GetEthernetInterfaceListDataLayer2Lldp {
      * Enable LLDP on Interface
      */
     enable: boolean;
+    /**
+     * LLDP high availability settings
+     */
+    highAvailability: outputs.GetEthernetInterfaceListDataLayer2LldpHighAvailability;
+    /**
+     * Name of the LLDP profile to assign to the interface
+     */
+    profile: string;
+}
+
+export interface GetEthernetInterfaceListDataLayer2LldpHighAvailability {
+    /**
+     * Passive pre negotiation
+     */
+    passivePreNegotiation: boolean;
 }
 
 export interface GetEthernetInterfaceListDataLayer3 {
+    /**
+     * TCP MSS adjustment settings for the interface
+     */
+    adjustTcpMss: outputs.GetEthernetInterfaceListDataLayer3AdjustTcpMss;
     /**
      * Ethernet Interfaces ARP configuration
      */
@@ -16962,10 +16960,12 @@ export interface GetEthernetInterfaceListDataLayer3 {
     interfaceManagementProfile: string;
     /**
      * Ethernet Interface IP addresses
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `dhcpClient`, `ip`, and `pppoe`.
      */
     ips: outputs.GetEthernetInterfaceListDataLayer3Ip[];
+    /**
+     * LLDP settings for the interface
+     */
+    lldp: outputs.GetEthernetInterfaceListDataLayer3Lldp;
     /**
      * MTU
      */
@@ -16975,11 +16975,24 @@ export interface GetEthernetInterfaceListDataLayer3 {
      */
     netflowProfile: string;
     /**
-     * Pppoe
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `dhcpClient`, `ip`, and `pppoe`.
+     * PPPoE configuration for the interface
      */
     pppoe: outputs.GetEthernetInterfaceListDataLayer3Pppoe;
+}
+
+export interface GetEthernetInterfaceListDataLayer3AdjustTcpMss {
+    /**
+     * Enable TCP MSS adjustment on the interface
+     */
+    enable: boolean;
+    /**
+     * IPv4 MSS adjustment size in bytes
+     */
+    ipv4MssAdjustment: number;
+    /**
+     * IPv6 MSS adjustment size in bytes
+     */
+    ipv6MssAdjustment: number;
 }
 
 export interface GetEthernetInterfaceListDataLayer3Arp {
@@ -17061,13 +17074,35 @@ export interface GetEthernetInterfaceListDataLayer3Ip {
     name: string;
 }
 
+export interface GetEthernetInterfaceListDataLayer3Lldp {
+    /**
+     * Enable LLDP on Interface
+     */
+    enable: boolean;
+    /**
+     * LLDP high availability settings
+     */
+    highAvailability: outputs.GetEthernetInterfaceListDataLayer3LldpHighAvailability;
+    /**
+     * Name of the LLDP profile to assign to the interface
+     */
+    profile: string;
+}
+
+export interface GetEthernetInterfaceListDataLayer3LldpHighAvailability {
+    /**
+     * Passive pre negotiation
+     */
+    passivePreNegotiation: boolean;
+}
+
 export interface GetEthernetInterfaceListDataLayer3Pppoe {
     /**
      * Access concentrator
      */
     accessConcentrator: string;
     /**
-     * Authentication protocol
+     * Authentication protocol. Possible values are `CHAP`, `PAP` and `auto`.
      */
     authentication: string;
     /**
@@ -17075,7 +17110,7 @@ export interface GetEthernetInterfaceListDataLayer3Pppoe {
      */
     defaultRouteMetric: number;
     /**
-     * Enable
+     * Enable PPPoE on the interface
      */
     enable: boolean;
     /**
@@ -17160,7 +17195,7 @@ export interface GetExternalDynamicListListData {
      */
     encryptedValues: {[key: string]: string};
     /**
-     * The folder of the item. Default: Shared.
+     * The folder in which the resource is defined
      */
     folder: string;
     /**
@@ -17168,11 +17203,11 @@ export interface GetExternalDynamicListListData {
      */
     id: string;
     /**
-     * The name of the item.
+     * The name of the external dynamic list
      */
     name: string;
     /**
-     * The snippet of the item.
+     * The snippet in which the resource is defined
      */
     snippet: string;
     /**
@@ -17192,38 +17227,26 @@ export interface GetExternalDynamicListListDataType {
     domain: outputs.GetExternalDynamicListListDataTypeDomain;
     /**
      * IMEI Configuration settings
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
      */
     imei: outputs.GetExternalDynamicListListDataTypeImei;
     /**
      * IMSI Config for Custom IMSI type
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
      */
     imsi: outputs.GetExternalDynamicListListDataTypeImsi;
     /**
      * IP settings for Custom IP type
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
      */
     ip: outputs.GetExternalDynamicListListDataTypeIp;
     /**
      * Predefined IP settings for EDL type
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
      */
     predefinedIp: outputs.GetExternalDynamicListListDataTypePredefinedIp;
     /**
      * Predefined URL settings for EDL type
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
      */
     predefinedUrl: outputs.GetExternalDynamicListListDataTypePredefinedUrl;
     /**
      * URL settings for Custom URL type
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
      */
     url: outputs.GetExternalDynamicListListDataTypeUrl;
 }
@@ -17277,26 +17300,18 @@ export interface GetExternalDynamicListListDataTypeDomainRecurring {
     daily: outputs.GetExternalDynamicListListDataTypeDomainRecurringDaily;
     /**
      * Five minute settings for Domain recurring
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
      */
     fiveMinute: outputs.GetExternalDynamicListListDataTypeDomainRecurringFiveMinute;
     /**
      * Hourly settings for Domain recurring
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
      */
     hourly: outputs.GetExternalDynamicListListDataTypeDomainRecurringHourly;
     /**
      * Monthly settings for Domain recurring
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
      */
     monthly: outputs.GetExternalDynamicListListDataTypeDomainRecurringMonthly;
     /**
      * Weekly settings for Domain recurring
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
      */
     weekly: outputs.GetExternalDynamicListListDataTypeDomainRecurringWeekly;
 }
@@ -17331,7 +17346,7 @@ export interface GetExternalDynamicListListDataTypeDomainRecurringWeekly {
      */
     at: string;
     /**
-     * Day of week
+     * Day of week. Possible values are `sunday`, `monday`, `tuesday`, `wednesday`, `thursday`, `friday` and `saturday`.
      */
     dayOfWeek: string;
 }
@@ -17381,26 +17396,18 @@ export interface GetExternalDynamicListListDataTypeImeiRecurring {
     daily: outputs.GetExternalDynamicListListDataTypeImeiRecurringDaily;
     /**
      * Five-minute interval settings for IMEI updates
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
      */
     fiveMinute: outputs.GetExternalDynamicListListDataTypeImeiRecurringFiveMinute;
     /**
      * Hourly interval settings for IMEI updates
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
      */
     hourly: outputs.GetExternalDynamicListListDataTypeImeiRecurringHourly;
     /**
      * Monthly interval settings for IMEI updates
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
      */
     monthly: outputs.GetExternalDynamicListListDataTypeImeiRecurringMonthly;
     /**
      * Weekly interval settings for IMEI updates
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
      */
     weekly: outputs.GetExternalDynamicListListDataTypeImeiRecurringWeekly;
 }
@@ -17435,7 +17442,7 @@ export interface GetExternalDynamicListListDataTypeImeiRecurringWeekly {
      */
     at: string;
     /**
-     * Day of week
+     * Day of week. Possible values are `sunday`, `monday`, `tuesday`, `wednesday`, `thursday`, `friday` and `saturday`.
      */
     dayOfWeek: string;
 }
@@ -17485,26 +17492,18 @@ export interface GetExternalDynamicListListDataTypeImsiRecurring {
     daily: outputs.GetExternalDynamicListListDataTypeImsiRecurringDaily;
     /**
      * Five-minute interval settings for IMSI updates
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
      */
     fiveMinute: outputs.GetExternalDynamicListListDataTypeImsiRecurringFiveMinute;
     /**
      * Hourly interval settings for IMSI updates
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
      */
     hourly: outputs.GetExternalDynamicListListDataTypeImsiRecurringHourly;
     /**
      * Monthly interval settings for IMSI updates
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
      */
     monthly: outputs.GetExternalDynamicListListDataTypeImsiRecurringMonthly;
     /**
      * Weekly interval settings for IMSI updates
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
      */
     weekly: outputs.GetExternalDynamicListListDataTypeImsiRecurringWeekly;
 }
@@ -17539,7 +17538,7 @@ export interface GetExternalDynamicListListDataTypeImsiRecurringWeekly {
      */
     at: string;
     /**
-     * Day of week
+     * Day of week. Possible values are `sunday`, `monday`, `tuesday`, `wednesday`, `thursday`, `friday` and `saturday`.
      */
     dayOfWeek: string;
 }
@@ -17589,26 +17588,18 @@ export interface GetExternalDynamicListListDataTypeIpRecurring {
     daily: outputs.GetExternalDynamicListListDataTypeIpRecurringDaily;
     /**
      * Five minute settings for IP recurring
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
      */
     fiveMinute: outputs.GetExternalDynamicListListDataTypeIpRecurringFiveMinute;
     /**
      * Hourly settings for IP recurring
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
      */
     hourly: outputs.GetExternalDynamicListListDataTypeIpRecurringHourly;
     /**
      * Monthly settings for IP recurring
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
      */
     monthly: outputs.GetExternalDynamicListListDataTypeIpRecurringMonthly;
     /**
      * Weekly settings for IP recurring
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
      */
     weekly: outputs.GetExternalDynamicListListDataTypeIpRecurringWeekly;
 }
@@ -17643,7 +17634,7 @@ export interface GetExternalDynamicListListDataTypeIpRecurringWeekly {
      */
     at: string;
     /**
-     * Day of week
+     * Day of week. Possible values are `sunday`, `monday`, `tuesday`, `wednesday`, `thursday`, `friday` and `saturday`.
      */
     dayOfWeek: string;
 }
@@ -17723,26 +17714,18 @@ export interface GetExternalDynamicListListDataTypeUrlRecurring {
     daily: outputs.GetExternalDynamicListListDataTypeUrlRecurringDaily;
     /**
      * Five minute settings for URL recurring
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
      */
     fiveMinute: outputs.GetExternalDynamicListListDataTypeUrlRecurringFiveMinute;
     /**
      * Hourly settings for URL recurring
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
      */
     hourly: outputs.GetExternalDynamicListListDataTypeUrlRecurringHourly;
     /**
      * Monthly settings for URL recurring
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
      */
     monthly: outputs.GetExternalDynamicListListDataTypeUrlRecurringMonthly;
     /**
      * Weekly settings for URL recurring
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
      */
     weekly: outputs.GetExternalDynamicListListDataTypeUrlRecurringWeekly;
 }
@@ -17777,7 +17760,7 @@ export interface GetExternalDynamicListListDataTypeUrlRecurringWeekly {
      */
     at: string;
     /**
-     * Day of week
+     * Day of week. Possible values are `sunday`, `monday`, `tuesday`, `wednesday`, `thursday`, `friday` and `saturday`.
      */
     dayOfWeek: string;
 }
@@ -17789,38 +17772,26 @@ export interface GetExternalDynamicListType {
     domain: outputs.GetExternalDynamicListTypeDomain;
     /**
      * IMEI Configuration settings
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
      */
     imei: outputs.GetExternalDynamicListTypeImei;
     /**
      * IMSI Config for Custom IMSI type
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
      */
     imsi: outputs.GetExternalDynamicListTypeImsi;
     /**
      * IP settings for Custom IP type
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
      */
     ip: outputs.GetExternalDynamicListTypeIp;
     /**
      * Predefined IP settings for EDL type
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
      */
     predefinedIp: outputs.GetExternalDynamicListTypePredefinedIp;
     /**
      * Predefined URL settings for EDL type
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
      */
     predefinedUrl: outputs.GetExternalDynamicListTypePredefinedUrl;
     /**
      * URL settings for Custom URL type
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
      */
     url: outputs.GetExternalDynamicListTypeUrl;
 }
@@ -17874,26 +17845,18 @@ export interface GetExternalDynamicListTypeDomainRecurring {
     daily: outputs.GetExternalDynamicListTypeDomainRecurringDaily;
     /**
      * Five minute settings for Domain recurring
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
      */
     fiveMinute: outputs.GetExternalDynamicListTypeDomainRecurringFiveMinute;
     /**
      * Hourly settings for Domain recurring
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
      */
     hourly: outputs.GetExternalDynamicListTypeDomainRecurringHourly;
     /**
      * Monthly settings for Domain recurring
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
      */
     monthly: outputs.GetExternalDynamicListTypeDomainRecurringMonthly;
     /**
      * Weekly settings for Domain recurring
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
      */
     weekly: outputs.GetExternalDynamicListTypeDomainRecurringWeekly;
 }
@@ -17928,7 +17891,7 @@ export interface GetExternalDynamicListTypeDomainRecurringWeekly {
      */
     at: string;
     /**
-     * Day of week
+     * Day of week. Possible values are `sunday`, `monday`, `tuesday`, `wednesday`, `thursday`, `friday` and `saturday`.
      */
     dayOfWeek: string;
 }
@@ -17978,26 +17941,18 @@ export interface GetExternalDynamicListTypeImeiRecurring {
     daily: outputs.GetExternalDynamicListTypeImeiRecurringDaily;
     /**
      * Five-minute interval settings for IMEI updates
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
      */
     fiveMinute: outputs.GetExternalDynamicListTypeImeiRecurringFiveMinute;
     /**
      * Hourly interval settings for IMEI updates
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
      */
     hourly: outputs.GetExternalDynamicListTypeImeiRecurringHourly;
     /**
      * Monthly interval settings for IMEI updates
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
      */
     monthly: outputs.GetExternalDynamicListTypeImeiRecurringMonthly;
     /**
      * Weekly interval settings for IMEI updates
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
      */
     weekly: outputs.GetExternalDynamicListTypeImeiRecurringWeekly;
 }
@@ -18032,7 +17987,7 @@ export interface GetExternalDynamicListTypeImeiRecurringWeekly {
      */
     at: string;
     /**
-     * Day of week
+     * Day of week. Possible values are `sunday`, `monday`, `tuesday`, `wednesday`, `thursday`, `friday` and `saturday`.
      */
     dayOfWeek: string;
 }
@@ -18082,26 +18037,18 @@ export interface GetExternalDynamicListTypeImsiRecurring {
     daily: outputs.GetExternalDynamicListTypeImsiRecurringDaily;
     /**
      * Five-minute interval settings for IMSI updates
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
      */
     fiveMinute: outputs.GetExternalDynamicListTypeImsiRecurringFiveMinute;
     /**
      * Hourly interval settings for IMSI updates
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
      */
     hourly: outputs.GetExternalDynamicListTypeImsiRecurringHourly;
     /**
      * Monthly interval settings for IMSI updates
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
      */
     monthly: outputs.GetExternalDynamicListTypeImsiRecurringMonthly;
     /**
      * Weekly interval settings for IMSI updates
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
      */
     weekly: outputs.GetExternalDynamicListTypeImsiRecurringWeekly;
 }
@@ -18136,7 +18083,7 @@ export interface GetExternalDynamicListTypeImsiRecurringWeekly {
      */
     at: string;
     /**
-     * Day of week
+     * Day of week. Possible values are `sunday`, `monday`, `tuesday`, `wednesday`, `thursday`, `friday` and `saturday`.
      */
     dayOfWeek: string;
 }
@@ -18186,26 +18133,18 @@ export interface GetExternalDynamicListTypeIpRecurring {
     daily: outputs.GetExternalDynamicListTypeIpRecurringDaily;
     /**
      * Five minute settings for IP recurring
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
      */
     fiveMinute: outputs.GetExternalDynamicListTypeIpRecurringFiveMinute;
     /**
      * Hourly settings for IP recurring
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
      */
     hourly: outputs.GetExternalDynamicListTypeIpRecurringHourly;
     /**
      * Monthly settings for IP recurring
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
      */
     monthly: outputs.GetExternalDynamicListTypeIpRecurringMonthly;
     /**
      * Weekly settings for IP recurring
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
      */
     weekly: outputs.GetExternalDynamicListTypeIpRecurringWeekly;
 }
@@ -18240,7 +18179,7 @@ export interface GetExternalDynamicListTypeIpRecurringWeekly {
      */
     at: string;
     /**
-     * Day of week
+     * Day of week. Possible values are `sunday`, `monday`, `tuesday`, `wednesday`, `thursday`, `friday` and `saturday`.
      */
     dayOfWeek: string;
 }
@@ -18320,26 +18259,18 @@ export interface GetExternalDynamicListTypeUrlRecurring {
     daily: outputs.GetExternalDynamicListTypeUrlRecurringDaily;
     /**
      * Five minute settings for URL recurring
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
      */
     fiveMinute: outputs.GetExternalDynamicListTypeUrlRecurringFiveMinute;
     /**
      * Hourly settings for URL recurring
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
      */
     hourly: outputs.GetExternalDynamicListTypeUrlRecurringHourly;
     /**
      * Monthly settings for URL recurring
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
      */
     monthly: outputs.GetExternalDynamicListTypeUrlRecurringMonthly;
     /**
      * Weekly settings for URL recurring
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
      */
     weekly: outputs.GetExternalDynamicListTypeUrlRecurringWeekly;
 }
@@ -18374,7 +18305,7 @@ export interface GetExternalDynamicListTypeUrlRecurringWeekly {
      */
     at: string;
     /**
-     * Day of week
+     * Day of week. Possible values are `sunday`, `monday`, `tuesday`, `wednesday`, `thursday`, `friday` and `saturday`.
      */
     dayOfWeek: string;
 }
@@ -18389,7 +18320,7 @@ export interface GetFileBlockingProfileListData {
      */
     device: string;
     /**
-     * The folder of the item. Default: Shared.
+     * The folder in which the resource is defined
      */
     folder: string;
     /**
@@ -18397,7 +18328,7 @@ export interface GetFileBlockingProfileListData {
      */
     id: string;
     /**
-     * The name of the item.
+     * The name of the file blocking profile
      */
     name: string;
     /**
@@ -18405,7 +18336,7 @@ export interface GetFileBlockingProfileListData {
      */
     rules: outputs.GetFileBlockingProfileListDataRule[];
     /**
-     * The snippet of the item.
+     * The snippet in which the resource is defined
      */
     snippet: string;
     /**
@@ -18416,19 +18347,19 @@ export interface GetFileBlockingProfileListData {
 
 export interface GetFileBlockingProfileListDataRule {
     /**
-     * The action to take when the rule match criteria is met
+     * The action to take when the rule match criteria is met. Possible values are `alert`, `block` and `continue`.
      */
     action: string;
     /**
-     * The application transferring the files (App-ID naming)
+     * The application transferring the files (App-ID naming). Possible values are `any`, `axifile`, `dl-free`, `facebook-mail`, `file.io`, `giphy-base`, `glassdoor-uploading`, `http-proxy`, `redbooth`, `send-anywhere` and `zoho-mail`.
      */
     applications: string[];
     /**
-     * The direction of the file transfer
+     * The direction of the file transfer. Possible values are `download`, `upload` and `both`.
      */
     direction: string;
     /**
-     * The file type
+     * The file type. Possible values are `7z`, `Multi-Level-Encoding`, `PE`, `access-shortcut`, `ace`, `ade`, `adp`, `ai`, `aip-encrypted-docx`, `aip-encrypted-pptx`, `aip-encrypted-xlsx`, `any`, `apk`, `arj`, `asp`, `avi`, `avi-divx`, `avi-xvid`, `bas`, `bat`, `bmp`, `bmp-upload`, `bzip2`, `cab`, `catpart`, `cdr`, `chm`, `cin`, `class`, `cmd`, `com`, `cpl`, `csv`, `deflate64-zip`, `der`, `dll`, `dmg`, `doc`, `docm`, `docx`, `dpx`, `dsn`, `dwf`, `dwg`, `dxf`, `edif`, `elf`, `emf`, `encrypted-7z`, `encrypted-doc`, `encrypted-docx`, `encrypted-office2007`, `encrypted-pdf`, `encrypted-ppt`, `encrypted-pptx`, `encrypted-rar`, `encrypted-xls`, `encrypted-xlsx`, `encrypted-zip`, `eps`, `exe`, `exr`, `flash`, `flv`, `gds`, `gif`, `gif-upload`, `gzip`, `hlp`, `hta`, `hwp`, `hwpx`, `ichitaro`, `iff`, `inf`, `ins`, `iqy`, `iso`, `its`, `iwork-keynote`, `iwork-numbers`, `iwork-pages`, `jar`, `jpeg`, `jpeg-upload`, `js`, `jse`, `lnk`, `lzh`, `ma`, `macapp`, `mach-o`, `mb`, `mda`, `mdb`, `mdi`, `mdt`, `mdw`, `mdz`, `mht`, `microsoft-shell`, `mif`, `mkv`, `mov`, `mp3`, `mp4`, `mpeg`, `mpeg-ts`, `mpkg`, `msc`, `msi`, `msoffice`, `msp`, `ocx`, `pbix`, `pbm`, `pcl`, `pdf`, `pem`, `pgp`, `pif`, `pkg`, `pl`, `png`, `png-upload`, `powershell`, `ppt`, `pptx`, `prg`, `psd`, `py`, `rar`, `reg`, `renamed-zip`, `rla`, `rm`, `rpf`, `rtf`, `scf`, `scr`, `sgi`, `sh`, `shk`, `shs`, `slk`, `softimg`, `split-cab`, `split-rar`, `stp`, `svg`, `sys`, `tar`, `tdb`, `tif`, `tiff`, `tmp`, `torrent`, `url`, `vb`, `vbe`, `vbs`, `vxd`, `webm`, `wmf`, `wmv`, `wri`, `wsf`, `wsh`, `xll`, `xls`, `xlsx`, `xpm`, `zcompressed` and `zip`.
      */
     fileTypes: string[];
     /**
@@ -18439,19 +18370,19 @@ export interface GetFileBlockingProfileListDataRule {
 
 export interface GetFileBlockingProfileRule {
     /**
-     * The action to take when the rule match criteria is met
+     * The action to take when the rule match criteria is met. Possible values are `alert`, `block` and `continue`.
      */
     action: string;
     /**
-     * The application transferring the files (App-ID naming)
+     * The application transferring the files (App-ID naming). Possible values are `any`, `axifile`, `dl-free`, `facebook-mail`, `file.io`, `giphy-base`, `glassdoor-uploading`, `http-proxy`, `redbooth`, `send-anywhere` and `zoho-mail`.
      */
     applications: string[];
     /**
-     * The direction of the file transfer
+     * The direction of the file transfer. Possible values are `download`, `upload` and `both`.
      */
     direction: string;
     /**
-     * The file type
+     * The file type. Possible values are `7z`, `Multi-Level-Encoding`, `PE`, `access-shortcut`, `ace`, `ade`, `adp`, `ai`, `aip-encrypted-docx`, `aip-encrypted-pptx`, `aip-encrypted-xlsx`, `any`, `apk`, `arj`, `asp`, `avi`, `avi-divx`, `avi-xvid`, `bas`, `bat`, `bmp`, `bmp-upload`, `bzip2`, `cab`, `catpart`, `cdr`, `chm`, `cin`, `class`, `cmd`, `com`, `cpl`, `csv`, `deflate64-zip`, `der`, `dll`, `dmg`, `doc`, `docm`, `docx`, `dpx`, `dsn`, `dwf`, `dwg`, `dxf`, `edif`, `elf`, `emf`, `encrypted-7z`, `encrypted-doc`, `encrypted-docx`, `encrypted-office2007`, `encrypted-pdf`, `encrypted-ppt`, `encrypted-pptx`, `encrypted-rar`, `encrypted-xls`, `encrypted-xlsx`, `encrypted-zip`, `eps`, `exe`, `exr`, `flash`, `flv`, `gds`, `gif`, `gif-upload`, `gzip`, `hlp`, `hta`, `hwp`, `hwpx`, `ichitaro`, `iff`, `inf`, `ins`, `iqy`, `iso`, `its`, `iwork-keynote`, `iwork-numbers`, `iwork-pages`, `jar`, `jpeg`, `jpeg-upload`, `js`, `jse`, `lnk`, `lzh`, `ma`, `macapp`, `mach-o`, `mb`, `mda`, `mdb`, `mdi`, `mdt`, `mdw`, `mdz`, `mht`, `microsoft-shell`, `mif`, `mkv`, `mov`, `mp3`, `mp4`, `mpeg`, `mpeg-ts`, `mpkg`, `msc`, `msi`, `msoffice`, `msp`, `ocx`, `pbix`, `pbm`, `pcl`, `pdf`, `pem`, `pgp`, `pif`, `pkg`, `pl`, `png`, `png-upload`, `powershell`, `ppt`, `pptx`, `prg`, `psd`, `py`, `rar`, `reg`, `renamed-zip`, `rla`, `rm`, `rpf`, `rtf`, `scf`, `scr`, `sgi`, `sh`, `shk`, `shs`, `slk`, `softimg`, `split-cab`, `split-rar`, `stp`, `svg`, `sys`, `tar`, `tdb`, `tif`, `tiff`, `tmp`, `torrent`, `url`, `vb`, `vbe`, `vbs`, `vxd`, `webm`, `wmf`, `wmv`, `wri`, `wsf`, `wsh`, `xll`, `xls`, `xlsx`, `xpm`, `zcompressed` and `zip`.
      */
     fileTypes: string[];
     /**
@@ -18519,7 +18450,7 @@ export interface GetForwardingProfileDestinationListData {
      */
     description: string;
     /**
-     * The folder in which the resource is defined
+     * The folder in which the resource is defined. Possible values are `Mobile Users`.
      */
     folder: string;
     /**
@@ -18568,7 +18499,7 @@ export interface GetForwardingProfileDestinationListDataIpAddress {
 
 export interface GetForwardingProfileListData {
     /**
-     * Enable forwarding rule for forwarding profile
+     * Enable forwarding rule for forwarding profile. Possible values are `rules` and `pac-file`.
      */
     definitionMethod: string;
     /**
@@ -18576,7 +18507,7 @@ export interface GetForwardingProfileListData {
      */
     description: string;
     /**
-     * The folder in which the resource is defined
+     * The folder in which the resource is defined. Possible values are `Mobile Users`.
      */
     folder: string;
     /**
@@ -18604,14 +18535,10 @@ export interface GetForwardingProfileListDataType {
     globalProtectProxy: outputs.GetForwardingProfileListDataTypeGlobalProtectProxy;
     /**
      * PAC file based forwarding configuration
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `globalProtectProxy`, `pacFile`, and `ztnaAgent`.
      */
     pacFile: outputs.GetForwardingProfileListDataTypePacFile;
     /**
      * ZTNA agent-based forwarding configuration
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `globalProtectProxy`, `pacFile`, and `ztnaAgent`.
      */
     ztnaAgent: outputs.GetForwardingProfileListDataTypeZtnaAgent;
 }
@@ -18850,7 +18777,7 @@ export interface GetForwardingProfileListDataTypeZtnaAgentForwardingRule {
      */
     sourceApplications: string;
     /**
-     * Type of traffic this ZTNA rule applies to (dns, network, or both)
+     * Type of traffic this ZTNA rule applies to (dns, network, or both). Possible values are `dns`, `dns-and-network-traffic` and `network-traffic`.
      */
     trafficType: string;
     /**
@@ -18865,7 +18792,7 @@ export interface GetForwardingProfileRegionalAndCustomProxyConnectivityPreferenc
      */
     enabled: boolean;
     /**
-     * Connectivity method type - 'tunnel' for VPN tunnels, 'proxy' for HTTP/HTTPS proxies, 'adns' for authenticated DNS, 'masque' for MASQUE protocol
+     * Connectivity method type - 'tunnel' for VPN tunnels, 'proxy' for HTTP/HTTPS proxies, 'adns' for authenticated DNS, 'masque' for MASQUE protocol. Possible values are `tunnel`, `proxy`, `adns` and `masque`.
      */
     name: string;
 }
@@ -18880,11 +18807,11 @@ export interface GetForwardingProfileRegionalAndCustomProxyListData {
      */
     description: string;
     /**
-     * Behavior when proxy connection fails - 'fail-open' allows direct internet access, 'fail-safe' blocks traffic until proxy is restored
+     * Behavior when proxy connection fails - 'fail-open' allows direct internet access, 'fail-safe' blocks traffic until proxy is restored. Possible values are `fail-open` and `fail-safe`.
      */
     fallbackOption: string;
     /**
-     * The folder in which the resource is defined
+     * The folder in which the resource is defined. Possible values are `Mobile Users`.
      */
     folder: string;
     /**
@@ -18892,7 +18819,7 @@ export interface GetForwardingProfileRegionalAndCustomProxyListData {
      */
     id: string;
     /**
-     * Strategy for selecting Prisma Access location - 'best-available-pa-location' automatically selects optimal location, 'specific-pa-location' uses predefined locations
+     * Strategy for selecting Prisma Access location - 'best-available-pa-location' automatically selects optimal location, 'specific-pa-location' uses predefined locations. Possible values are `best-available-pa-location` and `specific-pa-location`.
      */
     locationPreference: string;
     /**
@@ -18916,7 +18843,7 @@ export interface GetForwardingProfileRegionalAndCustomProxyListData {
      */
     tfid: string;
     /**
-     * Proxy configuration type - 'gp-and-pac' for GlobalProtect and PAC file forwarding, 'ztna-agent' for ZTNA agent forwarding
+     * Proxy configuration type - 'gp-and-pac' for GlobalProtect and PAC file forwarding, 'ztna-agent' for ZTNA agent forwarding. Possible values are `gp-and-pac` and `ztna-agent`.
      */
     type: string;
 }
@@ -18927,7 +18854,7 @@ export interface GetForwardingProfileRegionalAndCustomProxyListDataConnectivityP
      */
     enabled: boolean;
     /**
-     * Connectivity method type - 'tunnel' for VPN tunnels, 'proxy' for HTTP/HTTPS proxies, 'adns' for authenticated DNS, 'masque' for MASQUE protocol
+     * Connectivity method type - 'tunnel' for VPN tunnels, 'proxy' for HTTP/HTTPS proxies, 'adns' for authenticated DNS, 'masque' for MASQUE protocol. Possible values are `tunnel`, `proxy`, `adns` and `masque`.
      */
     name: string;
 }
@@ -19024,7 +18951,7 @@ export interface GetForwardingProfileSourceApplicationListData {
      */
     description: string;
     /**
-     * The folder in which the resource is defined
+     * The folder in which the resource is defined. Possible values are `Mobile Users`.
      */
     folder: string;
     /**
@@ -19048,14 +18975,10 @@ export interface GetForwardingProfileType {
     globalProtectProxy: outputs.GetForwardingProfileTypeGlobalProtectProxy;
     /**
      * PAC file based forwarding configuration
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `globalProtectProxy`, `pacFile`, and `ztnaAgent`.
      */
     pacFile: outputs.GetForwardingProfileTypePacFile;
     /**
      * ZTNA agent-based forwarding configuration
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `globalProtectProxy`, `pacFile`, and `ztnaAgent`.
      */
     ztnaAgent: outputs.GetForwardingProfileTypeZtnaAgent;
 }
@@ -19294,7 +19217,7 @@ export interface GetForwardingProfileTypeZtnaAgentForwardingRule {
      */
     sourceApplications: string;
     /**
-     * Type of traffic this ZTNA rule applies to (dns, network, or both)
+     * Type of traffic this ZTNA rule applies to (dns, network, or both). Possible values are `dns`, `dns-and-network-traffic` and `network-traffic`.
      */
     trafficType: string;
     /**
@@ -19320,7 +19243,7 @@ export interface GetForwardingProfileUserLocationListData {
      */
     description: string;
     /**
-     * The folder in which the resource is defined
+     * The folder in which the resource is defined. Possible values are `Mobile Users`.
      */
     folder: string;
     /**
@@ -19370,7 +19293,7 @@ export interface GetGeneralSettingGeneral {
      */
     geoLocation: outputs.GetGeneralSettingGeneralGeoLocation;
     /**
-     * Locale
+     * Locale. Possible values are `en`, `es`, `ja`, `fr`, `zh_CN` and `zh_TW`.
      */
     locale: string;
     /**
@@ -19438,7 +19361,7 @@ export interface GetGeneralSettingListData {
      */
     device: string;
     /**
-     * The folder of the item. Default: Shared.
+     * The folder in which the resource is defined
      */
     folder: string;
     /**
@@ -19450,7 +19373,7 @@ export interface GetGeneralSettingListData {
      */
     id: string;
     /**
-     * The snippet of the item.
+     * The snippet in which the resource is defined
      */
     snippet: string;
     /**
@@ -19473,7 +19396,7 @@ export interface GetGeneralSettingListDataGeneral {
      */
     geoLocation: outputs.GetGeneralSettingListDataGeneralGeoLocation;
     /**
-     * Locale
+     * Locale. Possible values are `en`, `es`, `ja`, `fr`, `zh_CN` and `zh_TW`.
      */
     locale: string;
     /**
@@ -19549,7 +19472,7 @@ export interface GetGlobalprotectMatchListListData {
      */
     filter: string;
     /**
-     * The folder of the item. Default: Shared.
+     * The folder in which the resource is defined
      */
     folder: string;
     /**
@@ -19557,7 +19480,7 @@ export interface GetGlobalprotectMatchListListData {
      */
     id: string;
     /**
-     * The name of the item.
+     * Name of the globalprotect match list entry
      */
     name: string;
     /**
@@ -19585,7 +19508,7 @@ export interface GetGlobalprotectMatchListListData {
      */
     sendToPanorama: boolean;
     /**
-     * The snippet of the item.
+     * The snippet in which the resource is defined
      */
     snippet: string;
     /**
@@ -19623,7 +19546,7 @@ export interface GetHipObjectAntiMalwareCriteria {
      */
     productVersion: outputs.GetHipObjectAntiMalwareCriteriaProductVersion;
     /**
-     * real time protection
+     * real time protection. Possible values are `no`, `yes` and `not-available`.
      */
     realTimeProtection: string;
     /**
@@ -19639,14 +19562,10 @@ export interface GetHipObjectAntiMalwareCriteriaLastScanTime {
     notAvailable: outputs.GetHipObjectAntiMalwareCriteriaLastScanTimeNotAvailable;
     /**
      * Not within
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `notAvailable`, `notWithin`, and `within`.
      */
     notWithin: outputs.GetHipObjectAntiMalwareCriteriaLastScanTimeNotWithin;
     /**
      * Within
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `notAvailable`, `notWithin`, and `within`.
      */
     within: outputs.GetHipObjectAntiMalwareCriteriaLastScanTimeWithin;
 }
@@ -19661,8 +19580,6 @@ export interface GetHipObjectAntiMalwareCriteriaLastScanTimeNotWithin {
     days: number;
     /**
      * specify time in hours
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `days` and `hours`.
      */
     hours: number;
 }
@@ -19674,8 +19591,6 @@ export interface GetHipObjectAntiMalwareCriteriaLastScanTimeWithin {
     days: number;
     /**
      * specify time in hours
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `days` and `hours`.
      */
     hours: number;
 }
@@ -19687,50 +19602,34 @@ export interface GetHipObjectAntiMalwareCriteriaProductVersion {
     contains: string;
     /**
      * Greater equal
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `contains`, `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`, `notWithin`, and `within`.
      */
     greaterEqual: string;
     /**
      * Greater than
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `contains`, `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`, `notWithin`, and `within`.
      */
     greaterThan: string;
     /**
      * Is
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `contains`, `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`, `notWithin`, and `within`.
      */
     is: string;
     /**
      * Is not
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `contains`, `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`, `notWithin`, and `within`.
      */
     isNot: string;
     /**
      * Less equal
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `contains`, `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`, `notWithin`, and `within`.
      */
     lessEqual: string;
     /**
      * Less than
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `contains`, `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`, `notWithin`, and `within`.
      */
     lessThan: string;
     /**
      * Not within
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `contains`, `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`, `notWithin`, and `within`.
      */
     notWithin: outputs.GetHipObjectAntiMalwareCriteriaProductVersionNotWithin;
     /**
      * Within
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `contains`, `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`, `notWithin`, and `within`.
      */
     within: outputs.GetHipObjectAntiMalwareCriteriaProductVersionWithin;
 }
@@ -19756,8 +19655,6 @@ export interface GetHipObjectAntiMalwareCriteriaVirdefVersion {
     notWithin: outputs.GetHipObjectAntiMalwareCriteriaVirdefVersionNotWithin;
     /**
      * Within
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `notWithin` and `within`.
      */
     within: outputs.GetHipObjectAntiMalwareCriteriaVirdefVersionWithin;
 }
@@ -19769,8 +19666,6 @@ export interface GetHipObjectAntiMalwareCriteriaVirdefVersionNotWithin {
     days: number;
     /**
      * specify versions range
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `days` and `versions`.
      */
     versions: number;
 }
@@ -19782,8 +19677,6 @@ export interface GetHipObjectAntiMalwareCriteriaVirdefVersionWithin {
     days: number;
     /**
      * specify versions range
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `days` and `versions`.
      */
     versions: number;
 }
@@ -19942,7 +19835,7 @@ export interface GetHipObjectDataLossPrevention {
 
 export interface GetHipObjectDataLossPreventionCriteria {
     /**
-     * is enabled
+     * is enabled. Possible values are `no`, `yes` and `not-available`.
      */
     isEnabled: string;
     /**
@@ -19995,14 +19888,10 @@ export interface GetHipObjectDiskBackupCriteriaLastBackupTime {
     notAvailable: outputs.GetHipObjectDiskBackupCriteriaLastBackupTimeNotAvailable;
     /**
      * Not within
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `notAvailable`, `notWithin`, and `within`.
      */
     notWithin: outputs.GetHipObjectDiskBackupCriteriaLastBackupTimeNotWithin;
     /**
      * Within
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `notAvailable`, `notWithin`, and `within`.
      */
     within: outputs.GetHipObjectDiskBackupCriteriaLastBackupTimeWithin;
 }
@@ -20017,8 +19906,6 @@ export interface GetHipObjectDiskBackupCriteriaLastBackupTimeNotWithin {
     days: number;
     /**
      * specify time in hours
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `days` and `hours`.
      */
     hours: number;
 }
@@ -20030,8 +19917,6 @@ export interface GetHipObjectDiskBackupCriteriaLastBackupTimeWithin {
     days: number;
     /**
      * specify time in hours
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `days` and `hours`.
      */
     hours: number;
 }
@@ -20086,13 +19971,11 @@ export interface GetHipObjectDiskEncryptionCriteriaEncryptedLocation {
 
 export interface GetHipObjectDiskEncryptionCriteriaEncryptedLocationEncryptionState {
     /**
-     * Is
+     * Is. Possible values are `encrypted`, `unencrypted`, `partial` and `unknown`.
      */
     is: string;
     /**
-     * Is not
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `is` and `isNot`.
+     * Is not. Possible values are `encrypted`, `unencrypted`, `partial` and `unknown`.
      */
     isNot: string;
 }
@@ -20125,7 +20008,7 @@ export interface GetHipObjectFirewall {
 
 export interface GetHipObjectFirewallCriteria {
     /**
-     * is enabled
+     * is enabled. Possible values are `no`, `yes` and `not-available`.
      */
     isEnabled: string;
     /**
@@ -20190,14 +20073,10 @@ export interface GetHipObjectHostInfoCriteriaClientVersion {
     contains: string;
     /**
      * Is
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
      */
     is: string;
     /**
      * Is not
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
      */
     isNot: string;
 }
@@ -20209,14 +20088,10 @@ export interface GetHipObjectHostInfoCriteriaDomain {
     contains: string;
     /**
      * Is
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
      */
     is: string;
     /**
      * Is not
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
      */
     isNot: string;
 }
@@ -20228,14 +20103,10 @@ export interface GetHipObjectHostInfoCriteriaHostId {
     contains: string;
     /**
      * Is
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
      */
     is: string;
     /**
      * Is not
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
      */
     isNot: string;
 }
@@ -20247,14 +20118,10 @@ export interface GetHipObjectHostInfoCriteriaHostName {
     contains: string;
     /**
      * Is
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
      */
     is: string;
     /**
      * Is not
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
      */
     isNot: string;
 }
@@ -20296,14 +20163,10 @@ export interface GetHipObjectHostInfoCriteriaSerialNumber {
     contains: string;
     /**
      * Is
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
      */
     is: string;
     /**
      * Is not
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
      */
     isNot: string;
 }
@@ -20346,7 +20209,7 @@ export interface GetHipObjectListData {
      */
     firewall: outputs.GetHipObjectListDataFirewall;
     /**
-     * The folder of the item. Default: Shared.
+     * The folder in which the resource is defined
      */
     folder: string;
     /**
@@ -20362,7 +20225,7 @@ export interface GetHipObjectListData {
      */
     mobileDevice: outputs.GetHipObjectListDataMobileDevice;
     /**
-     * The name of the item.
+     * The name of the HIP object
      */
     name: string;
     /**
@@ -20374,7 +20237,7 @@ export interface GetHipObjectListData {
      */
     patchManagement: outputs.GetHipObjectListDataPatchManagement;
     /**
-     * The snippet of the item.
+     * The snippet in which the resource is defined
      */
     snippet: string;
     /**
@@ -20412,7 +20275,7 @@ export interface GetHipObjectListDataAntiMalwareCriteria {
      */
     productVersion: outputs.GetHipObjectListDataAntiMalwareCriteriaProductVersion;
     /**
-     * real time protection
+     * real time protection. Possible values are `no`, `yes` and `not-available`.
      */
     realTimeProtection: string;
     /**
@@ -20428,14 +20291,10 @@ export interface GetHipObjectListDataAntiMalwareCriteriaLastScanTime {
     notAvailable: outputs.GetHipObjectListDataAntiMalwareCriteriaLastScanTimeNotAvailable;
     /**
      * Not within
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `notAvailable`, `notWithin`, and `within`.
      */
     notWithin: outputs.GetHipObjectListDataAntiMalwareCriteriaLastScanTimeNotWithin;
     /**
      * Within
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `notAvailable`, `notWithin`, and `within`.
      */
     within: outputs.GetHipObjectListDataAntiMalwareCriteriaLastScanTimeWithin;
 }
@@ -20450,8 +20309,6 @@ export interface GetHipObjectListDataAntiMalwareCriteriaLastScanTimeNotWithin {
     days: number;
     /**
      * specify time in hours
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `days` and `hours`.
      */
     hours: number;
 }
@@ -20463,8 +20320,6 @@ export interface GetHipObjectListDataAntiMalwareCriteriaLastScanTimeWithin {
     days: number;
     /**
      * specify time in hours
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `days` and `hours`.
      */
     hours: number;
 }
@@ -20476,50 +20331,34 @@ export interface GetHipObjectListDataAntiMalwareCriteriaProductVersion {
     contains: string;
     /**
      * Greater equal
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `contains`, `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`, `notWithin`, and `within`.
      */
     greaterEqual: string;
     /**
      * Greater than
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `contains`, `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`, `notWithin`, and `within`.
      */
     greaterThan: string;
     /**
      * Is
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `contains`, `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`, `notWithin`, and `within`.
      */
     is: string;
     /**
      * Is not
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `contains`, `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`, `notWithin`, and `within`.
      */
     isNot: string;
     /**
      * Less equal
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `contains`, `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`, `notWithin`, and `within`.
      */
     lessEqual: string;
     /**
      * Less than
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `contains`, `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`, `notWithin`, and `within`.
      */
     lessThan: string;
     /**
      * Not within
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `contains`, `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`, `notWithin`, and `within`.
      */
     notWithin: outputs.GetHipObjectListDataAntiMalwareCriteriaProductVersionNotWithin;
     /**
      * Within
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `contains`, `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`, `notWithin`, and `within`.
      */
     within: outputs.GetHipObjectListDataAntiMalwareCriteriaProductVersionWithin;
 }
@@ -20545,8 +20384,6 @@ export interface GetHipObjectListDataAntiMalwareCriteriaVirdefVersion {
     notWithin: outputs.GetHipObjectListDataAntiMalwareCriteriaVirdefVersionNotWithin;
     /**
      * Within
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `notWithin` and `within`.
      */
     within: outputs.GetHipObjectListDataAntiMalwareCriteriaVirdefVersionWithin;
 }
@@ -20558,8 +20395,6 @@ export interface GetHipObjectListDataAntiMalwareCriteriaVirdefVersionNotWithin {
     days: number;
     /**
      * specify versions range
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `days` and `versions`.
      */
     versions: number;
 }
@@ -20571,8 +20406,6 @@ export interface GetHipObjectListDataAntiMalwareCriteriaVirdefVersionWithin {
     days: number;
     /**
      * specify versions range
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `days` and `versions`.
      */
     versions: number;
 }
@@ -20731,7 +20564,7 @@ export interface GetHipObjectListDataDataLossPrevention {
 
 export interface GetHipObjectListDataDataLossPreventionCriteria {
     /**
-     * is enabled
+     * is enabled. Possible values are `no`, `yes` and `not-available`.
      */
     isEnabled: string;
     /**
@@ -20784,14 +20617,10 @@ export interface GetHipObjectListDataDiskBackupCriteriaLastBackupTime {
     notAvailable: outputs.GetHipObjectListDataDiskBackupCriteriaLastBackupTimeNotAvailable;
     /**
      * Not within
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `notAvailable`, `notWithin`, and `within`.
      */
     notWithin: outputs.GetHipObjectListDataDiskBackupCriteriaLastBackupTimeNotWithin;
     /**
      * Within
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `notAvailable`, `notWithin`, and `within`.
      */
     within: outputs.GetHipObjectListDataDiskBackupCriteriaLastBackupTimeWithin;
 }
@@ -20806,8 +20635,6 @@ export interface GetHipObjectListDataDiskBackupCriteriaLastBackupTimeNotWithin {
     days: number;
     /**
      * specify time in hours
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `days` and `hours`.
      */
     hours: number;
 }
@@ -20819,8 +20646,6 @@ export interface GetHipObjectListDataDiskBackupCriteriaLastBackupTimeWithin {
     days: number;
     /**
      * specify time in hours
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `days` and `hours`.
      */
     hours: number;
 }
@@ -20875,13 +20700,11 @@ export interface GetHipObjectListDataDiskEncryptionCriteriaEncryptedLocation {
 
 export interface GetHipObjectListDataDiskEncryptionCriteriaEncryptedLocationEncryptionState {
     /**
-     * Is
+     * Is. Possible values are `encrypted`, `unencrypted`, `partial` and `unknown`.
      */
     is: string;
     /**
-     * Is not
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `is` and `isNot`.
+     * Is not. Possible values are `encrypted`, `unencrypted`, `partial` and `unknown`.
      */
     isNot: string;
 }
@@ -20914,7 +20737,7 @@ export interface GetHipObjectListDataFirewall {
 
 export interface GetHipObjectListDataFirewallCriteria {
     /**
-     * is enabled
+     * is enabled. Possible values are `no`, `yes` and `not-available`.
      */
     isEnabled: string;
     /**
@@ -20979,14 +20802,10 @@ export interface GetHipObjectListDataHostInfoCriteriaClientVersion {
     contains: string;
     /**
      * Is
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
      */
     is: string;
     /**
      * Is not
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
      */
     isNot: string;
 }
@@ -20998,14 +20817,10 @@ export interface GetHipObjectListDataHostInfoCriteriaDomain {
     contains: string;
     /**
      * Is
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
      */
     is: string;
     /**
      * Is not
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
      */
     isNot: string;
 }
@@ -21017,14 +20832,10 @@ export interface GetHipObjectListDataHostInfoCriteriaHostId {
     contains: string;
     /**
      * Is
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
      */
     is: string;
     /**
      * Is not
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
      */
     isNot: string;
 }
@@ -21036,14 +20847,10 @@ export interface GetHipObjectListDataHostInfoCriteriaHostName {
     contains: string;
     /**
      * Is
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
      */
     is: string;
     /**
      * Is not
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
      */
     isNot: string;
 }
@@ -21085,14 +20892,10 @@ export interface GetHipObjectListDataHostInfoCriteriaSerialNumber {
     contains: string;
     /**
      * Is
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
      */
     is: string;
     /**
      * Is not
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
      */
     isNot: string;
 }
@@ -21165,8 +20968,6 @@ export interface GetHipObjectListDataMobileDeviceCriteriaApplicationsHasMalware 
     no: outputs.GetHipObjectListDataMobileDeviceCriteriaApplicationsHasMalwareNo;
     /**
      * Yes
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `no` and `yes`.
      */
     yes: outputs.GetHipObjectListDataMobileDeviceCriteriaApplicationsHasMalwareYes;
 }
@@ -21218,14 +21019,10 @@ export interface GetHipObjectListDataMobileDeviceCriteriaImei {
     contains: string;
     /**
      * Is
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
      */
     is: string;
     /**
      * Is not
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
      */
     isNot: string;
 }
@@ -21237,8 +21034,6 @@ export interface GetHipObjectListDataMobileDeviceCriteriaLastCheckinTime {
     notWithin: outputs.GetHipObjectListDataMobileDeviceCriteriaLastCheckinTimeNotWithin;
     /**
      * Within
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `notWithin` and `within`.
      */
     within: outputs.GetHipObjectListDataMobileDeviceCriteriaLastCheckinTimeWithin;
 }
@@ -21264,14 +21059,10 @@ export interface GetHipObjectListDataMobileDeviceCriteriaModel {
     contains: string;
     /**
      * Is
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
      */
     is: string;
     /**
      * Is not
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
      */
     isNot: string;
 }
@@ -21283,14 +21074,10 @@ export interface GetHipObjectListDataMobileDeviceCriteriaPhoneNumber {
     contains: string;
     /**
      * Is
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
      */
     is: string;
     /**
      * Is not
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
      */
     isNot: string;
 }
@@ -21302,14 +21089,10 @@ export interface GetHipObjectListDataMobileDeviceCriteriaTag {
     contains: string;
     /**
      * Is
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
      */
     is: string;
     /**
      * Is not
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
      */
     isNot: string;
 }
@@ -21335,8 +21118,6 @@ export interface GetHipObjectListDataNetworkInfoCriteriaNetwork {
     is: outputs.GetHipObjectListDataNetworkInfoCriteriaNetworkIs;
     /**
      * Is not
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `is` and `isNot`.
      */
     isNot: outputs.GetHipObjectListDataNetworkInfoCriteriaNetworkIsNot;
 }
@@ -21348,14 +21129,10 @@ export interface GetHipObjectListDataNetworkInfoCriteriaNetworkIs {
     mobile: outputs.GetHipObjectListDataNetworkInfoCriteriaNetworkIsMobile;
     /**
      * Unknown
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `mobile`, `unknown`, and `wifi`.
      */
     unknown: outputs.GetHipObjectListDataNetworkInfoCriteriaNetworkIsUnknown;
     /**
      * Wifi
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `mobile`, `unknown`, and `wifi`.
      */
     wifi: outputs.GetHipObjectListDataNetworkInfoCriteriaNetworkIsWifi;
 }
@@ -21374,20 +21151,14 @@ export interface GetHipObjectListDataNetworkInfoCriteriaNetworkIsNot {
     ethernet: outputs.GetHipObjectListDataNetworkInfoCriteriaNetworkIsNotEthernet;
     /**
      * Mobile
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `ethernet`, `mobile`, `unknown`, and `wifi`.
      */
     mobile: outputs.GetHipObjectListDataNetworkInfoCriteriaNetworkIsNotMobile;
     /**
      * Unknown
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `ethernet`, `mobile`, `unknown`, and `wifi`.
      */
     unknown: outputs.GetHipObjectListDataNetworkInfoCriteriaNetworkIsNotUnknown;
     /**
      * Wifi
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `ethernet`, `mobile`, `unknown`, and `wifi`.
      */
     wifi: outputs.GetHipObjectListDataNetworkInfoCriteriaNetworkIsNotWifi;
 }
@@ -21439,7 +21210,7 @@ export interface GetHipObjectListDataPatchManagement {
 
 export interface GetHipObjectListDataPatchManagementCriteria {
     /**
-     * is enabled
+     * is enabled. Possible values are `no`, `yes` and `not-available`.
      */
     isEnabled: string;
     /**
@@ -21454,7 +21225,7 @@ export interface GetHipObjectListDataPatchManagementCriteria {
 
 export interface GetHipObjectListDataPatchManagementCriteriaMissingPatches {
     /**
-     * Check
+     * Check. Possible values are `has-any`, `has-none` and `has-all`.
      */
     check: string;
     /**
@@ -21474,32 +21245,22 @@ export interface GetHipObjectListDataPatchManagementCriteriaMissingPatchesSeveri
     greaterEqual: number;
     /**
      * Greater than
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, and `lessThan`.
      */
     greaterThan: number;
     /**
      * Is
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, and `lessThan`.
      */
     is: number;
     /**
      * Is not
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, and `lessThan`.
      */
     isNot: number;
     /**
      * Less equal
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, and `lessThan`.
      */
     lessEqual: number;
     /**
      * Less than
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, and `lessThan`.
      */
     lessThan: number;
 }
@@ -21583,8 +21344,6 @@ export interface GetHipObjectMobileDeviceCriteriaApplicationsHasMalware {
     no: outputs.GetHipObjectMobileDeviceCriteriaApplicationsHasMalwareNo;
     /**
      * Yes
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `no` and `yes`.
      */
     yes: outputs.GetHipObjectMobileDeviceCriteriaApplicationsHasMalwareYes;
 }
@@ -21636,14 +21395,10 @@ export interface GetHipObjectMobileDeviceCriteriaImei {
     contains: string;
     /**
      * Is
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
      */
     is: string;
     /**
      * Is not
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
      */
     isNot: string;
 }
@@ -21655,8 +21410,6 @@ export interface GetHipObjectMobileDeviceCriteriaLastCheckinTime {
     notWithin: outputs.GetHipObjectMobileDeviceCriteriaLastCheckinTimeNotWithin;
     /**
      * Within
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `notWithin` and `within`.
      */
     within: outputs.GetHipObjectMobileDeviceCriteriaLastCheckinTimeWithin;
 }
@@ -21682,14 +21435,10 @@ export interface GetHipObjectMobileDeviceCriteriaModel {
     contains: string;
     /**
      * Is
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
      */
     is: string;
     /**
      * Is not
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
      */
     isNot: string;
 }
@@ -21701,14 +21450,10 @@ export interface GetHipObjectMobileDeviceCriteriaPhoneNumber {
     contains: string;
     /**
      * Is
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
      */
     is: string;
     /**
      * Is not
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
      */
     isNot: string;
 }
@@ -21720,14 +21465,10 @@ export interface GetHipObjectMobileDeviceCriteriaTag {
     contains: string;
     /**
      * Is
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
      */
     is: string;
     /**
      * Is not
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
      */
     isNot: string;
 }
@@ -21753,8 +21494,6 @@ export interface GetHipObjectNetworkInfoCriteriaNetwork {
     is: outputs.GetHipObjectNetworkInfoCriteriaNetworkIs;
     /**
      * Is not
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `is` and `isNot`.
      */
     isNot: outputs.GetHipObjectNetworkInfoCriteriaNetworkIsNot;
 }
@@ -21766,14 +21505,10 @@ export interface GetHipObjectNetworkInfoCriteriaNetworkIs {
     mobile: outputs.GetHipObjectNetworkInfoCriteriaNetworkIsMobile;
     /**
      * Unknown
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `mobile`, `unknown`, and `wifi`.
      */
     unknown: outputs.GetHipObjectNetworkInfoCriteriaNetworkIsUnknown;
     /**
      * Wifi
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `mobile`, `unknown`, and `wifi`.
      */
     wifi: outputs.GetHipObjectNetworkInfoCriteriaNetworkIsWifi;
 }
@@ -21792,20 +21527,14 @@ export interface GetHipObjectNetworkInfoCriteriaNetworkIsNot {
     ethernet: outputs.GetHipObjectNetworkInfoCriteriaNetworkIsNotEthernet;
     /**
      * Mobile
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `ethernet`, `mobile`, `unknown`, and `wifi`.
      */
     mobile: outputs.GetHipObjectNetworkInfoCriteriaNetworkIsNotMobile;
     /**
      * Unknown
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `ethernet`, `mobile`, `unknown`, and `wifi`.
      */
     unknown: outputs.GetHipObjectNetworkInfoCriteriaNetworkIsNotUnknown;
     /**
      * Wifi
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `ethernet`, `mobile`, `unknown`, and `wifi`.
      */
     wifi: outputs.GetHipObjectNetworkInfoCriteriaNetworkIsNotWifi;
 }
@@ -21857,7 +21586,7 @@ export interface GetHipObjectPatchManagement {
 
 export interface GetHipObjectPatchManagementCriteria {
     /**
-     * is enabled
+     * is enabled. Possible values are `no`, `yes` and `not-available`.
      */
     isEnabled: string;
     /**
@@ -21872,7 +21601,7 @@ export interface GetHipObjectPatchManagementCriteria {
 
 export interface GetHipObjectPatchManagementCriteriaMissingPatches {
     /**
-     * Check
+     * Check. Possible values are `has-any`, `has-none` and `has-all`.
      */
     check: string;
     /**
@@ -21892,32 +21621,22 @@ export interface GetHipObjectPatchManagementCriteriaMissingPatchesSeverity {
     greaterEqual: number;
     /**
      * Greater than
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, and `lessThan`.
      */
     greaterThan: number;
     /**
      * Is
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, and `lessThan`.
      */
     is: number;
     /**
      * Is not
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, and `lessThan`.
      */
     isNot: number;
     /**
      * Less equal
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, and `lessThan`.
      */
     lessEqual: number;
     /**
      * Less than
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, and `lessThan`.
      */
     lessThan: number;
 }
@@ -21943,7 +21662,7 @@ export interface GetHipProfileListData {
      */
     device: string;
     /**
-     * The folder of the item. Default: Shared.
+     * The folder in which the resource is defined
      */
     folder: string;
     /**
@@ -21955,11 +21674,11 @@ export interface GetHipProfileListData {
      */
     match: string;
     /**
-     * The name of the item.
+     * The name of the HIP profile
      */
     name: string;
     /**
-     * The snippet of the item.
+     * The snippet in which the resource is defined
      */
     snippet: string;
     /**
@@ -21982,7 +21701,7 @@ export interface GetHipmatchMatchListListData {
      */
     filter: string;
     /**
-     * The folder of the item. Default: Shared.
+     * The folder in which the resource is defined
      */
     folder: string;
     /**
@@ -21990,7 +21709,7 @@ export interface GetHipmatchMatchListListData {
      */
     id: string;
     /**
-     * The name of the item.
+     * Name of the hipmatch match list entry
      */
     name: string;
     /**
@@ -22018,7 +21737,7 @@ export interface GetHipmatchMatchListListData {
      */
     sendToPanorama: boolean;
     /**
-     * The snippet of the item.
+     * The snippet in which the resource is defined
      */
     snippet: string;
     /**
@@ -22048,7 +21767,7 @@ export interface GetHttpHeaderProfileHttpHeaderInsertionType {
      */
     headers: outputs.GetHttpHeaderProfileHttpHeaderInsertionTypeHeader[];
     /**
-     * The HTTP header insertion type
+     * The HTTP header insertion type. Possible values are `Custom`, `Dropbox Network Control`, `Dynamic Fields`, `Google Apps Access Control`, `Microsoft Office365 Tenant Restrictions` and `Youtube Safe Search`.
      */
     name: string;
 }
@@ -22082,7 +21801,7 @@ export interface GetHttpHeaderProfileListData {
      */
     device: string;
     /**
-     * The folder of the item. Default: Shared.
+     * The folder in which the resource is defined
      */
     folder: string;
     /**
@@ -22094,11 +21813,11 @@ export interface GetHttpHeaderProfileListData {
      */
     id: string;
     /**
-     * The name of the item.
+     * The name of the HTTP header profile
      */
     name: string;
     /**
-     * The snippet of the item.
+     * The snippet in which the resource is defined
      */
     snippet: string;
     /**
@@ -22128,7 +21847,7 @@ export interface GetHttpHeaderProfileListDataHttpHeaderInsertionType {
      */
     headers: outputs.GetHttpHeaderProfileListDataHttpHeaderInsertionTypeHeader[];
     /**
-     * The HTTP header insertion type
+     * The HTTP header insertion type. Possible values are `Custom`, `Dropbox Network Control`, `Dynamic Fields`, `Google Apps Access Control`, `Microsoft Office365 Tenant Restrictions` and `Youtube Safe Search`.
      */
     name: string;
 }
@@ -22994,7 +22713,7 @@ export interface GetHttpServerProfileListData {
      */
     device: string;
     /**
-     * The folder of the item. Default: Shared.
+     * The folder in which the resource is defined
      */
     folder: string;
     /**
@@ -23006,7 +22725,7 @@ export interface GetHttpServerProfileListData {
      */
     id: string;
     /**
-     * The name of the item.
+     * The name of the profile
      */
     name: string;
     /**
@@ -23014,7 +22733,7 @@ export interface GetHttpServerProfileListData {
      */
     servers: outputs.GetHttpServerProfileListDataServer[];
     /**
-     * The snippet of the item.
+     * The snippet in which the resource is defined
      */
     snippet: string;
     /**
@@ -23873,7 +23592,7 @@ export interface GetHttpServerProfileListDataServer {
      */
     certificateProfile: string;
     /**
-     * HTTP operation to perform
+     * HTTP operation to perform. Possible values are `GET`, `POST`, `PUT` and `DELETE`.
      */
     httpMethod: string;
     /**
@@ -23885,11 +23604,11 @@ export interface GetHttpServerProfileListDataServer {
      */
     port: number;
     /**
-     * HTTP server protocol
+     * HTTP server protocol. Possible values are `HTTP` and `HTTPS`.
      */
     protocol: string;
     /**
-     * HTTP server TLS version
+     * HTTP server TLS version. Possible values are `1.0`, `1.1`, `1.2` and `1.3`.
      */
     tlsVersion: string;
 }
@@ -23904,7 +23623,7 @@ export interface GetHttpServerProfileServer {
      */
     certificateProfile: string;
     /**
-     * HTTP operation to perform
+     * HTTP operation to perform. Possible values are `GET`, `POST`, `PUT` and `DELETE`.
      */
     httpMethod: string;
     /**
@@ -23916,11 +23635,11 @@ export interface GetHttpServerProfileServer {
      */
     port: number;
     /**
-     * HTTP server protocol
+     * HTTP server protocol. Possible values are `HTTP` and `HTTPS`.
      */
     protocol: string;
     /**
-     * HTTP server TLS version
+     * HTTP server TLS version. Possible values are `1.0`, `1.1`, `1.2` and `1.3`.
      */
     tlsVersion: string;
 }
@@ -23932,20 +23651,14 @@ export interface GetIkeCryptoProfileLifetime {
     days: number;
     /**
      * specify lifetime in hours
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `days`, `hours`, `minutes`, and `seconds`.
      */
     hours: number;
     /**
      * specify lifetime in minutes
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `days`, `hours`, `minutes`, and `seconds`.
      */
     minutes: number;
     /**
      * specify lifetime in seconds
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `days`, `hours`, `minutes`, and `seconds`.
      */
     seconds: number;
 }
@@ -23960,19 +23673,19 @@ export interface GetIkeCryptoProfileListData {
      */
     device: string;
     /**
-     * Dh group
+     * Dh group. Possible values are `group1`, `group2`, `group5`, `group14`, `group19`, `group20`, `group21`, `ml-kem-512`, `ml-kem-768` and `ml-kem-1024`.
      */
     dhGroups: string[];
     /**
-     * Encryption algorithm
+     * Encryption algorithm. Possible values are `des`, `3des`, `aes-128-cbc`, `aes-192-cbc`, `aes-256-cbc`, `aes-128-gcm` and `aes-256-gcm`.
      */
     encryptions: string[];
     /**
-     * The folder of the item. Default: Shared.
+     * The folder in which the resource is defined
      */
     folder: string;
     /**
-     * Hash
+     * Hash. Possible values are `md5`, `sha1`, `sha256`, `sha384`, `sha512` and `non-auth`.
      */
     hashes: string[];
     /**
@@ -23984,11 +23697,11 @@ export interface GetIkeCryptoProfileListData {
      */
     lifetime: outputs.GetIkeCryptoProfileListDataLifetime;
     /**
-     * The name of the item.
+     * Alphanumeric string begin with letter: [0-9a-zA-Z._-]
      */
     name: string;
     /**
-     * The snippet of the item.
+     * The snippet in which the resource is defined
      */
     snippet: string;
     /**
@@ -24004,20 +23717,14 @@ export interface GetIkeCryptoProfileListDataLifetime {
     days: number;
     /**
      * specify lifetime in hours
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `days`, `hours`, `minutes`, and `seconds`.
      */
     hours: number;
     /**
      * specify lifetime in minutes
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `days`, `hours`, `minutes`, and `seconds`.
      */
     minutes: number;
     /**
      * specify lifetime in seconds
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `days`, `hours`, `minutes`, and `seconds`.
      */
     seconds: number;
 }
@@ -24029,8 +23736,6 @@ export interface GetIkeGatewayAuthentication {
     certificate: outputs.GetIkeGatewayAuthenticationCertificate;
     /**
      * Pre shared key
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `certificate` and `preSharedKey`.
      */
     preSharedKey: outputs.GetIkeGatewayAuthenticationPreSharedKey;
 }
@@ -24086,7 +23791,7 @@ export interface GetIkeGatewayListData {
      */
     encryptedValues: {[key: string]: string};
     /**
-     * The folder of the item. Default: Shared.
+     * The folder in which the resource is defined
      */
     folder: string;
     /**
@@ -24102,7 +23807,7 @@ export interface GetIkeGatewayListData {
      */
     localId: outputs.GetIkeGatewayListDataLocalId;
     /**
-     * The name of the item.
+     * Alphanumeric string begin with letter: [0-9a-zA-Z._-]
      */
     name: string;
     /**
@@ -24122,7 +23827,7 @@ export interface GetIkeGatewayListData {
      */
     protocolCommon: outputs.GetIkeGatewayListDataProtocolCommon;
     /**
-     * The snippet of the item.
+     * The snippet in which the resource is defined
      */
     snippet: string;
     /**
@@ -24138,8 +23843,6 @@ export interface GetIkeGatewayListDataAuthentication {
     certificate: outputs.GetIkeGatewayListDataAuthenticationCertificate;
     /**
      * Pre shared key
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `certificate` and `preSharedKey`.
      */
     preSharedKey: outputs.GetIkeGatewayListDataAuthenticationPreSharedKey;
 }
@@ -24210,14 +23913,10 @@ export interface GetIkeGatewayListDataPeerAddress {
     dynamic: outputs.GetIkeGatewayListDataPeerAddressDynamic;
     /**
      * peer gateway FQDN name
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `dynamic`, `fqdn`, and `ip`.
      */
     fqdn: string;
     /**
      * peer gateway has static IP address
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `dynamic`, `fqdn`, and `ip`.
      */
     ip: string;
 }
@@ -24231,7 +23930,7 @@ export interface GetIkeGatewayListDataPeerId {
      */
     id: string;
     /**
-     * Type
+     * Type. Possible values are `ipaddr`, `keyid`, `fqdn` and `ufqdn`.
      */
     type: string;
 }
@@ -24246,7 +23945,7 @@ export interface GetIkeGatewayListDataProtocol {
      */
     ikev2: outputs.GetIkeGatewayListDataProtocolIkev2;
     /**
-     * Version
+     * Version. Possible values are `ikev2-preferred`, `ikev1` and `ikev2`.
      */
     version: string;
 }
@@ -24345,14 +24044,10 @@ export interface GetIkeGatewayPeerAddress {
     dynamic: outputs.GetIkeGatewayPeerAddressDynamic;
     /**
      * peer gateway FQDN name
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `dynamic`, `fqdn`, and `ip`.
      */
     fqdn: string;
     /**
      * peer gateway has static IP address
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `dynamic`, `fqdn`, and `ip`.
      */
     ip: string;
 }
@@ -24366,7 +24061,7 @@ export interface GetIkeGatewayPeerId {
      */
     id: string;
     /**
-     * Type
+     * Type. Possible values are `ipaddr`, `keyid`, `fqdn` and `ufqdn`.
      */
     type: string;
 }
@@ -24381,7 +24076,7 @@ export interface GetIkeGatewayProtocol {
      */
     ikev2: outputs.GetIkeGatewayProtocolIkev2;
     /**
-     * Version
+     * Version. Possible values are `ikev2-preferred`, `ikev1` and `ikev2`.
      */
     version: string;
 }
@@ -24457,7 +24152,7 @@ export interface GetInterfaceManagementProfileListData {
      */
     device: string;
     /**
-     * The folder of the item. Default: Shared.
+     * The folder in which the resource is defined
      */
     folder: string;
     /**
@@ -24477,7 +24172,7 @@ export interface GetInterfaceManagementProfileListData {
      */
     id: string;
     /**
-     * The name of the item.
+     * Name
      */
     name: string;
     /**
@@ -24493,7 +24188,7 @@ export interface GetInterfaceManagementProfileListData {
      */
     responsePages: boolean;
     /**
-     * The snippet of the item.
+     * The snippet in which the resource is defined
      */
     snippet: string;
     /**
@@ -24538,7 +24233,7 @@ export interface GetInterfaceManagementProfilePermittedIp {
 
 export interface GetIpsecCryptoProfileAh {
     /**
-     * Authentication
+     * Authentication. Possible values are `md5`, `sha1`, `sha256`, `sha384` and `sha512`.
      */
     authentications: string[];
 }
@@ -24549,7 +24244,7 @@ export interface GetIpsecCryptoProfileEsp {
      */
     authentications: string[];
     /**
-     * Encryption algorithm
+     * Encryption algorithm. Possible values are `des`, `3des`, `aes-128-cbc`, `aes-192-cbc`, `aes-256-cbc`, `aes-128-gcm`, `aes-256-gcm` and `null`.
      */
     encryptions: string[];
 }
@@ -24561,20 +24256,14 @@ export interface GetIpsecCryptoProfileLifesize {
     gb: number;
     /**
      * specify lifesize in kilobytes(KB)
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `gb`, `kb`, `mb`, and `tb`.
      */
     kb: number;
     /**
      * specify lifesize in megabytes(MB)
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `gb`, `kb`, `mb`, and `tb`.
      */
     mb: number;
     /**
      * specify lifesize in terabytes(TB)
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `gb`, `kb`, `mb`, and `tb`.
      */
     tb: number;
 }
@@ -24586,20 +24275,14 @@ export interface GetIpsecCryptoProfileLifetime {
     days: number;
     /**
      * specify lifetime in hours
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `days`, `hours`, `minutes`, and `seconds`.
      */
     hours: number;
     /**
      * specify lifetime in minutes
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `days`, `hours`, `minutes`, and `seconds`.
      */
     minutes: number;
     /**
      * specify lifetime in seconds
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `days`, `hours`, `minutes`, and `seconds`.
      */
     seconds: number;
 }
@@ -24607,8 +24290,6 @@ export interface GetIpsecCryptoProfileLifetime {
 export interface GetIpsecCryptoProfileListData {
     /**
      * Ah
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `ah` and `esp`.
      */
     ah: outputs.GetIpsecCryptoProfileListDataAh;
     /**
@@ -24616,17 +24297,15 @@ export interface GetIpsecCryptoProfileListData {
      */
     device: string;
     /**
-     * phase-2 DH group (PFS DH group)
+     * phase-2 DH group (PFS DH group). Possible values are `no-pfs`, `group1`, `group2`, `group5`, `group14`, `group19`, `group20`, `group21`, `ml-kem-512`, `ml-kem-768` and `ml-kem-1024`.
      */
     dhGroup: string;
     /**
      * Esp
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `ah` and `esp`.
      */
     esp: outputs.GetIpsecCryptoProfileListDataEsp;
     /**
-     * The folder of the item. Default: Shared.
+     * The folder in which the resource is defined
      */
     folder: string;
     /**
@@ -24642,11 +24321,11 @@ export interface GetIpsecCryptoProfileListData {
      */
     lifetime: outputs.GetIpsecCryptoProfileListDataLifetime;
     /**
-     * The name of the item.
+     * Alphanumeric string begin with letter: [0-9a-zA-Z._-]
      */
     name: string;
     /**
-     * The snippet of the item.
+     * The snippet in which the resource is defined
      */
     snippet: string;
     /**
@@ -24657,7 +24336,7 @@ export interface GetIpsecCryptoProfileListData {
 
 export interface GetIpsecCryptoProfileListDataAh {
     /**
-     * Authentication
+     * Authentication. Possible values are `md5`, `sha1`, `sha256`, `sha384` and `sha512`.
      */
     authentications: string[];
 }
@@ -24668,7 +24347,7 @@ export interface GetIpsecCryptoProfileListDataEsp {
      */
     authentications: string[];
     /**
-     * Encryption algorithm
+     * Encryption algorithm. Possible values are `des`, `3des`, `aes-128-cbc`, `aes-192-cbc`, `aes-256-cbc`, `aes-128-gcm`, `aes-256-gcm` and `null`.
      */
     encryptions: string[];
 }
@@ -24680,20 +24359,14 @@ export interface GetIpsecCryptoProfileListDataLifesize {
     gb: number;
     /**
      * specify lifesize in kilobytes(KB)
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `gb`, `kb`, `mb`, and `tb`.
      */
     kb: number;
     /**
      * specify lifesize in megabytes(MB)
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `gb`, `kb`, `mb`, and `tb`.
      */
     mb: number;
     /**
      * specify lifesize in terabytes(TB)
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `gb`, `kb`, `mb`, and `tb`.
      */
     tb: number;
 }
@@ -24705,20 +24378,14 @@ export interface GetIpsecCryptoProfileListDataLifetime {
     days: number;
     /**
      * specify lifetime in hours
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `days`, `hours`, `minutes`, and `seconds`.
      */
     hours: number;
     /**
      * specify lifetime in minutes
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `days`, `hours`, `minutes`, and `seconds`.
      */
     minutes: number;
     /**
      * specify lifetime in seconds
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `days`, `hours`, `minutes`, and `seconds`.
      */
     seconds: number;
 }
@@ -24774,15 +24441,11 @@ export interface GetIpsecTunnelAutoKeyProxyIdProtocol {
      */
     number: number;
     /**
-     * IPv4 type of proxyId protocol values for TCP protocol
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `number`, `tcp`, and `udp`.
+     * IPv4 type of proxy*id protocol values for TCP protocol
      */
     tcp: outputs.GetIpsecTunnelAutoKeyProxyIdProtocolTcp;
     /**
-     * IPv6 type of proxyId protocol values for UDP protocol
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `number`, `tcp`, and `udp`.
+     * IPv6 type of proxy*id protocol values for UDP protocol
      */
     udp: outputs.GetIpsecTunnelAutoKeyProxyIdProtocolUdp;
 }
@@ -24834,15 +24497,11 @@ export interface GetIpsecTunnelAutoKeyProxyIdV6Protocol {
      */
     number: number;
     /**
-     * IPv6 type of proxyId protocol values for TCP protocol
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `number`, `tcp`, and `udp`.
+     * IPv6 type of proxy*id protocol values for TCP protocol
      */
     tcp: outputs.GetIpsecTunnelAutoKeyProxyIdV6ProtocolTcp;
     /**
-     * IPv6 type of proxyId protocol values for UDP protocol
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `number`, `tcp`, and `udp`.
+     * IPv6 type of proxy*id protocol values for UDP protocol
      */
     udp: outputs.GetIpsecTunnelAutoKeyProxyIdV6ProtocolUdp;
 }
@@ -24891,7 +24550,7 @@ export interface GetIpsecTunnelListData {
      */
     enableGreEncapsulation: boolean;
     /**
-     * The folder of the item. Default: Shared.
+     * The folder in which the resource is defined
      */
     folder: string;
     /**
@@ -24899,11 +24558,11 @@ export interface GetIpsecTunnelListData {
      */
     id: string;
     /**
-     * The name of the item.
+     * Alphanumeric string begin with letter: [0-9a-zA-Z._-]
      */
     name: string;
     /**
-     * The snippet of the item.
+     * The snippet in which the resource is defined
      */
     snippet: string;
     /**
@@ -24971,15 +24630,11 @@ export interface GetIpsecTunnelListDataAutoKeyProxyIdProtocol {
      */
     number: number;
     /**
-     * IPv4 type of proxyId protocol values for TCP protocol
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `number`, `tcp`, and `udp`.
+     * IPv4 type of proxy*id protocol values for TCP protocol
      */
     tcp: outputs.GetIpsecTunnelListDataAutoKeyProxyIdProtocolTcp;
     /**
-     * IPv6 type of proxyId protocol values for UDP protocol
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `number`, `tcp`, and `udp`.
+     * IPv6 type of proxy*id protocol values for UDP protocol
      */
     udp: outputs.GetIpsecTunnelListDataAutoKeyProxyIdProtocolUdp;
 }
@@ -25031,15 +24686,11 @@ export interface GetIpsecTunnelListDataAutoKeyProxyIdV6Protocol {
      */
     number: number;
     /**
-     * IPv6 type of proxyId protocol values for TCP protocol
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `number`, `tcp`, and `udp`.
+     * IPv6 type of proxy*id protocol values for TCP protocol
      */
     tcp: outputs.GetIpsecTunnelListDataAutoKeyProxyIdV6ProtocolTcp;
     /**
-     * IPv6 type of proxyId protocol values for UDP protocol
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `number`, `tcp`, and `udp`.
+     * IPv6 type of proxy*id protocol values for UDP protocol
      */
     udp: outputs.GetIpsecTunnelListDataAutoKeyProxyIdV6ProtocolUdp;
 }
@@ -25110,7 +24761,7 @@ export interface GetIptagMatchListListData {
      */
     filter: string;
     /**
-     * The folder of the item. Default: Shared.
+     * The folder in which the resource is defined
      */
     folder: string;
     /**
@@ -25118,7 +24769,7 @@ export interface GetIptagMatchListListData {
      */
     id: string;
     /**
-     * The name of the item.
+     * Name of the iptag match list entry
      */
     name: string;
     /**
@@ -25146,7 +24797,7 @@ export interface GetIptagMatchListListData {
      */
     sendToPanorama: boolean;
     /**
-     * The snippet of the item.
+     * The snippet in which the resource is defined
      */
     snippet: string;
     /**
@@ -25161,7 +24812,7 @@ export interface GetKerberosServerProfileListData {
      */
     device: string;
     /**
-     * The folder of the item. Default: Shared.
+     * The folder in which the resource is defined
      */
     folder: string;
     /**
@@ -25169,7 +24820,7 @@ export interface GetKerberosServerProfileListData {
      */
     id: string;
     /**
-     * The name of the item.
+     * The name of the Kerberos server profile
      */
     name: string;
     /**
@@ -25177,7 +24828,7 @@ export interface GetKerberosServerProfileListData {
      */
     servers: outputs.GetKerberosServerProfileListDataServer[];
     /**
-     * The snippet of the item.
+     * The snippet in which the resource is defined
      */
     snippet: string;
     /**
@@ -25245,7 +24896,7 @@ export interface GetLayer2SubinterfaceListData {
      */
     device: string;
     /**
-     * The folder of the item. Default: Shared.
+     * The folder in which the resource is defined
      */
     folder: string;
     /**
@@ -25253,7 +24904,7 @@ export interface GetLayer2SubinterfaceListData {
      */
     id: string;
     /**
-     * The name of the item.
+     * L2 sub-interface name
      */
     name: string;
     /**
@@ -25261,7 +24912,7 @@ export interface GetLayer2SubinterfaceListData {
      */
     parentInterface: string;
     /**
-     * The snippet of the item.
+     * The snippet in which the resource is defined
      */
     snippet: string;
     /**
@@ -25272,6 +24923,21 @@ export interface GetLayer2SubinterfaceListData {
      * VLAN tag
      */
     vlanTag: string;
+}
+
+export interface GetLayer3SubinterfaceAdjustTcpMss {
+    /**
+     * Enable TCP MSS adjustment on the interface
+     */
+    enable: boolean;
+    /**
+     * IPv4 MSS adjustment size in bytes
+     */
+    ipv4MssAdjustment: number;
+    /**
+     * IPv6 MSS adjustment size in bytes
+     */
+    ipv6MssAdjustment: number;
 }
 
 export interface GetLayer3SubinterfaceArp {
@@ -25355,6 +25021,10 @@ export interface GetLayer3SubinterfaceIp {
 
 export interface GetLayer3SubinterfaceListData {
     /**
+     * TCP MSS adjustment settings for the interface
+     */
+    adjustTcpMss: outputs.GetLayer3SubinterfaceListDataAdjustTcpMss;
+    /**
      * Layer 3 sub Interfaces ARP configuration
      */
     arps: outputs.GetLayer3SubinterfaceListDataArp[];
@@ -25372,12 +25042,14 @@ export interface GetLayer3SubinterfaceListData {
     device: string;
     /**
      * Layer3 sub interfaces DHCP Client Object
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
      */
     dhcpClient: outputs.GetLayer3SubinterfaceListDataDhcpClient;
     /**
-     * The folder of the item. Default: Shared.
+     * Map of sensitive values returned from the API.
+     */
+    encryptedValues: {[key: string]: string};
+    /**
+     * The folder in which the resource is defined
      */
     folder: string;
     /**
@@ -25390,8 +25062,6 @@ export interface GetLayer3SubinterfaceListData {
     interfaceManagementProfile: string;
     /**
      * L3 sub-interface IP Parent
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
      */
     ips: outputs.GetLayer3SubinterfaceListDataIp[];
     /**
@@ -25399,7 +25069,7 @@ export interface GetLayer3SubinterfaceListData {
      */
     mtu: number;
     /**
-     * The name of the item.
+     * L3 sub-interface name
      */
     name: string;
     /**
@@ -25411,7 +25081,11 @@ export interface GetLayer3SubinterfaceListData {
      */
     parentInterface: string;
     /**
-     * The snippet of the item.
+     * PPPoE configuration for the interface
+     */
+    pppoe: outputs.GetLayer3SubinterfaceListDataPppoe;
+    /**
+     * The snippet in which the resource is defined
      */
     snippet: string;
     /**
@@ -25422,6 +25096,21 @@ export interface GetLayer3SubinterfaceListData {
      * The Terraform ID.
      */
     tfid: string;
+}
+
+export interface GetLayer3SubinterfaceListDataAdjustTcpMss {
+    /**
+     * Enable TCP MSS adjustment on the interface
+     */
+    enable: boolean;
+    /**
+     * IPv4 MSS adjustment size in bytes
+     */
+    ipv4MssAdjustment: number;
+    /**
+     * IPv6 MSS adjustment size in bytes
+     */
+    ipv6MssAdjustment: number;
 }
 
 export interface GetLayer3SubinterfaceListDataArp {
@@ -25503,6 +25192,112 @@ export interface GetLayer3SubinterfaceListDataIp {
     name: string;
 }
 
+export interface GetLayer3SubinterfaceListDataPppoe {
+    /**
+     * Access concentrator
+     */
+    accessConcentrator: string;
+    /**
+     * Authentication protocol. Possible values are `CHAP`, `PAP` and `auto`.
+     */
+    authentication: string;
+    /**
+     * Metric of the default route created
+     */
+    defaultRouteMetric: number;
+    /**
+     * Enable PPPoE on the interface
+     */
+    enable: boolean;
+    /**
+     * Passive
+     */
+    passive: outputs.GetLayer3SubinterfaceListDataPppoePassive;
+    /**
+     * Password
+     */
+    password: string;
+    /**
+     * Service
+     */
+    service: string;
+    /**
+     * Static address
+     */
+    staticAddress: outputs.GetLayer3SubinterfaceListDataPppoeStaticAddress;
+    /**
+     * Username
+     */
+    username: string;
+}
+
+export interface GetLayer3SubinterfaceListDataPppoePassive {
+    /**
+     * Passive Mode enabled
+     */
+    enable: boolean;
+}
+
+export interface GetLayer3SubinterfaceListDataPppoeStaticAddress {
+    /**
+     * Static IP address
+     */
+    ip: string;
+}
+
+export interface GetLayer3SubinterfacePppoe {
+    /**
+     * Access concentrator
+     */
+    accessConcentrator: string;
+    /**
+     * Authentication protocol. Possible values are `CHAP`, `PAP` and `auto`.
+     */
+    authentication: string;
+    /**
+     * Metric of the default route created
+     */
+    defaultRouteMetric: number;
+    /**
+     * Enable PPPoE on the interface
+     */
+    enable: boolean;
+    /**
+     * Passive
+     */
+    passive: outputs.GetLayer3SubinterfacePppoePassive;
+    /**
+     * Password
+     */
+    password: string;
+    /**
+     * Service
+     */
+    service: string;
+    /**
+     * Static address
+     */
+    staticAddress: outputs.GetLayer3SubinterfacePppoeStaticAddress;
+    /**
+     * Username
+     */
+    username: string;
+}
+
+export interface GetLayer3SubinterfacePppoePassive {
+    /**
+     * Passive Mode enabled
+     */
+    enable: boolean;
+}
+
+export interface GetLayer3SubinterfacePppoeStaticAddress {
+    /**
+     * Static IP address
+     */
+    ip: string;
+}
+
 export interface GetLdapServerProfileListData {
     /**
      * The base DN
@@ -25529,7 +25324,7 @@ export interface GetLdapServerProfileListData {
      */
     encryptedValues: {[key: string]: string};
     /**
-     * The folder of the item. Default: Shared.
+     * The folder in which the resource is defined
      */
     folder: string;
     /**
@@ -25537,11 +25332,11 @@ export interface GetLdapServerProfileListData {
      */
     id: string;
     /**
-     * The LDAP server time
+     * The LDAP server time. Possible values are `active-directory`, `e-directory`, `sun` and `other`.
      */
     ldapType: string;
     /**
-     * The name of the item.
+     * The name of the LDAP server profile
      */
     name: string;
     /**
@@ -25553,7 +25348,7 @@ export interface GetLdapServerProfileListData {
      */
     servers: outputs.GetLdapServerProfileListDataServer[];
     /**
-     * The snippet of the item.
+     * The snippet in which the resource is defined
      */
     snippet: string;
     /**
@@ -25606,7 +25401,7 @@ export interface GetLdapServerProfileServer {
 
 export interface GetLinkTagListData {
     /**
-     * The color of the link tag
+     * The color of the link tag. Possible values are `Red`, `Green`, `Blue`, `Yellow`, `Copper`, `Orange`, `Purple`, `Gray`, `Light Green`, `Cyan`, `Light Gray`, `Blue Gray`, `Lime`, `Black`, `Gold`, `Brown`, `Olive`, `Maroon`, `Red-Orange`, `Yellow-Orange`, `Forest Green`, `Turquoise Blue`, `Azure Blue`, `Cerulean Blue`, `Midnight Blue`, `Medium Blue`, `Cobalt Blue`, `Violet Blue`, `Blue Violet`, `Medium Violet`, `Medium Rose`, `Lavender`, `Orchid`, `Thistle`, `Peach`, `Salmon`, `Magenta`, `Red Violet`, `Mahogany`, `Burnt Sienna` and `Chestnut`.
      */
     color: string;
     /**
@@ -25618,7 +25413,7 @@ export interface GetLinkTagListData {
      */
     device: string;
     /**
-     * The folder of the item. Default: Shared.
+     * The folder in which the resource is defined
      */
     folder: string;
     /**
@@ -25626,11 +25421,11 @@ export interface GetLinkTagListData {
      */
     id: string;
     /**
-     * The name of the item.
+     * The name of the link tag
      */
     name: string;
     /**
-     * The snippet of the item.
+     * The snippet in which the resource is defined
      */
     snippet: string;
     /**
@@ -25645,7 +25440,7 @@ export interface GetLldpProfileListData {
      */
     device: string;
     /**
-     * The folder of the item. Default: Shared.
+     * The folder in which the resource is defined
      */
     folder: string;
     /**
@@ -25657,7 +25452,7 @@ export interface GetLldpProfileListData {
      */
     mode: string;
     /**
-     * The name of the item.
+     * LLDP profile name
      */
     name: string;
     /**
@@ -25665,7 +25460,7 @@ export interface GetLldpProfileListData {
      */
     optionTlvs: outputs.GetLldpProfileListDataOptionTlvs;
     /**
-     * The snippet of the item.
+     * The snippet in which the resource is defined
      */
     snippet: string;
     /**
@@ -25790,7 +25585,7 @@ export interface GetLocalUserGroupListData {
      */
     device: string;
     /**
-     * The folder of the item. Default: Shared.
+     * The folder in which the resource is defined
      */
     folder: string;
     /**
@@ -25798,11 +25593,11 @@ export interface GetLocalUserGroupListData {
      */
     id: string;
     /**
-     * The name of the item.
+     * The name of the local user group
      */
     name: string;
     /**
-     * The snippet of the item.
+     * The snippet in which the resource is defined
      */
     snippet: string;
     /**
@@ -25829,7 +25624,7 @@ export interface GetLocalUserListData {
      */
     encryptedValues: {[key: string]: string};
     /**
-     * The folder of the item. Default: Shared.
+     * The folder in which the resource is defined
      */
     folder: string;
     /**
@@ -25837,7 +25632,7 @@ export interface GetLocalUserListData {
      */
     id: string;
     /**
-     * The name of the item.
+     * The name of the local user
      */
     name: string;
     /**
@@ -25845,13 +25640,48 @@ export interface GetLocalUserListData {
      */
     password: string;
     /**
-     * The snippet of the item.
+     * The snippet in which the resource is defined
      */
     snippet: string;
     /**
      * The Terraform ID.
      */
     tfid: string;
+}
+
+export interface GetLocationListData {
+    /**
+     * Aggregate region
+     */
+    aggregateRegion: string;
+    /**
+     * The continent in which the location exists
+     */
+    continent: string;
+    /**
+     * The location as displayed in the Strata Cloud Manager portal
+     */
+    display: string;
+    /**
+     * The latitudinal position of the location
+     */
+    latitude: number;
+    /**
+     * The longitudinal position of the location
+     */
+    longitude: number;
+    /**
+     * Region
+     */
+    region: string;
+    /**
+     * The Terraform ID.
+     */
+    tfid: string;
+    /**
+     * Value
+     */
+    value: string;
 }
 
 export interface GetLogForwardingProfileListData {
@@ -25864,7 +25694,7 @@ export interface GetLogForwardingProfileListData {
      */
     device: string;
     /**
-     * The folder of the item. Default: Shared.
+     * The folder in which the resource is defined
      */
     folder: string;
     /**
@@ -25876,11 +25706,11 @@ export interface GetLogForwardingProfileListData {
      */
     matchLists: outputs.GetLogForwardingProfileListDataMatchList[];
     /**
-     * The name of the item.
+     * The name of the log forwarding profile
      */
     name: string;
     /**
-     * The snippet of the item.
+     * The snippet in which the resource is defined
      */
     snippet: string;
     /**
@@ -25899,7 +25729,7 @@ export interface GetLogForwardingProfileListDataMatchList {
      */
     filter: string;
     /**
-     * Log type
+     * Log type. Possible values are `traffic`, `threat`, `wildfire`, `url`, `data`, `tunnel`, `auth`, `decryption`, `dns-security`, `gtp` and `sctp`.
      */
     logType: string;
     /**
@@ -25934,7 +25764,7 @@ export interface GetLogForwardingProfileMatchList {
      */
     filter: string;
     /**
-     * Log type
+     * Log type. Possible values are `traffic`, `threat`, `wildfire`, `url`, `data`, `tunnel`, `auth`, `decryption`, `dns-security`, `gtp` and `sctp`.
      */
     logType: string;
     /**
@@ -25965,7 +25795,7 @@ export interface GetLogicalRouterListData {
      */
     device: string;
     /**
-     * The folder of the item. Default: Shared.
+     * The folder in which the resource is defined
      */
     folder: string;
     /**
@@ -25973,15 +25803,11 @@ export interface GetLogicalRouterListData {
      */
     id: string;
     /**
-     * The name of the item.
+     * Name
      */
     name: string;
     /**
-     * Routing stack
-     */
-    routingStack: string;
-    /**
-     * The snippet of the item.
+     * The snippet in which the resource is defined
      */
     snippet: string;
     /**
@@ -26307,8 +26133,6 @@ export interface GetLogicalRouterListDataVrfBgpAggregateRouteType {
     ipv4: outputs.GetLogicalRouterListDataVrfBgpAggregateRouteTypeIpv4;
     /**
      * Ipv6
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `ipv4` and `ipv6`.
      */
     ipv6: outputs.GetLogicalRouterListDataVrfBgpAggregateRouteTypeIpv6;
 }
@@ -26617,8 +26441,6 @@ export interface GetLogicalRouterListDataVrfBgpPeerGroupPeerInherit {
     no: outputs.GetLogicalRouterListDataVrfBgpPeerGroupPeerInheritNo;
     /**
      * Yes
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `no` and `yes`.
      */
     yes: outputs.GetLogicalRouterListDataVrfBgpPeerGroupPeerInheritYes;
 }
@@ -26677,8 +26499,6 @@ export interface GetLogicalRouterListDataVrfBgpPeerGroupPeerPeerAddress {
     fqdn: string;
     /**
      * Ip
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `fqdn` and `ip`.
      */
     ip: string;
 }
@@ -26701,20 +26521,14 @@ export interface GetLogicalRouterListDataVrfBgpPeerGroupType {
     ebgp: outputs.GetLogicalRouterListDataVrfBgpPeerGroupTypeEbgp;
     /**
      * Ebgp confed
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `ebgp`, `ebgpConfed`, `ibgp`, and `ibgpConfed`.
      */
     ebgpConfed: outputs.GetLogicalRouterListDataVrfBgpPeerGroupTypeEbgpConfed;
     /**
      * Ibgp
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `ebgp`, `ebgpConfed`, `ibgp`, and `ibgpConfed`.
      */
     ibgp: outputs.GetLogicalRouterListDataVrfBgpPeerGroupTypeIbgp;
     /**
      * Ibgp confed
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `ebgp`, `ebgpConfed`, `ibgp`, and `ibgpConfed`.
      */
     ibgpConfed: outputs.GetLogicalRouterListDataVrfBgpPeerGroupTypeIbgpConfed;
 }
@@ -26837,7 +26651,7 @@ export interface GetLogicalRouterListDataVrfBgpPolicyAggregationAddressAdvertise
      */
     addressPrefixes: outputs.GetLogicalRouterListDataVrfBgpPolicyAggregationAddressAdvertiseFilterMatchAddressPrefix[];
     /**
-     * Afi
+     * Afi. Possible values are `ip` and `ipv6`.
      */
     afi: string;
     /**
@@ -26865,11 +26679,11 @@ export interface GetLogicalRouterListDataVrfBgpPolicyAggregationAddressAdvertise
      */
     nexthops: string[];
     /**
-     * Route table
+     * Route table. Possible values are `unicast`, `multicast` and `both`.
      */
     routeTable: string;
     /**
-     * Safi
+     * Safi. Possible values are `ip` and `ipv6`.
      */
     safi: string;
 }
@@ -26936,7 +26750,7 @@ export interface GetLogicalRouterListDataVrfBgpPolicyAggregationAddressAggregate
      */
     nexthop: string;
     /**
-     * Origin
+     * Origin. Possible values are `igp`, `egp` and `incomplete`.
      */
     origin: string;
     /**
@@ -26952,20 +26766,14 @@ export interface GetLogicalRouterListDataVrfBgpPolicyAggregationAddressAggregate
     none: outputs.GetLogicalRouterListDataVrfBgpPolicyAggregationAddressAggregateRouteAttributesAsPathNone;
     /**
      * Prepend
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
      */
     prepend: number;
     /**
      * Remove
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
      */
     remove: outputs.GetLogicalRouterListDataVrfBgpPolicyAggregationAddressAggregateRouteAttributesAsPathRemove;
     /**
      * Remove and prepend
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
      */
     removeAndPrepend: number;
 }
@@ -26983,26 +26791,18 @@ export interface GetLogicalRouterListDataVrfBgpPolicyAggregationAddressAggregate
     appends: string[];
     /**
      * None
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
      */
     none: outputs.GetLogicalRouterListDataVrfBgpPolicyAggregationAddressAggregateRouteAttributesCommunityNone;
     /**
      * Overwrite
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
      */
     overwrites: string[];
     /**
      * Remove all
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
      */
     removeAll: outputs.GetLogicalRouterListDataVrfBgpPolicyAggregationAddressAggregateRouteAttributesCommunityRemoveAll;
     /**
      * Remove regex
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
      */
     removeRegex: string;
 }
@@ -27020,26 +26820,18 @@ export interface GetLogicalRouterListDataVrfBgpPolicyAggregationAddressAggregate
     appends: string[];
     /**
      * None
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
      */
     none: outputs.GetLogicalRouterListDataVrfBgpPolicyAggregationAddressAggregateRouteAttributesExtendedCommunityNone;
     /**
      * Overwrite
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
      */
     overwrites: string[];
     /**
      * Remove all
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
      */
     removeAll: outputs.GetLogicalRouterListDataVrfBgpPolicyAggregationAddressAggregateRouteAttributesExtendedCommunityRemoveAll;
     /**
      * Remove regex
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
      */
     removeRegex: string;
 }
@@ -27071,7 +26863,7 @@ export interface GetLogicalRouterListDataVrfBgpPolicyAggregationAddressSuppressF
      */
     addressPrefixes: outputs.GetLogicalRouterListDataVrfBgpPolicyAggregationAddressSuppressFilterMatchAddressPrefix[];
     /**
-     * Afi
+     * Afi. Possible values are `ip` and `ipv6`.
      */
     afi: string;
     /**
@@ -27099,11 +26891,11 @@ export interface GetLogicalRouterListDataVrfBgpPolicyAggregationAddressSuppressF
      */
     nexthops: string[];
     /**
-     * Route table
+     * Route table. Possible values are `unicast`, `multicast` and `both`.
      */
     routeTable: string;
     /**
-     * Safi
+     * Safi. Possible values are `ip` and `ipv6`.
      */
     safi: string;
 }
@@ -27191,7 +26983,7 @@ export interface GetLogicalRouterListDataVrfBgpPolicyConditionalAdvertisementPol
      */
     addressPrefixes: outputs.GetLogicalRouterListDataVrfBgpPolicyConditionalAdvertisementPolicyAdvertiseFilterMatchAddressPrefix[];
     /**
-     * Afi
+     * Afi. Possible values are `ip` and `ipv6`.
      */
     afi: string;
     /**
@@ -27219,11 +27011,11 @@ export interface GetLogicalRouterListDataVrfBgpPolicyConditionalAdvertisementPol
      */
     nexthops: string[];
     /**
-     * Route table
+     * Route table. Possible values are `unicast`, `multicast` and `both`.
      */
     routeTable: string;
     /**
-     * Safi
+     * Safi. Possible values are `ip` and `ipv6`.
      */
     safi: string;
 }
@@ -27281,7 +27073,7 @@ export interface GetLogicalRouterListDataVrfBgpPolicyConditionalAdvertisementPol
      */
     addressPrefixes: outputs.GetLogicalRouterListDataVrfBgpPolicyConditionalAdvertisementPolicyNonExistFilterMatchAddressPrefix[];
     /**
-     * Afi
+     * Afi. Possible values are `ip` and `ipv6`.
      */
     afi: string;
     /**
@@ -27309,11 +27101,11 @@ export interface GetLogicalRouterListDataVrfBgpPolicyConditionalAdvertisementPol
      */
     nexthops: string[];
     /**
-     * Route table
+     * Route table. Possible values are `unicast`, `multicast` and `both`.
      */
     routeTable: string;
     /**
-     * Safi
+     * Safi. Possible values are `ip` and `ipv6`.
      */
     safi: string;
 }
@@ -27387,8 +27179,6 @@ export interface GetLogicalRouterListDataVrfBgpPolicyExportRuleAction {
     allow: outputs.GetLogicalRouterListDataVrfBgpPolicyExportRuleActionAllow;
     /**
      * Deny
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `allow` and `deny`.
      */
     deny: outputs.GetLogicalRouterListDataVrfBgpPolicyExportRuleActionDeny;
 }
@@ -27430,7 +27220,7 @@ export interface GetLogicalRouterListDataVrfBgpPolicyExportRuleActionAllowUpdate
      */
     nexthop: string;
     /**
-     * Origin
+     * Origin. Possible values are `igp`, `egp` and `multicast`.
      */
     origin: string;
 }
@@ -27442,20 +27232,14 @@ export interface GetLogicalRouterListDataVrfBgpPolicyExportRuleActionAllowUpdate
     none: outputs.GetLogicalRouterListDataVrfBgpPolicyExportRuleActionAllowUpdateAsPathNone;
     /**
      * Prepend
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
      */
     prepend: number;
     /**
      * Remove
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
      */
     remove: outputs.GetLogicalRouterListDataVrfBgpPolicyExportRuleActionAllowUpdateAsPathRemove;
     /**
      * Remove and prepend
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
      */
     removeAndPrepend: number;
 }
@@ -27473,26 +27257,18 @@ export interface GetLogicalRouterListDataVrfBgpPolicyExportRuleActionAllowUpdate
     appends: string[];
     /**
      * None
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
      */
     none: outputs.GetLogicalRouterListDataVrfBgpPolicyExportRuleActionAllowUpdateCommunityNone;
     /**
      * Overwrite
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
      */
     overwrites: string[];
     /**
      * Remove all
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
      */
     removeAll: outputs.GetLogicalRouterListDataVrfBgpPolicyExportRuleActionAllowUpdateCommunityRemoveAll;
     /**
      * Remove regex
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
      */
     removeRegex: string;
 }
@@ -27510,26 +27286,18 @@ export interface GetLogicalRouterListDataVrfBgpPolicyExportRuleActionAllowUpdate
     appends: string[];
     /**
      * None
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
      */
     none: outputs.GetLogicalRouterListDataVrfBgpPolicyExportRuleActionAllowUpdateExtendedCommunityNone;
     /**
      * Overwrite
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
      */
     overwrites: string[];
     /**
      * Remove all
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
      */
     removeAll: outputs.GetLogicalRouterListDataVrfBgpPolicyExportRuleActionAllowUpdateExtendedCommunityRemoveAll;
     /**
      * Remove regex
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
      */
     removeRegex: string;
 }
@@ -27549,7 +27317,7 @@ export interface GetLogicalRouterListDataVrfBgpPolicyExportRuleMatch {
      */
     addressPrefixes: outputs.GetLogicalRouterListDataVrfBgpPolicyExportRuleMatchAddressPrefix[];
     /**
-     * Afi
+     * Afi. Possible values are `ip` and `ipv6`.
      */
     afi: string;
     /**
@@ -27577,11 +27345,11 @@ export interface GetLogicalRouterListDataVrfBgpPolicyExportRuleMatch {
      */
     nexthops: string[];
     /**
-     * Route table
+     * Route table. Possible values are `unicast`, `multicast` and `both`.
      */
     routeTable: string;
     /**
-     * Safi
+     * Safi. Possible values are `ip` and `ipv6`.
      */
     safi: string;
 }
@@ -27655,8 +27423,6 @@ export interface GetLogicalRouterListDataVrfBgpPolicyImportRuleAction {
     allow: outputs.GetLogicalRouterListDataVrfBgpPolicyImportRuleActionAllow;
     /**
      * Deny
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `allow` and `deny`.
      */
     deny: outputs.GetLogicalRouterListDataVrfBgpPolicyImportRuleActionDeny;
 }
@@ -27702,7 +27468,7 @@ export interface GetLogicalRouterListDataVrfBgpPolicyImportRuleActionAllowUpdate
      */
     nexthop: string;
     /**
-     * Origin
+     * Origin. Possible values are `igp`, `egp` and `incomplete`.
      */
     origin: string;
     /**
@@ -27718,20 +27484,14 @@ export interface GetLogicalRouterListDataVrfBgpPolicyImportRuleActionAllowUpdate
     none: outputs.GetLogicalRouterListDataVrfBgpPolicyImportRuleActionAllowUpdateAsPathNone;
     /**
      * Prepend
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
      */
     prepend: number;
     /**
      * Remove
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
      */
     remove: outputs.GetLogicalRouterListDataVrfBgpPolicyImportRuleActionAllowUpdateAsPathRemove;
     /**
      * Remove and prepend
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
      */
     removeAndPrepend: number;
 }
@@ -27749,26 +27509,18 @@ export interface GetLogicalRouterListDataVrfBgpPolicyImportRuleActionAllowUpdate
     appends: string[];
     /**
      * None
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
      */
     none: outputs.GetLogicalRouterListDataVrfBgpPolicyImportRuleActionAllowUpdateCommunityNone;
     /**
      * Overwrite
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
      */
     overwrites: string[];
     /**
      * Remove all
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
      */
     removeAll: outputs.GetLogicalRouterListDataVrfBgpPolicyImportRuleActionAllowUpdateCommunityRemoveAll;
     /**
      * Remove regex
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
      */
     removeRegex: string;
 }
@@ -27786,26 +27538,18 @@ export interface GetLogicalRouterListDataVrfBgpPolicyImportRuleActionAllowUpdate
     appends: string[];
     /**
      * None
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
      */
     none: outputs.GetLogicalRouterListDataVrfBgpPolicyImportRuleActionAllowUpdateExtendedCommunityNone;
     /**
      * Overwrite
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
      */
     overwrites: string[];
     /**
      * Remove all
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
      */
     removeAll: outputs.GetLogicalRouterListDataVrfBgpPolicyImportRuleActionAllowUpdateExtendedCommunityRemoveAll;
     /**
      * Remove regex
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
      */
     removeRegex: string;
 }
@@ -27825,7 +27569,7 @@ export interface GetLogicalRouterListDataVrfBgpPolicyImportRuleMatch {
      */
     addressPrefixes: outputs.GetLogicalRouterListDataVrfBgpPolicyImportRuleMatchAddressPrefix[];
     /**
-     * Afi
+     * Afi. Possible values are `ip` and `ipv6`.
      */
     afi: string;
     /**
@@ -27853,11 +27597,11 @@ export interface GetLogicalRouterListDataVrfBgpPolicyImportRuleMatch {
      */
     nexthops: string[];
     /**
-     * Route table
+     * Route table. Possible values are `unicast`, `multicast` and `both`.
      */
     routeTable: string;
     /**
-     * Safi
+     * Safi. Possible values are `ip` and `ipv6`.
      */
     safi: string;
 }
@@ -27896,7 +27640,7 @@ export interface GetLogicalRouterListDataVrfBgpPolicyImportRuleMatchExtendedComm
 
 export interface GetLogicalRouterListDataVrfBgpRedistRule {
     /**
-     * Address family identifier
+     * Address family identifier. Possible values are `ipv4` and `ipv6`.
      */
     addressFamilyIdentifier: string;
     /**
@@ -27912,7 +27656,7 @@ export interface GetLogicalRouterListDataVrfBgpRedistRule {
      */
     name: string;
     /**
-     * Route table
+     * Route table. Possible values are `unicast`, `multicast` and `both`.
      */
     routeTable: string;
     /**
@@ -27936,7 +27680,7 @@ export interface GetLogicalRouterListDataVrfBgpRedistRule {
      */
     setMed: number;
     /**
-     * Set origin
+     * Set origin. Possible values are `igp`, `egp` and `incomplete`.
      */
     setOrigin: string;
 }
@@ -27996,20 +27740,14 @@ export interface GetLogicalRouterListDataVrfEcmpAlgorithm {
     balancedRoundRobin: outputs.GetLogicalRouterListDataVrfEcmpAlgorithmBalancedRoundRobin;
     /**
      * Ip hash
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `balancedRoundRobin`, `ipHash`, `ipModulo`, and `weightedRoundRobin`.
      */
     ipHash: outputs.GetLogicalRouterListDataVrfEcmpAlgorithmIpHash;
     /**
      * Ip modulo
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `balancedRoundRobin`, `ipHash`, `ipModulo`, and `weightedRoundRobin`.
      */
     ipModulo: outputs.GetLogicalRouterListDataVrfEcmpAlgorithmIpModulo;
     /**
      * Weighted round robin
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `balancedRoundRobin`, `ipHash`, `ipModulo`, and `weightedRoundRobin`.
      */
     weightedRoundRobin: outputs.GetLogicalRouterListDataVrfEcmpAlgorithmWeightedRoundRobin;
 }
@@ -28071,7 +27809,7 @@ export interface GetLogicalRouterListDataVrfMulticast {
      */
     interfaceGroups: outputs.GetLogicalRouterListDataVrfMulticastInterfaceGroup[];
     /**
-     * Mode
+     * Mode. Possible values are `PIM-SM` and `IGMP-Proxy`.
      */
     mode: string;
     /**
@@ -28148,7 +27886,7 @@ export interface GetLogicalRouterListDataVrfMulticastIgmpDynamicInterface {
      */
     queryProfile: string;
     /**
-     * Robustness
+     * Robustness. Possible values are `1`, `2`, `3`, `4`, `5`, `6` and `7`.
      */
     robustness: string;
     /**
@@ -28156,7 +27894,7 @@ export interface GetLogicalRouterListDataVrfMulticastIgmpDynamicInterface {
      */
     routerAlertPolicing: boolean;
     /**
-     * Version
+     * Version. Possible values are `2` and `3`.
      */
     version: string;
 }
@@ -28278,7 +28016,7 @@ export interface GetLogicalRouterListDataVrfMulticastInterfaceGroupIgmp {
      */
     maxSources: string;
     /**
-     * Mode
+     * Mode. Possible values are `router` and `host`.
      */
     mode: string;
     /**
@@ -28286,7 +28024,7 @@ export interface GetLogicalRouterListDataVrfMulticastInterfaceGroupIgmp {
      */
     queryInterval: number;
     /**
-     * Robustness
+     * Robustness. Possible values are `1`, `2`, `3`, `4`, `5`, `6` and `7`.
      */
     robustness: string;
     /**
@@ -28294,7 +28032,7 @@ export interface GetLogicalRouterListDataVrfMulticastInterfaceGroupIgmp {
      */
     routerAlertPolicing: boolean;
     /**
-     * Version
+     * Version. Possible values are `1`, `2` and `3`.
      */
     version: string;
 }
@@ -28428,8 +28166,6 @@ export interface GetLogicalRouterListDataVrfMulticastMsdpPeerPeerAddress {
     fqdn: string;
     /**
      * Ip
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `fqdn` and `ip`.
      */
     ip: string;
 }
@@ -28460,7 +28196,7 @@ export interface GetLogicalRouterListDataVrfMulticastPim {
      */
     rp: outputs.GetLogicalRouterListDataVrfMulticastPimRp;
     /**
-     * Rpf lookup mode
+     * Rpf lookup mode. Possible values are `mrib-then-urib`, `mrib-only` and `urib-only`.
      */
     rpfLookupMode: string;
     /**
@@ -28533,8 +28269,6 @@ export interface GetLogicalRouterListDataVrfMulticastPimRpLocalRp {
     candidateRp: outputs.GetLogicalRouterListDataVrfMulticastPimRpLocalRpCandidateRp;
     /**
      * Static rp
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `candidateRp` and `staticRp`.
      */
     staticRp: outputs.GetLogicalRouterListDataVrfMulticastPimRpLocalRpStaticRp;
 }
@@ -28632,8 +28366,6 @@ export interface GetLogicalRouterListDataVrfMulticastRpLocalRp {
     candidateRp: outputs.GetLogicalRouterListDataVrfMulticastRpLocalRpCandidateRp;
     /**
      * Static rp
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `candidateRp` and `staticRp`.
      */
     staticRp: outputs.GetLogicalRouterListDataVrfMulticastRpLocalRpStaticRp;
 }
@@ -28891,14 +28623,10 @@ export interface GetLogicalRouterListDataVrfOspfAreaInterfaceLinkType {
     broadcast: outputs.GetLogicalRouterListDataVrfOspfAreaInterfaceLinkTypeBroadcast;
     /**
      * P2mp
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `broadcast`, `p2mp`, and `p2p`.
      */
     p2mp: outputs.GetLogicalRouterListDataVrfOspfAreaInterfaceLinkTypeP2mp;
     /**
      * P2p
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `broadcast`, `p2mp`, and `p2p`.
      */
     p2p: outputs.GetLogicalRouterListDataVrfOspfAreaInterfaceLinkTypeP2p;
 }
@@ -28972,14 +28700,10 @@ export interface GetLogicalRouterListDataVrfOspfAreaType {
     normal: outputs.GetLogicalRouterListDataVrfOspfAreaTypeNormal;
     /**
      * Nssa
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `normal`, `nssa`, and `stub`.
      */
     nssa: outputs.GetLogicalRouterListDataVrfOspfAreaTypeNssa;
     /**
      * Stub
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `normal`, `nssa`, and `stub`.
      */
     stub: outputs.GetLogicalRouterListDataVrfOspfAreaTypeStub;
 }
@@ -29081,7 +28805,7 @@ export interface GetLogicalRouterListDataVrfOspfAreaTypeNssaDefaultInformationOr
      */
     metric: number;
     /**
-     * Metric type
+     * Metric type. Possible values are `type-1` and `type-2`.
      */
     metricType: string;
 }
@@ -29093,8 +28817,6 @@ export interface GetLogicalRouterListDataVrfOspfAreaTypeNssaDefaultRoute {
     advertise: outputs.GetLogicalRouterListDataVrfOspfAreaTypeNssaDefaultRouteAdvertise;
     /**
      * Disable
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `advertise` and `disable`.
      */
     disable: outputs.GetLogicalRouterListDataVrfOspfAreaTypeNssaDefaultRouteDisable;
 }
@@ -29105,7 +28827,7 @@ export interface GetLogicalRouterListDataVrfOspfAreaTypeNssaDefaultRouteAdvertis
      */
     metric: number;
     /**
-     * Type
+     * Type. Possible values are `ext-1` and `ext-2`.
      */
     type: string;
 }
@@ -29183,8 +28905,6 @@ export interface GetLogicalRouterListDataVrfOspfAreaTypeStubDefaultRoute {
     advertise: outputs.GetLogicalRouterListDataVrfOspfAreaTypeStubDefaultRouteAdvertise;
     /**
      * Disable
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `advertise` and `disable`.
      */
     disable: outputs.GetLogicalRouterListDataVrfOspfAreaTypeStubDefaultRouteDisable;
 }
@@ -29333,7 +29053,7 @@ export interface GetLogicalRouterListDataVrfOspfExportRule {
      */
     name: string;
     /**
-     * New path type
+     * New path type. Possible values are `ext-1` and `ext-2`.
      */
     newPathType: string;
     /**
@@ -29575,14 +29295,10 @@ export interface GetLogicalRouterListDataVrfOspfv3AreaInterfaceLinkType {
     broadcast: outputs.GetLogicalRouterListDataVrfOspfv3AreaInterfaceLinkTypeBroadcast;
     /**
      * P2mp
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `broadcast`, `p2mp`, and `p2p`.
      */
     p2mp: outputs.GetLogicalRouterListDataVrfOspfv3AreaInterfaceLinkTypeP2mp;
     /**
      * P2p
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `broadcast`, `p2mp`, and `p2p`.
      */
     p2p: outputs.GetLogicalRouterListDataVrfOspfv3AreaInterfaceLinkTypeP2p;
 }
@@ -29659,14 +29375,10 @@ export interface GetLogicalRouterListDataVrfOspfv3AreaType {
     normal: outputs.GetLogicalRouterListDataVrfOspfv3AreaTypeNormal;
     /**
      * Nssa
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `normal`, `nssa`, and `stub`.
      */
     nssa: outputs.GetLogicalRouterListDataVrfOspfv3AreaTypeNssa;
     /**
      * Stub
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `normal`, `nssa`, and `stub`.
      */
     stub: outputs.GetLogicalRouterListDataVrfOspfv3AreaTypeStub;
 }
@@ -29778,7 +29490,7 @@ export interface GetLogicalRouterListDataVrfOspfv3AreaTypeNssaDefaultInformation
      */
     metric: number;
     /**
-     * Metric type
+     * Metric type. Possible values are `type-1` and `type-2`.
      */
     metricType: string;
 }
@@ -29790,8 +29502,6 @@ export interface GetLogicalRouterListDataVrfOspfv3AreaTypeNssaDefaultRoute {
     advertise: outputs.GetLogicalRouterListDataVrfOspfv3AreaTypeNssaDefaultRouteAdvertise;
     /**
      * Disable
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `advertise` and `disable`.
      */
     disable: outputs.GetLogicalRouterListDataVrfOspfv3AreaTypeNssaDefaultRouteDisable;
 }
@@ -29802,7 +29512,7 @@ export interface GetLogicalRouterListDataVrfOspfv3AreaTypeNssaDefaultRouteAdvert
      */
     metric: number;
     /**
-     * Type
+     * Type. Possible values are `ext-1` and `ext-2`.
      */
     type: string;
 }
@@ -29884,8 +29594,6 @@ export interface GetLogicalRouterListDataVrfOspfv3AreaTypeStubDefaultRoute {
     advertise: outputs.GetLogicalRouterListDataVrfOspfv3AreaTypeStubDefaultRouteAdvertise;
     /**
      * Disable
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `advertise` and `disable`.
      */
     disable: outputs.GetLogicalRouterListDataVrfOspfv3AreaTypeStubDefaultRouteDisable;
 }
@@ -30020,26 +29728,18 @@ export interface GetLogicalRouterListDataVrfOspfv3AuthProfileAh {
     md5: outputs.GetLogicalRouterListDataVrfOspfv3AuthProfileAhMd5;
     /**
      * Sha1
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `md5`, `sha1`, `sha256`, `sha384`, and `sha512`.
      */
     sha1: outputs.GetLogicalRouterListDataVrfOspfv3AuthProfileAhSha1;
     /**
      * Sha256
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `md5`, `sha1`, `sha256`, `sha384`, and `sha512`.
      */
     sha256: outputs.GetLogicalRouterListDataVrfOspfv3AuthProfileAhSha256;
     /**
      * Sha384
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `md5`, `sha1`, `sha256`, `sha384`, and `sha512`.
      */
     sha384: outputs.GetLogicalRouterListDataVrfOspfv3AuthProfileAhSha384;
     /**
      * Sha512
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `md5`, `sha1`, `sha256`, `sha384`, and `sha512`.
      */
     sha512: outputs.GetLogicalRouterListDataVrfOspfv3AuthProfileAhSha512;
 }
@@ -30097,32 +29797,22 @@ export interface GetLogicalRouterListDataVrfOspfv3AuthProfileEspAuthentication {
     md5: outputs.GetLogicalRouterListDataVrfOspfv3AuthProfileEspAuthenticationMd5;
     /**
      * None
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `md5`, `none`, `sha1`, `sha256`, `sha384`, and `sha512`.
      */
     none: outputs.GetLogicalRouterListDataVrfOspfv3AuthProfileEspAuthenticationNone;
     /**
      * Sha1
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `md5`, `none`, `sha1`, `sha256`, `sha384`, and `sha512`.
      */
     sha1: outputs.GetLogicalRouterListDataVrfOspfv3AuthProfileEspAuthenticationSha1;
     /**
      * Sha256
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `md5`, `none`, `sha1`, `sha256`, `sha384`, and `sha512`.
      */
     sha256: outputs.GetLogicalRouterListDataVrfOspfv3AuthProfileEspAuthenticationSha256;
     /**
      * Sha384
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `md5`, `none`, `sha1`, `sha256`, `sha384`, and `sha512`.
      */
     sha384: outputs.GetLogicalRouterListDataVrfOspfv3AuthProfileEspAuthenticationSha384;
     /**
      * Sha512
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `md5`, `none`, `sha1`, `sha256`, `sha384`, and `sha512`.
      */
     sha512: outputs.GetLogicalRouterListDataVrfOspfv3AuthProfileEspAuthenticationSha512;
 }
@@ -30167,7 +29857,7 @@ export interface GetLogicalRouterListDataVrfOspfv3AuthProfileEspAuthenticationSh
 
 export interface GetLogicalRouterListDataVrfOspfv3AuthProfileEspEncryption {
     /**
-     * Algorithm
+     * Algorithm. Possible values are `3des`, `aes-128-cbc`, `aes-192-cbc`, `aes-256-cbc` and `null`.
      */
     algorithm: string;
     /**
@@ -30186,7 +29876,7 @@ export interface GetLogicalRouterListDataVrfOspfv3ExportRule {
      */
     name: string;
     /**
-     * New path type
+     * New path type. Possible values are `ext-1` and `ext-2`.
      */
     newPathType: string;
     /**
@@ -30412,7 +30102,7 @@ export interface GetLogicalRouterListDataVrfRipInterface {
      */
     interfaceOutboundDistributeList: outputs.GetLogicalRouterListDataVrfRipInterfaceInterfaceOutboundDistributeList;
     /**
-     * Mode
+     * Mode. Possible values are `active`, `passive` and `send-only`.
      */
     mode: string;
     /**
@@ -30420,7 +30110,7 @@ export interface GetLogicalRouterListDataVrfRipInterface {
      */
     name: string;
     /**
-     * Split horizon
+     * Split horizon. Possible values are `split-horizon`, `no-split-horizon` and `no-split-horizon-with-poison-reverse`.
      */
     splitHorizon: string;
 }
@@ -30525,44 +30215,30 @@ export interface GetLogicalRouterListDataVrfRoutingTableIpStaticRouteNexthop {
     discard: outputs.GetLogicalRouterListDataVrfRoutingTableIpStaticRouteNexthopDiscard;
     /**
      * Fqdn
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipAddress`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
      */
     fqdn: string;
     /**
      * Ip address
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipAddress`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
      */
     ipAddress: string;
     /**
      * Ipv6 address
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipAddress`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
      */
     ipv6Address: string;
     /**
      * Next lr
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipAddress`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
      */
     nextLr: string;
     /**
      * Next vr
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipAddress`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
      */
     nextVr: string;
     /**
      * Receive
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipAddress`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
      */
     receive: outputs.GetLogicalRouterListDataVrfRoutingTableIpStaticRouteNexthopReceive;
     /**
      * Tunnel
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipAddress`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
      */
     tunnel: string;
 }
@@ -30579,7 +30255,7 @@ export interface GetLogicalRouterListDataVrfRoutingTableIpStaticRoutePathMonitor
      */
     enable: boolean;
     /**
-     * Failure condition
+     * Failure condition. Possible values are `any` and `all`.
      */
     failureCondition: string;
     /**
@@ -30630,20 +30306,14 @@ export interface GetLogicalRouterListDataVrfRoutingTableIpStaticRouteRouteTable 
     both: outputs.GetLogicalRouterListDataVrfRoutingTableIpStaticRouteRouteTableBoth;
     /**
      * Multicast
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `both`, `multicast`, `noInstall`, and `unicast`.
      */
     multicast: outputs.GetLogicalRouterListDataVrfRoutingTableIpStaticRouteRouteTableMulticast;
     /**
      * No install
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `both`, `multicast`, `noInstall`, and `unicast`.
      */
     noInstall: outputs.GetLogicalRouterListDataVrfRoutingTableIpStaticRouteRouteTableNoInstall;
     /**
      * Unicast
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `both`, `multicast`, `noInstall`, and `unicast`.
      */
     unicast: outputs.GetLogicalRouterListDataVrfRoutingTableIpStaticRouteRouteTableUnicast;
 }
@@ -30724,38 +30394,26 @@ export interface GetLogicalRouterListDataVrfRoutingTableIpv6StaticRouteNexthop {
     discard: outputs.GetLogicalRouterListDataVrfRoutingTableIpv6StaticRouteNexthopDiscard;
     /**
      * Fqdn
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
      */
     fqdn: string;
     /**
      * Ipv6 address
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
      */
     ipv6Address: string;
     /**
      * Next lr
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
      */
     nextLr: string;
     /**
      * Next vr
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
      */
     nextVr: string;
     /**
      * Receive
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
      */
     receive: outputs.GetLogicalRouterListDataVrfRoutingTableIpv6StaticRouteNexthopReceive;
     /**
      * Tunnel
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
      */
     tunnel: string;
 }
@@ -30782,7 +30440,7 @@ export interface GetLogicalRouterListDataVrfRoutingTableIpv6StaticRoutePathMonit
      */
     enable: boolean;
     /**
-     * Failure condition
+     * Failure condition. Possible values are `any` and `all`.
      */
     failureCondition: string;
     /**
@@ -31209,8 +30867,6 @@ export interface GetLogicalRouterVrfBgpAggregateRouteType {
     ipv4: outputs.GetLogicalRouterVrfBgpAggregateRouteTypeIpv4;
     /**
      * Ipv6
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `ipv4` and `ipv6`.
      */
     ipv6: outputs.GetLogicalRouterVrfBgpAggregateRouteTypeIpv6;
 }
@@ -31519,8 +31175,6 @@ export interface GetLogicalRouterVrfBgpPeerGroupPeerInherit {
     no: outputs.GetLogicalRouterVrfBgpPeerGroupPeerInheritNo;
     /**
      * Yes
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `no` and `yes`.
      */
     yes: outputs.GetLogicalRouterVrfBgpPeerGroupPeerInheritYes;
 }
@@ -31579,8 +31233,6 @@ export interface GetLogicalRouterVrfBgpPeerGroupPeerPeerAddress {
     fqdn: string;
     /**
      * Ip
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `fqdn` and `ip`.
      */
     ip: string;
 }
@@ -31603,20 +31255,14 @@ export interface GetLogicalRouterVrfBgpPeerGroupType {
     ebgp: outputs.GetLogicalRouterVrfBgpPeerGroupTypeEbgp;
     /**
      * Ebgp confed
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `ebgp`, `ebgpConfed`, `ibgp`, and `ibgpConfed`.
      */
     ebgpConfed: outputs.GetLogicalRouterVrfBgpPeerGroupTypeEbgpConfed;
     /**
      * Ibgp
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `ebgp`, `ebgpConfed`, `ibgp`, and `ibgpConfed`.
      */
     ibgp: outputs.GetLogicalRouterVrfBgpPeerGroupTypeIbgp;
     /**
      * Ibgp confed
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `ebgp`, `ebgpConfed`, `ibgp`, and `ibgpConfed`.
      */
     ibgpConfed: outputs.GetLogicalRouterVrfBgpPeerGroupTypeIbgpConfed;
 }
@@ -31739,7 +31385,7 @@ export interface GetLogicalRouterVrfBgpPolicyAggregationAddressAdvertiseFilterMa
      */
     addressPrefixes: outputs.GetLogicalRouterVrfBgpPolicyAggregationAddressAdvertiseFilterMatchAddressPrefix[];
     /**
-     * Afi
+     * Afi. Possible values are `ip` and `ipv6`.
      */
     afi: string;
     /**
@@ -31767,11 +31413,11 @@ export interface GetLogicalRouterVrfBgpPolicyAggregationAddressAdvertiseFilterMa
      */
     nexthops: string[];
     /**
-     * Route table
+     * Route table. Possible values are `unicast`, `multicast` and `both`.
      */
     routeTable: string;
     /**
-     * Safi
+     * Safi. Possible values are `ip` and `ipv6`.
      */
     safi: string;
 }
@@ -31838,7 +31484,7 @@ export interface GetLogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAtt
      */
     nexthop: string;
     /**
-     * Origin
+     * Origin. Possible values are `igp`, `egp` and `incomplete`.
      */
     origin: string;
     /**
@@ -31854,20 +31500,14 @@ export interface GetLogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAtt
     none: outputs.GetLogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesAsPathNone;
     /**
      * Prepend
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
      */
     prepend: number;
     /**
      * Remove
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
      */
     remove: outputs.GetLogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesAsPathRemove;
     /**
      * Remove and prepend
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
      */
     removeAndPrepend: number;
 }
@@ -31885,26 +31525,18 @@ export interface GetLogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAtt
     appends: string[];
     /**
      * None
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
      */
     none: outputs.GetLogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesCommunityNone;
     /**
      * Overwrite
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
      */
     overwrites: string[];
     /**
      * Remove all
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
      */
     removeAll: outputs.GetLogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesCommunityRemoveAll;
     /**
      * Remove regex
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
      */
     removeRegex: string;
 }
@@ -31922,26 +31554,18 @@ export interface GetLogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAtt
     appends: string[];
     /**
      * None
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
      */
     none: outputs.GetLogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesExtendedCommunityNone;
     /**
      * Overwrite
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
      */
     overwrites: string[];
     /**
      * Remove all
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
      */
     removeAll: outputs.GetLogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesExtendedCommunityRemoveAll;
     /**
      * Remove regex
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
      */
     removeRegex: string;
 }
@@ -31973,7 +31597,7 @@ export interface GetLogicalRouterVrfBgpPolicyAggregationAddressSuppressFilterMat
      */
     addressPrefixes: outputs.GetLogicalRouterVrfBgpPolicyAggregationAddressSuppressFilterMatchAddressPrefix[];
     /**
-     * Afi
+     * Afi. Possible values are `ip` and `ipv6`.
      */
     afi: string;
     /**
@@ -32001,11 +31625,11 @@ export interface GetLogicalRouterVrfBgpPolicyAggregationAddressSuppressFilterMat
      */
     nexthops: string[];
     /**
-     * Route table
+     * Route table. Possible values are `unicast`, `multicast` and `both`.
      */
     routeTable: string;
     /**
-     * Safi
+     * Safi. Possible values are `ip` and `ipv6`.
      */
     safi: string;
 }
@@ -32093,7 +31717,7 @@ export interface GetLogicalRouterVrfBgpPolicyConditionalAdvertisementPolicyAdver
      */
     addressPrefixes: outputs.GetLogicalRouterVrfBgpPolicyConditionalAdvertisementPolicyAdvertiseFilterMatchAddressPrefix[];
     /**
-     * Afi
+     * Afi. Possible values are `ip` and `ipv6`.
      */
     afi: string;
     /**
@@ -32121,11 +31745,11 @@ export interface GetLogicalRouterVrfBgpPolicyConditionalAdvertisementPolicyAdver
      */
     nexthops: string[];
     /**
-     * Route table
+     * Route table. Possible values are `unicast`, `multicast` and `both`.
      */
     routeTable: string;
     /**
-     * Safi
+     * Safi. Possible values are `ip` and `ipv6`.
      */
     safi: string;
 }
@@ -32183,7 +31807,7 @@ export interface GetLogicalRouterVrfBgpPolicyConditionalAdvertisementPolicyNonEx
      */
     addressPrefixes: outputs.GetLogicalRouterVrfBgpPolicyConditionalAdvertisementPolicyNonExistFilterMatchAddressPrefix[];
     /**
-     * Afi
+     * Afi. Possible values are `ip` and `ipv6`.
      */
     afi: string;
     /**
@@ -32211,11 +31835,11 @@ export interface GetLogicalRouterVrfBgpPolicyConditionalAdvertisementPolicyNonEx
      */
     nexthops: string[];
     /**
-     * Route table
+     * Route table. Possible values are `unicast`, `multicast` and `both`.
      */
     routeTable: string;
     /**
-     * Safi
+     * Safi. Possible values are `ip` and `ipv6`.
      */
     safi: string;
 }
@@ -32289,8 +31913,6 @@ export interface GetLogicalRouterVrfBgpPolicyExportRuleAction {
     allow: outputs.GetLogicalRouterVrfBgpPolicyExportRuleActionAllow;
     /**
      * Deny
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `allow` and `deny`.
      */
     deny: outputs.GetLogicalRouterVrfBgpPolicyExportRuleActionDeny;
 }
@@ -32332,7 +31954,7 @@ export interface GetLogicalRouterVrfBgpPolicyExportRuleActionAllowUpdate {
      */
     nexthop: string;
     /**
-     * Origin
+     * Origin. Possible values are `igp`, `egp` and `multicast`.
      */
     origin: string;
 }
@@ -32344,20 +31966,14 @@ export interface GetLogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateAsPath {
     none: outputs.GetLogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateAsPathNone;
     /**
      * Prepend
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
      */
     prepend: number;
     /**
      * Remove
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
      */
     remove: outputs.GetLogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateAsPathRemove;
     /**
      * Remove and prepend
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
      */
     removeAndPrepend: number;
 }
@@ -32375,26 +31991,18 @@ export interface GetLogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateCommunit
     appends: string[];
     /**
      * None
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
      */
     none: outputs.GetLogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateCommunityNone;
     /**
      * Overwrite
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
      */
     overwrites: string[];
     /**
      * Remove all
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
      */
     removeAll: outputs.GetLogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateCommunityRemoveAll;
     /**
      * Remove regex
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
      */
     removeRegex: string;
 }
@@ -32412,26 +32020,18 @@ export interface GetLogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateExtended
     appends: string[];
     /**
      * None
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
      */
     none: outputs.GetLogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateExtendedCommunityNone;
     /**
      * Overwrite
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
      */
     overwrites: string[];
     /**
      * Remove all
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
      */
     removeAll: outputs.GetLogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateExtendedCommunityRemoveAll;
     /**
      * Remove regex
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
      */
     removeRegex: string;
 }
@@ -32451,7 +32051,7 @@ export interface GetLogicalRouterVrfBgpPolicyExportRuleMatch {
      */
     addressPrefixes: outputs.GetLogicalRouterVrfBgpPolicyExportRuleMatchAddressPrefix[];
     /**
-     * Afi
+     * Afi. Possible values are `ip` and `ipv6`.
      */
     afi: string;
     /**
@@ -32479,11 +32079,11 @@ export interface GetLogicalRouterVrfBgpPolicyExportRuleMatch {
      */
     nexthops: string[];
     /**
-     * Route table
+     * Route table. Possible values are `unicast`, `multicast` and `both`.
      */
     routeTable: string;
     /**
-     * Safi
+     * Safi. Possible values are `ip` and `ipv6`.
      */
     safi: string;
 }
@@ -32557,8 +32157,6 @@ export interface GetLogicalRouterVrfBgpPolicyImportRuleAction {
     allow: outputs.GetLogicalRouterVrfBgpPolicyImportRuleActionAllow;
     /**
      * Deny
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `allow` and `deny`.
      */
     deny: outputs.GetLogicalRouterVrfBgpPolicyImportRuleActionDeny;
 }
@@ -32604,7 +32202,7 @@ export interface GetLogicalRouterVrfBgpPolicyImportRuleActionAllowUpdate {
      */
     nexthop: string;
     /**
-     * Origin
+     * Origin. Possible values are `igp`, `egp` and `incomplete`.
      */
     origin: string;
     /**
@@ -32620,20 +32218,14 @@ export interface GetLogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateAsPath {
     none: outputs.GetLogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateAsPathNone;
     /**
      * Prepend
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
      */
     prepend: number;
     /**
      * Remove
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
      */
     remove: outputs.GetLogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateAsPathRemove;
     /**
      * Remove and prepend
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
      */
     removeAndPrepend: number;
 }
@@ -32651,26 +32243,18 @@ export interface GetLogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateCommunit
     appends: string[];
     /**
      * None
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
      */
     none: outputs.GetLogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateCommunityNone;
     /**
      * Overwrite
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
      */
     overwrites: string[];
     /**
      * Remove all
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
      */
     removeAll: outputs.GetLogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateCommunityRemoveAll;
     /**
      * Remove regex
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
      */
     removeRegex: string;
 }
@@ -32688,26 +32272,18 @@ export interface GetLogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateExtended
     appends: string[];
     /**
      * None
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
      */
     none: outputs.GetLogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateExtendedCommunityNone;
     /**
      * Overwrite
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
      */
     overwrites: string[];
     /**
      * Remove all
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
      */
     removeAll: outputs.GetLogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateExtendedCommunityRemoveAll;
     /**
      * Remove regex
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
      */
     removeRegex: string;
 }
@@ -32727,7 +32303,7 @@ export interface GetLogicalRouterVrfBgpPolicyImportRuleMatch {
      */
     addressPrefixes: outputs.GetLogicalRouterVrfBgpPolicyImportRuleMatchAddressPrefix[];
     /**
-     * Afi
+     * Afi. Possible values are `ip` and `ipv6`.
      */
     afi: string;
     /**
@@ -32755,11 +32331,11 @@ export interface GetLogicalRouterVrfBgpPolicyImportRuleMatch {
      */
     nexthops: string[];
     /**
-     * Route table
+     * Route table. Possible values are `unicast`, `multicast` and `both`.
      */
     routeTable: string;
     /**
-     * Safi
+     * Safi. Possible values are `ip` and `ipv6`.
      */
     safi: string;
 }
@@ -32798,7 +32374,7 @@ export interface GetLogicalRouterVrfBgpPolicyImportRuleMatchExtendedCommunity {
 
 export interface GetLogicalRouterVrfBgpRedistRule {
     /**
-     * Address family identifier
+     * Address family identifier. Possible values are `ipv4` and `ipv6`.
      */
     addressFamilyIdentifier: string;
     /**
@@ -32814,7 +32390,7 @@ export interface GetLogicalRouterVrfBgpRedistRule {
      */
     name: string;
     /**
-     * Route table
+     * Route table. Possible values are `unicast`, `multicast` and `both`.
      */
     routeTable: string;
     /**
@@ -32838,7 +32414,7 @@ export interface GetLogicalRouterVrfBgpRedistRule {
      */
     setMed: number;
     /**
-     * Set origin
+     * Set origin. Possible values are `igp`, `egp` and `incomplete`.
      */
     setOrigin: string;
 }
@@ -32898,20 +32474,14 @@ export interface GetLogicalRouterVrfEcmpAlgorithm {
     balancedRoundRobin: outputs.GetLogicalRouterVrfEcmpAlgorithmBalancedRoundRobin;
     /**
      * Ip hash
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `balancedRoundRobin`, `ipHash`, `ipModulo`, and `weightedRoundRobin`.
      */
     ipHash: outputs.GetLogicalRouterVrfEcmpAlgorithmIpHash;
     /**
      * Ip modulo
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `balancedRoundRobin`, `ipHash`, `ipModulo`, and `weightedRoundRobin`.
      */
     ipModulo: outputs.GetLogicalRouterVrfEcmpAlgorithmIpModulo;
     /**
      * Weighted round robin
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `balancedRoundRobin`, `ipHash`, `ipModulo`, and `weightedRoundRobin`.
      */
     weightedRoundRobin: outputs.GetLogicalRouterVrfEcmpAlgorithmWeightedRoundRobin;
 }
@@ -32973,7 +32543,7 @@ export interface GetLogicalRouterVrfMulticast {
      */
     interfaceGroups: outputs.GetLogicalRouterVrfMulticastInterfaceGroup[];
     /**
-     * Mode
+     * Mode. Possible values are `PIM-SM` and `IGMP-Proxy`.
      */
     mode: string;
     /**
@@ -33050,7 +32620,7 @@ export interface GetLogicalRouterVrfMulticastIgmpDynamicInterface {
      */
     queryProfile: string;
     /**
-     * Robustness
+     * Robustness. Possible values are `1`, `2`, `3`, `4`, `5`, `6` and `7`.
      */
     robustness: string;
     /**
@@ -33058,7 +32628,7 @@ export interface GetLogicalRouterVrfMulticastIgmpDynamicInterface {
      */
     routerAlertPolicing: boolean;
     /**
-     * Version
+     * Version. Possible values are `2` and `3`.
      */
     version: string;
 }
@@ -33180,7 +32750,7 @@ export interface GetLogicalRouterVrfMulticastInterfaceGroupIgmp {
      */
     maxSources: string;
     /**
-     * Mode
+     * Mode. Possible values are `router` and `host`.
      */
     mode: string;
     /**
@@ -33188,7 +32758,7 @@ export interface GetLogicalRouterVrfMulticastInterfaceGroupIgmp {
      */
     queryInterval: number;
     /**
-     * Robustness
+     * Robustness. Possible values are `1`, `2`, `3`, `4`, `5`, `6` and `7`.
      */
     robustness: string;
     /**
@@ -33196,7 +32766,7 @@ export interface GetLogicalRouterVrfMulticastInterfaceGroupIgmp {
      */
     routerAlertPolicing: boolean;
     /**
-     * Version
+     * Version. Possible values are `1`, `2` and `3`.
      */
     version: string;
 }
@@ -33330,8 +32900,6 @@ export interface GetLogicalRouterVrfMulticastMsdpPeerPeerAddress {
     fqdn: string;
     /**
      * Ip
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `fqdn` and `ip`.
      */
     ip: string;
 }
@@ -33362,7 +32930,7 @@ export interface GetLogicalRouterVrfMulticastPim {
      */
     rp: outputs.GetLogicalRouterVrfMulticastPimRp;
     /**
-     * Rpf lookup mode
+     * Rpf lookup mode. Possible values are `mrib-then-urib`, `mrib-only` and `urib-only`.
      */
     rpfLookupMode: string;
     /**
@@ -33435,8 +33003,6 @@ export interface GetLogicalRouterVrfMulticastPimRpLocalRp {
     candidateRp: outputs.GetLogicalRouterVrfMulticastPimRpLocalRpCandidateRp;
     /**
      * Static rp
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `candidateRp` and `staticRp`.
      */
     staticRp: outputs.GetLogicalRouterVrfMulticastPimRpLocalRpStaticRp;
 }
@@ -33534,8 +33100,6 @@ export interface GetLogicalRouterVrfMulticastRpLocalRp {
     candidateRp: outputs.GetLogicalRouterVrfMulticastRpLocalRpCandidateRp;
     /**
      * Static rp
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `candidateRp` and `staticRp`.
      */
     staticRp: outputs.GetLogicalRouterVrfMulticastRpLocalRpStaticRp;
 }
@@ -33793,14 +33357,10 @@ export interface GetLogicalRouterVrfOspfAreaInterfaceLinkType {
     broadcast: outputs.GetLogicalRouterVrfOspfAreaInterfaceLinkTypeBroadcast;
     /**
      * P2mp
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `broadcast`, `p2mp`, and `p2p`.
      */
     p2mp: outputs.GetLogicalRouterVrfOspfAreaInterfaceLinkTypeP2mp;
     /**
      * P2p
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `broadcast`, `p2mp`, and `p2p`.
      */
     p2p: outputs.GetLogicalRouterVrfOspfAreaInterfaceLinkTypeP2p;
 }
@@ -33874,14 +33434,10 @@ export interface GetLogicalRouterVrfOspfAreaType {
     normal: outputs.GetLogicalRouterVrfOspfAreaTypeNormal;
     /**
      * Nssa
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `normal`, `nssa`, and `stub`.
      */
     nssa: outputs.GetLogicalRouterVrfOspfAreaTypeNssa;
     /**
      * Stub
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `normal`, `nssa`, and `stub`.
      */
     stub: outputs.GetLogicalRouterVrfOspfAreaTypeStub;
 }
@@ -33983,7 +33539,7 @@ export interface GetLogicalRouterVrfOspfAreaTypeNssaDefaultInformationOriginate 
      */
     metric: number;
     /**
-     * Metric type
+     * Metric type. Possible values are `type-1` and `type-2`.
      */
     metricType: string;
 }
@@ -33995,8 +33551,6 @@ export interface GetLogicalRouterVrfOspfAreaTypeNssaDefaultRoute {
     advertise: outputs.GetLogicalRouterVrfOspfAreaTypeNssaDefaultRouteAdvertise;
     /**
      * Disable
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `advertise` and `disable`.
      */
     disable: outputs.GetLogicalRouterVrfOspfAreaTypeNssaDefaultRouteDisable;
 }
@@ -34007,7 +33561,7 @@ export interface GetLogicalRouterVrfOspfAreaTypeNssaDefaultRouteAdvertise {
      */
     metric: number;
     /**
-     * Type
+     * Type. Possible values are `ext-1` and `ext-2`.
      */
     type: string;
 }
@@ -34085,8 +33639,6 @@ export interface GetLogicalRouterVrfOspfAreaTypeStubDefaultRoute {
     advertise: outputs.GetLogicalRouterVrfOspfAreaTypeStubDefaultRouteAdvertise;
     /**
      * Disable
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `advertise` and `disable`.
      */
     disable: outputs.GetLogicalRouterVrfOspfAreaTypeStubDefaultRouteDisable;
 }
@@ -34235,7 +33787,7 @@ export interface GetLogicalRouterVrfOspfExportRule {
      */
     name: string;
     /**
-     * New path type
+     * New path type. Possible values are `ext-1` and `ext-2`.
      */
     newPathType: string;
     /**
@@ -34477,14 +34029,10 @@ export interface GetLogicalRouterVrfOspfv3AreaInterfaceLinkType {
     broadcast: outputs.GetLogicalRouterVrfOspfv3AreaInterfaceLinkTypeBroadcast;
     /**
      * P2mp
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `broadcast`, `p2mp`, and `p2p`.
      */
     p2mp: outputs.GetLogicalRouterVrfOspfv3AreaInterfaceLinkTypeP2mp;
     /**
      * P2p
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `broadcast`, `p2mp`, and `p2p`.
      */
     p2p: outputs.GetLogicalRouterVrfOspfv3AreaInterfaceLinkTypeP2p;
 }
@@ -34561,14 +34109,10 @@ export interface GetLogicalRouterVrfOspfv3AreaType {
     normal: outputs.GetLogicalRouterVrfOspfv3AreaTypeNormal;
     /**
      * Nssa
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `normal`, `nssa`, and `stub`.
      */
     nssa: outputs.GetLogicalRouterVrfOspfv3AreaTypeNssa;
     /**
      * Stub
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `normal`, `nssa`, and `stub`.
      */
     stub: outputs.GetLogicalRouterVrfOspfv3AreaTypeStub;
 }
@@ -34680,7 +34224,7 @@ export interface GetLogicalRouterVrfOspfv3AreaTypeNssaDefaultInformationOriginat
      */
     metric: number;
     /**
-     * Metric type
+     * Metric type. Possible values are `type-1` and `type-2`.
      */
     metricType: string;
 }
@@ -34692,8 +34236,6 @@ export interface GetLogicalRouterVrfOspfv3AreaTypeNssaDefaultRoute {
     advertise: outputs.GetLogicalRouterVrfOspfv3AreaTypeNssaDefaultRouteAdvertise;
     /**
      * Disable
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `advertise` and `disable`.
      */
     disable: outputs.GetLogicalRouterVrfOspfv3AreaTypeNssaDefaultRouteDisable;
 }
@@ -34704,7 +34246,7 @@ export interface GetLogicalRouterVrfOspfv3AreaTypeNssaDefaultRouteAdvertise {
      */
     metric: number;
     /**
-     * Type
+     * Type. Possible values are `ext-1` and `ext-2`.
      */
     type: string;
 }
@@ -34786,8 +34328,6 @@ export interface GetLogicalRouterVrfOspfv3AreaTypeStubDefaultRoute {
     advertise: outputs.GetLogicalRouterVrfOspfv3AreaTypeStubDefaultRouteAdvertise;
     /**
      * Disable
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `advertise` and `disable`.
      */
     disable: outputs.GetLogicalRouterVrfOspfv3AreaTypeStubDefaultRouteDisable;
 }
@@ -34922,26 +34462,18 @@ export interface GetLogicalRouterVrfOspfv3AuthProfileAh {
     md5: outputs.GetLogicalRouterVrfOspfv3AuthProfileAhMd5;
     /**
      * Sha1
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `md5`, `sha1`, `sha256`, `sha384`, and `sha512`.
      */
     sha1: outputs.GetLogicalRouterVrfOspfv3AuthProfileAhSha1;
     /**
      * Sha256
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `md5`, `sha1`, `sha256`, `sha384`, and `sha512`.
      */
     sha256: outputs.GetLogicalRouterVrfOspfv3AuthProfileAhSha256;
     /**
      * Sha384
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `md5`, `sha1`, `sha256`, `sha384`, and `sha512`.
      */
     sha384: outputs.GetLogicalRouterVrfOspfv3AuthProfileAhSha384;
     /**
      * Sha512
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `md5`, `sha1`, `sha256`, `sha384`, and `sha512`.
      */
     sha512: outputs.GetLogicalRouterVrfOspfv3AuthProfileAhSha512;
 }
@@ -34999,32 +34531,22 @@ export interface GetLogicalRouterVrfOspfv3AuthProfileEspAuthentication {
     md5: outputs.GetLogicalRouterVrfOspfv3AuthProfileEspAuthenticationMd5;
     /**
      * None
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `md5`, `none`, `sha1`, `sha256`, `sha384`, and `sha512`.
      */
     none: outputs.GetLogicalRouterVrfOspfv3AuthProfileEspAuthenticationNone;
     /**
      * Sha1
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `md5`, `none`, `sha1`, `sha256`, `sha384`, and `sha512`.
      */
     sha1: outputs.GetLogicalRouterVrfOspfv3AuthProfileEspAuthenticationSha1;
     /**
      * Sha256
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `md5`, `none`, `sha1`, `sha256`, `sha384`, and `sha512`.
      */
     sha256: outputs.GetLogicalRouterVrfOspfv3AuthProfileEspAuthenticationSha256;
     /**
      * Sha384
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `md5`, `none`, `sha1`, `sha256`, `sha384`, and `sha512`.
      */
     sha384: outputs.GetLogicalRouterVrfOspfv3AuthProfileEspAuthenticationSha384;
     /**
      * Sha512
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `md5`, `none`, `sha1`, `sha256`, `sha384`, and `sha512`.
      */
     sha512: outputs.GetLogicalRouterVrfOspfv3AuthProfileEspAuthenticationSha512;
 }
@@ -35069,7 +34591,7 @@ export interface GetLogicalRouterVrfOspfv3AuthProfileEspAuthenticationSha512 {
 
 export interface GetLogicalRouterVrfOspfv3AuthProfileEspEncryption {
     /**
-     * Algorithm
+     * Algorithm. Possible values are `3des`, `aes-128-cbc`, `aes-192-cbc`, `aes-256-cbc` and `null`.
      */
     algorithm: string;
     /**
@@ -35088,7 +34610,7 @@ export interface GetLogicalRouterVrfOspfv3ExportRule {
      */
     name: string;
     /**
-     * New path type
+     * New path type. Possible values are `ext-1` and `ext-2`.
      */
     newPathType: string;
     /**
@@ -35314,7 +34836,7 @@ export interface GetLogicalRouterVrfRipInterface {
      */
     interfaceOutboundDistributeList: outputs.GetLogicalRouterVrfRipInterfaceInterfaceOutboundDistributeList;
     /**
-     * Mode
+     * Mode. Possible values are `active`, `passive` and `send-only`.
      */
     mode: string;
     /**
@@ -35322,7 +34844,7 @@ export interface GetLogicalRouterVrfRipInterface {
      */
     name: string;
     /**
-     * Split horizon
+     * Split horizon. Possible values are `split-horizon`, `no-split-horizon` and `no-split-horizon-with-poison-reverse`.
      */
     splitHorizon: string;
 }
@@ -35427,44 +34949,30 @@ export interface GetLogicalRouterVrfRoutingTableIpStaticRouteNexthop {
     discard: outputs.GetLogicalRouterVrfRoutingTableIpStaticRouteNexthopDiscard;
     /**
      * Fqdn
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipAddress`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
      */
     fqdn: string;
     /**
      * Ip address
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipAddress`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
      */
     ipAddress: string;
     /**
      * Ipv6 address
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipAddress`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
      */
     ipv6Address: string;
     /**
      * Next lr
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipAddress`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
      */
     nextLr: string;
     /**
      * Next vr
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipAddress`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
      */
     nextVr: string;
     /**
      * Receive
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipAddress`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
      */
     receive: outputs.GetLogicalRouterVrfRoutingTableIpStaticRouteNexthopReceive;
     /**
      * Tunnel
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipAddress`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
      */
     tunnel: string;
 }
@@ -35481,7 +34989,7 @@ export interface GetLogicalRouterVrfRoutingTableIpStaticRoutePathMonitor {
      */
     enable: boolean;
     /**
-     * Failure condition
+     * Failure condition. Possible values are `any` and `all`.
      */
     failureCondition: string;
     /**
@@ -35532,20 +35040,14 @@ export interface GetLogicalRouterVrfRoutingTableIpStaticRouteRouteTable {
     both: outputs.GetLogicalRouterVrfRoutingTableIpStaticRouteRouteTableBoth;
     /**
      * Multicast
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `both`, `multicast`, `noInstall`, and `unicast`.
      */
     multicast: outputs.GetLogicalRouterVrfRoutingTableIpStaticRouteRouteTableMulticast;
     /**
      * No install
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `both`, `multicast`, `noInstall`, and `unicast`.
      */
     noInstall: outputs.GetLogicalRouterVrfRoutingTableIpStaticRouteRouteTableNoInstall;
     /**
      * Unicast
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `both`, `multicast`, `noInstall`, and `unicast`.
      */
     unicast: outputs.GetLogicalRouterVrfRoutingTableIpStaticRouteRouteTableUnicast;
 }
@@ -35626,38 +35128,26 @@ export interface GetLogicalRouterVrfRoutingTableIpv6StaticRouteNexthop {
     discard: outputs.GetLogicalRouterVrfRoutingTableIpv6StaticRouteNexthopDiscard;
     /**
      * Fqdn
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
      */
     fqdn: string;
     /**
      * Ipv6 address
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
      */
     ipv6Address: string;
     /**
      * Next lr
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
      */
     nextLr: string;
     /**
      * Next vr
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
      */
     nextVr: string;
     /**
      * Receive
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
      */
     receive: outputs.GetLogicalRouterVrfRoutingTableIpv6StaticRouteNexthopReceive;
     /**
      * Tunnel
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
      */
     tunnel: string;
 }
@@ -35684,7 +35174,7 @@ export interface GetLogicalRouterVrfRoutingTableIpv6StaticRoutePathMonitor {
      */
     enable: boolean;
     /**
-     * Failure condition
+     * Failure condition. Possible values are `any` and `all`.
      */
     failureCondition: string;
     /**
@@ -35798,6 +35288,21 @@ export interface GetLogicalRouterVrfVrAdminDists {
     staticIpv6: number;
 }
 
+export interface GetLoopbackInterfaceAdjustTcpMss {
+    /**
+     * Enable TCP MSS adjustment on the interface
+     */
+    enable: boolean;
+    /**
+     * IPv4 MSS adjustment size in bytes
+     */
+    ipv4MssAdjustment: number;
+    /**
+     * IPv6 MSS adjustment size in bytes
+     */
+    ipv6MssAdjustment: number;
+}
+
 export interface GetLoopbackInterfaceIp {
     /**
      * Loopback IP address(es)
@@ -35847,6 +35352,10 @@ export interface GetLoopbackInterfaceIpv6AddressPrefix {
 
 export interface GetLoopbackInterfaceListData {
     /**
+     * TCP MSS adjustment settings for the interface
+     */
+    adjustTcpMss: outputs.GetLoopbackInterfaceListDataAdjustTcpMss;
+    /**
      * Description for loopback interface
      */
     comment: string;
@@ -35859,7 +35368,7 @@ export interface GetLoopbackInterfaceListData {
      */
     device: string;
     /**
-     * The folder of the item. Default: Shared.
+     * The folder in which the resource is defined
      */
     folder: string;
     /**
@@ -35883,7 +35392,7 @@ export interface GetLoopbackInterfaceListData {
      */
     mtu: number;
     /**
-     * The name of the item.
+     * Loopback Interface name
      */
     name: string;
     /**
@@ -35891,13 +35400,28 @@ export interface GetLoopbackInterfaceListData {
      */
     netflowProfile: string;
     /**
-     * The snippet of the item.
+     * The snippet in which the resource is defined
      */
     snippet: string;
     /**
      * The Terraform ID.
      */
     tfid: string;
+}
+
+export interface GetLoopbackInterfaceListDataAdjustTcpMss {
+    /**
+     * Enable TCP MSS adjustment on the interface
+     */
+    enable: boolean;
+    /**
+     * IPv4 MSS adjustment size in bytes
+     */
+    ipv4MssAdjustment: number;
+    /**
+     * IPv6 MSS adjustment size in bytes
+     */
+    ipv6MssAdjustment: number;
 }
 
 export interface GetLoopbackInterfaceListDataIp {
@@ -35953,7 +35477,7 @@ export interface GetManagementInterfaceListData {
      */
     device: string;
     /**
-     * The folder of the item. Default: Shared.
+     * The folder in which the resource is defined
      */
     folder: string;
     /**
@@ -35965,7 +35489,7 @@ export interface GetManagementInterfaceListData {
      */
     managementInterface: outputs.GetManagementInterfaceListDataManagementInterface;
     /**
-     * The snippet of the item.
+     * The snippet in which the resource is defined
      */
     snippet: string;
     /**
@@ -36004,7 +35528,7 @@ export interface GetManagementInterfaceListDataManagementInterface {
      */
     service: outputs.GetManagementInterfaceListDataManagementInterfaceService;
     /**
-     * Speed and duplex
+     * Speed and duplex. Possible values are `auto-negotiate`, `10Mbps-half-duplex`, `10Mbps-full-duplex`, `100Mbps-half-duplex`, `100Mbps-full-duplex`, `1Gbps-half-duplex` and `1Gbps-full-duplex`.
      */
     speedDuplex: string;
 }
@@ -36016,8 +35540,6 @@ export interface GetManagementInterfaceListDataManagementInterfaceMgmtType {
     dhcpClient: outputs.GetManagementInterfaceListDataManagementInterfaceMgmtTypeDhcpClient;
     /**
      * Static
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `static`.
      */
     static: outputs.GetManagementInterfaceListDataManagementInterfaceMgmtTypeStatic;
 }
@@ -36128,7 +35650,7 @@ export interface GetManagementInterfaceManagementInterface {
      */
     service: outputs.GetManagementInterfaceManagementInterfaceService;
     /**
-     * Speed and duplex
+     * Speed and duplex. Possible values are `auto-negotiate`, `10Mbps-half-duplex`, `10Mbps-full-duplex`, `100Mbps-half-duplex`, `100Mbps-full-duplex`, `1Gbps-half-duplex` and `1Gbps-full-duplex`.
      */
     speedDuplex: string;
 }
@@ -36140,8 +35662,6 @@ export interface GetManagementInterfaceManagementInterfaceMgmtType {
     dhcpClient: outputs.GetManagementInterfaceManagementInterfaceMgmtTypeDhcpClient;
     /**
      * Static
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `static`.
      */
     static: outputs.GetManagementInterfaceManagementInterfaceMgmtTypeStatic;
 }
@@ -36228,7 +35748,7 @@ export interface GetMotdBannerSettingListData {
      */
     device: string;
     /**
-     * The folder of the item. Default: Shared.
+     * The folder in which the resource is defined
      */
     folder: string;
     /**
@@ -36240,7 +35760,7 @@ export interface GetMotdBannerSettingListData {
      */
     motdAndBanner: outputs.GetMotdBannerSettingListDataMotdAndBanner;
     /**
-     * The snippet of the item.
+     * The snippet in which the resource is defined
      */
     snippet: string;
     /**
@@ -36299,7 +35819,7 @@ export interface GetMotdBannerSettingListDataMotdAndBanner {
      */
     motdTitle: string;
     /**
-     * Severity
+     * Severity. Possible values are `warning`, `question`, `error` and `info`.
      */
     severity: string;
 }
@@ -36354,7 +35874,7 @@ export interface GetMotdBannerSettingMotdAndBanner {
      */
     motdTitle: string;
     /**
-     * Severity
+     * Severity. Possible values are `warning`, `question`, `error` and `info`.
      */
     severity: string;
 }
@@ -36376,14 +35896,14 @@ export interface GetNatRuleDestinationTranslation {
 
 export interface GetNatRuleDestinationTranslationDnsRewrite {
     /**
-     * Direction
+     * Direction. Possible values are `reverse` and `forward`.
      */
     direction: string;
 }
 
 export interface GetNatRuleDynamicDestinationTranslation {
     /**
-     * Distribution method
+     * Distribution method. Possible values are `round-robin`, `source-ip-hash`, `ip-modulo`, `ip-hash` and `least-sessions`.
      */
     distribution: string;
     /**
@@ -36398,7 +35918,7 @@ export interface GetNatRuleDynamicDestinationTranslation {
 
 export interface GetNatRuleListData {
     /**
-     * Active active device binding
+     * Active active device binding. Possible values are `primary`, `both`, `0` and `1`.
      */
     activeActiveDeviceBinding: string;
     /**
@@ -36442,11 +35962,11 @@ export interface GetNatRuleListData {
      */
     name: string;
     /**
-     * NAT type
+     * NAT type. Possible values are `ipv4`, `nat64` and `nptv6`.
      */
     natType: string;
     /**
-     * The relative position of the rule
+     * The relative position of the rule. Possible values are `pre` and `post`.
      */
     position: string;
     /**
@@ -36500,14 +36020,14 @@ export interface GetNatRuleListDataDestinationTranslation {
 
 export interface GetNatRuleListDataDestinationTranslationDnsRewrite {
     /**
-     * Direction
+     * Direction. Possible values are `reverse` and `forward`.
      */
     direction: string;
 }
 
 export interface GetNatRuleListDataDynamicDestinationTranslation {
     /**
-     * Distribution method
+     * Distribution method. Possible values are `round-robin`, `source-ip-hash`, `ip-modulo`, `ip-hash` and `least-sessions`.
      */
     distribution: string;
     /**
@@ -36708,7 +36228,7 @@ export interface GetOspfAuthProfileListData {
      */
     encryptedValues: {[key: string]: string};
     /**
-     * The folder of the item. Default: Shared.
+     * The folder in which the resource is defined
      */
     folder: string;
     /**
@@ -36717,22 +36237,18 @@ export interface GetOspfAuthProfileListData {
     id: string;
     /**
      * MD5s
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `md5` and `password`.
      */
     md5s: outputs.GetOspfAuthProfileListDataMd5[];
     /**
-     * The name of the item.
+     * Profile name
      */
     name: string;
     /**
      * Password
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `md5` and `password`.
      */
     password: string;
     /**
-     * The snippet of the item.
+     * The snippet in which the resource is defined
      */
     snippet: string;
     /**
@@ -36778,14 +36294,10 @@ export interface GetPbfRuleAction {
     discard: outputs.GetPbfRuleActionDiscard;
     /**
      * Forward
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `discard`, `forward`, and `noPbf`.
      */
     forward: outputs.GetPbfRuleActionForward;
     /**
      * No pbf
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `discard`, `forward`, and `noPbf`.
      */
     noPbf: outputs.GetPbfRuleActionNoPbf;
 }
@@ -36830,8 +36342,6 @@ export interface GetPbfRuleActionForwardNexthop {
     fqdn: string;
     /**
      * Next hop IP address
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `fqdn` and `ipAddress`.
      */
     ipAddress: string;
 }
@@ -36864,8 +36374,6 @@ export interface GetPbfRuleFrom {
     interfaces: string[];
     /**
      * Source zones
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `interface` and `zone`.
      */
     zones: string[];
 }
@@ -36896,7 +36404,7 @@ export interface GetPbfRuleListData {
      */
     enforceSymmetricReturn: outputs.GetPbfRuleListDataEnforceSymmetricReturn;
     /**
-     * The folder of the item. Default: Shared.
+     * The folder in which the resource is defined
      */
     folder: string;
     /**
@@ -36908,9 +36416,17 @@ export interface GetPbfRuleListData {
      */
     id: string;
     /**
-     * The name of the item.
+     * PBF rule name
      */
     name: string;
+    /**
+     * Negate destination address
+     */
+    negateDestination: boolean;
+    /**
+     * Negate source address
+     */
+    negateSource: boolean;
     /**
      * Schedule
      */
@@ -36920,7 +36436,7 @@ export interface GetPbfRuleListData {
      */
     services: string[];
     /**
-     * The snippet of the item.
+     * The snippet in which the resource is defined
      */
     snippet: string;
     /**
@@ -36948,14 +36464,10 @@ export interface GetPbfRuleListDataAction {
     discard: outputs.GetPbfRuleListDataActionDiscard;
     /**
      * Forward
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `discard`, `forward`, and `noPbf`.
      */
     forward: outputs.GetPbfRuleListDataActionForward;
     /**
      * No pbf
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `discard`, `forward`, and `noPbf`.
      */
     noPbf: outputs.GetPbfRuleListDataActionNoPbf;
 }
@@ -37000,8 +36512,6 @@ export interface GetPbfRuleListDataActionForwardNexthop {
     fqdn: string;
     /**
      * Next hop IP address
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `fqdn` and `ipAddress`.
      */
     ipAddress: string;
 }
@@ -37034,8 +36544,6 @@ export interface GetPbfRuleListDataFrom {
     interfaces: string[];
     /**
      * Source zones
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `interface` and `zone`.
      */
     zones: string[];
 }
@@ -37062,7 +36570,7 @@ export interface GetProfileGroupListData {
      */
     fileBlockings: string[];
     /**
-     * The folder of the item. Default: Shared.
+     * The folder in which the resource is defined
      */
     folder: string;
     /**
@@ -37070,7 +36578,7 @@ export interface GetProfileGroupListData {
      */
     id: string;
     /**
-     * The name of the item.
+     * The name of the profile group
      */
     name: string;
     /**
@@ -37078,7 +36586,7 @@ export interface GetProfileGroupListData {
      */
     saasSecurities: string[];
     /**
-     * The snippet of the item.
+     * The snippet in which the resource is defined
      */
     snippet: string;
     /**
@@ -37135,26 +36643,18 @@ export interface GetQosPolicyRuleDscpTosCodepointType {
     af: outputs.GetQosPolicyRuleDscpTosCodepointTypeAf;
     /**
      * Cs
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `af`, `cs`, `custom`, `ef`, and `tos`.
      */
     cs: outputs.GetQosPolicyRuleDscpTosCodepointTypeCs;
     /**
      * Custom
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `af`, `cs`, `custom`, `ef`, and `tos`.
      */
     custom: outputs.GetQosPolicyRuleDscpTosCodepointTypeCustom;
     /**
      * Ef
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `af`, `cs`, `custom`, `ef`, and `tos`.
      */
     ef: outputs.GetQosPolicyRuleDscpTosCodepointTypeEf;
     /**
      * Tos
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `af`, `cs`, `custom`, `ef`, and `tos`.
      */
     tos: outputs.GetQosPolicyRuleDscpTosCodepointTypeTos;
 }
@@ -37219,7 +36719,7 @@ export interface GetQosPolicyRuleListData {
      */
     dscpTos: outputs.GetQosPolicyRuleListDataDscpTos;
     /**
-     * The folder of the item. Default: Shared.
+     * The folder in which the resource is defined
      */
     folder: string;
     /**
@@ -37227,11 +36727,11 @@ export interface GetQosPolicyRuleListData {
      */
     id: string;
     /**
-     * The name of the item.
+     * Name
      */
     name: string;
     /**
-     * The relative position of the rule
+     * The relative position of the rule. Possible values are `pre` and `post`.
      */
     position: string;
     /**
@@ -37243,11 +36743,11 @@ export interface GetQosPolicyRuleListData {
      */
     schedule: string;
     /**
-     * The snippet of the item.
+     * The snippet in which the resource is defined
      */
     snippet: string;
     /**
-     * The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `"before"` or `"after"`.
+     * UUID of the rule to position this rule relative to. Required when `relativePosition` is `"before"` or `"after"`.
      */
     targetRule: string;
     /**
@@ -37288,26 +36788,18 @@ export interface GetQosPolicyRuleListDataDscpTosCodepointType {
     af: outputs.GetQosPolicyRuleListDataDscpTosCodepointTypeAf;
     /**
      * Cs
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `af`, `cs`, `custom`, `ef`, and `tos`.
      */
     cs: outputs.GetQosPolicyRuleListDataDscpTosCodepointTypeCs;
     /**
      * Custom
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `af`, `cs`, `custom`, `ef`, and `tos`.
      */
     custom: outputs.GetQosPolicyRuleListDataDscpTosCodepointTypeCustom;
     /**
      * Ef
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `af`, `cs`, `custom`, `ef`, and `tos`.
      */
     ef: outputs.GetQosPolicyRuleListDataDscpTosCodepointTypeEf;
     /**
      * Tos
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `af`, `cs`, `custom`, `ef`, and `tos`.
      */
     tos: outputs.GetQosPolicyRuleListDataDscpTosCodepointTypeTos;
 }
@@ -37372,8 +36864,6 @@ export interface GetQosProfileClassBandwidthType {
     mbps: outputs.GetQosProfileClassBandwidthTypeMbps;
     /**
      * Percentage
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `mbps` and `percentage`.
      */
     percentage: outputs.GetQosProfileClassBandwidthTypePercentage;
 }
@@ -37391,11 +36881,11 @@ export interface GetQosProfileClassBandwidthTypeMbpsClass {
      */
     classBandwidth: outputs.GetQosProfileClassBandwidthTypeMbpsClassClassBandwidth;
     /**
-     * Traffic class
+     * Traffic class. Possible values are `class1`, `class2`, `class3`, `class4`, `class5`, `class6`, `class7` and `class8`.
      */
     name: string;
     /**
-     * traffic class priority
+     * traffic class priority. Possible values are `real-time`, `high`, `medium` and `low`.
      */
     priority: string;
 }
@@ -37424,11 +36914,11 @@ export interface GetQosProfileClassBandwidthTypePercentageClass {
      */
     classBandwidth: outputs.GetQosProfileClassBandwidthTypePercentageClassClassBandwidth;
     /**
-     * Traffic class
+     * Traffic class. Possible values are `class1`, `class2`, `class3`, `class4`, `class5`, `class6`, `class7` and `class8`.
      */
     name: string;
     /**
-     * traffic class priority
+     * traffic class priority. Possible values are `real-time`, `high`, `medium` and `low`.
      */
     priority: string;
 }
@@ -37458,7 +36948,7 @@ export interface GetQosProfileListData {
      */
     device: string;
     /**
-     * The folder of the item. Default: Shared.
+     * The folder in which the resource is defined
      */
     folder: string;
     /**
@@ -37466,11 +36956,11 @@ export interface GetQosProfileListData {
      */
     id: string;
     /**
-     * The name of the item.
+     * Alphanumeric string begin with letter: [0-9a-zA-Z._-]
      */
     name: string;
     /**
-     * The snippet of the item.
+     * The snippet in which the resource is defined
      */
     snippet: string;
     /**
@@ -37497,8 +36987,6 @@ export interface GetQosProfileListDataClassBandwidthType {
     mbps: outputs.GetQosProfileListDataClassBandwidthTypeMbps;
     /**
      * Percentage
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `mbps` and `percentage`.
      */
     percentage: outputs.GetQosProfileListDataClassBandwidthTypePercentage;
 }
@@ -37516,11 +37004,11 @@ export interface GetQosProfileListDataClassBandwidthTypeMbpsClass {
      */
     classBandwidth: outputs.GetQosProfileListDataClassBandwidthTypeMbpsClassClassBandwidth;
     /**
-     * Traffic class
+     * Traffic class. Possible values are `class1`, `class2`, `class3`, `class4`, `class5`, `class6`, `class7` and `class8`.
      */
     name: string;
     /**
-     * traffic class priority
+     * traffic class priority. Possible values are `real-time`, `high`, `medium` and `low`.
      */
     priority: string;
 }
@@ -37549,11 +37037,11 @@ export interface GetQosProfileListDataClassBandwidthTypePercentageClass {
      */
     classBandwidth: outputs.GetQosProfileListDataClassBandwidthTypePercentageClassClassBandwidth;
     /**
-     * Traffic class
+     * Traffic class. Possible values are `class1`, `class2`, `class3`, `class4`, `class5`, `class6`, `class7` and `class8`.
      */
     name: string;
     /**
-     * traffic class priority
+     * traffic class priority. Possible values are `real-time`, `high`, `medium` and `low`.
      */
     priority: string;
 }
@@ -37579,7 +37067,7 @@ export interface GetRadiusServerProfileListData {
      */
     encryptedValues: {[key: string]: string};
     /**
-     * The folder of the item. Default: Shared.
+     * The folder in which the resource is defined
      */
     folder: string;
     /**
@@ -37587,7 +37075,7 @@ export interface GetRadiusServerProfileListData {
      */
     id: string;
     /**
-     * The name of the item.
+     * The name of the RADIUS server profile
      */
     name: string;
     /**
@@ -37603,7 +37091,7 @@ export interface GetRadiusServerProfileListData {
      */
     servers: outputs.GetRadiusServerProfileListDataServer[];
     /**
-     * The snippet of the item.
+     * The snippet in which the resource is defined
      */
     snippet: string;
     /**
@@ -37807,7 +37295,7 @@ export interface GetRegionListData {
      */
     device: string;
     /**
-     * The folder of the item. Default: Shared.
+     * The folder in which the resource is defined
      */
     folder: string;
     /**
@@ -37819,11 +37307,11 @@ export interface GetRegionListData {
      */
     id: string;
     /**
-     * The name of the item.
+     * The name of the region
      */
     name: string;
     /**
-     * The snippet of the item.
+     * The snippet in which the resource is defined
      */
     snippet: string;
     /**
@@ -37891,7 +37379,7 @@ export interface GetRemoteNetworkEcmpTunnelProtocolBgp {
      */
     peerIpAddress: string;
     /**
-     * Route exchange types
+     * Route exchange types. Possible values are `exchange-v4-over-v4`, `exchange-v4-v6-over-v4`, `exchange-v4-over-v4-v6-over-v6` and `exchange-v6-over-v6`.
      */
     peeringType: string;
     /**
@@ -37906,7 +37394,7 @@ export interface GetRemoteNetworkEcmpTunnelProtocolBgp {
 
 export interface GetRemoteNetworkListData {
     /**
-     * Ecmp load balancing
+     * Ecmp load balancing. Possible values are `enable` and `disable`.
      */
     ecmpLoadBalancing: string;
     /**
@@ -37938,7 +37426,7 @@ export interface GetRemoteNetworkListData {
      */
     name: string;
     /**
-     * setup the protocol when ecmp*load*balancing is disable
+     * setup the protocol when ecmp*load*balancing is disabled
      */
     protocol: outputs.GetRemoteNetworkListDataProtocol;
     /**
@@ -38011,7 +37499,7 @@ export interface GetRemoteNetworkListDataEcmpTunnelProtocolBgp {
      */
     peerIpAddress: string;
     /**
-     * Route exchange types
+     * Route exchange types. Possible values are `exchange-v4-over-v4`, `exchange-v4-v6-over-v4`, `exchange-v4-over-v4-v6-over-v6` and `exchange-v6-over-v6`.
      */
     peeringType: string;
     /**
@@ -38061,7 +37549,7 @@ export interface GetRemoteNetworkListDataProtocolBgp {
      */
     peerIpAddress: string;
     /**
-     * Route exchange types
+     * Route exchange types. Possible values are `exchange-v4-over-v4`, `exchange-v4-v6-over-v4`, `exchange-v4-over-v4-v6-over-v6` and `exchange-v6-over-v6`.
      */
     peeringType: string;
     /**
@@ -38130,7 +37618,7 @@ export interface GetRemoteNetworkProtocolBgp {
      */
     peerIpAddress: string;
     /**
-     * Route exchange types
+     * Route exchange types. Possible values are `exchange-v4-over-v4`, `exchange-v4-v6-over-v4`, `exchange-v4-over-v4-v6-over-v6` and `exchange-v6-over-v6`.
      */
     peeringType: string;
     /**
@@ -38172,7 +37660,7 @@ export interface GetRouteAccessListListData {
      */
     device: string;
     /**
-     * The folder of the item. Default: Shared.
+     * The folder in which the resource is defined
      */
     folder: string;
     /**
@@ -38180,11 +37668,11 @@ export interface GetRouteAccessListListData {
      */
     id: string;
     /**
-     * The name of the item.
+     * Route access list name
      */
     name: string;
     /**
-     * The snippet of the item.
+     * The snippet in which the resource is defined
      */
     snippet: string;
     /**
@@ -38213,7 +37701,7 @@ export interface GetRouteAccessListListDataTypeIpv4 {
 
 export interface GetRouteAccessListListDataTypeIpv4Ipv4Entry {
     /**
-     * Action
+     * Action. Possible values are `deny` and `permit`.
      */
     action: string;
     /**
@@ -38290,7 +37778,7 @@ export interface GetRouteAccessListTypeIpv4 {
 
 export interface GetRouteAccessListTypeIpv4Ipv4Entry {
     /**
-     * Action
+     * Action. Possible values are `deny` and `permit`.
      */
     action: string;
     /**
@@ -38361,7 +37849,7 @@ export interface GetRouteCommunityListListData {
      */
     device: string;
     /**
-     * The folder of the item. Default: Shared.
+     * The folder in which the resource is defined
      */
     folder: string;
     /**
@@ -38369,11 +37857,11 @@ export interface GetRouteCommunityListListData {
      */
     id: string;
     /**
-     * The name of the item.
+     * Route community list name
      */
     name: string;
     /**
-     * The snippet of the item.
+     * The snippet in which the resource is defined
      */
     snippet: string;
     /**
@@ -38393,14 +37881,10 @@ export interface GetRouteCommunityListListDataType {
     extended: outputs.GetRouteCommunityListListDataTypeExtended;
     /**
      * Large
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `extended`, `large`, and `regular`.
      */
     large: outputs.GetRouteCommunityListListDataTypeLarge;
     /**
      * Regular
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `extended`, `large`, and `regular`.
      */
     regular: outputs.GetRouteCommunityListListDataTypeRegular;
 }
@@ -38414,7 +37898,7 @@ export interface GetRouteCommunityListListDataTypeExtended {
 
 export interface GetRouteCommunityListListDataTypeExtendedExtendedEntry {
     /**
-     * Action
+     * Action. Possible values are `deny` and `permit`.
      */
     action: string;
     /**
@@ -38436,7 +37920,7 @@ export interface GetRouteCommunityListListDataTypeLarge {
 
 export interface GetRouteCommunityListListDataTypeLargeLargeEntry {
     /**
-     * Action
+     * Action. Possible values are `deny` and `permit`.
      */
     action: string;
     /**
@@ -38458,7 +37942,7 @@ export interface GetRouteCommunityListListDataTypeRegular {
 
 export interface GetRouteCommunityListListDataTypeRegularRegularEntry {
     /**
-     * Action
+     * Action. Possible values are `deny` and `permit`.
      */
     action: string;
     /**
@@ -38478,14 +37962,10 @@ export interface GetRouteCommunityListType {
     extended: outputs.GetRouteCommunityListTypeExtended;
     /**
      * Large
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `extended`, `large`, and `regular`.
      */
     large: outputs.GetRouteCommunityListTypeLarge;
     /**
      * Regular
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `extended`, `large`, and `regular`.
      */
     regular: outputs.GetRouteCommunityListTypeRegular;
 }
@@ -38499,7 +37979,7 @@ export interface GetRouteCommunityListTypeExtended {
 
 export interface GetRouteCommunityListTypeExtendedExtendedEntry {
     /**
-     * Action
+     * Action. Possible values are `deny` and `permit`.
      */
     action: string;
     /**
@@ -38521,7 +38001,7 @@ export interface GetRouteCommunityListTypeLarge {
 
 export interface GetRouteCommunityListTypeLargeLargeEntry {
     /**
-     * Action
+     * Action. Possible values are `deny` and `permit`.
      */
     action: string;
     /**
@@ -38543,7 +38023,7 @@ export interface GetRouteCommunityListTypeRegular {
 
 export interface GetRouteCommunityListTypeRegularRegularEntry {
     /**
-     * Action
+     * Action. Possible values are `deny` and `permit`.
      */
     action: string;
     /**
@@ -38558,7 +38038,7 @@ export interface GetRouteCommunityListTypeRegularRegularEntry {
 
 export interface GetRoutePathAccessListAspathEntry {
     /**
-     * Action
+     * Action. Possible values are `deny` and `permit`.
      */
     action: string;
     /**
@@ -38585,7 +38065,7 @@ export interface GetRoutePathAccessListListData {
      */
     device: string;
     /**
-     * The folder of the item. Default: Shared.
+     * The folder in which the resource is defined
      */
     folder: string;
     /**
@@ -38593,11 +38073,11 @@ export interface GetRoutePathAccessListListData {
      */
     id: string;
     /**
-     * The name of the item.
+     * AS path access list name
      */
     name: string;
     /**
-     * The snippet of the item.
+     * The snippet in which the resource is defined
      */
     snippet: string;
     /**
@@ -38608,7 +38088,7 @@ export interface GetRoutePathAccessListListData {
 
 export interface GetRoutePathAccessListListDataAspathEntry {
     /**
-     * Action
+     * Action. Possible values are `deny` and `permit`.
      */
     action: string;
     /**
@@ -38631,7 +38111,7 @@ export interface GetRoutePrefixListListData {
      */
     device: string;
     /**
-     * The folder of the item. Default: Shared.
+     * The folder in which the resource is defined
      */
     folder: string;
     /**
@@ -38639,11 +38119,11 @@ export interface GetRoutePrefixListListData {
      */
     id: string;
     /**
-     * The name of the item.
+     * Filter prefix list name
      */
     name: string;
     /**
-     * The snippet of the item.
+     * The snippet in which the resource is defined
      */
     snippet: string;
     /**
@@ -38672,7 +38152,7 @@ export interface GetRoutePrefixListListDataTypeIpv4 {
 
 export interface GetRoutePrefixListListDataTypeIpv4Ipv4Entry {
     /**
-     * Action
+     * Action. Possible values are `deny` and `permit`.
      */
     action: string;
     /**
@@ -38691,9 +38171,7 @@ export interface GetRoutePrefixListListDataTypeIpv4Ipv4EntryPrefix {
      */
     entry: outputs.GetRoutePrefixListListDataTypeIpv4Ipv4EntryPrefixEntry;
     /**
-     * Network
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `entry` and `network`.
+     * Network. Possible values are `any`.
      */
     network: string;
 }
@@ -38729,7 +38207,7 @@ export interface GetRoutePrefixListTypeIpv4 {
 
 export interface GetRoutePrefixListTypeIpv4Ipv4Entry {
     /**
-     * Action
+     * Action. Possible values are `deny` and `permit`.
      */
     action: string;
     /**
@@ -38748,9 +38226,7 @@ export interface GetRoutePrefixListTypeIpv4Ipv4EntryPrefix {
      */
     entry: outputs.GetRoutePrefixListTypeIpv4Ipv4EntryPrefixEntry;
     /**
-     * Network
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `entry` and `network`.
+     * Network. Possible values are `any`.
      */
     network: string;
 }
@@ -38784,7 +38260,7 @@ export interface GetSamlServerProfileListData {
      */
     entityId: string;
     /**
-     * The folder of the item. Default: Shared.
+     * The folder in which the resource is defined
      */
     folder: string;
     /**
@@ -38796,11 +38272,11 @@ export interface GetSamlServerProfileListData {
      */
     maxClockSkew: number;
     /**
-     * The name of the item.
+     * The name of the SAML server profile
      */
     name: string;
     /**
-     * SAML HTTP binding for SLO requests to the identity provider
+     * SAML HTTP binding for SLO requests to the identity provider. Possible values are `post` and `redirect`.
      */
     sloBindings: string;
     /**
@@ -38808,11 +38284,11 @@ export interface GetSamlServerProfileListData {
      */
     sloUrl: string;
     /**
-     * The snippet of the item.
+     * The snippet in which the resource is defined
      */
     snippet: string;
     /**
-     * SAML HTTP binding for SSO requests to the identity provider
+     * SAML HTTP binding for SSO requests to the identity provider. Possible values are `post` and `redirect`.
      */
     ssoBindings: string;
     /**
@@ -38842,7 +38318,7 @@ export interface GetScepProfileAlgorithm {
 
 export interface GetScepProfileAlgorithmRsa {
     /**
-     * Rsa nbits
+     * Rsa nbits. Possible values are `1024`, `2048` and `3072`.
      */
     rsaNbits: string;
 }
@@ -38854,14 +38330,10 @@ export interface GetScepProfileCertificateAttributes {
     dnsname: string;
     /**
      * Rfc822name
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `dnsname`, `rfc822name`, and `uniformResourceIdentifier`.
      */
     rfc822name: string;
     /**
      * Uniform resource identifier
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `dnsname`, `rfc822name`, and `uniformResourceIdentifier`.
      */
     uniformResourceIdentifier: string;
 }
@@ -38884,7 +38356,7 @@ export interface GetScepProfileListData {
      */
     device: string;
     /**
-     * Digest for CSR
+     * Digest for CSR. Possible values are `sha1`, `sha256`, `sha384` and `sha512`.
      */
     digest: string;
     /**
@@ -38896,7 +38368,7 @@ export interface GetScepProfileListData {
      */
     fingerprint: string;
     /**
-     * The folder of the item. Default: Shared.
+     * The folder in which the resource is defined
      */
     folder: string;
     /**
@@ -38904,11 +38376,11 @@ export interface GetScepProfileListData {
      */
     id: string;
     /**
-     * The name of the item.
+     * The name of the SCEP profile
      */
     name: string;
     /**
-     * SCEP Server CA Certificate
+     * SCEP Server CA Certificate. Possible values are `Authentication Cookie CA`, `Forward-Trust-CA`, `Forward-Trust-CA-ECDSA`, `Forward-UnTrust-CA`, `Forward-UnTrust-CA-ECDSA`, `Global Authentication Cookie CA`, `GlobalSign-Root-CA` and `Root CA`.
      */
     scepCaCert: string;
     /**
@@ -38916,7 +38388,7 @@ export interface GetScepProfileListData {
      */
     scepChallenge: outputs.GetScepProfileListDataScepChallenge;
     /**
-     * SCEP Client Certificate
+     * SCEP Client Certificate. Possible values are `Authentication Cookie CA`, `Forward-Trust-CA`, `Forward-Trust-CA-ECDSA`, `Forward-UnTrust-CA`, `Forward-UnTrust-CA-ECDSA`, `Global Authentication Cookie CA`, `GlobalSign-Root-CA` and `Root CA`.
      */
     scepClientCert: string;
     /**
@@ -38924,7 +38396,7 @@ export interface GetScepProfileListData {
      */
     scepUrl: string;
     /**
-     * The snippet of the item.
+     * The snippet in which the resource is defined
      */
     snippet: string;
     /**
@@ -38954,7 +38426,7 @@ export interface GetScepProfileListDataAlgorithm {
 
 export interface GetScepProfileListDataAlgorithmRsa {
     /**
-     * Rsa nbits
+     * Rsa nbits. Possible values are `1024`, `2048` and `3072`.
      */
     rsaNbits: string;
 }
@@ -38966,14 +38438,10 @@ export interface GetScepProfileListDataCertificateAttributes {
     dnsname: string;
     /**
      * Rfc822name
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `dnsname`, `rfc822name`, and `uniformResourceIdentifier`.
      */
     rfc822name: string;
     /**
      * Uniform resource identifier
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `dnsname`, `rfc822name`, and `uniformResourceIdentifier`.
      */
     uniformResourceIdentifier: string;
 }
@@ -38985,14 +38453,10 @@ export interface GetScepProfileListDataScepChallenge {
     dynamic: outputs.GetScepProfileListDataScepChallengeDynamic;
     /**
      * Challenge to use for SCEP server on mobile clients
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `dynamic`, `fixed`, and `none`.
      */
     fixed: string;
     /**
      * No OTP
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `dynamic`, `fixed`, and `none`.
      */
     none: outputs.GetScepProfileListDataScepChallengeNone;
 }
@@ -39022,14 +38486,10 @@ export interface GetScepProfileScepChallenge {
     dynamic: outputs.GetScepProfileScepChallengeDynamic;
     /**
      * Challenge to use for SCEP server on mobile clients
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `dynamic`, `fixed`, and `none`.
      */
     fixed: string;
     /**
      * No OTP
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `dynamic`, `fixed`, and `none`.
      */
     none: outputs.GetScepProfileScepChallengeNone;
 }
@@ -39058,7 +38518,7 @@ export interface GetScheduleListData {
      */
     device: string;
     /**
-     * The folder of the item. Default: Shared.
+     * The folder in which the resource is defined
      */
     folder: string;
     /**
@@ -39066,7 +38526,7 @@ export interface GetScheduleListData {
      */
     id: string;
     /**
-     * The name of the item.
+     * The name of the schedule
      */
     name: string;
     /**
@@ -39074,7 +38534,7 @@ export interface GetScheduleListData {
      */
     scheduleType: outputs.GetScheduleListDataScheduleType;
     /**
-     * The snippet of the item.
+     * The snippet in which the resource is defined
      */
     snippet: string;
     /**
@@ -39090,8 +38550,6 @@ export interface GetScheduleListDataScheduleType {
     nonRecurrings: string[];
     /**
      * Recurring
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `nonRecurring` and `recurring`.
      */
     recurring: outputs.GetScheduleListDataScheduleTypeRecurring;
 }
@@ -39103,8 +38561,6 @@ export interface GetScheduleListDataScheduleTypeRecurring {
     dailies: string[];
     /**
      * Weekly
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `daily` and `weekly`.
      */
     weekly: outputs.GetScheduleListDataScheduleTypeRecurringWeekly;
 }
@@ -39147,8 +38603,6 @@ export interface GetScheduleScheduleType {
     nonRecurrings: string[];
     /**
      * Recurring
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `nonRecurring` and `recurring`.
      */
     recurring: outputs.GetScheduleScheduleTypeRecurring;
 }
@@ -39160,8 +38614,6 @@ export interface GetScheduleScheduleTypeRecurring {
     dailies: string[];
     /**
      * Weekly
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `daily` and `weekly`.
      */
     weekly: outputs.GetScheduleScheduleTypeRecurringWeekly;
 }
@@ -39207,7 +38659,7 @@ export interface GetSdwanErrorCorrectionProfileListData {
      */
     device: string;
     /**
-     * The folder of the item. Default: Shared.
+     * The folder in which the resource is defined
      */
     folder: string;
     /**
@@ -39219,11 +38671,11 @@ export interface GetSdwanErrorCorrectionProfileListData {
      */
     mode: outputs.GetSdwanErrorCorrectionProfileListDataMode;
     /**
-     * The name of the item.
+     * Name
      */
     name: string;
     /**
-     * The snippet of the item.
+     * The snippet in which the resource is defined
      */
     snippet: string;
     /**
@@ -39239,8 +38691,6 @@ export interface GetSdwanErrorCorrectionProfileListDataMode {
     forwardErrorCorrection: outputs.GetSdwanErrorCorrectionProfileListDataModeForwardErrorCorrection;
     /**
      * Packet duplication
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `forwardErrorCorrection` and `packetDuplication`.
      */
     packetDuplication: outputs.GetSdwanErrorCorrectionProfileListDataModePacketDuplication;
 }
@@ -39270,8 +38720,6 @@ export interface GetSdwanErrorCorrectionProfileMode {
     forwardErrorCorrection: outputs.GetSdwanErrorCorrectionProfileModeForwardErrorCorrection;
     /**
      * Packet duplication
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `forwardErrorCorrection` and `packetDuplication`.
      */
     packetDuplication: outputs.GetSdwanErrorCorrectionProfileModePacketDuplication;
 }
@@ -39300,7 +38748,7 @@ export interface GetSdwanPathQualityProfileListData {
      */
     device: string;
     /**
-     * The folder of the item. Default: Shared.
+     * The folder in which the resource is defined
      */
     folder: string;
     /**
@@ -39312,11 +38760,11 @@ export interface GetSdwanPathQualityProfileListData {
      */
     metric: outputs.GetSdwanPathQualityProfileListDataMetric;
     /**
-     * The name of the item.
+     * Profile name
      */
     name: string;
     /**
-     * The snippet of the item.
+     * The snippet in which the resource is defined
      */
     snippet: string;
     /**
@@ -39342,7 +38790,7 @@ export interface GetSdwanPathQualityProfileListDataMetric {
 
 export interface GetSdwanPathQualityProfileListDataMetricJitter {
     /**
-     * Jitter sensitivity
+     * Jitter sensitivity. Possible values are `low`, `medium` and `high`.
      */
     sensitivity: string;
     /**
@@ -39353,7 +38801,7 @@ export interface GetSdwanPathQualityProfileListDataMetricJitter {
 
 export interface GetSdwanPathQualityProfileListDataMetricLatency {
     /**
-     * Latency sensitivity
+     * Latency sensitivity. Possible values are `low`, `medium` and `high`.
      */
     sensitivity: string;
     /**
@@ -39364,7 +38812,7 @@ export interface GetSdwanPathQualityProfileListDataMetricLatency {
 
 export interface GetSdwanPathQualityProfileListDataMetricPktLoss {
     /**
-     * Packet loss sensitivity
+     * Packet loss sensitivity. Possible values are `low`, `medium` and `high`.
      */
     sensitivity: string;
     /**
@@ -39390,7 +38838,7 @@ export interface GetSdwanPathQualityProfileMetric {
 
 export interface GetSdwanPathQualityProfileMetricJitter {
     /**
-     * Jitter sensitivity
+     * Jitter sensitivity. Possible values are `low`, `medium` and `high`.
      */
     sensitivity: string;
     /**
@@ -39401,7 +38849,7 @@ export interface GetSdwanPathQualityProfileMetricJitter {
 
 export interface GetSdwanPathQualityProfileMetricLatency {
     /**
-     * Latency sensitivity
+     * Latency sensitivity. Possible values are `low`, `medium` and `high`.
      */
     sensitivity: string;
     /**
@@ -39412,7 +38860,7 @@ export interface GetSdwanPathQualityProfileMetricLatency {
 
 export interface GetSdwanPathQualityProfileMetricPktLoss {
     /**
-     * Packet loss sensitivity
+     * Packet loss sensitivity. Possible values are `low`, `medium` and `high`.
      */
     sensitivity: string;
     /**
@@ -39458,7 +38906,7 @@ export interface GetSdwanRuleListData {
      */
     errorCorrectionProfile: string;
     /**
-     * The folder of the item. Default: Shared.
+     * The folder in which the resource is defined
      */
     folder: string;
     /**
@@ -39470,7 +38918,7 @@ export interface GetSdwanRuleListData {
      */
     id: string;
     /**
-     * The name of the item.
+     * Rule name
      */
     name: string;
     /**
@@ -39486,7 +38934,7 @@ export interface GetSdwanRuleListData {
      */
     pathQualityProfile: string;
     /**
-     * Rule postion relative to device rules
+     * Rule postion relative to device rules. Possible values are `pre` and `post`.
      */
     position: string;
     /**
@@ -39498,7 +38946,7 @@ export interface GetSdwanRuleListData {
      */
     services: string[];
     /**
-     * The snippet of the item.
+     * The snippet in which the resource is defined
      */
     snippet: string;
     /**
@@ -39536,7 +38984,7 @@ export interface GetSdwanSaasQualityProfileListData {
      */
     device: string;
     /**
-     * The folder of the item. Default: Shared.
+     * The folder in which the resource is defined
      */
     folder: string;
     /**
@@ -39548,11 +38996,11 @@ export interface GetSdwanSaasQualityProfileListData {
      */
     monitorMode: outputs.GetSdwanSaasQualityProfileListDataMonitorMode;
     /**
-     * The name of the item.
+     * Profile name
      */
     name: string;
     /**
-     * The snippet of the item.
+     * The snippet in which the resource is defined
      */
     snippet: string;
     /**
@@ -39568,14 +39016,10 @@ export interface GetSdwanSaasQualityProfileListDataMonitorMode {
     adaptive: outputs.GetSdwanSaasQualityProfileListDataMonitorModeAdaptive;
     /**
      * Http https
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `adaptive`, `httpHttps`, and `staticIp`.
      */
     httpHttps: outputs.GetSdwanSaasQualityProfileListDataMonitorModeHttpHttps;
     /**
      * Static ip
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `adaptive`, `httpHttps`, and `staticIp`.
      */
     staticIp: outputs.GetSdwanSaasQualityProfileListDataMonitorModeStaticIp;
 }
@@ -39601,8 +39045,6 @@ export interface GetSdwanSaasQualityProfileListDataMonitorModeStaticIp {
     fqdn: outputs.GetSdwanSaasQualityProfileListDataMonitorModeStaticIpFqdn;
     /**
      * List of IP addresses
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `fqdn` and `ipAddress`.
      */
     ipAddresses: outputs.GetSdwanSaasQualityProfileListDataMonitorModeStaticIpIpAddress[];
 }
@@ -39636,14 +39078,10 @@ export interface GetSdwanSaasQualityProfileMonitorMode {
     adaptive: outputs.GetSdwanSaasQualityProfileMonitorModeAdaptive;
     /**
      * Http https
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `adaptive`, `httpHttps`, and `staticIp`.
      */
     httpHttps: outputs.GetSdwanSaasQualityProfileMonitorModeHttpHttps;
     /**
      * Static ip
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `adaptive`, `httpHttps`, and `staticIp`.
      */
     staticIp: outputs.GetSdwanSaasQualityProfileMonitorModeStaticIp;
 }
@@ -39669,8 +39107,6 @@ export interface GetSdwanSaasQualityProfileMonitorModeStaticIp {
     fqdn: outputs.GetSdwanSaasQualityProfileMonitorModeStaticIpFqdn;
     /**
      * List of IP addresses
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `fqdn` and `ipAddress`.
      */
     ipAddresses: outputs.GetSdwanSaasQualityProfileMonitorModeStaticIpIpAddress[];
 }
@@ -39714,7 +39150,7 @@ export interface GetSdwanTrafficDistributionProfileListData {
      */
     device: string;
     /**
-     * The folder of the item. Default: Shared.
+     * The folder in which the resource is defined
      */
     folder: string;
     /**
@@ -39726,11 +39162,11 @@ export interface GetSdwanTrafficDistributionProfileListData {
      */
     linkTags: outputs.GetSdwanTrafficDistributionProfileListDataLinkTag[];
     /**
-     * The name of the item.
+     * Profile name
      */
     name: string;
     /**
-     * The snippet of the item.
+     * The snippet in which the resource is defined
      */
     snippet: string;
     /**
@@ -39738,7 +39174,7 @@ export interface GetSdwanTrafficDistributionProfileListData {
      */
     tfid: string;
     /**
-     * Traffic distribution
+     * Traffic distribution. Possible values are `Best Available Path`, `Top Down Priority` and `Weighted Session Distribution`.
      */
     trafficDistribution: string;
 }
@@ -39756,15 +39192,15 @@ export interface GetSdwanTrafficDistributionProfileListDataLinkTag {
 
 export interface GetSecurityRuleAllowUrlCategory {
     /**
-     * Additional action
+     * Additional action. Possible values are `none`, `continue`, `redirect` and `isolate`.
      */
     additionalAction: string;
     /**
-     * Credential enforcement
+     * Credential enforcement. Possible values are `enabled` and `disabled`.
      */
     credentialEnforcement: string;
     /**
-     * Decryption
+     * Decryption. Possible values are `enabled` and `disabled`.
      */
     decryption: string;
     /**
@@ -39787,11 +39223,11 @@ export interface GetSecurityRuleAllowUrlCategory {
 
 export interface GetSecurityRuleAllowUrlCategoryFileControl {
     /**
-     * Download
+     * Download. Possible values are `allow-all-file-types`, `best-practice` and `block-all-file-types`.
      */
     download: string;
     /**
-     * Upload
+     * Upload. Possible values are `allow-all-file-types`, `best-practice` and `block-all-file-types`.
      */
     upload: string;
 }
@@ -39841,11 +39277,11 @@ export interface GetSecurityRuleAllowWebApplication {
 
 export interface GetSecurityRuleAllowWebApplicationFileControl {
     /**
-     * Download
+     * Download. Possible values are `allow-all-file-types`, `best-practice` and `block-all-file-types`.
      */
     download: string;
     /**
-     * Upload
+     * Upload. Possible values are `allow-all-file-types`, `best-practice` and `block-all-file-types`.
      */
     upload: string;
 }
@@ -39863,14 +39299,14 @@ export interface GetSecurityRuleAllowWebApplicationSaasEnterpriseControl {
 
 export interface GetSecurityRuleAllowWebApplicationSaasEnterpriseControlConsumerAccess {
     /**
-     * Enable
+     * Enable. Possible values are `yes` and `no`.
      */
     enable: string;
 }
 
 export interface GetSecurityRuleAllowWebApplicationSaasEnterpriseControlEnterpriseAccess {
     /**
-     * Enable
+     * Enable. Possible values are `yes` and `no`.
      */
     enable: string;
     /**
@@ -39911,18 +39347,18 @@ export interface GetSecurityRuleDefaultProfileSettings {
 
 export interface GetSecurityRuleDefaultProfileSettingsFileControl {
     /**
-     * Download
+     * Download. Possible values are `allow-all-file-types`, `best-practice` and `block-all-file-types`.
      */
     download: string;
     /**
-     * Upload
+     * Upload. Possible values are `allow-all-file-types`, `best-practice` and `block-all-file-types`.
      */
     upload: string;
 }
 
 export interface GetSecurityRuleListData {
     /**
-     * The action to be taken when the rule is matched
+     * The action to be taken when the rule is matched. Possible values are `allow`, `deny`, `drop`, `reset-client`, `reset-server` and `reset-both`.
      */
     action: string;
     /**
@@ -40026,7 +39462,7 @@ export interface GetSecurityRuleListData {
      */
     policyType: string;
     /**
-     * The position of a security rule
+     * The position of a security rule. Possible values are `pre` and `post`.
      */
     position: string;
     /**
@@ -40070,7 +39506,7 @@ export interface GetSecurityRuleListData {
      */
     tags: string[];
     /**
-     * The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `"before"` or `"after"`.
+     * UUID of the rule to position this rule relative to. Required when `relativePosition` is `"before"` or `"after"`.
      */
     targetRule: string;
     /**
@@ -40089,15 +39525,15 @@ export interface GetSecurityRuleListData {
 
 export interface GetSecurityRuleListDataAllowUrlCategory {
     /**
-     * Additional action
+     * Additional action. Possible values are `none`, `continue`, `redirect` and `isolate`.
      */
     additionalAction: string;
     /**
-     * Credential enforcement
+     * Credential enforcement. Possible values are `enabled` and `disabled`.
      */
     credentialEnforcement: string;
     /**
-     * Decryption
+     * Decryption. Possible values are `enabled` and `disabled`.
      */
     decryption: string;
     /**
@@ -40120,11 +39556,11 @@ export interface GetSecurityRuleListDataAllowUrlCategory {
 
 export interface GetSecurityRuleListDataAllowUrlCategoryFileControl {
     /**
-     * Download
+     * Download. Possible values are `allow-all-file-types`, `best-practice` and `block-all-file-types`.
      */
     download: string;
     /**
-     * Upload
+     * Upload. Possible values are `allow-all-file-types`, `best-practice` and `block-all-file-types`.
      */
     upload: string;
 }
@@ -40174,11 +39610,11 @@ export interface GetSecurityRuleListDataAllowWebApplication {
 
 export interface GetSecurityRuleListDataAllowWebApplicationFileControl {
     /**
-     * Download
+     * Download. Possible values are `allow-all-file-types`, `best-practice` and `block-all-file-types`.
      */
     download: string;
     /**
-     * Upload
+     * Upload. Possible values are `allow-all-file-types`, `best-practice` and `block-all-file-types`.
      */
     upload: string;
 }
@@ -40196,14 +39632,14 @@ export interface GetSecurityRuleListDataAllowWebApplicationSaasEnterpriseControl
 
 export interface GetSecurityRuleListDataAllowWebApplicationSaasEnterpriseControlConsumerAccess {
     /**
-     * Enable
+     * Enable. Possible values are `yes` and `no`.
      */
     enable: string;
 }
 
 export interface GetSecurityRuleListDataAllowWebApplicationSaasEnterpriseControlEnterpriseAccess {
     /**
-     * Enable
+     * Enable. Possible values are `yes` and `no`.
      */
     enable: string;
     /**
@@ -40244,11 +39680,11 @@ export interface GetSecurityRuleListDataDefaultProfileSettings {
 
 export interface GetSecurityRuleListDataDefaultProfileSettingsFileControl {
     /**
-     * Download
+     * Download. Possible values are `allow-all-file-types`, `best-practice` and `block-all-file-types`.
      */
     download: string;
     /**
-     * Upload
+     * Upload. Possible values are `allow-all-file-types`, `best-practice` and `block-all-file-types`.
      */
     upload: string;
 }
@@ -40269,15 +39705,15 @@ export interface GetSecurityRuleListDataProfileSetting {
 
 export interface GetSecurityRuleListDataSecuritySettings {
     /**
-     * Anti spyware
+     * Anti spyware. Possible values are `yes` and `no`.
      */
     antiSpyware: string;
     /**
-     * Virus and wildfire analysis
+     * Virus and wildfire analysis. Possible values are `yes` and `no`.
      */
     virusAndWildfireAnalysis: string;
     /**
-     * Vulnerability
+     * Vulnerability. Possible values are `yes` and `no`.
      */
     vulnerability: string;
 }
@@ -40298,44 +39734,17 @@ export interface GetSecurityRuleProfileSetting {
 
 export interface GetSecurityRuleSecuritySettings {
     /**
-     * Anti spyware
+     * Anti spyware. Possible values are `yes` and `no`.
      */
     antiSpyware: string;
     /**
-     * Virus and wildfire analysis
+     * Virus and wildfire analysis. Possible values are `yes` and `no`.
      */
     virusAndWildfireAnalysis: string;
     /**
-     * Vulnerability
+     * Vulnerability. Possible values are `yes` and `no`.
      */
     vulnerability: string;
-}
-
-export interface GetServiceConnectionBgpPeer {
-    /**
-     * Local ip address
-     */
-    localIpAddress: string;
-    /**
-     * Local ipv6 address
-     */
-    localIpv6Address: string;
-    /**
-     * Peer ip address
-     */
-    peerIpAddress: string;
-    /**
-     * Peer ipv6 address
-     */
-    peerIpv6Address: string;
-    /**
-     * Same peer IP address for SC
-     */
-    sameAsPrimary: boolean;
-    /**
-     * Secret
-     */
-    secret: string;
 }
 
 export interface GetServiceConnectionGroupListData {
@@ -40375,10 +39784,6 @@ export interface GetServiceConnectionListData {
      */
     backupSc: string;
     /**
-     * Bgp peer
-     */
-    bgpPeer: outputs.GetServiceConnectionListDataBgpPeer;
-    /**
      * Map of sensitive values returned from the API.
      */
     encryptedValues: {[key: string]: string};
@@ -40403,11 +39808,11 @@ export interface GetServiceConnectionListData {
      */
     natPool: string;
     /**
-     * No export community
+     * No export community. Possible values are `Disabled`, `Enabled-In`, `Enabled-Out` and `Enabled-Both`.
      */
     noExportCommunity: string;
     /**
-     * Onboarding type
+     * Onboarding type. Possible values are `classic`.
      */
     onboardingType: string;
     /**
@@ -40444,38 +39849,15 @@ export interface GetServiceConnectionListData {
     tfid: string;
 }
 
-export interface GetServiceConnectionListDataBgpPeer {
-    /**
-     * Local ip address
-     */
-    localIpAddress: string;
-    /**
-     * Local ipv6 address
-     */
-    localIpv6Address: string;
-    /**
-     * Peer ip address
-     */
-    peerIpAddress: string;
-    /**
-     * Peer ipv6 address
-     */
-    peerIpv6Address: string;
-    /**
-     * Same peer IP address for SC
-     */
-    sameAsPrimary: boolean;
-    /**
-     * Secret
-     */
-    secret: string;
-}
-
 export interface GetServiceConnectionListDataProtocol {
     /**
      * Bgp
      */
     bgp: outputs.GetServiceConnectionListDataProtocolBgp;
+    /**
+     * Bgp peer
+     */
+    bgpPeer: outputs.GetServiceConnectionListDataProtocolBgpPeer;
 }
 
 export interface GetServiceConnectionListDataProtocolBgp {
@@ -40517,6 +39899,29 @@ export interface GetServiceConnectionListDataProtocolBgp {
     summarizeMobileUserRoutes: boolean;
 }
 
+export interface GetServiceConnectionListDataProtocolBgpPeer {
+    /**
+     * Local peer IP address (secondary WAN)
+     */
+    localIpAddress: string;
+    /**
+     * Local peer IPv6 address (secondary WAN)
+     */
+    localIpv6Address: string;
+    /**
+     * Remote peer IP address (secondary WAN)
+     */
+    peerIpAddress: string;
+    /**
+     * Remote peer IPv6 address (secondary WAN)
+     */
+    peerIpv6Address: string;
+    /**
+     * BGP peering secret (secondary WAN)
+     */
+    secret: string;
+}
+
 export interface GetServiceConnectionListDataQos {
     /**
      * Enable
@@ -40533,6 +39938,10 @@ export interface GetServiceConnectionProtocol {
      * Bgp
      */
     bgp: outputs.GetServiceConnectionProtocolBgp;
+    /**
+     * Bgp peer
+     */
+    bgpPeer: outputs.GetServiceConnectionProtocolBgpPeer;
 }
 
 export interface GetServiceConnectionProtocolBgp {
@@ -40574,6 +39983,29 @@ export interface GetServiceConnectionProtocolBgp {
     summarizeMobileUserRoutes: boolean;
 }
 
+export interface GetServiceConnectionProtocolBgpPeer {
+    /**
+     * Local peer IP address (secondary WAN)
+     */
+    localIpAddress: string;
+    /**
+     * Local peer IPv6 address (secondary WAN)
+     */
+    localIpv6Address: string;
+    /**
+     * Remote peer IP address (secondary WAN)
+     */
+    peerIpAddress: string;
+    /**
+     * Remote peer IPv6 address (secondary WAN)
+     */
+    peerIpv6Address: string;
+    /**
+     * BGP peering secret (secondary WAN)
+     */
+    secret: string;
+}
+
 export interface GetServiceConnectionQos {
     /**
      * Enable
@@ -40591,7 +40023,7 @@ export interface GetServiceGroupListData {
      */
     device: string;
     /**
-     * The folder of the item. Default: Shared.
+     * The folder in which the resource is defined
      */
     folder: string;
     /**
@@ -40603,11 +40035,11 @@ export interface GetServiceGroupListData {
      */
     members: string[];
     /**
-     * The name of the item.
+     * The name of the service group
      */
     name: string;
     /**
-     * The snippet of the item.
+     * The snippet in which the resource is defined
      */
     snippet: string;
     /**
@@ -40630,7 +40062,7 @@ export interface GetServiceListData {
      */
     device: string;
     /**
-     * The folder of the item. Default: Shared.
+     * The folder in which the resource is defined
      */
     folder: string;
     /**
@@ -40638,7 +40070,7 @@ export interface GetServiceListData {
      */
     id: string;
     /**
-     * The name of the item.
+     * The name of the service
      */
     name: string;
     /**
@@ -40646,7 +40078,7 @@ export interface GetServiceListData {
      */
     protocol: outputs.GetServiceListDataProtocol;
     /**
-     * The snippet of the item.
+     * The snippet in which the resource is defined
      */
     snippet: string;
     /**
@@ -40666,8 +40098,6 @@ export interface GetServiceListDataProtocol {
     tcp: outputs.GetServiceListDataProtocolTcp;
     /**
      * Udp
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `tcp` and `udp`.
      */
     udp: outputs.GetServiceListDataProtocolUdp;
 }
@@ -40731,8 +40161,6 @@ export interface GetServiceProtocol {
     tcp: outputs.GetServiceProtocolTcp;
     /**
      * Udp
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `tcp` and `udp`.
      */
     udp: outputs.GetServiceProtocolUdp;
 }
@@ -40795,7 +40223,7 @@ export interface GetServiceRouteListData {
      */
     device: string;
     /**
-     * The folder of the item. Default: Shared.
+     * The folder in which the resource is defined
      */
     folder: string;
     /**
@@ -40807,7 +40235,7 @@ export interface GetServiceRouteListData {
      */
     route: outputs.GetServiceRouteListDataRoute;
     /**
-     * The snippet of the item.
+     * The snippet in which the resource is defined
      */
     snippet: string;
     /**
@@ -40966,7 +40394,7 @@ export interface GetServiceSettingListData {
      */
     encryptedValues: {[key: string]: string};
     /**
-     * The folder of the item. Default: Shared.
+     * The folder in which the resource is defined
      */
     folder: string;
     /**
@@ -40978,7 +40406,7 @@ export interface GetServiceSettingListData {
      */
     services: outputs.GetServiceSettingListDataServices;
     /**
-     * The snippet of the item.
+     * The snippet in which the resource is defined
      */
     snippet: string;
     /**
@@ -41045,8 +40473,6 @@ export interface GetServiceSettingListDataServicesDnsSetting {
     dnsProxyObject: string;
     /**
      * Servers
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `dnsProxyObject` and `servers`.
      */
     servers: outputs.GetServiceSettingListDataServicesDnsSettingServers;
 }
@@ -41091,14 +40517,10 @@ export interface GetServiceSettingListDataServicesNtpServersPrimaryNtpServerAuth
     autokey: outputs.GetServiceSettingListDataServicesNtpServersPrimaryNtpServerAuthenticationTypeAutokey;
     /**
      * None
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `autokey`, `none`, and `symmetricKey`.
      */
     none: outputs.GetServiceSettingListDataServicesNtpServersPrimaryNtpServerAuthenticationTypeNone;
     /**
      * Symmetric key
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `autokey`, `none`, and `symmetricKey`.
      */
     symmetricKey: outputs.GetServiceSettingListDataServicesNtpServersPrimaryNtpServerAuthenticationTypeSymmetricKey;
 }
@@ -41163,14 +40585,10 @@ export interface GetServiceSettingListDataServicesNtpServersSecondaryNtpServerAu
     autokey: outputs.GetServiceSettingListDataServicesNtpServersSecondaryNtpServerAuthenticationTypeAutokey;
     /**
      * None
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `autokey`, `none`, and `symmetricKey`.
      */
     none: outputs.GetServiceSettingListDataServicesNtpServersSecondaryNtpServerAuthenticationTypeNone;
     /**
      * Symmetric key
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `autokey`, `none`, and `symmetricKey`.
      */
     symmetricKey: outputs.GetServiceSettingListDataServicesNtpServersSecondaryNtpServerAuthenticationTypeSymmetricKey;
 }
@@ -41275,8 +40693,6 @@ export interface GetServiceSettingServicesDnsSetting {
     dnsProxyObject: string;
     /**
      * Servers
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `dnsProxyObject` and `servers`.
      */
     servers: outputs.GetServiceSettingServicesDnsSettingServers;
 }
@@ -41321,14 +40737,10 @@ export interface GetServiceSettingServicesNtpServersPrimaryNtpServerAuthenticati
     autokey: outputs.GetServiceSettingServicesNtpServersPrimaryNtpServerAuthenticationTypeAutokey;
     /**
      * None
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `autokey`, `none`, and `symmetricKey`.
      */
     none: outputs.GetServiceSettingServicesNtpServersPrimaryNtpServerAuthenticationTypeNone;
     /**
      * Symmetric key
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `autokey`, `none`, and `symmetricKey`.
      */
     symmetricKey: outputs.GetServiceSettingServicesNtpServersPrimaryNtpServerAuthenticationTypeSymmetricKey;
 }
@@ -41393,14 +40805,10 @@ export interface GetServiceSettingServicesNtpServersSecondaryNtpServerAuthentica
     autokey: outputs.GetServiceSettingServicesNtpServersSecondaryNtpServerAuthenticationTypeAutokey;
     /**
      * None
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `autokey`, `none`, and `symmetricKey`.
      */
     none: outputs.GetServiceSettingServicesNtpServersSecondaryNtpServerAuthenticationTypeNone;
     /**
      * Symmetric key
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `autokey`, `none`, and `symmetricKey`.
      */
     symmetricKey: outputs.GetServiceSettingServicesNtpServersSecondaryNtpServerAuthenticationTypeSymmetricKey;
 }
@@ -41453,7 +40861,7 @@ export interface GetSessionSettingListData {
      */
     device: string;
     /**
-     * The folder of the item. Default: Shared.
+     * The folder in which the resource is defined
      */
     folder: string;
     /**
@@ -41465,7 +40873,7 @@ export interface GetSessionSettingListData {
      */
     sessionSettings: outputs.GetSessionSettingListDataSessionSettings;
     /**
-     * The snippet of the item.
+     * The snippet in which the resource is defined
      */
     snippet: string;
     /**
@@ -41608,7 +41016,7 @@ export interface GetSessionSettingListDataSessionSettingsJumboFrame {
 
 export interface GetSessionSettingListDataSessionSettingsNat {
     /**
-     * NAT oversubscription rate
+     * NAT oversubscription rate. Possible values are `1x`, `2x`, `4x` and `8x`.
      */
     dippOversub: string;
 }
@@ -41754,7 +41162,7 @@ export interface GetSessionSettingSessionSettingsJumboFrame {
 
 export interface GetSessionSettingSessionSettingsNat {
     /**
-     * NAT oversubscription rate
+     * NAT oversubscription rate. Possible values are `1x`, `2x`, `4x` and `8x`.
      */
     dippOversub: string;
 }
@@ -41772,7 +41180,7 @@ export interface GetSessionTimeoutListData {
      */
     device: string;
     /**
-     * The folder of the item. Default: Shared.
+     * The folder in which the resource is defined
      */
     folder: string;
     /**
@@ -41784,7 +41192,7 @@ export interface GetSessionTimeoutListData {
      */
     sessionTimeouts: outputs.GetSessionTimeoutListDataSessionTimeouts;
     /**
-     * The snippet of the item.
+     * The snippet in which the resource is defined
      */
     snippet: string;
     /**
@@ -41941,7 +41349,7 @@ export interface GetSiteListData {
      */
     latitude: string;
     /**
-     * The license type of the site
+     * The license type of the site. Possible values are `FWAAS-SITE-25Mbps`, `FWAAS-SITE-50Mbps`, `FWAAS-SITE-250Mbps`, `FWAAS-SITE-1000Mbps` and `FWAAS-SITE-2500Mbps`.
      */
     licenseType: string;
     /**
@@ -41969,7 +41377,7 @@ export interface GetSiteListData {
      */
     tfid: string;
     /**
-     * The site type
+     * The site type. Possible values are `prisma-sdwan`, `third-party-branch` and `third-party-discovered`.
      */
     type: string;
     /**
@@ -41984,7 +41392,7 @@ export interface GetSiteListDataMember {
      */
     id: string;
     /**
-     * The mode of the remote network
+     * The mode of the remote network. Possible values are `active` and `backup`.
      */
     mode: string;
     /**
@@ -42018,7 +41426,7 @@ export interface GetSiteMember {
      */
     id: string;
     /**
-     * The mode of the remote network
+     * The mode of the remote network. Possible values are `active` and `backup`.
      */
     mode: string;
     /**
@@ -42046,6 +41454,147 @@ export interface GetSiteQos {
     profile: string;
 }
 
+export interface GetSnippetCategoryFolder {
+    /**
+     * Id
+     */
+    id: string;
+    /**
+     * Name
+     */
+    name: string;
+}
+
+export interface GetSnippetCategoryListData {
+    /**
+     * Created in
+     */
+    createdIn: string;
+    /**
+     * Description
+     */
+    description: string;
+    /**
+     * Display name
+     */
+    displayName: string;
+    /**
+     * Donor created
+     */
+    donorCreated: number;
+    /**
+     * Donor snippet file id
+     */
+    donorSnippetFileId: number;
+    /**
+     * Donor snippet version
+     */
+    donorSnippetVersion: number;
+    /**
+     * Donor tenant id
+     */
+    donorTenantId: string;
+    /**
+     * Donor tenant name
+     */
+    donorTenantName: string;
+    /**
+     * Donor tsg
+     */
+    donorTsg: string;
+    /**
+     * Enable prefix
+     */
+    enablePrefix: boolean;
+    /**
+     * Error
+     */
+    error: string;
+    /**
+     * Folders
+     */
+    folders: outputs.GetSnippetCategoryListDataFolder[];
+    /**
+     * Id
+     */
+    id: string;
+    /**
+     * Labels
+     */
+    labels: string[];
+    /**
+     * Last update
+     */
+    lastUpdate: string;
+    /**
+     * Msg uuid
+     */
+    msgUuid: string;
+    /**
+     * Name
+     */
+    name: string;
+    /**
+     * Prefix
+     */
+    prefix: string;
+    /**
+     * Recipient paused update
+     */
+    recipientPausedUpdate: boolean;
+    /**
+     * Recipient tenant id
+     */
+    recipientTenantId: string;
+    /**
+     * Recipient tenant name
+     */
+    recipientTenantName: string;
+    /**
+     * Recipient tsg
+     */
+    recipientTsg: string;
+    /**
+     * Recipient validate before update
+     */
+    recipientValidateBeforeUpdate: boolean;
+    /**
+     * Shared in
+     */
+    sharedIn: string;
+    /**
+     * Snippet uuid
+     */
+    snippetUuid: string;
+    /**
+     * Status
+     */
+    status: string;
+    /**
+     * The Terraform ID.
+     */
+    tfid: string;
+    /**
+     * Type
+     */
+    type: string;
+    /**
+     * Version
+     */
+    version: number;
+}
+
+export interface GetSnippetCategoryListDataFolder {
+    /**
+     * Id
+     */
+    id: string;
+    /**
+     * Name
+     */
+    name: string;
+}
+
 export interface GetSnippetListData {
     /**
      * The description of the snippet
@@ -42068,7 +41617,7 @@ export interface GetSnippetListData {
      */
     tfid: string;
     /**
-     * The snippet type
+     * The snippet type. Possible values are `predefined`, `custom` and `readonly`.
      */
     type: string;
 }
@@ -42165,7 +41714,7 @@ export interface GetSyslogServerProfileListData {
      */
     device: string;
     /**
-     * The folder of the item. Default: Shared.
+     * The folder in which the resource is defined
      */
     folder: string;
     /**
@@ -42177,7 +41726,7 @@ export interface GetSyslogServerProfileListData {
      */
     id: string;
     /**
-     * The name of the item.
+     * The name of the syslog server profile
      */
     name: string;
     /**
@@ -42185,7 +41734,7 @@ export interface GetSyslogServerProfileListData {
      */
     servers: outputs.GetSyslogServerProfileListDataServer[];
     /**
-     * The snippet of the item.
+     * The snippet in which the resource is defined
      */
     snippet: string;
     /**
@@ -42282,11 +41831,11 @@ export interface GetSyslogServerProfileListDataFormatEscaping {
 
 export interface GetSyslogServerProfileListDataServer {
     /**
-     * Syslog facility
+     * Syslog facility. Possible values are `LOG_USER`, `LOG_LOCAL0`, `LOG_LOCAL1`, `LOG_LOCAL2`, `LOG_LOCAL3`, `LOG_LOCAL4`, `LOG_LOCAL5`, `LOG_LOCAL6` and `LOG_LOCAL7`.
      */
     facility: string;
     /**
-     * Syslog format
+     * Syslog format. Possible values are `BSD` and `IETF`.
      */
     format: string;
     /**
@@ -42302,18 +41851,18 @@ export interface GetSyslogServerProfileListDataServer {
      */
     server: string;
     /**
-     * Transport protocol
+     * Transport protocol. Possible values are `UDP` and `TCP`.
      */
     transport: string;
 }
 
 export interface GetSyslogServerProfileServer {
     /**
-     * Syslog facility
+     * Syslog facility. Possible values are `LOG_USER`, `LOG_LOCAL0`, `LOG_LOCAL1`, `LOG_LOCAL2`, `LOG_LOCAL3`, `LOG_LOCAL4`, `LOG_LOCAL5`, `LOG_LOCAL6` and `LOG_LOCAL7`.
      */
     facility: string;
     /**
-     * Syslog format
+     * Syslog format. Possible values are `BSD` and `IETF`.
      */
     format: string;
     /**
@@ -42329,7 +41878,7 @@ export interface GetSyslogServerProfileServer {
      */
     server: string;
     /**
-     * Transport protocol
+     * Transport protocol. Possible values are `UDP` and `TCP`.
      */
     transport: string;
 }
@@ -42348,7 +41897,7 @@ export interface GetSystemMatchListListData {
      */
     filter: string;
     /**
-     * The folder of the item. Default: Shared.
+     * The folder in which the resource is defined
      */
     folder: string;
     /**
@@ -42356,7 +41905,7 @@ export interface GetSystemMatchListListData {
      */
     id: string;
     /**
-     * The name of the item.
+     * Name of the system match list entry
      */
     name: string;
     /**
@@ -42380,7 +41929,7 @@ export interface GetSystemMatchListListData {
      */
     sendToPanorama: boolean;
     /**
-     * The snippet of the item.
+     * The snippet in which the resource is defined
      */
     snippet: string;
     /**
@@ -42399,7 +41948,7 @@ export interface GetTacacsServerProfileListData {
      */
     encryptedValues: {[key: string]: string};
     /**
-     * The folder of the item. Default: Shared.
+     * The folder in which the resource is defined
      */
     folder: string;
     /**
@@ -42407,11 +41956,11 @@ export interface GetTacacsServerProfileListData {
      */
     id: string;
     /**
-     * The name of the item.
+     * The name of the TACACS+ server profile
      */
     name: string;
     /**
-     * The TACACS+ authentication protocol
+     * The TACACS+ authentication protocol. Possible values are `CHAP` and `PAP`.
      */
     protocol: string;
     /**
@@ -42419,7 +41968,7 @@ export interface GetTacacsServerProfileListData {
      */
     servers: outputs.GetTacacsServerProfileListDataServer[];
     /**
-     * The snippet of the item.
+     * The snippet in which the resource is defined
      */
     snippet: string;
     /**
@@ -42476,7 +42025,7 @@ export interface GetTacacsServerProfileServer {
 
 export interface GetTagListData {
     /**
-     * The color of the tag
+     * The color of the tag. Possible values are `Red`, `Green`, `Blue`, `Yellow`, `Copper`, `Orange`, `Purple`, `Gray`, `Light Green`, `Cyan`, `Light Gray`, `Blue Gray`, `Lime`, `Black`, `Gold`, `Brown`, `Olive`, `Maroon`, `Red-Orange`, `Yellow-Orange`, `Forest Green`, `Turquoise Blue`, `Azure Blue`, `Cerulean Blue`, `Midnight Blue`, `Medium Blue`, `Cobalt Blue`, `Violet Blue`, `Blue Violet`, `Medium Violet`, `Medium Rose`, `Lavender`, `Orchid`, `Thistle`, `Peach`, `Salmon`, `Magenta`, `Red Violet`, `Mahogany`, `Burnt Sienna` and `Chestnut`.
      */
     color: string;
     /**
@@ -42488,7 +42037,7 @@ export interface GetTagListData {
      */
     device: string;
     /**
-     * The folder of the item. Default: Shared.
+     * The folder in which the resource is defined
      */
     folder: string;
     /**
@@ -42496,11 +42045,11 @@ export interface GetTagListData {
      */
     id: string;
     /**
-     * The name of the item.
+     * The name of the tag
      */
     name: string;
     /**
-     * The snippet of the item.
+     * The snippet in which the resource is defined
      */
     snippet: string;
     /**
@@ -42515,7 +42064,7 @@ export interface GetTcpSettingListData {
      */
     device: string;
     /**
-     * The folder of the item. Default: Shared.
+     * The folder in which the resource is defined
      */
     folder: string;
     /**
@@ -42523,7 +42072,7 @@ export interface GetTcpSettingListData {
      */
     id: string;
     /**
-     * The snippet of the item.
+     * The snippet in which the resource is defined
      */
     snippet: string;
     /**
@@ -42542,7 +42091,7 @@ export interface GetTcpSettingListDataTcp {
      */
     allowChallengeAck: boolean;
     /**
-     * Asymmetric path action
+     * Asymmetric path action. Possible values are `drop` and `bypass`.
      */
     asymmetricPath: string;
     /**
@@ -42558,7 +42107,7 @@ export interface GetTcpSettingListDataTcp {
      */
     dropZeroFlag: boolean;
     /**
-     * SIP TCP cleartext action (`'0'` = Always Off, `'1'` = Always Enabled, `'2'` = Automatically enable proxy when needed)
+     * SIP TCP cleartext action (`'0'` = Always Off, `'1'` = Always Enabled, `'2'` = Automatically enable proxy when needed). Possible values are `0`, `2` and `3`.
      */
     siptcpCleartextProxy: string;
     /**
@@ -42570,7 +42119,7 @@ export interface GetTcpSettingListDataTcp {
      */
     tcpRetransmitScan: boolean;
     /**
-     * Urgent data flag action
+     * Urgent data flag action. Possible values are `clear` and `oobinline`.
      */
     urgentData: string;
 }
@@ -42581,7 +42130,7 @@ export interface GetTcpSettingTcp {
      */
     allowChallengeAck: boolean;
     /**
-     * Asymmetric path action
+     * Asymmetric path action. Possible values are `drop` and `bypass`.
      */
     asymmetricPath: string;
     /**
@@ -42597,7 +42146,7 @@ export interface GetTcpSettingTcp {
      */
     dropZeroFlag: boolean;
     /**
-     * SIP TCP cleartext action (`'0'` = Always Off, `'1'` = Always Enabled, `'2'` = Automatically enable proxy when needed)
+     * SIP TCP cleartext action (`'0'` = Always Off, `'1'` = Always Enabled, `'2'` = Automatically enable proxy when needed). Possible values are `0`, `2` and `3`.
      */
     siptcpCleartextProxy: string;
     /**
@@ -42609,7 +42158,7 @@ export interface GetTcpSettingTcp {
      */
     tcpRetransmitScan: boolean;
     /**
-     * Urgent data flag action
+     * Urgent data flag action. Possible values are `clear` and `oobinline`.
      */
     urgentData: string;
 }
@@ -42624,7 +42173,7 @@ export interface GetTlsServiceProfileListData {
      */
     device: string;
     /**
-     * The folder of the item. Default: Shared.
+     * The folder in which the resource is defined
      */
     folder: string;
     /**
@@ -42632,7 +42181,7 @@ export interface GetTlsServiceProfileListData {
      */
     id: string;
     /**
-     * The name of the item.
+     * TLS service profile name. The value is `muCustomDomainSSLProfile` when it is used on mobile-agent infra settings.
      */
     name: string;
     /**
@@ -42640,7 +42189,7 @@ export interface GetTlsServiceProfileListData {
      */
     protocolSettings: outputs.GetTlsServiceProfileListDataProtocolSettings;
     /**
-     * The snippet of the item.
+     * The snippet in which the resource is defined
      */
     snippet: string;
     /**
@@ -42691,11 +42240,11 @@ export interface GetTlsServiceProfileListDataProtocolSettings {
      */
     keyxchgAlgoRsa: boolean;
     /**
-     * Maximum TLS version
+     * Maximum TLS version. Possible values are `tls1-0`, `tls1-1`, `tls1-2` and `tls1-3`.
      */
     maxVersion: string;
     /**
-     * Minimum TLS version
+     * Minimum TLS version. Possible values are `tls1-0`, `tls1-1`, `tls1-2` and `tls1-3`.
      */
     minVersion: string;
 }
@@ -42742,11 +42291,11 @@ export interface GetTlsServiceProfileProtocolSettings {
      */
     keyxchgAlgoRsa: boolean;
     /**
-     * Maximum TLS version
+     * Maximum TLS version. Possible values are `tls1-0`, `tls1-1`, `tls1-2` and `tls1-3`.
      */
     maxVersion: string;
     /**
-     * Minimum TLS version
+     * Minimum TLS version. Possible values are `tls1-0`, `tls1-1`, `tls1-2` and `tls1-3`.
      */
     minVersion: string;
 }
@@ -42850,6 +42399,28 @@ export interface GetTrafficSteeringRuleListDataActionForwardForward {
 export interface GetTrafficSteeringRuleListDataActionForwardNoPbf {
 }
 
+export interface GetTrustedTenantOverviewPublisher {
+    /**
+     * Pending
+     */
+    pending: number;
+    /**
+     * Total
+     */
+    total: number;
+}
+
+export interface GetTrustedTenantOverviewSubscriber {
+    /**
+     * Pending
+     */
+    pending: number;
+    /**
+     * Total
+     */
+    total: number;
+}
+
 export interface GetTunnelInterfaceIp {
     /**
      * Tunnel Interface IP address(es)
@@ -42911,7 +42482,7 @@ export interface GetTunnelInterfaceListData {
      */
     device: string;
     /**
-     * The folder of the item. Default: Shared.
+     * The folder in which the resource is defined
      */
     folder: string;
     /**
@@ -42935,7 +42506,7 @@ export interface GetTunnelInterfaceListData {
      */
     mtu: number;
     /**
-     * The name of the item.
+     * L3 sub-interface name for tunnel interface
      */
     name: string;
     /**
@@ -42943,7 +42514,7 @@ export interface GetTunnelInterfaceListData {
      */
     netflowProfile: string;
     /**
-     * The snippet of the item.
+     * The snippet in which the resource is defined
      */
     snippet: string;
     /**
@@ -43005,7 +42576,7 @@ export interface GetUpdateScheduleListData {
      */
     device: string;
     /**
-     * The folder of the item. Default: Shared.
+     * The folder in which the resource is defined
      */
     folder: string;
     /**
@@ -43013,7 +42584,7 @@ export interface GetUpdateScheduleListData {
      */
     id: string;
     /**
-     * The snippet of the item.
+     * The snippet in which the resource is defined
      */
     snippet: string;
     /**
@@ -43055,14 +42626,10 @@ export interface GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurring {
     daily: outputs.GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringDaily;
     /**
      * Hourly
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `daily`, `hourly`, `none`, and `weekly`.
      */
     hourly: outputs.GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringHourly;
     /**
      * None
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `daily`, `hourly`, `none`, and `weekly`.
      */
     none: outputs.GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringNone;
     /**
@@ -43075,15 +42642,13 @@ export interface GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurring {
     threshold: number;
     /**
      * Weekly
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `daily`, `hourly`, `none`, and `weekly`.
      */
     weekly: outputs.GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringWeekly;
 }
 
 export interface GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringDaily {
     /**
-     * Action
+     * Action. Possible values are `download-only` and `download-and-install`.
      */
     action: string;
     /**
@@ -43094,7 +42659,7 @@ export interface GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringDaily 
 
 export interface GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringHourly {
     /**
-     * Action
+     * Action. Possible values are `download-only` and `download-and-install`.
      */
     action: string;
     /**
@@ -43108,7 +42673,7 @@ export interface GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringNone {
 
 export interface GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringWeekly {
     /**
-     * Action
+     * Action. Possible values are `download-only` and `download-and-install`.
      */
     action: string;
     /**
@@ -43116,7 +42681,7 @@ export interface GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringWeekly
      */
     at: string;
     /**
-     * Day of week
+     * Day of week. Possible values are `sunday`, `monday`, `tuesday`, `wednesday`, `thursday`, `friday` and `saturday`.
      */
     dayOfWeek: string;
 }
@@ -43135,14 +42700,10 @@ export interface GetUpdateScheduleListDataUpdateScheduleThreatsRecurring {
     daily: outputs.GetUpdateScheduleListDataUpdateScheduleThreatsRecurringDaily;
     /**
      * Every30 mins
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `daily`, `every30Mins`, `hourly`, `none`, and `weekly`.
      */
     every30Mins: outputs.GetUpdateScheduleListDataUpdateScheduleThreatsRecurringEvery30Mins;
     /**
      * Hourly
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `daily`, `every30Mins`, `hourly`, `none`, and `weekly`.
      */
     hourly: outputs.GetUpdateScheduleListDataUpdateScheduleThreatsRecurringHourly;
     /**
@@ -43151,8 +42712,6 @@ export interface GetUpdateScheduleListDataUpdateScheduleThreatsRecurring {
     newAppThreshold: number;
     /**
      * None
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `daily`, `every30Mins`, `hourly`, `none`, and `weekly`.
      */
     none: outputs.GetUpdateScheduleListDataUpdateScheduleThreatsRecurringNone;
     /**
@@ -43165,15 +42724,13 @@ export interface GetUpdateScheduleListDataUpdateScheduleThreatsRecurring {
     threshold: number;
     /**
      * Weekly
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `daily`, `every30Mins`, `hourly`, `none`, and `weekly`.
      */
     weekly: outputs.GetUpdateScheduleListDataUpdateScheduleThreatsRecurringWeekly;
 }
 
 export interface GetUpdateScheduleListDataUpdateScheduleThreatsRecurringDaily {
     /**
-     * Action
+     * Action. Possible values are `download-only` and `download-and-install`.
      */
     action: string;
     /**
@@ -43188,7 +42745,7 @@ export interface GetUpdateScheduleListDataUpdateScheduleThreatsRecurringDaily {
 
 export interface GetUpdateScheduleListDataUpdateScheduleThreatsRecurringEvery30Mins {
     /**
-     * Action
+     * Action. Possible values are `download-only` and `download-and-install`.
      */
     action: string;
     /**
@@ -43203,7 +42760,7 @@ export interface GetUpdateScheduleListDataUpdateScheduleThreatsRecurringEvery30M
 
 export interface GetUpdateScheduleListDataUpdateScheduleThreatsRecurringHourly {
     /**
-     * Action
+     * Action. Possible values are `download-only` and `download-and-install`.
      */
     action: string;
     /**
@@ -43221,7 +42778,7 @@ export interface GetUpdateScheduleListDataUpdateScheduleThreatsRecurringNone {
 
 export interface GetUpdateScheduleListDataUpdateScheduleThreatsRecurringWeekly {
     /**
-     * Action
+     * Action. Possible values are `download-only` and `download-and-install`.
      */
     action: string;
     /**
@@ -43229,7 +42786,7 @@ export interface GetUpdateScheduleListDataUpdateScheduleThreatsRecurringWeekly {
      */
     at: string;
     /**
-     * Day of week
+     * Day of week. Possible values are `sunday`, `monday`, `tuesday`, `wednesday`, `thursday`, `friday` and `saturday`.
      */
     dayOfWeek: string;
     /**
@@ -43252,39 +42809,29 @@ export interface GetUpdateScheduleListDataUpdateScheduleWildfireRecurring {
     every15Mins: outputs.GetUpdateScheduleListDataUpdateScheduleWildfireRecurringEvery15Mins;
     /**
      * Every30 mins
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `every15Mins`, `every30Mins`, `everyHour`, `everyMin`, `none`, and `realTime`.
      */
     every30Mins: outputs.GetUpdateScheduleListDataUpdateScheduleWildfireRecurringEvery30Mins;
     /**
      * Every hour
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `every15Mins`, `every30Mins`, `everyHour`, `everyMin`, `none`, and `realTime`.
      */
     everyHour: outputs.GetUpdateScheduleListDataUpdateScheduleWildfireRecurringEveryHour;
     /**
      * Every min
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `every15Mins`, `every30Mins`, `everyHour`, `everyMin`, `none`, and `realTime`.
      */
     everyMin: outputs.GetUpdateScheduleListDataUpdateScheduleWildfireRecurringEveryMin;
     /**
      * None
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `every15Mins`, `every30Mins`, `everyHour`, `everyMin`, `none`, and `realTime`.
      */
     none: outputs.GetUpdateScheduleListDataUpdateScheduleWildfireRecurringNone;
     /**
      * Real time
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `every15Mins`, `every30Mins`, `everyHour`, `everyMin`, `none`, and `realTime`.
      */
     realTime: outputs.GetUpdateScheduleListDataUpdateScheduleWildfireRecurringRealTime;
 }
 
 export interface GetUpdateScheduleListDataUpdateScheduleWildfireRecurringEvery15Mins {
     /**
-     * Action
+     * Action. Possible values are `download-only` and `download-and-install`.
      */
     action: string;
     /**
@@ -43299,7 +42846,7 @@ export interface GetUpdateScheduleListDataUpdateScheduleWildfireRecurringEvery15
 
 export interface GetUpdateScheduleListDataUpdateScheduleWildfireRecurringEvery30Mins {
     /**
-     * Action
+     * Action. Possible values are `download-only` and `download-and-install`.
      */
     action: string;
     /**
@@ -43314,7 +42861,7 @@ export interface GetUpdateScheduleListDataUpdateScheduleWildfireRecurringEvery30
 
 export interface GetUpdateScheduleListDataUpdateScheduleWildfireRecurringEveryHour {
     /**
-     * Action
+     * Action. Possible values are `download-only` and `download-and-install`.
      */
     action: string;
     /**
@@ -43329,7 +42876,7 @@ export interface GetUpdateScheduleListDataUpdateScheduleWildfireRecurringEveryHo
 
 export interface GetUpdateScheduleListDataUpdateScheduleWildfireRecurringEveryMin {
     /**
-     * Action
+     * Action. Possible values are `download-only` and `download-and-install`.
      */
     action: string;
     /**
@@ -43373,14 +42920,10 @@ export interface GetUpdateScheduleUpdateScheduleAntiVirusRecurring {
     daily: outputs.GetUpdateScheduleUpdateScheduleAntiVirusRecurringDaily;
     /**
      * Hourly
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `daily`, `hourly`, `none`, and `weekly`.
      */
     hourly: outputs.GetUpdateScheduleUpdateScheduleAntiVirusRecurringHourly;
     /**
      * None
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `daily`, `hourly`, `none`, and `weekly`.
      */
     none: outputs.GetUpdateScheduleUpdateScheduleAntiVirusRecurringNone;
     /**
@@ -43393,15 +42936,13 @@ export interface GetUpdateScheduleUpdateScheduleAntiVirusRecurring {
     threshold: number;
     /**
      * Weekly
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `daily`, `hourly`, `none`, and `weekly`.
      */
     weekly: outputs.GetUpdateScheduleUpdateScheduleAntiVirusRecurringWeekly;
 }
 
 export interface GetUpdateScheduleUpdateScheduleAntiVirusRecurringDaily {
     /**
-     * Action
+     * Action. Possible values are `download-only` and `download-and-install`.
      */
     action: string;
     /**
@@ -43412,7 +42953,7 @@ export interface GetUpdateScheduleUpdateScheduleAntiVirusRecurringDaily {
 
 export interface GetUpdateScheduleUpdateScheduleAntiVirusRecurringHourly {
     /**
-     * Action
+     * Action. Possible values are `download-only` and `download-and-install`.
      */
     action: string;
     /**
@@ -43426,7 +42967,7 @@ export interface GetUpdateScheduleUpdateScheduleAntiVirusRecurringNone {
 
 export interface GetUpdateScheduleUpdateScheduleAntiVirusRecurringWeekly {
     /**
-     * Action
+     * Action. Possible values are `download-only` and `download-and-install`.
      */
     action: string;
     /**
@@ -43434,7 +42975,7 @@ export interface GetUpdateScheduleUpdateScheduleAntiVirusRecurringWeekly {
      */
     at: string;
     /**
-     * Day of week
+     * Day of week. Possible values are `sunday`, `monday`, `tuesday`, `wednesday`, `thursday`, `friday` and `saturday`.
      */
     dayOfWeek: string;
 }
@@ -43453,14 +42994,10 @@ export interface GetUpdateScheduleUpdateScheduleThreatsRecurring {
     daily: outputs.GetUpdateScheduleUpdateScheduleThreatsRecurringDaily;
     /**
      * Every30 mins
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `daily`, `every30Mins`, `hourly`, `none`, and `weekly`.
      */
     every30Mins: outputs.GetUpdateScheduleUpdateScheduleThreatsRecurringEvery30Mins;
     /**
      * Hourly
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `daily`, `every30Mins`, `hourly`, `none`, and `weekly`.
      */
     hourly: outputs.GetUpdateScheduleUpdateScheduleThreatsRecurringHourly;
     /**
@@ -43469,8 +43006,6 @@ export interface GetUpdateScheduleUpdateScheduleThreatsRecurring {
     newAppThreshold: number;
     /**
      * None
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `daily`, `every30Mins`, `hourly`, `none`, and `weekly`.
      */
     none: outputs.GetUpdateScheduleUpdateScheduleThreatsRecurringNone;
     /**
@@ -43483,15 +43018,13 @@ export interface GetUpdateScheduleUpdateScheduleThreatsRecurring {
     threshold: number;
     /**
      * Weekly
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `daily`, `every30Mins`, `hourly`, `none`, and `weekly`.
      */
     weekly: outputs.GetUpdateScheduleUpdateScheduleThreatsRecurringWeekly;
 }
 
 export interface GetUpdateScheduleUpdateScheduleThreatsRecurringDaily {
     /**
-     * Action
+     * Action. Possible values are `download-only` and `download-and-install`.
      */
     action: string;
     /**
@@ -43506,7 +43039,7 @@ export interface GetUpdateScheduleUpdateScheduleThreatsRecurringDaily {
 
 export interface GetUpdateScheduleUpdateScheduleThreatsRecurringEvery30Mins {
     /**
-     * Action
+     * Action. Possible values are `download-only` and `download-and-install`.
      */
     action: string;
     /**
@@ -43521,7 +43054,7 @@ export interface GetUpdateScheduleUpdateScheduleThreatsRecurringEvery30Mins {
 
 export interface GetUpdateScheduleUpdateScheduleThreatsRecurringHourly {
     /**
-     * Action
+     * Action. Possible values are `download-only` and `download-and-install`.
      */
     action: string;
     /**
@@ -43539,7 +43072,7 @@ export interface GetUpdateScheduleUpdateScheduleThreatsRecurringNone {
 
 export interface GetUpdateScheduleUpdateScheduleThreatsRecurringWeekly {
     /**
-     * Action
+     * Action. Possible values are `download-only` and `download-and-install`.
      */
     action: string;
     /**
@@ -43547,7 +43080,7 @@ export interface GetUpdateScheduleUpdateScheduleThreatsRecurringWeekly {
      */
     at: string;
     /**
-     * Day of week
+     * Day of week. Possible values are `sunday`, `monday`, `tuesday`, `wednesday`, `thursday`, `friday` and `saturday`.
      */
     dayOfWeek: string;
     /**
@@ -43570,39 +43103,29 @@ export interface GetUpdateScheduleUpdateScheduleWildfireRecurring {
     every15Mins: outputs.GetUpdateScheduleUpdateScheduleWildfireRecurringEvery15Mins;
     /**
      * Every30 mins
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `every15Mins`, `every30Mins`, `everyHour`, `everyMin`, `none`, and `realTime`.
      */
     every30Mins: outputs.GetUpdateScheduleUpdateScheduleWildfireRecurringEvery30Mins;
     /**
      * Every hour
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `every15Mins`, `every30Mins`, `everyHour`, `everyMin`, `none`, and `realTime`.
      */
     everyHour: outputs.GetUpdateScheduleUpdateScheduleWildfireRecurringEveryHour;
     /**
      * Every min
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `every15Mins`, `every30Mins`, `everyHour`, `everyMin`, `none`, and `realTime`.
      */
     everyMin: outputs.GetUpdateScheduleUpdateScheduleWildfireRecurringEveryMin;
     /**
      * None
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `every15Mins`, `every30Mins`, `everyHour`, `everyMin`, `none`, and `realTime`.
      */
     none: outputs.GetUpdateScheduleUpdateScheduleWildfireRecurringNone;
     /**
      * Real time
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `every15Mins`, `every30Mins`, `everyHour`, `everyMin`, `none`, and `realTime`.
      */
     realTime: outputs.GetUpdateScheduleUpdateScheduleWildfireRecurringRealTime;
 }
 
 export interface GetUpdateScheduleUpdateScheduleWildfireRecurringEvery15Mins {
     /**
-     * Action
+     * Action. Possible values are `download-only` and `download-and-install`.
      */
     action: string;
     /**
@@ -43617,7 +43140,7 @@ export interface GetUpdateScheduleUpdateScheduleWildfireRecurringEvery15Mins {
 
 export interface GetUpdateScheduleUpdateScheduleWildfireRecurringEvery30Mins {
     /**
-     * Action
+     * Action. Possible values are `download-only` and `download-and-install`.
      */
     action: string;
     /**
@@ -43632,7 +43155,7 @@ export interface GetUpdateScheduleUpdateScheduleWildfireRecurringEvery30Mins {
 
 export interface GetUpdateScheduleUpdateScheduleWildfireRecurringEveryHour {
     /**
-     * Action
+     * Action. Possible values are `download-only` and `download-and-install`.
      */
     action: string;
     /**
@@ -43647,7 +43170,7 @@ export interface GetUpdateScheduleUpdateScheduleWildfireRecurringEveryHour {
 
 export interface GetUpdateScheduleUpdateScheduleWildfireRecurringEveryMin {
     /**
-     * Action
+     * Action. Possible values are `download-only` and `download-and-install`.
      */
     action: string;
     /**
@@ -43751,7 +43274,7 @@ export interface GetUrlAccessProfileListData {
      */
     device: string;
     /**
-     * The folder of the item. Default: Shared.
+     * The folder in which the resource is defined
      */
     folder: string;
     /**
@@ -43783,7 +43306,7 @@ export interface GetUrlAccessProfileListData {
      */
     mlavCategoryExceptions: string[];
     /**
-     * The name of the item.
+     * Name
      */
     name: string;
     /**
@@ -43795,7 +43318,7 @@ export interface GetUrlAccessProfileListData {
      */
     safeSearchEnforcement: boolean;
     /**
-     * The snippet of the item.
+     * The snippet in which the resource is defined
      */
     snippet: string;
     /**
@@ -43869,7 +43392,7 @@ export interface GetUrlCategoryListData {
      */
     device: string;
     /**
-     * The folder of the item. Default: Shared.
+     * The folder in which the resource is defined
      */
     folder: string;
     /**
@@ -43881,11 +43404,11 @@ export interface GetUrlCategoryListData {
      */
     lists: string[];
     /**
-     * The name of the item.
+     * Name
      */
     name: string;
     /**
-     * The snippet of the item.
+     * The snippet in which the resource is defined
      */
     snippet: string;
     /**
@@ -43893,7 +43416,7 @@ export interface GetUrlCategoryListData {
      */
     tfid: string;
     /**
-     * Type
+     * Type. Possible values are `URL List` and `Category Match`.
      */
     type: string;
 }
@@ -43912,7 +43435,7 @@ export interface GetUseridMatchListListData {
      */
     filter: string;
     /**
-     * The folder of the item. Default: Shared.
+     * The folder in which the resource is defined
      */
     folder: string;
     /**
@@ -43920,7 +43443,7 @@ export interface GetUseridMatchListListData {
      */
     id: string;
     /**
-     * The name of the item.
+     * Name of the userid match list entry
      */
     name: string;
     /**
@@ -43948,7 +43471,7 @@ export interface GetUseridMatchListListData {
      */
     sendToPanorama: boolean;
     /**
-     * The snippet of the item.
+     * The snippet in which the resource is defined
      */
     snippet: string;
     /**
@@ -43967,7 +43490,7 @@ export interface GetVariableListData {
      */
     device: string;
     /**
-     * The folder of the item. Default: Shared.
+     * The folder in which the resource is defined
      */
     folder: string;
     /**
@@ -43975,7 +43498,7 @@ export interface GetVariableListData {
      */
     id: string;
     /**
-     * The name of the item.
+     * The name of the variable
      */
     name: string;
     /**
@@ -43983,7 +43506,7 @@ export interface GetVariableListData {
      */
     overridden: boolean;
     /**
-     * The snippet of the item.
+     * The snippet in which the resource is defined
      */
     snippet: string;
     /**
@@ -43991,13 +43514,28 @@ export interface GetVariableListData {
      */
     tfid: string;
     /**
-     * The variable type
+     * The variable type. Possible values are `percent`, `count`, `ip-netmask`, `zone`, `ip-range`, `ip-wildcard`, `device-priority`, `device-id`, `egress-max`, `as-number`, `fqdn`, `port`, `link-tag`, `group-id`, `rate`, `router-id`, `qos-profile` and `timer`.
      */
     type: string;
     /**
      * The value of the variable
      */
     value: string;
+}
+
+export interface GetVlanInterfaceAdjustTcpMss {
+    /**
+     * Enable TCP MSS adjustment on the interface
+     */
+    enable: boolean;
+    /**
+     * IPv4 MSS adjustment size in bytes
+     */
+    ipv4MssAdjustment: number;
+    /**
+     * IPv6 MSS adjustment size in bytes
+     */
+    ipv6MssAdjustment: number;
 }
 
 export interface GetVlanInterfaceArp {
@@ -44085,6 +43623,10 @@ export interface GetVlanInterfaceIp {
 
 export interface GetVlanInterfaceListData {
     /**
+     * TCP MSS adjustment settings for the interface
+     */
+    adjustTcpMss: outputs.GetVlanInterfaceListDataAdjustTcpMss;
+    /**
      * ARP configuration
      */
     arps: outputs.GetVlanInterfaceListDataArp[];
@@ -44106,12 +43648,10 @@ export interface GetVlanInterfaceListData {
     device: string;
     /**
      * Vlan interfaces DHCP Client Object
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
      */
     dhcpClient: outputs.GetVlanInterfaceListDataDhcpClient;
     /**
-     * The folder of the item. Default: Shared.
+     * The folder in which the resource is defined
      */
     folder: string;
     /**
@@ -44124,8 +43664,6 @@ export interface GetVlanInterfaceListData {
     interfaceManagementProfile: string;
     /**
      * VLAN Interface IP Parent
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
      */
     ips: outputs.GetVlanInterfaceListDataIp[];
     /**
@@ -44133,7 +43671,7 @@ export interface GetVlanInterfaceListData {
      */
     mtu: number;
     /**
-     * The name of the item.
+     * L3 sub-interface name
      */
     name: string;
     /**
@@ -44141,7 +43679,7 @@ export interface GetVlanInterfaceListData {
      */
     netflowProfile: string;
     /**
-     * The snippet of the item.
+     * The snippet in which the resource is defined
      */
     snippet: string;
     /**
@@ -44152,6 +43690,21 @@ export interface GetVlanInterfaceListData {
      * VLAN tag
      */
     vlanTag: string;
+}
+
+export interface GetVlanInterfaceListDataAdjustTcpMss {
+    /**
+     * Enable TCP MSS adjustment on the interface
+     */
+    enable: boolean;
+    /**
+     * IPv4 MSS adjustment size in bytes
+     */
+    ipv4MssAdjustment: number;
+    /**
+     * IPv6 MSS adjustment size in bytes
+     */
+    ipv6MssAdjustment: number;
 }
 
 export interface GetVlanInterfaceListDataArp {
@@ -44243,7 +43796,7 @@ export interface GetVpnSettingListData {
      */
     device: string;
     /**
-     * The folder of the item. Default: Shared.
+     * The folder in which the resource is defined
      */
     folder: string;
     /**
@@ -44251,7 +43804,7 @@ export interface GetVpnSettingListData {
      */
     id: string;
     /**
-     * The snippet of the item.
+     * The snippet in which the resource is defined
      */
     snippet: string;
     /**
@@ -44318,7 +43871,7 @@ export interface GetVulnerabilityProtectionProfileListData {
      */
     device: string;
     /**
-     * The folder of the item. Default: Shared.
+     * The folder in which the resource is defined
      */
     folder: string;
     /**
@@ -44326,7 +43879,7 @@ export interface GetVulnerabilityProtectionProfileListData {
      */
     id: string;
     /**
-     * The name of the item.
+     * Name
      */
     name: string;
     /**
@@ -44334,7 +43887,7 @@ export interface GetVulnerabilityProtectionProfileListData {
      */
     rules: outputs.GetVulnerabilityProtectionProfileListDataRule[];
     /**
-     * The snippet of the item.
+     * The snippet in which the resource is defined
      */
     snippet: string;
     /**
@@ -44353,7 +43906,7 @@ export interface GetVulnerabilityProtectionProfileListDataRule {
      */
     action: outputs.GetVulnerabilityProtectionProfileListDataRuleAction;
     /**
-     * Category
+     * Category. Possible values are `any`, `app-id-change`, `brute-force`, `code-execution`, `code-obfuscation`, `command-execution`, `dos`, `exploit-kit`, `info-leak`, `inline-cloud-exploit`, `insecure-credentials`, `overflow`, `phishing`, `protocol-anomaly`, `scan` and `sql-injection`.
      */
     category: string;
     /**
@@ -44369,7 +43922,7 @@ export interface GetVulnerabilityProtectionProfileListDataRule {
      */
     name: string;
     /**
-     * Packet capture
+     * Packet capture. Possible values are `disable`, `single-packet` and `extended-capture`.
      */
     packetCapture: string;
     /**
@@ -44393,44 +43946,30 @@ export interface GetVulnerabilityProtectionProfileListDataRuleAction {
     alert: outputs.GetVulnerabilityProtectionProfileListDataRuleActionAlert;
     /**
      * Allow
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      */
     allow: outputs.GetVulnerabilityProtectionProfileListDataRuleActionAllow;
     /**
      * vulnerability protection block ip
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      */
     blockIp: outputs.GetVulnerabilityProtectionProfileListDataRuleActionBlockIp;
     /**
      * Default
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      */
     default: outputs.GetVulnerabilityProtectionProfileListDataRuleActionDefault;
     /**
      * Drop
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      */
     drop: outputs.GetVulnerabilityProtectionProfileListDataRuleActionDrop;
     /**
      * Reset both
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      */
     resetBoth: outputs.GetVulnerabilityProtectionProfileListDataRuleActionResetBoth;
     /**
      * Reset client
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      */
     resetClient: outputs.GetVulnerabilityProtectionProfileListDataRuleActionResetClient;
     /**
      * Reset server
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      */
     resetServer: outputs.GetVulnerabilityProtectionProfileListDataRuleActionResetServer;
 }
@@ -44447,7 +43986,7 @@ export interface GetVulnerabilityProtectionProfileListDataRuleActionBlockIp {
      */
     duration: number;
     /**
-     * Track by
+     * Track by. Possible values are `source-and-destination` and `source`.
      */
     trackBy: string;
 }
@@ -44485,7 +44024,7 @@ export interface GetVulnerabilityProtectionProfileListDataThreatException {
      */
     notes: string;
     /**
-     * Packet capture
+     * Packet capture. Possible values are `disable`, `single-packet` and `extended-capture`.
      */
     packetCapture: string;
     /**
@@ -44501,44 +44040,30 @@ export interface GetVulnerabilityProtectionProfileListDataThreatExceptionAction 
     alert: outputs.GetVulnerabilityProtectionProfileListDataThreatExceptionActionAlert;
     /**
      * Allow
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      */
     allow: outputs.GetVulnerabilityProtectionProfileListDataThreatExceptionActionAllow;
     /**
      * vulnerability protection threat exception block ip
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      */
     blockIp: outputs.GetVulnerabilityProtectionProfileListDataThreatExceptionActionBlockIp;
     /**
      * Default
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      */
     default: outputs.GetVulnerabilityProtectionProfileListDataThreatExceptionActionDefault;
     /**
      * Drop
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      */
     drop: outputs.GetVulnerabilityProtectionProfileListDataThreatExceptionActionDrop;
     /**
      * Reset both
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      */
     resetBoth: outputs.GetVulnerabilityProtectionProfileListDataThreatExceptionActionResetBoth;
     /**
      * Reset client
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      */
     resetClient: outputs.GetVulnerabilityProtectionProfileListDataThreatExceptionActionResetClient;
     /**
      * Reset server
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      */
     resetServer: outputs.GetVulnerabilityProtectionProfileListDataThreatExceptionActionResetServer;
 }
@@ -44555,7 +44080,7 @@ export interface GetVulnerabilityProtectionProfileListDataThreatExceptionActionB
      */
     duration: number;
     /**
-     * Track by
+     * Track by. Possible values are `source-and-destination` and `source`.
      */
     trackBy: string;
 }
@@ -44592,7 +44117,7 @@ export interface GetVulnerabilityProtectionProfileListDataThreatExceptionTimeAtt
      */
     threshold: number;
     /**
-     * Track by
+     * Track by. Possible values are `source`, `destination` and `source-and-destination`.
      */
     trackBy: string;
 }
@@ -44603,7 +44128,7 @@ export interface GetVulnerabilityProtectionProfileRule {
      */
     action: outputs.GetVulnerabilityProtectionProfileRuleAction;
     /**
-     * Category
+     * Category. Possible values are `any`, `app-id-change`, `brute-force`, `code-execution`, `code-obfuscation`, `command-execution`, `dos`, `exploit-kit`, `info-leak`, `inline-cloud-exploit`, `insecure-credentials`, `overflow`, `phishing`, `protocol-anomaly`, `scan` and `sql-injection`.
      */
     category: string;
     /**
@@ -44619,7 +44144,7 @@ export interface GetVulnerabilityProtectionProfileRule {
      */
     name: string;
     /**
-     * Packet capture
+     * Packet capture. Possible values are `disable`, `single-packet` and `extended-capture`.
      */
     packetCapture: string;
     /**
@@ -44643,44 +44168,30 @@ export interface GetVulnerabilityProtectionProfileRuleAction {
     alert: outputs.GetVulnerabilityProtectionProfileRuleActionAlert;
     /**
      * Allow
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      */
     allow: outputs.GetVulnerabilityProtectionProfileRuleActionAllow;
     /**
      * vulnerability protection block ip
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      */
     blockIp: outputs.GetVulnerabilityProtectionProfileRuleActionBlockIp;
     /**
      * Default
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      */
     default: outputs.GetVulnerabilityProtectionProfileRuleActionDefault;
     /**
      * Drop
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      */
     drop: outputs.GetVulnerabilityProtectionProfileRuleActionDrop;
     /**
      * Reset both
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      */
     resetBoth: outputs.GetVulnerabilityProtectionProfileRuleActionResetBoth;
     /**
      * Reset client
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      */
     resetClient: outputs.GetVulnerabilityProtectionProfileRuleActionResetClient;
     /**
      * Reset server
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      */
     resetServer: outputs.GetVulnerabilityProtectionProfileRuleActionResetServer;
 }
@@ -44697,7 +44208,7 @@ export interface GetVulnerabilityProtectionProfileRuleActionBlockIp {
      */
     duration: number;
     /**
-     * Track by
+     * Track by. Possible values are `source-and-destination` and `source`.
      */
     trackBy: string;
 }
@@ -44735,7 +44246,7 @@ export interface GetVulnerabilityProtectionProfileThreatException {
      */
     notes: string;
     /**
-     * Packet capture
+     * Packet capture. Possible values are `disable`, `single-packet` and `extended-capture`.
      */
     packetCapture: string;
     /**
@@ -44751,44 +44262,30 @@ export interface GetVulnerabilityProtectionProfileThreatExceptionAction {
     alert: outputs.GetVulnerabilityProtectionProfileThreatExceptionActionAlert;
     /**
      * Allow
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      */
     allow: outputs.GetVulnerabilityProtectionProfileThreatExceptionActionAllow;
     /**
      * vulnerability protection threat exception block ip
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      */
     blockIp: outputs.GetVulnerabilityProtectionProfileThreatExceptionActionBlockIp;
     /**
      * Default
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      */
     default: outputs.GetVulnerabilityProtectionProfileThreatExceptionActionDefault;
     /**
      * Drop
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      */
     drop: outputs.GetVulnerabilityProtectionProfileThreatExceptionActionDrop;
     /**
      * Reset both
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      */
     resetBoth: outputs.GetVulnerabilityProtectionProfileThreatExceptionActionResetBoth;
     /**
      * Reset client
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      */
     resetClient: outputs.GetVulnerabilityProtectionProfileThreatExceptionActionResetClient;
     /**
      * Reset server
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      */
     resetServer: outputs.GetVulnerabilityProtectionProfileThreatExceptionActionResetServer;
 }
@@ -44805,7 +44302,7 @@ export interface GetVulnerabilityProtectionProfileThreatExceptionActionBlockIp {
      */
     duration: number;
     /**
-     * Track by
+     * Track by. Possible values are `source-and-destination` and `source`.
      */
     trackBy: string;
 }
@@ -44842,7 +44339,7 @@ export interface GetVulnerabilityProtectionProfileThreatExceptionTimeAttribute {
      */
     threshold: number;
     /**
-     * Track by
+     * Track by. Possible values are `source`, `destination` and `source-and-destination`.
      */
     trackBy: string;
 }
@@ -44854,8 +44351,6 @@ export interface GetVulnerabilityProtectionSignatureAffectedHost {
     client: boolean;
     /**
      * Server
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `client` and `server`.
      */
     server: boolean;
 }
@@ -44867,38 +44362,26 @@ export interface GetVulnerabilityProtectionSignatureDefaultAction {
     alert: outputs.GetVulnerabilityProtectionSignatureDefaultActionAlert;
     /**
      * Allow
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      */
     allow: outputs.GetVulnerabilityProtectionSignatureDefaultActionAllow;
     /**
      * vulnerability protection bugtraq block ip
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      */
     blockIp: outputs.GetVulnerabilityProtectionSignatureDefaultActionBlockIp;
     /**
      * Drop
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      */
     drop: outputs.GetVulnerabilityProtectionSignatureDefaultActionDrop;
     /**
      * Reset both
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      */
     resetBoth: outputs.GetVulnerabilityProtectionSignatureDefaultActionResetBoth;
     /**
      * Reset client
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      */
     resetClient: outputs.GetVulnerabilityProtectionSignatureDefaultActionResetClient;
     /**
      * Reset server
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      */
     resetServer: outputs.GetVulnerabilityProtectionSignatureDefaultActionResetServer;
 }
@@ -44915,7 +44398,7 @@ export interface GetVulnerabilityProtectionSignatureDefaultActionBlockIp {
      */
     duration: number;
     /**
-     * Track by
+     * Track by. Possible values are `source-and-destination` and `source`.
      */
     trackBy: string;
 }
@@ -44958,11 +44441,11 @@ export interface GetVulnerabilityProtectionSignatureListData {
      */
     device: string;
     /**
-     * Direction
+     * Direction. Possible values are `client2server`, `server2client` and `both`.
      */
     direction: string;
     /**
-     * The folder of the item. Default: Shared.
+     * The folder in which the resource is defined
      */
     folder: string;
     /**
@@ -44974,7 +44457,7 @@ export interface GetVulnerabilityProtectionSignatureListData {
      */
     references: string[];
     /**
-     * Severity
+     * Severity. Possible values are `critical`, `low`, `high`, `medium` and `informational`.
      */
     severity: string;
     /**
@@ -44982,7 +44465,7 @@ export interface GetVulnerabilityProtectionSignatureListData {
      */
     signature: outputs.GetVulnerabilityProtectionSignatureListDataSignature;
     /**
-     * The snippet of the item.
+     * The snippet in which the resource is defined
      */
     snippet: string;
     /**
@@ -44990,7 +44473,7 @@ export interface GetVulnerabilityProtectionSignatureListData {
      */
     tfid: string;
     /**
-     * threat id range <41000-45000> and <6800001-6900000>
+     * threat id range \n\n and \n\n
      */
     threatId: string;
     /**
@@ -45010,8 +44493,6 @@ export interface GetVulnerabilityProtectionSignatureListDataAffectedHost {
     client: boolean;
     /**
      * Server
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `client` and `server`.
      */
     server: boolean;
 }
@@ -45023,38 +44504,26 @@ export interface GetVulnerabilityProtectionSignatureListDataDefaultAction {
     alert: outputs.GetVulnerabilityProtectionSignatureListDataDefaultActionAlert;
     /**
      * Allow
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      */
     allow: outputs.GetVulnerabilityProtectionSignatureListDataDefaultActionAllow;
     /**
      * vulnerability protection bugtraq block ip
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      */
     blockIp: outputs.GetVulnerabilityProtectionSignatureListDataDefaultActionBlockIp;
     /**
      * Drop
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      */
     drop: outputs.GetVulnerabilityProtectionSignatureListDataDefaultActionDrop;
     /**
      * Reset both
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      */
     resetBoth: outputs.GetVulnerabilityProtectionSignatureListDataDefaultActionResetBoth;
     /**
      * Reset client
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      */
     resetClient: outputs.GetVulnerabilityProtectionSignatureListDataDefaultActionResetClient;
     /**
      * Reset server
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      */
     resetServer: outputs.GetVulnerabilityProtectionSignatureListDataDefaultActionResetServer;
 }
@@ -45071,7 +44540,7 @@ export interface GetVulnerabilityProtectionSignatureListDataDefaultActionBlockIp
      */
     duration: number;
     /**
-     * Track by
+     * Track by. Possible values are `source-and-destination` and `source`.
      */
     trackBy: string;
 }
@@ -45095,8 +44564,6 @@ export interface GetVulnerabilityProtectionSignatureListDataSignature {
     combination: outputs.GetVulnerabilityProtectionSignatureListDataSignatureCombination;
     /**
      * vulnerability protection signature standard array
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `combination` and `standard`.
      */
     standards: outputs.GetVulnerabilityProtectionSignatureListDataSignatureStandard[];
 }
@@ -45148,7 +44615,7 @@ export interface GetVulnerabilityProtectionSignatureListDataSignatureCombination
      */
     threshold: number;
     /**
-     * Track by
+     * Track by. Possible values are `source-and-destination`, `source` and `destination`.
      */
     trackBy: string;
 }
@@ -45171,7 +44638,7 @@ export interface GetVulnerabilityProtectionSignatureListDataSignatureStandard {
      */
     orderFree: boolean;
     /**
-     * Scope
+     * Scope. Possible values are `protocol-data-unit` and `session`.
      */
     scope: string;
 }
@@ -45336,8 +44803,6 @@ export interface GetVulnerabilityProtectionSignatureSignature {
     combination: outputs.GetVulnerabilityProtectionSignatureSignatureCombination;
     /**
      * vulnerability protection signature standard array
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `combination` and `standard`.
      */
     standards: outputs.GetVulnerabilityProtectionSignatureSignatureStandard[];
 }
@@ -45389,7 +44854,7 @@ export interface GetVulnerabilityProtectionSignatureSignatureCombinationTimeAttr
      */
     threshold: number;
     /**
-     * Track by
+     * Track by. Possible values are `source-and-destination`, `source` and `destination`.
      */
     trackBy: string;
 }
@@ -45412,7 +44877,7 @@ export interface GetVulnerabilityProtectionSignatureSignatureStandard {
      */
     orderFree: boolean;
     /**
-     * Scope
+     * Scope. Possible values are `protocol-data-unit` and `session`.
      */
     scope: string;
 }
@@ -45580,7 +45045,7 @@ export interface GetWildfireAntiVirusProfileListData {
      */
     device: string;
     /**
-     * The folder of the item. Default: Shared.
+     * The folder in which the resource is defined
      */
     folder: string;
     /**
@@ -45592,7 +45057,7 @@ export interface GetWildfireAntiVirusProfileListData {
      */
     mlavExceptions: outputs.GetWildfireAntiVirusProfileListDataMlavException[];
     /**
-     * The name of the item.
+     * Name
      */
     name: string;
     /**
@@ -45604,7 +45069,7 @@ export interface GetWildfireAntiVirusProfileListData {
      */
     rules: outputs.GetWildfireAntiVirusProfileListDataRule[];
     /**
-     * The snippet of the item.
+     * The snippet in which the resource is defined
      */
     snippet: string;
     /**
@@ -45634,7 +45099,7 @@ export interface GetWildfireAntiVirusProfileListDataMlavException {
 
 export interface GetWildfireAntiVirusProfileListDataRule {
     /**
-     * Analysis
+     * Analysis. Possible values are `public-cloud` and `private-cloud`.
      */
     analysis: string;
     /**
@@ -45642,7 +45107,7 @@ export interface GetWildfireAntiVirusProfileListDataRule {
      */
     applications: string[];
     /**
-     * Direction
+     * Direction. Possible values are `download`, `upload` and `both`.
      */
     direction: string;
     /**
@@ -45683,7 +45148,7 @@ export interface GetWildfireAntiVirusProfileMlavException {
 
 export interface GetWildfireAntiVirusProfileRule {
     /**
-     * Analysis
+     * Analysis. Possible values are `public-cloud` and `private-cloud`.
      */
     analysis: string;
     /**
@@ -45691,7 +45156,7 @@ export interface GetWildfireAntiVirusProfileRule {
      */
     applications: string[];
     /**
-     * Direction
+     * Direction. Possible values are `download`, `upload` and `both`.
      */
     direction: string;
     /**
@@ -45752,7 +45217,7 @@ export interface GetZoneListData {
      */
     enableUserIdentification: boolean;
     /**
-     * The folder of the item. Default: Shared.
+     * Folder
      */
     folder: string;
     /**
@@ -45760,7 +45225,7 @@ export interface GetZoneListData {
      */
     id: string;
     /**
-     * The name of the item.
+     * Alphanumeric string begin with letter: [0-9a-zA-Z._-]
      */
     name: string;
     /**
@@ -45768,7 +45233,7 @@ export interface GetZoneListData {
      */
     network: outputs.GetZoneListDataNetwork;
     /**
-     * The snippet of the item.
+     * The snippet in which the resource is defined
      */
     snippet: string;
     /**
@@ -46217,7 +45682,7 @@ export interface GetZoneProtectionProfileListData {
      * Determine whether to drop or bypass packets that contain out-of-sync ACKs or out-of-window sequence numbers:
      * * `global` — Use system-wide setting that is assigned through TCP Settings or the CLI.
      * * `drop` — Drop packets that contain an asymmetric path.
-     * * `bypass` — Bypass scanning on packets that contain an asymmetric path.
+     * * `bypass` — Bypass scanning on packets that contain an asymmetric path. Possible values are `global`, `drop` and `bypass`.
      */
     asymmetricPath: string;
     /**
@@ -46226,8 +45691,6 @@ export interface GetZoneProtectionProfileListData {
     description: string;
     /**
      * The device in which the resource is defined
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     device: string;
     /**
@@ -46240,8 +45703,6 @@ export interface GetZoneProtectionProfileListData {
     flood: outputs.GetZoneProtectionProfileListDataFlood;
     /**
      * The folder in which the resource is defined
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     folder: string;
     /**
@@ -46288,7 +45749,7 @@ export interface GetZoneProtectionProfileListData {
      * MPTCP is an extension of TCP that allows a client to maintain a connection by simultaneously using multiple paths to connect to the destination host. By default, MPTCP support is disabled, based on the global MPTCP setting.  Review or adjust the MPTCP settings for the security zones associated with this profile:
      * * `no` — Enable MPTCP support (do not strip the MPTCP option).
      * * `yes` — Disable MPTCP support (strip the MPTCP option). With this configured, MPTCP connections are converted to standard TCP connections, as MPTCP is backwards compatible with TCP.
-     * * `global` — Support MPTCP based on the global MPTCP setting. By default, the global MPTCP setting is set to yes so that MPTCP is disabled (the MPTCP option is stripped from the packet).
+     * * `global` — Support MPTCP based on the global MPTCP setting. By default, the global MPTCP setting is set to yes so that MPTCP is disabled (the MPTCP option is stripped from the packet). Possible values are `no`, `yes` and `global`.
      */
     mptcpOptionStrip: string;
     /**
@@ -46307,7 +45768,7 @@ export interface GetZoneProtectionProfileListData {
      * Determine whether to reject the packet if the first packet for the TCP session setup is not a SYN packet:
      * * `global` — Use system-wide setting that is assigned through the CLI.
      * * `yes` — Reject non-SYN TCP.
-     * * `no` — Accept non-SYN TCP.
+     * * `no` — Accept non-SYN TCP. Possible values are `global`, `yes` and `no`.
      */
     rejectNonSynTcp: string;
     /**
@@ -46324,8 +45785,6 @@ export interface GetZoneProtectionProfileListData {
     securityDiscard: boolean;
     /**
      * The snippet in which the resource is defined
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     snippet: string;
     /**
@@ -46718,7 +46177,7 @@ export interface GetZoneProtectionProfileListDataNonIpProtocol {
     /**
      * Specify the type of list you are creating for protocol protection:
      * * Include List—Only the protocols on the list are allowed—in addition to IPv4 (0x0800), IPv6 (0x86DD), ARP (0x0806), and VLAN tagged frames (0x8100). All other protocols are implicitly denied (blocked).
-     * * Exclude List—Only the protocols on the list are denied; all other protocols are implicitly allowed. You cannot exclude IPv4 (0x0800), IPv6 (0x86DD), ARP (0x0806), or VLAN tagged frames (0x8100).
+     * * Exclude List—Only the protocols on the list are denied; all other protocols are implicitly allowed. You cannot exclude IPv4 (0x0800), IPv6 (0x86DD), ARP (0x0806), or VLAN tagged frames (0x8100). Possible values are `exclude` and `include`.
      */
     listType: string;
     /**
@@ -46759,7 +46218,7 @@ export interface GetZoneProtectionProfileListDataScan {
      * * "8001" - TCP Port Scan
      * * "8002" - Host Sweep
      * * "8003" - UDP Port Scan
-     * * "8006" - Port Scan
+     * * "8006" - Port Scan. Possible values are `8001`, `8002`, `8003` and `8006`.
      */
     name: string;
     /**
@@ -46802,7 +46261,7 @@ export interface GetZoneProtectionProfileListDataScanActionBlockIp {
      */
     duration: number;
     /**
-     * Track by
+     * Track by. Possible values are `source-and-destination` and `source`.
      */
     trackBy: string;
 }
@@ -46826,7 +46285,7 @@ export interface GetZoneProtectionProfileNonIpProtocol {
     /**
      * Specify the type of list you are creating for protocol protection:
      * * Include List—Only the protocols on the list are allowed—in addition to IPv4 (0x0800), IPv6 (0x86DD), ARP (0x0806), and VLAN tagged frames (0x8100). All other protocols are implicitly denied (blocked).
-     * * Exclude List—Only the protocols on the list are denied; all other protocols are implicitly allowed. You cannot exclude IPv4 (0x0800), IPv6 (0x86DD), ARP (0x0806), or VLAN tagged frames (0x8100).
+     * * Exclude List—Only the protocols on the list are denied; all other protocols are implicitly allowed. You cannot exclude IPv4 (0x0800), IPv6 (0x86DD), ARP (0x0806), or VLAN tagged frames (0x8100). Possible values are `exclude` and `include`.
      */
     listType: string;
     /**
@@ -46867,7 +46326,7 @@ export interface GetZoneProtectionProfileScan {
      * * "8001" - TCP Port Scan
      * * "8002" - Host Sweep
      * * "8003" - UDP Port Scan
-     * * "8006" - Port Scan
+     * * "8006" - Port Scan. Possible values are `8001`, `8002`, `8003` and `8006`.
      */
     name: string;
     /**
@@ -46910,7 +46369,7 @@ export interface GetZoneProtectionProfileScanActionBlockIp {
      */
     duration: number;
     /**
-     * Track by
+     * Track by. Possible values are `source-and-destination` and `source`.
      */
     trackBy: string;
 }
@@ -46970,7 +46429,7 @@ export interface HipObjectAntiMalwareCriteria {
      */
     productVersion?: outputs.HipObjectAntiMalwareCriteriaProductVersion;
     /**
-     * real time protection
+     * real time protection. Possible values are `no`, `yes` and `not-available`.
      */
     realTimeProtection?: string;
     /**
@@ -46986,14 +46445,10 @@ export interface HipObjectAntiMalwareCriteriaLastScanTime {
     notAvailable?: outputs.HipObjectAntiMalwareCriteriaLastScanTimeNotAvailable;
     /**
      * Not within
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `notAvailable`, `notWithin`, and `within`.
      */
     notWithin?: outputs.HipObjectAntiMalwareCriteriaLastScanTimeNotWithin;
     /**
      * Within
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `notAvailable`, `notWithin`, and `within`.
      */
     within?: outputs.HipObjectAntiMalwareCriteriaLastScanTimeWithin;
 }
@@ -47008,8 +46463,6 @@ export interface HipObjectAntiMalwareCriteriaLastScanTimeNotWithin {
     days?: number;
     /**
      * specify time in hours
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `days` and `hours`.
      */
     hours?: number;
 }
@@ -47021,8 +46474,6 @@ export interface HipObjectAntiMalwareCriteriaLastScanTimeWithin {
     days?: number;
     /**
      * specify time in hours
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `days` and `hours`.
      */
     hours?: number;
 }
@@ -47034,50 +46485,34 @@ export interface HipObjectAntiMalwareCriteriaProductVersion {
     contains?: string;
     /**
      * Greater equal
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `contains`, `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`, `notWithin`, and `within`.
      */
     greaterEqual?: string;
     /**
      * Greater than
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `contains`, `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`, `notWithin`, and `within`.
      */
     greaterThan?: string;
     /**
      * Is
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `contains`, `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`, `notWithin`, and `within`.
      */
     is?: string;
     /**
      * Is not
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `contains`, `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`, `notWithin`, and `within`.
      */
     isNot?: string;
     /**
      * Less equal
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `contains`, `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`, `notWithin`, and `within`.
      */
     lessEqual?: string;
     /**
      * Less than
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `contains`, `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`, `notWithin`, and `within`.
      */
     lessThan?: string;
     /**
      * Not within
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `contains`, `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`, `notWithin`, and `within`.
      */
     notWithin?: outputs.HipObjectAntiMalwareCriteriaProductVersionNotWithin;
     /**
      * Within
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `contains`, `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`, `notWithin`, and `within`.
      */
     within?: outputs.HipObjectAntiMalwareCriteriaProductVersionWithin;
 }
@@ -47103,8 +46538,6 @@ export interface HipObjectAntiMalwareCriteriaVirdefVersion {
     notWithin?: outputs.HipObjectAntiMalwareCriteriaVirdefVersionNotWithin;
     /**
      * Within
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `notWithin` and `within`.
      */
     within?: outputs.HipObjectAntiMalwareCriteriaVirdefVersionWithin;
 }
@@ -47116,8 +46549,6 @@ export interface HipObjectAntiMalwareCriteriaVirdefVersionNotWithin {
     days?: number;
     /**
      * specify versions range
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `days` and `versions`.
      */
     versions?: number;
 }
@@ -47129,8 +46560,6 @@ export interface HipObjectAntiMalwareCriteriaVirdefVersionWithin {
     days?: number;
     /**
      * specify versions range
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `days` and `versions`.
      */
     versions?: number;
 }
@@ -47289,7 +46718,7 @@ export interface HipObjectDataLossPrevention {
 
 export interface HipObjectDataLossPreventionCriteria {
     /**
-     * is enabled
+     * is enabled. Possible values are `no`, `yes` and `not-available`.
      */
     isEnabled?: string;
     /**
@@ -47342,14 +46771,10 @@ export interface HipObjectDiskBackupCriteriaLastBackupTime {
     notAvailable?: outputs.HipObjectDiskBackupCriteriaLastBackupTimeNotAvailable;
     /**
      * Not within
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `notAvailable`, `notWithin`, and `within`.
      */
     notWithin?: outputs.HipObjectDiskBackupCriteriaLastBackupTimeNotWithin;
     /**
      * Within
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `notAvailable`, `notWithin`, and `within`.
      */
     within?: outputs.HipObjectDiskBackupCriteriaLastBackupTimeWithin;
 }
@@ -47364,8 +46789,6 @@ export interface HipObjectDiskBackupCriteriaLastBackupTimeNotWithin {
     days?: number;
     /**
      * specify time in hours
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `days` and `hours`.
      */
     hours?: number;
 }
@@ -47377,8 +46800,6 @@ export interface HipObjectDiskBackupCriteriaLastBackupTimeWithin {
     days?: number;
     /**
      * specify time in hours
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `days` and `hours`.
      */
     hours?: number;
 }
@@ -47433,13 +46854,11 @@ export interface HipObjectDiskEncryptionCriteriaEncryptedLocation {
 
 export interface HipObjectDiskEncryptionCriteriaEncryptedLocationEncryptionState {
     /**
-     * Is
+     * Is. Possible values are `encrypted`, `unencrypted`, `partial` and `unknown`.
      */
     is?: string;
     /**
-     * Is not
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `is` and `isNot`.
+     * Is not. Possible values are `encrypted`, `unencrypted`, `partial` and `unknown`.
      */
     isNot?: string;
 }
@@ -47472,7 +46891,7 @@ export interface HipObjectFirewall {
 
 export interface HipObjectFirewallCriteria {
     /**
-     * is enabled
+     * is enabled. Possible values are `no`, `yes` and `not-available`.
      */
     isEnabled?: string;
     /**
@@ -47537,14 +46956,10 @@ export interface HipObjectHostInfoCriteriaClientVersion {
     contains?: string;
     /**
      * Is
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
      */
     is?: string;
     /**
      * Is not
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
      */
     isNot?: string;
 }
@@ -47556,14 +46971,10 @@ export interface HipObjectHostInfoCriteriaDomain {
     contains?: string;
     /**
      * Is
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
      */
     is?: string;
     /**
      * Is not
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
      */
     isNot?: string;
 }
@@ -47575,14 +46986,10 @@ export interface HipObjectHostInfoCriteriaHostId {
     contains?: string;
     /**
      * Is
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
      */
     is?: string;
     /**
      * Is not
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
      */
     isNot?: string;
 }
@@ -47594,14 +47001,10 @@ export interface HipObjectHostInfoCriteriaHostName {
     contains?: string;
     /**
      * Is
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
      */
     is?: string;
     /**
      * Is not
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
      */
     isNot?: string;
 }
@@ -47643,14 +47046,10 @@ export interface HipObjectHostInfoCriteriaSerialNumber {
     contains?: string;
     /**
      * Is
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
      */
     is?: string;
     /**
      * Is not
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
      */
     isNot?: string;
 }
@@ -47723,8 +47122,6 @@ export interface HipObjectMobileDeviceCriteriaApplicationsHasMalware {
     no?: outputs.HipObjectMobileDeviceCriteriaApplicationsHasMalwareNo;
     /**
      * Yes
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `no` and `yes`.
      */
     yes?: outputs.HipObjectMobileDeviceCriteriaApplicationsHasMalwareYes;
 }
@@ -47776,14 +47173,10 @@ export interface HipObjectMobileDeviceCriteriaImei {
     contains?: string;
     /**
      * Is
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
      */
     is?: string;
     /**
      * Is not
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
      */
     isNot?: string;
 }
@@ -47795,8 +47188,6 @@ export interface HipObjectMobileDeviceCriteriaLastCheckinTime {
     notWithin?: outputs.HipObjectMobileDeviceCriteriaLastCheckinTimeNotWithin;
     /**
      * Within
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `notWithin` and `within`.
      */
     within?: outputs.HipObjectMobileDeviceCriteriaLastCheckinTimeWithin;
 }
@@ -47822,14 +47213,10 @@ export interface HipObjectMobileDeviceCriteriaModel {
     contains?: string;
     /**
      * Is
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
      */
     is?: string;
     /**
      * Is not
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
      */
     isNot?: string;
 }
@@ -47841,14 +47228,10 @@ export interface HipObjectMobileDeviceCriteriaPhoneNumber {
     contains?: string;
     /**
      * Is
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
      */
     is?: string;
     /**
      * Is not
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
      */
     isNot?: string;
 }
@@ -47860,14 +47243,10 @@ export interface HipObjectMobileDeviceCriteriaTag {
     contains?: string;
     /**
      * Is
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
      */
     is?: string;
     /**
      * Is not
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
      */
     isNot?: string;
 }
@@ -47893,8 +47272,6 @@ export interface HipObjectNetworkInfoCriteriaNetwork {
     is?: outputs.HipObjectNetworkInfoCriteriaNetworkIs;
     /**
      * Is not
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `is` and `isNot`.
      */
     isNot?: outputs.HipObjectNetworkInfoCriteriaNetworkIsNot;
 }
@@ -47906,14 +47283,10 @@ export interface HipObjectNetworkInfoCriteriaNetworkIs {
     mobile?: outputs.HipObjectNetworkInfoCriteriaNetworkIsMobile;
     /**
      * Unknown
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `mobile`, `unknown`, and `wifi`.
      */
     unknown?: outputs.HipObjectNetworkInfoCriteriaNetworkIsUnknown;
     /**
      * Wifi
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `mobile`, `unknown`, and `wifi`.
      */
     wifi?: outputs.HipObjectNetworkInfoCriteriaNetworkIsWifi;
 }
@@ -47932,20 +47305,14 @@ export interface HipObjectNetworkInfoCriteriaNetworkIsNot {
     ethernet?: outputs.HipObjectNetworkInfoCriteriaNetworkIsNotEthernet;
     /**
      * Mobile
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `ethernet`, `mobile`, `unknown`, and `wifi`.
      */
     mobile?: outputs.HipObjectNetworkInfoCriteriaNetworkIsNotMobile;
     /**
      * Unknown
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `ethernet`, `mobile`, `unknown`, and `wifi`.
      */
     unknown?: outputs.HipObjectNetworkInfoCriteriaNetworkIsNotUnknown;
     /**
      * Wifi
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `ethernet`, `mobile`, `unknown`, and `wifi`.
      */
     wifi?: outputs.HipObjectNetworkInfoCriteriaNetworkIsNotWifi;
 }
@@ -47997,7 +47364,7 @@ export interface HipObjectPatchManagement {
 
 export interface HipObjectPatchManagementCriteria {
     /**
-     * is enabled
+     * is enabled. Possible values are `no`, `yes` and `not-available`.
      */
     isEnabled?: string;
     /**
@@ -48012,7 +47379,7 @@ export interface HipObjectPatchManagementCriteria {
 
 export interface HipObjectPatchManagementCriteriaMissingPatches {
     /**
-     * Check
+     * Check. Possible values are `has-any`, `has-none` and `has-all`.
      */
     check: string;
     /**
@@ -48032,32 +47399,22 @@ export interface HipObjectPatchManagementCriteriaMissingPatchesSeverity {
     greaterEqual?: number;
     /**
      * Greater than
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, and `lessThan`.
      */
     greaterThan?: number;
     /**
      * Is
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, and `lessThan`.
      */
     is?: number;
     /**
      * Is not
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, and `lessThan`.
      */
     isNot?: number;
     /**
      * Less equal
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, and `lessThan`.
      */
     lessEqual?: number;
     /**
      * Less than
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, and `lessThan`.
      */
     lessThan?: number;
 }
@@ -48094,7 +47451,7 @@ export interface HttpHeaderProfileHttpHeaderInsertionType {
      */
     headers: outputs.HttpHeaderProfileHttpHeaderInsertionTypeHeader[];
     /**
-     * The HTTP header insertion type
+     * The HTTP header insertion type. Possible values are `Custom`, `Dropbox Network Control`, `Dynamic Fields`, `Google Apps Access Control`, `Microsoft Office365 Tenant Restrictions` and `Youtube Safe Search`.
      */
     name: string;
 }
@@ -48964,7 +48321,7 @@ export interface HttpServerProfileServer {
      */
     certificateProfile: string;
     /**
-     * HTTP operation to perform
+     * HTTP operation to perform. Possible values are `GET`, `POST`, `PUT` and `DELETE`.
      */
     httpMethod?: string;
     /**
@@ -48976,11 +48333,11 @@ export interface HttpServerProfileServer {
      */
     port?: number;
     /**
-     * HTTP server protocol
+     * HTTP server protocol. Possible values are `HTTP` and `HTTPS`.
      */
     protocol?: string;
     /**
-     * HTTP server TLS version
+     * HTTP server TLS version. Possible values are `1.0`, `1.1`, `1.2` and `1.3`.
      */
     tlsVersion?: string;
 }
@@ -48992,20 +48349,14 @@ export interface IkeCryptoProfileLifetime {
     days?: number;
     /**
      * specify lifetime in hours
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `days`, `hours`, `minutes`, and `seconds`.
      */
     hours?: number;
     /**
      * specify lifetime in minutes
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `days`, `hours`, `minutes`, and `seconds`.
      */
     minutes?: number;
     /**
      * specify lifetime in seconds
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `days`, `hours`, `minutes`, and `seconds`.
      */
     seconds?: number;
 }
@@ -49017,8 +48368,6 @@ export interface IkeGatewayAuthentication {
     certificate?: outputs.IkeGatewayAuthenticationCertificate;
     /**
      * Pre shared key
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `certificate` and `preSharedKey`.
      */
     preSharedKey?: outputs.IkeGatewayAuthenticationPreSharedKey;
 }
@@ -49089,14 +48438,10 @@ export interface IkeGatewayPeerAddress {
     dynamic?: outputs.IkeGatewayPeerAddressDynamic;
     /**
      * peer gateway FQDN name
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `dynamic`, `fqdn`, and `ip`.
      */
     fqdn?: string;
     /**
      * peer gateway has static IP address
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `dynamic`, `fqdn`, and `ip`.
      */
     ip?: string;
 }
@@ -49110,7 +48455,7 @@ export interface IkeGatewayPeerId {
      */
     id?: string;
     /**
-     * Type
+     * Type. Possible values are `ipaddr`, `keyid`, `fqdn` and `ufqdn`.
      */
     type?: string;
 }
@@ -49125,7 +48470,7 @@ export interface IkeGatewayProtocol {
      */
     ikev2?: outputs.IkeGatewayProtocolIkev2;
     /**
-     * Version
+     * Version. Possible values are `ikev2-preferred`, `ikev1` and `ikev2`.
      */
     version: string;
 }
@@ -49204,7 +48549,7 @@ export interface InterfaceManagementProfilePermittedIp {
 
 export interface IpsecCryptoProfileAh {
     /**
-     * Authentication
+     * Authentication. Possible values are `md5`, `sha1`, `sha256`, `sha384` and `sha512`.
      */
     authentications: string[];
 }
@@ -49215,7 +48560,7 @@ export interface IpsecCryptoProfileEsp {
      */
     authentications: string[];
     /**
-     * Encryption algorithm
+     * Encryption algorithm. Possible values are `des`, `3des`, `aes-128-cbc`, `aes-192-cbc`, `aes-256-cbc`, `aes-128-gcm`, `aes-256-gcm` and `null`.
      */
     encryptions: string[];
 }
@@ -49227,20 +48572,14 @@ export interface IpsecCryptoProfileLifesize {
     gb?: number;
     /**
      * specify lifesize in kilobytes(KB)
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `gb`, `kb`, `mb`, and `tb`.
      */
     kb?: number;
     /**
      * specify lifesize in megabytes(MB)
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `gb`, `kb`, `mb`, and `tb`.
      */
     mb?: number;
     /**
      * specify lifesize in terabytes(TB)
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `gb`, `kb`, `mb`, and `tb`.
      */
     tb?: number;
 }
@@ -49252,20 +48591,14 @@ export interface IpsecCryptoProfileLifetime {
     days?: number;
     /**
      * specify lifetime in hours
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `days`, `hours`, `minutes`, and `seconds`.
      */
     hours?: number;
     /**
      * specify lifetime in minutes
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `days`, `hours`, `minutes`, and `seconds`.
      */
     minutes?: number;
     /**
      * specify lifetime in seconds
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `days`, `hours`, `minutes`, and `seconds`.
      */
     seconds?: number;
 }
@@ -49322,14 +48655,10 @@ export interface IpsecTunnelAutoKeyProxyIdProtocol {
     number?: number;
     /**
      * IPv4 type of proxyId protocol values for TCP protocol
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `number`, `tcp`, and `udp`.
      */
     tcp?: outputs.IpsecTunnelAutoKeyProxyIdProtocolTcp;
     /**
      * IPv6 type of proxyId protocol values for UDP protocol
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `number`, `tcp`, and `udp`.
      */
     udp?: outputs.IpsecTunnelAutoKeyProxyIdProtocolUdp;
 }
@@ -49382,14 +48711,10 @@ export interface IpsecTunnelAutoKeyProxyIdV6Protocol {
     number?: number;
     /**
      * IPv6 type of proxyId protocol values for TCP protocol
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `number`, `tcp`, and `udp`.
      */
     tcp?: outputs.IpsecTunnelAutoKeyProxyIdV6ProtocolTcp;
     /**
      * IPv6 type of proxyId protocol values for UDP protocol
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `number`, `tcp`, and `udp`.
      */
     udp?: outputs.IpsecTunnelAutoKeyProxyIdV6ProtocolUdp;
 }
@@ -49444,6 +48769,21 @@ export interface KerberosServerProfileServer {
      * The Kerberos server port
      */
     port?: number;
+}
+
+export interface Layer3SubinterfaceAdjustTcpMss {
+    /**
+     * Enable TCP MSS adjustment on the interface
+     */
+    enable?: boolean;
+    /**
+     * IPv4 MSS adjustment size in bytes
+     */
+    ipv4MssAdjustment?: number;
+    /**
+     * IPv6 MSS adjustment size in bytes
+     */
+    ipv6MssAdjustment?: number;
 }
 
 export interface Layer3SubinterfaceArp {
@@ -49525,6 +48865,59 @@ export interface Layer3SubinterfaceIp {
     name: string;
 }
 
+export interface Layer3SubinterfacePppoe {
+    /**
+     * Access concentrator
+     */
+    accessConcentrator?: string;
+    /**
+     * Authentication protocol. Possible values are `CHAP`, `PAP` and `auto`.
+     */
+    authentication?: string;
+    /**
+     * Metric of the default route created
+     */
+    defaultRouteMetric: number;
+    /**
+     * Enable PPPoE on the interface
+     */
+    enable: boolean;
+    /**
+     * Passive
+     */
+    passive?: outputs.Layer3SubinterfacePppoePassive;
+    /**
+     * Password
+     */
+    password: string;
+    /**
+     * Service
+     */
+    service?: string;
+    /**
+     * Static address
+     */
+    staticAddress?: outputs.Layer3SubinterfacePppoeStaticAddress;
+    /**
+     * Username
+     */
+    username: string;
+}
+
+export interface Layer3SubinterfacePppoePassive {
+    /**
+     * Passive Mode enabled
+     */
+    enable: boolean;
+}
+
+export interface Layer3SubinterfacePppoeStaticAddress {
+    /**
+     * Static IP address
+     */
+    ip: string;
+}
+
 export interface LdapServerProfileServer {
     /**
      * The LDAP server IP address
@@ -49603,7 +48996,7 @@ export interface LogForwardingProfileMatchList {
      */
     filter: string;
     /**
-     * Log type
+     * Log type. Possible values are `traffic`, `threat`, `wildfire`, `url`, `data`, `tunnel`, `auth`, `decryption`, `dns-security`, `gtp` and `sctp`.
      */
     logType: string;
     /**
@@ -49941,8 +49334,6 @@ export interface LogicalRouterVrfBgpAggregateRouteType {
     ipv4?: outputs.LogicalRouterVrfBgpAggregateRouteTypeIpv4;
     /**
      * Ipv6
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `ipv4` and `ipv6`.
      */
     ipv6?: outputs.LogicalRouterVrfBgpAggregateRouteTypeIpv6;
 }
@@ -50251,8 +49642,6 @@ export interface LogicalRouterVrfBgpPeerGroupPeerInherit {
     no?: outputs.LogicalRouterVrfBgpPeerGroupPeerInheritNo;
     /**
      * Yes
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `no` and `yes`.
      */
     yes?: outputs.LogicalRouterVrfBgpPeerGroupPeerInheritYes;
 }
@@ -50311,8 +49700,6 @@ export interface LogicalRouterVrfBgpPeerGroupPeerPeerAddress {
     fqdn?: string;
     /**
      * Ip
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `fqdn` and `ip`.
      */
     ip?: string;
 }
@@ -50335,20 +49722,14 @@ export interface LogicalRouterVrfBgpPeerGroupType {
     ebgp?: outputs.LogicalRouterVrfBgpPeerGroupTypeEbgp;
     /**
      * Ebgp confed
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `ebgp`, `ebgpConfed`, `ibgp`, and `ibgpConfed`.
      */
     ebgpConfed?: outputs.LogicalRouterVrfBgpPeerGroupTypeEbgpConfed;
     /**
      * Ibgp
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `ebgp`, `ebgpConfed`, `ibgp`, and `ibgpConfed`.
      */
     ibgp?: outputs.LogicalRouterVrfBgpPeerGroupTypeIbgp;
     /**
      * Ibgp confed
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `ebgp`, `ebgpConfed`, `ibgp`, and `ibgpConfed`.
      */
     ibgpConfed?: outputs.LogicalRouterVrfBgpPeerGroupTypeIbgpConfed;
 }
@@ -50471,7 +49852,7 @@ export interface LogicalRouterVrfBgpPolicyAggregationAddressAdvertiseFilterMatch
      */
     addressPrefixes?: outputs.LogicalRouterVrfBgpPolicyAggregationAddressAdvertiseFilterMatchAddressPrefix[];
     /**
-     * Afi
+     * Afi. Possible values are `ip` and `ipv6`.
      */
     afi?: string;
     /**
@@ -50499,11 +49880,11 @@ export interface LogicalRouterVrfBgpPolicyAggregationAddressAdvertiseFilterMatch
      */
     nexthops?: string[];
     /**
-     * Route table
+     * Route table. Possible values are `unicast`, `multicast` and `both`.
      */
     routeTable?: string;
     /**
-     * Safi
+     * Safi. Possible values are `ip` and `ipv6`.
      */
     safi?: string;
 }
@@ -50570,7 +49951,7 @@ export interface LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttrib
      */
     nexthop?: string;
     /**
-     * Origin
+     * Origin. Possible values are `igp`, `egp` and `incomplete`.
      */
     origin?: string;
     /**
@@ -50586,20 +49967,14 @@ export interface LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttrib
     none?: outputs.LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesAsPathNone;
     /**
      * Prepend
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
      */
     prepend?: number;
     /**
      * Remove
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
      */
     remove?: outputs.LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesAsPathRemove;
     /**
      * Remove and prepend
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
      */
     removeAndPrepend?: number;
 }
@@ -50617,26 +49992,18 @@ export interface LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttrib
     appends?: string[];
     /**
      * None
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
      */
     none?: outputs.LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesCommunityNone;
     /**
      * Overwrite
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
      */
     overwrites?: string[];
     /**
      * Remove all
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
      */
     removeAll?: outputs.LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesCommunityRemoveAll;
     /**
      * Remove regex
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
      */
     removeRegex?: string;
 }
@@ -50654,26 +50021,18 @@ export interface LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttrib
     appends?: string[];
     /**
      * None
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
      */
     none?: outputs.LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesExtendedCommunityNone;
     /**
      * Overwrite
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
      */
     overwrites?: string[];
     /**
      * Remove all
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
      */
     removeAll?: outputs.LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesExtendedCommunityRemoveAll;
     /**
      * Remove regex
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
      */
     removeRegex?: string;
 }
@@ -50705,7 +50064,7 @@ export interface LogicalRouterVrfBgpPolicyAggregationAddressSuppressFilterMatch 
      */
     addressPrefixes?: outputs.LogicalRouterVrfBgpPolicyAggregationAddressSuppressFilterMatchAddressPrefix[];
     /**
-     * Afi
+     * Afi. Possible values are `ip` and `ipv6`.
      */
     afi?: string;
     /**
@@ -50733,11 +50092,11 @@ export interface LogicalRouterVrfBgpPolicyAggregationAddressSuppressFilterMatch 
      */
     nexthops?: string[];
     /**
-     * Route table
+     * Route table. Possible values are `unicast`, `multicast` and `both`.
      */
     routeTable?: string;
     /**
-     * Safi
+     * Safi. Possible values are `ip` and `ipv6`.
      */
     safi?: string;
 }
@@ -50825,7 +50184,7 @@ export interface LogicalRouterVrfBgpPolicyConditionalAdvertisementPolicyAdvertis
      */
     addressPrefixes?: outputs.LogicalRouterVrfBgpPolicyConditionalAdvertisementPolicyAdvertiseFilterMatchAddressPrefix[];
     /**
-     * Afi
+     * Afi. Possible values are `ip` and `ipv6`.
      */
     afi?: string;
     /**
@@ -50853,11 +50212,11 @@ export interface LogicalRouterVrfBgpPolicyConditionalAdvertisementPolicyAdvertis
      */
     nexthops?: string[];
     /**
-     * Route table
+     * Route table. Possible values are `unicast`, `multicast` and `both`.
      */
     routeTable?: string;
     /**
-     * Safi
+     * Safi. Possible values are `ip` and `ipv6`.
      */
     safi?: string;
 }
@@ -50915,7 +50274,7 @@ export interface LogicalRouterVrfBgpPolicyConditionalAdvertisementPolicyNonExist
      */
     addressPrefixes?: outputs.LogicalRouterVrfBgpPolicyConditionalAdvertisementPolicyNonExistFilterMatchAddressPrefix[];
     /**
-     * Afi
+     * Afi. Possible values are `ip` and `ipv6`.
      */
     afi?: string;
     /**
@@ -50943,11 +50302,11 @@ export interface LogicalRouterVrfBgpPolicyConditionalAdvertisementPolicyNonExist
      */
     nexthops?: string[];
     /**
-     * Route table
+     * Route table. Possible values are `unicast`, `multicast` and `both`.
      */
     routeTable?: string;
     /**
-     * Safi
+     * Safi. Possible values are `ip` and `ipv6`.
      */
     safi?: string;
 }
@@ -51021,8 +50380,6 @@ export interface LogicalRouterVrfBgpPolicyExportRuleAction {
     allow?: outputs.LogicalRouterVrfBgpPolicyExportRuleActionAllow;
     /**
      * Deny
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `allow` and `deny`.
      */
     deny?: outputs.LogicalRouterVrfBgpPolicyExportRuleActionDeny;
 }
@@ -51064,7 +50421,7 @@ export interface LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdate {
      */
     nexthop?: string;
     /**
-     * Origin
+     * Origin. Possible values are `igp`, `egp` and `multicast`.
      */
     origin?: string;
 }
@@ -51076,20 +50433,14 @@ export interface LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateAsPath {
     none?: outputs.LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateAsPathNone;
     /**
      * Prepend
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
      */
     prepend?: number;
     /**
      * Remove
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
      */
     remove?: outputs.LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateAsPathRemove;
     /**
      * Remove and prepend
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
      */
     removeAndPrepend?: number;
 }
@@ -51107,26 +50458,18 @@ export interface LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateCommunity {
     appends?: string[];
     /**
      * None
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
      */
     none?: outputs.LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateCommunityNone;
     /**
      * Overwrite
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
      */
     overwrites?: string[];
     /**
      * Remove all
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
      */
     removeAll?: outputs.LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateCommunityRemoveAll;
     /**
      * Remove regex
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
      */
     removeRegex?: string;
 }
@@ -51144,26 +50487,18 @@ export interface LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateExtendedCom
     appends?: string[];
     /**
      * None
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
      */
     none?: outputs.LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateExtendedCommunityNone;
     /**
      * Overwrite
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
      */
     overwrites?: string[];
     /**
      * Remove all
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
      */
     removeAll?: outputs.LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateExtendedCommunityRemoveAll;
     /**
      * Remove regex
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
      */
     removeRegex?: string;
 }
@@ -51183,7 +50518,7 @@ export interface LogicalRouterVrfBgpPolicyExportRuleMatch {
      */
     addressPrefixes?: outputs.LogicalRouterVrfBgpPolicyExportRuleMatchAddressPrefix[];
     /**
-     * Afi
+     * Afi. Possible values are `ip` and `ipv6`.
      */
     afi?: string;
     /**
@@ -51211,11 +50546,11 @@ export interface LogicalRouterVrfBgpPolicyExportRuleMatch {
      */
     nexthops?: string[];
     /**
-     * Route table
+     * Route table. Possible values are `unicast`, `multicast` and `both`.
      */
     routeTable?: string;
     /**
-     * Safi
+     * Safi. Possible values are `ip` and `ipv6`.
      */
     safi?: string;
 }
@@ -51289,8 +50624,6 @@ export interface LogicalRouterVrfBgpPolicyImportRuleAction {
     allow?: outputs.LogicalRouterVrfBgpPolicyImportRuleActionAllow;
     /**
      * Deny
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `allow` and `deny`.
      */
     deny?: outputs.LogicalRouterVrfBgpPolicyImportRuleActionDeny;
 }
@@ -51336,7 +50669,7 @@ export interface LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdate {
      */
     nexthop?: string;
     /**
-     * Origin
+     * Origin. Possible values are `igp`, `egp` and `incomplete`.
      */
     origin?: string;
     /**
@@ -51352,20 +50685,14 @@ export interface LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateAsPath {
     none?: outputs.LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateAsPathNone;
     /**
      * Prepend
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
      */
     prepend?: number;
     /**
      * Remove
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
      */
     remove?: outputs.LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateAsPathRemove;
     /**
      * Remove and prepend
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
      */
     removeAndPrepend?: number;
 }
@@ -51383,26 +50710,18 @@ export interface LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateCommunity {
     appends?: string[];
     /**
      * None
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
      */
     none?: outputs.LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateCommunityNone;
     /**
      * Overwrite
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
      */
     overwrites?: string[];
     /**
      * Remove all
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
      */
     removeAll?: outputs.LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateCommunityRemoveAll;
     /**
      * Remove regex
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
      */
     removeRegex?: string;
 }
@@ -51420,26 +50739,18 @@ export interface LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateExtendedCom
     appends?: string[];
     /**
      * None
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
      */
     none?: outputs.LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateExtendedCommunityNone;
     /**
      * Overwrite
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
      */
     overwrites?: string[];
     /**
      * Remove all
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
      */
     removeAll?: outputs.LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateExtendedCommunityRemoveAll;
     /**
      * Remove regex
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
      */
     removeRegex?: string;
 }
@@ -51459,7 +50770,7 @@ export interface LogicalRouterVrfBgpPolicyImportRuleMatch {
      */
     addressPrefixes?: outputs.LogicalRouterVrfBgpPolicyImportRuleMatchAddressPrefix[];
     /**
-     * Afi
+     * Afi. Possible values are `ip` and `ipv6`.
      */
     afi?: string;
     /**
@@ -51487,11 +50798,11 @@ export interface LogicalRouterVrfBgpPolicyImportRuleMatch {
      */
     nexthops?: string[];
     /**
-     * Route table
+     * Route table. Possible values are `unicast`, `multicast` and `both`.
      */
     routeTable?: string;
     /**
-     * Safi
+     * Safi. Possible values are `ip` and `ipv6`.
      */
     safi?: string;
 }
@@ -51530,7 +50841,7 @@ export interface LogicalRouterVrfBgpPolicyImportRuleMatchExtendedCommunity {
 
 export interface LogicalRouterVrfBgpRedistRule {
     /**
-     * Address family identifier
+     * Address family identifier. Possible values are `ipv4` and `ipv6`.
      */
     addressFamilyIdentifier?: string;
     /**
@@ -51546,7 +50857,7 @@ export interface LogicalRouterVrfBgpRedistRule {
      */
     name: string;
     /**
-     * Route table
+     * Route table. Possible values are `unicast`, `multicast` and `both`.
      */
     routeTable?: string;
     /**
@@ -51570,7 +50881,7 @@ export interface LogicalRouterVrfBgpRedistRule {
      */
     setMed?: number;
     /**
-     * Set origin
+     * Set origin. Possible values are `igp`, `egp` and `incomplete`.
      */
     setOrigin?: string;
 }
@@ -51630,20 +50941,14 @@ export interface LogicalRouterVrfEcmpAlgorithm {
     balancedRoundRobin?: outputs.LogicalRouterVrfEcmpAlgorithmBalancedRoundRobin;
     /**
      * Ip hash
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `balancedRoundRobin`, `ipHash`, `ipModulo`, and `weightedRoundRobin`.
      */
     ipHash?: outputs.LogicalRouterVrfEcmpAlgorithmIpHash;
     /**
      * Ip modulo
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `balancedRoundRobin`, `ipHash`, `ipModulo`, and `weightedRoundRobin`.
      */
     ipModulo?: outputs.LogicalRouterVrfEcmpAlgorithmIpModulo;
     /**
      * Weighted round robin
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `balancedRoundRobin`, `ipHash`, `ipModulo`, and `weightedRoundRobin`.
      */
     weightedRoundRobin?: outputs.LogicalRouterVrfEcmpAlgorithmWeightedRoundRobin;
 }
@@ -51705,7 +51010,7 @@ export interface LogicalRouterVrfMulticast {
      */
     interfaceGroups?: outputs.LogicalRouterVrfMulticastInterfaceGroup[];
     /**
-     * Mode
+     * Mode. Possible values are `PIM-SM` and `IGMP-Proxy`.
      */
     mode?: string;
     /**
@@ -51782,7 +51087,7 @@ export interface LogicalRouterVrfMulticastIgmpDynamicInterface {
      */
     queryProfile?: string;
     /**
-     * Robustness
+     * Robustness. Possible values are `1`, `2`, `3`, `4`, `5`, `6` and `7`.
      */
     robustness?: string;
     /**
@@ -51790,7 +51095,7 @@ export interface LogicalRouterVrfMulticastIgmpDynamicInterface {
      */
     routerAlertPolicing?: boolean;
     /**
-     * Version
+     * Version. Possible values are `2` and `3`.
      */
     version?: string;
 }
@@ -51912,7 +51217,7 @@ export interface LogicalRouterVrfMulticastInterfaceGroupIgmp {
      */
     maxSources?: string;
     /**
-     * Mode
+     * Mode. Possible values are `router` and `host`.
      */
     mode?: string;
     /**
@@ -51920,7 +51225,7 @@ export interface LogicalRouterVrfMulticastInterfaceGroupIgmp {
      */
     queryInterval?: number;
     /**
-     * Robustness
+     * Robustness. Possible values are `1`, `2`, `3`, `4`, `5`, `6` and `7`.
      */
     robustness?: string;
     /**
@@ -51928,7 +51233,7 @@ export interface LogicalRouterVrfMulticastInterfaceGroupIgmp {
      */
     routerAlertPolicing?: boolean;
     /**
-     * Version
+     * Version. Possible values are `1`, `2` and `3`.
      */
     version?: string;
 }
@@ -52062,8 +51367,6 @@ export interface LogicalRouterVrfMulticastMsdpPeerPeerAddress {
     fqdn?: string;
     /**
      * Ip
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `fqdn` and `ip`.
      */
     ip?: string;
 }
@@ -52094,7 +51397,7 @@ export interface LogicalRouterVrfMulticastPim {
      */
     rp?: outputs.LogicalRouterVrfMulticastPimRp;
     /**
-     * Rpf lookup mode
+     * Rpf lookup mode. Possible values are `mrib-then-urib`, `mrib-only` and `urib-only`.
      */
     rpfLookupMode?: string;
     /**
@@ -52167,8 +51470,6 @@ export interface LogicalRouterVrfMulticastPimRpLocalRp {
     candidateRp?: outputs.LogicalRouterVrfMulticastPimRpLocalRpCandidateRp;
     /**
      * Static rp
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `candidateRp` and `staticRp`.
      */
     staticRp?: outputs.LogicalRouterVrfMulticastPimRpLocalRpStaticRp;
 }
@@ -52266,8 +51567,6 @@ export interface LogicalRouterVrfMulticastRpLocalRp {
     candidateRp?: outputs.LogicalRouterVrfMulticastRpLocalRpCandidateRp;
     /**
      * Static rp
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `candidateRp` and `staticRp`.
      */
     staticRp?: outputs.LogicalRouterVrfMulticastRpLocalRpStaticRp;
 }
@@ -52525,14 +51824,10 @@ export interface LogicalRouterVrfOspfAreaInterfaceLinkType {
     broadcast?: outputs.LogicalRouterVrfOspfAreaInterfaceLinkTypeBroadcast;
     /**
      * P2mp
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `broadcast`, `p2mp`, and `p2p`.
      */
     p2mp?: outputs.LogicalRouterVrfOspfAreaInterfaceLinkTypeP2mp;
     /**
      * P2p
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `broadcast`, `p2mp`, and `p2p`.
      */
     p2p?: outputs.LogicalRouterVrfOspfAreaInterfaceLinkTypeP2p;
 }
@@ -52606,14 +51901,10 @@ export interface LogicalRouterVrfOspfAreaType {
     normal?: outputs.LogicalRouterVrfOspfAreaTypeNormal;
     /**
      * Nssa
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `normal`, `nssa`, and `stub`.
      */
     nssa?: outputs.LogicalRouterVrfOspfAreaTypeNssa;
     /**
      * Stub
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `normal`, `nssa`, and `stub`.
      */
     stub?: outputs.LogicalRouterVrfOspfAreaTypeStub;
 }
@@ -52715,7 +52006,7 @@ export interface LogicalRouterVrfOspfAreaTypeNssaDefaultInformationOriginate {
      */
     metric?: number;
     /**
-     * Metric type
+     * Metric type. Possible values are `type-1` and `type-2`.
      */
     metricType?: string;
 }
@@ -52727,8 +52018,6 @@ export interface LogicalRouterVrfOspfAreaTypeNssaDefaultRoute {
     advertise?: outputs.LogicalRouterVrfOspfAreaTypeNssaDefaultRouteAdvertise;
     /**
      * Disable
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `advertise` and `disable`.
      */
     disable?: outputs.LogicalRouterVrfOspfAreaTypeNssaDefaultRouteDisable;
 }
@@ -52739,7 +52028,7 @@ export interface LogicalRouterVrfOspfAreaTypeNssaDefaultRouteAdvertise {
      */
     metric?: number;
     /**
-     * Type
+     * Type. Possible values are `ext-1` and `ext-2`.
      */
     type?: string;
 }
@@ -52817,8 +52106,6 @@ export interface LogicalRouterVrfOspfAreaTypeStubDefaultRoute {
     advertise?: outputs.LogicalRouterVrfOspfAreaTypeStubDefaultRouteAdvertise;
     /**
      * Disable
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `advertise` and `disable`.
      */
     disable?: outputs.LogicalRouterVrfOspfAreaTypeStubDefaultRouteDisable;
 }
@@ -52967,7 +52254,7 @@ export interface LogicalRouterVrfOspfExportRule {
      */
     name: string;
     /**
-     * New path type
+     * New path type. Possible values are `ext-1` and `ext-2`.
      */
     newPathType?: string;
     /**
@@ -53209,14 +52496,10 @@ export interface LogicalRouterVrfOspfv3AreaInterfaceLinkType {
     broadcast?: outputs.LogicalRouterVrfOspfv3AreaInterfaceLinkTypeBroadcast;
     /**
      * P2mp
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `broadcast`, `p2mp`, and `p2p`.
      */
     p2mp?: outputs.LogicalRouterVrfOspfv3AreaInterfaceLinkTypeP2mp;
     /**
      * P2p
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `broadcast`, `p2mp`, and `p2p`.
      */
     p2p?: outputs.LogicalRouterVrfOspfv3AreaInterfaceLinkTypeP2p;
 }
@@ -53293,14 +52576,10 @@ export interface LogicalRouterVrfOspfv3AreaType {
     normal?: outputs.LogicalRouterVrfOspfv3AreaTypeNormal;
     /**
      * Nssa
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `normal`, `nssa`, and `stub`.
      */
     nssa?: outputs.LogicalRouterVrfOspfv3AreaTypeNssa;
     /**
      * Stub
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `normal`, `nssa`, and `stub`.
      */
     stub?: outputs.LogicalRouterVrfOspfv3AreaTypeStub;
 }
@@ -53412,7 +52691,7 @@ export interface LogicalRouterVrfOspfv3AreaTypeNssaDefaultInformationOriginate {
      */
     metric?: number;
     /**
-     * Metric type
+     * Metric type. Possible values are `type-1` and `type-2`.
      */
     metricType?: string;
 }
@@ -53424,8 +52703,6 @@ export interface LogicalRouterVrfOspfv3AreaTypeNssaDefaultRoute {
     advertise?: outputs.LogicalRouterVrfOspfv3AreaTypeNssaDefaultRouteAdvertise;
     /**
      * Disable
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `advertise` and `disable`.
      */
     disable?: outputs.LogicalRouterVrfOspfv3AreaTypeNssaDefaultRouteDisable;
 }
@@ -53436,7 +52713,7 @@ export interface LogicalRouterVrfOspfv3AreaTypeNssaDefaultRouteAdvertise {
      */
     metric?: number;
     /**
-     * Type
+     * Type. Possible values are `ext-1` and `ext-2`.
      */
     type?: string;
 }
@@ -53518,8 +52795,6 @@ export interface LogicalRouterVrfOspfv3AreaTypeStubDefaultRoute {
     advertise?: outputs.LogicalRouterVrfOspfv3AreaTypeStubDefaultRouteAdvertise;
     /**
      * Disable
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `advertise` and `disable`.
      */
     disable?: outputs.LogicalRouterVrfOspfv3AreaTypeStubDefaultRouteDisable;
 }
@@ -53654,26 +52929,18 @@ export interface LogicalRouterVrfOspfv3AuthProfileAh {
     md5?: outputs.LogicalRouterVrfOspfv3AuthProfileAhMd5;
     /**
      * Sha1
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `md5`, `sha1`, `sha256`, `sha384`, and `sha512`.
      */
     sha1?: outputs.LogicalRouterVrfOspfv3AuthProfileAhSha1;
     /**
      * Sha256
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `md5`, `sha1`, `sha256`, `sha384`, and `sha512`.
      */
     sha256?: outputs.LogicalRouterVrfOspfv3AuthProfileAhSha256;
     /**
      * Sha384
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `md5`, `sha1`, `sha256`, `sha384`, and `sha512`.
      */
     sha384?: outputs.LogicalRouterVrfOspfv3AuthProfileAhSha384;
     /**
      * Sha512
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `md5`, `sha1`, `sha256`, `sha384`, and `sha512`.
      */
     sha512?: outputs.LogicalRouterVrfOspfv3AuthProfileAhSha512;
 }
@@ -53731,32 +52998,22 @@ export interface LogicalRouterVrfOspfv3AuthProfileEspAuthentication {
     md5?: outputs.LogicalRouterVrfOspfv3AuthProfileEspAuthenticationMd5;
     /**
      * None
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `md5`, `none`, `sha1`, `sha256`, `sha384`, and `sha512`.
      */
     none?: outputs.LogicalRouterVrfOspfv3AuthProfileEspAuthenticationNone;
     /**
      * Sha1
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `md5`, `none`, `sha1`, `sha256`, `sha384`, and `sha512`.
      */
     sha1?: outputs.LogicalRouterVrfOspfv3AuthProfileEspAuthenticationSha1;
     /**
      * Sha256
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `md5`, `none`, `sha1`, `sha256`, `sha384`, and `sha512`.
      */
     sha256?: outputs.LogicalRouterVrfOspfv3AuthProfileEspAuthenticationSha256;
     /**
      * Sha384
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `md5`, `none`, `sha1`, `sha256`, `sha384`, and `sha512`.
      */
     sha384?: outputs.LogicalRouterVrfOspfv3AuthProfileEspAuthenticationSha384;
     /**
      * Sha512
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `md5`, `none`, `sha1`, `sha256`, `sha384`, and `sha512`.
      */
     sha512?: outputs.LogicalRouterVrfOspfv3AuthProfileEspAuthenticationSha512;
 }
@@ -53801,7 +53058,7 @@ export interface LogicalRouterVrfOspfv3AuthProfileEspAuthenticationSha512 {
 
 export interface LogicalRouterVrfOspfv3AuthProfileEspEncryption {
     /**
-     * Algorithm
+     * Algorithm. Possible values are `3des`, `aes-128-cbc`, `aes-192-cbc`, `aes-256-cbc` and `null`.
      */
     algorithm?: string;
     /**
@@ -53820,7 +53077,7 @@ export interface LogicalRouterVrfOspfv3ExportRule {
      */
     name: string;
     /**
-     * New path type
+     * New path type. Possible values are `ext-1` and `ext-2`.
      */
     newPathType?: string;
     /**
@@ -54046,7 +53303,7 @@ export interface LogicalRouterVrfRipInterface {
      */
     interfaceOutboundDistributeList?: outputs.LogicalRouterVrfRipInterfaceInterfaceOutboundDistributeList;
     /**
-     * Mode
+     * Mode. Possible values are `active`, `passive` and `send-only`.
      */
     mode?: string;
     /**
@@ -54054,7 +53311,7 @@ export interface LogicalRouterVrfRipInterface {
      */
     name: string;
     /**
-     * Split horizon
+     * Split horizon. Possible values are `split-horizon`, `no-split-horizon` and `no-split-horizon-with-poison-reverse`.
      */
     splitHorizon?: string;
 }
@@ -54159,44 +53416,30 @@ export interface LogicalRouterVrfRoutingTableIpStaticRouteNexthop {
     discard?: outputs.LogicalRouterVrfRoutingTableIpStaticRouteNexthopDiscard;
     /**
      * Fqdn
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipAddress`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
      */
     fqdn?: string;
     /**
      * Ip address
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipAddress`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
      */
     ipAddress?: string;
     /**
      * Ipv6 address
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipAddress`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
      */
     ipv6Address?: string;
     /**
      * Next lr
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipAddress`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
      */
     nextLr?: string;
     /**
      * Next vr
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipAddress`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
      */
     nextVr?: string;
     /**
      * Receive
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipAddress`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
      */
     receive?: outputs.LogicalRouterVrfRoutingTableIpStaticRouteNexthopReceive;
     /**
      * Tunnel
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipAddress`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
      */
     tunnel?: string;
 }
@@ -54213,7 +53456,7 @@ export interface LogicalRouterVrfRoutingTableIpStaticRoutePathMonitor {
      */
     enable?: boolean;
     /**
-     * Failure condition
+     * Failure condition. Possible values are `any` and `all`.
      */
     failureCondition?: string;
     /**
@@ -54264,20 +53507,14 @@ export interface LogicalRouterVrfRoutingTableIpStaticRouteRouteTable {
     both?: outputs.LogicalRouterVrfRoutingTableIpStaticRouteRouteTableBoth;
     /**
      * Multicast
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `both`, `multicast`, `noInstall`, and `unicast`.
      */
     multicast?: outputs.LogicalRouterVrfRoutingTableIpStaticRouteRouteTableMulticast;
     /**
      * No install
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `both`, `multicast`, `noInstall`, and `unicast`.
      */
     noInstall?: outputs.LogicalRouterVrfRoutingTableIpStaticRouteRouteTableNoInstall;
     /**
      * Unicast
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `both`, `multicast`, `noInstall`, and `unicast`.
      */
     unicast?: outputs.LogicalRouterVrfRoutingTableIpStaticRouteRouteTableUnicast;
 }
@@ -54358,38 +53595,26 @@ export interface LogicalRouterVrfRoutingTableIpv6StaticRouteNexthop {
     discard?: outputs.LogicalRouterVrfRoutingTableIpv6StaticRouteNexthopDiscard;
     /**
      * Fqdn
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
      */
     fqdn?: string;
     /**
      * Ipv6 address
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
      */
     ipv6Address?: string;
     /**
      * Next lr
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
      */
     nextLr?: string;
     /**
      * Next vr
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
      */
     nextVr?: string;
     /**
      * Receive
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
      */
     receive?: outputs.LogicalRouterVrfRoutingTableIpv6StaticRouteNexthopReceive;
     /**
      * Tunnel
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
      */
     tunnel?: string;
 }
@@ -54416,7 +53641,7 @@ export interface LogicalRouterVrfRoutingTableIpv6StaticRoutePathMonitor {
      */
     enable?: boolean;
     /**
-     * Failure condition
+     * Failure condition. Possible values are `any` and `all`.
      */
     failureCondition?: string;
     /**
@@ -54530,6 +53755,21 @@ export interface LogicalRouterVrfVrAdminDists {
     staticIpv6?: number;
 }
 
+export interface LoopbackInterfaceAdjustTcpMss {
+    /**
+     * Enable TCP MSS adjustment on the interface
+     */
+    enable?: boolean;
+    /**
+     * IPv4 MSS adjustment size in bytes
+     */
+    ipv4MssAdjustment?: number;
+    /**
+     * IPv6 MSS adjustment size in bytes
+     */
+    ipv6MssAdjustment?: number;
+}
+
 export interface LoopbackInterfaceIp {
     /**
      * Loopback IP address(es)
@@ -54607,7 +53847,7 @@ export interface ManagementInterfaceManagementInterface {
      */
     service?: outputs.ManagementInterfaceManagementInterfaceService;
     /**
-     * Speed and duplex
+     * Speed and duplex. Possible values are `auto-negotiate`, `10Mbps-half-duplex`, `10Mbps-full-duplex`, `100Mbps-half-duplex`, `100Mbps-full-duplex`, `1Gbps-half-duplex` and `1Gbps-full-duplex`.
      */
     speedDuplex: string;
 }
@@ -54619,8 +53859,6 @@ export interface ManagementInterfaceManagementInterfaceMgmtType {
     dhcpClient?: outputs.ManagementInterfaceManagementInterfaceMgmtTypeDhcpClient;
     /**
      * Static
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `static`.
      */
     static?: outputs.ManagementInterfaceManagementInterfaceMgmtTypeStatic;
 }
@@ -54708,20 +53946,14 @@ export interface MfaServerMfaVendorType {
     duoSecurityV2?: outputs.MfaServerMfaVendorTypeDuoSecurityV2;
     /**
      * Integration with [Okta Adaptive MFA](https://www.okta.com/products/adaptive-multi-factor-authentication)
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `duoSecurityV2`, `oktaAdaptiveV1`, `pingIdentityV1`, and `rsaSecuridAccessV1`.
      */
     oktaAdaptiveV1?: outputs.MfaServerMfaVendorTypeOktaAdaptiveV1;
     /**
      * Integation with [Ping Identity](https://www.pingidentity.com/en/platform.html)
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `duoSecurityV2`, `oktaAdaptiveV1`, `pingIdentityV1`, and `rsaSecuridAccessV1`.
      */
     pingIdentityV1?: outputs.MfaServerMfaVendorTypePingIdentityV1;
     /**
      * Integration with [RSA SecurID](https://www.rsa.com/products/securid/)
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `duoSecurityV2`, `oktaAdaptiveV1`, `pingIdentityV1`, and `rsaSecuridAccessV1`.
      */
     rsaSecuridAccessV1?: outputs.MfaServerMfaVendorTypeRsaSecuridAccessV1;
 }
@@ -54876,7 +54108,7 @@ export interface MotdBannerSettingMotdAndBanner {
      */
     motdTitle?: string;
     /**
-     * Severity
+     * Severity. Possible values are `warning`, `question`, `error` and `info`.
      */
     severity?: string;
 }
@@ -54898,14 +54130,14 @@ export interface NatRuleDestinationTranslation {
 
 export interface NatRuleDestinationTranslationDnsRewrite {
     /**
-     * Direction
+     * Direction. Possible values are `reverse` and `forward`.
      */
     direction?: string;
 }
 
 export interface NatRuleDynamicDestinationTranslation {
     /**
-     * Distribution method
+     * Distribution method. Possible values are `round-robin`, `source-ip-hash`, `ip-modulo`, `ip-hash` and `least-sessions`.
      */
     distribution?: string;
     /**
@@ -55029,14 +54261,10 @@ export interface PbfRuleAction {
     discard?: outputs.PbfRuleActionDiscard;
     /**
      * Forward
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `discard`, `forward`, and `noPbf`.
      */
     forward?: outputs.PbfRuleActionForward;
     /**
      * No pbf
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `discard`, `forward`, and `noPbf`.
      */
     noPbf?: outputs.PbfRuleActionNoPbf;
 }
@@ -55081,8 +54309,6 @@ export interface PbfRuleActionForwardNexthop {
     fqdn?: string;
     /**
      * Next hop IP address
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `fqdn` and `ipAddress`.
      */
     ipAddress?: string;
 }
@@ -55115,8 +54341,6 @@ export interface PbfRuleFrom {
     interfaces?: string[];
     /**
      * Source zones
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `interface` and `zone`.
      */
     zones?: string[];
 }
@@ -55153,26 +54377,18 @@ export interface QosPolicyRuleDscpTosCodepointType {
     af?: outputs.QosPolicyRuleDscpTosCodepointTypeAf;
     /**
      * Cs
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `af`, `cs`, `custom`, `ef`, and `tos`.
      */
     cs?: outputs.QosPolicyRuleDscpTosCodepointTypeCs;
     /**
      * Custom
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `af`, `cs`, `custom`, `ef`, and `tos`.
      */
     custom?: outputs.QosPolicyRuleDscpTosCodepointTypeCustom;
     /**
      * Ef
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `af`, `cs`, `custom`, `ef`, and `tos`.
      */
     ef?: outputs.QosPolicyRuleDscpTosCodepointTypeEf;
     /**
      * Tos
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `af`, `cs`, `custom`, `ef`, and `tos`.
      */
     tos?: outputs.QosPolicyRuleDscpTosCodepointTypeTos;
 }
@@ -55237,8 +54453,6 @@ export interface QosProfileClassBandwidthType {
     mbps?: outputs.QosProfileClassBandwidthTypeMbps;
     /**
      * Percentage
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `mbps` and `percentage`.
      */
     percentage?: outputs.QosProfileClassBandwidthTypePercentage;
 }
@@ -55256,11 +54470,11 @@ export interface QosProfileClassBandwidthTypeMbpsClass {
      */
     classBandwidth?: outputs.QosProfileClassBandwidthTypeMbpsClassClassBandwidth;
     /**
-     * Traffic class
+     * Traffic class. Possible values are `class1`, `class2`, `class3`, `class4`, `class5`, `class6`, `class7` and `class8`.
      */
     name?: string;
     /**
-     * traffic class priority
+     * traffic class priority. Possible values are `real-time`, `high`, `medium` and `low`.
      */
     priority: string;
 }
@@ -55289,11 +54503,11 @@ export interface QosProfileClassBandwidthTypePercentageClass {
      */
     classBandwidth?: outputs.QosProfileClassBandwidthTypePercentageClassClassBandwidth;
     /**
-     * Traffic class
+     * Traffic class. Possible values are `class1`, `class2`, `class3`, `class4`, `class5`, `class6`, `class7` and `class8`.
      */
     name?: string;
     /**
-     * traffic class priority
+     * traffic class priority. Possible values are `real-time`, `high`, `medium` and `low`.
      */
     priority: string;
 }
@@ -55453,7 +54667,7 @@ export interface RemoteNetworkEcmpTunnelProtocolBgp {
      */
     peerIpAddress?: string;
     /**
-     * Route exchange types
+     * Route exchange types. Possible values are `exchange-v4-over-v4`, `exchange-v4-v6-over-v4`, `exchange-v4-over-v4-v6-over-v6` and `exchange-v6-over-v6`.
      */
     peeringType?: string;
     /**
@@ -55503,7 +54717,7 @@ export interface RemoteNetworkProtocolBgp {
      */
     peerIpAddress?: string;
     /**
-     * Route exchange types
+     * Route exchange types. Possible values are `exchange-v4-over-v4`, `exchange-v4-v6-over-v4`, `exchange-v4-over-v4-v6-over-v6` and `exchange-v6-over-v6`.
      */
     peeringType?: string;
     /**
@@ -55551,7 +54765,7 @@ export interface RouteAccessListTypeIpv4 {
 
 export interface RouteAccessListTypeIpv4Ipv4Entry {
     /**
-     * Action
+     * Action. Possible values are `deny` and `permit`.
      */
     action?: string;
     /**
@@ -55619,14 +54833,10 @@ export interface RouteCommunityListType {
     extended?: outputs.RouteCommunityListTypeExtended;
     /**
      * Large
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `extended`, `large`, and `regular`.
      */
     large?: outputs.RouteCommunityListTypeLarge;
     /**
      * Regular
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `extended`, `large`, and `regular`.
      */
     regular?: outputs.RouteCommunityListTypeRegular;
 }
@@ -55640,7 +54850,7 @@ export interface RouteCommunityListTypeExtended {
 
 export interface RouteCommunityListTypeExtendedExtendedEntry {
     /**
-     * Action
+     * Action. Possible values are `deny` and `permit`.
      */
     action?: string;
     /**
@@ -55662,7 +54872,7 @@ export interface RouteCommunityListTypeLarge {
 
 export interface RouteCommunityListTypeLargeLargeEntry {
     /**
-     * Action
+     * Action. Possible values are `deny` and `permit`.
      */
     action?: string;
     /**
@@ -55684,7 +54894,7 @@ export interface RouteCommunityListTypeRegular {
 
 export interface RouteCommunityListTypeRegularRegularEntry {
     /**
-     * Action
+     * Action. Possible values are `deny` and `permit`.
      */
     action?: string;
     /**
@@ -55699,7 +54909,7 @@ export interface RouteCommunityListTypeRegularRegularEntry {
 
 export interface RoutePathAccessListAspathEntry {
     /**
-     * Action
+     * Action. Possible values are `deny` and `permit`.
      */
     action?: string;
     /**
@@ -55728,7 +54938,7 @@ export interface RoutePrefixListTypeIpv4 {
 
 export interface RoutePrefixListTypeIpv4Ipv4Entry {
     /**
-     * Action
+     * Action. Possible values are `deny` and `permit`.
      */
     action?: string;
     /**
@@ -55747,9 +54957,7 @@ export interface RoutePrefixListTypeIpv4Ipv4EntryPrefix {
      */
     entry?: outputs.RoutePrefixListTypeIpv4Ipv4EntryPrefixEntry;
     /**
-     * Network
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `entry` and `network`.
+     * Network. Possible values are `any`.
      */
     network?: string;
 }
@@ -55778,7 +54986,7 @@ export interface ScepProfileAlgorithm {
 
 export interface ScepProfileAlgorithmRsa {
     /**
-     * Rsa nbits
+     * Rsa nbits. Possible values are `1024`, `2048` and `3072`.
      */
     rsaNbits: string;
 }
@@ -55790,14 +54998,10 @@ export interface ScepProfileCertificateAttributes {
     dnsname?: string;
     /**
      * Rfc822name
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `dnsname`, `rfc822name`, and `uniformResourceIdentifier`.
      */
     rfc822name?: string;
     /**
      * Uniform resource identifier
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `dnsname`, `rfc822name`, and `uniformResourceIdentifier`.
      */
     uniformResourceIdentifier?: string;
 }
@@ -55809,14 +55013,10 @@ export interface ScepProfileScepChallenge {
     dynamic?: outputs.ScepProfileScepChallengeDynamic;
     /**
      * Challenge to use for SCEP server on mobile clients
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `dynamic`, `fixed`, and `none`.
      */
     fixed?: string;
     /**
      * No OTP
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `dynamic`, `fixed`, and `none`.
      */
     none?: outputs.ScepProfileScepChallengeNone;
 }
@@ -55846,8 +55046,6 @@ export interface ScheduleScheduleType {
     nonRecurrings?: string[];
     /**
      * Recurring
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `nonRecurring` and `recurring`.
      */
     recurring?: outputs.ScheduleScheduleTypeRecurring;
 }
@@ -55859,8 +55057,6 @@ export interface ScheduleScheduleTypeRecurring {
     dailies?: string[];
     /**
      * Weekly
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `daily` and `weekly`.
      */
     weekly?: outputs.ScheduleScheduleTypeRecurringWeekly;
 }
@@ -55903,8 +55099,6 @@ export interface SdwanErrorCorrectionProfileMode {
     forwardErrorCorrection?: outputs.SdwanErrorCorrectionProfileModeForwardErrorCorrection;
     /**
      * Packet duplication
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `forwardErrorCorrection` and `packetDuplication`.
      */
     packetDuplication?: outputs.SdwanErrorCorrectionProfileModePacketDuplication;
 }
@@ -55944,7 +55138,7 @@ export interface SdwanPathQualityProfileMetric {
 
 export interface SdwanPathQualityProfileMetricJitter {
     /**
-     * Jitter sensitivity
+     * Jitter sensitivity. Possible values are `low`, `medium` and `high`.
      */
     sensitivity: string;
     /**
@@ -55955,7 +55149,7 @@ export interface SdwanPathQualityProfileMetricJitter {
 
 export interface SdwanPathQualityProfileMetricLatency {
     /**
-     * Latency sensitivity
+     * Latency sensitivity. Possible values are `low`, `medium` and `high`.
      */
     sensitivity: string;
     /**
@@ -55966,7 +55160,7 @@ export interface SdwanPathQualityProfileMetricLatency {
 
 export interface SdwanPathQualityProfileMetricPktLoss {
     /**
-     * Packet loss sensitivity
+     * Packet loss sensitivity. Possible values are `low`, `medium` and `high`.
      */
     sensitivity: string;
     /**
@@ -55989,14 +55183,10 @@ export interface SdwanSaasQualityProfileMonitorMode {
     adaptive?: outputs.SdwanSaasQualityProfileMonitorModeAdaptive;
     /**
      * Http https
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `adaptive`, `httpHttps`, and `staticIp`.
      */
     httpHttps?: outputs.SdwanSaasQualityProfileMonitorModeHttpHttps;
     /**
      * Static ip
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `adaptive`, `httpHttps`, and `staticIp`.
      */
     staticIp?: outputs.SdwanSaasQualityProfileMonitorModeStaticIp;
 }
@@ -56022,8 +55212,6 @@ export interface SdwanSaasQualityProfileMonitorModeStaticIp {
     fqdn?: outputs.SdwanSaasQualityProfileMonitorModeStaticIpFqdn;
     /**
      * List of IP addresses
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `fqdn` and `ipAddress`.
      */
     ipAddresses?: outputs.SdwanSaasQualityProfileMonitorModeStaticIpIpAddress[];
 }
@@ -56063,15 +55251,15 @@ export interface SdwanTrafficDistributionProfileLinkTag {
 
 export interface SecurityRuleAllowUrlCategory {
     /**
-     * Additional action
+     * Additional action. Possible values are `none`, `continue`, `redirect` and `isolate`.
      */
     additionalAction: string;
     /**
-     * Credential enforcement
+     * Credential enforcement. Possible values are `enabled` and `disabled`.
      */
     credentialEnforcement: string;
     /**
-     * Decryption
+     * Decryption. Possible values are `enabled` and `disabled`.
      */
     decryption: string;
     /**
@@ -56094,11 +55282,11 @@ export interface SecurityRuleAllowUrlCategory {
 
 export interface SecurityRuleAllowUrlCategoryFileControl {
     /**
-     * Download
+     * Download. Possible values are `allow-all-file-types`, `best-practice` and `block-all-file-types`.
      */
     download?: string;
     /**
-     * Upload
+     * Upload. Possible values are `allow-all-file-types`, `best-practice` and `block-all-file-types`.
      */
     upload?: string;
 }
@@ -56148,11 +55336,11 @@ export interface SecurityRuleAllowWebApplication {
 
 export interface SecurityRuleAllowWebApplicationFileControl {
     /**
-     * Download
+     * Download. Possible values are `allow-all-file-types`, `best-practice` and `block-all-file-types`.
      */
     download?: string;
     /**
-     * Upload
+     * Upload. Possible values are `allow-all-file-types`, `best-practice` and `block-all-file-types`.
      */
     upload?: string;
 }
@@ -56170,14 +55358,14 @@ export interface SecurityRuleAllowWebApplicationSaasEnterpriseControl {
 
 export interface SecurityRuleAllowWebApplicationSaasEnterpriseControlConsumerAccess {
     /**
-     * Enable
+     * Enable. Possible values are `yes` and `no`.
      */
     enable?: string;
 }
 
 export interface SecurityRuleAllowWebApplicationSaasEnterpriseControlEnterpriseAccess {
     /**
-     * Enable
+     * Enable. Possible values are `yes` and `no`.
      */
     enable?: string;
     /**
@@ -56218,11 +55406,11 @@ export interface SecurityRuleDefaultProfileSettings {
 
 export interface SecurityRuleDefaultProfileSettingsFileControl {
     /**
-     * Download
+     * Download. Possible values are `allow-all-file-types`, `best-practice` and `block-all-file-types`.
      */
     download: string;
     /**
-     * Upload
+     * Upload. Possible values are `allow-all-file-types`, `best-practice` and `block-all-file-types`.
      */
     upload: string;
 }
@@ -56243,44 +55431,17 @@ export interface SecurityRuleProfileSetting {
 
 export interface SecurityRuleSecuritySettings {
     /**
-     * Anti spyware
+     * Anti spyware. Possible values are `yes` and `no`.
      */
     antiSpyware: string;
     /**
-     * Virus and wildfire analysis
+     * Virus and wildfire analysis. Possible values are `yes` and `no`.
      */
     virusAndWildfireAnalysis: string;
     /**
-     * Vulnerability
+     * Vulnerability. Possible values are `yes` and `no`.
      */
     vulnerability: string;
-}
-
-export interface ServiceConnectionBgpPeer {
-    /**
-     * Local ip address
-     */
-    localIpAddress?: string;
-    /**
-     * Local ipv6 address
-     */
-    localIpv6Address?: string;
-    /**
-     * Peer ip address
-     */
-    peerIpAddress?: string;
-    /**
-     * Peer ipv6 address
-     */
-    peerIpv6Address?: string;
-    /**
-     * Same peer IP address for SC
-     */
-    sameAsPrimary?: boolean;
-    /**
-     * Secret
-     */
-    secret?: string;
 }
 
 export interface ServiceConnectionProtocol {
@@ -56288,6 +55449,10 @@ export interface ServiceConnectionProtocol {
      * Bgp
      */
     bgp?: outputs.ServiceConnectionProtocolBgp;
+    /**
+     * Bgp peer
+     */
+    bgpPeer?: outputs.ServiceConnectionProtocolBgpPeer;
 }
 
 export interface ServiceConnectionProtocolBgp {
@@ -56329,6 +55494,29 @@ export interface ServiceConnectionProtocolBgp {
     summarizeMobileUserRoutes?: boolean;
 }
 
+export interface ServiceConnectionProtocolBgpPeer {
+    /**
+     * Local peer IP address (secondary WAN)
+     */
+    localIpAddress?: string;
+    /**
+     * Local peer IPv6 address (secondary WAN)
+     */
+    localIpv6Address?: string;
+    /**
+     * Remote peer IP address (secondary WAN)
+     */
+    peerIpAddress?: string;
+    /**
+     * Remote peer IPv6 address (secondary WAN)
+     */
+    peerIpv6Address?: string;
+    /**
+     * BGP peering secret (secondary WAN)
+     */
+    secret?: string;
+}
+
 export interface ServiceConnectionQos {
     /**
      * Enable
@@ -56347,8 +55535,6 @@ export interface ServiceProtocol {
     tcp?: outputs.ServiceProtocolTcp;
     /**
      * Udp
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `tcp` and `udp`.
      */
     udp?: outputs.ServiceProtocolUdp;
 }
@@ -56533,8 +55719,6 @@ export interface ServiceSettingServicesDnsSetting {
     dnsProxyObject?: string;
     /**
      * Servers
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `dnsProxyObject` and `servers`.
      */
     servers?: outputs.ServiceSettingServicesDnsSettingServers;
 }
@@ -56579,14 +55763,10 @@ export interface ServiceSettingServicesNtpServersPrimaryNtpServerAuthenticationT
     autokey?: outputs.ServiceSettingServicesNtpServersPrimaryNtpServerAuthenticationTypeAutokey;
     /**
      * None
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `autokey`, `none`, and `symmetricKey`.
      */
     none?: outputs.ServiceSettingServicesNtpServersPrimaryNtpServerAuthenticationTypeNone;
     /**
      * Symmetric key
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `autokey`, `none`, and `symmetricKey`.
      */
     symmetricKey?: outputs.ServiceSettingServicesNtpServersPrimaryNtpServerAuthenticationTypeSymmetricKey;
 }
@@ -56651,14 +55831,10 @@ export interface ServiceSettingServicesNtpServersSecondaryNtpServerAuthenticatio
     autokey?: outputs.ServiceSettingServicesNtpServersSecondaryNtpServerAuthenticationTypeAutokey;
     /**
      * None
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `autokey`, `none`, and `symmetricKey`.
      */
     none?: outputs.ServiceSettingServicesNtpServersSecondaryNtpServerAuthenticationTypeNone;
     /**
      * Symmetric key
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `autokey`, `none`, and `symmetricKey`.
      */
     symmetricKey?: outputs.ServiceSettingServicesNtpServersSecondaryNtpServerAuthenticationTypeSymmetricKey;
 }
@@ -56839,7 +56015,7 @@ export interface SessionSettingSessionSettingsJumboFrame {
 
 export interface SessionSettingSessionSettingsNat {
     /**
-     * NAT oversubscription rate
+     * NAT oversubscription rate. Possible values are `1x`, `2x`, `4x` and `8x`.
      */
     dippOversub: string;
 }
@@ -56916,7 +56092,7 @@ export interface SiteMember {
      */
     id: string;
     /**
-     * The mode of the remote network
+     * The mode of the remote network. Possible values are `active` and `backup`.
      */
     mode: string;
     /**
@@ -57032,11 +56208,11 @@ export interface SyslogServerProfileFormatEscaping {
 
 export interface SyslogServerProfileServer {
     /**
-     * Syslog facility
+     * Syslog facility. Possible values are `LOG_USER`, `LOG_LOCAL0`, `LOG_LOCAL1`, `LOG_LOCAL2`, `LOG_LOCAL3`, `LOG_LOCAL4`, `LOG_LOCAL5`, `LOG_LOCAL6` and `LOG_LOCAL7`.
      */
     facility?: string;
     /**
-     * Syslog format
+     * Syslog format. Possible values are `BSD` and `IETF`.
      */
     format?: string;
     /**
@@ -57052,7 +56228,7 @@ export interface SyslogServerProfileServer {
      */
     server?: string;
     /**
-     * Transport protocol
+     * Transport protocol. Possible values are `UDP` and `TCP`.
      */
     transport?: string;
 }
@@ -57082,7 +56258,7 @@ export interface TcpSettingTcp {
      */
     allowChallengeAck?: boolean;
     /**
-     * Asymmetric path action
+     * Asymmetric path action. Possible values are `drop` and `bypass`.
      */
     asymmetricPath?: string;
     /**
@@ -57098,7 +56274,7 @@ export interface TcpSettingTcp {
      */
     dropZeroFlag?: boolean;
     /**
-     * SIP TCP cleartext action (`'0'` = Always Off, `'1'` = Always Enabled, `'2'` = Automatically enable proxy when needed)
+     * SIP TCP cleartext action (`'0'` = Always Off, `'1'` = Always Enabled, `'2'` = Automatically enable proxy when needed). Possible values are `0`, `2` and `3`.
      */
     siptcpCleartextProxy?: string;
     /**
@@ -57110,7 +56286,7 @@ export interface TcpSettingTcp {
      */
     tcpRetransmitScan?: boolean;
     /**
-     * Urgent data flag action
+     * Urgent data flag action. Possible values are `clear` and `oobinline`.
      */
     urgentData?: string;
 }
@@ -57157,11 +56333,11 @@ export interface TlsServiceProfileProtocolSettings {
      */
     keyxchgAlgoRsa?: boolean;
     /**
-     * Maximum TLS version
+     * Maximum TLS version. Possible values are `tls1-0`, `tls1-1`, `tls1-2` and `tls1-3`.
      */
     maxVersion?: string;
     /**
-     * Minimum TLS version
+     * Minimum TLS version. Possible values are `tls1-0`, `tls1-1`, `tls1-2` and `tls1-3`.
      */
     minVersion?: string;
 }
@@ -57270,14 +56446,10 @@ export interface UpdateScheduleUpdateScheduleAntiVirusRecurring {
     daily?: outputs.UpdateScheduleUpdateScheduleAntiVirusRecurringDaily;
     /**
      * Hourly
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `daily`, `hourly`, `none`, and `weekly`.
      */
     hourly?: outputs.UpdateScheduleUpdateScheduleAntiVirusRecurringHourly;
     /**
      * None
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `daily`, `hourly`, `none`, and `weekly`.
      */
     none?: outputs.UpdateScheduleUpdateScheduleAntiVirusRecurringNone;
     /**
@@ -57290,15 +56462,13 @@ export interface UpdateScheduleUpdateScheduleAntiVirusRecurring {
     threshold?: number;
     /**
      * Weekly
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `daily`, `hourly`, `none`, and `weekly`.
      */
     weekly?: outputs.UpdateScheduleUpdateScheduleAntiVirusRecurringWeekly;
 }
 
 export interface UpdateScheduleUpdateScheduleAntiVirusRecurringDaily {
     /**
-     * Action
+     * Action. Possible values are `download-only` and `download-and-install`.
      */
     action?: string;
     /**
@@ -57309,7 +56479,7 @@ export interface UpdateScheduleUpdateScheduleAntiVirusRecurringDaily {
 
 export interface UpdateScheduleUpdateScheduleAntiVirusRecurringHourly {
     /**
-     * Action
+     * Action. Possible values are `download-only` and `download-and-install`.
      */
     action?: string;
     /**
@@ -57323,7 +56493,7 @@ export interface UpdateScheduleUpdateScheduleAntiVirusRecurringNone {
 
 export interface UpdateScheduleUpdateScheduleAntiVirusRecurringWeekly {
     /**
-     * Action
+     * Action. Possible values are `download-only` and `download-and-install`.
      */
     action?: string;
     /**
@@ -57331,7 +56501,7 @@ export interface UpdateScheduleUpdateScheduleAntiVirusRecurringWeekly {
      */
     at?: string;
     /**
-     * Day of week
+     * Day of week. Possible values are `sunday`, `monday`, `tuesday`, `wednesday`, `thursday`, `friday` and `saturday`.
      */
     dayOfWeek?: string;
 }
@@ -57350,14 +56520,10 @@ export interface UpdateScheduleUpdateScheduleThreatsRecurring {
     daily?: outputs.UpdateScheduleUpdateScheduleThreatsRecurringDaily;
     /**
      * Every30 mins
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `daily`, `every30Mins`, `hourly`, `none`, and `weekly`.
      */
     every30Mins?: outputs.UpdateScheduleUpdateScheduleThreatsRecurringEvery30Mins;
     /**
      * Hourly
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `daily`, `every30Mins`, `hourly`, `none`, and `weekly`.
      */
     hourly?: outputs.UpdateScheduleUpdateScheduleThreatsRecurringHourly;
     /**
@@ -57366,8 +56532,6 @@ export interface UpdateScheduleUpdateScheduleThreatsRecurring {
     newAppThreshold?: number;
     /**
      * None
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `daily`, `every30Mins`, `hourly`, `none`, and `weekly`.
      */
     none?: outputs.UpdateScheduleUpdateScheduleThreatsRecurringNone;
     /**
@@ -57380,15 +56544,13 @@ export interface UpdateScheduleUpdateScheduleThreatsRecurring {
     threshold?: number;
     /**
      * Weekly
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `daily`, `every30Mins`, `hourly`, `none`, and `weekly`.
      */
     weekly?: outputs.UpdateScheduleUpdateScheduleThreatsRecurringWeekly;
 }
 
 export interface UpdateScheduleUpdateScheduleThreatsRecurringDaily {
     /**
-     * Action
+     * Action. Possible values are `download-only` and `download-and-install`.
      */
     action?: string;
     /**
@@ -57403,7 +56565,7 @@ export interface UpdateScheduleUpdateScheduleThreatsRecurringDaily {
 
 export interface UpdateScheduleUpdateScheduleThreatsRecurringEvery30Mins {
     /**
-     * Action
+     * Action. Possible values are `download-only` and `download-and-install`.
      */
     action?: string;
     /**
@@ -57418,7 +56580,7 @@ export interface UpdateScheduleUpdateScheduleThreatsRecurringEvery30Mins {
 
 export interface UpdateScheduleUpdateScheduleThreatsRecurringHourly {
     /**
-     * Action
+     * Action. Possible values are `download-only` and `download-and-install`.
      */
     action?: string;
     /**
@@ -57436,7 +56598,7 @@ export interface UpdateScheduleUpdateScheduleThreatsRecurringNone {
 
 export interface UpdateScheduleUpdateScheduleThreatsRecurringWeekly {
     /**
-     * Action
+     * Action. Possible values are `download-only` and `download-and-install`.
      */
     action?: string;
     /**
@@ -57444,7 +56606,7 @@ export interface UpdateScheduleUpdateScheduleThreatsRecurringWeekly {
      */
     at: string;
     /**
-     * Day of week
+     * Day of week. Possible values are `sunday`, `monday`, `tuesday`, `wednesday`, `thursday`, `friday` and `saturday`.
      */
     dayOfWeek: string;
     /**
@@ -57467,39 +56629,29 @@ export interface UpdateScheduleUpdateScheduleWildfireRecurring {
     every15Mins?: outputs.UpdateScheduleUpdateScheduleWildfireRecurringEvery15Mins;
     /**
      * Every30 mins
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `every15Mins`, `every30Mins`, `everyHour`, `everyMin`, `none`, and `realTime`.
      */
     every30Mins?: outputs.UpdateScheduleUpdateScheduleWildfireRecurringEvery30Mins;
     /**
      * Every hour
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `every15Mins`, `every30Mins`, `everyHour`, `everyMin`, `none`, and `realTime`.
      */
     everyHour?: outputs.UpdateScheduleUpdateScheduleWildfireRecurringEveryHour;
     /**
      * Every min
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `every15Mins`, `every30Mins`, `everyHour`, `everyMin`, `none`, and `realTime`.
      */
     everyMin?: outputs.UpdateScheduleUpdateScheduleWildfireRecurringEveryMin;
     /**
      * None
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `every15Mins`, `every30Mins`, `everyHour`, `everyMin`, `none`, and `realTime`.
      */
     none?: outputs.UpdateScheduleUpdateScheduleWildfireRecurringNone;
     /**
      * Real time
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `every15Mins`, `every30Mins`, `everyHour`, `everyMin`, `none`, and `realTime`.
      */
     realTime?: outputs.UpdateScheduleUpdateScheduleWildfireRecurringRealTime;
 }
 
 export interface UpdateScheduleUpdateScheduleWildfireRecurringEvery15Mins {
     /**
-     * Action
+     * Action. Possible values are `download-only` and `download-and-install`.
      */
     action?: string;
     /**
@@ -57514,7 +56666,7 @@ export interface UpdateScheduleUpdateScheduleWildfireRecurringEvery15Mins {
 
 export interface UpdateScheduleUpdateScheduleWildfireRecurringEvery30Mins {
     /**
-     * Action
+     * Action. Possible values are `download-only` and `download-and-install`.
      */
     action?: string;
     /**
@@ -57529,7 +56681,7 @@ export interface UpdateScheduleUpdateScheduleWildfireRecurringEvery30Mins {
 
 export interface UpdateScheduleUpdateScheduleWildfireRecurringEveryHour {
     /**
-     * Action
+     * Action. Possible values are `download-only` and `download-and-install`.
      */
     action?: string;
     /**
@@ -57544,7 +56696,7 @@ export interface UpdateScheduleUpdateScheduleWildfireRecurringEveryHour {
 
 export interface UpdateScheduleUpdateScheduleWildfireRecurringEveryMin {
     /**
-     * Action
+     * Action. Possible values are `download-only` and `download-and-install`.
      */
     action?: string;
     /**
@@ -57612,6 +56764,21 @@ export interface UrlAccessProfileCredentialEnforcementModeDomainCredentials {
 }
 
 export interface UrlAccessProfileCredentialEnforcementModeIpUser {
+}
+
+export interface VlanInterfaceAdjustTcpMss {
+    /**
+     * Enable TCP MSS adjustment on the interface
+     */
+    enable?: boolean;
+    /**
+     * IPv4 MSS adjustment size in bytes
+     */
+    ipv4MssAdjustment?: number;
+    /**
+     * IPv6 MSS adjustment size in bytes
+     */
+    ipv6MssAdjustment?: number;
 }
 
 export interface VlanInterfaceArp {
@@ -57725,7 +56892,7 @@ export interface VulnerabilityProtectionProfileRule {
      */
     action?: outputs.VulnerabilityProtectionProfileRuleAction;
     /**
-     * Category
+     * Category. Possible values are `any`, `app-id-change`, `brute-force`, `code-execution`, `code-obfuscation`, `command-execution`, `dos`, `exploit-kit`, `info-leak`, `inline-cloud-exploit`, `insecure-credentials`, `overflow`, `phishing`, `protocol-anomaly`, `scan` and `sql-injection`.
      */
     category?: string;
     /**
@@ -57741,7 +56908,7 @@ export interface VulnerabilityProtectionProfileRule {
      */
     name?: string;
     /**
-     * Packet capture
+     * Packet capture. Possible values are `disable`, `single-packet` and `extended-capture`.
      */
     packetCapture?: string;
     /**
@@ -57765,44 +56932,30 @@ export interface VulnerabilityProtectionProfileRuleAction {
     alert?: outputs.VulnerabilityProtectionProfileRuleActionAlert;
     /**
      * Allow
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      */
     allow?: outputs.VulnerabilityProtectionProfileRuleActionAllow;
     /**
      * vulnerability protection block ip
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      */
     blockIp?: outputs.VulnerabilityProtectionProfileRuleActionBlockIp;
     /**
      * Default
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      */
     default?: outputs.VulnerabilityProtectionProfileRuleActionDefault;
     /**
      * Drop
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      */
     drop?: outputs.VulnerabilityProtectionProfileRuleActionDrop;
     /**
      * Reset both
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      */
     resetBoth?: outputs.VulnerabilityProtectionProfileRuleActionResetBoth;
     /**
      * Reset client
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      */
     resetClient?: outputs.VulnerabilityProtectionProfileRuleActionResetClient;
     /**
      * Reset server
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      */
     resetServer?: outputs.VulnerabilityProtectionProfileRuleActionResetServer;
 }
@@ -57819,7 +56972,7 @@ export interface VulnerabilityProtectionProfileRuleActionBlockIp {
      */
     duration?: number;
     /**
-     * Track by
+     * Track by. Possible values are `source-and-destination` and `source`.
      */
     trackBy?: string;
 }
@@ -57857,7 +57010,7 @@ export interface VulnerabilityProtectionProfileThreatException {
      */
     notes?: string;
     /**
-     * Packet capture
+     * Packet capture. Possible values are `disable`, `single-packet` and `extended-capture`.
      */
     packetCapture?: string;
     /**
@@ -57873,44 +57026,30 @@ export interface VulnerabilityProtectionProfileThreatExceptionAction {
     alert?: outputs.VulnerabilityProtectionProfileThreatExceptionActionAlert;
     /**
      * Allow
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      */
     allow?: outputs.VulnerabilityProtectionProfileThreatExceptionActionAllow;
     /**
      * vulnerability protection threat exception block ip
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      */
     blockIp?: outputs.VulnerabilityProtectionProfileThreatExceptionActionBlockIp;
     /**
      * Default
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      */
     default?: outputs.VulnerabilityProtectionProfileThreatExceptionActionDefault;
     /**
      * Drop
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      */
     drop?: outputs.VulnerabilityProtectionProfileThreatExceptionActionDrop;
     /**
      * Reset both
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      */
     resetBoth?: outputs.VulnerabilityProtectionProfileThreatExceptionActionResetBoth;
     /**
      * Reset client
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      */
     resetClient?: outputs.VulnerabilityProtectionProfileThreatExceptionActionResetClient;
     /**
      * Reset server
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      */
     resetServer?: outputs.VulnerabilityProtectionProfileThreatExceptionActionResetServer;
 }
@@ -57927,7 +57066,7 @@ export interface VulnerabilityProtectionProfileThreatExceptionActionBlockIp {
      */
     duration?: number;
     /**
-     * Track by
+     * Track by. Possible values are `source-and-destination` and `source`.
      */
     trackBy?: string;
 }
@@ -57964,7 +57103,7 @@ export interface VulnerabilityProtectionProfileThreatExceptionTimeAttribute {
      */
     threshold?: number;
     /**
-     * Track by
+     * Track by. Possible values are `source`, `destination` and `source-and-destination`.
      */
     trackBy?: string;
 }
@@ -57976,8 +57115,6 @@ export interface VulnerabilityProtectionSignatureAffectedHost {
     client?: boolean;
     /**
      * Server
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `client` and `server`.
      */
     server?: boolean;
 }
@@ -57989,38 +57126,26 @@ export interface VulnerabilityProtectionSignatureDefaultAction {
     alert?: outputs.VulnerabilityProtectionSignatureDefaultActionAlert;
     /**
      * Allow
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      */
     allow?: outputs.VulnerabilityProtectionSignatureDefaultActionAllow;
     /**
      * vulnerability protection bugtraq block ip
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      */
     blockIp?: outputs.VulnerabilityProtectionSignatureDefaultActionBlockIp;
     /**
      * Drop
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      */
     drop?: outputs.VulnerabilityProtectionSignatureDefaultActionDrop;
     /**
      * Reset both
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      */
     resetBoth?: outputs.VulnerabilityProtectionSignatureDefaultActionResetBoth;
     /**
      * Reset client
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      */
     resetClient?: outputs.VulnerabilityProtectionSignatureDefaultActionResetClient;
     /**
      * Reset server
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      */
     resetServer?: outputs.VulnerabilityProtectionSignatureDefaultActionResetServer;
 }
@@ -58037,7 +57162,7 @@ export interface VulnerabilityProtectionSignatureDefaultActionBlockIp {
      */
     duration?: number;
     /**
-     * Track by
+     * Track by. Possible values are `source-and-destination` and `source`.
      */
     trackBy?: string;
 }
@@ -58061,8 +57186,6 @@ export interface VulnerabilityProtectionSignatureSignature {
     combination?: outputs.VulnerabilityProtectionSignatureSignatureCombination;
     /**
      * vulnerability protection signature standard array
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `combination` and `standard`.
      */
     standards?: outputs.VulnerabilityProtectionSignatureSignatureStandard[];
 }
@@ -58114,7 +57237,7 @@ export interface VulnerabilityProtectionSignatureSignatureCombinationTimeAttribu
      */
     threshold?: number;
     /**
-     * Track by
+     * Track by. Possible values are `source-and-destination`, `source` and `destination`.
      */
     trackBy?: string;
 }
@@ -58137,7 +57260,7 @@ export interface VulnerabilityProtectionSignatureSignatureStandard {
      */
     orderFree: boolean;
     /**
-     * Scope
+     * Scope. Possible values are `protocol-data-unit` and `session`.
      */
     scope?: string;
 }
@@ -58312,7 +57435,7 @@ export interface WildfireAntiVirusProfileMlavException {
 
 export interface WildfireAntiVirusProfileRule {
     /**
-     * Analysis
+     * Analysis. Possible values are `public-cloud` and `private-cloud`.
      */
     analysis?: string;
     /**
@@ -58320,7 +57443,7 @@ export interface WildfireAntiVirusProfileRule {
      */
     applications?: string[];
     /**
-     * Direction
+     * Direction. Possible values are `download`, `upload` and `both`.
      */
     direction?: string;
     /**
@@ -58726,7 +57849,7 @@ export interface ZoneProtectionProfileNonIpProtocol {
     /**
      * Specify the type of list you are creating for protocol protection:
      * * Include List—Only the protocols on the list are allowed—in addition to IPv4 (0x0800), IPv6 (0x86DD), ARP (0x0806), and VLAN tagged frames (0x8100). All other protocols are implicitly denied (blocked).
-     * * Exclude List—Only the protocols on the list are denied; all other protocols are implicitly allowed. You cannot exclude IPv4 (0x0800), IPv6 (0x86DD), ARP (0x0806), or VLAN tagged frames (0x8100).
+     * * Exclude List—Only the protocols on the list are denied; all other protocols are implicitly allowed. You cannot exclude IPv4 (0x0800), IPv6 (0x86DD), ARP (0x0806), or VLAN tagged frames (0x8100). Possible values are `exclude` and `include`.
      */
     listType?: string;
     /**
@@ -58767,7 +57890,7 @@ export interface ZoneProtectionProfileScan {
      * * "8001" - TCP Port Scan
      * * "8002" - Host Sweep
      * * "8003" - UDP Port Scan
-     * * "8006" - Port Scan
+     * * "8006" - Port Scan. Possible values are `8001`, `8002`, `8003` and `8006`.
      */
     name: string;
     /**
@@ -58810,7 +57933,7 @@ export interface ZoneProtectionProfileScanActionBlockIp {
      */
     duration: number;
     /**
-     * Track by
+     * Track by. Possible values are `source-and-destination` and `source`.
      */
     trackBy: string;
 }

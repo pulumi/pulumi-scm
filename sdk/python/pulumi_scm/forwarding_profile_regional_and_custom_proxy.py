@@ -36,14 +36,14 @@ class ForwardingProfileRegionalAndCustomProxyArgs:
 
         :param pulumi.Input[Sequence[pulumi.Input['ForwardingProfileRegionalAndCustomProxyConnectivityPreferenceArgs']]] connectivity_preferences: List of connectivity methods and their enablement status for establishing proxy connections
         :param pulumi.Input[_builtins.str] description: regional and custom proxy configuration description
-        :param pulumi.Input[_builtins.str] fallback_option: Behavior when proxy connection fails - 'fail-open' allows direct internet access, 'fail-safe' blocks traffic until proxy is restored
-        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-        :param pulumi.Input[_builtins.str] location_preference: Strategy for selecting Prisma Access location - 'best-available-pa-location' automatically selects optimal location, 'specific-pa-location' uses predefined locations
+        :param pulumi.Input[_builtins.str] fallback_option: Behavior when proxy connection fails - 'fail-open' allows direct internet access, 'fail-safe' blocks traffic until proxy is restored. Possible values are `fail-open` and `fail-safe`.
+        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined. Possible values are `Mobile Users`.
+        :param pulumi.Input[_builtins.str] location_preference: Strategy for selecting Prisma Access location - 'best-available-pa-location' automatically selects optimal location, 'specific-pa-location' uses predefined locations. Possible values are `best-available-pa-location` and `specific-pa-location`.
         :param pulumi.Input[_builtins.str] name: alphanumeric string [ 0-9a-zA-Z ._-]
         :param pulumi.Input[Sequence[pulumi.Input['ForwardingProfileRegionalAndCustomProxyPrismaAccessLocationArgs']]] prisma_access_locations: Select Prisma Access location Americas, Europe and Asia-Pacific.
         :param pulumi.Input['ForwardingProfileRegionalAndCustomProxyProxy1Args'] proxy1: primary regional and custom proxy
         :param pulumi.Input['ForwardingProfileRegionalAndCustomProxyProxy2Args'] proxy2: secondary regional and custom proxy
-        :param pulumi.Input[_builtins.str] type: Proxy configuration type - 'gp-and-pac' for GlobalProtect and PAC file forwarding, 'ztna-agent' for ZTNA agent forwarding
+        :param pulumi.Input[_builtins.str] type: Proxy configuration type - 'gp-and-pac' for GlobalProtect and PAC file forwarding, 'ztna-agent' for ZTNA agent forwarding. Possible values are `gp-and-pac` and `ztna-agent`.
         """
         if connectivity_preferences is not None:
             pulumi.set(__self__, "connectivity_preferences", connectivity_preferences)
@@ -94,7 +94,7 @@ class ForwardingProfileRegionalAndCustomProxyArgs:
     @pulumi.getter(name="fallbackOption")
     def fallback_option(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
-        Behavior when proxy connection fails - 'fail-open' allows direct internet access, 'fail-safe' blocks traffic until proxy is restored
+        Behavior when proxy connection fails - 'fail-open' allows direct internet access, 'fail-safe' blocks traffic until proxy is restored. Possible values are `fail-open` and `fail-safe`.
         """
         return pulumi.get(self, "fallback_option")
 
@@ -106,7 +106,7 @@ class ForwardingProfileRegionalAndCustomProxyArgs:
     @pulumi.getter
     def folder(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
-        The folder in which the resource is defined
+        The folder in which the resource is defined. Possible values are `Mobile Users`.
         """
         return pulumi.get(self, "folder")
 
@@ -118,7 +118,7 @@ class ForwardingProfileRegionalAndCustomProxyArgs:
     @pulumi.getter(name="locationPreference")
     def location_preference(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
-        Strategy for selecting Prisma Access location - 'best-available-pa-location' automatically selects optimal location, 'specific-pa-location' uses predefined locations
+        Strategy for selecting Prisma Access location - 'best-available-pa-location' automatically selects optimal location, 'specific-pa-location' uses predefined locations. Possible values are `best-available-pa-location` and `specific-pa-location`.
         """
         return pulumi.get(self, "location_preference")
 
@@ -178,7 +178,7 @@ class ForwardingProfileRegionalAndCustomProxyArgs:
     @pulumi.getter
     def type(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
-        Proxy configuration type - 'gp-and-pac' for GlobalProtect and PAC file forwarding, 'ztna-agent' for ZTNA agent forwarding
+        Proxy configuration type - 'gp-and-pac' for GlobalProtect and PAC file forwarding, 'ztna-agent' for ZTNA agent forwarding. Possible values are `gp-and-pac` and `ztna-agent`.
         """
         return pulumi.get(self, "type")
 
@@ -206,15 +206,15 @@ class _ForwardingProfileRegionalAndCustomProxyState:
 
         :param pulumi.Input[Sequence[pulumi.Input['ForwardingProfileRegionalAndCustomProxyConnectivityPreferenceArgs']]] connectivity_preferences: List of connectivity methods and their enablement status for establishing proxy connections
         :param pulumi.Input[_builtins.str] description: regional and custom proxy configuration description
-        :param pulumi.Input[_builtins.str] fallback_option: Behavior when proxy connection fails - 'fail-open' allows direct internet access, 'fail-safe' blocks traffic until proxy is restored
-        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-        :param pulumi.Input[_builtins.str] location_preference: Strategy for selecting Prisma Access location - 'best-available-pa-location' automatically selects optimal location, 'specific-pa-location' uses predefined locations
+        :param pulumi.Input[_builtins.str] fallback_option: Behavior when proxy connection fails - 'fail-open' allows direct internet access, 'fail-safe' blocks traffic until proxy is restored. Possible values are `fail-open` and `fail-safe`.
+        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined. Possible values are `Mobile Users`.
+        :param pulumi.Input[_builtins.str] location_preference: Strategy for selecting Prisma Access location - 'best-available-pa-location' automatically selects optimal location, 'specific-pa-location' uses predefined locations. Possible values are `best-available-pa-location` and `specific-pa-location`.
         :param pulumi.Input[_builtins.str] name: alphanumeric string [ 0-9a-zA-Z ._-]
         :param pulumi.Input[Sequence[pulumi.Input['ForwardingProfileRegionalAndCustomProxyPrismaAccessLocationArgs']]] prisma_access_locations: Select Prisma Access location Americas, Europe and Asia-Pacific.
         :param pulumi.Input['ForwardingProfileRegionalAndCustomProxyProxy1Args'] proxy1: primary regional and custom proxy
         :param pulumi.Input['ForwardingProfileRegionalAndCustomProxyProxy2Args'] proxy2: secondary regional and custom proxy
         :param pulumi.Input[_builtins.str] tfid: The Terraform ID.
-        :param pulumi.Input[_builtins.str] type: Proxy configuration type - 'gp-and-pac' for GlobalProtect and PAC file forwarding, 'ztna-agent' for ZTNA agent forwarding
+        :param pulumi.Input[_builtins.str] type: Proxy configuration type - 'gp-and-pac' for GlobalProtect and PAC file forwarding, 'ztna-agent' for ZTNA agent forwarding. Possible values are `gp-and-pac` and `ztna-agent`.
         """
         if connectivity_preferences is not None:
             pulumi.set(__self__, "connectivity_preferences", connectivity_preferences)
@@ -267,7 +267,7 @@ class _ForwardingProfileRegionalAndCustomProxyState:
     @pulumi.getter(name="fallbackOption")
     def fallback_option(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
-        Behavior when proxy connection fails - 'fail-open' allows direct internet access, 'fail-safe' blocks traffic until proxy is restored
+        Behavior when proxy connection fails - 'fail-open' allows direct internet access, 'fail-safe' blocks traffic until proxy is restored. Possible values are `fail-open` and `fail-safe`.
         """
         return pulumi.get(self, "fallback_option")
 
@@ -279,7 +279,7 @@ class _ForwardingProfileRegionalAndCustomProxyState:
     @pulumi.getter
     def folder(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
-        The folder in which the resource is defined
+        The folder in which the resource is defined. Possible values are `Mobile Users`.
         """
         return pulumi.get(self, "folder")
 
@@ -291,7 +291,7 @@ class _ForwardingProfileRegionalAndCustomProxyState:
     @pulumi.getter(name="locationPreference")
     def location_preference(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
-        Strategy for selecting Prisma Access location - 'best-available-pa-location' automatically selects optimal location, 'specific-pa-location' uses predefined locations
+        Strategy for selecting Prisma Access location - 'best-available-pa-location' automatically selects optimal location, 'specific-pa-location' uses predefined locations. Possible values are `best-available-pa-location` and `specific-pa-location`.
         """
         return pulumi.get(self, "location_preference")
 
@@ -363,7 +363,7 @@ class _ForwardingProfileRegionalAndCustomProxyState:
     @pulumi.getter
     def type(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
-        Proxy configuration type - 'gp-and-pac' for GlobalProtect and PAC file forwarding, 'ztna-agent' for ZTNA agent forwarding
+        Proxy configuration type - 'gp-and-pac' for GlobalProtect and PAC file forwarding, 'ztna-agent' for ZTNA agent forwarding. Possible values are `gp-and-pac` and `ztna-agent`.
         """
         return pulumi.get(self, "type")
 
@@ -513,14 +513,14 @@ class ForwardingProfileRegionalAndCustomProxy(pulumi.CustomResource):
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[Sequence[pulumi.Input[Union['ForwardingProfileRegionalAndCustomProxyConnectivityPreferenceArgs', 'ForwardingProfileRegionalAndCustomProxyConnectivityPreferenceArgsDict', 'outputs.ForwardingProfileRegionalAndCustomProxyConnectivityPreference']]]] connectivity_preferences: List of connectivity methods and their enablement status for establishing proxy connections
         :param pulumi.Input[_builtins.str] description: regional and custom proxy configuration description
-        :param pulumi.Input[_builtins.str] fallback_option: Behavior when proxy connection fails - 'fail-open' allows direct internet access, 'fail-safe' blocks traffic until proxy is restored
-        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-        :param pulumi.Input[_builtins.str] location_preference: Strategy for selecting Prisma Access location - 'best-available-pa-location' automatically selects optimal location, 'specific-pa-location' uses predefined locations
+        :param pulumi.Input[_builtins.str] fallback_option: Behavior when proxy connection fails - 'fail-open' allows direct internet access, 'fail-safe' blocks traffic until proxy is restored. Possible values are `fail-open` and `fail-safe`.
+        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined. Possible values are `Mobile Users`.
+        :param pulumi.Input[_builtins.str] location_preference: Strategy for selecting Prisma Access location - 'best-available-pa-location' automatically selects optimal location, 'specific-pa-location' uses predefined locations. Possible values are `best-available-pa-location` and `specific-pa-location`.
         :param pulumi.Input[_builtins.str] name: alphanumeric string [ 0-9a-zA-Z ._-]
         :param pulumi.Input[Sequence[pulumi.Input[Union['ForwardingProfileRegionalAndCustomProxyPrismaAccessLocationArgs', 'ForwardingProfileRegionalAndCustomProxyPrismaAccessLocationArgsDict', 'outputs.ForwardingProfileRegionalAndCustomProxyPrismaAccessLocation']]]] prisma_access_locations: Select Prisma Access location Americas, Europe and Asia-Pacific.
         :param pulumi.Input[Union['ForwardingProfileRegionalAndCustomProxyProxy1Args', 'ForwardingProfileRegionalAndCustomProxyProxy1ArgsDict', 'outputs.ForwardingProfileRegionalAndCustomProxyProxy1']] proxy1: primary regional and custom proxy
         :param pulumi.Input[Union['ForwardingProfileRegionalAndCustomProxyProxy2Args', 'ForwardingProfileRegionalAndCustomProxyProxy2ArgsDict', 'outputs.ForwardingProfileRegionalAndCustomProxyProxy2']] proxy2: secondary regional and custom proxy
-        :param pulumi.Input[_builtins.str] type: Proxy configuration type - 'gp-and-pac' for GlobalProtect and PAC file forwarding, 'ztna-agent' for ZTNA agent forwarding
+        :param pulumi.Input[_builtins.str] type: Proxy configuration type - 'gp-and-pac' for GlobalProtect and PAC file forwarding, 'ztna-agent' for ZTNA agent forwarding. Possible values are `gp-and-pac` and `ztna-agent`.
         """
         ...
     @overload
@@ -723,15 +723,15 @@ class ForwardingProfileRegionalAndCustomProxy(pulumi.CustomResource):
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[Sequence[pulumi.Input[Union['ForwardingProfileRegionalAndCustomProxyConnectivityPreferenceArgs', 'ForwardingProfileRegionalAndCustomProxyConnectivityPreferenceArgsDict', 'outputs.ForwardingProfileRegionalAndCustomProxyConnectivityPreference']]]] connectivity_preferences: List of connectivity methods and their enablement status for establishing proxy connections
         :param pulumi.Input[_builtins.str] description: regional and custom proxy configuration description
-        :param pulumi.Input[_builtins.str] fallback_option: Behavior when proxy connection fails - 'fail-open' allows direct internet access, 'fail-safe' blocks traffic until proxy is restored
-        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-        :param pulumi.Input[_builtins.str] location_preference: Strategy for selecting Prisma Access location - 'best-available-pa-location' automatically selects optimal location, 'specific-pa-location' uses predefined locations
+        :param pulumi.Input[_builtins.str] fallback_option: Behavior when proxy connection fails - 'fail-open' allows direct internet access, 'fail-safe' blocks traffic until proxy is restored. Possible values are `fail-open` and `fail-safe`.
+        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined. Possible values are `Mobile Users`.
+        :param pulumi.Input[_builtins.str] location_preference: Strategy for selecting Prisma Access location - 'best-available-pa-location' automatically selects optimal location, 'specific-pa-location' uses predefined locations. Possible values are `best-available-pa-location` and `specific-pa-location`.
         :param pulumi.Input[_builtins.str] name: alphanumeric string [ 0-9a-zA-Z ._-]
         :param pulumi.Input[Sequence[pulumi.Input[Union['ForwardingProfileRegionalAndCustomProxyPrismaAccessLocationArgs', 'ForwardingProfileRegionalAndCustomProxyPrismaAccessLocationArgsDict', 'outputs.ForwardingProfileRegionalAndCustomProxyPrismaAccessLocation']]]] prisma_access_locations: Select Prisma Access location Americas, Europe and Asia-Pacific.
         :param pulumi.Input[Union['ForwardingProfileRegionalAndCustomProxyProxy1Args', 'ForwardingProfileRegionalAndCustomProxyProxy1ArgsDict', 'outputs.ForwardingProfileRegionalAndCustomProxyProxy1']] proxy1: primary regional and custom proxy
         :param pulumi.Input[Union['ForwardingProfileRegionalAndCustomProxyProxy2Args', 'ForwardingProfileRegionalAndCustomProxyProxy2ArgsDict', 'outputs.ForwardingProfileRegionalAndCustomProxyProxy2']] proxy2: secondary regional and custom proxy
         :param pulumi.Input[_builtins.str] tfid: The Terraform ID.
-        :param pulumi.Input[_builtins.str] type: Proxy configuration type - 'gp-and-pac' for GlobalProtect and PAC file forwarding, 'ztna-agent' for ZTNA agent forwarding
+        :param pulumi.Input[_builtins.str] type: Proxy configuration type - 'gp-and-pac' for GlobalProtect and PAC file forwarding, 'ztna-agent' for ZTNA agent forwarding. Possible values are `gp-and-pac` and `ztna-agent`.
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
 
@@ -770,7 +770,7 @@ class ForwardingProfileRegionalAndCustomProxy(pulumi.CustomResource):
     @pulumi.getter(name="fallbackOption")
     def fallback_option(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        Behavior when proxy connection fails - 'fail-open' allows direct internet access, 'fail-safe' blocks traffic until proxy is restored
+        Behavior when proxy connection fails - 'fail-open' allows direct internet access, 'fail-safe' blocks traffic until proxy is restored. Possible values are `fail-open` and `fail-safe`.
         """
         return pulumi.get(self, "fallback_option")
 
@@ -778,7 +778,7 @@ class ForwardingProfileRegionalAndCustomProxy(pulumi.CustomResource):
     @pulumi.getter
     def folder(self) -> pulumi.Output[_builtins.str]:
         """
-        The folder in which the resource is defined
+        The folder in which the resource is defined. Possible values are `Mobile Users`.
         """
         return pulumi.get(self, "folder")
 
@@ -786,7 +786,7 @@ class ForwardingProfileRegionalAndCustomProxy(pulumi.CustomResource):
     @pulumi.getter(name="locationPreference")
     def location_preference(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        Strategy for selecting Prisma Access location - 'best-available-pa-location' automatically selects optimal location, 'specific-pa-location' uses predefined locations
+        Strategy for selecting Prisma Access location - 'best-available-pa-location' automatically selects optimal location, 'specific-pa-location' uses predefined locations. Possible values are `best-available-pa-location` and `specific-pa-location`.
         """
         return pulumi.get(self, "location_preference")
 
@@ -834,7 +834,7 @@ class ForwardingProfileRegionalAndCustomProxy(pulumi.CustomResource):
     @pulumi.getter
     def type(self) -> pulumi.Output[_builtins.str]:
         """
-        Proxy configuration type - 'gp-and-pac' for GlobalProtect and PAC file forwarding, 'ztna-agent' for ZTNA agent forwarding
+        Proxy configuration type - 'gp-and-pac' for GlobalProtect and PAC file forwarding, 'ztna-agent' for ZTNA agent forwarding. Possible values are `gp-and-pac` and `ztna-agent`.
         """
         return pulumi.get(self, "type")
 

@@ -17,7 +17,7 @@ public final class GetForwardingProfileRegionalAndCustomProxyListDataConnectivit
      */
     private Boolean enabled;
     /**
-     * @return Connectivity method type - &#39;tunnel&#39; for VPN tunnels, &#39;proxy&#39; for HTTP/HTTPS proxies, &#39;adns&#39; for authenticated DNS, &#39;masque&#39; for MASQUE protocol
+     * @return Connectivity method type - &#39;tunnel&#39; for VPN tunnels, &#39;proxy&#39; for HTTP/HTTPS proxies, &#39;adns&#39; for authenticated DNS, &#39;masque&#39; for MASQUE protocol. Possible values are `tunnel`, `proxy`, `adns` and `masque`.
      * 
      */
     private String name;
@@ -31,7 +31,7 @@ public final class GetForwardingProfileRegionalAndCustomProxyListDataConnectivit
         return this.enabled;
     }
     /**
-     * @return Connectivity method type - &#39;tunnel&#39; for VPN tunnels, &#39;proxy&#39; for HTTP/HTTPS proxies, &#39;adns&#39; for authenticated DNS, &#39;masque&#39; for MASQUE protocol
+     * @return Connectivity method type - &#39;tunnel&#39; for VPN tunnels, &#39;proxy&#39; for HTTP/HTTPS proxies, &#39;adns&#39; for authenticated DNS, &#39;masque&#39; for MASQUE protocol. Possible values are `tunnel`, `proxy`, `adns` and `masque`.
      * 
      */
     public String name() {

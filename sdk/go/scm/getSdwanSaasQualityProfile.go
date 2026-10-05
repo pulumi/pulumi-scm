@@ -26,10 +26,13 @@ func LookupSdwanSaasQualityProfile(ctx *pulumi.Context, args *LookupSdwanSaasQua
 type LookupSdwanSaasQualityProfileArgs struct {
 	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
+	// The folder in which the resource is defined
 	Folder *string `pulumi:"folder"`
 	// UUID of the resource
-	Id      string  `pulumi:"id"`
-	Name    *string `pulumi:"name"`
+	Id string `pulumi:"id"`
+	// Profile name
+	Name *string `pulumi:"name"`
+	// The snippet in which the resource is defined
 	Snippet *string `pulumi:"snippet"`
 }
 
@@ -37,13 +40,18 @@ type LookupSdwanSaasQualityProfileArgs struct {
 type LookupSdwanSaasQualityProfileResult struct {
 	// The device in which the resource is defined
 	Device string `pulumi:"device"`
+	// The folder in which the resource is defined
 	Folder string `pulumi:"folder"`
 	// UUID of the resource
-	Id          string                                `pulumi:"id"`
+	Id string `pulumi:"id"`
+	// Monitor mode
 	MonitorMode GetSdwanSaasQualityProfileMonitorMode `pulumi:"monitorMode"`
-	Name        string                                `pulumi:"name"`
-	Snippet     string                                `pulumi:"snippet"`
-	Tfid        string                                `pulumi:"tfid"`
+	// Profile name
+	Name string `pulumi:"name"`
+	// The snippet in which the resource is defined
+	Snippet string `pulumi:"snippet"`
+	// The Terraform ID.
+	Tfid string `pulumi:"tfid"`
 }
 
 func LookupSdwanSaasQualityProfileOutput(ctx *pulumi.Context, args LookupSdwanSaasQualityProfileOutputArgs, opts ...pulumi.InvokeOption) LookupSdwanSaasQualityProfileResultOutput {
@@ -55,10 +63,13 @@ func LookupSdwanSaasQualityProfileOutput(ctx *pulumi.Context, args LookupSdwanSa
 type LookupSdwanSaasQualityProfileOutputArgs struct {
 	// The device in which the resource is defined
 	Device pulumi.StringPtrInput `pulumi:"device"`
+	// The folder in which the resource is defined
 	Folder pulumi.StringPtrInput `pulumi:"folder"`
 	// UUID of the resource
-	Id      pulumi.StringInput    `pulumi:"id"`
-	Name    pulumi.StringPtrInput `pulumi:"name"`
+	Id pulumi.StringInput `pulumi:"id"`
+	// Profile name
+	Name pulumi.StringPtrInput `pulumi:"name"`
+	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrInput `pulumi:"snippet"`
 }
 
@@ -86,6 +97,7 @@ func (o LookupSdwanSaasQualityProfileResultOutput) Device() pulumi.StringOutput 
 	return o.ApplyT(func(v LookupSdwanSaasQualityProfileResult) string { return v.Device }).(pulumi.StringOutput)
 }
 
+// The folder in which the resource is defined
 func (o LookupSdwanSaasQualityProfileResultOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupSdwanSaasQualityProfileResult) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -95,20 +107,24 @@ func (o LookupSdwanSaasQualityProfileResultOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupSdwanSaasQualityProfileResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
+// Monitor mode
 func (o LookupSdwanSaasQualityProfileResultOutput) MonitorMode() GetSdwanSaasQualityProfileMonitorModeOutput {
 	return o.ApplyT(func(v LookupSdwanSaasQualityProfileResult) GetSdwanSaasQualityProfileMonitorMode {
 		return v.MonitorMode
 	}).(GetSdwanSaasQualityProfileMonitorModeOutput)
 }
 
+// Profile name
 func (o LookupSdwanSaasQualityProfileResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupSdwanSaasQualityProfileResult) string { return v.Name }).(pulumi.StringOutput)
 }
 
+// The snippet in which the resource is defined
 func (o LookupSdwanSaasQualityProfileResultOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupSdwanSaasQualityProfileResult) string { return v.Snippet }).(pulumi.StringOutput)
 }
 
+// The Terraform ID.
 func (o LookupSdwanSaasQualityProfileResultOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupSdwanSaasQualityProfileResult) string { return v.Tfid }).(pulumi.StringOutput)
 }

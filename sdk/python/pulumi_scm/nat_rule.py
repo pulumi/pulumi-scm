@@ -48,7 +48,7 @@ class NatRuleArgs:
         :param pulumi.Input[_builtins.str] service: The service of the original packet
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] sources: Source address(es) of the original packet
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tos: Destination zone of the original packet
-        :param pulumi.Input[_builtins.str] active_active_device_binding: Active active device binding
+        :param pulumi.Input[_builtins.str] active_active_device_binding: Active active device binding. Possible values are `primary`, `both`, `0` and `1`.
         :param pulumi.Input[_builtins.str] description: NAT rule description
         :param pulumi.Input['NatRuleDestinationTranslationArgs'] destination_translation: Destination translation
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
@@ -56,8 +56,8 @@ class NatRuleArgs:
         :param pulumi.Input['NatRuleDynamicDestinationTranslationArgs'] dynamic_destination_translation: Dynamic destination translation
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
         :param pulumi.Input[_builtins.str] name: NAT rule name
-        :param pulumi.Input[_builtins.str] nat_type: NAT type
-        :param pulumi.Input[_builtins.str] position: The relative position of the rule
+        :param pulumi.Input[_builtins.str] nat_type: NAT type. Possible values are `ipv4`, `nat64` and `nptv6`.
+        :param pulumi.Input[_builtins.str] position: The relative position of the rule. Possible values are `pre` and `post`.
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
         :param pulumi.Input['NatRuleSourceTranslationArgs'] source_translation: Source translation
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tags: NAT rule tags
@@ -161,7 +161,7 @@ class NatRuleArgs:
     @pulumi.getter(name="activeActiveDeviceBinding")
     def active_active_device_binding(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
-        Active active device binding
+        Active active device binding. Possible values are `primary`, `both`, `0` and `1`.
         """
         return pulumi.get(self, "active_active_device_binding")
 
@@ -257,7 +257,7 @@ class NatRuleArgs:
     @pulumi.getter(name="natType")
     def nat_type(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
-        NAT type
+        NAT type. Possible values are `ipv4`, `nat64` and `nptv6`.
         """
         return pulumi.get(self, "nat_type")
 
@@ -269,7 +269,7 @@ class NatRuleArgs:
     @pulumi.getter
     def position(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
-        The relative position of the rule
+        The relative position of the rule. Possible values are `pre` and `post`.
         """
         return pulumi.get(self, "position")
 
@@ -352,7 +352,7 @@ class _NatRuleState:
         """
         Input properties used for looking up and filtering NatRule resources.
 
-        :param pulumi.Input[_builtins.str] active_active_device_binding: Active active device binding
+        :param pulumi.Input[_builtins.str] active_active_device_binding: Active active device binding. Possible values are `primary`, `both`, `0` and `1`.
         :param pulumi.Input[_builtins.str] description: NAT rule description
         :param pulumi.Input['NatRuleDestinationTranslationArgs'] destination_translation: Destination translation
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] destinations: Destination address(es) of the original packet
@@ -362,8 +362,8 @@ class _NatRuleState:
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] froms: Source zone(s) of the original packet
         :param pulumi.Input[_builtins.str] name: NAT rule name
-        :param pulumi.Input[_builtins.str] nat_type: NAT type
-        :param pulumi.Input[_builtins.str] position: The relative position of the rule
+        :param pulumi.Input[_builtins.str] nat_type: NAT type. Possible values are `ipv4`, `nat64` and `nptv6`.
+        :param pulumi.Input[_builtins.str] position: The relative position of the rule. Possible values are `pre` and `post`.
         :param pulumi.Input[_builtins.str] service: The service of the original packet
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
         :param pulumi.Input['NatRuleSourceTranslationArgs'] source_translation: Source translation
@@ -418,7 +418,7 @@ class _NatRuleState:
     @pulumi.getter(name="activeActiveDeviceBinding")
     def active_active_device_binding(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
-        Active active device binding
+        Active active device binding. Possible values are `primary`, `both`, `0` and `1`.
         """
         return pulumi.get(self, "active_active_device_binding")
 
@@ -538,7 +538,7 @@ class _NatRuleState:
     @pulumi.getter(name="natType")
     def nat_type(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
-        NAT type
+        NAT type. Possible values are `ipv4`, `nat64` and `nptv6`.
         """
         return pulumi.get(self, "nat_type")
 
@@ -550,7 +550,7 @@ class _NatRuleState:
     @pulumi.getter
     def position(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
-        The relative position of the rule
+        The relative position of the rule. Possible values are `pre` and `post`.
         """
         return pulumi.get(self, "position")
 
@@ -821,7 +821,7 @@ class NatRule(pulumi.CustomResource):
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[_builtins.str] active_active_device_binding: Active active device binding
+        :param pulumi.Input[_builtins.str] active_active_device_binding: Active active device binding. Possible values are `primary`, `both`, `0` and `1`.
         :param pulumi.Input[_builtins.str] description: NAT rule description
         :param pulumi.Input[Union['NatRuleDestinationTranslationArgs', 'NatRuleDestinationTranslationArgsDict', 'outputs.NatRuleDestinationTranslation']] destination_translation: Destination translation
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] destinations: Destination address(es) of the original packet
@@ -831,8 +831,8 @@ class NatRule(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] froms: Source zone(s) of the original packet
         :param pulumi.Input[_builtins.str] name: NAT rule name
-        :param pulumi.Input[_builtins.str] nat_type: NAT type
-        :param pulumi.Input[_builtins.str] position: The relative position of the rule
+        :param pulumi.Input[_builtins.str] nat_type: NAT type. Possible values are `ipv4`, `nat64` and `nptv6`.
+        :param pulumi.Input[_builtins.str] position: The relative position of the rule. Possible values are `pre` and `post`.
         :param pulumi.Input[_builtins.str] service: The service of the original packet
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
         :param pulumi.Input[Union['NatRuleSourceTranslationArgs', 'NatRuleSourceTranslationArgsDict', 'outputs.NatRuleSourceTranslation']] source_translation: Source translation
@@ -1095,7 +1095,7 @@ class NatRule(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[_builtins.str] active_active_device_binding: Active active device binding
+        :param pulumi.Input[_builtins.str] active_active_device_binding: Active active device binding. Possible values are `primary`, `both`, `0` and `1`.
         :param pulumi.Input[_builtins.str] description: NAT rule description
         :param pulumi.Input[Union['NatRuleDestinationTranslationArgs', 'NatRuleDestinationTranslationArgsDict', 'outputs.NatRuleDestinationTranslation']] destination_translation: Destination translation
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] destinations: Destination address(es) of the original packet
@@ -1105,8 +1105,8 @@ class NatRule(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] froms: Source zone(s) of the original packet
         :param pulumi.Input[_builtins.str] name: NAT rule name
-        :param pulumi.Input[_builtins.str] nat_type: NAT type
-        :param pulumi.Input[_builtins.str] position: The relative position of the rule
+        :param pulumi.Input[_builtins.str] nat_type: NAT type. Possible values are `ipv4`, `nat64` and `nptv6`.
+        :param pulumi.Input[_builtins.str] position: The relative position of the rule. Possible values are `pre` and `post`.
         :param pulumi.Input[_builtins.str] service: The service of the original packet
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
         :param pulumi.Input[Union['NatRuleSourceTranslationArgs', 'NatRuleSourceTranslationArgsDict', 'outputs.NatRuleSourceTranslation']] source_translation: Source translation
@@ -1146,7 +1146,7 @@ class NatRule(pulumi.CustomResource):
     @pulumi.getter(name="activeActiveDeviceBinding")
     def active_active_device_binding(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        Active active device binding
+        Active active device binding. Possible values are `primary`, `both`, `0` and `1`.
         """
         return pulumi.get(self, "active_active_device_binding")
 
@@ -1226,7 +1226,7 @@ class NatRule(pulumi.CustomResource):
     @pulumi.getter(name="natType")
     def nat_type(self) -> pulumi.Output[_builtins.str]:
         """
-        NAT type
+        NAT type. Possible values are `ipv4`, `nat64` and `nptv6`.
         """
         return pulumi.get(self, "nat_type")
 
@@ -1234,7 +1234,7 @@ class NatRule(pulumi.CustomResource):
     @pulumi.getter
     def position(self) -> pulumi.Output[_builtins.str]:
         """
-        The relative position of the rule
+        The relative position of the rule. Possible values are `pre` and `post`.
         """
         return pulumi.get(self, "position")
 

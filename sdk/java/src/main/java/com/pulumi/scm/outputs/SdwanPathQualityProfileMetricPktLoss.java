@@ -12,7 +12,7 @@ import java.util.Objects;
 @CustomType
 public final class SdwanPathQualityProfileMetricPktLoss {
     /**
-     * @return Packet loss sensitivity
+     * @return Packet loss sensitivity. Possible values are `low`, `medium` and `high`.
      * 
      */
     private String sensitivity;
@@ -24,7 +24,7 @@ public final class SdwanPathQualityProfileMetricPktLoss {
 
     private SdwanPathQualityProfileMetricPktLoss() {}
     /**
-     * @return Packet loss sensitivity
+     * @return Packet loss sensitivity. Possible values are `low`, `medium` and `high`.
      * 
      */
     public String sensitivity() {

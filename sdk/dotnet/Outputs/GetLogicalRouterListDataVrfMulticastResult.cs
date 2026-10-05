@@ -30,7 +30,7 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly ImmutableArray<Outputs.GetLogicalRouterListDataVrfMulticastInterfaceGroupResult> InterfaceGroups;
         /// <summary>
-        /// Mode
+        /// Mode. Possible values are `PIM-SM` and `IGMP-Proxy`.
         /// </summary>
         public readonly string Mode;
         /// <summary>

@@ -20,8 +20,6 @@ namespace Pulumi.Scm.Inputs
 
         /// <summary>
         /// Servers
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `DnsProxyObject` and `Servers`.
         /// </summary>
         [Input("servers")]
         public Input<Inputs.ServiceSettingServicesDnsSettingServersGetArgs>? Servers { get; set; }

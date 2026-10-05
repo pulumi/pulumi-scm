@@ -172,29 +172,25 @@ type ScepProfile struct {
 	CertificateAttributes ScepProfileCertificateAttributesPtrOutput `pulumi:"certificateAttributes"`
 	// The device in which the resource is defined
 	Device pulumi.StringPtrOutput `pulumi:"device"`
-	// Digest for CSR
+	// Digest for CSR. Possible values are `sha1`, `sha256`, `sha384` and `sha512`.
 	Digest pulumi.StringOutput `pulumi:"digest"`
 	// Map of sensitive values returned from the API.
 	EncryptedValues pulumi.StringMapOutput `pulumi:"encryptedValues"`
 	// CA Certificate Fingerprint
 	Fingerprint pulumi.StringPtrOutput `pulumi:"fingerprint"`
 	// The folder in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrOutput `pulumi:"folder"`
 	// The name of the SCEP profile
 	Name pulumi.StringOutput `pulumi:"name"`
-	// SCEP Server CA Certificate
+	// SCEP Server CA Certificate. Possible values are `Authentication Cookie CA`, `Forward-Trust-CA`, `Forward-Trust-CA-ECDSA`, `Forward-UnTrust-CA`, `Forward-UnTrust-CA-ECDSA`, `Global Authentication Cookie CA`, `GlobalSign-Root-CA` and `Root CA`.
 	ScepCaCert pulumi.StringPtrOutput `pulumi:"scepCaCert"`
 	// One Time Password Challenge
 	ScepChallenge ScepProfileScepChallengeOutput `pulumi:"scepChallenge"`
-	// SCEP Client Certificate
+	// SCEP Client Certificate. Possible values are `Authentication Cookie CA`, `Forward-Trust-CA`, `Forward-Trust-CA-ECDSA`, `Forward-UnTrust-CA`, `Forward-UnTrust-CA-ECDSA`, `Global Authentication Cookie CA`, `GlobalSign-Root-CA` and `Root CA`.
 	ScepClientCert pulumi.StringPtrOutput `pulumi:"scepClientCert"`
 	// SCEP server URL
 	ScepUrl pulumi.StringOutput `pulumi:"scepUrl"`
 	// The snippet in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
 	// Subject
 	Subject pulumi.StringOutput `pulumi:"subject"`
@@ -266,29 +262,25 @@ type scepProfileState struct {
 	CertificateAttributes *ScepProfileCertificateAttributes `pulumi:"certificateAttributes"`
 	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
-	// Digest for CSR
+	// Digest for CSR. Possible values are `sha1`, `sha256`, `sha384` and `sha512`.
 	Digest *string `pulumi:"digest"`
 	// Map of sensitive values returned from the API.
 	EncryptedValues map[string]string `pulumi:"encryptedValues"`
 	// CA Certificate Fingerprint
 	Fingerprint *string `pulumi:"fingerprint"`
 	// The folder in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// The name of the SCEP profile
 	Name *string `pulumi:"name"`
-	// SCEP Server CA Certificate
+	// SCEP Server CA Certificate. Possible values are `Authentication Cookie CA`, `Forward-Trust-CA`, `Forward-Trust-CA-ECDSA`, `Forward-UnTrust-CA`, `Forward-UnTrust-CA-ECDSA`, `Global Authentication Cookie CA`, `GlobalSign-Root-CA` and `Root CA`.
 	ScepCaCert *string `pulumi:"scepCaCert"`
 	// One Time Password Challenge
 	ScepChallenge *ScepProfileScepChallenge `pulumi:"scepChallenge"`
-	// SCEP Client Certificate
+	// SCEP Client Certificate. Possible values are `Authentication Cookie CA`, `Forward-Trust-CA`, `Forward-Trust-CA-ECDSA`, `Forward-UnTrust-CA`, `Forward-UnTrust-CA-ECDSA`, `Global Authentication Cookie CA`, `GlobalSign-Root-CA` and `Root CA`.
 	ScepClientCert *string `pulumi:"scepClientCert"`
 	// SCEP server URL
 	ScepUrl *string `pulumi:"scepUrl"`
 	// The snippet in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	// Subject
 	Subject *string `pulumi:"subject"`
@@ -309,29 +301,25 @@ type ScepProfileState struct {
 	CertificateAttributes ScepProfileCertificateAttributesPtrInput
 	// The device in which the resource is defined
 	Device pulumi.StringPtrInput
-	// Digest for CSR
+	// Digest for CSR. Possible values are `sha1`, `sha256`, `sha384` and `sha512`.
 	Digest pulumi.StringPtrInput
 	// Map of sensitive values returned from the API.
 	EncryptedValues pulumi.StringMapInput
 	// CA Certificate Fingerprint
 	Fingerprint pulumi.StringPtrInput
 	// The folder in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// The name of the SCEP profile
 	Name pulumi.StringPtrInput
-	// SCEP Server CA Certificate
+	// SCEP Server CA Certificate. Possible values are `Authentication Cookie CA`, `Forward-Trust-CA`, `Forward-Trust-CA-ECDSA`, `Forward-UnTrust-CA`, `Forward-UnTrust-CA-ECDSA`, `Global Authentication Cookie CA`, `GlobalSign-Root-CA` and `Root CA`.
 	ScepCaCert pulumi.StringPtrInput
 	// One Time Password Challenge
 	ScepChallenge ScepProfileScepChallengePtrInput
-	// SCEP Client Certificate
+	// SCEP Client Certificate. Possible values are `Authentication Cookie CA`, `Forward-Trust-CA`, `Forward-Trust-CA-ECDSA`, `Forward-UnTrust-CA`, `Forward-UnTrust-CA-ECDSA`, `Global Authentication Cookie CA`, `GlobalSign-Root-CA` and `Root CA`.
 	ScepClientCert pulumi.StringPtrInput
 	// SCEP server URL
 	ScepUrl pulumi.StringPtrInput
 	// The snippet in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	// Subject
 	Subject pulumi.StringPtrInput
@@ -356,27 +344,23 @@ type scepProfileArgs struct {
 	CertificateAttributes *ScepProfileCertificateAttributes `pulumi:"certificateAttributes"`
 	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
-	// Digest for CSR
+	// Digest for CSR. Possible values are `sha1`, `sha256`, `sha384` and `sha512`.
 	Digest string `pulumi:"digest"`
 	// CA Certificate Fingerprint
 	Fingerprint *string `pulumi:"fingerprint"`
 	// The folder in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// The name of the SCEP profile
 	Name *string `pulumi:"name"`
-	// SCEP Server CA Certificate
+	// SCEP Server CA Certificate. Possible values are `Authentication Cookie CA`, `Forward-Trust-CA`, `Forward-Trust-CA-ECDSA`, `Forward-UnTrust-CA`, `Forward-UnTrust-CA-ECDSA`, `Global Authentication Cookie CA`, `GlobalSign-Root-CA` and `Root CA`.
 	ScepCaCert *string `pulumi:"scepCaCert"`
 	// One Time Password Challenge
 	ScepChallenge ScepProfileScepChallenge `pulumi:"scepChallenge"`
-	// SCEP Client Certificate
+	// SCEP Client Certificate. Possible values are `Authentication Cookie CA`, `Forward-Trust-CA`, `Forward-Trust-CA-ECDSA`, `Forward-UnTrust-CA`, `Forward-UnTrust-CA-ECDSA`, `Global Authentication Cookie CA`, `GlobalSign-Root-CA` and `Root CA`.
 	ScepClientCert *string `pulumi:"scepClientCert"`
 	// SCEP server URL
 	ScepUrl string `pulumi:"scepUrl"`
 	// The snippet in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	// Subject
 	Subject string `pulumi:"subject"`
@@ -396,27 +380,23 @@ type ScepProfileArgs struct {
 	CertificateAttributes ScepProfileCertificateAttributesPtrInput
 	// The device in which the resource is defined
 	Device pulumi.StringPtrInput
-	// Digest for CSR
+	// Digest for CSR. Possible values are `sha1`, `sha256`, `sha384` and `sha512`.
 	Digest pulumi.StringInput
 	// CA Certificate Fingerprint
 	Fingerprint pulumi.StringPtrInput
 	// The folder in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// The name of the SCEP profile
 	Name pulumi.StringPtrInput
-	// SCEP Server CA Certificate
+	// SCEP Server CA Certificate. Possible values are `Authentication Cookie CA`, `Forward-Trust-CA`, `Forward-Trust-CA-ECDSA`, `Forward-UnTrust-CA`, `Forward-UnTrust-CA-ECDSA`, `Global Authentication Cookie CA`, `GlobalSign-Root-CA` and `Root CA`.
 	ScepCaCert pulumi.StringPtrInput
 	// One Time Password Challenge
 	ScepChallenge ScepProfileScepChallengeInput
-	// SCEP Client Certificate
+	// SCEP Client Certificate. Possible values are `Authentication Cookie CA`, `Forward-Trust-CA`, `Forward-Trust-CA-ECDSA`, `Forward-UnTrust-CA`, `Forward-UnTrust-CA-ECDSA`, `Global Authentication Cookie CA`, `GlobalSign-Root-CA` and `Root CA`.
 	ScepClientCert pulumi.StringPtrInput
 	// SCEP server URL
 	ScepUrl pulumi.StringInput
 	// The snippet in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	// Subject
 	Subject pulumi.StringInput
@@ -533,7 +513,7 @@ func (o ScepProfileOutput) Device() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *ScepProfile) pulumi.StringPtrOutput { return v.Device }).(pulumi.StringPtrOutput)
 }
 
-// Digest for CSR
+// Digest for CSR. Possible values are `sha1`, `sha256`, `sha384` and `sha512`.
 func (o ScepProfileOutput) Digest() pulumi.StringOutput {
 	return o.ApplyT(func(v *ScepProfile) pulumi.StringOutput { return v.Digest }).(pulumi.StringOutput)
 }
@@ -549,8 +529,6 @@ func (o ScepProfileOutput) Fingerprint() pulumi.StringPtrOutput {
 }
 
 // The folder in which the resource is defined
-//
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o ScepProfileOutput) Folder() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *ScepProfile) pulumi.StringPtrOutput { return v.Folder }).(pulumi.StringPtrOutput)
 }
@@ -560,7 +538,7 @@ func (o ScepProfileOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v *ScepProfile) pulumi.StringOutput { return v.Name }).(pulumi.StringOutput)
 }
 
-// SCEP Server CA Certificate
+// SCEP Server CA Certificate. Possible values are `Authentication Cookie CA`, `Forward-Trust-CA`, `Forward-Trust-CA-ECDSA`, `Forward-UnTrust-CA`, `Forward-UnTrust-CA-ECDSA`, `Global Authentication Cookie CA`, `GlobalSign-Root-CA` and `Root CA`.
 func (o ScepProfileOutput) ScepCaCert() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *ScepProfile) pulumi.StringPtrOutput { return v.ScepCaCert }).(pulumi.StringPtrOutput)
 }
@@ -570,7 +548,7 @@ func (o ScepProfileOutput) ScepChallenge() ScepProfileScepChallengeOutput {
 	return o.ApplyT(func(v *ScepProfile) ScepProfileScepChallengeOutput { return v.ScepChallenge }).(ScepProfileScepChallengeOutput)
 }
 
-// SCEP Client Certificate
+// SCEP Client Certificate. Possible values are `Authentication Cookie CA`, `Forward-Trust-CA`, `Forward-Trust-CA-ECDSA`, `Forward-UnTrust-CA`, `Forward-UnTrust-CA-ECDSA`, `Global Authentication Cookie CA`, `GlobalSign-Root-CA` and `Root CA`.
 func (o ScepProfileOutput) ScepClientCert() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *ScepProfile) pulumi.StringPtrOutput { return v.ScepClientCert }).(pulumi.StringPtrOutput)
 }
@@ -581,8 +559,6 @@ func (o ScepProfileOutput) ScepUrl() pulumi.StringOutput {
 }
 
 // The snippet in which the resource is defined
-//
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o ScepProfileOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *ScepProfile) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)
 }

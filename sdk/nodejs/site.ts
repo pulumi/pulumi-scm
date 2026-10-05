@@ -169,7 +169,7 @@ export class Site extends pulumi.CustomResource {
      */
     declare public readonly latitude: pulumi.Output<string | undefined>;
     /**
-     * The license type of the site
+     * The license type of the site. Possible values are `FWAAS-SITE-25Mbps`, `FWAAS-SITE-50Mbps`, `FWAAS-SITE-250Mbps`, `FWAAS-SITE-1000Mbps` and `FWAAS-SITE-2500Mbps`.
      */
     declare public readonly licenseType: pulumi.Output<string | undefined>;
     /**
@@ -197,7 +197,7 @@ export class Site extends pulumi.CustomResource {
      */
     declare public /*out*/ readonly tfid: pulumi.Output<string>;
     /**
-     * The site type
+     * The site type. Possible values are `prisma-sdwan`, `third-party-branch` and `third-party-discovered`.
      */
     declare public readonly type: pulumi.Output<string | undefined>;
     /**
@@ -285,7 +285,7 @@ export interface SiteState {
      */
     latitude?: pulumi.Input<string | undefined>;
     /**
-     * The license type of the site
+     * The license type of the site. Possible values are `FWAAS-SITE-25Mbps`, `FWAAS-SITE-50Mbps`, `FWAAS-SITE-250Mbps`, `FWAAS-SITE-1000Mbps` and `FWAAS-SITE-2500Mbps`.
      */
     licenseType?: pulumi.Input<string | undefined>;
     /**
@@ -313,7 +313,7 @@ export interface SiteState {
      */
     tfid?: pulumi.Input<string | undefined>;
     /**
-     * The site type
+     * The site type. Possible values are `prisma-sdwan`, `third-party-branch` and `third-party-discovered`.
      */
     type?: pulumi.Input<string | undefined>;
     /**
@@ -347,7 +347,7 @@ export interface SiteArgs {
      */
     latitude?: pulumi.Input<string | undefined>;
     /**
-     * The license type of the site
+     * The license type of the site. Possible values are `FWAAS-SITE-25Mbps`, `FWAAS-SITE-50Mbps`, `FWAAS-SITE-250Mbps`, `FWAAS-SITE-1000Mbps` and `FWAAS-SITE-2500Mbps`.
      */
     licenseType?: pulumi.Input<string | undefined>;
     /**
@@ -371,7 +371,7 @@ export interface SiteArgs {
      */
     state?: pulumi.Input<string | undefined>;
     /**
-     * The site type
+     * The site type. Possible values are `prisma-sdwan`, `third-party-branch` and `third-party-discovered`.
      */
     type?: pulumi.Input<string | undefined>;
     /**

@@ -42,12 +42,21 @@ export interface GetApplicationArgs {
      * The device in which the resource is defined
      */
     device?: string;
+    /**
+     * The folder in which the resource is defined
+     */
     folder?: string;
     /**
      * The UUID of the application
      */
     id: string;
+    /**
+     * The name of the application
+     */
     name?: string;
+    /**
+     * The snippet in which the resource is defined
+     */
     snippet?: string;
 }
 
@@ -55,44 +64,137 @@ export interface GetApplicationArgs {
  * A collection of values returned by getApplication.
  */
 export interface GetApplicationResult {
+    /**
+     * Able to transfer file
+     */
     readonly ableToTransferFile: boolean;
+    /**
+     * Alg disable capability
+     */
     readonly algDisableCapability: string;
+    /**
+     * Category
+     */
     readonly category: string;
+    /**
+     * Consume big bandwidth
+     */
     readonly consumeBigBandwidth: boolean;
+    /**
+     * Data ident
+     */
     readonly dataIdent: boolean;
+    /**
+     * Default
+     */
     readonly default: outputs.GetApplicationDefault;
+    /**
+     * Description
+     */
     readonly description: string;
     /**
      * The device in which the resource is defined
      */
     readonly device: string;
+    /**
+     * Evasive behavior
+     */
     readonly evasiveBehavior: boolean;
+    /**
+     * File type ident
+     */
     readonly fileTypeIdent: boolean;
+    /**
+     * The folder in which the resource is defined
+     */
     readonly folder: string;
+    /**
+     * Has known vulnerability
+     */
     readonly hasKnownVulnerability: boolean;
     /**
      * The UUID of the application
      */
     readonly id: string;
+    /**
+     * The name of the application
+     */
     readonly name: string;
+    /**
+     * No appid caching
+     */
     readonly noAppidCaching: boolean;
+    /**
+     * Parent app
+     */
     readonly parentApp: string;
+    /**
+     * Pervasive use
+     */
     readonly pervasiveUse: boolean;
+    /**
+     * Prone to misuse
+     */
     readonly proneToMisuse: boolean;
+    /**
+     * Risk
+     */
     readonly risk: string;
+    /**
+     * Signature
+     */
     readonly signatures: outputs.GetApplicationSignature[];
+    /**
+     * The snippet in which the resource is defined
+     */
     readonly snippet: string;
+    /**
+     * Subcategory
+     */
     readonly subcategory: string;
+    /**
+     * timeout for half-close session in seconds
+     */
     readonly tcpHalfClosedTimeout: number;
+    /**
+     * timeout for session in timeWait state in seconds
+     */
     readonly tcpTimeWaitTimeout: number;
+    /**
+     * timeout in seconds
+     */
     readonly tcpTimeout: number;
+    /**
+     * Technology
+     */
     readonly technology: string;
+    /**
+     * The Terraform ID.
+     */
     readonly tfid: string;
+    /**
+     * timeout in seconds
+     */
     readonly timeout: number;
+    /**
+     * Tunnel applications
+     */
     readonly tunnelApplications: boolean;
+    /**
+     * Tunnel other application
+     */
     readonly tunnelOtherApplication: boolean;
+    /**
+     * timeout in seconds
+     */
     readonly udpTimeout: number;
+    /**
+     * Used by malware
+     */
     readonly usedByMalware: boolean;
+    /**
+     * Virus ident
+     */
     readonly virusIdent: boolean;
 }
 /**
@@ -131,11 +233,20 @@ export interface GetApplicationOutputArgs {
      * The device in which the resource is defined
      */
     device?: pulumi.Input<string | undefined>;
+    /**
+     * The folder in which the resource is defined
+     */
     folder?: pulumi.Input<string | undefined>;
     /**
      * The UUID of the application
      */
     id: pulumi.Input<string>;
+    /**
+     * The name of the application
+     */
     name?: pulumi.Input<string | undefined>;
+    /**
+     * The snippet in which the resource is defined
+     */
     snippet?: pulumi.Input<string | undefined>;
 }

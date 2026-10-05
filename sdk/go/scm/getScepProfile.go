@@ -60,36 +60,56 @@ func LookupScepProfile(ctx *pulumi.Context, args *LookupScepProfileArgs, opts ..
 type LookupScepProfileArgs struct {
 	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
+	// The folder in which the resource is defined
 	Folder *string `pulumi:"folder"`
 	// The UUID of the SCEP profile
-	Id      string  `pulumi:"id"`
-	Name    *string `pulumi:"name"`
+	Id string `pulumi:"id"`
+	// The name of the SCEP profile
+	Name *string `pulumi:"name"`
+	// The snippet in which the resource is defined
 	Snippet *string `pulumi:"snippet"`
 }
 
 // A collection of values returned by getScepProfile.
 type LookupScepProfileResult struct {
-	Algorithm             GetScepProfileAlgorithm             `pulumi:"algorithm"`
-	CaIdentityName        string                              `pulumi:"caIdentityName"`
+	// Algorithm
+	Algorithm GetScepProfileAlgorithm `pulumi:"algorithm"`
+	// Certificate Authority Identity
+	CaIdentityName string `pulumi:"caIdentityName"`
+	// Subject Alternative name type
 	CertificateAttributes GetScepProfileCertificateAttributes `pulumi:"certificateAttributes"`
 	// The device in which the resource is defined
-	Device          string            `pulumi:"device"`
-	Digest          string            `pulumi:"digest"`
+	Device string `pulumi:"device"`
+	// Digest for CSR. Possible values are `sha1`, `sha256`, `sha384` and `sha512`.
+	Digest string `pulumi:"digest"`
+	// Map of sensitive values returned from the API.
 	EncryptedValues map[string]string `pulumi:"encryptedValues"`
-	Fingerprint     string            `pulumi:"fingerprint"`
-	Folder          string            `pulumi:"folder"`
+	// CA Certificate Fingerprint
+	Fingerprint string `pulumi:"fingerprint"`
+	// The folder in which the resource is defined
+	Folder string `pulumi:"folder"`
 	// The UUID of the SCEP profile
-	Id                    string                      `pulumi:"id"`
-	Name                  string                      `pulumi:"name"`
-	ScepCaCert            string                      `pulumi:"scepCaCert"`
-	ScepChallenge         GetScepProfileScepChallenge `pulumi:"scepChallenge"`
-	ScepClientCert        string                      `pulumi:"scepClientCert"`
-	ScepUrl               string                      `pulumi:"scepUrl"`
-	Snippet               string                      `pulumi:"snippet"`
-	Subject               string                      `pulumi:"subject"`
-	Tfid                  string                      `pulumi:"tfid"`
-	UseAsDigitalSignature bool                        `pulumi:"useAsDigitalSignature"`
-	UseForKeyEncipherment bool                        `pulumi:"useForKeyEncipherment"`
+	Id string `pulumi:"id"`
+	// The name of the SCEP profile
+	Name string `pulumi:"name"`
+	// SCEP Server CA Certificate. Possible values are `Authentication Cookie CA`, `Forward-Trust-CA`, `Forward-Trust-CA-ECDSA`, `Forward-UnTrust-CA`, `Forward-UnTrust-CA-ECDSA`, `Global Authentication Cookie CA`, `GlobalSign-Root-CA` and `Root CA`.
+	ScepCaCert string `pulumi:"scepCaCert"`
+	// One Time Password Challenge
+	ScepChallenge GetScepProfileScepChallenge `pulumi:"scepChallenge"`
+	// SCEP Client Certificate. Possible values are `Authentication Cookie CA`, `Forward-Trust-CA`, `Forward-Trust-CA-ECDSA`, `Forward-UnTrust-CA`, `Forward-UnTrust-CA-ECDSA`, `Global Authentication Cookie CA`, `GlobalSign-Root-CA` and `Root CA`.
+	ScepClientCert string `pulumi:"scepClientCert"`
+	// SCEP server URL
+	ScepUrl string `pulumi:"scepUrl"`
+	// The snippet in which the resource is defined
+	Snippet string `pulumi:"snippet"`
+	// Subject
+	Subject string `pulumi:"subject"`
+	// The Terraform ID.
+	Tfid string `pulumi:"tfid"`
+	// Use as digital signature?
+	UseAsDigitalSignature bool `pulumi:"useAsDigitalSignature"`
+	// Use for key encipherment?
+	UseForKeyEncipherment bool `pulumi:"useForKeyEncipherment"`
 }
 
 func LookupScepProfileOutput(ctx *pulumi.Context, args LookupScepProfileOutputArgs, opts ...pulumi.InvokeOption) LookupScepProfileResultOutput {
@@ -101,10 +121,13 @@ func LookupScepProfileOutput(ctx *pulumi.Context, args LookupScepProfileOutputAr
 type LookupScepProfileOutputArgs struct {
 	// The device in which the resource is defined
 	Device pulumi.StringPtrInput `pulumi:"device"`
+	// The folder in which the resource is defined
 	Folder pulumi.StringPtrInput `pulumi:"folder"`
 	// The UUID of the SCEP profile
-	Id      pulumi.StringInput    `pulumi:"id"`
-	Name    pulumi.StringPtrInput `pulumi:"name"`
+	Id pulumi.StringInput `pulumi:"id"`
+	// The name of the SCEP profile
+	Name pulumi.StringPtrInput `pulumi:"name"`
+	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrInput `pulumi:"snippet"`
 }
 
@@ -127,14 +150,17 @@ func (o LookupScepProfileResultOutput) ToLookupScepProfileResultOutputWithContex
 	return o
 }
 
+// Algorithm
 func (o LookupScepProfileResultOutput) Algorithm() GetScepProfileAlgorithmOutput {
 	return o.ApplyT(func(v LookupScepProfileResult) GetScepProfileAlgorithm { return v.Algorithm }).(GetScepProfileAlgorithmOutput)
 }
 
+// Certificate Authority Identity
 func (o LookupScepProfileResultOutput) CaIdentityName() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupScepProfileResult) string { return v.CaIdentityName }).(pulumi.StringOutput)
 }
 
+// Subject Alternative name type
 func (o LookupScepProfileResultOutput) CertificateAttributes() GetScepProfileCertificateAttributesOutput {
 	return o.ApplyT(func(v LookupScepProfileResult) GetScepProfileCertificateAttributes { return v.CertificateAttributes }).(GetScepProfileCertificateAttributesOutput)
 }
@@ -144,18 +170,22 @@ func (o LookupScepProfileResultOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupScepProfileResult) string { return v.Device }).(pulumi.StringOutput)
 }
 
+// Digest for CSR. Possible values are `sha1`, `sha256`, `sha384` and `sha512`.
 func (o LookupScepProfileResultOutput) Digest() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupScepProfileResult) string { return v.Digest }).(pulumi.StringOutput)
 }
 
+// Map of sensitive values returned from the API.
 func (o LookupScepProfileResultOutput) EncryptedValues() pulumi.StringMapOutput {
 	return o.ApplyT(func(v LookupScepProfileResult) map[string]string { return v.EncryptedValues }).(pulumi.StringMapOutput)
 }
 
+// CA Certificate Fingerprint
 func (o LookupScepProfileResultOutput) Fingerprint() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupScepProfileResult) string { return v.Fingerprint }).(pulumi.StringOutput)
 }
 
+// The folder in which the resource is defined
 func (o LookupScepProfileResultOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupScepProfileResult) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -165,42 +195,52 @@ func (o LookupScepProfileResultOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupScepProfileResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
+// The name of the SCEP profile
 func (o LookupScepProfileResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupScepProfileResult) string { return v.Name }).(pulumi.StringOutput)
 }
 
+// SCEP Server CA Certificate. Possible values are `Authentication Cookie CA`, `Forward-Trust-CA`, `Forward-Trust-CA-ECDSA`, `Forward-UnTrust-CA`, `Forward-UnTrust-CA-ECDSA`, `Global Authentication Cookie CA`, `GlobalSign-Root-CA` and `Root CA`.
 func (o LookupScepProfileResultOutput) ScepCaCert() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupScepProfileResult) string { return v.ScepCaCert }).(pulumi.StringOutput)
 }
 
+// One Time Password Challenge
 func (o LookupScepProfileResultOutput) ScepChallenge() GetScepProfileScepChallengeOutput {
 	return o.ApplyT(func(v LookupScepProfileResult) GetScepProfileScepChallenge { return v.ScepChallenge }).(GetScepProfileScepChallengeOutput)
 }
 
+// SCEP Client Certificate. Possible values are `Authentication Cookie CA`, `Forward-Trust-CA`, `Forward-Trust-CA-ECDSA`, `Forward-UnTrust-CA`, `Forward-UnTrust-CA-ECDSA`, `Global Authentication Cookie CA`, `GlobalSign-Root-CA` and `Root CA`.
 func (o LookupScepProfileResultOutput) ScepClientCert() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupScepProfileResult) string { return v.ScepClientCert }).(pulumi.StringOutput)
 }
 
+// SCEP server URL
 func (o LookupScepProfileResultOutput) ScepUrl() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupScepProfileResult) string { return v.ScepUrl }).(pulumi.StringOutput)
 }
 
+// The snippet in which the resource is defined
 func (o LookupScepProfileResultOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupScepProfileResult) string { return v.Snippet }).(pulumi.StringOutput)
 }
 
+// Subject
 func (o LookupScepProfileResultOutput) Subject() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupScepProfileResult) string { return v.Subject }).(pulumi.StringOutput)
 }
 
+// The Terraform ID.
 func (o LookupScepProfileResultOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupScepProfileResult) string { return v.Tfid }).(pulumi.StringOutput)
 }
 
+// Use as digital signature?
 func (o LookupScepProfileResultOutput) UseAsDigitalSignature() pulumi.BoolOutput {
 	return o.ApplyT(func(v LookupScepProfileResult) bool { return v.UseAsDigitalSignature }).(pulumi.BoolOutput)
 }
 
+// Use for key encipherment?
 func (o LookupScepProfileResultOutput) UseForKeyEncipherment() pulumi.BoolOutput {
 	return o.ApplyT(func(v LookupScepProfileResult) bool { return v.UseForKeyEncipherment }).(pulumi.BoolOutput)
 }

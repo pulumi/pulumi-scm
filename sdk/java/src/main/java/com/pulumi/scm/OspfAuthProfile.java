@@ -76,16 +76,12 @@ public class OspfAuthProfile extends com.pulumi.resources.CustomResource {
     /**
      * The folder in which the resource is defined
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
      */
     @Export(name="folder", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> folder;
 
     /**
      * @return The folder in which the resource is defined
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public Output<Optional<String>> folder() {
@@ -94,16 +90,12 @@ public class OspfAuthProfile extends com.pulumi.resources.CustomResource {
     /**
      * MD5s
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `md5` and `password`.
-     * 
      */
     @Export(name="md5s", refs={List.class,OspfAuthProfileMd5.class}, tree="[0,1]")
     private Output</* @Nullable */ List<OspfAuthProfileMd5>> md5s;
 
     /**
      * @return MD5s
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `md5` and `password`.
      * 
      */
     public Output<Optional<List<OspfAuthProfileMd5>>> md5s() {
@@ -126,16 +118,12 @@ public class OspfAuthProfile extends com.pulumi.resources.CustomResource {
     /**
      * Password
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `md5` and `password`.
-     * 
      */
     @Export(name="password", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> password;
 
     /**
      * @return Password
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `md5` and `password`.
      * 
      */
     public Output<Optional<String>> password() {
@@ -144,16 +132,12 @@ public class OspfAuthProfile extends com.pulumi.resources.CustomResource {
     /**
      * The snippet in which the resource is defined
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
      */
     @Export(name="snippet", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> snippet;
 
     /**
      * @return The snippet in which the resource is defined
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public Output<Optional<String>> snippet() {

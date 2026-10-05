@@ -41,12 +41,21 @@ export interface GetIpsecCryptoProfileArgs {
      * The device in which the resource is defined
      */
     device?: string;
+    /**
+     * The folder in which the resource is defined
+     */
     folder?: string;
     /**
      * UUID of the resource
      */
     id: string;
+    /**
+     * Alphanumeric string begin with letter: [0-9a-zA-Z._-]
+     */
     name?: string;
+    /**
+     * The snippet in which the resource is defined
+     */
     snippet?: string;
 }
 
@@ -54,22 +63,49 @@ export interface GetIpsecCryptoProfileArgs {
  * A collection of values returned by getIpsecCryptoProfile.
  */
 export interface GetIpsecCryptoProfileResult {
+    /**
+     * Ah
+     */
     readonly ah: outputs.GetIpsecCryptoProfileAh;
     /**
      * The device in which the resource is defined
      */
     readonly device: string;
+    /**
+     * phase-2 DH group (PFS DH group). Possible values are `no-pfs`, `group1`, `group2`, `group5`, `group14`, `group19`, `group20`, `group21`, `ml-kem-512`, `ml-kem-768` and `ml-kem-1024`.
+     */
     readonly dhGroup: string;
+    /**
+     * Esp
+     */
     readonly esp: outputs.GetIpsecCryptoProfileEsp;
+    /**
+     * The folder in which the resource is defined
+     */
     readonly folder: string;
     /**
      * UUID of the resource
      */
     readonly id: string;
+    /**
+     * Lifesize
+     */
     readonly lifesize: outputs.GetIpsecCryptoProfileLifesize;
+    /**
+     * Ipsec crypto profile lifetime
+     */
     readonly lifetime: outputs.GetIpsecCryptoProfileLifetime;
+    /**
+     * Alphanumeric string begin with letter: [0-9a-zA-Z._-]
+     */
     readonly name: string;
+    /**
+     * The snippet in which the resource is defined
+     */
     readonly snippet: string;
+    /**
+     * The Terraform ID.
+     */
     readonly tfid: string;
 }
 /**
@@ -107,11 +143,20 @@ export interface GetIpsecCryptoProfileOutputArgs {
      * The device in which the resource is defined
      */
     device?: pulumi.Input<string | undefined>;
+    /**
+     * The folder in which the resource is defined
+     */
     folder?: pulumi.Input<string | undefined>;
     /**
      * UUID of the resource
      */
     id: pulumi.Input<string>;
+    /**
+     * Alphanumeric string begin with letter: [0-9a-zA-Z._-]
+     */
     name?: pulumi.Input<string | undefined>;
+    /**
+     * The snippet in which the resource is defined
+     */
     snippet?: pulumi.Input<string | undefined>;
 }

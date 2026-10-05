@@ -51,7 +51,7 @@ class DecryptionRuleArgs:
         """
         The set of arguments for constructing a DecryptionRule resource.
 
-        :param pulumi.Input[_builtins.str] action: The action to be taken
+        :param pulumi.Input[_builtins.str] action: The action to be taken. Possible values are `decrypt` and `no-decrypt`.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] categories: The destination URL category
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] destinations: The destination addresses
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] froms: The source security zone
@@ -64,23 +64,19 @@ class DecryptionRuleArgs:
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input[_builtins.bool] disabled: Is the rule disabled?
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.bool] log_fail: Log failed decryption events?
         :param pulumi.Input[_builtins.str] log_setting: The log settings of the decryption rule
         :param pulumi.Input[_builtins.bool] log_success: Log successful decryption events?
         :param pulumi.Input[_builtins.str] name: The name of the decryption rule
         :param pulumi.Input[_builtins.bool] negate_destination: Negate the destination addresses?
         :param pulumi.Input[_builtins.bool] negate_source: Negate the source addresses?
-        :param pulumi.Input[_builtins.str] position: The position of a security rule
+        :param pulumi.Input[_builtins.str] position: The position of a security rule. Possible values are `pre` and `post`.
         :param pulumi.Input[_builtins.str] profile: The decryption profile associated with the decryption rule
         :param pulumi.Input[_builtins.str] relative_position: Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] source_hips: Source hip
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tags: The tags associated with the decryption rule
-        :param pulumi.Input[_builtins.str] target_rule: The name or UUID of the rule to position this rule relative to. Required when `relative_position` is `"before"` or `"after"`.
+        :param pulumi.Input[_builtins.str] target_rule: UUID of the rule to position this rule relative to. Required when `relative_position` is `"before"` or `"after"`.
         :param pulumi.Input['DecryptionRuleTypeArgs'] type: The type of decryption
         """
         pulumi.set(__self__, "action", action)
@@ -134,7 +130,7 @@ class DecryptionRuleArgs:
     @pulumi.getter
     def action(self) -> pulumi.Input[_builtins.str]:
         """
-        The action to be taken
+        The action to be taken. Possible values are `decrypt` and `no-decrypt`.
         """
         return pulumi.get(self, "action")
 
@@ -279,8 +275,6 @@ class DecryptionRuleArgs:
     def folder(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
-
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
 
@@ -364,7 +358,7 @@ class DecryptionRuleArgs:
     @pulumi.getter
     def position(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
-        The position of a security rule
+        The position of a security rule. Possible values are `pre` and `post`.
         """
         return pulumi.get(self, "position")
 
@@ -401,8 +395,6 @@ class DecryptionRuleArgs:
     def snippet(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
-
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
 
@@ -438,7 +430,7 @@ class DecryptionRuleArgs:
     @pulumi.getter(name="targetRule")
     def target_rule(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
-        The name or UUID of the rule to position this rule relative to. Required when `relative_position` is `"before"` or `"after"`.
+        UUID of the rule to position this rule relative to. Required when `relative_position` is `"before"` or `"after"`.
         """
         return pulumi.get(self, "target_rule")
 
@@ -493,7 +485,7 @@ class _DecryptionRuleState:
         """
         Input properties used for looking up and filtering DecryptionRule resources.
 
-        :param pulumi.Input[_builtins.str] action: The action to be taken
+        :param pulumi.Input[_builtins.str] action: The action to be taken. Possible values are `decrypt` and `no-decrypt`.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] categories: The destination URL category
         :param pulumi.Input[_builtins.str] description: The description of the decryption rule
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] destination_hips: The Host Integrity Profile of the destination host
@@ -501,8 +493,6 @@ class _DecryptionRuleState:
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input[_builtins.bool] disabled: Is the rule disabled?
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] froms: The source security zone
         :param pulumi.Input[_builtins.bool] log_fail: Log failed decryption events?
         :param pulumi.Input[_builtins.str] log_setting: The log settings of the decryption rule
@@ -510,18 +500,16 @@ class _DecryptionRuleState:
         :param pulumi.Input[_builtins.str] name: The name of the decryption rule
         :param pulumi.Input[_builtins.bool] negate_destination: Negate the destination addresses?
         :param pulumi.Input[_builtins.bool] negate_source: Negate the source addresses?
-        :param pulumi.Input[_builtins.str] position: The position of a security rule
+        :param pulumi.Input[_builtins.str] position: The position of a security rule. Possible values are `pre` and `post`.
         :param pulumi.Input[_builtins.str] profile: The decryption profile associated with the decryption rule
         :param pulumi.Input[_builtins.str] relative_position: Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] services: The destination services and/or service groups
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] source_hips: Source hip
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] source_users: List of source users and/or groups.  Reserved words include `any`, `pre-login`, `known-user`, and `unknown`.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] sources: The source addresses
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tags: The tags associated with the decryption rule
-        :param pulumi.Input[_builtins.str] target_rule: The name or UUID of the rule to position this rule relative to. Required when `relative_position` is `"before"` or `"after"`.
+        :param pulumi.Input[_builtins.str] target_rule: UUID of the rule to position this rule relative to. Required when `relative_position` is `"before"` or `"after"`.
         :param pulumi.Input[_builtins.str] tfid: The Terraform ID.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tos: The destination security zone
         :param pulumi.Input['DecryptionRuleTypeArgs'] type: The type of decryption
@@ -587,7 +575,7 @@ class _DecryptionRuleState:
     @pulumi.getter
     def action(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
-        The action to be taken
+        The action to be taken. Possible values are `decrypt` and `no-decrypt`.
         """
         return pulumi.get(self, "action")
 
@@ -672,8 +660,6 @@ class _DecryptionRuleState:
     def folder(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
-
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
 
@@ -769,7 +755,7 @@ class _DecryptionRuleState:
     @pulumi.getter
     def position(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
-        The position of a security rule
+        The position of a security rule. Possible values are `pre` and `post`.
         """
         return pulumi.get(self, "position")
 
@@ -818,8 +804,6 @@ class _DecryptionRuleState:
     def snippet(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
-
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
 
@@ -879,7 +863,7 @@ class _DecryptionRuleState:
     @pulumi.getter(name="targetRule")
     def target_rule(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
-        The name or UUID of the rule to position this rule relative to. Required when `relative_position` is `"before"` or `"after"`.
+        UUID of the rule to position this rule relative to. Required when `relative_position` is `"before"` or `"after"`.
         """
         return pulumi.get(self, "target_rule")
 
@@ -1120,7 +1104,7 @@ class DecryptionRule(pulumi.CustomResource):
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[_builtins.str] action: The action to be taken
+        :param pulumi.Input[_builtins.str] action: The action to be taken. Possible values are `decrypt` and `no-decrypt`.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] categories: The destination URL category
         :param pulumi.Input[_builtins.str] description: The description of the decryption rule
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] destination_hips: The Host Integrity Profile of the destination host
@@ -1128,8 +1112,6 @@ class DecryptionRule(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input[_builtins.bool] disabled: Is the rule disabled?
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] froms: The source security zone
         :param pulumi.Input[_builtins.bool] log_fail: Log failed decryption events?
         :param pulumi.Input[_builtins.str] log_setting: The log settings of the decryption rule
@@ -1137,18 +1119,16 @@ class DecryptionRule(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] name: The name of the decryption rule
         :param pulumi.Input[_builtins.bool] negate_destination: Negate the destination addresses?
         :param pulumi.Input[_builtins.bool] negate_source: Negate the source addresses?
-        :param pulumi.Input[_builtins.str] position: The position of a security rule
+        :param pulumi.Input[_builtins.str] position: The position of a security rule. Possible values are `pre` and `post`.
         :param pulumi.Input[_builtins.str] profile: The decryption profile associated with the decryption rule
         :param pulumi.Input[_builtins.str] relative_position: Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] services: The destination services and/or service groups
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] source_hips: Source hip
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] source_users: List of source users and/or groups.  Reserved words include `any`, `pre-login`, `known-user`, and `unknown`.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] sources: The source addresses
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tags: The tags associated with the decryption rule
-        :param pulumi.Input[_builtins.str] target_rule: The name or UUID of the rule to position this rule relative to. Required when `relative_position` is `"before"` or `"after"`.
+        :param pulumi.Input[_builtins.str] target_rule: UUID of the rule to position this rule relative to. Required when `relative_position` is `"before"` or `"after"`.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tos: The destination security zone
         :param pulumi.Input[Union['DecryptionRuleTypeArgs', 'DecryptionRuleTypeArgsDict', 'outputs.DecryptionRuleType']] type: The type of decryption
         """
@@ -1458,7 +1438,7 @@ class DecryptionRule(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[_builtins.str] action: The action to be taken
+        :param pulumi.Input[_builtins.str] action: The action to be taken. Possible values are `decrypt` and `no-decrypt`.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] categories: The destination URL category
         :param pulumi.Input[_builtins.str] description: The description of the decryption rule
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] destination_hips: The Host Integrity Profile of the destination host
@@ -1466,8 +1446,6 @@ class DecryptionRule(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input[_builtins.bool] disabled: Is the rule disabled?
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] froms: The source security zone
         :param pulumi.Input[_builtins.bool] log_fail: Log failed decryption events?
         :param pulumi.Input[_builtins.str] log_setting: The log settings of the decryption rule
@@ -1475,18 +1453,16 @@ class DecryptionRule(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] name: The name of the decryption rule
         :param pulumi.Input[_builtins.bool] negate_destination: Negate the destination addresses?
         :param pulumi.Input[_builtins.bool] negate_source: Negate the source addresses?
-        :param pulumi.Input[_builtins.str] position: The position of a security rule
+        :param pulumi.Input[_builtins.str] position: The position of a security rule. Possible values are `pre` and `post`.
         :param pulumi.Input[_builtins.str] profile: The decryption profile associated with the decryption rule
         :param pulumi.Input[_builtins.str] relative_position: Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] services: The destination services and/or service groups
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] source_hips: Source hip
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] source_users: List of source users and/or groups.  Reserved words include `any`, `pre-login`, `known-user`, and `unknown`.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] sources: The source addresses
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tags: The tags associated with the decryption rule
-        :param pulumi.Input[_builtins.str] target_rule: The name or UUID of the rule to position this rule relative to. Required when `relative_position` is `"before"` or `"after"`.
+        :param pulumi.Input[_builtins.str] target_rule: UUID of the rule to position this rule relative to. Required when `relative_position` is `"before"` or `"after"`.
         :param pulumi.Input[_builtins.str] tfid: The Terraform ID.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tos: The destination security zone
         :param pulumi.Input[Union['DecryptionRuleTypeArgs', 'DecryptionRuleTypeArgsDict', 'outputs.DecryptionRuleType']] type: The type of decryption
@@ -1529,7 +1505,7 @@ class DecryptionRule(pulumi.CustomResource):
     @pulumi.getter
     def action(self) -> pulumi.Output[_builtins.str]:
         """
-        The action to be taken
+        The action to be taken. Possible values are `decrypt` and `no-decrypt`.
         """
         return pulumi.get(self, "action")
 
@@ -1586,8 +1562,6 @@ class DecryptionRule(pulumi.CustomResource):
     def folder(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
-
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
 
@@ -1651,7 +1625,7 @@ class DecryptionRule(pulumi.CustomResource):
     @pulumi.getter
     def position(self) -> pulumi.Output[_builtins.str]:
         """
-        The position of a security rule
+        The position of a security rule. Possible values are `pre` and `post`.
         """
         return pulumi.get(self, "position")
 
@@ -1684,8 +1658,6 @@ class DecryptionRule(pulumi.CustomResource):
     def snippet(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
-
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
 
@@ -1725,7 +1697,7 @@ class DecryptionRule(pulumi.CustomResource):
     @pulumi.getter(name="targetRule")
     def target_rule(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The name or UUID of the rule to position this rule relative to. Required when `relative_position` is `"before"` or `"after"`.
+        UUID of the rule to position this rule relative to. Required when `relative_position` is `"before"` or `"after"`.
         """
         return pulumi.get(self, "target_rule")
 

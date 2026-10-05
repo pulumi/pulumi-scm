@@ -27,7 +27,7 @@ class GetPbfRuleResult:
     """
     A collection of values returned by getPbfRule.
     """
-    def __init__(__self__, action=None, applications=None, description=None, destinations=None, device=None, enforce_symmetric_return=None, folder=None, from_=None, id=None, name=None, schedule=None, services=None, snippet=None, source_users=None, sources=None, tags=None, tfid=None):
+    def __init__(__self__, action=None, applications=None, description=None, destinations=None, device=None, enforce_symmetric_return=None, folder=None, from_=None, id=None, name=None, negate_destination=None, negate_source=None, schedule=None, services=None, snippet=None, source_users=None, sources=None, tags=None, tfid=None):
         if action and not isinstance(action, dict):
             raise TypeError("Expected argument 'action' to be a dict")
         pulumi.set(__self__, "action", action)
@@ -58,6 +58,12 @@ class GetPbfRuleResult:
         if name and not isinstance(name, str):
             raise TypeError("Expected argument 'name' to be a str")
         pulumi.set(__self__, "name", name)
+        if negate_destination and not isinstance(negate_destination, bool):
+            raise TypeError("Expected argument 'negate_destination' to be a bool")
+        pulumi.set(__self__, "negate_destination", negate_destination)
+        if negate_source and not isinstance(negate_source, bool):
+            raise TypeError("Expected argument 'negate_source' to be a bool")
+        pulumi.set(__self__, "negate_source", negate_source)
         if schedule and not isinstance(schedule, str):
             raise TypeError("Expected argument 'schedule' to be a str")
         pulumi.set(__self__, "schedule", schedule)
@@ -83,21 +89,33 @@ class GetPbfRuleResult:
     @_builtins.property
     @pulumi.getter
     def action(self) -> 'outputs.GetPbfRuleActionResult':
+        """
+        Action
+        """
         return pulumi.get(self, "action")
 
     @_builtins.property
     @pulumi.getter
     def applications(self) -> Sequence[_builtins.str]:
+        """
+        Applications
+        """
         return pulumi.get(self, "applications")
 
     @_builtins.property
     @pulumi.getter
     def description(self) -> _builtins.str:
+        """
+        Description
+        """
         return pulumi.get(self, "description")
 
     @_builtins.property
     @pulumi.getter
     def destinations(self) -> Sequence[_builtins.str]:
+        """
+        Destination addresses
+        """
         return pulumi.get(self, "destinations")
 
     @_builtins.property
@@ -111,16 +129,25 @@ class GetPbfRuleResult:
     @_builtins.property
     @pulumi.getter(name="enforceSymmetricReturn")
     def enforce_symmetric_return(self) -> 'outputs.GetPbfRuleEnforceSymmetricReturnResult':
+        """
+        Enforce symmetric return
+        """
         return pulumi.get(self, "enforce_symmetric_return")
 
     @_builtins.property
     @pulumi.getter
     def folder(self) -> _builtins.str:
+        """
+        The folder in which the resource is defined
+        """
         return pulumi.get(self, "folder")
 
     @_builtins.property
     @pulumi.getter(name="from")
     def from_(self) -> 'outputs.GetPbfRuleFromResult':
+        """
+        From
+        """
         return pulumi.get(self, "from_")
 
     @_builtins.property
@@ -134,41 +161,81 @@ class GetPbfRuleResult:
     @_builtins.property
     @pulumi.getter
     def name(self) -> _builtins.str:
+        """
+        PBF rule name
+        """
         return pulumi.get(self, "name")
+
+    @_builtins.property
+    @pulumi.getter(name="negateDestination")
+    def negate_destination(self) -> _builtins.bool:
+        """
+        Negate destination address
+        """
+        return pulumi.get(self, "negate_destination")
+
+    @_builtins.property
+    @pulumi.getter(name="negateSource")
+    def negate_source(self) -> _builtins.bool:
+        """
+        Negate source address
+        """
+        return pulumi.get(self, "negate_source")
 
     @_builtins.property
     @pulumi.getter
     def schedule(self) -> _builtins.str:
+        """
+        Schedule
+        """
         return pulumi.get(self, "schedule")
 
     @_builtins.property
     @pulumi.getter
     def services(self) -> Sequence[_builtins.str]:
+        """
+        Services
+        """
         return pulumi.get(self, "services")
 
     @_builtins.property
     @pulumi.getter
     def snippet(self) -> _builtins.str:
+        """
+        The snippet in which the resource is defined
+        """
         return pulumi.get(self, "snippet")
 
     @_builtins.property
     @pulumi.getter(name="sourceUsers")
     def source_users(self) -> Sequence[_builtins.str]:
+        """
+        Source users
+        """
         return pulumi.get(self, "source_users")
 
     @_builtins.property
     @pulumi.getter
     def sources(self) -> Sequence[_builtins.str]:
+        """
+        Source addresses
+        """
         return pulumi.get(self, "sources")
 
     @_builtins.property
     @pulumi.getter
     def tags(self) -> Sequence[_builtins.str]:
+        """
+        Tags
+        """
         return pulumi.get(self, "tags")
 
     @_builtins.property
     @pulumi.getter
     def tfid(self) -> _builtins.str:
+        """
+        The Terraform ID.
+        """
         return pulumi.get(self, "tfid")
 
 
@@ -188,6 +255,8 @@ class AwaitableGetPbfRuleResult(GetPbfRuleResult):
             from_=self.from_,
             id=self.id,
             name=self.name,
+            negate_destination=self.negate_destination,
+            negate_source=self.negate_source,
             schedule=self.schedule,
             services=self.services,
             snippet=self.snippet,
@@ -223,7 +292,10 @@ def get_pbf_rule(device: Optional[_builtins.str] = None,
 
 
     :param _builtins.str device: The device in which the resource is defined
+    :param _builtins.str folder: The folder in which the resource is defined
     :param _builtins.str id: UUID of the resource
+    :param _builtins.str name: PBF rule name
+    :param _builtins.str snippet: The snippet in which the resource is defined
     """
     __args__ = dict()
     __args__['device'] = device
@@ -245,6 +317,8 @@ def get_pbf_rule(device: Optional[_builtins.str] = None,
         from_=pulumi.get(__ret__, 'from_'),
         id=pulumi.get(__ret__, 'id'),
         name=pulumi.get(__ret__, 'name'),
+        negate_destination=pulumi.get(__ret__, 'negate_destination'),
+        negate_source=pulumi.get(__ret__, 'negate_source'),
         schedule=pulumi.get(__ret__, 'schedule'),
         services=pulumi.get(__ret__, 'services'),
         snippet=pulumi.get(__ret__, 'snippet'),
@@ -278,7 +352,10 @@ def get_pbf_rule_output(device: pulumi.Input[Optional[Optional[_builtins.str]]] 
 
 
     :param _builtins.str device: The device in which the resource is defined
+    :param _builtins.str folder: The folder in which the resource is defined
     :param _builtins.str id: UUID of the resource
+    :param _builtins.str name: PBF rule name
+    :param _builtins.str snippet: The snippet in which the resource is defined
     """
     __args__ = dict()
     __args__['device'] = device
@@ -299,6 +376,8 @@ def get_pbf_rule_output(device: pulumi.Input[Optional[Optional[_builtins.str]]] 
         from_=pulumi.get(__response__, 'from_'),
         id=pulumi.get(__response__, 'id'),
         name=pulumi.get(__response__, 'name'),
+        negate_destination=pulumi.get(__response__, 'negate_destination'),
+        negate_source=pulumi.get(__response__, 'negate_source'),
         schedule=pulumi.get(__response__, 'schedule'),
         services=pulumi.get(__response__, 'services'),
         snippet=pulumi.get(__response__, 'snippet'),

@@ -37,14 +37,14 @@ public final class LogicalRouterVrfBgpPolicyConditionalAdvertisementPolicyAdvert
     }
 
     /**
-     * Afi
+     * Afi. Possible values are `ip` and `ipv6`.
      * 
      */
     @Import(name="afi")
     private @Nullable Output<String> afi;
 
     /**
-     * @return Afi
+     * @return Afi. Possible values are `ip` and `ipv6`.
      * 
      */
     public Optional<Output<String>> afi() {
@@ -142,14 +142,14 @@ public final class LogicalRouterVrfBgpPolicyConditionalAdvertisementPolicyAdvert
     }
 
     /**
-     * Route table
+     * Route table. Possible values are `unicast`, `multicast` and `both`.
      * 
      */
     @Import(name="routeTable")
     private @Nullable Output<String> routeTable;
 
     /**
-     * @return Route table
+     * @return Route table. Possible values are `unicast`, `multicast` and `both`.
      * 
      */
     public Optional<Output<String>> routeTable() {
@@ -157,14 +157,14 @@ public final class LogicalRouterVrfBgpPolicyConditionalAdvertisementPolicyAdvert
     }
 
     /**
-     * Safi
+     * Safi. Possible values are `ip` and `ipv6`.
      * 
      */
     @Import(name="safi")
     private @Nullable Output<String> safi;
 
     /**
-     * @return Safi
+     * @return Safi. Possible values are `ip` and `ipv6`.
      * 
      */
     public Optional<Output<String>> safi() {
@@ -236,7 +236,7 @@ public final class LogicalRouterVrfBgpPolicyConditionalAdvertisementPolicyAdvert
         }
 
         /**
-         * @param afi Afi
+         * @param afi Afi. Possible values are `ip` and `ipv6`.
          * 
          * @return builder
          * 
@@ -247,7 +247,7 @@ public final class LogicalRouterVrfBgpPolicyConditionalAdvertisementPolicyAdvert
         }
 
         /**
-         * @param afi Afi
+         * @param afi Afi. Possible values are `ip` and `ipv6`.
          * 
          * @return builder
          * 
@@ -403,7 +403,7 @@ public final class LogicalRouterVrfBgpPolicyConditionalAdvertisementPolicyAdvert
         }
 
         /**
-         * @param routeTable Route table
+         * @param routeTable Route table. Possible values are `unicast`, `multicast` and `both`.
          * 
          * @return builder
          * 
@@ -414,7 +414,7 @@ public final class LogicalRouterVrfBgpPolicyConditionalAdvertisementPolicyAdvert
         }
 
         /**
-         * @param routeTable Route table
+         * @param routeTable Route table. Possible values are `unicast`, `multicast` and `both`.
          * 
          * @return builder
          * 
@@ -424,7 +424,7 @@ public final class LogicalRouterVrfBgpPolicyConditionalAdvertisementPolicyAdvert
         }
 
         /**
-         * @param safi Safi
+         * @param safi Safi. Possible values are `ip` and `ipv6`.
          * 
          * @return builder
          * 
@@ -435,7 +435,7 @@ public final class LogicalRouterVrfBgpPolicyConditionalAdvertisementPolicyAdvert
         }
 
         /**
-         * @param safi Safi
+         * @param safi Safi. Possible values are `ip` and `ipv6`.
          * 
          * @return builder
          * 

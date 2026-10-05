@@ -81,14 +81,12 @@ export class DosProtectionRule extends pulumi.CustomResource {
     declare public readonly disabled: pulumi.Output<boolean>;
     /**
      * The folder in which the resource is defined
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly folder: pulumi.Output<string | undefined>;
     /**
-     * List of source zones
+     * Source zones and interfaces
      */
-    declare public readonly froms: pulumi.Output<string[] | undefined>;
+    declare public readonly from: pulumi.Output<outputs.DosProtectionRuleFrom>;
     /**
      * Log forwarding profile name
      */
@@ -98,13 +96,13 @@ export class DosProtectionRule extends pulumi.CustomResource {
      */
     declare public readonly name: pulumi.Output<string>;
     /**
-     * Position relative to local device rules
+     * Position relative to local device rules. Possible values are `pre` and `post`.
      */
     declare public readonly position: pulumi.Output<string>;
     /**
      * Protection
      */
-    declare public readonly protection: pulumi.Output<outputs.DosProtectionRuleProtection | undefined>;
+    declare public readonly protection: pulumi.Output<outputs.DosProtectionRuleProtection>;
     /**
      * Schedule on which to enforce the rule
      */
@@ -112,11 +110,9 @@ export class DosProtectionRule extends pulumi.CustomResource {
     /**
      * List of services
      */
-    declare public readonly services: pulumi.Output<string[] | undefined>;
+    declare public readonly services: pulumi.Output<string[]>;
     /**
      * The snippet in which the resource is defined
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly snippet: pulumi.Output<string | undefined>;
     /**
@@ -126,7 +122,7 @@ export class DosProtectionRule extends pulumi.CustomResource {
     /**
      * List of source addresses
      */
-    declare public readonly sources: pulumi.Output<string[] | undefined>;
+    declare public readonly sources: pulumi.Output<string[]>;
     /**
      * List of tags
      */
@@ -136,9 +132,9 @@ export class DosProtectionRule extends pulumi.CustomResource {
      */
     declare public /*out*/ readonly tfid: pulumi.Output<string>;
     /**
-     * List of destination zones
+     * Destination zones and interfaces
      */
-    declare public readonly tos: pulumi.Output<string[] | undefined>;
+    declare public readonly to: pulumi.Output<outputs.DosProtectionRuleTo>;
 
     /**
      * Create a DosProtectionRule resource with the given unique name, arguments, and options.
@@ -147,7 +143,7 @@ export class DosProtectionRule extends pulumi.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param opts A bag of options that control this resource's behavior.
      */
-    constructor(name: string, args?: DosProtectionRuleArgs, opts?: pulumi.CustomResourceOptions)
+    constructor(name: string, args: DosProtectionRuleArgs, opts?: pulumi.CustomResourceOptions)
     constructor(name: string, argsOrState?: DosProtectionRuleArgs | DosProtectionRuleState, opts?: pulumi.CustomResourceOptions) {
         let resourceInputs: pulumi.Inputs = {};
         opts = opts || {};
@@ -159,7 +155,7 @@ export class DosProtectionRule extends pulumi.CustomResource {
             resourceInputs["device"] = state?.device;
             resourceInputs["disabled"] = state?.disabled;
             resourceInputs["folder"] = state?.folder;
-            resourceInputs["froms"] = state?.froms;
+            resourceInputs["from"] = state?.from;
             resourceInputs["logSetting"] = state?.logSetting;
             resourceInputs["name"] = state?.name;
             resourceInputs["position"] = state?.position;
@@ -171,16 +167,31 @@ export class DosProtectionRule extends pulumi.CustomResource {
             resourceInputs["sources"] = state?.sources;
             resourceInputs["tags"] = state?.tags;
             resourceInputs["tfid"] = state?.tfid;
-            resourceInputs["tos"] = state?.tos;
+            resourceInputs["to"] = state?.to;
         } else {
             const args = argsOrState as DosProtectionRuleArgs | undefined;
+            if (args?.from === undefined && !opts.urn) {
+                throw new Error("Missing required property 'from'");
+            }
+            if (args?.protection === undefined && !opts.urn) {
+                throw new Error("Missing required property 'protection'");
+            }
+            if (args?.services === undefined && !opts.urn) {
+                throw new Error("Missing required property 'services'");
+            }
+            if (args?.sources === undefined && !opts.urn) {
+                throw new Error("Missing required property 'sources'");
+            }
+            if (args?.to === undefined && !opts.urn) {
+                throw new Error("Missing required property 'to'");
+            }
             resourceInputs["action"] = args?.action;
             resourceInputs["description"] = args?.description;
             resourceInputs["destinations"] = args?.destinations;
             resourceInputs["device"] = args?.device;
             resourceInputs["disabled"] = args?.disabled;
             resourceInputs["folder"] = args?.folder;
-            resourceInputs["froms"] = args?.froms;
+            resourceInputs["from"] = args?.from;
             resourceInputs["logSetting"] = args?.logSetting;
             resourceInputs["name"] = args?.name;
             resourceInputs["position"] = args?.position;
@@ -191,7 +202,7 @@ export class DosProtectionRule extends pulumi.CustomResource {
             resourceInputs["sourceUsers"] = args?.sourceUsers;
             resourceInputs["sources"] = args?.sources;
             resourceInputs["tags"] = args?.tags;
-            resourceInputs["tos"] = args?.tos;
+            resourceInputs["to"] = args?.to;
             resourceInputs["tfid"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
@@ -225,14 +236,12 @@ export interface DosProtectionRuleState {
     disabled?: pulumi.Input<boolean | undefined>;
     /**
      * The folder in which the resource is defined
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     folder?: pulumi.Input<string | undefined>;
     /**
-     * List of source zones
+     * Source zones and interfaces
      */
-    froms?: pulumi.Input<pulumi.Input<string>[] | undefined>;
+    from?: pulumi.Input<inputs.DosProtectionRuleFrom | undefined>;
     /**
      * Log forwarding profile name
      */
@@ -242,7 +251,7 @@ export interface DosProtectionRuleState {
      */
     name?: pulumi.Input<string | undefined>;
     /**
-     * Position relative to local device rules
+     * Position relative to local device rules. Possible values are `pre` and `post`.
      */
     position?: pulumi.Input<string | undefined>;
     /**
@@ -259,8 +268,6 @@ export interface DosProtectionRuleState {
     services?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * The snippet in which the resource is defined
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     snippet?: pulumi.Input<string | undefined>;
     /**
@@ -280,9 +287,9 @@ export interface DosProtectionRuleState {
      */
     tfid?: pulumi.Input<string | undefined>;
     /**
-     * List of destination zones
+     * Destination zones and interfaces
      */
-    tos?: pulumi.Input<pulumi.Input<string>[] | undefined>;
+    to?: pulumi.Input<inputs.DosProtectionRuleTo | undefined>;
 }
 
 /**
@@ -311,14 +318,12 @@ export interface DosProtectionRuleArgs {
     disabled?: pulumi.Input<boolean | undefined>;
     /**
      * The folder in which the resource is defined
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     folder?: pulumi.Input<string | undefined>;
     /**
-     * List of source zones
+     * Source zones and interfaces
      */
-    froms?: pulumi.Input<pulumi.Input<string>[] | undefined>;
+    from: pulumi.Input<inputs.DosProtectionRuleFrom>;
     /**
      * Log forwarding profile name
      */
@@ -328,13 +333,13 @@ export interface DosProtectionRuleArgs {
      */
     name?: pulumi.Input<string | undefined>;
     /**
-     * Position relative to local device rules
+     * Position relative to local device rules. Possible values are `pre` and `post`.
      */
     position?: pulumi.Input<string | undefined>;
     /**
      * Protection
      */
-    protection?: pulumi.Input<inputs.DosProtectionRuleProtection | undefined>;
+    protection: pulumi.Input<inputs.DosProtectionRuleProtection>;
     /**
      * Schedule on which to enforce the rule
      */
@@ -342,11 +347,9 @@ export interface DosProtectionRuleArgs {
     /**
      * List of services
      */
-    services?: pulumi.Input<pulumi.Input<string>[] | undefined>;
+    services: pulumi.Input<pulumi.Input<string>[]>;
     /**
      * The snippet in which the resource is defined
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     snippet?: pulumi.Input<string | undefined>;
     /**
@@ -356,13 +359,13 @@ export interface DosProtectionRuleArgs {
     /**
      * List of source addresses
      */
-    sources?: pulumi.Input<pulumi.Input<string>[] | undefined>;
+    sources: pulumi.Input<pulumi.Input<string>[]>;
     /**
      * List of tags
      */
     tags?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
-     * List of destination zones
+     * Destination zones and interfaces
      */
-    tos?: pulumi.Input<pulumi.Input<string>[] | undefined>;
+    to: pulumi.Input<inputs.DosProtectionRuleTo>;
 }

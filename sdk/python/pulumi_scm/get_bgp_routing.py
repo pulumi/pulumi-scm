@@ -70,7 +70,7 @@ class GetBgpRoutingResult:
     @pulumi.getter(name="backboneRouting")
     def backbone_routing(self) -> _builtins.str:
         """
-        Backbone routing
+        Backbone routing. Possible values are `no-asymmetric-routing`, `asymmetric-routing-only` and `asymmetric-routing-with-load-share`.
         """
         return pulumi.get(self, "backbone_routing")
 

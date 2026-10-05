@@ -98,8 +98,6 @@ public final class LdapServerProfileArgs extends com.pulumi.resources.ResourceAr
     /**
      * The folder in which the resource is defined
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
      */
     @Import(name="folder")
     private @Nullable Output<String> folder;
@@ -107,22 +105,20 @@ public final class LdapServerProfileArgs extends com.pulumi.resources.ResourceAr
     /**
      * @return The folder in which the resource is defined
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
      */
     public Optional<Output<String>> folder() {
         return Optional.ofNullable(this.folder);
     }
 
     /**
-     * The LDAP server time
+     * The LDAP server time. Possible values are `active-directory`, `e-directory`, `sun` and `other`.
      * 
      */
     @Import(name="ldapType")
     private @Nullable Output<String> ldapType;
 
     /**
-     * @return The LDAP server time
+     * @return The LDAP server time. Possible values are `active-directory`, `e-directory`, `sun` and `other`.
      * 
      */
     public Optional<Output<String>> ldapType() {
@@ -177,16 +173,12 @@ public final class LdapServerProfileArgs extends com.pulumi.resources.ResourceAr
     /**
      * The snippet in which the resource is defined
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
      */
     @Import(name="snippet")
     private @Nullable Output<String> snippet;
 
     /**
      * @return The snippet in which the resource is defined
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public Optional<Output<String>> snippet() {
@@ -383,8 +375,6 @@ public final class LdapServerProfileArgs extends com.pulumi.resources.ResourceAr
         /**
          * @param folder The folder in which the resource is defined
          * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-         * 
          * @return builder
          * 
          */
@@ -396,8 +386,6 @@ public final class LdapServerProfileArgs extends com.pulumi.resources.ResourceAr
         /**
          * @param folder The folder in which the resource is defined
          * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-         * 
          * @return builder
          * 
          */
@@ -406,7 +394,7 @@ public final class LdapServerProfileArgs extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param ldapType The LDAP server time
+         * @param ldapType The LDAP server time. Possible values are `active-directory`, `e-directory`, `sun` and `other`.
          * 
          * @return builder
          * 
@@ -417,7 +405,7 @@ public final class LdapServerProfileArgs extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param ldapType The LDAP server time
+         * @param ldapType The LDAP server time. Possible values are `active-directory`, `e-directory`, `sun` and `other`.
          * 
          * @return builder
          * 
@@ -502,8 +490,6 @@ public final class LdapServerProfileArgs extends com.pulumi.resources.ResourceAr
         /**
          * @param snippet The snippet in which the resource is defined
          * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-         * 
          * @return builder
          * 
          */
@@ -514,8 +500,6 @@ public final class LdapServerProfileArgs extends com.pulumi.resources.ResourceAr
 
         /**
          * @param snippet The snippet in which the resource is defined
-         * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
          * 
          * @return builder
          * 

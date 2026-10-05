@@ -83,12 +83,12 @@ public final class DecryptionProfileSslProtocolSettings {
      */
     private @Nullable Boolean keyxchgAlgoRsa;
     /**
-     * @return Max version
+     * @return Max version. Possible values are `sslv3`, `tls1-0`, `tls1-1`, `tls1-2`, `tls1-3` and `max`.
      * 
      */
     private @Nullable String maxVersion;
     /**
-     * @return Min version
+     * @return Min version. Possible values are `sslv3`, `tls1-0`, `tls1-1`, `tls1-2` and `tls1-3`.
      * 
      */
     private @Nullable String minVersion;
@@ -193,14 +193,14 @@ public final class DecryptionProfileSslProtocolSettings {
         return Optional.ofNullable(this.keyxchgAlgoRsa);
     }
     /**
-     * @return Max version
+     * @return Max version. Possible values are `sslv3`, `tls1-0`, `tls1-1`, `tls1-2`, `tls1-3` and `max`.
      * 
      */
     public Optional<String> maxVersion() {
         return Optional.ofNullable(this.maxVersion);
     }
     /**
-     * @return Min version
+     * @return Min version. Possible values are `sslv3`, `tls1-0`, `tls1-1`, `tls1-2` and `tls1-3`.
      * 
      */
     public Optional<String> minVersion() {

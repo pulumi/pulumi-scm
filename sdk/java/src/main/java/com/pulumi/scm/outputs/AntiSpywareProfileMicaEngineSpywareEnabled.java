@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class AntiSpywareProfileMicaEngineSpywareEnabled {
     /**
-     * @return Inline policy action
+     * @return Inline policy action. Possible values are `alert`, `allow`, `drop`, `reset-both`, `reset-client` and `reset-server`.
      * 
      */
     private @Nullable String inlinePolicyAction;
@@ -24,7 +24,7 @@ public final class AntiSpywareProfileMicaEngineSpywareEnabled {
 
     private AntiSpywareProfileMicaEngineSpywareEnabled() {}
     /**
-     * @return Inline policy action
+     * @return Inline policy action. Possible values are `alert`, `allow`, `drop`, `reset-both`, `reset-client` and `reset-server`.
      * 
      */
     public Optional<String> inlinePolicyAction() {

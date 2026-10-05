@@ -19,8 +19,6 @@ namespace Pulumi.Scm.Outputs
         public readonly Outputs.LogicalRouterVrfMulticastRpLocalRpCandidateRp? CandidateRp;
         /// <summary>
         /// Static rp
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `CandidateRp` and `StaticRp`.
         /// </summary>
         public readonly Outputs.LogicalRouterVrfMulticastRpLocalRpStaticRp? StaticRp;
 

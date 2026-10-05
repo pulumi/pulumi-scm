@@ -87,8 +87,6 @@ type IptagMatchList struct {
 	// Filter of the iptag match list entry
 	Filter pulumi.StringPtrOutput `pulumi:"filter"`
 	// The folder in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrOutput `pulumi:"folder"`
 	// Name of the iptag match list entry
 	Name pulumi.StringOutput `pulumi:"name"`
@@ -105,8 +103,6 @@ type IptagMatchList struct {
 	// Send to Panorama Flag of the iptag match list entry
 	SendToPanorama pulumi.BoolPtrOutput `pulumi:"sendToPanorama"`
 	// The snippet in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
 	// The Terraform ID.
 	Tfid pulumi.StringOutput `pulumi:"tfid"`
@@ -149,8 +145,6 @@ type iptagMatchListState struct {
 	// Filter of the iptag match list entry
 	Filter *string `pulumi:"filter"`
 	// The folder in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// Name of the iptag match list entry
 	Name *string `pulumi:"name"`
@@ -167,8 +161,6 @@ type iptagMatchListState struct {
 	// Send to Panorama Flag of the iptag match list entry
 	SendToPanorama *bool `pulumi:"sendToPanorama"`
 	// The snippet in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	// The Terraform ID.
 	Tfid *string `pulumi:"tfid"`
@@ -182,8 +174,6 @@ type IptagMatchListState struct {
 	// Filter of the iptag match list entry
 	Filter pulumi.StringPtrInput
 	// The folder in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// Name of the iptag match list entry
 	Name pulumi.StringPtrInput
@@ -200,8 +190,6 @@ type IptagMatchListState struct {
 	// Send to Panorama Flag of the iptag match list entry
 	SendToPanorama pulumi.BoolPtrInput
 	// The snippet in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	// The Terraform ID.
 	Tfid pulumi.StringPtrInput
@@ -219,8 +207,6 @@ type iptagMatchListArgs struct {
 	// Filter of the iptag match list entry
 	Filter *string `pulumi:"filter"`
 	// The folder in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// Name of the iptag match list entry
 	Name *string `pulumi:"name"`
@@ -237,8 +223,6 @@ type iptagMatchListArgs struct {
 	// Send to Panorama Flag of the iptag match list entry
 	SendToPanorama *bool `pulumi:"sendToPanorama"`
 	// The snippet in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 }
 
@@ -251,8 +235,6 @@ type IptagMatchListArgs struct {
 	// Filter of the iptag match list entry
 	Filter pulumi.StringPtrInput
 	// The folder in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// Name of the iptag match list entry
 	Name pulumi.StringPtrInput
@@ -269,8 +251,6 @@ type IptagMatchListArgs struct {
 	// Send to Panorama Flag of the iptag match list entry
 	SendToPanorama pulumi.BoolPtrInput
 	// The snippet in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 }
 
@@ -377,8 +357,6 @@ func (o IptagMatchListOutput) Filter() pulumi.StringPtrOutput {
 }
 
 // The folder in which the resource is defined
-//
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o IptagMatchListOutput) Folder() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *IptagMatchList) pulumi.StringPtrOutput { return v.Folder }).(pulumi.StringPtrOutput)
 }
@@ -419,8 +397,6 @@ func (o IptagMatchListOutput) SendToPanorama() pulumi.BoolPtrOutput {
 }
 
 // The snippet in which the resource is defined
-//
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o IptagMatchListOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *IptagMatchList) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)
 }

@@ -14,7 +14,7 @@ namespace Pulumi.Scm.Outputs
     public sealed class LogicalRouterVrfBgpRedistRule
     {
         /// <summary>
-        /// Address family identifier
+        /// Address family identifier. Possible values are `Ipv4` and `Ipv6`.
         /// </summary>
         public readonly string? AddressFamilyIdentifier;
         /// <summary>
@@ -30,7 +30,7 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly string Name;
         /// <summary>
-        /// Route table
+        /// Route table. Possible values are `Unicast`, `Multicast` and `Both`.
         /// </summary>
         public readonly string? RouteTable;
         /// <summary>
@@ -54,7 +54,7 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly int? SetMed;
         /// <summary>
-        /// Set origin
+        /// Set origin. Possible values are `Igp`, `Egp` and `Incomplete`.
         /// </summary>
         public readonly string? SetOrigin;
 

@@ -23,8 +23,6 @@ namespace Pulumi.Scm.Inputs
 
         /// <summary>
         /// List of IP addresses
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Fqdn` and `IpAddress`.
         /// </summary>
         public InputList<Inputs.SdwanSaasQualityProfileMonitorModeStaticIpIpAddressGetArgs> IpAddresses
         {

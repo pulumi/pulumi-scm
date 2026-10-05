@@ -20,21 +20,15 @@ public final class GetLogicalRouterListDataVrfBgpPolicyAggregationAddressAggrega
     /**
      * @return Prepend
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
-     * 
      */
     private Integer prepend;
     /**
      * @return Remove
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
-     * 
      */
     private GetLogicalRouterListDataVrfBgpPolicyAggregationAddressAggregateRouteAttributesAsPathRemove remove;
     /**
      * @return Remove and prepend
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
      * 
      */
     private Integer removeAndPrepend;
@@ -50,8 +44,6 @@ public final class GetLogicalRouterListDataVrfBgpPolicyAggregationAddressAggrega
     /**
      * @return Prepend
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
-     * 
      */
     public Integer prepend() {
         return this.prepend;
@@ -59,16 +51,12 @@ public final class GetLogicalRouterListDataVrfBgpPolicyAggregationAddressAggrega
     /**
      * @return Remove
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
-     * 
      */
     public GetLogicalRouterListDataVrfBgpPolicyAggregationAddressAggregateRouteAttributesAsPathRemove remove() {
         return this.remove;
     }
     /**
      * @return Remove and prepend
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
      * 
      */
     public Integer removeAndPrepend() {

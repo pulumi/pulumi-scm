@@ -48,12 +48,21 @@ export interface GetExternalDynamicListArgs {
      * The device in which the resource is defined
      */
     device?: string;
+    /**
+     * The folder in which the resource is defined
+     */
     folder?: string;
     /**
      * The UUID of the external dynamic list
      */
     id: string;
+    /**
+     * The name of the external dynamic list
+     */
     name?: string;
+    /**
+     * The snippet in which the resource is defined
+     */
     snippet?: string;
 }
 
@@ -65,15 +74,33 @@ export interface GetExternalDynamicListResult {
      * The device in which the resource is defined
      */
     readonly device: string;
+    /**
+     * Map of sensitive values returned from the API.
+     */
     readonly encryptedValues: {[key: string]: string};
+    /**
+     * The folder in which the resource is defined
+     */
     readonly folder: string;
     /**
      * The UUID of the external dynamic list
      */
     readonly id: string;
+    /**
+     * The name of the external dynamic list
+     */
     readonly name: string;
+    /**
+     * The snippet in which the resource is defined
+     */
     readonly snippet: string;
+    /**
+     * The Terraform ID.
+     */
     readonly tfid: string;
+    /**
+     * Type configuration for External Dynamic List
+     */
     readonly type: outputs.GetExternalDynamicListType;
 }
 /**
@@ -118,11 +145,20 @@ export interface GetExternalDynamicListOutputArgs {
      * The device in which the resource is defined
      */
     device?: pulumi.Input<string | undefined>;
+    /**
+     * The folder in which the resource is defined
+     */
     folder?: pulumi.Input<string | undefined>;
     /**
      * The UUID of the external dynamic list
      */
     id: pulumi.Input<string>;
+    /**
+     * The name of the external dynamic list
+     */
     name?: pulumi.Input<string | undefined>;
+    /**
+     * The snippet in which the resource is defined
+     */
     snippet?: pulumi.Input<string | undefined>;
 }

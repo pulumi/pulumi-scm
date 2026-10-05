@@ -18,7 +18,7 @@ public final class GetSdwanTrafficDistributionProfileListData {
      */
     private String device;
     /**
-     * @return The folder of the item. Default: Shared.
+     * @return The folder in which the resource is defined
      * 
      */
     private String folder;
@@ -33,12 +33,12 @@ public final class GetSdwanTrafficDistributionProfileListData {
      */
     private List<GetSdwanTrafficDistributionProfileListDataLinkTag> linkTags;
     /**
-     * @return The name of the item.
+     * @return Profile name
      * 
      */
     private String name;
     /**
-     * @return The snippet of the item.
+     * @return The snippet in which the resource is defined
      * 
      */
     private String snippet;
@@ -48,7 +48,7 @@ public final class GetSdwanTrafficDistributionProfileListData {
      */
     private String tfid;
     /**
-     * @return Traffic distribution
+     * @return Traffic distribution. Possible values are `Best Available Path`, `Top Down Priority` and `Weighted Session Distribution`.
      * 
      */
     private String trafficDistribution;
@@ -62,7 +62,7 @@ public final class GetSdwanTrafficDistributionProfileListData {
         return this.device;
     }
     /**
-     * @return The folder of the item. Default: Shared.
+     * @return The folder in which the resource is defined
      * 
      */
     public String folder() {
@@ -83,14 +83,14 @@ public final class GetSdwanTrafficDistributionProfileListData {
         return this.linkTags;
     }
     /**
-     * @return The name of the item.
+     * @return Profile name
      * 
      */
     public String name() {
         return this.name;
     }
     /**
-     * @return The snippet of the item.
+     * @return The snippet in which the resource is defined
      * 
      */
     public String snippet() {
@@ -104,7 +104,7 @@ public final class GetSdwanTrafficDistributionProfileListData {
         return this.tfid;
     }
     /**
-     * @return Traffic distribution
+     * @return Traffic distribution. Possible values are `Best Available Path`, `Top Down Priority` and `Weighted Session Distribution`.
      * 
      */
     public String trafficDistribution() {

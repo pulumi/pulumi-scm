@@ -5,7 +5,6 @@ package com.pulumi.scm.outputs;
 
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
-import com.pulumi.scm.outputs.GetServiceConnectionBgpPeer;
 import com.pulumi.scm.outputs.GetServiceConnectionProtocol;
 import com.pulumi.scm.outputs.GetServiceConnectionQos;
 import java.lang.Boolean;
@@ -21,11 +20,6 @@ public final class GetServiceConnectionResult {
      * 
      */
     private String backupSc;
-    /**
-     * @return Bgp peer
-     * 
-     */
-    private GetServiceConnectionBgpPeer bgpPeer;
     /**
      * @return Map of sensitive values returned from the API.
      * 
@@ -57,12 +51,12 @@ public final class GetServiceConnectionResult {
      */
     private String natPool;
     /**
-     * @return No export community
+     * @return No export community. Possible values are `Disabled`, `Enabled-In`, `Enabled-Out` and `Enabled-Both`.
      * 
      */
     private String noExportCommunity;
     /**
-     * @return Onboarding type
+     * @return Onboarding type. Possible values are `classic`.
      * 
      */
     private String onboardingType;
@@ -116,13 +110,6 @@ public final class GetServiceConnectionResult {
         return this.backupSc;
     }
     /**
-     * @return Bgp peer
-     * 
-     */
-    public GetServiceConnectionBgpPeer bgpPeer() {
-        return this.bgpPeer;
-    }
-    /**
      * @return Map of sensitive values returned from the API.
      * 
      */
@@ -165,14 +152,14 @@ public final class GetServiceConnectionResult {
         return this.natPool;
     }
     /**
-     * @return No export community
+     * @return No export community. Possible values are `Disabled`, `Enabled-In`, `Enabled-Out` and `Enabled-Both`.
      * 
      */
     public String noExportCommunity() {
         return this.noExportCommunity;
     }
     /**
-     * @return Onboarding type
+     * @return Onboarding type. Possible values are `classic`.
      * 
      */
     public String onboardingType() {
@@ -245,7 +232,6 @@ public final class GetServiceConnectionResult {
     @CustomType.Builder
     public static final class Builder {
         private String backupSc;
-        private GetServiceConnectionBgpPeer bgpPeer;
         private Map<String,String> encryptedValues;
         private String folder;
         private String id;
@@ -266,7 +252,6 @@ public final class GetServiceConnectionResult {
         public Builder(GetServiceConnectionResult defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.backupSc = defaults.backupSc;
-    	      this.bgpPeer = defaults.bgpPeer;
     	      this.encryptedValues = defaults.encryptedValues;
     	      this.folder = defaults.folder;
     	      this.id = defaults.id;
@@ -291,14 +276,6 @@ public final class GetServiceConnectionResult {
               throw new MissingRequiredPropertyException("GetServiceConnectionResult", "backupSc");
             }
             this.backupSc = backupSc;
-            return this;
-        }
-        @CustomType.Setter
-        public Builder bgpPeer(GetServiceConnectionBgpPeer bgpPeer) {
-            if (bgpPeer == null) {
-              throw new MissingRequiredPropertyException("GetServiceConnectionResult", "bgpPeer");
-            }
-            this.bgpPeer = bgpPeer;
             return this;
         }
         @CustomType.Setter
@@ -435,7 +412,6 @@ public final class GetServiceConnectionResult {
         public GetServiceConnectionResult build() {
             final var _resultValue = new GetServiceConnectionResult();
             _resultValue.backupSc = backupSc;
-            _resultValue.bgpPeer = bgpPeer;
             _resultValue.encryptedValues = encryptedValues;
             _resultValue.folder = folder;
             _resultValue.id = id;

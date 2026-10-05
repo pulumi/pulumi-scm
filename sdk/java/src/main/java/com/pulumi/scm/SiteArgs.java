@@ -94,14 +94,14 @@ public final class SiteArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The license type of the site
+     * The license type of the site. Possible values are `FWAAS-SITE-25Mbps`, `FWAAS-SITE-50Mbps`, `FWAAS-SITE-250Mbps`, `FWAAS-SITE-1000Mbps` and `FWAAS-SITE-2500Mbps`.
      * 
      */
     @Import(name="licenseType")
     private @Nullable Output<String> licenseType;
 
     /**
-     * @return The license type of the site
+     * @return The license type of the site. Possible values are `FWAAS-SITE-25Mbps`, `FWAAS-SITE-50Mbps`, `FWAAS-SITE-250Mbps`, `FWAAS-SITE-1000Mbps` and `FWAAS-SITE-2500Mbps`.
      * 
      */
     public Optional<Output<String>> licenseType() {
@@ -184,14 +184,14 @@ public final class SiteArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The site type
+     * The site type. Possible values are `prisma-sdwan`, `third-party-branch` and `third-party-discovered`.
      * 
      */
     @Import(name="type")
     private @Nullable Output<String> type;
 
     /**
-     * @return The site type
+     * @return The site type. Possible values are `prisma-sdwan`, `third-party-branch` and `third-party-discovered`.
      * 
      */
     public Optional<Output<String>> type() {
@@ -355,7 +355,7 @@ public final class SiteArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param licenseType The license type of the site
+         * @param licenseType The license type of the site. Possible values are `FWAAS-SITE-25Mbps`, `FWAAS-SITE-50Mbps`, `FWAAS-SITE-250Mbps`, `FWAAS-SITE-1000Mbps` and `FWAAS-SITE-2500Mbps`.
          * 
          * @return builder
          * 
@@ -366,7 +366,7 @@ public final class SiteArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param licenseType The license type of the site
+         * @param licenseType The license type of the site. Possible values are `FWAAS-SITE-25Mbps`, `FWAAS-SITE-50Mbps`, `FWAAS-SITE-250Mbps`, `FWAAS-SITE-1000Mbps` and `FWAAS-SITE-2500Mbps`.
          * 
          * @return builder
          * 
@@ -491,7 +491,7 @@ public final class SiteArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param type The site type
+         * @param type The site type. Possible values are `prisma-sdwan`, `third-party-branch` and `third-party-discovered`.
          * 
          * @return builder
          * 
@@ -502,7 +502,7 @@ public final class SiteArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param type The site type
+         * @param type The site type. Possible values are `prisma-sdwan`, `third-party-branch` and `third-party-discovered`.
          * 
          * @return builder
          * 

@@ -117,6 +117,9 @@ namespace Pulumi.Scm
         [Input("device")]
         public string? Device { get; set; }
 
+        /// <summary>
+        /// The folder in which the resource is defined
+        /// </summary>
         [Input("folder")]
         public string? Folder { get; set; }
 
@@ -126,9 +129,15 @@ namespace Pulumi.Scm
         [Input("id", required: true)]
         public string Id { get; set; } = null!;
 
+        /// <summary>
+        /// Name
+        /// </summary>
         [Input("name")]
         public string? Name { get; set; }
 
+        /// <summary>
+        /// The snippet in which the resource is defined
+        /// </summary>
         [Input("snippet")]
         public string? Snippet { get; set; }
 
@@ -146,6 +155,9 @@ namespace Pulumi.Scm
         [Input("device")]
         public Input<string>? Device { get; set; }
 
+        /// <summary>
+        /// The folder in which the resource is defined
+        /// </summary>
         [Input("folder")]
         public Input<string>? Folder { get; set; }
 
@@ -155,9 +167,15 @@ namespace Pulumi.Scm
         [Input("id", required: true)]
         public Input<string> Id { get; set; } = null!;
 
+        /// <summary>
+        /// Name
+        /// </summary>
         [Input("name")]
         public Input<string>? Name { get; set; }
 
+        /// <summary>
+        /// The snippet in which the resource is defined
+        /// </summary>
         [Input("snippet")]
         public Input<string>? Snippet { get; set; }
 
@@ -171,32 +189,89 @@ namespace Pulumi.Scm
     [OutputType]
     public sealed class GetUrlAccessProfileResult
     {
+        /// <summary>
+        /// Alert
+        /// </summary>
         public readonly ImmutableArray<string> Alerts;
+        /// <summary>
+        /// Allow
+        /// </summary>
         public readonly ImmutableArray<string> Allows;
+        /// <summary>
+        /// Block
+        /// </summary>
         public readonly ImmutableArray<string> Blocks;
+        /// <summary>
+        /// Cloud inline cat
+        /// </summary>
         public readonly bool CloudInlineCat;
+        /// <summary>
+        /// Continue
+        /// </summary>
         public readonly ImmutableArray<string> Continues;
+        /// <summary>
+        /// Credential enforcement
+        /// </summary>
         public readonly Outputs.GetUrlAccessProfileCredentialEnforcementResult CredentialEnforcement;
+        /// <summary>
+        /// Description
+        /// </summary>
         public readonly string Description;
         /// <summary>
         /// The device in which the resource is defined
         /// </summary>
         public readonly string Device;
+        /// <summary>
+        /// The folder in which the resource is defined
+        /// </summary>
         public readonly string Folder;
         /// <summary>
         /// UUID of the resource
         /// </summary>
         public readonly string Id;
+        /// <summary>
+        /// Local inline cat
+        /// </summary>
         public readonly bool LocalInlineCat;
+        /// <summary>
+        /// Log container page only
+        /// </summary>
         public readonly bool LogContainerPageOnly;
+        /// <summary>
+        /// Log http hdr referer
+        /// </summary>
         public readonly bool LogHttpHdrReferer;
+        /// <summary>
+        /// Log http hdr user agent
+        /// </summary>
         public readonly bool LogHttpHdrUserAgent;
+        /// <summary>
+        /// Log http hdr xff
+        /// </summary>
         public readonly bool LogHttpHdrXff;
+        /// <summary>
+        /// Mlav category exception
+        /// </summary>
         public readonly ImmutableArray<string> MlavCategoryExceptions;
+        /// <summary>
+        /// Name
+        /// </summary>
         public readonly string Name;
+        /// <summary>
+        /// Redirect
+        /// </summary>
         public readonly ImmutableArray<string> Redirects;
+        /// <summary>
+        /// Safe search enforcement
+        /// </summary>
         public readonly bool SafeSearchEnforcement;
+        /// <summary>
+        /// The snippet in which the resource is defined
+        /// </summary>
         public readonly string Snippet;
+        /// <summary>
+        /// The Terraform ID.
+        /// </summary>
         public readonly string Tfid;
 
         [OutputConstructor]

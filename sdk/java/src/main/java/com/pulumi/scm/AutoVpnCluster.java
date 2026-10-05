@@ -225,14 +225,14 @@ public class AutoVpnCluster extends com.pulumi.resources.CustomResource {
         return this.tfid;
     }
     /**
-     * VPN cluster type
+     * VPN cluster type. Possible values are `hub-spoke` and `mesh`.
      * 
      */
     @Export(name="type", refs={String.class}, tree="[0]")
     private Output<String> type;
 
     /**
-     * @return VPN cluster type
+     * @return VPN cluster type. Possible values are `hub-spoke` and `mesh`.
      * 
      */
     public Output<String> type() {

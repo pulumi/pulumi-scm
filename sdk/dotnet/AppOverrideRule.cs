@@ -25,7 +25,7 @@ namespace Pulumi.Scm
     ///     // --- 1. TAG Resource ---
     ///     var appOverridePositionTag = new Scm.Tag("app_override_position_tag", new()
     ///     {
-    ///         Name = "app-override-position-tag_1",
+    ///         Name = "tf_app-override-position-tag_1",
     ///         Folder = "ngfw-shared",
     ///         Color = "Orange",
     ///     });
@@ -33,7 +33,7 @@ namespace Pulumi.Scm
     ///     // --- 2. ANCHOR RULE (Used for relative positioning by other rules) ---
     ///     var anchorAppOverride = new Scm.AppOverrideRule("anchor_app_override", new()
     ///     {
-    ///         Name = "anchor-app-override-rule",
+    ///         Name = "tf_anchor-app-override-rule",
     ///         Description = "Base rule for testing 'before' and 'after' positioning. Updating",
     ///         Folder = "ngfw-shared",
     ///         Position = "pre",
@@ -65,7 +65,7 @@ namespace Pulumi.Scm
     ///     // --- 3. ABSOLUTE POSITIONING Examples ("top" and "bottom") ---
     ///     var ruleTopAppOverride = new Scm.AppOverrideRule("rule_top_app_override", new()
     ///     {
-    ///         Name = "top-absolute-app-override",
+    ///         Name = "tf_top-absolute-app-override",
     ///         Description = "Placed at the very TOP of the App Override rulebase.",
     ///         Folder = "ngfw-shared",
     ///         Position = "pre",
@@ -93,7 +93,7 @@ namespace Pulumi.Scm
     /// 
     ///     var ruleBottomAppOverride = new Scm.AppOverrideRule("rule_bottom_app_override", new()
     ///     {
-    ///         Name = "bottom-absolute-app-override",
+    ///         Name = "tf_bottom-absolute-app-override",
     ///         Description = "Placed at the very BOTTOM of the App Override rulebase.",
     ///         Folder = "ngfw-shared",
     ///         Position = "pre",
@@ -122,7 +122,7 @@ namespace Pulumi.Scm
     ///     //--- 4. RELATIVE POSITIONING Examples ("before" and "after") ---
     ///     var ruleBeforeAnchorOverride = new Scm.AppOverrideRule("rule_before_anchor_override", new()
     ///     {
-    ///         Name = "before-anchor-app-override",
+    ///         Name = "tf_before-anchor-app-override",
     ///         Description = "Positioned immediately BEFORE the anchor-app-override-rule.",
     ///         Folder = "ngfw-shared",
     ///         Position = "pre",
@@ -151,7 +151,7 @@ namespace Pulumi.Scm
     /// 
     ///     var ruleAfterAnchorOverride = new Scm.AppOverrideRule("rule_after_anchor_override", new()
     ///     {
-    ///         Name = "after-anchor-app-override",
+    ///         Name = "tf_after-anchor-app-override",
     ///         Description = "Positioned immediately AFTER the anchor-app-override-rule.",
     ///         Folder = "ngfw-shared",
     ///         Position = "pre",
@@ -238,8 +238,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The folder in which the resource is defined
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Output("folder")]
         public Output<string?> Folder { get; private set; } = null!;
@@ -281,13 +279,13 @@ namespace Pulumi.Scm
         public Output<string?> Port { get; private set; } = null!;
 
         /// <summary>
-        /// The position of a security rule
+        /// The position of a security rule. Possible values are `Pre` and `Post`.
         /// </summary>
         [Output("position")]
         public Output<string> Position { get; private set; } = null!;
 
         /// <summary>
-        /// Protocol
+        /// Protocol. Possible values are `Tcp` and `Udp`.
         /// </summary>
         [Output("protocol")]
         public Output<string?> Protocol { get; private set; } = null!;
@@ -300,8 +298,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The snippet in which the resource is defined
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Output("snippet")]
         public Output<string?> Snippet { get; private set; } = null!;
@@ -319,7 +315,7 @@ namespace Pulumi.Scm
         public Output<ImmutableArray<string>> Tags { get; private set; } = null!;
 
         /// <summary>
-        /// The name or UUID of the rule to position this rule relative to. Required when `RelativePosition` is `"before"` or `"after"`.
+        /// UUID of the rule to position this rule relative to. Required when `RelativePosition` is `"before"` or `"after"`.
         /// </summary>
         [Output("targetRule")]
         public Output<string?> TargetRule { get; private set; } = null!;
@@ -420,8 +416,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The folder in which the resource is defined
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("folder")]
         public Input<string>? Folder { get; set; }
@@ -469,13 +463,13 @@ namespace Pulumi.Scm
         public Input<string>? Port { get; set; }
 
         /// <summary>
-        /// The position of a security rule
+        /// The position of a security rule. Possible values are `Pre` and `Post`.
         /// </summary>
         [Input("position")]
         public Input<string>? Position { get; set; }
 
         /// <summary>
-        /// Protocol
+        /// Protocol. Possible values are `Tcp` and `Udp`.
         /// </summary>
         [Input("protocol")]
         public Input<string>? Protocol { get; set; }
@@ -488,8 +482,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The snippet in which the resource is defined
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("snippet")]
         public Input<string>? Snippet { get; set; }
@@ -519,7 +511,7 @@ namespace Pulumi.Scm
         }
 
         /// <summary>
-        /// The name or UUID of the rule to position this rule relative to. Required when `RelativePosition` is `"before"` or `"after"`.
+        /// UUID of the rule to position this rule relative to. Required when `RelativePosition` is `"before"` or `"after"`.
         /// </summary>
         [Input("targetRule")]
         public Input<string>? TargetRule { get; set; }
@@ -582,8 +574,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The folder in which the resource is defined
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("folder")]
         public Input<string>? Folder { get; set; }
@@ -631,13 +621,13 @@ namespace Pulumi.Scm
         public Input<string>? Port { get; set; }
 
         /// <summary>
-        /// The position of a security rule
+        /// The position of a security rule. Possible values are `Pre` and `Post`.
         /// </summary>
         [Input("position")]
         public Input<string>? Position { get; set; }
 
         /// <summary>
-        /// Protocol
+        /// Protocol. Possible values are `Tcp` and `Udp`.
         /// </summary>
         [Input("protocol")]
         public Input<string>? Protocol { get; set; }
@@ -650,8 +640,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The snippet in which the resource is defined
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("snippet")]
         public Input<string>? Snippet { get; set; }
@@ -681,7 +669,7 @@ namespace Pulumi.Scm
         }
 
         /// <summary>
-        /// The name or UUID of the rule to position this rule relative to. Required when `RelativePosition` is `"before"` or `"after"`.
+        /// UUID of the rule to position this rule relative to. Required when `RelativePosition` is `"before"` or `"after"`.
         /// </summary>
         [Input("targetRule")]
         public Input<string>? TargetRule { get; set; }

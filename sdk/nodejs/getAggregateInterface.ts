@@ -47,12 +47,21 @@ export interface GetAggregateInterfaceArgs {
      * The device in which the resource is defined
      */
     device?: string;
+    /**
+     * The folder in which the resource is defined
+     */
     folder?: string;
     /**
      * UUID of the resource
      */
     id: string;
+    /**
+     * Aggregate interface name
+     */
     name?: string;
+    /**
+     * The snippet in which the resource is defined
+     */
     snippet?: string;
 }
 
@@ -60,21 +69,45 @@ export interface GetAggregateInterfaceArgs {
  * A collection of values returned by getAggregateInterface.
  */
 export interface GetAggregateInterfaceResult {
+    /**
+     * Aggregate interface description
+     */
     readonly comment: string;
+    /**
+     * Default interface assignment
+     */
     readonly defaultValue: string;
     /**
      * The device in which the resource is defined
      */
     readonly device: string;
+    /**
+     * The folder in which the resource is defined
+     */
     readonly folder: string;
     /**
      * UUID of the resource
      */
     readonly id: string;
+    /**
+     * Layer2
+     */
     readonly layer2: outputs.GetAggregateInterfaceLayer2;
+    /**
+     * Aggregate Interface Layer 3 configuration
+     */
     readonly layer3: outputs.GetAggregateInterfaceLayer3;
+    /**
+     * Aggregate interface name
+     */
     readonly name: string;
+    /**
+     * The snippet in which the resource is defined
+     */
     readonly snippet: string;
+    /**
+     * The Terraform ID.
+     */
     readonly tfid: string;
 }
 /**
@@ -118,11 +151,20 @@ export interface GetAggregateInterfaceOutputArgs {
      * The device in which the resource is defined
      */
     device?: pulumi.Input<string | undefined>;
+    /**
+     * The folder in which the resource is defined
+     */
     folder?: pulumi.Input<string | undefined>;
     /**
      * UUID of the resource
      */
     id: pulumi.Input<string>;
+    /**
+     * Aggregate interface name
+     */
     name?: pulumi.Input<string | undefined>;
+    /**
+     * The snippet in which the resource is defined
+     */
     snippet?: pulumi.Input<string | undefined>;
 }

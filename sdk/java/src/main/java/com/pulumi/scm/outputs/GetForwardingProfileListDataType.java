@@ -20,14 +20,10 @@ public final class GetForwardingProfileListDataType {
     /**
      * @return PAC file based forwarding configuration
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `globalProtectProxy`, `pacFile`, and `ztnaAgent`.
-     * 
      */
     private GetForwardingProfileListDataTypePacFile pacFile;
     /**
      * @return ZTNA agent-based forwarding configuration
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `globalProtectProxy`, `pacFile`, and `ztnaAgent`.
      * 
      */
     private GetForwardingProfileListDataTypeZtnaAgent ztnaAgent;
@@ -43,16 +39,12 @@ public final class GetForwardingProfileListDataType {
     /**
      * @return PAC file based forwarding configuration
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `globalProtectProxy`, `pacFile`, and `ztnaAgent`.
-     * 
      */
     public GetForwardingProfileListDataTypePacFile pacFile() {
         return this.pacFile;
     }
     /**
      * @return ZTNA agent-based forwarding configuration
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `globalProtectProxy`, `pacFile`, and `ztnaAgent`.
      * 
      */
     public GetForwardingProfileListDataTypeZtnaAgent ztnaAgent() {

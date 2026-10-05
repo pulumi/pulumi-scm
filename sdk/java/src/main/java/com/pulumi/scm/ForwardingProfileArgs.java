@@ -17,14 +17,14 @@ public final class ForwardingProfileArgs extends com.pulumi.resources.ResourceAr
     public static final ForwardingProfileArgs Empty = new ForwardingProfileArgs();
 
     /**
-     * Enable forwarding rule for forwarding profile
+     * Enable forwarding rule for forwarding profile. Possible values are `rules` and `pac-file`.
      * 
      */
     @Import(name="definitionMethod")
     private @Nullable Output<String> definitionMethod;
 
     /**
-     * @return Enable forwarding rule for forwarding profile
+     * @return Enable forwarding rule for forwarding profile. Possible values are `rules` and `pac-file`.
      * 
      */
     public Optional<Output<String>> definitionMethod() {
@@ -47,14 +47,14 @@ public final class ForwardingProfileArgs extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * The folder in which the resource is defined
+     * The folder in which the resource is defined. Possible values are `Mobile Users`.
      * 
      */
     @Import(name="folder")
     private @Nullable Output<String> folder;
 
     /**
-     * @return The folder in which the resource is defined
+     * @return The folder in which the resource is defined. Possible values are `Mobile Users`.
      * 
      */
     public Optional<Output<String>> folder() {
@@ -120,7 +120,7 @@ public final class ForwardingProfileArgs extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param definitionMethod Enable forwarding rule for forwarding profile
+         * @param definitionMethod Enable forwarding rule for forwarding profile. Possible values are `rules` and `pac-file`.
          * 
          * @return builder
          * 
@@ -131,7 +131,7 @@ public final class ForwardingProfileArgs extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param definitionMethod Enable forwarding rule for forwarding profile
+         * @param definitionMethod Enable forwarding rule for forwarding profile. Possible values are `rules` and `pac-file`.
          * 
          * @return builder
          * 
@@ -162,7 +162,7 @@ public final class ForwardingProfileArgs extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param folder The folder in which the resource is defined
+         * @param folder The folder in which the resource is defined. Possible values are `Mobile Users`.
          * 
          * @return builder
          * 
@@ -173,7 +173,7 @@ public final class ForwardingProfileArgs extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param folder The folder in which the resource is defined
+         * @param folder The folder in which the resource is defined. Possible values are `Mobile Users`.
          * 
          * @return builder
          * 

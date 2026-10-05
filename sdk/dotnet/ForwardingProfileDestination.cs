@@ -127,7 +127,7 @@ namespace Pulumi.Scm
         public Output<string?> Description { get; private set; } = null!;
 
         /// <summary>
-        /// The folder in which the resource is defined
+        /// The folder in which the resource is defined. Possible values are `Mobile Users`.
         /// </summary>
         [Output("folder")]
         public Output<string> Folder { get; private set; } = null!;
@@ -209,7 +209,7 @@ namespace Pulumi.Scm
         public Input<string>? Description { get; set; }
 
         /// <summary>
-        /// The folder in which the resource is defined
+        /// The folder in which the resource is defined. Possible values are `Mobile Users`.
         /// </summary>
         [Input("folder")]
         public Input<string>? Folder { get; set; }
@@ -259,7 +259,7 @@ namespace Pulumi.Scm
         public Input<string>? Description { get; set; }
 
         /// <summary>
-        /// The folder in which the resource is defined
+        /// The folder in which the resource is defined. Possible values are `Mobile Users`.
         /// </summary>
         [Input("folder")]
         public Input<string>? Folder { get; set; }

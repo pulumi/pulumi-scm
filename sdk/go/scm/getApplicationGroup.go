@@ -59,10 +59,13 @@ func LookupApplicationGroup(ctx *pulumi.Context, args *LookupApplicationGroupArg
 type LookupApplicationGroupArgs struct {
 	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
+	// The folder in which the resource is defined
 	Folder *string `pulumi:"folder"`
 	// UUID of the resource
-	Id      string  `pulumi:"id"`
-	Name    *string `pulumi:"name"`
+	Id string `pulumi:"id"`
+	// Alphanumeric string [ 0-9a-zA-Z._-]
+	Name *string `pulumi:"name"`
+	// The snippet in which the resource is defined
 	Snippet *string `pulumi:"snippet"`
 }
 
@@ -70,13 +73,18 @@ type LookupApplicationGroupArgs struct {
 type LookupApplicationGroupResult struct {
 	// The device in which the resource is defined
 	Device string `pulumi:"device"`
+	// The folder in which the resource is defined
 	Folder string `pulumi:"folder"`
 	// UUID of the resource
-	Id      string   `pulumi:"id"`
+	Id string `pulumi:"id"`
+	// Members
 	Members []string `pulumi:"members"`
-	Name    string   `pulumi:"name"`
-	Snippet string   `pulumi:"snippet"`
-	Tfid    string   `pulumi:"tfid"`
+	// Alphanumeric string [ 0-9a-zA-Z._-]
+	Name string `pulumi:"name"`
+	// The snippet in which the resource is defined
+	Snippet string `pulumi:"snippet"`
+	// The Terraform ID.
+	Tfid string `pulumi:"tfid"`
 }
 
 func LookupApplicationGroupOutput(ctx *pulumi.Context, args LookupApplicationGroupOutputArgs, opts ...pulumi.InvokeOption) LookupApplicationGroupResultOutput {
@@ -88,10 +96,13 @@ func LookupApplicationGroupOutput(ctx *pulumi.Context, args LookupApplicationGro
 type LookupApplicationGroupOutputArgs struct {
 	// The device in which the resource is defined
 	Device pulumi.StringPtrInput `pulumi:"device"`
+	// The folder in which the resource is defined
 	Folder pulumi.StringPtrInput `pulumi:"folder"`
 	// UUID of the resource
-	Id      pulumi.StringInput    `pulumi:"id"`
-	Name    pulumi.StringPtrInput `pulumi:"name"`
+	Id pulumi.StringInput `pulumi:"id"`
+	// Alphanumeric string [ 0-9a-zA-Z._-]
+	Name pulumi.StringPtrInput `pulumi:"name"`
+	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrInput `pulumi:"snippet"`
 }
 
@@ -119,6 +130,7 @@ func (o LookupApplicationGroupResultOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupApplicationGroupResult) string { return v.Device }).(pulumi.StringOutput)
 }
 
+// The folder in which the resource is defined
 func (o LookupApplicationGroupResultOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupApplicationGroupResult) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -128,18 +140,22 @@ func (o LookupApplicationGroupResultOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupApplicationGroupResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
+// Members
 func (o LookupApplicationGroupResultOutput) Members() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupApplicationGroupResult) []string { return v.Members }).(pulumi.StringArrayOutput)
 }
 
+// Alphanumeric string [ 0-9a-zA-Z._-]
 func (o LookupApplicationGroupResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupApplicationGroupResult) string { return v.Name }).(pulumi.StringOutput)
 }
 
+// The snippet in which the resource is defined
 func (o LookupApplicationGroupResultOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupApplicationGroupResult) string { return v.Snippet }).(pulumi.StringOutput)
 }
 
+// The Terraform ID.
 func (o LookupApplicationGroupResultOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupApplicationGroupResult) string { return v.Tfid }).(pulumi.StringOutput)
 }

@@ -26,10 +26,13 @@ func LookupSdwanPathQualityProfile(ctx *pulumi.Context, args *LookupSdwanPathQua
 type LookupSdwanPathQualityProfileArgs struct {
 	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
+	// The folder in which the resource is defined
 	Folder *string `pulumi:"folder"`
 	// UUID of the resource
-	Id      string  `pulumi:"id"`
-	Name    *string `pulumi:"name"`
+	Id string `pulumi:"id"`
+	// Profile name
+	Name *string `pulumi:"name"`
+	// The snippet in which the resource is defined
 	Snippet *string `pulumi:"snippet"`
 }
 
@@ -37,13 +40,18 @@ type LookupSdwanPathQualityProfileArgs struct {
 type LookupSdwanPathQualityProfileResult struct {
 	// The device in which the resource is defined
 	Device string `pulumi:"device"`
+	// The folder in which the resource is defined
 	Folder string `pulumi:"folder"`
 	// UUID of the resource
-	Id      string                           `pulumi:"id"`
-	Metric  GetSdwanPathQualityProfileMetric `pulumi:"metric"`
-	Name    string                           `pulumi:"name"`
-	Snippet string                           `pulumi:"snippet"`
-	Tfid    string                           `pulumi:"tfid"`
+	Id string `pulumi:"id"`
+	// Metric
+	Metric GetSdwanPathQualityProfileMetric `pulumi:"metric"`
+	// Profile name
+	Name string `pulumi:"name"`
+	// The snippet in which the resource is defined
+	Snippet string `pulumi:"snippet"`
+	// The Terraform ID.
+	Tfid string `pulumi:"tfid"`
 }
 
 func LookupSdwanPathQualityProfileOutput(ctx *pulumi.Context, args LookupSdwanPathQualityProfileOutputArgs, opts ...pulumi.InvokeOption) LookupSdwanPathQualityProfileResultOutput {
@@ -55,10 +63,13 @@ func LookupSdwanPathQualityProfileOutput(ctx *pulumi.Context, args LookupSdwanPa
 type LookupSdwanPathQualityProfileOutputArgs struct {
 	// The device in which the resource is defined
 	Device pulumi.StringPtrInput `pulumi:"device"`
+	// The folder in which the resource is defined
 	Folder pulumi.StringPtrInput `pulumi:"folder"`
 	// UUID of the resource
-	Id      pulumi.StringInput    `pulumi:"id"`
-	Name    pulumi.StringPtrInput `pulumi:"name"`
+	Id pulumi.StringInput `pulumi:"id"`
+	// Profile name
+	Name pulumi.StringPtrInput `pulumi:"name"`
+	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrInput `pulumi:"snippet"`
 }
 
@@ -86,6 +97,7 @@ func (o LookupSdwanPathQualityProfileResultOutput) Device() pulumi.StringOutput 
 	return o.ApplyT(func(v LookupSdwanPathQualityProfileResult) string { return v.Device }).(pulumi.StringOutput)
 }
 
+// The folder in which the resource is defined
 func (o LookupSdwanPathQualityProfileResultOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupSdwanPathQualityProfileResult) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -95,18 +107,22 @@ func (o LookupSdwanPathQualityProfileResultOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupSdwanPathQualityProfileResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
+// Metric
 func (o LookupSdwanPathQualityProfileResultOutput) Metric() GetSdwanPathQualityProfileMetricOutput {
 	return o.ApplyT(func(v LookupSdwanPathQualityProfileResult) GetSdwanPathQualityProfileMetric { return v.Metric }).(GetSdwanPathQualityProfileMetricOutput)
 }
 
+// Profile name
 func (o LookupSdwanPathQualityProfileResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupSdwanPathQualityProfileResult) string { return v.Name }).(pulumi.StringOutput)
 }
 
+// The snippet in which the resource is defined
 func (o LookupSdwanPathQualityProfileResultOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupSdwanPathQualityProfileResult) string { return v.Snippet }).(pulumi.StringOutput)
 }
 
+// The Terraform ID.
 func (o LookupSdwanPathQualityProfileResultOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupSdwanPathQualityProfileResult) string { return v.Tfid }).(pulumi.StringOutput)
 }

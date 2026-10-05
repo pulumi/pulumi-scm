@@ -30,7 +30,7 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly Outputs.GetQosPolicyRuleListDataDscpTosResult DscpTos;
         /// <summary>
-        /// The folder of the item. Default: Shared.
+        /// The folder in which the resource is defined
         /// </summary>
         public readonly string Folder;
         /// <summary>
@@ -38,11 +38,11 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly string Id;
         /// <summary>
-        /// The name of the item.
+        /// Name
         /// </summary>
         public readonly string Name;
         /// <summary>
-        /// The relative position of the rule
+        /// The relative position of the rule. Possible values are `Pre` and `Post`.
         /// </summary>
         public readonly string Position;
         /// <summary>
@@ -54,11 +54,11 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly string Schedule;
         /// <summary>
-        /// The snippet of the item.
+        /// The snippet in which the resource is defined
         /// </summary>
         public readonly string Snippet;
         /// <summary>
-        /// The name or UUID of the rule to position this rule relative to. Required when `RelativePosition` is `"before"` or `"after"`.
+        /// UUID of the rule to position this rule relative to. Required when `RelativePosition` is `"before"` or `"after"`.
         /// </summary>
         public readonly string TargetRule;
         /// <summary>

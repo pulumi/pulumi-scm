@@ -23,12 +23,10 @@ namespace Pulumi.Scm.Outputs
         public readonly string Device;
         /// <summary>
         /// Dynamic
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Dynamic` and `Static`.
         /// </summary>
         public readonly Outputs.GetAddressGroupListDataDynamicResult Dynamic;
         /// <summary>
-        /// The folder of the item. Default: Shared.
+        /// The folder in which the resource is defined
         /// </summary>
         public readonly string Folder;
         /// <summary>
@@ -36,17 +34,15 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly string Id;
         /// <summary>
-        /// The name of the item.
+        /// The name of the address group
         /// </summary>
         public readonly string Name;
         /// <summary>
-        /// The snippet of the item.
+        /// The snippet in which the resource is defined
         /// </summary>
         public readonly string Snippet;
         /// <summary>
         /// Static
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Dynamic` and `Static`.
         /// </summary>
         public readonly ImmutableArray<string> Statics;
         /// <summary>

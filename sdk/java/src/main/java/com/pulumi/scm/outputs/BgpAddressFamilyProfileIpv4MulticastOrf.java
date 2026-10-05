@@ -12,14 +12,14 @@ import javax.annotation.Nullable;
 @CustomType
 public final class BgpAddressFamilyProfileIpv4MulticastOrf {
     /**
-     * @return ORF prefix list
+     * @return ORF prefix list. Possible values are `none`, `both`, `receive` and `send`.
      * 
      */
     private @Nullable String orfPrefixList;
 
     private BgpAddressFamilyProfileIpv4MulticastOrf() {}
     /**
-     * @return ORF prefix list
+     * @return ORF prefix list. Possible values are `none`, `both`, `receive` and `send`.
      * 
      */
     public Optional<String> orfPrefixList() {

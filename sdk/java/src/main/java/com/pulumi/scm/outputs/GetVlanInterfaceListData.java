@@ -5,6 +5,7 @@ package com.pulumi.scm.outputs;
 
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
+import com.pulumi.scm.outputs.GetVlanInterfaceListDataAdjustTcpMss;
 import com.pulumi.scm.outputs.GetVlanInterfaceListDataArp;
 import com.pulumi.scm.outputs.GetVlanInterfaceListDataDdnsConfig;
 import com.pulumi.scm.outputs.GetVlanInterfaceListDataDhcpClient;
@@ -16,6 +17,11 @@ import java.util.Objects;
 
 @CustomType
 public final class GetVlanInterfaceListData {
+    /**
+     * @return TCP MSS adjustment settings for the interface
+     * 
+     */
+    private GetVlanInterfaceListDataAdjustTcpMss adjustTcpMss;
     /**
      * @return ARP configuration
      * 
@@ -44,12 +50,10 @@ public final class GetVlanInterfaceListData {
     /**
      * @return Vlan interfaces DHCP Client Object
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
-     * 
      */
     private GetVlanInterfaceListDataDhcpClient dhcpClient;
     /**
-     * @return The folder of the item. Default: Shared.
+     * @return The folder in which the resource is defined
      * 
      */
     private String folder;
@@ -66,8 +70,6 @@ public final class GetVlanInterfaceListData {
     /**
      * @return VLAN Interface IP Parent
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
-     * 
      */
     private List<GetVlanInterfaceListDataIp> ips;
     /**
@@ -76,7 +78,7 @@ public final class GetVlanInterfaceListData {
      */
     private Integer mtu;
     /**
-     * @return The name of the item.
+     * @return L3 sub-interface name
      * 
      */
     private String name;
@@ -86,7 +88,7 @@ public final class GetVlanInterfaceListData {
      */
     private String netflowProfile;
     /**
-     * @return The snippet of the item.
+     * @return The snippet in which the resource is defined
      * 
      */
     private String snippet;
@@ -102,6 +104,13 @@ public final class GetVlanInterfaceListData {
     private String vlanTag;
 
     private GetVlanInterfaceListData() {}
+    /**
+     * @return TCP MSS adjustment settings for the interface
+     * 
+     */
+    public GetVlanInterfaceListDataAdjustTcpMss adjustTcpMss() {
+        return this.adjustTcpMss;
+    }
     /**
      * @return ARP configuration
      * 
@@ -140,14 +149,12 @@ public final class GetVlanInterfaceListData {
     /**
      * @return Vlan interfaces DHCP Client Object
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
-     * 
      */
     public GetVlanInterfaceListDataDhcpClient dhcpClient() {
         return this.dhcpClient;
     }
     /**
-     * @return The folder of the item. Default: Shared.
+     * @return The folder in which the resource is defined
      * 
      */
     public String folder() {
@@ -170,8 +177,6 @@ public final class GetVlanInterfaceListData {
     /**
      * @return VLAN Interface IP Parent
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
-     * 
      */
     public List<GetVlanInterfaceListDataIp> ips() {
         return this.ips;
@@ -184,7 +189,7 @@ public final class GetVlanInterfaceListData {
         return this.mtu;
     }
     /**
-     * @return The name of the item.
+     * @return L3 sub-interface name
      * 
      */
     public String name() {
@@ -198,7 +203,7 @@ public final class GetVlanInterfaceListData {
         return this.netflowProfile;
     }
     /**
-     * @return The snippet of the item.
+     * @return The snippet in which the resource is defined
      * 
      */
     public String snippet() {
@@ -228,6 +233,7 @@ public final class GetVlanInterfaceListData {
     }
     @CustomType.Builder
     public static final class Builder {
+        private GetVlanInterfaceListDataAdjustTcpMss adjustTcpMss;
         private List<GetVlanInterfaceListDataArp> arps;
         private String comment;
         private GetVlanInterfaceListDataDdnsConfig ddnsConfig;
@@ -247,6 +253,7 @@ public final class GetVlanInterfaceListData {
         public Builder() {}
         public Builder(GetVlanInterfaceListData defaults) {
     	      Objects.requireNonNull(defaults);
+    	      this.adjustTcpMss = defaults.adjustTcpMss;
     	      this.arps = defaults.arps;
     	      this.comment = defaults.comment;
     	      this.ddnsConfig = defaults.ddnsConfig;
@@ -265,6 +272,14 @@ public final class GetVlanInterfaceListData {
     	      this.vlanTag = defaults.vlanTag;
         }
 
+        @CustomType.Setter
+        public Builder adjustTcpMss(GetVlanInterfaceListDataAdjustTcpMss adjustTcpMss) {
+            if (adjustTcpMss == null) {
+              throw new MissingRequiredPropertyException("GetVlanInterfaceListData", "adjustTcpMss");
+            }
+            this.adjustTcpMss = adjustTcpMss;
+            return this;
+        }
         @CustomType.Setter
         public Builder arps(List<GetVlanInterfaceListDataArp> arps) {
             if (arps == null) {
@@ -401,6 +416,7 @@ public final class GetVlanInterfaceListData {
         }
         public GetVlanInterfaceListData build() {
             final var _resultValue = new GetVlanInterfaceListData();
+            _resultValue.adjustTcpMss = adjustTcpMss;
             _resultValue.arps = arps;
             _resultValue.comment = comment;
             _resultValue.ddnsConfig = ddnsConfig;

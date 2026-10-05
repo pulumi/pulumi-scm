@@ -138,14 +138,14 @@ public final class BgpRouteMapRedistributionBgpOspfRouteMapMatchArgs extends com
     }
 
     /**
-     * BGP Root OSPF Route maps match Peer
+     * BGP Root OSPF Route maps match Peer. Possible values are `local` and `none`.
      * 
      */
     @Import(name="peer")
     private @Nullable Output<String> peer;
 
     /**
-     * @return BGP Root OSPF Route maps match Peer
+     * @return BGP Root OSPF Route maps match Peer. Possible values are `local` and `none`.
      * 
      */
     public Optional<Output<String>> peer() {
@@ -385,7 +385,7 @@ public final class BgpRouteMapRedistributionBgpOspfRouteMapMatchArgs extends com
         }
 
         /**
-         * @param peer BGP Root OSPF Route maps match Peer
+         * @param peer BGP Root OSPF Route maps match Peer. Possible values are `local` and `none`.
          * 
          * @return builder
          * 
@@ -396,7 +396,7 @@ public final class BgpRouteMapRedistributionBgpOspfRouteMapMatchArgs extends com
         }
 
         /**
-         * @param peer BGP Root OSPF Route maps match Peer
+         * @param peer BGP Root OSPF Route maps match Peer. Possible values are `local` and `none`.
          * 
          * @return builder
          * 

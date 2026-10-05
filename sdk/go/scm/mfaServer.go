@@ -43,8 +43,6 @@ type MfaServer struct {
 	// Map of sensitive values returned from the API.
 	EncryptedValues pulumi.StringMapOutput `pulumi:"encryptedValues"`
 	// The folder in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrOutput `pulumi:"folder"`
 	// The MFA server certificate profile
 	MfaCertProfile pulumi.StringOutput `pulumi:"mfaCertProfile"`
@@ -53,8 +51,6 @@ type MfaServer struct {
 	// The name of the MFA server profile
 	Name pulumi.StringOutput `pulumi:"name"`
 	// The snippet in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
 	// The Terraform ID.
 	Tfid pulumi.StringOutput `pulumi:"tfid"`
@@ -102,8 +98,6 @@ type mfaServerState struct {
 	// Map of sensitive values returned from the API.
 	EncryptedValues map[string]string `pulumi:"encryptedValues"`
 	// The folder in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// The MFA server certificate profile
 	MfaCertProfile *string `pulumi:"mfaCertProfile"`
@@ -112,8 +106,6 @@ type mfaServerState struct {
 	// The name of the MFA server profile
 	Name *string `pulumi:"name"`
 	// The snippet in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	// The Terraform ID.
 	Tfid *string `pulumi:"tfid"`
@@ -125,8 +117,6 @@ type MfaServerState struct {
 	// Map of sensitive values returned from the API.
 	EncryptedValues pulumi.StringMapInput
 	// The folder in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// The MFA server certificate profile
 	MfaCertProfile pulumi.StringPtrInput
@@ -135,8 +125,6 @@ type MfaServerState struct {
 	// The name of the MFA server profile
 	Name pulumi.StringPtrInput
 	// The snippet in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	// The Terraform ID.
 	Tfid pulumi.StringPtrInput
@@ -150,8 +138,6 @@ type mfaServerArgs struct {
 	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
 	// The folder in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// The MFA server certificate profile
 	MfaCertProfile string `pulumi:"mfaCertProfile"`
@@ -160,8 +146,6 @@ type mfaServerArgs struct {
 	// The name of the MFA server profile
 	Name *string `pulumi:"name"`
 	// The snippet in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 }
 
@@ -170,8 +154,6 @@ type MfaServerArgs struct {
 	// The device in which the resource is defined
 	Device pulumi.StringPtrInput
 	// The folder in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// The MFA server certificate profile
 	MfaCertProfile pulumi.StringInput
@@ -180,8 +162,6 @@ type MfaServerArgs struct {
 	// The name of the MFA server profile
 	Name pulumi.StringPtrInput
 	// The snippet in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 }
 
@@ -283,8 +263,6 @@ func (o MfaServerOutput) EncryptedValues() pulumi.StringMapOutput {
 }
 
 // The folder in which the resource is defined
-//
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o MfaServerOutput) Folder() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *MfaServer) pulumi.StringPtrOutput { return v.Folder }).(pulumi.StringPtrOutput)
 }
@@ -305,8 +283,6 @@ func (o MfaServerOutput) Name() pulumi.StringOutput {
 }
 
 // The snippet in which the resource is defined
-//
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o MfaServerOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *MfaServer) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)
 }

@@ -14,7 +14,7 @@ namespace Pulumi.Scm.Outputs
     public sealed class HipObjectFirewallCriteria
     {
         /// <summary>
-        /// is enabled
+        /// is enabled. Possible values are `No`, `Yes` and `not-available`.
         /// </summary>
         public readonly string? IsEnabled;
         /// <summary>

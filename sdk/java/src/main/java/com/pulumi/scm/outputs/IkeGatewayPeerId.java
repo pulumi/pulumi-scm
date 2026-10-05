@@ -17,7 +17,7 @@ public final class IkeGatewayPeerId {
      */
     private @Nullable String id;
     /**
-     * @return Type
+     * @return Type. Possible values are `ipaddr`, `keyid`, `fqdn` and `ufqdn`.
      * 
      */
     private @Nullable String type;
@@ -31,7 +31,7 @@ public final class IkeGatewayPeerId {
         return Optional.ofNullable(this.id);
     }
     /**
-     * @return Type
+     * @return Type. Possible values are `ipaddr`, `keyid`, `fqdn` and `ufqdn`.
      * 
      */
     public Optional<String> type() {

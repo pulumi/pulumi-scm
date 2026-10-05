@@ -14,7 +14,7 @@ namespace Pulumi.Scm.Outputs
     public sealed class RouteAccessListTypeIpv4Ipv4Entry
     {
         /// <summary>
-        /// Action
+        /// Action. Possible values are `Deny` and `Permit`.
         /// </summary>
         public readonly string? Action;
         /// <summary>

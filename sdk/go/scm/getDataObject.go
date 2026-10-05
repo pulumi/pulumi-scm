@@ -54,26 +54,36 @@ func LookupDataObject(ctx *pulumi.Context, args *LookupDataObjectArgs, opts ...p
 type LookupDataObjectArgs struct {
 	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
+	// The folder in which the resource is defined
 	Folder *string `pulumi:"folder"`
 	// The UUID of the data object
-	Id      string  `pulumi:"id"`
-	Name    *string `pulumi:"name"`
+	Id string `pulumi:"id"`
+	// The name of the data object
+	Name *string `pulumi:"name"`
+	// The snippet in which the resource is defined
 	Snippet *string `pulumi:"snippet"`
 }
 
 // A collection of values returned by getDataObject.
 type LookupDataObjectResult struct {
+	// The description of the data object
 	Description string `pulumi:"description"`
 	// The device in which the resource is defined
-	Device          string `pulumi:"device"`
+	Device string `pulumi:"device"`
+	// Disable override
 	DisableOverride string `pulumi:"disableOverride"`
-	Folder          string `pulumi:"folder"`
+	// The folder in which the resource is defined
+	Folder string `pulumi:"folder"`
 	// The UUID of the data object
-	Id          string                   `pulumi:"id"`
-	Name        string                   `pulumi:"name"`
+	Id string `pulumi:"id"`
+	// The name of the data object
+	Name string `pulumi:"name"`
+	// Pattern type
 	PatternType GetDataObjectPatternType `pulumi:"patternType"`
-	Snippet     string                   `pulumi:"snippet"`
-	Tfid        string                   `pulumi:"tfid"`
+	// The snippet in which the resource is defined
+	Snippet string `pulumi:"snippet"`
+	// The Terraform ID.
+	Tfid string `pulumi:"tfid"`
 }
 
 func LookupDataObjectOutput(ctx *pulumi.Context, args LookupDataObjectOutputArgs, opts ...pulumi.InvokeOption) LookupDataObjectResultOutput {
@@ -85,10 +95,13 @@ func LookupDataObjectOutput(ctx *pulumi.Context, args LookupDataObjectOutputArgs
 type LookupDataObjectOutputArgs struct {
 	// The device in which the resource is defined
 	Device pulumi.StringPtrInput `pulumi:"device"`
+	// The folder in which the resource is defined
 	Folder pulumi.StringPtrInput `pulumi:"folder"`
 	// The UUID of the data object
-	Id      pulumi.StringInput    `pulumi:"id"`
-	Name    pulumi.StringPtrInput `pulumi:"name"`
+	Id pulumi.StringInput `pulumi:"id"`
+	// The name of the data object
+	Name pulumi.StringPtrInput `pulumi:"name"`
+	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrInput `pulumi:"snippet"`
 }
 
@@ -111,6 +124,7 @@ func (o LookupDataObjectResultOutput) ToLookupDataObjectResultOutputWithContext(
 	return o
 }
 
+// The description of the data object
 func (o LookupDataObjectResultOutput) Description() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupDataObjectResult) string { return v.Description }).(pulumi.StringOutput)
 }
@@ -120,10 +134,12 @@ func (o LookupDataObjectResultOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupDataObjectResult) string { return v.Device }).(pulumi.StringOutput)
 }
 
+// Disable override
 func (o LookupDataObjectResultOutput) DisableOverride() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupDataObjectResult) string { return v.DisableOverride }).(pulumi.StringOutput)
 }
 
+// The folder in which the resource is defined
 func (o LookupDataObjectResultOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupDataObjectResult) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -133,18 +149,22 @@ func (o LookupDataObjectResultOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupDataObjectResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
+// The name of the data object
 func (o LookupDataObjectResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupDataObjectResult) string { return v.Name }).(pulumi.StringOutput)
 }
 
+// Pattern type
 func (o LookupDataObjectResultOutput) PatternType() GetDataObjectPatternTypeOutput {
 	return o.ApplyT(func(v LookupDataObjectResult) GetDataObjectPatternType { return v.PatternType }).(GetDataObjectPatternTypeOutput)
 }
 
+// The snippet in which the resource is defined
 func (o LookupDataObjectResultOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupDataObjectResult) string { return v.Snippet }).(pulumi.StringOutput)
 }
 
+// The Terraform ID.
 func (o LookupDataObjectResultOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupDataObjectResult) string { return v.Tfid }).(pulumi.StringOutput)
 }

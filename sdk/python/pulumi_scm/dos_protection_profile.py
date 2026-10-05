@@ -32,18 +32,14 @@ class DosProtectionProfileArgs:
         """
         The set of arguments for constructing a DosProtectionProfile resource.
 
-        :param pulumi.Input[_builtins.str] type: Type
+        :param pulumi.Input[_builtins.str] type: Type. Possible values are `aggregate` and `classified`.
         :param pulumi.Input[_builtins.str] description: Description
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input['DosProtectionProfileFloodArgs'] flood: Flood
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] name: Profile name
         :param pulumi.Input['DosProtectionProfileResourceArgs'] resource: Resource
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         pulumi.set(__self__, "type", type)
         if description is not None:
@@ -65,7 +61,7 @@ class DosProtectionProfileArgs:
     @pulumi.getter
     def type(self) -> pulumi.Input[_builtins.str]:
         """
-        Type
+        Type. Possible values are `aggregate` and `classified`.
         """
         return pulumi.get(self, "type")
 
@@ -114,8 +110,6 @@ class DosProtectionProfileArgs:
     def folder(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
-
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
 
@@ -152,8 +146,6 @@ class DosProtectionProfileArgs:
     def snippet(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
-
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
 
@@ -181,15 +173,11 @@ class _DosProtectionProfileState:
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input['DosProtectionProfileFloodArgs'] flood: Flood
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] name: Profile name
         :param pulumi.Input['DosProtectionProfileResourceArgs'] resource: Resource
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] tfid: The Terraform ID.
-        :param pulumi.Input[_builtins.str] type: Type
+        :param pulumi.Input[_builtins.str] type: Type. Possible values are `aggregate` and `classified`.
         """
         if description is not None:
             pulumi.set(__self__, "description", description)
@@ -251,8 +239,6 @@ class _DosProtectionProfileState:
     def folder(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
-
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
 
@@ -289,8 +275,6 @@ class _DosProtectionProfileState:
     def snippet(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
-
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
 
@@ -314,7 +298,7 @@ class _DosProtectionProfileState:
     @pulumi.getter
     def type(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
-        Type
+        Type. Possible values are `aggregate` and `classified`.
         """
         return pulumi.get(self, "type")
 
@@ -370,14 +354,10 @@ class DosProtectionProfile(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input[Union['DosProtectionProfileFloodArgs', 'DosProtectionProfileFloodArgsDict', 'outputs.DosProtectionProfileFlood']] flood: Flood
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] name: Profile name
         :param pulumi.Input[Union['DosProtectionProfileResourceArgs', 'DosProtectionProfileResourceArgsDict', 'outputs.DosProtectionProfileResource']] resource: Resource
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-        :param pulumi.Input[_builtins.str] type: Type
+        :param pulumi.Input[_builtins.str] type: Type. Possible values are `aggregate` and `classified`.
         """
         ...
     @overload
@@ -484,15 +464,11 @@ class DosProtectionProfile(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input[Union['DosProtectionProfileFloodArgs', 'DosProtectionProfileFloodArgsDict', 'outputs.DosProtectionProfileFlood']] flood: Flood
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] name: Profile name
         :param pulumi.Input[Union['DosProtectionProfileResourceArgs', 'DosProtectionProfileResourceArgsDict', 'outputs.DosProtectionProfileResource']] resource: Resource
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] tfid: The Terraform ID.
-        :param pulumi.Input[_builtins.str] type: Type
+        :param pulumi.Input[_builtins.str] type: Type. Possible values are `aggregate` and `classified`.
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
 
@@ -538,8 +514,6 @@ class DosProtectionProfile(pulumi.CustomResource):
     def folder(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
-
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
 
@@ -564,8 +538,6 @@ class DosProtectionProfile(pulumi.CustomResource):
     def snippet(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
-
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
 
@@ -581,7 +553,7 @@ class DosProtectionProfile(pulumi.CustomResource):
     @pulumi.getter
     def type(self) -> pulumi.Output[_builtins.str]:
         """
-        Type
+        Type. Possible values are `aggregate` and `classified`.
         """
         return pulumi.get(self, "type")
 

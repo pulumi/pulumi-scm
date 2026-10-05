@@ -80,14 +80,14 @@ public final class ApplicationSignatureArgs extends com.pulumi.resources.Resourc
     }
 
     /**
-     * Scope
+     * Scope. Possible values are `protocol-data-unit` and `session`.
      * 
      */
     @Import(name="scope")
     private @Nullable Output<String> scope;
 
     /**
-     * @return Scope
+     * @return Scope. Possible values are `protocol-data-unit` and `session`.
      * 
      */
     public Optional<Output<String>> scope() {
@@ -217,7 +217,7 @@ public final class ApplicationSignatureArgs extends com.pulumi.resources.Resourc
         }
 
         /**
-         * @param scope Scope
+         * @param scope Scope. Possible values are `protocol-data-unit` and `session`.
          * 
          * @return builder
          * 
@@ -228,7 +228,7 @@ public final class ApplicationSignatureArgs extends com.pulumi.resources.Resourc
         }
 
         /**
-         * @param scope Scope
+         * @param scope Scope. Possible values are `protocol-data-unit` and `session`.
          * 
          * @return builder
          * 

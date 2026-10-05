@@ -26,7 +26,7 @@ public final class GetTacacsServerProfileListData {
      */
     private Map<String,String> encryptedValues;
     /**
-     * @return The folder of the item. Default: Shared.
+     * @return The folder in which the resource is defined
      * 
      */
     private String folder;
@@ -36,12 +36,12 @@ public final class GetTacacsServerProfileListData {
      */
     private String id;
     /**
-     * @return The name of the item.
+     * @return The name of the TACACS+ server profile
      * 
      */
     private String name;
     /**
-     * @return The TACACS+ authentication protocol
+     * @return The TACACS+ authentication protocol. Possible values are `CHAP` and `PAP`.
      * 
      */
     private String protocol;
@@ -51,7 +51,7 @@ public final class GetTacacsServerProfileListData {
      */
     private List<GetTacacsServerProfileListDataServer> servers;
     /**
-     * @return The snippet of the item.
+     * @return The snippet in which the resource is defined
      * 
      */
     private String snippet;
@@ -87,7 +87,7 @@ public final class GetTacacsServerProfileListData {
         return this.encryptedValues;
     }
     /**
-     * @return The folder of the item. Default: Shared.
+     * @return The folder in which the resource is defined
      * 
      */
     public String folder() {
@@ -101,14 +101,14 @@ public final class GetTacacsServerProfileListData {
         return this.id;
     }
     /**
-     * @return The name of the item.
+     * @return The name of the TACACS+ server profile
      * 
      */
     public String name() {
         return this.name;
     }
     /**
-     * @return The TACACS+ authentication protocol
+     * @return The TACACS+ authentication protocol. Possible values are `CHAP` and `PAP`.
      * 
      */
     public String protocol() {
@@ -122,7 +122,7 @@ public final class GetTacacsServerProfileListData {
         return this.servers;
     }
     /**
-     * @return The snippet of the item.
+     * @return The snippet in which the resource is defined
      * 
      */
     public String snippet() {

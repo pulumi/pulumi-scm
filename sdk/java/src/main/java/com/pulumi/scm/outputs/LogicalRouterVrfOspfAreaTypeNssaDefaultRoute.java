@@ -20,8 +20,6 @@ public final class LogicalRouterVrfOspfAreaTypeNssaDefaultRoute {
     /**
      * @return Disable
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `advertise` and `disable`.
-     * 
      */
     private @Nullable LogicalRouterVrfOspfAreaTypeNssaDefaultRouteDisable disable;
 
@@ -35,8 +33,6 @@ public final class LogicalRouterVrfOspfAreaTypeNssaDefaultRoute {
     }
     /**
      * @return Disable
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `advertise` and `disable`.
      * 
      */
     public Optional<LogicalRouterVrfOspfAreaTypeNssaDefaultRouteDisable> disable() {

@@ -27,7 +27,7 @@ class GetDosProtectionRuleResult:
     """
     A collection of values returned by getDosProtectionRule.
     """
-    def __init__(__self__, action=None, description=None, destinations=None, device=None, disabled=None, folder=None, froms=None, id=None, log_setting=None, name=None, position=None, protection=None, schedule=None, services=None, snippet=None, source_users=None, sources=None, tags=None, tfid=None, tos=None):
+    def __init__(__self__, action=None, description=None, destinations=None, device=None, disabled=None, folder=None, from_=None, id=None, log_setting=None, name=None, position=None, protection=None, schedule=None, services=None, snippet=None, source_users=None, sources=None, tags=None, tfid=None, to=None):
         if action and not isinstance(action, dict):
             raise TypeError("Expected argument 'action' to be a dict")
         pulumi.set(__self__, "action", action)
@@ -46,9 +46,9 @@ class GetDosProtectionRuleResult:
         if folder and not isinstance(folder, str):
             raise TypeError("Expected argument 'folder' to be a str")
         pulumi.set(__self__, "folder", folder)
-        if froms and not isinstance(froms, list):
-            raise TypeError("Expected argument 'froms' to be a list")
-        pulumi.set(__self__, "froms", froms)
+        if from_ and not isinstance(from_, dict):
+            raise TypeError("Expected argument 'from_' to be a dict")
+        pulumi.set(__self__, "from_", from_)
         if id and not isinstance(id, str):
             raise TypeError("Expected argument 'id' to be a str")
         pulumi.set(__self__, "id", id)
@@ -85,23 +85,32 @@ class GetDosProtectionRuleResult:
         if tfid and not isinstance(tfid, str):
             raise TypeError("Expected argument 'tfid' to be a str")
         pulumi.set(__self__, "tfid", tfid)
-        if tos and not isinstance(tos, list):
-            raise TypeError("Expected argument 'tos' to be a list")
-        pulumi.set(__self__, "tos", tos)
+        if to and not isinstance(to, dict):
+            raise TypeError("Expected argument 'to' to be a dict")
+        pulumi.set(__self__, "to", to)
 
     @_builtins.property
     @pulumi.getter
     def action(self) -> 'outputs.GetDosProtectionRuleActionResult':
+        """
+        The action to take on rule match
+        """
         return pulumi.get(self, "action")
 
     @_builtins.property
     @pulumi.getter
     def description(self) -> _builtins.str:
+        """
+        Description
+        """
         return pulumi.get(self, "description")
 
     @_builtins.property
     @pulumi.getter
     def destinations(self) -> Sequence[_builtins.str]:
+        """
+        List of destination addresses
+        """
         return pulumi.get(self, "destinations")
 
     @_builtins.property
@@ -115,17 +124,26 @@ class GetDosProtectionRuleResult:
     @_builtins.property
     @pulumi.getter
     def disabled(self) -> _builtins.bool:
+        """
+        Rule disabled?
+        """
         return pulumi.get(self, "disabled")
 
     @_builtins.property
     @pulumi.getter
     def folder(self) -> _builtins.str:
+        """
+        The folder in which the resource is defined
+        """
         return pulumi.get(self, "folder")
 
     @_builtins.property
-    @pulumi.getter
-    def froms(self) -> Sequence[_builtins.str]:
-        return pulumi.get(self, "froms")
+    @pulumi.getter(name="from")
+    def from_(self) -> 'outputs.GetDosProtectionRuleFromResult':
+        """
+        Source zones and interfaces
+        """
+        return pulumi.get(self, "from_")
 
     @_builtins.property
     @pulumi.getter
@@ -138,62 +156,98 @@ class GetDosProtectionRuleResult:
     @_builtins.property
     @pulumi.getter(name="logSetting")
     def log_setting(self) -> _builtins.str:
+        """
+        Log forwarding profile name
+        """
         return pulumi.get(self, "log_setting")
 
     @_builtins.property
     @pulumi.getter
     def name(self) -> _builtins.str:
+        """
+        Rule name
+        """
         return pulumi.get(self, "name")
 
     @_builtins.property
     @pulumi.getter
     def position(self) -> _builtins.str:
+        """
+        Position relative to local device rules. Possible values are `pre` and `post`.
+        """
         return pulumi.get(self, "position")
 
     @_builtins.property
     @pulumi.getter
     def protection(self) -> 'outputs.GetDosProtectionRuleProtectionResult':
+        """
+        Protection
+        """
         return pulumi.get(self, "protection")
 
     @_builtins.property
     @pulumi.getter
     def schedule(self) -> _builtins.str:
+        """
+        Schedule on which to enforce the rule
+        """
         return pulumi.get(self, "schedule")
 
     @_builtins.property
     @pulumi.getter
     def services(self) -> Sequence[_builtins.str]:
+        """
+        List of services
+        """
         return pulumi.get(self, "services")
 
     @_builtins.property
     @pulumi.getter
     def snippet(self) -> _builtins.str:
+        """
+        The snippet in which the resource is defined
+        """
         return pulumi.get(self, "snippet")
 
     @_builtins.property
     @pulumi.getter(name="sourceUsers")
     def source_users(self) -> Sequence[_builtins.str]:
+        """
+        List of source users and/or groups.  Reserved words include `any`, `pre-login`, `known-user`, and `unknown`.
+        """
         return pulumi.get(self, "source_users")
 
     @_builtins.property
     @pulumi.getter
     def sources(self) -> Sequence[_builtins.str]:
+        """
+        List of source addresses
+        """
         return pulumi.get(self, "sources")
 
     @_builtins.property
     @pulumi.getter
     def tags(self) -> Sequence[_builtins.str]:
+        """
+        List of tags
+        """
         return pulumi.get(self, "tags")
 
     @_builtins.property
     @pulumi.getter
     def tfid(self) -> _builtins.str:
+        """
+        The Terraform ID.
+        """
         return pulumi.get(self, "tfid")
 
     @_builtins.property
     @pulumi.getter
-    def tos(self) -> Sequence[_builtins.str]:
-        return pulumi.get(self, "tos")
+    def to(self) -> 'outputs.GetDosProtectionRuleToResult':
+        """
+        Destination zones and interfaces
+        """
+        return pulumi.get(self, "to")
 
 
 class AwaitableGetDosProtectionRuleResult(GetDosProtectionRuleResult):
@@ -208,7 +262,7 @@ class AwaitableGetDosProtectionRuleResult(GetDosProtectionRuleResult):
             device=self.device,
             disabled=self.disabled,
             folder=self.folder,
-            froms=self.froms,
+            from_=self.from_,
             id=self.id,
             log_setting=self.log_setting,
             name=self.name,
@@ -221,7 +275,7 @@ class AwaitableGetDosProtectionRuleResult(GetDosProtectionRuleResult):
             sources=self.sources,
             tags=self.tags,
             tfid=self.tfid,
-            tos=self.tos)
+            to=self.to)
 
 
 def get_dos_protection_rule(device: Optional[_builtins.str] = None,
@@ -235,7 +289,10 @@ def get_dos_protection_rule(device: Optional[_builtins.str] = None,
 
 
     :param _builtins.str device: The device in which the resource is defined
+    :param _builtins.str folder: The folder in which the resource is defined
     :param _builtins.str id: The UUID of the DNS security profile
+    :param _builtins.str name: Rule name
+    :param _builtins.str snippet: The snippet in which the resource is defined
     """
     __args__ = dict()
     __args__['device'] = device
@@ -253,7 +310,7 @@ def get_dos_protection_rule(device: Optional[_builtins.str] = None,
         device=pulumi.get(__ret__, 'device'),
         disabled=pulumi.get(__ret__, 'disabled'),
         folder=pulumi.get(__ret__, 'folder'),
-        froms=pulumi.get(__ret__, 'froms'),
+        from_=pulumi.get(__ret__, 'from_'),
         id=pulumi.get(__ret__, 'id'),
         log_setting=pulumi.get(__ret__, 'log_setting'),
         name=pulumi.get(__ret__, 'name'),
@@ -266,7 +323,7 @@ def get_dos_protection_rule(device: Optional[_builtins.str] = None,
         sources=pulumi.get(__ret__, 'sources'),
         tags=pulumi.get(__ret__, 'tags'),
         tfid=pulumi.get(__ret__, 'tfid'),
-        tos=pulumi.get(__ret__, 'tos'))
+        to=pulumi.get(__ret__, 'to'))
 def get_dos_protection_rule_output(device: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
                                    folder: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
                                    id: pulumi.Input[Optional[_builtins.str]] = None,
@@ -278,7 +335,10 @@ def get_dos_protection_rule_output(device: pulumi.Input[Optional[Optional[_built
 
 
     :param _builtins.str device: The device in which the resource is defined
+    :param _builtins.str folder: The folder in which the resource is defined
     :param _builtins.str id: The UUID of the DNS security profile
+    :param _builtins.str name: Rule name
+    :param _builtins.str snippet: The snippet in which the resource is defined
     """
     __args__ = dict()
     __args__['device'] = device
@@ -295,7 +355,7 @@ def get_dos_protection_rule_output(device: pulumi.Input[Optional[Optional[_built
         device=pulumi.get(__response__, 'device'),
         disabled=pulumi.get(__response__, 'disabled'),
         folder=pulumi.get(__response__, 'folder'),
-        froms=pulumi.get(__response__, 'froms'),
+        from_=pulumi.get(__response__, 'from_'),
         id=pulumi.get(__response__, 'id'),
         log_setting=pulumi.get(__response__, 'log_setting'),
         name=pulumi.get(__response__, 'name'),
@@ -308,4 +368,4 @@ def get_dos_protection_rule_output(device: pulumi.Input[Optional[Optional[_built
         sources=pulumi.get(__response__, 'sources'),
         tags=pulumi.get(__response__, 'tags'),
         tfid=pulumi.get(__response__, 'tfid'),
-        tos=pulumi.get(__response__, 'tos')))
+        to=pulumi.get(__response__, 'to')))

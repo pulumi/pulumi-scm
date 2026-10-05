@@ -13,7 +13,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class RoutePathAccessListAspathEntry {
     /**
-     * @return Action
+     * @return Action. Possible values are `deny` and `permit`.
      * 
      */
     private @Nullable String action;
@@ -30,7 +30,7 @@ public final class RoutePathAccessListAspathEntry {
 
     private RoutePathAccessListAspathEntry() {}
     /**
-     * @return Action
+     * @return Action. Possible values are `deny` and `permit`.
      * 
      */
     public Optional<String> action() {

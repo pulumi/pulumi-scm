@@ -18,7 +18,7 @@ public final class LogicalRouterVrfOspfAreaTypeNssaDefaultRouteAdvertise {
      */
     private @Nullable Integer metric;
     /**
-     * @return Type
+     * @return Type. Possible values are `ext-1` and `ext-2`.
      * 
      */
     private @Nullable String type;
@@ -32,7 +32,7 @@ public final class LogicalRouterVrfOspfAreaTypeNssaDefaultRouteAdvertise {
         return Optional.ofNullable(this.metric);
     }
     /**
-     * @return Type
+     * @return Type. Possible values are `ext-1` and `ext-2`.
      * 
      */
     public Optional<String> type() {

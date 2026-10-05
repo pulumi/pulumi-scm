@@ -19,8 +19,6 @@ public final class GetDecryptionRuleType {
     /**
      * @return add the certificate name for SSL inbound inspection
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `sslForwardProxy` and `sslInboundInspection`.
-     * 
      */
     private GetDecryptionRuleTypeSslInboundInspection sslInboundInspection;
 
@@ -34,8 +32,6 @@ public final class GetDecryptionRuleType {
     }
     /**
      * @return add the certificate name for SSL inbound inspection
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `sslForwardProxy` and `sslInboundInspection`.
      * 
      */
     public GetDecryptionRuleTypeSslInboundInspection sslInboundInspection() {

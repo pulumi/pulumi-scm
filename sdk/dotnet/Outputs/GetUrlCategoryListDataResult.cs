@@ -22,7 +22,7 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly string Device;
         /// <summary>
-        /// The folder of the item. Default: Shared.
+        /// The folder in which the resource is defined
         /// </summary>
         public readonly string Folder;
         /// <summary>
@@ -34,11 +34,11 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly ImmutableArray<string> Lists;
         /// <summary>
-        /// The name of the item.
+        /// Name
         /// </summary>
         public readonly string Name;
         /// <summary>
-        /// The snippet of the item.
+        /// The snippet in which the resource is defined
         /// </summary>
         public readonly string Snippet;
         /// <summary>
@@ -46,7 +46,7 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly string Tfid;
         /// <summary>
-        /// Type
+        /// Type. Possible values are `URL List` and `Category Match`.
         /// </summary>
         public readonly string Type;
 

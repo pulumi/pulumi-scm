@@ -19,14 +19,14 @@ public final class BgpRouteMapRedistributionBgpRibRouteMapArgs extends com.pulum
     public static final BgpRouteMapRedistributionBgpRibRouteMapArgs Empty = new BgpRouteMapRedistributionBgpRibRouteMapArgs();
 
     /**
-     * BGP Root RIB Route maps Action
+     * BGP Root RIB Route maps Action. Possible values are `permit` and `deny`.
      * 
      */
     @Import(name="action")
     private @Nullable Output<String> action;
 
     /**
-     * @return BGP Root RIB Route maps Action
+     * @return BGP Root RIB Route maps Action. Possible values are `permit` and `deny`.
      * 
      */
     public Optional<Output<String>> action() {
@@ -122,7 +122,7 @@ public final class BgpRouteMapRedistributionBgpRibRouteMapArgs extends com.pulum
         }
 
         /**
-         * @param action BGP Root RIB Route maps Action
+         * @param action BGP Root RIB Route maps Action. Possible values are `permit` and `deny`.
          * 
          * @return builder
          * 
@@ -133,7 +133,7 @@ public final class BgpRouteMapRedistributionBgpRibRouteMapArgs extends com.pulum
         }
 
         /**
-         * @param action BGP Root RIB Route maps Action
+         * @param action BGP Root RIB Route maps Action. Possible values are `permit` and `deny`.
          * 
          * @return builder
          * 

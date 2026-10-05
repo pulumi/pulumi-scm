@@ -45,7 +45,7 @@ public final class GetZoneListData {
      */
     private Boolean enableUserIdentification;
     /**
-     * @return The folder of the item. Default: Shared.
+     * @return Folder
      * 
      */
     private String folder;
@@ -55,7 +55,7 @@ public final class GetZoneListData {
      */
     private String id;
     /**
-     * @return The name of the item.
+     * @return Alphanumeric string begin with letter: [0-9a-zA-Z._-]
      * 
      */
     private String name;
@@ -65,7 +65,7 @@ public final class GetZoneListData {
      */
     private GetZoneListDataNetwork network;
     /**
-     * @return The snippet of the item.
+     * @return The snippet in which the resource is defined
      * 
      */
     private String snippet;
@@ -124,7 +124,7 @@ public final class GetZoneListData {
         return this.enableUserIdentification;
     }
     /**
-     * @return The folder of the item. Default: Shared.
+     * @return Folder
      * 
      */
     public String folder() {
@@ -138,7 +138,7 @@ public final class GetZoneListData {
         return this.id;
     }
     /**
-     * @return The name of the item.
+     * @return Alphanumeric string begin with letter: [0-9a-zA-Z._-]
      * 
      */
     public String name() {
@@ -152,7 +152,7 @@ public final class GetZoneListData {
         return this.network;
     }
     /**
-     * @return The snippet of the item.
+     * @return The snippet in which the resource is defined
      * 
      */
     public String snippet() {

@@ -37,7 +37,7 @@ public final class GetProfileGroupListData {
      */
     private List<String> fileBlockings;
     /**
-     * @return The folder of the item. Default: Shared.
+     * @return The folder in which the resource is defined
      * 
      */
     private String folder;
@@ -47,7 +47,7 @@ public final class GetProfileGroupListData {
      */
     private String id;
     /**
-     * @return The name of the item.
+     * @return The name of the profile group
      * 
      */
     private String name;
@@ -57,7 +57,7 @@ public final class GetProfileGroupListData {
      */
     private List<String> saasSecurities;
     /**
-     * @return The snippet of the item.
+     * @return The snippet in which the resource is defined
      * 
      */
     private String snippet;
@@ -124,7 +124,7 @@ public final class GetProfileGroupListData {
         return this.fileBlockings;
     }
     /**
-     * @return The folder of the item. Default: Shared.
+     * @return The folder in which the resource is defined
      * 
      */
     public String folder() {
@@ -138,7 +138,7 @@ public final class GetProfileGroupListData {
         return this.id;
     }
     /**
-     * @return The name of the item.
+     * @return The name of the profile group
      * 
      */
     public String name() {
@@ -152,7 +152,7 @@ public final class GetProfileGroupListData {
         return this.saasSecurities;
     }
     /**
-     * @return The snippet of the item.
+     * @return The snippet in which the resource is defined
      * 
      */
     public String snippet() {

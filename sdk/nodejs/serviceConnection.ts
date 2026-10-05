@@ -145,10 +145,6 @@ export class ServiceConnection extends pulumi.CustomResource {
      */
     declare public readonly backupSc: pulumi.Output<string | undefined>;
     /**
-     * Bgp peer
-     */
-    declare public readonly bgpPeer: pulumi.Output<outputs.ServiceConnectionBgpPeer | undefined>;
-    /**
      * Map of sensitive values returned from the API.
      */
     declare public /*out*/ readonly encryptedValues: pulumi.Output<{[key: string]: string}>;
@@ -169,11 +165,11 @@ export class ServiceConnection extends pulumi.CustomResource {
      */
     declare public readonly natPool: pulumi.Output<string | undefined>;
     /**
-     * No export community
+     * No export community. Possible values are `Disabled`, `Enabled-In`, `Enabled-Out` and `Enabled-Both`.
      */
     declare public readonly noExportCommunity: pulumi.Output<string | undefined>;
     /**
-     * Onboarding type
+     * Onboarding type. Possible values are `classic`.
      */
     declare public readonly onboardingType: pulumi.Output<string>;
     /**
@@ -223,7 +219,6 @@ export class ServiceConnection extends pulumi.CustomResource {
         if (opts.id) {
             const state = argsOrState as ServiceConnectionState | undefined;
             resourceInputs["backupSc"] = state?.backupSc;
-            resourceInputs["bgpPeer"] = state?.bgpPeer;
             resourceInputs["encryptedValues"] = state?.encryptedValues;
             resourceInputs["folder"] = state?.folder;
             resourceInputs["ipsecTunnel"] = state?.ipsecTunnel;
@@ -248,7 +243,6 @@ export class ServiceConnection extends pulumi.CustomResource {
                 throw new Error("Missing required property 'region'");
             }
             resourceInputs["backupSc"] = args?.backupSc;
-            resourceInputs["bgpPeer"] = args?.bgpPeer;
             resourceInputs["ipsecTunnel"] = args?.ipsecTunnel;
             resourceInputs["name"] = args?.name;
             resourceInputs["natPool"] = args?.natPool;
@@ -281,10 +275,6 @@ export interface ServiceConnectionState {
      */
     backupSc?: pulumi.Input<string | undefined>;
     /**
-     * Bgp peer
-     */
-    bgpPeer?: pulumi.Input<inputs.ServiceConnectionBgpPeer | undefined>;
-    /**
      * Map of sensitive values returned from the API.
      */
     encryptedValues?: pulumi.Input<{[key: string]: pulumi.Input<string>} | undefined>;
@@ -305,11 +295,11 @@ export interface ServiceConnectionState {
      */
     natPool?: pulumi.Input<string | undefined>;
     /**
-     * No export community
+     * No export community. Possible values are `Disabled`, `Enabled-In`, `Enabled-Out` and `Enabled-Both`.
      */
     noExportCommunity?: pulumi.Input<string | undefined>;
     /**
-     * Onboarding type
+     * Onboarding type. Possible values are `classic`.
      */
     onboardingType?: pulumi.Input<string | undefined>;
     /**
@@ -355,10 +345,6 @@ export interface ServiceConnectionArgs {
      */
     backupSc?: pulumi.Input<string | undefined>;
     /**
-     * Bgp peer
-     */
-    bgpPeer?: pulumi.Input<inputs.ServiceConnectionBgpPeer | undefined>;
-    /**
      * Ipsec tunnel
      */
     ipsecTunnel: pulumi.Input<string>;
@@ -371,11 +357,11 @@ export interface ServiceConnectionArgs {
      */
     natPool?: pulumi.Input<string | undefined>;
     /**
-     * No export community
+     * No export community. Possible values are `Disabled`, `Enabled-In`, `Enabled-Out` and `Enabled-Both`.
      */
     noExportCommunity?: pulumi.Input<string | undefined>;
     /**
-     * Onboarding type
+     * Onboarding type. Possible values are `classic`.
      */
     onboardingType?: pulumi.Input<string | undefined>;
     /**

@@ -14,7 +14,7 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetNatRuleListDataDestinationTranslationDnsRewriteResult
     {
         /// <summary>
-        /// Direction
+        /// Direction. Possible values are `Reverse` and `Forward`.
         /// </summary>
         public readonly string Direction;
 

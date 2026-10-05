@@ -33,12 +33,8 @@ class RouteAccessListArgs:
         :param pulumi.Input[_builtins.str] description: Description
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] name: Route access list name
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input['RouteAccessListTypeArgs'] type: Type
         """
         if description is not None:
@@ -83,8 +79,6 @@ class RouteAccessListArgs:
     def folder(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
-
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
 
@@ -109,8 +103,6 @@ class RouteAccessListArgs:
     def snippet(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
-
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
 
@@ -147,12 +139,8 @@ class _RouteAccessListState:
         :param pulumi.Input[_builtins.str] description: Description
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] name: Route access list name
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] tfid: The Terraform ID.
         :param pulumi.Input['RouteAccessListTypeArgs'] type: Type
         """
@@ -200,8 +188,6 @@ class _RouteAccessListState:
     def folder(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
-
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
 
@@ -226,8 +212,6 @@ class _RouteAccessListState:
     def snippet(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
-
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
 
@@ -276,6 +260,31 @@ class RouteAccessList(pulumi.CustomResource):
         """
         RouteAccessList resource
 
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_scm as scm
+
+        example = scm.RouteAccessList("example",
+            folder="ngfw-shared",
+            name="EXAMPLE-ACL",
+            type={
+                "ipv4": {
+                    "ipv4_entries": [{
+                        "name": 10,
+                        "action": "permit",
+                        "destination_address": {
+                            "entry": {
+                                "address": "10.0.0.0",
+                                "wildcard": "0.0.0.7",
+                            },
+                        },
+                    }],
+                },
+            })
+        ```
+
         ## Import
 
         The following command can be used to import a resource not managed by Terraform:
@@ -304,12 +313,8 @@ class RouteAccessList(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] description: Description
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] name: Route access list name
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[Union['RouteAccessListTypeArgs', 'RouteAccessListTypeArgsDict', 'outputs.RouteAccessListType']] type: Type
         """
         ...
@@ -320,6 +325,31 @@ class RouteAccessList(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
         RouteAccessList resource
+
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_scm as scm
+
+        example = scm.RouteAccessList("example",
+            folder="ngfw-shared",
+            name="EXAMPLE-ACL",
+            type={
+                "ipv4": {
+                    "ipv4_entries": [{
+                        "name": 10,
+                        "action": "permit",
+                        "destination_address": {
+                            "entry": {
+                                "address": "10.0.0.0",
+                                "wildcard": "0.0.0.7",
+                            },
+                        },
+                    }],
+                },
+            })
+        ```
 
         ## Import
 
@@ -408,12 +438,8 @@ class RouteAccessList(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] description: Description
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] name: Route access list name
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] tfid: The Terraform ID.
         :param pulumi.Input[Union['RouteAccessListTypeArgs', 'RouteAccessListTypeArgsDict', 'outputs.RouteAccessListType']] type: Type
         """
@@ -451,8 +477,6 @@ class RouteAccessList(pulumi.CustomResource):
     def folder(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
-
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
 
@@ -469,8 +493,6 @@ class RouteAccessList(pulumi.CustomResource):
     def snippet(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
-
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
 

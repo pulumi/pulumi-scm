@@ -19,14 +19,10 @@ namespace Pulumi.Scm.Outputs
         public readonly Outputs.GetUpdateScheduleUpdateScheduleThreatsRecurringDailyResult Daily;
         /// <summary>
         /// Every30 mins
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Daily`, `Every30Mins`, `Hourly`, `None`, and `Weekly`.
         /// </summary>
         public readonly Outputs.GetUpdateScheduleUpdateScheduleThreatsRecurringEvery30MinsResult Every30Mins;
         /// <summary>
         /// Hourly
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Daily`, `Every30Mins`, `Hourly`, `None`, and `Weekly`.
         /// </summary>
         public readonly Outputs.GetUpdateScheduleUpdateScheduleThreatsRecurringHourlyResult Hourly;
         /// <summary>
@@ -35,8 +31,6 @@ namespace Pulumi.Scm.Outputs
         public readonly int NewAppThreshold;
         /// <summary>
         /// None
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Daily`, `Every30Mins`, `Hourly`, `None`, and `Weekly`.
         /// </summary>
         public readonly Outputs.GetUpdateScheduleUpdateScheduleThreatsRecurringNoneResult None;
         /// <summary>
@@ -49,8 +43,6 @@ namespace Pulumi.Scm.Outputs
         public readonly int Threshold;
         /// <summary>
         /// Weekly
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Daily`, `Every30Mins`, `Hourly`, `None`, and `Weekly`.
         /// </summary>
         public readonly Outputs.GetUpdateScheduleUpdateScheduleThreatsRecurringWeeklyResult Weekly;
 

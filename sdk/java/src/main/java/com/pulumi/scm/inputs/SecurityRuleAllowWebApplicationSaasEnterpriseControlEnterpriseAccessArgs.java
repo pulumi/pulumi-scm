@@ -17,14 +17,14 @@ public final class SecurityRuleAllowWebApplicationSaasEnterpriseControlEnterpris
     public static final SecurityRuleAllowWebApplicationSaasEnterpriseControlEnterpriseAccessArgs Empty = new SecurityRuleAllowWebApplicationSaasEnterpriseControlEnterpriseAccessArgs();
 
     /**
-     * Enable
+     * Enable. Possible values are `yes` and `no`.
      * 
      */
     @Import(name="enable")
     private @Nullable Output<String> enable;
 
     /**
-     * @return Enable
+     * @return Enable. Possible values are `yes` and `no`.
      * 
      */
     public Optional<Output<String>> enable() {
@@ -72,7 +72,7 @@ public final class SecurityRuleAllowWebApplicationSaasEnterpriseControlEnterpris
         }
 
         /**
-         * @param enable Enable
+         * @param enable Enable. Possible values are `yes` and `no`.
          * 
          * @return builder
          * 
@@ -83,7 +83,7 @@ public final class SecurityRuleAllowWebApplicationSaasEnterpriseControlEnterpris
         }
 
         /**
-         * @param enable Enable
+         * @param enable Enable. Possible values are `yes` and `no`.
          * 
          * @return builder
          * 

@@ -14,7 +14,7 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetBgpRouteMapRedistributionListDataOspfRibRouteMapResult
     {
         /// <summary>
-        /// OSPF RIB Route maps Action
+        /// OSPF RIB Route maps Action. Possible values are `Permit` and `Deny`.
         /// </summary>
         public readonly string Action;
         /// <summary>

@@ -18,21 +18,15 @@ public final class GetIpsecCryptoProfileListDataLifetime {
     /**
      * @return specify lifetime in hours
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `days`, `hours`, `minutes`, and `seconds`.
-     * 
      */
     private Integer hours;
     /**
      * @return specify lifetime in minutes
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `days`, `hours`, `minutes`, and `seconds`.
-     * 
      */
     private Integer minutes;
     /**
      * @return specify lifetime in seconds
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `days`, `hours`, `minutes`, and `seconds`.
      * 
      */
     private Integer seconds;
@@ -48,8 +42,6 @@ public final class GetIpsecCryptoProfileListDataLifetime {
     /**
      * @return specify lifetime in hours
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `days`, `hours`, `minutes`, and `seconds`.
-     * 
      */
     public Integer hours() {
         return this.hours;
@@ -57,16 +49,12 @@ public final class GetIpsecCryptoProfileListDataLifetime {
     /**
      * @return specify lifetime in minutes
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `days`, `hours`, `minutes`, and `seconds`.
-     * 
      */
     public Integer minutes() {
         return this.minutes;
     }
     /**
      * @return specify lifetime in seconds
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `days`, `hours`, `minutes`, and `seconds`.
      * 
      */
     public Integer seconds() {

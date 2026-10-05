@@ -18,7 +18,7 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly int Duration;
         /// <summary>
-        /// Track by
+        /// Track by. Possible values are `source-and-destination` and `Source`.
         /// </summary>
         public readonly string TrackBy;
 

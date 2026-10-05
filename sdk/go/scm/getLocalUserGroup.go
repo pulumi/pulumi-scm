@@ -26,10 +26,13 @@ func LookupLocalUserGroup(ctx *pulumi.Context, args *LookupLocalUserGroupArgs, o
 type LookupLocalUserGroupArgs struct {
 	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
+	// The folder in which the resource is defined
 	Folder *string `pulumi:"folder"`
 	// The UUID of the local user group
-	Id      string  `pulumi:"id"`
-	Name    *string `pulumi:"name"`
+	Id string `pulumi:"id"`
+	// The name of the local user group
+	Name *string `pulumi:"name"`
+	// The snippet in which the resource is defined
 	Snippet *string `pulumi:"snippet"`
 }
 
@@ -37,13 +40,18 @@ type LookupLocalUserGroupArgs struct {
 type LookupLocalUserGroupResult struct {
 	// The device in which the resource is defined
 	Device string `pulumi:"device"`
+	// The folder in which the resource is defined
 	Folder string `pulumi:"folder"`
 	// The UUID of the local user group
-	Id      string   `pulumi:"id"`
-	Name    string   `pulumi:"name"`
-	Snippet string   `pulumi:"snippet"`
-	Tfid    string   `pulumi:"tfid"`
-	Users   []string `pulumi:"users"`
+	Id string `pulumi:"id"`
+	// The name of the local user group
+	Name string `pulumi:"name"`
+	// The snippet in which the resource is defined
+	Snippet string `pulumi:"snippet"`
+	// The Terraform ID.
+	Tfid string `pulumi:"tfid"`
+	// The local user group users
+	Users []string `pulumi:"users"`
 }
 
 func LookupLocalUserGroupOutput(ctx *pulumi.Context, args LookupLocalUserGroupOutputArgs, opts ...pulumi.InvokeOption) LookupLocalUserGroupResultOutput {
@@ -55,10 +63,13 @@ func LookupLocalUserGroupOutput(ctx *pulumi.Context, args LookupLocalUserGroupOu
 type LookupLocalUserGroupOutputArgs struct {
 	// The device in which the resource is defined
 	Device pulumi.StringPtrInput `pulumi:"device"`
+	// The folder in which the resource is defined
 	Folder pulumi.StringPtrInput `pulumi:"folder"`
 	// The UUID of the local user group
-	Id      pulumi.StringInput    `pulumi:"id"`
-	Name    pulumi.StringPtrInput `pulumi:"name"`
+	Id pulumi.StringInput `pulumi:"id"`
+	// The name of the local user group
+	Name pulumi.StringPtrInput `pulumi:"name"`
+	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrInput `pulumi:"snippet"`
 }
 
@@ -86,6 +97,7 @@ func (o LookupLocalUserGroupResultOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupLocalUserGroupResult) string { return v.Device }).(pulumi.StringOutput)
 }
 
+// The folder in which the resource is defined
 func (o LookupLocalUserGroupResultOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupLocalUserGroupResult) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -95,18 +107,22 @@ func (o LookupLocalUserGroupResultOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupLocalUserGroupResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
+// The name of the local user group
 func (o LookupLocalUserGroupResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupLocalUserGroupResult) string { return v.Name }).(pulumi.StringOutput)
 }
 
+// The snippet in which the resource is defined
 func (o LookupLocalUserGroupResultOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupLocalUserGroupResult) string { return v.Snippet }).(pulumi.StringOutput)
 }
 
+// The Terraform ID.
 func (o LookupLocalUserGroupResultOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupLocalUserGroupResult) string { return v.Tfid }).(pulumi.StringOutput)
 }
 
+// The local user group users
 func (o LookupLocalUserGroupResultOutput) Users() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupLocalUserGroupResult) []string { return v.Users }).(pulumi.StringArrayOutput)
 }

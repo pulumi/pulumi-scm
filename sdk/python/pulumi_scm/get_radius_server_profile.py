@@ -73,11 +73,17 @@ class GetRadiusServerProfileResult:
     @_builtins.property
     @pulumi.getter(name="encryptedValues")
     def encrypted_values(self) -> Mapping[str, _builtins.str]:
+        """
+        Map of sensitive values returned from the API.
+        """
         return pulumi.get(self, "encrypted_values")
 
     @_builtins.property
     @pulumi.getter
     def folder(self) -> _builtins.str:
+        """
+        The folder in which the resource is defined
+        """
         return pulumi.get(self, "folder")
 
     @_builtins.property
@@ -91,36 +97,57 @@ class GetRadiusServerProfileResult:
     @_builtins.property
     @pulumi.getter
     def name(self) -> _builtins.str:
+        """
+        The name of the RADIUS server profile
+        """
         return pulumi.get(self, "name")
 
     @_builtins.property
     @pulumi.getter
     def protocol(self) -> 'outputs.GetRadiusServerProfileProtocolResult':
+        """
+        The RADIUS authentication protocol
+        """
         return pulumi.get(self, "protocol")
 
     @_builtins.property
     @pulumi.getter
     def retries(self) -> _builtins.int:
+        """
+        The number of RADIUS server retries
+        """
         return pulumi.get(self, "retries")
 
     @_builtins.property
     @pulumi.getter
     def servers(self) -> Sequence['outputs.GetRadiusServerProfileServerResult']:
+        """
+        Server
+        """
         return pulumi.get(self, "servers")
 
     @_builtins.property
     @pulumi.getter
     def snippet(self) -> _builtins.str:
+        """
+        The snippet in which the resource is defined
+        """
         return pulumi.get(self, "snippet")
 
     @_builtins.property
     @pulumi.getter
     def tfid(self) -> _builtins.str:
+        """
+        The Terraform ID.
+        """
         return pulumi.get(self, "tfid")
 
     @_builtins.property
     @pulumi.getter
     def timeout(self) -> _builtins.int:
+        """
+        The RADIUS server authentication timeout (seconds)
+        """
         return pulumi.get(self, "timeout")
 
 
@@ -164,7 +191,10 @@ def get_radius_server_profile(device: Optional[_builtins.str] = None,
 
 
     :param _builtins.str device: The device in which the resource is defined
+    :param _builtins.str folder: The folder in which the resource is defined
     :param _builtins.str id: The UUID of the RADIUS server profile
+    :param _builtins.str name: The name of the RADIUS server profile
+    :param _builtins.str snippet: The snippet in which the resource is defined
     """
     __args__ = dict()
     __args__['device'] = device
@@ -208,7 +238,10 @@ def get_radius_server_profile_output(device: pulumi.Input[Optional[Optional[_bui
 
 
     :param _builtins.str device: The device in which the resource is defined
+    :param _builtins.str folder: The folder in which the resource is defined
     :param _builtins.str id: The UUID of the RADIUS server profile
+    :param _builtins.str name: The name of the RADIUS server profile
+    :param _builtins.str snippet: The snippet in which the resource is defined
     """
     __args__ = dict()
     __args__['device'] = device

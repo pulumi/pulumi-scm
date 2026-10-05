@@ -13,7 +13,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetMetric {
     /**
-     * @return Connected Static BGP Route maps set Metric action
+     * @return Connected Static BGP Route maps set Metric action. Possible values are `set`, `add` and `substract`.
      * 
      */
     private @Nullable String action;
@@ -25,7 +25,7 @@ public final class BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetMetric 
 
     private BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetMetric() {}
     /**
-     * @return Connected Static BGP Route maps set Metric action
+     * @return Connected Static BGP Route maps set Metric action. Possible values are `set`, `add` and `substract`.
      * 
      */
     public Optional<String> action() {

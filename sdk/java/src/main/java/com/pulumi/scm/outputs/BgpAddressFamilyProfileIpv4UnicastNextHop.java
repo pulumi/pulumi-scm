@@ -20,8 +20,6 @@ public final class BgpAddressFamilyProfileIpv4UnicastNextHop {
     /**
      * @return Self force
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `self` and `selfForce`.
-     * 
      */
     private @Nullable BgpAddressFamilyProfileIpv4UnicastNextHopSelfForce selfForce;
 
@@ -35,8 +33,6 @@ public final class BgpAddressFamilyProfileIpv4UnicastNextHop {
     }
     /**
      * @return Self force
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `self` and `selfForce`.
      * 
      */
     public Optional<BgpAddressFamilyProfileIpv4UnicastNextHopSelfForce> selfForce() {

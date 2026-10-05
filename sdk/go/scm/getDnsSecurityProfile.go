@@ -60,25 +60,34 @@ func LookupDnsSecurityProfile(ctx *pulumi.Context, args *LookupDnsSecurityProfil
 type LookupDnsSecurityProfileArgs struct {
 	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
+	// The folder in which the resource is defined
 	Folder *string `pulumi:"folder"`
 	// The UUID of the DNS security profile
-	Id      string  `pulumi:"id"`
-	Name    *string `pulumi:"name"`
+	Id string `pulumi:"id"`
+	// The name of the DNS security profile
+	Name *string `pulumi:"name"`
+	// The snippet in which the resource is defined
 	Snippet *string `pulumi:"snippet"`
 }
 
 // A collection of values returned by getDnsSecurityProfile.
 type LookupDnsSecurityProfileResult struct {
+	// Botnet domains
 	BotnetDomains GetDnsSecurityProfileBotnetDomains `pulumi:"botnetDomains"`
-	Description   string                             `pulumi:"description"`
+	// The description of the DNS security profile
+	Description string `pulumi:"description"`
 	// The device in which the resource is defined
 	Device string `pulumi:"device"`
+	// The folder in which the resource is defined
 	Folder string `pulumi:"folder"`
 	// The UUID of the DNS security profile
-	Id      string `pulumi:"id"`
-	Name    string `pulumi:"name"`
+	Id string `pulumi:"id"`
+	// The name of the DNS security profile
+	Name string `pulumi:"name"`
+	// The snippet in which the resource is defined
 	Snippet string `pulumi:"snippet"`
-	Tfid    string `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid string `pulumi:"tfid"`
 }
 
 func LookupDnsSecurityProfileOutput(ctx *pulumi.Context, args LookupDnsSecurityProfileOutputArgs, opts ...pulumi.InvokeOption) LookupDnsSecurityProfileResultOutput {
@@ -90,10 +99,13 @@ func LookupDnsSecurityProfileOutput(ctx *pulumi.Context, args LookupDnsSecurityP
 type LookupDnsSecurityProfileOutputArgs struct {
 	// The device in which the resource is defined
 	Device pulumi.StringPtrInput `pulumi:"device"`
+	// The folder in which the resource is defined
 	Folder pulumi.StringPtrInput `pulumi:"folder"`
 	// The UUID of the DNS security profile
-	Id      pulumi.StringInput    `pulumi:"id"`
-	Name    pulumi.StringPtrInput `pulumi:"name"`
+	Id pulumi.StringInput `pulumi:"id"`
+	// The name of the DNS security profile
+	Name pulumi.StringPtrInput `pulumi:"name"`
+	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrInput `pulumi:"snippet"`
 }
 
@@ -116,10 +128,12 @@ func (o LookupDnsSecurityProfileResultOutput) ToLookupDnsSecurityProfileResultOu
 	return o
 }
 
+// Botnet domains
 func (o LookupDnsSecurityProfileResultOutput) BotnetDomains() GetDnsSecurityProfileBotnetDomainsOutput {
 	return o.ApplyT(func(v LookupDnsSecurityProfileResult) GetDnsSecurityProfileBotnetDomains { return v.BotnetDomains }).(GetDnsSecurityProfileBotnetDomainsOutput)
 }
 
+// The description of the DNS security profile
 func (o LookupDnsSecurityProfileResultOutput) Description() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupDnsSecurityProfileResult) string { return v.Description }).(pulumi.StringOutput)
 }
@@ -129,6 +143,7 @@ func (o LookupDnsSecurityProfileResultOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupDnsSecurityProfileResult) string { return v.Device }).(pulumi.StringOutput)
 }
 
+// The folder in which the resource is defined
 func (o LookupDnsSecurityProfileResultOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupDnsSecurityProfileResult) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -138,14 +153,17 @@ func (o LookupDnsSecurityProfileResultOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupDnsSecurityProfileResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
+// The name of the DNS security profile
 func (o LookupDnsSecurityProfileResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupDnsSecurityProfileResult) string { return v.Name }).(pulumi.StringOutput)
 }
 
+// The snippet in which the resource is defined
 func (o LookupDnsSecurityProfileResultOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupDnsSecurityProfileResult) string { return v.Snippet }).(pulumi.StringOutput)
 }
 
+// The Terraform ID.
 func (o LookupDnsSecurityProfileResultOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupDnsSecurityProfileResult) string { return v.Tfid }).(pulumi.StringOutput)
 }

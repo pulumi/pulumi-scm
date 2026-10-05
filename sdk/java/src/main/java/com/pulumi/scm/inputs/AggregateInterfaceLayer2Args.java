@@ -6,6 +6,7 @@ package com.pulumi.scm.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.scm.inputs.AggregateInterfaceLayer2LacpArgs;
+import com.pulumi.scm.inputs.AggregateInterfaceLayer2LldpArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -29,6 +30,21 @@ public final class AggregateInterfaceLayer2Args extends com.pulumi.resources.Res
      */
     public Optional<Output<AggregateInterfaceLayer2LacpArgs>> lacp() {
         return Optional.ofNullable(this.lacp);
+    }
+
+    /**
+     * LLDP settings for the interface
+     * 
+     */
+    @Import(name="lldp")
+    private @Nullable Output<AggregateInterfaceLayer2LldpArgs> lldp;
+
+    /**
+     * @return LLDP settings for the interface
+     * 
+     */
+    public Optional<Output<AggregateInterfaceLayer2LldpArgs>> lldp() {
+        return Optional.ofNullable(this.lldp);
     }
 
     /**
@@ -65,6 +81,7 @@ public final class AggregateInterfaceLayer2Args extends com.pulumi.resources.Res
 
     private AggregateInterfaceLayer2Args(AggregateInterfaceLayer2Args $) {
         this.lacp = $.lacp;
+        this.lldp = $.lldp;
         this.netflowProfile = $.netflowProfile;
         this.vlanTag = $.vlanTag;
     }
@@ -106,6 +123,27 @@ public final class AggregateInterfaceLayer2Args extends com.pulumi.resources.Res
          */
         public Builder lacp(AggregateInterfaceLayer2LacpArgs lacp) {
             return lacp(Output.of(lacp));
+        }
+
+        /**
+         * @param lldp LLDP settings for the interface
+         * 
+         * @return builder
+         * 
+         */
+        public Builder lldp(@Nullable Output<AggregateInterfaceLayer2LldpArgs> lldp) {
+            $.lldp = lldp;
+            return this;
+        }
+
+        /**
+         * @param lldp LLDP settings for the interface
+         * 
+         * @return builder
+         * 
+         */
+        public Builder lldp(AggregateInterfaceLayer2LldpArgs lldp) {
+            return lldp(Output.of(lldp));
         }
 
         /**

@@ -11,38 +11,38 @@ import java.util.Objects;
 @CustomType
 public final class GetSecurityRuleListDataSecuritySettings {
     /**
-     * @return Anti spyware
+     * @return Anti spyware. Possible values are `yes` and `no`.
      * 
      */
     private String antiSpyware;
     /**
-     * @return Virus and wildfire analysis
+     * @return Virus and wildfire analysis. Possible values are `yes` and `no`.
      * 
      */
     private String virusAndWildfireAnalysis;
     /**
-     * @return Vulnerability
+     * @return Vulnerability. Possible values are `yes` and `no`.
      * 
      */
     private String vulnerability;
 
     private GetSecurityRuleListDataSecuritySettings() {}
     /**
-     * @return Anti spyware
+     * @return Anti spyware. Possible values are `yes` and `no`.
      * 
      */
     public String antiSpyware() {
         return this.antiSpyware;
     }
     /**
-     * @return Virus and wildfire analysis
+     * @return Virus and wildfire analysis. Possible values are `yes` and `no`.
      * 
      */
     public String virusAndWildfireAnalysis() {
         return this.virusAndWildfireAnalysis;
     }
     /**
-     * @return Vulnerability
+     * @return Vulnerability. Possible values are `yes` and `no`.
      * 
      */
     public String vulnerability() {

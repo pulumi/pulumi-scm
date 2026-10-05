@@ -39,6 +39,9 @@ namespace Pulumi.Scm
         [Input("device")]
         public string? Device { get; set; }
 
+        /// <summary>
+        /// The folder in which the resource is defined
+        /// </summary>
         [Input("folder")]
         public string? Folder { get; set; }
 
@@ -48,9 +51,15 @@ namespace Pulumi.Scm
         [Input("id", required: true)]
         public string Id { get; set; } = null!;
 
+        /// <summary>
+        /// The name of the profile group
+        /// </summary>
         [Input("name")]
         public string? Name { get; set; }
 
+        /// <summary>
+        /// The snippet in which the resource is defined
+        /// </summary>
         [Input("snippet")]
         public string? Snippet { get; set; }
 
@@ -68,6 +77,9 @@ namespace Pulumi.Scm
         [Input("device")]
         public Input<string>? Device { get; set; }
 
+        /// <summary>
+        /// The folder in which the resource is defined
+        /// </summary>
         [Input("folder")]
         public Input<string>? Folder { get; set; }
 
@@ -77,9 +89,15 @@ namespace Pulumi.Scm
         [Input("id", required: true)]
         public Input<string> Id { get; set; } = null!;
 
+        /// <summary>
+        /// The name of the profile group
+        /// </summary>
         [Input("name")]
         public Input<string>? Name { get; set; }
 
+        /// <summary>
+        /// The snippet in which the resource is defined
+        /// </summary>
         [Input("snippet")]
         public Input<string>? Snippet { get; set; }
 
@@ -93,26 +111,65 @@ namespace Pulumi.Scm
     [OutputType]
     public sealed class GetProfileGroupResult
     {
+        /// <summary>
+        /// Ai security
+        /// </summary>
         public readonly ImmutableArray<string> AiSecurities;
+        /// <summary>
+        /// Data filtering
+        /// </summary>
         public readonly ImmutableArray<string> DataFilterings;
         /// <summary>
         /// The device in which the resource is defined
         /// </summary>
         public readonly string Device;
+        /// <summary>
+        /// Dns security
+        /// </summary>
         public readonly ImmutableArray<string> DnsSecurities;
+        /// <summary>
+        /// File blocking
+        /// </summary>
         public readonly ImmutableArray<string> FileBlockings;
+        /// <summary>
+        /// The folder in which the resource is defined
+        /// </summary>
         public readonly string Folder;
         /// <summary>
         /// The UUID of the profile group
         /// </summary>
         public readonly string Id;
+        /// <summary>
+        /// The name of the profile group
+        /// </summary>
         public readonly string Name;
+        /// <summary>
+        /// Saas security
+        /// </summary>
         public readonly ImmutableArray<string> SaasSecurities;
+        /// <summary>
+        /// The snippet in which the resource is defined
+        /// </summary>
         public readonly string Snippet;
+        /// <summary>
+        /// Spyware
+        /// </summary>
         public readonly ImmutableArray<string> Spywares;
+        /// <summary>
+        /// The Terraform ID.
+        /// </summary>
         public readonly string Tfid;
+        /// <summary>
+        /// Url filtering
+        /// </summary>
         public readonly ImmutableArray<string> UrlFilterings;
+        /// <summary>
+        /// Virus and wildfire analysis
+        /// </summary>
         public readonly ImmutableArray<string> VirusAndWildfireAnalyses;
+        /// <summary>
+        /// Vulnerability
+        /// </summary>
         public readonly ImmutableArray<string> Vulnerabilities;
 
         [OutputConstructor]

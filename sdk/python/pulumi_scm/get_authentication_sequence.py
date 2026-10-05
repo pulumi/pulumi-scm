@@ -55,6 +55,9 @@ class GetAuthenticationSequenceResult:
     @_builtins.property
     @pulumi.getter(name="authenticationProfiles")
     def authentication_profiles(self) -> Sequence[_builtins.str]:
+        """
+        An ordered list of authentication profiles
+        """
         return pulumi.get(self, "authentication_profiles")
 
     @_builtins.property
@@ -68,6 +71,9 @@ class GetAuthenticationSequenceResult:
     @_builtins.property
     @pulumi.getter
     def folder(self) -> _builtins.str:
+        """
+        The folder in which the resource is defined
+        """
         return pulumi.get(self, "folder")
 
     @_builtins.property
@@ -81,21 +87,33 @@ class GetAuthenticationSequenceResult:
     @_builtins.property
     @pulumi.getter
     def name(self) -> _builtins.str:
+        """
+        The name of the authentication sequence
+        """
         return pulumi.get(self, "name")
 
     @_builtins.property
     @pulumi.getter
     def snippet(self) -> _builtins.str:
+        """
+        The snippet in which the resource is defined
+        """
         return pulumi.get(self, "snippet")
 
     @_builtins.property
     @pulumi.getter
     def tfid(self) -> _builtins.str:
+        """
+        The Terraform ID.
+        """
         return pulumi.get(self, "tfid")
 
     @_builtins.property
     @pulumi.getter(name="useDomainFindProfile")
     def use_domain_find_profile(self) -> _builtins.bool:
+        """
+        Use domain to determine authentication profile?
+        """
         return pulumi.get(self, "use_domain_find_profile")
 
 
@@ -137,7 +155,10 @@ def get_authentication_sequence(device: Optional[_builtins.str] = None,
 
 
     :param _builtins.str device: The device in which the resource is defined
+    :param _builtins.str folder: The folder in which the resource is defined
     :param _builtins.str id: The UUID of the authentication sequence
+    :param _builtins.str name: The name of the authentication sequence
+    :param _builtins.str snippet: The snippet in which the resource is defined
     """
     __args__ = dict()
     __args__['device'] = device
@@ -179,7 +200,10 @@ def get_authentication_sequence_output(device: pulumi.Input[Optional[Optional[_b
 
 
     :param _builtins.str device: The device in which the resource is defined
+    :param _builtins.str folder: The folder in which the resource is defined
     :param _builtins.str id: The UUID of the authentication sequence
+    :param _builtins.str name: The name of the authentication sequence
+    :param _builtins.str snippet: The snippet in which the resource is defined
     """
     __args__ = dict()
     __args__['device'] = device

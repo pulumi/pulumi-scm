@@ -43,7 +43,7 @@ public final class GetLogicalRouterListDataVrfMulticastInterfaceGroupIgmp {
      */
     private String maxSources;
     /**
-     * @return Mode
+     * @return Mode. Possible values are `router` and `host`.
      * 
      */
     private String mode;
@@ -53,7 +53,7 @@ public final class GetLogicalRouterListDataVrfMulticastInterfaceGroupIgmp {
      */
     private Integer queryInterval;
     /**
-     * @return Robustness
+     * @return Robustness. Possible values are `1`, `2`, `3`, `4`, `5`, `6` and `7`.
      * 
      */
     private String robustness;
@@ -63,7 +63,7 @@ public final class GetLogicalRouterListDataVrfMulticastInterfaceGroupIgmp {
      */
     private Boolean routerAlertPolicing;
     /**
-     * @return Version
+     * @return Version. Possible values are `1`, `2` and `3`.
      * 
      */
     private String version;
@@ -112,7 +112,7 @@ public final class GetLogicalRouterListDataVrfMulticastInterfaceGroupIgmp {
         return this.maxSources;
     }
     /**
-     * @return Mode
+     * @return Mode. Possible values are `router` and `host`.
      * 
      */
     public String mode() {
@@ -126,7 +126,7 @@ public final class GetLogicalRouterListDataVrfMulticastInterfaceGroupIgmp {
         return this.queryInterval;
     }
     /**
-     * @return Robustness
+     * @return Robustness. Possible values are `1`, `2`, `3`, `4`, `5`, `6` and `7`.
      * 
      */
     public String robustness() {
@@ -140,7 +140,7 @@ public final class GetLogicalRouterListDataVrfMulticastInterfaceGroupIgmp {
         return this.routerAlertPolicing;
     }
     /**
-     * @return Version
+     * @return Version. Possible values are `1`, `2` and `3`.
      * 
      */
     public String version() {

@@ -17,11 +17,26 @@ namespace Pulumi.Scm.Outputs
         /// Enable LLDP on Interface
         /// </summary>
         public readonly bool Enable;
+        /// <summary>
+        /// LLDP high availability settings
+        /// </summary>
+        public readonly Outputs.GetEthernetInterfaceListDataLayer2LldpHighAvailabilityResult HighAvailability;
+        /// <summary>
+        /// Name of the LLDP profile to assign to the interface
+        /// </summary>
+        public readonly string Profile;
 
         [OutputConstructor]
-        private GetEthernetInterfaceListDataLayer2LldpResult(bool enable)
+        private GetEthernetInterfaceListDataLayer2LldpResult(
+            bool enable,
+
+            Outputs.GetEthernetInterfaceListDataLayer2LldpHighAvailabilityResult highAvailability,
+
+            string profile)
         {
             Enable = enable;
+            HighAvailability = highAvailability;
+            Profile = profile;
         }
     }
 }

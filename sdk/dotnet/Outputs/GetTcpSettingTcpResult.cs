@@ -18,7 +18,7 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly bool AllowChallengeAck;
         /// <summary>
-        /// Asymmetric path action
+        /// Asymmetric path action. Possible values are `Drop` and `Bypass`.
         /// </summary>
         public readonly string AsymmetricPath;
         /// <summary>
@@ -34,7 +34,7 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly bool DropZeroFlag;
         /// <summary>
-        /// SIP TCP cleartext action (`'0'` = Always Off, `'1'` = Always Enabled, `'2'` = Automatically enable proxy when needed)
+        /// SIP TCP cleartext action (`'0'` = Always Off, `'1'` = Always Enabled, `'2'` = Automatically enable proxy when needed). Possible values are `0`, `2` and `3`.
         /// </summary>
         public readonly string SiptcpCleartextProxy;
         /// <summary>
@@ -46,7 +46,7 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly bool TcpRetransmitScan;
         /// <summary>
-        /// Urgent data flag action
+        /// Urgent data flag action. Possible values are `Clear` and `Oobinline`.
         /// </summary>
         public readonly string UrgentData;
 

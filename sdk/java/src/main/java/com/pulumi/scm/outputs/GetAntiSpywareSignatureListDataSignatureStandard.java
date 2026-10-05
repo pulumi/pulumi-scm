@@ -34,7 +34,7 @@ public final class GetAntiSpywareSignatureListDataSignatureStandard {
      */
     private Boolean orderFree;
     /**
-     * @return Scope
+     * @return Scope. Possible values are `protocol-data-unit` and `session`.
      * 
      */
     private String scope;
@@ -69,7 +69,7 @@ public final class GetAntiSpywareSignatureListDataSignatureStandard {
         return this.orderFree;
     }
     /**
-     * @return Scope
+     * @return Scope. Possible values are `protocol-data-unit` and `session`.
      * 
      */
     public String scope() {

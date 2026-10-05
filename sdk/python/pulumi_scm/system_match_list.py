@@ -37,8 +37,6 @@ class SystemMatchListArgs:
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input[_builtins.str] filter: Filter of the system match list entry
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] name: Name of the system match list entry
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] send_emails: Send Email List of the system match list entry
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] send_https: Send HTTP List of the system match list entry
@@ -46,8 +44,6 @@ class SystemMatchListArgs:
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] send_syslogs: Send Sys Log List of the system match list entry
         :param pulumi.Input[_builtins.bool] send_to_panorama: Send to Panorama Flag of the system match list entry
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         if description is not None:
             pulumi.set(__self__, "description", description)
@@ -113,8 +109,6 @@ class SystemMatchListArgs:
     def folder(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
-
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
 
@@ -199,8 +193,6 @@ class SystemMatchListArgs:
     def snippet(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
-
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
 
@@ -231,8 +223,6 @@ class _SystemMatchListState:
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input[_builtins.str] filter: Filter of the system match list entry
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] name: Name of the system match list entry
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] send_emails: Send Email List of the system match list entry
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] send_https: Send HTTP List of the system match list entry
@@ -240,8 +230,6 @@ class _SystemMatchListState:
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] send_syslogs: Send Sys Log List of the system match list entry
         :param pulumi.Input[_builtins.bool] send_to_panorama: Send to Panorama Flag of the system match list entry
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] tfid: The Terraform ID.
         """
         if description is not None:
@@ -310,8 +298,6 @@ class _SystemMatchListState:
     def folder(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
-
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
 
@@ -396,8 +382,6 @@ class _SystemMatchListState:
     def snippet(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
-
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
 
@@ -486,8 +470,6 @@ class SystemMatchList(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input[_builtins.str] filter: Filter of the system match list entry
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] name: Name of the system match list entry
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] send_emails: Send Email List of the system match list entry
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] send_https: Send HTTP List of the system match list entry
@@ -495,8 +477,6 @@ class SystemMatchList(pulumi.CustomResource):
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] send_syslogs: Send Sys Log List of the system match list entry
         :param pulumi.Input[_builtins.bool] send_to_panorama: Send to Panorama Flag of the system match list entry
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         ...
     @overload
@@ -628,8 +608,6 @@ class SystemMatchList(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input[_builtins.str] filter: Filter of the system match list entry
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] name: Name of the system match list entry
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] send_emails: Send Email List of the system match list entry
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] send_https: Send HTTP List of the system match list entry
@@ -637,8 +615,6 @@ class SystemMatchList(pulumi.CustomResource):
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] send_syslogs: Send Sys Log List of the system match list entry
         :param pulumi.Input[_builtins.bool] send_to_panorama: Send to Panorama Flag of the system match list entry
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] tfid: The Terraform ID.
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
@@ -688,8 +664,6 @@ class SystemMatchList(pulumi.CustomResource):
     def folder(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
-
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
 
@@ -746,8 +720,6 @@ class SystemMatchList(pulumi.CustomResource):
     def snippet(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
-
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
 

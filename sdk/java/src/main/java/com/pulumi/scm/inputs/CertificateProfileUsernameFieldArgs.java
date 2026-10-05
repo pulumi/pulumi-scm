@@ -16,14 +16,14 @@ public final class CertificateProfileUsernameFieldArgs extends com.pulumi.resour
     public static final CertificateProfileUsernameFieldArgs Empty = new CertificateProfileUsernameFieldArgs();
 
     /**
-     * Common name
+     * Common name. Possible values are `common-name`.
      * 
      */
     @Import(name="subject")
     private @Nullable Output<String> subject;
 
     /**
-     * @return Common name
+     * @return Common name. Possible values are `common-name`.
      * 
      */
     public Optional<Output<String>> subject() {
@@ -31,14 +31,14 @@ public final class CertificateProfileUsernameFieldArgs extends com.pulumi.resour
     }
 
     /**
-     * Email address
+     * Email address. Possible values are `email`.
      * 
      */
     @Import(name="subjectAlt")
     private @Nullable Output<String> subjectAlt;
 
     /**
-     * @return Email address
+     * @return Email address. Possible values are `email`.
      * 
      */
     public Optional<Output<String>> subjectAlt() {
@@ -71,7 +71,7 @@ public final class CertificateProfileUsernameFieldArgs extends com.pulumi.resour
         }
 
         /**
-         * @param subject Common name
+         * @param subject Common name. Possible values are `common-name`.
          * 
          * @return builder
          * 
@@ -82,7 +82,7 @@ public final class CertificateProfileUsernameFieldArgs extends com.pulumi.resour
         }
 
         /**
-         * @param subject Common name
+         * @param subject Common name. Possible values are `common-name`.
          * 
          * @return builder
          * 
@@ -92,7 +92,7 @@ public final class CertificateProfileUsernameFieldArgs extends com.pulumi.resour
         }
 
         /**
-         * @param subjectAlt Email address
+         * @param subjectAlt Email address. Possible values are `email`.
          * 
          * @return builder
          * 
@@ -103,7 +103,7 @@ public final class CertificateProfileUsernameFieldArgs extends com.pulumi.resour
         }
 
         /**
-         * @param subjectAlt Email address
+         * @param subjectAlt Email address. Possible values are `email`.
          * 
          * @return builder
          * 

@@ -34,16 +34,12 @@ public final class BgpAddressFamilyProfileIpv4UnicastAllowasInArgs extends com.p
     /**
      * Origin
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `occurrence` and `origin`.
-     * 
      */
     @Import(name="origin")
     private @Nullable Output<BgpAddressFamilyProfileIpv4UnicastAllowasInOriginArgs> origin;
 
     /**
      * @return Origin
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `occurrence` and `origin`.
      * 
      */
     public Optional<Output<BgpAddressFamilyProfileIpv4UnicastAllowasInOriginArgs>> origin() {
@@ -99,8 +95,6 @@ public final class BgpAddressFamilyProfileIpv4UnicastAllowasInArgs extends com.p
         /**
          * @param origin Origin
          * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `occurrence` and `origin`.
-         * 
          * @return builder
          * 
          */
@@ -111,8 +105,6 @@ public final class BgpAddressFamilyProfileIpv4UnicastAllowasInArgs extends com.p
 
         /**
          * @param origin Origin
-         * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `occurrence` and `origin`.
          * 
          * @return builder
          * 

@@ -46,7 +46,7 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly string? Origin;
         /// <summary>
-        /// Peer
+        /// Peer. Possible values are `Local` and `None`.
         /// </summary>
         public readonly string? Peer;
         /// <summary>

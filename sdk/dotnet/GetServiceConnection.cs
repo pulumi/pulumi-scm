@@ -173,10 +173,6 @@ namespace Pulumi.Scm
         /// </summary>
         public readonly string BackupSc;
         /// <summary>
-        /// Bgp peer
-        /// </summary>
-        public readonly Outputs.GetServiceConnectionBgpPeerResult BgpPeer;
-        /// <summary>
         /// Map of sensitive values returned from the API.
         /// </summary>
         public readonly ImmutableDictionary<string, string> EncryptedValues;
@@ -201,11 +197,11 @@ namespace Pulumi.Scm
         /// </summary>
         public readonly string NatPool;
         /// <summary>
-        /// No export community
+        /// No export community. Possible values are `Disabled`, `Enabled-In`, `Enabled-Out` and `Enabled-Both`.
         /// </summary>
         public readonly string NoExportCommunity;
         /// <summary>
-        /// Onboarding type
+        /// Onboarding type. Possible values are `Classic`.
         /// </summary>
         public readonly string OnboardingType;
         /// <summary>
@@ -245,8 +241,6 @@ namespace Pulumi.Scm
         private GetServiceConnectionResult(
             string backupSc,
 
-            Outputs.GetServiceConnectionBgpPeerResult bgpPeer,
-
             ImmutableDictionary<string, string> encryptedValues,
 
             string folder,
@@ -280,7 +274,6 @@ namespace Pulumi.Scm
             string tfid)
         {
             BackupSc = backupSc;
-            BgpPeer = bgpPeer;
             EncryptedValues = encryptedValues;
             Folder = folder;
             Id = id;

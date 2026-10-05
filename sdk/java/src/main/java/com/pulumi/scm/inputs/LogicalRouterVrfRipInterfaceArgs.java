@@ -96,14 +96,14 @@ public final class LogicalRouterVrfRipInterfaceArgs extends com.pulumi.resources
     }
 
     /**
-     * Mode
+     * Mode. Possible values are `active`, `passive` and `send-only`.
      * 
      */
     @Import(name="mode")
     private @Nullable Output<String> mode;
 
     /**
-     * @return Mode
+     * @return Mode. Possible values are `active`, `passive` and `send-only`.
      * 
      */
     public Optional<Output<String>> mode() {
@@ -126,14 +126,14 @@ public final class LogicalRouterVrfRipInterfaceArgs extends com.pulumi.resources
     }
 
     /**
-     * Split horizon
+     * Split horizon. Possible values are `split-horizon`, `no-split-horizon` and `no-split-horizon-with-poison-reverse`.
      * 
      */
     @Import(name="splitHorizon")
     private @Nullable Output<String> splitHorizon;
 
     /**
-     * @return Split horizon
+     * @return Split horizon. Possible values are `split-horizon`, `no-split-horizon` and `no-split-horizon-with-poison-reverse`.
      * 
      */
     public Optional<Output<String>> splitHorizon() {
@@ -277,7 +277,7 @@ public final class LogicalRouterVrfRipInterfaceArgs extends com.pulumi.resources
         }
 
         /**
-         * @param mode Mode
+         * @param mode Mode. Possible values are `active`, `passive` and `send-only`.
          * 
          * @return builder
          * 
@@ -288,7 +288,7 @@ public final class LogicalRouterVrfRipInterfaceArgs extends com.pulumi.resources
         }
 
         /**
-         * @param mode Mode
+         * @param mode Mode. Possible values are `active`, `passive` and `send-only`.
          * 
          * @return builder
          * 
@@ -319,7 +319,7 @@ public final class LogicalRouterVrfRipInterfaceArgs extends com.pulumi.resources
         }
 
         /**
-         * @param splitHorizon Split horizon
+         * @param splitHorizon Split horizon. Possible values are `split-horizon`, `no-split-horizon` and `no-split-horizon-with-poison-reverse`.
          * 
          * @return builder
          * 
@@ -330,7 +330,7 @@ public final class LogicalRouterVrfRipInterfaceArgs extends com.pulumi.resources
         }
 
         /**
-         * @param splitHorizon Split horizon
+         * @param splitHorizon Split horizon. Possible values are `split-horizon`, `no-split-horizon` and `no-split-horizon-with-poison-reverse`.
          * 
          * @return builder
          * 

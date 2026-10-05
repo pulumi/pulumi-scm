@@ -155,7 +155,7 @@ import (
 type RemoteNetwork struct {
 	pulumi.CustomResourceState
 
-	// Ecmp load balancing
+	// Ecmp load balancing. Possible values are `enable` and `disable`.
 	EcmpLoadBalancing pulumi.StringOutput `pulumi:"ecmpLoadBalancing"`
 	// ecmp*tunnels is required when ecmp*load*balancing is enable
 	EcmpTunnels RemoteNetworkEcmpTunnelArrayOutput `pulumi:"ecmpTunnels"`
@@ -169,7 +169,7 @@ type RemoteNetwork struct {
 	LicenseType pulumi.StringOutput `pulumi:"licenseType"`
 	// The name of the remote network
 	Name pulumi.StringOutput `pulumi:"name"`
-	// setup the protocol when ecmp*load*balancing is disable
+	// setup the protocol when ecmp*load*balancing is disabled
 	Protocol RemoteNetworkProtocolPtrOutput `pulumi:"protocol"`
 	// Region
 	Region pulumi.StringOutput `pulumi:"region"`
@@ -226,7 +226,7 @@ func GetRemoteNetwork(ctx *pulumi.Context,
 
 // Input properties used for looking up and filtering RemoteNetwork resources.
 type remoteNetworkState struct {
-	// Ecmp load balancing
+	// Ecmp load balancing. Possible values are `enable` and `disable`.
 	EcmpLoadBalancing *string `pulumi:"ecmpLoadBalancing"`
 	// ecmp*tunnels is required when ecmp*load*balancing is enable
 	EcmpTunnels []RemoteNetworkEcmpTunnel `pulumi:"ecmpTunnels"`
@@ -240,7 +240,7 @@ type remoteNetworkState struct {
 	LicenseType *string `pulumi:"licenseType"`
 	// The name of the remote network
 	Name *string `pulumi:"name"`
-	// setup the protocol when ecmp*load*balancing is disable
+	// setup the protocol when ecmp*load*balancing is disabled
 	Protocol *RemoteNetworkProtocol `pulumi:"protocol"`
 	// Region
 	Region *string `pulumi:"region"`
@@ -255,7 +255,7 @@ type remoteNetworkState struct {
 }
 
 type RemoteNetworkState struct {
-	// Ecmp load balancing
+	// Ecmp load balancing. Possible values are `enable` and `disable`.
 	EcmpLoadBalancing pulumi.StringPtrInput
 	// ecmp*tunnels is required when ecmp*load*balancing is enable
 	EcmpTunnels RemoteNetworkEcmpTunnelArrayInput
@@ -269,7 +269,7 @@ type RemoteNetworkState struct {
 	LicenseType pulumi.StringPtrInput
 	// The name of the remote network
 	Name pulumi.StringPtrInput
-	// setup the protocol when ecmp*load*balancing is disable
+	// setup the protocol when ecmp*load*balancing is disabled
 	Protocol RemoteNetworkProtocolPtrInput
 	// Region
 	Region pulumi.StringPtrInput
@@ -288,7 +288,7 @@ func (RemoteNetworkState) ElementType() reflect.Type {
 }
 
 type remoteNetworkArgs struct {
-	// Ecmp load balancing
+	// Ecmp load balancing. Possible values are `enable` and `disable`.
 	EcmpLoadBalancing *string `pulumi:"ecmpLoadBalancing"`
 	// ecmp*tunnels is required when ecmp*load*balancing is enable
 	EcmpTunnels []RemoteNetworkEcmpTunnel `pulumi:"ecmpTunnels"`
@@ -300,7 +300,7 @@ type remoteNetworkArgs struct {
 	LicenseType string `pulumi:"licenseType"`
 	// The name of the remote network
 	Name *string `pulumi:"name"`
-	// setup the protocol when ecmp*load*balancing is disable
+	// setup the protocol when ecmp*load*balancing is disabled
 	Protocol *RemoteNetworkProtocol `pulumi:"protocol"`
 	// Region
 	Region string `pulumi:"region"`
@@ -314,7 +314,7 @@ type remoteNetworkArgs struct {
 
 // The set of arguments for constructing a RemoteNetwork resource.
 type RemoteNetworkArgs struct {
-	// Ecmp load balancing
+	// Ecmp load balancing. Possible values are `enable` and `disable`.
 	EcmpLoadBalancing pulumi.StringPtrInput
 	// ecmp*tunnels is required when ecmp*load*balancing is enable
 	EcmpTunnels RemoteNetworkEcmpTunnelArrayInput
@@ -326,7 +326,7 @@ type RemoteNetworkArgs struct {
 	LicenseType pulumi.StringInput
 	// The name of the remote network
 	Name pulumi.StringPtrInput
-	// setup the protocol when ecmp*load*balancing is disable
+	// setup the protocol when ecmp*load*balancing is disabled
 	Protocol RemoteNetworkProtocolPtrInput
 	// Region
 	Region pulumi.StringInput
@@ -425,7 +425,7 @@ func (o RemoteNetworkOutput) ToRemoteNetworkOutputWithContext(ctx context.Contex
 	return o
 }
 
-// Ecmp load balancing
+// Ecmp load balancing. Possible values are `enable` and `disable`.
 func (o RemoteNetworkOutput) EcmpLoadBalancing() pulumi.StringOutput {
 	return o.ApplyT(func(v *RemoteNetwork) pulumi.StringOutput { return v.EcmpLoadBalancing }).(pulumi.StringOutput)
 }
@@ -460,7 +460,7 @@ func (o RemoteNetworkOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v *RemoteNetwork) pulumi.StringOutput { return v.Name }).(pulumi.StringOutput)
 }
 
-// setup the protocol when ecmp*load*balancing is disable
+// setup the protocol when ecmp*load*balancing is disabled
 func (o RemoteNetworkOutput) Protocol() RemoteNetworkProtocolPtrOutput {
 	return o.ApplyT(func(v *RemoteNetwork) RemoteNetworkProtocolPtrOutput { return v.Protocol }).(RemoteNetworkProtocolPtrOutput)
 }

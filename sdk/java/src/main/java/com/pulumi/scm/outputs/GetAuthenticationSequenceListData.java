@@ -23,7 +23,7 @@ public final class GetAuthenticationSequenceListData {
      */
     private String device;
     /**
-     * @return The folder of the item. Default: Shared.
+     * @return The folder in which the resource is defined
      * 
      */
     private String folder;
@@ -33,12 +33,12 @@ public final class GetAuthenticationSequenceListData {
      */
     private String id;
     /**
-     * @return The name of the item.
+     * @return The name of the authentication sequence
      * 
      */
     private String name;
     /**
-     * @return The snippet of the item.
+     * @return The snippet in which the resource is defined
      * 
      */
     private String snippet;
@@ -69,7 +69,7 @@ public final class GetAuthenticationSequenceListData {
         return this.device;
     }
     /**
-     * @return The folder of the item. Default: Shared.
+     * @return The folder in which the resource is defined
      * 
      */
     public String folder() {
@@ -83,14 +83,14 @@ public final class GetAuthenticationSequenceListData {
         return this.id;
     }
     /**
-     * @return The name of the item.
+     * @return The name of the authentication sequence
      * 
      */
     public String name() {
         return this.name;
     }
     /**
-     * @return The snippet of the item.
+     * @return The snippet in which the resource is defined
      * 
      */
     public String snippet() {

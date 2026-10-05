@@ -14,32 +14,84 @@ import java.util.Objects;
 
 @CustomType
 public final class GetTunnelInterfaceResult {
+    /**
+     * @return Description for tunnel interface
+     * 
+     */
     private String comment;
+    /**
+     * @return Default interface assignment for tunnel interface
+     * 
+     */
     private String defaultValue;
     /**
      * @return The device in which the resource is defined
      * 
      */
     private String device;
+    /**
+     * @return The folder in which the resource is defined
+     * 
+     */
     private String folder;
     /**
      * @return UUID of the resource for tunnel interface
      * 
      */
     private String id;
+    /**
+     * @return Interface management profile for tunnel interface
+     * 
+     */
     private String interfaceManagementProfile;
+    /**
+     * @return Tunnel Interface IP Parent
+     * 
+     */
     private List<GetTunnelInterfaceIp> ips;
+    /**
+     * @return Tunnel Interface IPv6 Configuration
+     * 
+     */
     private GetTunnelInterfaceIpv6 ipv6;
+    /**
+     * @return MTU for tunnel interface
+     * 
+     */
     private Integer mtu;
+    /**
+     * @return L3 sub-interface name for tunnel interface
+     * 
+     */
     private String name;
+    /**
+     * @return Name of Netflow Profile to assign to Interface
+     * 
+     */
     private String netflowProfile;
+    /**
+     * @return The snippet in which the resource is defined
+     * 
+     */
     private String snippet;
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     private String tfid;
 
     private GetTunnelInterfaceResult() {}
+    /**
+     * @return Description for tunnel interface
+     * 
+     */
     public String comment() {
         return this.comment;
     }
+    /**
+     * @return Default interface assignment for tunnel interface
+     * 
+     */
     public String defaultValue() {
         return this.defaultValue;
     }
@@ -50,6 +102,10 @@ public final class GetTunnelInterfaceResult {
     public String device() {
         return this.device;
     }
+    /**
+     * @return The folder in which the resource is defined
+     * 
+     */
     public String folder() {
         return this.folder;
     }
@@ -60,27 +116,59 @@ public final class GetTunnelInterfaceResult {
     public String id() {
         return this.id;
     }
+    /**
+     * @return Interface management profile for tunnel interface
+     * 
+     */
     public String interfaceManagementProfile() {
         return this.interfaceManagementProfile;
     }
+    /**
+     * @return Tunnel Interface IP Parent
+     * 
+     */
     public List<GetTunnelInterfaceIp> ips() {
         return this.ips;
     }
+    /**
+     * @return Tunnel Interface IPv6 Configuration
+     * 
+     */
     public GetTunnelInterfaceIpv6 ipv6() {
         return this.ipv6;
     }
+    /**
+     * @return MTU for tunnel interface
+     * 
+     */
     public Integer mtu() {
         return this.mtu;
     }
+    /**
+     * @return L3 sub-interface name for tunnel interface
+     * 
+     */
     public String name() {
         return this.name;
     }
+    /**
+     * @return Name of Netflow Profile to assign to Interface
+     * 
+     */
     public String netflowProfile() {
         return this.netflowProfile;
     }
+    /**
+     * @return The snippet in which the resource is defined
+     * 
+     */
     public String snippet() {
         return this.snippet;
     }
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     public String tfid() {
         return this.tfid;
     }

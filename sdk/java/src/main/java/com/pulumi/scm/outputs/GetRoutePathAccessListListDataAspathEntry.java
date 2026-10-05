@@ -12,7 +12,7 @@ import java.util.Objects;
 @CustomType
 public final class GetRoutePathAccessListListDataAspathEntry {
     /**
-     * @return Action
+     * @return Action. Possible values are `deny` and `permit`.
      * 
      */
     private String action;
@@ -29,7 +29,7 @@ public final class GetRoutePathAccessListListDataAspathEntry {
 
     private GetRoutePathAccessListListDataAspathEntry() {}
     /**
-     * @return Action
+     * @return Action. Possible values are `deny` and `permit`.
      * 
      */
     public String action() {

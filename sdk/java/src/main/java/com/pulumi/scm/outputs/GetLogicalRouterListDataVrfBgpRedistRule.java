@@ -14,7 +14,7 @@ import java.util.Objects;
 @CustomType
 public final class GetLogicalRouterListDataVrfBgpRedistRule {
     /**
-     * @return Address family identifier
+     * @return Address family identifier. Possible values are `ipv4` and `ipv6`.
      * 
      */
     private String addressFamilyIdentifier;
@@ -34,7 +34,7 @@ public final class GetLogicalRouterListDataVrfBgpRedistRule {
      */
     private String name;
     /**
-     * @return Route table
+     * @return Route table. Possible values are `unicast`, `multicast` and `both`.
      * 
      */
     private String routeTable;
@@ -64,14 +64,14 @@ public final class GetLogicalRouterListDataVrfBgpRedistRule {
      */
     private Integer setMed;
     /**
-     * @return Set origin
+     * @return Set origin. Possible values are `igp`, `egp` and `incomplete`.
      * 
      */
     private String setOrigin;
 
     private GetLogicalRouterListDataVrfBgpRedistRule() {}
     /**
-     * @return Address family identifier
+     * @return Address family identifier. Possible values are `ipv4` and `ipv6`.
      * 
      */
     public String addressFamilyIdentifier() {
@@ -99,7 +99,7 @@ public final class GetLogicalRouterListDataVrfBgpRedistRule {
         return this.name;
     }
     /**
-     * @return Route table
+     * @return Route table. Possible values are `unicast`, `multicast` and `both`.
      * 
      */
     public String routeTable() {
@@ -141,7 +141,7 @@ public final class GetLogicalRouterListDataVrfBgpRedistRule {
         return this.setMed;
     }
     /**
-     * @return Set origin
+     * @return Set origin. Possible values are `igp`, `egp` and `incomplete`.
      * 
      */
     public String setOrigin() {

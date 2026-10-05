@@ -13,7 +13,7 @@ namespace Pulumi.Scm.Inputs
     public sealed class UpdateScheduleUpdateScheduleThreatsRecurringDailyArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Action
+        /// Action. Possible values are `download-only` and `download-and-install`.
         /// </summary>
         [Input("action")]
         public Input<string>? Action { get; set; }

@@ -26,25 +26,34 @@ func LookupRoutePrefixList(ctx *pulumi.Context, args *LookupRoutePrefixListArgs,
 type LookupRoutePrefixListArgs struct {
 	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
+	// The folder in which the resource is defined
 	Folder *string `pulumi:"folder"`
 	// UUID of the resource
-	Id      string  `pulumi:"id"`
-	Name    *string `pulumi:"name"`
+	Id string `pulumi:"id"`
+	// Filter prefix list name
+	Name *string `pulumi:"name"`
+	// The snippet in which the resource is defined
 	Snippet *string `pulumi:"snippet"`
 }
 
 // A collection of values returned by getRoutePrefixList.
 type LookupRoutePrefixListResult struct {
+	// Description
 	Description string `pulumi:"description"`
 	// The device in which the resource is defined
 	Device string `pulumi:"device"`
+	// The folder in which the resource is defined
 	Folder string `pulumi:"folder"`
 	// UUID of the resource
-	Id      string                 `pulumi:"id"`
-	Name    string                 `pulumi:"name"`
-	Snippet string                 `pulumi:"snippet"`
-	Tfid    string                 `pulumi:"tfid"`
-	Type    GetRoutePrefixListType `pulumi:"type"`
+	Id string `pulumi:"id"`
+	// Filter prefix list name
+	Name string `pulumi:"name"`
+	// The snippet in which the resource is defined
+	Snippet string `pulumi:"snippet"`
+	// The Terraform ID.
+	Tfid string `pulumi:"tfid"`
+	// Address Family Type
+	Type GetRoutePrefixListType `pulumi:"type"`
 }
 
 func LookupRoutePrefixListOutput(ctx *pulumi.Context, args LookupRoutePrefixListOutputArgs, opts ...pulumi.InvokeOption) LookupRoutePrefixListResultOutput {
@@ -56,10 +65,13 @@ func LookupRoutePrefixListOutput(ctx *pulumi.Context, args LookupRoutePrefixList
 type LookupRoutePrefixListOutputArgs struct {
 	// The device in which the resource is defined
 	Device pulumi.StringPtrInput `pulumi:"device"`
+	// The folder in which the resource is defined
 	Folder pulumi.StringPtrInput `pulumi:"folder"`
 	// UUID of the resource
-	Id      pulumi.StringInput    `pulumi:"id"`
-	Name    pulumi.StringPtrInput `pulumi:"name"`
+	Id pulumi.StringInput `pulumi:"id"`
+	// Filter prefix list name
+	Name pulumi.StringPtrInput `pulumi:"name"`
+	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrInput `pulumi:"snippet"`
 }
 
@@ -82,6 +94,7 @@ func (o LookupRoutePrefixListResultOutput) ToLookupRoutePrefixListResultOutputWi
 	return o
 }
 
+// Description
 func (o LookupRoutePrefixListResultOutput) Description() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupRoutePrefixListResult) string { return v.Description }).(pulumi.StringOutput)
 }
@@ -91,6 +104,7 @@ func (o LookupRoutePrefixListResultOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupRoutePrefixListResult) string { return v.Device }).(pulumi.StringOutput)
 }
 
+// The folder in which the resource is defined
 func (o LookupRoutePrefixListResultOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupRoutePrefixListResult) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -100,18 +114,22 @@ func (o LookupRoutePrefixListResultOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupRoutePrefixListResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
+// Filter prefix list name
 func (o LookupRoutePrefixListResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupRoutePrefixListResult) string { return v.Name }).(pulumi.StringOutput)
 }
 
+// The snippet in which the resource is defined
 func (o LookupRoutePrefixListResultOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupRoutePrefixListResult) string { return v.Snippet }).(pulumi.StringOutput)
 }
 
+// The Terraform ID.
 func (o LookupRoutePrefixListResultOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupRoutePrefixListResult) string { return v.Tfid }).(pulumi.StringOutput)
 }
 
+// Address Family Type
 func (o LookupRoutePrefixListResultOutput) Type() GetRoutePrefixListTypeOutput {
 	return o.ApplyT(func(v LookupRoutePrefixListResult) GetRoutePrefixListType { return v.Type }).(GetRoutePrefixListTypeOutput)
 }

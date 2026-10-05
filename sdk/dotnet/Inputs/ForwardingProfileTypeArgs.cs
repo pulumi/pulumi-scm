@@ -20,16 +20,12 @@ namespace Pulumi.Scm.Inputs
 
         /// <summary>
         /// PAC file based forwarding configuration
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `GlobalProtectProxy`, `PacFile`, and `ZtnaAgent`.
         /// </summary>
         [Input("pacFile")]
         public Input<Inputs.ForwardingProfileTypePacFileArgs>? PacFile { get; set; }
 
         /// <summary>
         /// ZTNA agent-based forwarding configuration
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `GlobalProtectProxy`, `PacFile`, and `ZtnaAgent`.
         /// </summary>
         [Input("ztnaAgent")]
         public Input<Inputs.ForwardingProfileTypeZtnaAgentArgs>? ZtnaAgent { get; set; }

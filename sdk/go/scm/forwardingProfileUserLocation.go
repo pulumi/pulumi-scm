@@ -101,7 +101,7 @@ type ForwardingProfileUserLocation struct {
 
 	// Description of the user location
 	Description pulumi.StringPtrOutput `pulumi:"description"`
-	// The folder in which the resource is defined
+	// The folder in which the resource is defined. Possible values are `Mobile Users`.
 	Folder pulumi.StringOutput `pulumi:"folder"`
 	// Configuration for detecting internal hosts using IP address and FQDN
 	InternalHostDetection ForwardingProfileUserLocationInternalHostDetectionPtrOutput `pulumi:"internalHostDetection"`
@@ -145,7 +145,7 @@ func GetForwardingProfileUserLocation(ctx *pulumi.Context,
 type forwardingProfileUserLocationState struct {
 	// Description of the user location
 	Description *string `pulumi:"description"`
-	// The folder in which the resource is defined
+	// The folder in which the resource is defined. Possible values are `Mobile Users`.
 	Folder *string `pulumi:"folder"`
 	// Configuration for detecting internal hosts using IP address and FQDN
 	InternalHostDetection *ForwardingProfileUserLocationInternalHostDetection `pulumi:"internalHostDetection"`
@@ -160,7 +160,7 @@ type forwardingProfileUserLocationState struct {
 type ForwardingProfileUserLocationState struct {
 	// Description of the user location
 	Description pulumi.StringPtrInput
-	// The folder in which the resource is defined
+	// The folder in which the resource is defined. Possible values are `Mobile Users`.
 	Folder pulumi.StringPtrInput
 	// Configuration for detecting internal hosts using IP address and FQDN
 	InternalHostDetection ForwardingProfileUserLocationInternalHostDetectionPtrInput
@@ -179,7 +179,7 @@ func (ForwardingProfileUserLocationState) ElementType() reflect.Type {
 type forwardingProfileUserLocationArgs struct {
 	// Description of the user location
 	Description *string `pulumi:"description"`
-	// The folder in which the resource is defined
+	// The folder in which the resource is defined. Possible values are `Mobile Users`.
 	Folder *string `pulumi:"folder"`
 	// Configuration for detecting internal hosts using IP address and FQDN
 	InternalHostDetection *ForwardingProfileUserLocationInternalHostDetection `pulumi:"internalHostDetection"`
@@ -193,7 +193,7 @@ type forwardingProfileUserLocationArgs struct {
 type ForwardingProfileUserLocationArgs struct {
 	// Description of the user location
 	Description pulumi.StringPtrInput
-	// The folder in which the resource is defined
+	// The folder in which the resource is defined. Possible values are `Mobile Users`.
 	Folder pulumi.StringPtrInput
 	// Configuration for detecting internal hosts using IP address and FQDN
 	InternalHostDetection ForwardingProfileUserLocationInternalHostDetectionPtrInput
@@ -295,7 +295,7 @@ func (o ForwardingProfileUserLocationOutput) Description() pulumi.StringPtrOutpu
 	return o.ApplyT(func(v *ForwardingProfileUserLocation) pulumi.StringPtrOutput { return v.Description }).(pulumi.StringPtrOutput)
 }
 
-// The folder in which the resource is defined
+// The folder in which the resource is defined. Possible values are `Mobile Users`.
 func (o ForwardingProfileUserLocationOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v *ForwardingProfileUserLocation) pulumi.StringOutput { return v.Folder }).(pulumi.StringOutput)
 }

@@ -10,25 +10,57 @@ import java.util.Objects;
 
 @CustomType
 public final class GetLayer2SubinterfaceResult {
+    /**
+     * @return Description
+     * 
+     */
     private String comment;
     /**
      * @return The device in which the resource is defined
      * 
      */
     private String device;
+    /**
+     * @return The folder in which the resource is defined
+     * 
+     */
     private String folder;
     /**
      * @return UUID of the resource
      * 
      */
     private String id;
+    /**
+     * @return L2 sub-interface name
+     * 
+     */
     private String name;
+    /**
+     * @return Parent interface
+     * 
+     */
     private String parentInterface;
+    /**
+     * @return The snippet in which the resource is defined
+     * 
+     */
     private String snippet;
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     private String tfid;
+    /**
+     * @return VLAN tag
+     * 
+     */
     private String vlanTag;
 
     private GetLayer2SubinterfaceResult() {}
+    /**
+     * @return Description
+     * 
+     */
     public String comment() {
         return this.comment;
     }
@@ -39,6 +71,10 @@ public final class GetLayer2SubinterfaceResult {
     public String device() {
         return this.device;
     }
+    /**
+     * @return The folder in which the resource is defined
+     * 
+     */
     public String folder() {
         return this.folder;
     }
@@ -49,18 +85,38 @@ public final class GetLayer2SubinterfaceResult {
     public String id() {
         return this.id;
     }
+    /**
+     * @return L2 sub-interface name
+     * 
+     */
     public String name() {
         return this.name;
     }
+    /**
+     * @return Parent interface
+     * 
+     */
     public String parentInterface() {
         return this.parentInterface;
     }
+    /**
+     * @return The snippet in which the resource is defined
+     * 
+     */
     public String snippet() {
         return this.snippet;
     }
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     public String tfid() {
         return this.tfid;
     }
+    /**
+     * @return VLAN tag
+     * 
+     */
     public String vlanTag() {
         return this.vlanTag;
     }

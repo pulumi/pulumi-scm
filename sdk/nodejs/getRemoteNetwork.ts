@@ -58,7 +58,7 @@ export interface GetRemoteNetworkArgs {
  */
 export interface GetRemoteNetworkResult {
     /**
-     * Ecmp load balancing
+     * Ecmp load balancing. Possible values are `enable` and `disable`.
      */
     readonly ecmpLoadBalancing: string;
     /**
@@ -90,7 +90,7 @@ export interface GetRemoteNetworkResult {
      */
     readonly name: string;
     /**
-     * setup the protocol when ecmp*load*balancing is disable
+     * setup the protocol when ecmp*load*balancing is disabled
      */
     readonly protocol: outputs.GetRemoteNetworkProtocol;
     /**

@@ -14,7 +14,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class UpdateScheduleUpdateScheduleAntiVirusRecurringHourly {
     /**
-     * @return Action
+     * @return Action. Possible values are `download-only` and `download-and-install`.
      * 
      */
     private @Nullable String action;
@@ -26,7 +26,7 @@ public final class UpdateScheduleUpdateScheduleAntiVirusRecurringHourly {
 
     private UpdateScheduleUpdateScheduleAntiVirusRecurringHourly() {}
     /**
-     * @return Action
+     * @return Action. Possible values are `download-only` and `download-and-install`.
      * 
      */
     public Optional<String> action() {

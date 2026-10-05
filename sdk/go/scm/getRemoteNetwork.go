@@ -65,7 +65,7 @@ type LookupRemoteNetworkArgs struct {
 
 // A collection of values returned by getRemoteNetwork.
 type LookupRemoteNetworkResult struct {
-	// Ecmp load balancing
+	// Ecmp load balancing. Possible values are `enable` and `disable`.
 	EcmpLoadBalancing string `pulumi:"ecmpLoadBalancing"`
 	// ecmp*tunnels is required when ecmp*load*balancing is enable
 	EcmpTunnels []GetRemoteNetworkEcmpTunnel `pulumi:"ecmpTunnels"`
@@ -81,7 +81,7 @@ type LookupRemoteNetworkResult struct {
 	LicenseType string `pulumi:"licenseType"`
 	// The name of the remote network
 	Name string `pulumi:"name"`
-	// setup the protocol when ecmp*load*balancing is disable
+	// setup the protocol when ecmp*load*balancing is disabled
 	Protocol GetRemoteNetworkProtocol `pulumi:"protocol"`
 	// Region
 	Region string `pulumi:"region"`
@@ -129,7 +129,7 @@ func (o LookupRemoteNetworkResultOutput) ToLookupRemoteNetworkResultOutputWithCo
 	return o
 }
 
-// Ecmp load balancing
+// Ecmp load balancing. Possible values are `enable` and `disable`.
 func (o LookupRemoteNetworkResultOutput) EcmpLoadBalancing() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupRemoteNetworkResult) string { return v.EcmpLoadBalancing }).(pulumi.StringOutput)
 }
@@ -169,7 +169,7 @@ func (o LookupRemoteNetworkResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupRemoteNetworkResult) string { return v.Name }).(pulumi.StringOutput)
 }
 
-// setup the protocol when ecmp*load*balancing is disable
+// setup the protocol when ecmp*load*balancing is disabled
 func (o LookupRemoteNetworkResultOutput) Protocol() GetRemoteNetworkProtocolOutput {
 	return o.ApplyT(func(v LookupRemoteNetworkResult) GetRemoteNetworkProtocol { return v.Protocol }).(GetRemoteNetworkProtocolOutput)
 }

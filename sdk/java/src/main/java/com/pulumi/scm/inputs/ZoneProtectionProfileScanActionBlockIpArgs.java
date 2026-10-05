@@ -31,14 +31,14 @@ public final class ZoneProtectionProfileScanActionBlockIpArgs extends com.pulumi
     }
 
     /**
-     * Track by
+     * Track by. Possible values are `source-and-destination` and `source`.
      * 
      */
     @Import(name="trackBy", required=true)
     private Output<String> trackBy;
 
     /**
-     * @return Track by
+     * @return Track by. Possible values are `source-and-destination` and `source`.
      * 
      */
     public Output<String> trackBy() {
@@ -92,7 +92,7 @@ public final class ZoneProtectionProfileScanActionBlockIpArgs extends com.pulumi
         }
 
         /**
-         * @param trackBy Track by
+         * @param trackBy Track by. Possible values are `source-and-destination` and `source`.
          * 
          * @return builder
          * 
@@ -103,7 +103,7 @@ public final class ZoneProtectionProfileScanActionBlockIpArgs extends com.pulumi
         }
 
         /**
-         * @param trackBy Track by
+         * @param trackBy Track by. Possible values are `source-and-destination` and `source`.
          * 
          * @return builder
          * 

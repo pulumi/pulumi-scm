@@ -11,12 +11,12 @@ import java.util.Objects;
 @CustomType
 public final class GetDnsSecurityProfileListDataBotnetDomainsDnsSecurityCategory {
     /**
-     * @return Action
+     * @return Action. Possible values are `default`, `allow`, `block` and `sinkhole`.
      * 
      */
     private String action;
     /**
-     * @return Log level
+     * @return Log level. Possible values are `default`, `none`, `low`, `informational`, `medium`, `high` and `critical`.
      * 
      */
     private String logLevel;
@@ -26,21 +26,21 @@ public final class GetDnsSecurityProfileListDataBotnetDomainsDnsSecurityCategory
      */
     private String name;
     /**
-     * @return Packet capture
+     * @return Packet capture. Possible values are `disable`, `single-packet` and `extended-capture`.
      * 
      */
     private String packetCapture;
 
     private GetDnsSecurityProfileListDataBotnetDomainsDnsSecurityCategory() {}
     /**
-     * @return Action
+     * @return Action. Possible values are `default`, `allow`, `block` and `sinkhole`.
      * 
      */
     public String action() {
         return this.action;
     }
     /**
-     * @return Log level
+     * @return Log level. Possible values are `default`, `none`, `low`, `informational`, `medium`, `high` and `critical`.
      * 
      */
     public String logLevel() {
@@ -54,7 +54,7 @@ public final class GetDnsSecurityProfileListDataBotnetDomainsDnsSecurityCategory
         return this.name;
     }
     /**
-     * @return Packet capture
+     * @return Packet capture. Possible values are `disable`, `single-packet` and `extended-capture`.
      * 
      */
     public String packetCapture() {

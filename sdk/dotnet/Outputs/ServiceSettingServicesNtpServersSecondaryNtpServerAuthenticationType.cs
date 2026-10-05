@@ -19,14 +19,10 @@ namespace Pulumi.Scm.Outputs
         public readonly Outputs.ServiceSettingServicesNtpServersSecondaryNtpServerAuthenticationTypeAutokey? Autokey;
         /// <summary>
         /// None
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Autokey`, `None`, and `SymmetricKey`.
         /// </summary>
         public readonly Outputs.ServiceSettingServicesNtpServersSecondaryNtpServerAuthenticationTypeNone? None;
         /// <summary>
         /// Symmetric key
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Autokey`, `None`, and `SymmetricKey`.
         /// </summary>
         public readonly Outputs.ServiceSettingServicesNtpServersSecondaryNtpServerAuthenticationTypeSymmetricKey? SymmetricKey;
 

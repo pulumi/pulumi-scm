@@ -26,7 +26,7 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly string EntityId;
         /// <summary>
-        /// The folder of the item. Default: Shared.
+        /// The folder in which the resource is defined
         /// </summary>
         public readonly string Folder;
         /// <summary>
@@ -38,11 +38,11 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly int MaxClockSkew;
         /// <summary>
-        /// The name of the item.
+        /// The name of the SAML server profile
         /// </summary>
         public readonly string Name;
         /// <summary>
-        /// SAML HTTP binding for SLO requests to the identity provider
+        /// SAML HTTP binding for SLO requests to the identity provider. Possible values are `Post` and `Redirect`.
         /// </summary>
         public readonly string SloBindings;
         /// <summary>
@@ -50,11 +50,11 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly string SloUrl;
         /// <summary>
-        /// The snippet of the item.
+        /// The snippet in which the resource is defined
         /// </summary>
         public readonly string Snippet;
         /// <summary>
-        /// SAML HTTP binding for SSO requests to the identity provider
+        /// SAML HTTP binding for SSO requests to the identity provider. Possible values are `Post` and `Redirect`.
         /// </summary>
         public readonly string SsoBindings;
         /// <summary>

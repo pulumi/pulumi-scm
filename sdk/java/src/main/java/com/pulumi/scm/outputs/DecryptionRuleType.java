@@ -20,8 +20,6 @@ public final class DecryptionRuleType {
     /**
      * @return add the certificate name for SSL inbound inspection
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `sslForwardProxy` and `sslInboundInspection`.
-     * 
      */
     private @Nullable DecryptionRuleTypeSslInboundInspection sslInboundInspection;
 
@@ -35,8 +33,6 @@ public final class DecryptionRuleType {
     }
     /**
      * @return add the certificate name for SSL inbound inspection
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `sslForwardProxy` and `sslInboundInspection`.
      * 
      */
     public Optional<DecryptionRuleTypeSslInboundInspection> sslInboundInspection() {

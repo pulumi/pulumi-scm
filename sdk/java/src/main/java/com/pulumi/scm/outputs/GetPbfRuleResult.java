@@ -8,48 +8,135 @@ import com.pulumi.exceptions.MissingRequiredPropertyException;
 import com.pulumi.scm.outputs.GetPbfRuleAction;
 import com.pulumi.scm.outputs.GetPbfRuleEnforceSymmetricReturn;
 import com.pulumi.scm.outputs.GetPbfRuleFrom;
+import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
 @CustomType
 public final class GetPbfRuleResult {
+    /**
+     * @return Action
+     * 
+     */
     private GetPbfRuleAction action;
+    /**
+     * @return Applications
+     * 
+     */
     private List<String> applications;
+    /**
+     * @return Description
+     * 
+     */
     private String description;
+    /**
+     * @return Destination addresses
+     * 
+     */
     private List<String> destinations;
     /**
      * @return The device in which the resource is defined
      * 
      */
     private String device;
+    /**
+     * @return Enforce symmetric return
+     * 
+     */
     private GetPbfRuleEnforceSymmetricReturn enforceSymmetricReturn;
+    /**
+     * @return The folder in which the resource is defined
+     * 
+     */
     private String folder;
+    /**
+     * @return From
+     * 
+     */
     private GetPbfRuleFrom from;
     /**
      * @return UUID of the resource
      * 
      */
     private String id;
+    /**
+     * @return PBF rule name
+     * 
+     */
     private String name;
+    /**
+     * @return Negate destination address
+     * 
+     */
+    private Boolean negateDestination;
+    /**
+     * @return Negate source address
+     * 
+     */
+    private Boolean negateSource;
+    /**
+     * @return Schedule
+     * 
+     */
     private String schedule;
+    /**
+     * @return Services
+     * 
+     */
     private List<String> services;
+    /**
+     * @return The snippet in which the resource is defined
+     * 
+     */
     private String snippet;
+    /**
+     * @return Source users
+     * 
+     */
     private List<String> sourceUsers;
+    /**
+     * @return Source addresses
+     * 
+     */
     private List<String> sources;
+    /**
+     * @return Tags
+     * 
+     */
     private List<String> tags;
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     private String tfid;
 
     private GetPbfRuleResult() {}
+    /**
+     * @return Action
+     * 
+     */
     public GetPbfRuleAction action() {
         return this.action;
     }
+    /**
+     * @return Applications
+     * 
+     */
     public List<String> applications() {
         return this.applications;
     }
+    /**
+     * @return Description
+     * 
+     */
     public String description() {
         return this.description;
     }
+    /**
+     * @return Destination addresses
+     * 
+     */
     public List<String> destinations() {
         return this.destinations;
     }
@@ -60,12 +147,24 @@ public final class GetPbfRuleResult {
     public String device() {
         return this.device;
     }
+    /**
+     * @return Enforce symmetric return
+     * 
+     */
     public GetPbfRuleEnforceSymmetricReturn enforceSymmetricReturn() {
         return this.enforceSymmetricReturn;
     }
+    /**
+     * @return The folder in which the resource is defined
+     * 
+     */
     public String folder() {
         return this.folder;
     }
+    /**
+     * @return From
+     * 
+     */
     public GetPbfRuleFrom from() {
         return this.from;
     }
@@ -76,27 +175,73 @@ public final class GetPbfRuleResult {
     public String id() {
         return this.id;
     }
+    /**
+     * @return PBF rule name
+     * 
+     */
     public String name() {
         return this.name;
     }
+    /**
+     * @return Negate destination address
+     * 
+     */
+    public Boolean negateDestination() {
+        return this.negateDestination;
+    }
+    /**
+     * @return Negate source address
+     * 
+     */
+    public Boolean negateSource() {
+        return this.negateSource;
+    }
+    /**
+     * @return Schedule
+     * 
+     */
     public String schedule() {
         return this.schedule;
     }
+    /**
+     * @return Services
+     * 
+     */
     public List<String> services() {
         return this.services;
     }
+    /**
+     * @return The snippet in which the resource is defined
+     * 
+     */
     public String snippet() {
         return this.snippet;
     }
+    /**
+     * @return Source users
+     * 
+     */
     public List<String> sourceUsers() {
         return this.sourceUsers;
     }
+    /**
+     * @return Source addresses
+     * 
+     */
     public List<String> sources() {
         return this.sources;
     }
+    /**
+     * @return Tags
+     * 
+     */
     public List<String> tags() {
         return this.tags;
     }
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     public String tfid() {
         return this.tfid;
     }
@@ -120,6 +265,8 @@ public final class GetPbfRuleResult {
         private GetPbfRuleFrom from;
         private String id;
         private String name;
+        private Boolean negateDestination;
+        private Boolean negateSource;
         private String schedule;
         private List<String> services;
         private String snippet;
@@ -140,6 +287,8 @@ public final class GetPbfRuleResult {
     	      this.from = defaults.from;
     	      this.id = defaults.id;
     	      this.name = defaults.name;
+    	      this.negateDestination = defaults.negateDestination;
+    	      this.negateSource = defaults.negateSource;
     	      this.schedule = defaults.schedule;
     	      this.services = defaults.services;
     	      this.snippet = defaults.snippet;
@@ -236,6 +385,22 @@ public final class GetPbfRuleResult {
             return this;
         }
         @CustomType.Setter
+        public Builder negateDestination(Boolean negateDestination) {
+            if (negateDestination == null) {
+              throw new MissingRequiredPropertyException("GetPbfRuleResult", "negateDestination");
+            }
+            this.negateDestination = negateDestination;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder negateSource(Boolean negateSource) {
+            if (negateSource == null) {
+              throw new MissingRequiredPropertyException("GetPbfRuleResult", "negateSource");
+            }
+            this.negateSource = negateSource;
+            return this;
+        }
+        @CustomType.Setter
         public Builder schedule(String schedule) {
             if (schedule == null) {
               throw new MissingRequiredPropertyException("GetPbfRuleResult", "schedule");
@@ -315,6 +480,8 @@ public final class GetPbfRuleResult {
             _resultValue.from = from;
             _resultValue.id = id;
             _resultValue.name = name;
+            _resultValue.negateDestination = negateDestination;
+            _resultValue.negateSource = negateSource;
             _resultValue.schedule = schedule;
             _resultValue.services = services;
             _resultValue.snippet = snippet;

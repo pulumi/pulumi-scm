@@ -71,7 +71,7 @@ type LookupNatRuleArgs struct {
 
 // A collection of values returned by getNatRule.
 type LookupNatRuleResult struct {
-	// Active active device binding
+	// Active active device binding. Possible values are `primary`, `both`, `0` and `1`.
 	ActiveActiveDeviceBinding string `pulumi:"activeActiveDeviceBinding"`
 	// NAT rule description
 	Description string `pulumi:"description"`
@@ -93,9 +93,9 @@ type LookupNatRuleResult struct {
 	Id string `pulumi:"id"`
 	// NAT rule name
 	Name string `pulumi:"name"`
-	// NAT type
+	// NAT type. Possible values are `ipv4`, `nat64` and `nptv6`.
 	NatType string `pulumi:"natType"`
-	// The relative position of the rule
+	// The relative position of the rule. Possible values are `pre` and `post`.
 	Position string `pulumi:"position"`
 	// The service of the original packet
 	Service string `pulumi:"service"`
@@ -153,7 +153,7 @@ func (o LookupNatRuleResultOutput) ToLookupNatRuleResultOutputWithContext(ctx co
 	return o
 }
 
-// Active active device binding
+// Active active device binding. Possible values are `primary`, `both`, `0` and `1`.
 func (o LookupNatRuleResultOutput) ActiveActiveDeviceBinding() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupNatRuleResult) string { return v.ActiveActiveDeviceBinding }).(pulumi.StringOutput)
 }
@@ -210,12 +210,12 @@ func (o LookupNatRuleResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupNatRuleResult) string { return v.Name }).(pulumi.StringOutput)
 }
 
-// NAT type
+// NAT type. Possible values are `ipv4`, `nat64` and `nptv6`.
 func (o LookupNatRuleResultOutput) NatType() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupNatRuleResult) string { return v.NatType }).(pulumi.StringOutput)
 }
 
-// The relative position of the rule
+// The relative position of the rule. Possible values are `pre` and `post`.
 func (o LookupNatRuleResultOutput) Position() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupNatRuleResult) string { return v.Position }).(pulumi.StringOutput)
 }

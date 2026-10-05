@@ -246,7 +246,7 @@ export class SecurityRule extends pulumi.CustomResource {
     }
 
     /**
-     * The action to be taken when the rule is matched
+     * The action to be taken when the rule is matched. Possible values are `allow`, `deny`, `drop`, `reset-client`, `reset-server` and `reset-both`.
      */
     declare public readonly action: pulumi.Output<string | undefined>;
     /**
@@ -346,7 +346,7 @@ export class SecurityRule extends pulumi.CustomResource {
      */
     declare public readonly policyType: pulumi.Output<string>;
     /**
-     * The position of a security rule
+     * The position of a security rule. Possible values are `pre` and `post`.
      */
     declare public readonly position: pulumi.Output<string>;
     /**
@@ -390,7 +390,7 @@ export class SecurityRule extends pulumi.CustomResource {
      */
     declare public readonly tags: pulumi.Output<string[] | undefined>;
     /**
-     * The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `"before"` or `"after"`.
+     * UUID of the rule to position this rule relative to. Required when `relativePosition` is `"before"` or `"after"`.
      */
     declare public readonly targetRule: pulumi.Output<string | undefined>;
     /**
@@ -512,7 +512,7 @@ export class SecurityRule extends pulumi.CustomResource {
  */
 export interface SecurityRuleState {
     /**
-     * The action to be taken when the rule is matched
+     * The action to be taken when the rule is matched. Possible values are `allow`, `deny`, `drop`, `reset-client`, `reset-server` and `reset-both`.
      */
     action?: pulumi.Input<string | undefined>;
     /**
@@ -612,7 +612,7 @@ export interface SecurityRuleState {
      */
     policyType?: pulumi.Input<string | undefined>;
     /**
-     * The position of a security rule
+     * The position of a security rule. Possible values are `pre` and `post`.
      */
     position?: pulumi.Input<string | undefined>;
     /**
@@ -656,7 +656,7 @@ export interface SecurityRuleState {
      */
     tags?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
-     * The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `"before"` or `"after"`.
+     * UUID of the rule to position this rule relative to. Required when `relativePosition` is `"before"` or `"after"`.
      */
     targetRule?: pulumi.Input<string | undefined>;
     /**
@@ -678,7 +678,7 @@ export interface SecurityRuleState {
  */
 export interface SecurityRuleArgs {
     /**
-     * The action to be taken when the rule is matched
+     * The action to be taken when the rule is matched. Possible values are `allow`, `deny`, `drop`, `reset-client`, `reset-server` and `reset-both`.
      */
     action?: pulumi.Input<string | undefined>;
     /**
@@ -778,7 +778,7 @@ export interface SecurityRuleArgs {
      */
     policyType?: pulumi.Input<string | undefined>;
     /**
-     * The position of a security rule
+     * The position of a security rule. Possible values are `pre` and `post`.
      */
     position?: pulumi.Input<string | undefined>;
     /**
@@ -822,7 +822,7 @@ export interface SecurityRuleArgs {
      */
     tags?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
-     * The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `"before"` or `"after"`.
+     * UUID of the rule to position this rule relative to. Required when `relativePosition` is `"before"` or `"after"`.
      */
     targetRule?: pulumi.Input<string | undefined>;
     /**

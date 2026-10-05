@@ -49,7 +49,7 @@ public final class GetAuthenticationRuleListData {
      */
     private Boolean disabled;
     /**
-     * @return The folder of the item. Default: Shared.
+     * @return Folder
      * 
      */
     private String folder;
@@ -84,7 +84,7 @@ public final class GetAuthenticationRuleListData {
      */
     private String logSetting;
     /**
-     * @return The name of the item.
+     * @return The name of the authentication rule
      * 
      */
     private String name;
@@ -99,7 +99,7 @@ public final class GetAuthenticationRuleListData {
      */
     private Boolean negateSource;
     /**
-     * @return The relative position of the rule
+     * @return The relative position of the rule. Possible values are `pre` and `post`.
      * 
      */
     private String position;
@@ -114,7 +114,7 @@ public final class GetAuthenticationRuleListData {
      */
     private List<String> services;
     /**
-     * @return The snippet of the item.
+     * @return Snippet
      * 
      */
     private String snippet;
@@ -139,7 +139,7 @@ public final class GetAuthenticationRuleListData {
      */
     private List<String> tags;
     /**
-     * @return The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `&#34;before&#34;` or `&#34;after&#34;`.
+     * @return UUID of the rule to position this rule relative to. Required when `relativePosition` is `&#34;before&#34;` or `&#34;after&#34;`.
      * 
      */
     private String targetRule;
@@ -210,7 +210,7 @@ public final class GetAuthenticationRuleListData {
         return this.disabled;
     }
     /**
-     * @return The folder of the item. Default: Shared.
+     * @return Folder
      * 
      */
     public String folder() {
@@ -259,7 +259,7 @@ public final class GetAuthenticationRuleListData {
         return this.logSetting;
     }
     /**
-     * @return The name of the item.
+     * @return The name of the authentication rule
      * 
      */
     public String name() {
@@ -280,7 +280,7 @@ public final class GetAuthenticationRuleListData {
         return this.negateSource;
     }
     /**
-     * @return The relative position of the rule
+     * @return The relative position of the rule. Possible values are `pre` and `post`.
      * 
      */
     public String position() {
@@ -301,7 +301,7 @@ public final class GetAuthenticationRuleListData {
         return this.services;
     }
     /**
-     * @return The snippet of the item.
+     * @return Snippet
      * 
      */
     public String snippet() {
@@ -336,7 +336,7 @@ public final class GetAuthenticationRuleListData {
         return this.tags;
     }
     /**
-     * @return The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `&#34;before&#34;` or `&#34;after&#34;`.
+     * @return UUID of the rule to position this rule relative to. Required when `relativePosition` is `&#34;before&#34;` or `&#34;after&#34;`.
      * 
      */
     public String targetRule() {

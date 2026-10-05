@@ -40,7 +40,7 @@ public final class GetLogicalRouterListDataVrfRipInterface {
      */
     private GetLogicalRouterListDataVrfRipInterfaceInterfaceOutboundDistributeList interfaceOutboundDistributeList;
     /**
-     * @return Mode
+     * @return Mode. Possible values are `active`, `passive` and `send-only`.
      * 
      */
     private String mode;
@@ -50,7 +50,7 @@ public final class GetLogicalRouterListDataVrfRipInterface {
      */
     private String name;
     /**
-     * @return Split horizon
+     * @return Split horizon. Possible values are `split-horizon`, `no-split-horizon` and `no-split-horizon-with-poison-reverse`.
      * 
      */
     private String splitHorizon;
@@ -92,7 +92,7 @@ public final class GetLogicalRouterListDataVrfRipInterface {
         return this.interfaceOutboundDistributeList;
     }
     /**
-     * @return Mode
+     * @return Mode. Possible values are `active`, `passive` and `send-only`.
      * 
      */
     public String mode() {
@@ -106,7 +106,7 @@ public final class GetLogicalRouterListDataVrfRipInterface {
         return this.name;
     }
     /**
-     * @return Split horizon
+     * @return Split horizon. Possible values are `split-horizon`, `no-split-horizon` and `no-split-horizon-with-poison-reverse`.
      * 
      */
     public String splitHorizon() {

@@ -85,7 +85,7 @@ class GetForwardingProfileRegionalAndCustomProxyResult:
     @pulumi.getter(name="fallbackOption")
     def fallback_option(self) -> _builtins.str:
         """
-        Behavior when proxy connection fails - 'fail-open' allows direct internet access, 'fail-safe' blocks traffic until proxy is restored
+        Behavior when proxy connection fails - 'fail-open' allows direct internet access, 'fail-safe' blocks traffic until proxy is restored. Possible values are `fail-open` and `fail-safe`.
         """
         return pulumi.get(self, "fallback_option")
 
@@ -93,7 +93,7 @@ class GetForwardingProfileRegionalAndCustomProxyResult:
     @pulumi.getter
     def folder(self) -> _builtins.str:
         """
-        The folder in which the resource is defined
+        The folder in which the resource is defined. Possible values are `Mobile Users`.
         """
         return pulumi.get(self, "folder")
 
@@ -109,7 +109,7 @@ class GetForwardingProfileRegionalAndCustomProxyResult:
     @pulumi.getter(name="locationPreference")
     def location_preference(self) -> _builtins.str:
         """
-        Strategy for selecting Prisma Access location - 'best-available-pa-location' automatically selects optimal location, 'specific-pa-location' uses predefined locations
+        Strategy for selecting Prisma Access location - 'best-available-pa-location' automatically selects optimal location, 'specific-pa-location' uses predefined locations. Possible values are `best-available-pa-location` and `specific-pa-location`.
         """
         return pulumi.get(self, "location_preference")
 
@@ -157,7 +157,7 @@ class GetForwardingProfileRegionalAndCustomProxyResult:
     @pulumi.getter
     def type(self) -> _builtins.str:
         """
-        Proxy configuration type - 'gp-and-pac' for GlobalProtect and PAC file forwarding, 'ztna-agent' for ZTNA agent forwarding
+        Proxy configuration type - 'gp-and-pac' for GlobalProtect and PAC file forwarding, 'ztna-agent' for ZTNA agent forwarding. Possible values are `gp-and-pac` and `ztna-agent`.
         """
         return pulumi.get(self, "type")
 
@@ -212,7 +212,7 @@ def get_forwarding_profile_regional_and_custom_proxy(folder: Optional[_builtins.
     ```
 
 
-    :param _builtins.str folder: The folder in which the resource is defined
+    :param _builtins.str folder: The folder in which the resource is defined. Possible values are `Mobile Users`.
     :param _builtins.str id: The UUID of the regional and custom proxy
     :param _builtins.str name: alphanumeric string [ 0-9a-zA-Z ._-]
     """
@@ -266,7 +266,7 @@ def get_forwarding_profile_regional_and_custom_proxy_output(folder: pulumi.Input
     ```
 
 
-    :param _builtins.str folder: The folder in which the resource is defined
+    :param _builtins.str folder: The folder in which the resource is defined. Possible values are `Mobile Users`.
     :param _builtins.str id: The UUID of the regional and custom proxy
     :param _builtins.str name: alphanumeric string [ 0-9a-zA-Z ._-]
     """

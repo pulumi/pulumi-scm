@@ -49,14 +49,14 @@ public final class BgpRoutingArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Backbone routing
+     * Backbone routing. Possible values are `no-asymmetric-routing`, `asymmetric-routing-only` and `asymmetric-routing-with-load-share`.
      * 
      */
     @Import(name="backboneRouting")
     private @Nullable Output<String> backboneRouting;
 
     /**
-     * @return Backbone routing
+     * @return Backbone routing. Possible values are `no-asymmetric-routing`, `asymmetric-routing-only` and `asymmetric-routing-with-load-share`.
      * 
      */
     public Optional<Output<String>> backboneRouting() {
@@ -180,7 +180,7 @@ public final class BgpRoutingArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param backboneRouting Backbone routing
+         * @param backboneRouting Backbone routing. Possible values are `no-asymmetric-routing`, `asymmetric-routing-only` and `asymmetric-routing-with-load-share`.
          * 
          * @return builder
          * 
@@ -191,7 +191,7 @@ public final class BgpRoutingArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param backboneRouting Backbone routing
+         * @param backboneRouting Backbone routing. Possible values are `no-asymmetric-routing`, `asymmetric-routing-only` and `asymmetric-routing-with-load-share`.
          * 
          * @return builder
          * 

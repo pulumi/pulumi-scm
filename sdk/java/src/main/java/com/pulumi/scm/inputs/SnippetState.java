@@ -77,14 +77,14 @@ public final class SnippetState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The snippet type
+     * The snippet type. Possible values are `predefined`, `custom` and `readonly`.
      * 
      */
     @Import(name="type")
     private @Nullable Output<String> type;
 
     /**
-     * @return The snippet type
+     * @return The snippet type. Possible values are `predefined`, `custom` and `readonly`.
      * 
      */
     public Optional<Output<String>> type() {
@@ -214,7 +214,7 @@ public final class SnippetState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param type The snippet type
+         * @param type The snippet type. Possible values are `predefined`, `custom` and `readonly`.
          * 
          * @return builder
          * 
@@ -225,7 +225,7 @@ public final class SnippetState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param type The snippet type
+         * @param type The snippet type. Possible values are `predefined`, `custom` and `readonly`.
          * 
          * @return builder
          * 

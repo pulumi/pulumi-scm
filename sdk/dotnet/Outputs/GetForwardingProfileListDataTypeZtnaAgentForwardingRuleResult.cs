@@ -34,7 +34,7 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly string SourceApplications;
         /// <summary>
-        /// Type of traffic this ZTNA rule applies to (dns, network, or both)
+        /// Type of traffic this ZTNA rule applies to (dns, network, or both). Possible values are `Dns`, `dns-and-network-traffic` and `network-traffic`.
         /// </summary>
         public readonly string TrafficType;
         /// <summary>

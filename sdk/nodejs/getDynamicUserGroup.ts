@@ -46,12 +46,21 @@ export interface GetDynamicUserGroupArgs {
      * The device in which the resource is defined
      */
     device?: string;
+    /**
+     * The folder in which the resource is defined
+     */
     folder?: string;
     /**
      * The UUID of the dynamic user group
      */
     id: string;
+    /**
+     * The name of the dynamic address group
+     */
     name?: string;
+    /**
+     * The snippet in which the resource is defined
+     */
     snippet?: string;
 }
 
@@ -59,20 +68,41 @@ export interface GetDynamicUserGroupArgs {
  * A collection of values returned by getDynamicUserGroup.
  */
 export interface GetDynamicUserGroupResult {
+    /**
+     * The description of the dynamic address group
+     */
     readonly description: string;
     /**
      * The device in which the resource is defined
      */
     readonly device: string;
+    /**
+     * The tag-based filter for the dynamic user group
+     */
     readonly filter: string;
+    /**
+     * The folder in which the resource is defined
+     */
     readonly folder: string;
     /**
      * The UUID of the dynamic user group
      */
     readonly id: string;
+    /**
+     * The name of the dynamic address group
+     */
     readonly name: string;
+    /**
+     * The snippet in which the resource is defined
+     */
     readonly snippet: string;
+    /**
+     * Tags associated with the dynamic user group
+     */
     readonly tags: string[];
+    /**
+     * The Terraform ID.
+     */
     readonly tfid: string;
 }
 /**
@@ -117,11 +147,20 @@ export interface GetDynamicUserGroupOutputArgs {
      * The device in which the resource is defined
      */
     device?: pulumi.Input<string | undefined>;
+    /**
+     * The folder in which the resource is defined
+     */
     folder?: pulumi.Input<string | undefined>;
     /**
      * The UUID of the dynamic user group
      */
     id: pulumi.Input<string>;
+    /**
+     * The name of the dynamic address group
+     */
     name?: pulumi.Input<string | undefined>;
+    /**
+     * The snippet in which the resource is defined
+     */
     snippet?: pulumi.Input<string | undefined>;
 }

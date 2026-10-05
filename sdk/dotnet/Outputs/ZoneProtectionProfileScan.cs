@@ -26,7 +26,7 @@ namespace Pulumi.Scm.Outputs
         /// * "8001" - TCP Port Scan
         /// * "8002" - Host Sweep
         /// * "8003" - UDP Port Scan
-        /// * "8006" - Port Scan
+        /// * "8006" - Port Scan. Possible values are `8001`, `8002`, `8003` and `8006`.
         /// </summary>
         public readonly string Name;
         /// <summary>

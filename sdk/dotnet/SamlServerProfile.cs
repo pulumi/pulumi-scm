@@ -108,8 +108,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The folder in which the resource is defined
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Output("folder")]
         public Output<string?> Folder { get; private set; } = null!;
@@ -127,7 +125,7 @@ namespace Pulumi.Scm
         public Output<string> Name { get; private set; } = null!;
 
         /// <summary>
-        /// SAML HTTP binding for SLO requests to the identity provider
+        /// SAML HTTP binding for SLO requests to the identity provider. Possible values are `Post` and `Redirect`.
         /// </summary>
         [Output("sloBindings")]
         public Output<string?> SloBindings { get; private set; } = null!;
@@ -140,14 +138,12 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The snippet in which the resource is defined
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Output("snippet")]
         public Output<string?> Snippet { get; private set; } = null!;
 
         /// <summary>
-        /// SAML HTTP binding for SSO requests to the identity provider
+        /// SAML HTTP binding for SSO requests to the identity provider. Possible values are `Post` and `Redirect`.
         /// </summary>
         [Output("ssoBindings")]
         public Output<string> SsoBindings { get; private set; } = null!;
@@ -242,8 +238,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The folder in which the resource is defined
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("folder")]
         public Input<string>? Folder { get; set; }
@@ -261,7 +255,7 @@ namespace Pulumi.Scm
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// SAML HTTP binding for SLO requests to the identity provider
+        /// SAML HTTP binding for SLO requests to the identity provider. Possible values are `Post` and `Redirect`.
         /// </summary>
         [Input("sloBindings")]
         public Input<string>? SloBindings { get; set; }
@@ -274,14 +268,12 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The snippet in which the resource is defined
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("snippet")]
         public Input<string>? Snippet { get; set; }
 
         /// <summary>
-        /// SAML HTTP binding for SSO requests to the identity provider
+        /// SAML HTTP binding for SSO requests to the identity provider. Possible values are `Post` and `Redirect`.
         /// </summary>
         [Input("ssoBindings", required: true)]
         public Input<string> SsoBindings { get; set; } = null!;
@@ -332,8 +324,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The folder in which the resource is defined
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("folder")]
         public Input<string>? Folder { get; set; }
@@ -351,7 +341,7 @@ namespace Pulumi.Scm
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// SAML HTTP binding for SLO requests to the identity provider
+        /// SAML HTTP binding for SLO requests to the identity provider. Possible values are `Post` and `Redirect`.
         /// </summary>
         [Input("sloBindings")]
         public Input<string>? SloBindings { get; set; }
@@ -364,14 +354,12 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The snippet in which the resource is defined
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("snippet")]
         public Input<string>? Snippet { get; set; }
 
         /// <summary>
-        /// SAML HTTP binding for SSO requests to the identity provider
+        /// SAML HTTP binding for SSO requests to the identity provider. Possible values are `Post` and `Redirect`.
         /// </summary>
         [Input("ssoBindings")]
         public Input<string>? SsoBindings { get; set; }

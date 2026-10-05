@@ -5,7 +5,6 @@ package com.pulumi.scm;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -65,16 +64,12 @@ public final class AuthenticationPortalArgs extends com.pulumi.resources.Resourc
     /**
      * The folder in which the resource is defined
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
      */
     @Import(name="folder")
     private @Nullable Output<String> folder;
 
     /**
      * @return The folder in which the resource is defined
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public Optional<Output<String>> folder() {
@@ -115,21 +110,19 @@ public final class AuthenticationPortalArgs extends com.pulumi.resources.Resourc
      * The authentication portal IP address or hostname
      * 
      */
-    @Import(name="redirectHost", required=true)
-    private Output<String> redirectHost;
+    @Import(name="redirectHost")
+    private @Nullable Output<String> redirectHost;
 
     /**
      * @return The authentication portal IP address or hostname
      * 
      */
-    public Output<String> redirectHost() {
-        return this.redirectHost;
+    public Optional<Output<String>> redirectHost() {
+        return Optional.ofNullable(this.redirectHost);
     }
 
     /**
      * The snippet in which the resource is defined
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     @Import(name="snippet")
@@ -137,8 +130,6 @@ public final class AuthenticationPortalArgs extends com.pulumi.resources.Resourc
 
     /**
      * @return The snippet in which the resource is defined
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public Optional<Output<String>> snippet() {
@@ -274,8 +265,6 @@ public final class AuthenticationPortalArgs extends com.pulumi.resources.Resourc
         /**
          * @param folder The folder in which the resource is defined
          * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-         * 
          * @return builder
          * 
          */
@@ -286,8 +275,6 @@ public final class AuthenticationPortalArgs extends com.pulumi.resources.Resourc
 
         /**
          * @param folder The folder in which the resource is defined
-         * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
          * 
          * @return builder
          * 
@@ -344,7 +331,7 @@ public final class AuthenticationPortalArgs extends com.pulumi.resources.Resourc
          * @return builder
          * 
          */
-        public Builder redirectHost(Output<String> redirectHost) {
+        public Builder redirectHost(@Nullable Output<String> redirectHost) {
             $.redirectHost = redirectHost;
             return this;
         }
@@ -362,8 +349,6 @@ public final class AuthenticationPortalArgs extends com.pulumi.resources.Resourc
         /**
          * @param snippet The snippet in which the resource is defined
          * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-         * 
          * @return builder
          * 
          */
@@ -374,8 +359,6 @@ public final class AuthenticationPortalArgs extends com.pulumi.resources.Resourc
 
         /**
          * @param snippet The snippet in which the resource is defined
-         * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
          * 
          * @return builder
          * 
@@ -427,9 +410,6 @@ public final class AuthenticationPortalArgs extends com.pulumi.resources.Resourc
         }
 
         public AuthenticationPortalArgs build() {
-            if ($.redirectHost == null) {
-                throw new MissingRequiredPropertyException("AuthenticationPortalArgs", "redirectHost");
-            }
             return $;
         }
     }

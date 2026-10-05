@@ -10,6 +10,7 @@ import com.pulumi.core.internal.Codegen;
 import com.pulumi.scm.Utilities;
 import com.pulumi.scm.VlanInterfaceArgs;
 import com.pulumi.scm.inputs.VlanInterfaceState;
+import com.pulumi.scm.outputs.VlanInterfaceAdjustTcpMss;
 import com.pulumi.scm.outputs.VlanInterfaceArp;
 import com.pulumi.scm.outputs.VlanInterfaceDdnsConfig;
 import com.pulumi.scm.outputs.VlanInterfaceDhcpClient;
@@ -35,6 +36,7 @@ import javax.annotation.Nullable;
  * import com.pulumi.scm.VlanInterface;
  * import com.pulumi.scm.VlanInterfaceArgs;
  * import com.pulumi.scm.inputs.VlanInterfaceIpArgs;
+ * import com.pulumi.scm.inputs.VlanInterfaceAdjustTcpMssArgs;
  * import java.util.ArrayList;
  * import java.util.Arrays;
  * import java.util.Map;
@@ -58,6 +60,11 @@ import javax.annotation.Nullable;
  *             .vlanTag("1234")
  *             .ips(VlanInterfaceIpArgs.builder()
  *                 .name("198.18.1.1/24")
+ *                 .build())
+ *             .adjustTcpMss(VlanInterfaceAdjustTcpMssArgs.builder()
+ *                 .enable(true)
+ *                 .ipv4MssAdjustment(40)
+ *                 .ipv6MssAdjustment(60)
  *                 .build())
  *             .build());
  * 
@@ -91,6 +98,20 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="scm:index/vlanInterface:VlanInterface")
 public class VlanInterface extends com.pulumi.resources.CustomResource {
+    /**
+     * TCP MSS adjustment settings for the interface
+     * 
+     */
+    @Export(name="adjustTcpMss", refs={VlanInterfaceAdjustTcpMss.class}, tree="[0]")
+    private Output</* @Nullable */ VlanInterfaceAdjustTcpMss> adjustTcpMss;
+
+    /**
+     * @return TCP MSS adjustment settings for the interface
+     * 
+     */
+    public Output<Optional<VlanInterfaceAdjustTcpMss>> adjustTcpMss() {
+        return Codegen.optional(this.adjustTcpMss);
+    }
     /**
      * ARP configuration
      * 
@@ -164,16 +185,12 @@ public class VlanInterface extends com.pulumi.resources.CustomResource {
     /**
      * Vlan interfaces DHCP Client Object
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
-     * 
      */
     @Export(name="dhcpClient", refs={VlanInterfaceDhcpClient.class}, tree="[0]")
     private Output</* @Nullable */ VlanInterfaceDhcpClient> dhcpClient;
 
     /**
      * @return Vlan interfaces DHCP Client Object
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
      * 
      */
     public Output<Optional<VlanInterfaceDhcpClient>> dhcpClient() {
@@ -182,16 +199,12 @@ public class VlanInterface extends com.pulumi.resources.CustomResource {
     /**
      * The folder in which the resource is defined
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
      */
     @Export(name="folder", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> folder;
 
     /**
      * @return The folder in which the resource is defined
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public Output<Optional<String>> folder() {
@@ -214,16 +227,12 @@ public class VlanInterface extends com.pulumi.resources.CustomResource {
     /**
      * VLAN Interface IP Parent
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
-     * 
      */
     @Export(name="ips", refs={List.class,VlanInterfaceIp.class}, tree="[0,1]")
     private Output</* @Nullable */ List<VlanInterfaceIp>> ips;
 
     /**
      * @return VLAN Interface IP Parent
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
      * 
      */
     public Output<Optional<List<VlanInterfaceIp>>> ips() {
@@ -274,16 +283,12 @@ public class VlanInterface extends com.pulumi.resources.CustomResource {
     /**
      * The snippet in which the resource is defined
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
      */
     @Export(name="snippet", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> snippet;
 
     /**
      * @return The snippet in which the resource is defined
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public Output<Optional<String>> snippet() {

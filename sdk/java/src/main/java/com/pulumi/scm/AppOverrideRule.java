@@ -47,14 +47,14 @@ import javax.annotation.Nullable;
  *     public static void stack(Context ctx) {
  *         // --- 1. TAG Resource ---
  *         var appOverridePositionTag = new Tag("appOverridePositionTag", TagArgs.builder()
- *             .name("app-override-position-tag_1")
+ *             .name("tf_app-override-position-tag_1")
  *             .folder("ngfw-shared")
  *             .color("Orange")
  *             .build());
  * 
  *         // --- 2. ANCHOR RULE (Used for relative positioning by other rules) ---
  *         var anchorAppOverride = new AppOverrideRule("anchorAppOverride", AppOverrideRuleArgs.builder()
- *             .name("anchor-app-override-rule")
+ *             .name("tf_anchor-app-override-rule")
  *             .description("Base rule for testing 'before' and 'after' positioning. Updating")
  *             .folder("ngfw-shared")
  *             .position("pre")
@@ -70,7 +70,7 @@ import javax.annotation.Nullable;
  * 
  *         // --- 3. ABSOLUTE POSITIONING Examples ("top" and "bottom") ---
  *         var ruleTopAppOverride = new AppOverrideRule("ruleTopAppOverride", AppOverrideRuleArgs.builder()
- *             .name("top-absolute-app-override")
+ *             .name("tf_top-absolute-app-override")
  *             .description("Placed at the very TOP of the App Override rulebase.")
  *             .folder("ngfw-shared")
  *             .position("pre")
@@ -85,7 +85,7 @@ import javax.annotation.Nullable;
  *             .build());
  * 
  *         var ruleBottomAppOverride = new AppOverrideRule("ruleBottomAppOverride", AppOverrideRuleArgs.builder()
- *             .name("bottom-absolute-app-override")
+ *             .name("tf_bottom-absolute-app-override")
  *             .description("Placed at the very BOTTOM of the App Override rulebase.")
  *             .folder("ngfw-shared")
  *             .position("pre")
@@ -101,7 +101,7 @@ import javax.annotation.Nullable;
  * 
  *         //--- 4. RELATIVE POSITIONING Examples ("before" and "after") ---
  *         var ruleBeforeAnchorOverride = new AppOverrideRule("ruleBeforeAnchorOverride", AppOverrideRuleArgs.builder()
- *             .name("before-anchor-app-override")
+ *             .name("tf_before-anchor-app-override")
  *             .description("Positioned immediately BEFORE the anchor-app-override-rule.")
  *             .folder("ngfw-shared")
  *             .position("pre")
@@ -117,7 +117,7 @@ import javax.annotation.Nullable;
  *             .build());
  * 
  *         var ruleAfterAnchorOverride = new AppOverrideRule("ruleAfterAnchorOverride", AppOverrideRuleArgs.builder()
- *             .name("after-anchor-app-override")
+ *             .name("tf_after-anchor-app-override")
  *             .description("Positioned immediately AFTER the anchor-app-override-rule.")
  *             .folder("ngfw-shared")
  *             .position("pre")
@@ -235,16 +235,12 @@ public class AppOverrideRule extends com.pulumi.resources.CustomResource {
     /**
      * The folder in which the resource is defined
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
      */
     @Export(name="folder", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> folder;
 
     /**
      * @return The folder in which the resource is defined
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public Output<Optional<String>> folder() {
@@ -335,28 +331,28 @@ public class AppOverrideRule extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.port);
     }
     /**
-     * The position of a security rule
+     * The position of a security rule. Possible values are `pre` and `post`.
      * 
      */
     @Export(name="position", refs={String.class}, tree="[0]")
     private Output<String> position;
 
     /**
-     * @return The position of a security rule
+     * @return The position of a security rule. Possible values are `pre` and `post`.
      * 
      */
     public Output<String> position() {
         return this.position;
     }
     /**
-     * Protocol
+     * Protocol. Possible values are `tcp` and `udp`.
      * 
      */
     @Export(name="protocol", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> protocol;
 
     /**
-     * @return Protocol
+     * @return Protocol. Possible values are `tcp` and `udp`.
      * 
      */
     public Output<Optional<String>> protocol() {
@@ -379,16 +375,12 @@ public class AppOverrideRule extends com.pulumi.resources.CustomResource {
     /**
      * The snippet in which the resource is defined
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
      */
     @Export(name="snippet", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> snippet;
 
     /**
      * @return The snippet in which the resource is defined
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public Output<Optional<String>> snippet() {
@@ -423,14 +415,14 @@ public class AppOverrideRule extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.tags);
     }
     /**
-     * The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `&#34;before&#34;` or `&#34;after&#34;`.
+     * UUID of the rule to position this rule relative to. Required when `relativePosition` is `&#34;before&#34;` or `&#34;after&#34;`.
      * 
      */
     @Export(name="targetRule", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> targetRule;
 
     /**
-     * @return The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `&#34;before&#34;` or `&#34;after&#34;`.
+     * @return UUID of the rule to position this rule relative to. Required when `relativePosition` is `&#34;before&#34;` or `&#34;after&#34;`.
      * 
      */
     public Output<Optional<String>> targetRule() {

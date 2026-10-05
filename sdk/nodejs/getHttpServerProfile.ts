@@ -28,12 +28,21 @@ export interface GetHttpServerProfileArgs {
      * The device in which the resource is defined
      */
     device?: string;
+    /**
+     * The folder in which the resource is defined
+     */
     folder?: string;
     /**
      * The UUID of the HTTP server profile
      */
     id: string;
+    /**
+     * The name of the profile
+     */
     name?: string;
+    /**
+     * The snippet in which the resource is defined
+     */
     snippet?: string;
 }
 
@@ -45,16 +54,37 @@ export interface GetHttpServerProfileResult {
      * The device in which the resource is defined
      */
     readonly device: string;
+    /**
+     * The folder in which the resource is defined
+     */
     readonly folder: string;
+    /**
+     * Format
+     */
     readonly format: outputs.GetHttpServerProfileFormat;
     /**
      * The UUID of the HTTP server profile
      */
     readonly id: string;
+    /**
+     * The name of the profile
+     */
     readonly name: string;
+    /**
+     * Server
+     */
     readonly servers: outputs.GetHttpServerProfileServer[];
+    /**
+     * The snippet in which the resource is defined
+     */
     readonly snippet: string;
+    /**
+     * Register tags on match
+     */
     readonly tagRegistration: boolean;
+    /**
+     * The Terraform ID.
+     */
     readonly tfid: string;
 }
 /**
@@ -79,11 +109,20 @@ export interface GetHttpServerProfileOutputArgs {
      * The device in which the resource is defined
      */
     device?: pulumi.Input<string | undefined>;
+    /**
+     * The folder in which the resource is defined
+     */
     folder?: pulumi.Input<string | undefined>;
     /**
      * The UUID of the HTTP server profile
      */
     id: pulumi.Input<string>;
+    /**
+     * The name of the profile
+     */
     name?: pulumi.Input<string | undefined>;
+    /**
+     * The snippet in which the resource is defined
+     */
     snippet?: pulumi.Input<string | undefined>;
 }

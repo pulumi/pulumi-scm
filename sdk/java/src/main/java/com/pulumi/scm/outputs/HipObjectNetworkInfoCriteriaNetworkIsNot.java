@@ -22,21 +22,15 @@ public final class HipObjectNetworkInfoCriteriaNetworkIsNot {
     /**
      * @return Mobile
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `ethernet`, `mobile`, `unknown`, and `wifi`.
-     * 
      */
     private @Nullable HipObjectNetworkInfoCriteriaNetworkIsNotMobile mobile;
     /**
      * @return Unknown
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `ethernet`, `mobile`, `unknown`, and `wifi`.
-     * 
      */
     private @Nullable HipObjectNetworkInfoCriteriaNetworkIsNotUnknown unknown;
     /**
      * @return Wifi
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `ethernet`, `mobile`, `unknown`, and `wifi`.
      * 
      */
     private @Nullable HipObjectNetworkInfoCriteriaNetworkIsNotWifi wifi;
@@ -52,8 +46,6 @@ public final class HipObjectNetworkInfoCriteriaNetworkIsNot {
     /**
      * @return Mobile
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `ethernet`, `mobile`, `unknown`, and `wifi`.
-     * 
      */
     public Optional<HipObjectNetworkInfoCriteriaNetworkIsNotMobile> mobile() {
         return Optional.ofNullable(this.mobile);
@@ -61,16 +53,12 @@ public final class HipObjectNetworkInfoCriteriaNetworkIsNot {
     /**
      * @return Unknown
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `ethernet`, `mobile`, `unknown`, and `wifi`.
-     * 
      */
     public Optional<HipObjectNetworkInfoCriteriaNetworkIsNotUnknown> unknown() {
         return Optional.ofNullable(this.unknown);
     }
     /**
      * @return Wifi
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `ethernet`, `mobile`, `unknown`, and `wifi`.
      * 
      */
     public Optional<HipObjectNetworkInfoCriteriaNetworkIsNotWifi> wifi() {

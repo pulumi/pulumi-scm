@@ -19,8 +19,6 @@ namespace Pulumi.Scm.Outputs
         public readonly Outputs.GetBgpAddressFamilyProfileListDataIpv4MulticastMaximumPrefixActionRestartResult Restart;
         /// <summary>
         /// Warning only
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Restart` and `WarningOnly`.
         /// </summary>
         public readonly Outputs.GetBgpAddressFamilyProfileListDataIpv4MulticastMaximumPrefixActionWarningOnlyResult WarningOnly;
 

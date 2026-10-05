@@ -66,7 +66,7 @@ public final class GetApplicationListData {
      */
     private Boolean fileTypeIdent;
     /**
-     * @return The folder of the item. Default: Shared.
+     * @return The folder in which the resource is defined
      * 
      */
     private String folder;
@@ -81,7 +81,7 @@ public final class GetApplicationListData {
      */
     private String id;
     /**
-     * @return The name of the item.
+     * @return The name of the application
      * 
      */
     private String name;
@@ -116,7 +116,7 @@ public final class GetApplicationListData {
      */
     private List<GetApplicationListDataSignature> signatures;
     /**
-     * @return The snippet of the item.
+     * @return The snippet in which the resource is defined
      * 
      */
     private String snippet;
@@ -253,7 +253,7 @@ public final class GetApplicationListData {
         return this.fileTypeIdent;
     }
     /**
-     * @return The folder of the item. Default: Shared.
+     * @return The folder in which the resource is defined
      * 
      */
     public String folder() {
@@ -274,7 +274,7 @@ public final class GetApplicationListData {
         return this.id;
     }
     /**
-     * @return The name of the item.
+     * @return The name of the application
      * 
      */
     public String name() {
@@ -323,7 +323,7 @@ public final class GetApplicationListData {
         return this.signatures;
     }
     /**
-     * @return The snippet of the item.
+     * @return The snippet in which the resource is defined
      * 
      */
     public String snippet() {

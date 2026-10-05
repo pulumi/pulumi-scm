@@ -34,6 +34,10 @@ type Provider struct {
 	Protocol pulumi.StringPtrOutput `pulumi:"protocol"`
 	// The client scope. Environment variable: `SCM_SCOPE`. JSON config file variable: `scope`.
 	Scope pulumi.StringPtrOutput `pulumi:"scope"`
+	// The region for ZTNA Connector API requests (x-panw-region header). Required when using ztna_* resources. Valid values: ae, americas, au, br, ca, ch, cn, de, es, europe, fr, id, il, in, it, jp, kr, pl, qa, sa, sg, tw, uk, za. Environment variable: `X_PANW_REGION`. JSON config file variable: `xPanwRegion`.
+	XPanwRegion pulumi.StringPtrOutput `pulumi:"xPanwRegion"`
+	// The hostname of the ZTNA Connector API. Required when using ztna_* resources. Default: `api.sase.paloaltonetworks.com`. Environment variable: `ZTNA_HOST`. JSON config file variable: `ztnaHost`.
+	ZtnaHost pulumi.StringPtrOutput `pulumi:"ztnaHost"`
 }
 
 // NewProvider registers a new resource with the given unique name, arguments, and options.
@@ -80,6 +84,10 @@ type providerArgs struct {
 	Protocol *string `pulumi:"protocol"`
 	// The client scope. Environment variable: `SCM_SCOPE`. JSON config file variable: `scope`.
 	Scope *string `pulumi:"scope"`
+	// The region for ZTNA Connector API requests (x-panw-region header). Required when using ztna_* resources. Valid values: ae, americas, au, br, ca, ch, cn, de, es, europe, fr, id, il, in, it, jp, kr, pl, qa, sa, sg, tw, uk, za. Environment variable: `X_PANW_REGION`. JSON config file variable: `xPanwRegion`.
+	XPanwRegion *string `pulumi:"xPanwRegion"`
+	// The hostname of the ZTNA Connector API. Required when using ztna_* resources. Default: `api.sase.paloaltonetworks.com`. Environment variable: `ZTNA_HOST`. JSON config file variable: `ztnaHost`.
+	ZtnaHost *string `pulumi:"ztnaHost"`
 }
 
 // The set of arguments for constructing a Provider resource.
@@ -104,6 +112,10 @@ type ProviderArgs struct {
 	Protocol pulumi.StringPtrInput
 	// The client scope. Environment variable: `SCM_SCOPE`. JSON config file variable: `scope`.
 	Scope pulumi.StringPtrInput
+	// The region for ZTNA Connector API requests (x-panw-region header). Required when using ztna_* resources. Valid values: ae, americas, au, br, ca, ch, cn, de, es, europe, fr, id, il, in, it, jp, kr, pl, qa, sa, sg, tw, uk, za. Environment variable: `X_PANW_REGION`. JSON config file variable: `xPanwRegion`.
+	XPanwRegion pulumi.StringPtrInput
+	// The hostname of the ZTNA Connector API. Required when using ztna_* resources. Default: `api.sase.paloaltonetworks.com`. Environment variable: `ZTNA_HOST`. JSON config file variable: `ztnaHost`.
+	ZtnaHost pulumi.StringPtrInput
 }
 
 func (ProviderArgs) ElementType() reflect.Type {
@@ -204,6 +216,16 @@ func (o ProviderOutput) Protocol() pulumi.StringPtrOutput {
 // The client scope. Environment variable: `SCM_SCOPE`. JSON config file variable: `scope`.
 func (o ProviderOutput) Scope() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *Provider) pulumi.StringPtrOutput { return v.Scope }).(pulumi.StringPtrOutput)
+}
+
+// The region for ZTNA Connector API requests (x-panw-region header). Required when using ztna_* resources. Valid values: ae, americas, au, br, ca, ch, cn, de, es, europe, fr, id, il, in, it, jp, kr, pl, qa, sa, sg, tw, uk, za. Environment variable: `X_PANW_REGION`. JSON config file variable: `xPanwRegion`.
+func (o ProviderOutput) XPanwRegion() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *Provider) pulumi.StringPtrOutput { return v.XPanwRegion }).(pulumi.StringPtrOutput)
+}
+
+// The hostname of the ZTNA Connector API. Required when using ztna_* resources. Default: `api.sase.paloaltonetworks.com`. Environment variable: `ZTNA_HOST`. JSON config file variable: `ztnaHost`.
+func (o ProviderOutput) ZtnaHost() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *Provider) pulumi.StringPtrOutput { return v.ZtnaHost }).(pulumi.StringPtrOutput)
 }
 
 func init() {

@@ -11,14 +11,14 @@ import java.util.Objects;
 @CustomType
 public final class GetSecurityRuleListDataAllowWebApplicationSaasEnterpriseControlConsumerAccess {
     /**
-     * @return Enable
+     * @return Enable. Possible values are `yes` and `no`.
      * 
      */
     private String enable;
 
     private GetSecurityRuleListDataAllowWebApplicationSaasEnterpriseControlConsumerAccess() {}
     /**
-     * @return Enable
+     * @return Enable. Possible values are `yes` and `no`.
      * 
      */
     public String enable() {

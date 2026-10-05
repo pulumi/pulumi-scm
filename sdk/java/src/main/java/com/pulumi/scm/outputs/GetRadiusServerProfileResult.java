@@ -20,19 +20,55 @@ public final class GetRadiusServerProfileResult {
      * 
      */
     private String device;
+    /**
+     * @return Map of sensitive values returned from the API.
+     * 
+     */
     private Map<String,String> encryptedValues;
+    /**
+     * @return The folder in which the resource is defined
+     * 
+     */
     private String folder;
     /**
      * @return The UUID of the RADIUS server profile
      * 
      */
     private String id;
+    /**
+     * @return The name of the RADIUS server profile
+     * 
+     */
     private String name;
+    /**
+     * @return The RADIUS authentication protocol
+     * 
+     */
     private GetRadiusServerProfileProtocol protocol;
+    /**
+     * @return The number of RADIUS server retries
+     * 
+     */
     private Integer retries;
+    /**
+     * @return Server
+     * 
+     */
     private List<GetRadiusServerProfileServer> servers;
+    /**
+     * @return The snippet in which the resource is defined
+     * 
+     */
     private String snippet;
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     private String tfid;
+    /**
+     * @return The RADIUS server authentication timeout (seconds)
+     * 
+     */
     private Integer timeout;
 
     private GetRadiusServerProfileResult() {}
@@ -43,9 +79,17 @@ public final class GetRadiusServerProfileResult {
     public String device() {
         return this.device;
     }
+    /**
+     * @return Map of sensitive values returned from the API.
+     * 
+     */
     public Map<String,String> encryptedValues() {
         return this.encryptedValues;
     }
+    /**
+     * @return The folder in which the resource is defined
+     * 
+     */
     public String folder() {
         return this.folder;
     }
@@ -56,24 +100,52 @@ public final class GetRadiusServerProfileResult {
     public String id() {
         return this.id;
     }
+    /**
+     * @return The name of the RADIUS server profile
+     * 
+     */
     public String name() {
         return this.name;
     }
+    /**
+     * @return The RADIUS authentication protocol
+     * 
+     */
     public GetRadiusServerProfileProtocol protocol() {
         return this.protocol;
     }
+    /**
+     * @return The number of RADIUS server retries
+     * 
+     */
     public Integer retries() {
         return this.retries;
     }
+    /**
+     * @return Server
+     * 
+     */
     public List<GetRadiusServerProfileServer> servers() {
         return this.servers;
     }
+    /**
+     * @return The snippet in which the resource is defined
+     * 
+     */
     public String snippet() {
         return this.snippet;
     }
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     public String tfid() {
         return this.tfid;
     }
+    /**
+     * @return The RADIUS server authentication timeout (seconds)
+     * 
+     */
     public Integer timeout() {
         return this.timeout;
     }

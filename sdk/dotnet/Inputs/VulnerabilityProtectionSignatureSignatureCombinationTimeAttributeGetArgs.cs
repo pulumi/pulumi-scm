@@ -25,7 +25,7 @@ namespace Pulumi.Scm.Inputs
         public Input<int>? Threshold { get; set; }
 
         /// <summary>
-        /// Track by
+        /// Track by. Possible values are `source-and-destination`, `Source` and `Destination`.
         /// </summary>
         [Input("trackBy")]
         public Input<string>? TrackBy { get; set; }

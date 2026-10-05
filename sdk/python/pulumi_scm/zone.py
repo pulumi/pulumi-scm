@@ -42,13 +42,9 @@ class ZoneArgs:
         :param pulumi.Input[_builtins.bool] enable_device_identification: Enable device identification
         :param pulumi.Input[_builtins.bool] enable_user_identification: Enable user identification
         :param pulumi.Input[_builtins.str] folder: Folder
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] name: Alphanumeric string begin with letter: [0-9a-zA-Z._-]
         :param pulumi.Input['ZoneNetworkArgs'] network: Network
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input['ZoneUserAclArgs'] user_acl: User acl
         """
         if device is not None:
@@ -151,8 +147,6 @@ class ZoneArgs:
     def folder(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Folder
-
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
 
@@ -189,8 +183,6 @@ class ZoneArgs:
     def snippet(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
-
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
 
@@ -236,13 +228,9 @@ class _ZoneState:
         :param pulumi.Input[_builtins.bool] enable_device_identification: Enable device identification
         :param pulumi.Input[_builtins.bool] enable_user_identification: Enable user identification
         :param pulumi.Input[_builtins.str] folder: Folder
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] name: Alphanumeric string begin with letter: [0-9a-zA-Z._-]
         :param pulumi.Input['ZoneNetworkArgs'] network: Network
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] tfid: The Terraform ID.
         :param pulumi.Input['ZoneUserAclArgs'] user_acl: User acl
         """
@@ -348,8 +336,6 @@ class _ZoneState:
     def folder(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Folder
-
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
 
@@ -386,8 +372,6 @@ class _ZoneState:
     def snippet(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
-
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
 
@@ -484,14 +468,21 @@ class Zone(pulumi.CustomResource):
                 "virtual_wires": [],
             })
         #
-        # Creates a layer3 zone
-        # Requires Interface $scm_l3_interface to exist
+        # Creates a layer3 ethernet interface for use in zone
+        #
+        scm_l3_interface = scm.EthernetInterface("scm_l3_interface",
+            name="$scm_l3_interface",
+            comment="Managed by Pulumi",
+            folder="ngfw-shared",
+            layer3={})
+        #
+        # Creates a layer3 zone that references the interface
         #
         scm_layer3_zone_complex = scm.Zone("scm_layer3_zone_complex",
             name="scm_layer3_zone_complex",
             folder="ngfw-shared",
             network={
-                "layer3s": ["$scm_l3_interface"],
+                "layer3s": [scm_l3_interface.name],
                 "zone_protection_profile": "best-practice",
                 "enable_packet_buffer_protection": True,
             },
@@ -504,7 +495,8 @@ class Zone(pulumi.CustomResource):
             user_acl={
                 "include_lists": ["198.18.3.0/24"],
                 "exclude_lists": ["198.18.4.0/24"],
-            })
+            },
+            opts = pulumi.ResourceOptions(depends_on=[scm_l3_interface]))
         ```
 
         ## Import
@@ -539,13 +531,9 @@ class Zone(pulumi.CustomResource):
         :param pulumi.Input[_builtins.bool] enable_device_identification: Enable device identification
         :param pulumi.Input[_builtins.bool] enable_user_identification: Enable user identification
         :param pulumi.Input[_builtins.str] folder: Folder
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] name: Alphanumeric string begin with letter: [0-9a-zA-Z._-]
         :param pulumi.Input[Union['ZoneNetworkArgs', 'ZoneNetworkArgsDict', 'outputs.ZoneNetwork']] network: Network
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[Union['ZoneUserAclArgs', 'ZoneUserAclArgsDict', 'outputs.ZoneUserAcl']] user_acl: User acl
         """
         ...
@@ -600,14 +588,21 @@ class Zone(pulumi.CustomResource):
                 "virtual_wires": [],
             })
         #
-        # Creates a layer3 zone
-        # Requires Interface $scm_l3_interface to exist
+        # Creates a layer3 ethernet interface for use in zone
+        #
+        scm_l3_interface = scm.EthernetInterface("scm_l3_interface",
+            name="$scm_l3_interface",
+            comment="Managed by Pulumi",
+            folder="ngfw-shared",
+            layer3={})
+        #
+        # Creates a layer3 zone that references the interface
         #
         scm_layer3_zone_complex = scm.Zone("scm_layer3_zone_complex",
             name="scm_layer3_zone_complex",
             folder="ngfw-shared",
             network={
-                "layer3s": ["$scm_l3_interface"],
+                "layer3s": [scm_l3_interface.name],
                 "zone_protection_profile": "best-practice",
                 "enable_packet_buffer_protection": True,
             },
@@ -620,7 +615,8 @@ class Zone(pulumi.CustomResource):
             user_acl={
                 "include_lists": ["198.18.3.0/24"],
                 "exclude_lists": ["198.18.4.0/24"],
-            })
+            },
+            opts = pulumi.ResourceOptions(depends_on=[scm_l3_interface]))
         ```
 
         ## Import
@@ -729,13 +725,9 @@ class Zone(pulumi.CustomResource):
         :param pulumi.Input[_builtins.bool] enable_device_identification: Enable device identification
         :param pulumi.Input[_builtins.bool] enable_user_identification: Enable user identification
         :param pulumi.Input[_builtins.str] folder: Folder
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] name: Alphanumeric string begin with letter: [0-9a-zA-Z._-]
         :param pulumi.Input[Union['ZoneNetworkArgs', 'ZoneNetworkArgsDict', 'outputs.ZoneNetwork']] network: Network
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] tfid: The Terraform ID.
         :param pulumi.Input[Union['ZoneUserAclArgs', 'ZoneUserAclArgsDict', 'outputs.ZoneUserAcl']] user_acl: User acl
         """
@@ -810,8 +802,6 @@ class Zone(pulumi.CustomResource):
     def folder(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         Folder
-
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
 
@@ -836,8 +826,6 @@ class Zone(pulumi.CustomResource):
     def snippet(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
-
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
 

@@ -18,7 +18,7 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly ImmutableArray<string> IpPools;
         /// <summary>
-        /// DHCP server mode
+        /// DHCP server mode. Possible values are `Auto`, `Enabled` and `Disabled`.
         /// </summary>
         public readonly string Mode;
         /// <summary>

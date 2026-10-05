@@ -51,7 +51,7 @@ public final class GetManagementInterfaceListDataManagementInterface {
      */
     private GetManagementInterfaceListDataManagementInterfaceService service;
     /**
-     * @return Speed and duplex
+     * @return Speed and duplex. Possible values are `auto-negotiate`, `10Mbps-half-duplex`, `10Mbps-full-duplex`, `100Mbps-half-duplex`, `100Mbps-full-duplex`, `1Gbps-half-duplex` and `1Gbps-full-duplex`.
      * 
      */
     private String speedDuplex;
@@ -107,7 +107,7 @@ public final class GetManagementInterfaceListDataManagementInterface {
         return this.service;
     }
     /**
-     * @return Speed and duplex
+     * @return Speed and duplex. Possible values are `auto-negotiate`, `10Mbps-half-duplex`, `10Mbps-full-duplex`, `100Mbps-half-duplex`, `100Mbps-full-duplex`, `1Gbps-half-duplex` and `1Gbps-full-duplex`.
      * 
      */
     public String speedDuplex() {

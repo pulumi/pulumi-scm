@@ -11,14 +11,14 @@ import java.util.Objects;
 @CustomType
 public final class GetNatRuleDestinationTranslationDnsRewrite {
     /**
-     * @return Direction
+     * @return Direction. Possible values are `reverse` and `forward`.
      * 
      */
     private String direction;
 
     private GetNatRuleDestinationTranslationDnsRewrite() {}
     /**
-     * @return Direction
+     * @return Direction. Possible values are `reverse` and `forward`.
      * 
      */
     public String direction() {

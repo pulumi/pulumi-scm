@@ -49,7 +49,7 @@ namespace Pulumi.Scm.Inputs
         public Input<string>? MaxSources { get; set; }
 
         /// <summary>
-        /// Mode
+        /// Mode. Possible values are `Router` and `Host`.
         /// </summary>
         [Input("mode")]
         public Input<string>? Mode { get; set; }
@@ -61,7 +61,7 @@ namespace Pulumi.Scm.Inputs
         public Input<int>? QueryInterval { get; set; }
 
         /// <summary>
-        /// Robustness
+        /// Robustness. Possible values are `1`, `2`, `3`, `4`, `5`, `6` and `7`.
         /// </summary>
         [Input("robustness")]
         public Input<string>? Robustness { get; set; }
@@ -73,7 +73,7 @@ namespace Pulumi.Scm.Inputs
         public Input<bool>? RouterAlertPolicing { get; set; }
 
         /// <summary>
-        /// Version
+        /// Version. Possible values are `1`, `2` and `3`.
         /// </summary>
         [Input("version")]
         public Input<string>? Version { get; set; }

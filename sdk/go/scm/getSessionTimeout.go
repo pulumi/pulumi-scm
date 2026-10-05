@@ -53,9 +53,11 @@ func LookupSessionTimeout(ctx *pulumi.Context, args *LookupSessionTimeoutArgs, o
 type LookupSessionTimeoutArgs struct {
 	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
+	// The folder in which the resource is defined
 	Folder *string `pulumi:"folder"`
 	// UUID of the resource
-	Id      string  `pulumi:"id"`
+	Id string `pulumi:"id"`
+	// The snippet in which the resource is defined
 	Snippet *string `pulumi:"snippet"`
 }
 
@@ -63,12 +65,16 @@ type LookupSessionTimeoutArgs struct {
 type LookupSessionTimeoutResult struct {
 	// The device in which the resource is defined
 	Device string `pulumi:"device"`
+	// The folder in which the resource is defined
 	Folder string `pulumi:"folder"`
 	// UUID of the resource
-	Id              string                           `pulumi:"id"`
+	Id string `pulumi:"id"`
+	// Session timeouts
 	SessionTimeouts GetSessionTimeoutSessionTimeouts `pulumi:"sessionTimeouts"`
-	Snippet         string                           `pulumi:"snippet"`
-	Tfid            string                           `pulumi:"tfid"`
+	// The snippet in which the resource is defined
+	Snippet string `pulumi:"snippet"`
+	// The Terraform ID.
+	Tfid string `pulumi:"tfid"`
 }
 
 func LookupSessionTimeoutOutput(ctx *pulumi.Context, args LookupSessionTimeoutOutputArgs, opts ...pulumi.InvokeOption) LookupSessionTimeoutResultOutput {
@@ -80,9 +86,11 @@ func LookupSessionTimeoutOutput(ctx *pulumi.Context, args LookupSessionTimeoutOu
 type LookupSessionTimeoutOutputArgs struct {
 	// The device in which the resource is defined
 	Device pulumi.StringPtrInput `pulumi:"device"`
+	// The folder in which the resource is defined
 	Folder pulumi.StringPtrInput `pulumi:"folder"`
 	// UUID of the resource
-	Id      pulumi.StringInput    `pulumi:"id"`
+	Id pulumi.StringInput `pulumi:"id"`
+	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrInput `pulumi:"snippet"`
 }
 
@@ -110,6 +118,7 @@ func (o LookupSessionTimeoutResultOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupSessionTimeoutResult) string { return v.Device }).(pulumi.StringOutput)
 }
 
+// The folder in which the resource is defined
 func (o LookupSessionTimeoutResultOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupSessionTimeoutResult) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -119,14 +128,17 @@ func (o LookupSessionTimeoutResultOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupSessionTimeoutResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
+// Session timeouts
 func (o LookupSessionTimeoutResultOutput) SessionTimeouts() GetSessionTimeoutSessionTimeoutsOutput {
 	return o.ApplyT(func(v LookupSessionTimeoutResult) GetSessionTimeoutSessionTimeouts { return v.SessionTimeouts }).(GetSessionTimeoutSessionTimeoutsOutput)
 }
 
+// The snippet in which the resource is defined
 func (o LookupSessionTimeoutResultOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupSessionTimeoutResult) string { return v.Snippet }).(pulumi.StringOutput)
 }
 
+// The Terraform ID.
 func (o LookupSessionTimeoutResultOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupSessionTimeoutResult) string { return v.Tfid }).(pulumi.StringOutput)
 }

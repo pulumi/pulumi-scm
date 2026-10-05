@@ -16,7 +16,7 @@ namespace Pulumi.Scm.Inputs
         private InputList<string>? _authentications;
 
         /// <summary>
-        /// Authentication
+        /// Authentication. Possible values are `Md5`, `Sha1`, `Sha256`, `Sha384` and `Sha512`.
         /// </summary>
         public InputList<string> Authentications
         {

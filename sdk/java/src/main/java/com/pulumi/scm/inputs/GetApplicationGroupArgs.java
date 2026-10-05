@@ -31,9 +31,17 @@ public final class GetApplicationGroupArgs extends com.pulumi.resources.InvokeAr
         return Optional.ofNullable(this.device);
     }
 
+    /**
+     * The folder in which the resource is defined
+     * 
+     */
     @Import(name="folder")
     private @Nullable Output<String> folder;
 
+    /**
+     * @return The folder in which the resource is defined
+     * 
+     */
     public Optional<Output<String>> folder() {
         return Optional.ofNullable(this.folder);
     }
@@ -53,16 +61,32 @@ public final class GetApplicationGroupArgs extends com.pulumi.resources.InvokeAr
         return this.id;
     }
 
+    /**
+     * Alphanumeric string [ 0-9a-zA-Z._-]
+     * 
+     */
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Alphanumeric string [ 0-9a-zA-Z._-]
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
 
+    /**
+     * The snippet in which the resource is defined
+     * 
+     */
     @Import(name="snippet")
     private @Nullable Output<String> snippet;
 
+    /**
+     * @return The snippet in which the resource is defined
+     * 
+     */
     public Optional<Output<String>> snippet() {
         return Optional.ofNullable(this.snippet);
     }
@@ -116,11 +140,23 @@ public final class GetApplicationGroupArgs extends com.pulumi.resources.InvokeAr
             return device(Output.of(device));
         }
 
+        /**
+         * @param folder The folder in which the resource is defined
+         * 
+         * @return builder
+         * 
+         */
         public Builder folder(@Nullable Output<String> folder) {
             $.folder = folder;
             return this;
         }
 
+        /**
+         * @param folder The folder in which the resource is defined
+         * 
+         * @return builder
+         * 
+         */
         public Builder folder(String folder) {
             return folder(Output.of(folder));
         }
@@ -146,20 +182,44 @@ public final class GetApplicationGroupArgs extends com.pulumi.resources.InvokeAr
             return id(Output.of(id));
         }
 
+        /**
+         * @param name Alphanumeric string [ 0-9a-zA-Z._-]
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Alphanumeric string [ 0-9a-zA-Z._-]
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param snippet The snippet in which the resource is defined
+         * 
+         * @return builder
+         * 
+         */
         public Builder snippet(@Nullable Output<String> snippet) {
             $.snippet = snippet;
             return this;
         }
 
+        /**
+         * @param snippet The snippet in which the resource is defined
+         * 
+         * @return builder
+         * 
+         */
         public Builder snippet(String snippet) {
             return snippet(Output.of(snippet));
         }

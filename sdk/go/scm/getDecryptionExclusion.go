@@ -26,24 +26,32 @@ func LookupDecryptionExclusion(ctx *pulumi.Context, args *LookupDecryptionExclus
 type LookupDecryptionExclusionArgs struct {
 	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
+	// The folder in which the resource is defined
 	Folder *string `pulumi:"folder"`
 	// UUID of the resource
-	Id      string  `pulumi:"id"`
-	Name    *string `pulumi:"name"`
+	Id string `pulumi:"id"`
+	// Name
+	Name *string `pulumi:"name"`
+	// The snippet in which the resource is defined
 	Snippet *string `pulumi:"snippet"`
 }
 
 // A collection of values returned by getDecryptionExclusion.
 type LookupDecryptionExclusionResult struct {
+	// Description
 	Description string `pulumi:"description"`
 	// The device in which the resource is defined
 	Device string `pulumi:"device"`
+	// The folder in which the resource is defined
 	Folder string `pulumi:"folder"`
 	// UUID of the resource
-	Id      string `pulumi:"id"`
-	Name    string `pulumi:"name"`
+	Id string `pulumi:"id"`
+	// Name
+	Name string `pulumi:"name"`
+	// The snippet in which the resource is defined
 	Snippet string `pulumi:"snippet"`
-	Tfid    string `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid string `pulumi:"tfid"`
 }
 
 func LookupDecryptionExclusionOutput(ctx *pulumi.Context, args LookupDecryptionExclusionOutputArgs, opts ...pulumi.InvokeOption) LookupDecryptionExclusionResultOutput {
@@ -55,10 +63,13 @@ func LookupDecryptionExclusionOutput(ctx *pulumi.Context, args LookupDecryptionE
 type LookupDecryptionExclusionOutputArgs struct {
 	// The device in which the resource is defined
 	Device pulumi.StringPtrInput `pulumi:"device"`
+	// The folder in which the resource is defined
 	Folder pulumi.StringPtrInput `pulumi:"folder"`
 	// UUID of the resource
-	Id      pulumi.StringInput    `pulumi:"id"`
-	Name    pulumi.StringPtrInput `pulumi:"name"`
+	Id pulumi.StringInput `pulumi:"id"`
+	// Name
+	Name pulumi.StringPtrInput `pulumi:"name"`
+	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrInput `pulumi:"snippet"`
 }
 
@@ -81,6 +92,7 @@ func (o LookupDecryptionExclusionResultOutput) ToLookupDecryptionExclusionResult
 	return o
 }
 
+// Description
 func (o LookupDecryptionExclusionResultOutput) Description() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupDecryptionExclusionResult) string { return v.Description }).(pulumi.StringOutput)
 }
@@ -90,6 +102,7 @@ func (o LookupDecryptionExclusionResultOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupDecryptionExclusionResult) string { return v.Device }).(pulumi.StringOutput)
 }
 
+// The folder in which the resource is defined
 func (o LookupDecryptionExclusionResultOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupDecryptionExclusionResult) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -99,14 +112,17 @@ func (o LookupDecryptionExclusionResultOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupDecryptionExclusionResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
+// Name
 func (o LookupDecryptionExclusionResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupDecryptionExclusionResult) string { return v.Name }).(pulumi.StringOutput)
 }
 
+// The snippet in which the resource is defined
 func (o LookupDecryptionExclusionResultOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupDecryptionExclusionResult) string { return v.Snippet }).(pulumi.StringOutput)
 }
 
+// The Terraform ID.
 func (o LookupDecryptionExclusionResultOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupDecryptionExclusionResult) string { return v.Tfid }).(pulumi.StringOutput)
 }

@@ -51,7 +51,7 @@ public final class LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdate {
      */
     private @Nullable String nexthop;
     /**
-     * @return Origin
+     * @return Origin. Possible values are `igp`, `egp` and `multicast`.
      * 
      */
     private @Nullable String origin;
@@ -107,7 +107,7 @@ public final class LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdate {
         return Optional.ofNullable(this.nexthop);
     }
     /**
-     * @return Origin
+     * @return Origin. Possible values are `igp`, `egp` and `multicast`.
      * 
      */
     public Optional<String> origin() {

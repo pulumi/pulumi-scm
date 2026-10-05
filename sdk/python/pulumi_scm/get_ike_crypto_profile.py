@@ -65,6 +65,9 @@ class GetIkeCryptoProfileResult:
     @_builtins.property
     @pulumi.getter(name="authenticationMultiple")
     def authentication_multiple(self) -> _builtins.int:
+        """
+        IKEv2 SA reauthentication interval equals authetication-multiple * rekey-lifetime; 0 means reauthentication disabled
+        """
         return pulumi.get(self, "authentication_multiple")
 
     @_builtins.property
@@ -78,21 +81,33 @@ class GetIkeCryptoProfileResult:
     @_builtins.property
     @pulumi.getter(name="dhGroups")
     def dh_groups(self) -> Sequence[_builtins.str]:
+        """
+        Dh group. Possible values are `group1`, `group2`, `group5`, `group14`, `group19`, `group20`, `group21`, `ml-kem-512`, `ml-kem-768` and `ml-kem-1024`.
+        """
         return pulumi.get(self, "dh_groups")
 
     @_builtins.property
     @pulumi.getter
     def encryptions(self) -> Sequence[_builtins.str]:
+        """
+        Encryption algorithm. Possible values are `des`, `3des`, `aes-128-cbc`, `aes-192-cbc`, `aes-256-cbc`, `aes-128-gcm` and `aes-256-gcm`.
+        """
         return pulumi.get(self, "encryptions")
 
     @_builtins.property
     @pulumi.getter
     def folder(self) -> _builtins.str:
+        """
+        The folder in which the resource is defined
+        """
         return pulumi.get(self, "folder")
 
     @_builtins.property
     @pulumi.getter
     def hashes(self) -> Sequence[_builtins.str]:
+        """
+        Hash. Possible values are `md5`, `sha1`, `sha256`, `sha384`, `sha512` and `non-auth`.
+        """
         return pulumi.get(self, "hashes")
 
     @_builtins.property
@@ -106,21 +121,33 @@ class GetIkeCryptoProfileResult:
     @_builtins.property
     @pulumi.getter
     def lifetime(self) -> 'outputs.GetIkeCryptoProfileLifetimeResult':
+        """
+        Ike crypto profile lifetime
+        """
         return pulumi.get(self, "lifetime")
 
     @_builtins.property
     @pulumi.getter
     def name(self) -> _builtins.str:
+        """
+        Alphanumeric string begin with letter: [0-9a-zA-Z._-]
+        """
         return pulumi.get(self, "name")
 
     @_builtins.property
     @pulumi.getter
     def snippet(self) -> _builtins.str:
+        """
+        The snippet in which the resource is defined
+        """
         return pulumi.get(self, "snippet")
 
     @_builtins.property
     @pulumi.getter
     def tfid(self) -> _builtins.str:
+        """
+        The Terraform ID.
+        """
         return pulumi.get(self, "tfid")
 
 
@@ -165,7 +192,10 @@ def get_ike_crypto_profile(device: Optional[_builtins.str] = None,
 
 
     :param _builtins.str device: The device in which the resource is defined
+    :param _builtins.str folder: The folder in which the resource is defined
     :param _builtins.str id: UUID of the resource
+    :param _builtins.str name: Alphanumeric string begin with letter: [0-9a-zA-Z._-]
+    :param _builtins.str snippet: The snippet in which the resource is defined
     """
     __args__ = dict()
     __args__['device'] = device
@@ -210,7 +240,10 @@ def get_ike_crypto_profile_output(device: pulumi.Input[Optional[Optional[_builti
 
 
     :param _builtins.str device: The device in which the resource is defined
+    :param _builtins.str folder: The folder in which the resource is defined
     :param _builtins.str id: UUID of the resource
+    :param _builtins.str name: Alphanumeric string begin with letter: [0-9a-zA-Z._-]
+    :param _builtins.str snippet: The snippet in which the resource is defined
     """
     __args__ = dict()
     __args__['device'] = device

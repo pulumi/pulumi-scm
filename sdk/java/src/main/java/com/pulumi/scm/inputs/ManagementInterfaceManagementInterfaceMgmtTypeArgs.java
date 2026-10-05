@@ -34,16 +34,12 @@ public final class ManagementInterfaceManagementInterfaceMgmtTypeArgs extends co
     /**
      * Static
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `static`.
-     * 
      */
     @Import(name="static")
     private @Nullable Output<ManagementInterfaceManagementInterfaceMgmtTypeStaticArgs> static_;
 
     /**
      * @return Static
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `static`.
      * 
      */
     public Optional<Output<ManagementInterfaceManagementInterfaceMgmtTypeStaticArgs>> static_() {
@@ -99,8 +95,6 @@ public final class ManagementInterfaceManagementInterfaceMgmtTypeArgs extends co
         /**
          * @param static_ Static
          * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `static`.
-         * 
          * @return builder
          * 
          */
@@ -111,8 +105,6 @@ public final class ManagementInterfaceManagementInterfaceMgmtTypeArgs extends co
 
         /**
          * @param static_ Static
-         * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `static`.
          * 
          * @return builder
          * 

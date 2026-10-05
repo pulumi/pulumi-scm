@@ -16,7 +16,7 @@ public final class GetIkeGatewayListDataPeerId {
      */
     private String id;
     /**
-     * @return Type
+     * @return Type. Possible values are `ipaddr`, `keyid`, `fqdn` and `ufqdn`.
      * 
      */
     private String type;
@@ -30,7 +30,7 @@ public final class GetIkeGatewayListDataPeerId {
         return this.id;
     }
     /**
-     * @return Type
+     * @return Type. Possible values are `ipaddr`, `keyid`, `fqdn` and `ufqdn`.
      * 
      */
     public String type() {

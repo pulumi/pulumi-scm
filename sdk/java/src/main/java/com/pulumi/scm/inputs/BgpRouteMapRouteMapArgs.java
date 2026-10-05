@@ -19,14 +19,14 @@ public final class BgpRouteMapRouteMapArgs extends com.pulumi.resources.Resource
     public static final BgpRouteMapRouteMapArgs Empty = new BgpRouteMapRouteMapArgs();
 
     /**
-     * Action
+     * Action. Possible values are `permit` and `deny`.
      * 
      */
     @Import(name="action")
     private @Nullable Output<String> action;
 
     /**
-     * @return Action
+     * @return Action. Possible values are `permit` and `deny`.
      * 
      */
     public Optional<Output<String>> action() {
@@ -122,7 +122,7 @@ public final class BgpRouteMapRouteMapArgs extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param action Action
+         * @param action Action. Possible values are `permit` and `deny`.
          * 
          * @return builder
          * 
@@ -133,7 +133,7 @@ public final class BgpRouteMapRouteMapArgs extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param action Action
+         * @param action Action. Possible values are `permit` and `deny`.
          * 
          * @return builder
          * 

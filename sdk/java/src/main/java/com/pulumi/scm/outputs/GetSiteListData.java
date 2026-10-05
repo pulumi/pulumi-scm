@@ -49,7 +49,7 @@ public final class GetSiteListData {
      */
     private String latitude;
     /**
-     * @return The license type of the site
+     * @return The license type of the site. Possible values are `FWAAS-SITE-25Mbps`, `FWAAS-SITE-50Mbps`, `FWAAS-SITE-250Mbps`, `FWAAS-SITE-1000Mbps` and `FWAAS-SITE-2500Mbps`.
      * 
      */
     private String licenseType;
@@ -84,7 +84,7 @@ public final class GetSiteListData {
      */
     private String tfid;
     /**
-     * @return The site type
+     * @return The site type. Possible values are `prisma-sdwan`, `third-party-branch` and `third-party-discovered`.
      * 
      */
     private String type;
@@ -145,7 +145,7 @@ public final class GetSiteListData {
         return this.latitude;
     }
     /**
-     * @return The license type of the site
+     * @return The license type of the site. Possible values are `FWAAS-SITE-25Mbps`, `FWAAS-SITE-50Mbps`, `FWAAS-SITE-250Mbps`, `FWAAS-SITE-1000Mbps` and `FWAAS-SITE-2500Mbps`.
      * 
      */
     public String licenseType() {
@@ -194,7 +194,7 @@ public final class GetSiteListData {
         return this.tfid;
     }
     /**
-     * @return The site type
+     * @return The site type. Possible values are `prisma-sdwan`, `third-party-branch` and `third-party-discovered`.
      * 
      */
     public String type() {

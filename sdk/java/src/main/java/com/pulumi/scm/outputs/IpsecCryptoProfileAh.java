@@ -12,14 +12,14 @@ import java.util.Objects;
 @CustomType
 public final class IpsecCryptoProfileAh {
     /**
-     * @return Authentication
+     * @return Authentication. Possible values are `md5`, `sha1`, `sha256`, `sha384` and `sha512`.
      * 
      */
     private List<String> authentications;
 
     private IpsecCryptoProfileAh() {}
     /**
-     * @return Authentication
+     * @return Authentication. Possible values are `md5`, `sha1`, `sha256`, `sha384` and `sha512`.
      * 
      */
     public List<String> authentications() {

@@ -5,11 +5,13 @@ package com.pulumi.scm.outputs;
 
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
+import com.pulumi.scm.outputs.GetAggregateInterfaceLayer3AdjustTcpMss;
 import com.pulumi.scm.outputs.GetAggregateInterfaceLayer3Arp;
 import com.pulumi.scm.outputs.GetAggregateInterfaceLayer3DdnsConfig;
 import com.pulumi.scm.outputs.GetAggregateInterfaceLayer3DhcpClient;
 import com.pulumi.scm.outputs.GetAggregateInterfaceLayer3Ip;
 import com.pulumi.scm.outputs.GetAggregateInterfaceLayer3Lacp;
+import com.pulumi.scm.outputs.GetAggregateInterfaceLayer3Lldp;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -17,6 +19,11 @@ import java.util.Objects;
 
 @CustomType
 public final class GetAggregateInterfaceLayer3 {
+    /**
+     * @return TCP MSS adjustment settings for the interface
+     * 
+     */
+    private GetAggregateInterfaceLayer3AdjustTcpMss adjustTcpMss;
     /**
      * @return Aggregate Ethernet ARP configuration
      * 
@@ -40,8 +47,6 @@ public final class GetAggregateInterfaceLayer3 {
     /**
      * @return Aggregate Interface IP addresses
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
-     * 
      */
     private List<GetAggregateInterfaceLayer3Ip> ips;
     /**
@@ -49,6 +54,11 @@ public final class GetAggregateInterfaceLayer3 {
      * 
      */
     private GetAggregateInterfaceLayer3Lacp lacp;
+    /**
+     * @return LLDP settings for the interface
+     * 
+     */
+    private GetAggregateInterfaceLayer3Lldp lldp;
     /**
      * @return MTU
      * 
@@ -61,6 +71,13 @@ public final class GetAggregateInterfaceLayer3 {
     private String netflowProfile;
 
     private GetAggregateInterfaceLayer3() {}
+    /**
+     * @return TCP MSS adjustment settings for the interface
+     * 
+     */
+    public GetAggregateInterfaceLayer3AdjustTcpMss adjustTcpMss() {
+        return this.adjustTcpMss;
+    }
     /**
      * @return Aggregate Ethernet ARP configuration
      * 
@@ -92,8 +109,6 @@ public final class GetAggregateInterfaceLayer3 {
     /**
      * @return Aggregate Interface IP addresses
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
-     * 
      */
     public List<GetAggregateInterfaceLayer3Ip> ips() {
         return this.ips;
@@ -104,6 +119,13 @@ public final class GetAggregateInterfaceLayer3 {
      */
     public GetAggregateInterfaceLayer3Lacp lacp() {
         return this.lacp;
+    }
+    /**
+     * @return LLDP settings for the interface
+     * 
+     */
+    public GetAggregateInterfaceLayer3Lldp lldp() {
+        return this.lldp;
     }
     /**
      * @return MTU
@@ -129,27 +151,39 @@ public final class GetAggregateInterfaceLayer3 {
     }
     @CustomType.Builder
     public static final class Builder {
+        private GetAggregateInterfaceLayer3AdjustTcpMss adjustTcpMss;
         private List<GetAggregateInterfaceLayer3Arp> arps;
         private GetAggregateInterfaceLayer3DdnsConfig ddnsConfig;
         private GetAggregateInterfaceLayer3DhcpClient dhcpClient;
         private String interfaceManagementProfile;
         private List<GetAggregateInterfaceLayer3Ip> ips;
         private GetAggregateInterfaceLayer3Lacp lacp;
+        private GetAggregateInterfaceLayer3Lldp lldp;
         private Integer mtu;
         private String netflowProfile;
         public Builder() {}
         public Builder(GetAggregateInterfaceLayer3 defaults) {
     	      Objects.requireNonNull(defaults);
+    	      this.adjustTcpMss = defaults.adjustTcpMss;
     	      this.arps = defaults.arps;
     	      this.ddnsConfig = defaults.ddnsConfig;
     	      this.dhcpClient = defaults.dhcpClient;
     	      this.interfaceManagementProfile = defaults.interfaceManagementProfile;
     	      this.ips = defaults.ips;
     	      this.lacp = defaults.lacp;
+    	      this.lldp = defaults.lldp;
     	      this.mtu = defaults.mtu;
     	      this.netflowProfile = defaults.netflowProfile;
         }
 
+        @CustomType.Setter
+        public Builder adjustTcpMss(GetAggregateInterfaceLayer3AdjustTcpMss adjustTcpMss) {
+            if (adjustTcpMss == null) {
+              throw new MissingRequiredPropertyException("GetAggregateInterfaceLayer3", "adjustTcpMss");
+            }
+            this.adjustTcpMss = adjustTcpMss;
+            return this;
+        }
         @CustomType.Setter
         public Builder arps(List<GetAggregateInterfaceLayer3Arp> arps) {
             if (arps == null) {
@@ -205,6 +239,14 @@ public final class GetAggregateInterfaceLayer3 {
             return this;
         }
         @CustomType.Setter
+        public Builder lldp(GetAggregateInterfaceLayer3Lldp lldp) {
+            if (lldp == null) {
+              throw new MissingRequiredPropertyException("GetAggregateInterfaceLayer3", "lldp");
+            }
+            this.lldp = lldp;
+            return this;
+        }
+        @CustomType.Setter
         public Builder mtu(Integer mtu) {
             if (mtu == null) {
               throw new MissingRequiredPropertyException("GetAggregateInterfaceLayer3", "mtu");
@@ -222,12 +264,14 @@ public final class GetAggregateInterfaceLayer3 {
         }
         public GetAggregateInterfaceLayer3 build() {
             final var _resultValue = new GetAggregateInterfaceLayer3();
+            _resultValue.adjustTcpMss = adjustTcpMss;
             _resultValue.arps = arps;
             _resultValue.ddnsConfig = ddnsConfig;
             _resultValue.dhcpClient = dhcpClient;
             _resultValue.interfaceManagementProfile = interfaceManagementProfile;
             _resultValue.ips = ips;
             _resultValue.lacp = lacp;
+            _resultValue.lldp = lldp;
             _resultValue.mtu = mtu;
             _resultValue.netflowProfile = netflowProfile;
             return _resultValue;

@@ -13,12 +13,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class SyslogServerProfileServer {
     /**
-     * @return Syslog facility
+     * @return Syslog facility. Possible values are `LOG_USER`, `LOG_LOCAL0`, `LOG_LOCAL1`, `LOG_LOCAL2`, `LOG_LOCAL3`, `LOG_LOCAL4`, `LOG_LOCAL5`, `LOG_LOCAL6` and `LOG_LOCAL7`.
      * 
      */
     private @Nullable String facility;
     /**
-     * @return Syslog format
+     * @return Syslog format. Possible values are `BSD` and `IETF`.
      * 
      */
     private @Nullable String format;
@@ -38,21 +38,21 @@ public final class SyslogServerProfileServer {
      */
     private @Nullable String server;
     /**
-     * @return Transport protocol
+     * @return Transport protocol. Possible values are `UDP` and `TCP`.
      * 
      */
     private @Nullable String transport;
 
     private SyslogServerProfileServer() {}
     /**
-     * @return Syslog facility
+     * @return Syslog facility. Possible values are `LOG_USER`, `LOG_LOCAL0`, `LOG_LOCAL1`, `LOG_LOCAL2`, `LOG_LOCAL3`, `LOG_LOCAL4`, `LOG_LOCAL5`, `LOG_LOCAL6` and `LOG_LOCAL7`.
      * 
      */
     public Optional<String> facility() {
         return Optional.ofNullable(this.facility);
     }
     /**
-     * @return Syslog format
+     * @return Syslog format. Possible values are `BSD` and `IETF`.
      * 
      */
     public Optional<String> format() {
@@ -80,7 +80,7 @@ public final class SyslogServerProfileServer {
         return Optional.ofNullable(this.server);
     }
     /**
-     * @return Transport protocol
+     * @return Transport protocol. Possible values are `UDP` and `TCP`.
      * 
      */
     public Optional<String> transport() {

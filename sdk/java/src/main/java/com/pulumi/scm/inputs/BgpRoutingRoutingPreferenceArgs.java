@@ -34,16 +34,12 @@ public final class BgpRoutingRoutingPreferenceArgs extends com.pulumi.resources.
     /**
      * Hot potato routing
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `default` and `hotPotatoRouting`.
-     * 
      */
     @Import(name="hotPotatoRouting")
     private @Nullable Output<BgpRoutingRoutingPreferenceHotPotatoRoutingArgs> hotPotatoRouting;
 
     /**
      * @return Hot potato routing
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `default` and `hotPotatoRouting`.
      * 
      */
     public Optional<Output<BgpRoutingRoutingPreferenceHotPotatoRoutingArgs>> hotPotatoRouting() {
@@ -99,8 +95,6 @@ public final class BgpRoutingRoutingPreferenceArgs extends com.pulumi.resources.
         /**
          * @param hotPotatoRouting Hot potato routing
          * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `default` and `hotPotatoRouting`.
-         * 
          * @return builder
          * 
          */
@@ -111,8 +105,6 @@ public final class BgpRoutingRoutingPreferenceArgs extends com.pulumi.resources.
 
         /**
          * @param hotPotatoRouting Hot potato routing
-         * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `default` and `hotPotatoRouting`.
          * 
          * @return builder
          * 

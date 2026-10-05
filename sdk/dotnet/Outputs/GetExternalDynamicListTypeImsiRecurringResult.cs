@@ -19,26 +19,18 @@ namespace Pulumi.Scm.Outputs
         public readonly Outputs.GetExternalDynamicListTypeImsiRecurringDailyResult Daily;
         /// <summary>
         /// Five-minute interval settings for IMSI updates
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Daily`, `FiveMinute`, `Hourly`, `Monthly`, and `Weekly`.
         /// </summary>
         public readonly Outputs.GetExternalDynamicListTypeImsiRecurringFiveMinuteResult FiveMinute;
         /// <summary>
         /// Hourly interval settings for IMSI updates
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Daily`, `FiveMinute`, `Hourly`, `Monthly`, and `Weekly`.
         /// </summary>
         public readonly Outputs.GetExternalDynamicListTypeImsiRecurringHourlyResult Hourly;
         /// <summary>
         /// Monthly interval settings for IMSI updates
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Daily`, `FiveMinute`, `Hourly`, `Monthly`, and `Weekly`.
         /// </summary>
         public readonly Outputs.GetExternalDynamicListTypeImsiRecurringMonthlyResult Monthly;
         /// <summary>
         /// Weekly interval settings for IMSI updates
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Daily`, `FiveMinute`, `Hourly`, `Monthly`, and `Weekly`.
         /// </summary>
         public readonly Outputs.GetExternalDynamicListTypeImsiRecurringWeeklyResult Weekly;
 

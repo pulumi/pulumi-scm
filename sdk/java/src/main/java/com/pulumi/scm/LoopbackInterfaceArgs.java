@@ -5,6 +5,7 @@ package com.pulumi.scm;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.scm.inputs.LoopbackInterfaceAdjustTcpMssArgs;
 import com.pulumi.scm.inputs.LoopbackInterfaceIpArgs;
 import com.pulumi.scm.inputs.LoopbackInterfaceIpv6Args;
 import java.lang.Integer;
@@ -18,6 +19,21 @@ import javax.annotation.Nullable;
 public final class LoopbackInterfaceArgs extends com.pulumi.resources.ResourceArgs {
 
     public static final LoopbackInterfaceArgs Empty = new LoopbackInterfaceArgs();
+
+    /**
+     * TCP MSS adjustment settings for the interface
+     * 
+     */
+    @Import(name="adjustTcpMss")
+    private @Nullable Output<LoopbackInterfaceAdjustTcpMssArgs> adjustTcpMss;
+
+    /**
+     * @return TCP MSS adjustment settings for the interface
+     * 
+     */
+    public Optional<Output<LoopbackInterfaceAdjustTcpMssArgs>> adjustTcpMss() {
+        return Optional.ofNullable(this.adjustTcpMss);
+    }
 
     /**
      * Description for loopback interface
@@ -67,16 +83,12 @@ public final class LoopbackInterfaceArgs extends com.pulumi.resources.ResourceAr
     /**
      * The folder in which the resource is defined
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
      */
     @Import(name="folder")
     private @Nullable Output<String> folder;
 
     /**
      * @return The folder in which the resource is defined
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public Optional<Output<String>> folder() {
@@ -176,16 +188,12 @@ public final class LoopbackInterfaceArgs extends com.pulumi.resources.ResourceAr
     /**
      * The snippet in which the resource is defined
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
      */
     @Import(name="snippet")
     private @Nullable Output<String> snippet;
 
     /**
      * @return The snippet in which the resource is defined
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public Optional<Output<String>> snippet() {
@@ -195,6 +203,7 @@ public final class LoopbackInterfaceArgs extends com.pulumi.resources.ResourceAr
     private LoopbackInterfaceArgs() {}
 
     private LoopbackInterfaceArgs(LoopbackInterfaceArgs $) {
+        this.adjustTcpMss = $.adjustTcpMss;
         this.comment = $.comment;
         this.defaultValue = $.defaultValue;
         this.device = $.device;
@@ -224,6 +233,27 @@ public final class LoopbackInterfaceArgs extends com.pulumi.resources.ResourceAr
 
         public Builder(LoopbackInterfaceArgs defaults) {
             $ = new LoopbackInterfaceArgs(Objects.requireNonNull(defaults));
+        }
+
+        /**
+         * @param adjustTcpMss TCP MSS adjustment settings for the interface
+         * 
+         * @return builder
+         * 
+         */
+        public Builder adjustTcpMss(@Nullable Output<LoopbackInterfaceAdjustTcpMssArgs> adjustTcpMss) {
+            $.adjustTcpMss = adjustTcpMss;
+            return this;
+        }
+
+        /**
+         * @param adjustTcpMss TCP MSS adjustment settings for the interface
+         * 
+         * @return builder
+         * 
+         */
+        public Builder adjustTcpMss(LoopbackInterfaceAdjustTcpMssArgs adjustTcpMss) {
+            return adjustTcpMss(Output.of(adjustTcpMss));
         }
 
         /**
@@ -292,8 +322,6 @@ public final class LoopbackInterfaceArgs extends com.pulumi.resources.ResourceAr
         /**
          * @param folder The folder in which the resource is defined
          * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-         * 
          * @return builder
          * 
          */
@@ -304,8 +332,6 @@ public final class LoopbackInterfaceArgs extends com.pulumi.resources.ResourceAr
 
         /**
          * @param folder The folder in which the resource is defined
-         * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
          * 
          * @return builder
          * 
@@ -453,8 +479,6 @@ public final class LoopbackInterfaceArgs extends com.pulumi.resources.ResourceAr
         /**
          * @param snippet The snippet in which the resource is defined
          * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-         * 
          * @return builder
          * 
          */
@@ -465,8 +489,6 @@ public final class LoopbackInterfaceArgs extends com.pulumi.resources.ResourceAr
 
         /**
          * @param snippet The snippet in which the resource is defined
-         * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
          * 
          * @return builder
          * 

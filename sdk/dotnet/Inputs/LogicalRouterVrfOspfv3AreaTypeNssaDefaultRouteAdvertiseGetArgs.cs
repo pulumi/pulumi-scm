@@ -19,7 +19,7 @@ namespace Pulumi.Scm.Inputs
         public Input<int>? Metric { get; set; }
 
         /// <summary>
-        /// Type
+        /// Type. Possible values are `ext-1` and `ext-2`.
         /// </summary>
         [Input("type")]
         public Input<string>? Type { get; set; }

@@ -40,7 +40,7 @@ public final class GetAutoVpnClusterListDataGateway {
      */
     private String name;
     /**
-     * @return Priority
+     * @return Priority. Possible values are `1`, `2`, `3`, `4`, `5`, `6`, `7` and `8`.
      * 
      */
     private String priority;
@@ -92,7 +92,7 @@ public final class GetAutoVpnClusterListDataGateway {
         return this.name;
     }
     /**
-     * @return Priority
+     * @return Priority. Possible values are `1`, `2`, `3`, `4`, `5`, `6`, `7` and `8`.
      * 
      */
     public String priority() {

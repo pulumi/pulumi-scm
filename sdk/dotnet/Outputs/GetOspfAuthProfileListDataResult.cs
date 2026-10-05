@@ -22,7 +22,7 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly ImmutableDictionary<string, string> EncryptedValues;
         /// <summary>
-        /// The folder of the item. Default: Shared.
+        /// The folder in which the resource is defined
         /// </summary>
         public readonly string Folder;
         /// <summary>
@@ -31,22 +31,18 @@ namespace Pulumi.Scm.Outputs
         public readonly string Id;
         /// <summary>
         /// MD5s
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Md5` and `Password`.
         /// </summary>
         public readonly ImmutableArray<Outputs.GetOspfAuthProfileListDataMd5Result> Md5s;
         /// <summary>
-        /// The name of the item.
+        /// Profile name
         /// </summary>
         public readonly string Name;
         /// <summary>
         /// Password
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Md5` and `Password`.
         /// </summary>
         public readonly string Password;
         /// <summary>
-        /// The snippet of the item.
+        /// The snippet in which the resource is defined
         /// </summary>
         public readonly string Snippet;
         /// <summary>

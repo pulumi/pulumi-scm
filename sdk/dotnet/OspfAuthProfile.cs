@@ -51,16 +51,12 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The folder in which the resource is defined
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Output("folder")]
         public Output<string?> Folder { get; private set; } = null!;
 
         /// <summary>
         /// MD5s
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Md5` and `Password`.
         /// </summary>
         [Output("md5s")]
         public Output<ImmutableArray<Outputs.OspfAuthProfileMd5>> Md5s { get; private set; } = null!;
@@ -73,16 +69,12 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// Password
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Md5` and `Password`.
         /// </summary>
         [Output("password")]
         public Output<string?> Password { get; private set; } = null!;
 
         /// <summary>
         /// The snippet in which the resource is defined
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Output("snippet")]
         public Output<string?> Snippet { get; private set; } = null!;
@@ -152,8 +144,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The folder in which the resource is defined
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("folder")]
         public Input<string>? Folder { get; set; }
@@ -163,8 +153,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// MD5s
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Md5` and `Password`.
         /// </summary>
         public InputList<Inputs.OspfAuthProfileMd5Args> Md5s
         {
@@ -183,8 +171,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// Password
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Md5` and `Password`.
         /// </summary>
         public Input<string>? Password
         {
@@ -198,8 +184,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The snippet in which the resource is defined
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("snippet")]
         public Input<string>? Snippet { get; set; }
@@ -236,8 +220,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The folder in which the resource is defined
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("folder")]
         public Input<string>? Folder { get; set; }
@@ -247,8 +229,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// MD5s
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Md5` and `Password`.
         /// </summary>
         public InputList<Inputs.OspfAuthProfileMd5GetArgs> Md5s
         {
@@ -267,8 +247,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// Password
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Md5` and `Password`.
         /// </summary>
         public Input<string>? Password
         {
@@ -282,8 +260,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The snippet in which the resource is defined
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("snippet")]
         public Input<string>? Snippet { get; set; }

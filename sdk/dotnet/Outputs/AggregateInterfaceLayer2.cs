@@ -18,6 +18,10 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly Outputs.AggregateInterfaceLayer2Lacp? Lacp;
         /// <summary>
+        /// LLDP settings for the interface
+        /// </summary>
+        public readonly Outputs.AggregateInterfaceLayer2Lldp? Lldp;
+        /// <summary>
         /// Name of Netflow Profile to assign to Interface
         /// </summary>
         public readonly string? NetflowProfile;
@@ -30,11 +34,14 @@ namespace Pulumi.Scm.Outputs
         private AggregateInterfaceLayer2(
             Outputs.AggregateInterfaceLayer2Lacp? lacp,
 
+            Outputs.AggregateInterfaceLayer2Lldp? lldp,
+
             string? netflowProfile,
 
             string? vlanTag)
         {
             Lacp = lacp;
+            Lldp = lldp;
             NetflowProfile = netflowProfile;
             VlanTag = vlanTag;
         }

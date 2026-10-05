@@ -20,14 +20,10 @@ public final class GetServiceSettingServicesNtpServersPrimaryNtpServerAuthentica
     /**
      * @return None
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `autokey`, `none`, and `symmetricKey`.
-     * 
      */
     private GetServiceSettingServicesNtpServersPrimaryNtpServerAuthenticationTypeNone none;
     /**
      * @return Symmetric key
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `autokey`, `none`, and `symmetricKey`.
      * 
      */
     private GetServiceSettingServicesNtpServersPrimaryNtpServerAuthenticationTypeSymmetricKey symmetricKey;
@@ -43,16 +39,12 @@ public final class GetServiceSettingServicesNtpServersPrimaryNtpServerAuthentica
     /**
      * @return None
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `autokey`, `none`, and `symmetricKey`.
-     * 
      */
     public GetServiceSettingServicesNtpServersPrimaryNtpServerAuthenticationTypeNone none() {
         return this.none;
     }
     /**
      * @return Symmetric key
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `autokey`, `none`, and `symmetricKey`.
      * 
      */
     public GetServiceSettingServicesNtpServersPrimaryNtpServerAuthenticationTypeSymmetricKey symmetricKey() {

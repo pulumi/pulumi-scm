@@ -199,14 +199,14 @@ import javax.annotation.Nullable;
 @ResourceType(type="scm:index/natRule:NatRule")
 public class NatRule extends com.pulumi.resources.CustomResource {
     /**
-     * Active active device binding
+     * Active active device binding. Possible values are `primary`, `both`, `0` and `1`.
      * 
      */
     @Export(name="activeActiveDeviceBinding", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> activeActiveDeviceBinding;
 
     /**
-     * @return Active active device binding
+     * @return Active active device binding. Possible values are `primary`, `both`, `0` and `1`.
      * 
      */
     public Output<Optional<String>> activeActiveDeviceBinding() {
@@ -339,28 +339,28 @@ public class NatRule extends com.pulumi.resources.CustomResource {
         return this.name;
     }
     /**
-     * NAT type
+     * NAT type. Possible values are `ipv4`, `nat64` and `nptv6`.
      * 
      */
     @Export(name="natType", refs={String.class}, tree="[0]")
     private Output<String> natType;
 
     /**
-     * @return NAT type
+     * @return NAT type. Possible values are `ipv4`, `nat64` and `nptv6`.
      * 
      */
     public Output<String> natType() {
         return this.natType;
     }
     /**
-     * The relative position of the rule
+     * The relative position of the rule. Possible values are `pre` and `post`.
      * 
      */
     @Export(name="position", refs={String.class}, tree="[0]")
     private Output<String> position;
 
     /**
-     * @return The relative position of the rule
+     * @return The relative position of the rule. Possible values are `pre` and `post`.
      * 
      */
     public Output<String> position() {

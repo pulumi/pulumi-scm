@@ -13,7 +13,7 @@ namespace Pulumi.Scm.Inputs
     public sealed class EthernetInterfaceLayer2GetArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// LLDP Settings
+        /// LLDP settings for the interface
         /// </summary>
         [Input("lldp")]
         public Input<Inputs.EthernetInterfaceLayer2LldpGetArgs>? Lldp { get; set; }

@@ -30,7 +30,7 @@ class ForwardingProfileDestinationArgs:
         The set of arguments for constructing a ForwardingProfileDestination resource.
 
         :param pulumi.Input[_builtins.str] description: description of the destination
-        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined. Possible values are `Mobile Users`.
         :param pulumi.Input[Sequence[pulumi.Input['ForwardingProfileDestinationFqdnArgs']]] fqdns: List of FQDN based destination entries
         :param pulumi.Input[Sequence[pulumi.Input['ForwardingProfileDestinationIpAddressArgs']]] ip_addresses: List of IP address based destination entries
         :param pulumi.Input[_builtins.str] name: alphanumeric string [ 0-9a-zA-Z._ -]
@@ -62,7 +62,7 @@ class ForwardingProfileDestinationArgs:
     @pulumi.getter
     def folder(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
-        The folder in which the resource is defined
+        The folder in which the resource is defined. Possible values are `Mobile Users`.
         """
         return pulumi.get(self, "folder")
 
@@ -120,7 +120,7 @@ class _ForwardingProfileDestinationState:
         Input properties used for looking up and filtering ForwardingProfileDestination resources.
 
         :param pulumi.Input[_builtins.str] description: description of the destination
-        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined. Possible values are `Mobile Users`.
         :param pulumi.Input[Sequence[pulumi.Input['ForwardingProfileDestinationFqdnArgs']]] fqdns: List of FQDN based destination entries
         :param pulumi.Input[Sequence[pulumi.Input['ForwardingProfileDestinationIpAddressArgs']]] ip_addresses: List of IP address based destination entries
         :param pulumi.Input[_builtins.str] name: alphanumeric string [ 0-9a-zA-Z._ -]
@@ -155,7 +155,7 @@ class _ForwardingProfileDestinationState:
     @pulumi.getter
     def folder(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
-        The folder in which the resource is defined
+        The folder in which the resource is defined. Possible values are `Mobile Users`.
         """
         return pulumi.get(self, "folder")
 
@@ -309,7 +309,7 @@ class ForwardingProfileDestination(pulumi.CustomResource):
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] description: description of the destination
-        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined. Possible values are `Mobile Users`.
         :param pulumi.Input[Sequence[pulumi.Input[Union['ForwardingProfileDestinationFqdnArgs', 'ForwardingProfileDestinationFqdnArgsDict', 'outputs.ForwardingProfileDestinationFqdn']]]] fqdns: List of FQDN based destination entries
         :param pulumi.Input[Sequence[pulumi.Input[Union['ForwardingProfileDestinationIpAddressArgs', 'ForwardingProfileDestinationIpAddressArgsDict', 'outputs.ForwardingProfileDestinationIpAddress']]]] ip_addresses: List of IP address based destination entries
         :param pulumi.Input[_builtins.str] name: alphanumeric string [ 0-9a-zA-Z._ -]
@@ -461,7 +461,7 @@ class ForwardingProfileDestination(pulumi.CustomResource):
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] description: description of the destination
-        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined. Possible values are `Mobile Users`.
         :param pulumi.Input[Sequence[pulumi.Input[Union['ForwardingProfileDestinationFqdnArgs', 'ForwardingProfileDestinationFqdnArgsDict', 'outputs.ForwardingProfileDestinationFqdn']]]] fqdns: List of FQDN based destination entries
         :param pulumi.Input[Sequence[pulumi.Input[Union['ForwardingProfileDestinationIpAddressArgs', 'ForwardingProfileDestinationIpAddressArgsDict', 'outputs.ForwardingProfileDestinationIpAddress']]]] ip_addresses: List of IP address based destination entries
         :param pulumi.Input[_builtins.str] name: alphanumeric string [ 0-9a-zA-Z._ -]
@@ -491,7 +491,7 @@ class ForwardingProfileDestination(pulumi.CustomResource):
     @pulumi.getter
     def folder(self) -> pulumi.Output[_builtins.str]:
         """
-        The folder in which the resource is defined
+        The folder in which the resource is defined. Possible values are `Mobile Users`.
         """
         return pulumi.get(self, "folder")
 

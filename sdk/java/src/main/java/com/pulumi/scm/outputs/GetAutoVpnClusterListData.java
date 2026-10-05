@@ -55,7 +55,7 @@ public final class GetAutoVpnClusterListData {
      */
     private String tfid;
     /**
-     * @return VPN cluster type
+     * @return VPN cluster type. Possible values are `hub-spoke` and `mesh`.
      * 
      */
     private String type;
@@ -118,7 +118,7 @@ public final class GetAutoVpnClusterListData {
         return this.tfid;
     }
     /**
-     * @return VPN cluster type
+     * @return VPN cluster type. Possible values are `hub-spoke` and `mesh`.
      * 
      */
     public String type() {

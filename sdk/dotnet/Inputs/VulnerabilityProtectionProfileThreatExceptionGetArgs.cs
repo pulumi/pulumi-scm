@@ -43,7 +43,7 @@ namespace Pulumi.Scm.Inputs
         public Input<string>? Notes { get; set; }
 
         /// <summary>
-        /// Packet capture
+        /// Packet capture. Possible values are `Disable`, `single-packet` and `extended-capture`.
         /// </summary>
         [Input("packetCapture")]
         public Input<string>? PacketCapture { get; set; }

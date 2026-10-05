@@ -34,16 +34,12 @@ public final class BgpAddressFamilyProfileIpv4UnicastNextHopArgs extends com.pul
     /**
      * Self force
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `self` and `selfForce`.
-     * 
      */
     @Import(name="selfForce")
     private @Nullable Output<BgpAddressFamilyProfileIpv4UnicastNextHopSelfForceArgs> selfForce;
 
     /**
      * @return Self force
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `self` and `selfForce`.
      * 
      */
     public Optional<Output<BgpAddressFamilyProfileIpv4UnicastNextHopSelfForceArgs>> selfForce() {
@@ -99,8 +95,6 @@ public final class BgpAddressFamilyProfileIpv4UnicastNextHopArgs extends com.pul
         /**
          * @param selfForce Self force
          * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `self` and `selfForce`.
-         * 
          * @return builder
          * 
          */
@@ -111,8 +105,6 @@ public final class BgpAddressFamilyProfileIpv4UnicastNextHopArgs extends com.pul
 
         /**
          * @param selfForce Self force
-         * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `self` and `selfForce`.
          * 
          * @return builder
          * 

@@ -17,16 +17,40 @@ public final class GetDhcpInterfaceResult {
      * 
      */
     private String device;
+    /**
+     * @return The folder in which the resource is defined
+     * 
+     */
     private String folder;
     /**
      * @return UUID of the resource
      * 
      */
     private String id;
+    /**
+     * @return Interface name
+     * 
+     */
     private String name;
+    /**
+     * @return Relay
+     * 
+     */
     private GetDhcpInterfaceRelay relay;
+    /**
+     * @return Server
+     * 
+     */
     private GetDhcpInterfaceServer server;
+    /**
+     * @return The snippet in which the resource is defined
+     * 
+     */
     private String snippet;
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     private String tfid;
 
     private GetDhcpInterfaceResult() {}
@@ -37,6 +61,10 @@ public final class GetDhcpInterfaceResult {
     public String device() {
         return this.device;
     }
+    /**
+     * @return The folder in which the resource is defined
+     * 
+     */
     public String folder() {
         return this.folder;
     }
@@ -47,18 +75,38 @@ public final class GetDhcpInterfaceResult {
     public String id() {
         return this.id;
     }
+    /**
+     * @return Interface name
+     * 
+     */
     public String name() {
         return this.name;
     }
+    /**
+     * @return Relay
+     * 
+     */
     public GetDhcpInterfaceRelay relay() {
         return this.relay;
     }
+    /**
+     * @return Server
+     * 
+     */
     public GetDhcpInterfaceServer server() {
         return this.server;
     }
+    /**
+     * @return The snippet in which the resource is defined
+     * 
+     */
     public String snippet() {
         return this.snippet;
     }
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     public String tfid() {
         return this.tfid;
     }

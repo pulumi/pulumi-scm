@@ -71,14 +71,23 @@ import (
 //			if err != nil {
 //				return err
 //			}
-//			// Creates a layer3 zone
-//			// Requires Interface $scm_l3_interface to exist
+//			// Creates a layer3 ethernet interface for use in zone
+//			scmL3Interface, err := scm.NewEthernetInterface(ctx, "scm_l3_interface", &scm.EthernetInterfaceArgs{
+//				Name:    pulumi.String("$scm_l3_interface"),
+//				Comment: pulumi.String("Managed by Pulumi"),
+//				Folder:  pulumi.String("ngfw-shared"),
+//				Layer3:  &scm.EthernetInterfaceLayer3Args{},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			// Creates a layer3 zone that references the interface
 //			_, err = scm.NewZone(ctx, "scm_layer3_zone_complex", &scm.ZoneArgs{
 //				Name:   pulumi.String("scm_layer3_zone_complex"),
 //				Folder: pulumi.String("ngfw-shared"),
 //				Network: &scm.ZoneNetworkArgs{
 //					Layer3s: pulumi.StringArray{
-//						pulumi.String("$scm_l3_interface"),
+//						scmL3Interface.Name,
 //					},
 //					ZoneProtectionProfile:        pulumi.String("best-practice"),
 //					EnablePacketBufferProtection: pulumi.Bool(true),
@@ -101,7 +110,9 @@ import (
 //						pulumi.String("198.18.4.0/24"),
 //					},
 //				},
-//			})
+//			}, pulumi.DependsOn([]pulumi.Resource{
+//				scmL3Interface,
+//			}))
 //			if err != nil {
 //				return err
 //			}
@@ -148,16 +159,12 @@ type Zone struct {
 	// Enable user identification
 	EnableUserIdentification pulumi.BoolPtrOutput `pulumi:"enableUserIdentification"`
 	// Folder
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrOutput `pulumi:"folder"`
 	// Alphanumeric string begin with letter: [0-9a-zA-Z._-]
 	Name pulumi.StringOutput `pulumi:"name"`
 	// Network
 	Network ZoneNetworkPtrOutput `pulumi:"network"`
 	// The snippet in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
 	// The Terraform ID.
 	Tfid pulumi.StringOutput `pulumi:"tfid"`
@@ -208,16 +215,12 @@ type zoneState struct {
 	// Enable user identification
 	EnableUserIdentification *bool `pulumi:"enableUserIdentification"`
 	// Folder
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// Alphanumeric string begin with letter: [0-9a-zA-Z._-]
 	Name *string `pulumi:"name"`
 	// Network
 	Network *ZoneNetwork `pulumi:"network"`
 	// The snippet in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	// The Terraform ID.
 	Tfid *string `pulumi:"tfid"`
@@ -239,16 +242,12 @@ type ZoneState struct {
 	// Enable user identification
 	EnableUserIdentification pulumi.BoolPtrInput
 	// Folder
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// Alphanumeric string begin with letter: [0-9a-zA-Z._-]
 	Name pulumi.StringPtrInput
 	// Network
 	Network ZoneNetworkPtrInput
 	// The snippet in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	// The Terraform ID.
 	Tfid pulumi.StringPtrInput
@@ -274,16 +273,12 @@ type zoneArgs struct {
 	// Enable user identification
 	EnableUserIdentification *bool `pulumi:"enableUserIdentification"`
 	// Folder
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// Alphanumeric string begin with letter: [0-9a-zA-Z._-]
 	Name *string `pulumi:"name"`
 	// Network
 	Network *ZoneNetwork `pulumi:"network"`
 	// The snippet in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	// User acl
 	UserAcl *ZoneUserAcl `pulumi:"userAcl"`
@@ -304,16 +299,12 @@ type ZoneArgs struct {
 	// Enable user identification
 	EnableUserIdentification pulumi.BoolPtrInput
 	// Folder
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// Alphanumeric string begin with letter: [0-9a-zA-Z._-]
 	Name pulumi.StringPtrInput
 	// Network
 	Network ZoneNetworkPtrInput
 	// The snippet in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	// User acl
 	UserAcl ZoneUserAclPtrInput
@@ -437,8 +428,6 @@ func (o ZoneOutput) EnableUserIdentification() pulumi.BoolPtrOutput {
 }
 
 // Folder
-//
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o ZoneOutput) Folder() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *Zone) pulumi.StringPtrOutput { return v.Folder }).(pulumi.StringPtrOutput)
 }
@@ -454,8 +443,6 @@ func (o ZoneOutput) Network() ZoneNetworkPtrOutput {
 }
 
 // The snippet in which the resource is defined
-//
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o ZoneOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *Zone) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)
 }

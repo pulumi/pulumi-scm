@@ -156,7 +156,7 @@ class GetSecurityRuleResult:
     @pulumi.getter
     def action(self) -> _builtins.str:
         """
-        The action to be taken when the rule is matched
+        The action to be taken when the rule is matched. Possible values are `allow`, `deny`, `drop`, `reset-client`, `reset-server` and `reset-both`.
         """
         return pulumi.get(self, "action")
 
@@ -364,7 +364,7 @@ class GetSecurityRuleResult:
     @pulumi.getter
     def position(self) -> _builtins.str:
         """
-        The position of a security rule
+        The position of a security rule. Possible values are `pre` and `post`.
         """
         return pulumi.get(self, "position")
 
@@ -452,7 +452,7 @@ class GetSecurityRuleResult:
     @pulumi.getter(name="targetRule")
     def target_rule(self) -> _builtins.str:
         """
-        The name or UUID of the rule to position this rule relative to. Required when `relative_position` is `"before"` or `"after"`.
+        UUID of the rule to position this rule relative to. Required when `relative_position` is `"before"` or `"after"`.
         """
         return pulumi.get(self, "target_rule")
 

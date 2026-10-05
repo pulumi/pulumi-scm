@@ -53,9 +53,11 @@ func LookupUpdateSchedule(ctx *pulumi.Context, args *LookupUpdateScheduleArgs, o
 type LookupUpdateScheduleArgs struct {
 	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
+	// The folder in which the resource is defined
 	Folder *string `pulumi:"folder"`
 	// UUID of the resource
-	Id      string  `pulumi:"id"`
+	Id string `pulumi:"id"`
+	// The snippet in which the resource is defined
 	Snippet *string `pulumi:"snippet"`
 }
 
@@ -63,11 +65,15 @@ type LookupUpdateScheduleArgs struct {
 type LookupUpdateScheduleResult struct {
 	// The device in which the resource is defined
 	Device string `pulumi:"device"`
+	// The folder in which the resource is defined
 	Folder string `pulumi:"folder"`
 	// UUID of the resource
-	Id             string                          `pulumi:"id"`
-	Snippet        string                          `pulumi:"snippet"`
-	Tfid           string                          `pulumi:"tfid"`
+	Id string `pulumi:"id"`
+	// The snippet in which the resource is defined
+	Snippet string `pulumi:"snippet"`
+	// The Terraform ID.
+	Tfid string `pulumi:"tfid"`
+	// Update schedule
 	UpdateSchedule GetUpdateScheduleUpdateSchedule `pulumi:"updateSchedule"`
 }
 
@@ -80,9 +86,11 @@ func LookupUpdateScheduleOutput(ctx *pulumi.Context, args LookupUpdateScheduleOu
 type LookupUpdateScheduleOutputArgs struct {
 	// The device in which the resource is defined
 	Device pulumi.StringPtrInput `pulumi:"device"`
+	// The folder in which the resource is defined
 	Folder pulumi.StringPtrInput `pulumi:"folder"`
 	// UUID of the resource
-	Id      pulumi.StringInput    `pulumi:"id"`
+	Id pulumi.StringInput `pulumi:"id"`
+	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrInput `pulumi:"snippet"`
 }
 
@@ -110,6 +118,7 @@ func (o LookupUpdateScheduleResultOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupUpdateScheduleResult) string { return v.Device }).(pulumi.StringOutput)
 }
 
+// The folder in which the resource is defined
 func (o LookupUpdateScheduleResultOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupUpdateScheduleResult) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -119,14 +128,17 @@ func (o LookupUpdateScheduleResultOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupUpdateScheduleResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
+// The snippet in which the resource is defined
 func (o LookupUpdateScheduleResultOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupUpdateScheduleResult) string { return v.Snippet }).(pulumi.StringOutput)
 }
 
+// The Terraform ID.
 func (o LookupUpdateScheduleResultOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupUpdateScheduleResult) string { return v.Tfid }).(pulumi.StringOutput)
 }
 
+// Update schedule
 func (o LookupUpdateScheduleResultOutput) UpdateSchedule() GetUpdateScheduleUpdateScheduleOutput {
 	return o.ApplyT(func(v LookupUpdateScheduleResult) GetUpdateScheduleUpdateSchedule { return v.UpdateSchedule }).(GetUpdateScheduleUpdateScheduleOutput)
 }

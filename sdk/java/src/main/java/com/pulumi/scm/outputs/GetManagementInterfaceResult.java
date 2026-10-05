@@ -16,14 +16,30 @@ public final class GetManagementInterfaceResult {
      * 
      */
     private String device;
+    /**
+     * @return The folder in which the resource is defined
+     * 
+     */
     private String folder;
     /**
      * @return UUID of the resource
      * 
      */
     private String id;
+    /**
+     * @return Management interface
+     * 
+     */
     private GetManagementInterfaceManagementInterface managementInterface;
+    /**
+     * @return The snippet in which the resource is defined
+     * 
+     */
     private String snippet;
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     private String tfid;
 
     private GetManagementInterfaceResult() {}
@@ -34,6 +50,10 @@ public final class GetManagementInterfaceResult {
     public String device() {
         return this.device;
     }
+    /**
+     * @return The folder in which the resource is defined
+     * 
+     */
     public String folder() {
         return this.folder;
     }
@@ -44,12 +64,24 @@ public final class GetManagementInterfaceResult {
     public String id() {
         return this.id;
     }
+    /**
+     * @return Management interface
+     * 
+     */
     public GetManagementInterfaceManagementInterface managementInterface() {
         return this.managementInterface;
     }
+    /**
+     * @return The snippet in which the resource is defined
+     * 
+     */
     public String snippet() {
         return this.snippet;
     }
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     public String tfid() {
         return this.tfid;
     }

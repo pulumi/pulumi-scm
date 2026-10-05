@@ -14,7 +14,7 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetLogicalRouterListDataVrfOspfv3AuthProfileEspEncryptionResult
     {
         /// <summary>
-        /// Algorithm
+        /// Algorithm. Possible values are `3des`, `aes-128-cbc`, `aes-192-cbc`, `aes-256-cbc` and `Null`.
         /// </summary>
         public readonly string Algorithm;
         /// <summary>

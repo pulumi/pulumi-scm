@@ -12,7 +12,7 @@ import java.util.Objects;
 @CustomType
 public final class GetEthernetInterfaceListDataLayer2 {
     /**
-     * @return LLDP Settings
+     * @return LLDP settings for the interface
      * 
      */
     private GetEthernetInterfaceListDataLayer2Lldp lldp;
@@ -29,7 +29,7 @@ public final class GetEthernetInterfaceListDataLayer2 {
 
     private GetEthernetInterfaceListDataLayer2() {}
     /**
-     * @return LLDP Settings
+     * @return LLDP settings for the interface
      * 
      */
     public GetEthernetInterfaceListDataLayer2Lldp lldp() {

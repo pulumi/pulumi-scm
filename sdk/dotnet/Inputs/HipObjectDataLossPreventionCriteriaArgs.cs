@@ -13,7 +13,7 @@ namespace Pulumi.Scm.Inputs
     public sealed class HipObjectDataLossPreventionCriteriaArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// is enabled
+        /// is enabled. Possible values are `No`, `Yes` and `not-available`.
         /// </summary>
         [Input("isEnabled")]
         public Input<string>? IsEnabled { get; set; }

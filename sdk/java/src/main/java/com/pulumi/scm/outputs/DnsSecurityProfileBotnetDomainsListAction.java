@@ -22,21 +22,15 @@ public final class DnsSecurityProfileBotnetDomainsListAction {
     /**
      * @return Allow
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `block`, and `sinkhole`.
-     * 
      */
     private @Nullable DnsSecurityProfileBotnetDomainsListActionAllow allow;
     /**
      * @return Block
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `block`, and `sinkhole`.
-     * 
      */
     private @Nullable DnsSecurityProfileBotnetDomainsListActionBlock block;
     /**
      * @return Sinkhole
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `block`, and `sinkhole`.
      * 
      */
     private @Nullable DnsSecurityProfileBotnetDomainsListActionSinkhole sinkhole;
@@ -52,8 +46,6 @@ public final class DnsSecurityProfileBotnetDomainsListAction {
     /**
      * @return Allow
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `block`, and `sinkhole`.
-     * 
      */
     public Optional<DnsSecurityProfileBotnetDomainsListActionAllow> allow() {
         return Optional.ofNullable(this.allow);
@@ -61,16 +53,12 @@ public final class DnsSecurityProfileBotnetDomainsListAction {
     /**
      * @return Block
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `block`, and `sinkhole`.
-     * 
      */
     public Optional<DnsSecurityProfileBotnetDomainsListActionBlock> block() {
         return Optional.ofNullable(this.block);
     }
     /**
      * @return Sinkhole
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `block`, and `sinkhole`.
      * 
      */
     public Optional<DnsSecurityProfileBotnetDomainsListActionSinkhole> sinkhole() {

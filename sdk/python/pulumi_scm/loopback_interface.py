@@ -21,6 +21,7 @@ __all__ = ['LoopbackInterfaceArgs', 'LoopbackInterface']
 @pulumi.input_type
 class LoopbackInterfaceArgs:
     def __init__(__self__, *,
+                 adjust_tcp_mss: pulumi.Input[Optional['LoopbackInterfaceAdjustTcpMssArgs']] = None,
                  comment: pulumi.Input[Optional[_builtins.str]] = None,
                  default_value: pulumi.Input[Optional[_builtins.str]] = None,
                  device: pulumi.Input[Optional[_builtins.str]] = None,
@@ -35,12 +36,11 @@ class LoopbackInterfaceArgs:
         """
         The set of arguments for constructing a LoopbackInterface resource.
 
+        :param pulumi.Input['LoopbackInterfaceAdjustTcpMssArgs'] adjust_tcp_mss: TCP MSS adjustment settings for the interface
         :param pulumi.Input[_builtins.str] comment: Description for loopback interface
         :param pulumi.Input[_builtins.str] default_value: Default interface assignment for loopback interface
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] interface_management_profile: Interface management profile for loopback interface
         :param pulumi.Input[Sequence[pulumi.Input['LoopbackInterfaceIpArgs']]] ips: Loopback IP Parent
         :param pulumi.Input['LoopbackInterfaceIpv6Args'] ipv6: Loopback IPv6 Configuration
@@ -48,9 +48,9 @@ class LoopbackInterfaceArgs:
         :param pulumi.Input[_builtins.str] name: Loopback Interface name
         :param pulumi.Input[_builtins.str] netflow_profile: Name of Netflow Profile to assign to Interface
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
+        if adjust_tcp_mss is not None:
+            pulumi.set(__self__, "adjust_tcp_mss", adjust_tcp_mss)
         if comment is not None:
             pulumi.set(__self__, "comment", comment)
         if default_value is not None:
@@ -73,6 +73,18 @@ class LoopbackInterfaceArgs:
             pulumi.set(__self__, "netflow_profile", netflow_profile)
         if snippet is not None:
             pulumi.set(__self__, "snippet", snippet)
+
+    @_builtins.property
+    @pulumi.getter(name="adjustTcpMss")
+    def adjust_tcp_mss(self) -> pulumi.Input[Optional['LoopbackInterfaceAdjustTcpMssArgs']]:
+        """
+        TCP MSS adjustment settings for the interface
+        """
+        return pulumi.get(self, "adjust_tcp_mss")
+
+    @adjust_tcp_mss.setter
+    def adjust_tcp_mss(self, value: pulumi.Input[Optional['LoopbackInterfaceAdjustTcpMssArgs']]):
+        pulumi.set(self, "adjust_tcp_mss", value)
 
     @_builtins.property
     @pulumi.getter
@@ -115,8 +127,6 @@ class LoopbackInterfaceArgs:
     def folder(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
-
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
 
@@ -201,8 +211,6 @@ class LoopbackInterfaceArgs:
     def snippet(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
-
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
 
@@ -214,6 +222,7 @@ class LoopbackInterfaceArgs:
 @pulumi.input_type
 class _LoopbackInterfaceState:
     def __init__(__self__, *,
+                 adjust_tcp_mss: pulumi.Input[Optional['LoopbackInterfaceAdjustTcpMssArgs']] = None,
                  comment: pulumi.Input[Optional[_builtins.str]] = None,
                  default_value: pulumi.Input[Optional[_builtins.str]] = None,
                  device: pulumi.Input[Optional[_builtins.str]] = None,
@@ -229,12 +238,11 @@ class _LoopbackInterfaceState:
         """
         Input properties used for looking up and filtering LoopbackInterface resources.
 
+        :param pulumi.Input['LoopbackInterfaceAdjustTcpMssArgs'] adjust_tcp_mss: TCP MSS adjustment settings for the interface
         :param pulumi.Input[_builtins.str] comment: Description for loopback interface
         :param pulumi.Input[_builtins.str] default_value: Default interface assignment for loopback interface
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] interface_management_profile: Interface management profile for loopback interface
         :param pulumi.Input[Sequence[pulumi.Input['LoopbackInterfaceIpArgs']]] ips: Loopback IP Parent
         :param pulumi.Input['LoopbackInterfaceIpv6Args'] ipv6: Loopback IPv6 Configuration
@@ -242,10 +250,10 @@ class _LoopbackInterfaceState:
         :param pulumi.Input[_builtins.str] name: Loopback Interface name
         :param pulumi.Input[_builtins.str] netflow_profile: Name of Netflow Profile to assign to Interface
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] tfid: The Terraform ID.
         """
+        if adjust_tcp_mss is not None:
+            pulumi.set(__self__, "adjust_tcp_mss", adjust_tcp_mss)
         if comment is not None:
             pulumi.set(__self__, "comment", comment)
         if default_value is not None:
@@ -272,6 +280,18 @@ class _LoopbackInterfaceState:
             pulumi.set(__self__, "tfid", tfid)
 
     @_builtins.property
+    @pulumi.getter(name="adjustTcpMss")
+    def adjust_tcp_mss(self) -> pulumi.Input[Optional['LoopbackInterfaceAdjustTcpMssArgs']]:
+        """
+        TCP MSS adjustment settings for the interface
+        """
+        return pulumi.get(self, "adjust_tcp_mss")
+
+    @adjust_tcp_mss.setter
+    def adjust_tcp_mss(self, value: pulumi.Input[Optional['LoopbackInterfaceAdjustTcpMssArgs']]):
+        pulumi.set(self, "adjust_tcp_mss", value)
+
+    @_builtins.property
     @pulumi.getter
     def comment(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
@@ -312,8 +332,6 @@ class _LoopbackInterfaceState:
     def folder(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
-
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
 
@@ -398,8 +416,6 @@ class _LoopbackInterfaceState:
     def snippet(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
-
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
 
@@ -426,6 +442,7 @@ class LoopbackInterface(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
+                 adjust_tcp_mss: pulumi.Input[Optional[Union['LoopbackInterfaceAdjustTcpMssArgs', 'LoopbackInterfaceAdjustTcpMssArgsDict', 'outputs.LoopbackInterfaceAdjustTcpMss']]] = None,
                  comment: pulumi.Input[Optional[_builtins.str]] = None,
                  default_value: pulumi.Input[Optional[_builtins.str]] = None,
                  device: pulumi.Input[Optional[_builtins.str]] = None,
@@ -456,7 +473,12 @@ class LoopbackInterface(pulumi.CustomResource):
             folder="ngfw-shared",
             ips=[{
                 "name": "198.18.1.1/32",
-            }])
+            }],
+            adjust_tcp_mss={
+                "enable": True,
+                "ipv4_mss_adjustment": 40,
+                "ipv6_mss_adjustment": 60,
+            })
         #
         # Creates a loopback interface with static ipv4 address, with default value loopback.123
         #
@@ -521,12 +543,11 @@ class LoopbackInterface(pulumi.CustomResource):
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
+        :param pulumi.Input[Union['LoopbackInterfaceAdjustTcpMssArgs', 'LoopbackInterfaceAdjustTcpMssArgsDict', 'outputs.LoopbackInterfaceAdjustTcpMss']] adjust_tcp_mss: TCP MSS adjustment settings for the interface
         :param pulumi.Input[_builtins.str] comment: Description for loopback interface
         :param pulumi.Input[_builtins.str] default_value: Default interface assignment for loopback interface
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] interface_management_profile: Interface management profile for loopback interface
         :param pulumi.Input[Sequence[pulumi.Input[Union['LoopbackInterfaceIpArgs', 'LoopbackInterfaceIpArgsDict', 'outputs.LoopbackInterfaceIp']]]] ips: Loopback IP Parent
         :param pulumi.Input[Union['LoopbackInterfaceIpv6Args', 'LoopbackInterfaceIpv6ArgsDict', 'outputs.LoopbackInterfaceIpv6']] ipv6: Loopback IPv6 Configuration
@@ -534,8 +555,6 @@ class LoopbackInterface(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] name: Loopback Interface name
         :param pulumi.Input[_builtins.str] netflow_profile: Name of Netflow Profile to assign to Interface
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         ...
     @overload
@@ -561,7 +580,12 @@ class LoopbackInterface(pulumi.CustomResource):
             folder="ngfw-shared",
             ips=[{
                 "name": "198.18.1.1/32",
-            }])
+            }],
+            adjust_tcp_mss={
+                "enable": True,
+                "ipv4_mss_adjustment": 40,
+                "ipv6_mss_adjustment": 60,
+            })
         #
         # Creates a loopback interface with static ipv4 address, with default value loopback.123
         #
@@ -639,6 +663,7 @@ class LoopbackInterface(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
+                 adjust_tcp_mss: pulumi.Input[Optional[Union['LoopbackInterfaceAdjustTcpMssArgs', 'LoopbackInterfaceAdjustTcpMssArgsDict', 'outputs.LoopbackInterfaceAdjustTcpMss']]] = None,
                  comment: pulumi.Input[Optional[_builtins.str]] = None,
                  default_value: pulumi.Input[Optional[_builtins.str]] = None,
                  device: pulumi.Input[Optional[_builtins.str]] = None,
@@ -659,6 +684,7 @@ class LoopbackInterface(pulumi.CustomResource):
                 raise TypeError('__props__ is only valid when passed in combination with a valid opts.id to get an existing resource')
             __props__ = LoopbackInterfaceArgs.__new__(LoopbackInterfaceArgs)
 
+            __props__.__dict__["adjust_tcp_mss"] = adjust_tcp_mss
             __props__.__dict__["comment"] = comment
             __props__.__dict__["default_value"] = default_value
             __props__.__dict__["device"] = device
@@ -681,6 +707,7 @@ class LoopbackInterface(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
+            adjust_tcp_mss: pulumi.Input[Optional[Union['LoopbackInterfaceAdjustTcpMssArgs', 'LoopbackInterfaceAdjustTcpMssArgsDict', 'outputs.LoopbackInterfaceAdjustTcpMss']]] = None,
             comment: pulumi.Input[Optional[_builtins.str]] = None,
             default_value: pulumi.Input[Optional[_builtins.str]] = None,
             device: pulumi.Input[Optional[_builtins.str]] = None,
@@ -700,12 +727,11 @@ class LoopbackInterface(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
+        :param pulumi.Input[Union['LoopbackInterfaceAdjustTcpMssArgs', 'LoopbackInterfaceAdjustTcpMssArgsDict', 'outputs.LoopbackInterfaceAdjustTcpMss']] adjust_tcp_mss: TCP MSS adjustment settings for the interface
         :param pulumi.Input[_builtins.str] comment: Description for loopback interface
         :param pulumi.Input[_builtins.str] default_value: Default interface assignment for loopback interface
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] interface_management_profile: Interface management profile for loopback interface
         :param pulumi.Input[Sequence[pulumi.Input[Union['LoopbackInterfaceIpArgs', 'LoopbackInterfaceIpArgsDict', 'outputs.LoopbackInterfaceIp']]]] ips: Loopback IP Parent
         :param pulumi.Input[Union['LoopbackInterfaceIpv6Args', 'LoopbackInterfaceIpv6ArgsDict', 'outputs.LoopbackInterfaceIpv6']] ipv6: Loopback IPv6 Configuration
@@ -713,14 +739,13 @@ class LoopbackInterface(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] name: Loopback Interface name
         :param pulumi.Input[_builtins.str] netflow_profile: Name of Netflow Profile to assign to Interface
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] tfid: The Terraform ID.
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
 
         __props__ = _LoopbackInterfaceState.__new__(_LoopbackInterfaceState)
 
+        __props__.__dict__["adjust_tcp_mss"] = adjust_tcp_mss
         __props__.__dict__["comment"] = comment
         __props__.__dict__["default_value"] = default_value
         __props__.__dict__["device"] = device
@@ -734,6 +759,14 @@ class LoopbackInterface(pulumi.CustomResource):
         __props__.__dict__["snippet"] = snippet
         __props__.__dict__["tfid"] = tfid
         return LoopbackInterface(resource_name, opts=opts, __props__=__props__)
+
+    @_builtins.property
+    @pulumi.getter(name="adjustTcpMss")
+    def adjust_tcp_mss(self) -> pulumi.Output[Optional['outputs.LoopbackInterfaceAdjustTcpMss']]:
+        """
+        TCP MSS adjustment settings for the interface
+        """
+        return pulumi.get(self, "adjust_tcp_mss")
 
     @_builtins.property
     @pulumi.getter
@@ -764,8 +797,6 @@ class LoopbackInterface(pulumi.CustomResource):
     def folder(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
-
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
 
@@ -822,8 +853,6 @@ class LoopbackInterface(pulumi.CustomResource):
     def snippet(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
-
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
 

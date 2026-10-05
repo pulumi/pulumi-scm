@@ -5,6 +5,7 @@ package com.pulumi.scm.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.scm.inputs.AggregateInterfaceLayer3LacpHighAvailabilityArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -48,6 +49,21 @@ public final class AggregateInterfaceLayer3LacpArgs extends com.pulumi.resources
     }
 
     /**
+     * High Availability settings
+     * 
+     */
+    @Import(name="highAvailability")
+    private @Nullable Output<AggregateInterfaceLayer3LacpHighAvailabilityArgs> highAvailability;
+
+    /**
+     * @return High Availability settings
+     * 
+     */
+    public Optional<Output<AggregateInterfaceLayer3LacpHighAvailabilityArgs>> highAvailability() {
+        return Optional.ofNullable(this.highAvailability);
+    }
+
+    /**
      * Maximum number of physical ports bundled in the LAG
      * 
      */
@@ -63,14 +79,14 @@ public final class AggregateInterfaceLayer3LacpArgs extends com.pulumi.resources
     }
 
     /**
-     * Mode
+     * Mode. Possible values are `passive` and `active`.
      * 
      */
     @Import(name="mode")
     private @Nullable Output<String> mode;
 
     /**
-     * @return Mode
+     * @return Mode. Possible values are `passive` and `active`.
      * 
      */
     public Optional<Output<String>> mode() {
@@ -93,14 +109,14 @@ public final class AggregateInterfaceLayer3LacpArgs extends com.pulumi.resources
     }
 
     /**
-     * Transmission mode
+     * Transmission mode. Possible values are `fast` and `slow`.
      * 
      */
     @Import(name="transmissionRate")
     private @Nullable Output<String> transmissionRate;
 
     /**
-     * @return Transmission mode
+     * @return Transmission mode. Possible values are `fast` and `slow`.
      * 
      */
     public Optional<Output<String>> transmissionRate() {
@@ -112,6 +128,7 @@ public final class AggregateInterfaceLayer3LacpArgs extends com.pulumi.resources
     private AggregateInterfaceLayer3LacpArgs(AggregateInterfaceLayer3LacpArgs $) {
         this.enable = $.enable;
         this.fastFailover = $.fastFailover;
+        this.highAvailability = $.highAvailability;
         this.maxPorts = $.maxPorts;
         this.mode = $.mode;
         this.systemPriority = $.systemPriority;
@@ -179,6 +196,27 @@ public final class AggregateInterfaceLayer3LacpArgs extends com.pulumi.resources
         }
 
         /**
+         * @param highAvailability High Availability settings
+         * 
+         * @return builder
+         * 
+         */
+        public Builder highAvailability(@Nullable Output<AggregateInterfaceLayer3LacpHighAvailabilityArgs> highAvailability) {
+            $.highAvailability = highAvailability;
+            return this;
+        }
+
+        /**
+         * @param highAvailability High Availability settings
+         * 
+         * @return builder
+         * 
+         */
+        public Builder highAvailability(AggregateInterfaceLayer3LacpHighAvailabilityArgs highAvailability) {
+            return highAvailability(Output.of(highAvailability));
+        }
+
+        /**
          * @param maxPorts Maximum number of physical ports bundled in the LAG
          * 
          * @return builder
@@ -200,7 +238,7 @@ public final class AggregateInterfaceLayer3LacpArgs extends com.pulumi.resources
         }
 
         /**
-         * @param mode Mode
+         * @param mode Mode. Possible values are `passive` and `active`.
          * 
          * @return builder
          * 
@@ -211,7 +249,7 @@ public final class AggregateInterfaceLayer3LacpArgs extends com.pulumi.resources
         }
 
         /**
-         * @param mode Mode
+         * @param mode Mode. Possible values are `passive` and `active`.
          * 
          * @return builder
          * 
@@ -242,7 +280,7 @@ public final class AggregateInterfaceLayer3LacpArgs extends com.pulumi.resources
         }
 
         /**
-         * @param transmissionRate Transmission mode
+         * @param transmissionRate Transmission mode. Possible values are `fast` and `slow`.
          * 
          * @return builder
          * 
@@ -253,7 +291,7 @@ public final class AggregateInterfaceLayer3LacpArgs extends com.pulumi.resources
         }
 
         /**
-         * @param transmissionRate Transmission mode
+         * @param transmissionRate Transmission mode. Possible values are `fast` and `slow`.
          * 
          * @return builder
          * 

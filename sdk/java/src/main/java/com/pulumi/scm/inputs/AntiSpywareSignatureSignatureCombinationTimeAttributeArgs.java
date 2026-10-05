@@ -47,14 +47,14 @@ public final class AntiSpywareSignatureSignatureCombinationTimeAttributeArgs ext
     }
 
     /**
-     * Track by
+     * Track by. Possible values are `source-and-destination`, `source` and `destination`.
      * 
      */
     @Import(name="trackBy")
     private @Nullable Output<String> trackBy;
 
     /**
-     * @return Track by
+     * @return Track by. Possible values are `source-and-destination`, `source` and `destination`.
      * 
      */
     public Optional<Output<String>> trackBy() {
@@ -130,7 +130,7 @@ public final class AntiSpywareSignatureSignatureCombinationTimeAttributeArgs ext
         }
 
         /**
-         * @param trackBy Track by
+         * @param trackBy Track by. Possible values are `source-and-destination`, `source` and `destination`.
          * 
          * @return builder
          * 
@@ -141,7 +141,7 @@ public final class AntiSpywareSignatureSignatureCombinationTimeAttributeArgs ext
         }
 
         /**
-         * @param trackBy Track by
+         * @param trackBy Track by. Possible values are `source-and-destination`, `source` and `destination`.
          * 
          * @return builder
          * 

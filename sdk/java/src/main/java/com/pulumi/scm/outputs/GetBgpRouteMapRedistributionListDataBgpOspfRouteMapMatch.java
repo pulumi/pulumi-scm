@@ -53,7 +53,7 @@ public final class GetBgpRouteMapRedistributionListDataBgpOspfRouteMapMatch {
      */
     private String origin;
     /**
-     * @return BGP Root OSPF Route maps match Peer
+     * @return BGP Root OSPF Route maps match Peer. Possible values are `local` and `none`.
      * 
      */
     private String peer;
@@ -126,7 +126,7 @@ public final class GetBgpRouteMapRedistributionListDataBgpOspfRouteMapMatch {
         return this.origin;
     }
     /**
-     * @return BGP Root OSPF Route maps match Peer
+     * @return BGP Root OSPF Route maps match Peer. Possible values are `local` and `none`.
      * 
      */
     public String peer() {

@@ -17,14 +17,14 @@ public final class BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetMetricA
     public static final BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetMetricArgs Empty = new BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetMetricArgs();
 
     /**
-     * Connected Static BGP Route maps set Metric action
+     * Connected Static BGP Route maps set Metric action. Possible values are `set`, `add` and `substract`.
      * 
      */
     @Import(name="action")
     private @Nullable Output<String> action;
 
     /**
-     * @return Connected Static BGP Route maps set Metric action
+     * @return Connected Static BGP Route maps set Metric action. Possible values are `set`, `add` and `substract`.
      * 
      */
     public Optional<Output<String>> action() {
@@ -72,7 +72,7 @@ public final class BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetMetricA
         }
 
         /**
-         * @param action Connected Static BGP Route maps set Metric action
+         * @param action Connected Static BGP Route maps set Metric action. Possible values are `set`, `add` and `substract`.
          * 
          * @return builder
          * 
@@ -83,7 +83,7 @@ public final class BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetMetricA
         }
 
         /**
-         * @param action Connected Static BGP Route maps set Metric action
+         * @param action Connected Static BGP Route maps set Metric action. Possible values are `set`, `add` and `substract`.
          * 
          * @return builder
          * 

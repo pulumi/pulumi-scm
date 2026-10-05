@@ -65,8 +65,6 @@ export class BgpRouteMapRedistribution extends pulumi.CustomResource {
     declare public readonly bgp: pulumi.Output<outputs.BgpRouteMapRedistributionBgp | undefined>;
     /**
      * Connected static
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `bgp`, `connectedStatic`, and `ospf`.
      */
     declare public readonly connectedStatic: pulumi.Output<outputs.BgpRouteMapRedistributionConnectedStatic | undefined>;
     /**
@@ -75,14 +73,10 @@ export class BgpRouteMapRedistribution extends pulumi.CustomResource {
     declare public readonly description: pulumi.Output<string | undefined>;
     /**
      * The device in which the resource is defined
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly device: pulumi.Output<string | undefined>;
     /**
      * The folder in which the resource is defined
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly folder: pulumi.Output<string | undefined>;
     /**
@@ -91,14 +85,10 @@ export class BgpRouteMapRedistribution extends pulumi.CustomResource {
     declare public readonly name: pulumi.Output<string>;
     /**
      * Ospf
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `bgp`, `connectedStatic`, and `ospf`.
      */
     declare public readonly ospf: pulumi.Output<outputs.BgpRouteMapRedistributionOspf | undefined>;
     /**
      * The snippet in which the resource is defined
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly snippet: pulumi.Output<string | undefined>;
     /**
@@ -155,8 +145,6 @@ export interface BgpRouteMapRedistributionState {
     bgp?: pulumi.Input<inputs.BgpRouteMapRedistributionBgp | undefined>;
     /**
      * Connected static
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `bgp`, `connectedStatic`, and `ospf`.
      */
     connectedStatic?: pulumi.Input<inputs.BgpRouteMapRedistributionConnectedStatic | undefined>;
     /**
@@ -165,14 +153,10 @@ export interface BgpRouteMapRedistributionState {
     description?: pulumi.Input<string | undefined>;
     /**
      * The device in which the resource is defined
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     device?: pulumi.Input<string | undefined>;
     /**
      * The folder in which the resource is defined
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     folder?: pulumi.Input<string | undefined>;
     /**
@@ -181,14 +165,10 @@ export interface BgpRouteMapRedistributionState {
     name?: pulumi.Input<string | undefined>;
     /**
      * Ospf
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `bgp`, `connectedStatic`, and `ospf`.
      */
     ospf?: pulumi.Input<inputs.BgpRouteMapRedistributionOspf | undefined>;
     /**
      * The snippet in which the resource is defined
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     snippet?: pulumi.Input<string | undefined>;
     /**
@@ -207,8 +187,6 @@ export interface BgpRouteMapRedistributionArgs {
     bgp?: pulumi.Input<inputs.BgpRouteMapRedistributionBgp | undefined>;
     /**
      * Connected static
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `bgp`, `connectedStatic`, and `ospf`.
      */
     connectedStatic?: pulumi.Input<inputs.BgpRouteMapRedistributionConnectedStatic | undefined>;
     /**
@@ -217,14 +195,10 @@ export interface BgpRouteMapRedistributionArgs {
     description?: pulumi.Input<string | undefined>;
     /**
      * The device in which the resource is defined
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     device?: pulumi.Input<string | undefined>;
     /**
      * The folder in which the resource is defined
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     folder?: pulumi.Input<string | undefined>;
     /**
@@ -233,14 +207,10 @@ export interface BgpRouteMapRedistributionArgs {
     name?: pulumi.Input<string | undefined>;
     /**
      * Ospf
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `bgp`, `connectedStatic`, and `ospf`.
      */
     ospf?: pulumi.Input<inputs.BgpRouteMapRedistributionOspf | undefined>;
     /**
      * The snippet in which the resource is defined
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     snippet?: pulumi.Input<string | undefined>;
 }

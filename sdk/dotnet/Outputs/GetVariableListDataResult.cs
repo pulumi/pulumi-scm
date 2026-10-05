@@ -22,7 +22,7 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly string Device;
         /// <summary>
-        /// The folder of the item. Default: Shared.
+        /// The folder in which the resource is defined
         /// </summary>
         public readonly string Folder;
         /// <summary>
@@ -30,7 +30,7 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly string Id;
         /// <summary>
-        /// The name of the item.
+        /// The name of the variable
         /// </summary>
         public readonly string Name;
         /// <summary>
@@ -38,7 +38,7 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly bool Overridden;
         /// <summary>
-        /// The snippet of the item.
+        /// The snippet in which the resource is defined
         /// </summary>
         public readonly string Snippet;
         /// <summary>
@@ -46,7 +46,7 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly string Tfid;
         /// <summary>
-        /// The variable type
+        /// The variable type. Possible values are `Percent`, `Count`, `ip-netmask`, `Zone`, `ip-range`, `ip-wildcard`, `device-priority`, `device-id`, `egress-max`, `as-number`, `Fqdn`, `Port`, `link-tag`, `group-id`, `Rate`, `router-id`, `qos-profile` and `Timer`.
         /// </summary>
         public readonly string Type;
         /// <summary>

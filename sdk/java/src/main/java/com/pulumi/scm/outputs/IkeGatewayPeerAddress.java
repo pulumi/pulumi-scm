@@ -20,14 +20,10 @@ public final class IkeGatewayPeerAddress {
     /**
      * @return peer gateway FQDN name
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `dynamic`, `fqdn`, and `ip`.
-     * 
      */
     private @Nullable String fqdn;
     /**
      * @return peer gateway has static IP address
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `dynamic`, `fqdn`, and `ip`.
      * 
      */
     private @Nullable String ip;
@@ -43,16 +39,12 @@ public final class IkeGatewayPeerAddress {
     /**
      * @return peer gateway FQDN name
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `dynamic`, `fqdn`, and `ip`.
-     * 
      */
     public Optional<String> fqdn() {
         return Optional.ofNullable(this.fqdn);
     }
     /**
      * @return peer gateway has static IP address
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `dynamic`, `fqdn`, and `ip`.
      * 
      */
     public Optional<String> ip() {

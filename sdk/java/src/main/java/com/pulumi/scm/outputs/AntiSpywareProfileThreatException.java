@@ -35,7 +35,7 @@ public final class AntiSpywareProfileThreatException {
      */
     private @Nullable String notes;
     /**
-     * @return Packet capture
+     * @return Packet capture. Possible values are `disable`, `single-packet` and `extended-capture`.
      * 
      */
     private @Nullable String packetCapture;
@@ -70,7 +70,7 @@ public final class AntiSpywareProfileThreatException {
         return Optional.ofNullable(this.notes);
     }
     /**
-     * @return Packet capture
+     * @return Packet capture. Possible values are `disable`, `single-packet` and `extended-capture`.
      * 
      */
     public Optional<String> packetCapture() {

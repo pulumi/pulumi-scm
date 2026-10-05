@@ -30,9 +30,17 @@ public final class GetZonePlainArgs extends com.pulumi.resources.InvokeArgs {
         return Optional.ofNullable(this.device);
     }
 
+    /**
+     * Folder
+     * 
+     */
     @Import(name="folder")
     private @Nullable String folder;
 
+    /**
+     * @return Folder
+     * 
+     */
     public Optional<String> folder() {
         return Optional.ofNullable(this.folder);
     }
@@ -52,16 +60,32 @@ public final class GetZonePlainArgs extends com.pulumi.resources.InvokeArgs {
         return this.id;
     }
 
+    /**
+     * Alphanumeric string begin with letter: [0-9a-zA-Z._-]
+     * 
+     */
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return Alphanumeric string begin with letter: [0-9a-zA-Z._-]
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
 
+    /**
+     * The snippet in which the resource is defined
+     * 
+     */
     @Import(name="snippet")
     private @Nullable String snippet;
 
+    /**
+     * @return The snippet in which the resource is defined
+     * 
+     */
     public Optional<String> snippet() {
         return Optional.ofNullable(this.snippet);
     }
@@ -105,6 +129,12 @@ public final class GetZonePlainArgs extends com.pulumi.resources.InvokeArgs {
             return this;
         }
 
+        /**
+         * @param folder Folder
+         * 
+         * @return builder
+         * 
+         */
         public Builder folder(@Nullable String folder) {
             $.folder = folder;
             return this;
@@ -121,11 +151,23 @@ public final class GetZonePlainArgs extends com.pulumi.resources.InvokeArgs {
             return this;
         }
 
+        /**
+         * @param name Alphanumeric string begin with letter: [0-9a-zA-Z._-]
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param snippet The snippet in which the resource is defined
+         * 
+         * @return builder
+         * 
+         */
         public Builder snippet(@Nullable String snippet) {
             $.snippet = snippet;
             return this;

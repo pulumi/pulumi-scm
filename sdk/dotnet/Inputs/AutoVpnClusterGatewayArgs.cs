@@ -49,7 +49,7 @@ namespace Pulumi.Scm.Inputs
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// Priority
+        /// Priority. Possible values are `1`, `2`, `3`, `4`, `5`, `6`, `7` and `8`.
         /// </summary>
         [Input("priority")]
         public Input<string>? Priority { get; set; }

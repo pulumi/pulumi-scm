@@ -48,12 +48,21 @@ export interface GetDnsSecurityProfileArgs {
      * The device in which the resource is defined
      */
     device?: string;
+    /**
+     * The folder in which the resource is defined
+     */
     folder?: string;
     /**
      * The UUID of the DNS security profile
      */
     id: string;
+    /**
+     * The name of the DNS security profile
+     */
     name?: string;
+    /**
+     * The snippet in which the resource is defined
+     */
     snippet?: string;
 }
 
@@ -61,19 +70,37 @@ export interface GetDnsSecurityProfileArgs {
  * A collection of values returned by getDnsSecurityProfile.
  */
 export interface GetDnsSecurityProfileResult {
+    /**
+     * Botnet domains
+     */
     readonly botnetDomains: outputs.GetDnsSecurityProfileBotnetDomains;
+    /**
+     * The description of the DNS security profile
+     */
     readonly description: string;
     /**
      * The device in which the resource is defined
      */
     readonly device: string;
+    /**
+     * The folder in which the resource is defined
+     */
     readonly folder: string;
     /**
      * The UUID of the DNS security profile
      */
     readonly id: string;
+    /**
+     * The name of the DNS security profile
+     */
     readonly name: string;
+    /**
+     * The snippet in which the resource is defined
+     */
     readonly snippet: string;
+    /**
+     * The Terraform ID.
+     */
     readonly tfid: string;
 }
 /**
@@ -118,11 +145,20 @@ export interface GetDnsSecurityProfileOutputArgs {
      * The device in which the resource is defined
      */
     device?: pulumi.Input<string | undefined>;
+    /**
+     * The folder in which the resource is defined
+     */
     folder?: pulumi.Input<string | undefined>;
     /**
      * The UUID of the DNS security profile
      */
     id: pulumi.Input<string>;
+    /**
+     * The name of the DNS security profile
+     */
     name?: pulumi.Input<string | undefined>;
+    /**
+     * The snippet in which the resource is defined
+     */
     snippet?: pulumi.Input<string | undefined>;
 }

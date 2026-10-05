@@ -48,12 +48,21 @@ export interface GetFileBlockingProfileArgs {
      * The device in which the resource is defined
      */
     device?: string;
+    /**
+     * The folder in which the resource is defined
+     */
     folder?: string;
     /**
      * The UUID of the file blocking profile
      */
     id: string;
+    /**
+     * The name of the file blocking profile
+     */
     name?: string;
+    /**
+     * The snippet in which the resource is defined
+     */
     snippet?: string;
 }
 
@@ -61,19 +70,37 @@ export interface GetFileBlockingProfileArgs {
  * A collection of values returned by getFileBlockingProfile.
  */
 export interface GetFileBlockingProfileResult {
+    /**
+     * Description
+     */
     readonly description: string;
     /**
      * The device in which the resource is defined
      */
     readonly device: string;
+    /**
+     * The folder in which the resource is defined
+     */
     readonly folder: string;
     /**
      * The UUID of the file blocking profile
      */
     readonly id: string;
+    /**
+     * The name of the file blocking profile
+     */
     readonly name: string;
+    /**
+     * A list of file blocking rules
+     */
     readonly rules: outputs.GetFileBlockingProfileRule[];
+    /**
+     * The snippet in which the resource is defined
+     */
     readonly snippet: string;
+    /**
+     * The Terraform ID.
+     */
     readonly tfid: string;
 }
 /**
@@ -118,11 +145,20 @@ export interface GetFileBlockingProfileOutputArgs {
      * The device in which the resource is defined
      */
     device?: pulumi.Input<string | undefined>;
+    /**
+     * The folder in which the resource is defined
+     */
     folder?: pulumi.Input<string | undefined>;
     /**
      * The UUID of the file blocking profile
      */
     id: pulumi.Input<string>;
+    /**
+     * The name of the file blocking profile
+     */
     name?: pulumi.Input<string | undefined>;
+    /**
+     * The snippet in which the resource is defined
+     */
     snippet?: pulumi.Input<string | undefined>;
 }

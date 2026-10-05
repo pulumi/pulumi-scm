@@ -26,26 +26,36 @@ func LookupOspfAuthProfile(ctx *pulumi.Context, args *LookupOspfAuthProfileArgs,
 type LookupOspfAuthProfileArgs struct {
 	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
+	// The folder in which the resource is defined
 	Folder *string `pulumi:"folder"`
 	// UUID of the resource
-	Id      string  `pulumi:"id"`
-	Name    *string `pulumi:"name"`
+	Id string `pulumi:"id"`
+	// Profile name
+	Name *string `pulumi:"name"`
+	// The snippet in which the resource is defined
 	Snippet *string `pulumi:"snippet"`
 }
 
 // A collection of values returned by getOspfAuthProfile.
 type LookupOspfAuthProfileResult struct {
 	// The device in which the resource is defined
-	Device          string            `pulumi:"device"`
+	Device string `pulumi:"device"`
+	// Map of sensitive values returned from the API.
 	EncryptedValues map[string]string `pulumi:"encryptedValues"`
-	Folder          string            `pulumi:"folder"`
+	// The folder in which the resource is defined
+	Folder string `pulumi:"folder"`
 	// UUID of the resource
-	Id       string                  `pulumi:"id"`
-	Md5s     []GetOspfAuthProfileMd5 `pulumi:"md5s"`
-	Name     string                  `pulumi:"name"`
-	Password string                  `pulumi:"password"`
-	Snippet  string                  `pulumi:"snippet"`
-	Tfid     string                  `pulumi:"tfid"`
+	Id string `pulumi:"id"`
+	// MD5s
+	Md5s []GetOspfAuthProfileMd5 `pulumi:"md5s"`
+	// Profile name
+	Name string `pulumi:"name"`
+	// Password
+	Password string `pulumi:"password"`
+	// The snippet in which the resource is defined
+	Snippet string `pulumi:"snippet"`
+	// The Terraform ID.
+	Tfid string `pulumi:"tfid"`
 }
 
 func LookupOspfAuthProfileOutput(ctx *pulumi.Context, args LookupOspfAuthProfileOutputArgs, opts ...pulumi.InvokeOption) LookupOspfAuthProfileResultOutput {
@@ -57,10 +67,13 @@ func LookupOspfAuthProfileOutput(ctx *pulumi.Context, args LookupOspfAuthProfile
 type LookupOspfAuthProfileOutputArgs struct {
 	// The device in which the resource is defined
 	Device pulumi.StringPtrInput `pulumi:"device"`
+	// The folder in which the resource is defined
 	Folder pulumi.StringPtrInput `pulumi:"folder"`
 	// UUID of the resource
-	Id      pulumi.StringInput    `pulumi:"id"`
-	Name    pulumi.StringPtrInput `pulumi:"name"`
+	Id pulumi.StringInput `pulumi:"id"`
+	// Profile name
+	Name pulumi.StringPtrInput `pulumi:"name"`
+	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrInput `pulumi:"snippet"`
 }
 
@@ -88,10 +101,12 @@ func (o LookupOspfAuthProfileResultOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupOspfAuthProfileResult) string { return v.Device }).(pulumi.StringOutput)
 }
 
+// Map of sensitive values returned from the API.
 func (o LookupOspfAuthProfileResultOutput) EncryptedValues() pulumi.StringMapOutput {
 	return o.ApplyT(func(v LookupOspfAuthProfileResult) map[string]string { return v.EncryptedValues }).(pulumi.StringMapOutput)
 }
 
+// The folder in which the resource is defined
 func (o LookupOspfAuthProfileResultOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupOspfAuthProfileResult) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -101,22 +116,27 @@ func (o LookupOspfAuthProfileResultOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupOspfAuthProfileResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
+// MD5s
 func (o LookupOspfAuthProfileResultOutput) Md5s() GetOspfAuthProfileMd5ArrayOutput {
 	return o.ApplyT(func(v LookupOspfAuthProfileResult) []GetOspfAuthProfileMd5 { return v.Md5s }).(GetOspfAuthProfileMd5ArrayOutput)
 }
 
+// Profile name
 func (o LookupOspfAuthProfileResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupOspfAuthProfileResult) string { return v.Name }).(pulumi.StringOutput)
 }
 
+// Password
 func (o LookupOspfAuthProfileResultOutput) Password() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupOspfAuthProfileResult) string { return v.Password }).(pulumi.StringOutput)
 }
 
+// The snippet in which the resource is defined
 func (o LookupOspfAuthProfileResultOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupOspfAuthProfileResult) string { return v.Snippet }).(pulumi.StringOutput)
 }
 
+// The Terraform ID.
 func (o LookupOspfAuthProfileResultOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupOspfAuthProfileResult) string { return v.Tfid }).(pulumi.StringOutput)
 }

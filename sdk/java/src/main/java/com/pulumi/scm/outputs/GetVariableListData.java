@@ -22,7 +22,7 @@ public final class GetVariableListData {
      */
     private String device;
     /**
-     * @return The folder of the item. Default: Shared.
+     * @return The folder in which the resource is defined
      * 
      */
     private String folder;
@@ -32,7 +32,7 @@ public final class GetVariableListData {
      */
     private String id;
     /**
-     * @return The name of the item.
+     * @return The name of the variable
      * 
      */
     private String name;
@@ -42,7 +42,7 @@ public final class GetVariableListData {
      */
     private Boolean overridden;
     /**
-     * @return The snippet of the item.
+     * @return The snippet in which the resource is defined
      * 
      */
     private String snippet;
@@ -52,7 +52,7 @@ public final class GetVariableListData {
      */
     private String tfid;
     /**
-     * @return The variable type
+     * @return The variable type. Possible values are `percent`, `count`, `ip-netmask`, `zone`, `ip-range`, `ip-wildcard`, `device-priority`, `device-id`, `egress-max`, `as-number`, `fqdn`, `port`, `link-tag`, `group-id`, `rate`, `router-id`, `qos-profile` and `timer`.
      * 
      */
     private String type;
@@ -78,7 +78,7 @@ public final class GetVariableListData {
         return this.device;
     }
     /**
-     * @return The folder of the item. Default: Shared.
+     * @return The folder in which the resource is defined
      * 
      */
     public String folder() {
@@ -92,7 +92,7 @@ public final class GetVariableListData {
         return this.id;
     }
     /**
-     * @return The name of the item.
+     * @return The name of the variable
      * 
      */
     public String name() {
@@ -106,7 +106,7 @@ public final class GetVariableListData {
         return this.overridden;
     }
     /**
-     * @return The snippet of the item.
+     * @return The snippet in which the resource is defined
      * 
      */
     public String snippet() {
@@ -120,7 +120,7 @@ public final class GetVariableListData {
         return this.tfid;
     }
     /**
-     * @return The variable type
+     * @return The variable type. Possible values are `percent`, `count`, `ip-netmask`, `zone`, `ip-range`, `ip-wildcard`, `device-priority`, `device-id`, `egress-max`, `as-number`, `fqdn`, `port`, `link-tag`, `group-id`, `rate`, `router-id`, `qos-profile` and `timer`.
      * 
      */
     public String type() {

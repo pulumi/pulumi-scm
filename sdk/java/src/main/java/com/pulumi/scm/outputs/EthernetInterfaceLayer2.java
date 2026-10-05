@@ -13,7 +13,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class EthernetInterfaceLayer2 {
     /**
-     * @return LLDP Settings
+     * @return LLDP settings for the interface
      * 
      */
     private @Nullable EthernetInterfaceLayer2Lldp lldp;
@@ -30,7 +30,7 @@ public final class EthernetInterfaceLayer2 {
 
     private EthernetInterfaceLayer2() {}
     /**
-     * @return LLDP Settings
+     * @return LLDP settings for the interface
      * 
      */
     public Optional<EthernetInterfaceLayer2Lldp> lldp() {

@@ -54,30 +54,44 @@ func LookupSystemMatchList(ctx *pulumi.Context, args *LookupSystemMatchListArgs,
 type LookupSystemMatchListArgs struct {
 	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
+	// The folder in which the resource is defined
 	Folder *string `pulumi:"folder"`
 	// UUID of the resource
-	Id      string  `pulumi:"id"`
-	Name    *string `pulumi:"name"`
+	Id string `pulumi:"id"`
+	// Name of the system match list entry
+	Name *string `pulumi:"name"`
+	// The snippet in which the resource is defined
 	Snippet *string `pulumi:"snippet"`
 }
 
 // A collection of values returned by getSystemMatchList.
 type LookupSystemMatchListResult struct {
+	// Description of the system match list entry
 	Description string `pulumi:"description"`
 	// The device in which the resource is defined
 	Device string `pulumi:"device"`
+	// Filter of the system match list entry
 	Filter string `pulumi:"filter"`
+	// The folder in which the resource is defined
 	Folder string `pulumi:"folder"`
 	// UUID of the resource
-	Id             string   `pulumi:"id"`
-	Name           string   `pulumi:"name"`
-	SendEmails     []string `pulumi:"sendEmails"`
-	SendHttps      []string `pulumi:"sendHttps"`
-	SendSnmptraps  []string `pulumi:"sendSnmptraps"`
-	SendSyslogs    []string `pulumi:"sendSyslogs"`
-	SendToPanorama bool     `pulumi:"sendToPanorama"`
-	Snippet        string   `pulumi:"snippet"`
-	Tfid           string   `pulumi:"tfid"`
+	Id string `pulumi:"id"`
+	// Name of the system match list entry
+	Name string `pulumi:"name"`
+	// Send Email List of the system match list entry
+	SendEmails []string `pulumi:"sendEmails"`
+	// Send HTTP List of the system match list entry
+	SendHttps []string `pulumi:"sendHttps"`
+	// Send SNMP Trap List of the system match list entry
+	SendSnmptraps []string `pulumi:"sendSnmptraps"`
+	// Send Sys Log List of the system match list entry
+	SendSyslogs []string `pulumi:"sendSyslogs"`
+	// Send to Panorama Flag of the system match list entry
+	SendToPanorama bool `pulumi:"sendToPanorama"`
+	// The snippet in which the resource is defined
+	Snippet string `pulumi:"snippet"`
+	// The Terraform ID.
+	Tfid string `pulumi:"tfid"`
 }
 
 func LookupSystemMatchListOutput(ctx *pulumi.Context, args LookupSystemMatchListOutputArgs, opts ...pulumi.InvokeOption) LookupSystemMatchListResultOutput {
@@ -89,10 +103,13 @@ func LookupSystemMatchListOutput(ctx *pulumi.Context, args LookupSystemMatchList
 type LookupSystemMatchListOutputArgs struct {
 	// The device in which the resource is defined
 	Device pulumi.StringPtrInput `pulumi:"device"`
+	// The folder in which the resource is defined
 	Folder pulumi.StringPtrInput `pulumi:"folder"`
 	// UUID of the resource
-	Id      pulumi.StringInput    `pulumi:"id"`
-	Name    pulumi.StringPtrInput `pulumi:"name"`
+	Id pulumi.StringInput `pulumi:"id"`
+	// Name of the system match list entry
+	Name pulumi.StringPtrInput `pulumi:"name"`
+	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrInput `pulumi:"snippet"`
 }
 
@@ -115,6 +132,7 @@ func (o LookupSystemMatchListResultOutput) ToLookupSystemMatchListResultOutputWi
 	return o
 }
 
+// Description of the system match list entry
 func (o LookupSystemMatchListResultOutput) Description() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupSystemMatchListResult) string { return v.Description }).(pulumi.StringOutput)
 }
@@ -124,10 +142,12 @@ func (o LookupSystemMatchListResultOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupSystemMatchListResult) string { return v.Device }).(pulumi.StringOutput)
 }
 
+// Filter of the system match list entry
 func (o LookupSystemMatchListResultOutput) Filter() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupSystemMatchListResult) string { return v.Filter }).(pulumi.StringOutput)
 }
 
+// The folder in which the resource is defined
 func (o LookupSystemMatchListResultOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupSystemMatchListResult) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -137,34 +157,42 @@ func (o LookupSystemMatchListResultOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupSystemMatchListResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
+// Name of the system match list entry
 func (o LookupSystemMatchListResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupSystemMatchListResult) string { return v.Name }).(pulumi.StringOutput)
 }
 
+// Send Email List of the system match list entry
 func (o LookupSystemMatchListResultOutput) SendEmails() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupSystemMatchListResult) []string { return v.SendEmails }).(pulumi.StringArrayOutput)
 }
 
+// Send HTTP List of the system match list entry
 func (o LookupSystemMatchListResultOutput) SendHttps() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupSystemMatchListResult) []string { return v.SendHttps }).(pulumi.StringArrayOutput)
 }
 
+// Send SNMP Trap List of the system match list entry
 func (o LookupSystemMatchListResultOutput) SendSnmptraps() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupSystemMatchListResult) []string { return v.SendSnmptraps }).(pulumi.StringArrayOutput)
 }
 
+// Send Sys Log List of the system match list entry
 func (o LookupSystemMatchListResultOutput) SendSyslogs() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupSystemMatchListResult) []string { return v.SendSyslogs }).(pulumi.StringArrayOutput)
 }
 
+// Send to Panorama Flag of the system match list entry
 func (o LookupSystemMatchListResultOutput) SendToPanorama() pulumi.BoolOutput {
 	return o.ApplyT(func(v LookupSystemMatchListResult) bool { return v.SendToPanorama }).(pulumi.BoolOutput)
 }
 
+// The snippet in which the resource is defined
 func (o LookupSystemMatchListResultOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupSystemMatchListResult) string { return v.Snippet }).(pulumi.StringOutput)
 }
 
+// The Terraform ID.
 func (o LookupSystemMatchListResultOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupSystemMatchListResult) string { return v.Tfid }).(pulumi.StringOutput)
 }

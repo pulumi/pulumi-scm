@@ -43,7 +43,7 @@ namespace Pulumi.Scm.Inputs
         public Input<string>? SourceApplications { get; set; }
 
         /// <summary>
-        /// Type of traffic this ZTNA rule applies to (dns, network, or both)
+        /// Type of traffic this ZTNA rule applies to (dns, network, or both). Possible values are `Dns`, `dns-and-network-traffic` and `network-traffic`.
         /// </summary>
         [Input("trafficType")]
         public Input<string>? TrafficType { get; set; }

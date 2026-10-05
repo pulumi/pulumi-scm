@@ -22,7 +22,7 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly string Name;
         /// <summary>
-        /// New path type
+        /// New path type. Possible values are `ext-1` and `ext-2`.
         /// </summary>
         public readonly string NewPathType;
         /// <summary>

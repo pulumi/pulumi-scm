@@ -48,12 +48,21 @@ export interface GetKerberosServerProfileArgs {
      * The device in which the resource is defined
      */
     device?: string;
+    /**
+     * The folder in which the resource is defined
+     */
     folder?: string;
     /**
      * The UUID of the Kerberos server profile
      */
     id: string;
+    /**
+     * The name of the Kerberos server profile
+     */
     name?: string;
+    /**
+     * The snippet in which the resource is defined
+     */
     snippet?: string;
 }
 
@@ -65,14 +74,29 @@ export interface GetKerberosServerProfileResult {
      * The device in which the resource is defined
      */
     readonly device: string;
+    /**
+     * The folder in which the resource is defined
+     */
     readonly folder: string;
     /**
      * The UUID of the Kerberos server profile
      */
     readonly id: string;
+    /**
+     * The name of the Kerberos server profile
+     */
     readonly name: string;
+    /**
+     * The Kerberos server configuration
+     */
     readonly servers: outputs.GetKerberosServerProfileServer[];
+    /**
+     * The snippet in which the resource is defined
+     */
     readonly snippet: string;
+    /**
+     * The Terraform ID.
+     */
     readonly tfid: string;
 }
 /**
@@ -117,11 +141,20 @@ export interface GetKerberosServerProfileOutputArgs {
      * The device in which the resource is defined
      */
     device?: pulumi.Input<string | undefined>;
+    /**
+     * The folder in which the resource is defined
+     */
     folder?: pulumi.Input<string | undefined>;
     /**
      * The UUID of the Kerberos server profile
      */
     id: pulumi.Input<string>;
+    /**
+     * The name of the Kerberos server profile
+     */
     name?: pulumi.Input<string | undefined>;
+    /**
+     * The snippet in which the resource is defined
+     */
     snippet?: pulumi.Input<string | undefined>;
 }

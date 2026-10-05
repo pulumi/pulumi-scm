@@ -50,16 +50,12 @@ class HipObjectArgs:
         :param pulumi.Input['HipObjectDiskEncryptionArgs'] disk_encryption: Disk encryption
         :param pulumi.Input['HipObjectFirewallArgs'] firewall: Firewall
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input['HipObjectHostInfoArgs'] host_info: Host info
         :param pulumi.Input['HipObjectMobileDeviceArgs'] mobile_device: Mobile device
         :param pulumi.Input[_builtins.str] name: The name of the HIP object
         :param pulumi.Input['HipObjectNetworkInfoArgs'] network_info: Network info
         :param pulumi.Input['HipObjectPatchManagementArgs'] patch_management: Patch management
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         if anti_malware is not None:
             pulumi.set(__self__, "anti_malware", anti_malware)
@@ -207,8 +203,6 @@ class HipObjectArgs:
     def folder(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
-
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
 
@@ -281,8 +275,6 @@ class HipObjectArgs:
     def snippet(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
-
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
 
@@ -324,16 +316,12 @@ class _HipObjectState:
         :param pulumi.Input['HipObjectDiskEncryptionArgs'] disk_encryption: Disk encryption
         :param pulumi.Input['HipObjectFirewallArgs'] firewall: Firewall
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input['HipObjectHostInfoArgs'] host_info: Host info
         :param pulumi.Input['HipObjectMobileDeviceArgs'] mobile_device: Mobile device
         :param pulumi.Input[_builtins.str] name: The name of the HIP object
         :param pulumi.Input['HipObjectNetworkInfoArgs'] network_info: Network info
         :param pulumi.Input['HipObjectPatchManagementArgs'] patch_management: Patch management
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] tfid: The Terraform ID.
         """
         if anti_malware is not None:
@@ -484,8 +472,6 @@ class _HipObjectState:
     def folder(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
-
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
 
@@ -558,8 +544,6 @@ class _HipObjectState:
     def snippet(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
-
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
 
@@ -798,16 +782,12 @@ class HipObject(pulumi.CustomResource):
         :param pulumi.Input[Union['HipObjectDiskEncryptionArgs', 'HipObjectDiskEncryptionArgsDict', 'outputs.HipObjectDiskEncryption']] disk_encryption: Disk encryption
         :param pulumi.Input[Union['HipObjectFirewallArgs', 'HipObjectFirewallArgsDict', 'outputs.HipObjectFirewall']] firewall: Firewall
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[Union['HipObjectHostInfoArgs', 'HipObjectHostInfoArgsDict', 'outputs.HipObjectHostInfo']] host_info: Host info
         :param pulumi.Input[Union['HipObjectMobileDeviceArgs', 'HipObjectMobileDeviceArgsDict', 'outputs.HipObjectMobileDevice']] mobile_device: Mobile device
         :param pulumi.Input[_builtins.str] name: The name of the HIP object
         :param pulumi.Input[Union['HipObjectNetworkInfoArgs', 'HipObjectNetworkInfoArgsDict', 'outputs.HipObjectNetworkInfo']] network_info: Network info
         :param pulumi.Input[Union['HipObjectPatchManagementArgs', 'HipObjectPatchManagementArgsDict', 'outputs.HipObjectPatchManagement']] patch_management: Patch management
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         ...
     @overload
@@ -1099,16 +1079,12 @@ class HipObject(pulumi.CustomResource):
         :param pulumi.Input[Union['HipObjectDiskEncryptionArgs', 'HipObjectDiskEncryptionArgsDict', 'outputs.HipObjectDiskEncryption']] disk_encryption: Disk encryption
         :param pulumi.Input[Union['HipObjectFirewallArgs', 'HipObjectFirewallArgsDict', 'outputs.HipObjectFirewall']] firewall: Firewall
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[Union['HipObjectHostInfoArgs', 'HipObjectHostInfoArgsDict', 'outputs.HipObjectHostInfo']] host_info: Host info
         :param pulumi.Input[Union['HipObjectMobileDeviceArgs', 'HipObjectMobileDeviceArgsDict', 'outputs.HipObjectMobileDevice']] mobile_device: Mobile device
         :param pulumi.Input[_builtins.str] name: The name of the HIP object
         :param pulumi.Input[Union['HipObjectNetworkInfoArgs', 'HipObjectNetworkInfoArgsDict', 'outputs.HipObjectNetworkInfo']] network_info: Network info
         :param pulumi.Input[Union['HipObjectPatchManagementArgs', 'HipObjectPatchManagementArgsDict', 'outputs.HipObjectPatchManagement']] patch_management: Patch management
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] tfid: The Terraform ID.
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
@@ -1211,8 +1187,6 @@ class HipObject(pulumi.CustomResource):
     def folder(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
-
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
 
@@ -1261,8 +1235,6 @@ class HipObject(pulumi.CustomResource):
     def snippet(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
-
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
 

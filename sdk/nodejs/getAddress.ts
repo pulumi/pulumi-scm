@@ -61,12 +61,21 @@ export interface GetAddressArgs {
      * The device in which the resource is defined
      */
     device?: string;
+    /**
+     * The folder in which the resource is defined
+     */
     folder?: string;
     /**
      * The UUID of the address object
      */
     id: string;
+    /**
+     * The name of the address object
+     */
     name?: string;
+    /**
+     * The snippet in which the resource is defined
+     */
     snippet?: string;
 }
 
@@ -74,23 +83,53 @@ export interface GetAddressArgs {
  * A collection of values returned by getAddress.
  */
 export interface GetAddressResult {
+    /**
+     * The description of the address object
+     */
     readonly description: string;
     /**
      * The device in which the resource is defined
      */
     readonly device: string;
+    /**
+     * The folder in which the resource is defined
+     */
     readonly folder: string;
+    /**
+     * Fully qualified domain name
+     */
     readonly fqdn: string;
     /**
      * The UUID of the address object
      */
     readonly id: string;
+    /**
+     * IP address with or without CIDR notation
+     */
     readonly ipNetmask: string;
+    /**
+     * Ip range
+     */
     readonly ipRange: string;
+    /**
+     * IP wildcard mask
+     */
     readonly ipWildcard: string;
+    /**
+     * The name of the address object
+     */
     readonly name: string;
+    /**
+     * The snippet in which the resource is defined
+     */
     readonly snippet: string;
+    /**
+     * Tags assocaited with the address object
+     */
     readonly tags: string[];
+    /**
+     * The Terraform ID.
+     */
     readonly tfid: string;
 }
 /**
@@ -150,11 +189,20 @@ export interface GetAddressOutputArgs {
      * The device in which the resource is defined
      */
     device?: pulumi.Input<string | undefined>;
+    /**
+     * The folder in which the resource is defined
+     */
     folder?: pulumi.Input<string | undefined>;
     /**
      * The UUID of the address object
      */
     id: pulumi.Input<string>;
+    /**
+     * The name of the address object
+     */
     name?: pulumi.Input<string | undefined>;
+    /**
+     * The snippet in which the resource is defined
+     */
     snippet?: pulumi.Input<string | undefined>;
 }

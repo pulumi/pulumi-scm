@@ -20,14 +20,14 @@ public final class LogicalRouterVrfBgpRedistRuleArgs extends com.pulumi.resource
     public static final LogicalRouterVrfBgpRedistRuleArgs Empty = new LogicalRouterVrfBgpRedistRuleArgs();
 
     /**
-     * Address family identifier
+     * Address family identifier. Possible values are `ipv4` and `ipv6`.
      * 
      */
     @Import(name="addressFamilyIdentifier")
     private @Nullable Output<String> addressFamilyIdentifier;
 
     /**
-     * @return Address family identifier
+     * @return Address family identifier. Possible values are `ipv4` and `ipv6`.
      * 
      */
     public Optional<Output<String>> addressFamilyIdentifier() {
@@ -80,14 +80,14 @@ public final class LogicalRouterVrfBgpRedistRuleArgs extends com.pulumi.resource
     }
 
     /**
-     * Route table
+     * Route table. Possible values are `unicast`, `multicast` and `both`.
      * 
      */
     @Import(name="routeTable")
     private @Nullable Output<String> routeTable;
 
     /**
-     * @return Route table
+     * @return Route table. Possible values are `unicast`, `multicast` and `both`.
      * 
      */
     public Optional<Output<String>> routeTable() {
@@ -170,14 +170,14 @@ public final class LogicalRouterVrfBgpRedistRuleArgs extends com.pulumi.resource
     }
 
     /**
-     * Set origin
+     * Set origin. Possible values are `igp`, `egp` and `incomplete`.
      * 
      */
     @Import(name="setOrigin")
     private @Nullable Output<String> setOrigin;
 
     /**
-     * @return Set origin
+     * @return Set origin. Possible values are `igp`, `egp` and `incomplete`.
      * 
      */
     public Optional<Output<String>> setOrigin() {
@@ -219,7 +219,7 @@ public final class LogicalRouterVrfBgpRedistRuleArgs extends com.pulumi.resource
         }
 
         /**
-         * @param addressFamilyIdentifier Address family identifier
+         * @param addressFamilyIdentifier Address family identifier. Possible values are `ipv4` and `ipv6`.
          * 
          * @return builder
          * 
@@ -230,7 +230,7 @@ public final class LogicalRouterVrfBgpRedistRuleArgs extends com.pulumi.resource
         }
 
         /**
-         * @param addressFamilyIdentifier Address family identifier
+         * @param addressFamilyIdentifier Address family identifier. Possible values are `ipv4` and `ipv6`.
          * 
          * @return builder
          * 
@@ -303,7 +303,7 @@ public final class LogicalRouterVrfBgpRedistRuleArgs extends com.pulumi.resource
         }
 
         /**
-         * @param routeTable Route table
+         * @param routeTable Route table. Possible values are `unicast`, `multicast` and `both`.
          * 
          * @return builder
          * 
@@ -314,7 +314,7 @@ public final class LogicalRouterVrfBgpRedistRuleArgs extends com.pulumi.resource
         }
 
         /**
-         * @param routeTable Route table
+         * @param routeTable Route table. Possible values are `unicast`, `multicast` and `both`.
          * 
          * @return builder
          * 
@@ -449,7 +449,7 @@ public final class LogicalRouterVrfBgpRedistRuleArgs extends com.pulumi.resource
         }
 
         /**
-         * @param setOrigin Set origin
+         * @param setOrigin Set origin. Possible values are `igp`, `egp` and `incomplete`.
          * 
          * @return builder
          * 
@@ -460,7 +460,7 @@ public final class LogicalRouterVrfBgpRedistRuleArgs extends com.pulumi.resource
         }
 
         /**
-         * @param setOrigin Set origin
+         * @param setOrigin Set origin. Possible values are `igp`, `egp` and `incomplete`.
          * 
          * @return builder
          * 

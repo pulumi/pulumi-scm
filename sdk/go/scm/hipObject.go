@@ -247,8 +247,6 @@ type HipObject struct {
 	// Firewall
 	Firewall HipObjectFirewallPtrOutput `pulumi:"firewall"`
 	// The folder in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrOutput `pulumi:"folder"`
 	// Host info
 	HostInfo HipObjectHostInfoPtrOutput `pulumi:"hostInfo"`
@@ -261,8 +259,6 @@ type HipObject struct {
 	// Patch management
 	PatchManagement HipObjectPatchManagementPtrOutput `pulumi:"patchManagement"`
 	// The snippet in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
 	// The Terraform ID.
 	Tfid pulumi.StringOutput `pulumi:"tfid"`
@@ -317,8 +313,6 @@ type hipObjectState struct {
 	// Firewall
 	Firewall *HipObjectFirewall `pulumi:"firewall"`
 	// The folder in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// Host info
 	HostInfo *HipObjectHostInfo `pulumi:"hostInfo"`
@@ -331,8 +325,6 @@ type hipObjectState struct {
 	// Patch management
 	PatchManagement *HipObjectPatchManagement `pulumi:"patchManagement"`
 	// The snippet in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	// The Terraform ID.
 	Tfid *string `pulumi:"tfid"`
@@ -358,8 +350,6 @@ type HipObjectState struct {
 	// Firewall
 	Firewall HipObjectFirewallPtrInput
 	// The folder in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// Host info
 	HostInfo HipObjectHostInfoPtrInput
@@ -372,8 +362,6 @@ type HipObjectState struct {
 	// Patch management
 	PatchManagement HipObjectPatchManagementPtrInput
 	// The snippet in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	// The Terraform ID.
 	Tfid pulumi.StringPtrInput
@@ -403,8 +391,6 @@ type hipObjectArgs struct {
 	// Firewall
 	Firewall *HipObjectFirewall `pulumi:"firewall"`
 	// The folder in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// Host info
 	HostInfo *HipObjectHostInfo `pulumi:"hostInfo"`
@@ -417,8 +403,6 @@ type hipObjectArgs struct {
 	// Patch management
 	PatchManagement *HipObjectPatchManagement `pulumi:"patchManagement"`
 	// The snippet in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 }
 
@@ -443,8 +427,6 @@ type HipObjectArgs struct {
 	// Firewall
 	Firewall HipObjectFirewallPtrInput
 	// The folder in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// Host info
 	HostInfo HipObjectHostInfoPtrInput
@@ -457,8 +439,6 @@ type HipObjectArgs struct {
 	// Patch management
 	PatchManagement HipObjectPatchManagementPtrInput
 	// The snippet in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 }
 
@@ -595,8 +575,6 @@ func (o HipObjectOutput) Firewall() HipObjectFirewallPtrOutput {
 }
 
 // The folder in which the resource is defined
-//
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o HipObjectOutput) Folder() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *HipObject) pulumi.StringPtrOutput { return v.Folder }).(pulumi.StringPtrOutput)
 }
@@ -627,8 +605,6 @@ func (o HipObjectOutput) PatchManagement() HipObjectPatchManagementPtrOutput {
 }
 
 // The snippet in which the resource is defined
-//
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o HipObjectOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *HipObject) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)
 }

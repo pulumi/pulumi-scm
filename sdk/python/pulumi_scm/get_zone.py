@@ -79,31 +79,49 @@ class GetZoneResult:
     @_builtins.property
     @pulumi.getter(name="deviceAcl")
     def device_acl(self) -> 'outputs.GetZoneDeviceAclResult':
+        """
+        Device acl
+        """
         return pulumi.get(self, "device_acl")
 
     @_builtins.property
     @pulumi.getter(name="dosLogSetting")
     def dos_log_setting(self) -> _builtins.str:
+        """
+        Dos log setting
+        """
         return pulumi.get(self, "dos_log_setting")
 
     @_builtins.property
     @pulumi.getter(name="dosProfile")
     def dos_profile(self) -> _builtins.str:
+        """
+        Dos profile
+        """
         return pulumi.get(self, "dos_profile")
 
     @_builtins.property
     @pulumi.getter(name="enableDeviceIdentification")
     def enable_device_identification(self) -> _builtins.bool:
+        """
+        Enable device identification
+        """
         return pulumi.get(self, "enable_device_identification")
 
     @_builtins.property
     @pulumi.getter(name="enableUserIdentification")
     def enable_user_identification(self) -> _builtins.bool:
+        """
+        Enable user identification
+        """
         return pulumi.get(self, "enable_user_identification")
 
     @_builtins.property
     @pulumi.getter
     def folder(self) -> _builtins.str:
+        """
+        Folder
+        """
         return pulumi.get(self, "folder")
 
     @_builtins.property
@@ -117,26 +135,41 @@ class GetZoneResult:
     @_builtins.property
     @pulumi.getter
     def name(self) -> _builtins.str:
+        """
+        Alphanumeric string begin with letter: [0-9a-zA-Z._-]
+        """
         return pulumi.get(self, "name")
 
     @_builtins.property
     @pulumi.getter
     def network(self) -> 'outputs.GetZoneNetworkResult':
+        """
+        Network
+        """
         return pulumi.get(self, "network")
 
     @_builtins.property
     @pulumi.getter
     def snippet(self) -> _builtins.str:
+        """
+        The snippet in which the resource is defined
+        """
         return pulumi.get(self, "snippet")
 
     @_builtins.property
     @pulumi.getter
     def tfid(self) -> _builtins.str:
+        """
+        The Terraform ID.
+        """
         return pulumi.get(self, "tfid")
 
     @_builtins.property
     @pulumi.getter(name="userAcl")
     def user_acl(self) -> 'outputs.GetZoneUserAclResult':
+        """
+        User acl
+        """
         return pulumi.get(self, "user_acl")
 
 
@@ -192,7 +225,10 @@ def get_zone(device: Optional[_builtins.str] = None,
 
 
     :param _builtins.str device: The device in which the resource is defined
+    :param _builtins.str folder: Folder
     :param _builtins.str id: UUID of the resource
+    :param _builtins.str name: Alphanumeric string begin with letter: [0-9a-zA-Z._-]
+    :param _builtins.str snippet: The snippet in which the resource is defined
     """
     __args__ = dict()
     __args__['device'] = device
@@ -248,7 +284,10 @@ def get_zone_output(device: pulumi.Input[Optional[Optional[_builtins.str]]] = No
 
 
     :param _builtins.str device: The device in which the resource is defined
+    :param _builtins.str folder: Folder
     :param _builtins.str id: UUID of the resource
+    :param _builtins.str name: Alphanumeric string begin with letter: [0-9a-zA-Z._-]
+    :param _builtins.str snippet: The snippet in which the resource is defined
     """
     __args__ = dict()
     __args__['device'] = device

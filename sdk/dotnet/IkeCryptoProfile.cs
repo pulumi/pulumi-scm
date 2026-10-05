@@ -90,27 +90,25 @@ namespace Pulumi.Scm
         public Output<string?> Device { get; private set; } = null!;
 
         /// <summary>
-        /// Dh group
+        /// Dh group. Possible values are `Group1`, `Group2`, `Group5`, `Group14`, `Group19`, `Group20`, `Group21`, `ml-kem-512`, `ml-kem-768` and `ml-kem-1024`.
         /// </summary>
         [Output("dhGroups")]
         public Output<ImmutableArray<string>> DhGroups { get; private set; } = null!;
 
         /// <summary>
-        /// Encryption algorithm
+        /// Encryption algorithm. Possible values are `Des`, `3des`, `aes-128-cbc`, `aes-192-cbc`, `aes-256-cbc`, `aes-128-gcm` and `aes-256-gcm`.
         /// </summary>
         [Output("encryptions")]
         public Output<ImmutableArray<string>> Encryptions { get; private set; } = null!;
 
         /// <summary>
         /// The folder in which the resource is defined
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Output("folder")]
         public Output<string?> Folder { get; private set; } = null!;
 
         /// <summary>
-        /// Hash
+        /// Hash. Possible values are `Md5`, `Sha1`, `Sha256`, `Sha384`, `Sha512` and `non-auth`.
         /// </summary>
         [Output("hashes")]
         public Output<ImmutableArray<string>> Hashes { get; private set; } = null!;
@@ -129,8 +127,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The snippet in which the resource is defined
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Output("snippet")]
         public Output<string?> Snippet { get; private set; } = null!;
@@ -203,7 +199,7 @@ namespace Pulumi.Scm
         private InputList<string>? _dhGroups;
 
         /// <summary>
-        /// Dh group
+        /// Dh group. Possible values are `Group1`, `Group2`, `Group5`, `Group14`, `Group19`, `Group20`, `Group21`, `ml-kem-512`, `ml-kem-768` and `ml-kem-1024`.
         /// </summary>
         public InputList<string> DhGroups
         {
@@ -215,7 +211,7 @@ namespace Pulumi.Scm
         private InputList<string>? _encryptions;
 
         /// <summary>
-        /// Encryption algorithm
+        /// Encryption algorithm. Possible values are `Des`, `3des`, `aes-128-cbc`, `aes-192-cbc`, `aes-256-cbc`, `aes-128-gcm` and `aes-256-gcm`.
         /// </summary>
         public InputList<string> Encryptions
         {
@@ -225,8 +221,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The folder in which the resource is defined
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("folder")]
         public Input<string>? Folder { get; set; }
@@ -235,7 +229,7 @@ namespace Pulumi.Scm
         private InputList<string>? _hashes;
 
         /// <summary>
-        /// Hash
+        /// Hash. Possible values are `Md5`, `Sha1`, `Sha256`, `Sha384`, `Sha512` and `non-auth`.
         /// </summary>
         public InputList<string> Hashes
         {
@@ -257,8 +251,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The snippet in which the resource is defined
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("snippet")]
         public Input<string>? Snippet { get; set; }
@@ -287,7 +279,7 @@ namespace Pulumi.Scm
         private InputList<string>? _dhGroups;
 
         /// <summary>
-        /// Dh group
+        /// Dh group. Possible values are `Group1`, `Group2`, `Group5`, `Group14`, `Group19`, `Group20`, `Group21`, `ml-kem-512`, `ml-kem-768` and `ml-kem-1024`.
         /// </summary>
         public InputList<string> DhGroups
         {
@@ -299,7 +291,7 @@ namespace Pulumi.Scm
         private InputList<string>? _encryptions;
 
         /// <summary>
-        /// Encryption algorithm
+        /// Encryption algorithm. Possible values are `Des`, `3des`, `aes-128-cbc`, `aes-192-cbc`, `aes-256-cbc`, `aes-128-gcm` and `aes-256-gcm`.
         /// </summary>
         public InputList<string> Encryptions
         {
@@ -309,8 +301,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The folder in which the resource is defined
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("folder")]
         public Input<string>? Folder { get; set; }
@@ -319,7 +309,7 @@ namespace Pulumi.Scm
         private InputList<string>? _hashes;
 
         /// <summary>
-        /// Hash
+        /// Hash. Possible values are `Md5`, `Sha1`, `Sha256`, `Sha384`, `Sha512` and `non-auth`.
         /// </summary>
         public InputList<string> Hashes
         {
@@ -341,8 +331,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The snippet in which the resource is defined
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("snippet")]
         public Input<string>? Snippet { get; set; }

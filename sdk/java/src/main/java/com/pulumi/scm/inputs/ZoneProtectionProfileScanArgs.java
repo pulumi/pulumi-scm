@@ -53,7 +53,7 @@ public final class ZoneProtectionProfileScanArgs extends com.pulumi.resources.Re
      * * &#34;8001&#34; - TCP Port Scan
      * * &#34;8002&#34; - Host Sweep
      * * &#34;8003&#34; - UDP Port Scan
-     * * &#34;8006&#34; - Port Scan
+     * * &#34;8006&#34; - Port Scan. Possible values are `8001`, `8002`, `8003` and `8006`.
      * 
      */
     @Import(name="name", required=true)
@@ -64,7 +64,7 @@ public final class ZoneProtectionProfileScanArgs extends com.pulumi.resources.Re
      * * &#34;8001&#34; - TCP Port Scan
      * * &#34;8002&#34; - Host Sweep
      * * &#34;8003&#34; - UDP Port Scan
-     * * &#34;8006&#34; - Port Scan
+     * * &#34;8006&#34; - Port Scan. Possible values are `8001`, `8002`, `8003` and `8006`.
      * 
      */
     public Output<String> name() {
@@ -160,7 +160,7 @@ public final class ZoneProtectionProfileScanArgs extends com.pulumi.resources.Re
          * * &#34;8001&#34; - TCP Port Scan
          * * &#34;8002&#34; - Host Sweep
          * * &#34;8003&#34; - UDP Port Scan
-         * * &#34;8006&#34; - Port Scan
+         * * &#34;8006&#34; - Port Scan. Possible values are `8001`, `8002`, `8003` and `8006`.
          * 
          * @return builder
          * 
@@ -175,7 +175,7 @@ public final class ZoneProtectionProfileScanArgs extends com.pulumi.resources.Re
          * * &#34;8001&#34; - TCP Port Scan
          * * &#34;8002&#34; - Host Sweep
          * * &#34;8003&#34; - UDP Port Scan
-         * * &#34;8006&#34; - Port Scan
+         * * &#34;8006&#34; - Port Scan. Possible values are `8001`, `8002`, `8003` and `8006`.
          * 
          * @return builder
          * 

@@ -88,8 +88,6 @@ export class AuthenticationPortal extends pulumi.CustomResource {
     declare public readonly device: pulumi.Output<string | undefined>;
     /**
      * The folder in which the resource is defined
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly folder: pulumi.Output<string | undefined>;
     /**
@@ -103,11 +101,9 @@ export class AuthenticationPortal extends pulumi.CustomResource {
     /**
      * The authentication portal IP address or hostname
      */
-    declare public readonly redirectHost: pulumi.Output<string>;
+    declare public readonly redirectHost: pulumi.Output<string | undefined>;
     /**
      * The snippet in which the resource is defined
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly snippet: pulumi.Output<string | undefined>;
     /**
@@ -130,7 +126,7 @@ export class AuthenticationPortal extends pulumi.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param opts A bag of options that control this resource's behavior.
      */
-    constructor(name: string, args: AuthenticationPortalArgs, opts?: pulumi.CustomResourceOptions)
+    constructor(name: string, args?: AuthenticationPortalArgs, opts?: pulumi.CustomResourceOptions)
     constructor(name: string, argsOrState?: AuthenticationPortalArgs | AuthenticationPortalState, opts?: pulumi.CustomResourceOptions) {
         let resourceInputs: pulumi.Inputs = {};
         opts = opts || {};
@@ -149,9 +145,6 @@ export class AuthenticationPortal extends pulumi.CustomResource {
             resourceInputs["tlsServiceProfile"] = state?.tlsServiceProfile;
         } else {
             const args = argsOrState as AuthenticationPortalArgs | undefined;
-            if (args?.redirectHost === undefined && !opts.urn) {
-                throw new Error("Missing required property 'redirectHost'");
-            }
             resourceInputs["authenticationProfile"] = args?.authenticationProfile;
             resourceInputs["certificateProfile"] = args?.certificateProfile;
             resourceInputs["device"] = args?.device;
@@ -187,8 +180,6 @@ export interface AuthenticationPortalState {
     device?: pulumi.Input<string | undefined>;
     /**
      * The folder in which the resource is defined
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     folder?: pulumi.Input<string | undefined>;
     /**
@@ -205,8 +196,6 @@ export interface AuthenticationPortalState {
     redirectHost?: pulumi.Input<string | undefined>;
     /**
      * The snippet in which the resource is defined
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     snippet?: pulumi.Input<string | undefined>;
     /**
@@ -241,8 +230,6 @@ export interface AuthenticationPortalArgs {
     device?: pulumi.Input<string | undefined>;
     /**
      * The folder in which the resource is defined
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     folder?: pulumi.Input<string | undefined>;
     /**
@@ -256,11 +243,9 @@ export interface AuthenticationPortalArgs {
     /**
      * The authentication portal IP address or hostname
      */
-    redirectHost: pulumi.Input<string>;
+    redirectHost?: pulumi.Input<string | undefined>;
     /**
      * The snippet in which the resource is defined
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     snippet?: pulumi.Input<string | undefined>;
     /**

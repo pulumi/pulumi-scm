@@ -20,8 +20,6 @@ namespace Pulumi.Scm.Inputs
 
         /// <summary>
         /// Origin
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Occurrence` and `Origin`.
         /// </summary>
         [Input("origin")]
         public Input<Inputs.BgpAddressFamilyProfileIpv4UnicastAllowasInOriginArgs>? Origin { get; set; }

@@ -12,24 +12,52 @@ import java.util.Objects;
 
 @CustomType
 public final class GetRegionResult {
+    /**
+     * @return Address
+     * 
+     */
     private List<String> addresses;
     /**
      * @return The device in which the resource is defined
      * 
      */
     private String device;
+    /**
+     * @return The folder in which the resource is defined
+     * 
+     */
     private String folder;
+    /**
+     * @return Geo location
+     * 
+     */
     private GetRegionGeoLocation geoLocation;
     /**
      * @return The UUID of the region
      * 
      */
     private String id;
+    /**
+     * @return The name of the region
+     * 
+     */
     private String name;
+    /**
+     * @return The snippet in which the resource is defined
+     * 
+     */
     private String snippet;
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     private String tfid;
 
     private GetRegionResult() {}
+    /**
+     * @return Address
+     * 
+     */
     public List<String> addresses() {
         return this.addresses;
     }
@@ -40,9 +68,17 @@ public final class GetRegionResult {
     public String device() {
         return this.device;
     }
+    /**
+     * @return The folder in which the resource is defined
+     * 
+     */
     public String folder() {
         return this.folder;
     }
+    /**
+     * @return Geo location
+     * 
+     */
     public GetRegionGeoLocation geoLocation() {
         return this.geoLocation;
     }
@@ -53,12 +89,24 @@ public final class GetRegionResult {
     public String id() {
         return this.id;
     }
+    /**
+     * @return The name of the region
+     * 
+     */
     public String name() {
         return this.name;
     }
+    /**
+     * @return The snippet in which the resource is defined
+     * 
+     */
     public String snippet() {
         return this.snippet;
     }
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     public String tfid() {
         return this.tfid;
     }

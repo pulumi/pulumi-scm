@@ -21,14 +21,14 @@ public final class NatRuleState extends com.pulumi.resources.ResourceArgs {
     public static final NatRuleState Empty = new NatRuleState();
 
     /**
-     * Active active device binding
+     * Active active device binding. Possible values are `primary`, `both`, `0` and `1`.
      * 
      */
     @Import(name="activeActiveDeviceBinding")
     private @Nullable Output<String> activeActiveDeviceBinding;
 
     /**
-     * @return Active active device binding
+     * @return Active active device binding. Possible values are `primary`, `both`, `0` and `1`.
      * 
      */
     public Optional<Output<String>> activeActiveDeviceBinding() {
@@ -171,14 +171,14 @@ public final class NatRuleState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * NAT type
+     * NAT type. Possible values are `ipv4`, `nat64` and `nptv6`.
      * 
      */
     @Import(name="natType")
     private @Nullable Output<String> natType;
 
     /**
-     * @return NAT type
+     * @return NAT type. Possible values are `ipv4`, `nat64` and `nptv6`.
      * 
      */
     public Optional<Output<String>> natType() {
@@ -186,14 +186,14 @@ public final class NatRuleState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The relative position of the rule
+     * The relative position of the rule. Possible values are `pre` and `post`.
      * 
      */
     @Import(name="position")
     private @Nullable Output<String> position;
 
     /**
-     * @return The relative position of the rule
+     * @return The relative position of the rule. Possible values are `pre` and `post`.
      * 
      */
     public Optional<Output<String>> position() {
@@ -364,7 +364,7 @@ public final class NatRuleState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param activeActiveDeviceBinding Active active device binding
+         * @param activeActiveDeviceBinding Active active device binding. Possible values are `primary`, `both`, `0` and `1`.
          * 
          * @return builder
          * 
@@ -375,7 +375,7 @@ public final class NatRuleState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param activeActiveDeviceBinding Active active device binding
+         * @param activeActiveDeviceBinding Active active device binding. Possible values are `primary`, `both`, `0` and `1`.
          * 
          * @return builder
          * 
@@ -594,7 +594,7 @@ public final class NatRuleState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param natType NAT type
+         * @param natType NAT type. Possible values are `ipv4`, `nat64` and `nptv6`.
          * 
          * @return builder
          * 
@@ -605,7 +605,7 @@ public final class NatRuleState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param natType NAT type
+         * @param natType NAT type. Possible values are `ipv4`, `nat64` and `nptv6`.
          * 
          * @return builder
          * 
@@ -615,7 +615,7 @@ public final class NatRuleState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param position The relative position of the rule
+         * @param position The relative position of the rule. Possible values are `pre` and `post`.
          * 
          * @return builder
          * 
@@ -626,7 +626,7 @@ public final class NatRuleState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param position The relative position of the rule
+         * @param position The relative position of the rule. Possible values are `pre` and `post`.
          * 
          * @return builder
          * 

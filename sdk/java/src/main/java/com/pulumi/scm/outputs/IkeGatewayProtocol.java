@@ -24,7 +24,7 @@ public final class IkeGatewayProtocol {
      */
     private @Nullable IkeGatewayProtocolIkev2 ikev2;
     /**
-     * @return Version
+     * @return Version. Possible values are `ikev2-preferred`, `ikev1` and `ikev2`.
      * 
      */
     private @Nullable String version;
@@ -45,7 +45,7 @@ public final class IkeGatewayProtocol {
         return Optional.ofNullable(this.ikev2);
     }
     /**
-     * @return Version
+     * @return Version. Possible values are `ikev2-preferred`, `ikev1` and `ikev2`.
      * 
      */
     public Optional<String> version() {

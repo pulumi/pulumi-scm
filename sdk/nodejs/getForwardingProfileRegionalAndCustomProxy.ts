@@ -53,7 +53,7 @@ export function getForwardingProfileRegionalAndCustomProxy(args: GetForwardingPr
  */
 export interface GetForwardingProfileRegionalAndCustomProxyArgs {
     /**
-     * The folder in which the resource is defined
+     * The folder in which the resource is defined. Possible values are `Mobile Users`.
      */
     folder?: string;
     /**
@@ -79,11 +79,11 @@ export interface GetForwardingProfileRegionalAndCustomProxyResult {
      */
     readonly description: string;
     /**
-     * Behavior when proxy connection fails - 'fail-open' allows direct internet access, 'fail-safe' blocks traffic until proxy is restored
+     * Behavior when proxy connection fails - 'fail-open' allows direct internet access, 'fail-safe' blocks traffic until proxy is restored. Possible values are `fail-open` and `fail-safe`.
      */
     readonly fallbackOption: string;
     /**
-     * The folder in which the resource is defined
+     * The folder in which the resource is defined. Possible values are `Mobile Users`.
      */
     readonly folder: string;
     /**
@@ -91,7 +91,7 @@ export interface GetForwardingProfileRegionalAndCustomProxyResult {
      */
     readonly id: string;
     /**
-     * Strategy for selecting Prisma Access location - 'best-available-pa-location' automatically selects optimal location, 'specific-pa-location' uses predefined locations
+     * Strategy for selecting Prisma Access location - 'best-available-pa-location' automatically selects optimal location, 'specific-pa-location' uses predefined locations. Possible values are `best-available-pa-location` and `specific-pa-location`.
      */
     readonly locationPreference: string;
     /**
@@ -115,7 +115,7 @@ export interface GetForwardingProfileRegionalAndCustomProxyResult {
      */
     readonly tfid: string;
     /**
-     * Proxy configuration type - 'gp-and-pac' for GlobalProtect and PAC file forwarding, 'ztna-agent' for ZTNA agent forwarding
+     * Proxy configuration type - 'gp-and-pac' for GlobalProtect and PAC file forwarding, 'ztna-agent' for ZTNA agent forwarding. Possible values are `gp-and-pac` and `ztna-agent`.
      */
     readonly type: string;
 }
@@ -166,7 +166,7 @@ export function getForwardingProfileRegionalAndCustomProxyOutput(args: GetForwar
  */
 export interface GetForwardingProfileRegionalAndCustomProxyOutputArgs {
     /**
-     * The folder in which the resource is defined
+     * The folder in which the resource is defined. Possible values are `Mobile Users`.
      */
     folder?: pulumi.Input<string | undefined>;
     /**

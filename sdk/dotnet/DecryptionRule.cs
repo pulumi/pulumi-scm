@@ -346,7 +346,7 @@ namespace Pulumi.Scm
     public partial class DecryptionRule : global::Pulumi.CustomResource
     {
         /// <summary>
-        /// The action to be taken
+        /// The action to be taken. Possible values are `Decrypt` and `no-decrypt`.
         /// </summary>
         [Output("action")]
         public Output<string> Action { get; private set; } = null!;
@@ -389,8 +389,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The folder in which the resource is defined
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Output("folder")]
         public Output<string?> Folder { get; private set; } = null!;
@@ -438,7 +436,7 @@ namespace Pulumi.Scm
         public Output<bool?> NegateSource { get; private set; } = null!;
 
         /// <summary>
-        /// The position of a security rule
+        /// The position of a security rule. Possible values are `Pre` and `Post`.
         /// </summary>
         [Output("position")]
         public Output<string> Position { get; private set; } = null!;
@@ -463,8 +461,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The snippet in which the resource is defined
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Output("snippet")]
         public Output<string?> Snippet { get; private set; } = null!;
@@ -494,7 +490,7 @@ namespace Pulumi.Scm
         public Output<ImmutableArray<string>> Tags { get; private set; } = null!;
 
         /// <summary>
-        /// The name or UUID of the rule to position this rule relative to. Required when `RelativePosition` is `"before"` or `"after"`.
+        /// UUID of the rule to position this rule relative to. Required when `RelativePosition` is `"before"` or `"after"`.
         /// </summary>
         [Output("targetRule")]
         public Output<string?> TargetRule { get; private set; } = null!;
@@ -564,7 +560,7 @@ namespace Pulumi.Scm
     public sealed class DecryptionRuleArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The action to be taken
+        /// The action to be taken. Possible values are `Decrypt` and `no-decrypt`.
         /// </summary>
         [Input("action", required: true)]
         public Input<string> Action { get; set; } = null!;
@@ -625,8 +621,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The folder in which the resource is defined
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("folder")]
         public Input<string>? Folder { get; set; }
@@ -680,7 +674,7 @@ namespace Pulumi.Scm
         public Input<bool>? NegateSource { get; set; }
 
         /// <summary>
-        /// The position of a security rule
+        /// The position of a security rule. Possible values are `Pre` and `Post`.
         /// </summary>
         [Input("position")]
         public Input<string>? Position { get; set; }
@@ -711,8 +705,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The snippet in which the resource is defined
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("snippet")]
         public Input<string>? Snippet { get; set; }
@@ -766,7 +758,7 @@ namespace Pulumi.Scm
         }
 
         /// <summary>
-        /// The name or UUID of the rule to position this rule relative to. Required when `RelativePosition` is `"before"` or `"after"`.
+        /// UUID of the rule to position this rule relative to. Required when `RelativePosition` is `"before"` or `"after"`.
         /// </summary>
         [Input("targetRule")]
         public Input<string>? TargetRule { get; set; }
@@ -798,7 +790,7 @@ namespace Pulumi.Scm
     public sealed class DecryptionRuleState : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The action to be taken
+        /// The action to be taken. Possible values are `Decrypt` and `no-decrypt`.
         /// </summary>
         [Input("action")]
         public Input<string>? Action { get; set; }
@@ -859,8 +851,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The folder in which the resource is defined
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("folder")]
         public Input<string>? Folder { get; set; }
@@ -914,7 +904,7 @@ namespace Pulumi.Scm
         public Input<bool>? NegateSource { get; set; }
 
         /// <summary>
-        /// The position of a security rule
+        /// The position of a security rule. Possible values are `Pre` and `Post`.
         /// </summary>
         [Input("position")]
         public Input<string>? Position { get; set; }
@@ -945,8 +935,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The snippet in which the resource is defined
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("snippet")]
         public Input<string>? Snippet { get; set; }
@@ -1000,7 +988,7 @@ namespace Pulumi.Scm
         }
 
         /// <summary>
-        /// The name or UUID of the rule to position this rule relative to. Required when `RelativePosition` is `"before"` or `"after"`.
+        /// UUID of the rule to position this rule relative to. Required when `RelativePosition` is `"before"` or `"after"`.
         /// </summary>
         [Input("targetRule")]
         public Input<string>? TargetRule { get; set; }

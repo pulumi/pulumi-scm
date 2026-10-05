@@ -38,16 +38,12 @@ public final class LogicalRouterVrfOspfv3AuthProfileEspAuthenticationArgs extend
     /**
      * None
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `md5`, `none`, `sha1`, `sha256`, `sha384`, and `sha512`.
-     * 
      */
     @Import(name="none")
     private @Nullable Output<LogicalRouterVrfOspfv3AuthProfileEspAuthenticationNoneArgs> none;
 
     /**
      * @return None
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `md5`, `none`, `sha1`, `sha256`, `sha384`, and `sha512`.
      * 
      */
     public Optional<Output<LogicalRouterVrfOspfv3AuthProfileEspAuthenticationNoneArgs>> none() {
@@ -57,16 +53,12 @@ public final class LogicalRouterVrfOspfv3AuthProfileEspAuthenticationArgs extend
     /**
      * Sha1
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `md5`, `none`, `sha1`, `sha256`, `sha384`, and `sha512`.
-     * 
      */
     @Import(name="sha1")
     private @Nullable Output<LogicalRouterVrfOspfv3AuthProfileEspAuthenticationSha1Args> sha1;
 
     /**
      * @return Sha1
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `md5`, `none`, `sha1`, `sha256`, `sha384`, and `sha512`.
      * 
      */
     public Optional<Output<LogicalRouterVrfOspfv3AuthProfileEspAuthenticationSha1Args>> sha1() {
@@ -76,16 +68,12 @@ public final class LogicalRouterVrfOspfv3AuthProfileEspAuthenticationArgs extend
     /**
      * Sha256
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `md5`, `none`, `sha1`, `sha256`, `sha384`, and `sha512`.
-     * 
      */
     @Import(name="sha256")
     private @Nullable Output<LogicalRouterVrfOspfv3AuthProfileEspAuthenticationSha256Args> sha256;
 
     /**
      * @return Sha256
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `md5`, `none`, `sha1`, `sha256`, `sha384`, and `sha512`.
      * 
      */
     public Optional<Output<LogicalRouterVrfOspfv3AuthProfileEspAuthenticationSha256Args>> sha256() {
@@ -95,16 +83,12 @@ public final class LogicalRouterVrfOspfv3AuthProfileEspAuthenticationArgs extend
     /**
      * Sha384
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `md5`, `none`, `sha1`, `sha256`, `sha384`, and `sha512`.
-     * 
      */
     @Import(name="sha384")
     private @Nullable Output<LogicalRouterVrfOspfv3AuthProfileEspAuthenticationSha384Args> sha384;
 
     /**
      * @return Sha384
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `md5`, `none`, `sha1`, `sha256`, `sha384`, and `sha512`.
      * 
      */
     public Optional<Output<LogicalRouterVrfOspfv3AuthProfileEspAuthenticationSha384Args>> sha384() {
@@ -114,16 +98,12 @@ public final class LogicalRouterVrfOspfv3AuthProfileEspAuthenticationArgs extend
     /**
      * Sha512
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `md5`, `none`, `sha1`, `sha256`, `sha384`, and `sha512`.
-     * 
      */
     @Import(name="sha512")
     private @Nullable Output<LogicalRouterVrfOspfv3AuthProfileEspAuthenticationSha512Args> sha512;
 
     /**
      * @return Sha512
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `md5`, `none`, `sha1`, `sha256`, `sha384`, and `sha512`.
      * 
      */
     public Optional<Output<LogicalRouterVrfOspfv3AuthProfileEspAuthenticationSha512Args>> sha512() {
@@ -183,8 +163,6 @@ public final class LogicalRouterVrfOspfv3AuthProfileEspAuthenticationArgs extend
         /**
          * @param none None
          * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `md5`, `none`, `sha1`, `sha256`, `sha384`, and `sha512`.
-         * 
          * @return builder
          * 
          */
@@ -196,8 +174,6 @@ public final class LogicalRouterVrfOspfv3AuthProfileEspAuthenticationArgs extend
         /**
          * @param none None
          * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `md5`, `none`, `sha1`, `sha256`, `sha384`, and `sha512`.
-         * 
          * @return builder
          * 
          */
@@ -207,8 +183,6 @@ public final class LogicalRouterVrfOspfv3AuthProfileEspAuthenticationArgs extend
 
         /**
          * @param sha1 Sha1
-         * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `md5`, `none`, `sha1`, `sha256`, `sha384`, and `sha512`.
          * 
          * @return builder
          * 
@@ -221,8 +195,6 @@ public final class LogicalRouterVrfOspfv3AuthProfileEspAuthenticationArgs extend
         /**
          * @param sha1 Sha1
          * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `md5`, `none`, `sha1`, `sha256`, `sha384`, and `sha512`.
-         * 
          * @return builder
          * 
          */
@@ -232,8 +204,6 @@ public final class LogicalRouterVrfOspfv3AuthProfileEspAuthenticationArgs extend
 
         /**
          * @param sha256 Sha256
-         * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `md5`, `none`, `sha1`, `sha256`, `sha384`, and `sha512`.
          * 
          * @return builder
          * 
@@ -246,8 +216,6 @@ public final class LogicalRouterVrfOspfv3AuthProfileEspAuthenticationArgs extend
         /**
          * @param sha256 Sha256
          * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `md5`, `none`, `sha1`, `sha256`, `sha384`, and `sha512`.
-         * 
          * @return builder
          * 
          */
@@ -257,8 +225,6 @@ public final class LogicalRouterVrfOspfv3AuthProfileEspAuthenticationArgs extend
 
         /**
          * @param sha384 Sha384
-         * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `md5`, `none`, `sha1`, `sha256`, `sha384`, and `sha512`.
          * 
          * @return builder
          * 
@@ -271,8 +237,6 @@ public final class LogicalRouterVrfOspfv3AuthProfileEspAuthenticationArgs extend
         /**
          * @param sha384 Sha384
          * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `md5`, `none`, `sha1`, `sha256`, `sha384`, and `sha512`.
-         * 
          * @return builder
          * 
          */
@@ -282,8 +246,6 @@ public final class LogicalRouterVrfOspfv3AuthProfileEspAuthenticationArgs extend
 
         /**
          * @param sha512 Sha512
-         * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `md5`, `none`, `sha1`, `sha256`, `sha384`, and `sha512`.
          * 
          * @return builder
          * 
@@ -295,8 +257,6 @@ public final class LogicalRouterVrfOspfv3AuthProfileEspAuthenticationArgs extend
 
         /**
          * @param sha512 Sha512
-         * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `md5`, `none`, `sha1`, `sha256`, `sha384`, and `sha512`.
          * 
          * @return builder
          * 

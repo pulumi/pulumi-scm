@@ -5,8 +5,12 @@ package com.pulumi.scm.outputs;
 
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
+import com.pulumi.scm.outputs.EthernetInterfaceLayer2LldpHighAvailability;
 import java.lang.Boolean;
+import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
+import javax.annotation.Nullable;
 
 @CustomType
 public final class EthernetInterfaceLayer2Lldp {
@@ -15,6 +19,16 @@ public final class EthernetInterfaceLayer2Lldp {
      * 
      */
     private Boolean enable;
+    /**
+     * @return LLDP high availability settings
+     * 
+     */
+    private @Nullable EthernetInterfaceLayer2LldpHighAvailability highAvailability;
+    /**
+     * @return Name of the LLDP profile to assign to the interface
+     * 
+     */
+    private @Nullable String profile;
 
     private EthernetInterfaceLayer2Lldp() {}
     /**
@@ -23,6 +37,20 @@ public final class EthernetInterfaceLayer2Lldp {
      */
     public Boolean enable() {
         return this.enable;
+    }
+    /**
+     * @return LLDP high availability settings
+     * 
+     */
+    public Optional<EthernetInterfaceLayer2LldpHighAvailability> highAvailability() {
+        return Optional.ofNullable(this.highAvailability);
+    }
+    /**
+     * @return Name of the LLDP profile to assign to the interface
+     * 
+     */
+    public Optional<String> profile() {
+        return Optional.ofNullable(this.profile);
     }
 
     public static Builder builder() {
@@ -35,10 +63,14 @@ public final class EthernetInterfaceLayer2Lldp {
     @CustomType.Builder
     public static final class Builder {
         private Boolean enable;
+        private @Nullable EthernetInterfaceLayer2LldpHighAvailability highAvailability;
+        private @Nullable String profile;
         public Builder() {}
         public Builder(EthernetInterfaceLayer2Lldp defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.enable = defaults.enable;
+    	      this.highAvailability = defaults.highAvailability;
+    	      this.profile = defaults.profile;
         }
 
         @CustomType.Setter
@@ -49,9 +81,23 @@ public final class EthernetInterfaceLayer2Lldp {
             this.enable = enable;
             return this;
         }
+        @CustomType.Setter
+        public Builder highAvailability(@Nullable EthernetInterfaceLayer2LldpHighAvailability highAvailability) {
+
+            this.highAvailability = highAvailability;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder profile(@Nullable String profile) {
+
+            this.profile = profile;
+            return this;
+        }
         public EthernetInterfaceLayer2Lldp build() {
             final var _resultValue = new EthernetInterfaceLayer2Lldp();
             _resultValue.enable = enable;
+            _resultValue.highAvailability = highAvailability;
+            _resultValue.profile = profile;
             return _resultValue;
         }
     }

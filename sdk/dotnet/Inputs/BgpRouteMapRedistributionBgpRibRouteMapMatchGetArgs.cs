@@ -61,7 +61,7 @@ namespace Pulumi.Scm.Inputs
         public Input<string>? Origin { get; set; }
 
         /// <summary>
-        /// BGP Root RIB Route maps match Peer
+        /// BGP Root RIB Route maps match Peer. Possible values are `Local` and `None`.
         /// </summary>
         [Input("peer")]
         public Input<string>? Peer { get; set; }

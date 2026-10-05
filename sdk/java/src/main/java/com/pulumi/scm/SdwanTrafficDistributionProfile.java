@@ -61,16 +61,12 @@ public class SdwanTrafficDistributionProfile extends com.pulumi.resources.Custom
     /**
      * The folder in which the resource is defined
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
      */
     @Export(name="folder", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> folder;
 
     /**
      * @return The folder in which the resource is defined
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public Output<Optional<String>> folder() {
@@ -107,16 +103,12 @@ public class SdwanTrafficDistributionProfile extends com.pulumi.resources.Custom
     /**
      * The snippet in which the resource is defined
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
      */
     @Export(name="snippet", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> snippet;
 
     /**
      * @return The snippet in which the resource is defined
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public Output<Optional<String>> snippet() {
@@ -137,14 +129,14 @@ public class SdwanTrafficDistributionProfile extends com.pulumi.resources.Custom
         return this.tfid;
     }
     /**
-     * Traffic distribution
+     * Traffic distribution. Possible values are `Best Available Path`, `Top Down Priority` and `Weighted Session Distribution`.
      * 
      */
     @Export(name="trafficDistribution", refs={String.class}, tree="[0]")
     private Output<String> trafficDistribution;
 
     /**
-     * @return Traffic distribution
+     * @return Traffic distribution. Possible values are `Best Available Path`, `Top Down Priority` and `Weighted Session Distribution`.
      * 
      */
     public Output<String> trafficDistribution() {

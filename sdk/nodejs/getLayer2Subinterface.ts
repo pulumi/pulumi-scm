@@ -46,12 +46,21 @@ export interface GetLayer2SubinterfaceArgs {
      * The device in which the resource is defined
      */
     device?: string;
+    /**
+     * The folder in which the resource is defined
+     */
     folder?: string;
     /**
      * UUID of the resource
      */
     id: string;
+    /**
+     * L2 sub-interface name
+     */
     name?: string;
+    /**
+     * The snippet in which the resource is defined
+     */
     snippet?: string;
 }
 
@@ -59,20 +68,41 @@ export interface GetLayer2SubinterfaceArgs {
  * A collection of values returned by getLayer2Subinterface.
  */
 export interface GetLayer2SubinterfaceResult {
+    /**
+     * Description
+     */
     readonly comment: string;
     /**
      * The device in which the resource is defined
      */
     readonly device: string;
+    /**
+     * The folder in which the resource is defined
+     */
     readonly folder: string;
     /**
      * UUID of the resource
      */
     readonly id: string;
+    /**
+     * L2 sub-interface name
+     */
     readonly name: string;
+    /**
+     * Parent interface
+     */
     readonly parentInterface: string;
+    /**
+     * The snippet in which the resource is defined
+     */
     readonly snippet: string;
+    /**
+     * The Terraform ID.
+     */
     readonly tfid: string;
+    /**
+     * VLAN tag
+     */
     readonly vlanTag: string;
 }
 /**
@@ -117,11 +147,20 @@ export interface GetLayer2SubinterfaceOutputArgs {
      * The device in which the resource is defined
      */
     device?: pulumi.Input<string | undefined>;
+    /**
+     * The folder in which the resource is defined
+     */
     folder?: pulumi.Input<string | undefined>;
     /**
      * UUID of the resource
      */
     id: pulumi.Input<string>;
+    /**
+     * L2 sub-interface name
+     */
     name?: pulumi.Input<string | undefined>;
+    /**
+     * The snippet in which the resource is defined
+     */
     snippet?: pulumi.Input<string | undefined>;
 }

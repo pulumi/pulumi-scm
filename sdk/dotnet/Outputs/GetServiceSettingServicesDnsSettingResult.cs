@@ -19,8 +19,6 @@ namespace Pulumi.Scm.Outputs
         public readonly string DnsProxyObject;
         /// <summary>
         /// Servers
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `DnsProxyObject` and `Servers`.
         /// </summary>
         public readonly Outputs.GetServiceSettingServicesDnsSettingServersResult Servers;
 

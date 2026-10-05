@@ -35,6 +35,7 @@ import * as utilities from "./utilities";
  *         "service-https",
  *     ],
  *     sourceUsers: ["any"],
+ *     authenticationEnforcement: "default-no-captive-portal",
  *     timeout: 1200,
  *     negateSource: false,
  *     negateDestination: false,
@@ -59,6 +60,7 @@ import * as utilities from "./utilities";
  *     sources: ["any"],
  *     services: ["any"],
  *     sourceUsers: ["any"],
+ *     authenticationEnforcement: "default-no-captive-portal",
  * });
  * const ruleBottomOfList = new scm.AuthenticationRule("rule_bottom_of_list", {
  *     name: "test_bottom_rule_25",
@@ -72,6 +74,7 @@ import * as utilities from "./utilities";
  *     sources: ["any"],
  *     services: ["any"],
  *     sourceUsers: ["any"],
+ *     authenticationEnforcement: "default-no-captive-portal",
  * });
  * // -----------------------------------------------------------------------------
  * // 4. RELATIVE POSITIONING Examples ("before" and "after")
@@ -89,6 +92,7 @@ import * as utilities from "./utilities";
  *     sources: ["any"],
  *     services: ["any"],
  *     sourceUsers: ["any"],
+ *     authenticationEnforcement: "default-no-captive-portal",
  * });
  * const ruleAfterAnchor = new scm.AuthenticationRule("rule_after_anchor", {
  *     name: "test_after_rule_25",
@@ -103,6 +107,7 @@ import * as utilities from "./utilities";
  *     sources: ["any"],
  *     services: ["any"],
  *     sourceUsers: ["any"],
+ *     authenticationEnforcement: "default-no-captive-portal",
  * });
  * ```
  *
@@ -159,7 +164,7 @@ export class AuthenticationRule extends pulumi.CustomResource {
     /**
      * The authentication profile name
      */
-    declare public readonly authenticationEnforcement: pulumi.Output<string | undefined>;
+    declare public readonly authenticationEnforcement: pulumi.Output<string>;
     /**
      * The destination URL categories
      */
@@ -186,8 +191,6 @@ export class AuthenticationRule extends pulumi.CustomResource {
     declare public readonly disabled: pulumi.Output<boolean>;
     /**
      * Folder
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly folder: pulumi.Output<string | undefined>;
     /**
@@ -223,7 +226,7 @@ export class AuthenticationRule extends pulumi.CustomResource {
      */
     declare public readonly negateSource: pulumi.Output<boolean>;
     /**
-     * The relative position of the rule
+     * The relative position of the rule. Possible values are `pre` and `post`.
      */
     declare public readonly position: pulumi.Output<string>;
     /**
@@ -236,8 +239,6 @@ export class AuthenticationRule extends pulumi.CustomResource {
     declare public readonly services: pulumi.Output<string[]>;
     /**
      * Snippet
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly snippet: pulumi.Output<string | undefined>;
     /**
@@ -257,7 +258,7 @@ export class AuthenticationRule extends pulumi.CustomResource {
      */
     declare public readonly tags: pulumi.Output<string[] | undefined>;
     /**
-     * The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `"before"` or `"after"`.
+     * UUID of the rule to position this rule relative to. Required when `relativePosition` is `"before"` or `"after"`.
      */
     declare public readonly targetRule: pulumi.Output<string | undefined>;
     /**
@@ -399,8 +400,6 @@ export interface AuthenticationRuleState {
     disabled?: pulumi.Input<boolean | undefined>;
     /**
      * Folder
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     folder?: pulumi.Input<string | undefined>;
     /**
@@ -436,7 +435,7 @@ export interface AuthenticationRuleState {
      */
     negateSource?: pulumi.Input<boolean | undefined>;
     /**
-     * The relative position of the rule
+     * The relative position of the rule. Possible values are `pre` and `post`.
      */
     position?: pulumi.Input<string | undefined>;
     /**
@@ -449,8 +448,6 @@ export interface AuthenticationRuleState {
     services?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Snippet
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     snippet?: pulumi.Input<string | undefined>;
     /**
@@ -470,7 +467,7 @@ export interface AuthenticationRuleState {
      */
     tags?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
-     * The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `"before"` or `"after"`.
+     * UUID of the rule to position this rule relative to. Required when `relativePosition` is `"before"` or `"after"`.
      */
     targetRule?: pulumi.Input<string | undefined>;
     /**
@@ -521,8 +518,6 @@ export interface AuthenticationRuleArgs {
     disabled?: pulumi.Input<boolean | undefined>;
     /**
      * Folder
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     folder?: pulumi.Input<string | undefined>;
     /**
@@ -558,7 +553,7 @@ export interface AuthenticationRuleArgs {
      */
     negateSource?: pulumi.Input<boolean | undefined>;
     /**
-     * The relative position of the rule
+     * The relative position of the rule. Possible values are `pre` and `post`.
      */
     position?: pulumi.Input<string | undefined>;
     /**
@@ -571,8 +566,6 @@ export interface AuthenticationRuleArgs {
     services: pulumi.Input<pulumi.Input<string>[]>;
     /**
      * Snippet
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     snippet?: pulumi.Input<string | undefined>;
     /**
@@ -592,7 +585,7 @@ export interface AuthenticationRuleArgs {
      */
     tags?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
-     * The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `"before"` or `"after"`.
+     * UUID of the rule to position this rule relative to. Required when `relativePosition` is `"before"` or `"after"`.
      */
     targetRule?: pulumi.Input<string | undefined>;
     /**

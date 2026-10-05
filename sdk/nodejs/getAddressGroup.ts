@@ -47,12 +47,21 @@ export interface GetAddressGroupArgs {
      * The device in which the resource is defined
      */
     device?: string;
+    /**
+     * The folder in which the resource is defined
+     */
     folder?: string;
     /**
      * The UUID of the address group
      */
     id: string;
+    /**
+     * The name of the address group
+     */
     name?: string;
+    /**
+     * The snippet in which the resource is defined
+     */
     snippet?: string;
 }
 
@@ -60,21 +69,45 @@ export interface GetAddressGroupArgs {
  * A collection of values returned by getAddressGroup.
  */
 export interface GetAddressGroupResult {
+    /**
+     * Description
+     */
     readonly description: string;
     /**
      * The device in which the resource is defined
      */
     readonly device: string;
+    /**
+     * Dynamic
+     */
     readonly dynamic: outputs.GetAddressGroupDynamic;
+    /**
+     * The folder in which the resource is defined
+     */
     readonly folder: string;
     /**
      * The UUID of the address group
      */
     readonly id: string;
+    /**
+     * The name of the address group
+     */
     readonly name: string;
+    /**
+     * The snippet in which the resource is defined
+     */
     readonly snippet: string;
+    /**
+     * Static
+     */
     readonly statics: string[];
+    /**
+     * Tags for address group object
+     */
     readonly tags: string[];
+    /**
+     * The Terraform ID.
+     */
     readonly tfid: string;
 }
 /**
@@ -118,11 +151,20 @@ export interface GetAddressGroupOutputArgs {
      * The device in which the resource is defined
      */
     device?: pulumi.Input<string | undefined>;
+    /**
+     * The folder in which the resource is defined
+     */
     folder?: pulumi.Input<string | undefined>;
     /**
      * The UUID of the address group
      */
     id: pulumi.Input<string>;
+    /**
+     * The name of the address group
+     */
     name?: pulumi.Input<string | undefined>;
+    /**
+     * The snippet in which the resource is defined
+     */
     snippet?: pulumi.Input<string | undefined>;
 }

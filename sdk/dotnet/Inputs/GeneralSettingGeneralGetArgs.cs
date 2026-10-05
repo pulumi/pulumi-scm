@@ -31,7 +31,7 @@ namespace Pulumi.Scm.Inputs
         public Input<Inputs.GeneralSettingGeneralGeoLocationGetArgs>? GeoLocation { get; set; }
 
         /// <summary>
-        /// Locale
+        /// Locale. Possible values are `En`, `Es`, `Ja`, `Fr`, `zh_CN` and `zh_TW`.
         /// </summary>
         [Input("locale")]
         public Input<string>? Locale { get; set; }

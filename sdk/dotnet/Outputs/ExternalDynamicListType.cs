@@ -19,38 +19,26 @@ namespace Pulumi.Scm.Outputs
         public readonly Outputs.ExternalDynamicListTypeDomain? Domain;
         /// <summary>
         /// IMEI Configuration settings
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Domain`, `Imei`, `Imsi`, `Ip`, `PredefinedIp`, `PredefinedUrl`, and `Url`.
         /// </summary>
         public readonly Outputs.ExternalDynamicListTypeImei? Imei;
         /// <summary>
         /// IMSI Config for Custom IMSI type
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Domain`, `Imei`, `Imsi`, `Ip`, `PredefinedIp`, `PredefinedUrl`, and `Url`.
         /// </summary>
         public readonly Outputs.ExternalDynamicListTypeImsi? Imsi;
         /// <summary>
         /// IP settings for Custom IP type
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Domain`, `Imei`, `Imsi`, `Ip`, `PredefinedIp`, `PredefinedUrl`, and `Url`.
         /// </summary>
         public readonly Outputs.ExternalDynamicListTypeIp? Ip;
         /// <summary>
         /// Predefined IP settings for EDL type
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Domain`, `Imei`, `Imsi`, `Ip`, `PredefinedIp`, `PredefinedUrl`, and `Url`.
         /// </summary>
         public readonly Outputs.ExternalDynamicListTypePredefinedIp? PredefinedIp;
         /// <summary>
         /// Predefined URL settings for EDL type
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Domain`, `Imei`, `Imsi`, `Ip`, `PredefinedIp`, `PredefinedUrl`, and `Url`.
         /// </summary>
         public readonly Outputs.ExternalDynamicListTypePredefinedUrl? PredefinedUrl;
         /// <summary>
         /// URL settings for Custom URL type
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Domain`, `Imei`, `Imsi`, `Ip`, `PredefinedIp`, `PredefinedUrl`, and `Url`.
         /// </summary>
         public readonly Outputs.ExternalDynamicListTypeUrl? Url;
 

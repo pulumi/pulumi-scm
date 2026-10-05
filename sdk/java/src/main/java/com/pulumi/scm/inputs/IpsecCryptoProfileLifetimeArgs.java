@@ -33,16 +33,12 @@ public final class IpsecCryptoProfileLifetimeArgs extends com.pulumi.resources.R
     /**
      * specify lifetime in hours
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `days`, `hours`, `minutes`, and `seconds`.
-     * 
      */
     @Import(name="hours")
     private @Nullable Output<Integer> hours;
 
     /**
      * @return specify lifetime in hours
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `days`, `hours`, `minutes`, and `seconds`.
      * 
      */
     public Optional<Output<Integer>> hours() {
@@ -52,16 +48,12 @@ public final class IpsecCryptoProfileLifetimeArgs extends com.pulumi.resources.R
     /**
      * specify lifetime in minutes
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `days`, `hours`, `minutes`, and `seconds`.
-     * 
      */
     @Import(name="minutes")
     private @Nullable Output<Integer> minutes;
 
     /**
      * @return specify lifetime in minutes
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `days`, `hours`, `minutes`, and `seconds`.
      * 
      */
     public Optional<Output<Integer>> minutes() {
@@ -71,16 +63,12 @@ public final class IpsecCryptoProfileLifetimeArgs extends com.pulumi.resources.R
     /**
      * specify lifetime in seconds
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `days`, `hours`, `minutes`, and `seconds`.
-     * 
      */
     @Import(name="seconds")
     private @Nullable Output<Integer> seconds;
 
     /**
      * @return specify lifetime in seconds
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `days`, `hours`, `minutes`, and `seconds`.
      * 
      */
     public Optional<Output<Integer>> seconds() {
@@ -138,8 +126,6 @@ public final class IpsecCryptoProfileLifetimeArgs extends com.pulumi.resources.R
         /**
          * @param hours specify lifetime in hours
          * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `days`, `hours`, `minutes`, and `seconds`.
-         * 
          * @return builder
          * 
          */
@@ -151,8 +137,6 @@ public final class IpsecCryptoProfileLifetimeArgs extends com.pulumi.resources.R
         /**
          * @param hours specify lifetime in hours
          * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `days`, `hours`, `minutes`, and `seconds`.
-         * 
          * @return builder
          * 
          */
@@ -162,8 +146,6 @@ public final class IpsecCryptoProfileLifetimeArgs extends com.pulumi.resources.R
 
         /**
          * @param minutes specify lifetime in minutes
-         * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `days`, `hours`, `minutes`, and `seconds`.
          * 
          * @return builder
          * 
@@ -176,8 +158,6 @@ public final class IpsecCryptoProfileLifetimeArgs extends com.pulumi.resources.R
         /**
          * @param minutes specify lifetime in minutes
          * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `days`, `hours`, `minutes`, and `seconds`.
-         * 
          * @return builder
          * 
          */
@@ -187,8 +167,6 @@ public final class IpsecCryptoProfileLifetimeArgs extends com.pulumi.resources.R
 
         /**
          * @param seconds specify lifetime in seconds
-         * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `days`, `hours`, `minutes`, and `seconds`.
          * 
          * @return builder
          * 
@@ -200,8 +178,6 @@ public final class IpsecCryptoProfileLifetimeArgs extends com.pulumi.resources.R
 
         /**
          * @param seconds specify lifetime in seconds
-         * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `days`, `hours`, `minutes`, and `seconds`.
          * 
          * @return builder
          * 

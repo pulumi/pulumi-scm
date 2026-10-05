@@ -12,29 +12,77 @@ import java.util.Objects;
 
 @CustomType
 public final class GetConfigMatchListResult {
+    /**
+     * @return Description of the config match list entry
+     * 
+     */
     private String description;
     /**
      * @return The device in which the resource is defined
      * 
      */
     private String device;
+    /**
+     * @return Filter of the config match list entry
+     * 
+     */
     private String filter;
+    /**
+     * @return The folder in which the resource is defined
+     * 
+     */
     private String folder;
     /**
      * @return UUID of the resource
      * 
      */
     private String id;
+    /**
+     * @return Name of the config match list entry
+     * 
+     */
     private String name;
+    /**
+     * @return Send Email List of the config match list entry
+     * 
+     */
     private List<String> sendEmails;
+    /**
+     * @return Send HTTP List of the config match list entry
+     * 
+     */
     private List<String> sendHttps;
+    /**
+     * @return Send SNMP Trap List of the config match list entry
+     * 
+     */
     private List<String> sendSnmptraps;
+    /**
+     * @return Send Sys Log List of the config match list entry
+     * 
+     */
     private List<String> sendSyslogs;
+    /**
+     * @return Send Panorama Flag of the config match list entry
+     * 
+     */
     private Boolean sendToPanorama;
+    /**
+     * @return The snippet in which the resource is defined
+     * 
+     */
     private String snippet;
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     private String tfid;
 
     private GetConfigMatchListResult() {}
+    /**
+     * @return Description of the config match list entry
+     * 
+     */
     public String description() {
         return this.description;
     }
@@ -45,9 +93,17 @@ public final class GetConfigMatchListResult {
     public String device() {
         return this.device;
     }
+    /**
+     * @return Filter of the config match list entry
+     * 
+     */
     public String filter() {
         return this.filter;
     }
+    /**
+     * @return The folder in which the resource is defined
+     * 
+     */
     public String folder() {
         return this.folder;
     }
@@ -58,27 +114,59 @@ public final class GetConfigMatchListResult {
     public String id() {
         return this.id;
     }
+    /**
+     * @return Name of the config match list entry
+     * 
+     */
     public String name() {
         return this.name;
     }
+    /**
+     * @return Send Email List of the config match list entry
+     * 
+     */
     public List<String> sendEmails() {
         return this.sendEmails;
     }
+    /**
+     * @return Send HTTP List of the config match list entry
+     * 
+     */
     public List<String> sendHttps() {
         return this.sendHttps;
     }
+    /**
+     * @return Send SNMP Trap List of the config match list entry
+     * 
+     */
     public List<String> sendSnmptraps() {
         return this.sendSnmptraps;
     }
+    /**
+     * @return Send Sys Log List of the config match list entry
+     * 
+     */
     public List<String> sendSyslogs() {
         return this.sendSyslogs;
     }
+    /**
+     * @return Send Panorama Flag of the config match list entry
+     * 
+     */
     public Boolean sendToPanorama() {
         return this.sendToPanorama;
     }
+    /**
+     * @return The snippet in which the resource is defined
+     * 
+     */
     public String snippet() {
         return this.snippet;
     }
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     public String tfid() {
         return this.tfid;
     }

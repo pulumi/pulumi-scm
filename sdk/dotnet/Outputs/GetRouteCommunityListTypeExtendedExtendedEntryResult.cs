@@ -14,7 +14,7 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetRouteCommunityListTypeExtendedExtendedEntryResult
     {
         /// <summary>
-        /// Action
+        /// Action. Possible values are `Deny` and `Permit`.
         /// </summary>
         public readonly string Action;
         /// <summary>

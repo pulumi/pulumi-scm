@@ -34,7 +34,7 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly string Tfid;
         /// <summary>
-        /// The snippet type
+        /// The snippet type. Possible values are `Predefined`, `Custom` and `Readonly`.
         /// </summary>
         public readonly string Type;
 

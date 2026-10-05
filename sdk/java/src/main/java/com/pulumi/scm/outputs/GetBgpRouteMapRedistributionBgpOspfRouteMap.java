@@ -14,7 +14,7 @@ import java.util.Objects;
 @CustomType
 public final class GetBgpRouteMapRedistributionBgpOspfRouteMap {
     /**
-     * @return BGP Root OSPF Route maps Action
+     * @return BGP Root OSPF Route maps Action. Possible values are `permit` and `deny`.
      * 
      */
     private String action;
@@ -41,7 +41,7 @@ public final class GetBgpRouteMapRedistributionBgpOspfRouteMap {
 
     private GetBgpRouteMapRedistributionBgpOspfRouteMap() {}
     /**
-     * @return BGP Root OSPF Route maps Action
+     * @return BGP Root OSPF Route maps Action. Possible values are `permit` and `deny`.
      * 
      */
     public String action() {

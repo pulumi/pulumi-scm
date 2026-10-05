@@ -19,7 +19,7 @@ namespace Pulumi.Scm.Inputs
         public Input<string>? AccessConcentrator { get; set; }
 
         /// <summary>
-        /// Authentication protocol
+        /// Authentication protocol. Possible values are `CHAP`, `PAP` and `Auto`.
         /// </summary>
         [Input("authentication")]
         public Input<string>? Authentication { get; set; }
@@ -31,7 +31,7 @@ namespace Pulumi.Scm.Inputs
         public Input<int>? DefaultRouteMetric { get; set; }
 
         /// <summary>
-        /// Enable
+        /// Enable PPPoE on the interface
         /// </summary>
         [Input("enable")]
         public Input<bool>? Enable { get; set; }

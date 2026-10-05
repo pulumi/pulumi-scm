@@ -17,7 +17,7 @@ public final class GetLogicalRouterVrfOspfv3AreaTypeNssaDefaultRouteAdvertise {
      */
     private Integer metric;
     /**
-     * @return Type
+     * @return Type. Possible values are `ext-1` and `ext-2`.
      * 
      */
     private String type;
@@ -31,7 +31,7 @@ public final class GetLogicalRouterVrfOspfv3AreaTypeNssaDefaultRouteAdvertise {
         return this.metric;
     }
     /**
-     * @return Type
+     * @return Type. Possible values are `ext-1` and `ext-2`.
      * 
      */
     public String type() {

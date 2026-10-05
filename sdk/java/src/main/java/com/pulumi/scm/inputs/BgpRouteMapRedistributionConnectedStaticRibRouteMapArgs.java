@@ -19,14 +19,14 @@ public final class BgpRouteMapRedistributionConnectedStaticRibRouteMapArgs exten
     public static final BgpRouteMapRedistributionConnectedStaticRibRouteMapArgs Empty = new BgpRouteMapRedistributionConnectedStaticRibRouteMapArgs();
 
     /**
-     * Connected Static BGP Rib Route maps Action
+     * Connected Static BGP Rib Route maps Action. Possible values are `permit` and `deny`.
      * 
      */
     @Import(name="action")
     private @Nullable Output<String> action;
 
     /**
-     * @return Connected Static BGP Rib Route maps Action
+     * @return Connected Static BGP Rib Route maps Action. Possible values are `permit` and `deny`.
      * 
      */
     public Optional<Output<String>> action() {
@@ -122,7 +122,7 @@ public final class BgpRouteMapRedistributionConnectedStaticRibRouteMapArgs exten
         }
 
         /**
-         * @param action Connected Static BGP Rib Route maps Action
+         * @param action Connected Static BGP Rib Route maps Action. Possible values are `permit` and `deny`.
          * 
          * @return builder
          * 
@@ -133,7 +133,7 @@ public final class BgpRouteMapRedistributionConnectedStaticRibRouteMapArgs exten
         }
 
         /**
-         * @param action Connected Static BGP Rib Route maps Action
+         * @param action Connected Static BGP Rib Route maps Action. Possible values are `permit` and `deny`.
          * 
          * @return builder
          * 

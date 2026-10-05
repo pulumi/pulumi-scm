@@ -52,7 +52,7 @@ public final class GetBgpRouteMapRedistributionConnectedStaticBgpRouteMapSet {
      */
     private GetBgpRouteMapRedistributionConnectedStaticBgpRouteMapSetMetric metric;
     /**
-     * @return Connected Static BGP Route maps set Origin
+     * @return Connected Static BGP Route maps set Origin. Possible values are `none`, `egp`, `igp` and `incomplete`.
      * 
      */
     private String origin;
@@ -128,7 +128,7 @@ public final class GetBgpRouteMapRedistributionConnectedStaticBgpRouteMapSet {
         return this.metric;
     }
     /**
-     * @return Connected Static BGP Route maps set Origin
+     * @return Connected Static BGP Route maps set Origin. Possible values are `none`, `egp`, `igp` and `incomplete`.
      * 
      */
     public String origin() {

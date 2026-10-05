@@ -18,7 +18,7 @@ public final class GetForwardingProfileUserLocationResult {
      */
     private String description;
     /**
-     * @return The folder in which the resource is defined
+     * @return The folder in which the resource is defined. Possible values are `Mobile Users`.
      * 
      */
     private String folder;
@@ -57,7 +57,7 @@ public final class GetForwardingProfileUserLocationResult {
         return this.description;
     }
     /**
-     * @return The folder in which the resource is defined
+     * @return The folder in which the resource is defined. Possible values are `Mobile Users`.
      * 
      */
     public String folder() {

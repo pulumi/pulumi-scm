@@ -197,14 +197,14 @@ public final class MotdBannerSettingMotdAndBannerArgs extends com.pulumi.resourc
     }
 
     /**
-     * Severity
+     * Severity. Possible values are `warning`, `question`, `error` and `info`.
      * 
      */
     @Import(name="severity")
     private @Nullable Output<String> severity;
 
     /**
-     * @return Severity
+     * @return Severity. Possible values are `warning`, `question`, `error` and `info`.
      * 
      */
     public Optional<Output<String>> severity() {
@@ -500,7 +500,7 @@ public final class MotdBannerSettingMotdAndBannerArgs extends com.pulumi.resourc
         }
 
         /**
-         * @param severity Severity
+         * @param severity Severity. Possible values are `warning`, `question`, `error` and `info`.
          * 
          * @return builder
          * 
@@ -511,7 +511,7 @@ public final class MotdBannerSettingMotdAndBannerArgs extends com.pulumi.resourc
         }
 
         /**
-         * @param severity Severity
+         * @param severity Severity. Possible values are `warning`, `question`, `error` and `info`.
          * 
          * @return builder
          * 

@@ -18,6 +18,10 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly Outputs.GetAggregateInterfaceListDataLayer2LacpResult Lacp;
         /// <summary>
+        /// LLDP settings for the interface
+        /// </summary>
+        public readonly Outputs.GetAggregateInterfaceListDataLayer2LldpResult Lldp;
+        /// <summary>
         /// Name of Netflow Profile to assign to Interface
         /// </summary>
         public readonly string NetflowProfile;
@@ -30,11 +34,14 @@ namespace Pulumi.Scm.Outputs
         private GetAggregateInterfaceListDataLayer2Result(
             Outputs.GetAggregateInterfaceListDataLayer2LacpResult lacp,
 
+            Outputs.GetAggregateInterfaceListDataLayer2LldpResult lldp,
+
             string netflowProfile,
 
             string vlanTag)
         {
             Lacp = lacp;
+            Lldp = lldp;
             NetflowProfile = netflowProfile;
             VlanTag = vlanTag;
         }

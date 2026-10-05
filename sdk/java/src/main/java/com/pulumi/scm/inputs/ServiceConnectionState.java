@@ -5,7 +5,6 @@ package com.pulumi.scm.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.scm.inputs.ServiceConnectionBgpPeerArgs;
 import com.pulumi.scm.inputs.ServiceConnectionProtocolArgs;
 import com.pulumi.scm.inputs.ServiceConnectionQosArgs;
 import java.lang.Boolean;
@@ -34,21 +33,6 @@ public final class ServiceConnectionState extends com.pulumi.resources.ResourceA
      */
     public Optional<Output<String>> backupSc() {
         return Optional.ofNullable(this.backupSc);
-    }
-
-    /**
-     * Bgp peer
-     * 
-     */
-    @Import(name="bgpPeer")
-    private @Nullable Output<ServiceConnectionBgpPeerArgs> bgpPeer;
-
-    /**
-     * @return Bgp peer
-     * 
-     */
-    public Optional<Output<ServiceConnectionBgpPeerArgs>> bgpPeer() {
-        return Optional.ofNullable(this.bgpPeer);
     }
 
     /**
@@ -127,14 +111,14 @@ public final class ServiceConnectionState extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * No export community
+     * No export community. Possible values are `Disabled`, `Enabled-In`, `Enabled-Out` and `Enabled-Both`.
      * 
      */
     @Import(name="noExportCommunity")
     private @Nullable Output<String> noExportCommunity;
 
     /**
-     * @return No export community
+     * @return No export community. Possible values are `Disabled`, `Enabled-In`, `Enabled-Out` and `Enabled-Both`.
      * 
      */
     public Optional<Output<String>> noExportCommunity() {
@@ -142,14 +126,14 @@ public final class ServiceConnectionState extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * Onboarding type
+     * Onboarding type. Possible values are `classic`.
      * 
      */
     @Import(name="onboardingType")
     private @Nullable Output<String> onboardingType;
 
     /**
-     * @return Onboarding type
+     * @return Onboarding type. Possible values are `classic`.
      * 
      */
     public Optional<Output<String>> onboardingType() {
@@ -280,7 +264,6 @@ public final class ServiceConnectionState extends com.pulumi.resources.ResourceA
 
     private ServiceConnectionState(ServiceConnectionState $) {
         this.backupSc = $.backupSc;
-        this.bgpPeer = $.bgpPeer;
         this.encryptedValues = $.encryptedValues;
         this.folder = $.folder;
         this.ipsecTunnel = $.ipsecTunnel;
@@ -335,27 +318,6 @@ public final class ServiceConnectionState extends com.pulumi.resources.ResourceA
          */
         public Builder backupSc(String backupSc) {
             return backupSc(Output.of(backupSc));
-        }
-
-        /**
-         * @param bgpPeer Bgp peer
-         * 
-         * @return builder
-         * 
-         */
-        public Builder bgpPeer(@Nullable Output<ServiceConnectionBgpPeerArgs> bgpPeer) {
-            $.bgpPeer = bgpPeer;
-            return this;
-        }
-
-        /**
-         * @param bgpPeer Bgp peer
-         * 
-         * @return builder
-         * 
-         */
-        public Builder bgpPeer(ServiceConnectionBgpPeerArgs bgpPeer) {
-            return bgpPeer(Output.of(bgpPeer));
         }
 
         /**
@@ -464,7 +426,7 @@ public final class ServiceConnectionState extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param noExportCommunity No export community
+         * @param noExportCommunity No export community. Possible values are `Disabled`, `Enabled-In`, `Enabled-Out` and `Enabled-Both`.
          * 
          * @return builder
          * 
@@ -475,7 +437,7 @@ public final class ServiceConnectionState extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param noExportCommunity No export community
+         * @param noExportCommunity No export community. Possible values are `Disabled`, `Enabled-In`, `Enabled-Out` and `Enabled-Both`.
          * 
          * @return builder
          * 
@@ -485,7 +447,7 @@ public final class ServiceConnectionState extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param onboardingType Onboarding type
+         * @param onboardingType Onboarding type. Possible values are `classic`.
          * 
          * @return builder
          * 
@@ -496,7 +458,7 @@ public final class ServiceConnectionState extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param onboardingType Onboarding type
+         * @param onboardingType Onboarding type. Possible values are `classic`.
          * 
          * @return builder
          * 

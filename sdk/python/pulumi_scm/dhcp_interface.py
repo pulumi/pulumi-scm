@@ -32,18 +32,10 @@ class DhcpInterfaceArgs:
 
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] name: Interface name
         :param pulumi.Input['DhcpInterfaceRelayArgs'] relay: Relay
-               
-               > ℹ️ **Note:** You must specify exactly one of `relay` and `server`.
         :param pulumi.Input['DhcpInterfaceServerArgs'] server: Server
-               
-               > ℹ️ **Note:** You must specify exactly one of `relay` and `server`.
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         if device is not None:
             pulumi.set(__self__, "device", device)
@@ -75,8 +67,6 @@ class DhcpInterfaceArgs:
     def folder(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
-
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
 
@@ -101,8 +91,6 @@ class DhcpInterfaceArgs:
     def relay(self) -> pulumi.Input[Optional['DhcpInterfaceRelayArgs']]:
         """
         Relay
-
-        > ℹ️ **Note:** You must specify exactly one of `relay` and `server`.
         """
         return pulumi.get(self, "relay")
 
@@ -115,8 +103,6 @@ class DhcpInterfaceArgs:
     def server(self) -> pulumi.Input[Optional['DhcpInterfaceServerArgs']]:
         """
         Server
-
-        > ℹ️ **Note:** You must specify exactly one of `relay` and `server`.
         """
         return pulumi.get(self, "server")
 
@@ -129,8 +115,6 @@ class DhcpInterfaceArgs:
     def snippet(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
-
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
 
@@ -154,18 +138,10 @@ class _DhcpInterfaceState:
 
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] name: Interface name
         :param pulumi.Input['DhcpInterfaceRelayArgs'] relay: Relay
-               
-               > ℹ️ **Note:** You must specify exactly one of `relay` and `server`.
         :param pulumi.Input['DhcpInterfaceServerArgs'] server: Server
-               
-               > ℹ️ **Note:** You must specify exactly one of `relay` and `server`.
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] tfid: The Terraform ID.
         """
         if device is not None:
@@ -200,8 +176,6 @@ class _DhcpInterfaceState:
     def folder(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
-
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
 
@@ -226,8 +200,6 @@ class _DhcpInterfaceState:
     def relay(self) -> pulumi.Input[Optional['DhcpInterfaceRelayArgs']]:
         """
         Relay
-
-        > ℹ️ **Note:** You must specify exactly one of `relay` and `server`.
         """
         return pulumi.get(self, "relay")
 
@@ -240,8 +212,6 @@ class _DhcpInterfaceState:
     def server(self) -> pulumi.Input[Optional['DhcpInterfaceServerArgs']]:
         """
         Server
-
-        > ℹ️ **Note:** You must specify exactly one of `relay` and `server`.
         """
         return pulumi.get(self, "server")
 
@@ -254,8 +224,6 @@ class _DhcpInterfaceState:
     def snippet(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
-
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
 
@@ -298,9 +266,23 @@ class DhcpInterface(pulumi.CustomResource):
         import pulumi
         import pulumi_scm as scm
 
+        # Create a Layer3 ethernet interface first
+        test_interface = scm.EthernetInterface("test_interface",
+            name="$test-interface",
+            comment="Interface for DHCP server - Managed by Terraform",
+            folder="ngfw-shared",
+            link_speed="auto",
+            link_duplex="full",
+            link_state="auto",
+            layer3={
+                "ips": [{
+                    "name": "10.10.10.1/24",
+                }],
+            })
+        # Configure DHCP server on the interface
         dhcp_server_example = scm.DhcpInterface("dhcp_server_example",
             folder="ngfw-shared",
-            name="$test-interface-must-exist",
+            name=test_interface.name,
             server={
                 "ip_pools": ["10.10.10.10-10.10.10.200"],
                 "mode": "auto",
@@ -342,7 +324,8 @@ class DhcpInterface(pulumi.CustomResource):
                     "mac": "aa:bb:cc:dd:ee:ff",
                     "name": "10.10.10.50",
                 }],
-            })
+            },
+            opts = pulumi.ResourceOptions(depends_on=[test_interface]))
         ```
 
         ## Import
@@ -372,18 +355,10 @@ class DhcpInterface(pulumi.CustomResource):
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] name: Interface name
         :param pulumi.Input[Union['DhcpInterfaceRelayArgs', 'DhcpInterfaceRelayArgsDict', 'outputs.DhcpInterfaceRelay']] relay: Relay
-               
-               > ℹ️ **Note:** You must specify exactly one of `relay` and `server`.
         :param pulumi.Input[Union['DhcpInterfaceServerArgs', 'DhcpInterfaceServerArgsDict', 'outputs.DhcpInterfaceServer']] server: Server
-               
-               > ℹ️ **Note:** You must specify exactly one of `relay` and `server`.
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         ...
     @overload
@@ -400,9 +375,23 @@ class DhcpInterface(pulumi.CustomResource):
         import pulumi
         import pulumi_scm as scm
 
+        # Create a Layer3 ethernet interface first
+        test_interface = scm.EthernetInterface("test_interface",
+            name="$test-interface",
+            comment="Interface for DHCP server - Managed by Terraform",
+            folder="ngfw-shared",
+            link_speed="auto",
+            link_duplex="full",
+            link_state="auto",
+            layer3={
+                "ips": [{
+                    "name": "10.10.10.1/24",
+                }],
+            })
+        # Configure DHCP server on the interface
         dhcp_server_example = scm.DhcpInterface("dhcp_server_example",
             folder="ngfw-shared",
-            name="$test-interface-must-exist",
+            name=test_interface.name,
             server={
                 "ip_pools": ["10.10.10.10-10.10.10.200"],
                 "mode": "auto",
@@ -444,7 +433,8 @@ class DhcpInterface(pulumi.CustomResource):
                     "mac": "aa:bb:cc:dd:ee:ff",
                     "name": "10.10.10.50",
                 }],
-            })
+            },
+            opts = pulumi.ResourceOptions(depends_on=[test_interface]))
         ```
 
         ## Import
@@ -533,18 +523,10 @@ class DhcpInterface(pulumi.CustomResource):
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] name: Interface name
         :param pulumi.Input[Union['DhcpInterfaceRelayArgs', 'DhcpInterfaceRelayArgsDict', 'outputs.DhcpInterfaceRelay']] relay: Relay
-               
-               > ℹ️ **Note:** You must specify exactly one of `relay` and `server`.
         :param pulumi.Input[Union['DhcpInterfaceServerArgs', 'DhcpInterfaceServerArgsDict', 'outputs.DhcpInterfaceServer']] server: Server
-               
-               > ℹ️ **Note:** You must specify exactly one of `relay` and `server`.
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] tfid: The Terraform ID.
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
@@ -573,8 +555,6 @@ class DhcpInterface(pulumi.CustomResource):
     def folder(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
-
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
 
@@ -591,8 +571,6 @@ class DhcpInterface(pulumi.CustomResource):
     def relay(self) -> pulumi.Output[Optional['outputs.DhcpInterfaceRelay']]:
         """
         Relay
-
-        > ℹ️ **Note:** You must specify exactly one of `relay` and `server`.
         """
         return pulumi.get(self, "relay")
 
@@ -601,8 +579,6 @@ class DhcpInterface(pulumi.CustomResource):
     def server(self) -> pulumi.Output[Optional['outputs.DhcpInterfaceServer']]:
         """
         Server
-
-        > ℹ️ **Note:** You must specify exactly one of `relay` and `server`.
         """
         return pulumi.get(self, "server")
 
@@ -611,8 +587,6 @@ class DhcpInterface(pulumi.CustomResource):
     def snippet(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
-
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
 

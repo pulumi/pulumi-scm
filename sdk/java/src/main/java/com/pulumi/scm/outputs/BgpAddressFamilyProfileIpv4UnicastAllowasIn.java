@@ -20,8 +20,6 @@ public final class BgpAddressFamilyProfileIpv4UnicastAllowasIn {
     /**
      * @return Origin
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `occurrence` and `origin`.
-     * 
      */
     private @Nullable BgpAddressFamilyProfileIpv4UnicastAllowasInOrigin origin;
 
@@ -35,8 +33,6 @@ public final class BgpAddressFamilyProfileIpv4UnicastAllowasIn {
     }
     /**
      * @return Origin
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `occurrence` and `origin`.
      * 
      */
     public Optional<BgpAddressFamilyProfileIpv4UnicastAllowasInOrigin> origin() {

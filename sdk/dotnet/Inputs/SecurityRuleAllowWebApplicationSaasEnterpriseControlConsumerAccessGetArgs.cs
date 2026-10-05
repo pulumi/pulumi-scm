@@ -13,7 +13,7 @@ namespace Pulumi.Scm.Inputs
     public sealed class SecurityRuleAllowWebApplicationSaasEnterpriseControlConsumerAccessGetArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Enable
+        /// Enable. Possible values are `Yes` and `No`.
         /// </summary>
         [Input("enable")]
         public Input<string>? Enable { get; set; }

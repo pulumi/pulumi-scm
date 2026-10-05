@@ -34,7 +34,7 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly string? Name;
         /// <summary>
-        /// Priority
+        /// Priority. Possible values are `1`, `2`, `3`, `4`, `5`, `6`, `7` and `8`.
         /// </summary>
         public readonly string? Priority;
         /// <summary>

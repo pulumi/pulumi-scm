@@ -54,7 +54,7 @@ class GetForwardingProfileResult:
     @pulumi.getter(name="definitionMethod")
     def definition_method(self) -> _builtins.str:
         """
-        Enable forwarding rule for forwarding profile
+        Enable forwarding rule for forwarding profile. Possible values are `rules` and `pac-file`.
         """
         return pulumi.get(self, "definition_method")
 
@@ -70,7 +70,7 @@ class GetForwardingProfileResult:
     @pulumi.getter
     def folder(self) -> _builtins.str:
         """
-        The folder in which the resource is defined
+        The folder in which the resource is defined. Possible values are `Mobile Users`.
         """
         return pulumi.get(self, "folder")
 
@@ -152,7 +152,7 @@ def get_forwarding_profile(folder: Optional[_builtins.str] = None,
     ```
 
 
-    :param _builtins.str folder: The folder in which the resource is defined
+    :param _builtins.str folder: The folder in which the resource is defined. Possible values are `Mobile Users`.
     :param _builtins.str id: The UUID of the forwarding profile
     :param _builtins.str name: forwarding profile name as an alphanumeric string [ 0-9a-zA-Z._ -]
     """
@@ -201,7 +201,7 @@ def get_forwarding_profile_output(folder: pulumi.Input[Optional[Optional[_builti
     ```
 
 
-    :param _builtins.str folder: The folder in which the resource is defined
+    :param _builtins.str folder: The folder in which the resource is defined. Possible values are `Mobile Users`.
     :param _builtins.str id: The UUID of the forwarding profile
     :param _builtins.str name: forwarding profile name as an alphanumeric string [ 0-9a-zA-Z._ -]
     """

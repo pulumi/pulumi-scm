@@ -199,42 +199,42 @@ public class ForwardingProfileRegionalAndCustomProxy extends com.pulumi.resource
         return Codegen.optional(this.description);
     }
     /**
-     * Behavior when proxy connection fails - &#39;fail-open&#39; allows direct internet access, &#39;fail-safe&#39; blocks traffic until proxy is restored
+     * Behavior when proxy connection fails - &#39;fail-open&#39; allows direct internet access, &#39;fail-safe&#39; blocks traffic until proxy is restored. Possible values are `fail-open` and `fail-safe`.
      * 
      */
     @Export(name="fallbackOption", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> fallbackOption;
 
     /**
-     * @return Behavior when proxy connection fails - &#39;fail-open&#39; allows direct internet access, &#39;fail-safe&#39; blocks traffic until proxy is restored
+     * @return Behavior when proxy connection fails - &#39;fail-open&#39; allows direct internet access, &#39;fail-safe&#39; blocks traffic until proxy is restored. Possible values are `fail-open` and `fail-safe`.
      * 
      */
     public Output<Optional<String>> fallbackOption() {
         return Codegen.optional(this.fallbackOption);
     }
     /**
-     * The folder in which the resource is defined
+     * The folder in which the resource is defined. Possible values are `Mobile Users`.
      * 
      */
     @Export(name="folder", refs={String.class}, tree="[0]")
     private Output<String> folder;
 
     /**
-     * @return The folder in which the resource is defined
+     * @return The folder in which the resource is defined. Possible values are `Mobile Users`.
      * 
      */
     public Output<String> folder() {
         return this.folder;
     }
     /**
-     * Strategy for selecting Prisma Access location - &#39;best-available-pa-location&#39; automatically selects optimal location, &#39;specific-pa-location&#39; uses predefined locations
+     * Strategy for selecting Prisma Access location - &#39;best-available-pa-location&#39; automatically selects optimal location, &#39;specific-pa-location&#39; uses predefined locations. Possible values are `best-available-pa-location` and `specific-pa-location`.
      * 
      */
     @Export(name="locationPreference", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> locationPreference;
 
     /**
-     * @return Strategy for selecting Prisma Access location - &#39;best-available-pa-location&#39; automatically selects optimal location, &#39;specific-pa-location&#39; uses predefined locations
+     * @return Strategy for selecting Prisma Access location - &#39;best-available-pa-location&#39; automatically selects optimal location, &#39;specific-pa-location&#39; uses predefined locations. Possible values are `best-available-pa-location` and `specific-pa-location`.
      * 
      */
     public Output<Optional<String>> locationPreference() {
@@ -311,14 +311,14 @@ public class ForwardingProfileRegionalAndCustomProxy extends com.pulumi.resource
         return this.tfid;
     }
     /**
-     * Proxy configuration type - &#39;gp-and-pac&#39; for GlobalProtect and PAC file forwarding, &#39;ztna-agent&#39; for ZTNA agent forwarding
+     * Proxy configuration type - &#39;gp-and-pac&#39; for GlobalProtect and PAC file forwarding, &#39;ztna-agent&#39; for ZTNA agent forwarding. Possible values are `gp-and-pac` and `ztna-agent`.
      * 
      */
     @Export(name="type", refs={String.class}, tree="[0]")
     private Output<String> type;
 
     /**
-     * @return Proxy configuration type - &#39;gp-and-pac&#39; for GlobalProtect and PAC file forwarding, &#39;ztna-agent&#39; for ZTNA agent forwarding
+     * @return Proxy configuration type - &#39;gp-and-pac&#39; for GlobalProtect and PAC file forwarding, &#39;ztna-agent&#39; for ZTNA agent forwarding. Possible values are `gp-and-pac` and `ztna-agent`.
      * 
      */
     public Output<String> type() {

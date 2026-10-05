@@ -19,8 +19,6 @@ namespace Pulumi.Scm.Outputs
         public readonly Outputs.BgpAddressFamilyProfileIpv4UnicastNextHopSelf? Self;
         /// <summary>
         /// Self force
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Self` and `SelfForce`.
         /// </summary>
         public readonly Outputs.BgpAddressFamilyProfileIpv4UnicastNextHopSelfForce? SelfForce;
 

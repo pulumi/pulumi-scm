@@ -64,3 +64,13 @@ scope: Optional[str]
 The client scope. Environment variable: `SCM_SCOPE`. JSON config file variable: `scope`.
 """
 
+xPanwRegion: Optional[str]
+"""
+The region for ZTNA Connector API requests (x-panw-region header). Required when using ztna_* resources. Valid values: ae, americas, au, br, ca, ch, cn, de, es, europe, fr, id, il, in, it, jp, kr, pl, qa, sa, sg, tw, uk, za. Environment variable: `X_PANW_REGION`. JSON config file variable: `x_panw_region`.
+"""
+
+ztnaHost: Optional[str]
+"""
+The hostname of the ZTNA Connector API. Required when using ztna_* resources. Default: `api.sase.paloaltonetworks.com`. Environment variable: `ZTNA_HOST`. JSON config file variable: `ztna_host`.
+"""
+

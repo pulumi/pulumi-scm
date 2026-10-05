@@ -52,7 +52,7 @@ public final class GetBgpRouteMapRedistributionListDataOspfBgpRouteMapSet {
      */
     private GetBgpRouteMapRedistributionListDataOspfBgpRouteMapSetMetric metric;
     /**
-     * @return OSPF BGP Route maps set Origin
+     * @return OSPF BGP Route maps set Origin. Possible values are `none`, `egp`, `igp` and `incomplete`.
      * 
      */
     private String origin;
@@ -128,7 +128,7 @@ public final class GetBgpRouteMapRedistributionListDataOspfBgpRouteMapSet {
         return this.metric;
     }
     /**
-     * @return OSPF BGP Route maps set Origin
+     * @return OSPF BGP Route maps set Origin. Possible values are `none`, `egp`, `igp` and `incomplete`.
      * 
      */
     public String origin() {

@@ -47,12 +47,21 @@ export interface GetAntiSpywareProfileArgs {
      * The device in which the resource is defined
      */
     device?: string;
+    /**
+     * The folder in which the resource is defined
+     */
     folder?: string;
     /**
      * The UUID of the anti-spyware profile
      */
     id: string;
+    /**
+     * The name of the anti-spyware profile
+     */
     name?: string;
+    /**
+     * The snippet in which the resource is defined
+     */
     snippet?: string;
 }
 
@@ -60,24 +69,57 @@ export interface GetAntiSpywareProfileArgs {
  * A collection of values returned by getAntiSpywareProfile.
  */
 export interface GetAntiSpywareProfileResult {
+    /**
+     * Cloud inline analysis
+     */
     readonly cloudInlineAnalysis: boolean;
+    /**
+     * Description
+     */
     readonly description: string;
     /**
      * The device in which the resource is defined
      */
     readonly device: string;
+    /**
+     * The folder in which the resource is defined
+     */
     readonly folder: string;
     /**
      * The UUID of the anti-spyware profile
      */
     readonly id: string;
+    /**
+     * Inline exception edl url
+     */
     readonly inlineExceptionEdlUrls: string[];
+    /**
+     * Inline exception ip address
+     */
     readonly inlineExceptionIpAddresses: string[];
+    /**
+     * Mica engine spyware enabled
+     */
     readonly micaEngineSpywareEnableds: outputs.GetAntiSpywareProfileMicaEngineSpywareEnabled[];
+    /**
+     * The name of the anti-spyware profile
+     */
     readonly name: string;
+    /**
+     * Rules
+     */
     readonly rules: outputs.GetAntiSpywareProfileRule[];
+    /**
+     * The snippet in which the resource is defined
+     */
     readonly snippet: string;
+    /**
+     * The Terraform ID.
+     */
     readonly tfid: string;
+    /**
+     * Threat exception
+     */
     readonly threatExceptions: outputs.GetAntiSpywareProfileThreatException[];
 }
 /**
@@ -121,11 +163,20 @@ export interface GetAntiSpywareProfileOutputArgs {
      * The device in which the resource is defined
      */
     device?: pulumi.Input<string | undefined>;
+    /**
+     * The folder in which the resource is defined
+     */
     folder?: pulumi.Input<string | undefined>;
     /**
      * The UUID of the anti-spyware profile
      */
     id: pulumi.Input<string>;
+    /**
+     * The name of the anti-spyware profile
+     */
     name?: pulumi.Input<string | undefined>;
+    /**
+     * The snippet in which the resource is defined
+     */
     snippet?: pulumi.Input<string | undefined>;
 }

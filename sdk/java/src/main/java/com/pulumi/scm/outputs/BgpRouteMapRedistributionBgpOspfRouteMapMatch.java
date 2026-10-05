@@ -54,7 +54,7 @@ public final class BgpRouteMapRedistributionBgpOspfRouteMapMatch {
      */
     private @Nullable String origin;
     /**
-     * @return BGP Root OSPF Route maps match Peer
+     * @return BGP Root OSPF Route maps match Peer. Possible values are `local` and `none`.
      * 
      */
     private @Nullable String peer;
@@ -127,7 +127,7 @@ public final class BgpRouteMapRedistributionBgpOspfRouteMapMatch {
         return Optional.ofNullable(this.origin);
     }
     /**
-     * @return BGP Root OSPF Route maps match Peer
+     * @return BGP Root OSPF Route maps match Peer. Possible values are `local` and `none`.
      * 
      */
     public Optional<String> peer() {

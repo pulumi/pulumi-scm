@@ -63,7 +63,7 @@ export class ZoneProtectionProfile extends pulumi.CustomResource {
      * Determine whether to drop or bypass packets that contain out-of-sync ACKs or out-of-window sequence numbers:
      * * `global` — Use system-wide setting that is assigned through TCP Settings or the CLI.
      * * `drop` — Drop packets that contain an asymmetric path.
-     * * `bypass` — Bypass scanning on packets that contain an asymmetric path.
+     * * `bypass` — Bypass scanning on packets that contain an asymmetric path. Possible values are `global`, `drop` and `bypass`.
      */
     declare public readonly asymmetricPath: pulumi.Output<string | undefined>;
     /**
@@ -72,8 +72,6 @@ export class ZoneProtectionProfile extends pulumi.CustomResource {
     declare public readonly description: pulumi.Output<string | undefined>;
     /**
      * The device in which the resource is defined
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly device: pulumi.Output<string | undefined>;
     /**
@@ -86,8 +84,6 @@ export class ZoneProtectionProfile extends pulumi.CustomResource {
     declare public readonly flood: pulumi.Output<outputs.ZoneProtectionProfileFlood | undefined>;
     /**
      * The folder in which the resource is defined
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly folder: pulumi.Output<string | undefined>;
     /**
@@ -130,7 +126,7 @@ export class ZoneProtectionProfile extends pulumi.CustomResource {
      * MPTCP is an extension of TCP that allows a client to maintain a connection by simultaneously using multiple paths to connect to the destination host. By default, MPTCP support is disabled, based on the global MPTCP setting.  Review or adjust the MPTCP settings for the security zones associated with this profile:
      * * `no` — Enable MPTCP support (do not strip the MPTCP option).
      * * `yes` — Disable MPTCP support (strip the MPTCP option). With this configured, MPTCP connections are converted to standard TCP connections, as MPTCP is backwards compatible with TCP.
-     * * `global` — Support MPTCP based on the global MPTCP setting. By default, the global MPTCP setting is set to yes so that MPTCP is disabled (the MPTCP option is stripped from the packet).
+     * * `global` — Support MPTCP based on the global MPTCP setting. By default, the global MPTCP setting is set to yes so that MPTCP is disabled (the MPTCP option is stripped from the packet). Possible values are `no`, `yes` and `global`.
      */
     declare public readonly mptcpOptionStrip: pulumi.Output<string>;
     /**
@@ -149,7 +145,7 @@ export class ZoneProtectionProfile extends pulumi.CustomResource {
      * Determine whether to reject the packet if the first packet for the TCP session setup is not a SYN packet:
      * * `global` — Use system-wide setting that is assigned through the CLI.
      * * `yes` — Reject non-SYN TCP.
-     * * `no` — Accept non-SYN TCP.
+     * * `no` — Accept non-SYN TCP. Possible values are `global`, `yes` and `no`.
      */
     declare public readonly rejectNonSynTcp: pulumi.Output<string | undefined>;
     /**
@@ -166,8 +162,6 @@ export class ZoneProtectionProfile extends pulumi.CustomResource {
     declare public readonly securityDiscard: pulumi.Output<boolean | undefined>;
     /**
      * The snippet in which the resource is defined
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly snippet: pulumi.Output<string | undefined>;
     /**
@@ -335,7 +329,7 @@ export interface ZoneProtectionProfileState {
      * Determine whether to drop or bypass packets that contain out-of-sync ACKs or out-of-window sequence numbers:
      * * `global` — Use system-wide setting that is assigned through TCP Settings or the CLI.
      * * `drop` — Drop packets that contain an asymmetric path.
-     * * `bypass` — Bypass scanning on packets that contain an asymmetric path.
+     * * `bypass` — Bypass scanning on packets that contain an asymmetric path. Possible values are `global`, `drop` and `bypass`.
      */
     asymmetricPath?: pulumi.Input<string | undefined>;
     /**
@@ -344,8 +338,6 @@ export interface ZoneProtectionProfileState {
     description?: pulumi.Input<string | undefined>;
     /**
      * The device in which the resource is defined
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     device?: pulumi.Input<string | undefined>;
     /**
@@ -358,8 +350,6 @@ export interface ZoneProtectionProfileState {
     flood?: pulumi.Input<inputs.ZoneProtectionProfileFlood | undefined>;
     /**
      * The folder in which the resource is defined
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     folder?: pulumi.Input<string | undefined>;
     /**
@@ -402,7 +392,7 @@ export interface ZoneProtectionProfileState {
      * MPTCP is an extension of TCP that allows a client to maintain a connection by simultaneously using multiple paths to connect to the destination host. By default, MPTCP support is disabled, based on the global MPTCP setting.  Review or adjust the MPTCP settings for the security zones associated with this profile:
      * * `no` — Enable MPTCP support (do not strip the MPTCP option).
      * * `yes` — Disable MPTCP support (strip the MPTCP option). With this configured, MPTCP connections are converted to standard TCP connections, as MPTCP is backwards compatible with TCP.
-     * * `global` — Support MPTCP based on the global MPTCP setting. By default, the global MPTCP setting is set to yes so that MPTCP is disabled (the MPTCP option is stripped from the packet).
+     * * `global` — Support MPTCP based on the global MPTCP setting. By default, the global MPTCP setting is set to yes so that MPTCP is disabled (the MPTCP option is stripped from the packet). Possible values are `no`, `yes` and `global`.
      */
     mptcpOptionStrip?: pulumi.Input<string | undefined>;
     /**
@@ -421,7 +411,7 @@ export interface ZoneProtectionProfileState {
      * Determine whether to reject the packet if the first packet for the TCP session setup is not a SYN packet:
      * * `global` — Use system-wide setting that is assigned through the CLI.
      * * `yes` — Reject non-SYN TCP.
-     * * `no` — Accept non-SYN TCP.
+     * * `no` — Accept non-SYN TCP. Possible values are `global`, `yes` and `no`.
      */
     rejectNonSynTcp?: pulumi.Input<string | undefined>;
     /**
@@ -438,8 +428,6 @@ export interface ZoneProtectionProfileState {
     securityDiscard?: pulumi.Input<boolean | undefined>;
     /**
      * The snippet in which the resource is defined
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     snippet?: pulumi.Input<string | undefined>;
     /**
@@ -511,7 +499,7 @@ export interface ZoneProtectionProfileArgs {
      * Determine whether to drop or bypass packets that contain out-of-sync ACKs or out-of-window sequence numbers:
      * * `global` — Use system-wide setting that is assigned through TCP Settings or the CLI.
      * * `drop` — Drop packets that contain an asymmetric path.
-     * * `bypass` — Bypass scanning on packets that contain an asymmetric path.
+     * * `bypass` — Bypass scanning on packets that contain an asymmetric path. Possible values are `global`, `drop` and `bypass`.
      */
     asymmetricPath?: pulumi.Input<string | undefined>;
     /**
@@ -520,8 +508,6 @@ export interface ZoneProtectionProfileArgs {
     description?: pulumi.Input<string | undefined>;
     /**
      * The device in which the resource is defined
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     device?: pulumi.Input<string | undefined>;
     /**
@@ -534,8 +520,6 @@ export interface ZoneProtectionProfileArgs {
     flood?: pulumi.Input<inputs.ZoneProtectionProfileFlood | undefined>;
     /**
      * The folder in which the resource is defined
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     folder?: pulumi.Input<string | undefined>;
     /**
@@ -578,7 +562,7 @@ export interface ZoneProtectionProfileArgs {
      * MPTCP is an extension of TCP that allows a client to maintain a connection by simultaneously using multiple paths to connect to the destination host. By default, MPTCP support is disabled, based on the global MPTCP setting.  Review or adjust the MPTCP settings for the security zones associated with this profile:
      * * `no` — Enable MPTCP support (do not strip the MPTCP option).
      * * `yes` — Disable MPTCP support (strip the MPTCP option). With this configured, MPTCP connections are converted to standard TCP connections, as MPTCP is backwards compatible with TCP.
-     * * `global` — Support MPTCP based on the global MPTCP setting. By default, the global MPTCP setting is set to yes so that MPTCP is disabled (the MPTCP option is stripped from the packet).
+     * * `global` — Support MPTCP based on the global MPTCP setting. By default, the global MPTCP setting is set to yes so that MPTCP is disabled (the MPTCP option is stripped from the packet). Possible values are `no`, `yes` and `global`.
      */
     mptcpOptionStrip?: pulumi.Input<string | undefined>;
     /**
@@ -597,7 +581,7 @@ export interface ZoneProtectionProfileArgs {
      * Determine whether to reject the packet if the first packet for the TCP session setup is not a SYN packet:
      * * `global` — Use system-wide setting that is assigned through the CLI.
      * * `yes` — Reject non-SYN TCP.
-     * * `no` — Accept non-SYN TCP.
+     * * `no` — Accept non-SYN TCP. Possible values are `global`, `yes` and `no`.
      */
     rejectNonSynTcp?: pulumi.Input<string | undefined>;
     /**
@@ -614,8 +598,6 @@ export interface ZoneProtectionProfileArgs {
     securityDiscard?: pulumi.Input<boolean | undefined>;
     /**
      * The snippet in which the resource is defined
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     snippet?: pulumi.Input<string | undefined>;
     /**

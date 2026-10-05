@@ -41,12 +41,21 @@ export interface GetHipObjectArgs {
      * The device in which the resource is defined
      */
     device?: string;
+    /**
+     * The folder in which the resource is defined
+     */
     folder?: string;
     /**
      * UUID of the resource
      */
     id: string;
+    /**
+     * The name of the HIP object
+     */
     name?: string;
+    /**
+     * The snippet in which the resource is defined
+     */
     snippet?: string;
 }
 
@@ -54,29 +63,77 @@ export interface GetHipObjectArgs {
  * A collection of values returned by getHipObject.
  */
 export interface GetHipObjectResult {
+    /**
+     * Anti malware
+     */
     readonly antiMalware: outputs.GetHipObjectAntiMalware;
+    /**
+     * Certificate
+     */
     readonly certificate: outputs.GetHipObjectCertificate;
+    /**
+     * Custom checks
+     */
     readonly customChecks: outputs.GetHipObjectCustomChecks;
+    /**
+     * Data loss prevention
+     */
     readonly dataLossPrevention: outputs.GetHipObjectDataLossPrevention;
+    /**
+     * Description
+     */
     readonly description: string;
     /**
      * The device in which the resource is defined
      */
     readonly device: string;
+    /**
+     * Disk backup
+     */
     readonly diskBackup: outputs.GetHipObjectDiskBackup;
+    /**
+     * Disk encryption
+     */
     readonly diskEncryption: outputs.GetHipObjectDiskEncryption;
+    /**
+     * Firewall
+     */
     readonly firewall: outputs.GetHipObjectFirewall;
+    /**
+     * The folder in which the resource is defined
+     */
     readonly folder: string;
+    /**
+     * Host info
+     */
     readonly hostInfo: outputs.GetHipObjectHostInfo;
     /**
      * UUID of the resource
      */
     readonly id: string;
+    /**
+     * Mobile device
+     */
     readonly mobileDevice: outputs.GetHipObjectMobileDevice;
+    /**
+     * The name of the HIP object
+     */
     readonly name: string;
+    /**
+     * Network info
+     */
     readonly networkInfo: outputs.GetHipObjectNetworkInfo;
+    /**
+     * Patch management
+     */
     readonly patchManagement: outputs.GetHipObjectPatchManagement;
+    /**
+     * The snippet in which the resource is defined
+     */
     readonly snippet: string;
+    /**
+     * The Terraform ID.
+     */
     readonly tfid: string;
 }
 /**
@@ -114,11 +171,20 @@ export interface GetHipObjectOutputArgs {
      * The device in which the resource is defined
      */
     device?: pulumi.Input<string | undefined>;
+    /**
+     * The folder in which the resource is defined
+     */
     folder?: pulumi.Input<string | undefined>;
     /**
      * UUID of the resource
      */
     id: pulumi.Input<string>;
+    /**
+     * The name of the HIP object
+     */
     name?: pulumi.Input<string | undefined>;
+    /**
+     * The snippet in which the resource is defined
+     */
     snippet?: pulumi.Input<string | undefined>;
 }

@@ -47,12 +47,21 @@ export interface GetTunnelInterfaceArgs {
      * The device in which the resource is defined
      */
     device?: string;
+    /**
+     * The folder in which the resource is defined
+     */
     folder?: string;
     /**
      * UUID of the resource for tunnel interface
      */
     id: string;
+    /**
+     * L3 sub-interface name for tunnel interface
+     */
     name?: string;
+    /**
+     * The snippet in which the resource is defined
+     */
     snippet?: string;
 }
 
@@ -60,24 +69,57 @@ export interface GetTunnelInterfaceArgs {
  * A collection of values returned by getTunnelInterface.
  */
 export interface GetTunnelInterfaceResult {
+    /**
+     * Description for tunnel interface
+     */
     readonly comment: string;
+    /**
+     * Default interface assignment for tunnel interface
+     */
     readonly defaultValue: string;
     /**
      * The device in which the resource is defined
      */
     readonly device: string;
+    /**
+     * The folder in which the resource is defined
+     */
     readonly folder: string;
     /**
      * UUID of the resource for tunnel interface
      */
     readonly id: string;
+    /**
+     * Interface management profile for tunnel interface
+     */
     readonly interfaceManagementProfile: string;
+    /**
+     * Tunnel Interface IP Parent
+     */
     readonly ips: outputs.GetTunnelInterfaceIp[];
+    /**
+     * Tunnel Interface IPv6 Configuration
+     */
     readonly ipv6: outputs.GetTunnelInterfaceIpv6;
+    /**
+     * MTU for tunnel interface
+     */
     readonly mtu: number;
+    /**
+     * L3 sub-interface name for tunnel interface
+     */
     readonly name: string;
+    /**
+     * Name of Netflow Profile to assign to Interface
+     */
     readonly netflowProfile: string;
+    /**
+     * The snippet in which the resource is defined
+     */
     readonly snippet: string;
+    /**
+     * The Terraform ID.
+     */
     readonly tfid: string;
 }
 /**
@@ -121,11 +163,20 @@ export interface GetTunnelInterfaceOutputArgs {
      * The device in which the resource is defined
      */
     device?: pulumi.Input<string | undefined>;
+    /**
+     * The folder in which the resource is defined
+     */
     folder?: pulumi.Input<string | undefined>;
     /**
      * UUID of the resource for tunnel interface
      */
     id: pulumi.Input<string>;
+    /**
+     * L3 sub-interface name for tunnel interface
+     */
     name?: pulumi.Input<string | undefined>;
+    /**
+     * The snippet in which the resource is defined
+     */
     snippet?: pulumi.Input<string | undefined>;
 }

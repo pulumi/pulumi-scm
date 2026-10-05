@@ -126,14 +126,14 @@ public final class ManagementInterfaceManagementInterfaceArgs extends com.pulumi
     }
 
     /**
-     * Speed and duplex
+     * Speed and duplex. Possible values are `auto-negotiate`, `10Mbps-half-duplex`, `10Mbps-full-duplex`, `100Mbps-half-duplex`, `100Mbps-full-duplex`, `1Gbps-half-duplex` and `1Gbps-full-duplex`.
      * 
      */
     @Import(name="speedDuplex")
     private @Nullable Output<String> speedDuplex;
 
     /**
-     * @return Speed and duplex
+     * @return Speed and duplex. Possible values are `auto-negotiate`, `10Mbps-half-duplex`, `10Mbps-full-duplex`, `100Mbps-half-duplex`, `100Mbps-full-duplex`, `1Gbps-half-duplex` and `1Gbps-full-duplex`.
      * 
      */
     public Optional<Output<String>> speedDuplex() {
@@ -329,7 +329,7 @@ public final class ManagementInterfaceManagementInterfaceArgs extends com.pulumi
         }
 
         /**
-         * @param speedDuplex Speed and duplex
+         * @param speedDuplex Speed and duplex. Possible values are `auto-negotiate`, `10Mbps-half-duplex`, `10Mbps-full-duplex`, `100Mbps-half-duplex`, `100Mbps-full-duplex`, `1Gbps-half-duplex` and `1Gbps-full-duplex`.
          * 
          * @return builder
          * 
@@ -340,7 +340,7 @@ public final class ManagementInterfaceManagementInterfaceArgs extends com.pulumi
         }
 
         /**
-         * @param speedDuplex Speed and duplex
+         * @param speedDuplex Speed and duplex. Possible values are `auto-negotiate`, `10Mbps-half-duplex`, `10Mbps-full-duplex`, `100Mbps-half-duplex`, `100Mbps-full-duplex`, `1Gbps-half-duplex` and `1Gbps-full-duplex`.
          * 
          * @return builder
          * 

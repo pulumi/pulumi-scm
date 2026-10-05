@@ -19,14 +19,14 @@ public final class HipObjectPatchManagementCriteriaMissingPatchesArgs extends co
     public static final HipObjectPatchManagementCriteriaMissingPatchesArgs Empty = new HipObjectPatchManagementCriteriaMissingPatchesArgs();
 
     /**
-     * Check
+     * Check. Possible values are `has-any`, `has-none` and `has-all`.
      * 
      */
     @Import(name="check", required=true)
     private Output<String> check;
 
     /**
-     * @return Check
+     * @return Check. Possible values are `has-any`, `has-none` and `has-all`.
      * 
      */
     public Output<String> check() {
@@ -90,7 +90,7 @@ public final class HipObjectPatchManagementCriteriaMissingPatchesArgs extends co
         }
 
         /**
-         * @param check Check
+         * @param check Check. Possible values are `has-any`, `has-none` and `has-all`.
          * 
          * @return builder
          * 
@@ -101,7 +101,7 @@ public final class HipObjectPatchManagementCriteriaMissingPatchesArgs extends co
         }
 
         /**
-         * @param check Check
+         * @param check Check. Possible values are `has-any`, `has-none` and `has-all`.
          * 
          * @return builder
          * 

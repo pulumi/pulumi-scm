@@ -21,14 +21,10 @@ public final class BgpRouteMapRedistributionConnectedStatic {
     /**
      * @return Ospf
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `bgp`, `ospf`, and `rib`.
-     * 
      */
     private @Nullable BgpRouteMapRedistributionConnectedStaticOspf ospf;
     /**
      * @return Rib
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `bgp`, `ospf`, and `rib`.
      * 
      */
     private @Nullable BgpRouteMapRedistributionConnectedStaticRib rib;
@@ -44,16 +40,12 @@ public final class BgpRouteMapRedistributionConnectedStatic {
     /**
      * @return Ospf
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `bgp`, `ospf`, and `rib`.
-     * 
      */
     public Optional<BgpRouteMapRedistributionConnectedStaticOspf> ospf() {
         return Optional.ofNullable(this.ospf);
     }
     /**
      * @return Rib
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `bgp`, `ospf`, and `rib`.
      * 
      */
     public Optional<BgpRouteMapRedistributionConnectedStaticRib> rib() {

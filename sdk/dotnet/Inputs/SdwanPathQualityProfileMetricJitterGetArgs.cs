@@ -13,7 +13,7 @@ namespace Pulumi.Scm.Inputs
     public sealed class SdwanPathQualityProfileMetricJitterGetArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Jitter sensitivity
+        /// Jitter sensitivity. Possible values are `Low`, `Medium` and `High`.
         /// </summary>
         [Input("sensitivity", required: true)]
         public Input<string> Sensitivity { get; set; } = null!;

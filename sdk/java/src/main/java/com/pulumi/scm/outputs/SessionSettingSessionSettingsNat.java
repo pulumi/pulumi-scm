@@ -12,14 +12,14 @@ import javax.annotation.Nullable;
 @CustomType
 public final class SessionSettingSessionSettingsNat {
     /**
-     * @return NAT oversubscription rate
+     * @return NAT oversubscription rate. Possible values are `1x`, `2x`, `4x` and `8x`.
      * 
      */
     private @Nullable String dippOversub;
 
     private SessionSettingSessionSettingsNat() {}
     /**
-     * @return NAT oversubscription rate
+     * @return NAT oversubscription rate. Possible values are `1x`, `2x`, `4x` and `8x`.
      * 
      */
     public Optional<String> dippOversub() {

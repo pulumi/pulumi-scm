@@ -30,7 +30,7 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly string? Notes;
         /// <summary>
-        /// Packet capture
+        /// Packet capture. Possible values are `Disable`, `single-packet` and `extended-capture`.
         /// </summary>
         public readonly string? PacketCapture;
 

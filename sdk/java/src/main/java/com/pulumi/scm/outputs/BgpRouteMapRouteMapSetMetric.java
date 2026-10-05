@@ -13,7 +13,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class BgpRouteMapRouteMapSetMetric {
     /**
-     * @return Metric action
+     * @return Metric action. Possible values are `set`, `add` and `substract`.
      * 
      */
     private @Nullable String action;
@@ -25,7 +25,7 @@ public final class BgpRouteMapRouteMapSetMetric {
 
     private BgpRouteMapRouteMapSetMetric() {}
     /**
-     * @return Metric action
+     * @return Metric action. Possible values are `set`, `add` and `substract`.
      * 
      */
     public Optional<String> action() {

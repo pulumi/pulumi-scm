@@ -45,14 +45,10 @@ class LdapServerProfileArgs:
         :param pulumi.Input[_builtins.str] bind_timelimit: The bind timeout (seconds)
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-        :param pulumi.Input[_builtins.str] ldap_type: The LDAP server time
+        :param pulumi.Input[_builtins.str] ldap_type: The LDAP server time. Possible values are `active-directory`, `e-directory`, `sun` and `other`.
         :param pulumi.Input[_builtins.str] name: The name of the LDAP server profile
         :param pulumi.Input[_builtins.int] retry_interval: The search retry interval (seconds)
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.bool] ssl: Require SSL/TLS secured connection?
         :param pulumi.Input[_builtins.int] timelimit: The search timeout (seconds)
         :param pulumi.Input[_builtins.bool] verify_server_certificate: Verify server certificate for SSL sessions?
@@ -162,8 +158,6 @@ class LdapServerProfileArgs:
     def folder(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
-
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
 
@@ -175,7 +169,7 @@ class LdapServerProfileArgs:
     @pulumi.getter(name="ldapType")
     def ldap_type(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
-        The LDAP server time
+        The LDAP server time. Possible values are `active-directory`, `e-directory`, `sun` and `other`.
         """
         return pulumi.get(self, "ldap_type")
 
@@ -212,8 +206,6 @@ class LdapServerProfileArgs:
     def snippet(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
-
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
 
@@ -287,15 +279,11 @@ class _LdapServerProfileState:
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input[Mapping[str, pulumi.Input[_builtins.str]]] encrypted_values: Map of sensitive values returned from the API.
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-        :param pulumi.Input[_builtins.str] ldap_type: The LDAP server time
+        :param pulumi.Input[_builtins.str] ldap_type: The LDAP server time. Possible values are `active-directory`, `e-directory`, `sun` and `other`.
         :param pulumi.Input[_builtins.str] name: The name of the LDAP server profile
         :param pulumi.Input[_builtins.int] retry_interval: The search retry interval (seconds)
         :param pulumi.Input[Sequence[pulumi.Input['LdapServerProfileServerArgs']]] servers: The LDAP server configuration
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.bool] ssl: Require SSL/TLS secured connection?
         :param pulumi.Input[_builtins.str] tfid: The Terraform ID.
         :param pulumi.Input[_builtins.int] timelimit: The search timeout (seconds)
@@ -411,8 +399,6 @@ class _LdapServerProfileState:
     def folder(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
-
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
 
@@ -424,7 +410,7 @@ class _LdapServerProfileState:
     @pulumi.getter(name="ldapType")
     def ldap_type(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
-        The LDAP server time
+        The LDAP server time. Possible values are `active-directory`, `e-directory`, `sun` and `other`.
         """
         return pulumi.get(self, "ldap_type")
 
@@ -473,8 +459,6 @@ class _LdapServerProfileState:
     def snippet(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
-
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
 
@@ -694,15 +678,11 @@ class LdapServerProfile(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] bind_timelimit: The bind timeout (seconds)
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-        :param pulumi.Input[_builtins.str] ldap_type: The LDAP server time
+        :param pulumi.Input[_builtins.str] ldap_type: The LDAP server time. Possible values are `active-directory`, `e-directory`, `sun` and `other`.
         :param pulumi.Input[_builtins.str] name: The name of the LDAP server profile
         :param pulumi.Input[_builtins.int] retry_interval: The search retry interval (seconds)
         :param pulumi.Input[Sequence[pulumi.Input[Union['LdapServerProfileServerArgs', 'LdapServerProfileServerArgsDict', 'outputs.LdapServerProfileServer']]]] servers: The LDAP server configuration
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.bool] ssl: Require SSL/TLS secured connection?
         :param pulumi.Input[_builtins.int] timelimit: The search timeout (seconds)
         :param pulumi.Input[_builtins.bool] verify_server_certificate: Verify server certificate for SSL sessions?
@@ -945,15 +925,11 @@ class LdapServerProfile(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input[Mapping[str, pulumi.Input[_builtins.str]]] encrypted_values: Map of sensitive values returned from the API.
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-        :param pulumi.Input[_builtins.str] ldap_type: The LDAP server time
+        :param pulumi.Input[_builtins.str] ldap_type: The LDAP server time. Possible values are `active-directory`, `e-directory`, `sun` and `other`.
         :param pulumi.Input[_builtins.str] name: The name of the LDAP server profile
         :param pulumi.Input[_builtins.int] retry_interval: The search retry interval (seconds)
         :param pulumi.Input[Sequence[pulumi.Input[Union['LdapServerProfileServerArgs', 'LdapServerProfileServerArgsDict', 'outputs.LdapServerProfileServer']]]] servers: The LDAP server configuration
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.bool] ssl: Require SSL/TLS secured connection?
         :param pulumi.Input[_builtins.str] tfid: The Terraform ID.
         :param pulumi.Input[_builtins.int] timelimit: The search timeout (seconds)
@@ -1034,8 +1010,6 @@ class LdapServerProfile(pulumi.CustomResource):
     def folder(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
-
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
 
@@ -1043,7 +1017,7 @@ class LdapServerProfile(pulumi.CustomResource):
     @pulumi.getter(name="ldapType")
     def ldap_type(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The LDAP server time
+        The LDAP server time. Possible values are `active-directory`, `e-directory`, `sun` and `other`.
         """
         return pulumi.get(self, "ldap_type")
 
@@ -1076,8 +1050,6 @@ class LdapServerProfile(pulumi.CustomResource):
     def snippet(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
-
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
 

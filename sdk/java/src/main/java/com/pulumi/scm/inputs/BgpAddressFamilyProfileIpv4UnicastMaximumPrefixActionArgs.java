@@ -34,16 +34,12 @@ public final class BgpAddressFamilyProfileIpv4UnicastMaximumPrefixActionArgs ext
     /**
      * Warning only
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `restart` and `warningOnly`.
-     * 
      */
     @Import(name="warningOnly")
     private @Nullable Output<BgpAddressFamilyProfileIpv4UnicastMaximumPrefixActionWarningOnlyArgs> warningOnly;
 
     /**
      * @return Warning only
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `restart` and `warningOnly`.
      * 
      */
     public Optional<Output<BgpAddressFamilyProfileIpv4UnicastMaximumPrefixActionWarningOnlyArgs>> warningOnly() {
@@ -99,8 +95,6 @@ public final class BgpAddressFamilyProfileIpv4UnicastMaximumPrefixActionArgs ext
         /**
          * @param warningOnly Warning only
          * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `restart` and `warningOnly`.
-         * 
          * @return builder
          * 
          */
@@ -111,8 +105,6 @@ public final class BgpAddressFamilyProfileIpv4UnicastMaximumPrefixActionArgs ext
 
         /**
          * @param warningOnly Warning only
-         * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `restart` and `warningOnly`.
          * 
          * @return builder
          * 

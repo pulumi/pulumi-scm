@@ -19,7 +19,7 @@ namespace Pulumi.Scm.Inputs
         public Input<bool>? AllowChallengeAck { get; set; }
 
         /// <summary>
-        /// Asymmetric path action
+        /// Asymmetric path action. Possible values are `Drop` and `Bypass`.
         /// </summary>
         [Input("asymmetricPath")]
         public Input<string>? AsymmetricPath { get; set; }
@@ -43,7 +43,7 @@ namespace Pulumi.Scm.Inputs
         public Input<bool>? DropZeroFlag { get; set; }
 
         /// <summary>
-        /// SIP TCP cleartext action (`'0'` = Always Off, `'1'` = Always Enabled, `'2'` = Automatically enable proxy when needed)
+        /// SIP TCP cleartext action (`'0'` = Always Off, `'1'` = Always Enabled, `'2'` = Automatically enable proxy when needed). Possible values are `0`, `2` and `3`.
         /// </summary>
         [Input("siptcpCleartextProxy")]
         public Input<string>? SiptcpCleartextProxy { get; set; }
@@ -61,7 +61,7 @@ namespace Pulumi.Scm.Inputs
         public Input<bool>? TcpRetransmitScan { get; set; }
 
         /// <summary>
-        /// Urgent data flag action
+        /// Urgent data flag action. Possible values are `Clear` and `Oobinline`.
         /// </summary>
         [Input("urgentData")]
         public Input<string>? UrgentData { get; set; }

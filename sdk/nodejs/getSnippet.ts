@@ -72,7 +72,7 @@ export interface GetSnippetResult {
      */
     readonly tfid: string;
     /**
-     * The snippet type
+     * The snippet type. Possible values are `predefined`, `custom` and `readonly`.
      */
     readonly type: string;
 }

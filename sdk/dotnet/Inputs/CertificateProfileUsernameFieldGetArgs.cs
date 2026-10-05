@@ -13,13 +13,13 @@ namespace Pulumi.Scm.Inputs
     public sealed class CertificateProfileUsernameFieldGetArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Common name
+        /// Common name. Possible values are `common-name`.
         /// </summary>
         [Input("subject")]
         public Input<string>? Subject { get; set; }
 
         /// <summary>
-        /// Email address
+        /// Email address. Possible values are `Email`.
         /// </summary>
         [Input("subjectAlt")]
         public Input<string>? SubjectAlt { get; set; }

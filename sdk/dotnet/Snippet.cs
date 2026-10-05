@@ -89,7 +89,7 @@ namespace Pulumi.Scm
         public Output<string> Tfid { get; private set; } = null!;
 
         /// <summary>
-        /// The snippet type
+        /// The snippet type. Possible values are `Predefined`, `Custom` and `Readonly`.
         /// </summary>
         [Output("type")]
         public Output<string> Type { get; private set; } = null!;
@@ -203,7 +203,7 @@ namespace Pulumi.Scm
         public Input<string>? Tfid { get; set; }
 
         /// <summary>
-        /// The snippet type
+        /// The snippet type. Possible values are `Predefined`, `Custom` and `Readonly`.
         /// </summary>
         [Input("type")]
         public Input<string>? Type { get; set; }

@@ -108,6 +108,9 @@ namespace Pulumi.Scm
         [Input("device")]
         public string? Device { get; set; }
 
+        /// <summary>
+        /// The folder in which the resource is defined
+        /// </summary>
         [Input("folder")]
         public string? Folder { get; set; }
 
@@ -117,9 +120,15 @@ namespace Pulumi.Scm
         [Input("id", required: true)]
         public string Id { get; set; } = null!;
 
+        /// <summary>
+        /// Name of the globalprotect match list entry
+        /// </summary>
         [Input("name")]
         public string? Name { get; set; }
 
+        /// <summary>
+        /// The snippet in which the resource is defined
+        /// </summary>
         [Input("snippet")]
         public string? Snippet { get; set; }
 
@@ -137,6 +146,9 @@ namespace Pulumi.Scm
         [Input("device")]
         public Input<string>? Device { get; set; }
 
+        /// <summary>
+        /// The folder in which the resource is defined
+        /// </summary>
         [Input("folder")]
         public Input<string>? Folder { get; set; }
 
@@ -146,9 +158,15 @@ namespace Pulumi.Scm
         [Input("id", required: true)]
         public Input<string> Id { get; set; } = null!;
 
+        /// <summary>
+        /// Name of the globalprotect match list entry
+        /// </summary>
         [Input("name")]
         public Input<string>? Name { get; set; }
 
+        /// <summary>
+        /// The snippet in which the resource is defined
+        /// </summary>
         [Input("snippet")]
         public Input<string>? Snippet { get; set; }
 
@@ -162,25 +180,61 @@ namespace Pulumi.Scm
     [OutputType]
     public sealed class GetGlobalprotectMatchListResult
     {
+        /// <summary>
+        /// Description of the globalprotect match list entry
+        /// </summary>
         public readonly string Description;
         /// <summary>
         /// The device in which the resource is defined
         /// </summary>
         public readonly string Device;
+        /// <summary>
+        /// Filter of the globalprotect match list entry
+        /// </summary>
         public readonly string Filter;
+        /// <summary>
+        /// The folder in which the resource is defined
+        /// </summary>
         public readonly string Folder;
         /// <summary>
         /// UUID of the resource
         /// </summary>
         public readonly string Id;
+        /// <summary>
+        /// Name of the globalprotect match list entry
+        /// </summary>
         public readonly string Name;
+        /// <summary>
+        /// Quarantine Flag of the globalprotect match list entry
+        /// </summary>
         public readonly bool Quarantine;
+        /// <summary>
+        /// Send Email List of the globalprotect match list entry
+        /// </summary>
         public readonly ImmutableArray<string> SendEmails;
+        /// <summary>
+        /// Send HTTP List of the globalprotect match list entry
+        /// </summary>
         public readonly ImmutableArray<string> SendHttps;
+        /// <summary>
+        /// Send SNMP Trap List of the globalprotect match list entry
+        /// </summary>
         public readonly ImmutableArray<string> SendSnmptraps;
+        /// <summary>
+        /// Send Sys log List of the globalprotect match list entry
+        /// </summary>
         public readonly ImmutableArray<string> SendSyslogs;
+        /// <summary>
+        /// Send to Panorama Flag of the globalprotect match list entry
+        /// </summary>
         public readonly bool SendToPanorama;
+        /// <summary>
+        /// The snippet in which the resource is defined
+        /// </summary>
         public readonly string Snippet;
+        /// <summary>
+        /// The Terraform ID.
+        /// </summary>
         public readonly string Tfid;
 
         [OutputConstructor]

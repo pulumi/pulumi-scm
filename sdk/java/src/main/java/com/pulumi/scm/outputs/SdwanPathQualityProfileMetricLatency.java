@@ -12,7 +12,7 @@ import java.util.Objects;
 @CustomType
 public final class SdwanPathQualityProfileMetricLatency {
     /**
-     * @return Latency sensitivity
+     * @return Latency sensitivity. Possible values are `low`, `medium` and `high`.
      * 
      */
     private String sensitivity;
@@ -24,7 +24,7 @@ public final class SdwanPathQualityProfileMetricLatency {
 
     private SdwanPathQualityProfileMetricLatency() {}
     /**
-     * @return Latency sensitivity
+     * @return Latency sensitivity. Possible values are `low`, `medium` and `high`.
      * 
      */
     public String sensitivity() {

@@ -116,8 +116,6 @@ public class IpsecCryptoProfile extends com.pulumi.resources.CustomResource {
     /**
      * The device in which the resource is defined
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
      */
     @Export(name="device", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> device;
@@ -125,21 +123,19 @@ public class IpsecCryptoProfile extends com.pulumi.resources.CustomResource {
     /**
      * @return The device in which the resource is defined
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
      */
     public Output<Optional<String>> device() {
         return Codegen.optional(this.device);
     }
     /**
-     * phase-2 DH group (PFS DH group)
+     * phase-2 DH group (PFS DH group). Possible values are `no-pfs`, `group1`, `group2`, `group5`, `group14`, `group19`, `group20`, `group21`, `ml-kem-512`, `ml-kem-768` and `ml-kem-1024`.
      * 
      */
     @Export(name="dhGroup", refs={String.class}, tree="[0]")
     private Output<String> dhGroup;
 
     /**
-     * @return phase-2 DH group (PFS DH group)
+     * @return phase-2 DH group (PFS DH group). Possible values are `no-pfs`, `group1`, `group2`, `group5`, `group14`, `group19`, `group20`, `group21`, `ml-kem-512`, `ml-kem-768` and `ml-kem-1024`.
      * 
      */
     public Output<String> dhGroup() {
@@ -148,16 +144,12 @@ public class IpsecCryptoProfile extends com.pulumi.resources.CustomResource {
     /**
      * Esp
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `ah` and `esp`.
-     * 
      */
     @Export(name="esp", refs={IpsecCryptoProfileEsp.class}, tree="[0]")
     private Output</* @Nullable */ IpsecCryptoProfileEsp> esp;
 
     /**
      * @return Esp
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `ah` and `esp`.
      * 
      */
     public Output<Optional<IpsecCryptoProfileEsp>> esp() {
@@ -166,16 +158,12 @@ public class IpsecCryptoProfile extends com.pulumi.resources.CustomResource {
     /**
      * The folder in which the resource is defined
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
      */
     @Export(name="folder", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> folder;
 
     /**
      * @return The folder in which the resource is defined
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public Output<Optional<String>> folder() {
@@ -226,16 +214,12 @@ public class IpsecCryptoProfile extends com.pulumi.resources.CustomResource {
     /**
      * The snippet in which the resource is defined
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
      */
     @Export(name="snippet", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> snippet;
 
     /**
      * @return The snippet in which the resource is defined
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public Output<Optional<String>> snippet() {

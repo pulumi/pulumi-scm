@@ -47,12 +47,21 @@ export interface GetTacacsServerProfileArgs {
      * The device in which the resource is defined
      */
     device?: string;
+    /**
+     * The folder in which the resource is defined
+     */
     folder?: string;
     /**
      * The UUID of the TACACS+ server profile
      */
     id: string;
+    /**
+     * The name of the TACACS+ server profile
+     */
     name?: string;
+    /**
+     * The snippet in which the resource is defined
+     */
     snippet?: string;
 }
 
@@ -64,18 +73,45 @@ export interface GetTacacsServerProfileResult {
      * The device in which the resource is defined
      */
     readonly device: string;
+    /**
+     * Map of sensitive values returned from the API.
+     */
     readonly encryptedValues: {[key: string]: string};
+    /**
+     * The folder in which the resource is defined
+     */
     readonly folder: string;
     /**
      * The UUID of the TACACS+ server profile
      */
     readonly id: string;
+    /**
+     * The name of the TACACS+ server profile
+     */
     readonly name: string;
+    /**
+     * The TACACS+ authentication protocol. Possible values are `CHAP` and `PAP`.
+     */
     readonly protocol: string;
+    /**
+     * The TACACS+ server configuration
+     */
     readonly servers: outputs.GetTacacsServerProfileServer[];
+    /**
+     * The snippet in which the resource is defined
+     */
     readonly snippet: string;
+    /**
+     * The Terraform ID.
+     */
     readonly tfid: string;
+    /**
+     * The TACACS+ timeout (seconds)
+     */
     readonly timeout: number;
+    /**
+     * Use a single TACACS+ connection?
+     */
     readonly useSingleConnection: boolean;
 }
 /**
@@ -119,11 +155,20 @@ export interface GetTacacsServerProfileOutputArgs {
      * The device in which the resource is defined
      */
     device?: pulumi.Input<string | undefined>;
+    /**
+     * The folder in which the resource is defined
+     */
     folder?: pulumi.Input<string | undefined>;
     /**
      * The UUID of the TACACS+ server profile
      */
     id: pulumi.Input<string>;
+    /**
+     * The name of the TACACS+ server profile
+     */
     name?: pulumi.Input<string | undefined>;
+    /**
+     * The snippet in which the resource is defined
+     */
     snippet?: pulumi.Input<string | undefined>;
 }

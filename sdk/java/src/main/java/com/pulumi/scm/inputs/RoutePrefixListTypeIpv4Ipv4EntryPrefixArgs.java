@@ -32,18 +32,14 @@ public final class RoutePrefixListTypeIpv4Ipv4EntryPrefixArgs extends com.pulumi
     }
 
     /**
-     * Network
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `entry` and `network`.
+     * Network. Possible values are `any`.
      * 
      */
     @Import(name="network")
     private @Nullable Output<String> network;
 
     /**
-     * @return Network
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `entry` and `network`.
+     * @return Network. Possible values are `any`.
      * 
      */
     public Optional<Output<String>> network() {
@@ -97,9 +93,7 @@ public final class RoutePrefixListTypeIpv4Ipv4EntryPrefixArgs extends com.pulumi
         }
 
         /**
-         * @param network Network
-         * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `entry` and `network`.
+         * @param network Network. Possible values are `any`.
          * 
          * @return builder
          * 
@@ -110,9 +104,7 @@ public final class RoutePrefixListTypeIpv4Ipv4EntryPrefixArgs extends com.pulumi
         }
 
         /**
-         * @param network Network
-         * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `entry` and `network`.
+         * @param network Network. Possible values are `any`.
          * 
          * @return builder
          * 

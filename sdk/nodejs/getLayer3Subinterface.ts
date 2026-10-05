@@ -49,12 +49,21 @@ export interface GetLayer3SubinterfaceArgs {
      * The device in which the resource is defined
      */
     device?: string;
+    /**
+     * The folder in which the resource is defined
+     */
     folder?: string;
     /**
      * UUID of the resource
      */
     id: string;
+    /**
+     * L3 sub-interface name
+     */
     name?: string;
+    /**
+     * The snippet in which the resource is defined
+     */
     snippet?: string;
 }
 
@@ -62,27 +71,81 @@ export interface GetLayer3SubinterfaceArgs {
  * A collection of values returned by getLayer3Subinterface.
  */
 export interface GetLayer3SubinterfaceResult {
+    /**
+     * TCP MSS adjustment settings for the interface
+     */
+    readonly adjustTcpMss: outputs.GetLayer3SubinterfaceAdjustTcpMss;
+    /**
+     * Layer 3 sub Interfaces ARP configuration
+     */
     readonly arps: outputs.GetLayer3SubinterfaceArp[];
+    /**
+     * Description
+     */
     readonly comment: string;
+    /**
+     * Dynamic DNS configuration specific to the Layer 3 sub Interfaces.
+     */
     readonly ddnsConfig: outputs.GetLayer3SubinterfaceDdnsConfig;
     /**
      * The device in which the resource is defined
      */
     readonly device: string;
+    /**
+     * Layer3 sub interfaces DHCP Client Object
+     */
     readonly dhcpClient: outputs.GetLayer3SubinterfaceDhcpClient;
+    /**
+     * Map of sensitive values returned from the API.
+     */
+    readonly encryptedValues: {[key: string]: string};
+    /**
+     * The folder in which the resource is defined
+     */
     readonly folder: string;
     /**
      * UUID of the resource
      */
     readonly id: string;
+    /**
+     * Interface management profile
+     */
     readonly interfaceManagementProfile: string;
+    /**
+     * L3 sub-interface IP Parent
+     */
     readonly ips: outputs.GetLayer3SubinterfaceIp[];
+    /**
+     * MTU
+     */
     readonly mtu: number;
+    /**
+     * L3 sub-interface name
+     */
     readonly name: string;
+    /**
+     * Name of Netflow Profile to assign to Interface
+     */
     readonly netflowProfile: string;
+    /**
+     * Parent interface
+     */
     readonly parentInterface: string;
+    /**
+     * PPPoE configuration for the interface
+     */
+    readonly pppoe: outputs.GetLayer3SubinterfacePppoe;
+    /**
+     * The snippet in which the resource is defined
+     */
     readonly snippet: string;
+    /**
+     * VLAN tag
+     */
     readonly tag: number;
+    /**
+     * The Terraform ID.
+     */
     readonly tfid: string;
 }
 /**
@@ -128,11 +191,20 @@ export interface GetLayer3SubinterfaceOutputArgs {
      * The device in which the resource is defined
      */
     device?: pulumi.Input<string | undefined>;
+    /**
+     * The folder in which the resource is defined
+     */
     folder?: pulumi.Input<string | undefined>;
     /**
      * UUID of the resource
      */
     id: pulumi.Input<string>;
+    /**
+     * L3 sub-interface name
+     */
     name?: pulumi.Input<string | undefined>;
+    /**
+     * The snippet in which the resource is defined
+     */
     snippet?: pulumi.Input<string | undefined>;
 }

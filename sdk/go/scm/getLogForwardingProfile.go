@@ -61,25 +61,34 @@ func LookupLogForwardingProfile(ctx *pulumi.Context, args *LookupLogForwardingPr
 type LookupLogForwardingProfileArgs struct {
 	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
+	// The folder in which the resource is defined
 	Folder *string `pulumi:"folder"`
 	// The UUID of the log server profile
-	Id      string  `pulumi:"id"`
-	Name    *string `pulumi:"name"`
+	Id string `pulumi:"id"`
+	// The name of the log forwarding profile
+	Name *string `pulumi:"name"`
+	// The snippet in which the resource is defined
 	Snippet *string `pulumi:"snippet"`
 }
 
 // A collection of values returned by getLogForwardingProfile.
 type LookupLogForwardingProfileResult struct {
+	// Log forwarding profile description
 	Description string `pulumi:"description"`
 	// The device in which the resource is defined
 	Device string `pulumi:"device"`
+	// The folder in which the resource is defined
 	Folder string `pulumi:"folder"`
 	// The UUID of the log server profile
-	Id         string                             `pulumi:"id"`
+	Id string `pulumi:"id"`
+	// Match list
 	MatchLists []GetLogForwardingProfileMatchList `pulumi:"matchLists"`
-	Name       string                             `pulumi:"name"`
-	Snippet    string                             `pulumi:"snippet"`
-	Tfid       string                             `pulumi:"tfid"`
+	// The name of the log forwarding profile
+	Name string `pulumi:"name"`
+	// The snippet in which the resource is defined
+	Snippet string `pulumi:"snippet"`
+	// The Terraform ID.
+	Tfid string `pulumi:"tfid"`
 }
 
 func LookupLogForwardingProfileOutput(ctx *pulumi.Context, args LookupLogForwardingProfileOutputArgs, opts ...pulumi.InvokeOption) LookupLogForwardingProfileResultOutput {
@@ -91,10 +100,13 @@ func LookupLogForwardingProfileOutput(ctx *pulumi.Context, args LookupLogForward
 type LookupLogForwardingProfileOutputArgs struct {
 	// The device in which the resource is defined
 	Device pulumi.StringPtrInput `pulumi:"device"`
+	// The folder in which the resource is defined
 	Folder pulumi.StringPtrInput `pulumi:"folder"`
 	// The UUID of the log server profile
-	Id      pulumi.StringInput    `pulumi:"id"`
-	Name    pulumi.StringPtrInput `pulumi:"name"`
+	Id pulumi.StringInput `pulumi:"id"`
+	// The name of the log forwarding profile
+	Name pulumi.StringPtrInput `pulumi:"name"`
+	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrInput `pulumi:"snippet"`
 }
 
@@ -117,6 +129,7 @@ func (o LookupLogForwardingProfileResultOutput) ToLookupLogForwardingProfileResu
 	return o
 }
 
+// Log forwarding profile description
 func (o LookupLogForwardingProfileResultOutput) Description() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupLogForwardingProfileResult) string { return v.Description }).(pulumi.StringOutput)
 }
@@ -126,6 +139,7 @@ func (o LookupLogForwardingProfileResultOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupLogForwardingProfileResult) string { return v.Device }).(pulumi.StringOutput)
 }
 
+// The folder in which the resource is defined
 func (o LookupLogForwardingProfileResultOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupLogForwardingProfileResult) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -135,18 +149,22 @@ func (o LookupLogForwardingProfileResultOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupLogForwardingProfileResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
+// Match list
 func (o LookupLogForwardingProfileResultOutput) MatchLists() GetLogForwardingProfileMatchListArrayOutput {
 	return o.ApplyT(func(v LookupLogForwardingProfileResult) []GetLogForwardingProfileMatchList { return v.MatchLists }).(GetLogForwardingProfileMatchListArrayOutput)
 }
 
+// The name of the log forwarding profile
 func (o LookupLogForwardingProfileResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupLogForwardingProfileResult) string { return v.Name }).(pulumi.StringOutput)
 }
 
+// The snippet in which the resource is defined
 func (o LookupLogForwardingProfileResultOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupLogForwardingProfileResult) string { return v.Snippet }).(pulumi.StringOutput)
 }
 
+// The Terraform ID.
 func (o LookupLogForwardingProfileResultOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupLogForwardingProfileResult) string { return v.Tfid }).(pulumi.StringOutput)
 }

@@ -13,7 +13,7 @@ import java.util.Objects;
 @CustomType
 public final class GetHipObjectPatchManagementCriteriaMissingPatches {
     /**
-     * @return Check
+     * @return Check. Possible values are `has-any`, `has-none` and `has-all`.
      * 
      */
     private String check;
@@ -30,7 +30,7 @@ public final class GetHipObjectPatchManagementCriteriaMissingPatches {
 
     private GetHipObjectPatchManagementCriteriaMissingPatches() {}
     /**
-     * @return Check
+     * @return Check. Possible values are `has-any`, `has-none` and `has-all`.
      * 
      */
     public String check() {

@@ -81,8 +81,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The folder in which the resource is defined
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Output("folder")]
         public Output<string?> Folder { get; private set; } = null!;
@@ -103,12 +101,10 @@ namespace Pulumi.Scm
         /// The authentication portal IP address or hostname
         /// </summary>
         [Output("redirectHost")]
-        public Output<string> RedirectHost { get; private set; } = null!;
+        public Output<string?> RedirectHost { get; private set; } = null!;
 
         /// <summary>
         /// The snippet in which the resource is defined
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Output("snippet")]
         public Output<string?> Snippet { get; private set; } = null!;
@@ -139,7 +135,7 @@ namespace Pulumi.Scm
         /// <param name="name">The unique name of the resource</param>
         /// <param name="args">The arguments used to populate this resource's properties</param>
         /// <param name="options">A bag of options that control this resource's behavior</param>
-        public AuthenticationPortal(string name, AuthenticationPortalArgs args, CustomResourceOptions? options = null)
+        public AuthenticationPortal(string name, AuthenticationPortalArgs? args = null, CustomResourceOptions? options = null)
             : base("scm:index/authenticationPortal:AuthenticationPortal", name, args ?? new AuthenticationPortalArgs(), MakeResourceOptions(options, ""))
         {
         }
@@ -197,8 +193,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The folder in which the resource is defined
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("folder")]
         public Input<string>? Folder { get; set; }
@@ -218,13 +212,11 @@ namespace Pulumi.Scm
         /// <summary>
         /// The authentication portal IP address or hostname
         /// </summary>
-        [Input("redirectHost", required: true)]
-        public Input<string> RedirectHost { get; set; } = null!;
+        [Input("redirectHost")]
+        public Input<string>? RedirectHost { get; set; }
 
         /// <summary>
         /// The snippet in which the resource is defined
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("snippet")]
         public Input<string>? Snippet { get; set; }
@@ -269,8 +261,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The folder in which the resource is defined
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("folder")]
         public Input<string>? Folder { get; set; }
@@ -295,8 +285,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The snippet in which the resource is defined
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("snippet")]
         public Input<string>? Snippet { get; set; }

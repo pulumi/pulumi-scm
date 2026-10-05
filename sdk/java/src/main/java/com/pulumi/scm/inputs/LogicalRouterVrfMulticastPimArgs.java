@@ -113,14 +113,14 @@ public final class LogicalRouterVrfMulticastPimArgs extends com.pulumi.resources
     }
 
     /**
-     * Rpf lookup mode
+     * Rpf lookup mode. Possible values are `mrib-then-urib`, `mrib-only` and `urib-only`.
      * 
      */
     @Import(name="rpfLookupMode")
     private @Nullable Output<String> rpfLookupMode;
 
     /**
-     * @return Rpf lookup mode
+     * @return Rpf lookup mode. Possible values are `mrib-then-urib`, `mrib-only` and `urib-only`.
      * 
      */
     public Optional<Output<String>> rpfLookupMode() {
@@ -326,7 +326,7 @@ public final class LogicalRouterVrfMulticastPimArgs extends com.pulumi.resources
         }
 
         /**
-         * @param rpfLookupMode Rpf lookup mode
+         * @param rpfLookupMode Rpf lookup mode. Possible values are `mrib-then-urib`, `mrib-only` and `urib-only`.
          * 
          * @return builder
          * 
@@ -337,7 +337,7 @@ public final class LogicalRouterVrfMulticastPimArgs extends com.pulumi.resources
         }
 
         /**
-         * @param rpfLookupMode Rpf lookup mode
+         * @param rpfLookupMode Rpf lookup mode. Possible values are `mrib-then-urib`, `mrib-only` and `urib-only`.
          * 
          * @return builder
          * 

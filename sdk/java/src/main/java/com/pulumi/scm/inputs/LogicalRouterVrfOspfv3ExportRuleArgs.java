@@ -48,14 +48,14 @@ public final class LogicalRouterVrfOspfv3ExportRuleArgs extends com.pulumi.resou
     }
 
     /**
-     * New path type
+     * New path type. Possible values are `ext-1` and `ext-2`.
      * 
      */
     @Import(name="newPathType")
     private @Nullable Output<String> newPathType;
 
     /**
-     * @return New path type
+     * @return New path type. Possible values are `ext-1` and `ext-2`.
      * 
      */
     public Optional<Output<String>> newPathType() {
@@ -147,7 +147,7 @@ public final class LogicalRouterVrfOspfv3ExportRuleArgs extends com.pulumi.resou
         }
 
         /**
-         * @param newPathType New path type
+         * @param newPathType New path type. Possible values are `ext-1` and `ext-2`.
          * 
          * @return builder
          * 
@@ -158,7 +158,7 @@ public final class LogicalRouterVrfOspfv3ExportRuleArgs extends com.pulumi.resou
         }
 
         /**
-         * @param newPathType New path type
+         * @param newPathType New path type. Possible values are `ext-1` and `ext-2`.
          * 
          * @return builder
          * 

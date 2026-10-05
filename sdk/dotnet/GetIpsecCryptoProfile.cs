@@ -108,6 +108,9 @@ namespace Pulumi.Scm
         [Input("device")]
         public string? Device { get; set; }
 
+        /// <summary>
+        /// The folder in which the resource is defined
+        /// </summary>
         [Input("folder")]
         public string? Folder { get; set; }
 
@@ -117,9 +120,15 @@ namespace Pulumi.Scm
         [Input("id", required: true)]
         public string Id { get; set; } = null!;
 
+        /// <summary>
+        /// Alphanumeric string begin with letter: [0-9a-zA-Z._-]
+        /// </summary>
         [Input("name")]
         public string? Name { get; set; }
 
+        /// <summary>
+        /// The snippet in which the resource is defined
+        /// </summary>
         [Input("snippet")]
         public string? Snippet { get; set; }
 
@@ -137,6 +146,9 @@ namespace Pulumi.Scm
         [Input("device")]
         public Input<string>? Device { get; set; }
 
+        /// <summary>
+        /// The folder in which the resource is defined
+        /// </summary>
         [Input("folder")]
         public Input<string>? Folder { get; set; }
 
@@ -146,9 +158,15 @@ namespace Pulumi.Scm
         [Input("id", required: true)]
         public Input<string> Id { get; set; } = null!;
 
+        /// <summary>
+        /// Alphanumeric string begin with letter: [0-9a-zA-Z._-]
+        /// </summary>
         [Input("name")]
         public Input<string>? Name { get; set; }
 
+        /// <summary>
+        /// The snippet in which the resource is defined
+        /// </summary>
         [Input("snippet")]
         public Input<string>? Snippet { get; set; }
 
@@ -162,22 +180,49 @@ namespace Pulumi.Scm
     [OutputType]
     public sealed class GetIpsecCryptoProfileResult
     {
+        /// <summary>
+        /// Ah
+        /// </summary>
         public readonly Outputs.GetIpsecCryptoProfileAhResult Ah;
         /// <summary>
         /// The device in which the resource is defined
         /// </summary>
         public readonly string Device;
+        /// <summary>
+        /// phase-2 DH group (PFS DH group). Possible values are `no-pfs`, `Group1`, `Group2`, `Group5`, `Group14`, `Group19`, `Group20`, `Group21`, `ml-kem-512`, `ml-kem-768` and `ml-kem-1024`.
+        /// </summary>
         public readonly string DhGroup;
+        /// <summary>
+        /// Esp
+        /// </summary>
         public readonly Outputs.GetIpsecCryptoProfileEspResult Esp;
+        /// <summary>
+        /// The folder in which the resource is defined
+        /// </summary>
         public readonly string Folder;
         /// <summary>
         /// UUID of the resource
         /// </summary>
         public readonly string Id;
+        /// <summary>
+        /// Lifesize
+        /// </summary>
         public readonly Outputs.GetIpsecCryptoProfileLifesizeResult Lifesize;
+        /// <summary>
+        /// Ipsec crypto profile lifetime
+        /// </summary>
         public readonly Outputs.GetIpsecCryptoProfileLifetimeResult Lifetime;
+        /// <summary>
+        /// Alphanumeric string begin with letter: [0-9a-zA-Z._-]
+        /// </summary>
         public readonly string Name;
+        /// <summary>
+        /// The snippet in which the resource is defined
+        /// </summary>
         public readonly string Snippet;
+        /// <summary>
+        /// The Terraform ID.
+        /// </summary>
         public readonly string Tfid;
 
         [OutputConstructor]

@@ -42,12 +42,21 @@ export interface GetCertificateProfileArgs {
      * The device in which the resource is defined
      */
     device?: string;
+    /**
+     * The folder in which the resource is defined
+     */
     folder?: string;
     /**
      * The UUID of the certificate profile
      */
     id: string;
+    /**
+     * The name of the certificate profile
+     */
     name?: string;
+    /**
+     * The snippet in which the resource is defined
+     */
     snippet?: string;
 }
 
@@ -55,29 +64,77 @@ export interface GetCertificateProfileArgs {
  * A collection of values returned by getCertificateProfile.
  */
 export interface GetCertificateProfileResult {
+    /**
+     * Block sessions with expired certificates?
+     */
     readonly blockExpiredCert: boolean;
+    /**
+     * Block session if certificate status cannot be retrieved within timeout?
+     */
     readonly blockTimeoutCert: boolean;
+    /**
+     * Block session if the certificate was not issued to the authenticating device?
+     */
     readonly blockUnauthenticatedCert: boolean;
+    /**
+     * Block session if certificate status is unknown?
+     */
     readonly blockUnknownCert: boolean;
+    /**
+     * An ordered list of CA certificates
+     */
     readonly caCertificates: outputs.GetCertificateProfileCaCertificate[];
+    /**
+     * Certificate status timeout
+     */
     readonly certStatusTimeout: string;
+    /**
+     * CRL receive timeout (seconds)
+     */
     readonly crlReceiveTimeout: string;
     /**
      * The device in which the resource is defined
      */
     readonly device: string;
+    /**
+     * User domain
+     */
     readonly domain: string;
+    /**
+     * The folder in which the resource is defined
+     */
     readonly folder: string;
     /**
      * The UUID of the certificate profile
      */
     readonly id: string;
+    /**
+     * The name of the certificate profile
+     */
     readonly name: string;
+    /**
+     * OCSP receive timeout (seconds)
+     */
     readonly ocspReceiveTimeout: string;
+    /**
+     * The snippet in which the resource is defined
+     */
     readonly snippet: string;
+    /**
+     * The Terraform ID.
+     */
     readonly tfid: string;
+    /**
+     * Use CRL?
+     */
     readonly useCrl: boolean;
+    /**
+     * Use OCSP?
+     */
     readonly useOcsp: boolean;
+    /**
+     * Certificate username field
+     */
     readonly usernameField: outputs.GetCertificateProfileUsernameField;
 }
 /**
@@ -116,11 +173,20 @@ export interface GetCertificateProfileOutputArgs {
      * The device in which the resource is defined
      */
     device?: pulumi.Input<string | undefined>;
+    /**
+     * The folder in which the resource is defined
+     */
     folder?: pulumi.Input<string | undefined>;
     /**
      * The UUID of the certificate profile
      */
     id: pulumi.Input<string>;
+    /**
+     * The name of the certificate profile
+     */
     name?: pulumi.Input<string | undefined>;
+    /**
+     * The snippet in which the resource is defined
+     */
     snippet?: pulumi.Input<string | undefined>;
 }

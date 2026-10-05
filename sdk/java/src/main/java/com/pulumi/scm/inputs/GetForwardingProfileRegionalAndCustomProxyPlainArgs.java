@@ -16,14 +16,14 @@ public final class GetForwardingProfileRegionalAndCustomProxyPlainArgs extends c
     public static final GetForwardingProfileRegionalAndCustomProxyPlainArgs Empty = new GetForwardingProfileRegionalAndCustomProxyPlainArgs();
 
     /**
-     * The folder in which the resource is defined
+     * The folder in which the resource is defined. Possible values are `Mobile Users`.
      * 
      */
     @Import(name="folder")
     private @Nullable String folder;
 
     /**
-     * @return The folder in which the resource is defined
+     * @return The folder in which the resource is defined. Possible values are `Mobile Users`.
      * 
      */
     public Optional<String> folder() {
@@ -87,7 +87,7 @@ public final class GetForwardingProfileRegionalAndCustomProxyPlainArgs extends c
         }
 
         /**
-         * @param folder The folder in which the resource is defined
+         * @param folder The folder in which the resource is defined. Possible values are `Mobile Users`.
          * 
          * @return builder
          * 

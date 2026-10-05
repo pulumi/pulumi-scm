@@ -22,7 +22,7 @@ public final class GetLogicalRouterVrfBgpPolicyConditionalAdvertisementPolicyAdv
      */
     private List<GetLogicalRouterVrfBgpPolicyConditionalAdvertisementPolicyAdvertiseFilterMatchAddressPrefix> addressPrefixes;
     /**
-     * @return Afi
+     * @return Afi. Possible values are `ip` and `ipv6`.
      * 
      */
     private String afi;
@@ -57,12 +57,12 @@ public final class GetLogicalRouterVrfBgpPolicyConditionalAdvertisementPolicyAdv
      */
     private List<String> nexthops;
     /**
-     * @return Route table
+     * @return Route table. Possible values are `unicast`, `multicast` and `both`.
      * 
      */
     private String routeTable;
     /**
-     * @return Safi
+     * @return Safi. Possible values are `ip` and `ipv6`.
      * 
      */
     private String safi;
@@ -76,7 +76,7 @@ public final class GetLogicalRouterVrfBgpPolicyConditionalAdvertisementPolicyAdv
         return this.addressPrefixes;
     }
     /**
-     * @return Afi
+     * @return Afi. Possible values are `ip` and `ipv6`.
      * 
      */
     public String afi() {
@@ -125,14 +125,14 @@ public final class GetLogicalRouterVrfBgpPolicyConditionalAdvertisementPolicyAdv
         return this.nexthops;
     }
     /**
-     * @return Route table
+     * @return Route table. Possible values are `unicast`, `multicast` and `both`.
      * 
      */
     public String routeTable() {
         return this.routeTable;
     }
     /**
-     * @return Safi
+     * @return Safi. Possible values are `ip` and `ipv6`.
      * 
      */
     public String safi() {

@@ -19,7 +19,7 @@ namespace Pulumi.Scm.Inputs
         public Input<bool>? Enable { get; set; }
 
         /// <summary>
-        /// Failure condition
+        /// Failure condition. Possible values are `Any` and `All`.
         /// </summary>
         [Input("failureCondition")]
         public Input<string>? FailureCondition { get; set; }

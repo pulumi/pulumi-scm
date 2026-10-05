@@ -137,7 +137,7 @@ export class AutoVpnCluster extends pulumi.CustomResource {
      */
     declare public /*out*/ readonly tfid: pulumi.Output<string>;
     /**
-     * VPN cluster type
+     * VPN cluster type. Possible values are `hub-spoke` and `mesh`.
      */
     declare public readonly type: pulumi.Output<string>;
 
@@ -211,7 +211,7 @@ export interface AutoVpnClusterState {
      */
     tfid?: pulumi.Input<string | undefined>;
     /**
-     * VPN cluster type
+     * VPN cluster type. Possible values are `hub-spoke` and `mesh`.
      */
     type?: pulumi.Input<string | undefined>;
 }
@@ -245,7 +245,7 @@ export interface AutoVpnClusterArgs {
      */
     name?: pulumi.Input<string | undefined>;
     /**
-     * VPN cluster type
+     * VPN cluster type. Possible values are `hub-spoke` and `mesh`.
      */
     type?: pulumi.Input<string | undefined>;
 }

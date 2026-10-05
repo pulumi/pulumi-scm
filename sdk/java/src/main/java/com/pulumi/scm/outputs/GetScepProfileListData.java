@@ -36,7 +36,7 @@ public final class GetScepProfileListData {
      */
     private String device;
     /**
-     * @return Digest for CSR
+     * @return Digest for CSR. Possible values are `sha1`, `sha256`, `sha384` and `sha512`.
      * 
      */
     private String digest;
@@ -51,7 +51,7 @@ public final class GetScepProfileListData {
      */
     private String fingerprint;
     /**
-     * @return The folder of the item. Default: Shared.
+     * @return The folder in which the resource is defined
      * 
      */
     private String folder;
@@ -61,12 +61,12 @@ public final class GetScepProfileListData {
      */
     private String id;
     /**
-     * @return The name of the item.
+     * @return The name of the SCEP profile
      * 
      */
     private String name;
     /**
-     * @return SCEP Server CA Certificate
+     * @return SCEP Server CA Certificate. Possible values are `Authentication Cookie CA`, `Forward-Trust-CA`, `Forward-Trust-CA-ECDSA`, `Forward-UnTrust-CA`, `Forward-UnTrust-CA-ECDSA`, `Global Authentication Cookie CA`, `GlobalSign-Root-CA` and `Root CA`.
      * 
      */
     private String scepCaCert;
@@ -76,7 +76,7 @@ public final class GetScepProfileListData {
      */
     private GetScepProfileListDataScepChallenge scepChallenge;
     /**
-     * @return SCEP Client Certificate
+     * @return SCEP Client Certificate. Possible values are `Authentication Cookie CA`, `Forward-Trust-CA`, `Forward-Trust-CA-ECDSA`, `Forward-UnTrust-CA`, `Forward-UnTrust-CA-ECDSA`, `Global Authentication Cookie CA`, `GlobalSign-Root-CA` and `Root CA`.
      * 
      */
     private String scepClientCert;
@@ -86,7 +86,7 @@ public final class GetScepProfileListData {
      */
     private String scepUrl;
     /**
-     * @return The snippet of the item.
+     * @return The snippet in which the resource is defined
      * 
      */
     private String snippet;
@@ -141,7 +141,7 @@ public final class GetScepProfileListData {
         return this.device;
     }
     /**
-     * @return Digest for CSR
+     * @return Digest for CSR. Possible values are `sha1`, `sha256`, `sha384` and `sha512`.
      * 
      */
     public String digest() {
@@ -162,7 +162,7 @@ public final class GetScepProfileListData {
         return this.fingerprint;
     }
     /**
-     * @return The folder of the item. Default: Shared.
+     * @return The folder in which the resource is defined
      * 
      */
     public String folder() {
@@ -176,14 +176,14 @@ public final class GetScepProfileListData {
         return this.id;
     }
     /**
-     * @return The name of the item.
+     * @return The name of the SCEP profile
      * 
      */
     public String name() {
         return this.name;
     }
     /**
-     * @return SCEP Server CA Certificate
+     * @return SCEP Server CA Certificate. Possible values are `Authentication Cookie CA`, `Forward-Trust-CA`, `Forward-Trust-CA-ECDSA`, `Forward-UnTrust-CA`, `Forward-UnTrust-CA-ECDSA`, `Global Authentication Cookie CA`, `GlobalSign-Root-CA` and `Root CA`.
      * 
      */
     public String scepCaCert() {
@@ -197,7 +197,7 @@ public final class GetScepProfileListData {
         return this.scepChallenge;
     }
     /**
-     * @return SCEP Client Certificate
+     * @return SCEP Client Certificate. Possible values are `Authentication Cookie CA`, `Forward-Trust-CA`, `Forward-Trust-CA-ECDSA`, `Forward-UnTrust-CA`, `Forward-UnTrust-CA-ECDSA`, `Global Authentication Cookie CA`, `GlobalSign-Root-CA` and `Root CA`.
      * 
      */
     public String scepClientCert() {
@@ -211,7 +211,7 @@ public final class GetScepProfileListData {
         return this.scepUrl;
     }
     /**
-     * @return The snippet of the item.
+     * @return The snippet in which the resource is defined
      * 
      */
     public String snippet() {

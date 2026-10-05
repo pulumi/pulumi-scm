@@ -18,7 +18,7 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly ImmutableArray<string> Authentications;
         /// <summary>
-        /// Encryption algorithm
+        /// Encryption algorithm. Possible values are `Des`, `3des`, `aes-128-cbc`, `aes-192-cbc`, `aes-256-cbc`, `aes-128-gcm`, `aes-256-gcm` and `Null`.
         /// </summary>
         public readonly ImmutableArray<string> Encryptions;
 

@@ -17,16 +17,35 @@ public final class GetLogicalRouterResult {
      * 
      */
     private String device;
+    /**
+     * @return The folder in which the resource is defined
+     * 
+     */
     private String folder;
     /**
      * @return UUID of the resource
      * 
      */
     private String id;
+    /**
+     * @return Name
+     * 
+     */
     private String name;
-    private String routingStack;
+    /**
+     * @return The snippet in which the resource is defined
+     * 
+     */
     private String snippet;
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     private String tfid;
+    /**
+     * @return Vrf
+     * 
+     */
     private List<GetLogicalRouterVrf> vrves;
 
     private GetLogicalRouterResult() {}
@@ -37,6 +56,10 @@ public final class GetLogicalRouterResult {
     public String device() {
         return this.device;
     }
+    /**
+     * @return The folder in which the resource is defined
+     * 
+     */
     public String folder() {
         return this.folder;
     }
@@ -47,18 +70,31 @@ public final class GetLogicalRouterResult {
     public String id() {
         return this.id;
     }
+    /**
+     * @return Name
+     * 
+     */
     public String name() {
         return this.name;
     }
-    public String routingStack() {
-        return this.routingStack;
-    }
+    /**
+     * @return The snippet in which the resource is defined
+     * 
+     */
     public String snippet() {
         return this.snippet;
     }
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     public String tfid() {
         return this.tfid;
     }
+    /**
+     * @return Vrf
+     * 
+     */
     public List<GetLogicalRouterVrf> vrves() {
         return this.vrves;
     }
@@ -76,7 +112,6 @@ public final class GetLogicalRouterResult {
         private String folder;
         private String id;
         private String name;
-        private String routingStack;
         private String snippet;
         private String tfid;
         private List<GetLogicalRouterVrf> vrves;
@@ -87,7 +122,6 @@ public final class GetLogicalRouterResult {
     	      this.folder = defaults.folder;
     	      this.id = defaults.id;
     	      this.name = defaults.name;
-    	      this.routingStack = defaults.routingStack;
     	      this.snippet = defaults.snippet;
     	      this.tfid = defaults.tfid;
     	      this.vrves = defaults.vrves;
@@ -126,14 +160,6 @@ public final class GetLogicalRouterResult {
             return this;
         }
         @CustomType.Setter
-        public Builder routingStack(String routingStack) {
-            if (routingStack == null) {
-              throw new MissingRequiredPropertyException("GetLogicalRouterResult", "routingStack");
-            }
-            this.routingStack = routingStack;
-            return this;
-        }
-        @CustomType.Setter
         public Builder snippet(String snippet) {
             if (snippet == null) {
               throw new MissingRequiredPropertyException("GetLogicalRouterResult", "snippet");
@@ -166,7 +192,6 @@ public final class GetLogicalRouterResult {
             _resultValue.folder = folder;
             _resultValue.id = id;
             _resultValue.name = name;
-            _resultValue.routingStack = routingStack;
             _resultValue.snippet = snippet;
             _resultValue.tfid = tfid;
             _resultValue.vrves = vrves;

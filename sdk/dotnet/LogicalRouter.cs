@@ -91,7 +91,6 @@ namespace Pulumi.Scm
     ///     {
     ///         Folder = "ngfw-shared",
     ///         Name = "scm_logical_router",
-    ///         RoutingStack = "advanced",
     ///         Vrves = new[]
     ///         {
     ///             new Scm.Inputs.LogicalRouterVrfArgs
@@ -165,7 +164,6 @@ namespace Pulumi.Scm
     ///     {
     ///         Folder = "ngfw-shared",
     ///         Name = "scm_bgp_router",
-    ///         RoutingStack = "advanced",
     ///         Vrves = new[]
     ///         {
     ///             new Scm.Inputs.LogicalRouterVrfArgs
@@ -266,8 +264,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The folder in which the resource is defined
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Output("folder")]
         public Output<string?> Folder { get; private set; } = null!;
@@ -279,15 +275,7 @@ namespace Pulumi.Scm
         public Output<string> Name { get; private set; } = null!;
 
         /// <summary>
-        /// Routing stack
-        /// </summary>
-        [Output("routingStack")]
-        public Output<string?> RoutingStack { get; private set; } = null!;
-
-        /// <summary>
         /// The snippet in which the resource is defined
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Output("snippet")]
         public Output<string?> Snippet { get; private set; } = null!;
@@ -358,8 +346,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The folder in which the resource is defined
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("folder")]
         public Input<string>? Folder { get; set; }
@@ -371,15 +357,7 @@ namespace Pulumi.Scm
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// Routing stack
-        /// </summary>
-        [Input("routingStack")]
-        public Input<string>? RoutingStack { get; set; }
-
-        /// <summary>
         /// The snippet in which the resource is defined
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("snippet")]
         public Input<string>? Snippet { get; set; }
@@ -412,8 +390,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The folder in which the resource is defined
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("folder")]
         public Input<string>? Folder { get; set; }
@@ -425,15 +401,7 @@ namespace Pulumi.Scm
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// Routing stack
-        /// </summary>
-        [Input("routingStack")]
-        public Input<string>? RoutingStack { get; set; }
-
-        /// <summary>
         /// The snippet in which the resource is defined
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("snippet")]
         public Input<string>? Snippet { get; set; }

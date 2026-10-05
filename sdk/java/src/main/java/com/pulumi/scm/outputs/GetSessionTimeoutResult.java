@@ -16,14 +16,30 @@ public final class GetSessionTimeoutResult {
      * 
      */
     private String device;
+    /**
+     * @return The folder in which the resource is defined
+     * 
+     */
     private String folder;
     /**
      * @return UUID of the resource
      * 
      */
     private String id;
+    /**
+     * @return Session timeouts
+     * 
+     */
     private GetSessionTimeoutSessionTimeouts sessionTimeouts;
+    /**
+     * @return The snippet in which the resource is defined
+     * 
+     */
     private String snippet;
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     private String tfid;
 
     private GetSessionTimeoutResult() {}
@@ -34,6 +50,10 @@ public final class GetSessionTimeoutResult {
     public String device() {
         return this.device;
     }
+    /**
+     * @return The folder in which the resource is defined
+     * 
+     */
     public String folder() {
         return this.folder;
     }
@@ -44,12 +64,24 @@ public final class GetSessionTimeoutResult {
     public String id() {
         return this.id;
     }
+    /**
+     * @return Session timeouts
+     * 
+     */
     public GetSessionTimeoutSessionTimeouts sessionTimeouts() {
         return this.sessionTimeouts;
     }
+    /**
+     * @return The snippet in which the resource is defined
+     * 
+     */
     public String snippet() {
         return this.snippet;
     }
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     public String tfid() {
         return this.tfid;
     }

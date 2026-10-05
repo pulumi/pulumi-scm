@@ -18,7 +18,7 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly ImmutableArray<Outputs.GetLogicalRouterListDataVrfBgpPolicyConditionalAdvertisementPolicyAdvertiseFilterMatchAddressPrefixResult> AddressPrefixes;
         /// <summary>
-        /// Afi
+        /// Afi. Possible values are `Ip` and `Ipv6`.
         /// </summary>
         public readonly string Afi;
         /// <summary>
@@ -46,11 +46,11 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly ImmutableArray<string> Nexthops;
         /// <summary>
-        /// Route table
+        /// Route table. Possible values are `Unicast`, `Multicast` and `Both`.
         /// </summary>
         public readonly string RouteTable;
         /// <summary>
-        /// Safi
+        /// Safi. Possible values are `Ip` and `Ipv6`.
         /// </summary>
         public readonly string Safi;
 

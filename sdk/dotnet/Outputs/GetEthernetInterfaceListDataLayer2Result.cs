@@ -14,7 +14,7 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetEthernetInterfaceListDataLayer2Result
     {
         /// <summary>
-        /// LLDP Settings
+        /// LLDP settings for the interface
         /// </summary>
         public readonly Outputs.GetEthernetInterfaceListDataLayer2LldpResult Lldp;
         /// <summary>

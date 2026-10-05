@@ -19,8 +19,6 @@ namespace Pulumi.Scm.Outputs
         public readonly Outputs.BgpRouteMapRedistributionOspfBgp? Bgp;
         /// <summary>
         /// Rib
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Bgp` and `Rib`.
         /// </summary>
         public readonly Outputs.BgpRouteMapRedistributionOspfRib? Rib;
 

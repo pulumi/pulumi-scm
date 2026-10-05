@@ -116,13 +116,11 @@ export class AntiSpywareSignature extends pulumi.CustomResource {
      */
     declare public readonly device: pulumi.Output<string | undefined>;
     /**
-     * Direction
+     * Direction. Possible values are `client2server`, `server2client` and `both`.
      */
     declare public readonly direction: pulumi.Output<string | undefined>;
     /**
      * The folder in which the resource is defined
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly folder: pulumi.Output<string | undefined>;
     /**
@@ -130,7 +128,7 @@ export class AntiSpywareSignature extends pulumi.CustomResource {
      */
     declare public readonly references: pulumi.Output<string[] | undefined>;
     /**
-     * Severity
+     * Severity. Possible values are `critical`, `low`, `high`, `medium` and `informational`.
      */
     declare public readonly severity: pulumi.Output<string | undefined>;
     /**
@@ -139,8 +137,6 @@ export class AntiSpywareSignature extends pulumi.CustomResource {
     declare public readonly signature: pulumi.Output<outputs.AntiSpywareSignatureSignature | undefined>;
     /**
      * The snippet in which the resource is defined
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly snippet: pulumi.Output<string | undefined>;
     /**
@@ -242,13 +238,11 @@ export interface AntiSpywareSignatureState {
      */
     device?: pulumi.Input<string | undefined>;
     /**
-     * Direction
+     * Direction. Possible values are `client2server`, `server2client` and `both`.
      */
     direction?: pulumi.Input<string | undefined>;
     /**
      * The folder in which the resource is defined
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     folder?: pulumi.Input<string | undefined>;
     /**
@@ -256,7 +250,7 @@ export interface AntiSpywareSignatureState {
      */
     references?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
-     * Severity
+     * Severity. Possible values are `critical`, `low`, `high`, `medium` and `informational`.
      */
     severity?: pulumi.Input<string | undefined>;
     /**
@@ -265,8 +259,6 @@ export interface AntiSpywareSignatureState {
     signature?: pulumi.Input<inputs.AntiSpywareSignatureSignature | undefined>;
     /**
      * The snippet in which the resource is defined
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     snippet?: pulumi.Input<string | undefined>;
     /**
@@ -312,13 +304,11 @@ export interface AntiSpywareSignatureArgs {
      */
     device?: pulumi.Input<string | undefined>;
     /**
-     * Direction
+     * Direction. Possible values are `client2server`, `server2client` and `both`.
      */
     direction?: pulumi.Input<string | undefined>;
     /**
      * The folder in which the resource is defined
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     folder?: pulumi.Input<string | undefined>;
     /**
@@ -326,7 +316,7 @@ export interface AntiSpywareSignatureArgs {
      */
     references?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
-     * Severity
+     * Severity. Possible values are `critical`, `low`, `high`, `medium` and `informational`.
      */
     severity?: pulumi.Input<string | undefined>;
     /**
@@ -335,8 +325,6 @@ export interface AntiSpywareSignatureArgs {
     signature?: pulumi.Input<inputs.AntiSpywareSignatureSignature | undefined>;
     /**
      * The snippet in which the resource is defined
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     snippet?: pulumi.Input<string | undefined>;
     /**

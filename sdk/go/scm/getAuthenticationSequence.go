@@ -54,25 +54,34 @@ func LookupAuthenticationSequence(ctx *pulumi.Context, args *LookupAuthenticatio
 type LookupAuthenticationSequenceArgs struct {
 	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
+	// The folder in which the resource is defined
 	Folder *string `pulumi:"folder"`
 	// The UUID of the authentication sequence
-	Id      string  `pulumi:"id"`
-	Name    *string `pulumi:"name"`
+	Id string `pulumi:"id"`
+	// The name of the authentication sequence
+	Name *string `pulumi:"name"`
+	// The snippet in which the resource is defined
 	Snippet *string `pulumi:"snippet"`
 }
 
 // A collection of values returned by getAuthenticationSequence.
 type LookupAuthenticationSequenceResult struct {
+	// An ordered list of authentication profiles
 	AuthenticationProfiles []string `pulumi:"authenticationProfiles"`
 	// The device in which the resource is defined
 	Device string `pulumi:"device"`
+	// The folder in which the resource is defined
 	Folder string `pulumi:"folder"`
 	// The UUID of the authentication sequence
-	Id                   string `pulumi:"id"`
-	Name                 string `pulumi:"name"`
-	Snippet              string `pulumi:"snippet"`
-	Tfid                 string `pulumi:"tfid"`
-	UseDomainFindProfile bool   `pulumi:"useDomainFindProfile"`
+	Id string `pulumi:"id"`
+	// The name of the authentication sequence
+	Name string `pulumi:"name"`
+	// The snippet in which the resource is defined
+	Snippet string `pulumi:"snippet"`
+	// The Terraform ID.
+	Tfid string `pulumi:"tfid"`
+	// Use domain to determine authentication profile?
+	UseDomainFindProfile bool `pulumi:"useDomainFindProfile"`
 }
 
 func LookupAuthenticationSequenceOutput(ctx *pulumi.Context, args LookupAuthenticationSequenceOutputArgs, opts ...pulumi.InvokeOption) LookupAuthenticationSequenceResultOutput {
@@ -84,10 +93,13 @@ func LookupAuthenticationSequenceOutput(ctx *pulumi.Context, args LookupAuthenti
 type LookupAuthenticationSequenceOutputArgs struct {
 	// The device in which the resource is defined
 	Device pulumi.StringPtrInput `pulumi:"device"`
+	// The folder in which the resource is defined
 	Folder pulumi.StringPtrInput `pulumi:"folder"`
 	// The UUID of the authentication sequence
-	Id      pulumi.StringInput    `pulumi:"id"`
-	Name    pulumi.StringPtrInput `pulumi:"name"`
+	Id pulumi.StringInput `pulumi:"id"`
+	// The name of the authentication sequence
+	Name pulumi.StringPtrInput `pulumi:"name"`
+	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrInput `pulumi:"snippet"`
 }
 
@@ -110,6 +122,7 @@ func (o LookupAuthenticationSequenceResultOutput) ToLookupAuthenticationSequence
 	return o
 }
 
+// An ordered list of authentication profiles
 func (o LookupAuthenticationSequenceResultOutput) AuthenticationProfiles() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupAuthenticationSequenceResult) []string { return v.AuthenticationProfiles }).(pulumi.StringArrayOutput)
 }
@@ -119,6 +132,7 @@ func (o LookupAuthenticationSequenceResultOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupAuthenticationSequenceResult) string { return v.Device }).(pulumi.StringOutput)
 }
 
+// The folder in which the resource is defined
 func (o LookupAuthenticationSequenceResultOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupAuthenticationSequenceResult) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -128,18 +142,22 @@ func (o LookupAuthenticationSequenceResultOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupAuthenticationSequenceResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
+// The name of the authentication sequence
 func (o LookupAuthenticationSequenceResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupAuthenticationSequenceResult) string { return v.Name }).(pulumi.StringOutput)
 }
 
+// The snippet in which the resource is defined
 func (o LookupAuthenticationSequenceResultOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupAuthenticationSequenceResult) string { return v.Snippet }).(pulumi.StringOutput)
 }
 
+// The Terraform ID.
 func (o LookupAuthenticationSequenceResultOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupAuthenticationSequenceResult) string { return v.Tfid }).(pulumi.StringOutput)
 }
 
+// Use domain to determine authentication profile?
 func (o LookupAuthenticationSequenceResultOutput) UseDomainFindProfile() pulumi.BoolOutput {
 	return o.ApplyT(func(v LookupAuthenticationSequenceResult) bool { return v.UseDomainFindProfile }).(pulumi.BoolOutput)
 }

@@ -97,21 +97,19 @@ export class IkeCryptoProfile extends pulumi.CustomResource {
      */
     declare public readonly device: pulumi.Output<string | undefined>;
     /**
-     * Dh group
+     * Dh group. Possible values are `group1`, `group2`, `group5`, `group14`, `group19`, `group20`, `group21`, `ml-kem-512`, `ml-kem-768` and `ml-kem-1024`.
      */
     declare public readonly dhGroups: pulumi.Output<string[]>;
     /**
-     * Encryption algorithm
+     * Encryption algorithm. Possible values are `des`, `3des`, `aes-128-cbc`, `aes-192-cbc`, `aes-256-cbc`, `aes-128-gcm` and `aes-256-gcm`.
      */
     declare public readonly encryptions: pulumi.Output<string[]>;
     /**
      * The folder in which the resource is defined
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly folder: pulumi.Output<string | undefined>;
     /**
-     * Hash
+     * Hash. Possible values are `md5`, `sha1`, `sha256`, `sha384`, `sha512` and `non-auth`.
      */
     declare public readonly hashes: pulumi.Output<string[]>;
     /**
@@ -124,8 +122,6 @@ export class IkeCryptoProfile extends pulumi.CustomResource {
     declare public readonly name: pulumi.Output<string>;
     /**
      * The snippet in which the resource is defined
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly snippet: pulumi.Output<string | undefined>;
     /**
@@ -196,21 +192,19 @@ export interface IkeCryptoProfileState {
      */
     device?: pulumi.Input<string | undefined>;
     /**
-     * Dh group
+     * Dh group. Possible values are `group1`, `group2`, `group5`, `group14`, `group19`, `group20`, `group21`, `ml-kem-512`, `ml-kem-768` and `ml-kem-1024`.
      */
     dhGroups?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
-     * Encryption algorithm
+     * Encryption algorithm. Possible values are `des`, `3des`, `aes-128-cbc`, `aes-192-cbc`, `aes-256-cbc`, `aes-128-gcm` and `aes-256-gcm`.
      */
     encryptions?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * The folder in which the resource is defined
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     folder?: pulumi.Input<string | undefined>;
     /**
-     * Hash
+     * Hash. Possible values are `md5`, `sha1`, `sha256`, `sha384`, `sha512` and `non-auth`.
      */
     hashes?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
@@ -223,8 +217,6 @@ export interface IkeCryptoProfileState {
     name?: pulumi.Input<string | undefined>;
     /**
      * The snippet in which the resource is defined
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     snippet?: pulumi.Input<string | undefined>;
     /**
@@ -246,21 +238,19 @@ export interface IkeCryptoProfileArgs {
      */
     device?: pulumi.Input<string | undefined>;
     /**
-     * Dh group
+     * Dh group. Possible values are `group1`, `group2`, `group5`, `group14`, `group19`, `group20`, `group21`, `ml-kem-512`, `ml-kem-768` and `ml-kem-1024`.
      */
     dhGroups: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * Encryption algorithm
+     * Encryption algorithm. Possible values are `des`, `3des`, `aes-128-cbc`, `aes-192-cbc`, `aes-256-cbc`, `aes-128-gcm` and `aes-256-gcm`.
      */
     encryptions: pulumi.Input<pulumi.Input<string>[]>;
     /**
      * The folder in which the resource is defined
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     folder?: pulumi.Input<string | undefined>;
     /**
-     * Hash
+     * Hash. Possible values are `md5`, `sha1`, `sha256`, `sha384`, `sha512` and `non-auth`.
      */
     hashes: pulumi.Input<pulumi.Input<string>[]>;
     /**
@@ -273,8 +263,6 @@ export interface IkeCryptoProfileArgs {
     name?: pulumi.Input<string | undefined>;
     /**
      * The snippet in which the resource is defined
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     snippet?: pulumi.Input<string | undefined>;
 }

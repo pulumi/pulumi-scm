@@ -14,15 +14,15 @@ namespace Pulumi.Scm.Outputs
     public sealed class SecurityRuleAllowUrlCategory
     {
         /// <summary>
-        /// Additional action
+        /// Additional action. Possible values are `None`, `Continue`, `Redirect` and `Isolate`.
         /// </summary>
         public readonly string? AdditionalAction;
         /// <summary>
-        /// Credential enforcement
+        /// Credential enforcement. Possible values are `Enabled` and `Disabled`.
         /// </summary>
         public readonly string? CredentialEnforcement;
         /// <summary>
-        /// Decryption
+        /// Decryption. Possible values are `Enabled` and `Disabled`.
         /// </summary>
         public readonly string? Decryption;
         /// <summary>

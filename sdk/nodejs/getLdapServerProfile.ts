@@ -48,12 +48,21 @@ export interface GetLdapServerProfileArgs {
      * The device in which the resource is defined
      */
     device?: string;
+    /**
+     * The folder in which the resource is defined
+     */
     folder?: string;
     /**
      * The UUID of the LDAP server profile
      */
     id: string;
+    /**
+     * The name of the LDAP server profile
+     */
     name?: string;
+    /**
+     * The snippet in which the resource is defined
+     */
     snippet?: string;
 }
 
@@ -61,28 +70,73 @@ export interface GetLdapServerProfileArgs {
  * A collection of values returned by getLdapServerProfile.
  */
 export interface GetLdapServerProfileResult {
+    /**
+     * The base DN
+     */
     readonly base: string;
+    /**
+     * The bind DN
+     */
     readonly bindDn: string;
+    /**
+     * The bind password
+     */
     readonly bindPassword: string;
+    /**
+     * The bind timeout (seconds)
+     */
     readonly bindTimelimit: string;
     /**
      * The device in which the resource is defined
      */
     readonly device: string;
+    /**
+     * Map of sensitive values returned from the API.
+     */
     readonly encryptedValues: {[key: string]: string};
+    /**
+     * The folder in which the resource is defined
+     */
     readonly folder: string;
     /**
      * The UUID of the LDAP server profile
      */
     readonly id: string;
+    /**
+     * The LDAP server time. Possible values are `active-directory`, `e-directory`, `sun` and `other`.
+     */
     readonly ldapType: string;
+    /**
+     * The name of the LDAP server profile
+     */
     readonly name: string;
+    /**
+     * The search retry interval (seconds)
+     */
     readonly retryInterval: number;
+    /**
+     * The LDAP server configuration
+     */
     readonly servers: outputs.GetLdapServerProfileServer[];
+    /**
+     * The snippet in which the resource is defined
+     */
     readonly snippet: string;
+    /**
+     * Require SSL/TLS secured connection?
+     */
     readonly ssl: boolean;
+    /**
+     * The Terraform ID.
+     */
     readonly tfid: string;
+    /**
+     * The search timeout (seconds)
+     */
     readonly timelimit: number;
+    /**
+     * Verify server certificate for SSL sessions?
+     */
     readonly verifyServerCertificate: boolean;
 }
 /**
@@ -127,11 +181,20 @@ export interface GetLdapServerProfileOutputArgs {
      * The device in which the resource is defined
      */
     device?: pulumi.Input<string | undefined>;
+    /**
+     * The folder in which the resource is defined
+     */
     folder?: pulumi.Input<string | undefined>;
     /**
      * The UUID of the LDAP server profile
      */
     id: pulumi.Input<string>;
+    /**
+     * The name of the LDAP server profile
+     */
     name?: pulumi.Input<string | undefined>;
+    /**
+     * The snippet in which the resource is defined
+     */
     snippet?: pulumi.Input<string | undefined>;
 }

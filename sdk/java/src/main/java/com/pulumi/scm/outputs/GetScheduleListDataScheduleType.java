@@ -20,8 +20,6 @@ public final class GetScheduleListDataScheduleType {
     /**
      * @return Recurring
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `nonRecurring` and `recurring`.
-     * 
      */
     private GetScheduleListDataScheduleTypeRecurring recurring;
 
@@ -35,8 +33,6 @@ public final class GetScheduleListDataScheduleType {
     }
     /**
      * @return Recurring
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `nonRecurring` and `recurring`.
      * 
      */
     public GetScheduleListDataScheduleTypeRecurring recurring() {

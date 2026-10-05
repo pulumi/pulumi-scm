@@ -60,25 +60,34 @@ func LookupSyslogServerProfile(ctx *pulumi.Context, args *LookupSyslogServerProf
 type LookupSyslogServerProfileArgs struct {
 	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
+	// The folder in which the resource is defined
 	Folder *string `pulumi:"folder"`
 	// The UUID of the syslog server profile
-	Id      string  `pulumi:"id"`
-	Name    *string `pulumi:"name"`
+	Id string `pulumi:"id"`
+	// The name of the syslog server profile
+	Name *string `pulumi:"name"`
+	// The snippet in which the resource is defined
 	Snippet *string `pulumi:"snippet"`
 }
 
 // A collection of values returned by getSyslogServerProfile.
 type LookupSyslogServerProfileResult struct {
 	// The device in which the resource is defined
-	Device string                       `pulumi:"device"`
-	Folder string                       `pulumi:"folder"`
+	Device string `pulumi:"device"`
+	// The folder in which the resource is defined
+	Folder string `pulumi:"folder"`
+	// Format
 	Format GetSyslogServerProfileFormat `pulumi:"format"`
 	// The UUID of the syslog server profile
-	Id      string                         `pulumi:"id"`
-	Name    string                         `pulumi:"name"`
+	Id string `pulumi:"id"`
+	// The name of the syslog server profile
+	Name string `pulumi:"name"`
+	// A list of syslog server configurations. At least one server is required.
 	Servers []GetSyslogServerProfileServer `pulumi:"servers"`
-	Snippet string                         `pulumi:"snippet"`
-	Tfid    string                         `pulumi:"tfid"`
+	// The snippet in which the resource is defined
+	Snippet string `pulumi:"snippet"`
+	// The Terraform ID.
+	Tfid string `pulumi:"tfid"`
 }
 
 func LookupSyslogServerProfileOutput(ctx *pulumi.Context, args LookupSyslogServerProfileOutputArgs, opts ...pulumi.InvokeOption) LookupSyslogServerProfileResultOutput {
@@ -90,10 +99,13 @@ func LookupSyslogServerProfileOutput(ctx *pulumi.Context, args LookupSyslogServe
 type LookupSyslogServerProfileOutputArgs struct {
 	// The device in which the resource is defined
 	Device pulumi.StringPtrInput `pulumi:"device"`
+	// The folder in which the resource is defined
 	Folder pulumi.StringPtrInput `pulumi:"folder"`
 	// The UUID of the syslog server profile
-	Id      pulumi.StringInput    `pulumi:"id"`
-	Name    pulumi.StringPtrInput `pulumi:"name"`
+	Id pulumi.StringInput `pulumi:"id"`
+	// The name of the syslog server profile
+	Name pulumi.StringPtrInput `pulumi:"name"`
+	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrInput `pulumi:"snippet"`
 }
 
@@ -121,10 +133,12 @@ func (o LookupSyslogServerProfileResultOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupSyslogServerProfileResult) string { return v.Device }).(pulumi.StringOutput)
 }
 
+// The folder in which the resource is defined
 func (o LookupSyslogServerProfileResultOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupSyslogServerProfileResult) string { return v.Folder }).(pulumi.StringOutput)
 }
 
+// Format
 func (o LookupSyslogServerProfileResultOutput) Format() GetSyslogServerProfileFormatOutput {
 	return o.ApplyT(func(v LookupSyslogServerProfileResult) GetSyslogServerProfileFormat { return v.Format }).(GetSyslogServerProfileFormatOutput)
 }
@@ -134,18 +148,22 @@ func (o LookupSyslogServerProfileResultOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupSyslogServerProfileResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
+// The name of the syslog server profile
 func (o LookupSyslogServerProfileResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupSyslogServerProfileResult) string { return v.Name }).(pulumi.StringOutput)
 }
 
+// A list of syslog server configurations. At least one server is required.
 func (o LookupSyslogServerProfileResultOutput) Servers() GetSyslogServerProfileServerArrayOutput {
 	return o.ApplyT(func(v LookupSyslogServerProfileResult) []GetSyslogServerProfileServer { return v.Servers }).(GetSyslogServerProfileServerArrayOutput)
 }
 
+// The snippet in which the resource is defined
 func (o LookupSyslogServerProfileResultOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupSyslogServerProfileResult) string { return v.Snippet }).(pulumi.StringOutput)
 }
 
+// The Terraform ID.
 func (o LookupSyslogServerProfileResultOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupSyslogServerProfileResult) string { return v.Tfid }).(pulumi.StringOutput)
 }

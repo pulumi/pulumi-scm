@@ -125,14 +125,14 @@ public final class AutoVpnClusterState extends com.pulumi.resources.ResourceArgs
     }
 
     /**
-     * VPN cluster type
+     * VPN cluster type. Possible values are `hub-spoke` and `mesh`.
      * 
      */
     @Import(name="type")
     private @Nullable Output<String> type;
 
     /**
-     * @return VPN cluster type
+     * @return VPN cluster type. Possible values are `hub-spoke` and `mesh`.
      * 
      */
     public Optional<Output<String>> type() {
@@ -338,7 +338,7 @@ public final class AutoVpnClusterState extends com.pulumi.resources.ResourceArgs
         }
 
         /**
-         * @param type VPN cluster type
+         * @param type VPN cluster type. Possible values are `hub-spoke` and `mesh`.
          * 
          * @return builder
          * 
@@ -349,7 +349,7 @@ public final class AutoVpnClusterState extends com.pulumi.resources.ResourceArgs
         }
 
         /**
-         * @param type VPN cluster type
+         * @param type VPN cluster type. Possible values are `hub-spoke` and `mesh`.
          * 
          * @return builder
          * 

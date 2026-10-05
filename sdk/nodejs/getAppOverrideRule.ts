@@ -38,12 +38,21 @@ export interface GetAppOverrideRuleArgs {
      * The device in which the resource is defined
      */
     device?: string;
+    /**
+     * The folder in which the resource is defined
+     */
     folder?: string;
     /**
      * UUID of the resource
      */
     id: string;
+    /**
+     * Name
+     */
     name?: string;
+    /**
+     * The snippet in which the resource is defined
+     */
     snippet?: string;
 }
 
@@ -51,33 +60,93 @@ export interface GetAppOverrideRuleArgs {
  * A collection of values returned by getAppOverrideRule.
  */
 export interface GetAppOverrideRuleResult {
+    /**
+     * Application
+     */
     readonly application: string;
+    /**
+     * Description
+     */
     readonly description: string;
+    /**
+     * Destination
+     */
     readonly destinations: string[];
     /**
      * The device in which the resource is defined
      */
     readonly device: string;
+    /**
+     * Disabled
+     */
     readonly disabled: boolean;
+    /**
+     * The folder in which the resource is defined
+     */
     readonly folder: string;
+    /**
+     * From
+     */
     readonly froms: string[];
+    /**
+     * Group tag
+     */
     readonly groupTag: string;
     /**
      * UUID of the resource
      */
     readonly id: string;
+    /**
+     * Name
+     */
     readonly name: string;
+    /**
+     * Negate destination
+     */
     readonly negateDestination: boolean;
+    /**
+     * Negate source
+     */
     readonly negateSource: boolean;
+    /**
+     * Port
+     */
     readonly port: string;
+    /**
+     * The position of a security rule. Possible values are `pre` and `post`.
+     */
     readonly position: string;
+    /**
+     * Protocol. Possible values are `tcp` and `udp`.
+     */
     readonly protocol: string;
+    /**
+     * Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
+     */
     readonly relativePosition: string;
+    /**
+     * The snippet in which the resource is defined
+     */
     readonly snippet: string;
+    /**
+     * Source
+     */
     readonly sources: string[];
+    /**
+     * Tag
+     */
     readonly tags: string[];
+    /**
+     * UUID of the rule to position this rule relative to. Required when `relativePosition` is `"before"` or `"after"`.
+     */
     readonly targetRule: string;
+    /**
+     * The Terraform ID.
+     */
     readonly tfid: string;
+    /**
+     * To
+     */
     readonly tos: string[];
 }
 /**
@@ -114,11 +183,20 @@ export interface GetAppOverrideRuleOutputArgs {
      * The device in which the resource is defined
      */
     device?: pulumi.Input<string | undefined>;
+    /**
+     * The folder in which the resource is defined
+     */
     folder?: pulumi.Input<string | undefined>;
     /**
      * UUID of the resource
      */
     id: pulumi.Input<string>;
+    /**
+     * Name
+     */
     name?: pulumi.Input<string | undefined>;
+    /**
+     * The snippet in which the resource is defined
+     */
     snippet?: pulumi.Input<string | undefined>;
 }

@@ -32,14 +32,14 @@ public final class LogicalRouterVrfOspfv3AreaTypeNssaDefaultRouteAdvertiseArgs e
     }
 
     /**
-     * Type
+     * Type. Possible values are `ext-1` and `ext-2`.
      * 
      */
     @Import(name="type")
     private @Nullable Output<String> type;
 
     /**
-     * @return Type
+     * @return Type. Possible values are `ext-1` and `ext-2`.
      * 
      */
     public Optional<Output<String>> type() {
@@ -93,7 +93,7 @@ public final class LogicalRouterVrfOspfv3AreaTypeNssaDefaultRouteAdvertiseArgs e
         }
 
         /**
-         * @param type Type
+         * @param type Type. Possible values are `ext-1` and `ext-2`.
          * 
          * @return builder
          * 
@@ -104,7 +104,7 @@ public final class LogicalRouterVrfOspfv3AreaTypeNssaDefaultRouteAdvertiseArgs e
         }
 
         /**
-         * @param type Type
+         * @param type Type. Possible values are `ext-1` and `ext-2`.
          * 
          * @return builder
          * 

@@ -28,7 +28,7 @@ class ForwardingProfileSourceApplicationArgs:
 
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] applications: List of application names to be included in this source application profile
         :param pulumi.Input[_builtins.str] description: fowarding profile source application description
-        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined. Possible values are `Mobile Users`.
         :param pulumi.Input[_builtins.str] name: The unique name identifying the source application. Must be alphanumeric with allowed characters [0-9a-zA-Z._-]
         """
         pulumi.set(__self__, "applications", applications)
@@ -67,7 +67,7 @@ class ForwardingProfileSourceApplicationArgs:
     @pulumi.getter
     def folder(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
-        The folder in which the resource is defined
+        The folder in which the resource is defined. Possible values are `Mobile Users`.
         """
         return pulumi.get(self, "folder")
 
@@ -101,7 +101,7 @@ class _ForwardingProfileSourceApplicationState:
 
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] applications: List of application names to be included in this source application profile
         :param pulumi.Input[_builtins.str] description: fowarding profile source application description
-        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined. Possible values are `Mobile Users`.
         :param pulumi.Input[_builtins.str] name: The unique name identifying the source application. Must be alphanumeric with allowed characters [0-9a-zA-Z._-]
         :param pulumi.Input[_builtins.str] tfid: The Terraform ID.
         """
@@ -144,7 +144,7 @@ class _ForwardingProfileSourceApplicationState:
     @pulumi.getter
     def folder(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
-        The folder in which the resource is defined
+        The folder in which the resource is defined. Possible values are `Mobile Users`.
         """
         return pulumi.get(self, "folder")
 
@@ -259,7 +259,7 @@ class ForwardingProfileSourceApplication(pulumi.CustomResource):
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] applications: List of application names to be included in this source application profile
         :param pulumi.Input[_builtins.str] description: fowarding profile source application description
-        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined. Possible values are `Mobile Users`.
         :param pulumi.Input[_builtins.str] name: The unique name identifying the source application. Must be alphanumeric with allowed characters [0-9a-zA-Z._-]
         """
         ...
@@ -394,7 +394,7 @@ class ForwardingProfileSourceApplication(pulumi.CustomResource):
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] applications: List of application names to be included in this source application profile
         :param pulumi.Input[_builtins.str] description: fowarding profile source application description
-        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined. Possible values are `Mobile Users`.
         :param pulumi.Input[_builtins.str] name: The unique name identifying the source application. Must be alphanumeric with allowed characters [0-9a-zA-Z._-]
         :param pulumi.Input[_builtins.str] tfid: The Terraform ID.
         """
@@ -429,7 +429,7 @@ class ForwardingProfileSourceApplication(pulumi.CustomResource):
     @pulumi.getter
     def folder(self) -> pulumi.Output[_builtins.str]:
         """
-        The folder in which the resource is defined
+        The folder in which the resource is defined. Possible values are `Mobile Users`.
         """
         return pulumi.get(self, "folder")
 

@@ -23,7 +23,7 @@ public final class GetServiceListData {
      */
     private String device;
     /**
-     * @return The folder of the item. Default: Shared.
+     * @return The folder in which the resource is defined
      * 
      */
     private String folder;
@@ -33,7 +33,7 @@ public final class GetServiceListData {
      */
     private String id;
     /**
-     * @return The name of the item.
+     * @return The name of the service
      * 
      */
     private String name;
@@ -43,7 +43,7 @@ public final class GetServiceListData {
      */
     private GetServiceListDataProtocol protocol;
     /**
-     * @return The snippet of the item.
+     * @return The snippet in which the resource is defined
      * 
      */
     private String snippet;
@@ -74,7 +74,7 @@ public final class GetServiceListData {
         return this.device;
     }
     /**
-     * @return The folder of the item. Default: Shared.
+     * @return The folder in which the resource is defined
      * 
      */
     public String folder() {
@@ -88,7 +88,7 @@ public final class GetServiceListData {
         return this.id;
     }
     /**
-     * @return The name of the item.
+     * @return The name of the service
      * 
      */
     public String name() {
@@ -102,7 +102,7 @@ public final class GetServiceListData {
         return this.protocol;
     }
     /**
-     * @return The snippet of the item.
+     * @return The snippet in which the resource is defined
      * 
      */
     public String snippet() {

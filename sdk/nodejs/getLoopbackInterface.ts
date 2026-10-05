@@ -47,12 +47,21 @@ export interface GetLoopbackInterfaceArgs {
      * The device in which the resource is defined
      */
     device?: string;
+    /**
+     * The folder in which the resource is defined
+     */
     folder?: string;
     /**
      * UUID of the resource loopback interface
      */
     id: string;
+    /**
+     * Loopback Interface name
+     */
     name?: string;
+    /**
+     * The snippet in which the resource is defined
+     */
     snippet?: string;
 }
 
@@ -60,24 +69,61 @@ export interface GetLoopbackInterfaceArgs {
  * A collection of values returned by getLoopbackInterface.
  */
 export interface GetLoopbackInterfaceResult {
+    /**
+     * TCP MSS adjustment settings for the interface
+     */
+    readonly adjustTcpMss: outputs.GetLoopbackInterfaceAdjustTcpMss;
+    /**
+     * Description for loopback interface
+     */
     readonly comment: string;
+    /**
+     * Default interface assignment for loopback interface
+     */
     readonly defaultValue: string;
     /**
      * The device in which the resource is defined
      */
     readonly device: string;
+    /**
+     * The folder in which the resource is defined
+     */
     readonly folder: string;
     /**
      * UUID of the resource loopback interface
      */
     readonly id: string;
+    /**
+     * Interface management profile for loopback interface
+     */
     readonly interfaceManagementProfile: string;
+    /**
+     * Loopback IP Parent
+     */
     readonly ips: outputs.GetLoopbackInterfaceIp[];
+    /**
+     * Loopback IPv6 Configuration
+     */
     readonly ipv6: outputs.GetLoopbackInterfaceIpv6;
+    /**
+     * MTU for loopback interface
+     */
     readonly mtu: number;
+    /**
+     * Loopback Interface name
+     */
     readonly name: string;
+    /**
+     * Name of Netflow Profile to assign to Interface
+     */
     readonly netflowProfile: string;
+    /**
+     * The snippet in which the resource is defined
+     */
     readonly snippet: string;
+    /**
+     * The Terraform ID.
+     */
     readonly tfid: string;
 }
 /**
@@ -121,11 +167,20 @@ export interface GetLoopbackInterfaceOutputArgs {
      * The device in which the resource is defined
      */
     device?: pulumi.Input<string | undefined>;
+    /**
+     * The folder in which the resource is defined
+     */
     folder?: pulumi.Input<string | undefined>;
     /**
      * UUID of the resource loopback interface
      */
     id: pulumi.Input<string>;
+    /**
+     * Loopback Interface name
+     */
     name?: pulumi.Input<string | undefined>;
+    /**
+     * The snippet in which the resource is defined
+     */
     snippet?: pulumi.Input<string | undefined>;
 }

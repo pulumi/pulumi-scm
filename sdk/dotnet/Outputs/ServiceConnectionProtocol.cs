@@ -17,11 +17,19 @@ namespace Pulumi.Scm.Outputs
         /// Bgp
         /// </summary>
         public readonly Outputs.ServiceConnectionProtocolBgp? Bgp;
+        /// <summary>
+        /// Bgp peer
+        /// </summary>
+        public readonly Outputs.ServiceConnectionProtocolBgpPeer? BgpPeer;
 
         [OutputConstructor]
-        private ServiceConnectionProtocol(Outputs.ServiceConnectionProtocolBgp? bgp)
+        private ServiceConnectionProtocol(
+            Outputs.ServiceConnectionProtocolBgp? bgp,
+
+            Outputs.ServiceConnectionProtocolBgpPeer? bgpPeer)
         {
             Bgp = bgp;
+            BgpPeer = bgpPeer;
         }
     }
 }

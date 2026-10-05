@@ -21,21 +21,15 @@ public final class GetApplicationListDataSignatureAndConditionOrConditionOperato
     /**
      * @return Greater than
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `equalTo`, `greaterThan`, `lessThan`, and `patternMatch`.
-     * 
      */
     private GetApplicationListDataSignatureAndConditionOrConditionOperatorGreaterThan greaterThan;
     /**
      * @return Less than
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `equalTo`, `greaterThan`, `lessThan`, and `patternMatch`.
-     * 
      */
     private GetApplicationListDataSignatureAndConditionOrConditionOperatorLessThan lessThan;
     /**
      * @return Pattern match
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `equalTo`, `greaterThan`, `lessThan`, and `patternMatch`.
      * 
      */
     private GetApplicationListDataSignatureAndConditionOrConditionOperatorPatternMatch patternMatch;
@@ -51,8 +45,6 @@ public final class GetApplicationListDataSignatureAndConditionOrConditionOperato
     /**
      * @return Greater than
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `equalTo`, `greaterThan`, `lessThan`, and `patternMatch`.
-     * 
      */
     public GetApplicationListDataSignatureAndConditionOrConditionOperatorGreaterThan greaterThan() {
         return this.greaterThan;
@@ -60,16 +52,12 @@ public final class GetApplicationListDataSignatureAndConditionOrConditionOperato
     /**
      * @return Less than
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `equalTo`, `greaterThan`, `lessThan`, and `patternMatch`.
-     * 
      */
     public GetApplicationListDataSignatureAndConditionOrConditionOperatorLessThan lessThan() {
         return this.lessThan;
     }
     /**
      * @return Pattern match
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `equalTo`, `greaterThan`, `lessThan`, and `patternMatch`.
      * 
      */
     public GetApplicationListDataSignatureAndConditionOrConditionOperatorPatternMatch patternMatch() {

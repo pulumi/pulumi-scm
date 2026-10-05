@@ -21,50 +21,51 @@ __all__ = ['DosProtectionRuleArgs', 'DosProtectionRule']
 @pulumi.input_type
 class DosProtectionRuleArgs:
     def __init__(__self__, *,
+                 from_: pulumi.Input['DosProtectionRuleFromArgs'],
+                 protection: pulumi.Input['DosProtectionRuleProtectionArgs'],
+                 services: pulumi.Input[Sequence[pulumi.Input[_builtins.str]]],
+                 sources: pulumi.Input[Sequence[pulumi.Input[_builtins.str]]],
+                 to: pulumi.Input['DosProtectionRuleToArgs'],
                  action: pulumi.Input[Optional['DosProtectionRuleActionArgs']] = None,
                  description: pulumi.Input[Optional[_builtins.str]] = None,
                  destinations: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  device: pulumi.Input[Optional[_builtins.str]] = None,
                  disabled: pulumi.Input[Optional[_builtins.bool]] = None,
                  folder: pulumi.Input[Optional[_builtins.str]] = None,
-                 froms: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  log_setting: pulumi.Input[Optional[_builtins.str]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
                  position: pulumi.Input[Optional[_builtins.str]] = None,
-                 protection: pulumi.Input[Optional['DosProtectionRuleProtectionArgs']] = None,
                  schedule: pulumi.Input[Optional[_builtins.str]] = None,
-                 services: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  snippet: pulumi.Input[Optional[_builtins.str]] = None,
                  source_users: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 sources: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 tags: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 tos: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None):
+                 tags: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None):
         """
         The set of arguments for constructing a DosProtectionRule resource.
 
+        :param pulumi.Input['DosProtectionRuleFromArgs'] from_: Source zones and interfaces
+        :param pulumi.Input['DosProtectionRuleProtectionArgs'] protection: Protection
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] services: List of services
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] sources: List of source addresses
+        :param pulumi.Input['DosProtectionRuleToArgs'] to: Destination zones and interfaces
         :param pulumi.Input['DosProtectionRuleActionArgs'] action: The action to take on rule match
         :param pulumi.Input[_builtins.str] description: Description
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] destinations: List of destination addresses
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input[_builtins.bool] disabled: Rule disabled?
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] froms: List of source zones
         :param pulumi.Input[_builtins.str] log_setting: Log forwarding profile name
         :param pulumi.Input[_builtins.str] name: Rule name
-        :param pulumi.Input[_builtins.str] position: Position relative to local device rules
-        :param pulumi.Input['DosProtectionRuleProtectionArgs'] protection: Protection
+        :param pulumi.Input[_builtins.str] position: Position relative to local device rules. Possible values are `pre` and `post`.
         :param pulumi.Input[_builtins.str] schedule: Schedule on which to enforce the rule
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] services: List of services
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] source_users: List of source users and/or groups.  Reserved words include `any`, `pre-login`, `known-user`, and `unknown`.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] sources: List of source addresses
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tags: List of tags
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tos: List of destination zones
         """
+        pulumi.set(__self__, "from_", from_)
+        pulumi.set(__self__, "protection", protection)
+        pulumi.set(__self__, "services", services)
+        pulumi.set(__self__, "sources", sources)
+        pulumi.set(__self__, "to", to)
         if action is not None:
             pulumi.set(__self__, "action", action)
         if description is not None:
@@ -77,30 +78,80 @@ class DosProtectionRuleArgs:
             pulumi.set(__self__, "disabled", disabled)
         if folder is not None:
             pulumi.set(__self__, "folder", folder)
-        if froms is not None:
-            pulumi.set(__self__, "froms", froms)
         if log_setting is not None:
             pulumi.set(__self__, "log_setting", log_setting)
         if name is not None:
             pulumi.set(__self__, "name", name)
         if position is not None:
             pulumi.set(__self__, "position", position)
-        if protection is not None:
-            pulumi.set(__self__, "protection", protection)
         if schedule is not None:
             pulumi.set(__self__, "schedule", schedule)
-        if services is not None:
-            pulumi.set(__self__, "services", services)
         if snippet is not None:
             pulumi.set(__self__, "snippet", snippet)
         if source_users is not None:
             pulumi.set(__self__, "source_users", source_users)
-        if sources is not None:
-            pulumi.set(__self__, "sources", sources)
         if tags is not None:
             pulumi.set(__self__, "tags", tags)
-        if tos is not None:
-            pulumi.set(__self__, "tos", tos)
+
+    @_builtins.property
+    @pulumi.getter(name="from")
+    def from_(self) -> pulumi.Input['DosProtectionRuleFromArgs']:
+        """
+        Source zones and interfaces
+        """
+        return pulumi.get(self, "from_")
+
+    @from_.setter
+    def from_(self, value: pulumi.Input['DosProtectionRuleFromArgs']):
+        pulumi.set(self, "from_", value)
+
+    @_builtins.property
+    @pulumi.getter
+    def protection(self) -> pulumi.Input['DosProtectionRuleProtectionArgs']:
+        """
+        Protection
+        """
+        return pulumi.get(self, "protection")
+
+    @protection.setter
+    def protection(self, value: pulumi.Input['DosProtectionRuleProtectionArgs']):
+        pulumi.set(self, "protection", value)
+
+    @_builtins.property
+    @pulumi.getter
+    def services(self) -> pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]:
+        """
+        List of services
+        """
+        return pulumi.get(self, "services")
+
+    @services.setter
+    def services(self, value: pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]):
+        pulumi.set(self, "services", value)
+
+    @_builtins.property
+    @pulumi.getter
+    def sources(self) -> pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]:
+        """
+        List of source addresses
+        """
+        return pulumi.get(self, "sources")
+
+    @sources.setter
+    def sources(self, value: pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]):
+        pulumi.set(self, "sources", value)
+
+    @_builtins.property
+    @pulumi.getter
+    def to(self) -> pulumi.Input['DosProtectionRuleToArgs']:
+        """
+        Destination zones and interfaces
+        """
+        return pulumi.get(self, "to")
+
+    @to.setter
+    def to(self, value: pulumi.Input['DosProtectionRuleToArgs']):
+        pulumi.set(self, "to", value)
 
     @_builtins.property
     @pulumi.getter
@@ -167,26 +218,12 @@ class DosProtectionRuleArgs:
     def folder(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
-
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
 
     @folder.setter
     def folder(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "folder", value)
-
-    @_builtins.property
-    @pulumi.getter
-    def froms(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
-        """
-        List of source zones
-        """
-        return pulumi.get(self, "froms")
-
-    @froms.setter
-    def froms(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
-        pulumi.set(self, "froms", value)
 
     @_builtins.property
     @pulumi.getter(name="logSetting")
@@ -216,25 +253,13 @@ class DosProtectionRuleArgs:
     @pulumi.getter
     def position(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
-        Position relative to local device rules
+        Position relative to local device rules. Possible values are `pre` and `post`.
         """
         return pulumi.get(self, "position")
 
     @position.setter
     def position(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "position", value)
-
-    @_builtins.property
-    @pulumi.getter
-    def protection(self) -> pulumi.Input[Optional['DosProtectionRuleProtectionArgs']]:
-        """
-        Protection
-        """
-        return pulumi.get(self, "protection")
-
-    @protection.setter
-    def protection(self, value: pulumi.Input[Optional['DosProtectionRuleProtectionArgs']]):
-        pulumi.set(self, "protection", value)
 
     @_builtins.property
     @pulumi.getter
@@ -250,23 +275,9 @@ class DosProtectionRuleArgs:
 
     @_builtins.property
     @pulumi.getter
-    def services(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
-        """
-        List of services
-        """
-        return pulumi.get(self, "services")
-
-    @services.setter
-    def services(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
-        pulumi.set(self, "services", value)
-
-    @_builtins.property
-    @pulumi.getter
     def snippet(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
-
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
 
@@ -288,18 +299,6 @@ class DosProtectionRuleArgs:
 
     @_builtins.property
     @pulumi.getter
-    def sources(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
-        """
-        List of source addresses
-        """
-        return pulumi.get(self, "sources")
-
-    @sources.setter
-    def sources(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
-        pulumi.set(self, "sources", value)
-
-    @_builtins.property
-    @pulumi.getter
     def tags(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         List of tags
@@ -309,18 +308,6 @@ class DosProtectionRuleArgs:
     @tags.setter
     def tags(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "tags", value)
-
-    @_builtins.property
-    @pulumi.getter
-    def tos(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
-        """
-        List of destination zones
-        """
-        return pulumi.get(self, "tos")
-
-    @tos.setter
-    def tos(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
-        pulumi.set(self, "tos", value)
 
 
 @pulumi.input_type
@@ -332,7 +319,7 @@ class _DosProtectionRuleState:
                  device: pulumi.Input[Optional[_builtins.str]] = None,
                  disabled: pulumi.Input[Optional[_builtins.bool]] = None,
                  folder: pulumi.Input[Optional[_builtins.str]] = None,
-                 froms: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 from_: pulumi.Input[Optional['DosProtectionRuleFromArgs']] = None,
                  log_setting: pulumi.Input[Optional[_builtins.str]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
                  position: pulumi.Input[Optional[_builtins.str]] = None,
@@ -344,7 +331,7 @@ class _DosProtectionRuleState:
                  sources: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  tags: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  tfid: pulumi.Input[Optional[_builtins.str]] = None,
-                 tos: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None):
+                 to: pulumi.Input[Optional['DosProtectionRuleToArgs']] = None):
         """
         Input properties used for looking up and filtering DosProtectionRule resources.
 
@@ -354,23 +341,19 @@ class _DosProtectionRuleState:
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input[_builtins.bool] disabled: Rule disabled?
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] froms: List of source zones
+        :param pulumi.Input['DosProtectionRuleFromArgs'] from_: Source zones and interfaces
         :param pulumi.Input[_builtins.str] log_setting: Log forwarding profile name
         :param pulumi.Input[_builtins.str] name: Rule name
-        :param pulumi.Input[_builtins.str] position: Position relative to local device rules
+        :param pulumi.Input[_builtins.str] position: Position relative to local device rules. Possible values are `pre` and `post`.
         :param pulumi.Input['DosProtectionRuleProtectionArgs'] protection: Protection
         :param pulumi.Input[_builtins.str] schedule: Schedule on which to enforce the rule
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] services: List of services
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] source_users: List of source users and/or groups.  Reserved words include `any`, `pre-login`, `known-user`, and `unknown`.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] sources: List of source addresses
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tags: List of tags
         :param pulumi.Input[_builtins.str] tfid: The Terraform ID.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tos: List of destination zones
+        :param pulumi.Input['DosProtectionRuleToArgs'] to: Destination zones and interfaces
         """
         if action is not None:
             pulumi.set(__self__, "action", action)
@@ -384,8 +367,8 @@ class _DosProtectionRuleState:
             pulumi.set(__self__, "disabled", disabled)
         if folder is not None:
             pulumi.set(__self__, "folder", folder)
-        if froms is not None:
-            pulumi.set(__self__, "froms", froms)
+        if from_ is not None:
+            pulumi.set(__self__, "from_", from_)
         if log_setting is not None:
             pulumi.set(__self__, "log_setting", log_setting)
         if name is not None:
@@ -408,8 +391,8 @@ class _DosProtectionRuleState:
             pulumi.set(__self__, "tags", tags)
         if tfid is not None:
             pulumi.set(__self__, "tfid", tfid)
-        if tos is not None:
-            pulumi.set(__self__, "tos", tos)
+        if to is not None:
+            pulumi.set(__self__, "to", to)
 
     @_builtins.property
     @pulumi.getter
@@ -476,8 +459,6 @@ class _DosProtectionRuleState:
     def folder(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
-
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
 
@@ -486,16 +467,16 @@ class _DosProtectionRuleState:
         pulumi.set(self, "folder", value)
 
     @_builtins.property
-    @pulumi.getter
-    def froms(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
+    @pulumi.getter(name="from")
+    def from_(self) -> pulumi.Input[Optional['DosProtectionRuleFromArgs']]:
         """
-        List of source zones
+        Source zones and interfaces
         """
-        return pulumi.get(self, "froms")
+        return pulumi.get(self, "from_")
 
-    @froms.setter
-    def froms(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
-        pulumi.set(self, "froms", value)
+    @from_.setter
+    def from_(self, value: pulumi.Input[Optional['DosProtectionRuleFromArgs']]):
+        pulumi.set(self, "from_", value)
 
     @_builtins.property
     @pulumi.getter(name="logSetting")
@@ -525,7 +506,7 @@ class _DosProtectionRuleState:
     @pulumi.getter
     def position(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
-        Position relative to local device rules
+        Position relative to local device rules. Possible values are `pre` and `post`.
         """
         return pulumi.get(self, "position")
 
@@ -574,8 +555,6 @@ class _DosProtectionRuleState:
     def snippet(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
-
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
 
@@ -633,15 +612,15 @@ class _DosProtectionRuleState:
 
     @_builtins.property
     @pulumi.getter
-    def tos(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
+    def to(self) -> pulumi.Input[Optional['DosProtectionRuleToArgs']]:
         """
-        List of destination zones
+        Destination zones and interfaces
         """
-        return pulumi.get(self, "tos")
+        return pulumi.get(self, "to")
 
-    @tos.setter
-    def tos(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
-        pulumi.set(self, "tos", value)
+    @to.setter
+    def to(self, value: pulumi.Input[Optional['DosProtectionRuleToArgs']]):
+        pulumi.set(self, "to", value)
 
 
 @pulumi.type_token("scm:index/dosProtectionRule:DosProtectionRule")
@@ -656,7 +635,7 @@ class DosProtectionRule(pulumi.CustomResource):
                  device: pulumi.Input[Optional[_builtins.str]] = None,
                  disabled: pulumi.Input[Optional[_builtins.bool]] = None,
                  folder: pulumi.Input[Optional[_builtins.str]] = None,
-                 froms: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 from_: pulumi.Input[Optional[Union['DosProtectionRuleFromArgs', 'DosProtectionRuleFromArgsDict', 'outputs.DosProtectionRuleFrom']]] = None,
                  log_setting: pulumi.Input[Optional[_builtins.str]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
                  position: pulumi.Input[Optional[_builtins.str]] = None,
@@ -667,7 +646,7 @@ class DosProtectionRule(pulumi.CustomResource):
                  source_users: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  sources: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  tags: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 tos: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 to: pulumi.Input[Optional[Union['DosProtectionRuleToArgs', 'DosProtectionRuleToArgsDict', 'outputs.DosProtectionRuleTo']]] = None,
                  __props__=None):
         """
         DosProtectionRule resource
@@ -703,28 +682,24 @@ class DosProtectionRule(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input[_builtins.bool] disabled: Rule disabled?
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] froms: List of source zones
+        :param pulumi.Input[Union['DosProtectionRuleFromArgs', 'DosProtectionRuleFromArgsDict', 'outputs.DosProtectionRuleFrom']] from_: Source zones and interfaces
         :param pulumi.Input[_builtins.str] log_setting: Log forwarding profile name
         :param pulumi.Input[_builtins.str] name: Rule name
-        :param pulumi.Input[_builtins.str] position: Position relative to local device rules
+        :param pulumi.Input[_builtins.str] position: Position relative to local device rules. Possible values are `pre` and `post`.
         :param pulumi.Input[Union['DosProtectionRuleProtectionArgs', 'DosProtectionRuleProtectionArgsDict', 'outputs.DosProtectionRuleProtection']] protection: Protection
         :param pulumi.Input[_builtins.str] schedule: Schedule on which to enforce the rule
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] services: List of services
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] source_users: List of source users and/or groups.  Reserved words include `any`, `pre-login`, `known-user`, and `unknown`.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] sources: List of source addresses
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tags: List of tags
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tos: List of destination zones
+        :param pulumi.Input[Union['DosProtectionRuleToArgs', 'DosProtectionRuleToArgsDict', 'outputs.DosProtectionRuleTo']] to: Destination zones and interfaces
         """
         ...
     @overload
     def __init__(__self__,
                  resource_name: str,
-                 args: Optional[DosProtectionRuleArgs] = None,
+                 args: DosProtectionRuleArgs,
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
         DosProtectionRule resource
@@ -773,7 +748,7 @@ class DosProtectionRule(pulumi.CustomResource):
                  device: pulumi.Input[Optional[_builtins.str]] = None,
                  disabled: pulumi.Input[Optional[_builtins.bool]] = None,
                  folder: pulumi.Input[Optional[_builtins.str]] = None,
-                 froms: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 from_: pulumi.Input[Optional[Union['DosProtectionRuleFromArgs', 'DosProtectionRuleFromArgsDict', 'outputs.DosProtectionRuleFrom']]] = None,
                  log_setting: pulumi.Input[Optional[_builtins.str]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
                  position: pulumi.Input[Optional[_builtins.str]] = None,
@@ -784,7 +759,7 @@ class DosProtectionRule(pulumi.CustomResource):
                  source_users: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  sources: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  tags: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 tos: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 to: pulumi.Input[Optional[Union['DosProtectionRuleToArgs', 'DosProtectionRuleToArgsDict', 'outputs.DosProtectionRuleTo']]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -800,18 +775,28 @@ class DosProtectionRule(pulumi.CustomResource):
             __props__.__dict__["device"] = device
             __props__.__dict__["disabled"] = disabled
             __props__.__dict__["folder"] = folder
-            __props__.__dict__["froms"] = froms
+            if from_ is None and not opts.urn:
+                raise TypeError("Missing required property 'from_'")
+            __props__.__dict__["from_"] = from_
             __props__.__dict__["log_setting"] = log_setting
             __props__.__dict__["name"] = name
             __props__.__dict__["position"] = position
+            if protection is None and not opts.urn:
+                raise TypeError("Missing required property 'protection'")
             __props__.__dict__["protection"] = protection
             __props__.__dict__["schedule"] = schedule
+            if services is None and not opts.urn:
+                raise TypeError("Missing required property 'services'")
             __props__.__dict__["services"] = services
             __props__.__dict__["snippet"] = snippet
             __props__.__dict__["source_users"] = source_users
+            if sources is None and not opts.urn:
+                raise TypeError("Missing required property 'sources'")
             __props__.__dict__["sources"] = sources
             __props__.__dict__["tags"] = tags
-            __props__.__dict__["tos"] = tos
+            if to is None and not opts.urn:
+                raise TypeError("Missing required property 'to'")
+            __props__.__dict__["to"] = to
             __props__.__dict__["tfid"] = None
         super(DosProtectionRule, __self__).__init__(
             'scm:index/dosProtectionRule:DosProtectionRule',
@@ -829,7 +814,7 @@ class DosProtectionRule(pulumi.CustomResource):
             device: pulumi.Input[Optional[_builtins.str]] = None,
             disabled: pulumi.Input[Optional[_builtins.bool]] = None,
             folder: pulumi.Input[Optional[_builtins.str]] = None,
-            froms: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            from_: pulumi.Input[Optional[Union['DosProtectionRuleFromArgs', 'DosProtectionRuleFromArgsDict', 'outputs.DosProtectionRuleFrom']]] = None,
             log_setting: pulumi.Input[Optional[_builtins.str]] = None,
             name: pulumi.Input[Optional[_builtins.str]] = None,
             position: pulumi.Input[Optional[_builtins.str]] = None,
@@ -841,7 +826,7 @@ class DosProtectionRule(pulumi.CustomResource):
             sources: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
             tags: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
             tfid: pulumi.Input[Optional[_builtins.str]] = None,
-            tos: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None) -> 'DosProtectionRule':
+            to: pulumi.Input[Optional[Union['DosProtectionRuleToArgs', 'DosProtectionRuleToArgsDict', 'outputs.DosProtectionRuleTo']]] = None) -> 'DosProtectionRule':
         """
         Get an existing DosProtectionRule resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.
@@ -855,23 +840,19 @@ class DosProtectionRule(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input[_builtins.bool] disabled: Rule disabled?
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] froms: List of source zones
+        :param pulumi.Input[Union['DosProtectionRuleFromArgs', 'DosProtectionRuleFromArgsDict', 'outputs.DosProtectionRuleFrom']] from_: Source zones and interfaces
         :param pulumi.Input[_builtins.str] log_setting: Log forwarding profile name
         :param pulumi.Input[_builtins.str] name: Rule name
-        :param pulumi.Input[_builtins.str] position: Position relative to local device rules
+        :param pulumi.Input[_builtins.str] position: Position relative to local device rules. Possible values are `pre` and `post`.
         :param pulumi.Input[Union['DosProtectionRuleProtectionArgs', 'DosProtectionRuleProtectionArgsDict', 'outputs.DosProtectionRuleProtection']] protection: Protection
         :param pulumi.Input[_builtins.str] schedule: Schedule on which to enforce the rule
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] services: List of services
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] source_users: List of source users and/or groups.  Reserved words include `any`, `pre-login`, `known-user`, and `unknown`.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] sources: List of source addresses
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tags: List of tags
         :param pulumi.Input[_builtins.str] tfid: The Terraform ID.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tos: List of destination zones
+        :param pulumi.Input[Union['DosProtectionRuleToArgs', 'DosProtectionRuleToArgsDict', 'outputs.DosProtectionRuleTo']] to: Destination zones and interfaces
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
 
@@ -883,7 +864,7 @@ class DosProtectionRule(pulumi.CustomResource):
         __props__.__dict__["device"] = device
         __props__.__dict__["disabled"] = disabled
         __props__.__dict__["folder"] = folder
-        __props__.__dict__["froms"] = froms
+        __props__.__dict__["from_"] = from_
         __props__.__dict__["log_setting"] = log_setting
         __props__.__dict__["name"] = name
         __props__.__dict__["position"] = position
@@ -895,7 +876,7 @@ class DosProtectionRule(pulumi.CustomResource):
         __props__.__dict__["sources"] = sources
         __props__.__dict__["tags"] = tags
         __props__.__dict__["tfid"] = tfid
-        __props__.__dict__["tos"] = tos
+        __props__.__dict__["to"] = to
         return DosProtectionRule(resource_name, opts=opts, __props__=__props__)
 
     @_builtins.property
@@ -943,18 +924,16 @@ class DosProtectionRule(pulumi.CustomResource):
     def folder(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
-
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
 
     @_builtins.property
-    @pulumi.getter
-    def froms(self) -> pulumi.Output[Optional[Sequence[_builtins.str]]]:
+    @pulumi.getter(name="from")
+    def from_(self) -> pulumi.Output['outputs.DosProtectionRuleFrom']:
         """
-        List of source zones
+        Source zones and interfaces
         """
-        return pulumi.get(self, "froms")
+        return pulumi.get(self, "from_")
 
     @_builtins.property
     @pulumi.getter(name="logSetting")
@@ -976,13 +955,13 @@ class DosProtectionRule(pulumi.CustomResource):
     @pulumi.getter
     def position(self) -> pulumi.Output[_builtins.str]:
         """
-        Position relative to local device rules
+        Position relative to local device rules. Possible values are `pre` and `post`.
         """
         return pulumi.get(self, "position")
 
     @_builtins.property
     @pulumi.getter
-    def protection(self) -> pulumi.Output[Optional['outputs.DosProtectionRuleProtection']]:
+    def protection(self) -> pulumi.Output['outputs.DosProtectionRuleProtection']:
         """
         Protection
         """
@@ -998,7 +977,7 @@ class DosProtectionRule(pulumi.CustomResource):
 
     @_builtins.property
     @pulumi.getter
-    def services(self) -> pulumi.Output[Optional[Sequence[_builtins.str]]]:
+    def services(self) -> pulumi.Output[Sequence[_builtins.str]]:
         """
         List of services
         """
@@ -1009,8 +988,6 @@ class DosProtectionRule(pulumi.CustomResource):
     def snippet(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
-
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
 
@@ -1024,7 +1001,7 @@ class DosProtectionRule(pulumi.CustomResource):
 
     @_builtins.property
     @pulumi.getter
-    def sources(self) -> pulumi.Output[Optional[Sequence[_builtins.str]]]:
+    def sources(self) -> pulumi.Output[Sequence[_builtins.str]]:
         """
         List of source addresses
         """
@@ -1048,9 +1025,9 @@ class DosProtectionRule(pulumi.CustomResource):
 
     @_builtins.property
     @pulumi.getter
-    def tos(self) -> pulumi.Output[Optional[Sequence[_builtins.str]]]:
+    def to(self) -> pulumi.Output['outputs.DosProtectionRuleTo']:
         """
-        List of destination zones
+        Destination zones and interfaces
         """
-        return pulumi.get(self, "tos")
+        return pulumi.get(self, "to")
 

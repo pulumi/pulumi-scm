@@ -147,22 +147,18 @@ type QosPolicyRule struct {
 	// Dscp tos
 	DscpTos QosPolicyRuleDscpTosPtrOutput `pulumi:"dscpTos"`
 	// The folder in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrOutput `pulumi:"folder"`
 	// Name
 	Name pulumi.StringOutput `pulumi:"name"`
-	// The relative position of the rule
+	// The relative position of the rule. Possible values are `pre` and `post`.
 	Position pulumi.StringOutput `pulumi:"position"`
 	// Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
 	RelativePosition pulumi.StringPtrOutput `pulumi:"relativePosition"`
 	// Schedule
 	Schedule pulumi.StringPtrOutput `pulumi:"schedule"`
 	// The snippet in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
-	// The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `"before"` or `"after"`.
+	// UUID of the rule to position this rule relative to. Required when `relativePosition` is `"before"` or `"after"`.
 	TargetRule pulumi.StringPtrOutput `pulumi:"targetRule"`
 	// The Terraform ID.
 	Tfid pulumi.StringOutput `pulumi:"tfid"`
@@ -210,22 +206,18 @@ type qosPolicyRuleState struct {
 	// Dscp tos
 	DscpTos *QosPolicyRuleDscpTos `pulumi:"dscpTos"`
 	// The folder in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// Name
 	Name *string `pulumi:"name"`
-	// The relative position of the rule
+	// The relative position of the rule. Possible values are `pre` and `post`.
 	Position *string `pulumi:"position"`
 	// Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
 	RelativePosition *string `pulumi:"relativePosition"`
 	// Schedule
 	Schedule *string `pulumi:"schedule"`
 	// The snippet in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
-	// The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `"before"` or `"after"`.
+	// UUID of the rule to position this rule relative to. Required when `relativePosition` is `"before"` or `"after"`.
 	TargetRule *string `pulumi:"targetRule"`
 	// The Terraform ID.
 	Tfid *string `pulumi:"tfid"`
@@ -241,22 +233,18 @@ type QosPolicyRuleState struct {
 	// Dscp tos
 	DscpTos QosPolicyRuleDscpTosPtrInput
 	// The folder in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// Name
 	Name pulumi.StringPtrInput
-	// The relative position of the rule
+	// The relative position of the rule. Possible values are `pre` and `post`.
 	Position pulumi.StringPtrInput
 	// Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
 	RelativePosition pulumi.StringPtrInput
 	// Schedule
 	Schedule pulumi.StringPtrInput
 	// The snippet in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
-	// The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `"before"` or `"after"`.
+	// UUID of the rule to position this rule relative to. Required when `relativePosition` is `"before"` or `"after"`.
 	TargetRule pulumi.StringPtrInput
 	// The Terraform ID.
 	Tfid pulumi.StringPtrInput
@@ -276,22 +264,18 @@ type qosPolicyRuleArgs struct {
 	// Dscp tos
 	DscpTos *QosPolicyRuleDscpTos `pulumi:"dscpTos"`
 	// The folder in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// Name
 	Name *string `pulumi:"name"`
-	// The relative position of the rule
+	// The relative position of the rule. Possible values are `pre` and `post`.
 	Position *string `pulumi:"position"`
 	// Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
 	RelativePosition *string `pulumi:"relativePosition"`
 	// Schedule
 	Schedule *string `pulumi:"schedule"`
 	// The snippet in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
-	// The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `"before"` or `"after"`.
+	// UUID of the rule to position this rule relative to. Required when `relativePosition` is `"before"` or `"after"`.
 	TargetRule *string `pulumi:"targetRule"`
 }
 
@@ -306,22 +290,18 @@ type QosPolicyRuleArgs struct {
 	// Dscp tos
 	DscpTos QosPolicyRuleDscpTosPtrInput
 	// The folder in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// Name
 	Name pulumi.StringPtrInput
-	// The relative position of the rule
+	// The relative position of the rule. Possible values are `pre` and `post`.
 	Position pulumi.StringPtrInput
 	// Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
 	RelativePosition pulumi.StringPtrInput
 	// Schedule
 	Schedule pulumi.StringPtrInput
 	// The snippet in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
-	// The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `"before"` or `"after"`.
+	// UUID of the rule to position this rule relative to. Required when `relativePosition` is `"before"` or `"after"`.
 	TargetRule pulumi.StringPtrInput
 }
 
@@ -433,8 +413,6 @@ func (o QosPolicyRuleOutput) DscpTos() QosPolicyRuleDscpTosPtrOutput {
 }
 
 // The folder in which the resource is defined
-//
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o QosPolicyRuleOutput) Folder() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *QosPolicyRule) pulumi.StringPtrOutput { return v.Folder }).(pulumi.StringPtrOutput)
 }
@@ -444,7 +422,7 @@ func (o QosPolicyRuleOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v *QosPolicyRule) pulumi.StringOutput { return v.Name }).(pulumi.StringOutput)
 }
 
-// The relative position of the rule
+// The relative position of the rule. Possible values are `pre` and `post`.
 func (o QosPolicyRuleOutput) Position() pulumi.StringOutput {
 	return o.ApplyT(func(v *QosPolicyRule) pulumi.StringOutput { return v.Position }).(pulumi.StringOutput)
 }
@@ -460,13 +438,11 @@ func (o QosPolicyRuleOutput) Schedule() pulumi.StringPtrOutput {
 }
 
 // The snippet in which the resource is defined
-//
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o QosPolicyRuleOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *QosPolicyRule) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)
 }
 
-// The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `"before"` or `"after"`.
+// UUID of the rule to position this rule relative to. Required when `relativePosition` is `"before"` or `"after"`.
 func (o QosPolicyRuleOutput) TargetRule() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *QosPolicyRule) pulumi.StringPtrOutput { return v.TargetRule }).(pulumi.StringPtrOutput)
 }

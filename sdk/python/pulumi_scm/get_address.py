@@ -67,6 +67,9 @@ class GetAddressResult:
     @_builtins.property
     @pulumi.getter
     def description(self) -> _builtins.str:
+        """
+        The description of the address object
+        """
         return pulumi.get(self, "description")
 
     @_builtins.property
@@ -80,11 +83,17 @@ class GetAddressResult:
     @_builtins.property
     @pulumi.getter
     def folder(self) -> _builtins.str:
+        """
+        The folder in which the resource is defined
+        """
         return pulumi.get(self, "folder")
 
     @_builtins.property
     @pulumi.getter
     def fqdn(self) -> _builtins.str:
+        """
+        Fully qualified domain name
+        """
         return pulumi.get(self, "fqdn")
 
     @_builtins.property
@@ -98,36 +107,57 @@ class GetAddressResult:
     @_builtins.property
     @pulumi.getter(name="ipNetmask")
     def ip_netmask(self) -> _builtins.str:
+        """
+        IP address with or without CIDR notation
+        """
         return pulumi.get(self, "ip_netmask")
 
     @_builtins.property
     @pulumi.getter(name="ipRange")
     def ip_range(self) -> _builtins.str:
+        """
+        Ip range
+        """
         return pulumi.get(self, "ip_range")
 
     @_builtins.property
     @pulumi.getter(name="ipWildcard")
     def ip_wildcard(self) -> _builtins.str:
+        """
+        IP wildcard mask
+        """
         return pulumi.get(self, "ip_wildcard")
 
     @_builtins.property
     @pulumi.getter
     def name(self) -> _builtins.str:
+        """
+        The name of the address object
+        """
         return pulumi.get(self, "name")
 
     @_builtins.property
     @pulumi.getter
     def snippet(self) -> _builtins.str:
+        """
+        The snippet in which the resource is defined
+        """
         return pulumi.get(self, "snippet")
 
     @_builtins.property
     @pulumi.getter
     def tags(self) -> Sequence[_builtins.str]:
+        """
+        Tags assocaited with the address object
+        """
         return pulumi.get(self, "tags")
 
     @_builtins.property
     @pulumi.getter
     def tfid(self) -> _builtins.str:
+        """
+        The Terraform ID.
+        """
         return pulumi.get(self, "tfid")
 
 
@@ -187,7 +217,10 @@ def get_address(device: Optional[_builtins.str] = None,
 
 
     :param _builtins.str device: The device in which the resource is defined
+    :param _builtins.str folder: The folder in which the resource is defined
     :param _builtins.str id: The UUID of the address object
+    :param _builtins.str name: The name of the address object
+    :param _builtins.str snippet: The snippet in which the resource is defined
     """
     __args__ = dict()
     __args__['device'] = device
@@ -247,7 +280,10 @@ def get_address_output(device: pulumi.Input[Optional[Optional[_builtins.str]]] =
 
 
     :param _builtins.str device: The device in which the resource is defined
+    :param _builtins.str folder: The folder in which the resource is defined
     :param _builtins.str id: The UUID of the address object
+    :param _builtins.str name: The name of the address object
+    :param _builtins.str snippet: The snippet in which the resource is defined
     """
     __args__ = dict()
     __args__['device'] = device

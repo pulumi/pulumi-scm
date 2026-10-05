@@ -20,8 +20,6 @@ namespace Pulumi.Scm.Inputs
 
         /// <summary>
         /// Ip
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Fqdn` and `Ip`.
         /// </summary>
         [Input("ip")]
         public Input<string>? Ip { get; set; }

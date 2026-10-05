@@ -24,7 +24,7 @@ public final class GetBgpRoutingResult {
      */
     private Boolean addHostRouteToIkePeer;
     /**
-     * @return Backbone routing
+     * @return Backbone routing. Possible values are `no-asymmetric-routing`, `asymmetric-routing-only` and `asymmetric-routing-with-load-share`.
      * 
      */
     private String backboneRouting;
@@ -65,7 +65,7 @@ public final class GetBgpRoutingResult {
         return this.addHostRouteToIkePeer;
     }
     /**
-     * @return Backbone routing
+     * @return Backbone routing. Possible values are `no-asymmetric-routing`, `asymmetric-routing-only` and `asymmetric-routing-with-load-share`.
      * 
      */
     public String backboneRouting() {

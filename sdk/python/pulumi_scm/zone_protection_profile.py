@@ -64,16 +64,12 @@ class ZoneProtectionProfileArgs:
         :param pulumi.Input[_builtins.str] asymmetric_path: Determine whether to drop or bypass packets that contain out-of-sync ACKs or out-of-window sequence numbers:
                * `global` — Use system-wide setting that is assigned through TCP Settings or the CLI.
                * `drop` — Drop packets that contain an asymmetric path.
-               * `bypass` — Bypass scanning on packets that contain an asymmetric path.
+               * `bypass` — Bypass scanning on packets that contain an asymmetric path. Possible values are `global`, `drop` and `bypass`.
         :param pulumi.Input[_builtins.str] description: The description of the profile
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.bool] discard_icmp_embedded_error: Discard ICMP packets that are embedded with an error message.
         :param pulumi.Input['ZoneProtectionProfileFloodArgs'] flood: Flood
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.bool] fragmented_traffic_discard: Discard fragmented IP packets.
         :param pulumi.Input[_builtins.bool] icmp_frag_discard: Discard packets that consist of ICMP fragments.
         :param pulumi.Input[_builtins.bool] icmp_large_packet_discard: Discard ICMP packets that are larger than 1024 bytes.
@@ -86,20 +82,18 @@ class ZoneProtectionProfileArgs:
         :param pulumi.Input[_builtins.str] mptcp_option_strip: MPTCP is an extension of TCP that allows a client to maintain a connection by simultaneously using multiple paths to connect to the destination host. By default, MPTCP support is disabled, based on the global MPTCP setting.  Review or adjust the MPTCP settings for the security zones associated with this profile:
                * `no` — Enable MPTCP support (do not strip the MPTCP option).
                * `yes` — Disable MPTCP support (strip the MPTCP option). With this configured, MPTCP connections are converted to standard TCP connections, as MPTCP is backwards compatible with TCP.
-               * `global` — Support MPTCP based on the global MPTCP setting. By default, the global MPTCP setting is set to yes so that MPTCP is disabled (the MPTCP option is stripped from the packet).
+               * `global` — Support MPTCP based on the global MPTCP setting. By default, the global MPTCP setting is set to yes so that MPTCP is disabled (the MPTCP option is stripped from the packet). Possible values are `no`, `yes` and `global`.
         :param pulumi.Input[_builtins.str] name: The profile name
         :param pulumi.Input['ZoneProtectionProfileNonIpProtocolArgs'] non_ip_protocol: Non ip protocol
         :param pulumi.Input[_builtins.bool] record_route_discard: Discard packets with the Record Route IP option set. When a datagram has this option, each router that routes the datagram adds its own IP address to the header, thus providing the path to the recipient.
         :param pulumi.Input[_builtins.str] reject_non_syn_tcp: Determine whether to reject the packet if the first packet for the TCP session setup is not a SYN packet:
                * `global` — Use system-wide setting that is assigned through the CLI.
                * `yes` — Reject non-SYN TCP.
-               * `no` — Accept non-SYN TCP.
+               * `no` — Accept non-SYN TCP. Possible values are `global`, `yes` and `no`.
         :param pulumi.Input[Sequence[pulumi.Input['ZoneProtectionProfileScanWhiteListArgs']]] scan_white_lists: Scan white list
         :param pulumi.Input[Sequence[pulumi.Input['ZoneProtectionProfileScanArgs']]] scans: Scan
         :param pulumi.Input[_builtins.bool] security_discard: Discard packets if the security option is defined.
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.bool] spoofed_ip_discard: Check that the source IP address of the ingress packet is routable and the routing interface is in the same zone as the ingress interface. If either condition is not true, discard the packet.
         :param pulumi.Input[_builtins.bool] stream_id_discard: Discard packets if the Stream ID option is defined.
         :param pulumi.Input[_builtins.bool] strict_ip_check: Check that both conditions are true:
@@ -199,7 +193,7 @@ class ZoneProtectionProfileArgs:
         Determine whether to drop or bypass packets that contain out-of-sync ACKs or out-of-window sequence numbers:
         * `global` — Use system-wide setting that is assigned through TCP Settings or the CLI.
         * `drop` — Drop packets that contain an asymmetric path.
-        * `bypass` — Bypass scanning on packets that contain an asymmetric path.
+        * `bypass` — Bypass scanning on packets that contain an asymmetric path. Possible values are `global`, `drop` and `bypass`.
         """
         return pulumi.get(self, "asymmetric_path")
 
@@ -224,8 +218,6 @@ class ZoneProtectionProfileArgs:
     def device(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The device in which the resource is defined
-
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "device")
 
@@ -262,8 +254,6 @@ class ZoneProtectionProfileArgs:
     def folder(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
-
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
 
@@ -386,7 +376,7 @@ class ZoneProtectionProfileArgs:
         MPTCP is an extension of TCP that allows a client to maintain a connection by simultaneously using multiple paths to connect to the destination host. By default, MPTCP support is disabled, based on the global MPTCP setting.  Review or adjust the MPTCP settings for the security zones associated with this profile:
         * `no` — Enable MPTCP support (do not strip the MPTCP option).
         * `yes` — Disable MPTCP support (strip the MPTCP option). With this configured, MPTCP connections are converted to standard TCP connections, as MPTCP is backwards compatible with TCP.
-        * `global` — Support MPTCP based on the global MPTCP setting. By default, the global MPTCP setting is set to yes so that MPTCP is disabled (the MPTCP option is stripped from the packet).
+        * `global` — Support MPTCP based on the global MPTCP setting. By default, the global MPTCP setting is set to yes so that MPTCP is disabled (the MPTCP option is stripped from the packet). Possible values are `no`, `yes` and `global`.
         """
         return pulumi.get(self, "mptcp_option_strip")
 
@@ -437,7 +427,7 @@ class ZoneProtectionProfileArgs:
         Determine whether to reject the packet if the first packet for the TCP session setup is not a SYN packet:
         * `global` — Use system-wide setting that is assigned through the CLI.
         * `yes` — Reject non-SYN TCP.
-        * `no` — Accept non-SYN TCP.
+        * `no` — Accept non-SYN TCP. Possible values are `global`, `yes` and `no`.
         """
         return pulumi.get(self, "reject_non_syn_tcp")
 
@@ -486,8 +476,6 @@ class ZoneProtectionProfileArgs:
     def snippet(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
-
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
 
@@ -702,16 +690,12 @@ class _ZoneProtectionProfileState:
         :param pulumi.Input[_builtins.str] asymmetric_path: Determine whether to drop or bypass packets that contain out-of-sync ACKs or out-of-window sequence numbers:
                * `global` — Use system-wide setting that is assigned through TCP Settings or the CLI.
                * `drop` — Drop packets that contain an asymmetric path.
-               * `bypass` — Bypass scanning on packets that contain an asymmetric path.
+               * `bypass` — Bypass scanning on packets that contain an asymmetric path. Possible values are `global`, `drop` and `bypass`.
         :param pulumi.Input[_builtins.str] description: The description of the profile
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.bool] discard_icmp_embedded_error: Discard ICMP packets that are embedded with an error message.
         :param pulumi.Input['ZoneProtectionProfileFloodArgs'] flood: Flood
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.bool] fragmented_traffic_discard: Discard fragmented IP packets.
         :param pulumi.Input[_builtins.bool] icmp_frag_discard: Discard packets that consist of ICMP fragments.
         :param pulumi.Input[_builtins.bool] icmp_large_packet_discard: Discard ICMP packets that are larger than 1024 bytes.
@@ -724,20 +708,18 @@ class _ZoneProtectionProfileState:
         :param pulumi.Input[_builtins.str] mptcp_option_strip: MPTCP is an extension of TCP that allows a client to maintain a connection by simultaneously using multiple paths to connect to the destination host. By default, MPTCP support is disabled, based on the global MPTCP setting.  Review or adjust the MPTCP settings for the security zones associated with this profile:
                * `no` — Enable MPTCP support (do not strip the MPTCP option).
                * `yes` — Disable MPTCP support (strip the MPTCP option). With this configured, MPTCP connections are converted to standard TCP connections, as MPTCP is backwards compatible with TCP.
-               * `global` — Support MPTCP based on the global MPTCP setting. By default, the global MPTCP setting is set to yes so that MPTCP is disabled (the MPTCP option is stripped from the packet).
+               * `global` — Support MPTCP based on the global MPTCP setting. By default, the global MPTCP setting is set to yes so that MPTCP is disabled (the MPTCP option is stripped from the packet). Possible values are `no`, `yes` and `global`.
         :param pulumi.Input[_builtins.str] name: The profile name
         :param pulumi.Input['ZoneProtectionProfileNonIpProtocolArgs'] non_ip_protocol: Non ip protocol
         :param pulumi.Input[_builtins.bool] record_route_discard: Discard packets with the Record Route IP option set. When a datagram has this option, each router that routes the datagram adds its own IP address to the header, thus providing the path to the recipient.
         :param pulumi.Input[_builtins.str] reject_non_syn_tcp: Determine whether to reject the packet if the first packet for the TCP session setup is not a SYN packet:
                * `global` — Use system-wide setting that is assigned through the CLI.
                * `yes` — Reject non-SYN TCP.
-               * `no` — Accept non-SYN TCP.
+               * `no` — Accept non-SYN TCP. Possible values are `global`, `yes` and `no`.
         :param pulumi.Input[Sequence[pulumi.Input['ZoneProtectionProfileScanWhiteListArgs']]] scan_white_lists: Scan white list
         :param pulumi.Input[Sequence[pulumi.Input['ZoneProtectionProfileScanArgs']]] scans: Scan
         :param pulumi.Input[_builtins.bool] security_discard: Discard packets if the security option is defined.
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.bool] spoofed_ip_discard: Check that the source IP address of the ingress packet is routable and the routing interface is in the same zone as the ingress interface. If either condition is not true, discard the packet.
         :param pulumi.Input[_builtins.bool] stream_id_discard: Discard packets if the Stream ID option is defined.
         :param pulumi.Input[_builtins.bool] strict_ip_check: Check that both conditions are true:
@@ -840,7 +822,7 @@ class _ZoneProtectionProfileState:
         Determine whether to drop or bypass packets that contain out-of-sync ACKs or out-of-window sequence numbers:
         * `global` — Use system-wide setting that is assigned through TCP Settings or the CLI.
         * `drop` — Drop packets that contain an asymmetric path.
-        * `bypass` — Bypass scanning on packets that contain an asymmetric path.
+        * `bypass` — Bypass scanning on packets that contain an asymmetric path. Possible values are `global`, `drop` and `bypass`.
         """
         return pulumi.get(self, "asymmetric_path")
 
@@ -865,8 +847,6 @@ class _ZoneProtectionProfileState:
     def device(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The device in which the resource is defined
-
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "device")
 
@@ -903,8 +883,6 @@ class _ZoneProtectionProfileState:
     def folder(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
-
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
 
@@ -1027,7 +1005,7 @@ class _ZoneProtectionProfileState:
         MPTCP is an extension of TCP that allows a client to maintain a connection by simultaneously using multiple paths to connect to the destination host. By default, MPTCP support is disabled, based on the global MPTCP setting.  Review or adjust the MPTCP settings for the security zones associated with this profile:
         * `no` — Enable MPTCP support (do not strip the MPTCP option).
         * `yes` — Disable MPTCP support (strip the MPTCP option). With this configured, MPTCP connections are converted to standard TCP connections, as MPTCP is backwards compatible with TCP.
-        * `global` — Support MPTCP based on the global MPTCP setting. By default, the global MPTCP setting is set to yes so that MPTCP is disabled (the MPTCP option is stripped from the packet).
+        * `global` — Support MPTCP based on the global MPTCP setting. By default, the global MPTCP setting is set to yes so that MPTCP is disabled (the MPTCP option is stripped from the packet). Possible values are `no`, `yes` and `global`.
         """
         return pulumi.get(self, "mptcp_option_strip")
 
@@ -1078,7 +1056,7 @@ class _ZoneProtectionProfileState:
         Determine whether to reject the packet if the first packet for the TCP session setup is not a SYN packet:
         * `global` — Use system-wide setting that is assigned through the CLI.
         * `yes` — Reject non-SYN TCP.
-        * `no` — Accept non-SYN TCP.
+        * `no` — Accept non-SYN TCP. Possible values are `global`, `yes` and `no`.
         """
         return pulumi.get(self, "reject_non_syn_tcp")
 
@@ -1127,8 +1105,6 @@ class _ZoneProtectionProfileState:
     def snippet(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
-
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
 
@@ -1383,16 +1359,12 @@ class ZoneProtectionProfile(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] asymmetric_path: Determine whether to drop or bypass packets that contain out-of-sync ACKs or out-of-window sequence numbers:
                * `global` — Use system-wide setting that is assigned through TCP Settings or the CLI.
                * `drop` — Drop packets that contain an asymmetric path.
-               * `bypass` — Bypass scanning on packets that contain an asymmetric path.
+               * `bypass` — Bypass scanning on packets that contain an asymmetric path. Possible values are `global`, `drop` and `bypass`.
         :param pulumi.Input[_builtins.str] description: The description of the profile
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.bool] discard_icmp_embedded_error: Discard ICMP packets that are embedded with an error message.
         :param pulumi.Input[Union['ZoneProtectionProfileFloodArgs', 'ZoneProtectionProfileFloodArgsDict', 'outputs.ZoneProtectionProfileFlood']] flood: Flood
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.bool] fragmented_traffic_discard: Discard fragmented IP packets.
         :param pulumi.Input[_builtins.bool] icmp_frag_discard: Discard packets that consist of ICMP fragments.
         :param pulumi.Input[_builtins.bool] icmp_large_packet_discard: Discard ICMP packets that are larger than 1024 bytes.
@@ -1405,20 +1377,18 @@ class ZoneProtectionProfile(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] mptcp_option_strip: MPTCP is an extension of TCP that allows a client to maintain a connection by simultaneously using multiple paths to connect to the destination host. By default, MPTCP support is disabled, based on the global MPTCP setting.  Review or adjust the MPTCP settings for the security zones associated with this profile:
                * `no` — Enable MPTCP support (do not strip the MPTCP option).
                * `yes` — Disable MPTCP support (strip the MPTCP option). With this configured, MPTCP connections are converted to standard TCP connections, as MPTCP is backwards compatible with TCP.
-               * `global` — Support MPTCP based on the global MPTCP setting. By default, the global MPTCP setting is set to yes so that MPTCP is disabled (the MPTCP option is stripped from the packet).
+               * `global` — Support MPTCP based on the global MPTCP setting. By default, the global MPTCP setting is set to yes so that MPTCP is disabled (the MPTCP option is stripped from the packet). Possible values are `no`, `yes` and `global`.
         :param pulumi.Input[_builtins.str] name: The profile name
         :param pulumi.Input[Union['ZoneProtectionProfileNonIpProtocolArgs', 'ZoneProtectionProfileNonIpProtocolArgsDict', 'outputs.ZoneProtectionProfileNonIpProtocol']] non_ip_protocol: Non ip protocol
         :param pulumi.Input[_builtins.bool] record_route_discard: Discard packets with the Record Route IP option set. When a datagram has this option, each router that routes the datagram adds its own IP address to the header, thus providing the path to the recipient.
         :param pulumi.Input[_builtins.str] reject_non_syn_tcp: Determine whether to reject the packet if the first packet for the TCP session setup is not a SYN packet:
                * `global` — Use system-wide setting that is assigned through the CLI.
                * `yes` — Reject non-SYN TCP.
-               * `no` — Accept non-SYN TCP.
+               * `no` — Accept non-SYN TCP. Possible values are `global`, `yes` and `no`.
         :param pulumi.Input[Sequence[pulumi.Input[Union['ZoneProtectionProfileScanWhiteListArgs', 'ZoneProtectionProfileScanWhiteListArgsDict', 'outputs.ZoneProtectionProfileScanWhiteList']]]] scan_white_lists: Scan white list
         :param pulumi.Input[Sequence[pulumi.Input[Union['ZoneProtectionProfileScanArgs', 'ZoneProtectionProfileScanArgsDict', 'outputs.ZoneProtectionProfileScan']]]] scans: Scan
         :param pulumi.Input[_builtins.bool] security_discard: Discard packets if the security option is defined.
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.bool] spoofed_ip_discard: Check that the source IP address of the ingress packet is routable and the routing interface is in the same zone as the ingress interface. If either condition is not true, discard the packet.
         :param pulumi.Input[_builtins.bool] stream_id_discard: Discard packets if the Stream ID option is defined.
         :param pulumi.Input[_builtins.bool] strict_ip_check: Check that both conditions are true:
@@ -1625,16 +1595,12 @@ class ZoneProtectionProfile(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] asymmetric_path: Determine whether to drop or bypass packets that contain out-of-sync ACKs or out-of-window sequence numbers:
                * `global` — Use system-wide setting that is assigned through TCP Settings or the CLI.
                * `drop` — Drop packets that contain an asymmetric path.
-               * `bypass` — Bypass scanning on packets that contain an asymmetric path.
+               * `bypass` — Bypass scanning on packets that contain an asymmetric path. Possible values are `global`, `drop` and `bypass`.
         :param pulumi.Input[_builtins.str] description: The description of the profile
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.bool] discard_icmp_embedded_error: Discard ICMP packets that are embedded with an error message.
         :param pulumi.Input[Union['ZoneProtectionProfileFloodArgs', 'ZoneProtectionProfileFloodArgsDict', 'outputs.ZoneProtectionProfileFlood']] flood: Flood
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.bool] fragmented_traffic_discard: Discard fragmented IP packets.
         :param pulumi.Input[_builtins.bool] icmp_frag_discard: Discard packets that consist of ICMP fragments.
         :param pulumi.Input[_builtins.bool] icmp_large_packet_discard: Discard ICMP packets that are larger than 1024 bytes.
@@ -1647,20 +1613,18 @@ class ZoneProtectionProfile(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] mptcp_option_strip: MPTCP is an extension of TCP that allows a client to maintain a connection by simultaneously using multiple paths to connect to the destination host. By default, MPTCP support is disabled, based on the global MPTCP setting.  Review or adjust the MPTCP settings for the security zones associated with this profile:
                * `no` — Enable MPTCP support (do not strip the MPTCP option).
                * `yes` — Disable MPTCP support (strip the MPTCP option). With this configured, MPTCP connections are converted to standard TCP connections, as MPTCP is backwards compatible with TCP.
-               * `global` — Support MPTCP based on the global MPTCP setting. By default, the global MPTCP setting is set to yes so that MPTCP is disabled (the MPTCP option is stripped from the packet).
+               * `global` — Support MPTCP based on the global MPTCP setting. By default, the global MPTCP setting is set to yes so that MPTCP is disabled (the MPTCP option is stripped from the packet). Possible values are `no`, `yes` and `global`.
         :param pulumi.Input[_builtins.str] name: The profile name
         :param pulumi.Input[Union['ZoneProtectionProfileNonIpProtocolArgs', 'ZoneProtectionProfileNonIpProtocolArgsDict', 'outputs.ZoneProtectionProfileNonIpProtocol']] non_ip_protocol: Non ip protocol
         :param pulumi.Input[_builtins.bool] record_route_discard: Discard packets with the Record Route IP option set. When a datagram has this option, each router that routes the datagram adds its own IP address to the header, thus providing the path to the recipient.
         :param pulumi.Input[_builtins.str] reject_non_syn_tcp: Determine whether to reject the packet if the first packet for the TCP session setup is not a SYN packet:
                * `global` — Use system-wide setting that is assigned through the CLI.
                * `yes` — Reject non-SYN TCP.
-               * `no` — Accept non-SYN TCP.
+               * `no` — Accept non-SYN TCP. Possible values are `global`, `yes` and `no`.
         :param pulumi.Input[Sequence[pulumi.Input[Union['ZoneProtectionProfileScanWhiteListArgs', 'ZoneProtectionProfileScanWhiteListArgsDict', 'outputs.ZoneProtectionProfileScanWhiteList']]]] scan_white_lists: Scan white list
         :param pulumi.Input[Sequence[pulumi.Input[Union['ZoneProtectionProfileScanArgs', 'ZoneProtectionProfileScanArgsDict', 'outputs.ZoneProtectionProfileScan']]]] scans: Scan
         :param pulumi.Input[_builtins.bool] security_discard: Discard packets if the security option is defined.
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.bool] spoofed_ip_discard: Check that the source IP address of the ingress packet is routable and the routing interface is in the same zone as the ingress interface. If either condition is not true, discard the packet.
         :param pulumi.Input[_builtins.bool] stream_id_discard: Discard packets if the Stream ID option is defined.
         :param pulumi.Input[_builtins.bool] strict_ip_check: Check that both conditions are true:
@@ -1730,7 +1694,7 @@ class ZoneProtectionProfile(pulumi.CustomResource):
         Determine whether to drop or bypass packets that contain out-of-sync ACKs or out-of-window sequence numbers:
         * `global` — Use system-wide setting that is assigned through TCP Settings or the CLI.
         * `drop` — Drop packets that contain an asymmetric path.
-        * `bypass` — Bypass scanning on packets that contain an asymmetric path.
+        * `bypass` — Bypass scanning on packets that contain an asymmetric path. Possible values are `global`, `drop` and `bypass`.
         """
         return pulumi.get(self, "asymmetric_path")
 
@@ -1747,8 +1711,6 @@ class ZoneProtectionProfile(pulumi.CustomResource):
     def device(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The device in which the resource is defined
-
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "device")
 
@@ -1773,8 +1735,6 @@ class ZoneProtectionProfile(pulumi.CustomResource):
     def folder(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
-
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
 
@@ -1857,7 +1817,7 @@ class ZoneProtectionProfile(pulumi.CustomResource):
         MPTCP is an extension of TCP that allows a client to maintain a connection by simultaneously using multiple paths to connect to the destination host. By default, MPTCP support is disabled, based on the global MPTCP setting.  Review or adjust the MPTCP settings for the security zones associated with this profile:
         * `no` — Enable MPTCP support (do not strip the MPTCP option).
         * `yes` — Disable MPTCP support (strip the MPTCP option). With this configured, MPTCP connections are converted to standard TCP connections, as MPTCP is backwards compatible with TCP.
-        * `global` — Support MPTCP based on the global MPTCP setting. By default, the global MPTCP setting is set to yes so that MPTCP is disabled (the MPTCP option is stripped from the packet).
+        * `global` — Support MPTCP based on the global MPTCP setting. By default, the global MPTCP setting is set to yes so that MPTCP is disabled (the MPTCP option is stripped from the packet). Possible values are `no`, `yes` and `global`.
         """
         return pulumi.get(self, "mptcp_option_strip")
 
@@ -1892,7 +1852,7 @@ class ZoneProtectionProfile(pulumi.CustomResource):
         Determine whether to reject the packet if the first packet for the TCP session setup is not a SYN packet:
         * `global` — Use system-wide setting that is assigned through the CLI.
         * `yes` — Reject non-SYN TCP.
-        * `no` — Accept non-SYN TCP.
+        * `no` — Accept non-SYN TCP. Possible values are `global`, `yes` and `no`.
         """
         return pulumi.get(self, "reject_non_syn_tcp")
 
@@ -1925,8 +1885,6 @@ class ZoneProtectionProfile(pulumi.CustomResource):
     def snippet(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
-
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
 

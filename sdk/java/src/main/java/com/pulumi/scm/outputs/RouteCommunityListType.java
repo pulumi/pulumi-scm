@@ -21,14 +21,10 @@ public final class RouteCommunityListType {
     /**
      * @return Large
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `extended`, `large`, and `regular`.
-     * 
      */
     private @Nullable RouteCommunityListTypeLarge large;
     /**
      * @return Regular
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `extended`, `large`, and `regular`.
      * 
      */
     private @Nullable RouteCommunityListTypeRegular regular;
@@ -44,16 +40,12 @@ public final class RouteCommunityListType {
     /**
      * @return Large
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `extended`, `large`, and `regular`.
-     * 
      */
     public Optional<RouteCommunityListTypeLarge> large() {
         return Optional.ofNullable(this.large);
     }
     /**
      * @return Regular
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `extended`, `large`, and `regular`.
      * 
      */
     public Optional<RouteCommunityListTypeRegular> regular() {

@@ -27,7 +27,7 @@ class GetLogicalRouterResult:
     """
     A collection of values returned by getLogicalRouter.
     """
-    def __init__(__self__, device=None, folder=None, id=None, name=None, routing_stack=None, snippet=None, tfid=None, vrves=None):
+    def __init__(__self__, device=None, folder=None, id=None, name=None, snippet=None, tfid=None, vrves=None):
         if device and not isinstance(device, str):
             raise TypeError("Expected argument 'device' to be a str")
         pulumi.set(__self__, "device", device)
@@ -40,9 +40,6 @@ class GetLogicalRouterResult:
         if name and not isinstance(name, str):
             raise TypeError("Expected argument 'name' to be a str")
         pulumi.set(__self__, "name", name)
-        if routing_stack and not isinstance(routing_stack, str):
-            raise TypeError("Expected argument 'routing_stack' to be a str")
-        pulumi.set(__self__, "routing_stack", routing_stack)
         if snippet and not isinstance(snippet, str):
             raise TypeError("Expected argument 'snippet' to be a str")
         pulumi.set(__self__, "snippet", snippet)
@@ -64,6 +61,9 @@ class GetLogicalRouterResult:
     @_builtins.property
     @pulumi.getter
     def folder(self) -> _builtins.str:
+        """
+        The folder in which the resource is defined
+        """
         return pulumi.get(self, "folder")
 
     @_builtins.property
@@ -77,26 +77,33 @@ class GetLogicalRouterResult:
     @_builtins.property
     @pulumi.getter
     def name(self) -> _builtins.str:
+        """
+        Name
+        """
         return pulumi.get(self, "name")
-
-    @_builtins.property
-    @pulumi.getter(name="routingStack")
-    def routing_stack(self) -> _builtins.str:
-        return pulumi.get(self, "routing_stack")
 
     @_builtins.property
     @pulumi.getter
     def snippet(self) -> _builtins.str:
+        """
+        The snippet in which the resource is defined
+        """
         return pulumi.get(self, "snippet")
 
     @_builtins.property
     @pulumi.getter
     def tfid(self) -> _builtins.str:
+        """
+        The Terraform ID.
+        """
         return pulumi.get(self, "tfid")
 
     @_builtins.property
     @pulumi.getter
     def vrves(self) -> Sequence['outputs.GetLogicalRouterVrfResult']:
+        """
+        Vrf
+        """
         return pulumi.get(self, "vrves")
 
 
@@ -110,7 +117,6 @@ class AwaitableGetLogicalRouterResult(GetLogicalRouterResult):
             folder=self.folder,
             id=self.id,
             name=self.name,
-            routing_stack=self.routing_stack,
             snippet=self.snippet,
             tfid=self.tfid,
             vrves=self.vrves)
@@ -144,7 +150,10 @@ def get_logical_router(device: Optional[_builtins.str] = None,
 
 
     :param _builtins.str device: The device in which the resource is defined
+    :param _builtins.str folder: The folder in which the resource is defined
     :param _builtins.str id: UUID of the resource
+    :param _builtins.str name: Name
+    :param _builtins.str snippet: The snippet in which the resource is defined
     """
     __args__ = dict()
     __args__['device'] = device
@@ -160,7 +169,6 @@ def get_logical_router(device: Optional[_builtins.str] = None,
         folder=pulumi.get(__ret__, 'folder'),
         id=pulumi.get(__ret__, 'id'),
         name=pulumi.get(__ret__, 'name'),
-        routing_stack=pulumi.get(__ret__, 'routing_stack'),
         snippet=pulumi.get(__ret__, 'snippet'),
         tfid=pulumi.get(__ret__, 'tfid'),
         vrves=pulumi.get(__ret__, 'vrves'))
@@ -192,7 +200,10 @@ def get_logical_router_output(device: pulumi.Input[Optional[Optional[_builtins.s
 
 
     :param _builtins.str device: The device in which the resource is defined
+    :param _builtins.str folder: The folder in which the resource is defined
     :param _builtins.str id: UUID of the resource
+    :param _builtins.str name: Name
+    :param _builtins.str snippet: The snippet in which the resource is defined
     """
     __args__ = dict()
     __args__['device'] = device
@@ -207,7 +218,6 @@ def get_logical_router_output(device: pulumi.Input[Optional[Optional[_builtins.s
         folder=pulumi.get(__response__, 'folder'),
         id=pulumi.get(__response__, 'id'),
         name=pulumi.get(__response__, 'name'),
-        routing_stack=pulumi.get(__response__, 'routing_stack'),
         snippet=pulumi.get(__response__, 'snippet'),
         tfid=pulumi.get(__response__, 'tfid'),
         vrves=pulumi.get(__response__, 'vrves')))

@@ -16,15 +16,35 @@ public final class GetLocalUserGroupResult {
      * 
      */
     private String device;
+    /**
+     * @return The folder in which the resource is defined
+     * 
+     */
     private String folder;
     /**
      * @return The UUID of the local user group
      * 
      */
     private String id;
+    /**
+     * @return The name of the local user group
+     * 
+     */
     private String name;
+    /**
+     * @return The snippet in which the resource is defined
+     * 
+     */
     private String snippet;
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     private String tfid;
+    /**
+     * @return The local user group users
+     * 
+     */
     private List<String> users;
 
     private GetLocalUserGroupResult() {}
@@ -35,6 +55,10 @@ public final class GetLocalUserGroupResult {
     public String device() {
         return this.device;
     }
+    /**
+     * @return The folder in which the resource is defined
+     * 
+     */
     public String folder() {
         return this.folder;
     }
@@ -45,15 +69,31 @@ public final class GetLocalUserGroupResult {
     public String id() {
         return this.id;
     }
+    /**
+     * @return The name of the local user group
+     * 
+     */
     public String name() {
         return this.name;
     }
+    /**
+     * @return The snippet in which the resource is defined
+     * 
+     */
     public String snippet() {
         return this.snippet;
     }
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     public String tfid() {
         return this.tfid;
     }
+    /**
+     * @return The local user group users
+     * 
+     */
     public List<String> users() {
         return this.users;
     }

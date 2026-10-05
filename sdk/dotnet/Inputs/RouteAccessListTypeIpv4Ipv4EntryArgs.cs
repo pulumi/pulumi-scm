@@ -13,7 +13,7 @@ namespace Pulumi.Scm.Inputs
     public sealed class RouteAccessListTypeIpv4Ipv4EntryArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Action
+        /// Action. Possible values are `Deny` and `Permit`.
         /// </summary>
         [Input("action")]
         public Input<string>? Action { get; set; }

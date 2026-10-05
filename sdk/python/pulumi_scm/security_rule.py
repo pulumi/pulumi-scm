@@ -63,7 +63,7 @@ class SecurityRuleArgs:
         """
         The set of arguments for constructing a SecurityRule resource.
 
-        :param pulumi.Input[_builtins.str] action: The action to be taken when the rule is matched
+        :param pulumi.Input[_builtins.str] action: The action to be taken when the rule is matched. Possible values are `allow`, `deny`, `drop`, `reset-client`, `reset-server` and `reset-both`.
         :param pulumi.Input[Sequence[pulumi.Input['SecurityRuleAllowUrlCategoryArgs']]] allow_url_categories: Allow url category
         :param pulumi.Input[Sequence[pulumi.Input['SecurityRuleAllowWebApplicationArgs']]] allow_web_applications: Allow web application
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] applications: The application(s) being accessed
@@ -88,7 +88,7 @@ class SecurityRuleArgs:
         :param pulumi.Input[_builtins.bool] negate_source: Negate the source address(es)?
         :param pulumi.Input[_builtins.bool] negate_user: Negate user
         :param pulumi.Input[_builtins.str] policy_type: Policy type
-        :param pulumi.Input[_builtins.str] position: The position of a security rule
+        :param pulumi.Input[_builtins.str] position: The position of a security rule. Possible values are `pre` and `post`.
         :param pulumi.Input['SecurityRuleProfileSettingArgs'] profile_setting: The security profile object
         :param pulumi.Input[_builtins.str] relative_position: Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
         :param pulumi.Input[_builtins.str] schedule: Schedule in which this rule will be applied
@@ -99,7 +99,7 @@ class SecurityRuleArgs:
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] source_users: List of source users and/or groups.  Reserved words include `any`, `pre-login`, `known-user`, and `unknown`.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] sources: The source addresses(es)
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tags: The tags associated with the security rule
-        :param pulumi.Input[_builtins.str] target_rule: The name or UUID of the rule to position this rule relative to. Required when `relative_position` is `"before"` or `"after"`.
+        :param pulumi.Input[_builtins.str] target_rule: UUID of the rule to position this rule relative to. Required when `relative_position` is `"before"` or `"after"`.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tenant_restrictions: Tenant restrictions
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tos: The destination security zone(s)
         """
@@ -186,7 +186,7 @@ class SecurityRuleArgs:
     @pulumi.getter
     def action(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
-        The action to be taken when the rule is matched
+        The action to be taken when the rule is matched. Possible values are `allow`, `deny`, `drop`, `reset-client`, `reset-server` and `reset-both`.
         """
         return pulumi.get(self, "action")
 
@@ -486,7 +486,7 @@ class SecurityRuleArgs:
     @pulumi.getter
     def position(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
-        The position of a security rule
+        The position of a security rule. Possible values are `pre` and `post`.
         """
         return pulumi.get(self, "position")
 
@@ -618,7 +618,7 @@ class SecurityRuleArgs:
     @pulumi.getter(name="targetRule")
     def target_rule(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
-        The name or UUID of the rule to position this rule relative to. Required when `relative_position` is `"before"` or `"after"`.
+        UUID of the rule to position this rule relative to. Required when `relative_position` is `"before"` or `"after"`.
         """
         return pulumi.get(self, "target_rule")
 
@@ -697,7 +697,7 @@ class _SecurityRuleState:
         """
         Input properties used for looking up and filtering SecurityRule resources.
 
-        :param pulumi.Input[_builtins.str] action: The action to be taken when the rule is matched
+        :param pulumi.Input[_builtins.str] action: The action to be taken when the rule is matched. Possible values are `allow`, `deny`, `drop`, `reset-client`, `reset-server` and `reset-both`.
         :param pulumi.Input[Sequence[pulumi.Input['SecurityRuleAllowUrlCategoryArgs']]] allow_url_categories: Allow url category
         :param pulumi.Input[Sequence[pulumi.Input['SecurityRuleAllowWebApplicationArgs']]] allow_web_applications: Allow web application
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] applications: The application(s) being accessed
@@ -722,7 +722,7 @@ class _SecurityRuleState:
         :param pulumi.Input[_builtins.bool] negate_source: Negate the source address(es)?
         :param pulumi.Input[_builtins.bool] negate_user: Negate user
         :param pulumi.Input[_builtins.str] policy_type: Policy type
-        :param pulumi.Input[_builtins.str] position: The position of a security rule
+        :param pulumi.Input[_builtins.str] position: The position of a security rule. Possible values are `pre` and `post`.
         :param pulumi.Input['SecurityRuleProfileSettingArgs'] profile_setting: The security profile object
         :param pulumi.Input[_builtins.str] relative_position: Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
         :param pulumi.Input[_builtins.str] schedule: Schedule in which this rule will be applied
@@ -733,7 +733,7 @@ class _SecurityRuleState:
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] source_users: List of source users and/or groups.  Reserved words include `any`, `pre-login`, `known-user`, and `unknown`.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] sources: The source addresses(es)
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tags: The tags associated with the security rule
-        :param pulumi.Input[_builtins.str] target_rule: The name or UUID of the rule to position this rule relative to. Required when `relative_position` is `"before"` or `"after"`.
+        :param pulumi.Input[_builtins.str] target_rule: UUID of the rule to position this rule relative to. Required when `relative_position` is `"before"` or `"after"`.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tenant_restrictions: Tenant restrictions
         :param pulumi.Input[_builtins.str] tfid: The Terraform ID.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tos: The destination security zone(s)
@@ -823,7 +823,7 @@ class _SecurityRuleState:
     @pulumi.getter
     def action(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
-        The action to be taken when the rule is matched
+        The action to be taken when the rule is matched. Possible values are `allow`, `deny`, `drop`, `reset-client`, `reset-server` and `reset-both`.
         """
         return pulumi.get(self, "action")
 
@@ -1123,7 +1123,7 @@ class _SecurityRuleState:
     @pulumi.getter
     def position(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
-        The position of a security rule
+        The position of a security rule. Possible values are `pre` and `post`.
         """
         return pulumi.get(self, "position")
 
@@ -1255,7 +1255,7 @@ class _SecurityRuleState:
     @pulumi.getter(name="targetRule")
     def target_rule(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
-        The name or UUID of the rule to position this rule relative to. Required when `relative_position` is `"before"` or `"after"`.
+        UUID of the rule to position this rule relative to. Required when `relative_position` is `"before"` or `"after"`.
         """
         return pulumi.get(self, "target_rule")
 
@@ -1551,7 +1551,7 @@ class SecurityRule(pulumi.CustomResource):
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[_builtins.str] action: The action to be taken when the rule is matched
+        :param pulumi.Input[_builtins.str] action: The action to be taken when the rule is matched. Possible values are `allow`, `deny`, `drop`, `reset-client`, `reset-server` and `reset-both`.
         :param pulumi.Input[Sequence[pulumi.Input[Union['SecurityRuleAllowUrlCategoryArgs', 'SecurityRuleAllowUrlCategoryArgsDict', 'outputs.SecurityRuleAllowUrlCategory']]]] allow_url_categories: Allow url category
         :param pulumi.Input[Sequence[pulumi.Input[Union['SecurityRuleAllowWebApplicationArgs', 'SecurityRuleAllowWebApplicationArgsDict', 'outputs.SecurityRuleAllowWebApplication']]]] allow_web_applications: Allow web application
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] applications: The application(s) being accessed
@@ -1576,7 +1576,7 @@ class SecurityRule(pulumi.CustomResource):
         :param pulumi.Input[_builtins.bool] negate_source: Negate the source address(es)?
         :param pulumi.Input[_builtins.bool] negate_user: Negate user
         :param pulumi.Input[_builtins.str] policy_type: Policy type
-        :param pulumi.Input[_builtins.str] position: The position of a security rule
+        :param pulumi.Input[_builtins.str] position: The position of a security rule. Possible values are `pre` and `post`.
         :param pulumi.Input[Union['SecurityRuleProfileSettingArgs', 'SecurityRuleProfileSettingArgsDict', 'outputs.SecurityRuleProfileSetting']] profile_setting: The security profile object
         :param pulumi.Input[_builtins.str] relative_position: Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
         :param pulumi.Input[_builtins.str] schedule: Schedule in which this rule will be applied
@@ -1587,7 +1587,7 @@ class SecurityRule(pulumi.CustomResource):
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] source_users: List of source users and/or groups.  Reserved words include `any`, `pre-login`, `known-user`, and `unknown`.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] sources: The source addresses(es)
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tags: The tags associated with the security rule
-        :param pulumi.Input[_builtins.str] target_rule: The name or UUID of the rule to position this rule relative to. Required when `relative_position` is `"before"` or `"after"`.
+        :param pulumi.Input[_builtins.str] target_rule: UUID of the rule to position this rule relative to. Required when `relative_position` is `"before"` or `"after"`.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tenant_restrictions: Tenant restrictions
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tos: The destination security zone(s)
         """
@@ -1960,7 +1960,7 @@ class SecurityRule(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[_builtins.str] action: The action to be taken when the rule is matched
+        :param pulumi.Input[_builtins.str] action: The action to be taken when the rule is matched. Possible values are `allow`, `deny`, `drop`, `reset-client`, `reset-server` and `reset-both`.
         :param pulumi.Input[Sequence[pulumi.Input[Union['SecurityRuleAllowUrlCategoryArgs', 'SecurityRuleAllowUrlCategoryArgsDict', 'outputs.SecurityRuleAllowUrlCategory']]]] allow_url_categories: Allow url category
         :param pulumi.Input[Sequence[pulumi.Input[Union['SecurityRuleAllowWebApplicationArgs', 'SecurityRuleAllowWebApplicationArgsDict', 'outputs.SecurityRuleAllowWebApplication']]]] allow_web_applications: Allow web application
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] applications: The application(s) being accessed
@@ -1985,7 +1985,7 @@ class SecurityRule(pulumi.CustomResource):
         :param pulumi.Input[_builtins.bool] negate_source: Negate the source address(es)?
         :param pulumi.Input[_builtins.bool] negate_user: Negate user
         :param pulumi.Input[_builtins.str] policy_type: Policy type
-        :param pulumi.Input[_builtins.str] position: The position of a security rule
+        :param pulumi.Input[_builtins.str] position: The position of a security rule. Possible values are `pre` and `post`.
         :param pulumi.Input[Union['SecurityRuleProfileSettingArgs', 'SecurityRuleProfileSettingArgsDict', 'outputs.SecurityRuleProfileSetting']] profile_setting: The security profile object
         :param pulumi.Input[_builtins.str] relative_position: Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
         :param pulumi.Input[_builtins.str] schedule: Schedule in which this rule will be applied
@@ -1996,7 +1996,7 @@ class SecurityRule(pulumi.CustomResource):
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] source_users: List of source users and/or groups.  Reserved words include `any`, `pre-login`, `known-user`, and `unknown`.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] sources: The source addresses(es)
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tags: The tags associated with the security rule
-        :param pulumi.Input[_builtins.str] target_rule: The name or UUID of the rule to position this rule relative to. Required when `relative_position` is `"before"` or `"after"`.
+        :param pulumi.Input[_builtins.str] target_rule: UUID of the rule to position this rule relative to. Required when `relative_position` is `"before"` or `"after"`.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tenant_restrictions: Tenant restrictions
         :param pulumi.Input[_builtins.str] tfid: The Terraform ID.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tos: The destination security zone(s)
@@ -2051,7 +2051,7 @@ class SecurityRule(pulumi.CustomResource):
     @pulumi.getter
     def action(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The action to be taken when the rule is matched
+        The action to be taken when the rule is matched. Possible values are `allow`, `deny`, `drop`, `reset-client`, `reset-server` and `reset-both`.
         """
         return pulumi.get(self, "action")
 
@@ -2251,7 +2251,7 @@ class SecurityRule(pulumi.CustomResource):
     @pulumi.getter
     def position(self) -> pulumi.Output[_builtins.str]:
         """
-        The position of a security rule
+        The position of a security rule. Possible values are `pre` and `post`.
         """
         return pulumi.get(self, "position")
 
@@ -2339,7 +2339,7 @@ class SecurityRule(pulumi.CustomResource):
     @pulumi.getter(name="targetRule")
     def target_rule(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The name or UUID of the rule to position this rule relative to. Required when `relative_position` is `"before"` or `"after"`.
+        UUID of the rule to position this rule relative to. Required when `relative_position` is `"before"` or `"after"`.
         """
         return pulumi.get(self, "target_rule")
 

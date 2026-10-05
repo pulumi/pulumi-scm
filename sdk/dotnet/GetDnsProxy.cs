@@ -39,6 +39,9 @@ namespace Pulumi.Scm
         [Input("device")]
         public string? Device { get; set; }
 
+        /// <summary>
+        /// The folder in which the resource is defined
+        /// </summary>
         [Input("folder")]
         public string? Folder { get; set; }
 
@@ -48,9 +51,15 @@ namespace Pulumi.Scm
         [Input("id", required: true)]
         public string Id { get; set; } = null!;
 
+        /// <summary>
+        /// DNS proxy name
+        /// </summary>
         [Input("name")]
         public string? Name { get; set; }
 
+        /// <summary>
+        /// The snippet in which the resource is defined
+        /// </summary>
         [Input("snippet")]
         public string? Snippet { get; set; }
 
@@ -68,6 +77,9 @@ namespace Pulumi.Scm
         [Input("device")]
         public Input<string>? Device { get; set; }
 
+        /// <summary>
+        /// The folder in which the resource is defined
+        /// </summary>
         [Input("folder")]
         public Input<string>? Folder { get; set; }
 
@@ -77,9 +89,15 @@ namespace Pulumi.Scm
         [Input("id", required: true)]
         public Input<string> Id { get; set; } = null!;
 
+        /// <summary>
+        /// DNS proxy name
+        /// </summary>
         [Input("name")]
         public Input<string>? Name { get; set; }
 
+        /// <summary>
+        /// The snippet in which the resource is defined
+        /// </summary>
         [Input("snippet")]
         public Input<string>? Snippet { get; set; }
 
@@ -93,25 +111,61 @@ namespace Pulumi.Scm
     [OutputType]
     public sealed class GetDnsProxyResult
     {
+        /// <summary>
+        /// Cache
+        /// </summary>
         public readonly Outputs.GetDnsProxyCacheResult Cache;
+        /// <summary>
+        /// Default
+        /// </summary>
         public readonly Outputs.GetDnsProxyDefaultResult Default;
         /// <summary>
         /// The device in which the resource is defined
         /// </summary>
         public readonly string Device;
+        /// <summary>
+        /// DNS proxy rules
+        /// </summary>
         public readonly ImmutableArray<Outputs.GetDnsProxyDomainServerResult> DomainServers;
+        /// <summary>
+        /// Enable DNS proxy?
+        /// </summary>
         public readonly bool Enabled;
+        /// <summary>
+        /// The folder in which the resource is defined
+        /// </summary>
         public readonly string Folder;
         /// <summary>
         /// UUID of the resource
         /// </summary>
         public readonly string Id;
+        /// <summary>
+        /// Interfaces on which to enable DNS proxy service
+        /// </summary>
         public readonly ImmutableArray<string> Interfaces;
+        /// <summary>
+        /// DNS proxy name
+        /// </summary>
         public readonly string Name;
+        /// <summary>
+        /// The snippet in which the resource is defined
+        /// </summary>
         public readonly string Snippet;
+        /// <summary>
+        /// Static entries
+        /// </summary>
         public readonly ImmutableArray<Outputs.GetDnsProxyStaticEntryResult> StaticEntries;
+        /// <summary>
+        /// Tcp queries
+        /// </summary>
         public readonly Outputs.GetDnsProxyTcpQueriesResult TcpQueries;
+        /// <summary>
+        /// The Terraform ID.
+        /// </summary>
         public readonly string Tfid;
+        /// <summary>
+        /// Udp queries
+        /// </summary>
         public readonly Outputs.GetDnsProxyUdpQueriesResult UdpQueries;
 
         [OutputConstructor]

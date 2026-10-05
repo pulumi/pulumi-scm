@@ -35,16 +35,12 @@ public final class SdwanSaasQualityProfileMonitorModeStaticIpArgs extends com.pu
     /**
      * List of IP addresses
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `fqdn` and `ipAddress`.
-     * 
      */
     @Import(name="ipAddresses")
     private @Nullable Output<List<SdwanSaasQualityProfileMonitorModeStaticIpIpAddressArgs>> ipAddresses;
 
     /**
      * @return List of IP addresses
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `fqdn` and `ipAddress`.
      * 
      */
     public Optional<Output<List<SdwanSaasQualityProfileMonitorModeStaticIpIpAddressArgs>>> ipAddresses() {
@@ -100,8 +96,6 @@ public final class SdwanSaasQualityProfileMonitorModeStaticIpArgs extends com.pu
         /**
          * @param ipAddresses List of IP addresses
          * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `fqdn` and `ipAddress`.
-         * 
          * @return builder
          * 
          */
@@ -113,8 +107,6 @@ public final class SdwanSaasQualityProfileMonitorModeStaticIpArgs extends com.pu
         /**
          * @param ipAddresses List of IP addresses
          * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `fqdn` and `ipAddress`.
-         * 
          * @return builder
          * 
          */
@@ -124,8 +116,6 @@ public final class SdwanSaasQualityProfileMonitorModeStaticIpArgs extends com.pu
 
         /**
          * @param ipAddresses List of IP addresses
-         * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `fqdn` and `ipAddress`.
          * 
          * @return builder
          * 

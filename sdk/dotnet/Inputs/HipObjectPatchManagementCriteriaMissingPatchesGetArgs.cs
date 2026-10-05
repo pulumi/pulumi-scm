@@ -13,7 +13,7 @@ namespace Pulumi.Scm.Inputs
     public sealed class HipObjectPatchManagementCriteriaMissingPatchesGetArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Check
+        /// Check. Possible values are `has-any`, `has-none` and `has-all`.
         /// </summary>
         [Input("check", required: true)]
         public Input<string> Check { get; set; } = null!;

@@ -12,30 +12,26 @@ import javax.annotation.Nullable;
 @CustomType
 public final class HipObjectDiskEncryptionCriteriaEncryptedLocationEncryptionState {
     /**
-     * @return Is
+     * @return Is. Possible values are `encrypted`, `unencrypted`, `partial` and `unknown`.
      * 
      */
     private @Nullable String is;
     /**
-     * @return Is not
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `is` and `isNot`.
+     * @return Is not. Possible values are `encrypted`, `unencrypted`, `partial` and `unknown`.
      * 
      */
     private @Nullable String isNot;
 
     private HipObjectDiskEncryptionCriteriaEncryptedLocationEncryptionState() {}
     /**
-     * @return Is
+     * @return Is. Possible values are `encrypted`, `unencrypted`, `partial` and `unknown`.
      * 
      */
     public Optional<String> is() {
         return Optional.ofNullable(this.is);
     }
     /**
-     * @return Is not
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `is` and `isNot`.
+     * @return Is not. Possible values are `encrypted`, `unencrypted`, `partial` and `unknown`.
      * 
      */
     public Optional<String> isNot() {

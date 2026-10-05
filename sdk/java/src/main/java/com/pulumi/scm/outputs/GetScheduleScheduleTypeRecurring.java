@@ -20,8 +20,6 @@ public final class GetScheduleScheduleTypeRecurring {
     /**
      * @return Weekly
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `daily` and `weekly`.
-     * 
      */
     private GetScheduleScheduleTypeRecurringWeekly weekly;
 
@@ -35,8 +33,6 @@ public final class GetScheduleScheduleTypeRecurring {
     }
     /**
      * @return Weekly
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `daily` and `weekly`.
      * 
      */
     public GetScheduleScheduleTypeRecurringWeekly weekly() {

@@ -23,28 +23,20 @@ public final class BgpAddressFamilyProfileIpv4UnicastSendCommunity {
     /**
      * @return Both
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
-     * 
      */
     private @Nullable BgpAddressFamilyProfileIpv4UnicastSendCommunityBoth both;
     /**
      * @return Extended
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
      * 
      */
     private @Nullable BgpAddressFamilyProfileIpv4UnicastSendCommunityExtended extended;
     /**
      * @return Large
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
-     * 
      */
     private @Nullable BgpAddressFamilyProfileIpv4UnicastSendCommunityLarge large;
     /**
      * @return Standard
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
      * 
      */
     private @Nullable BgpAddressFamilyProfileIpv4UnicastSendCommunityStandard standard;
@@ -60,16 +52,12 @@ public final class BgpAddressFamilyProfileIpv4UnicastSendCommunity {
     /**
      * @return Both
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
-     * 
      */
     public Optional<BgpAddressFamilyProfileIpv4UnicastSendCommunityBoth> both() {
         return Optional.ofNullable(this.both);
     }
     /**
      * @return Extended
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
      * 
      */
     public Optional<BgpAddressFamilyProfileIpv4UnicastSendCommunityExtended> extended() {
@@ -78,16 +66,12 @@ public final class BgpAddressFamilyProfileIpv4UnicastSendCommunity {
     /**
      * @return Large
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
-     * 
      */
     public Optional<BgpAddressFamilyProfileIpv4UnicastSendCommunityLarge> large() {
         return Optional.ofNullable(this.large);
     }
     /**
      * @return Standard
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
      * 
      */
     public Optional<BgpAddressFamilyProfileIpv4UnicastSendCommunityStandard> standard() {

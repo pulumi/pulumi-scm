@@ -12,7 +12,7 @@ import java.util.Objects;
 @CustomType
 public final class GetUpdateScheduleUpdateScheduleAntiVirusRecurringHourly {
     /**
-     * @return Action
+     * @return Action. Possible values are `download-only` and `download-and-install`.
      * 
      */
     private String action;
@@ -24,7 +24,7 @@ public final class GetUpdateScheduleUpdateScheduleAntiVirusRecurringHourly {
 
     private GetUpdateScheduleUpdateScheduleAntiVirusRecurringHourly() {}
     /**
-     * @return Action
+     * @return Action. Possible values are `download-only` and `download-and-install`.
      * 
      */
     public String action() {

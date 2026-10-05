@@ -46,7 +46,7 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly string Origin;
         /// <summary>
-        /// BGP Root RIB Route maps match Peer
+        /// BGP Root RIB Route maps match Peer. Possible values are `Local` and `None`.
         /// </summary>
         public readonly string Peer;
         /// <summary>

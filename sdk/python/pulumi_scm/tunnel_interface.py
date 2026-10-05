@@ -39,8 +39,6 @@ class TunnelInterfaceArgs:
         :param pulumi.Input[_builtins.str] default_value: Default interface assignment for tunnel interface
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] interface_management_profile: Interface management profile for tunnel interface
         :param pulumi.Input[Sequence[pulumi.Input['TunnelInterfaceIpArgs']]] ips: Tunnel Interface IP Parent
         :param pulumi.Input['TunnelInterfaceIpv6Args'] ipv6: Tunnel Interface IPv6 Configuration
@@ -48,8 +46,6 @@ class TunnelInterfaceArgs:
         :param pulumi.Input[_builtins.str] name: L3 sub-interface name for tunnel interface
         :param pulumi.Input[_builtins.str] netflow_profile: Name of Netflow Profile to assign to Interface
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         if comment is not None:
             pulumi.set(__self__, "comment", comment)
@@ -115,8 +111,6 @@ class TunnelInterfaceArgs:
     def folder(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
-
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
 
@@ -201,8 +195,6 @@ class TunnelInterfaceArgs:
     def snippet(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
-
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
 
@@ -233,8 +225,6 @@ class _TunnelInterfaceState:
         :param pulumi.Input[_builtins.str] default_value: Default interface assignment for tunnel interface
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] interface_management_profile: Interface management profile for tunnel interface
         :param pulumi.Input[Sequence[pulumi.Input['TunnelInterfaceIpArgs']]] ips: Tunnel Interface IP Parent
         :param pulumi.Input['TunnelInterfaceIpv6Args'] ipv6: Tunnel Interface IPv6 Configuration
@@ -242,8 +232,6 @@ class _TunnelInterfaceState:
         :param pulumi.Input[_builtins.str] name: L3 sub-interface name for tunnel interface
         :param pulumi.Input[_builtins.str] netflow_profile: Name of Netflow Profile to assign to Interface
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] tfid: The Terraform ID.
         """
         if comment is not None:
@@ -312,8 +300,6 @@ class _TunnelInterfaceState:
     def folder(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
-
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
 
@@ -398,8 +384,6 @@ class _TunnelInterfaceState:
     def snippet(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
-
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
 
@@ -524,8 +508,6 @@ class TunnelInterface(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] default_value: Default interface assignment for tunnel interface
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] interface_management_profile: Interface management profile for tunnel interface
         :param pulumi.Input[Sequence[pulumi.Input[Union['TunnelInterfaceIpArgs', 'TunnelInterfaceIpArgsDict', 'outputs.TunnelInterfaceIp']]]] ips: Tunnel Interface IP Parent
         :param pulumi.Input[Union['TunnelInterfaceIpv6Args', 'TunnelInterfaceIpv6ArgsDict', 'outputs.TunnelInterfaceIpv6']] ipv6: Tunnel Interface IPv6 Configuration
@@ -533,8 +515,6 @@ class TunnelInterface(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] name: L3 sub-interface name for tunnel interface
         :param pulumi.Input[_builtins.str] netflow_profile: Name of Netflow Profile to assign to Interface
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         ...
     @overload
@@ -702,8 +682,6 @@ class TunnelInterface(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] default_value: Default interface assignment for tunnel interface
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] interface_management_profile: Interface management profile for tunnel interface
         :param pulumi.Input[Sequence[pulumi.Input[Union['TunnelInterfaceIpArgs', 'TunnelInterfaceIpArgsDict', 'outputs.TunnelInterfaceIp']]]] ips: Tunnel Interface IP Parent
         :param pulumi.Input[Union['TunnelInterfaceIpv6Args', 'TunnelInterfaceIpv6ArgsDict', 'outputs.TunnelInterfaceIpv6']] ipv6: Tunnel Interface IPv6 Configuration
@@ -711,8 +689,6 @@ class TunnelInterface(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] name: L3 sub-interface name for tunnel interface
         :param pulumi.Input[_builtins.str] netflow_profile: Name of Netflow Profile to assign to Interface
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] tfid: The Terraform ID.
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
@@ -762,8 +738,6 @@ class TunnelInterface(pulumi.CustomResource):
     def folder(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
-
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
 
@@ -820,8 +794,6 @@ class TunnelInterface(pulumi.CustomResource):
     def snippet(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
-
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
 

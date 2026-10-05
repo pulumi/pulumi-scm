@@ -127,14 +127,14 @@ public final class BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetArgs ex
     }
 
     /**
-     * Connected Static BGP Route maps set Origin
+     * Connected Static BGP Route maps set Origin. Possible values are `none`, `egp`, `igp` and `incomplete`.
      * 
      */
     @Import(name="origin")
     private @Nullable Output<String> origin;
 
     /**
-     * @return Connected Static BGP Route maps set Origin
+     * @return Connected Static BGP Route maps set Origin. Possible values are `none`, `egp`, `igp` and `incomplete`.
      * 
      */
     public Optional<Output<String>> origin() {
@@ -404,7 +404,7 @@ public final class BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetArgs ex
         }
 
         /**
-         * @param origin Connected Static BGP Route maps set Origin
+         * @param origin Connected Static BGP Route maps set Origin. Possible values are `none`, `egp`, `igp` and `incomplete`.
          * 
          * @return builder
          * 
@@ -415,7 +415,7 @@ public final class BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetArgs ex
         }
 
         /**
-         * @param origin Connected Static BGP Route maps set Origin
+         * @param origin Connected Static BGP Route maps set Origin. Possible values are `none`, `egp`, `igp` and `incomplete`.
          * 
          * @return builder
          * 

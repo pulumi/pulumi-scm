@@ -35,14 +35,14 @@ public final class LogicalRouterVrfRoutingTableIpStaticRoutePathMonitorArgs exte
     }
 
     /**
-     * Failure condition
+     * Failure condition. Possible values are `any` and `all`.
      * 
      */
     @Import(name="failureCondition")
     private @Nullable Output<String> failureCondition;
 
     /**
-     * @return Failure condition
+     * @return Failure condition. Possible values are `any` and `all`.
      * 
      */
     public Optional<Output<String>> failureCondition() {
@@ -128,7 +128,7 @@ public final class LogicalRouterVrfRoutingTableIpStaticRoutePathMonitorArgs exte
         }
 
         /**
-         * @param failureCondition Failure condition
+         * @param failureCondition Failure condition. Possible values are `any` and `all`.
          * 
          * @return builder
          * 
@@ -139,7 +139,7 @@ public final class LogicalRouterVrfRoutingTableIpStaticRoutePathMonitorArgs exte
         }
 
         /**
-         * @param failureCondition Failure condition
+         * @param failureCondition Failure condition. Possible values are `any` and `all`.
          * 
          * @return builder
          * 

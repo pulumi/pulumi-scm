@@ -38,18 +38,14 @@ class AuthenticationProfileArgs:
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] allow_lists: The allow_list of the authentication profile
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input['AuthenticationProfileLockoutArgs'] lockout: Lockout object of the authentication profile
         :param pulumi.Input['AuthenticationProfileMethodArgs'] method: method object of authentication profile
         :param pulumi.Input['AuthenticationProfileMultiFactorAuthArgs'] multi_factor_auth: Multi factor auth
         :param pulumi.Input[_builtins.str] name: The name of the authentication profile
         :param pulumi.Input['AuthenticationProfileSingleSignOnArgs'] single_sign_on: Single sign on
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] user_domain: User domain
-        :param pulumi.Input[_builtins.str] username_modifier: Username modifier
+        :param pulumi.Input[_builtins.str] username_modifier: Username modifier. Possible values are `%USERINPUT%`, `%USERINPUT%@%USERDOMAIN%` and `%USERDOMAIN%\\\\%USERINPUT%`.
         """
         if allow_lists is not None:
             pulumi.set(__self__, "allow_lists", allow_lists)
@@ -103,8 +99,6 @@ class AuthenticationProfileArgs:
     def folder(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
-
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
 
@@ -177,8 +171,6 @@ class AuthenticationProfileArgs:
     def snippet(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
-
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
 
@@ -202,7 +194,7 @@ class AuthenticationProfileArgs:
     @pulumi.getter(name="usernameModifier")
     def username_modifier(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
-        Username modifier
+        Username modifier. Possible values are `%USERINPUT%`, `%USERINPUT%@%USERDOMAIN%` and `%USERDOMAIN%\\\\%USERINPUT%`.
         """
         return pulumi.get(self, "username_modifier")
 
@@ -232,19 +224,15 @@ class _AuthenticationProfileState:
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] allow_lists: The allow_list of the authentication profile
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input['AuthenticationProfileLockoutArgs'] lockout: Lockout object of the authentication profile
         :param pulumi.Input['AuthenticationProfileMethodArgs'] method: method object of authentication profile
         :param pulumi.Input['AuthenticationProfileMultiFactorAuthArgs'] multi_factor_auth: Multi factor auth
         :param pulumi.Input[_builtins.str] name: The name of the authentication profile
         :param pulumi.Input['AuthenticationProfileSingleSignOnArgs'] single_sign_on: Single sign on
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] tfid: The Terraform ID.
         :param pulumi.Input[_builtins.str] user_domain: User domain
-        :param pulumi.Input[_builtins.str] username_modifier: Username modifier
+        :param pulumi.Input[_builtins.str] username_modifier: Username modifier. Possible values are `%USERINPUT%`, `%USERINPUT%@%USERDOMAIN%` and `%USERDOMAIN%\\\\%USERINPUT%`.
         """
         if allow_lists is not None:
             pulumi.set(__self__, "allow_lists", allow_lists)
@@ -300,8 +288,6 @@ class _AuthenticationProfileState:
     def folder(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
-
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
 
@@ -374,8 +360,6 @@ class _AuthenticationProfileState:
     def snippet(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
-
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
 
@@ -411,7 +395,7 @@ class _AuthenticationProfileState:
     @pulumi.getter(name="usernameModifier")
     def username_modifier(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
-        Username modifier
+        Username modifier. Possible values are `%USERINPUT%`, `%USERINPUT%@%USERDOMAIN%` and `%USERDOMAIN%\\\\%USERINPUT%`.
         """
         return pulumi.get(self, "username_modifier")
 
@@ -526,18 +510,14 @@ class AuthenticationProfile(pulumi.CustomResource):
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] allow_lists: The allow_list of the authentication profile
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[Union['AuthenticationProfileLockoutArgs', 'AuthenticationProfileLockoutArgsDict', 'outputs.AuthenticationProfileLockout']] lockout: Lockout object of the authentication profile
         :param pulumi.Input[Union['AuthenticationProfileMethodArgs', 'AuthenticationProfileMethodArgsDict', 'outputs.AuthenticationProfileMethod']] method: method object of authentication profile
         :param pulumi.Input[Union['AuthenticationProfileMultiFactorAuthArgs', 'AuthenticationProfileMultiFactorAuthArgsDict', 'outputs.AuthenticationProfileMultiFactorAuth']] multi_factor_auth: Multi factor auth
         :param pulumi.Input[_builtins.str] name: The name of the authentication profile
         :param pulumi.Input[Union['AuthenticationProfileSingleSignOnArgs', 'AuthenticationProfileSingleSignOnArgsDict', 'outputs.AuthenticationProfileSingleSignOn']] single_sign_on: Single sign on
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] user_domain: User domain
-        :param pulumi.Input[_builtins.str] username_modifier: Username modifier
+        :param pulumi.Input[_builtins.str] username_modifier: Username modifier. Possible values are `%USERINPUT%`, `%USERINPUT%@%USERDOMAIN%` and `%USERDOMAIN%\\\\%USERINPUT%`.
         """
         ...
     @overload
@@ -707,19 +687,15 @@ class AuthenticationProfile(pulumi.CustomResource):
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] allow_lists: The allow_list of the authentication profile
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[Union['AuthenticationProfileLockoutArgs', 'AuthenticationProfileLockoutArgsDict', 'outputs.AuthenticationProfileLockout']] lockout: Lockout object of the authentication profile
         :param pulumi.Input[Union['AuthenticationProfileMethodArgs', 'AuthenticationProfileMethodArgsDict', 'outputs.AuthenticationProfileMethod']] method: method object of authentication profile
         :param pulumi.Input[Union['AuthenticationProfileMultiFactorAuthArgs', 'AuthenticationProfileMultiFactorAuthArgsDict', 'outputs.AuthenticationProfileMultiFactorAuth']] multi_factor_auth: Multi factor auth
         :param pulumi.Input[_builtins.str] name: The name of the authentication profile
         :param pulumi.Input[Union['AuthenticationProfileSingleSignOnArgs', 'AuthenticationProfileSingleSignOnArgsDict', 'outputs.AuthenticationProfileSingleSignOn']] single_sign_on: Single sign on
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] tfid: The Terraform ID.
         :param pulumi.Input[_builtins.str] user_domain: User domain
-        :param pulumi.Input[_builtins.str] username_modifier: Username modifier
+        :param pulumi.Input[_builtins.str] username_modifier: Username modifier. Possible values are `%USERINPUT%`, `%USERINPUT%@%USERDOMAIN%` and `%USERDOMAIN%\\\\%USERINPUT%`.
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
 
@@ -760,8 +736,6 @@ class AuthenticationProfile(pulumi.CustomResource):
     def folder(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
-
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
 
@@ -810,8 +784,6 @@ class AuthenticationProfile(pulumi.CustomResource):
     def snippet(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
-
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
 
@@ -835,7 +807,7 @@ class AuthenticationProfile(pulumi.CustomResource):
     @pulumi.getter(name="usernameModifier")
     def username_modifier(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        Username modifier
+        Username modifier. Possible values are `%USERINPUT%`, `%USERINPUT%@%USERDOMAIN%` and `%USERDOMAIN%\\\\%USERINPUT%`.
         """
         return pulumi.get(self, "username_modifier")
 

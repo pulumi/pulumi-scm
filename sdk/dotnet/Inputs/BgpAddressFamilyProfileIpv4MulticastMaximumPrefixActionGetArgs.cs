@@ -20,8 +20,6 @@ namespace Pulumi.Scm.Inputs
 
         /// <summary>
         /// Warning only
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Restart` and `WarningOnly`.
         /// </summary>
         [Input("warningOnly")]
         public Input<Inputs.BgpAddressFamilyProfileIpv4MulticastMaximumPrefixActionWarningOnlyGetArgs>? WarningOnly { get; set; }

@@ -103,21 +103,17 @@ type AntiSpywareSignature struct {
 	DefaultAction AntiSpywareSignatureDefaultActionPtrOutput `pulumi:"defaultAction"`
 	// The device in which the resource is defined
 	Device pulumi.StringPtrOutput `pulumi:"device"`
-	// Direction
+	// Direction. Possible values are `client2server`, `server2client` and `both`.
 	Direction pulumi.StringPtrOutput `pulumi:"direction"`
 	// The folder in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrOutput `pulumi:"folder"`
 	// Reference
 	References pulumi.StringArrayOutput `pulumi:"references"`
-	// Severity
+	// Severity. Possible values are `critical`, `low`, `high`, `medium` and `informational`.
 	Severity pulumi.StringPtrOutput `pulumi:"severity"`
 	// anti spyware signature
 	Signature AntiSpywareSignatureSignaturePtrOutput `pulumi:"signature"`
 	// The snippet in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
 	// The Terraform ID.
 	Tfid pulumi.StringOutput `pulumi:"tfid"`
@@ -175,21 +171,17 @@ type antiSpywareSignatureState struct {
 	DefaultAction *AntiSpywareSignatureDefaultAction `pulumi:"defaultAction"`
 	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
-	// Direction
+	// Direction. Possible values are `client2server`, `server2client` and `both`.
 	Direction *string `pulumi:"direction"`
 	// The folder in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// Reference
 	References []string `pulumi:"references"`
-	// Severity
+	// Severity. Possible values are `critical`, `low`, `high`, `medium` and `informational`.
 	Severity *string `pulumi:"severity"`
 	// anti spyware signature
 	Signature *AntiSpywareSignatureSignature `pulumi:"signature"`
 	// The snippet in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	// The Terraform ID.
 	Tfid *string `pulumi:"tfid"`
@@ -212,21 +204,17 @@ type AntiSpywareSignatureState struct {
 	DefaultAction AntiSpywareSignatureDefaultActionPtrInput
 	// The device in which the resource is defined
 	Device pulumi.StringPtrInput
-	// Direction
+	// Direction. Possible values are `client2server`, `server2client` and `both`.
 	Direction pulumi.StringPtrInput
 	// The folder in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// Reference
 	References pulumi.StringArrayInput
-	// Severity
+	// Severity. Possible values are `critical`, `low`, `high`, `medium` and `informational`.
 	Severity pulumi.StringPtrInput
 	// anti spyware signature
 	Signature AntiSpywareSignatureSignaturePtrInput
 	// The snippet in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	// The Terraform ID.
 	Tfid pulumi.StringPtrInput
@@ -253,21 +241,17 @@ type antiSpywareSignatureArgs struct {
 	DefaultAction *AntiSpywareSignatureDefaultAction `pulumi:"defaultAction"`
 	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
-	// Direction
+	// Direction. Possible values are `client2server`, `server2client` and `both`.
 	Direction *string `pulumi:"direction"`
 	// The folder in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// Reference
 	References []string `pulumi:"references"`
-	// Severity
+	// Severity. Possible values are `critical`, `low`, `high`, `medium` and `informational`.
 	Severity *string `pulumi:"severity"`
 	// anti spyware signature
 	Signature *AntiSpywareSignatureSignature `pulumi:"signature"`
 	// The snippet in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	// threat id range \n\n and \n\n
 	ThreatId string `pulumi:"threatId"`
@@ -289,21 +273,17 @@ type AntiSpywareSignatureArgs struct {
 	DefaultAction AntiSpywareSignatureDefaultActionPtrInput
 	// The device in which the resource is defined
 	Device pulumi.StringPtrInput
-	// Direction
+	// Direction. Possible values are `client2server`, `server2client` and `both`.
 	Direction pulumi.StringPtrInput
 	// The folder in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// Reference
 	References pulumi.StringArrayInput
-	// Severity
+	// Severity. Possible values are `critical`, `low`, `high`, `medium` and `informational`.
 	Severity pulumi.StringPtrInput
 	// anti spyware signature
 	Signature AntiSpywareSignatureSignaturePtrInput
 	// The snippet in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	// threat id range \n\n and \n\n
 	ThreatId pulumi.StringInput
@@ -425,14 +405,12 @@ func (o AntiSpywareSignatureOutput) Device() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *AntiSpywareSignature) pulumi.StringPtrOutput { return v.Device }).(pulumi.StringPtrOutput)
 }
 
-// Direction
+// Direction. Possible values are `client2server`, `server2client` and `both`.
 func (o AntiSpywareSignatureOutput) Direction() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *AntiSpywareSignature) pulumi.StringPtrOutput { return v.Direction }).(pulumi.StringPtrOutput)
 }
 
 // The folder in which the resource is defined
-//
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o AntiSpywareSignatureOutput) Folder() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *AntiSpywareSignature) pulumi.StringPtrOutput { return v.Folder }).(pulumi.StringPtrOutput)
 }
@@ -442,7 +420,7 @@ func (o AntiSpywareSignatureOutput) References() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v *AntiSpywareSignature) pulumi.StringArrayOutput { return v.References }).(pulumi.StringArrayOutput)
 }
 
-// Severity
+// Severity. Possible values are `critical`, `low`, `high`, `medium` and `informational`.
 func (o AntiSpywareSignatureOutput) Severity() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *AntiSpywareSignature) pulumi.StringPtrOutput { return v.Severity }).(pulumi.StringPtrOutput)
 }
@@ -453,8 +431,6 @@ func (o AntiSpywareSignatureOutput) Signature() AntiSpywareSignatureSignaturePtr
 }
 
 // The snippet in which the resource is defined
-//
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o AntiSpywareSignatureOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *AntiSpywareSignature) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)
 }

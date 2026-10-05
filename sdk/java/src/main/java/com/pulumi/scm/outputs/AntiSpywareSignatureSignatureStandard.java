@@ -36,7 +36,7 @@ public final class AntiSpywareSignatureSignatureStandard {
      */
     private @Nullable Boolean orderFree;
     /**
-     * @return Scope
+     * @return Scope. Possible values are `protocol-data-unit` and `session`.
      * 
      */
     private @Nullable String scope;
@@ -71,7 +71,7 @@ public final class AntiSpywareSignatureSignatureStandard {
         return Optional.ofNullable(this.orderFree);
     }
     /**
-     * @return Scope
+     * @return Scope. Possible values are `protocol-data-unit` and `session`.
      * 
      */
     public Optional<String> scope() {

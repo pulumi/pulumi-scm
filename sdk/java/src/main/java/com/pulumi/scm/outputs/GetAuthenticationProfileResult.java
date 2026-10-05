@@ -15,29 +15,77 @@ import java.util.Objects;
 
 @CustomType
 public final class GetAuthenticationProfileResult {
+    /**
+     * @return The allowList of the authentication profile
+     * 
+     */
     private List<String> allowLists;
     /**
      * @return The device in which the resource is defined
      * 
      */
     private String device;
+    /**
+     * @return The folder in which the resource is defined
+     * 
+     */
     private String folder;
     /**
      * @return The UUID of the authentication profile
      * 
      */
     private String id;
+    /**
+     * @return Lockout object of the authentication profile
+     * 
+     */
     private GetAuthenticationProfileLockout lockout;
+    /**
+     * @return method object of authentication profile
+     * 
+     */
     private GetAuthenticationProfileMethod method;
+    /**
+     * @return Multi factor auth
+     * 
+     */
     private GetAuthenticationProfileMultiFactorAuth multiFactorAuth;
+    /**
+     * @return The name of the authentication profile
+     * 
+     */
     private String name;
+    /**
+     * @return Single sign on
+     * 
+     */
     private GetAuthenticationProfileSingleSignOn singleSignOn;
+    /**
+     * @return The snippet in which the resource is defined
+     * 
+     */
     private String snippet;
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     private String tfid;
+    /**
+     * @return User domain
+     * 
+     */
     private String userDomain;
+    /**
+     * @return Username modifier. Possible values are `%USERINPUT%`, `%USERINPUT%{@literal @}%USERDOMAIN%` and `%USERDOMAIN%\\%USERINPUT%`.
+     * 
+     */
     private String usernameModifier;
 
     private GetAuthenticationProfileResult() {}
+    /**
+     * @return The allowList of the authentication profile
+     * 
+     */
     public List<String> allowLists() {
         return this.allowLists;
     }
@@ -48,6 +96,10 @@ public final class GetAuthenticationProfileResult {
     public String device() {
         return this.device;
     }
+    /**
+     * @return The folder in which the resource is defined
+     * 
+     */
     public String folder() {
         return this.folder;
     }
@@ -58,30 +110,66 @@ public final class GetAuthenticationProfileResult {
     public String id() {
         return this.id;
     }
+    /**
+     * @return Lockout object of the authentication profile
+     * 
+     */
     public GetAuthenticationProfileLockout lockout() {
         return this.lockout;
     }
+    /**
+     * @return method object of authentication profile
+     * 
+     */
     public GetAuthenticationProfileMethod method() {
         return this.method;
     }
+    /**
+     * @return Multi factor auth
+     * 
+     */
     public GetAuthenticationProfileMultiFactorAuth multiFactorAuth() {
         return this.multiFactorAuth;
     }
+    /**
+     * @return The name of the authentication profile
+     * 
+     */
     public String name() {
         return this.name;
     }
+    /**
+     * @return Single sign on
+     * 
+     */
     public GetAuthenticationProfileSingleSignOn singleSignOn() {
         return this.singleSignOn;
     }
+    /**
+     * @return The snippet in which the resource is defined
+     * 
+     */
     public String snippet() {
         return this.snippet;
     }
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     public String tfid() {
         return this.tfid;
     }
+    /**
+     * @return User domain
+     * 
+     */
     public String userDomain() {
         return this.userDomain;
     }
+    /**
+     * @return Username modifier. Possible values are `%USERINPUT%`, `%USERINPUT%{@literal @}%USERDOMAIN%` and `%USERDOMAIN%\\%USERINPUT%`.
+     * 
+     */
     public String usernameModifier() {
         return this.usernameModifier;
     }

@@ -18,7 +18,7 @@ public final class GetLogicalRouterListData {
      */
     private String device;
     /**
-     * @return The folder of the item. Default: Shared.
+     * @return The folder in which the resource is defined
      * 
      */
     private String folder;
@@ -28,17 +28,12 @@ public final class GetLogicalRouterListData {
      */
     private String id;
     /**
-     * @return The name of the item.
+     * @return Name
      * 
      */
     private String name;
     /**
-     * @return Routing stack
-     * 
-     */
-    private String routingStack;
-    /**
-     * @return The snippet of the item.
+     * @return The snippet in which the resource is defined
      * 
      */
     private String snippet;
@@ -62,7 +57,7 @@ public final class GetLogicalRouterListData {
         return this.device;
     }
     /**
-     * @return The folder of the item. Default: Shared.
+     * @return The folder in which the resource is defined
      * 
      */
     public String folder() {
@@ -76,21 +71,14 @@ public final class GetLogicalRouterListData {
         return this.id;
     }
     /**
-     * @return The name of the item.
+     * @return Name
      * 
      */
     public String name() {
         return this.name;
     }
     /**
-     * @return Routing stack
-     * 
-     */
-    public String routingStack() {
-        return this.routingStack;
-    }
-    /**
-     * @return The snippet of the item.
+     * @return The snippet in which the resource is defined
      * 
      */
     public String snippet() {
@@ -124,7 +112,6 @@ public final class GetLogicalRouterListData {
         private String folder;
         private String id;
         private String name;
-        private String routingStack;
         private String snippet;
         private String tfid;
         private List<GetLogicalRouterListDataVrf> vrves;
@@ -135,7 +122,6 @@ public final class GetLogicalRouterListData {
     	      this.folder = defaults.folder;
     	      this.id = defaults.id;
     	      this.name = defaults.name;
-    	      this.routingStack = defaults.routingStack;
     	      this.snippet = defaults.snippet;
     	      this.tfid = defaults.tfid;
     	      this.vrves = defaults.vrves;
@@ -174,14 +160,6 @@ public final class GetLogicalRouterListData {
             return this;
         }
         @CustomType.Setter
-        public Builder routingStack(String routingStack) {
-            if (routingStack == null) {
-              throw new MissingRequiredPropertyException("GetLogicalRouterListData", "routingStack");
-            }
-            this.routingStack = routingStack;
-            return this;
-        }
-        @CustomType.Setter
         public Builder snippet(String snippet) {
             if (snippet == null) {
               throw new MissingRequiredPropertyException("GetLogicalRouterListData", "snippet");
@@ -214,7 +192,6 @@ public final class GetLogicalRouterListData {
             _resultValue.folder = folder;
             _resultValue.id = id;
             _resultValue.name = name;
-            _resultValue.routingStack = routingStack;
             _resultValue.snippet = snippet;
             _resultValue.tfid = tfid;
             _resultValue.vrves = vrves;

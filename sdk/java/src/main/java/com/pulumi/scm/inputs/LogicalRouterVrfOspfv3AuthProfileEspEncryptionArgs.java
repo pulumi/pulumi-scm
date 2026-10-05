@@ -16,14 +16,14 @@ public final class LogicalRouterVrfOspfv3AuthProfileEspEncryptionArgs extends co
     public static final LogicalRouterVrfOspfv3AuthProfileEspEncryptionArgs Empty = new LogicalRouterVrfOspfv3AuthProfileEspEncryptionArgs();
 
     /**
-     * Algorithm
+     * Algorithm. Possible values are `3des`, `aes-128-cbc`, `aes-192-cbc`, `aes-256-cbc` and `null`.
      * 
      */
     @Import(name="algorithm")
     private @Nullable Output<String> algorithm;
 
     /**
-     * @return Algorithm
+     * @return Algorithm. Possible values are `3des`, `aes-128-cbc`, `aes-192-cbc`, `aes-256-cbc` and `null`.
      * 
      */
     public Optional<Output<String>> algorithm() {
@@ -71,7 +71,7 @@ public final class LogicalRouterVrfOspfv3AuthProfileEspEncryptionArgs extends co
         }
 
         /**
-         * @param algorithm Algorithm
+         * @param algorithm Algorithm. Possible values are `3des`, `aes-128-cbc`, `aes-192-cbc`, `aes-256-cbc` and `null`.
          * 
          * @return builder
          * 
@@ -82,7 +82,7 @@ public final class LogicalRouterVrfOspfv3AuthProfileEspEncryptionArgs extends co
         }
 
         /**
-         * @param algorithm Algorithm
+         * @param algorithm Algorithm. Possible values are `3des`, `aes-128-cbc`, `aes-192-cbc`, `aes-256-cbc` and `null`.
          * 
          * @return builder
          * 

@@ -13,7 +13,7 @@ namespace Pulumi.Scm.Inputs
     public sealed class SessionSettingSessionSettingsNatGetArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// NAT oversubscription rate
+        /// NAT oversubscription rate. Possible values are `1x`, `2x`, `4x` and `8x`.
         /// </summary>
         [Input("dippOversub")]
         public Input<string>? DippOversub { get; set; }

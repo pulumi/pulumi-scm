@@ -14,7 +14,7 @@ namespace Pulumi.Scm.Outputs
     public sealed class WildfireAntiVirusProfileRule
     {
         /// <summary>
-        /// Analysis
+        /// Analysis. Possible values are `public-cloud` and `private-cloud`.
         /// </summary>
         public readonly string? Analysis;
         /// <summary>
@@ -22,7 +22,7 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly ImmutableArray<string> Applications;
         /// <summary>
-        /// Direction
+        /// Direction. Possible values are `Download`, `Upload` and `Both`.
         /// </summary>
         public readonly string? Direction;
         /// <summary>

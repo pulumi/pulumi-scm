@@ -50,6 +50,12 @@ namespace Pulumi.Scm
     ///                 Name = "198.18.1.1/32",
     ///             },
     ///         },
+    ///         AdjustTcpMss = new Scm.Inputs.Layer3SubinterfaceAdjustTcpMssArgs
+    ///         {
+    ///             Enable = true,
+    ///             Ipv4MssAdjustment = 40,
+    ///             Ipv6MssAdjustment = 60,
+    ///         },
     ///     }, new CustomResourceOptions
     ///     {
     ///         DependsOn =
@@ -95,6 +101,43 @@ namespace Pulumi.Scm
     ///         },
     ///     });
     /// 
+    ///     //
+    ///     // Creates an ethernet interface used as parent-interface for the pppoe example
+    ///     //
+    ///     var scmParentPppoeInterface = new Scm.EthernetInterface("scm_parent_pppoe_interface", new()
+    ///     {
+    ///         Name = "$scm_parent_tf_pppoe_interface",
+    ///         Comment = "Managed by Pulumi",
+    ///         Folder = "ngfw-shared",
+    ///         Layer3 = null,
+    ///     });
+    /// 
+    ///     //
+    ///     // Creates a layer3 sub-interface with pppoe
+    ///     //
+    ///     var scmL3PppoeSubinterface = new Scm.Layer3Subinterface("scm_l3_pppoe_subinterface", new()
+    ///     {
+    ///         Name = "$scm_parent_tf_pppoe_interface.100",
+    ///         Comment = "Managed by Pulumi",
+    ///         Folder = "ngfw-shared",
+    ///         Tag = 100,
+    ///         ParentInterface = "$scm_parent_tf_pppoe_interface",
+    ///         Pppoe = new Scm.Inputs.Layer3SubinterfacePppoeArgs
+    ///         {
+    ///             Enable = true,
+    ///             Username = "testname",
+    ///             Password = "testpass",
+    ///             Authentication = "auto",
+    ///             DefaultRouteMetric = 10,
+    ///         },
+    ///     }, new CustomResourceOptions
+    ///     {
+    ///         DependsOn =
+    ///         {
+    ///             scmParentPppoeInterface,
+    ///         },
+    ///     });
+    /// 
     /// });
     /// ```
     /// 
@@ -124,6 +167,12 @@ namespace Pulumi.Scm
     public partial class Layer3Subinterface : global::Pulumi.CustomResource
     {
         /// <summary>
+        /// TCP MSS adjustment settings for the interface
+        /// </summary>
+        [Output("adjustTcpMss")]
+        public Output<Outputs.Layer3SubinterfaceAdjustTcpMss?> AdjustTcpMss { get; private set; } = null!;
+
+        /// <summary>
         /// Layer 3 sub Interfaces ARP configuration
         /// </summary>
         [Output("arps")]
@@ -149,16 +198,18 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// Layer3 sub interfaces DHCP Client Object
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `DhcpClient` and `Ip`.
         /// </summary>
         [Output("dhcpClient")]
         public Output<Outputs.Layer3SubinterfaceDhcpClient?> DhcpClient { get; private set; } = null!;
 
         /// <summary>
+        /// Map of sensitive values returned from the API.
+        /// </summary>
+        [Output("encryptedValues")]
+        public Output<ImmutableDictionary<string, string>> EncryptedValues { get; private set; } = null!;
+
+        /// <summary>
         /// The folder in which the resource is defined
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Output("folder")]
         public Output<string?> Folder { get; private set; } = null!;
@@ -171,8 +222,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// L3 sub-interface IP Parent
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `DhcpClient` and `Ip`.
         /// </summary>
         [Output("ips")]
         public Output<ImmutableArray<Outputs.Layer3SubinterfaceIp>> Ips { get; private set; } = null!;
@@ -202,9 +251,13 @@ namespace Pulumi.Scm
         public Output<string?> ParentInterface { get; private set; } = null!;
 
         /// <summary>
+        /// PPPoE configuration for the interface
+        /// </summary>
+        [Output("pppoe")]
+        public Output<Outputs.Layer3SubinterfacePppoe?> Pppoe { get; private set; } = null!;
+
+        /// <summary>
         /// The snippet in which the resource is defined
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Output("snippet")]
         public Output<string?> Snippet { get; private set; } = null!;
@@ -244,6 +297,10 @@ namespace Pulumi.Scm
             var defaultOptions = new CustomResourceOptions
             {
                 Version = Utilities.Version,
+                AdditionalSecretOutputs =
+                {
+                    "encryptedValues",
+                },
             };
             var merged = CustomResourceOptions.Merge(defaultOptions, options);
             // Override the ID if one was specified for consistency with other language SDKs.
@@ -267,6 +324,12 @@ namespace Pulumi.Scm
 
     public sealed class Layer3SubinterfaceArgs : global::Pulumi.ResourceArgs
     {
+        /// <summary>
+        /// TCP MSS adjustment settings for the interface
+        /// </summary>
+        [Input("adjustTcpMss")]
+        public Input<Inputs.Layer3SubinterfaceAdjustTcpMssArgs>? AdjustTcpMss { get; set; }
+
         [Input("arps")]
         private InputList<Inputs.Layer3SubinterfaceArpArgs>? _arps;
 
@@ -299,16 +362,12 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// Layer3 sub interfaces DHCP Client Object
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `DhcpClient` and `Ip`.
         /// </summary>
         [Input("dhcpClient")]
         public Input<Inputs.Layer3SubinterfaceDhcpClientArgs>? DhcpClient { get; set; }
 
         /// <summary>
         /// The folder in which the resource is defined
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("folder")]
         public Input<string>? Folder { get; set; }
@@ -324,8 +383,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// L3 sub-interface IP Parent
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `DhcpClient` and `Ip`.
         /// </summary>
         public InputList<Inputs.Layer3SubinterfaceIpArgs> Ips
         {
@@ -358,9 +415,13 @@ namespace Pulumi.Scm
         public Input<string>? ParentInterface { get; set; }
 
         /// <summary>
+        /// PPPoE configuration for the interface
+        /// </summary>
+        [Input("pppoe")]
+        public Input<Inputs.Layer3SubinterfacePppoeArgs>? Pppoe { get; set; }
+
+        /// <summary>
         /// The snippet in which the resource is defined
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("snippet")]
         public Input<string>? Snippet { get; set; }
@@ -379,6 +440,12 @@ namespace Pulumi.Scm
 
     public sealed class Layer3SubinterfaceState : global::Pulumi.ResourceArgs
     {
+        /// <summary>
+        /// TCP MSS adjustment settings for the interface
+        /// </summary>
+        [Input("adjustTcpMss")]
+        public Input<Inputs.Layer3SubinterfaceAdjustTcpMssGetArgs>? AdjustTcpMss { get; set; }
+
         [Input("arps")]
         private InputList<Inputs.Layer3SubinterfaceArpGetArgs>? _arps;
 
@@ -411,16 +478,28 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// Layer3 sub interfaces DHCP Client Object
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `DhcpClient` and `Ip`.
         /// </summary>
         [Input("dhcpClient")]
         public Input<Inputs.Layer3SubinterfaceDhcpClientGetArgs>? DhcpClient { get; set; }
 
+        [Input("encryptedValues")]
+        private InputMap<string>? _encryptedValues;
+
+        /// <summary>
+        /// Map of sensitive values returned from the API.
+        /// </summary>
+        public InputMap<string> EncryptedValues
+        {
+            get => _encryptedValues ?? (_encryptedValues = new InputMap<string>());
+            set
+            {
+                var emptySecret = Output.CreateSecret(ImmutableDictionary.Create<string, string>());
+                _encryptedValues = Output.All(value, emptySecret).Apply(v => v[0]);
+            }
+        }
+
         /// <summary>
         /// The folder in which the resource is defined
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("folder")]
         public Input<string>? Folder { get; set; }
@@ -436,8 +515,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// L3 sub-interface IP Parent
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `DhcpClient` and `Ip`.
         /// </summary>
         public InputList<Inputs.Layer3SubinterfaceIpGetArgs> Ips
         {
@@ -470,9 +547,13 @@ namespace Pulumi.Scm
         public Input<string>? ParentInterface { get; set; }
 
         /// <summary>
+        /// PPPoE configuration for the interface
+        /// </summary>
+        [Input("pppoe")]
+        public Input<Inputs.Layer3SubinterfacePppoeGetArgs>? Pppoe { get; set; }
+
+        /// <summary>
         /// The snippet in which the resource is defined
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("snippet")]
         public Input<string>? Snippet { get; set; }

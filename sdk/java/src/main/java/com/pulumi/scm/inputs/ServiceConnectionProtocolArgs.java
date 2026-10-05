@@ -6,6 +6,7 @@ package com.pulumi.scm.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.scm.inputs.ServiceConnectionProtocolBgpArgs;
+import com.pulumi.scm.inputs.ServiceConnectionProtocolBgpPeerArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -30,10 +31,26 @@ public final class ServiceConnectionProtocolArgs extends com.pulumi.resources.Re
         return Optional.ofNullable(this.bgp);
     }
 
+    /**
+     * Bgp peer
+     * 
+     */
+    @Import(name="bgpPeer")
+    private @Nullable Output<ServiceConnectionProtocolBgpPeerArgs> bgpPeer;
+
+    /**
+     * @return Bgp peer
+     * 
+     */
+    public Optional<Output<ServiceConnectionProtocolBgpPeerArgs>> bgpPeer() {
+        return Optional.ofNullable(this.bgpPeer);
+    }
+
     private ServiceConnectionProtocolArgs() {}
 
     private ServiceConnectionProtocolArgs(ServiceConnectionProtocolArgs $) {
         this.bgp = $.bgp;
+        this.bgpPeer = $.bgpPeer;
     }
 
     public static Builder builder() {
@@ -73,6 +90,27 @@ public final class ServiceConnectionProtocolArgs extends com.pulumi.resources.Re
          */
         public Builder bgp(ServiceConnectionProtocolBgpArgs bgp) {
             return bgp(Output.of(bgp));
+        }
+
+        /**
+         * @param bgpPeer Bgp peer
+         * 
+         * @return builder
+         * 
+         */
+        public Builder bgpPeer(@Nullable Output<ServiceConnectionProtocolBgpPeerArgs> bgpPeer) {
+            $.bgpPeer = bgpPeer;
+            return this;
+        }
+
+        /**
+         * @param bgpPeer Bgp peer
+         * 
+         * @return builder
+         * 
+         */
+        public Builder bgpPeer(ServiceConnectionProtocolBgpPeerArgs bgpPeer) {
+            return bgpPeer(Output.of(bgpPeer));
         }
 
         public ServiceConnectionProtocolArgs build() {

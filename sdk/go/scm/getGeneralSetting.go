@@ -53,22 +53,28 @@ func LookupGeneralSetting(ctx *pulumi.Context, args *LookupGeneralSettingArgs, o
 type LookupGeneralSettingArgs struct {
 	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
+	// The folder in which the resource is defined
 	Folder *string `pulumi:"folder"`
 	// UUID of the resource
-	Id      string  `pulumi:"id"`
+	Id string `pulumi:"id"`
+	// The snippet in which the resource is defined
 	Snippet *string `pulumi:"snippet"`
 }
 
 // A collection of values returned by getGeneralSetting.
 type LookupGeneralSettingResult struct {
 	// The device in which the resource is defined
-	Device  string                   `pulumi:"device"`
-	Folder  string                   `pulumi:"folder"`
+	Device string `pulumi:"device"`
+	// The folder in which the resource is defined
+	Folder string `pulumi:"folder"`
+	// General
 	General GetGeneralSettingGeneral `pulumi:"general"`
 	// UUID of the resource
-	Id      string `pulumi:"id"`
+	Id string `pulumi:"id"`
+	// The snippet in which the resource is defined
 	Snippet string `pulumi:"snippet"`
-	Tfid    string `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid string `pulumi:"tfid"`
 }
 
 func LookupGeneralSettingOutput(ctx *pulumi.Context, args LookupGeneralSettingOutputArgs, opts ...pulumi.InvokeOption) LookupGeneralSettingResultOutput {
@@ -80,9 +86,11 @@ func LookupGeneralSettingOutput(ctx *pulumi.Context, args LookupGeneralSettingOu
 type LookupGeneralSettingOutputArgs struct {
 	// The device in which the resource is defined
 	Device pulumi.StringPtrInput `pulumi:"device"`
+	// The folder in which the resource is defined
 	Folder pulumi.StringPtrInput `pulumi:"folder"`
 	// UUID of the resource
-	Id      pulumi.StringInput    `pulumi:"id"`
+	Id pulumi.StringInput `pulumi:"id"`
+	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrInput `pulumi:"snippet"`
 }
 
@@ -110,10 +118,12 @@ func (o LookupGeneralSettingResultOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupGeneralSettingResult) string { return v.Device }).(pulumi.StringOutput)
 }
 
+// The folder in which the resource is defined
 func (o LookupGeneralSettingResultOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupGeneralSettingResult) string { return v.Folder }).(pulumi.StringOutput)
 }
 
+// General
 func (o LookupGeneralSettingResultOutput) General() GetGeneralSettingGeneralOutput {
 	return o.ApplyT(func(v LookupGeneralSettingResult) GetGeneralSettingGeneral { return v.General }).(GetGeneralSettingGeneralOutput)
 }
@@ -123,10 +133,12 @@ func (o LookupGeneralSettingResultOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupGeneralSettingResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
+// The snippet in which the resource is defined
 func (o LookupGeneralSettingResultOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupGeneralSettingResult) string { return v.Snippet }).(pulumi.StringOutput)
 }
 
+// The Terraform ID.
 func (o LookupGeneralSettingResultOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupGeneralSettingResult) string { return v.Tfid }).(pulumi.StringOutput)
 }

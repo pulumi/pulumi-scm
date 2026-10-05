@@ -13,6 +13,7 @@ import com.pulumi.scm.inputs.PbfRuleState;
 import com.pulumi.scm.outputs.PbfRuleAction;
 import com.pulumi.scm.outputs.PbfRuleEnforceSymmetricReturn;
 import com.pulumi.scm.outputs.PbfRuleFrom;
+import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Optional;
@@ -259,16 +260,12 @@ public class PbfRule extends com.pulumi.resources.CustomResource {
     /**
      * The folder in which the resource is defined
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
      */
     @Export(name="folder", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> folder;
 
     /**
      * @return The folder in which the resource is defined
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public Output<Optional<String>> folder() {
@@ -303,6 +300,34 @@ public class PbfRule extends com.pulumi.resources.CustomResource {
         return this.name;
     }
     /**
+     * Negate destination address
+     * 
+     */
+    @Export(name="negateDestination", refs={Boolean.class}, tree="[0]")
+    private Output<Boolean> negateDestination;
+
+    /**
+     * @return Negate destination address
+     * 
+     */
+    public Output<Boolean> negateDestination() {
+        return this.negateDestination;
+    }
+    /**
+     * Negate source address
+     * 
+     */
+    @Export(name="negateSource", refs={Boolean.class}, tree="[0]")
+    private Output<Boolean> negateSource;
+
+    /**
+     * @return Negate source address
+     * 
+     */
+    public Output<Boolean> negateSource() {
+        return this.negateSource;
+    }
+    /**
      * Schedule
      * 
      */
@@ -333,16 +358,12 @@ public class PbfRule extends com.pulumi.resources.CustomResource {
     /**
      * The snippet in which the resource is defined
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
      */
     @Export(name="snippet", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> snippet;
 
     /**
      * @return The snippet in which the resource is defined
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public Output<Optional<String>> snippet() {

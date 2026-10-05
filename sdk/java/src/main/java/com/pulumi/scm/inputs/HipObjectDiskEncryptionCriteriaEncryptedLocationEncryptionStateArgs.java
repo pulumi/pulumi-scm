@@ -16,14 +16,14 @@ public final class HipObjectDiskEncryptionCriteriaEncryptedLocationEncryptionSta
     public static final HipObjectDiskEncryptionCriteriaEncryptedLocationEncryptionStateArgs Empty = new HipObjectDiskEncryptionCriteriaEncryptedLocationEncryptionStateArgs();
 
     /**
-     * Is
+     * Is. Possible values are `encrypted`, `unencrypted`, `partial` and `unknown`.
      * 
      */
     @Import(name="is")
     private @Nullable Output<String> is;
 
     /**
-     * @return Is
+     * @return Is. Possible values are `encrypted`, `unencrypted`, `partial` and `unknown`.
      * 
      */
     public Optional<Output<String>> is() {
@@ -31,18 +31,14 @@ public final class HipObjectDiskEncryptionCriteriaEncryptedLocationEncryptionSta
     }
 
     /**
-     * Is not
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `is` and `isNot`.
+     * Is not. Possible values are `encrypted`, `unencrypted`, `partial` and `unknown`.
      * 
      */
     @Import(name="isNot")
     private @Nullable Output<String> isNot;
 
     /**
-     * @return Is not
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `is` and `isNot`.
+     * @return Is not. Possible values are `encrypted`, `unencrypted`, `partial` and `unknown`.
      * 
      */
     public Optional<Output<String>> isNot() {
@@ -75,7 +71,7 @@ public final class HipObjectDiskEncryptionCriteriaEncryptedLocationEncryptionSta
         }
 
         /**
-         * @param is Is
+         * @param is Is. Possible values are `encrypted`, `unencrypted`, `partial` and `unknown`.
          * 
          * @return builder
          * 
@@ -86,7 +82,7 @@ public final class HipObjectDiskEncryptionCriteriaEncryptedLocationEncryptionSta
         }
 
         /**
-         * @param is Is
+         * @param is Is. Possible values are `encrypted`, `unencrypted`, `partial` and `unknown`.
          * 
          * @return builder
          * 
@@ -96,9 +92,7 @@ public final class HipObjectDiskEncryptionCriteriaEncryptedLocationEncryptionSta
         }
 
         /**
-         * @param isNot Is not
-         * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `is` and `isNot`.
+         * @param isNot Is not. Possible values are `encrypted`, `unencrypted`, `partial` and `unknown`.
          * 
          * @return builder
          * 
@@ -109,9 +103,7 @@ public final class HipObjectDiskEncryptionCriteriaEncryptedLocationEncryptionSta
         }
 
         /**
-         * @param isNot Is not
-         * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `is` and `isNot`.
+         * @param isNot Is not. Possible values are `encrypted`, `unencrypted`, `partial` and `unknown`.
          * 
          * @return builder
          * 

@@ -18,6 +18,18 @@ namespace Pulumi.Scm.Inputs
         [Input("enable", required: true)]
         public Input<bool> Enable { get; set; } = null!;
 
+        /// <summary>
+        /// LLDP high availability settings
+        /// </summary>
+        [Input("highAvailability")]
+        public Input<Inputs.EthernetInterfaceLayer2LldpHighAvailabilityArgs>? HighAvailability { get; set; }
+
+        /// <summary>
+        /// Name of the LLDP profile to assign to the interface
+        /// </summary>
+        [Input("profile")]
+        public Input<string>? Profile { get; set; }
+
         public EthernetInterfaceLayer2LldpArgs()
         {
         }

@@ -15,9 +15,24 @@ import * as utilities from "./utilities";
  * import * as pulumi from "@pulumi/pulumi";
  * import * as scm from "@pulumi/scm";
  *
+ * // Create a Layer3 ethernet interface first
+ * const testInterface = new scm.EthernetInterface("test_interface", {
+ *     name: "$test-interface",
+ *     comment: "Interface for DHCP server - Managed by Terraform",
+ *     folder: "ngfw-shared",
+ *     linkSpeed: "auto",
+ *     linkDuplex: "full",
+ *     linkState: "auto",
+ *     layer3: {
+ *         ips: [{
+ *             name: "10.10.10.1/24",
+ *         }],
+ *     },
+ * });
+ * // Configure DHCP server on the interface
  * const dhcpServerExample = new scm.DhcpInterface("dhcp_server_example", {
  *     folder: "ngfw-shared",
- *     name: "$test-interface-must-exist",
+ *     name: testInterface.name,
  *     server: {
  *         ipPools: ["10.10.10.10-10.10.10.200"],
  *         mode: "auto",
@@ -60,6 +75,8 @@ import * as utilities from "./utilities";
  *             name: "10.10.10.50",
  *         }],
  *     },
+ * }, {
+ *     dependsOn: [testInterface],
  * });
  * ```
  *
@@ -119,8 +136,6 @@ export class DhcpInterface extends pulumi.CustomResource {
     declare public readonly device: pulumi.Output<string | undefined>;
     /**
      * The folder in which the resource is defined
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly folder: pulumi.Output<string | undefined>;
     /**
@@ -129,20 +144,14 @@ export class DhcpInterface extends pulumi.CustomResource {
     declare public readonly name: pulumi.Output<string>;
     /**
      * Relay
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `relay` and `server`.
      */
     declare public readonly relay: pulumi.Output<outputs.DhcpInterfaceRelay | undefined>;
     /**
      * Server
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `relay` and `server`.
      */
     declare public readonly server: pulumi.Output<outputs.DhcpInterfaceServer | undefined>;
     /**
      * The snippet in which the resource is defined
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly snippet: pulumi.Output<string | undefined>;
     /**
@@ -195,8 +204,6 @@ export interface DhcpInterfaceState {
     device?: pulumi.Input<string | undefined>;
     /**
      * The folder in which the resource is defined
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     folder?: pulumi.Input<string | undefined>;
     /**
@@ -205,20 +212,14 @@ export interface DhcpInterfaceState {
     name?: pulumi.Input<string | undefined>;
     /**
      * Relay
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `relay` and `server`.
      */
     relay?: pulumi.Input<inputs.DhcpInterfaceRelay | undefined>;
     /**
      * Server
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `relay` and `server`.
      */
     server?: pulumi.Input<inputs.DhcpInterfaceServer | undefined>;
     /**
      * The snippet in which the resource is defined
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     snippet?: pulumi.Input<string | undefined>;
     /**
@@ -237,8 +238,6 @@ export interface DhcpInterfaceArgs {
     device?: pulumi.Input<string | undefined>;
     /**
      * The folder in which the resource is defined
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     folder?: pulumi.Input<string | undefined>;
     /**
@@ -247,20 +246,14 @@ export interface DhcpInterfaceArgs {
     name?: pulumi.Input<string | undefined>;
     /**
      * Relay
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `relay` and `server`.
      */
     relay?: pulumi.Input<inputs.DhcpInterfaceRelay | undefined>;
     /**
      * Server
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `relay` and `server`.
      */
     server?: pulumi.Input<inputs.DhcpInterfaceServer | undefined>;
     /**
      * The snippet in which the resource is defined
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     snippet?: pulumi.Input<string | undefined>;
 }

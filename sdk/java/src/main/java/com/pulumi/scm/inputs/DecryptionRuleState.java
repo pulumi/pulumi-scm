@@ -19,14 +19,14 @@ public final class DecryptionRuleState extends com.pulumi.resources.ResourceArgs
     public static final DecryptionRuleState Empty = new DecryptionRuleState();
 
     /**
-     * The action to be taken
+     * The action to be taken. Possible values are `decrypt` and `no-decrypt`.
      * 
      */
     @Import(name="action")
     private @Nullable Output<String> action;
 
     /**
-     * @return The action to be taken
+     * @return The action to be taken. Possible values are `decrypt` and `no-decrypt`.
      * 
      */
     public Optional<Output<String>> action() {
@@ -126,16 +126,12 @@ public final class DecryptionRuleState extends com.pulumi.resources.ResourceArgs
     /**
      * The folder in which the resource is defined
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
      */
     @Import(name="folder")
     private @Nullable Output<String> folder;
 
     /**
      * @return The folder in which the resource is defined
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public Optional<Output<String>> folder() {
@@ -248,14 +244,14 @@ public final class DecryptionRuleState extends com.pulumi.resources.ResourceArgs
     }
 
     /**
-     * The position of a security rule
+     * The position of a security rule. Possible values are `pre` and `post`.
      * 
      */
     @Import(name="position")
     private @Nullable Output<String> position;
 
     /**
-     * @return The position of a security rule
+     * @return The position of a security rule. Possible values are `pre` and `post`.
      * 
      */
     public Optional<Output<String>> position() {
@@ -310,16 +306,12 @@ public final class DecryptionRuleState extends com.pulumi.resources.ResourceArgs
     /**
      * The snippet in which the resource is defined
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
      */
     @Import(name="snippet")
     private @Nullable Output<String> snippet;
 
     /**
      * @return The snippet in which the resource is defined
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public Optional<Output<String>> snippet() {
@@ -387,14 +379,14 @@ public final class DecryptionRuleState extends com.pulumi.resources.ResourceArgs
     }
 
     /**
-     * The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `&#34;before&#34;` or `&#34;after&#34;`.
+     * UUID of the rule to position this rule relative to. Required when `relativePosition` is `&#34;before&#34;` or `&#34;after&#34;`.
      * 
      */
     @Import(name="targetRule")
     private @Nullable Output<String> targetRule;
 
     /**
-     * @return The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `&#34;before&#34;` or `&#34;after&#34;`.
+     * @return UUID of the rule to position this rule relative to. Required when `relativePosition` is `&#34;before&#34;` or `&#34;after&#34;`.
      * 
      */
     public Optional<Output<String>> targetRule() {
@@ -498,7 +490,7 @@ public final class DecryptionRuleState extends com.pulumi.resources.ResourceArgs
         }
 
         /**
-         * @param action The action to be taken
+         * @param action The action to be taken. Possible values are `decrypt` and `no-decrypt`.
          * 
          * @return builder
          * 
@@ -509,7 +501,7 @@ public final class DecryptionRuleState extends com.pulumi.resources.ResourceArgs
         }
 
         /**
-         * @param action The action to be taken
+         * @param action The action to be taken. Possible values are `decrypt` and `no-decrypt`.
          * 
          * @return builder
          * 
@@ -677,8 +669,6 @@ public final class DecryptionRuleState extends com.pulumi.resources.ResourceArgs
         /**
          * @param folder The folder in which the resource is defined
          * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-         * 
          * @return builder
          * 
          */
@@ -689,8 +679,6 @@ public final class DecryptionRuleState extends com.pulumi.resources.ResourceArgs
 
         /**
          * @param folder The folder in which the resource is defined
-         * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
          * 
          * @return builder
          * 
@@ -857,7 +845,7 @@ public final class DecryptionRuleState extends com.pulumi.resources.ResourceArgs
         }
 
         /**
-         * @param position The position of a security rule
+         * @param position The position of a security rule. Possible values are `pre` and `post`.
          * 
          * @return builder
          * 
@@ -868,7 +856,7 @@ public final class DecryptionRuleState extends com.pulumi.resources.ResourceArgs
         }
 
         /**
-         * @param position The position of a security rule
+         * @param position The position of a security rule. Possible values are `pre` and `post`.
          * 
          * @return builder
          * 
@@ -953,8 +941,6 @@ public final class DecryptionRuleState extends com.pulumi.resources.ResourceArgs
         /**
          * @param snippet The snippet in which the resource is defined
          * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-         * 
          * @return builder
          * 
          */
@@ -965,8 +951,6 @@ public final class DecryptionRuleState extends com.pulumi.resources.ResourceArgs
 
         /**
          * @param snippet The snippet in which the resource is defined
-         * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
          * 
          * @return builder
          * 
@@ -1100,7 +1084,7 @@ public final class DecryptionRuleState extends com.pulumi.resources.ResourceArgs
         }
 
         /**
-         * @param targetRule The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `&#34;before&#34;` or `&#34;after&#34;`.
+         * @param targetRule UUID of the rule to position this rule relative to. Required when `relativePosition` is `&#34;before&#34;` or `&#34;after&#34;`.
          * 
          * @return builder
          * 
@@ -1111,7 +1095,7 @@ public final class DecryptionRuleState extends com.pulumi.resources.ResourceArgs
         }
 
         /**
-         * @param targetRule The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `&#34;before&#34;` or `&#34;after&#34;`.
+         * @param targetRule UUID of the rule to position this rule relative to. Required when `relativePosition` is `&#34;before&#34;` or `&#34;after&#34;`.
          * 
          * @return builder
          * 

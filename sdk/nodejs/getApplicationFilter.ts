@@ -40,12 +40,21 @@ export interface GetApplicationFilterArgs {
      * The device in which the resource is defined
      */
     device?: string;
+    /**
+     * The folder in which the resource is defined
+     */
     folder?: string;
     /**
      * UUID of the resource
      */
     id: string;
+    /**
+     * Alphanumeric string [ 0-9a-zA-Z._-]
+     */
     name?: string;
+    /**
+     * The snippet in which the resource is defined
+     */
     snippet?: string;
 }
 
@@ -53,35 +62,101 @@ export interface GetApplicationFilterArgs {
  * A collection of values returned by getApplicationFilter.
  */
 export interface GetApplicationFilterResult {
+    /**
+     * Category
+     */
     readonly categories: string[];
     /**
      * The device in which the resource is defined
      */
     readonly device: string;
+    /**
+     * only True is a valid value
+     */
     readonly evasive: boolean;
+    /**
+     * only True is a valid value
+     */
     readonly excessiveBandwidthUse: boolean;
+    /**
+     * Exclude
+     */
     readonly excludes: string[];
+    /**
+     * The folder in which the resource is defined
+     */
     readonly folder: string;
+    /**
+     * only True is a valid value
+     */
     readonly hasKnownVulnerabilities: boolean;
     /**
      * UUID of the resource
      */
     readonly id: string;
+    /**
+     * only True is a valid value
+     */
     readonly isSaas: boolean;
+    /**
+     * Alphanumeric string [ 0-9a-zA-Z._-]
+     */
     readonly name: string;
+    /**
+     * only True is a valid value
+     */
     readonly newAppid: boolean;
+    /**
+     * only True is a valid value
+     */
     readonly pervasive: boolean;
+    /**
+     * only True is a valid value
+     */
     readonly proneToMisuse: boolean;
+    /**
+     * Risk
+     */
     readonly risks: number[];
+    /**
+     * Saas certifications
+     */
     readonly saasCertifications: string[];
+    /**
+     * Saas risk
+     */
     readonly saasRisks: string[];
+    /**
+     * The snippet in which the resource is defined
+     */
     readonly snippet: string;
+    /**
+     * Subcategory
+     */
     readonly subcategories: string[];
+    /**
+     * Tagging
+     */
     readonly tagging: outputs.GetApplicationFilterTagging;
+    /**
+     * Technology
+     */
     readonly technologies: string[];
+    /**
+     * The Terraform ID.
+     */
     readonly tfid: string;
+    /**
+     * only True is a valid value
+     */
     readonly transfersFiles: boolean;
+    /**
+     * only True is a valid value
+     */
     readonly tunnelsOtherApps: boolean;
+    /**
+     * only True is a valid value
+     */
     readonly usedByMalware: boolean;
 }
 /**
@@ -118,11 +193,20 @@ export interface GetApplicationFilterOutputArgs {
      * The device in which the resource is defined
      */
     device?: pulumi.Input<string | undefined>;
+    /**
+     * The folder in which the resource is defined
+     */
     folder?: pulumi.Input<string | undefined>;
     /**
      * UUID of the resource
      */
     id: pulumi.Input<string>;
+    /**
+     * Alphanumeric string [ 0-9a-zA-Z._-]
+     */
     name?: pulumi.Input<string | undefined>;
+    /**
+     * The snippet in which the resource is defined
+     */
     snippet?: pulumi.Input<string | undefined>;
 }

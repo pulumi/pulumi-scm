@@ -121,7 +121,7 @@ type ForwardingProfileDestination struct {
 
 	// description of the destination
 	Description pulumi.StringPtrOutput `pulumi:"description"`
-	// The folder in which the resource is defined
+	// The folder in which the resource is defined. Possible values are `Mobile Users`.
 	Folder pulumi.StringOutput `pulumi:"folder"`
 	// List of FQDN based destination entries
 	Fqdns ForwardingProfileDestinationFqdnArrayOutput `pulumi:"fqdns"`
@@ -165,7 +165,7 @@ func GetForwardingProfileDestination(ctx *pulumi.Context,
 type forwardingProfileDestinationState struct {
 	// description of the destination
 	Description *string `pulumi:"description"`
-	// The folder in which the resource is defined
+	// The folder in which the resource is defined. Possible values are `Mobile Users`.
 	Folder *string `pulumi:"folder"`
 	// List of FQDN based destination entries
 	Fqdns []ForwardingProfileDestinationFqdn `pulumi:"fqdns"`
@@ -180,7 +180,7 @@ type forwardingProfileDestinationState struct {
 type ForwardingProfileDestinationState struct {
 	// description of the destination
 	Description pulumi.StringPtrInput
-	// The folder in which the resource is defined
+	// The folder in which the resource is defined. Possible values are `Mobile Users`.
 	Folder pulumi.StringPtrInput
 	// List of FQDN based destination entries
 	Fqdns ForwardingProfileDestinationFqdnArrayInput
@@ -199,7 +199,7 @@ func (ForwardingProfileDestinationState) ElementType() reflect.Type {
 type forwardingProfileDestinationArgs struct {
 	// description of the destination
 	Description *string `pulumi:"description"`
-	// The folder in which the resource is defined
+	// The folder in which the resource is defined. Possible values are `Mobile Users`.
 	Folder *string `pulumi:"folder"`
 	// List of FQDN based destination entries
 	Fqdns []ForwardingProfileDestinationFqdn `pulumi:"fqdns"`
@@ -213,7 +213,7 @@ type forwardingProfileDestinationArgs struct {
 type ForwardingProfileDestinationArgs struct {
 	// description of the destination
 	Description pulumi.StringPtrInput
-	// The folder in which the resource is defined
+	// The folder in which the resource is defined. Possible values are `Mobile Users`.
 	Folder pulumi.StringPtrInput
 	// List of FQDN based destination entries
 	Fqdns ForwardingProfileDestinationFqdnArrayInput
@@ -315,7 +315,7 @@ func (o ForwardingProfileDestinationOutput) Description() pulumi.StringPtrOutput
 	return o.ApplyT(func(v *ForwardingProfileDestination) pulumi.StringPtrOutput { return v.Description }).(pulumi.StringPtrOutput)
 }
 
-// The folder in which the resource is defined
+// The folder in which the resource is defined. Possible values are `Mobile Users`.
 func (o ForwardingProfileDestinationOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v *ForwardingProfileDestination) pulumi.StringOutput { return v.Folder }).(pulumi.StringOutput)
 }

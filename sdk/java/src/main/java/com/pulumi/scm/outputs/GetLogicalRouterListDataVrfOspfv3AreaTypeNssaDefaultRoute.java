@@ -19,8 +19,6 @@ public final class GetLogicalRouterListDataVrfOspfv3AreaTypeNssaDefaultRoute {
     /**
      * @return Disable
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `advertise` and `disable`.
-     * 
      */
     private GetLogicalRouterListDataVrfOspfv3AreaTypeNssaDefaultRouteDisable disable;
 
@@ -34,8 +32,6 @@ public final class GetLogicalRouterListDataVrfOspfv3AreaTypeNssaDefaultRoute {
     }
     /**
      * @return Disable
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `advertise` and `disable`.
      * 
      */
     public GetLogicalRouterListDataVrfOspfv3AreaTypeNssaDefaultRouteDisable disable() {

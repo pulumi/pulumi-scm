@@ -60,34 +60,52 @@ func LookupEthernetInterface(ctx *pulumi.Context, args *LookupEthernetInterfaceA
 type LookupEthernetInterfaceArgs struct {
 	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
+	// The folder in which the resource is defined
 	Folder *string `pulumi:"folder"`
 	// UUID of the resource
-	Id      string  `pulumi:"id"`
-	Name    *string `pulumi:"name"`
+	Id string `pulumi:"id"`
+	// Interface name
+	Name *string `pulumi:"name"`
+	// The snippet in which the resource is defined
 	Snippet *string `pulumi:"snippet"`
 }
 
 // A collection of values returned by getEthernetInterface.
 type LookupEthernetInterfaceResult struct {
+	// Aggregate group
 	AggregateGroup string `pulumi:"aggregateGroup"`
-	Comment        string `pulumi:"comment"`
-	DefaultValue   string `pulumi:"defaultValue"`
+	// Interface description
+	Comment string `pulumi:"comment"`
+	// Default interface assignment
+	DefaultValue string `pulumi:"defaultValue"`
 	// The device in which the resource is defined
-	Device          string            `pulumi:"device"`
+	Device string `pulumi:"device"`
+	// Map of sensitive values returned from the API.
 	EncryptedValues map[string]string `pulumi:"encryptedValues"`
-	Folder          string            `pulumi:"folder"`
+	// The folder in which the resource is defined
+	Folder string `pulumi:"folder"`
 	// UUID of the resource
-	Id         string                     `pulumi:"id"`
-	Layer2     GetEthernetInterfaceLayer2 `pulumi:"layer2"`
-	Layer3     GetEthernetInterfaceLayer3 `pulumi:"layer3"`
-	LinkDuplex string                     `pulumi:"linkDuplex"`
-	LinkSpeed  string                     `pulumi:"linkSpeed"`
-	LinkState  string                     `pulumi:"linkState"`
-	Name       string                     `pulumi:"name"`
-	Poe        GetEthernetInterfacePoe    `pulumi:"poe"`
-	Snippet    string                     `pulumi:"snippet"`
-	Tap        GetEthernetInterfaceTap    `pulumi:"tap"`
-	Tfid       string                     `pulumi:"tfid"`
+	Id string `pulumi:"id"`
+	// Layer2
+	Layer2 GetEthernetInterfaceLayer2 `pulumi:"layer2"`
+	// Ethernet Interface Layer 3 configuration
+	Layer3 GetEthernetInterfaceLayer3 `pulumi:"layer3"`
+	// Link duplex. Possible values are `auto`, `half` and `full`.
+	LinkDuplex string `pulumi:"linkDuplex"`
+	// Link speed. Possible values are `auto`, `10`, `100`, `1000`, `10000`, `40000` and `100000`.
+	LinkSpeed string `pulumi:"linkSpeed"`
+	// Link state. Possible values are `auto`, `up` and `down`.
+	LinkState string `pulumi:"linkState"`
+	// Interface name
+	Name string `pulumi:"name"`
+	// Poe
+	Poe GetEthernetInterfacePoe `pulumi:"poe"`
+	// The snippet in which the resource is defined
+	Snippet string `pulumi:"snippet"`
+	// Tap
+	Tap GetEthernetInterfaceTap `pulumi:"tap"`
+	// The Terraform ID.
+	Tfid string `pulumi:"tfid"`
 }
 
 func LookupEthernetInterfaceOutput(ctx *pulumi.Context, args LookupEthernetInterfaceOutputArgs, opts ...pulumi.InvokeOption) LookupEthernetInterfaceResultOutput {
@@ -99,10 +117,13 @@ func LookupEthernetInterfaceOutput(ctx *pulumi.Context, args LookupEthernetInter
 type LookupEthernetInterfaceOutputArgs struct {
 	// The device in which the resource is defined
 	Device pulumi.StringPtrInput `pulumi:"device"`
+	// The folder in which the resource is defined
 	Folder pulumi.StringPtrInput `pulumi:"folder"`
 	// UUID of the resource
-	Id      pulumi.StringInput    `pulumi:"id"`
-	Name    pulumi.StringPtrInput `pulumi:"name"`
+	Id pulumi.StringInput `pulumi:"id"`
+	// Interface name
+	Name pulumi.StringPtrInput `pulumi:"name"`
+	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrInput `pulumi:"snippet"`
 }
 
@@ -125,14 +146,17 @@ func (o LookupEthernetInterfaceResultOutput) ToLookupEthernetInterfaceResultOutp
 	return o
 }
 
+// Aggregate group
 func (o LookupEthernetInterfaceResultOutput) AggregateGroup() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupEthernetInterfaceResult) string { return v.AggregateGroup }).(pulumi.StringOutput)
 }
 
+// Interface description
 func (o LookupEthernetInterfaceResultOutput) Comment() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupEthernetInterfaceResult) string { return v.Comment }).(pulumi.StringOutput)
 }
 
+// Default interface assignment
 func (o LookupEthernetInterfaceResultOutput) DefaultValue() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupEthernetInterfaceResult) string { return v.DefaultValue }).(pulumi.StringOutput)
 }
@@ -142,10 +166,12 @@ func (o LookupEthernetInterfaceResultOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupEthernetInterfaceResult) string { return v.Device }).(pulumi.StringOutput)
 }
 
+// Map of sensitive values returned from the API.
 func (o LookupEthernetInterfaceResultOutput) EncryptedValues() pulumi.StringMapOutput {
 	return o.ApplyT(func(v LookupEthernetInterfaceResult) map[string]string { return v.EncryptedValues }).(pulumi.StringMapOutput)
 }
 
+// The folder in which the resource is defined
 func (o LookupEthernetInterfaceResultOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupEthernetInterfaceResult) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -155,42 +181,52 @@ func (o LookupEthernetInterfaceResultOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupEthernetInterfaceResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
+// Layer2
 func (o LookupEthernetInterfaceResultOutput) Layer2() GetEthernetInterfaceLayer2Output {
 	return o.ApplyT(func(v LookupEthernetInterfaceResult) GetEthernetInterfaceLayer2 { return v.Layer2 }).(GetEthernetInterfaceLayer2Output)
 }
 
+// Ethernet Interface Layer 3 configuration
 func (o LookupEthernetInterfaceResultOutput) Layer3() GetEthernetInterfaceLayer3Output {
 	return o.ApplyT(func(v LookupEthernetInterfaceResult) GetEthernetInterfaceLayer3 { return v.Layer3 }).(GetEthernetInterfaceLayer3Output)
 }
 
+// Link duplex. Possible values are `auto`, `half` and `full`.
 func (o LookupEthernetInterfaceResultOutput) LinkDuplex() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupEthernetInterfaceResult) string { return v.LinkDuplex }).(pulumi.StringOutput)
 }
 
+// Link speed. Possible values are `auto`, `10`, `100`, `1000`, `10000`, `40000` and `100000`.
 func (o LookupEthernetInterfaceResultOutput) LinkSpeed() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupEthernetInterfaceResult) string { return v.LinkSpeed }).(pulumi.StringOutput)
 }
 
+// Link state. Possible values are `auto`, `up` and `down`.
 func (o LookupEthernetInterfaceResultOutput) LinkState() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupEthernetInterfaceResult) string { return v.LinkState }).(pulumi.StringOutput)
 }
 
+// Interface name
 func (o LookupEthernetInterfaceResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupEthernetInterfaceResult) string { return v.Name }).(pulumi.StringOutput)
 }
 
+// Poe
 func (o LookupEthernetInterfaceResultOutput) Poe() GetEthernetInterfacePoeOutput {
 	return o.ApplyT(func(v LookupEthernetInterfaceResult) GetEthernetInterfacePoe { return v.Poe }).(GetEthernetInterfacePoeOutput)
 }
 
+// The snippet in which the resource is defined
 func (o LookupEthernetInterfaceResultOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupEthernetInterfaceResult) string { return v.Snippet }).(pulumi.StringOutput)
 }
 
+// Tap
 func (o LookupEthernetInterfaceResultOutput) Tap() GetEthernetInterfaceTapOutput {
 	return o.ApplyT(func(v LookupEthernetInterfaceResult) GetEthernetInterfaceTap { return v.Tap }).(GetEthernetInterfaceTapOutput)
 }
 
+// The Terraform ID.
 func (o LookupEthernetInterfaceResultOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupEthernetInterfaceResult) string { return v.Tfid }).(pulumi.StringOutput)
 }

@@ -138,14 +138,14 @@ public final class BgpRouteMapRouteMapMatchArgs extends com.pulumi.resources.Res
     }
 
     /**
-     * Peer
+     * Peer. Possible values are `local` and `none`.
      * 
      */
     @Import(name="peer")
     private @Nullable Output<String> peer;
 
     /**
-     * @return Peer
+     * @return Peer. Possible values are `local` and `none`.
      * 
      */
     public Optional<Output<String>> peer() {
@@ -385,7 +385,7 @@ public final class BgpRouteMapRouteMapMatchArgs extends com.pulumi.resources.Res
         }
 
         /**
-         * @param peer Peer
+         * @param peer Peer. Possible values are `local` and `none`.
          * 
          * @return builder
          * 
@@ -396,7 +396,7 @@ public final class BgpRouteMapRouteMapMatchArgs extends com.pulumi.resources.Res
         }
 
         /**
-         * @param peer Peer
+         * @param peer Peer. Possible values are `local` and `none`.
          * 
          * @return builder
          * 

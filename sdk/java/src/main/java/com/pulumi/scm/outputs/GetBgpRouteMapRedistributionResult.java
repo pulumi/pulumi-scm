@@ -13,32 +13,76 @@ import java.util.Objects;
 
 @CustomType
 public final class GetBgpRouteMapRedistributionResult {
+    /**
+     * @return Bgp
+     * 
+     */
     private GetBgpRouteMapRedistributionBgp bgp;
+    /**
+     * @return Connected static
+     * 
+     */
     private GetBgpRouteMapRedistributionConnectedStatic connectedStatic;
+    /**
+     * @return BGP Route Map Redistributions Description
+     * 
+     */
     private String description;
     /**
      * @return The device in which the resource is defined
      * 
      */
     private String device;
+    /**
+     * @return The folder in which the resource is defined
+     * 
+     */
     private String folder;
     /**
      * @return BGP Route Map Redistributions UUID of the resource
      * 
      */
     private String id;
+    /**
+     * @return BGP Route Map Redistributions Name
+     * 
+     */
     private String name;
+    /**
+     * @return Ospf
+     * 
+     */
     private GetBgpRouteMapRedistributionOspf ospf;
+    /**
+     * @return The snippet in which the resource is defined
+     * 
+     */
     private String snippet;
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     private String tfid;
 
     private GetBgpRouteMapRedistributionResult() {}
+    /**
+     * @return Bgp
+     * 
+     */
     public GetBgpRouteMapRedistributionBgp bgp() {
         return this.bgp;
     }
+    /**
+     * @return Connected static
+     * 
+     */
     public GetBgpRouteMapRedistributionConnectedStatic connectedStatic() {
         return this.connectedStatic;
     }
+    /**
+     * @return BGP Route Map Redistributions Description
+     * 
+     */
     public String description() {
         return this.description;
     }
@@ -49,6 +93,10 @@ public final class GetBgpRouteMapRedistributionResult {
     public String device() {
         return this.device;
     }
+    /**
+     * @return The folder in which the resource is defined
+     * 
+     */
     public String folder() {
         return this.folder;
     }
@@ -59,15 +107,31 @@ public final class GetBgpRouteMapRedistributionResult {
     public String id() {
         return this.id;
     }
+    /**
+     * @return BGP Route Map Redistributions Name
+     * 
+     */
     public String name() {
         return this.name;
     }
+    /**
+     * @return Ospf
+     * 
+     */
     public GetBgpRouteMapRedistributionOspf ospf() {
         return this.ospf;
     }
+    /**
+     * @return The snippet in which the resource is defined
+     * 
+     */
     public String snippet() {
         return this.snippet;
     }
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     public String tfid() {
         return this.tfid;
     }

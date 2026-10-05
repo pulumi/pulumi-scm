@@ -205,20 +205,20 @@ type PbfRule struct {
 	// Enforce symmetric return
 	EnforceSymmetricReturn PbfRuleEnforceSymmetricReturnPtrOutput `pulumi:"enforceSymmetricReturn"`
 	// The folder in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrOutput `pulumi:"folder"`
 	// From
 	From PbfRuleFromPtrOutput `pulumi:"from"`
 	// PBF rule name
 	Name pulumi.StringOutput `pulumi:"name"`
+	// Negate destination address
+	NegateDestination pulumi.BoolOutput `pulumi:"negateDestination"`
+	// Negate source address
+	NegateSource pulumi.BoolOutput `pulumi:"negateSource"`
 	// Schedule
 	Schedule pulumi.StringPtrOutput `pulumi:"schedule"`
 	// Services
 	Services pulumi.StringArrayOutput `pulumi:"services"`
 	// The snippet in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
 	// Source users
 	SourceUsers pulumi.StringArrayOutput `pulumi:"sourceUsers"`
@@ -273,20 +273,20 @@ type pbfRuleState struct {
 	// Enforce symmetric return
 	EnforceSymmetricReturn *PbfRuleEnforceSymmetricReturn `pulumi:"enforceSymmetricReturn"`
 	// The folder in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// From
 	From *PbfRuleFrom `pulumi:"from"`
 	// PBF rule name
 	Name *string `pulumi:"name"`
+	// Negate destination address
+	NegateDestination *bool `pulumi:"negateDestination"`
+	// Negate source address
+	NegateSource *bool `pulumi:"negateSource"`
 	// Schedule
 	Schedule *string `pulumi:"schedule"`
 	// Services
 	Services []string `pulumi:"services"`
 	// The snippet in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	// Source users
 	SourceUsers []string `pulumi:"sourceUsers"`
@@ -312,20 +312,20 @@ type PbfRuleState struct {
 	// Enforce symmetric return
 	EnforceSymmetricReturn PbfRuleEnforceSymmetricReturnPtrInput
 	// The folder in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// From
 	From PbfRuleFromPtrInput
 	// PBF rule name
 	Name pulumi.StringPtrInput
+	// Negate destination address
+	NegateDestination pulumi.BoolPtrInput
+	// Negate source address
+	NegateSource pulumi.BoolPtrInput
 	// Schedule
 	Schedule pulumi.StringPtrInput
 	// Services
 	Services pulumi.StringArrayInput
 	// The snippet in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	// Source users
 	SourceUsers pulumi.StringArrayInput
@@ -355,20 +355,20 @@ type pbfRuleArgs struct {
 	// Enforce symmetric return
 	EnforceSymmetricReturn *PbfRuleEnforceSymmetricReturn `pulumi:"enforceSymmetricReturn"`
 	// The folder in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// From
 	From *PbfRuleFrom `pulumi:"from"`
 	// PBF rule name
 	Name *string `pulumi:"name"`
+	// Negate destination address
+	NegateDestination *bool `pulumi:"negateDestination"`
+	// Negate source address
+	NegateSource *bool `pulumi:"negateSource"`
 	// Schedule
 	Schedule *string `pulumi:"schedule"`
 	// Services
 	Services []string `pulumi:"services"`
 	// The snippet in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	// Source users
 	SourceUsers []string `pulumi:"sourceUsers"`
@@ -393,20 +393,20 @@ type PbfRuleArgs struct {
 	// Enforce symmetric return
 	EnforceSymmetricReturn PbfRuleEnforceSymmetricReturnPtrInput
 	// The folder in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// From
 	From PbfRuleFromPtrInput
 	// PBF rule name
 	Name pulumi.StringPtrInput
+	// Negate destination address
+	NegateDestination pulumi.BoolPtrInput
+	// Negate source address
+	NegateSource pulumi.BoolPtrInput
 	// Schedule
 	Schedule pulumi.StringPtrInput
 	// Services
 	Services pulumi.StringArrayInput
 	// The snippet in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	// Source users
 	SourceUsers pulumi.StringArrayInput
@@ -534,8 +534,6 @@ func (o PbfRuleOutput) EnforceSymmetricReturn() PbfRuleEnforceSymmetricReturnPtr
 }
 
 // The folder in which the resource is defined
-//
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o PbfRuleOutput) Folder() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *PbfRule) pulumi.StringPtrOutput { return v.Folder }).(pulumi.StringPtrOutput)
 }
@@ -550,6 +548,16 @@ func (o PbfRuleOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v *PbfRule) pulumi.StringOutput { return v.Name }).(pulumi.StringOutput)
 }
 
+// Negate destination address
+func (o PbfRuleOutput) NegateDestination() pulumi.BoolOutput {
+	return o.ApplyT(func(v *PbfRule) pulumi.BoolOutput { return v.NegateDestination }).(pulumi.BoolOutput)
+}
+
+// Negate source address
+func (o PbfRuleOutput) NegateSource() pulumi.BoolOutput {
+	return o.ApplyT(func(v *PbfRule) pulumi.BoolOutput { return v.NegateSource }).(pulumi.BoolOutput)
+}
+
 // Schedule
 func (o PbfRuleOutput) Schedule() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *PbfRule) pulumi.StringPtrOutput { return v.Schedule }).(pulumi.StringPtrOutput)
@@ -561,8 +569,6 @@ func (o PbfRuleOutput) Services() pulumi.StringArrayOutput {
 }
 
 // The snippet in which the resource is defined
-//
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o PbfRuleOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *PbfRule) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)
 }

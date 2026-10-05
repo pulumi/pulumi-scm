@@ -26,10 +26,13 @@ func LookupSchedule(ctx *pulumi.Context, args *LookupScheduleArgs, opts ...pulum
 type LookupScheduleArgs struct {
 	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
+	// The folder in which the resource is defined
 	Folder *string `pulumi:"folder"`
 	// The UUID of the schedule
-	Id      string  `pulumi:"id"`
-	Name    *string `pulumi:"name"`
+	Id string `pulumi:"id"`
+	// The name of the schedule
+	Name *string `pulumi:"name"`
+	// The snippet in which the resource is defined
 	Snippet *string `pulumi:"snippet"`
 }
 
@@ -37,13 +40,18 @@ type LookupScheduleArgs struct {
 type LookupScheduleResult struct {
 	// The device in which the resource is defined
 	Device string `pulumi:"device"`
+	// The folder in which the resource is defined
 	Folder string `pulumi:"folder"`
 	// The UUID of the schedule
-	Id           string                  `pulumi:"id"`
-	Name         string                  `pulumi:"name"`
+	Id string `pulumi:"id"`
+	// The name of the schedule
+	Name string `pulumi:"name"`
+	// Schedule type
 	ScheduleType GetScheduleScheduleType `pulumi:"scheduleType"`
-	Snippet      string                  `pulumi:"snippet"`
-	Tfid         string                  `pulumi:"tfid"`
+	// The snippet in which the resource is defined
+	Snippet string `pulumi:"snippet"`
+	// The Terraform ID.
+	Tfid string `pulumi:"tfid"`
 }
 
 func LookupScheduleOutput(ctx *pulumi.Context, args LookupScheduleOutputArgs, opts ...pulumi.InvokeOption) LookupScheduleResultOutput {
@@ -55,10 +63,13 @@ func LookupScheduleOutput(ctx *pulumi.Context, args LookupScheduleOutputArgs, op
 type LookupScheduleOutputArgs struct {
 	// The device in which the resource is defined
 	Device pulumi.StringPtrInput `pulumi:"device"`
+	// The folder in which the resource is defined
 	Folder pulumi.StringPtrInput `pulumi:"folder"`
 	// The UUID of the schedule
-	Id      pulumi.StringInput    `pulumi:"id"`
-	Name    pulumi.StringPtrInput `pulumi:"name"`
+	Id pulumi.StringInput `pulumi:"id"`
+	// The name of the schedule
+	Name pulumi.StringPtrInput `pulumi:"name"`
+	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrInput `pulumi:"snippet"`
 }
 
@@ -86,6 +97,7 @@ func (o LookupScheduleResultOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupScheduleResult) string { return v.Device }).(pulumi.StringOutput)
 }
 
+// The folder in which the resource is defined
 func (o LookupScheduleResultOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupScheduleResult) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -95,18 +107,22 @@ func (o LookupScheduleResultOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupScheduleResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
+// The name of the schedule
 func (o LookupScheduleResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupScheduleResult) string { return v.Name }).(pulumi.StringOutput)
 }
 
+// Schedule type
 func (o LookupScheduleResultOutput) ScheduleType() GetScheduleScheduleTypeOutput {
 	return o.ApplyT(func(v LookupScheduleResult) GetScheduleScheduleType { return v.ScheduleType }).(GetScheduleScheduleTypeOutput)
 }
 
+// The snippet in which the resource is defined
 func (o LookupScheduleResultOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupScheduleResult) string { return v.Snippet }).(pulumi.StringOutput)
 }
 
+// The Terraform ID.
 func (o LookupScheduleResultOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupScheduleResult) string { return v.Tfid }).(pulumi.StringOutput)
 }

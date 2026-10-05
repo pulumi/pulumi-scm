@@ -13,7 +13,7 @@ namespace Pulumi.Scm.Inputs
     public sealed class ScepProfileAlgorithmRsaArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Rsa nbits
+        /// Rsa nbits. Possible values are `1024`, `2048` and `3072`.
         /// </summary>
         [Input("rsaNbits", required: true)]
         public Input<string> RsaNbits { get; set; } = null!;

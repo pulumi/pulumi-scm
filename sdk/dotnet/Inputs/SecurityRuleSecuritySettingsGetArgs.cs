@@ -13,19 +13,19 @@ namespace Pulumi.Scm.Inputs
     public sealed class SecurityRuleSecuritySettingsGetArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Anti spyware
+        /// Anti spyware. Possible values are `Yes` and `No`.
         /// </summary>
         [Input("antiSpyware")]
         public Input<string>? AntiSpyware { get; set; }
 
         /// <summary>
-        /// Virus and wildfire analysis
+        /// Virus and wildfire analysis. Possible values are `Yes` and `No`.
         /// </summary>
         [Input("virusAndWildfireAnalysis")]
         public Input<string>? VirusAndWildfireAnalysis { get; set; }
 
         /// <summary>
-        /// Vulnerability
+        /// Vulnerability. Possible values are `Yes` and `No`.
         /// </summary>
         [Input("vulnerability")]
         public Input<string>? Vulnerability { get; set; }

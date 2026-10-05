@@ -93,14 +93,14 @@ public final class ForwardingProfileTypeZtnaAgentForwardingRuleArgs extends com.
     }
 
     /**
-     * Type of traffic this ZTNA rule applies to (dns, network, or both)
+     * Type of traffic this ZTNA rule applies to (dns, network, or both). Possible values are `dns`, `dns-and-network-traffic` and `network-traffic`.
      * 
      */
     @Import(name="trafficType")
     private @Nullable Output<String> trafficType;
 
     /**
-     * @return Type of traffic this ZTNA rule applies to (dns, network, or both)
+     * @return Type of traffic this ZTNA rule applies to (dns, network, or both). Possible values are `dns`, `dns-and-network-traffic` and `network-traffic`.
      * 
      */
     public Optional<Output<String>> trafficType() {
@@ -258,7 +258,7 @@ public final class ForwardingProfileTypeZtnaAgentForwardingRuleArgs extends com.
         }
 
         /**
-         * @param trafficType Type of traffic this ZTNA rule applies to (dns, network, or both)
+         * @param trafficType Type of traffic this ZTNA rule applies to (dns, network, or both). Possible values are `dns`, `dns-and-network-traffic` and `network-traffic`.
          * 
          * @return builder
          * 
@@ -269,7 +269,7 @@ public final class ForwardingProfileTypeZtnaAgentForwardingRuleArgs extends com.
         }
 
         /**
-         * @param trafficType Type of traffic this ZTNA rule applies to (dns, network, or both)
+         * @param trafficType Type of traffic this ZTNA rule applies to (dns, network, or both). Possible values are `dns`, `dns-and-network-traffic` and `network-traffic`.
          * 
          * @return builder
          * 

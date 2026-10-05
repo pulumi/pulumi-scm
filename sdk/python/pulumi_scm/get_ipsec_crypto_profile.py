@@ -65,6 +65,9 @@ class GetIpsecCryptoProfileResult:
     @_builtins.property
     @pulumi.getter
     def ah(self) -> 'outputs.GetIpsecCryptoProfileAhResult':
+        """
+        Ah
+        """
         return pulumi.get(self, "ah")
 
     @_builtins.property
@@ -78,16 +81,25 @@ class GetIpsecCryptoProfileResult:
     @_builtins.property
     @pulumi.getter(name="dhGroup")
     def dh_group(self) -> _builtins.str:
+        """
+        phase-2 DH group (PFS DH group). Possible values are `no-pfs`, `group1`, `group2`, `group5`, `group14`, `group19`, `group20`, `group21`, `ml-kem-512`, `ml-kem-768` and `ml-kem-1024`.
+        """
         return pulumi.get(self, "dh_group")
 
     @_builtins.property
     @pulumi.getter
     def esp(self) -> 'outputs.GetIpsecCryptoProfileEspResult':
+        """
+        Esp
+        """
         return pulumi.get(self, "esp")
 
     @_builtins.property
     @pulumi.getter
     def folder(self) -> _builtins.str:
+        """
+        The folder in which the resource is defined
+        """
         return pulumi.get(self, "folder")
 
     @_builtins.property
@@ -101,26 +113,41 @@ class GetIpsecCryptoProfileResult:
     @_builtins.property
     @pulumi.getter
     def lifesize(self) -> 'outputs.GetIpsecCryptoProfileLifesizeResult':
+        """
+        Lifesize
+        """
         return pulumi.get(self, "lifesize")
 
     @_builtins.property
     @pulumi.getter
     def lifetime(self) -> 'outputs.GetIpsecCryptoProfileLifetimeResult':
+        """
+        Ipsec crypto profile lifetime
+        """
         return pulumi.get(self, "lifetime")
 
     @_builtins.property
     @pulumi.getter
     def name(self) -> _builtins.str:
+        """
+        Alphanumeric string begin with letter: [0-9a-zA-Z._-]
+        """
         return pulumi.get(self, "name")
 
     @_builtins.property
     @pulumi.getter
     def snippet(self) -> _builtins.str:
+        """
+        The snippet in which the resource is defined
+        """
         return pulumi.get(self, "snippet")
 
     @_builtins.property
     @pulumi.getter
     def tfid(self) -> _builtins.str:
+        """
+        The Terraform ID.
+        """
         return pulumi.get(self, "tfid")
 
 
@@ -165,7 +192,10 @@ def get_ipsec_crypto_profile(device: Optional[_builtins.str] = None,
 
 
     :param _builtins.str device: The device in which the resource is defined
+    :param _builtins.str folder: The folder in which the resource is defined
     :param _builtins.str id: UUID of the resource
+    :param _builtins.str name: Alphanumeric string begin with letter: [0-9a-zA-Z._-]
+    :param _builtins.str snippet: The snippet in which the resource is defined
     """
     __args__ = dict()
     __args__['device'] = device
@@ -210,7 +240,10 @@ def get_ipsec_crypto_profile_output(device: pulumi.Input[Optional[Optional[_buil
 
 
     :param _builtins.str device: The device in which the resource is defined
+    :param _builtins.str folder: The folder in which the resource is defined
     :param _builtins.str id: UUID of the resource
+    :param _builtins.str name: Alphanumeric string begin with letter: [0-9a-zA-Z._-]
+    :param _builtins.str snippet: The snippet in which the resource is defined
     """
     __args__ = dict()
     __args__['device'] = device

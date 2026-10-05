@@ -143,7 +143,7 @@ export class RemoteNetwork extends pulumi.CustomResource {
     }
 
     /**
-     * Ecmp load balancing
+     * Ecmp load balancing. Possible values are `enable` and `disable`.
      */
     declare public readonly ecmpLoadBalancing: pulumi.Output<string>;
     /**
@@ -171,7 +171,7 @@ export class RemoteNetwork extends pulumi.CustomResource {
      */
     declare public readonly name: pulumi.Output<string>;
     /**
-     * setup the protocol when ecmp*load*balancing is disable
+     * setup the protocol when ecmp*load*balancing is disabled
      */
     declare public readonly protocol: pulumi.Output<outputs.RemoteNetworkProtocol | undefined>;
     /**
@@ -258,7 +258,7 @@ export class RemoteNetwork extends pulumi.CustomResource {
  */
 export interface RemoteNetworkState {
     /**
-     * Ecmp load balancing
+     * Ecmp load balancing. Possible values are `enable` and `disable`.
      */
     ecmpLoadBalancing?: pulumi.Input<string | undefined>;
     /**
@@ -286,7 +286,7 @@ export interface RemoteNetworkState {
      */
     name?: pulumi.Input<string | undefined>;
     /**
-     * setup the protocol when ecmp*load*balancing is disable
+     * setup the protocol when ecmp*load*balancing is disabled
      */
     protocol?: pulumi.Input<inputs.RemoteNetworkProtocol | undefined>;
     /**
@@ -316,7 +316,7 @@ export interface RemoteNetworkState {
  */
 export interface RemoteNetworkArgs {
     /**
-     * Ecmp load balancing
+     * Ecmp load balancing. Possible values are `enable` and `disable`.
      */
     ecmpLoadBalancing?: pulumi.Input<string | undefined>;
     /**
@@ -340,7 +340,7 @@ export interface RemoteNetworkArgs {
      */
     name?: pulumi.Input<string | undefined>;
     /**
-     * setup the protocol when ecmp*load*balancing is disable
+     * setup the protocol when ecmp*load*balancing is disabled
      */
     protocol?: pulumi.Input<inputs.RemoteNetworkProtocol | undefined>;
     /**

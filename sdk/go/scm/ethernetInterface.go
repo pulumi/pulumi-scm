@@ -139,10 +139,17 @@ import (
 //					Ips: scm.EthernetInterfaceLayer3IpArray{
 //						&scm.EthernetInterfaceLayer3IpArgs{
 //							Name: pulumi.String("198.18.1.1/24"),
+//						},
+//						&scm.EthernetInterfaceLayer3IpArgs{
 //							Name: pulumi.String("198.18.1.2/32"),
 //						},
 //					},
 //					Mtu: pulumi.Int(1500),
+//					AdjustTcpMss: &scm.EthernetInterfaceLayer3AdjustTcpMssArgs{
+//						Enable:            pulumi.Bool(true),
+//						Ipv4MssAdjustment: pulumi.Int(40),
+//						Ipv6MssAdjustment: pulumi.Int(60),
+//					},
 //				},
 //			})
 //			if err != nil {
@@ -215,40 +222,28 @@ type EthernetInterface struct {
 	// Default interface assignment
 	DefaultValue pulumi.StringPtrOutput `pulumi:"defaultValue"`
 	// The device in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrOutput `pulumi:"device"`
 	// Map of sensitive values returned from the API.
 	EncryptedValues pulumi.StringMapOutput `pulumi:"encryptedValues"`
 	// The folder in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrOutput `pulumi:"folder"`
 	// Layer2
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `aggregateGroup`, `layer2`, `layer3`, and `tap`.
 	Layer2 EthernetInterfaceLayer2PtrOutput `pulumi:"layer2"`
 	// Ethernet Interface Layer 3 configuration
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `aggregateGroup`, `layer2`, `layer3`, and `tap`.
 	Layer3 EthernetInterfaceLayer3PtrOutput `pulumi:"layer3"`
-	// Link duplex
+	// Link duplex. Possible values are `auto`, `half` and `full`.
 	LinkDuplex pulumi.StringOutput `pulumi:"linkDuplex"`
-	// Link speed
+	// Link speed. Possible values are `auto`, `10`, `100`, `1000`, `10000`, `40000` and `100000`.
 	LinkSpeed pulumi.StringOutput `pulumi:"linkSpeed"`
-	// Link state
+	// Link state. Possible values are `auto`, `up` and `down`.
 	LinkState pulumi.StringOutput `pulumi:"linkState"`
 	// Interface name
 	Name pulumi.StringOutput `pulumi:"name"`
 	// Poe
 	Poe EthernetInterfacePoePtrOutput `pulumi:"poe"`
 	// The snippet in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
 	// Tap
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `aggregateGroup`, `layer2`, `layer3`, and `tap`.
 	Tap EthernetInterfaceTapPtrOutput `pulumi:"tap"`
 	// The Terraform ID.
 	Tfid pulumi.StringOutput `pulumi:"tfid"`
@@ -295,40 +290,28 @@ type ethernetInterfaceState struct {
 	// Default interface assignment
 	DefaultValue *string `pulumi:"defaultValue"`
 	// The device in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device *string `pulumi:"device"`
 	// Map of sensitive values returned from the API.
 	EncryptedValues map[string]string `pulumi:"encryptedValues"`
 	// The folder in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// Layer2
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `aggregateGroup`, `layer2`, `layer3`, and `tap`.
 	Layer2 *EthernetInterfaceLayer2 `pulumi:"layer2"`
 	// Ethernet Interface Layer 3 configuration
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `aggregateGroup`, `layer2`, `layer3`, and `tap`.
 	Layer3 *EthernetInterfaceLayer3 `pulumi:"layer3"`
-	// Link duplex
+	// Link duplex. Possible values are `auto`, `half` and `full`.
 	LinkDuplex *string `pulumi:"linkDuplex"`
-	// Link speed
+	// Link speed. Possible values are `auto`, `10`, `100`, `1000`, `10000`, `40000` and `100000`.
 	LinkSpeed *string `pulumi:"linkSpeed"`
-	// Link state
+	// Link state. Possible values are `auto`, `up` and `down`.
 	LinkState *string `pulumi:"linkState"`
 	// Interface name
 	Name *string `pulumi:"name"`
 	// Poe
 	Poe *EthernetInterfacePoe `pulumi:"poe"`
 	// The snippet in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	// Tap
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `aggregateGroup`, `layer2`, `layer3`, and `tap`.
 	Tap *EthernetInterfaceTap `pulumi:"tap"`
 	// The Terraform ID.
 	Tfid *string `pulumi:"tfid"`
@@ -342,40 +325,28 @@ type EthernetInterfaceState struct {
 	// Default interface assignment
 	DefaultValue pulumi.StringPtrInput
 	// The device in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrInput
 	// Map of sensitive values returned from the API.
 	EncryptedValues pulumi.StringMapInput
 	// The folder in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// Layer2
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `aggregateGroup`, `layer2`, `layer3`, and `tap`.
 	Layer2 EthernetInterfaceLayer2PtrInput
 	// Ethernet Interface Layer 3 configuration
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `aggregateGroup`, `layer2`, `layer3`, and `tap`.
 	Layer3 EthernetInterfaceLayer3PtrInput
-	// Link duplex
+	// Link duplex. Possible values are `auto`, `half` and `full`.
 	LinkDuplex pulumi.StringPtrInput
-	// Link speed
+	// Link speed. Possible values are `auto`, `10`, `100`, `1000`, `10000`, `40000` and `100000`.
 	LinkSpeed pulumi.StringPtrInput
-	// Link state
+	// Link state. Possible values are `auto`, `up` and `down`.
 	LinkState pulumi.StringPtrInput
 	// Interface name
 	Name pulumi.StringPtrInput
 	// Poe
 	Poe EthernetInterfacePoePtrInput
 	// The snippet in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	// Tap
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `aggregateGroup`, `layer2`, `layer3`, and `tap`.
 	Tap EthernetInterfaceTapPtrInput
 	// The Terraform ID.
 	Tfid pulumi.StringPtrInput
@@ -393,38 +364,26 @@ type ethernetInterfaceArgs struct {
 	// Default interface assignment
 	DefaultValue *string `pulumi:"defaultValue"`
 	// The device in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device *string `pulumi:"device"`
 	// The folder in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// Layer2
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `aggregateGroup`, `layer2`, `layer3`, and `tap`.
 	Layer2 *EthernetInterfaceLayer2 `pulumi:"layer2"`
 	// Ethernet Interface Layer 3 configuration
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `aggregateGroup`, `layer2`, `layer3`, and `tap`.
 	Layer3 *EthernetInterfaceLayer3 `pulumi:"layer3"`
-	// Link duplex
+	// Link duplex. Possible values are `auto`, `half` and `full`.
 	LinkDuplex *string `pulumi:"linkDuplex"`
-	// Link speed
+	// Link speed. Possible values are `auto`, `10`, `100`, `1000`, `10000`, `40000` and `100000`.
 	LinkSpeed *string `pulumi:"linkSpeed"`
-	// Link state
+	// Link state. Possible values are `auto`, `up` and `down`.
 	LinkState *string `pulumi:"linkState"`
 	// Interface name
 	Name *string `pulumi:"name"`
 	// Poe
 	Poe *EthernetInterfacePoe `pulumi:"poe"`
 	// The snippet in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	// Tap
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `aggregateGroup`, `layer2`, `layer3`, and `tap`.
 	Tap *EthernetInterfaceTap `pulumi:"tap"`
 }
 
@@ -437,38 +396,26 @@ type EthernetInterfaceArgs struct {
 	// Default interface assignment
 	DefaultValue pulumi.StringPtrInput
 	// The device in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrInput
 	// The folder in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// Layer2
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `aggregateGroup`, `layer2`, `layer3`, and `tap`.
 	Layer2 EthernetInterfaceLayer2PtrInput
 	// Ethernet Interface Layer 3 configuration
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `aggregateGroup`, `layer2`, `layer3`, and `tap`.
 	Layer3 EthernetInterfaceLayer3PtrInput
-	// Link duplex
+	// Link duplex. Possible values are `auto`, `half` and `full`.
 	LinkDuplex pulumi.StringPtrInput
-	// Link speed
+	// Link speed. Possible values are `auto`, `10`, `100`, `1000`, `10000`, `40000` and `100000`.
 	LinkSpeed pulumi.StringPtrInput
-	// Link state
+	// Link state. Possible values are `auto`, `up` and `down`.
 	LinkState pulumi.StringPtrInput
 	// Interface name
 	Name pulumi.StringPtrInput
 	// Poe
 	Poe EthernetInterfacePoePtrInput
 	// The snippet in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	// Tap
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `aggregateGroup`, `layer2`, `layer3`, and `tap`.
 	Tap EthernetInterfaceTapPtrInput
 }
 
@@ -575,8 +522,6 @@ func (o EthernetInterfaceOutput) DefaultValue() pulumi.StringPtrOutput {
 }
 
 // The device in which the resource is defined
-//
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o EthernetInterfaceOutput) Device() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *EthernetInterface) pulumi.StringPtrOutput { return v.Device }).(pulumi.StringPtrOutput)
 }
@@ -587,37 +532,31 @@ func (o EthernetInterfaceOutput) EncryptedValues() pulumi.StringMapOutput {
 }
 
 // The folder in which the resource is defined
-//
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o EthernetInterfaceOutput) Folder() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *EthernetInterface) pulumi.StringPtrOutput { return v.Folder }).(pulumi.StringPtrOutput)
 }
 
 // Layer2
-//
-// > ℹ️ **Note:** You must specify exactly one of `aggregateGroup`, `layer2`, `layer3`, and `tap`.
 func (o EthernetInterfaceOutput) Layer2() EthernetInterfaceLayer2PtrOutput {
 	return o.ApplyT(func(v *EthernetInterface) EthernetInterfaceLayer2PtrOutput { return v.Layer2 }).(EthernetInterfaceLayer2PtrOutput)
 }
 
 // Ethernet Interface Layer 3 configuration
-//
-// > ℹ️ **Note:** You must specify exactly one of `aggregateGroup`, `layer2`, `layer3`, and `tap`.
 func (o EthernetInterfaceOutput) Layer3() EthernetInterfaceLayer3PtrOutput {
 	return o.ApplyT(func(v *EthernetInterface) EthernetInterfaceLayer3PtrOutput { return v.Layer3 }).(EthernetInterfaceLayer3PtrOutput)
 }
 
-// Link duplex
+// Link duplex. Possible values are `auto`, `half` and `full`.
 func (o EthernetInterfaceOutput) LinkDuplex() pulumi.StringOutput {
 	return o.ApplyT(func(v *EthernetInterface) pulumi.StringOutput { return v.LinkDuplex }).(pulumi.StringOutput)
 }
 
-// Link speed
+// Link speed. Possible values are `auto`, `10`, `100`, `1000`, `10000`, `40000` and `100000`.
 func (o EthernetInterfaceOutput) LinkSpeed() pulumi.StringOutput {
 	return o.ApplyT(func(v *EthernetInterface) pulumi.StringOutput { return v.LinkSpeed }).(pulumi.StringOutput)
 }
 
-// Link state
+// Link state. Possible values are `auto`, `up` and `down`.
 func (o EthernetInterfaceOutput) LinkState() pulumi.StringOutput {
 	return o.ApplyT(func(v *EthernetInterface) pulumi.StringOutput { return v.LinkState }).(pulumi.StringOutput)
 }
@@ -633,15 +572,11 @@ func (o EthernetInterfaceOutput) Poe() EthernetInterfacePoePtrOutput {
 }
 
 // The snippet in which the resource is defined
-//
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o EthernetInterfaceOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *EthernetInterface) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)
 }
 
 // Tap
-//
-// > ℹ️ **Note:** You must specify exactly one of `aggregateGroup`, `layer2`, `layer3`, and `tap`.
 func (o EthernetInterfaceOutput) Tap() EthernetInterfaceTapPtrOutput {
 	return o.ApplyT(func(v *EthernetInterface) EthernetInterfaceTapPtrOutput { return v.Tap }).(EthernetInterfaceTapPtrOutput)
 }

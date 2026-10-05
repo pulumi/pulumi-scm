@@ -20,14 +20,10 @@ public final class GetLogicalRouterVrfOspfv3AreaType {
     /**
      * @return Nssa
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `normal`, `nssa`, and `stub`.
-     * 
      */
     private GetLogicalRouterVrfOspfv3AreaTypeNssa nssa;
     /**
      * @return Stub
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `normal`, `nssa`, and `stub`.
      * 
      */
     private GetLogicalRouterVrfOspfv3AreaTypeStub stub;
@@ -43,16 +39,12 @@ public final class GetLogicalRouterVrfOspfv3AreaType {
     /**
      * @return Nssa
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `normal`, `nssa`, and `stub`.
-     * 
      */
     public GetLogicalRouterVrfOspfv3AreaTypeNssa nssa() {
         return this.nssa;
     }
     /**
      * @return Stub
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `normal`, `nssa`, and `stub`.
      * 
      */
     public GetLogicalRouterVrfOspfv3AreaTypeStub stub() {

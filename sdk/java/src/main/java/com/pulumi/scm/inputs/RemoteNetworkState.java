@@ -20,14 +20,14 @@ public final class RemoteNetworkState extends com.pulumi.resources.ResourceArgs 
     public static final RemoteNetworkState Empty = new RemoteNetworkState();
 
     /**
-     * Ecmp load balancing
+     * Ecmp load balancing. Possible values are `enable` and `disable`.
      * 
      */
     @Import(name="ecmpLoadBalancing")
     private @Nullable Output<String> ecmpLoadBalancing;
 
     /**
-     * @return Ecmp load balancing
+     * @return Ecmp load balancing. Possible values are `enable` and `disable`.
      * 
      */
     public Optional<Output<String>> ecmpLoadBalancing() {
@@ -125,14 +125,14 @@ public final class RemoteNetworkState extends com.pulumi.resources.ResourceArgs 
     }
 
     /**
-     * setup the protocol when ecmp*load*balancing is disable
+     * setup the protocol when ecmp*load*balancing is disabled
      * 
      */
     @Import(name="protocol")
     private @Nullable Output<RemoteNetworkProtocolArgs> protocol;
 
     /**
-     * @return setup the protocol when ecmp*load*balancing is disable
+     * @return setup the protocol when ecmp*load*balancing is disabled
      * 
      */
     public Optional<Output<RemoteNetworkProtocolArgs>> protocol() {
@@ -251,7 +251,7 @@ public final class RemoteNetworkState extends com.pulumi.resources.ResourceArgs 
         }
 
         /**
-         * @param ecmpLoadBalancing Ecmp load balancing
+         * @param ecmpLoadBalancing Ecmp load balancing. Possible values are `enable` and `disable`.
          * 
          * @return builder
          * 
@@ -262,7 +262,7 @@ public final class RemoteNetworkState extends com.pulumi.resources.ResourceArgs 
         }
 
         /**
-         * @param ecmpLoadBalancing Ecmp load balancing
+         * @param ecmpLoadBalancing Ecmp load balancing. Possible values are `enable` and `disable`.
          * 
          * @return builder
          * 
@@ -408,7 +408,7 @@ public final class RemoteNetworkState extends com.pulumi.resources.ResourceArgs 
         }
 
         /**
-         * @param protocol setup the protocol when ecmp*load*balancing is disable
+         * @param protocol setup the protocol when ecmp*load*balancing is disabled
          * 
          * @return builder
          * 
@@ -419,7 +419,7 @@ public final class RemoteNetworkState extends com.pulumi.resources.ResourceArgs 
         }
 
         /**
-         * @param protocol setup the protocol when ecmp*load*balancing is disable
+         * @param protocol setup the protocol when ecmp*load*balancing is disabled
          * 
          * @return builder
          * 

@@ -20,21 +20,15 @@ public final class GetLogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateAsPath
     /**
      * @return Prepend
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
-     * 
      */
     private Integer prepend;
     /**
      * @return Remove
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
-     * 
      */
     private GetLogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateAsPathRemove remove;
     /**
      * @return Remove and prepend
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
      * 
      */
     private Integer removeAndPrepend;
@@ -50,8 +44,6 @@ public final class GetLogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateAsPath
     /**
      * @return Prepend
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
-     * 
      */
     public Integer prepend() {
         return this.prepend;
@@ -59,16 +51,12 @@ public final class GetLogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateAsPath
     /**
      * @return Remove
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
-     * 
      */
     public GetLogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateAsPathRemove remove() {
         return this.remove;
     }
     /**
      * @return Remove and prepend
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
      * 
      */
     public Integer removeAndPrepend() {

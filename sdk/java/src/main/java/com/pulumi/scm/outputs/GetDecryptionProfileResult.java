@@ -19,18 +19,50 @@ public final class GetDecryptionProfileResult {
      * 
      */
     private String device;
+    /**
+     * @return The folder in which the resource is defined
+     * 
+     */
     private String folder;
     /**
      * @return UUID of the resource
      * 
      */
     private String id;
+    /**
+     * @return Must start with alphanumeric char and should contain only alphanemeric, underscore, hyphen, dot or space
+     * 
+     */
     private String name;
+    /**
+     * @return The snippet in which the resource is defined
+     * 
+     */
     private String snippet;
+    /**
+     * @return Ssl forward proxy
+     * 
+     */
     private GetDecryptionProfileSslForwardProxy sslForwardProxy;
+    /**
+     * @return Ssl inbound proxy
+     * 
+     */
     private GetDecryptionProfileSslInboundProxy sslInboundProxy;
+    /**
+     * @return Ssl no proxy
+     * 
+     */
     private GetDecryptionProfileSslNoProxy sslNoProxy;
+    /**
+     * @return Ssl protocol settings
+     * 
+     */
     private GetDecryptionProfileSslProtocolSettings sslProtocolSettings;
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     private String tfid;
 
     private GetDecryptionProfileResult() {}
@@ -41,6 +73,10 @@ public final class GetDecryptionProfileResult {
     public String device() {
         return this.device;
     }
+    /**
+     * @return The folder in which the resource is defined
+     * 
+     */
     public String folder() {
         return this.folder;
     }
@@ -51,24 +87,52 @@ public final class GetDecryptionProfileResult {
     public String id() {
         return this.id;
     }
+    /**
+     * @return Must start with alphanumeric char and should contain only alphanemeric, underscore, hyphen, dot or space
+     * 
+     */
     public String name() {
         return this.name;
     }
+    /**
+     * @return The snippet in which the resource is defined
+     * 
+     */
     public String snippet() {
         return this.snippet;
     }
+    /**
+     * @return Ssl forward proxy
+     * 
+     */
     public GetDecryptionProfileSslForwardProxy sslForwardProxy() {
         return this.sslForwardProxy;
     }
+    /**
+     * @return Ssl inbound proxy
+     * 
+     */
     public GetDecryptionProfileSslInboundProxy sslInboundProxy() {
         return this.sslInboundProxy;
     }
+    /**
+     * @return Ssl no proxy
+     * 
+     */
     public GetDecryptionProfileSslNoProxy sslNoProxy() {
         return this.sslNoProxy;
     }
+    /**
+     * @return Ssl protocol settings
+     * 
+     */
     public GetDecryptionProfileSslProtocolSettings sslProtocolSettings() {
         return this.sslProtocolSettings;
     }
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     public String tfid() {
         return this.tfid;
     }

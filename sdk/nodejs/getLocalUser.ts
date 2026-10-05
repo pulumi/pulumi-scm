@@ -26,12 +26,21 @@ export interface GetLocalUserArgs {
      * The device in which the resource is defined
      */
     device?: string;
+    /**
+     * The folder in which the resource is defined
+     */
     folder?: string;
     /**
      * The UUID of the local user
      */
     id: string;
+    /**
+     * The name of the local user
+     */
     name?: string;
+    /**
+     * The snippet in which the resource is defined
+     */
     snippet?: string;
 }
 
@@ -43,16 +52,37 @@ export interface GetLocalUserResult {
      * The device in which the resource is defined
      */
     readonly device: string;
+    /**
+     * Is the local user disabled?
+     */
     readonly disabled: boolean;
+    /**
+     * Map of sensitive values returned from the API.
+     */
     readonly encryptedValues: {[key: string]: string};
+    /**
+     * The folder in which the resource is defined
+     */
     readonly folder: string;
     /**
      * The UUID of the local user
      */
     readonly id: string;
+    /**
+     * The name of the local user
+     */
     readonly name: string;
+    /**
+     * The password of the local user
+     */
     readonly password: string;
+    /**
+     * The snippet in which the resource is defined
+     */
     readonly snippet: string;
+    /**
+     * The Terraform ID.
+     */
     readonly tfid: string;
 }
 /**
@@ -77,11 +107,20 @@ export interface GetLocalUserOutputArgs {
      * The device in which the resource is defined
      */
     device?: pulumi.Input<string | undefined>;
+    /**
+     * The folder in which the resource is defined
+     */
     folder?: pulumi.Input<string | undefined>;
     /**
      * The UUID of the local user
      */
     id: pulumi.Input<string>;
+    /**
+     * The name of the local user
+     */
     name?: pulumi.Input<string | undefined>;
+    /**
+     * The snippet in which the resource is defined
+     */
     snippet?: pulumi.Input<string | undefined>;
 }

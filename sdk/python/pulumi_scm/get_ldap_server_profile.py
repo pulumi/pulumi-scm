@@ -83,21 +83,33 @@ class GetLdapServerProfileResult:
     @_builtins.property
     @pulumi.getter
     def base(self) -> _builtins.str:
+        """
+        The base DN
+        """
         return pulumi.get(self, "base")
 
     @_builtins.property
     @pulumi.getter(name="bindDn")
     def bind_dn(self) -> _builtins.str:
+        """
+        The bind DN
+        """
         return pulumi.get(self, "bind_dn")
 
     @_builtins.property
     @pulumi.getter(name="bindPassword")
     def bind_password(self) -> _builtins.str:
+        """
+        The bind password
+        """
         return pulumi.get(self, "bind_password")
 
     @_builtins.property
     @pulumi.getter(name="bindTimelimit")
     def bind_timelimit(self) -> _builtins.str:
+        """
+        The bind timeout (seconds)
+        """
         return pulumi.get(self, "bind_timelimit")
 
     @_builtins.property
@@ -111,11 +123,17 @@ class GetLdapServerProfileResult:
     @_builtins.property
     @pulumi.getter(name="encryptedValues")
     def encrypted_values(self) -> Mapping[str, _builtins.str]:
+        """
+        Map of sensitive values returned from the API.
+        """
         return pulumi.get(self, "encrypted_values")
 
     @_builtins.property
     @pulumi.getter
     def folder(self) -> _builtins.str:
+        """
+        The folder in which the resource is defined
+        """
         return pulumi.get(self, "folder")
 
     @_builtins.property
@@ -129,46 +147,73 @@ class GetLdapServerProfileResult:
     @_builtins.property
     @pulumi.getter(name="ldapType")
     def ldap_type(self) -> _builtins.str:
+        """
+        The LDAP server time. Possible values are `active-directory`, `e-directory`, `sun` and `other`.
+        """
         return pulumi.get(self, "ldap_type")
 
     @_builtins.property
     @pulumi.getter
     def name(self) -> _builtins.str:
+        """
+        The name of the LDAP server profile
+        """
         return pulumi.get(self, "name")
 
     @_builtins.property
     @pulumi.getter(name="retryInterval")
     def retry_interval(self) -> _builtins.int:
+        """
+        The search retry interval (seconds)
+        """
         return pulumi.get(self, "retry_interval")
 
     @_builtins.property
     @pulumi.getter
     def servers(self) -> Sequence['outputs.GetLdapServerProfileServerResult']:
+        """
+        The LDAP server configuration
+        """
         return pulumi.get(self, "servers")
 
     @_builtins.property
     @pulumi.getter
     def snippet(self) -> _builtins.str:
+        """
+        The snippet in which the resource is defined
+        """
         return pulumi.get(self, "snippet")
 
     @_builtins.property
     @pulumi.getter
     def ssl(self) -> _builtins.bool:
+        """
+        Require SSL/TLS secured connection?
+        """
         return pulumi.get(self, "ssl")
 
     @_builtins.property
     @pulumi.getter
     def tfid(self) -> _builtins.str:
+        """
+        The Terraform ID.
+        """
         return pulumi.get(self, "tfid")
 
     @_builtins.property
     @pulumi.getter
     def timelimit(self) -> _builtins.int:
+        """
+        The search timeout (seconds)
+        """
         return pulumi.get(self, "timelimit")
 
     @_builtins.property
     @pulumi.getter(name="verifyServerCertificate")
     def verify_server_certificate(self) -> _builtins.bool:
+        """
+        Verify server certificate for SSL sessions?
+        """
         return pulumi.get(self, "verify_server_certificate")
 
 
@@ -226,7 +271,10 @@ def get_ldap_server_profile(device: Optional[_builtins.str] = None,
 
 
     :param _builtins.str device: The device in which the resource is defined
+    :param _builtins.str folder: The folder in which the resource is defined
     :param _builtins.str id: The UUID of the LDAP server profile
+    :param _builtins.str name: The name of the LDAP server profile
+    :param _builtins.str snippet: The snippet in which the resource is defined
     """
     __args__ = dict()
     __args__['device'] = device
@@ -284,7 +332,10 @@ def get_ldap_server_profile_output(device: pulumi.Input[Optional[Optional[_built
 
 
     :param _builtins.str device: The device in which the resource is defined
+    :param _builtins.str folder: The folder in which the resource is defined
     :param _builtins.str id: The UUID of the LDAP server profile
+    :param _builtins.str name: The name of the LDAP server profile
+    :param _builtins.str snippet: The snippet in which the resource is defined
     """
     __args__ = dict()
     __args__['device'] = device

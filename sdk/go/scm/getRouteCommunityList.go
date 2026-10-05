@@ -26,25 +26,34 @@ func LookupRouteCommunityList(ctx *pulumi.Context, args *LookupRouteCommunityLis
 type LookupRouteCommunityListArgs struct {
 	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
+	// The folder in which the resource is defined
 	Folder *string `pulumi:"folder"`
 	// UUID of the resource
-	Id      string  `pulumi:"id"`
-	Name    *string `pulumi:"name"`
+	Id string `pulumi:"id"`
+	// Route community list name
+	Name *string `pulumi:"name"`
+	// The snippet in which the resource is defined
 	Snippet *string `pulumi:"snippet"`
 }
 
 // A collection of values returned by getRouteCommunityList.
 type LookupRouteCommunityListResult struct {
+	// Description
 	Description string `pulumi:"description"`
 	// The device in which the resource is defined
 	Device string `pulumi:"device"`
+	// The folder in which the resource is defined
 	Folder string `pulumi:"folder"`
 	// UUID of the resource
-	Id      string                    `pulumi:"id"`
-	Name    string                    `pulumi:"name"`
-	Snippet string                    `pulumi:"snippet"`
-	Tfid    string                    `pulumi:"tfid"`
-	Type    GetRouteCommunityListType `pulumi:"type"`
+	Id string `pulumi:"id"`
+	// Route community list name
+	Name string `pulumi:"name"`
+	// The snippet in which the resource is defined
+	Snippet string `pulumi:"snippet"`
+	// The Terraform ID.
+	Tfid string `pulumi:"tfid"`
+	// Type
+	Type GetRouteCommunityListType `pulumi:"type"`
 }
 
 func LookupRouteCommunityListOutput(ctx *pulumi.Context, args LookupRouteCommunityListOutputArgs, opts ...pulumi.InvokeOption) LookupRouteCommunityListResultOutput {
@@ -56,10 +65,13 @@ func LookupRouteCommunityListOutput(ctx *pulumi.Context, args LookupRouteCommuni
 type LookupRouteCommunityListOutputArgs struct {
 	// The device in which the resource is defined
 	Device pulumi.StringPtrInput `pulumi:"device"`
+	// The folder in which the resource is defined
 	Folder pulumi.StringPtrInput `pulumi:"folder"`
 	// UUID of the resource
-	Id      pulumi.StringInput    `pulumi:"id"`
-	Name    pulumi.StringPtrInput `pulumi:"name"`
+	Id pulumi.StringInput `pulumi:"id"`
+	// Route community list name
+	Name pulumi.StringPtrInput `pulumi:"name"`
+	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrInput `pulumi:"snippet"`
 }
 
@@ -82,6 +94,7 @@ func (o LookupRouteCommunityListResultOutput) ToLookupRouteCommunityListResultOu
 	return o
 }
 
+// Description
 func (o LookupRouteCommunityListResultOutput) Description() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupRouteCommunityListResult) string { return v.Description }).(pulumi.StringOutput)
 }
@@ -91,6 +104,7 @@ func (o LookupRouteCommunityListResultOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupRouteCommunityListResult) string { return v.Device }).(pulumi.StringOutput)
 }
 
+// The folder in which the resource is defined
 func (o LookupRouteCommunityListResultOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupRouteCommunityListResult) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -100,18 +114,22 @@ func (o LookupRouteCommunityListResultOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupRouteCommunityListResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
+// Route community list name
 func (o LookupRouteCommunityListResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupRouteCommunityListResult) string { return v.Name }).(pulumi.StringOutput)
 }
 
+// The snippet in which the resource is defined
 func (o LookupRouteCommunityListResultOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupRouteCommunityListResult) string { return v.Snippet }).(pulumi.StringOutput)
 }
 
+// The Terraform ID.
 func (o LookupRouteCommunityListResultOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupRouteCommunityListResult) string { return v.Tfid }).(pulumi.StringOutput)
 }
 
+// Type
 func (o LookupRouteCommunityListResultOutput) Type() GetRouteCommunityListTypeOutput {
 	return o.ApplyT(func(v LookupRouteCommunityListResult) GetRouteCommunityListType { return v.Type }).(GetRouteCommunityListTypeOutput)
 }

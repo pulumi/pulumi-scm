@@ -48,12 +48,21 @@ export interface GetDecryptionProfileArgs {
      * The device in which the resource is defined
      */
     device?: string;
+    /**
+     * The folder in which the resource is defined
+     */
     folder?: string;
     /**
      * UUID of the resource
      */
     id: string;
+    /**
+     * Must start with alphanumeric char and should contain only alphanemeric, underscore, hyphen, dot or space
+     */
     name?: string;
+    /**
+     * The snippet in which the resource is defined
+     */
     snippet?: string;
 }
 
@@ -65,17 +74,41 @@ export interface GetDecryptionProfileResult {
      * The device in which the resource is defined
      */
     readonly device: string;
+    /**
+     * The folder in which the resource is defined
+     */
     readonly folder: string;
     /**
      * UUID of the resource
      */
     readonly id: string;
+    /**
+     * Must start with alphanumeric char and should contain only alphanemeric, underscore, hyphen, dot or space
+     */
     readonly name: string;
+    /**
+     * The snippet in which the resource is defined
+     */
     readonly snippet: string;
+    /**
+     * Ssl forward proxy
+     */
     readonly sslForwardProxy: outputs.GetDecryptionProfileSslForwardProxy;
+    /**
+     * Ssl inbound proxy
+     */
     readonly sslInboundProxy: outputs.GetDecryptionProfileSslInboundProxy;
+    /**
+     * Ssl no proxy
+     */
     readonly sslNoProxy: outputs.GetDecryptionProfileSslNoProxy;
+    /**
+     * Ssl protocol settings
+     */
     readonly sslProtocolSettings: outputs.GetDecryptionProfileSslProtocolSettings;
+    /**
+     * The Terraform ID.
+     */
     readonly tfid: string;
 }
 /**
@@ -120,11 +153,20 @@ export interface GetDecryptionProfileOutputArgs {
      * The device in which the resource is defined
      */
     device?: pulumi.Input<string | undefined>;
+    /**
+     * The folder in which the resource is defined
+     */
     folder?: pulumi.Input<string | undefined>;
     /**
      * UUID of the resource
      */
     id: pulumi.Input<string>;
+    /**
+     * Must start with alphanumeric char and should contain only alphanemeric, underscore, hyphen, dot or space
+     */
     name?: pulumi.Input<string | undefined>;
+    /**
+     * The snippet in which the resource is defined
+     */
     snippet?: pulumi.Input<string | undefined>;
 }

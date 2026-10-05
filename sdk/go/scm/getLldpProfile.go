@@ -53,10 +53,13 @@ func LookupLldpProfile(ctx *pulumi.Context, args *LookupLldpProfileArgs, opts ..
 type LookupLldpProfileArgs struct {
 	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
+	// The folder in which the resource is defined
 	Folder *string `pulumi:"folder"`
 	// UUID of the resource
-	Id      string  `pulumi:"id"`
-	Name    *string `pulumi:"name"`
+	Id string `pulumi:"id"`
+	// LLDP profile name
+	Name *string `pulumi:"name"`
+	// The snippet in which the resource is defined
 	Snippet *string `pulumi:"snippet"`
 }
 
@@ -64,15 +67,22 @@ type LookupLldpProfileArgs struct {
 type LookupLldpProfileResult struct {
 	// The device in which the resource is defined
 	Device string `pulumi:"device"`
+	// The folder in which the resource is defined
 	Folder string `pulumi:"folder"`
 	// UUID of the resource
-	Id                     string                   `pulumi:"id"`
-	Mode                   string                   `pulumi:"mode"`
-	Name                   string                   `pulumi:"name"`
-	OptionTlvs             GetLldpProfileOptionTlvs `pulumi:"optionTlvs"`
-	Snippet                string                   `pulumi:"snippet"`
-	SnmpSyslogNotification bool                     `pulumi:"snmpSyslogNotification"`
-	Tfid                   string                   `pulumi:"tfid"`
+	Id string `pulumi:"id"`
+	// LLDP mode
+	Mode string `pulumi:"mode"`
+	// LLDP profile name
+	Name string `pulumi:"name"`
+	// Option tlvs
+	OptionTlvs GetLldpProfileOptionTlvs `pulumi:"optionTlvs"`
+	// The snippet in which the resource is defined
+	Snippet string `pulumi:"snippet"`
+	// SNMP syslog notification
+	SnmpSyslogNotification bool `pulumi:"snmpSyslogNotification"`
+	// The Terraform ID.
+	Tfid string `pulumi:"tfid"`
 }
 
 func LookupLldpProfileOutput(ctx *pulumi.Context, args LookupLldpProfileOutputArgs, opts ...pulumi.InvokeOption) LookupLldpProfileResultOutput {
@@ -84,10 +94,13 @@ func LookupLldpProfileOutput(ctx *pulumi.Context, args LookupLldpProfileOutputAr
 type LookupLldpProfileOutputArgs struct {
 	// The device in which the resource is defined
 	Device pulumi.StringPtrInput `pulumi:"device"`
+	// The folder in which the resource is defined
 	Folder pulumi.StringPtrInput `pulumi:"folder"`
 	// UUID of the resource
-	Id      pulumi.StringInput    `pulumi:"id"`
-	Name    pulumi.StringPtrInput `pulumi:"name"`
+	Id pulumi.StringInput `pulumi:"id"`
+	// LLDP profile name
+	Name pulumi.StringPtrInput `pulumi:"name"`
+	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrInput `pulumi:"snippet"`
 }
 
@@ -115,6 +128,7 @@ func (o LookupLldpProfileResultOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupLldpProfileResult) string { return v.Device }).(pulumi.StringOutput)
 }
 
+// The folder in which the resource is defined
 func (o LookupLldpProfileResultOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupLldpProfileResult) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -124,26 +138,32 @@ func (o LookupLldpProfileResultOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupLldpProfileResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
+// LLDP mode
 func (o LookupLldpProfileResultOutput) Mode() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupLldpProfileResult) string { return v.Mode }).(pulumi.StringOutput)
 }
 
+// LLDP profile name
 func (o LookupLldpProfileResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupLldpProfileResult) string { return v.Name }).(pulumi.StringOutput)
 }
 
+// Option tlvs
 func (o LookupLldpProfileResultOutput) OptionTlvs() GetLldpProfileOptionTlvsOutput {
 	return o.ApplyT(func(v LookupLldpProfileResult) GetLldpProfileOptionTlvs { return v.OptionTlvs }).(GetLldpProfileOptionTlvsOutput)
 }
 
+// The snippet in which the resource is defined
 func (o LookupLldpProfileResultOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupLldpProfileResult) string { return v.Snippet }).(pulumi.StringOutput)
 }
 
+// SNMP syslog notification
 func (o LookupLldpProfileResultOutput) SnmpSyslogNotification() pulumi.BoolOutput {
 	return o.ApplyT(func(v LookupLldpProfileResult) bool { return v.SnmpSyslogNotification }).(pulumi.BoolOutput)
 }
 
+// The Terraform ID.
 func (o LookupLldpProfileResultOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupLldpProfileResult) string { return v.Tfid }).(pulumi.StringOutput)
 }

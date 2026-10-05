@@ -59,10 +59,13 @@ func LookupBgpRedistributionProfile(ctx *pulumi.Context, args *LookupBgpRedistri
 type LookupBgpRedistributionProfileArgs struct {
 	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
+	// The folder in which the resource is defined
 	Folder *string `pulumi:"folder"`
 	// UUID of the resource
-	Id      string  `pulumi:"id"`
-	Name    *string `pulumi:"name"`
+	Id string `pulumi:"id"`
+	// Name
+	Name *string `pulumi:"name"`
+	// The snippet in which the resource is defined
 	Snippet *string `pulumi:"snippet"`
 }
 
@@ -70,13 +73,18 @@ type LookupBgpRedistributionProfileArgs struct {
 type LookupBgpRedistributionProfileResult struct {
 	// The device in which the resource is defined
 	Device string `pulumi:"device"`
+	// The folder in which the resource is defined
 	Folder string `pulumi:"folder"`
 	// UUID of the resource
-	Id      string                          `pulumi:"id"`
-	Ipv4    GetBgpRedistributionProfileIpv4 `pulumi:"ipv4"`
-	Name    string                          `pulumi:"name"`
-	Snippet string                          `pulumi:"snippet"`
-	Tfid    string                          `pulumi:"tfid"`
+	Id string `pulumi:"id"`
+	// Ipv4
+	Ipv4 GetBgpRedistributionProfileIpv4 `pulumi:"ipv4"`
+	// Name
+	Name string `pulumi:"name"`
+	// The snippet in which the resource is defined
+	Snippet string `pulumi:"snippet"`
+	// The Terraform ID.
+	Tfid string `pulumi:"tfid"`
 }
 
 func LookupBgpRedistributionProfileOutput(ctx *pulumi.Context, args LookupBgpRedistributionProfileOutputArgs, opts ...pulumi.InvokeOption) LookupBgpRedistributionProfileResultOutput {
@@ -88,10 +96,13 @@ func LookupBgpRedistributionProfileOutput(ctx *pulumi.Context, args LookupBgpRed
 type LookupBgpRedistributionProfileOutputArgs struct {
 	// The device in which the resource is defined
 	Device pulumi.StringPtrInput `pulumi:"device"`
+	// The folder in which the resource is defined
 	Folder pulumi.StringPtrInput `pulumi:"folder"`
 	// UUID of the resource
-	Id      pulumi.StringInput    `pulumi:"id"`
-	Name    pulumi.StringPtrInput `pulumi:"name"`
+	Id pulumi.StringInput `pulumi:"id"`
+	// Name
+	Name pulumi.StringPtrInput `pulumi:"name"`
+	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrInput `pulumi:"snippet"`
 }
 
@@ -119,6 +130,7 @@ func (o LookupBgpRedistributionProfileResultOutput) Device() pulumi.StringOutput
 	return o.ApplyT(func(v LookupBgpRedistributionProfileResult) string { return v.Device }).(pulumi.StringOutput)
 }
 
+// The folder in which the resource is defined
 func (o LookupBgpRedistributionProfileResultOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupBgpRedistributionProfileResult) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -128,18 +140,22 @@ func (o LookupBgpRedistributionProfileResultOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupBgpRedistributionProfileResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
+// Ipv4
 func (o LookupBgpRedistributionProfileResultOutput) Ipv4() GetBgpRedistributionProfileIpv4Output {
 	return o.ApplyT(func(v LookupBgpRedistributionProfileResult) GetBgpRedistributionProfileIpv4 { return v.Ipv4 }).(GetBgpRedistributionProfileIpv4Output)
 }
 
+// Name
 func (o LookupBgpRedistributionProfileResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupBgpRedistributionProfileResult) string { return v.Name }).(pulumi.StringOutput)
 }
 
+// The snippet in which the resource is defined
 func (o LookupBgpRedistributionProfileResultOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupBgpRedistributionProfileResult) string { return v.Snippet }).(pulumi.StringOutput)
 }
 
+// The Terraform ID.
 func (o LookupBgpRedistributionProfileResultOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupBgpRedistributionProfileResult) string { return v.Tfid }).(pulumi.StringOutput)
 }

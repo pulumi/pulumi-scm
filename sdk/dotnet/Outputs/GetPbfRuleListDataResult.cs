@@ -38,7 +38,7 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly Outputs.GetPbfRuleListDataEnforceSymmetricReturnResult EnforceSymmetricReturn;
         /// <summary>
-        /// The folder of the item. Default: Shared.
+        /// The folder in which the resource is defined
         /// </summary>
         public readonly string Folder;
         /// <summary>
@@ -50,9 +50,17 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly string Id;
         /// <summary>
-        /// The name of the item.
+        /// PBF rule name
         /// </summary>
         public readonly string Name;
+        /// <summary>
+        /// Negate destination address
+        /// </summary>
+        public readonly bool NegateDestination;
+        /// <summary>
+        /// Negate source address
+        /// </summary>
+        public readonly bool NegateSource;
         /// <summary>
         /// Schedule
         /// </summary>
@@ -62,7 +70,7 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly ImmutableArray<string> Services;
         /// <summary>
-        /// The snippet of the item.
+        /// The snippet in which the resource is defined
         /// </summary>
         public readonly string Snippet;
         /// <summary>
@@ -104,6 +112,10 @@ namespace Pulumi.Scm.Outputs
 
             string name,
 
+            bool negateDestination,
+
+            bool negateSource,
+
             string schedule,
 
             ImmutableArray<string> services,
@@ -128,6 +140,8 @@ namespace Pulumi.Scm.Outputs
             From = from;
             Id = id;
             Name = name;
+            NegateDestination = negateDestination;
+            NegateSource = negateSource;
             Schedule = schedule;
             Services = services;
             Snippet = snippet;

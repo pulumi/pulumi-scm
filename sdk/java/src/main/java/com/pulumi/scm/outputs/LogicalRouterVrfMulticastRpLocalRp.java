@@ -20,8 +20,6 @@ public final class LogicalRouterVrfMulticastRpLocalRp {
     /**
      * @return Static rp
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `candidateRp` and `staticRp`.
-     * 
      */
     private @Nullable LogicalRouterVrfMulticastRpLocalRpStaticRp staticRp;
 
@@ -35,8 +33,6 @@ public final class LogicalRouterVrfMulticastRpLocalRp {
     }
     /**
      * @return Static rp
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `candidateRp` and `staticRp`.
      * 
      */
     public Optional<LogicalRouterVrfMulticastRpLocalRpStaticRp> staticRp() {

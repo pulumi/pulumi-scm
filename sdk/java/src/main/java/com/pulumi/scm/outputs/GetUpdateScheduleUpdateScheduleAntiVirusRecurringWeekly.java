@@ -11,7 +11,7 @@ import java.util.Objects;
 @CustomType
 public final class GetUpdateScheduleUpdateScheduleAntiVirusRecurringWeekly {
     /**
-     * @return Action
+     * @return Action. Possible values are `download-only` and `download-and-install`.
      * 
      */
     private String action;
@@ -21,14 +21,14 @@ public final class GetUpdateScheduleUpdateScheduleAntiVirusRecurringWeekly {
      */
     private String at;
     /**
-     * @return Day of week
+     * @return Day of week. Possible values are `sunday`, `monday`, `tuesday`, `wednesday`, `thursday`, `friday` and `saturday`.
      * 
      */
     private String dayOfWeek;
 
     private GetUpdateScheduleUpdateScheduleAntiVirusRecurringWeekly() {}
     /**
-     * @return Action
+     * @return Action. Possible values are `download-only` and `download-and-install`.
      * 
      */
     public String action() {
@@ -42,7 +42,7 @@ public final class GetUpdateScheduleUpdateScheduleAntiVirusRecurringWeekly {
         return this.at;
     }
     /**
-     * @return Day of week
+     * @return Day of week. Possible values are `sunday`, `monday`, `tuesday`, `wednesday`, `thursday`, `friday` and `saturday`.
      * 
      */
     public String dayOfWeek() {

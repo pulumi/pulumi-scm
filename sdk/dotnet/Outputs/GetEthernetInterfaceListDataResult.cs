@@ -15,8 +15,6 @@ namespace Pulumi.Scm.Outputs
     {
         /// <summary>
         /// Aggregate group
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `AggregateGroup`, `Layer2`, `Layer3`, and `Tap`.
         /// </summary>
         public readonly string AggregateGroup;
         /// <summary>
@@ -36,7 +34,7 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly ImmutableDictionary<string, string> EncryptedValues;
         /// <summary>
-        /// The folder of the item. Default: Shared.
+        /// The folder in which the resource is defined
         /// </summary>
         public readonly string Folder;
         /// <summary>
@@ -45,30 +43,26 @@ namespace Pulumi.Scm.Outputs
         public readonly string Id;
         /// <summary>
         /// Layer2
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `AggregateGroup`, `Layer2`, `Layer3`, and `Tap`.
         /// </summary>
         public readonly Outputs.GetEthernetInterfaceListDataLayer2Result Layer2;
         /// <summary>
         /// Ethernet Interface Layer 3 configuration
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `AggregateGroup`, `Layer2`, `Layer3`, and `Tap`.
         /// </summary>
         public readonly Outputs.GetEthernetInterfaceListDataLayer3Result Layer3;
         /// <summary>
-        /// Link duplex
+        /// Link duplex. Possible values are `Auto`, `Half` and `Full`.
         /// </summary>
         public readonly string LinkDuplex;
         /// <summary>
-        /// Link speed
+        /// Link speed. Possible values are `Auto`, `10`, `100`, `1000`, `10000`, `40000` and `100000`.
         /// </summary>
         public readonly string LinkSpeed;
         /// <summary>
-        /// Link state
+        /// Link state. Possible values are `Auto`, `Up` and `Down`.
         /// </summary>
         public readonly string LinkState;
         /// <summary>
-        /// The name of the item.
+        /// Interface name
         /// </summary>
         public readonly string Name;
         /// <summary>
@@ -76,13 +70,11 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly Outputs.GetEthernetInterfaceListDataPoeResult Poe;
         /// <summary>
-        /// The snippet of the item.
+        /// The snippet in which the resource is defined
         /// </summary>
         public readonly string Snippet;
         /// <summary>
         /// Tap
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `AggregateGroup`, `Layer2`, `Layer3`, and `Tap`.
         /// </summary>
         public readonly Outputs.GetEthernetInterfaceListDataTapResult Tap;
         /// <summary>

@@ -24,7 +24,6 @@ class LogicalRouterArgs:
                  device: pulumi.Input[Optional[_builtins.str]] = None,
                  folder: pulumi.Input[Optional[_builtins.str]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
-                 routing_stack: pulumi.Input[Optional[_builtins.str]] = None,
                  snippet: pulumi.Input[Optional[_builtins.str]] = None,
                  vrves: pulumi.Input[Optional[Sequence[pulumi.Input['LogicalRouterVrfArgs']]]] = None):
         """
@@ -32,13 +31,8 @@ class LogicalRouterArgs:
 
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] name: Name
-        :param pulumi.Input[_builtins.str] routing_stack: Routing stack
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[Sequence[pulumi.Input['LogicalRouterVrfArgs']]] vrves: Vrf
         """
         if device is not None:
@@ -47,8 +41,6 @@ class LogicalRouterArgs:
             pulumi.set(__self__, "folder", folder)
         if name is not None:
             pulumi.set(__self__, "name", name)
-        if routing_stack is not None:
-            pulumi.set(__self__, "routing_stack", routing_stack)
         if snippet is not None:
             pulumi.set(__self__, "snippet", snippet)
         if vrves is not None:
@@ -71,8 +63,6 @@ class LogicalRouterArgs:
     def folder(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
-
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
 
@@ -93,24 +83,10 @@ class LogicalRouterArgs:
         pulumi.set(self, "name", value)
 
     @_builtins.property
-    @pulumi.getter(name="routingStack")
-    def routing_stack(self) -> pulumi.Input[Optional[_builtins.str]]:
-        """
-        Routing stack
-        """
-        return pulumi.get(self, "routing_stack")
-
-    @routing_stack.setter
-    def routing_stack(self, value: pulumi.Input[Optional[_builtins.str]]):
-        pulumi.set(self, "routing_stack", value)
-
-    @_builtins.property
     @pulumi.getter
     def snippet(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
-
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
 
@@ -137,7 +113,6 @@ class _LogicalRouterState:
                  device: pulumi.Input[Optional[_builtins.str]] = None,
                  folder: pulumi.Input[Optional[_builtins.str]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
-                 routing_stack: pulumi.Input[Optional[_builtins.str]] = None,
                  snippet: pulumi.Input[Optional[_builtins.str]] = None,
                  tfid: pulumi.Input[Optional[_builtins.str]] = None,
                  vrves: pulumi.Input[Optional[Sequence[pulumi.Input['LogicalRouterVrfArgs']]]] = None):
@@ -146,13 +121,8 @@ class _LogicalRouterState:
 
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] name: Name
-        :param pulumi.Input[_builtins.str] routing_stack: Routing stack
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] tfid: The Terraform ID.
         :param pulumi.Input[Sequence[pulumi.Input['LogicalRouterVrfArgs']]] vrves: Vrf
         """
@@ -162,8 +132,6 @@ class _LogicalRouterState:
             pulumi.set(__self__, "folder", folder)
         if name is not None:
             pulumi.set(__self__, "name", name)
-        if routing_stack is not None:
-            pulumi.set(__self__, "routing_stack", routing_stack)
         if snippet is not None:
             pulumi.set(__self__, "snippet", snippet)
         if tfid is not None:
@@ -188,8 +156,6 @@ class _LogicalRouterState:
     def folder(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
-
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
 
@@ -210,24 +176,10 @@ class _LogicalRouterState:
         pulumi.set(self, "name", value)
 
     @_builtins.property
-    @pulumi.getter(name="routingStack")
-    def routing_stack(self) -> pulumi.Input[Optional[_builtins.str]]:
-        """
-        Routing stack
-        """
-        return pulumi.get(self, "routing_stack")
-
-    @routing_stack.setter
-    def routing_stack(self, value: pulumi.Input[Optional[_builtins.str]]):
-        pulumi.set(self, "routing_stack", value)
-
-    @_builtins.property
     @pulumi.getter
     def snippet(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
-
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
 
@@ -269,7 +221,6 @@ class LogicalRouter(pulumi.CustomResource):
                  device: pulumi.Input[Optional[_builtins.str]] = None,
                  folder: pulumi.Input[Optional[_builtins.str]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
-                 routing_stack: pulumi.Input[Optional[_builtins.str]] = None,
                  snippet: pulumi.Input[Optional[_builtins.str]] = None,
                  vrves: pulumi.Input[Optional[Sequence[pulumi.Input[Union['LogicalRouterVrfArgs', 'LogicalRouterVrfArgsDict', 'outputs.LogicalRouterVrf']]]]] = None,
                  __props__=None):
@@ -325,7 +276,6 @@ class LogicalRouter(pulumi.CustomResource):
         scm_logical_router = scm.LogicalRouter("scm_logical_router",
             folder="ngfw-shared",
             name="scm_logical_router",
-            routing_stack="advanced",
             vrves=[{
                 "name": "default",
                 "interface": ["$scm_ethernet_interface"],
@@ -376,7 +326,6 @@ class LogicalRouter(pulumi.CustomResource):
         scm_bgp_router = scm.LogicalRouter("scm_bgp_router",
             folder="ngfw-shared",
             name="scm_bgp_router",
-            routing_stack="advanced",
             vrves=[{
                 "name": "default",
                 "interface": ["$scm_bgp_interface"],
@@ -444,13 +393,8 @@ class LogicalRouter(pulumi.CustomResource):
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] name: Name
-        :param pulumi.Input[_builtins.str] routing_stack: Routing stack
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[Sequence[pulumi.Input[Union['LogicalRouterVrfArgs', 'LogicalRouterVrfArgsDict', 'outputs.LogicalRouterVrf']]]] vrves: Vrf
         """
         ...
@@ -511,7 +455,6 @@ class LogicalRouter(pulumi.CustomResource):
         scm_logical_router = scm.LogicalRouter("scm_logical_router",
             folder="ngfw-shared",
             name="scm_logical_router",
-            routing_stack="advanced",
             vrves=[{
                 "name": "default",
                 "interface": ["$scm_ethernet_interface"],
@@ -562,7 +505,6 @@ class LogicalRouter(pulumi.CustomResource):
         scm_bgp_router = scm.LogicalRouter("scm_bgp_router",
             folder="ngfw-shared",
             name="scm_bgp_router",
-            routing_stack="advanced",
             vrves=[{
                 "name": "default",
                 "interface": ["$scm_bgp_interface"],
@@ -644,7 +586,6 @@ class LogicalRouter(pulumi.CustomResource):
                  device: pulumi.Input[Optional[_builtins.str]] = None,
                  folder: pulumi.Input[Optional[_builtins.str]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
-                 routing_stack: pulumi.Input[Optional[_builtins.str]] = None,
                  snippet: pulumi.Input[Optional[_builtins.str]] = None,
                  vrves: pulumi.Input[Optional[Sequence[pulumi.Input[Union['LogicalRouterVrfArgs', 'LogicalRouterVrfArgsDict', 'outputs.LogicalRouterVrf']]]]] = None,
                  __props__=None):
@@ -659,7 +600,6 @@ class LogicalRouter(pulumi.CustomResource):
             __props__.__dict__["device"] = device
             __props__.__dict__["folder"] = folder
             __props__.__dict__["name"] = name
-            __props__.__dict__["routing_stack"] = routing_stack
             __props__.__dict__["snippet"] = snippet
             __props__.__dict__["vrves"] = vrves
             __props__.__dict__["tfid"] = None
@@ -676,7 +616,6 @@ class LogicalRouter(pulumi.CustomResource):
             device: pulumi.Input[Optional[_builtins.str]] = None,
             folder: pulumi.Input[Optional[_builtins.str]] = None,
             name: pulumi.Input[Optional[_builtins.str]] = None,
-            routing_stack: pulumi.Input[Optional[_builtins.str]] = None,
             snippet: pulumi.Input[Optional[_builtins.str]] = None,
             tfid: pulumi.Input[Optional[_builtins.str]] = None,
             vrves: pulumi.Input[Optional[Sequence[pulumi.Input[Union['LogicalRouterVrfArgs', 'LogicalRouterVrfArgsDict', 'outputs.LogicalRouterVrf']]]]] = None) -> 'LogicalRouter':
@@ -689,13 +628,8 @@ class LogicalRouter(pulumi.CustomResource):
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] name: Name
-        :param pulumi.Input[_builtins.str] routing_stack: Routing stack
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] tfid: The Terraform ID.
         :param pulumi.Input[Sequence[pulumi.Input[Union['LogicalRouterVrfArgs', 'LogicalRouterVrfArgsDict', 'outputs.LogicalRouterVrf']]]] vrves: Vrf
         """
@@ -706,7 +640,6 @@ class LogicalRouter(pulumi.CustomResource):
         __props__.__dict__["device"] = device
         __props__.__dict__["folder"] = folder
         __props__.__dict__["name"] = name
-        __props__.__dict__["routing_stack"] = routing_stack
         __props__.__dict__["snippet"] = snippet
         __props__.__dict__["tfid"] = tfid
         __props__.__dict__["vrves"] = vrves
@@ -725,8 +658,6 @@ class LogicalRouter(pulumi.CustomResource):
     def folder(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
-
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
 
@@ -739,20 +670,10 @@ class LogicalRouter(pulumi.CustomResource):
         return pulumi.get(self, "name")
 
     @_builtins.property
-    @pulumi.getter(name="routingStack")
-    def routing_stack(self) -> pulumi.Output[Optional[_builtins.str]]:
-        """
-        Routing stack
-        """
-        return pulumi.get(self, "routing_stack")
-
-    @_builtins.property
     @pulumi.getter
     def snippet(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
-
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
 

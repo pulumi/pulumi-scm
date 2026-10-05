@@ -16,14 +16,14 @@ public final class SdwanPathQualityProfileMetricJitterArgs extends com.pulumi.re
     public static final SdwanPathQualityProfileMetricJitterArgs Empty = new SdwanPathQualityProfileMetricJitterArgs();
 
     /**
-     * Jitter sensitivity
+     * Jitter sensitivity. Possible values are `low`, `medium` and `high`.
      * 
      */
     @Import(name="sensitivity", required=true)
     private Output<String> sensitivity;
 
     /**
-     * @return Jitter sensitivity
+     * @return Jitter sensitivity. Possible values are `low`, `medium` and `high`.
      * 
      */
     public Output<String> sensitivity() {
@@ -71,7 +71,7 @@ public final class SdwanPathQualityProfileMetricJitterArgs extends com.pulumi.re
         }
 
         /**
-         * @param sensitivity Jitter sensitivity
+         * @param sensitivity Jitter sensitivity. Possible values are `low`, `medium` and `high`.
          * 
          * @return builder
          * 
@@ -82,7 +82,7 @@ public final class SdwanPathQualityProfileMetricJitterArgs extends com.pulumi.re
         }
 
         /**
-         * @param sensitivity Jitter sensitivity
+         * @param sensitivity Jitter sensitivity. Possible values are `low`, `medium` and `high`.
          * 
          * @return builder
          * 

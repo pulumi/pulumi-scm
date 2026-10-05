@@ -10,13 +10,16 @@ import com.pulumi.core.internal.Codegen;
 import com.pulumi.scm.Layer3SubinterfaceArgs;
 import com.pulumi.scm.Utilities;
 import com.pulumi.scm.inputs.Layer3SubinterfaceState;
+import com.pulumi.scm.outputs.Layer3SubinterfaceAdjustTcpMss;
 import com.pulumi.scm.outputs.Layer3SubinterfaceArp;
 import com.pulumi.scm.outputs.Layer3SubinterfaceDdnsConfig;
 import com.pulumi.scm.outputs.Layer3SubinterfaceDhcpClient;
 import com.pulumi.scm.outputs.Layer3SubinterfaceIp;
+import com.pulumi.scm.outputs.Layer3SubinterfacePppoe;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
@@ -38,8 +41,10 @@ import javax.annotation.Nullable;
  * import com.pulumi.scm.Layer3Subinterface;
  * import com.pulumi.scm.Layer3SubinterfaceArgs;
  * import com.pulumi.scm.inputs.Layer3SubinterfaceIpArgs;
+ * import com.pulumi.scm.inputs.Layer3SubinterfaceAdjustTcpMssArgs;
  * import com.pulumi.scm.inputs.Layer3SubinterfaceDhcpClientArgs;
  * import com.pulumi.scm.inputs.Layer3SubinterfaceDhcpClientSendHostnameArgs;
+ * import com.pulumi.scm.inputs.Layer3SubinterfacePppoeArgs;
  * import com.pulumi.resources.CustomResourceOptions;
  * import java.util.ArrayList;
  * import java.util.Arrays;
@@ -77,6 +82,11 @@ import javax.annotation.Nullable;
  *             .ips(Layer3SubinterfaceIpArgs.builder()
  *                 .name("198.18.1.1/32")
  *                 .build())
+ *             .adjustTcpMss(Layer3SubinterfaceAdjustTcpMssArgs.builder()
+ *                 .enable(true)
+ *                 .ipv4MssAdjustment(40)
+ *                 .ipv6MssAdjustment(60)
+ *                 .build())
  *             .build(), CustomResourceOptions.builder()
  *                 .dependsOn(scmParentInterface)
  *                 .build());
@@ -111,6 +121,37 @@ import javax.annotation.Nullable;
  *                 .dependsOn(scmParentDhcpInterface)
  *                 .build());
  * 
+ *         //
+ *         // Creates an ethernet interface used as parent-interface for the pppoe example
+ *         //
+ *         var scmParentPppoeInterface = new EthernetInterface("scmParentPppoeInterface", EthernetInterfaceArgs.builder()
+ *             .name("$scm_parent_tf_pppoe_interface")
+ *             .comment("Managed by Pulumi")
+ *             .folder("ngfw-shared")
+ *             .layer3(EthernetInterfaceLayer3Args.builder()
+ *                 .build())
+ *             .build());
+ * 
+ *         //
+ *         // Creates a layer3 sub-interface with pppoe
+ *         //
+ *         var scmL3PppoeSubinterface = new Layer3Subinterface("scmL3PppoeSubinterface", Layer3SubinterfaceArgs.builder()
+ *             .name("$scm_parent_tf_pppoe_interface.100")
+ *             .comment("Managed by Pulumi")
+ *             .folder("ngfw-shared")
+ *             .tag(100)
+ *             .parentInterface("$scm_parent_tf_pppoe_interface")
+ *             .pppoe(Layer3SubinterfacePppoeArgs.builder()
+ *                 .enable(true)
+ *                 .username("testname")
+ *                 .password("testpass")
+ *                 .authentication("auto")
+ *                 .defaultRouteMetric(10)
+ *                 .build())
+ *             .build(), CustomResourceOptions.builder()
+ *                 .dependsOn(scmParentPppoeInterface)
+ *                 .build());
+ * 
  *     }
  * }
  * }
@@ -141,6 +182,20 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="scm:index/layer3Subinterface:Layer3Subinterface")
 public class Layer3Subinterface extends com.pulumi.resources.CustomResource {
+    /**
+     * TCP MSS adjustment settings for the interface
+     * 
+     */
+    @Export(name="adjustTcpMss", refs={Layer3SubinterfaceAdjustTcpMss.class}, tree="[0]")
+    private Output</* @Nullable */ Layer3SubinterfaceAdjustTcpMss> adjustTcpMss;
+
+    /**
+     * @return TCP MSS adjustment settings for the interface
+     * 
+     */
+    public Output<Optional<Layer3SubinterfaceAdjustTcpMss>> adjustTcpMss() {
+        return Codegen.optional(this.adjustTcpMss);
+    }
     /**
      * Layer 3 sub Interfaces ARP configuration
      * 
@@ -200,8 +255,6 @@ public class Layer3Subinterface extends com.pulumi.resources.CustomResource {
     /**
      * Layer3 sub interfaces DHCP Client Object
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
-     * 
      */
     @Export(name="dhcpClient", refs={Layer3SubinterfaceDhcpClient.class}, tree="[0]")
     private Output</* @Nullable */ Layer3SubinterfaceDhcpClient> dhcpClient;
@@ -209,16 +262,26 @@ public class Layer3Subinterface extends com.pulumi.resources.CustomResource {
     /**
      * @return Layer3 sub interfaces DHCP Client Object
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
-     * 
      */
     public Output<Optional<Layer3SubinterfaceDhcpClient>> dhcpClient() {
         return Codegen.optional(this.dhcpClient);
     }
     /**
-     * The folder in which the resource is defined
+     * Map of sensitive values returned from the API.
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    @Export(name="encryptedValues", refs={Map.class,String.class}, tree="[0,1,1]")
+    private Output<Map<String,String>> encryptedValues;
+
+    /**
+     * @return Map of sensitive values returned from the API.
+     * 
+     */
+    public Output<Map<String,String>> encryptedValues() {
+        return this.encryptedValues;
+    }
+    /**
+     * The folder in which the resource is defined
      * 
      */
     @Export(name="folder", refs={String.class}, tree="[0]")
@@ -226,8 +289,6 @@ public class Layer3Subinterface extends com.pulumi.resources.CustomResource {
 
     /**
      * @return The folder in which the resource is defined
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public Output<Optional<String>> folder() {
@@ -250,16 +311,12 @@ public class Layer3Subinterface extends com.pulumi.resources.CustomResource {
     /**
      * L3 sub-interface IP Parent
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
-     * 
      */
     @Export(name="ips", refs={List.class,Layer3SubinterfaceIp.class}, tree="[0,1]")
     private Output</* @Nullable */ List<Layer3SubinterfaceIp>> ips;
 
     /**
      * @return L3 sub-interface IP Parent
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
      * 
      */
     public Output<Optional<List<Layer3SubinterfaceIp>>> ips() {
@@ -322,9 +379,21 @@ public class Layer3Subinterface extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.parentInterface);
     }
     /**
-     * The snippet in which the resource is defined
+     * PPPoE configuration for the interface
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    @Export(name="pppoe", refs={Layer3SubinterfacePppoe.class}, tree="[0]")
+    private Output</* @Nullable */ Layer3SubinterfacePppoe> pppoe;
+
+    /**
+     * @return PPPoE configuration for the interface
+     * 
+     */
+    public Output<Optional<Layer3SubinterfacePppoe>> pppoe() {
+        return Codegen.optional(this.pppoe);
+    }
+    /**
+     * The snippet in which the resource is defined
      * 
      */
     @Export(name="snippet", refs={String.class}, tree="[0]")
@@ -332,8 +401,6 @@ public class Layer3Subinterface extends com.pulumi.resources.CustomResource {
 
     /**
      * @return The snippet in which the resource is defined
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public Output<Optional<String>> snippet() {
@@ -407,6 +474,9 @@ public class Layer3Subinterface extends com.pulumi.resources.CustomResource {
     private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
+            .additionalSecretOutputs(List.of(
+                "encryptedValues"
+            ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }

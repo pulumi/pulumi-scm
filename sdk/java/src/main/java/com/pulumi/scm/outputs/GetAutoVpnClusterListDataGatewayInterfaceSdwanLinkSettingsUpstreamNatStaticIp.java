@@ -18,8 +18,6 @@ public final class GetAutoVpnClusterListDataGatewayInterfaceSdwanLinkSettingsUps
     /**
      * @return IP address
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `fqdn` and `ipAddress`.
-     * 
      */
     private String ipAddress;
 
@@ -33,8 +31,6 @@ public final class GetAutoVpnClusterListDataGatewayInterfaceSdwanLinkSettingsUps
     }
     /**
      * @return IP address
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `fqdn` and `ipAddress`.
      * 
      */
     public String ipAddress() {

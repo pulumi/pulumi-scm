@@ -31,7 +31,7 @@ public final class GetAntiSpywareProfileListData {
      */
     private String device;
     /**
-     * @return The folder of the item. Default: Shared.
+     * @return The folder in which the resource is defined
      * 
      */
     private String folder;
@@ -56,7 +56,7 @@ public final class GetAntiSpywareProfileListData {
      */
     private List<GetAntiSpywareProfileListDataMicaEngineSpywareEnabled> micaEngineSpywareEnableds;
     /**
-     * @return The name of the item.
+     * @return The name of the anti-spyware profile
      * 
      */
     private String name;
@@ -66,7 +66,7 @@ public final class GetAntiSpywareProfileListData {
      */
     private List<GetAntiSpywareProfileListDataRule> rules;
     /**
-     * @return The snippet of the item.
+     * @return The snippet in which the resource is defined
      * 
      */
     private String snippet;
@@ -104,7 +104,7 @@ public final class GetAntiSpywareProfileListData {
         return this.device;
     }
     /**
-     * @return The folder of the item. Default: Shared.
+     * @return The folder in which the resource is defined
      * 
      */
     public String folder() {
@@ -139,7 +139,7 @@ public final class GetAntiSpywareProfileListData {
         return this.micaEngineSpywareEnableds;
     }
     /**
-     * @return The name of the item.
+     * @return The name of the anti-spyware profile
      * 
      */
     public String name() {
@@ -153,7 +153,7 @@ public final class GetAntiSpywareProfileListData {
         return this.rules;
     }
     /**
-     * @return The snippet of the item.
+     * @return The snippet in which the resource is defined
      * 
      */
     public String snippet() {

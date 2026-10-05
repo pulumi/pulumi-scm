@@ -225,14 +225,14 @@ import javax.annotation.Nullable;
 @ResourceType(type="scm:index/decryptionRule:DecryptionRule")
 public class DecryptionRule extends com.pulumi.resources.CustomResource {
     /**
-     * The action to be taken
+     * The action to be taken. Possible values are `decrypt` and `no-decrypt`.
      * 
      */
     @Export(name="action", refs={String.class}, tree="[0]")
     private Output<String> action;
 
     /**
-     * @return The action to be taken
+     * @return The action to be taken. Possible values are `decrypt` and `no-decrypt`.
      * 
      */
     public Output<String> action() {
@@ -325,16 +325,12 @@ public class DecryptionRule extends com.pulumi.resources.CustomResource {
     /**
      * The folder in which the resource is defined
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
      */
     @Export(name="folder", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> folder;
 
     /**
      * @return The folder in which the resource is defined
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public Output<Optional<String>> folder() {
@@ -439,14 +435,14 @@ public class DecryptionRule extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.negateSource);
     }
     /**
-     * The position of a security rule
+     * The position of a security rule. Possible values are `pre` and `post`.
      * 
      */
     @Export(name="position", refs={String.class}, tree="[0]")
     private Output<String> position;
 
     /**
-     * @return The position of a security rule
+     * @return The position of a security rule. Possible values are `pre` and `post`.
      * 
      */
     public Output<String> position() {
@@ -497,16 +493,12 @@ public class DecryptionRule extends com.pulumi.resources.CustomResource {
     /**
      * The snippet in which the resource is defined
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
      */
     @Export(name="snippet", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> snippet;
 
     /**
      * @return The snippet in which the resource is defined
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public Output<Optional<String>> snippet() {
@@ -569,14 +561,14 @@ public class DecryptionRule extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.tags);
     }
     /**
-     * The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `&#34;before&#34;` or `&#34;after&#34;`.
+     * UUID of the rule to position this rule relative to. Required when `relativePosition` is `&#34;before&#34;` or `&#34;after&#34;`.
      * 
      */
     @Export(name="targetRule", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> targetRule;
 
     /**
-     * @return The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `&#34;before&#34;` or `&#34;after&#34;`.
+     * @return UUID of the rule to position this rule relative to. Required when `relativePosition` is `&#34;before&#34;` or `&#34;after&#34;`.
      * 
      */
     public Output<Optional<String>> targetRule() {

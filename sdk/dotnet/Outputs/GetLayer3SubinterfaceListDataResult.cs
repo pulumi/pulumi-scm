@@ -14,6 +14,10 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetLayer3SubinterfaceListDataResult
     {
         /// <summary>
+        /// TCP MSS adjustment settings for the interface
+        /// </summary>
+        public readonly Outputs.GetLayer3SubinterfaceListDataAdjustTcpMssResult AdjustTcpMss;
+        /// <summary>
         /// Layer 3 sub Interfaces ARP configuration
         /// </summary>
         public readonly ImmutableArray<Outputs.GetLayer3SubinterfaceListDataArpResult> Arps;
@@ -31,12 +35,14 @@ namespace Pulumi.Scm.Outputs
         public readonly string Device;
         /// <summary>
         /// Layer3 sub interfaces DHCP Client Object
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `DhcpClient` and `Ip`.
         /// </summary>
         public readonly Outputs.GetLayer3SubinterfaceListDataDhcpClientResult DhcpClient;
         /// <summary>
-        /// The folder of the item. Default: Shared.
+        /// Map of sensitive values returned from the API.
+        /// </summary>
+        public readonly ImmutableDictionary<string, string> EncryptedValues;
+        /// <summary>
+        /// The folder in which the resource is defined
         /// </summary>
         public readonly string Folder;
         /// <summary>
@@ -49,8 +55,6 @@ namespace Pulumi.Scm.Outputs
         public readonly string InterfaceManagementProfile;
         /// <summary>
         /// L3 sub-interface IP Parent
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `DhcpClient` and `Ip`.
         /// </summary>
         public readonly ImmutableArray<Outputs.GetLayer3SubinterfaceListDataIpResult> Ips;
         /// <summary>
@@ -58,7 +62,7 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly int Mtu;
         /// <summary>
-        /// The name of the item.
+        /// L3 sub-interface name
         /// </summary>
         public readonly string Name;
         /// <summary>
@@ -70,7 +74,11 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly string ParentInterface;
         /// <summary>
-        /// The snippet of the item.
+        /// PPPoE configuration for the interface
+        /// </summary>
+        public readonly Outputs.GetLayer3SubinterfaceListDataPppoeResult Pppoe;
+        /// <summary>
+        /// The snippet in which the resource is defined
         /// </summary>
         public readonly string Snippet;
         /// <summary>
@@ -84,6 +92,8 @@ namespace Pulumi.Scm.Outputs
 
         [OutputConstructor]
         private GetLayer3SubinterfaceListDataResult(
+            Outputs.GetLayer3SubinterfaceListDataAdjustTcpMssResult adjustTcpMss,
+
             ImmutableArray<Outputs.GetLayer3SubinterfaceListDataArpResult> arps,
 
             string comment,
@@ -93,6 +103,8 @@ namespace Pulumi.Scm.Outputs
             string device,
 
             Outputs.GetLayer3SubinterfaceListDataDhcpClientResult dhcpClient,
+
+            ImmutableDictionary<string, string> encryptedValues,
 
             string folder,
 
@@ -110,17 +122,21 @@ namespace Pulumi.Scm.Outputs
 
             string parentInterface,
 
+            Outputs.GetLayer3SubinterfaceListDataPppoeResult pppoe,
+
             string snippet,
 
             int tag,
 
             string tfid)
         {
+            AdjustTcpMss = adjustTcpMss;
             Arps = arps;
             Comment = comment;
             DdnsConfig = ddnsConfig;
             Device = device;
             DhcpClient = dhcpClient;
+            EncryptedValues = encryptedValues;
             Folder = folder;
             Id = id;
             InterfaceManagementProfile = interfaceManagementProfile;
@@ -129,6 +145,7 @@ namespace Pulumi.Scm.Outputs
             Name = name;
             NetflowProfile = netflowProfile;
             ParentInterface = parentInterface;
+            Pppoe = pppoe;
             Snippet = snippet;
             Tag = tag;
             Tfid = tfid;

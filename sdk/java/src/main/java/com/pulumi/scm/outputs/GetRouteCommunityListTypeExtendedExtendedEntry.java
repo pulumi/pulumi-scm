@@ -13,7 +13,7 @@ import java.util.Objects;
 @CustomType
 public final class GetRouteCommunityListTypeExtendedExtendedEntry {
     /**
-     * @return Action
+     * @return Action. Possible values are `deny` and `permit`.
      * 
      */
     private String action;
@@ -30,7 +30,7 @@ public final class GetRouteCommunityListTypeExtendedExtendedEntry {
 
     private GetRouteCommunityListTypeExtendedExtendedEntry() {}
     /**
-     * @return Action
+     * @return Action. Possible values are `deny` and `permit`.
      * 
      */
     public String action() {

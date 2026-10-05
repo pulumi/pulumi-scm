@@ -13,7 +13,7 @@ namespace Pulumi.Scm.Inputs
     public sealed class BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetMetricArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Connected Static BGP Route maps set Metric action
+        /// Connected Static BGP Route maps set Metric action. Possible values are `Set`, `Add` and `Substract`.
         /// </summary>
         [Input("action")]
         public Input<string>? Action { get; set; }

@@ -30,14 +30,14 @@ public final class ExternalDynamicListTypeImsiRecurringWeeklyArgs extends com.pu
     }
 
     /**
-     * Day of week
+     * Day of week. Possible values are `sunday`, `monday`, `tuesday`, `wednesday`, `thursday`, `friday` and `saturday`.
      * 
      */
     @Import(name="dayOfWeek", required=true)
     private Output<String> dayOfWeek;
 
     /**
-     * @return Day of week
+     * @return Day of week. Possible values are `sunday`, `monday`, `tuesday`, `wednesday`, `thursday`, `friday` and `saturday`.
      * 
      */
     public Output<String> dayOfWeek() {
@@ -91,7 +91,7 @@ public final class ExternalDynamicListTypeImsiRecurringWeeklyArgs extends com.pu
         }
 
         /**
-         * @param dayOfWeek Day of week
+         * @param dayOfWeek Day of week. Possible values are `sunday`, `monday`, `tuesday`, `wednesday`, `thursday`, `friday` and `saturday`.
          * 
          * @return builder
          * 
@@ -102,7 +102,7 @@ public final class ExternalDynamicListTypeImsiRecurringWeeklyArgs extends com.pu
         }
 
         /**
-         * @param dayOfWeek Day of week
+         * @param dayOfWeek Day of week. Possible values are `sunday`, `monday`, `tuesday`, `wednesday`, `thursday`, `friday` and `saturday`.
          * 
          * @return builder
          * 

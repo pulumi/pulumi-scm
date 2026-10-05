@@ -24,14 +24,10 @@ public final class GetUpdateScheduleListDataUpdateScheduleThreatsRecurring {
     /**
      * @return Every30 mins
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `every30Mins`, `hourly`, `none`, and `weekly`.
-     * 
      */
     private GetUpdateScheduleListDataUpdateScheduleThreatsRecurringEvery30Mins every30Mins;
     /**
      * @return Hourly
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `every30Mins`, `hourly`, `none`, and `weekly`.
      * 
      */
     private GetUpdateScheduleListDataUpdateScheduleThreatsRecurringHourly hourly;
@@ -42,8 +38,6 @@ public final class GetUpdateScheduleListDataUpdateScheduleThreatsRecurring {
     private Integer newAppThreshold;
     /**
      * @return None
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `every30Mins`, `hourly`, `none`, and `weekly`.
      * 
      */
     private GetUpdateScheduleListDataUpdateScheduleThreatsRecurringNone none;
@@ -60,8 +54,6 @@ public final class GetUpdateScheduleListDataUpdateScheduleThreatsRecurring {
     /**
      * @return Weekly
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `every30Mins`, `hourly`, `none`, and `weekly`.
-     * 
      */
     private GetUpdateScheduleListDataUpdateScheduleThreatsRecurringWeekly weekly;
 
@@ -76,16 +68,12 @@ public final class GetUpdateScheduleListDataUpdateScheduleThreatsRecurring {
     /**
      * @return Every30 mins
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `every30Mins`, `hourly`, `none`, and `weekly`.
-     * 
      */
     public GetUpdateScheduleListDataUpdateScheduleThreatsRecurringEvery30Mins every30Mins() {
         return this.every30Mins;
     }
     /**
      * @return Hourly
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `every30Mins`, `hourly`, `none`, and `weekly`.
      * 
      */
     public GetUpdateScheduleListDataUpdateScheduleThreatsRecurringHourly hourly() {
@@ -100,8 +88,6 @@ public final class GetUpdateScheduleListDataUpdateScheduleThreatsRecurring {
     }
     /**
      * @return None
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `every30Mins`, `hourly`, `none`, and `weekly`.
      * 
      */
     public GetUpdateScheduleListDataUpdateScheduleThreatsRecurringNone none() {
@@ -123,8 +109,6 @@ public final class GetUpdateScheduleListDataUpdateScheduleThreatsRecurring {
     }
     /**
      * @return Weekly
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `every30Mins`, `hourly`, `none`, and `weekly`.
      * 
      */
     public GetUpdateScheduleListDataUpdateScheduleThreatsRecurringWeekly weekly() {

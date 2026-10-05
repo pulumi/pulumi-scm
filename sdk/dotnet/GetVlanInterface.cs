@@ -132,6 +132,9 @@ namespace Pulumi.Scm
         [Input("device")]
         public string? Device { get; set; }
 
+        /// <summary>
+        /// The folder in which the resource is defined
+        /// </summary>
         [Input("folder")]
         public string? Folder { get; set; }
 
@@ -141,9 +144,15 @@ namespace Pulumi.Scm
         [Input("id", required: true)]
         public string Id { get; set; } = null!;
 
+        /// <summary>
+        /// L3 sub-interface name
+        /// </summary>
         [Input("name")]
         public string? Name { get; set; }
 
+        /// <summary>
+        /// The snippet in which the resource is defined
+        /// </summary>
         [Input("snippet")]
         public string? Snippet { get; set; }
 
@@ -161,6 +170,9 @@ namespace Pulumi.Scm
         [Input("device")]
         public Input<string>? Device { get; set; }
 
+        /// <summary>
+        /// The folder in which the resource is defined
+        /// </summary>
         [Input("folder")]
         public Input<string>? Folder { get; set; }
 
@@ -170,9 +182,15 @@ namespace Pulumi.Scm
         [Input("id", required: true)]
         public Input<string> Id { get; set; } = null!;
 
+        /// <summary>
+        /// L3 sub-interface name
+        /// </summary>
         [Input("name")]
         public Input<string>? Name { get; set; }
 
+        /// <summary>
+        /// The snippet in which the resource is defined
+        /// </summary>
         [Input("snippet")]
         public Input<string>? Snippet { get; set; }
 
@@ -186,31 +204,79 @@ namespace Pulumi.Scm
     [OutputType]
     public sealed class GetVlanInterfaceResult
     {
+        /// <summary>
+        /// TCP MSS adjustment settings for the interface
+        /// </summary>
+        public readonly Outputs.GetVlanInterfaceAdjustTcpMssResult AdjustTcpMss;
+        /// <summary>
+        /// ARP configuration
+        /// </summary>
         public readonly ImmutableArray<Outputs.GetVlanInterfaceArpResult> Arps;
+        /// <summary>
+        /// Description
+        /// </summary>
         public readonly string Comment;
+        /// <summary>
+        /// Dynamic DNS configuration specific to the Vlan Interfaces.
+        /// </summary>
         public readonly Outputs.GetVlanInterfaceDdnsConfigResult DdnsConfig;
+        /// <summary>
+        /// Default interface assignment
+        /// </summary>
         public readonly string DefaultValue;
         /// <summary>
         /// The device in which the resource is defined
         /// </summary>
         public readonly string Device;
+        /// <summary>
+        /// Vlan interfaces DHCP Client Object
+        /// </summary>
         public readonly Outputs.GetVlanInterfaceDhcpClientResult DhcpClient;
+        /// <summary>
+        /// The folder in which the resource is defined
+        /// </summary>
         public readonly string Folder;
         /// <summary>
         /// UUID of the resource
         /// </summary>
         public readonly string Id;
+        /// <summary>
+        /// Interface management profile
+        /// </summary>
         public readonly string InterfaceManagementProfile;
+        /// <summary>
+        /// VLAN Interface IP Parent
+        /// </summary>
         public readonly ImmutableArray<Outputs.GetVlanInterfaceIpResult> Ips;
+        /// <summary>
+        /// MTU
+        /// </summary>
         public readonly int Mtu;
+        /// <summary>
+        /// L3 sub-interface name
+        /// </summary>
         public readonly string Name;
+        /// <summary>
+        /// Name of Netflow Profile to assign to Interface
+        /// </summary>
         public readonly string NetflowProfile;
+        /// <summary>
+        /// The snippet in which the resource is defined
+        /// </summary>
         public readonly string Snippet;
+        /// <summary>
+        /// The Terraform ID.
+        /// </summary>
         public readonly string Tfid;
+        /// <summary>
+        /// VLAN tag
+        /// </summary>
         public readonly string VlanTag;
 
         [OutputConstructor]
         private GetVlanInterfaceResult(
+            Outputs.GetVlanInterfaceAdjustTcpMssResult adjustTcpMss,
+
             ImmutableArray<Outputs.GetVlanInterfaceArpResult> arps,
 
             string comment,
@@ -243,6 +309,7 @@ namespace Pulumi.Scm
 
             string vlanTag)
         {
+            AdjustTcpMss = adjustTcpMss;
             Arps = arps;
             Comment = comment;
             DdnsConfig = ddnsConfig;

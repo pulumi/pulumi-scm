@@ -25,7 +25,7 @@ namespace Pulumi.Scm.Inputs
         }
 
         /// <summary>
-        /// Afi
+        /// Afi. Possible values are `Ip` and `Ipv6`.
         /// </summary>
         [Input("afi")]
         public Input<string>? Afi { get; set; }
@@ -79,13 +79,13 @@ namespace Pulumi.Scm.Inputs
         }
 
         /// <summary>
-        /// Route table
+        /// Route table. Possible values are `Unicast`, `Multicast` and `Both`.
         /// </summary>
         [Input("routeTable")]
         public Input<string>? RouteTable { get; set; }
 
         /// <summary>
-        /// Safi
+        /// Safi. Possible values are `Ip` and `Ipv6`.
         /// </summary>
         [Input("safi")]
         public Input<string>? Safi { get; set; }

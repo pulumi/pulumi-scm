@@ -12,7 +12,7 @@ import java.util.Objects;
 @CustomType
 public final class GetBgpRouteMapListDataRouteMapSetMetric {
     /**
-     * @return Metric action
+     * @return Metric action. Possible values are `set`, `add` and `substract`.
      * 
      */
     private String action;
@@ -24,7 +24,7 @@ public final class GetBgpRouteMapListDataRouteMapSetMetric {
 
     private GetBgpRouteMapListDataRouteMapSetMetric() {}
     /**
-     * @return Metric action
+     * @return Metric action. Possible values are `set`, `add` and `substract`.
      * 
      */
     public String action() {

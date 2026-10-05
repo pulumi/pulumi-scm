@@ -32,14 +32,14 @@ public final class QosProfileClassBandwidthTypePercentageClassArgs extends com.p
     }
 
     /**
-     * Traffic class
+     * Traffic class. Possible values are `class1`, `class2`, `class3`, `class4`, `class5`, `class6`, `class7` and `class8`.
      * 
      */
     @Import(name="name")
     private @Nullable Output<String> name;
 
     /**
-     * @return Traffic class
+     * @return Traffic class. Possible values are `class1`, `class2`, `class3`, `class4`, `class5`, `class6`, `class7` and `class8`.
      * 
      */
     public Optional<Output<String>> name() {
@@ -47,14 +47,14 @@ public final class QosProfileClassBandwidthTypePercentageClassArgs extends com.p
     }
 
     /**
-     * traffic class priority
+     * traffic class priority. Possible values are `real-time`, `high`, `medium` and `low`.
      * 
      */
     @Import(name="priority")
     private @Nullable Output<String> priority;
 
     /**
-     * @return traffic class priority
+     * @return traffic class priority. Possible values are `real-time`, `high`, `medium` and `low`.
      * 
      */
     public Optional<Output<String>> priority() {
@@ -109,7 +109,7 @@ public final class QosProfileClassBandwidthTypePercentageClassArgs extends com.p
         }
 
         /**
-         * @param name Traffic class
+         * @param name Traffic class. Possible values are `class1`, `class2`, `class3`, `class4`, `class5`, `class6`, `class7` and `class8`.
          * 
          * @return builder
          * 
@@ -120,7 +120,7 @@ public final class QosProfileClassBandwidthTypePercentageClassArgs extends com.p
         }
 
         /**
-         * @param name Traffic class
+         * @param name Traffic class. Possible values are `class1`, `class2`, `class3`, `class4`, `class5`, `class6`, `class7` and `class8`.
          * 
          * @return builder
          * 
@@ -130,7 +130,7 @@ public final class QosProfileClassBandwidthTypePercentageClassArgs extends com.p
         }
 
         /**
-         * @param priority traffic class priority
+         * @param priority traffic class priority. Possible values are `real-time`, `high`, `medium` and `low`.
          * 
          * @return builder
          * 
@@ -141,7 +141,7 @@ public final class QosProfileClassBandwidthTypePercentageClassArgs extends com.p
         }
 
         /**
-         * @param priority traffic class priority
+         * @param priority traffic class priority. Possible values are `real-time`, `high`, `medium` and `low`.
          * 
          * @return builder
          * 

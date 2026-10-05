@@ -19,7 +19,7 @@ namespace Pulumi.Scm.Inputs
         public Input<string>? Id { get; set; }
 
         /// <summary>
-        /// Type
+        /// Type. Possible values are `Ipaddr`, `Keyid`, `Fqdn` and `Ufqdn`.
         /// </summary>
         [Input("type")]
         public Input<string>? Type { get; set; }

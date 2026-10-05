@@ -12,7 +12,7 @@ import java.util.Objects;
 @CustomType
 public final class GetUpdateScheduleListDataUpdateScheduleWildfireRecurringEveryMin {
     /**
-     * @return Action
+     * @return Action. Possible values are `download-only` and `download-and-install`.
      * 
      */
     private String action;
@@ -24,7 +24,7 @@ public final class GetUpdateScheduleListDataUpdateScheduleWildfireRecurringEvery
 
     private GetUpdateScheduleListDataUpdateScheduleWildfireRecurringEveryMin() {}
     /**
-     * @return Action
+     * @return Action. Possible values are `download-only` and `download-and-install`.
      * 
      */
     public String action() {

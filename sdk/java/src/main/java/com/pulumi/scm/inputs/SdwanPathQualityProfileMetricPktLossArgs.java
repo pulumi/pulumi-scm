@@ -16,14 +16,14 @@ public final class SdwanPathQualityProfileMetricPktLossArgs extends com.pulumi.r
     public static final SdwanPathQualityProfileMetricPktLossArgs Empty = new SdwanPathQualityProfileMetricPktLossArgs();
 
     /**
-     * Packet loss sensitivity
+     * Packet loss sensitivity. Possible values are `low`, `medium` and `high`.
      * 
      */
     @Import(name="sensitivity", required=true)
     private Output<String> sensitivity;
 
     /**
-     * @return Packet loss sensitivity
+     * @return Packet loss sensitivity. Possible values are `low`, `medium` and `high`.
      * 
      */
     public Output<String> sensitivity() {
@@ -71,7 +71,7 @@ public final class SdwanPathQualityProfileMetricPktLossArgs extends com.pulumi.r
         }
 
         /**
-         * @param sensitivity Packet loss sensitivity
+         * @param sensitivity Packet loss sensitivity. Possible values are `low`, `medium` and `high`.
          * 
          * @return builder
          * 
@@ -82,7 +82,7 @@ public final class SdwanPathQualityProfileMetricPktLossArgs extends com.pulumi.r
         }
 
         /**
-         * @param sensitivity Packet loss sensitivity
+         * @param sensitivity Packet loss sensitivity. Possible values are `low`, `medium` and `high`.
          * 
          * @return builder
          * 

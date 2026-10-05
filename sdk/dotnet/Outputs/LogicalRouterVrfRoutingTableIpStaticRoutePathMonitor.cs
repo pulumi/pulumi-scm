@@ -18,7 +18,7 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly bool? Enable;
         /// <summary>
-        /// Failure condition
+        /// Failure condition. Possible values are `Any` and `All`.
         /// </summary>
         public readonly string? FailureCondition;
         /// <summary>

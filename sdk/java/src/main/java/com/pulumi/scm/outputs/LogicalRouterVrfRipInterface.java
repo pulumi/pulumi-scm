@@ -42,7 +42,7 @@ public final class LogicalRouterVrfRipInterface {
      */
     private @Nullable LogicalRouterVrfRipInterfaceInterfaceOutboundDistributeList interfaceOutboundDistributeList;
     /**
-     * @return Mode
+     * @return Mode. Possible values are `active`, `passive` and `send-only`.
      * 
      */
     private @Nullable String mode;
@@ -52,7 +52,7 @@ public final class LogicalRouterVrfRipInterface {
      */
     private String name;
     /**
-     * @return Split horizon
+     * @return Split horizon. Possible values are `split-horizon`, `no-split-horizon` and `no-split-horizon-with-poison-reverse`.
      * 
      */
     private @Nullable String splitHorizon;
@@ -94,7 +94,7 @@ public final class LogicalRouterVrfRipInterface {
         return Optional.ofNullable(this.interfaceOutboundDistributeList);
     }
     /**
-     * @return Mode
+     * @return Mode. Possible values are `active`, `passive` and `send-only`.
      * 
      */
     public Optional<String> mode() {
@@ -108,7 +108,7 @@ public final class LogicalRouterVrfRipInterface {
         return this.name;
     }
     /**
-     * @return Split horizon
+     * @return Split horizon. Possible values are `split-horizon`, `no-split-horizon` and `no-split-horizon-with-poison-reverse`.
      * 
      */
     public Optional<String> splitHorizon() {

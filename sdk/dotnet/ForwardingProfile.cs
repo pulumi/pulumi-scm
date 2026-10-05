@@ -268,7 +268,7 @@ namespace Pulumi.Scm
     public partial class ForwardingProfile : global::Pulumi.CustomResource
     {
         /// <summary>
-        /// Enable forwarding rule for forwarding profile
+        /// Enable forwarding rule for forwarding profile. Possible values are `Rules` and `pac-file`.
         /// </summary>
         [Output("definitionMethod")]
         public Output<string> DefinitionMethod { get; private set; } = null!;
@@ -280,7 +280,7 @@ namespace Pulumi.Scm
         public Output<string?> Description { get; private set; } = null!;
 
         /// <summary>
-        /// The folder in which the resource is defined
+        /// The folder in which the resource is defined. Possible values are `Mobile Users`.
         /// </summary>
         [Output("folder")]
         public Output<string> Folder { get; private set; } = null!;
@@ -350,7 +350,7 @@ namespace Pulumi.Scm
     public sealed class ForwardingProfileArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Enable forwarding rule for forwarding profile
+        /// Enable forwarding rule for forwarding profile. Possible values are `Rules` and `pac-file`.
         /// </summary>
         [Input("definitionMethod")]
         public Input<string>? DefinitionMethod { get; set; }
@@ -362,7 +362,7 @@ namespace Pulumi.Scm
         public Input<string>? Description { get; set; }
 
         /// <summary>
-        /// The folder in which the resource is defined
+        /// The folder in which the resource is defined. Possible values are `Mobile Users`.
         /// </summary>
         [Input("folder")]
         public Input<string>? Folder { get; set; }
@@ -388,7 +388,7 @@ namespace Pulumi.Scm
     public sealed class ForwardingProfileState : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Enable forwarding rule for forwarding profile
+        /// Enable forwarding rule for forwarding profile. Possible values are `Rules` and `pac-file`.
         /// </summary>
         [Input("definitionMethod")]
         public Input<string>? DefinitionMethod { get; set; }
@@ -400,7 +400,7 @@ namespace Pulumi.Scm
         public Input<string>? Description { get; set; }
 
         /// <summary>
-        /// The folder in which the resource is defined
+        /// The folder in which the resource is defined. Possible values are `Mobile Users`.
         /// </summary>
         [Input("folder")]
         public Input<string>? Folder { get; set; }

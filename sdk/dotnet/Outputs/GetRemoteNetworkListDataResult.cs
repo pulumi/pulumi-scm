@@ -14,7 +14,7 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetRemoteNetworkListDataResult
     {
         /// <summary>
-        /// Ecmp load balancing
+        /// Ecmp load balancing. Possible values are `Enable` and `Disable`.
         /// </summary>
         public readonly string EcmpLoadBalancing;
         /// <summary>
@@ -46,7 +46,7 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly string Name;
         /// <summary>
-        /// setup the protocol when ecmp*load*balancing is disable
+        /// setup the protocol when ecmp*load*balancing is disabled
         /// </summary>
         public readonly Outputs.GetRemoteNetworkListDataProtocolResult Protocol;
         /// <summary>

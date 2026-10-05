@@ -6,8 +6,12 @@ package com.pulumi.scm.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
+import com.pulumi.scm.inputs.EthernetInterfaceLayer2LldpHighAvailabilityArgs;
 import java.lang.Boolean;
+import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
+import javax.annotation.Nullable;
 
 
 public final class EthernetInterfaceLayer2LldpArgs extends com.pulumi.resources.ResourceArgs {
@@ -29,10 +33,42 @@ public final class EthernetInterfaceLayer2LldpArgs extends com.pulumi.resources.
         return this.enable;
     }
 
+    /**
+     * LLDP high availability settings
+     * 
+     */
+    @Import(name="highAvailability")
+    private @Nullable Output<EthernetInterfaceLayer2LldpHighAvailabilityArgs> highAvailability;
+
+    /**
+     * @return LLDP high availability settings
+     * 
+     */
+    public Optional<Output<EthernetInterfaceLayer2LldpHighAvailabilityArgs>> highAvailability() {
+        return Optional.ofNullable(this.highAvailability);
+    }
+
+    /**
+     * Name of the LLDP profile to assign to the interface
+     * 
+     */
+    @Import(name="profile")
+    private @Nullable Output<String> profile;
+
+    /**
+     * @return Name of the LLDP profile to assign to the interface
+     * 
+     */
+    public Optional<Output<String>> profile() {
+        return Optional.ofNullable(this.profile);
+    }
+
     private EthernetInterfaceLayer2LldpArgs() {}
 
     private EthernetInterfaceLayer2LldpArgs(EthernetInterfaceLayer2LldpArgs $) {
         this.enable = $.enable;
+        this.highAvailability = $.highAvailability;
+        this.profile = $.profile;
     }
 
     public static Builder builder() {
@@ -72,6 +108,48 @@ public final class EthernetInterfaceLayer2LldpArgs extends com.pulumi.resources.
          */
         public Builder enable(Boolean enable) {
             return enable(Output.of(enable));
+        }
+
+        /**
+         * @param highAvailability LLDP high availability settings
+         * 
+         * @return builder
+         * 
+         */
+        public Builder highAvailability(@Nullable Output<EthernetInterfaceLayer2LldpHighAvailabilityArgs> highAvailability) {
+            $.highAvailability = highAvailability;
+            return this;
+        }
+
+        /**
+         * @param highAvailability LLDP high availability settings
+         * 
+         * @return builder
+         * 
+         */
+        public Builder highAvailability(EthernetInterfaceLayer2LldpHighAvailabilityArgs highAvailability) {
+            return highAvailability(Output.of(highAvailability));
+        }
+
+        /**
+         * @param profile Name of the LLDP profile to assign to the interface
+         * 
+         * @return builder
+         * 
+         */
+        public Builder profile(@Nullable Output<String> profile) {
+            $.profile = profile;
+            return this;
+        }
+
+        /**
+         * @param profile Name of the LLDP profile to assign to the interface
+         * 
+         * @return builder
+         * 
+         */
+        public Builder profile(String profile) {
+            return profile(Output.of(profile));
         }
 
         public EthernetInterfaceLayer2LldpArgs build() {

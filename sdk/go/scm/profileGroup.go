@@ -48,16 +48,12 @@ type ProfileGroup struct {
 	// File blocking
 	FileBlockings pulumi.StringArrayOutput `pulumi:"fileBlockings"`
 	// The folder in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrOutput `pulumi:"folder"`
 	// The name of the profile group
 	Name pulumi.StringOutput `pulumi:"name"`
 	// Saas security
 	SaasSecurities pulumi.StringArrayOutput `pulumi:"saasSecurities"`
 	// The snippet in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
 	// Spyware
 	Spywares pulumi.StringArrayOutput `pulumi:"spywares"`
@@ -112,16 +108,12 @@ type profileGroupState struct {
 	// File blocking
 	FileBlockings []string `pulumi:"fileBlockings"`
 	// The folder in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// The name of the profile group
 	Name *string `pulumi:"name"`
 	// Saas security
 	SaasSecurities []string `pulumi:"saasSecurities"`
 	// The snippet in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	// Spyware
 	Spywares []string `pulumi:"spywares"`
@@ -147,16 +139,12 @@ type ProfileGroupState struct {
 	// File blocking
 	FileBlockings pulumi.StringArrayInput
 	// The folder in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// The name of the profile group
 	Name pulumi.StringPtrInput
 	// Saas security
 	SaasSecurities pulumi.StringArrayInput
 	// The snippet in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	// Spyware
 	Spywares pulumi.StringArrayInput
@@ -186,16 +174,12 @@ type profileGroupArgs struct {
 	// File blocking
 	FileBlockings []string `pulumi:"fileBlockings"`
 	// The folder in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// The name of the profile group
 	Name *string `pulumi:"name"`
 	// Saas security
 	SaasSecurities []string `pulumi:"saasSecurities"`
 	// The snippet in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	// Spyware
 	Spywares []string `pulumi:"spywares"`
@@ -220,16 +204,12 @@ type ProfileGroupArgs struct {
 	// File blocking
 	FileBlockings pulumi.StringArrayInput
 	// The folder in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// The name of the profile group
 	Name pulumi.StringPtrInput
 	// Saas security
 	SaasSecurities pulumi.StringArrayInput
 	// The snippet in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	// Spyware
 	Spywares pulumi.StringArrayInput
@@ -354,8 +334,6 @@ func (o ProfileGroupOutput) FileBlockings() pulumi.StringArrayOutput {
 }
 
 // The folder in which the resource is defined
-//
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o ProfileGroupOutput) Folder() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *ProfileGroup) pulumi.StringPtrOutput { return v.Folder }).(pulumi.StringPtrOutput)
 }
@@ -371,8 +349,6 @@ func (o ProfileGroupOutput) SaasSecurities() pulumi.StringArrayOutput {
 }
 
 // The snippet in which the resource is defined
-//
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o ProfileGroupOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *ProfileGroup) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)
 }

@@ -30,9 +30,17 @@ public final class GetMotdBannerSettingPlainArgs extends com.pulumi.resources.In
         return Optional.ofNullable(this.device);
     }
 
+    /**
+     * The folder in which the resource is defined
+     * 
+     */
     @Import(name="folder")
     private @Nullable String folder;
 
+    /**
+     * @return The folder in which the resource is defined
+     * 
+     */
     public Optional<String> folder() {
         return Optional.ofNullable(this.folder);
     }
@@ -52,9 +60,17 @@ public final class GetMotdBannerSettingPlainArgs extends com.pulumi.resources.In
         return this.id;
     }
 
+    /**
+     * The snippet in which the resource is defined
+     * 
+     */
     @Import(name="snippet")
     private @Nullable String snippet;
 
+    /**
+     * @return The snippet in which the resource is defined
+     * 
+     */
     public Optional<String> snippet() {
         return Optional.ofNullable(this.snippet);
     }
@@ -97,6 +113,12 @@ public final class GetMotdBannerSettingPlainArgs extends com.pulumi.resources.In
             return this;
         }
 
+        /**
+         * @param folder The folder in which the resource is defined
+         * 
+         * @return builder
+         * 
+         */
         public Builder folder(@Nullable String folder) {
             $.folder = folder;
             return this;
@@ -113,6 +135,12 @@ public final class GetMotdBannerSettingPlainArgs extends com.pulumi.resources.In
             return this;
         }
 
+        /**
+         * @param snippet The snippet in which the resource is defined
+         * 
+         * @return builder
+         * 
+         */
         public Builder snippet(@Nullable String snippet) {
             $.snippet = snippet;
             return this;

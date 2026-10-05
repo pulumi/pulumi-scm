@@ -167,14 +167,14 @@ public final class TlsServiceProfileProtocolSettingsArgs extends com.pulumi.reso
     }
 
     /**
-     * Maximum TLS version
+     * Maximum TLS version. Possible values are `tls1-0`, `tls1-1`, `tls1-2` and `tls1-3`.
      * 
      */
     @Import(name="maxVersion")
     private @Nullable Output<String> maxVersion;
 
     /**
-     * @return Maximum TLS version
+     * @return Maximum TLS version. Possible values are `tls1-0`, `tls1-1`, `tls1-2` and `tls1-3`.
      * 
      */
     public Optional<Output<String>> maxVersion() {
@@ -182,14 +182,14 @@ public final class TlsServiceProfileProtocolSettingsArgs extends com.pulumi.reso
     }
 
     /**
-     * Minimum TLS version
+     * Minimum TLS version. Possible values are `tls1-0`, `tls1-1`, `tls1-2` and `tls1-3`.
      * 
      */
     @Import(name="minVersion")
     private @Nullable Output<String> minVersion;
 
     /**
-     * @return Minimum TLS version
+     * @return Minimum TLS version. Possible values are `tls1-0`, `tls1-1`, `tls1-2` and `tls1-3`.
      * 
      */
     public Optional<Output<String>> minVersion() {
@@ -442,7 +442,7 @@ public final class TlsServiceProfileProtocolSettingsArgs extends com.pulumi.reso
         }
 
         /**
-         * @param maxVersion Maximum TLS version
+         * @param maxVersion Maximum TLS version. Possible values are `tls1-0`, `tls1-1`, `tls1-2` and `tls1-3`.
          * 
          * @return builder
          * 
@@ -453,7 +453,7 @@ public final class TlsServiceProfileProtocolSettingsArgs extends com.pulumi.reso
         }
 
         /**
-         * @param maxVersion Maximum TLS version
+         * @param maxVersion Maximum TLS version. Possible values are `tls1-0`, `tls1-1`, `tls1-2` and `tls1-3`.
          * 
          * @return builder
          * 
@@ -463,7 +463,7 @@ public final class TlsServiceProfileProtocolSettingsArgs extends com.pulumi.reso
         }
 
         /**
-         * @param minVersion Minimum TLS version
+         * @param minVersion Minimum TLS version. Possible values are `tls1-0`, `tls1-1`, `tls1-2` and `tls1-3`.
          * 
          * @return builder
          * 
@@ -474,7 +474,7 @@ public final class TlsServiceProfileProtocolSettingsArgs extends com.pulumi.reso
         }
 
         /**
-         * @param minVersion Minimum TLS version
+         * @param minVersion Minimum TLS version. Possible values are `tls1-0`, `tls1-1`, `tls1-2` and `tls1-3`.
          * 
          * @return builder
          * 

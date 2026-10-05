@@ -18,7 +18,7 @@ public final class GetBgpRouteMapRedistributionListDataBgpOspfRouteMapSet {
      */
     private GetBgpRouteMapRedistributionListDataBgpOspfRouteMapSetMetric metric;
     /**
-     * @return BGP Root OSPF Route maps set Metric type
+     * @return BGP Root OSPF Route maps set Metric type. Possible values are `type-1` and `type-2`.
      * 
      */
     private String metricType;
@@ -37,7 +37,7 @@ public final class GetBgpRouteMapRedistributionListDataBgpOspfRouteMapSet {
         return this.metric;
     }
     /**
-     * @return BGP Root OSPF Route maps set Metric type
+     * @return BGP Root OSPF Route maps set Metric type. Possible values are `type-1` and `type-2`.
      * 
      */
     public String metricType() {

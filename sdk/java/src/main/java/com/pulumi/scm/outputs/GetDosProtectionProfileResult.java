@@ -12,26 +12,62 @@ import java.util.Objects;
 
 @CustomType
 public final class GetDosProtectionProfileResult {
+    /**
+     * @return Description
+     * 
+     */
     private String description;
     /**
      * @return The device in which the resource is defined
      * 
      */
     private String device;
+    /**
+     * @return Flood
+     * 
+     */
     private GetDosProtectionProfileFlood flood;
+    /**
+     * @return The folder in which the resource is defined
+     * 
+     */
     private String folder;
     /**
      * @return The UUID of the DNS security profile
      * 
      */
     private String id;
+    /**
+     * @return Profile name
+     * 
+     */
     private String name;
+    /**
+     * @return Resource
+     * 
+     */
     private GetDosProtectionProfileResource resource;
+    /**
+     * @return The snippet in which the resource is defined
+     * 
+     */
     private String snippet;
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     private String tfid;
+    /**
+     * @return Type. Possible values are `aggregate` and `classified`.
+     * 
+     */
     private String type;
 
     private GetDosProtectionProfileResult() {}
+    /**
+     * @return Description
+     * 
+     */
     public String description() {
         return this.description;
     }
@@ -42,9 +78,17 @@ public final class GetDosProtectionProfileResult {
     public String device() {
         return this.device;
     }
+    /**
+     * @return Flood
+     * 
+     */
     public GetDosProtectionProfileFlood flood() {
         return this.flood;
     }
+    /**
+     * @return The folder in which the resource is defined
+     * 
+     */
     public String folder() {
         return this.folder;
     }
@@ -55,18 +99,38 @@ public final class GetDosProtectionProfileResult {
     public String id() {
         return this.id;
     }
+    /**
+     * @return Profile name
+     * 
+     */
     public String name() {
         return this.name;
     }
+    /**
+     * @return Resource
+     * 
+     */
     public GetDosProtectionProfileResource resource() {
         return this.resource;
     }
+    /**
+     * @return The snippet in which the resource is defined
+     * 
+     */
     public String snippet() {
         return this.snippet;
     }
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     public String tfid() {
         return this.tfid;
     }
+    /**
+     * @return Type. Possible values are `aggregate` and `classified`.
+     * 
+     */
     public String type() {
         return this.type;
     }

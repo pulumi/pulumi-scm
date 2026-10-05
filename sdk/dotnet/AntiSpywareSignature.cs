@@ -123,15 +123,13 @@ namespace Pulumi.Scm
         public Output<string?> Device { get; private set; } = null!;
 
         /// <summary>
-        /// Direction
+        /// Direction. Possible values are `Client2server`, `Server2client` and `Both`.
         /// </summary>
         [Output("direction")]
         public Output<string?> Direction { get; private set; } = null!;
 
         /// <summary>
         /// The folder in which the resource is defined
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Output("folder")]
         public Output<string?> Folder { get; private set; } = null!;
@@ -143,7 +141,7 @@ namespace Pulumi.Scm
         public Output<ImmutableArray<string>> References { get; private set; } = null!;
 
         /// <summary>
-        /// Severity
+        /// Severity. Possible values are `Critical`, `Low`, `High`, `Medium` and `Informational`.
         /// </summary>
         [Output("severity")]
         public Output<string?> Severity { get; private set; } = null!;
@@ -156,8 +154,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The snippet in which the resource is defined
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Output("snippet")]
         public Output<string?> Snippet { get; private set; } = null!;
@@ -275,15 +271,13 @@ namespace Pulumi.Scm
         public Input<string>? Device { get; set; }
 
         /// <summary>
-        /// Direction
+        /// Direction. Possible values are `Client2server`, `Server2client` and `Both`.
         /// </summary>
         [Input("direction")]
         public Input<string>? Direction { get; set; }
 
         /// <summary>
         /// The folder in which the resource is defined
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("folder")]
         public Input<string>? Folder { get; set; }
@@ -301,7 +295,7 @@ namespace Pulumi.Scm
         }
 
         /// <summary>
-        /// Severity
+        /// Severity. Possible values are `Critical`, `Low`, `High`, `Medium` and `Informational`.
         /// </summary>
         [Input("severity")]
         public Input<string>? Severity { get; set; }
@@ -314,8 +308,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The snippet in which the resource is defined
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("snippet")]
         public Input<string>? Snippet { get; set; }
@@ -395,15 +387,13 @@ namespace Pulumi.Scm
         public Input<string>? Device { get; set; }
 
         /// <summary>
-        /// Direction
+        /// Direction. Possible values are `Client2server`, `Server2client` and `Both`.
         /// </summary>
         [Input("direction")]
         public Input<string>? Direction { get; set; }
 
         /// <summary>
         /// The folder in which the resource is defined
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("folder")]
         public Input<string>? Folder { get; set; }
@@ -421,7 +411,7 @@ namespace Pulumi.Scm
         }
 
         /// <summary>
-        /// Severity
+        /// Severity. Possible values are `Critical`, `Low`, `High`, `Medium` and `Informational`.
         /// </summary>
         [Input("severity")]
         public Input<string>? Severity { get; set; }
@@ -434,8 +424,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The snippet in which the resource is defined
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("snippet")]
         public Input<string>? Snippet { get; set; }

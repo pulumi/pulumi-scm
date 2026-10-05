@@ -16,14 +16,14 @@ public final class DnsSecurityProfileBotnetDomainsDnsSecurityCategoryArgs extend
     public static final DnsSecurityProfileBotnetDomainsDnsSecurityCategoryArgs Empty = new DnsSecurityProfileBotnetDomainsDnsSecurityCategoryArgs();
 
     /**
-     * Action
+     * Action. Possible values are `default`, `allow`, `block` and `sinkhole`.
      * 
      */
     @Import(name="action")
     private @Nullable Output<String> action;
 
     /**
-     * @return Action
+     * @return Action. Possible values are `default`, `allow`, `block` and `sinkhole`.
      * 
      */
     public Optional<Output<String>> action() {
@@ -31,14 +31,14 @@ public final class DnsSecurityProfileBotnetDomainsDnsSecurityCategoryArgs extend
     }
 
     /**
-     * Log level
+     * Log level. Possible values are `default`, `none`, `low`, `informational`, `medium`, `high` and `critical`.
      * 
      */
     @Import(name="logLevel")
     private @Nullable Output<String> logLevel;
 
     /**
-     * @return Log level
+     * @return Log level. Possible values are `default`, `none`, `low`, `informational`, `medium`, `high` and `critical`.
      * 
      */
     public Optional<Output<String>> logLevel() {
@@ -61,14 +61,14 @@ public final class DnsSecurityProfileBotnetDomainsDnsSecurityCategoryArgs extend
     }
 
     /**
-     * Packet capture
+     * Packet capture. Possible values are `disable`, `single-packet` and `extended-capture`.
      * 
      */
     @Import(name="packetCapture")
     private @Nullable Output<String> packetCapture;
 
     /**
-     * @return Packet capture
+     * @return Packet capture. Possible values are `disable`, `single-packet` and `extended-capture`.
      * 
      */
     public Optional<Output<String>> packetCapture() {
@@ -103,7 +103,7 @@ public final class DnsSecurityProfileBotnetDomainsDnsSecurityCategoryArgs extend
         }
 
         /**
-         * @param action Action
+         * @param action Action. Possible values are `default`, `allow`, `block` and `sinkhole`.
          * 
          * @return builder
          * 
@@ -114,7 +114,7 @@ public final class DnsSecurityProfileBotnetDomainsDnsSecurityCategoryArgs extend
         }
 
         /**
-         * @param action Action
+         * @param action Action. Possible values are `default`, `allow`, `block` and `sinkhole`.
          * 
          * @return builder
          * 
@@ -124,7 +124,7 @@ public final class DnsSecurityProfileBotnetDomainsDnsSecurityCategoryArgs extend
         }
 
         /**
-         * @param logLevel Log level
+         * @param logLevel Log level. Possible values are `default`, `none`, `low`, `informational`, `medium`, `high` and `critical`.
          * 
          * @return builder
          * 
@@ -135,7 +135,7 @@ public final class DnsSecurityProfileBotnetDomainsDnsSecurityCategoryArgs extend
         }
 
         /**
-         * @param logLevel Log level
+         * @param logLevel Log level. Possible values are `default`, `none`, `low`, `informational`, `medium`, `high` and `critical`.
          * 
          * @return builder
          * 
@@ -166,7 +166,7 @@ public final class DnsSecurityProfileBotnetDomainsDnsSecurityCategoryArgs extend
         }
 
         /**
-         * @param packetCapture Packet capture
+         * @param packetCapture Packet capture. Possible values are `disable`, `single-packet` and `extended-capture`.
          * 
          * @return builder
          * 
@@ -177,7 +177,7 @@ public final class DnsSecurityProfileBotnetDomainsDnsSecurityCategoryArgs extend
         }
 
         /**
-         * @param packetCapture Packet capture
+         * @param packetCapture Packet capture. Possible values are `disable`, `single-packet` and `extended-capture`.
          * 
          * @return builder
          * 

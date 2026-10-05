@@ -19,8 +19,6 @@ public final class GetManagementInterfaceManagementInterfaceMgmtType {
     /**
      * @return Static
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `static`.
-     * 
      */
     private GetManagementInterfaceManagementInterfaceMgmtTypeStatic static_;
 
@@ -34,8 +32,6 @@ public final class GetManagementInterfaceManagementInterfaceMgmtType {
     }
     /**
      * @return Static
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `static`.
      * 
      */
     public GetManagementInterfaceManagementInterfaceMgmtTypeStatic static_() {

@@ -154,7 +154,7 @@ namespace Pulumi.Scm
     public sealed class GetForwardingProfileDestinationArgs : global::Pulumi.InvokeArgs
     {
         /// <summary>
-        /// The folder in which the resource is defined
+        /// The folder in which the resource is defined. Possible values are `Mobile Users`.
         /// </summary>
         [Input("folder")]
         public string? Folder { get; set; }
@@ -180,7 +180,7 @@ namespace Pulumi.Scm
     public sealed class GetForwardingProfileDestinationInvokeArgs : global::Pulumi.InvokeArgs
     {
         /// <summary>
-        /// The folder in which the resource is defined
+        /// The folder in which the resource is defined. Possible values are `Mobile Users`.
         /// </summary>
         [Input("folder")]
         public Input<string>? Folder { get; set; }
@@ -212,7 +212,7 @@ namespace Pulumi.Scm
         /// </summary>
         public readonly string Description;
         /// <summary>
-        /// The folder in which the resource is defined
+        /// The folder in which the resource is defined. Possible values are `Mobile Users`.
         /// </summary>
         public readonly string Folder;
         /// <summary>

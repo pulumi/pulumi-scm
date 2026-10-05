@@ -30,7 +30,7 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly string Device;
         /// <summary>
-        /// Digest for CSR
+        /// Digest for CSR. Possible values are `Sha1`, `Sha256`, `Sha384` and `Sha512`.
         /// </summary>
         public readonly string Digest;
         /// <summary>
@@ -42,7 +42,7 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly string Fingerprint;
         /// <summary>
-        /// The folder of the item. Default: Shared.
+        /// The folder in which the resource is defined
         /// </summary>
         public readonly string Folder;
         /// <summary>
@@ -50,11 +50,11 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly string Id;
         /// <summary>
-        /// The name of the item.
+        /// The name of the SCEP profile
         /// </summary>
         public readonly string Name;
         /// <summary>
-        /// SCEP Server CA Certificate
+        /// SCEP Server CA Certificate. Possible values are `Authentication Cookie CA`, `Forward-Trust-CA`, `Forward-Trust-CA-ECDSA`, `Forward-UnTrust-CA`, `Forward-UnTrust-CA-ECDSA`, `Global Authentication Cookie CA`, `GlobalSign-Root-CA` and `Root CA`.
         /// </summary>
         public readonly string ScepCaCert;
         /// <summary>
@@ -62,7 +62,7 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly Outputs.GetScepProfileListDataScepChallengeResult ScepChallenge;
         /// <summary>
-        /// SCEP Client Certificate
+        /// SCEP Client Certificate. Possible values are `Authentication Cookie CA`, `Forward-Trust-CA`, `Forward-Trust-CA-ECDSA`, `Forward-UnTrust-CA`, `Forward-UnTrust-CA-ECDSA`, `Global Authentication Cookie CA`, `GlobalSign-Root-CA` and `Root CA`.
         /// </summary>
         public readonly string ScepClientCert;
         /// <summary>
@@ -70,7 +70,7 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly string ScepUrl;
         /// <summary>
-        /// The snippet of the item.
+        /// The snippet in which the resource is defined
         /// </summary>
         public readonly string Snippet;
         /// <summary>

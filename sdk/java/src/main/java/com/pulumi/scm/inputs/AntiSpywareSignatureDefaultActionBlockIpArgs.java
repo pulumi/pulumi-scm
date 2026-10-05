@@ -32,14 +32,14 @@ public final class AntiSpywareSignatureDefaultActionBlockIpArgs extends com.pulu
     }
 
     /**
-     * Track by
+     * Track by. Possible values are `source-and-destination` and `source`.
      * 
      */
     @Import(name="trackBy")
     private @Nullable Output<String> trackBy;
 
     /**
-     * @return Track by
+     * @return Track by. Possible values are `source-and-destination` and `source`.
      * 
      */
     public Optional<Output<String>> trackBy() {
@@ -93,7 +93,7 @@ public final class AntiSpywareSignatureDefaultActionBlockIpArgs extends com.pulu
         }
 
         /**
-         * @param trackBy Track by
+         * @param trackBy Track by. Possible values are `source-and-destination` and `source`.
          * 
          * @return builder
          * 
@@ -104,7 +104,7 @@ public final class AntiSpywareSignatureDefaultActionBlockIpArgs extends com.pulu
         }
 
         /**
-         * @param trackBy Track by
+         * @param trackBy Track by. Possible values are `source-and-destination` and `source`.
          * 
          * @return builder
          * 

@@ -48,12 +48,21 @@ export interface GetSyslogServerProfileArgs {
      * The device in which the resource is defined
      */
     device?: string;
+    /**
+     * The folder in which the resource is defined
+     */
     folder?: string;
     /**
      * The UUID of the syslog server profile
      */
     id: string;
+    /**
+     * The name of the syslog server profile
+     */
     name?: string;
+    /**
+     * The snippet in which the resource is defined
+     */
     snippet?: string;
 }
 
@@ -65,15 +74,33 @@ export interface GetSyslogServerProfileResult {
      * The device in which the resource is defined
      */
     readonly device: string;
+    /**
+     * The folder in which the resource is defined
+     */
     readonly folder: string;
+    /**
+     * Format
+     */
     readonly format: outputs.GetSyslogServerProfileFormat;
     /**
      * The UUID of the syslog server profile
      */
     readonly id: string;
+    /**
+     * The name of the syslog server profile
+     */
     readonly name: string;
+    /**
+     * A list of syslog server configurations. At least one server is required.
+     */
     readonly servers: outputs.GetSyslogServerProfileServer[];
+    /**
+     * The snippet in which the resource is defined
+     */
     readonly snippet: string;
+    /**
+     * The Terraform ID.
+     */
     readonly tfid: string;
 }
 /**
@@ -118,11 +145,20 @@ export interface GetSyslogServerProfileOutputArgs {
      * The device in which the resource is defined
      */
     device?: pulumi.Input<string | undefined>;
+    /**
+     * The folder in which the resource is defined
+     */
     folder?: pulumi.Input<string | undefined>;
     /**
      * The UUID of the syslog server profile
      */
     id: pulumi.Input<string>;
+    /**
+     * The name of the syslog server profile
+     */
     name?: pulumi.Input<string | undefined>;
+    /**
+     * The snippet in which the resource is defined
+     */
     snippet?: pulumi.Input<string | undefined>;
 }

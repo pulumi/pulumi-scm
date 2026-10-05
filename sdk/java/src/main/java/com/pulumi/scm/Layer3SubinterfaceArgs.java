@@ -5,10 +5,12 @@ package com.pulumi.scm;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.scm.inputs.Layer3SubinterfaceAdjustTcpMssArgs;
 import com.pulumi.scm.inputs.Layer3SubinterfaceArpArgs;
 import com.pulumi.scm.inputs.Layer3SubinterfaceDdnsConfigArgs;
 import com.pulumi.scm.inputs.Layer3SubinterfaceDhcpClientArgs;
 import com.pulumi.scm.inputs.Layer3SubinterfaceIpArgs;
+import com.pulumi.scm.inputs.Layer3SubinterfacePppoeArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -20,6 +22,21 @@ import javax.annotation.Nullable;
 public final class Layer3SubinterfaceArgs extends com.pulumi.resources.ResourceArgs {
 
     public static final Layer3SubinterfaceArgs Empty = new Layer3SubinterfaceArgs();
+
+    /**
+     * TCP MSS adjustment settings for the interface
+     * 
+     */
+    @Import(name="adjustTcpMss")
+    private @Nullable Output<Layer3SubinterfaceAdjustTcpMssArgs> adjustTcpMss;
+
+    /**
+     * @return TCP MSS adjustment settings for the interface
+     * 
+     */
+    public Optional<Output<Layer3SubinterfaceAdjustTcpMssArgs>> adjustTcpMss() {
+        return Optional.ofNullable(this.adjustTcpMss);
+    }
 
     /**
      * Layer 3 sub Interfaces ARP configuration
@@ -84,16 +101,12 @@ public final class Layer3SubinterfaceArgs extends com.pulumi.resources.ResourceA
     /**
      * Layer3 sub interfaces DHCP Client Object
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
-     * 
      */
     @Import(name="dhcpClient")
     private @Nullable Output<Layer3SubinterfaceDhcpClientArgs> dhcpClient;
 
     /**
      * @return Layer3 sub interfaces DHCP Client Object
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
      * 
      */
     public Optional<Output<Layer3SubinterfaceDhcpClientArgs>> dhcpClient() {
@@ -103,16 +116,12 @@ public final class Layer3SubinterfaceArgs extends com.pulumi.resources.ResourceA
     /**
      * The folder in which the resource is defined
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
      */
     @Import(name="folder")
     private @Nullable Output<String> folder;
 
     /**
      * @return The folder in which the resource is defined
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public Optional<Output<String>> folder() {
@@ -137,16 +146,12 @@ public final class Layer3SubinterfaceArgs extends com.pulumi.resources.ResourceA
     /**
      * L3 sub-interface IP Parent
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
-     * 
      */
     @Import(name="ips")
     private @Nullable Output<List<Layer3SubinterfaceIpArgs>> ips;
 
     /**
      * @return L3 sub-interface IP Parent
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
      * 
      */
     public Optional<Output<List<Layer3SubinterfaceIpArgs>>> ips() {
@@ -214,9 +219,22 @@ public final class Layer3SubinterfaceArgs extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * The snippet in which the resource is defined
+     * PPPoE configuration for the interface
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    @Import(name="pppoe")
+    private @Nullable Output<Layer3SubinterfacePppoeArgs> pppoe;
+
+    /**
+     * @return PPPoE configuration for the interface
+     * 
+     */
+    public Optional<Output<Layer3SubinterfacePppoeArgs>> pppoe() {
+        return Optional.ofNullable(this.pppoe);
+    }
+
+    /**
+     * The snippet in which the resource is defined
      * 
      */
     @Import(name="snippet")
@@ -224,8 +242,6 @@ public final class Layer3SubinterfaceArgs extends com.pulumi.resources.ResourceA
 
     /**
      * @return The snippet in which the resource is defined
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public Optional<Output<String>> snippet() {
@@ -250,6 +266,7 @@ public final class Layer3SubinterfaceArgs extends com.pulumi.resources.ResourceA
     private Layer3SubinterfaceArgs() {}
 
     private Layer3SubinterfaceArgs(Layer3SubinterfaceArgs $) {
+        this.adjustTcpMss = $.adjustTcpMss;
         this.arps = $.arps;
         this.comment = $.comment;
         this.ddnsConfig = $.ddnsConfig;
@@ -262,6 +279,7 @@ public final class Layer3SubinterfaceArgs extends com.pulumi.resources.ResourceA
         this.name = $.name;
         this.netflowProfile = $.netflowProfile;
         this.parentInterface = $.parentInterface;
+        this.pppoe = $.pppoe;
         this.snippet = $.snippet;
         this.tag = $.tag;
     }
@@ -282,6 +300,27 @@ public final class Layer3SubinterfaceArgs extends com.pulumi.resources.ResourceA
 
         public Builder(Layer3SubinterfaceArgs defaults) {
             $ = new Layer3SubinterfaceArgs(Objects.requireNonNull(defaults));
+        }
+
+        /**
+         * @param adjustTcpMss TCP MSS adjustment settings for the interface
+         * 
+         * @return builder
+         * 
+         */
+        public Builder adjustTcpMss(@Nullable Output<Layer3SubinterfaceAdjustTcpMssArgs> adjustTcpMss) {
+            $.adjustTcpMss = adjustTcpMss;
+            return this;
+        }
+
+        /**
+         * @param adjustTcpMss TCP MSS adjustment settings for the interface
+         * 
+         * @return builder
+         * 
+         */
+        public Builder adjustTcpMss(Layer3SubinterfaceAdjustTcpMssArgs adjustTcpMss) {
+            return adjustTcpMss(Output.of(adjustTcpMss));
         }
 
         /**
@@ -381,8 +420,6 @@ public final class Layer3SubinterfaceArgs extends com.pulumi.resources.ResourceA
         /**
          * @param dhcpClient Layer3 sub interfaces DHCP Client Object
          * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
-         * 
          * @return builder
          * 
          */
@@ -394,8 +431,6 @@ public final class Layer3SubinterfaceArgs extends com.pulumi.resources.ResourceA
         /**
          * @param dhcpClient Layer3 sub interfaces DHCP Client Object
          * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
-         * 
          * @return builder
          * 
          */
@@ -405,8 +440,6 @@ public final class Layer3SubinterfaceArgs extends com.pulumi.resources.ResourceA
 
         /**
          * @param folder The folder in which the resource is defined
-         * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
          * 
          * @return builder
          * 
@@ -418,8 +451,6 @@ public final class Layer3SubinterfaceArgs extends com.pulumi.resources.ResourceA
 
         /**
          * @param folder The folder in which the resource is defined
-         * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
          * 
          * @return builder
          * 
@@ -452,8 +483,6 @@ public final class Layer3SubinterfaceArgs extends com.pulumi.resources.ResourceA
         /**
          * @param ips L3 sub-interface IP Parent
          * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
-         * 
          * @return builder
          * 
          */
@@ -465,8 +494,6 @@ public final class Layer3SubinterfaceArgs extends com.pulumi.resources.ResourceA
         /**
          * @param ips L3 sub-interface IP Parent
          * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
-         * 
          * @return builder
          * 
          */
@@ -476,8 +503,6 @@ public final class Layer3SubinterfaceArgs extends com.pulumi.resources.ResourceA
 
         /**
          * @param ips L3 sub-interface IP Parent
-         * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
          * 
          * @return builder
          * 
@@ -571,9 +596,28 @@ public final class Layer3SubinterfaceArgs extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param snippet The snippet in which the resource is defined
+         * @param pppoe PPPoE configuration for the interface
          * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+         * @return builder
+         * 
+         */
+        public Builder pppoe(@Nullable Output<Layer3SubinterfacePppoeArgs> pppoe) {
+            $.pppoe = pppoe;
+            return this;
+        }
+
+        /**
+         * @param pppoe PPPoE configuration for the interface
+         * 
+         * @return builder
+         * 
+         */
+        public Builder pppoe(Layer3SubinterfacePppoeArgs pppoe) {
+            return pppoe(Output.of(pppoe));
+        }
+
+        /**
+         * @param snippet The snippet in which the resource is defined
          * 
          * @return builder
          * 
@@ -585,8 +629,6 @@ public final class Layer3SubinterfaceArgs extends com.pulumi.resources.ResourceA
 
         /**
          * @param snippet The snippet in which the resource is defined
-         * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
          * 
          * @return builder
          * 

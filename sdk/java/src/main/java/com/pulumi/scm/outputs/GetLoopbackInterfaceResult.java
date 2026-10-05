@@ -5,6 +5,7 @@ package com.pulumi.scm.outputs;
 
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
+import com.pulumi.scm.outputs.GetLoopbackInterfaceAdjustTcpMss;
 import com.pulumi.scm.outputs.GetLoopbackInterfaceIp;
 import com.pulumi.scm.outputs.GetLoopbackInterfaceIpv6;
 import java.lang.Integer;
@@ -14,32 +15,96 @@ import java.util.Objects;
 
 @CustomType
 public final class GetLoopbackInterfaceResult {
+    /**
+     * @return TCP MSS adjustment settings for the interface
+     * 
+     */
+    private GetLoopbackInterfaceAdjustTcpMss adjustTcpMss;
+    /**
+     * @return Description for loopback interface
+     * 
+     */
     private String comment;
+    /**
+     * @return Default interface assignment for loopback interface
+     * 
+     */
     private String defaultValue;
     /**
      * @return The device in which the resource is defined
      * 
      */
     private String device;
+    /**
+     * @return The folder in which the resource is defined
+     * 
+     */
     private String folder;
     /**
      * @return UUID of the resource loopback interface
      * 
      */
     private String id;
+    /**
+     * @return Interface management profile for loopback interface
+     * 
+     */
     private String interfaceManagementProfile;
+    /**
+     * @return Loopback IP Parent
+     * 
+     */
     private List<GetLoopbackInterfaceIp> ips;
+    /**
+     * @return Loopback IPv6 Configuration
+     * 
+     */
     private GetLoopbackInterfaceIpv6 ipv6;
+    /**
+     * @return MTU for loopback interface
+     * 
+     */
     private Integer mtu;
+    /**
+     * @return Loopback Interface name
+     * 
+     */
     private String name;
+    /**
+     * @return Name of Netflow Profile to assign to Interface
+     * 
+     */
     private String netflowProfile;
+    /**
+     * @return The snippet in which the resource is defined
+     * 
+     */
     private String snippet;
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     private String tfid;
 
     private GetLoopbackInterfaceResult() {}
+    /**
+     * @return TCP MSS adjustment settings for the interface
+     * 
+     */
+    public GetLoopbackInterfaceAdjustTcpMss adjustTcpMss() {
+        return this.adjustTcpMss;
+    }
+    /**
+     * @return Description for loopback interface
+     * 
+     */
     public String comment() {
         return this.comment;
     }
+    /**
+     * @return Default interface assignment for loopback interface
+     * 
+     */
     public String defaultValue() {
         return this.defaultValue;
     }
@@ -50,6 +115,10 @@ public final class GetLoopbackInterfaceResult {
     public String device() {
         return this.device;
     }
+    /**
+     * @return The folder in which the resource is defined
+     * 
+     */
     public String folder() {
         return this.folder;
     }
@@ -60,27 +129,59 @@ public final class GetLoopbackInterfaceResult {
     public String id() {
         return this.id;
     }
+    /**
+     * @return Interface management profile for loopback interface
+     * 
+     */
     public String interfaceManagementProfile() {
         return this.interfaceManagementProfile;
     }
+    /**
+     * @return Loopback IP Parent
+     * 
+     */
     public List<GetLoopbackInterfaceIp> ips() {
         return this.ips;
     }
+    /**
+     * @return Loopback IPv6 Configuration
+     * 
+     */
     public GetLoopbackInterfaceIpv6 ipv6() {
         return this.ipv6;
     }
+    /**
+     * @return MTU for loopback interface
+     * 
+     */
     public Integer mtu() {
         return this.mtu;
     }
+    /**
+     * @return Loopback Interface name
+     * 
+     */
     public String name() {
         return this.name;
     }
+    /**
+     * @return Name of Netflow Profile to assign to Interface
+     * 
+     */
     public String netflowProfile() {
         return this.netflowProfile;
     }
+    /**
+     * @return The snippet in which the resource is defined
+     * 
+     */
     public String snippet() {
         return this.snippet;
     }
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     public String tfid() {
         return this.tfid;
     }
@@ -94,6 +195,7 @@ public final class GetLoopbackInterfaceResult {
     }
     @CustomType.Builder
     public static final class Builder {
+        private GetLoopbackInterfaceAdjustTcpMss adjustTcpMss;
         private String comment;
         private String defaultValue;
         private String device;
@@ -110,6 +212,7 @@ public final class GetLoopbackInterfaceResult {
         public Builder() {}
         public Builder(GetLoopbackInterfaceResult defaults) {
     	      Objects.requireNonNull(defaults);
+    	      this.adjustTcpMss = defaults.adjustTcpMss;
     	      this.comment = defaults.comment;
     	      this.defaultValue = defaults.defaultValue;
     	      this.device = defaults.device;
@@ -125,6 +228,14 @@ public final class GetLoopbackInterfaceResult {
     	      this.tfid = defaults.tfid;
         }
 
+        @CustomType.Setter
+        public Builder adjustTcpMss(GetLoopbackInterfaceAdjustTcpMss adjustTcpMss) {
+            if (adjustTcpMss == null) {
+              throw new MissingRequiredPropertyException("GetLoopbackInterfaceResult", "adjustTcpMss");
+            }
+            this.adjustTcpMss = adjustTcpMss;
+            return this;
+        }
         @CustomType.Setter
         public Builder comment(String comment) {
             if (comment == null) {
@@ -234,6 +345,7 @@ public final class GetLoopbackInterfaceResult {
         }
         public GetLoopbackInterfaceResult build() {
             final var _resultValue = new GetLoopbackInterfaceResult();
+            _resultValue.adjustTcpMss = adjustTcpMss;
             _resultValue.comment = comment;
             _resultValue.defaultValue = defaultValue;
             _resultValue.device = device;

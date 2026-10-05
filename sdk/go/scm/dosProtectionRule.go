@@ -7,6 +7,7 @@ import (
 	"context"
 	"reflect"
 
+	"errors"
 	"github.com/pulumi/pulumi-scm/sdk/go/scm/internal"
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
@@ -48,26 +49,22 @@ type DosProtectionRule struct {
 	// Rule disabled?
 	Disabled pulumi.BoolOutput `pulumi:"disabled"`
 	// The folder in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrOutput `pulumi:"folder"`
-	// List of source zones
-	Froms pulumi.StringArrayOutput `pulumi:"froms"`
+	// Source zones and interfaces
+	From DosProtectionRuleFromOutput `pulumi:"from"`
 	// Log forwarding profile name
 	LogSetting pulumi.StringOutput `pulumi:"logSetting"`
 	// Rule name
 	Name pulumi.StringOutput `pulumi:"name"`
-	// Position relative to local device rules
+	// Position relative to local device rules. Possible values are `pre` and `post`.
 	Position pulumi.StringOutput `pulumi:"position"`
 	// Protection
-	Protection DosProtectionRuleProtectionPtrOutput `pulumi:"protection"`
+	Protection DosProtectionRuleProtectionOutput `pulumi:"protection"`
 	// Schedule on which to enforce the rule
 	Schedule pulumi.StringPtrOutput `pulumi:"schedule"`
 	// List of services
 	Services pulumi.StringArrayOutput `pulumi:"services"`
 	// The snippet in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
 	// List of source users and/or groups.  Reserved words include `any`, `pre-login`, `known-user`, and `unknown`.
 	SourceUsers pulumi.StringArrayOutput `pulumi:"sourceUsers"`
@@ -77,17 +74,32 @@ type DosProtectionRule struct {
 	Tags pulumi.StringArrayOutput `pulumi:"tags"`
 	// The Terraform ID.
 	Tfid pulumi.StringOutput `pulumi:"tfid"`
-	// List of destination zones
-	Tos pulumi.StringArrayOutput `pulumi:"tos"`
+	// Destination zones and interfaces
+	To DosProtectionRuleToOutput `pulumi:"to"`
 }
 
 // NewDosProtectionRule registers a new resource with the given unique name, arguments, and options.
 func NewDosProtectionRule(ctx *pulumi.Context,
 	name string, args *DosProtectionRuleArgs, opts ...pulumi.ResourceOption) (*DosProtectionRule, error) {
 	if args == nil {
-		args = &DosProtectionRuleArgs{}
+		return nil, errors.New("missing one or more required arguments")
 	}
 
+	if args.From == nil {
+		return nil, errors.New("invalid value for required argument 'From'")
+	}
+	if args.Protection == nil {
+		return nil, errors.New("invalid value for required argument 'Protection'")
+	}
+	if args.Services == nil {
+		return nil, errors.New("invalid value for required argument 'Services'")
+	}
+	if args.Sources == nil {
+		return nil, errors.New("invalid value for required argument 'Sources'")
+	}
+	if args.To == nil {
+		return nil, errors.New("invalid value for required argument 'To'")
+	}
 	opts = internal.PkgResourceDefaultOpts(opts)
 	var resource DosProtectionRule
 	err := ctx.RegisterResource("scm:index/dosProtectionRule:DosProtectionRule", name, args, &resource, opts...)
@@ -122,16 +134,14 @@ type dosProtectionRuleState struct {
 	// Rule disabled?
 	Disabled *bool `pulumi:"disabled"`
 	// The folder in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
-	// List of source zones
-	Froms []string `pulumi:"froms"`
+	// Source zones and interfaces
+	From *DosProtectionRuleFrom `pulumi:"from"`
 	// Log forwarding profile name
 	LogSetting *string `pulumi:"logSetting"`
 	// Rule name
 	Name *string `pulumi:"name"`
-	// Position relative to local device rules
+	// Position relative to local device rules. Possible values are `pre` and `post`.
 	Position *string `pulumi:"position"`
 	// Protection
 	Protection *DosProtectionRuleProtection `pulumi:"protection"`
@@ -140,8 +150,6 @@ type dosProtectionRuleState struct {
 	// List of services
 	Services []string `pulumi:"services"`
 	// The snippet in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	// List of source users and/or groups.  Reserved words include `any`, `pre-login`, `known-user`, and `unknown`.
 	SourceUsers []string `pulumi:"sourceUsers"`
@@ -151,8 +159,8 @@ type dosProtectionRuleState struct {
 	Tags []string `pulumi:"tags"`
 	// The Terraform ID.
 	Tfid *string `pulumi:"tfid"`
-	// List of destination zones
-	Tos []string `pulumi:"tos"`
+	// Destination zones and interfaces
+	To *DosProtectionRuleTo `pulumi:"to"`
 }
 
 type DosProtectionRuleState struct {
@@ -167,16 +175,14 @@ type DosProtectionRuleState struct {
 	// Rule disabled?
 	Disabled pulumi.BoolPtrInput
 	// The folder in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
-	// List of source zones
-	Froms pulumi.StringArrayInput
+	// Source zones and interfaces
+	From DosProtectionRuleFromPtrInput
 	// Log forwarding profile name
 	LogSetting pulumi.StringPtrInput
 	// Rule name
 	Name pulumi.StringPtrInput
-	// Position relative to local device rules
+	// Position relative to local device rules. Possible values are `pre` and `post`.
 	Position pulumi.StringPtrInput
 	// Protection
 	Protection DosProtectionRuleProtectionPtrInput
@@ -185,8 +191,6 @@ type DosProtectionRuleState struct {
 	// List of services
 	Services pulumi.StringArrayInput
 	// The snippet in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	// List of source users and/or groups.  Reserved words include `any`, `pre-login`, `known-user`, and `unknown`.
 	SourceUsers pulumi.StringArrayInput
@@ -196,8 +200,8 @@ type DosProtectionRuleState struct {
 	Tags pulumi.StringArrayInput
 	// The Terraform ID.
 	Tfid pulumi.StringPtrInput
-	// List of destination zones
-	Tos pulumi.StringArrayInput
+	// Destination zones and interfaces
+	To DosProtectionRuleToPtrInput
 }
 
 func (DosProtectionRuleState) ElementType() reflect.Type {
@@ -216,26 +220,22 @@ type dosProtectionRuleArgs struct {
 	// Rule disabled?
 	Disabled *bool `pulumi:"disabled"`
 	// The folder in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
-	// List of source zones
-	Froms []string `pulumi:"froms"`
+	// Source zones and interfaces
+	From DosProtectionRuleFrom `pulumi:"from"`
 	// Log forwarding profile name
 	LogSetting *string `pulumi:"logSetting"`
 	// Rule name
 	Name *string `pulumi:"name"`
-	// Position relative to local device rules
+	// Position relative to local device rules. Possible values are `pre` and `post`.
 	Position *string `pulumi:"position"`
 	// Protection
-	Protection *DosProtectionRuleProtection `pulumi:"protection"`
+	Protection DosProtectionRuleProtection `pulumi:"protection"`
 	// Schedule on which to enforce the rule
 	Schedule *string `pulumi:"schedule"`
 	// List of services
 	Services []string `pulumi:"services"`
 	// The snippet in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	// List of source users and/or groups.  Reserved words include `any`, `pre-login`, `known-user`, and `unknown`.
 	SourceUsers []string `pulumi:"sourceUsers"`
@@ -243,8 +243,8 @@ type dosProtectionRuleArgs struct {
 	Sources []string `pulumi:"sources"`
 	// List of tags
 	Tags []string `pulumi:"tags"`
-	// List of destination zones
-	Tos []string `pulumi:"tos"`
+	// Destination zones and interfaces
+	To DosProtectionRuleTo `pulumi:"to"`
 }
 
 // The set of arguments for constructing a DosProtectionRule resource.
@@ -260,26 +260,22 @@ type DosProtectionRuleArgs struct {
 	// Rule disabled?
 	Disabled pulumi.BoolPtrInput
 	// The folder in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
-	// List of source zones
-	Froms pulumi.StringArrayInput
+	// Source zones and interfaces
+	From DosProtectionRuleFromInput
 	// Log forwarding profile name
 	LogSetting pulumi.StringPtrInput
 	// Rule name
 	Name pulumi.StringPtrInput
-	// Position relative to local device rules
+	// Position relative to local device rules. Possible values are `pre` and `post`.
 	Position pulumi.StringPtrInput
 	// Protection
-	Protection DosProtectionRuleProtectionPtrInput
+	Protection DosProtectionRuleProtectionInput
 	// Schedule on which to enforce the rule
 	Schedule pulumi.StringPtrInput
 	// List of services
 	Services pulumi.StringArrayInput
 	// The snippet in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	// List of source users and/or groups.  Reserved words include `any`, `pre-login`, `known-user`, and `unknown`.
 	SourceUsers pulumi.StringArrayInput
@@ -287,8 +283,8 @@ type DosProtectionRuleArgs struct {
 	Sources pulumi.StringArrayInput
 	// List of tags
 	Tags pulumi.StringArrayInput
-	// List of destination zones
-	Tos pulumi.StringArrayInput
+	// Destination zones and interfaces
+	To DosProtectionRuleToInput
 }
 
 func (DosProtectionRuleArgs) ElementType() reflect.Type {
@@ -404,15 +400,13 @@ func (o DosProtectionRuleOutput) Disabled() pulumi.BoolOutput {
 }
 
 // The folder in which the resource is defined
-//
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o DosProtectionRuleOutput) Folder() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *DosProtectionRule) pulumi.StringPtrOutput { return v.Folder }).(pulumi.StringPtrOutput)
 }
 
-// List of source zones
-func (o DosProtectionRuleOutput) Froms() pulumi.StringArrayOutput {
-	return o.ApplyT(func(v *DosProtectionRule) pulumi.StringArrayOutput { return v.Froms }).(pulumi.StringArrayOutput)
+// Source zones and interfaces
+func (o DosProtectionRuleOutput) From() DosProtectionRuleFromOutput {
+	return o.ApplyT(func(v *DosProtectionRule) DosProtectionRuleFromOutput { return v.From }).(DosProtectionRuleFromOutput)
 }
 
 // Log forwarding profile name
@@ -425,14 +419,14 @@ func (o DosProtectionRuleOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v *DosProtectionRule) pulumi.StringOutput { return v.Name }).(pulumi.StringOutput)
 }
 
-// Position relative to local device rules
+// Position relative to local device rules. Possible values are `pre` and `post`.
 func (o DosProtectionRuleOutput) Position() pulumi.StringOutput {
 	return o.ApplyT(func(v *DosProtectionRule) pulumi.StringOutput { return v.Position }).(pulumi.StringOutput)
 }
 
 // Protection
-func (o DosProtectionRuleOutput) Protection() DosProtectionRuleProtectionPtrOutput {
-	return o.ApplyT(func(v *DosProtectionRule) DosProtectionRuleProtectionPtrOutput { return v.Protection }).(DosProtectionRuleProtectionPtrOutput)
+func (o DosProtectionRuleOutput) Protection() DosProtectionRuleProtectionOutput {
+	return o.ApplyT(func(v *DosProtectionRule) DosProtectionRuleProtectionOutput { return v.Protection }).(DosProtectionRuleProtectionOutput)
 }
 
 // Schedule on which to enforce the rule
@@ -446,8 +440,6 @@ func (o DosProtectionRuleOutput) Services() pulumi.StringArrayOutput {
 }
 
 // The snippet in which the resource is defined
-//
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o DosProtectionRuleOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *DosProtectionRule) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)
 }
@@ -472,9 +464,9 @@ func (o DosProtectionRuleOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v *DosProtectionRule) pulumi.StringOutput { return v.Tfid }).(pulumi.StringOutput)
 }
 
-// List of destination zones
-func (o DosProtectionRuleOutput) Tos() pulumi.StringArrayOutput {
-	return o.ApplyT(func(v *DosProtectionRule) pulumi.StringArrayOutput { return v.Tos }).(pulumi.StringArrayOutput)
+// Destination zones and interfaces
+func (o DosProtectionRuleOutput) To() DosProtectionRuleToOutput {
+	return o.ApplyT(func(v *DosProtectionRule) DosProtectionRuleToOutput { return v.To }).(DosProtectionRuleToOutput)
 }
 
 type DosProtectionRuleArrayOutput struct{ *pulumi.OutputState }

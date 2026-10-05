@@ -4,6 +4,7 @@
 package com.pulumi.scm.outputs;
 
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.scm.outputs.AggregateInterfaceLayer2LacpHighAvailability;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,12 +25,17 @@ public final class AggregateInterfaceLayer2Lacp {
      */
     private @Nullable Boolean fastFailover;
     /**
+     * @return High Availability settings
+     * 
+     */
+    private @Nullable AggregateInterfaceLayer2LacpHighAvailability highAvailability;
+    /**
      * @return Maximum number of physical ports bundled in the LAG
      * 
      */
     private @Nullable Integer maxPorts;
     /**
-     * @return Mode
+     * @return Mode. Possible values are `passive` and `active`.
      * 
      */
     private @Nullable String mode;
@@ -39,7 +45,7 @@ public final class AggregateInterfaceLayer2Lacp {
      */
     private @Nullable Integer systemPriority;
     /**
-     * @return Transmission mode
+     * @return Transmission mode. Possible values are `fast` and `slow`.
      * 
      */
     private @Nullable String transmissionRate;
@@ -60,6 +66,13 @@ public final class AggregateInterfaceLayer2Lacp {
         return Optional.ofNullable(this.fastFailover);
     }
     /**
+     * @return High Availability settings
+     * 
+     */
+    public Optional<AggregateInterfaceLayer2LacpHighAvailability> highAvailability() {
+        return Optional.ofNullable(this.highAvailability);
+    }
+    /**
      * @return Maximum number of physical ports bundled in the LAG
      * 
      */
@@ -67,7 +80,7 @@ public final class AggregateInterfaceLayer2Lacp {
         return Optional.ofNullable(this.maxPorts);
     }
     /**
-     * @return Mode
+     * @return Mode. Possible values are `passive` and `active`.
      * 
      */
     public Optional<String> mode() {
@@ -81,7 +94,7 @@ public final class AggregateInterfaceLayer2Lacp {
         return Optional.ofNullable(this.systemPriority);
     }
     /**
-     * @return Transmission mode
+     * @return Transmission mode. Possible values are `fast` and `slow`.
      * 
      */
     public Optional<String> transmissionRate() {
@@ -99,6 +112,7 @@ public final class AggregateInterfaceLayer2Lacp {
     public static final class Builder {
         private @Nullable Boolean enable;
         private @Nullable Boolean fastFailover;
+        private @Nullable AggregateInterfaceLayer2LacpHighAvailability highAvailability;
         private @Nullable Integer maxPorts;
         private @Nullable String mode;
         private @Nullable Integer systemPriority;
@@ -108,6 +122,7 @@ public final class AggregateInterfaceLayer2Lacp {
     	      Objects.requireNonNull(defaults);
     	      this.enable = defaults.enable;
     	      this.fastFailover = defaults.fastFailover;
+    	      this.highAvailability = defaults.highAvailability;
     	      this.maxPorts = defaults.maxPorts;
     	      this.mode = defaults.mode;
     	      this.systemPriority = defaults.systemPriority;
@@ -124,6 +139,12 @@ public final class AggregateInterfaceLayer2Lacp {
         public Builder fastFailover(@Nullable Boolean fastFailover) {
 
             this.fastFailover = fastFailover;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder highAvailability(@Nullable AggregateInterfaceLayer2LacpHighAvailability highAvailability) {
+
+            this.highAvailability = highAvailability;
             return this;
         }
         @CustomType.Setter
@@ -154,6 +175,7 @@ public final class AggregateInterfaceLayer2Lacp {
             final var _resultValue = new AggregateInterfaceLayer2Lacp();
             _resultValue.enable = enable;
             _resultValue.fastFailover = fastFailover;
+            _resultValue.highAvailability = highAvailability;
             _resultValue.maxPorts = maxPorts;
             _resultValue.mode = mode;
             _resultValue.systemPriority = systemPriority;

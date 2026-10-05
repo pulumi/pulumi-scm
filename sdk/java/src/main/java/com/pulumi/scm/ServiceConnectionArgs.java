@@ -6,7 +6,6 @@ package com.pulumi.scm;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
-import com.pulumi.scm.inputs.ServiceConnectionBgpPeerArgs;
 import com.pulumi.scm.inputs.ServiceConnectionProtocolArgs;
 import com.pulumi.scm.inputs.ServiceConnectionQosArgs;
 import java.lang.Boolean;
@@ -34,21 +33,6 @@ public final class ServiceConnectionArgs extends com.pulumi.resources.ResourceAr
      */
     public Optional<Output<String>> backupSc() {
         return Optional.ofNullable(this.backupSc);
-    }
-
-    /**
-     * Bgp peer
-     * 
-     */
-    @Import(name="bgpPeer")
-    private @Nullable Output<ServiceConnectionBgpPeerArgs> bgpPeer;
-
-    /**
-     * @return Bgp peer
-     * 
-     */
-    public Optional<Output<ServiceConnectionBgpPeerArgs>> bgpPeer() {
-        return Optional.ofNullable(this.bgpPeer);
     }
 
     /**
@@ -97,14 +81,14 @@ public final class ServiceConnectionArgs extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * No export community
+     * No export community. Possible values are `Disabled`, `Enabled-In`, `Enabled-Out` and `Enabled-Both`.
      * 
      */
     @Import(name="noExportCommunity")
     private @Nullable Output<String> noExportCommunity;
 
     /**
-     * @return No export community
+     * @return No export community. Possible values are `Disabled`, `Enabled-In`, `Enabled-Out` and `Enabled-Both`.
      * 
      */
     public Optional<Output<String>> noExportCommunity() {
@@ -112,14 +96,14 @@ public final class ServiceConnectionArgs extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * Onboarding type
+     * Onboarding type. Possible values are `classic`.
      * 
      */
     @Import(name="onboardingType")
     private @Nullable Output<String> onboardingType;
 
     /**
-     * @return Onboarding type
+     * @return Onboarding type. Possible values are `classic`.
      * 
      */
     public Optional<Output<String>> onboardingType() {
@@ -235,7 +219,6 @@ public final class ServiceConnectionArgs extends com.pulumi.resources.ResourceAr
 
     private ServiceConnectionArgs(ServiceConnectionArgs $) {
         this.backupSc = $.backupSc;
-        this.bgpPeer = $.bgpPeer;
         this.ipsecTunnel = $.ipsecTunnel;
         this.name = $.name;
         this.natPool = $.natPool;
@@ -287,27 +270,6 @@ public final class ServiceConnectionArgs extends com.pulumi.resources.ResourceAr
          */
         public Builder backupSc(String backupSc) {
             return backupSc(Output.of(backupSc));
-        }
-
-        /**
-         * @param bgpPeer Bgp peer
-         * 
-         * @return builder
-         * 
-         */
-        public Builder bgpPeer(@Nullable Output<ServiceConnectionBgpPeerArgs> bgpPeer) {
-            $.bgpPeer = bgpPeer;
-            return this;
-        }
-
-        /**
-         * @param bgpPeer Bgp peer
-         * 
-         * @return builder
-         * 
-         */
-        public Builder bgpPeer(ServiceConnectionBgpPeerArgs bgpPeer) {
-            return bgpPeer(Output.of(bgpPeer));
         }
 
         /**
@@ -374,7 +336,7 @@ public final class ServiceConnectionArgs extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param noExportCommunity No export community
+         * @param noExportCommunity No export community. Possible values are `Disabled`, `Enabled-In`, `Enabled-Out` and `Enabled-Both`.
          * 
          * @return builder
          * 
@@ -385,7 +347,7 @@ public final class ServiceConnectionArgs extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param noExportCommunity No export community
+         * @param noExportCommunity No export community. Possible values are `Disabled`, `Enabled-In`, `Enabled-Out` and `Enabled-Both`.
          * 
          * @return builder
          * 
@@ -395,7 +357,7 @@ public final class ServiceConnectionArgs extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param onboardingType Onboarding type
+         * @param onboardingType Onboarding type. Possible values are `classic`.
          * 
          * @return builder
          * 
@@ -406,7 +368,7 @@ public final class ServiceConnectionArgs extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param onboardingType Onboarding type
+         * @param onboardingType Onboarding type. Possible values are `classic`.
          * 
          * @return builder
          * 

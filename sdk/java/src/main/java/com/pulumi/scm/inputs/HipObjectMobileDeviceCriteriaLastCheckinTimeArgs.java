@@ -34,16 +34,12 @@ public final class HipObjectMobileDeviceCriteriaLastCheckinTimeArgs extends com.
     /**
      * Within
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `notWithin` and `within`.
-     * 
      */
     @Import(name="within")
     private @Nullable Output<HipObjectMobileDeviceCriteriaLastCheckinTimeWithinArgs> within;
 
     /**
      * @return Within
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `notWithin` and `within`.
      * 
      */
     public Optional<Output<HipObjectMobileDeviceCriteriaLastCheckinTimeWithinArgs>> within() {
@@ -99,8 +95,6 @@ public final class HipObjectMobileDeviceCriteriaLastCheckinTimeArgs extends com.
         /**
          * @param within Within
          * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `notWithin` and `within`.
-         * 
          * @return builder
          * 
          */
@@ -111,8 +105,6 @@ public final class HipObjectMobileDeviceCriteriaLastCheckinTimeArgs extends com.
 
         /**
          * @param within Within
-         * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `notWithin` and `within`.
          * 
          * @return builder
          * 

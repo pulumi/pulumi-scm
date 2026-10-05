@@ -19,7 +19,7 @@ namespace Pulumi.Scm.Inputs
         public Input<string> At { get; set; } = null!;
 
         /// <summary>
-        /// Day of week
+        /// Day of week. Possible values are `Sunday`, `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday` and `Saturday`.
         /// </summary>
         [Input("dayOfWeek", required: true)]
         public Input<string> DayOfWeek { get; set; } = null!;

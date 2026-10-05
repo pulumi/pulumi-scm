@@ -13,7 +13,7 @@ namespace Pulumi.Scm.Inputs
     public sealed class LogicalRouterVrfOspfv3AuthProfileEspEncryptionGetArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Algorithm
+        /// Algorithm. Possible values are `3des`, `aes-128-cbc`, `aes-192-cbc`, `aes-256-cbc` and `Null`.
         /// </summary>
         [Input("algorithm")]
         public Input<string>? Algorithm { get; set; }

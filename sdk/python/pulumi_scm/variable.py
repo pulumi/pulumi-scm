@@ -29,17 +29,13 @@ class VariableArgs:
         """
         The set of arguments for constructing a Variable resource.
 
-        :param pulumi.Input[_builtins.str] type: The variable type
+        :param pulumi.Input[_builtins.str] type: The variable type. Possible values are `percent`, `count`, `ip-netmask`, `zone`, `ip-range`, `ip-wildcard`, `device-priority`, `device-id`, `egress-max`, `as-number`, `fqdn`, `port`, `link-tag`, `group-id`, `rate`, `router-id`, `qos-profile` and `timer`.
         :param pulumi.Input[_builtins.str] value: The value of the variable
         :param pulumi.Input[_builtins.str] description: The description of the variable
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] name: The name of the variable
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         pulumi.set(__self__, "type", type)
         pulumi.set(__self__, "value", value)
@@ -58,7 +54,7 @@ class VariableArgs:
     @pulumi.getter
     def type(self) -> pulumi.Input[_builtins.str]:
         """
-        The variable type
+        The variable type. Possible values are `percent`, `count`, `ip-netmask`, `zone`, `ip-range`, `ip-wildcard`, `device-priority`, `device-id`, `egress-max`, `as-number`, `fqdn`, `port`, `link-tag`, `group-id`, `rate`, `router-id`, `qos-profile` and `timer`.
         """
         return pulumi.get(self, "type")
 
@@ -107,8 +103,6 @@ class VariableArgs:
     def folder(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
-
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
 
@@ -133,8 +127,6 @@ class VariableArgs:
     def snippet(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
-
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
 
@@ -161,15 +153,11 @@ class _VariableState:
         :param pulumi.Input[_builtins.str] description: The description of the variable
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] name: The name of the variable
         :param pulumi.Input[_builtins.bool] overridden: Is the variable overridden?
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] tfid: The Terraform ID.
-        :param pulumi.Input[_builtins.str] type: The variable type
+        :param pulumi.Input[_builtins.str] type: The variable type. Possible values are `percent`, `count`, `ip-netmask`, `zone`, `ip-range`, `ip-wildcard`, `device-priority`, `device-id`, `egress-max`, `as-number`, `fqdn`, `port`, `link-tag`, `group-id`, `rate`, `router-id`, `qos-profile` and `timer`.
         :param pulumi.Input[_builtins.str] value: The value of the variable
         """
         if description is not None:
@@ -220,8 +208,6 @@ class _VariableState:
     def folder(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
-
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
 
@@ -258,8 +244,6 @@ class _VariableState:
     def snippet(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
-
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
 
@@ -283,7 +267,7 @@ class _VariableState:
     @pulumi.getter
     def type(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
-        The variable type
+        The variable type. Possible values are `percent`, `count`, `ip-netmask`, `zone`, `ip-range`, `ip-wildcard`, `device-priority`, `device-id`, `egress-max`, `as-number`, `fqdn`, `port`, `link-tag`, `group-id`, `rate`, `router-id`, `qos-profile` and `timer`.
         """
         return pulumi.get(self, "type")
 
@@ -327,6 +311,15 @@ class Variable(pulumi.CustomResource):
         import pulumi
         import pulumi_scm as scm
 
+        #
+        # Creates a variable in ip-netmask format with an empty value
+        #
+        scm_variable_ipaddr_empty = scm.Variable("scm_variable_ipaddr_empty",
+            folder="ngfw-shared",
+            name="$tf_variable_ipaddr_empty",
+            description="Managed by Pulumi",
+            type="ip-netmask",
+            value="None")
         #
         # Creates a variable in as-number format
         #
@@ -456,13 +449,9 @@ class Variable(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] description: The description of the variable
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] name: The name of the variable
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-        :param pulumi.Input[_builtins.str] type: The variable type
+        :param pulumi.Input[_builtins.str] type: The variable type. Possible values are `percent`, `count`, `ip-netmask`, `zone`, `ip-range`, `ip-wildcard`, `device-priority`, `device-id`, `egress-max`, `as-number`, `fqdn`, `port`, `link-tag`, `group-id`, `rate`, `router-id`, `qos-profile` and `timer`.
         :param pulumi.Input[_builtins.str] value: The value of the variable
         """
         ...
@@ -480,6 +469,15 @@ class Variable(pulumi.CustomResource):
         import pulumi
         import pulumi_scm as scm
 
+        #
+        # Creates a variable in ip-netmask format with an empty value
+        #
+        scm_variable_ipaddr_empty = scm.Variable("scm_variable_ipaddr_empty",
+            folder="ngfw-shared",
+            name="$tf_variable_ipaddr_empty",
+            description="Managed by Pulumi",
+            type="ip-netmask",
+            value="None")
         #
         # Creates a variable in as-number format
         #
@@ -677,15 +675,11 @@ class Variable(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] description: The description of the variable
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] name: The name of the variable
         :param pulumi.Input[_builtins.bool] overridden: Is the variable overridden?
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] tfid: The Terraform ID.
-        :param pulumi.Input[_builtins.str] type: The variable type
+        :param pulumi.Input[_builtins.str] type: The variable type. Possible values are `percent`, `count`, `ip-netmask`, `zone`, `ip-range`, `ip-wildcard`, `device-priority`, `device-id`, `egress-max`, `as-number`, `fqdn`, `port`, `link-tag`, `group-id`, `rate`, `router-id`, `qos-profile` and `timer`.
         :param pulumi.Input[_builtins.str] value: The value of the variable
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
@@ -724,8 +718,6 @@ class Variable(pulumi.CustomResource):
     def folder(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
-
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
 
@@ -750,8 +742,6 @@ class Variable(pulumi.CustomResource):
     def snippet(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
-
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
 
@@ -767,7 +757,7 @@ class Variable(pulumi.CustomResource):
     @pulumi.getter
     def type(self) -> pulumi.Output[_builtins.str]:
         """
-        The variable type
+        The variable type. Possible values are `percent`, `count`, `ip-netmask`, `zone`, `ip-range`, `ip-wildcard`, `device-priority`, `device-id`, `egress-max`, `as-number`, `fqdn`, `port`, `link-tag`, `group-id`, `rate`, `router-id`, `qos-profile` and `timer`.
         """
         return pulumi.get(self, "type")
 

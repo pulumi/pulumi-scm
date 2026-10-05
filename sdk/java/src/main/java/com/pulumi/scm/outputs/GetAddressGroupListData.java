@@ -25,12 +25,10 @@ public final class GetAddressGroupListData {
     /**
      * @return Dynamic
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `dynamic` and `static`.
-     * 
      */
     private GetAddressGroupListDataDynamic dynamic;
     /**
-     * @return The folder of the item. Default: Shared.
+     * @return The folder in which the resource is defined
      * 
      */
     private String folder;
@@ -40,19 +38,17 @@ public final class GetAddressGroupListData {
      */
     private String id;
     /**
-     * @return The name of the item.
+     * @return The name of the address group
      * 
      */
     private String name;
     /**
-     * @return The snippet of the item.
+     * @return The snippet in which the resource is defined
      * 
      */
     private String snippet;
     /**
      * @return Static
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `dynamic` and `static`.
      * 
      */
     private List<String> statics;
@@ -85,14 +81,12 @@ public final class GetAddressGroupListData {
     /**
      * @return Dynamic
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `dynamic` and `static`.
-     * 
      */
     public GetAddressGroupListDataDynamic dynamic() {
         return this.dynamic;
     }
     /**
-     * @return The folder of the item. Default: Shared.
+     * @return The folder in which the resource is defined
      * 
      */
     public String folder() {
@@ -106,14 +100,14 @@ public final class GetAddressGroupListData {
         return this.id;
     }
     /**
-     * @return The name of the item.
+     * @return The name of the address group
      * 
      */
     public String name() {
         return this.name;
     }
     /**
-     * @return The snippet of the item.
+     * @return The snippet in which the resource is defined
      * 
      */
     public String snippet() {
@@ -121,8 +115,6 @@ public final class GetAddressGroupListData {
     }
     /**
      * @return Static
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `dynamic` and `static`.
      * 
      */
     public List<String> statics() {

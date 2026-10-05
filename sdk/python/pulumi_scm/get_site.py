@@ -137,7 +137,7 @@ class GetSiteResult:
     @pulumi.getter(name="licenseType")
     def license_type(self) -> _builtins.str:
         """
-        The license type of the site
+        The license type of the site. Possible values are `FWAAS-SITE-25Mbps`, `FWAAS-SITE-50Mbps`, `FWAAS-SITE-250Mbps`, `FWAAS-SITE-1000Mbps` and `FWAAS-SITE-2500Mbps`.
         """
         return pulumi.get(self, "license_type")
 
@@ -193,7 +193,7 @@ class GetSiteResult:
     @pulumi.getter
     def type(self) -> _builtins.str:
         """
-        The site type
+        The site type. Possible values are `prisma-sdwan`, `third-party-branch` and `third-party-discovered`.
         """
         return pulumi.get(self, "type")
 

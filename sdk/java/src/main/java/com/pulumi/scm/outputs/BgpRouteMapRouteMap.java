@@ -15,7 +15,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class BgpRouteMapRouteMap {
     /**
-     * @return Action
+     * @return Action. Possible values are `permit` and `deny`.
      * 
      */
     private @Nullable String action;
@@ -42,7 +42,7 @@ public final class BgpRouteMapRouteMap {
 
     private BgpRouteMapRouteMap() {}
     /**
-     * @return Action
+     * @return Action. Possible values are `permit` and `deny`.
      * 
      */
     public Optional<String> action() {

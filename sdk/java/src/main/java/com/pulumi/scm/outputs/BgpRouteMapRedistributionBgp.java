@@ -20,8 +20,6 @@ public final class BgpRouteMapRedistributionBgp {
     /**
      * @return BGP Root RIB
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `ospf` and `rib`.
-     * 
      */
     private @Nullable BgpRouteMapRedistributionBgpRib rib;
 
@@ -35,8 +33,6 @@ public final class BgpRouteMapRedistributionBgp {
     }
     /**
      * @return BGP Root RIB
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `ospf` and `rib`.
      * 
      */
     public Optional<BgpRouteMapRedistributionBgpRib> rib() {

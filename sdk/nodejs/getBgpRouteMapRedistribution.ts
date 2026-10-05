@@ -28,12 +28,21 @@ export interface GetBgpRouteMapRedistributionArgs {
      * The device in which the resource is defined
      */
     device?: string;
+    /**
+     * The folder in which the resource is defined
+     */
     folder?: string;
     /**
      * BGP Route Map Redistributions UUID of the resource
      */
     id: string;
+    /**
+     * BGP Route Map Redistributions Name
+     */
     name?: string;
+    /**
+     * The snippet in which the resource is defined
+     */
     snippet?: string;
 }
 
@@ -41,21 +50,45 @@ export interface GetBgpRouteMapRedistributionArgs {
  * A collection of values returned by getBgpRouteMapRedistribution.
  */
 export interface GetBgpRouteMapRedistributionResult {
+    /**
+     * Bgp
+     */
     readonly bgp: outputs.GetBgpRouteMapRedistributionBgp;
+    /**
+     * Connected static
+     */
     readonly connectedStatic: outputs.GetBgpRouteMapRedistributionConnectedStatic;
+    /**
+     * BGP Route Map Redistributions Description
+     */
     readonly description: string;
     /**
      * The device in which the resource is defined
      */
     readonly device: string;
+    /**
+     * The folder in which the resource is defined
+     */
     readonly folder: string;
     /**
      * BGP Route Map Redistributions UUID of the resource
      */
     readonly id: string;
+    /**
+     * BGP Route Map Redistributions Name
+     */
     readonly name: string;
+    /**
+     * Ospf
+     */
     readonly ospf: outputs.GetBgpRouteMapRedistributionOspf;
+    /**
+     * The snippet in which the resource is defined
+     */
     readonly snippet: string;
+    /**
+     * The Terraform ID.
+     */
     readonly tfid: string;
 }
 /**
@@ -80,11 +113,20 @@ export interface GetBgpRouteMapRedistributionOutputArgs {
      * The device in which the resource is defined
      */
     device?: pulumi.Input<string | undefined>;
+    /**
+     * The folder in which the resource is defined
+     */
     folder?: pulumi.Input<string | undefined>;
     /**
      * BGP Route Map Redistributions UUID of the resource
      */
     id: pulumi.Input<string>;
+    /**
+     * BGP Route Map Redistributions Name
+     */
     name?: pulumi.Input<string | undefined>;
+    /**
+     * The snippet in which the resource is defined
+     */
     snippet?: pulumi.Input<string | undefined>;
 }

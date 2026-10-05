@@ -5,10 +5,12 @@ package com.pulumi.scm.outputs;
 
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
+import com.pulumi.scm.outputs.GetEthernetInterfaceListDataLayer3AdjustTcpMss;
 import com.pulumi.scm.outputs.GetEthernetInterfaceListDataLayer3Arp;
 import com.pulumi.scm.outputs.GetEthernetInterfaceListDataLayer3DdnsConfig;
 import com.pulumi.scm.outputs.GetEthernetInterfaceListDataLayer3DhcpClient;
 import com.pulumi.scm.outputs.GetEthernetInterfaceListDataLayer3Ip;
+import com.pulumi.scm.outputs.GetEthernetInterfaceListDataLayer3Lldp;
 import com.pulumi.scm.outputs.GetEthernetInterfaceListDataLayer3Pppoe;
 import java.lang.Integer;
 import java.lang.String;
@@ -17,6 +19,11 @@ import java.util.Objects;
 
 @CustomType
 public final class GetEthernetInterfaceListDataLayer3 {
+    /**
+     * @return TCP MSS adjustment settings for the interface
+     * 
+     */
+    private GetEthernetInterfaceListDataLayer3AdjustTcpMss adjustTcpMss;
     /**
      * @return Ethernet Interfaces ARP configuration
      * 
@@ -40,10 +47,13 @@ public final class GetEthernetInterfaceListDataLayer3 {
     /**
      * @return Ethernet Interface IP addresses
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `dhcpClient`, `ip`, and `pppoe`.
-     * 
      */
     private List<GetEthernetInterfaceListDataLayer3Ip> ips;
+    /**
+     * @return LLDP settings for the interface
+     * 
+     */
+    private GetEthernetInterfaceListDataLayer3Lldp lldp;
     /**
      * @return MTU
      * 
@@ -55,14 +65,19 @@ public final class GetEthernetInterfaceListDataLayer3 {
      */
     private String netflowProfile;
     /**
-     * @return Pppoe
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `dhcpClient`, `ip`, and `pppoe`.
+     * @return PPPoE configuration for the interface
      * 
      */
     private GetEthernetInterfaceListDataLayer3Pppoe pppoe;
 
     private GetEthernetInterfaceListDataLayer3() {}
+    /**
+     * @return TCP MSS adjustment settings for the interface
+     * 
+     */
+    public GetEthernetInterfaceListDataLayer3AdjustTcpMss adjustTcpMss() {
+        return this.adjustTcpMss;
+    }
     /**
      * @return Ethernet Interfaces ARP configuration
      * 
@@ -94,11 +109,16 @@ public final class GetEthernetInterfaceListDataLayer3 {
     /**
      * @return Ethernet Interface IP addresses
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `dhcpClient`, `ip`, and `pppoe`.
-     * 
      */
     public List<GetEthernetInterfaceListDataLayer3Ip> ips() {
         return this.ips;
+    }
+    /**
+     * @return LLDP settings for the interface
+     * 
+     */
+    public GetEthernetInterfaceListDataLayer3Lldp lldp() {
+        return this.lldp;
     }
     /**
      * @return MTU
@@ -115,9 +135,7 @@ public final class GetEthernetInterfaceListDataLayer3 {
         return this.netflowProfile;
     }
     /**
-     * @return Pppoe
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `dhcpClient`, `ip`, and `pppoe`.
+     * @return PPPoE configuration for the interface
      * 
      */
     public GetEthernetInterfaceListDataLayer3Pppoe pppoe() {
@@ -133,27 +151,39 @@ public final class GetEthernetInterfaceListDataLayer3 {
     }
     @CustomType.Builder
     public static final class Builder {
+        private GetEthernetInterfaceListDataLayer3AdjustTcpMss adjustTcpMss;
         private List<GetEthernetInterfaceListDataLayer3Arp> arps;
         private GetEthernetInterfaceListDataLayer3DdnsConfig ddnsConfig;
         private GetEthernetInterfaceListDataLayer3DhcpClient dhcpClient;
         private String interfaceManagementProfile;
         private List<GetEthernetInterfaceListDataLayer3Ip> ips;
+        private GetEthernetInterfaceListDataLayer3Lldp lldp;
         private Integer mtu;
         private String netflowProfile;
         private GetEthernetInterfaceListDataLayer3Pppoe pppoe;
         public Builder() {}
         public Builder(GetEthernetInterfaceListDataLayer3 defaults) {
     	      Objects.requireNonNull(defaults);
+    	      this.adjustTcpMss = defaults.adjustTcpMss;
     	      this.arps = defaults.arps;
     	      this.ddnsConfig = defaults.ddnsConfig;
     	      this.dhcpClient = defaults.dhcpClient;
     	      this.interfaceManagementProfile = defaults.interfaceManagementProfile;
     	      this.ips = defaults.ips;
+    	      this.lldp = defaults.lldp;
     	      this.mtu = defaults.mtu;
     	      this.netflowProfile = defaults.netflowProfile;
     	      this.pppoe = defaults.pppoe;
         }
 
+        @CustomType.Setter
+        public Builder adjustTcpMss(GetEthernetInterfaceListDataLayer3AdjustTcpMss adjustTcpMss) {
+            if (adjustTcpMss == null) {
+              throw new MissingRequiredPropertyException("GetEthernetInterfaceListDataLayer3", "adjustTcpMss");
+            }
+            this.adjustTcpMss = adjustTcpMss;
+            return this;
+        }
         @CustomType.Setter
         public Builder arps(List<GetEthernetInterfaceListDataLayer3Arp> arps) {
             if (arps == null) {
@@ -201,6 +231,14 @@ public final class GetEthernetInterfaceListDataLayer3 {
             return ips(List.of(ips));
         }
         @CustomType.Setter
+        public Builder lldp(GetEthernetInterfaceListDataLayer3Lldp lldp) {
+            if (lldp == null) {
+              throw new MissingRequiredPropertyException("GetEthernetInterfaceListDataLayer3", "lldp");
+            }
+            this.lldp = lldp;
+            return this;
+        }
+        @CustomType.Setter
         public Builder mtu(Integer mtu) {
             if (mtu == null) {
               throw new MissingRequiredPropertyException("GetEthernetInterfaceListDataLayer3", "mtu");
@@ -226,11 +264,13 @@ public final class GetEthernetInterfaceListDataLayer3 {
         }
         public GetEthernetInterfaceListDataLayer3 build() {
             final var _resultValue = new GetEthernetInterfaceListDataLayer3();
+            _resultValue.adjustTcpMss = adjustTcpMss;
             _resultValue.arps = arps;
             _resultValue.ddnsConfig = ddnsConfig;
             _resultValue.dhcpClient = dhcpClient;
             _resultValue.interfaceManagementProfile = interfaceManagementProfile;
             _resultValue.ips = ips;
+            _resultValue.lldp = lldp;
             _resultValue.mtu = mtu;
             _resultValue.netflowProfile = netflowProfile;
             _resultValue.pppoe = pppoe;

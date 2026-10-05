@@ -47,14 +47,14 @@ public final class HttpServerProfileServerArgs extends com.pulumi.resources.Reso
     }
 
     /**
-     * HTTP operation to perform
+     * HTTP operation to perform. Possible values are `GET`, `POST`, `PUT` and `DELETE`.
      * 
      */
     @Import(name="httpMethod")
     private @Nullable Output<String> httpMethod;
 
     /**
-     * @return HTTP operation to perform
+     * @return HTTP operation to perform. Possible values are `GET`, `POST`, `PUT` and `DELETE`.
      * 
      */
     public Optional<Output<String>> httpMethod() {
@@ -92,14 +92,14 @@ public final class HttpServerProfileServerArgs extends com.pulumi.resources.Reso
     }
 
     /**
-     * HTTP server protocol
+     * HTTP server protocol. Possible values are `HTTP` and `HTTPS`.
      * 
      */
     @Import(name="protocol")
     private @Nullable Output<String> protocol;
 
     /**
-     * @return HTTP server protocol
+     * @return HTTP server protocol. Possible values are `HTTP` and `HTTPS`.
      * 
      */
     public Optional<Output<String>> protocol() {
@@ -107,14 +107,14 @@ public final class HttpServerProfileServerArgs extends com.pulumi.resources.Reso
     }
 
     /**
-     * HTTP server TLS version
+     * HTTP server TLS version. Possible values are `1.0`, `1.1`, `1.2` and `1.3`.
      * 
      */
     @Import(name="tlsVersion")
     private @Nullable Output<String> tlsVersion;
 
     /**
-     * @return HTTP server TLS version
+     * @return HTTP server TLS version. Possible values are `1.0`, `1.1`, `1.2` and `1.3`.
      * 
      */
     public Optional<Output<String>> tlsVersion() {
@@ -194,7 +194,7 @@ public final class HttpServerProfileServerArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param httpMethod HTTP operation to perform
+         * @param httpMethod HTTP operation to perform. Possible values are `GET`, `POST`, `PUT` and `DELETE`.
          * 
          * @return builder
          * 
@@ -205,7 +205,7 @@ public final class HttpServerProfileServerArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param httpMethod HTTP operation to perform
+         * @param httpMethod HTTP operation to perform. Possible values are `GET`, `POST`, `PUT` and `DELETE`.
          * 
          * @return builder
          * 
@@ -257,7 +257,7 @@ public final class HttpServerProfileServerArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param protocol HTTP server protocol
+         * @param protocol HTTP server protocol. Possible values are `HTTP` and `HTTPS`.
          * 
          * @return builder
          * 
@@ -268,7 +268,7 @@ public final class HttpServerProfileServerArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param protocol HTTP server protocol
+         * @param protocol HTTP server protocol. Possible values are `HTTP` and `HTTPS`.
          * 
          * @return builder
          * 
@@ -278,7 +278,7 @@ public final class HttpServerProfileServerArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param tlsVersion HTTP server TLS version
+         * @param tlsVersion HTTP server TLS version. Possible values are `1.0`, `1.1`, `1.2` and `1.3`.
          * 
          * @return builder
          * 
@@ -289,7 +289,7 @@ public final class HttpServerProfileServerArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param tlsVersion HTTP server TLS version
+         * @param tlsVersion HTTP server TLS version. Possible values are `1.0`, `1.1`, `1.2` and `1.3`.
          * 
          * @return builder
          * 

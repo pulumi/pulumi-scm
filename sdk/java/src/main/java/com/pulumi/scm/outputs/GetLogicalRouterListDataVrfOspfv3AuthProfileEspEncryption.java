@@ -11,7 +11,7 @@ import java.util.Objects;
 @CustomType
 public final class GetLogicalRouterListDataVrfOspfv3AuthProfileEspEncryption {
     /**
-     * @return Algorithm
+     * @return Algorithm. Possible values are `3des`, `aes-128-cbc`, `aes-192-cbc`, `aes-256-cbc` and `null`.
      * 
      */
     private String algorithm;
@@ -23,7 +23,7 @@ public final class GetLogicalRouterListDataVrfOspfv3AuthProfileEspEncryption {
 
     private GetLogicalRouterListDataVrfOspfv3AuthProfileEspEncryption() {}
     /**
-     * @return Algorithm
+     * @return Algorithm. Possible values are `3des`, `aes-128-cbc`, `aes-192-cbc`, `aes-256-cbc` and `null`.
      * 
      */
     public String algorithm() {

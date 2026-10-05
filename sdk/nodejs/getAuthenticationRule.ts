@@ -39,12 +39,21 @@ export interface GetAuthenticationRuleArgs {
      * Device
      */
     device?: string;
+    /**
+     * Folder
+     */
     folder?: string;
     /**
      * The UUID of the authentication rule
      */
     id: string;
+    /**
+     * The name of the authentication rule
+     */
     name?: string;
+    /**
+     * Snippet
+     */
     snippet?: string;
 }
 
@@ -52,40 +61,121 @@ export interface GetAuthenticationRuleArgs {
  * A collection of values returned by getAuthenticationRule.
  */
 export interface GetAuthenticationRuleResult {
+    /**
+     * The authentication profile name
+     */
     readonly authenticationEnforcement: string;
+    /**
+     * The destination URL categories
+     */
     readonly categories: string[];
+    /**
+     * The description of the authentication rule
+     */
     readonly description: string;
+    /**
+     * The destination Host Integrity Profile (HIP)
+     */
     readonly destinationHips: string[];
+    /**
+     * The destination addresses
+     */
     readonly destinations: string[];
     /**
      * Device
      */
     readonly device: string;
+    /**
+     * Is the authentication rule disabled?
+     */
     readonly disabled: boolean;
+    /**
+     * Folder
+     */
     readonly folder: string;
+    /**
+     * The source security zones
+     */
     readonly froms: string[];
+    /**
+     * Group tag
+     */
     readonly groupTag: string;
+    /**
+     * The source Host Integrity Profile (HIP)
+     */
     readonly hipProfiles: string[];
     /**
      * The UUID of the authentication rule
      */
     readonly id: string;
+    /**
+     * Log authentication timeouts?
+     */
     readonly logAuthenticationTimeout: boolean;
+    /**
+     * The log forwarding profile name
+     */
     readonly logSetting: string;
+    /**
+     * The name of the authentication rule
+     */
     readonly name: string;
+    /**
+     * Are the destination addresses negated?
+     */
     readonly negateDestination: boolean;
+    /**
+     * Are the source addresses negated?
+     */
     readonly negateSource: boolean;
+    /**
+     * The relative position of the rule. Possible values are `pre` and `post`.
+     */
     readonly position: string;
+    /**
+     * Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
+     */
     readonly relativePosition: string;
+    /**
+     * The destination ports
+     */
     readonly services: string[];
+    /**
+     * Snippet
+     */
     readonly snippet: string;
+    /**
+     * The source Host Integrity Profile (HIP)
+     */
     readonly sourceHips: string[];
+    /**
+     * The source users
+     */
     readonly sourceUsers: string[];
+    /**
+     * The source addresses
+     */
     readonly sources: string[];
+    /**
+     * The authentication rule tags
+     */
     readonly tags: string[];
+    /**
+     * UUID of the rule to position this rule relative to. Required when `relativePosition` is `"before"` or `"after"`.
+     */
     readonly targetRule: string;
+    /**
+     * The Terraform ID.
+     */
     readonly tfid: string;
+    /**
+     * The authentication session timeout (seconds)
+     */
     readonly timeout: number;
+    /**
+     * The destination security zones
+     */
     readonly tos: string[];
 }
 /**
@@ -123,11 +213,20 @@ export interface GetAuthenticationRuleOutputArgs {
      * Device
      */
     device?: pulumi.Input<string | undefined>;
+    /**
+     * Folder
+     */
     folder?: pulumi.Input<string | undefined>;
     /**
      * The UUID of the authentication rule
      */
     id: pulumi.Input<string>;
+    /**
+     * The name of the authentication rule
+     */
     name?: pulumi.Input<string | undefined>;
+    /**
+     * Snippet
+     */
     snippet?: pulumi.Input<string | undefined>;
 }

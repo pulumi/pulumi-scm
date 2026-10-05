@@ -88,7 +88,7 @@ class _SnippetState:
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] labels: Labels applied to the snippet
         :param pulumi.Input[_builtins.str] name: The name of the snippet
         :param pulumi.Input[_builtins.str] tfid: The Terraform ID.
-        :param pulumi.Input[_builtins.str] type: The snippet type
+        :param pulumi.Input[_builtins.str] type: The snippet type. Possible values are `predefined`, `custom` and `readonly`.
         """
         if description is not None:
             pulumi.set(__self__, "description", description)
@@ -153,7 +153,7 @@ class _SnippetState:
     @pulumi.getter
     def type(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
-        The snippet type
+        The snippet type. Possible values are `predefined`, `custom` and `readonly`.
         """
         return pulumi.get(self, "type")
 
@@ -306,7 +306,7 @@ class Snippet(pulumi.CustomResource):
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] labels: Labels applied to the snippet
         :param pulumi.Input[_builtins.str] name: The name of the snippet
         :param pulumi.Input[_builtins.str] tfid: The Terraform ID.
-        :param pulumi.Input[_builtins.str] type: The snippet type
+        :param pulumi.Input[_builtins.str] type: The snippet type. Possible values are `predefined`, `custom` and `readonly`.
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
 
@@ -355,7 +355,7 @@ class Snippet(pulumi.CustomResource):
     @pulumi.getter
     def type(self) -> pulumi.Output[_builtins.str]:
         """
-        The snippet type
+        The snippet type. Possible values are `predefined`, `custom` and `readonly`.
         """
         return pulumi.get(self, "type")
 

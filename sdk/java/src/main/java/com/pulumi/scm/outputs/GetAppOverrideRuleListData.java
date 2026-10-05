@@ -38,7 +38,7 @@ public final class GetAppOverrideRuleListData {
      */
     private Boolean disabled;
     /**
-     * @return The folder of the item. Default: Shared.
+     * @return The folder in which the resource is defined
      * 
      */
     private String folder;
@@ -58,7 +58,7 @@ public final class GetAppOverrideRuleListData {
      */
     private String id;
     /**
-     * @return The name of the item.
+     * @return Name
      * 
      */
     private String name;
@@ -78,12 +78,12 @@ public final class GetAppOverrideRuleListData {
      */
     private String port;
     /**
-     * @return The position of a security rule
+     * @return The position of a security rule. Possible values are `pre` and `post`.
      * 
      */
     private String position;
     /**
-     * @return Protocol
+     * @return Protocol. Possible values are `tcp` and `udp`.
      * 
      */
     private String protocol;
@@ -93,7 +93,7 @@ public final class GetAppOverrideRuleListData {
      */
     private String relativePosition;
     /**
-     * @return The snippet of the item.
+     * @return The snippet in which the resource is defined
      * 
      */
     private String snippet;
@@ -108,7 +108,7 @@ public final class GetAppOverrideRuleListData {
      */
     private List<String> tags;
     /**
-     * @return The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `&#34;before&#34;` or `&#34;after&#34;`.
+     * @return UUID of the rule to position this rule relative to. Required when `relativePosition` is `&#34;before&#34;` or `&#34;after&#34;`.
      * 
      */
     private String targetRule;
@@ -160,7 +160,7 @@ public final class GetAppOverrideRuleListData {
         return this.disabled;
     }
     /**
-     * @return The folder of the item. Default: Shared.
+     * @return The folder in which the resource is defined
      * 
      */
     public String folder() {
@@ -188,7 +188,7 @@ public final class GetAppOverrideRuleListData {
         return this.id;
     }
     /**
-     * @return The name of the item.
+     * @return Name
      * 
      */
     public String name() {
@@ -216,14 +216,14 @@ public final class GetAppOverrideRuleListData {
         return this.port;
     }
     /**
-     * @return The position of a security rule
+     * @return The position of a security rule. Possible values are `pre` and `post`.
      * 
      */
     public String position() {
         return this.position;
     }
     /**
-     * @return Protocol
+     * @return Protocol. Possible values are `tcp` and `udp`.
      * 
      */
     public String protocol() {
@@ -237,7 +237,7 @@ public final class GetAppOverrideRuleListData {
         return this.relativePosition;
     }
     /**
-     * @return The snippet of the item.
+     * @return The snippet in which the resource is defined
      * 
      */
     public String snippet() {
@@ -258,7 +258,7 @@ public final class GetAppOverrideRuleListData {
         return this.tags;
     }
     /**
-     * @return The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `&#34;before&#34;` or `&#34;after&#34;`.
+     * @return UUID of the rule to position this rule relative to. Required when `relativePosition` is `&#34;before&#34;` or `&#34;after&#34;`.
      * 
      */
     public String targetRule() {

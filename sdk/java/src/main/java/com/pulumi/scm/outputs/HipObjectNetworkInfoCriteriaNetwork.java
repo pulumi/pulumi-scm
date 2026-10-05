@@ -20,8 +20,6 @@ public final class HipObjectNetworkInfoCriteriaNetwork {
     /**
      * @return Is not
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `is` and `isNot`.
-     * 
      */
     private @Nullable HipObjectNetworkInfoCriteriaNetworkIsNot isNot;
 
@@ -35,8 +33,6 @@ public final class HipObjectNetworkInfoCriteriaNetwork {
     }
     /**
      * @return Is not
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `is` and `isNot`.
      * 
      */
     public Optional<HipObjectNetworkInfoCriteriaNetworkIsNot> isNot() {

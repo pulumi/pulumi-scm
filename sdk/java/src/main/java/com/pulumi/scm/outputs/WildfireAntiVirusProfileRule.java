@@ -13,7 +13,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class WildfireAntiVirusProfileRule {
     /**
-     * @return Analysis
+     * @return Analysis. Possible values are `public-cloud` and `private-cloud`.
      * 
      */
     private @Nullable String analysis;
@@ -23,7 +23,7 @@ public final class WildfireAntiVirusProfileRule {
      */
     private @Nullable List<String> applications;
     /**
-     * @return Direction
+     * @return Direction. Possible values are `download`, `upload` and `both`.
      * 
      */
     private @Nullable String direction;
@@ -40,7 +40,7 @@ public final class WildfireAntiVirusProfileRule {
 
     private WildfireAntiVirusProfileRule() {}
     /**
-     * @return Analysis
+     * @return Analysis. Possible values are `public-cloud` and `private-cloud`.
      * 
      */
     public Optional<String> analysis() {
@@ -54,7 +54,7 @@ public final class WildfireAntiVirusProfileRule {
         return this.applications == null ? List.of() : this.applications;
     }
     /**
-     * @return Direction
+     * @return Direction. Possible values are `download`, `upload` and `both`.
      * 
      */
     public Optional<String> direction() {

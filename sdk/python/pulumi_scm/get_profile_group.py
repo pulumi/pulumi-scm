@@ -76,11 +76,17 @@ class GetProfileGroupResult:
     @_builtins.property
     @pulumi.getter(name="aiSecurities")
     def ai_securities(self) -> Sequence[_builtins.str]:
+        """
+        Ai security
+        """
         return pulumi.get(self, "ai_securities")
 
     @_builtins.property
     @pulumi.getter(name="dataFilterings")
     def data_filterings(self) -> Sequence[_builtins.str]:
+        """
+        Data filtering
+        """
         return pulumi.get(self, "data_filterings")
 
     @_builtins.property
@@ -94,16 +100,25 @@ class GetProfileGroupResult:
     @_builtins.property
     @pulumi.getter(name="dnsSecurities")
     def dns_securities(self) -> Sequence[_builtins.str]:
+        """
+        Dns security
+        """
         return pulumi.get(self, "dns_securities")
 
     @_builtins.property
     @pulumi.getter(name="fileBlockings")
     def file_blockings(self) -> Sequence[_builtins.str]:
+        """
+        File blocking
+        """
         return pulumi.get(self, "file_blockings")
 
     @_builtins.property
     @pulumi.getter
     def folder(self) -> _builtins.str:
+        """
+        The folder in which the resource is defined
+        """
         return pulumi.get(self, "folder")
 
     @_builtins.property
@@ -117,41 +132,65 @@ class GetProfileGroupResult:
     @_builtins.property
     @pulumi.getter
     def name(self) -> _builtins.str:
+        """
+        The name of the profile group
+        """
         return pulumi.get(self, "name")
 
     @_builtins.property
     @pulumi.getter(name="saasSecurities")
     def saas_securities(self) -> Sequence[_builtins.str]:
+        """
+        Saas security
+        """
         return pulumi.get(self, "saas_securities")
 
     @_builtins.property
     @pulumi.getter
     def snippet(self) -> _builtins.str:
+        """
+        The snippet in which the resource is defined
+        """
         return pulumi.get(self, "snippet")
 
     @_builtins.property
     @pulumi.getter
     def spywares(self) -> Sequence[_builtins.str]:
+        """
+        Spyware
+        """
         return pulumi.get(self, "spywares")
 
     @_builtins.property
     @pulumi.getter
     def tfid(self) -> _builtins.str:
+        """
+        The Terraform ID.
+        """
         return pulumi.get(self, "tfid")
 
     @_builtins.property
     @pulumi.getter(name="urlFilterings")
     def url_filterings(self) -> Sequence[_builtins.str]:
+        """
+        Url filtering
+        """
         return pulumi.get(self, "url_filterings")
 
     @_builtins.property
     @pulumi.getter(name="virusAndWildfireAnalyses")
     def virus_and_wildfire_analyses(self) -> Sequence[_builtins.str]:
+        """
+        Virus and wildfire analysis
+        """
         return pulumi.get(self, "virus_and_wildfire_analyses")
 
     @_builtins.property
     @pulumi.getter
     def vulnerabilities(self) -> Sequence[_builtins.str]:
+        """
+        Vulnerability
+        """
         return pulumi.get(self, "vulnerabilities")
 
 
@@ -189,7 +228,10 @@ def get_profile_group(device: Optional[_builtins.str] = None,
 
 
     :param _builtins.str device: The device in which the resource is defined
+    :param _builtins.str folder: The folder in which the resource is defined
     :param _builtins.str id: The UUID of the profile group
+    :param _builtins.str name: The name of the profile group
+    :param _builtins.str snippet: The snippet in which the resource is defined
     """
     __args__ = dict()
     __args__['device'] = device
@@ -227,7 +269,10 @@ def get_profile_group_output(device: pulumi.Input[Optional[Optional[_builtins.st
 
 
     :param _builtins.str device: The device in which the resource is defined
+    :param _builtins.str folder: The folder in which the resource is defined
     :param _builtins.str id: The UUID of the profile group
+    :param _builtins.str name: The name of the profile group
+    :param _builtins.str snippet: The snippet in which the resource is defined
     """
     __args__ = dict()
     __args__['device'] = device

@@ -25,7 +25,7 @@ namespace Pulumi.Scm.Inputs
         public Input<Inputs.IkeGatewayProtocolIkev2Args>? Ikev2 { get; set; }
 
         /// <summary>
-        /// Version
+        /// Version. Possible values are `ikev2-preferred`, `Ikev1` and `Ikev2`.
         /// </summary>
         [Input("version")]
         public Input<string>? Version { get; set; }

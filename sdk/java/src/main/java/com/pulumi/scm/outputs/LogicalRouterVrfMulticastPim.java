@@ -49,7 +49,7 @@ public final class LogicalRouterVrfMulticastPim {
      */
     private @Nullable LogicalRouterVrfMulticastPimRp rp;
     /**
-     * @return Rpf lookup mode
+     * @return Rpf lookup mode. Possible values are `mrib-then-urib`, `mrib-only` and `urib-only`.
      * 
      */
     private @Nullable String rpfLookupMode;
@@ -108,7 +108,7 @@ public final class LogicalRouterVrfMulticastPim {
         return Optional.ofNullable(this.rp);
     }
     /**
-     * @return Rpf lookup mode
+     * @return Rpf lookup mode. Possible values are `mrib-then-urib`, `mrib-only` and `urib-only`.
      * 
      */
     public Optional<String> rpfLookupMode() {

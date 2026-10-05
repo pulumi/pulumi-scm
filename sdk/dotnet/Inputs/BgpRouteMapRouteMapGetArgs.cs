@@ -13,7 +13,7 @@ namespace Pulumi.Scm.Inputs
     public sealed class BgpRouteMapRouteMapGetArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Action
+        /// Action. Possible values are `Permit` and `Deny`.
         /// </summary>
         [Input("action")]
         public Input<string>? Action { get; set; }

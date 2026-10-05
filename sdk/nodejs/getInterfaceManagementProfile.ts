@@ -41,12 +41,21 @@ export interface GetInterfaceManagementProfileArgs {
      * The device in which the resource is defined
      */
     device?: string;
+    /**
+     * The folder in which the resource is defined
+     */
     folder?: string;
     /**
      * UUID of the resource
      */
     id: string;
+    /**
+     * Name
+     */
     name?: string;
+    /**
+     * The snippet in which the resource is defined
+     */
     snippet?: string;
 }
 
@@ -58,24 +67,69 @@ export interface GetInterfaceManagementProfileResult {
      * The device in which the resource is defined
      */
     readonly device: string;
+    /**
+     * The folder in which the resource is defined
+     */
     readonly folder: string;
+    /**
+     * Allow HTTP?
+     */
     readonly http: boolean;
+    /**
+     * Allow HTTP OCSP?
+     */
     readonly httpOcsp: boolean;
+    /**
+     * Allow HTTPS?
+     */
     readonly https: boolean;
     /**
      * UUID of the resource
      */
     readonly id: string;
+    /**
+     * Name
+     */
     readonly name: string;
+    /**
+     * Allowed IP address(es)
+     */
     readonly permittedIps: outputs.GetInterfaceManagementProfilePermittedIp[];
+    /**
+     * Allow ping?
+     */
     readonly ping: boolean;
+    /**
+     * Allow response pages?
+     */
     readonly responsePages: boolean;
+    /**
+     * The snippet in which the resource is defined
+     */
     readonly snippet: string;
+    /**
+     * Allow SSH?
+     */
     readonly ssh: boolean;
+    /**
+     * Allow telnet? Seriously, why would you do this?!?
+     */
     readonly telnet: boolean;
+    /**
+     * The Terraform ID.
+     */
     readonly tfid: string;
+    /**
+     * Allow User-ID?
+     */
     readonly useridService: boolean;
+    /**
+     * Allow User-ID syslog listener (SSL)?
+     */
     readonly useridSyslogListenerSsl: boolean;
+    /**
+     * Allow User-ID syslog listener (UDP)?
+     */
     readonly useridSyslogListenerUdp: boolean;
 }
 /**
@@ -113,11 +167,20 @@ export interface GetInterfaceManagementProfileOutputArgs {
      * The device in which the resource is defined
      */
     device?: pulumi.Input<string | undefined>;
+    /**
+     * The folder in which the resource is defined
+     */
     folder?: pulumi.Input<string | undefined>;
     /**
      * UUID of the resource
      */
     id: pulumi.Input<string>;
+    /**
+     * Name
+     */
     name?: pulumi.Input<string | undefined>;
+    /**
+     * The snippet in which the resource is defined
+     */
     snippet?: pulumi.Input<string | undefined>;
 }

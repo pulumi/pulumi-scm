@@ -30,7 +30,7 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly bool? OrderFree;
         /// <summary>
-        /// Scope
+        /// Scope. Possible values are `protocol-data-unit` and `Session`.
         /// </summary>
         public readonly string? Scope;
 

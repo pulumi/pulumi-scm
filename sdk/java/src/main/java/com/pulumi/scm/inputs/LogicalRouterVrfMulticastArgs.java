@@ -87,14 +87,14 @@ public final class LogicalRouterVrfMulticastArgs extends com.pulumi.resources.Re
     }
 
     /**
-     * Mode
+     * Mode. Possible values are `PIM-SM` and `IGMP-Proxy`.
      * 
      */
     @Import(name="mode")
     private @Nullable Output<String> mode;
 
     /**
-     * @return Mode
+     * @return Mode. Possible values are `PIM-SM` and `IGMP-Proxy`.
      * 
      */
     public Optional<Output<String>> mode() {
@@ -336,7 +336,7 @@ public final class LogicalRouterVrfMulticastArgs extends com.pulumi.resources.Re
         }
 
         /**
-         * @param mode Mode
+         * @param mode Mode. Possible values are `PIM-SM` and `IGMP-Proxy`.
          * 
          * @return builder
          * 
@@ -347,7 +347,7 @@ public final class LogicalRouterVrfMulticastArgs extends com.pulumi.resources.Re
         }
 
         /**
-         * @param mode Mode
+         * @param mode Mode. Possible values are `PIM-SM` and `IGMP-Proxy`.
          * 
          * @return builder
          * 

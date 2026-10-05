@@ -19,9 +19,7 @@ namespace Pulumi.Scm.Inputs
         public Input<Inputs.RoutePrefixListTypeIpv4Ipv4EntryPrefixEntryArgs>? Entry { get; set; }
 
         /// <summary>
-        /// Network
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Entry` and `Network`.
+        /// Network. Possible values are `Any`.
         /// </summary>
         [Input("network")]
         public Input<string>? Network { get; set; }

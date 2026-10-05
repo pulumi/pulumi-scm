@@ -63,12 +63,12 @@ public final class TlsServiceProfileProtocolSettings {
      */
     private @Nullable Boolean keyxchgAlgoRsa;
     /**
-     * @return Maximum TLS version
+     * @return Maximum TLS version. Possible values are `tls1-0`, `tls1-1`, `tls1-2` and `tls1-3`.
      * 
      */
     private @Nullable String maxVersion;
     /**
-     * @return Minimum TLS version
+     * @return Minimum TLS version. Possible values are `tls1-0`, `tls1-1`, `tls1-2` and `tls1-3`.
      * 
      */
     private @Nullable String minVersion;
@@ -145,14 +145,14 @@ public final class TlsServiceProfileProtocolSettings {
         return Optional.ofNullable(this.keyxchgAlgoRsa);
     }
     /**
-     * @return Maximum TLS version
+     * @return Maximum TLS version. Possible values are `tls1-0`, `tls1-1`, `tls1-2` and `tls1-3`.
      * 
      */
     public Optional<String> maxVersion() {
         return Optional.ofNullable(this.maxVersion);
     }
     /**
-     * @return Minimum TLS version
+     * @return Minimum TLS version. Possible values are `tls1-0`, `tls1-1`, `tls1-2` and `tls1-3`.
      * 
      */
     public Optional<String> minVersion() {

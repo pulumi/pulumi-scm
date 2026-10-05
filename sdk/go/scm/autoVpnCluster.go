@@ -121,7 +121,7 @@ type AutoVpnCluster struct {
 	Name pulumi.StringOutput `pulumi:"name"`
 	// The Terraform ID.
 	Tfid pulumi.StringOutput `pulumi:"tfid"`
-	// VPN cluster type
+	// VPN cluster type. Possible values are `hub-spoke` and `mesh`.
 	Type pulumi.StringOutput `pulumi:"type"`
 }
 
@@ -169,7 +169,7 @@ type autoVpnClusterState struct {
 	Name *string `pulumi:"name"`
 	// The Terraform ID.
 	Tfid *string `pulumi:"tfid"`
-	// VPN cluster type
+	// VPN cluster type. Possible values are `hub-spoke` and `mesh`.
 	Type *string `pulumi:"type"`
 }
 
@@ -188,7 +188,7 @@ type AutoVpnClusterState struct {
 	Name pulumi.StringPtrInput
 	// The Terraform ID.
 	Tfid pulumi.StringPtrInput
-	// VPN cluster type
+	// VPN cluster type. Possible values are `hub-spoke` and `mesh`.
 	Type pulumi.StringPtrInput
 }
 
@@ -209,7 +209,7 @@ type autoVpnClusterArgs struct {
 	Gateways []AutoVpnClusterGateway `pulumi:"gateways"`
 	// VPN cluster name
 	Name *string `pulumi:"name"`
-	// VPN cluster type
+	// VPN cluster type. Possible values are `hub-spoke` and `mesh`.
 	Type *string `pulumi:"type"`
 }
 
@@ -227,7 +227,7 @@ type AutoVpnClusterArgs struct {
 	Gateways AutoVpnClusterGatewayArrayInput
 	// VPN cluster name
 	Name pulumi.StringPtrInput
-	// VPN cluster type
+	// VPN cluster type. Possible values are `hub-spoke` and `mesh`.
 	Type pulumi.StringPtrInput
 }
 
@@ -353,7 +353,7 @@ func (o AutoVpnClusterOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v *AutoVpnCluster) pulumi.StringOutput { return v.Tfid }).(pulumi.StringOutput)
 }
 
-// VPN cluster type
+// VPN cluster type. Possible values are `hub-spoke` and `mesh`.
 func (o AutoVpnClusterOutput) Type() pulumi.StringOutput {
 	return o.ApplyT(func(v *AutoVpnCluster) pulumi.StringOutput { return v.Type }).(pulumi.StringOutput)
 }

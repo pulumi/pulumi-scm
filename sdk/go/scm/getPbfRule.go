@@ -58,34 +58,56 @@ func LookupPbfRule(ctx *pulumi.Context, args *LookupPbfRuleArgs, opts ...pulumi.
 type LookupPbfRuleArgs struct {
 	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
+	// The folder in which the resource is defined
 	Folder *string `pulumi:"folder"`
 	// UUID of the resource
-	Id      string  `pulumi:"id"`
-	Name    *string `pulumi:"name"`
+	Id string `pulumi:"id"`
+	// PBF rule name
+	Name *string `pulumi:"name"`
+	// The snippet in which the resource is defined
 	Snippet *string `pulumi:"snippet"`
 }
 
 // A collection of values returned by getPbfRule.
 type LookupPbfRuleResult struct {
-	Action       GetPbfRuleAction `pulumi:"action"`
-	Applications []string         `pulumi:"applications"`
-	Description  string           `pulumi:"description"`
-	Destinations []string         `pulumi:"destinations"`
+	// Action
+	Action GetPbfRuleAction `pulumi:"action"`
+	// Applications
+	Applications []string `pulumi:"applications"`
+	// Description
+	Description string `pulumi:"description"`
+	// Destination addresses
+	Destinations []string `pulumi:"destinations"`
 	// The device in which the resource is defined
-	Device                 string                           `pulumi:"device"`
+	Device string `pulumi:"device"`
+	// Enforce symmetric return
 	EnforceSymmetricReturn GetPbfRuleEnforceSymmetricReturn `pulumi:"enforceSymmetricReturn"`
-	Folder                 string                           `pulumi:"folder"`
-	From                   GetPbfRuleFrom                   `pulumi:"from"`
+	// The folder in which the resource is defined
+	Folder string `pulumi:"folder"`
+	// From
+	From GetPbfRuleFrom `pulumi:"from"`
 	// UUID of the resource
-	Id          string   `pulumi:"id"`
-	Name        string   `pulumi:"name"`
-	Schedule    string   `pulumi:"schedule"`
-	Services    []string `pulumi:"services"`
-	Snippet     string   `pulumi:"snippet"`
+	Id string `pulumi:"id"`
+	// PBF rule name
+	Name string `pulumi:"name"`
+	// Negate destination address
+	NegateDestination bool `pulumi:"negateDestination"`
+	// Negate source address
+	NegateSource bool `pulumi:"negateSource"`
+	// Schedule
+	Schedule string `pulumi:"schedule"`
+	// Services
+	Services []string `pulumi:"services"`
+	// The snippet in which the resource is defined
+	Snippet string `pulumi:"snippet"`
+	// Source users
 	SourceUsers []string `pulumi:"sourceUsers"`
-	Sources     []string `pulumi:"sources"`
-	Tags        []string `pulumi:"tags"`
-	Tfid        string   `pulumi:"tfid"`
+	// Source addresses
+	Sources []string `pulumi:"sources"`
+	// Tags
+	Tags []string `pulumi:"tags"`
+	// The Terraform ID.
+	Tfid string `pulumi:"tfid"`
 }
 
 func LookupPbfRuleOutput(ctx *pulumi.Context, args LookupPbfRuleOutputArgs, opts ...pulumi.InvokeOption) LookupPbfRuleResultOutput {
@@ -97,10 +119,13 @@ func LookupPbfRuleOutput(ctx *pulumi.Context, args LookupPbfRuleOutputArgs, opts
 type LookupPbfRuleOutputArgs struct {
 	// The device in which the resource is defined
 	Device pulumi.StringPtrInput `pulumi:"device"`
+	// The folder in which the resource is defined
 	Folder pulumi.StringPtrInput `pulumi:"folder"`
 	// UUID of the resource
-	Id      pulumi.StringInput    `pulumi:"id"`
-	Name    pulumi.StringPtrInput `pulumi:"name"`
+	Id pulumi.StringInput `pulumi:"id"`
+	// PBF rule name
+	Name pulumi.StringPtrInput `pulumi:"name"`
+	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrInput `pulumi:"snippet"`
 }
 
@@ -123,18 +148,22 @@ func (o LookupPbfRuleResultOutput) ToLookupPbfRuleResultOutputWithContext(ctx co
 	return o
 }
 
+// Action
 func (o LookupPbfRuleResultOutput) Action() GetPbfRuleActionOutput {
 	return o.ApplyT(func(v LookupPbfRuleResult) GetPbfRuleAction { return v.Action }).(GetPbfRuleActionOutput)
 }
 
+// Applications
 func (o LookupPbfRuleResultOutput) Applications() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupPbfRuleResult) []string { return v.Applications }).(pulumi.StringArrayOutput)
 }
 
+// Description
 func (o LookupPbfRuleResultOutput) Description() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupPbfRuleResult) string { return v.Description }).(pulumi.StringOutput)
 }
 
+// Destination addresses
 func (o LookupPbfRuleResultOutput) Destinations() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupPbfRuleResult) []string { return v.Destinations }).(pulumi.StringArrayOutput)
 }
@@ -144,14 +173,17 @@ func (o LookupPbfRuleResultOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupPbfRuleResult) string { return v.Device }).(pulumi.StringOutput)
 }
 
+// Enforce symmetric return
 func (o LookupPbfRuleResultOutput) EnforceSymmetricReturn() GetPbfRuleEnforceSymmetricReturnOutput {
 	return o.ApplyT(func(v LookupPbfRuleResult) GetPbfRuleEnforceSymmetricReturn { return v.EnforceSymmetricReturn }).(GetPbfRuleEnforceSymmetricReturnOutput)
 }
 
+// The folder in which the resource is defined
 func (o LookupPbfRuleResultOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupPbfRuleResult) string { return v.Folder }).(pulumi.StringOutput)
 }
 
+// From
 func (o LookupPbfRuleResultOutput) From() GetPbfRuleFromOutput {
 	return o.ApplyT(func(v LookupPbfRuleResult) GetPbfRuleFrom { return v.From }).(GetPbfRuleFromOutput)
 }
@@ -161,34 +193,52 @@ func (o LookupPbfRuleResultOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupPbfRuleResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
+// PBF rule name
 func (o LookupPbfRuleResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupPbfRuleResult) string { return v.Name }).(pulumi.StringOutput)
 }
 
+// Negate destination address
+func (o LookupPbfRuleResultOutput) NegateDestination() pulumi.BoolOutput {
+	return o.ApplyT(func(v LookupPbfRuleResult) bool { return v.NegateDestination }).(pulumi.BoolOutput)
+}
+
+// Negate source address
+func (o LookupPbfRuleResultOutput) NegateSource() pulumi.BoolOutput {
+	return o.ApplyT(func(v LookupPbfRuleResult) bool { return v.NegateSource }).(pulumi.BoolOutput)
+}
+
+// Schedule
 func (o LookupPbfRuleResultOutput) Schedule() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupPbfRuleResult) string { return v.Schedule }).(pulumi.StringOutput)
 }
 
+// Services
 func (o LookupPbfRuleResultOutput) Services() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupPbfRuleResult) []string { return v.Services }).(pulumi.StringArrayOutput)
 }
 
+// The snippet in which the resource is defined
 func (o LookupPbfRuleResultOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupPbfRuleResult) string { return v.Snippet }).(pulumi.StringOutput)
 }
 
+// Source users
 func (o LookupPbfRuleResultOutput) SourceUsers() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupPbfRuleResult) []string { return v.SourceUsers }).(pulumi.StringArrayOutput)
 }
 
+// Source addresses
 func (o LookupPbfRuleResultOutput) Sources() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupPbfRuleResult) []string { return v.Sources }).(pulumi.StringArrayOutput)
 }
 
+// Tags
 func (o LookupPbfRuleResultOutput) Tags() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupPbfRuleResult) []string { return v.Tags }).(pulumi.StringArrayOutput)
 }
 
+// The Terraform ID.
 func (o LookupPbfRuleResultOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupPbfRuleResult) string { return v.Tfid }).(pulumi.StringOutput)
 }

@@ -16,14 +16,14 @@ public final class BgpAddressFamilyProfileIpv4UnicastOrfArgs extends com.pulumi.
     public static final BgpAddressFamilyProfileIpv4UnicastOrfArgs Empty = new BgpAddressFamilyProfileIpv4UnicastOrfArgs();
 
     /**
-     * ORF prefix list
+     * ORF prefix list. Possible values are `none`, `both`, `receive` and `send`.
      * 
      */
     @Import(name="orfPrefixList")
     private @Nullable Output<String> orfPrefixList;
 
     /**
-     * @return ORF prefix list
+     * @return ORF prefix list. Possible values are `none`, `both`, `receive` and `send`.
      * 
      */
     public Optional<Output<String>> orfPrefixList() {
@@ -55,7 +55,7 @@ public final class BgpAddressFamilyProfileIpv4UnicastOrfArgs extends com.pulumi.
         }
 
         /**
-         * @param orfPrefixList ORF prefix list
+         * @param orfPrefixList ORF prefix list. Possible values are `none`, `both`, `receive` and `send`.
          * 
          * @return builder
          * 
@@ -66,7 +66,7 @@ public final class BgpAddressFamilyProfileIpv4UnicastOrfArgs extends com.pulumi.
         }
 
         /**
-         * @param orfPrefixList ORF prefix list
+         * @param orfPrefixList ORF prefix list. Possible values are `none`, `both`, `receive` and `send`.
          * 
          * @return builder
          * 

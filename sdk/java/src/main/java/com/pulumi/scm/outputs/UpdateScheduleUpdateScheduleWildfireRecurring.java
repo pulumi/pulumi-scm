@@ -24,35 +24,25 @@ public final class UpdateScheduleUpdateScheduleWildfireRecurring {
     /**
      * @return Every30 mins
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `every15Mins`, `every30Mins`, `everyHour`, `everyMin`, `none`, and `realTime`.
-     * 
      */
     private @Nullable UpdateScheduleUpdateScheduleWildfireRecurringEvery30Mins every30Mins;
     /**
      * @return Every hour
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `every15Mins`, `every30Mins`, `everyHour`, `everyMin`, `none`, and `realTime`.
      * 
      */
     private @Nullable UpdateScheduleUpdateScheduleWildfireRecurringEveryHour everyHour;
     /**
      * @return Every min
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `every15Mins`, `every30Mins`, `everyHour`, `everyMin`, `none`, and `realTime`.
-     * 
      */
     private @Nullable UpdateScheduleUpdateScheduleWildfireRecurringEveryMin everyMin;
     /**
      * @return None
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `every15Mins`, `every30Mins`, `everyHour`, `everyMin`, `none`, and `realTime`.
-     * 
      */
     private @Nullable UpdateScheduleUpdateScheduleWildfireRecurringNone none;
     /**
      * @return Real time
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `every15Mins`, `every30Mins`, `everyHour`, `everyMin`, `none`, and `realTime`.
      * 
      */
     private @Nullable UpdateScheduleUpdateScheduleWildfireRecurringRealTime realTime;
@@ -68,16 +58,12 @@ public final class UpdateScheduleUpdateScheduleWildfireRecurring {
     /**
      * @return Every30 mins
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `every15Mins`, `every30Mins`, `everyHour`, `everyMin`, `none`, and `realTime`.
-     * 
      */
     public Optional<UpdateScheduleUpdateScheduleWildfireRecurringEvery30Mins> every30Mins() {
         return Optional.ofNullable(this.every30Mins);
     }
     /**
      * @return Every hour
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `every15Mins`, `every30Mins`, `everyHour`, `everyMin`, `none`, and `realTime`.
      * 
      */
     public Optional<UpdateScheduleUpdateScheduleWildfireRecurringEveryHour> everyHour() {
@@ -86,8 +72,6 @@ public final class UpdateScheduleUpdateScheduleWildfireRecurring {
     /**
      * @return Every min
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `every15Mins`, `every30Mins`, `everyHour`, `everyMin`, `none`, and `realTime`.
-     * 
      */
     public Optional<UpdateScheduleUpdateScheduleWildfireRecurringEveryMin> everyMin() {
         return Optional.ofNullable(this.everyMin);
@@ -95,16 +79,12 @@ public final class UpdateScheduleUpdateScheduleWildfireRecurring {
     /**
      * @return None
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `every15Mins`, `every30Mins`, `everyHour`, `everyMin`, `none`, and `realTime`.
-     * 
      */
     public Optional<UpdateScheduleUpdateScheduleWildfireRecurringNone> none() {
         return Optional.ofNullable(this.none);
     }
     /**
      * @return Real time
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `every15Mins`, `every30Mins`, `everyHour`, `everyMin`, `none`, and `realTime`.
      * 
      */
     public Optional<UpdateScheduleUpdateScheduleWildfireRecurringRealTime> realTime() {

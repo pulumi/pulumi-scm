@@ -100,7 +100,7 @@ namespace Pulumi.Scm
         /// </summary>
         public readonly bool AddHostRouteToIkePeer;
         /// <summary>
-        /// Backbone routing
+        /// Backbone routing. Possible values are `no-asymmetric-routing`, `asymmetric-routing-only` and `asymmetric-routing-with-load-share`.
         /// </summary>
         public readonly string BackboneRouting;
         /// <summary>

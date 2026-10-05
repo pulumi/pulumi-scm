@@ -38,8 +38,6 @@ class GlobalprotectMatchListArgs:
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input[_builtins.str] filter: Filter of the globalprotect match list entry
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] name: Name of the globalprotect match list entry
         :param pulumi.Input[_builtins.bool] quarantine: Quarantine Flag of the globalprotect match list entry
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] send_emails: Send Email List of the globalprotect match list entry
@@ -48,8 +46,6 @@ class GlobalprotectMatchListArgs:
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] send_syslogs: Send Sys log List of the globalprotect match list entry
         :param pulumi.Input[_builtins.bool] send_to_panorama: Send to Panorama Flag of the globalprotect match list entry
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         if description is not None:
             pulumi.set(__self__, "description", description)
@@ -117,8 +113,6 @@ class GlobalprotectMatchListArgs:
     def folder(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
-
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
 
@@ -215,8 +209,6 @@ class GlobalprotectMatchListArgs:
     def snippet(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
-
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
 
@@ -248,8 +240,6 @@ class _GlobalprotectMatchListState:
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input[_builtins.str] filter: Filter of the globalprotect match list entry
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] name: Name of the globalprotect match list entry
         :param pulumi.Input[_builtins.bool] quarantine: Quarantine Flag of the globalprotect match list entry
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] send_emails: Send Email List of the globalprotect match list entry
@@ -258,8 +248,6 @@ class _GlobalprotectMatchListState:
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] send_syslogs: Send Sys log List of the globalprotect match list entry
         :param pulumi.Input[_builtins.bool] send_to_panorama: Send to Panorama Flag of the globalprotect match list entry
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] tfid: The Terraform ID.
         """
         if description is not None:
@@ -330,8 +318,6 @@ class _GlobalprotectMatchListState:
     def folder(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
-
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
 
@@ -428,8 +414,6 @@ class _GlobalprotectMatchListState:
     def snippet(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
-
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
 
@@ -520,8 +504,6 @@ class GlobalprotectMatchList(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input[_builtins.str] filter: Filter of the globalprotect match list entry
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] name: Name of the globalprotect match list entry
         :param pulumi.Input[_builtins.bool] quarantine: Quarantine Flag of the globalprotect match list entry
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] send_emails: Send Email List of the globalprotect match list entry
@@ -530,8 +512,6 @@ class GlobalprotectMatchList(pulumi.CustomResource):
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] send_syslogs: Send Sys log List of the globalprotect match list entry
         :param pulumi.Input[_builtins.bool] send_to_panorama: Send to Panorama Flag of the globalprotect match list entry
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         ...
     @overload
@@ -667,8 +647,6 @@ class GlobalprotectMatchList(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input[_builtins.str] filter: Filter of the globalprotect match list entry
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] name: Name of the globalprotect match list entry
         :param pulumi.Input[_builtins.bool] quarantine: Quarantine Flag of the globalprotect match list entry
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] send_emails: Send Email List of the globalprotect match list entry
@@ -677,8 +655,6 @@ class GlobalprotectMatchList(pulumi.CustomResource):
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] send_syslogs: Send Sys log List of the globalprotect match list entry
         :param pulumi.Input[_builtins.bool] send_to_panorama: Send to Panorama Flag of the globalprotect match list entry
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] tfid: The Terraform ID.
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
@@ -729,8 +705,6 @@ class GlobalprotectMatchList(pulumi.CustomResource):
     def folder(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
-
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
 
@@ -795,8 +769,6 @@ class GlobalprotectMatchList(pulumi.CustomResource):
     def snippet(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
-
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
 

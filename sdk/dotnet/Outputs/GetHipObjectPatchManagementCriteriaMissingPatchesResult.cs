@@ -14,7 +14,7 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetHipObjectPatchManagementCriteriaMissingPatchesResult
     {
         /// <summary>
-        /// Check
+        /// Check. Possible values are `has-any`, `has-none` and `has-all`.
         /// </summary>
         public readonly string Check;
         /// <summary>

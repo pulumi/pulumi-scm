@@ -27,7 +27,7 @@ public final class ZoneProtectionProfileArgs extends com.pulumi.resources.Resour
      * Determine whether to drop or bypass packets that contain out-of-sync ACKs or out-of-window sequence numbers:
      * * `global` — Use system-wide setting that is assigned through TCP Settings or the CLI.
      * * `drop` — Drop packets that contain an asymmetric path.
-     * * `bypass` — Bypass scanning on packets that contain an asymmetric path.
+     * * `bypass` — Bypass scanning on packets that contain an asymmetric path. Possible values are `global`, `drop` and `bypass`.
      * 
      */
     @Import(name="asymmetricPath")
@@ -37,7 +37,7 @@ public final class ZoneProtectionProfileArgs extends com.pulumi.resources.Resour
      * @return Determine whether to drop or bypass packets that contain out-of-sync ACKs or out-of-window sequence numbers:
      * * `global` — Use system-wide setting that is assigned through TCP Settings or the CLI.
      * * `drop` — Drop packets that contain an asymmetric path.
-     * * `bypass` — Bypass scanning on packets that contain an asymmetric path.
+     * * `bypass` — Bypass scanning on packets that contain an asymmetric path. Possible values are `global`, `drop` and `bypass`.
      * 
      */
     public Optional<Output<String>> asymmetricPath() {
@@ -62,16 +62,12 @@ public final class ZoneProtectionProfileArgs extends com.pulumi.resources.Resour
     /**
      * The device in which the resource is defined
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
      */
     @Import(name="device")
     private @Nullable Output<String> device;
 
     /**
      * @return The device in which the resource is defined
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public Optional<Output<String>> device() {
@@ -111,16 +107,12 @@ public final class ZoneProtectionProfileArgs extends com.pulumi.resources.Resour
     /**
      * The folder in which the resource is defined
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
      */
     @Import(name="folder")
     private @Nullable Output<String> folder;
 
     /**
      * @return The folder in which the resource is defined
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public Optional<Output<String>> folder() {
@@ -266,7 +258,7 @@ public final class ZoneProtectionProfileArgs extends com.pulumi.resources.Resour
      * MPTCP is an extension of TCP that allows a client to maintain a connection by simultaneously using multiple paths to connect to the destination host. By default, MPTCP support is disabled, based on the global MPTCP setting.  Review or adjust the MPTCP settings for the security zones associated with this profile:
      * * `no` — Enable MPTCP support (do not strip the MPTCP option).
      * * `yes` — Disable MPTCP support (strip the MPTCP option). With this configured, MPTCP connections are converted to standard TCP connections, as MPTCP is backwards compatible with TCP.
-     * * `global` — Support MPTCP based on the global MPTCP setting. By default, the global MPTCP setting is set to yes so that MPTCP is disabled (the MPTCP option is stripped from the packet).
+     * * `global` — Support MPTCP based on the global MPTCP setting. By default, the global MPTCP setting is set to yes so that MPTCP is disabled (the MPTCP option is stripped from the packet). Possible values are `no`, `yes` and `global`.
      * 
      */
     @Import(name="mptcpOptionStrip")
@@ -276,7 +268,7 @@ public final class ZoneProtectionProfileArgs extends com.pulumi.resources.Resour
      * @return MPTCP is an extension of TCP that allows a client to maintain a connection by simultaneously using multiple paths to connect to the destination host. By default, MPTCP support is disabled, based on the global MPTCP setting.  Review or adjust the MPTCP settings for the security zones associated with this profile:
      * * `no` — Enable MPTCP support (do not strip the MPTCP option).
      * * `yes` — Disable MPTCP support (strip the MPTCP option). With this configured, MPTCP connections are converted to standard TCP connections, as MPTCP is backwards compatible with TCP.
-     * * `global` — Support MPTCP based on the global MPTCP setting. By default, the global MPTCP setting is set to yes so that MPTCP is disabled (the MPTCP option is stripped from the packet).
+     * * `global` — Support MPTCP based on the global MPTCP setting. By default, the global MPTCP setting is set to yes so that MPTCP is disabled (the MPTCP option is stripped from the packet). Possible values are `no`, `yes` and `global`.
      * 
      */
     public Optional<Output<String>> mptcpOptionStrip() {
@@ -332,7 +324,7 @@ public final class ZoneProtectionProfileArgs extends com.pulumi.resources.Resour
      * Determine whether to reject the packet if the first packet for the TCP session setup is not a SYN packet:
      * * `global` — Use system-wide setting that is assigned through the CLI.
      * * `yes` — Reject non-SYN TCP.
-     * * `no` — Accept non-SYN TCP.
+     * * `no` — Accept non-SYN TCP. Possible values are `global`, `yes` and `no`.
      * 
      */
     @Import(name="rejectNonSynTcp")
@@ -342,7 +334,7 @@ public final class ZoneProtectionProfileArgs extends com.pulumi.resources.Resour
      * @return Determine whether to reject the packet if the first packet for the TCP session setup is not a SYN packet:
      * * `global` — Use system-wide setting that is assigned through the CLI.
      * * `yes` — Reject non-SYN TCP.
-     * * `no` — Accept non-SYN TCP.
+     * * `no` — Accept non-SYN TCP. Possible values are `global`, `yes` and `no`.
      * 
      */
     public Optional<Output<String>> rejectNonSynTcp() {
@@ -397,16 +389,12 @@ public final class ZoneProtectionProfileArgs extends com.pulumi.resources.Resour
     /**
      * The snippet in which the resource is defined
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
      */
     @Import(name="snippet")
     private @Nullable Output<String> snippet;
 
     /**
      * @return The snippet in which the resource is defined
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public Optional<Output<String>> snippet() {
@@ -678,7 +666,7 @@ public final class ZoneProtectionProfileArgs extends com.pulumi.resources.Resour
          * @param asymmetricPath Determine whether to drop or bypass packets that contain out-of-sync ACKs or out-of-window sequence numbers:
          * * `global` — Use system-wide setting that is assigned through TCP Settings or the CLI.
          * * `drop` — Drop packets that contain an asymmetric path.
-         * * `bypass` — Bypass scanning on packets that contain an asymmetric path.
+         * * `bypass` — Bypass scanning on packets that contain an asymmetric path. Possible values are `global`, `drop` and `bypass`.
          * 
          * @return builder
          * 
@@ -692,7 +680,7 @@ public final class ZoneProtectionProfileArgs extends com.pulumi.resources.Resour
          * @param asymmetricPath Determine whether to drop or bypass packets that contain out-of-sync ACKs or out-of-window sequence numbers:
          * * `global` — Use system-wide setting that is assigned through TCP Settings or the CLI.
          * * `drop` — Drop packets that contain an asymmetric path.
-         * * `bypass` — Bypass scanning on packets that contain an asymmetric path.
+         * * `bypass` — Bypass scanning on packets that contain an asymmetric path. Possible values are `global`, `drop` and `bypass`.
          * 
          * @return builder
          * 
@@ -725,8 +713,6 @@ public final class ZoneProtectionProfileArgs extends com.pulumi.resources.Resour
         /**
          * @param device The device in which the resource is defined
          * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-         * 
          * @return builder
          * 
          */
@@ -737,8 +723,6 @@ public final class ZoneProtectionProfileArgs extends com.pulumi.resources.Resour
 
         /**
          * @param device The device in which the resource is defined
-         * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
          * 
          * @return builder
          * 
@@ -792,8 +776,6 @@ public final class ZoneProtectionProfileArgs extends com.pulumi.resources.Resour
         /**
          * @param folder The folder in which the resource is defined
          * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-         * 
          * @return builder
          * 
          */
@@ -804,8 +786,6 @@ public final class ZoneProtectionProfileArgs extends com.pulumi.resources.Resour
 
         /**
          * @param folder The folder in which the resource is defined
-         * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
          * 
          * @return builder
          * 
@@ -1007,7 +987,7 @@ public final class ZoneProtectionProfileArgs extends com.pulumi.resources.Resour
          * @param mptcpOptionStrip MPTCP is an extension of TCP that allows a client to maintain a connection by simultaneously using multiple paths to connect to the destination host. By default, MPTCP support is disabled, based on the global MPTCP setting.  Review or adjust the MPTCP settings for the security zones associated with this profile:
          * * `no` — Enable MPTCP support (do not strip the MPTCP option).
          * * `yes` — Disable MPTCP support (strip the MPTCP option). With this configured, MPTCP connections are converted to standard TCP connections, as MPTCP is backwards compatible with TCP.
-         * * `global` — Support MPTCP based on the global MPTCP setting. By default, the global MPTCP setting is set to yes so that MPTCP is disabled (the MPTCP option is stripped from the packet).
+         * * `global` — Support MPTCP based on the global MPTCP setting. By default, the global MPTCP setting is set to yes so that MPTCP is disabled (the MPTCP option is stripped from the packet). Possible values are `no`, `yes` and `global`.
          * 
          * @return builder
          * 
@@ -1021,7 +1001,7 @@ public final class ZoneProtectionProfileArgs extends com.pulumi.resources.Resour
          * @param mptcpOptionStrip MPTCP is an extension of TCP that allows a client to maintain a connection by simultaneously using multiple paths to connect to the destination host. By default, MPTCP support is disabled, based on the global MPTCP setting.  Review or adjust the MPTCP settings for the security zones associated with this profile:
          * * `no` — Enable MPTCP support (do not strip the MPTCP option).
          * * `yes` — Disable MPTCP support (strip the MPTCP option). With this configured, MPTCP connections are converted to standard TCP connections, as MPTCP is backwards compatible with TCP.
-         * * `global` — Support MPTCP based on the global MPTCP setting. By default, the global MPTCP setting is set to yes so that MPTCP is disabled (the MPTCP option is stripped from the packet).
+         * * `global` — Support MPTCP based on the global MPTCP setting. By default, the global MPTCP setting is set to yes so that MPTCP is disabled (the MPTCP option is stripped from the packet). Possible values are `no`, `yes` and `global`.
          * 
          * @return builder
          * 
@@ -1097,7 +1077,7 @@ public final class ZoneProtectionProfileArgs extends com.pulumi.resources.Resour
          * @param rejectNonSynTcp Determine whether to reject the packet if the first packet for the TCP session setup is not a SYN packet:
          * * `global` — Use system-wide setting that is assigned through the CLI.
          * * `yes` — Reject non-SYN TCP.
-         * * `no` — Accept non-SYN TCP.
+         * * `no` — Accept non-SYN TCP. Possible values are `global`, `yes` and `no`.
          * 
          * @return builder
          * 
@@ -1111,7 +1091,7 @@ public final class ZoneProtectionProfileArgs extends com.pulumi.resources.Resour
          * @param rejectNonSynTcp Determine whether to reject the packet if the first packet for the TCP session setup is not a SYN packet:
          * * `global` — Use system-wide setting that is assigned through the CLI.
          * * `yes` — Reject non-SYN TCP.
-         * * `no` — Accept non-SYN TCP.
+         * * `no` — Accept non-SYN TCP. Possible values are `global`, `yes` and `no`.
          * 
          * @return builder
          * 
@@ -1206,8 +1186,6 @@ public final class ZoneProtectionProfileArgs extends com.pulumi.resources.Resour
         /**
          * @param snippet The snippet in which the resource is defined
          * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-         * 
          * @return builder
          * 
          */
@@ -1218,8 +1196,6 @@ public final class ZoneProtectionProfileArgs extends com.pulumi.resources.Resour
 
         /**
          * @param snippet The snippet in which the resource is defined
-         * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
          * 
          * @return builder
          * 

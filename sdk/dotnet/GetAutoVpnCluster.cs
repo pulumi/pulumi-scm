@@ -198,7 +198,7 @@ namespace Pulumi.Scm
         /// </summary>
         public readonly string Tfid;
         /// <summary>
-        /// VPN cluster type
+        /// VPN cluster type. Possible values are `hub-spoke` and `Mesh`.
         /// </summary>
         public readonly string Type;
 

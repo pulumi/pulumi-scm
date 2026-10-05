@@ -63,7 +63,6 @@ import * as utilities from "./utilities";
  * const scmLogicalRouter = new scm.LogicalRouter("scm_logical_router", {
  *     folder: "ngfw-shared",
  *     name: "scm_logical_router",
- *     routingStack: "advanced",
  *     vrves: [{
  *         name: "default",
  *         "interface": ["$scm_ethernet_interface"],
@@ -116,7 +115,6 @@ import * as utilities from "./utilities";
  * const scmBgpRouter = new scm.LogicalRouter("scm_bgp_router", {
  *     folder: "ngfw-shared",
  *     name: "scm_bgp_router",
- *     routingStack: "advanced",
  *     vrves: [{
  *         name: "default",
  *         "interface": ["$scm_bgp_interface"],
@@ -215,8 +213,6 @@ export class LogicalRouter extends pulumi.CustomResource {
     declare public readonly device: pulumi.Output<string | undefined>;
     /**
      * The folder in which the resource is defined
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly folder: pulumi.Output<string | undefined>;
     /**
@@ -224,13 +220,7 @@ export class LogicalRouter extends pulumi.CustomResource {
      */
     declare public readonly name: pulumi.Output<string>;
     /**
-     * Routing stack
-     */
-    declare public readonly routingStack: pulumi.Output<string | undefined>;
-    /**
      * The snippet in which the resource is defined
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly snippet: pulumi.Output<string | undefined>;
     /**
@@ -258,7 +248,6 @@ export class LogicalRouter extends pulumi.CustomResource {
             resourceInputs["device"] = state?.device;
             resourceInputs["folder"] = state?.folder;
             resourceInputs["name"] = state?.name;
-            resourceInputs["routingStack"] = state?.routingStack;
             resourceInputs["snippet"] = state?.snippet;
             resourceInputs["tfid"] = state?.tfid;
             resourceInputs["vrves"] = state?.vrves;
@@ -267,7 +256,6 @@ export class LogicalRouter extends pulumi.CustomResource {
             resourceInputs["device"] = args?.device;
             resourceInputs["folder"] = args?.folder;
             resourceInputs["name"] = args?.name;
-            resourceInputs["routingStack"] = args?.routingStack;
             resourceInputs["snippet"] = args?.snippet;
             resourceInputs["vrves"] = args?.vrves;
             resourceInputs["tfid"] = undefined /*out*/;
@@ -287,8 +275,6 @@ export interface LogicalRouterState {
     device?: pulumi.Input<string | undefined>;
     /**
      * The folder in which the resource is defined
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     folder?: pulumi.Input<string | undefined>;
     /**
@@ -296,13 +282,7 @@ export interface LogicalRouterState {
      */
     name?: pulumi.Input<string | undefined>;
     /**
-     * Routing stack
-     */
-    routingStack?: pulumi.Input<string | undefined>;
-    /**
      * The snippet in which the resource is defined
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     snippet?: pulumi.Input<string | undefined>;
     /**
@@ -325,8 +305,6 @@ export interface LogicalRouterArgs {
     device?: pulumi.Input<string | undefined>;
     /**
      * The folder in which the resource is defined
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     folder?: pulumi.Input<string | undefined>;
     /**
@@ -334,13 +312,7 @@ export interface LogicalRouterArgs {
      */
     name?: pulumi.Input<string | undefined>;
     /**
-     * Routing stack
-     */
-    routingStack?: pulumi.Input<string | undefined>;
-    /**
      * The snippet in which the resource is defined
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     snippet?: pulumi.Input<string | undefined>;
     /**

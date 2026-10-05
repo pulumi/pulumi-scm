@@ -37,16 +37,12 @@ public final class BgpAddressFamilyProfileIpv4MulticastSendCommunityArgs extends
     /**
      * Both
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
-     * 
      */
     @Import(name="both")
     private @Nullable Output<BgpAddressFamilyProfileIpv4MulticastSendCommunityBothArgs> both;
 
     /**
      * @return Both
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
      * 
      */
     public Optional<Output<BgpAddressFamilyProfileIpv4MulticastSendCommunityBothArgs>> both() {
@@ -56,16 +52,12 @@ public final class BgpAddressFamilyProfileIpv4MulticastSendCommunityArgs extends
     /**
      * Extended
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
-     * 
      */
     @Import(name="extended")
     private @Nullable Output<BgpAddressFamilyProfileIpv4MulticastSendCommunityExtendedArgs> extended;
 
     /**
      * @return Extended
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
      * 
      */
     public Optional<Output<BgpAddressFamilyProfileIpv4MulticastSendCommunityExtendedArgs>> extended() {
@@ -75,16 +67,12 @@ public final class BgpAddressFamilyProfileIpv4MulticastSendCommunityArgs extends
     /**
      * Large
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
-     * 
      */
     @Import(name="large")
     private @Nullable Output<BgpAddressFamilyProfileIpv4MulticastSendCommunityLargeArgs> large;
 
     /**
      * @return Large
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
      * 
      */
     public Optional<Output<BgpAddressFamilyProfileIpv4MulticastSendCommunityLargeArgs>> large() {
@@ -94,16 +82,12 @@ public final class BgpAddressFamilyProfileIpv4MulticastSendCommunityArgs extends
     /**
      * Standard
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
-     * 
      */
     @Import(name="standard")
     private @Nullable Output<BgpAddressFamilyProfileIpv4MulticastSendCommunityStandardArgs> standard;
 
     /**
      * @return Standard
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
      * 
      */
     public Optional<Output<BgpAddressFamilyProfileIpv4MulticastSendCommunityStandardArgs>> standard() {
@@ -162,8 +146,6 @@ public final class BgpAddressFamilyProfileIpv4MulticastSendCommunityArgs extends
         /**
          * @param both Both
          * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
-         * 
          * @return builder
          * 
          */
@@ -175,8 +157,6 @@ public final class BgpAddressFamilyProfileIpv4MulticastSendCommunityArgs extends
         /**
          * @param both Both
          * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
-         * 
          * @return builder
          * 
          */
@@ -186,8 +166,6 @@ public final class BgpAddressFamilyProfileIpv4MulticastSendCommunityArgs extends
 
         /**
          * @param extended Extended
-         * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
          * 
          * @return builder
          * 
@@ -200,8 +178,6 @@ public final class BgpAddressFamilyProfileIpv4MulticastSendCommunityArgs extends
         /**
          * @param extended Extended
          * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
-         * 
          * @return builder
          * 
          */
@@ -211,8 +187,6 @@ public final class BgpAddressFamilyProfileIpv4MulticastSendCommunityArgs extends
 
         /**
          * @param large Large
-         * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
          * 
          * @return builder
          * 
@@ -225,8 +199,6 @@ public final class BgpAddressFamilyProfileIpv4MulticastSendCommunityArgs extends
         /**
          * @param large Large
          * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
-         * 
          * @return builder
          * 
          */
@@ -236,8 +208,6 @@ public final class BgpAddressFamilyProfileIpv4MulticastSendCommunityArgs extends
 
         /**
          * @param standard Standard
-         * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
          * 
          * @return builder
          * 
@@ -249,8 +219,6 @@ public final class BgpAddressFamilyProfileIpv4MulticastSendCommunityArgs extends
 
         /**
          * @param standard Standard
-         * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
          * 
          * @return builder
          * 

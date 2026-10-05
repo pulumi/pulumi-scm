@@ -14,7 +14,7 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetAntiSpywareProfileListDataMicaEngineSpywareEnabledResult
     {
         /// <summary>
-        /// Inline policy action
+        /// Inline policy action. Possible values are `Alert`, `Allow`, `Drop`, `reset-both`, `reset-client` and `reset-server`.
         /// </summary>
         public readonly string InlinePolicyAction;
         /// <summary>

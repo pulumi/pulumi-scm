@@ -17,9 +17,7 @@ public final class GetRoutePrefixListTypeIpv4Ipv4EntryPrefix {
      */
     private GetRoutePrefixListTypeIpv4Ipv4EntryPrefixEntry entry;
     /**
-     * @return Network
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `entry` and `network`.
+     * @return Network. Possible values are `any`.
      * 
      */
     private String network;
@@ -33,9 +31,7 @@ public final class GetRoutePrefixListTypeIpv4Ipv4EntryPrefix {
         return this.entry;
     }
     /**
-     * @return Network
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `entry` and `network`.
+     * @return Network. Possible values are `any`.
      * 
      */
     public String network() {

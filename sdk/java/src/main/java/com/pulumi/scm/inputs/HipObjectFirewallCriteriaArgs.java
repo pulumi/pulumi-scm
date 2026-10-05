@@ -17,14 +17,14 @@ public final class HipObjectFirewallCriteriaArgs extends com.pulumi.resources.Re
     public static final HipObjectFirewallCriteriaArgs Empty = new HipObjectFirewallCriteriaArgs();
 
     /**
-     * is enabled
+     * is enabled. Possible values are `no`, `yes` and `not-available`.
      * 
      */
     @Import(name="isEnabled")
     private @Nullable Output<String> isEnabled;
 
     /**
-     * @return is enabled
+     * @return is enabled. Possible values are `no`, `yes` and `not-available`.
      * 
      */
     public Optional<Output<String>> isEnabled() {
@@ -72,7 +72,7 @@ public final class HipObjectFirewallCriteriaArgs extends com.pulumi.resources.Re
         }
 
         /**
-         * @param isEnabled is enabled
+         * @param isEnabled is enabled. Possible values are `no`, `yes` and `not-available`.
          * 
          * @return builder
          * 
@@ -83,7 +83,7 @@ public final class HipObjectFirewallCriteriaArgs extends com.pulumi.resources.Re
         }
 
         /**
-         * @param isEnabled is enabled
+         * @param isEnabled is enabled. Possible values are `no`, `yes` and `not-available`.
          * 
          * @return builder
          * 

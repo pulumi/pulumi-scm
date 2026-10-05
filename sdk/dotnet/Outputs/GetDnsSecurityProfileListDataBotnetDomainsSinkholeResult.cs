@@ -14,11 +14,11 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetDnsSecurityProfileListDataBotnetDomainsSinkholeResult
     {
         /// <summary>
-        /// Ipv4 address
+        /// Ipv4 address. Possible values are `127.0.0.1` and `pan-sinkhole-default-ip`.
         /// </summary>
         public readonly string Ipv4Address;
         /// <summary>
-        /// Ipv6 address
+        /// Ipv6 address. Possible values are `::1`.
         /// </summary>
         public readonly string Ipv6Address;
 

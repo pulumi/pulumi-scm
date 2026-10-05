@@ -12,17 +12,17 @@ import java.util.Objects;
 @CustomType
 public final class GetSecurityRuleListDataAllowUrlCategory {
     /**
-     * @return Additional action
+     * @return Additional action. Possible values are `none`, `continue`, `redirect` and `isolate`.
      * 
      */
     private String additionalAction;
     /**
-     * @return Credential enforcement
+     * @return Credential enforcement. Possible values are `enabled` and `disabled`.
      * 
      */
     private String credentialEnforcement;
     /**
-     * @return Decryption
+     * @return Decryption. Possible values are `enabled` and `disabled`.
      * 
      */
     private String decryption;
@@ -49,21 +49,21 @@ public final class GetSecurityRuleListDataAllowUrlCategory {
 
     private GetSecurityRuleListDataAllowUrlCategory() {}
     /**
-     * @return Additional action
+     * @return Additional action. Possible values are `none`, `continue`, `redirect` and `isolate`.
      * 
      */
     public String additionalAction() {
         return this.additionalAction;
     }
     /**
-     * @return Credential enforcement
+     * @return Credential enforcement. Possible values are `enabled` and `disabled`.
      * 
      */
     public String credentialEnforcement() {
         return this.credentialEnforcement;
     }
     /**
-     * @return Decryption
+     * @return Decryption. Possible values are `enabled` and `disabled`.
      * 
      */
     public String decryption() {

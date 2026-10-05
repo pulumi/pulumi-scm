@@ -14,7 +14,7 @@ namespace Pulumi.Scm.Outputs
     public sealed class BgpAddressFamilyProfileIpv4UnicastOrf
     {
         /// <summary>
-        /// ORF prefix list
+        /// ORF prefix list. Possible values are `None`, `Both`, `Receive` and `Send`.
         /// </summary>
         public readonly string? OrfPrefixList;
 

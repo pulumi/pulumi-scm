@@ -73,7 +73,7 @@ public final class MotdBannerSettingMotdAndBanner {
      */
     private @Nullable String motdTitle;
     /**
-     * @return Severity
+     * @return Severity. Possible values are `warning`, `question`, `error` and `info`.
      * 
      */
     private @Nullable String severity;
@@ -164,7 +164,7 @@ public final class MotdBannerSettingMotdAndBanner {
         return Optional.ofNullable(this.motdTitle);
     }
     /**
-     * @return Severity
+     * @return Severity. Possible values are `warning`, `question`, `error` and `info`.
      * 
      */
     public Optional<String> severity() {

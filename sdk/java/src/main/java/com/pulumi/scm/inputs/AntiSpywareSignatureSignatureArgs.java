@@ -35,16 +35,12 @@ public final class AntiSpywareSignatureSignatureArgs extends com.pulumi.resource
     /**
      * Standard
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `combination` and `standard`.
-     * 
      */
     @Import(name="standards")
     private @Nullable Output<List<AntiSpywareSignatureSignatureStandardArgs>> standards;
 
     /**
      * @return Standard
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `combination` and `standard`.
      * 
      */
     public Optional<Output<List<AntiSpywareSignatureSignatureStandardArgs>>> standards() {
@@ -100,8 +96,6 @@ public final class AntiSpywareSignatureSignatureArgs extends com.pulumi.resource
         /**
          * @param standards Standard
          * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `combination` and `standard`.
-         * 
          * @return builder
          * 
          */
@@ -113,8 +107,6 @@ public final class AntiSpywareSignatureSignatureArgs extends com.pulumi.resource
         /**
          * @param standards Standard
          * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `combination` and `standard`.
-         * 
          * @return builder
          * 
          */
@@ -124,8 +116,6 @@ public final class AntiSpywareSignatureSignatureArgs extends com.pulumi.resource
 
         /**
          * @param standards Standard
-         * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `combination` and `standard`.
          * 
          * @return builder
          * 

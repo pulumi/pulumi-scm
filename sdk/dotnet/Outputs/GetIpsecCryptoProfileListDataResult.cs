@@ -15,8 +15,6 @@ namespace Pulumi.Scm.Outputs
     {
         /// <summary>
         /// Ah
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Ah` and `Esp`.
         /// </summary>
         public readonly Outputs.GetIpsecCryptoProfileListDataAhResult Ah;
         /// <summary>
@@ -24,17 +22,15 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly string Device;
         /// <summary>
-        /// phase-2 DH group (PFS DH group)
+        /// phase-2 DH group (PFS DH group). Possible values are `no-pfs`, `Group1`, `Group2`, `Group5`, `Group14`, `Group19`, `Group20`, `Group21`, `ml-kem-512`, `ml-kem-768` and `ml-kem-1024`.
         /// </summary>
         public readonly string DhGroup;
         /// <summary>
         /// Esp
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Ah` and `Esp`.
         /// </summary>
         public readonly Outputs.GetIpsecCryptoProfileListDataEspResult Esp;
         /// <summary>
-        /// The folder of the item. Default: Shared.
+        /// The folder in which the resource is defined
         /// </summary>
         public readonly string Folder;
         /// <summary>
@@ -50,11 +46,11 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly Outputs.GetIpsecCryptoProfileListDataLifetimeResult Lifetime;
         /// <summary>
-        /// The name of the item.
+        /// Alphanumeric string begin with letter: [0-9a-zA-Z._-]
         /// </summary>
         public readonly string Name;
         /// <summary>
-        /// The snippet of the item.
+        /// The snippet in which the resource is defined
         /// </summary>
         public readonly string Snippet;
         /// <summary>

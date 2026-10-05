@@ -18,7 +18,7 @@ public final class SiteMember {
      */
     private @Nullable String id;
     /**
-     * @return The mode of the remote network
+     * @return The mode of the remote network. Possible values are `active` and `backup`.
      * 
      */
     private String mode;
@@ -42,7 +42,7 @@ public final class SiteMember {
         return Optional.ofNullable(this.id);
     }
     /**
-     * @return The mode of the remote network
+     * @return The mode of the remote network. Possible values are `active` and `backup`.
      * 
      */
     public String mode() {

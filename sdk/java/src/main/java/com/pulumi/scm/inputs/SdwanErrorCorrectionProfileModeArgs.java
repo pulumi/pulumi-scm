@@ -34,16 +34,12 @@ public final class SdwanErrorCorrectionProfileModeArgs extends com.pulumi.resour
     /**
      * Packet duplication
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `forwardErrorCorrection` and `packetDuplication`.
-     * 
      */
     @Import(name="packetDuplication")
     private @Nullable Output<SdwanErrorCorrectionProfileModePacketDuplicationArgs> packetDuplication;
 
     /**
      * @return Packet duplication
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `forwardErrorCorrection` and `packetDuplication`.
      * 
      */
     public Optional<Output<SdwanErrorCorrectionProfileModePacketDuplicationArgs>> packetDuplication() {
@@ -99,8 +95,6 @@ public final class SdwanErrorCorrectionProfileModeArgs extends com.pulumi.resour
         /**
          * @param packetDuplication Packet duplication
          * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `forwardErrorCorrection` and `packetDuplication`.
-         * 
          * @return builder
          * 
          */
@@ -111,8 +105,6 @@ public final class SdwanErrorCorrectionProfileModeArgs extends com.pulumi.resour
 
         /**
          * @param packetDuplication Packet duplication
-         * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `forwardErrorCorrection` and `packetDuplication`.
          * 
          * @return builder
          * 

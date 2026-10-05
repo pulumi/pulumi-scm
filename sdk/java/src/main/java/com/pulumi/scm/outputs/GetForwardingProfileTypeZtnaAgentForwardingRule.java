@@ -37,7 +37,7 @@ public final class GetForwardingProfileTypeZtnaAgentForwardingRule {
      */
     private String sourceApplications;
     /**
-     * @return Type of traffic this ZTNA rule applies to (dns, network, or both)
+     * @return Type of traffic this ZTNA rule applies to (dns, network, or both). Possible values are `dns`, `dns-and-network-traffic` and `network-traffic`.
      * 
      */
     private String trafficType;
@@ -84,7 +84,7 @@ public final class GetForwardingProfileTypeZtnaAgentForwardingRule {
         return this.sourceApplications;
     }
     /**
-     * @return Type of traffic this ZTNA rule applies to (dns, network, or both)
+     * @return Type of traffic this ZTNA rule applies to (dns, network, or both). Possible values are `dns`, `dns-and-network-traffic` and `network-traffic`.
      * 
      */
     public String trafficType() {

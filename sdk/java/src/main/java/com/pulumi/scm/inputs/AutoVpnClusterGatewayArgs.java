@@ -95,14 +95,14 @@ public final class AutoVpnClusterGatewayArgs extends com.pulumi.resources.Resour
     }
 
     /**
-     * Priority
+     * Priority. Possible values are `1`, `2`, `3`, `4`, `5`, `6`, `7` and `8`.
      * 
      */
     @Import(name="priority")
     private @Nullable Output<String> priority;
 
     /**
-     * @return Priority
+     * @return Priority. Possible values are `1`, `2`, `3`, `4`, `5`, `6`, `7` and `8`.
      * 
      */
     public Optional<Output<String>> priority() {
@@ -286,7 +286,7 @@ public final class AutoVpnClusterGatewayArgs extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param priority Priority
+         * @param priority Priority. Possible values are `1`, `2`, `3`, `4`, `5`, `6`, `7` and `8`.
          * 
          * @return builder
          * 
@@ -297,7 +297,7 @@ public final class AutoVpnClusterGatewayArgs extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param priority Priority
+         * @param priority Priority. Possible values are `1`, `2`, `3`, `4`, `5`, `6`, `7` and `8`.
          * 
          * @return builder
          * 

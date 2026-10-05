@@ -12,7 +12,7 @@ import java.util.Objects;
 @CustomType
 public final class GetWildfireAntiVirusProfileListDataRule {
     /**
-     * @return Analysis
+     * @return Analysis. Possible values are `public-cloud` and `private-cloud`.
      * 
      */
     private String analysis;
@@ -22,7 +22,7 @@ public final class GetWildfireAntiVirusProfileListDataRule {
      */
     private List<String> applications;
     /**
-     * @return Direction
+     * @return Direction. Possible values are `download`, `upload` and `both`.
      * 
      */
     private String direction;
@@ -39,7 +39,7 @@ public final class GetWildfireAntiVirusProfileListDataRule {
 
     private GetWildfireAntiVirusProfileListDataRule() {}
     /**
-     * @return Analysis
+     * @return Analysis. Possible values are `public-cloud` and `private-cloud`.
      * 
      */
     public String analysis() {
@@ -53,7 +53,7 @@ public final class GetWildfireAntiVirusProfileListDataRule {
         return this.applications;
     }
     /**
-     * @return Direction
+     * @return Direction. Possible values are `download`, `upload` and `both`.
      * 
      */
     public String direction() {

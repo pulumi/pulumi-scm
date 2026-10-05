@@ -34,16 +34,12 @@ public final class LogicalRouterVrfBgpAggregateRouteTypeArgs extends com.pulumi.
     /**
      * Ipv6
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `ipv4` and `ipv6`.
-     * 
      */
     @Import(name="ipv6")
     private @Nullable Output<LogicalRouterVrfBgpAggregateRouteTypeIpv6Args> ipv6;
 
     /**
      * @return Ipv6
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `ipv4` and `ipv6`.
      * 
      */
     public Optional<Output<LogicalRouterVrfBgpAggregateRouteTypeIpv6Args>> ipv6() {
@@ -99,8 +95,6 @@ public final class LogicalRouterVrfBgpAggregateRouteTypeArgs extends com.pulumi.
         /**
          * @param ipv6 Ipv6
          * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `ipv4` and `ipv6`.
-         * 
          * @return builder
          * 
          */
@@ -111,8 +105,6 @@ public final class LogicalRouterVrfBgpAggregateRouteTypeArgs extends com.pulumi.
 
         /**
          * @param ipv6 Ipv6
-         * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `ipv4` and `ipv6`.
          * 
          * @return builder
          * 

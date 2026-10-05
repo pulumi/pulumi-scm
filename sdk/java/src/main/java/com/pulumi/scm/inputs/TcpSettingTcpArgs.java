@@ -32,14 +32,14 @@ public final class TcpSettingTcpArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Asymmetric path action
+     * Asymmetric path action. Possible values are `drop` and `bypass`.
      * 
      */
     @Import(name="asymmetricPath")
     private @Nullable Output<String> asymmetricPath;
 
     /**
-     * @return Asymmetric path action
+     * @return Asymmetric path action. Possible values are `drop` and `bypass`.
      * 
      */
     public Optional<Output<String>> asymmetricPath() {
@@ -92,14 +92,14 @@ public final class TcpSettingTcpArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * SIP TCP cleartext action (`&#39;0&#39;` = Always Off, `&#39;1&#39;` = Always Enabled, `&#39;2&#39;` = Automatically enable proxy when needed)
+     * SIP TCP cleartext action (`&#39;0&#39;` = Always Off, `&#39;1&#39;` = Always Enabled, `&#39;2&#39;` = Automatically enable proxy when needed). Possible values are `0`, `2` and `3`.
      * 
      */
     @Import(name="siptcpCleartextProxy")
     private @Nullable Output<String> siptcpCleartextProxy;
 
     /**
-     * @return SIP TCP cleartext action (`&#39;0&#39;` = Always Off, `&#39;1&#39;` = Always Enabled, `&#39;2&#39;` = Automatically enable proxy when needed)
+     * @return SIP TCP cleartext action (`&#39;0&#39;` = Always Off, `&#39;1&#39;` = Always Enabled, `&#39;2&#39;` = Automatically enable proxy when needed). Possible values are `0`, `2` and `3`.
      * 
      */
     public Optional<Output<String>> siptcpCleartextProxy() {
@@ -137,14 +137,14 @@ public final class TcpSettingTcpArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Urgent data flag action
+     * Urgent data flag action. Possible values are `clear` and `oobinline`.
      * 
      */
     @Import(name="urgentData")
     private @Nullable Output<String> urgentData;
 
     /**
-     * @return Urgent data flag action
+     * @return Urgent data flag action. Possible values are `clear` and `oobinline`.
      * 
      */
     public Optional<Output<String>> urgentData() {
@@ -205,7 +205,7 @@ public final class TcpSettingTcpArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param asymmetricPath Asymmetric path action
+         * @param asymmetricPath Asymmetric path action. Possible values are `drop` and `bypass`.
          * 
          * @return builder
          * 
@@ -216,7 +216,7 @@ public final class TcpSettingTcpArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param asymmetricPath Asymmetric path action
+         * @param asymmetricPath Asymmetric path action. Possible values are `drop` and `bypass`.
          * 
          * @return builder
          * 
@@ -289,7 +289,7 @@ public final class TcpSettingTcpArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param siptcpCleartextProxy SIP TCP cleartext action (`&#39;0&#39;` = Always Off, `&#39;1&#39;` = Always Enabled, `&#39;2&#39;` = Automatically enable proxy when needed)
+         * @param siptcpCleartextProxy SIP TCP cleartext action (`&#39;0&#39;` = Always Off, `&#39;1&#39;` = Always Enabled, `&#39;2&#39;` = Automatically enable proxy when needed). Possible values are `0`, `2` and `3`.
          * 
          * @return builder
          * 
@@ -300,7 +300,7 @@ public final class TcpSettingTcpArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param siptcpCleartextProxy SIP TCP cleartext action (`&#39;0&#39;` = Always Off, `&#39;1&#39;` = Always Enabled, `&#39;2&#39;` = Automatically enable proxy when needed)
+         * @param siptcpCleartextProxy SIP TCP cleartext action (`&#39;0&#39;` = Always Off, `&#39;1&#39;` = Always Enabled, `&#39;2&#39;` = Automatically enable proxy when needed). Possible values are `0`, `2` and `3`.
          * 
          * @return builder
          * 
@@ -352,7 +352,7 @@ public final class TcpSettingTcpArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param urgentData Urgent data flag action
+         * @param urgentData Urgent data flag action. Possible values are `clear` and `oobinline`.
          * 
          * @return builder
          * 
@@ -363,7 +363,7 @@ public final class TcpSettingTcpArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param urgentData Urgent data flag action
+         * @param urgentData Urgent data flag action. Possible values are `clear` and `oobinline`.
          * 
          * @return builder
          * 

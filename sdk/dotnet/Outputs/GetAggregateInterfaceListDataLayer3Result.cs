@@ -14,6 +14,10 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetAggregateInterfaceListDataLayer3Result
     {
         /// <summary>
+        /// TCP MSS adjustment settings for the interface
+        /// </summary>
+        public readonly Outputs.GetAggregateInterfaceListDataLayer3AdjustTcpMssResult AdjustTcpMss;
+        /// <summary>
         /// Aggregate Ethernet ARP configuration
         /// </summary>
         public readonly ImmutableArray<Outputs.GetAggregateInterfaceListDataLayer3ArpResult> Arps;
@@ -31,14 +35,16 @@ namespace Pulumi.Scm.Outputs
         public readonly string InterfaceManagementProfile;
         /// <summary>
         /// Aggregate Interface IP addresses
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `DhcpClient` and `Ip`.
         /// </summary>
         public readonly ImmutableArray<Outputs.GetAggregateInterfaceListDataLayer3IpResult> Ips;
         /// <summary>
         /// Lacp
         /// </summary>
         public readonly Outputs.GetAggregateInterfaceListDataLayer3LacpResult Lacp;
+        /// <summary>
+        /// LLDP settings for the interface
+        /// </summary>
+        public readonly Outputs.GetAggregateInterfaceListDataLayer3LldpResult Lldp;
         /// <summary>
         /// MTU
         /// </summary>
@@ -50,6 +56,8 @@ namespace Pulumi.Scm.Outputs
 
         [OutputConstructor]
         private GetAggregateInterfaceListDataLayer3Result(
+            Outputs.GetAggregateInterfaceListDataLayer3AdjustTcpMssResult adjustTcpMss,
+
             ImmutableArray<Outputs.GetAggregateInterfaceListDataLayer3ArpResult> arps,
 
             Outputs.GetAggregateInterfaceListDataLayer3DdnsConfigResult ddnsConfig,
@@ -62,16 +70,20 @@ namespace Pulumi.Scm.Outputs
 
             Outputs.GetAggregateInterfaceListDataLayer3LacpResult lacp,
 
+            Outputs.GetAggregateInterfaceListDataLayer3LldpResult lldp,
+
             int mtu,
 
             string netflowProfile)
         {
+            AdjustTcpMss = adjustTcpMss;
             Arps = arps;
             DdnsConfig = ddnsConfig;
             DhcpClient = dhcpClient;
             InterfaceManagementProfile = interfaceManagementProfile;
             Ips = ips;
             Lacp = lacp;
+            Lldp = lldp;
             Mtu = mtu;
             NetflowProfile = netflowProfile;
         }

@@ -35,14 +35,14 @@ public final class DhcpInterfaceServerArgs extends com.pulumi.resources.Resource
     }
 
     /**
-     * DHCP server mode
+     * DHCP server mode. Possible values are `auto`, `enabled` and `disabled`.
      * 
      */
     @Import(name="mode")
     private @Nullable Output<String> mode;
 
     /**
-     * @return DHCP server mode
+     * @return DHCP server mode. Possible values are `auto`, `enabled` and `disabled`.
      * 
      */
     public Optional<Output<String>> mode() {
@@ -154,7 +154,7 @@ public final class DhcpInterfaceServerArgs extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param mode DHCP server mode
+         * @param mode DHCP server mode. Possible values are `auto`, `enabled` and `disabled`.
          * 
          * @return builder
          * 
@@ -165,7 +165,7 @@ public final class DhcpInterfaceServerArgs extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param mode DHCP server mode
+         * @param mode DHCP server mode. Possible values are `auto`, `enabled` and `disabled`.
          * 
          * @return builder
          * 

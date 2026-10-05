@@ -62,33 +62,56 @@ func LookupLayer3Subinterface(ctx *pulumi.Context, args *LookupLayer3Subinterfac
 type LookupLayer3SubinterfaceArgs struct {
 	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
+	// The folder in which the resource is defined
 	Folder *string `pulumi:"folder"`
 	// UUID of the resource
-	Id      string  `pulumi:"id"`
-	Name    *string `pulumi:"name"`
+	Id string `pulumi:"id"`
+	// L3 sub-interface name
+	Name *string `pulumi:"name"`
+	// The snippet in which the resource is defined
 	Snippet *string `pulumi:"snippet"`
 }
 
 // A collection of values returned by getLayer3Subinterface.
 type LookupLayer3SubinterfaceResult struct {
-	Arps       []GetLayer3SubinterfaceArp      `pulumi:"arps"`
-	Comment    string                          `pulumi:"comment"`
+	// TCP MSS adjustment settings for the interface
+	AdjustTcpMss GetLayer3SubinterfaceAdjustTcpMss `pulumi:"adjustTcpMss"`
+	// Layer 3 sub Interfaces ARP configuration
+	Arps []GetLayer3SubinterfaceArp `pulumi:"arps"`
+	// Description
+	Comment string `pulumi:"comment"`
+	// Dynamic DNS configuration specific to the Layer 3 sub Interfaces.
 	DdnsConfig GetLayer3SubinterfaceDdnsConfig `pulumi:"ddnsConfig"`
 	// The device in which the resource is defined
-	Device     string                          `pulumi:"device"`
+	Device string `pulumi:"device"`
+	// Layer3 sub interfaces DHCP Client Object
 	DhcpClient GetLayer3SubinterfaceDhcpClient `pulumi:"dhcpClient"`
-	Folder     string                          `pulumi:"folder"`
+	// Map of sensitive values returned from the API.
+	EncryptedValues map[string]string `pulumi:"encryptedValues"`
+	// The folder in which the resource is defined
+	Folder string `pulumi:"folder"`
 	// UUID of the resource
-	Id                         string                    `pulumi:"id"`
-	InterfaceManagementProfile string                    `pulumi:"interfaceManagementProfile"`
-	Ips                        []GetLayer3SubinterfaceIp `pulumi:"ips"`
-	Mtu                        int                       `pulumi:"mtu"`
-	Name                       string                    `pulumi:"name"`
-	NetflowProfile             string                    `pulumi:"netflowProfile"`
-	ParentInterface            string                    `pulumi:"parentInterface"`
-	Snippet                    string                    `pulumi:"snippet"`
-	Tag                        int                       `pulumi:"tag"`
-	Tfid                       string                    `pulumi:"tfid"`
+	Id string `pulumi:"id"`
+	// Interface management profile
+	InterfaceManagementProfile string `pulumi:"interfaceManagementProfile"`
+	// L3 sub-interface IP Parent
+	Ips []GetLayer3SubinterfaceIp `pulumi:"ips"`
+	// MTU
+	Mtu int `pulumi:"mtu"`
+	// L3 sub-interface name
+	Name string `pulumi:"name"`
+	// Name of Netflow Profile to assign to Interface
+	NetflowProfile string `pulumi:"netflowProfile"`
+	// Parent interface
+	ParentInterface string `pulumi:"parentInterface"`
+	// PPPoE configuration for the interface
+	Pppoe GetLayer3SubinterfacePppoe `pulumi:"pppoe"`
+	// The snippet in which the resource is defined
+	Snippet string `pulumi:"snippet"`
+	// VLAN tag
+	Tag int `pulumi:"tag"`
+	// The Terraform ID.
+	Tfid string `pulumi:"tfid"`
 }
 
 func LookupLayer3SubinterfaceOutput(ctx *pulumi.Context, args LookupLayer3SubinterfaceOutputArgs, opts ...pulumi.InvokeOption) LookupLayer3SubinterfaceResultOutput {
@@ -100,10 +123,13 @@ func LookupLayer3SubinterfaceOutput(ctx *pulumi.Context, args LookupLayer3Subint
 type LookupLayer3SubinterfaceOutputArgs struct {
 	// The device in which the resource is defined
 	Device pulumi.StringPtrInput `pulumi:"device"`
+	// The folder in which the resource is defined
 	Folder pulumi.StringPtrInput `pulumi:"folder"`
 	// UUID of the resource
-	Id      pulumi.StringInput    `pulumi:"id"`
-	Name    pulumi.StringPtrInput `pulumi:"name"`
+	Id pulumi.StringInput `pulumi:"id"`
+	// L3 sub-interface name
+	Name pulumi.StringPtrInput `pulumi:"name"`
+	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrInput `pulumi:"snippet"`
 }
 
@@ -126,14 +152,22 @@ func (o LookupLayer3SubinterfaceResultOutput) ToLookupLayer3SubinterfaceResultOu
 	return o
 }
 
+// TCP MSS adjustment settings for the interface
+func (o LookupLayer3SubinterfaceResultOutput) AdjustTcpMss() GetLayer3SubinterfaceAdjustTcpMssOutput {
+	return o.ApplyT(func(v LookupLayer3SubinterfaceResult) GetLayer3SubinterfaceAdjustTcpMss { return v.AdjustTcpMss }).(GetLayer3SubinterfaceAdjustTcpMssOutput)
+}
+
+// Layer 3 sub Interfaces ARP configuration
 func (o LookupLayer3SubinterfaceResultOutput) Arps() GetLayer3SubinterfaceArpArrayOutput {
 	return o.ApplyT(func(v LookupLayer3SubinterfaceResult) []GetLayer3SubinterfaceArp { return v.Arps }).(GetLayer3SubinterfaceArpArrayOutput)
 }
 
+// Description
 func (o LookupLayer3SubinterfaceResultOutput) Comment() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupLayer3SubinterfaceResult) string { return v.Comment }).(pulumi.StringOutput)
 }
 
+// Dynamic DNS configuration specific to the Layer 3 sub Interfaces.
 func (o LookupLayer3SubinterfaceResultOutput) DdnsConfig() GetLayer3SubinterfaceDdnsConfigOutput {
 	return o.ApplyT(func(v LookupLayer3SubinterfaceResult) GetLayer3SubinterfaceDdnsConfig { return v.DdnsConfig }).(GetLayer3SubinterfaceDdnsConfigOutput)
 }
@@ -143,10 +177,17 @@ func (o LookupLayer3SubinterfaceResultOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupLayer3SubinterfaceResult) string { return v.Device }).(pulumi.StringOutput)
 }
 
+// Layer3 sub interfaces DHCP Client Object
 func (o LookupLayer3SubinterfaceResultOutput) DhcpClient() GetLayer3SubinterfaceDhcpClientOutput {
 	return o.ApplyT(func(v LookupLayer3SubinterfaceResult) GetLayer3SubinterfaceDhcpClient { return v.DhcpClient }).(GetLayer3SubinterfaceDhcpClientOutput)
 }
 
+// Map of sensitive values returned from the API.
+func (o LookupLayer3SubinterfaceResultOutput) EncryptedValues() pulumi.StringMapOutput {
+	return o.ApplyT(func(v LookupLayer3SubinterfaceResult) map[string]string { return v.EncryptedValues }).(pulumi.StringMapOutput)
+}
+
+// The folder in which the resource is defined
 func (o LookupLayer3SubinterfaceResultOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupLayer3SubinterfaceResult) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -156,38 +197,52 @@ func (o LookupLayer3SubinterfaceResultOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupLayer3SubinterfaceResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
+// Interface management profile
 func (o LookupLayer3SubinterfaceResultOutput) InterfaceManagementProfile() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupLayer3SubinterfaceResult) string { return v.InterfaceManagementProfile }).(pulumi.StringOutput)
 }
 
+// L3 sub-interface IP Parent
 func (o LookupLayer3SubinterfaceResultOutput) Ips() GetLayer3SubinterfaceIpArrayOutput {
 	return o.ApplyT(func(v LookupLayer3SubinterfaceResult) []GetLayer3SubinterfaceIp { return v.Ips }).(GetLayer3SubinterfaceIpArrayOutput)
 }
 
+// MTU
 func (o LookupLayer3SubinterfaceResultOutput) Mtu() pulumi.IntOutput {
 	return o.ApplyT(func(v LookupLayer3SubinterfaceResult) int { return v.Mtu }).(pulumi.IntOutput)
 }
 
+// L3 sub-interface name
 func (o LookupLayer3SubinterfaceResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupLayer3SubinterfaceResult) string { return v.Name }).(pulumi.StringOutput)
 }
 
+// Name of Netflow Profile to assign to Interface
 func (o LookupLayer3SubinterfaceResultOutput) NetflowProfile() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupLayer3SubinterfaceResult) string { return v.NetflowProfile }).(pulumi.StringOutput)
 }
 
+// Parent interface
 func (o LookupLayer3SubinterfaceResultOutput) ParentInterface() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupLayer3SubinterfaceResult) string { return v.ParentInterface }).(pulumi.StringOutput)
 }
 
+// PPPoE configuration for the interface
+func (o LookupLayer3SubinterfaceResultOutput) Pppoe() GetLayer3SubinterfacePppoeOutput {
+	return o.ApplyT(func(v LookupLayer3SubinterfaceResult) GetLayer3SubinterfacePppoe { return v.Pppoe }).(GetLayer3SubinterfacePppoeOutput)
+}
+
+// The snippet in which the resource is defined
 func (o LookupLayer3SubinterfaceResultOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupLayer3SubinterfaceResult) string { return v.Snippet }).(pulumi.StringOutput)
 }
 
+// VLAN tag
 func (o LookupLayer3SubinterfaceResultOutput) Tag() pulumi.IntOutput {
 	return o.ApplyT(func(v LookupLayer3SubinterfaceResult) int { return v.Tag }).(pulumi.IntOutput)
 }
 
+// The Terraform ID.
 func (o LookupLayer3SubinterfaceResultOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupLayer3SubinterfaceResult) string { return v.Tfid }).(pulumi.StringOutput)
 }

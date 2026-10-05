@@ -14,11 +14,11 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetSecurityRuleListDataDefaultProfileSettingsFileControlResult
     {
         /// <summary>
-        /// Download
+        /// Download. Possible values are `allow-all-file-types`, `best-practice` and `block-all-file-types`.
         /// </summary>
         public readonly string Download;
         /// <summary>
-        /// Upload
+        /// Upload. Possible values are `allow-all-file-types`, `best-practice` and `block-all-file-types`.
         /// </summary>
         public readonly string Upload;
 

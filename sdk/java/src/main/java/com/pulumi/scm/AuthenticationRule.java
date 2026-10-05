@@ -68,6 +68,7 @@ import javax.annotation.Nullable;
  *                 "service-http",
  *                 "service-https")
  *             .sourceUsers("any")
+ *             .authenticationEnforcement("default-no-captive-portal")
  *             .timeout(1200)
  *             .negateSource(false)
  *             .negateDestination(false)
@@ -93,6 +94,7 @@ import javax.annotation.Nullable;
  *             .sources("any")
  *             .services("any")
  *             .sourceUsers("any")
+ *             .authenticationEnforcement("default-no-captive-portal")
  *             .build());
  * 
  *         var ruleBottomOfList = new AuthenticationRule("ruleBottomOfList", AuthenticationRuleArgs.builder()
@@ -107,6 +109,7 @@ import javax.annotation.Nullable;
  *             .sources("any")
  *             .services("any")
  *             .sourceUsers("any")
+ *             .authenticationEnforcement("default-no-captive-portal")
  *             .build());
  * 
  *         // -----------------------------------------------------------------------------
@@ -125,6 +128,7 @@ import javax.annotation.Nullable;
  *             .sources("any")
  *             .services("any")
  *             .sourceUsers("any")
+ *             .authenticationEnforcement("default-no-captive-portal")
  *             .build());
  * 
  *         var ruleAfterAnchor = new AuthenticationRule("ruleAfterAnchor", AuthenticationRuleArgs.builder()
@@ -140,6 +144,7 @@ import javax.annotation.Nullable;
  *             .sources("any")
  *             .services("any")
  *             .sourceUsers("any")
+ *             .authenticationEnforcement("default-no-captive-portal")
  *             .build());
  * 
  *     }
@@ -177,14 +182,14 @@ public class AuthenticationRule extends com.pulumi.resources.CustomResource {
      * 
      */
     @Export(name="authenticationEnforcement", refs={String.class}, tree="[0]")
-    private Output</* @Nullable */ String> authenticationEnforcement;
+    private Output<String> authenticationEnforcement;
 
     /**
      * @return The authentication profile name
      * 
      */
-    public Output<Optional<String>> authenticationEnforcement() {
-        return Codegen.optional(this.authenticationEnforcement);
+    public Output<String> authenticationEnforcement() {
+        return this.authenticationEnforcement;
     }
     /**
      * The destination URL categories
@@ -273,16 +278,12 @@ public class AuthenticationRule extends com.pulumi.resources.CustomResource {
     /**
      * Folder
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
      */
     @Export(name="folder", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> folder;
 
     /**
      * @return Folder
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public Output<Optional<String>> folder() {
@@ -401,14 +402,14 @@ public class AuthenticationRule extends com.pulumi.resources.CustomResource {
         return this.negateSource;
     }
     /**
-     * The relative position of the rule
+     * The relative position of the rule. Possible values are `pre` and `post`.
      * 
      */
     @Export(name="position", refs={String.class}, tree="[0]")
     private Output<String> position;
 
     /**
-     * @return The relative position of the rule
+     * @return The relative position of the rule. Possible values are `pre` and `post`.
      * 
      */
     public Output<String> position() {
@@ -445,16 +446,12 @@ public class AuthenticationRule extends com.pulumi.resources.CustomResource {
     /**
      * Snippet
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
      */
     @Export(name="snippet", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> snippet;
 
     /**
      * @return Snippet
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public Output<Optional<String>> snippet() {
@@ -517,14 +514,14 @@ public class AuthenticationRule extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.tags);
     }
     /**
-     * The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `&#34;before&#34;` or `&#34;after&#34;`.
+     * UUID of the rule to position this rule relative to. Required when `relativePosition` is `&#34;before&#34;` or `&#34;after&#34;`.
      * 
      */
     @Export(name="targetRule", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> targetRule;
 
     /**
-     * @return The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `&#34;before&#34;` or `&#34;after&#34;`.
+     * @return UUID of the rule to position this rule relative to. Required when `relativePosition` is `&#34;before&#34;` or `&#34;after&#34;`.
      * 
      */
     public Output<Optional<String>> targetRule() {

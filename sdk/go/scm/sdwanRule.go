@@ -53,8 +53,6 @@ type SdwanRule struct {
 	// Error correction profile
 	ErrorCorrectionProfile pulumi.StringPtrOutput `pulumi:"errorCorrectionProfile"`
 	// The folder in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrOutput `pulumi:"folder"`
 	// List of source zones
 	Froms pulumi.StringArrayOutput `pulumi:"froms"`
@@ -66,15 +64,13 @@ type SdwanRule struct {
 	NegateSource pulumi.BoolOutput `pulumi:"negateSource"`
 	// Path quality profile
 	PathQualityProfile pulumi.StringOutput `pulumi:"pathQualityProfile"`
-	// Rule postion relative to device rules
+	// Rule postion relative to device rules. Possible values are `pre` and `post`.
 	Position pulumi.StringOutput `pulumi:"position"`
 	// SaaS quality profile
 	SaasQualityProfile pulumi.StringPtrOutput `pulumi:"saasQualityProfile"`
 	// List of services
 	Services pulumi.StringArrayOutput `pulumi:"services"`
 	// The snippet in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
 	// List of source users
 	SourceUsers pulumi.StringArrayOutput `pulumi:"sourceUsers"`
@@ -163,8 +159,6 @@ type sdwanRuleState struct {
 	// Error correction profile
 	ErrorCorrectionProfile *string `pulumi:"errorCorrectionProfile"`
 	// The folder in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// List of source zones
 	Froms []string `pulumi:"froms"`
@@ -176,15 +170,13 @@ type sdwanRuleState struct {
 	NegateSource *bool `pulumi:"negateSource"`
 	// Path quality profile
 	PathQualityProfile *string `pulumi:"pathQualityProfile"`
-	// Rule postion relative to device rules
+	// Rule postion relative to device rules. Possible values are `pre` and `post`.
 	Position *string `pulumi:"position"`
 	// SaaS quality profile
 	SaasQualityProfile *string `pulumi:"saasQualityProfile"`
 	// List of services
 	Services []string `pulumi:"services"`
 	// The snippet in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	// List of source users
 	SourceUsers []string `pulumi:"sourceUsers"`
@@ -214,8 +206,6 @@ type SdwanRuleState struct {
 	// Error correction profile
 	ErrorCorrectionProfile pulumi.StringPtrInput
 	// The folder in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// List of source zones
 	Froms pulumi.StringArrayInput
@@ -227,15 +217,13 @@ type SdwanRuleState struct {
 	NegateSource pulumi.BoolPtrInput
 	// Path quality profile
 	PathQualityProfile pulumi.StringPtrInput
-	// Rule postion relative to device rules
+	// Rule postion relative to device rules. Possible values are `pre` and `post`.
 	Position pulumi.StringPtrInput
 	// SaaS quality profile
 	SaasQualityProfile pulumi.StringPtrInput
 	// List of services
 	Services pulumi.StringArrayInput
 	// The snippet in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	// List of source users
 	SourceUsers pulumi.StringArrayInput
@@ -269,8 +257,6 @@ type sdwanRuleArgs struct {
 	// Error correction profile
 	ErrorCorrectionProfile *string `pulumi:"errorCorrectionProfile"`
 	// The folder in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// List of source zones
 	Froms []string `pulumi:"froms"`
@@ -282,15 +268,13 @@ type sdwanRuleArgs struct {
 	NegateSource *bool `pulumi:"negateSource"`
 	// Path quality profile
 	PathQualityProfile string `pulumi:"pathQualityProfile"`
-	// Rule postion relative to device rules
+	// Rule postion relative to device rules. Possible values are `pre` and `post`.
 	Position string `pulumi:"position"`
 	// SaaS quality profile
 	SaasQualityProfile *string `pulumi:"saasQualityProfile"`
 	// List of services
 	Services []string `pulumi:"services"`
 	// The snippet in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	// List of source users
 	SourceUsers []string `pulumi:"sourceUsers"`
@@ -319,8 +303,6 @@ type SdwanRuleArgs struct {
 	// Error correction profile
 	ErrorCorrectionProfile pulumi.StringPtrInput
 	// The folder in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// List of source zones
 	Froms pulumi.StringArrayInput
@@ -332,15 +314,13 @@ type SdwanRuleArgs struct {
 	NegateSource pulumi.BoolPtrInput
 	// Path quality profile
 	PathQualityProfile pulumi.StringInput
-	// Rule postion relative to device rules
+	// Rule postion relative to device rules. Possible values are `pre` and `post`.
 	Position pulumi.StringInput
 	// SaaS quality profile
 	SaasQualityProfile pulumi.StringPtrInput
 	// List of services
 	Services pulumi.StringArrayInput
 	// The snippet in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	// List of source users
 	SourceUsers pulumi.StringArrayInput
@@ -475,8 +455,6 @@ func (o SdwanRuleOutput) ErrorCorrectionProfile() pulumi.StringPtrOutput {
 }
 
 // The folder in which the resource is defined
-//
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o SdwanRuleOutput) Folder() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *SdwanRule) pulumi.StringPtrOutput { return v.Folder }).(pulumi.StringPtrOutput)
 }
@@ -506,7 +484,7 @@ func (o SdwanRuleOutput) PathQualityProfile() pulumi.StringOutput {
 	return o.ApplyT(func(v *SdwanRule) pulumi.StringOutput { return v.PathQualityProfile }).(pulumi.StringOutput)
 }
 
-// Rule postion relative to device rules
+// Rule postion relative to device rules. Possible values are `pre` and `post`.
 func (o SdwanRuleOutput) Position() pulumi.StringOutput {
 	return o.ApplyT(func(v *SdwanRule) pulumi.StringOutput { return v.Position }).(pulumi.StringOutput)
 }
@@ -522,8 +500,6 @@ func (o SdwanRuleOutput) Services() pulumi.StringArrayOutput {
 }
 
 // The snippet in which the resource is defined
-//
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o SdwanRuleOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *SdwanRule) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)
 }

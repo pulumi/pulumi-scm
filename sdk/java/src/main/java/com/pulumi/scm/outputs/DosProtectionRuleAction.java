@@ -21,14 +21,10 @@ public final class DosProtectionRuleAction {
     /**
      * @return Deny
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `allow`, `deny`, and `protect`.
-     * 
      */
     private @Nullable DosProtectionRuleActionDeny deny;
     /**
      * @return Protect
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `allow`, `deny`, and `protect`.
      * 
      */
     private @Nullable DosProtectionRuleActionProtect protect;
@@ -44,16 +40,12 @@ public final class DosProtectionRuleAction {
     /**
      * @return Deny
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `allow`, `deny`, and `protect`.
-     * 
      */
     public Optional<DosProtectionRuleActionDeny> deny() {
         return Optional.ofNullable(this.deny);
     }
     /**
      * @return Protect
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `allow`, `deny`, and `protect`.
      * 
      */
     public Optional<DosProtectionRuleActionProtect> protect() {

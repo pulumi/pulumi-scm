@@ -365,7 +365,7 @@ import (
 type SecurityRule struct {
 	pulumi.CustomResourceState
 
-	// The action to be taken when the rule is matched
+	// The action to be taken when the rule is matched. Possible values are `allow`, `deny`, `drop`, `reset-client`, `reset-server` and `reset-both`.
 	Action pulumi.StringPtrOutput `pulumi:"action"`
 	// Allow url category
 	AllowUrlCategories SecurityRuleAllowUrlCategoryArrayOutput `pulumi:"allowUrlCategories"`
@@ -415,7 +415,7 @@ type SecurityRule struct {
 	NegateUser pulumi.BoolOutput `pulumi:"negateUser"`
 	// Policy type
 	PolicyType pulumi.StringOutput `pulumi:"policyType"`
-	// The position of a security rule
+	// The position of a security rule. Possible values are `pre` and `post`.
 	Position pulumi.StringOutput `pulumi:"position"`
 	// The security profile object
 	ProfileSetting SecurityRuleProfileSettingOutput `pulumi:"profileSetting"`
@@ -437,7 +437,7 @@ type SecurityRule struct {
 	Sources pulumi.StringArrayOutput `pulumi:"sources"`
 	// The tags associated with the security rule
 	Tags pulumi.StringArrayOutput `pulumi:"tags"`
-	// The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `"before"` or `"after"`.
+	// UUID of the rule to position this rule relative to. Required when `relativePosition` is `"before"` or `"after"`.
 	TargetRule pulumi.StringPtrOutput `pulumi:"targetRule"`
 	// Tenant restrictions
 	TenantRestrictions pulumi.StringArrayOutput `pulumi:"tenantRestrictions"`
@@ -477,7 +477,7 @@ func GetSecurityRule(ctx *pulumi.Context,
 
 // Input properties used for looking up and filtering SecurityRule resources.
 type securityRuleState struct {
-	// The action to be taken when the rule is matched
+	// The action to be taken when the rule is matched. Possible values are `allow`, `deny`, `drop`, `reset-client`, `reset-server` and `reset-both`.
 	Action *string `pulumi:"action"`
 	// Allow url category
 	AllowUrlCategories []SecurityRuleAllowUrlCategory `pulumi:"allowUrlCategories"`
@@ -527,7 +527,7 @@ type securityRuleState struct {
 	NegateUser *bool `pulumi:"negateUser"`
 	// Policy type
 	PolicyType *string `pulumi:"policyType"`
-	// The position of a security rule
+	// The position of a security rule. Possible values are `pre` and `post`.
 	Position *string `pulumi:"position"`
 	// The security profile object
 	ProfileSetting *SecurityRuleProfileSetting `pulumi:"profileSetting"`
@@ -549,7 +549,7 @@ type securityRuleState struct {
 	Sources []string `pulumi:"sources"`
 	// The tags associated with the security rule
 	Tags []string `pulumi:"tags"`
-	// The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `"before"` or `"after"`.
+	// UUID of the rule to position this rule relative to. Required when `relativePosition` is `"before"` or `"after"`.
 	TargetRule *string `pulumi:"targetRule"`
 	// Tenant restrictions
 	TenantRestrictions []string `pulumi:"tenantRestrictions"`
@@ -560,7 +560,7 @@ type securityRuleState struct {
 }
 
 type SecurityRuleState struct {
-	// The action to be taken when the rule is matched
+	// The action to be taken when the rule is matched. Possible values are `allow`, `deny`, `drop`, `reset-client`, `reset-server` and `reset-both`.
 	Action pulumi.StringPtrInput
 	// Allow url category
 	AllowUrlCategories SecurityRuleAllowUrlCategoryArrayInput
@@ -610,7 +610,7 @@ type SecurityRuleState struct {
 	NegateUser pulumi.BoolPtrInput
 	// Policy type
 	PolicyType pulumi.StringPtrInput
-	// The position of a security rule
+	// The position of a security rule. Possible values are `pre` and `post`.
 	Position pulumi.StringPtrInput
 	// The security profile object
 	ProfileSetting SecurityRuleProfileSettingPtrInput
@@ -632,7 +632,7 @@ type SecurityRuleState struct {
 	Sources pulumi.StringArrayInput
 	// The tags associated with the security rule
 	Tags pulumi.StringArrayInput
-	// The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `"before"` or `"after"`.
+	// UUID of the rule to position this rule relative to. Required when `relativePosition` is `"before"` or `"after"`.
 	TargetRule pulumi.StringPtrInput
 	// Tenant restrictions
 	TenantRestrictions pulumi.StringArrayInput
@@ -647,7 +647,7 @@ func (SecurityRuleState) ElementType() reflect.Type {
 }
 
 type securityRuleArgs struct {
-	// The action to be taken when the rule is matched
+	// The action to be taken when the rule is matched. Possible values are `allow`, `deny`, `drop`, `reset-client`, `reset-server` and `reset-both`.
 	Action *string `pulumi:"action"`
 	// Allow url category
 	AllowUrlCategories []SecurityRuleAllowUrlCategory `pulumi:"allowUrlCategories"`
@@ -697,7 +697,7 @@ type securityRuleArgs struct {
 	NegateUser *bool `pulumi:"negateUser"`
 	// Policy type
 	PolicyType *string `pulumi:"policyType"`
-	// The position of a security rule
+	// The position of a security rule. Possible values are `pre` and `post`.
 	Position *string `pulumi:"position"`
 	// The security profile object
 	ProfileSetting *SecurityRuleProfileSetting `pulumi:"profileSetting"`
@@ -719,7 +719,7 @@ type securityRuleArgs struct {
 	Sources []string `pulumi:"sources"`
 	// The tags associated with the security rule
 	Tags []string `pulumi:"tags"`
-	// The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `"before"` or `"after"`.
+	// UUID of the rule to position this rule relative to. Required when `relativePosition` is `"before"` or `"after"`.
 	TargetRule *string `pulumi:"targetRule"`
 	// Tenant restrictions
 	TenantRestrictions []string `pulumi:"tenantRestrictions"`
@@ -729,7 +729,7 @@ type securityRuleArgs struct {
 
 // The set of arguments for constructing a SecurityRule resource.
 type SecurityRuleArgs struct {
-	// The action to be taken when the rule is matched
+	// The action to be taken when the rule is matched. Possible values are `allow`, `deny`, `drop`, `reset-client`, `reset-server` and `reset-both`.
 	Action pulumi.StringPtrInput
 	// Allow url category
 	AllowUrlCategories SecurityRuleAllowUrlCategoryArrayInput
@@ -779,7 +779,7 @@ type SecurityRuleArgs struct {
 	NegateUser pulumi.BoolPtrInput
 	// Policy type
 	PolicyType pulumi.StringPtrInput
-	// The position of a security rule
+	// The position of a security rule. Possible values are `pre` and `post`.
 	Position pulumi.StringPtrInput
 	// The security profile object
 	ProfileSetting SecurityRuleProfileSettingPtrInput
@@ -801,7 +801,7 @@ type SecurityRuleArgs struct {
 	Sources pulumi.StringArrayInput
 	// The tags associated with the security rule
 	Tags pulumi.StringArrayInput
-	// The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `"before"` or `"after"`.
+	// UUID of the rule to position this rule relative to. Required when `relativePosition` is `"before"` or `"after"`.
 	TargetRule pulumi.StringPtrInput
 	// Tenant restrictions
 	TenantRestrictions pulumi.StringArrayInput
@@ -896,7 +896,7 @@ func (o SecurityRuleOutput) ToSecurityRuleOutputWithContext(ctx context.Context)
 	return o
 }
 
-// The action to be taken when the rule is matched
+// The action to be taken when the rule is matched. Possible values are `allow`, `deny`, `drop`, `reset-client`, `reset-server` and `reset-both`.
 func (o SecurityRuleOutput) Action() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *SecurityRule) pulumi.StringPtrOutput { return v.Action }).(pulumi.StringPtrOutput)
 }
@@ -1021,7 +1021,7 @@ func (o SecurityRuleOutput) PolicyType() pulumi.StringOutput {
 	return o.ApplyT(func(v *SecurityRule) pulumi.StringOutput { return v.PolicyType }).(pulumi.StringOutput)
 }
 
-// The position of a security rule
+// The position of a security rule. Possible values are `pre` and `post`.
 func (o SecurityRuleOutput) Position() pulumi.StringOutput {
 	return o.ApplyT(func(v *SecurityRule) pulumi.StringOutput { return v.Position }).(pulumi.StringOutput)
 }
@@ -1076,7 +1076,7 @@ func (o SecurityRuleOutput) Tags() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v *SecurityRule) pulumi.StringArrayOutput { return v.Tags }).(pulumi.StringArrayOutput)
 }
 
-// The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `"before"` or `"after"`.
+// UUID of the rule to position this rule relative to. Required when `relativePosition` is `"before"` or `"after"`.
 func (o SecurityRuleOutput) TargetRule() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *SecurityRule) pulumi.StringPtrOutput { return v.TargetRule }).(pulumi.StringPtrOutput)
 }

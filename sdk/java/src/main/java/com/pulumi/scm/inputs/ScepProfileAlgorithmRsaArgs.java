@@ -15,14 +15,14 @@ public final class ScepProfileAlgorithmRsaArgs extends com.pulumi.resources.Reso
     public static final ScepProfileAlgorithmRsaArgs Empty = new ScepProfileAlgorithmRsaArgs();
 
     /**
-     * Rsa nbits
+     * Rsa nbits. Possible values are `1024`, `2048` and `3072`.
      * 
      */
     @Import(name="rsaNbits", required=true)
     private Output<String> rsaNbits;
 
     /**
-     * @return Rsa nbits
+     * @return Rsa nbits. Possible values are `1024`, `2048` and `3072`.
      * 
      */
     public Output<String> rsaNbits() {
@@ -54,7 +54,7 @@ public final class ScepProfileAlgorithmRsaArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param rsaNbits Rsa nbits
+         * @param rsaNbits Rsa nbits. Possible values are `1024`, `2048` and `3072`.
          * 
          * @return builder
          * 
@@ -65,7 +65,7 @@ public final class ScepProfileAlgorithmRsaArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param rsaNbits Rsa nbits
+         * @param rsaNbits Rsa nbits. Possible values are `1024`, `2048` and `3072`.
          * 
          * @return builder
          * 

@@ -129,8 +129,6 @@ type AuthenticationProfile struct {
 	// The device in which the resource is defined
 	Device pulumi.StringPtrOutput `pulumi:"device"`
 	// The folder in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrOutput `pulumi:"folder"`
 	// Lockout object of the authentication profile
 	Lockout AuthenticationProfileLockoutPtrOutput `pulumi:"lockout"`
@@ -143,14 +141,12 @@ type AuthenticationProfile struct {
 	// Single sign on
 	SingleSignOn AuthenticationProfileSingleSignOnPtrOutput `pulumi:"singleSignOn"`
 	// The snippet in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
 	// The Terraform ID.
 	Tfid pulumi.StringOutput `pulumi:"tfid"`
 	// User domain
 	UserDomain pulumi.StringPtrOutput `pulumi:"userDomain"`
-	// Username modifier
+	// Username modifier. Possible values are `%USERINPUT%`, `%USERINPUT%@%USERDOMAIN%` and `%USERDOMAIN%\\%USERINPUT%`.
 	UsernameModifier pulumi.StringPtrOutput `pulumi:"usernameModifier"`
 }
 
@@ -189,8 +185,6 @@ type authenticationProfileState struct {
 	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
 	// The folder in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// Lockout object of the authentication profile
 	Lockout *AuthenticationProfileLockout `pulumi:"lockout"`
@@ -203,14 +197,12 @@ type authenticationProfileState struct {
 	// Single sign on
 	SingleSignOn *AuthenticationProfileSingleSignOn `pulumi:"singleSignOn"`
 	// The snippet in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	// The Terraform ID.
 	Tfid *string `pulumi:"tfid"`
 	// User domain
 	UserDomain *string `pulumi:"userDomain"`
-	// Username modifier
+	// Username modifier. Possible values are `%USERINPUT%`, `%USERINPUT%@%USERDOMAIN%` and `%USERDOMAIN%\\%USERINPUT%`.
 	UsernameModifier *string `pulumi:"usernameModifier"`
 }
 
@@ -220,8 +212,6 @@ type AuthenticationProfileState struct {
 	// The device in which the resource is defined
 	Device pulumi.StringPtrInput
 	// The folder in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// Lockout object of the authentication profile
 	Lockout AuthenticationProfileLockoutPtrInput
@@ -234,14 +224,12 @@ type AuthenticationProfileState struct {
 	// Single sign on
 	SingleSignOn AuthenticationProfileSingleSignOnPtrInput
 	// The snippet in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	// The Terraform ID.
 	Tfid pulumi.StringPtrInput
 	// User domain
 	UserDomain pulumi.StringPtrInput
-	// Username modifier
+	// Username modifier. Possible values are `%USERINPUT%`, `%USERINPUT%@%USERDOMAIN%` and `%USERDOMAIN%\\%USERINPUT%`.
 	UsernameModifier pulumi.StringPtrInput
 }
 
@@ -255,8 +243,6 @@ type authenticationProfileArgs struct {
 	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
 	// The folder in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// Lockout object of the authentication profile
 	Lockout *AuthenticationProfileLockout `pulumi:"lockout"`
@@ -269,12 +255,10 @@ type authenticationProfileArgs struct {
 	// Single sign on
 	SingleSignOn *AuthenticationProfileSingleSignOn `pulumi:"singleSignOn"`
 	// The snippet in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	// User domain
 	UserDomain *string `pulumi:"userDomain"`
-	// Username modifier
+	// Username modifier. Possible values are `%USERINPUT%`, `%USERINPUT%@%USERDOMAIN%` and `%USERDOMAIN%\\%USERINPUT%`.
 	UsernameModifier *string `pulumi:"usernameModifier"`
 }
 
@@ -285,8 +269,6 @@ type AuthenticationProfileArgs struct {
 	// The device in which the resource is defined
 	Device pulumi.StringPtrInput
 	// The folder in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// Lockout object of the authentication profile
 	Lockout AuthenticationProfileLockoutPtrInput
@@ -299,12 +281,10 @@ type AuthenticationProfileArgs struct {
 	// Single sign on
 	SingleSignOn AuthenticationProfileSingleSignOnPtrInput
 	// The snippet in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	// User domain
 	UserDomain pulumi.StringPtrInput
-	// Username modifier
+	// Username modifier. Possible values are `%USERINPUT%`, `%USERINPUT%@%USERDOMAIN%` and `%USERDOMAIN%\\%USERINPUT%`.
 	UsernameModifier pulumi.StringPtrInput
 }
 
@@ -406,8 +386,6 @@ func (o AuthenticationProfileOutput) Device() pulumi.StringPtrOutput {
 }
 
 // The folder in which the resource is defined
-//
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o AuthenticationProfileOutput) Folder() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *AuthenticationProfile) pulumi.StringPtrOutput { return v.Folder }).(pulumi.StringPtrOutput)
 }
@@ -438,8 +416,6 @@ func (o AuthenticationProfileOutput) SingleSignOn() AuthenticationProfileSingleS
 }
 
 // The snippet in which the resource is defined
-//
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o AuthenticationProfileOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *AuthenticationProfile) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)
 }
@@ -454,7 +430,7 @@ func (o AuthenticationProfileOutput) UserDomain() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *AuthenticationProfile) pulumi.StringPtrOutput { return v.UserDomain }).(pulumi.StringPtrOutput)
 }
 
-// Username modifier
+// Username modifier. Possible values are `%USERINPUT%`, `%USERINPUT%@%USERDOMAIN%` and `%USERDOMAIN%\\%USERINPUT%`.
 func (o AuthenticationProfileOutput) UsernameModifier() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *AuthenticationProfile) pulumi.StringPtrOutput { return v.UsernameModifier }).(pulumi.StringPtrOutput)
 }

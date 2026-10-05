@@ -823,7 +823,14 @@
                         "maxItemsOne": false
                     },
                     "from": {
-                        "maxItemsOne": false
+                        "fields": {
+                            "interface": {
+                                "maxItemsOne": false
+                            },
+                            "zone": {
+                                "maxItemsOne": false
+                            }
+                        }
                     },
                     "service": {
                         "maxItemsOne": false
@@ -838,7 +845,14 @@
                         "maxItemsOne": false
                     },
                     "to": {
-                        "maxItemsOne": false
+                        "fields": {
+                            "interface": {
+                                "maxItemsOne": false
+                            },
+                            "zone": {
+                                "maxItemsOne": false
+                            }
+                        }
                     }
                 }
             },
@@ -5214,7 +5228,14 @@
                         "maxItemsOne": false
                     },
                     "from": {
-                        "maxItemsOne": false
+                        "fields": {
+                            "interface": {
+                                "maxItemsOne": false
+                            },
+                            "zone": {
+                                "maxItemsOne": false
+                            }
+                        }
                     },
                     "service": {
                         "maxItemsOne": false
@@ -5229,7 +5250,14 @@
                         "maxItemsOne": false
                     },
                     "to": {
-                        "maxItemsOne": false
+                        "fields": {
+                            "interface": {
+                                "maxItemsOne": false
+                            },
+                            "zone": {
+                                "maxItemsOne": false
+                            }
+                        }
                     }
                 }
             },
@@ -5245,7 +5273,14 @@
                                     "maxItemsOne": false
                                 },
                                 "from": {
-                                    "maxItemsOne": false
+                                    "fields": {
+                                        "interface": {
+                                            "maxItemsOne": false
+                                        },
+                                        "zone": {
+                                            "maxItemsOne": false
+                                        }
+                                    }
                                 },
                                 "service": {
                                     "maxItemsOne": false
@@ -5260,7 +5295,14 @@
                                     "maxItemsOne": false
                                 },
                                 "to": {
-                                    "maxItemsOne": false
+                                    "fields": {
+                                        "interface": {
+                                            "maxItemsOne": false
+                                        },
+                                        "zone": {
+                                            "maxItemsOne": false
+                                        }
+                                    }
                                 }
                             }
                         }
@@ -7110,6 +7152,15 @@
             },
             "scm_local_user_list": {
                 "current": "scm:index/getLocalUserList:getLocalUserList",
+                "majorVersion": 1,
+                "fields": {
+                    "data": {
+                        "maxItemsOne": false
+                    }
+                }
+            },
+            "scm_location_list": {
+                "current": "scm:index/getLocationList:getLocationList",
                 "majorVersion": 1,
                 "fields": {
                     "data": {
@@ -9890,6 +9941,37 @@
                     }
                 }
             },
+            "scm_snippet_category": {
+                "current": "scm:index/getSnippetCategory:getSnippetCategory",
+                "majorVersion": 1,
+                "fields": {
+                    "folders": {
+                        "maxItemsOne": false
+                    },
+                    "labels": {
+                        "maxItemsOne": false
+                    }
+                }
+            },
+            "scm_snippet_category_list": {
+                "current": "scm:index/getSnippetCategoryList:getSnippetCategoryList",
+                "majorVersion": 1,
+                "fields": {
+                    "data": {
+                        "maxItemsOne": false,
+                        "elem": {
+                            "fields": {
+                                "folders": {
+                                    "maxItemsOne": false
+                                },
+                                "labels": {
+                                    "maxItemsOne": false
+                                }
+                            }
+                        }
+                    }
+                }
+            },
             "scm_snippet_list": {
                 "current": "scm:index/getSnippetList:getSnippetList",
                 "majorVersion": 1,
@@ -10086,6 +10168,10 @@
                         }
                     }
                 }
+            },
+            "scm_trusted_tenant_overview": {
+                "current": "scm:index/getTrustedTenantOverview:getTrustedTenantOverview",
+                "majorVersion": 1
             },
             "scm_tunnel_interface": {
                 "current": "scm:index/getTunnelInterface:getTunnelInterface",

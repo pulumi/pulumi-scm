@@ -26,7 +26,7 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly Outputs.GetGeneralSettingListDataGeneralGeoLocationResult GeoLocation;
         /// <summary>
-        /// Locale
+        /// Locale. Possible values are `En`, `Es`, `Ja`, `Fr`, `zh_CN` and `zh_TW`.
         /// </summary>
         public readonly string Locale;
         /// <summary>

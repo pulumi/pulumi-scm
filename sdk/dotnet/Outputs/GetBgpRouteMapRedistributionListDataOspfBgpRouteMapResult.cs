@@ -14,7 +14,7 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetBgpRouteMapRedistributionListDataOspfBgpRouteMapResult
     {
         /// <summary>
-        /// OSPF BGP Route maps Action
+        /// OSPF BGP Route maps Action. Possible values are `Permit` and `Deny`.
         /// </summary>
         public readonly string Action;
         /// <summary>

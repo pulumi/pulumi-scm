@@ -17,12 +17,12 @@ public final class GetQosProfileListDataClassBandwidthTypeMbpsClass {
      */
     private GetQosProfileListDataClassBandwidthTypeMbpsClassClassBandwidth classBandwidth;
     /**
-     * @return Traffic class
+     * @return Traffic class. Possible values are `class1`, `class2`, `class3`, `class4`, `class5`, `class6`, `class7` and `class8`.
      * 
      */
     private String name;
     /**
-     * @return traffic class priority
+     * @return traffic class priority. Possible values are `real-time`, `high`, `medium` and `low`.
      * 
      */
     private String priority;
@@ -36,14 +36,14 @@ public final class GetQosProfileListDataClassBandwidthTypeMbpsClass {
         return this.classBandwidth;
     }
     /**
-     * @return Traffic class
+     * @return Traffic class. Possible values are `class1`, `class2`, `class3`, `class4`, `class5`, `class6`, `class7` and `class8`.
      * 
      */
     public String name() {
         return this.name;
     }
     /**
-     * @return traffic class priority
+     * @return traffic class priority. Possible values are `real-time`, `high`, `medium` and `low`.
      * 
      */
     public String priority() {

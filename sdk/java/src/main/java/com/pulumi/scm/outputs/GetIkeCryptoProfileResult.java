@@ -13,27 +13,67 @@ import java.util.Objects;
 
 @CustomType
 public final class GetIkeCryptoProfileResult {
+    /**
+     * @return IKEv2 SA reauthentication interval equals authetication-multiple * rekey-lifetime; 0 means reauthentication disabled
+     * 
+     */
     private Integer authenticationMultiple;
     /**
      * @return The device in which the resource is defined
      * 
      */
     private String device;
+    /**
+     * @return Dh group. Possible values are `group1`, `group2`, `group5`, `group14`, `group19`, `group20`, `group21`, `ml-kem-512`, `ml-kem-768` and `ml-kem-1024`.
+     * 
+     */
     private List<String> dhGroups;
+    /**
+     * @return Encryption algorithm. Possible values are `des`, `3des`, `aes-128-cbc`, `aes-192-cbc`, `aes-256-cbc`, `aes-128-gcm` and `aes-256-gcm`.
+     * 
+     */
     private List<String> encryptions;
+    /**
+     * @return The folder in which the resource is defined
+     * 
+     */
     private String folder;
+    /**
+     * @return Hash. Possible values are `md5`, `sha1`, `sha256`, `sha384`, `sha512` and `non-auth`.
+     * 
+     */
     private List<String> hashes;
     /**
      * @return UUID of the resource
      * 
      */
     private String id;
+    /**
+     * @return Ike crypto profile lifetime
+     * 
+     */
     private GetIkeCryptoProfileLifetime lifetime;
+    /**
+     * @return Alphanumeric string begin with letter: [0-9a-zA-Z._-]
+     * 
+     */
     private String name;
+    /**
+     * @return The snippet in which the resource is defined
+     * 
+     */
     private String snippet;
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     private String tfid;
 
     private GetIkeCryptoProfileResult() {}
+    /**
+     * @return IKEv2 SA reauthentication interval equals authetication-multiple * rekey-lifetime; 0 means reauthentication disabled
+     * 
+     */
     public Integer authenticationMultiple() {
         return this.authenticationMultiple;
     }
@@ -44,15 +84,31 @@ public final class GetIkeCryptoProfileResult {
     public String device() {
         return this.device;
     }
+    /**
+     * @return Dh group. Possible values are `group1`, `group2`, `group5`, `group14`, `group19`, `group20`, `group21`, `ml-kem-512`, `ml-kem-768` and `ml-kem-1024`.
+     * 
+     */
     public List<String> dhGroups() {
         return this.dhGroups;
     }
+    /**
+     * @return Encryption algorithm. Possible values are `des`, `3des`, `aes-128-cbc`, `aes-192-cbc`, `aes-256-cbc`, `aes-128-gcm` and `aes-256-gcm`.
+     * 
+     */
     public List<String> encryptions() {
         return this.encryptions;
     }
+    /**
+     * @return The folder in which the resource is defined
+     * 
+     */
     public String folder() {
         return this.folder;
     }
+    /**
+     * @return Hash. Possible values are `md5`, `sha1`, `sha256`, `sha384`, `sha512` and `non-auth`.
+     * 
+     */
     public List<String> hashes() {
         return this.hashes;
     }
@@ -63,15 +119,31 @@ public final class GetIkeCryptoProfileResult {
     public String id() {
         return this.id;
     }
+    /**
+     * @return Ike crypto profile lifetime
+     * 
+     */
     public GetIkeCryptoProfileLifetime lifetime() {
         return this.lifetime;
     }
+    /**
+     * @return Alphanumeric string begin with letter: [0-9a-zA-Z._-]
+     * 
+     */
     public String name() {
         return this.name;
     }
+    /**
+     * @return The snippet in which the resource is defined
+     * 
+     */
     public String snippet() {
         return this.snippet;
     }
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     public String tfid() {
         return this.tfid;
     }

@@ -19,7 +19,7 @@ public final class BgpRouteMapRedistributionConnectedStaticOspfRouteMapSet {
      */
     private @Nullable BgpRouteMapRedistributionConnectedStaticOspfRouteMapSetMetric metric;
     /**
-     * @return Connected Static BGP OSPF Route map set Metric type
+     * @return Connected Static BGP OSPF Route map set Metric type. Possible values are `type-1` and `type-2`.
      * 
      */
     private @Nullable String metricType;
@@ -38,7 +38,7 @@ public final class BgpRouteMapRedistributionConnectedStaticOspfRouteMapSet {
         return Optional.ofNullable(this.metric);
     }
     /**
-     * @return Connected Static BGP OSPF Route map set Metric type
+     * @return Connected Static BGP OSPF Route map set Metric type. Possible values are `type-1` and `type-2`.
      * 
      */
     public Optional<String> metricType() {

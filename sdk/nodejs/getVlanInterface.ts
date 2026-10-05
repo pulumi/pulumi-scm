@@ -48,12 +48,21 @@ export interface GetVlanInterfaceArgs {
      * The device in which the resource is defined
      */
     device?: string;
+    /**
+     * The folder in which the resource is defined
+     */
     folder?: string;
     /**
      * UUID of the resource
      */
     id: string;
+    /**
+     * L3 sub-interface name
+     */
     name?: string;
+    /**
+     * The snippet in which the resource is defined
+     */
     snippet?: string;
 }
 
@@ -61,27 +70,73 @@ export interface GetVlanInterfaceArgs {
  * A collection of values returned by getVlanInterface.
  */
 export interface GetVlanInterfaceResult {
+    /**
+     * TCP MSS adjustment settings for the interface
+     */
+    readonly adjustTcpMss: outputs.GetVlanInterfaceAdjustTcpMss;
+    /**
+     * ARP configuration
+     */
     readonly arps: outputs.GetVlanInterfaceArp[];
+    /**
+     * Description
+     */
     readonly comment: string;
+    /**
+     * Dynamic DNS configuration specific to the Vlan Interfaces.
+     */
     readonly ddnsConfig: outputs.GetVlanInterfaceDdnsConfig;
+    /**
+     * Default interface assignment
+     */
     readonly defaultValue: string;
     /**
      * The device in which the resource is defined
      */
     readonly device: string;
+    /**
+     * Vlan interfaces DHCP Client Object
+     */
     readonly dhcpClient: outputs.GetVlanInterfaceDhcpClient;
+    /**
+     * The folder in which the resource is defined
+     */
     readonly folder: string;
     /**
      * UUID of the resource
      */
     readonly id: string;
+    /**
+     * Interface management profile
+     */
     readonly interfaceManagementProfile: string;
+    /**
+     * VLAN Interface IP Parent
+     */
     readonly ips: outputs.GetVlanInterfaceIp[];
+    /**
+     * MTU
+     */
     readonly mtu: number;
+    /**
+     * L3 sub-interface name
+     */
     readonly name: string;
+    /**
+     * Name of Netflow Profile to assign to Interface
+     */
     readonly netflowProfile: string;
+    /**
+     * The snippet in which the resource is defined
+     */
     readonly snippet: string;
+    /**
+     * The Terraform ID.
+     */
     readonly tfid: string;
+    /**
+     * VLAN tag
+     */
     readonly vlanTag: string;
 }
 /**
@@ -126,11 +181,20 @@ export interface GetVlanInterfaceOutputArgs {
      * The device in which the resource is defined
      */
     device?: pulumi.Input<string | undefined>;
+    /**
+     * The folder in which the resource is defined
+     */
     folder?: pulumi.Input<string | undefined>;
     /**
      * UUID of the resource
      */
     id: pulumi.Input<string>;
+    /**
+     * L3 sub-interface name
+     */
     name?: pulumi.Input<string | undefined>;
+    /**
+     * The snippet in which the resource is defined
+     */
     snippet?: pulumi.Input<string | undefined>;
 }

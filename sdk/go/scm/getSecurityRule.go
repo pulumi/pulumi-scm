@@ -68,7 +68,7 @@ type LookupSecurityRuleArgs struct {
 
 // A collection of values returned by getSecurityRule.
 type LookupSecurityRuleResult struct {
-	// The action to be taken when the rule is matched
+	// The action to be taken when the rule is matched. Possible values are `allow`, `deny`, `drop`, `reset-client`, `reset-server` and `reset-both`.
 	Action string `pulumi:"action"`
 	// Allow url category
 	AllowUrlCategories []GetSecurityRuleAllowUrlCategory `pulumi:"allowUrlCategories"`
@@ -120,7 +120,7 @@ type LookupSecurityRuleResult struct {
 	NegateUser bool `pulumi:"negateUser"`
 	// Policy type
 	PolicyType string `pulumi:"policyType"`
-	// The position of a security rule
+	// The position of a security rule. Possible values are `pre` and `post`.
 	Position string `pulumi:"position"`
 	// The security profile object
 	ProfileSetting GetSecurityRuleProfileSetting `pulumi:"profileSetting"`
@@ -142,7 +142,7 @@ type LookupSecurityRuleResult struct {
 	Sources []string `pulumi:"sources"`
 	// The tags associated with the security rule
 	Tags []string `pulumi:"tags"`
-	// The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `"before"` or `"after"`.
+	// UUID of the rule to position this rule relative to. Required when `relativePosition` is `"before"` or `"after"`.
 	TargetRule string `pulumi:"targetRule"`
 	// Tenant restrictions
 	TenantRestrictions []string `pulumi:"tenantRestrictions"`
@@ -190,7 +190,7 @@ func (o LookupSecurityRuleResultOutput) ToLookupSecurityRuleResultOutputWithCont
 	return o
 }
 
-// The action to be taken when the rule is matched
+// The action to be taken when the rule is matched. Possible values are `allow`, `deny`, `drop`, `reset-client`, `reset-server` and `reset-both`.
 func (o LookupSecurityRuleResultOutput) Action() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupSecurityRuleResult) string { return v.Action }).(pulumi.StringOutput)
 }
@@ -322,7 +322,7 @@ func (o LookupSecurityRuleResultOutput) PolicyType() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupSecurityRuleResult) string { return v.PolicyType }).(pulumi.StringOutput)
 }
 
-// The position of a security rule
+// The position of a security rule. Possible values are `pre` and `post`.
 func (o LookupSecurityRuleResultOutput) Position() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupSecurityRuleResult) string { return v.Position }).(pulumi.StringOutput)
 }
@@ -377,7 +377,7 @@ func (o LookupSecurityRuleResultOutput) Tags() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupSecurityRuleResult) []string { return v.Tags }).(pulumi.StringArrayOutput)
 }
 
-// The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `"before"` or `"after"`.
+// UUID of the rule to position this rule relative to. Required when `relativePosition` is `"before"` or `"after"`.
 func (o LookupSecurityRuleResultOutput) TargetRule() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupSecurityRuleResult) string { return v.TargetRule }).(pulumi.StringOutput)
 }

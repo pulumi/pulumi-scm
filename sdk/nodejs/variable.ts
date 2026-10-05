@@ -14,6 +14,16 @@ import * as utilities from "./utilities";
  * import * as scm from "@pulumi/scm";
  *
  * //
+ * // Creates a variable in ip-netmask format with an empty value
+ * //
+ * const scmVariableIpaddrEmpty = new scm.Variable("scm_variable_ipaddr_empty", {
+ *     folder: "ngfw-shared",
+ *     name: "$tf_variable_ipaddr_empty",
+ *     description: "Managed by Pulumi",
+ *     type: "ip-netmask",
+ *     value: "None",
+ * });
+ * //
  * // Creates a variable in as-number format
  * //
  * const scmVariableAsn = new scm.Variable("scm_variable_asn", {
@@ -185,8 +195,6 @@ export class Variable extends pulumi.CustomResource {
     declare public readonly device: pulumi.Output<string | undefined>;
     /**
      * The folder in which the resource is defined
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly folder: pulumi.Output<string | undefined>;
     /**
@@ -199,8 +207,6 @@ export class Variable extends pulumi.CustomResource {
     declare public /*out*/ readonly overridden: pulumi.Output<boolean>;
     /**
      * The snippet in which the resource is defined
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly snippet: pulumi.Output<string | undefined>;
     /**
@@ -208,7 +214,7 @@ export class Variable extends pulumi.CustomResource {
      */
     declare public /*out*/ readonly tfid: pulumi.Output<string>;
     /**
-     * The variable type
+     * The variable type. Possible values are `percent`, `count`, `ip-netmask`, `zone`, `ip-range`, `ip-wildcard`, `device-priority`, `device-id`, `egress-max`, `as-number`, `fqdn`, `port`, `link-tag`, `group-id`, `rate`, `router-id`, `qos-profile` and `timer`.
      */
     declare public readonly type: pulumi.Output<string>;
     /**
@@ -275,8 +281,6 @@ export interface VariableState {
     device?: pulumi.Input<string | undefined>;
     /**
      * The folder in which the resource is defined
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     folder?: pulumi.Input<string | undefined>;
     /**
@@ -289,8 +293,6 @@ export interface VariableState {
     overridden?: pulumi.Input<boolean | undefined>;
     /**
      * The snippet in which the resource is defined
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     snippet?: pulumi.Input<string | undefined>;
     /**
@@ -298,7 +300,7 @@ export interface VariableState {
      */
     tfid?: pulumi.Input<string | undefined>;
     /**
-     * The variable type
+     * The variable type. Possible values are `percent`, `count`, `ip-netmask`, `zone`, `ip-range`, `ip-wildcard`, `device-priority`, `device-id`, `egress-max`, `as-number`, `fqdn`, `port`, `link-tag`, `group-id`, `rate`, `router-id`, `qos-profile` and `timer`.
      */
     type?: pulumi.Input<string | undefined>;
     /**
@@ -321,8 +323,6 @@ export interface VariableArgs {
     device?: pulumi.Input<string | undefined>;
     /**
      * The folder in which the resource is defined
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     folder?: pulumi.Input<string | undefined>;
     /**
@@ -331,12 +331,10 @@ export interface VariableArgs {
     name?: pulumi.Input<string | undefined>;
     /**
      * The snippet in which the resource is defined
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     snippet?: pulumi.Input<string | undefined>;
     /**
-     * The variable type
+     * The variable type. Possible values are `percent`, `count`, `ip-netmask`, `zone`, `ip-range`, `ip-wildcard`, `device-priority`, `device-id`, `egress-max`, `as-number`, `fqdn`, `port`, `link-tag`, `group-id`, `rate`, `router-id`, `qos-profile` and `timer`.
      */
     type: pulumi.Input<string>;
     /**

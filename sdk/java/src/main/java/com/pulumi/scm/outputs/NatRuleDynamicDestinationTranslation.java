@@ -13,7 +13,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class NatRuleDynamicDestinationTranslation {
     /**
-     * @return Distribution method
+     * @return Distribution method. Possible values are `round-robin`, `source-ip-hash`, `ip-modulo`, `ip-hash` and `least-sessions`.
      * 
      */
     private @Nullable String distribution;
@@ -30,7 +30,7 @@ public final class NatRuleDynamicDestinationTranslation {
 
     private NatRuleDynamicDestinationTranslation() {}
     /**
-     * @return Distribution method
+     * @return Distribution method. Possible values are `round-robin`, `source-ip-hash`, `ip-modulo`, `ip-hash` and `least-sessions`.
      * 
      */
     public Optional<String> distribution() {

@@ -23,14 +23,10 @@ public final class GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurring {
     /**
      * @return Hourly
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `hourly`, `none`, and `weekly`.
-     * 
      */
     private GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringHourly hourly;
     /**
      * @return None
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `hourly`, `none`, and `weekly`.
      * 
      */
     private GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringNone none;
@@ -47,8 +43,6 @@ public final class GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurring {
     /**
      * @return Weekly
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `hourly`, `none`, and `weekly`.
-     * 
      */
     private GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringWeekly weekly;
 
@@ -63,16 +57,12 @@ public final class GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurring {
     /**
      * @return Hourly
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `hourly`, `none`, and `weekly`.
-     * 
      */
     public GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringHourly hourly() {
         return this.hourly;
     }
     /**
      * @return None
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `hourly`, `none`, and `weekly`.
      * 
      */
     public GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringNone none() {
@@ -94,8 +84,6 @@ public final class GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurring {
     }
     /**
      * @return Weekly
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `hourly`, `none`, and `weekly`.
      * 
      */
     public GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringWeekly weekly() {

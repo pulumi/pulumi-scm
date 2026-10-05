@@ -17,14 +17,14 @@ public final class SyslogServerProfileServerArgs extends com.pulumi.resources.Re
     public static final SyslogServerProfileServerArgs Empty = new SyslogServerProfileServerArgs();
 
     /**
-     * Syslog facility
+     * Syslog facility. Possible values are `LOG_USER`, `LOG_LOCAL0`, `LOG_LOCAL1`, `LOG_LOCAL2`, `LOG_LOCAL3`, `LOG_LOCAL4`, `LOG_LOCAL5`, `LOG_LOCAL6` and `LOG_LOCAL7`.
      * 
      */
     @Import(name="facility")
     private @Nullable Output<String> facility;
 
     /**
-     * @return Syslog facility
+     * @return Syslog facility. Possible values are `LOG_USER`, `LOG_LOCAL0`, `LOG_LOCAL1`, `LOG_LOCAL2`, `LOG_LOCAL3`, `LOG_LOCAL4`, `LOG_LOCAL5`, `LOG_LOCAL6` and `LOG_LOCAL7`.
      * 
      */
     public Optional<Output<String>> facility() {
@@ -32,14 +32,14 @@ public final class SyslogServerProfileServerArgs extends com.pulumi.resources.Re
     }
 
     /**
-     * Syslog format
+     * Syslog format. Possible values are `BSD` and `IETF`.
      * 
      */
     @Import(name="format")
     private @Nullable Output<String> format;
 
     /**
-     * @return Syslog format
+     * @return Syslog format. Possible values are `BSD` and `IETF`.
      * 
      */
     public Optional<Output<String>> format() {
@@ -92,14 +92,14 @@ public final class SyslogServerProfileServerArgs extends com.pulumi.resources.Re
     }
 
     /**
-     * Transport protocol
+     * Transport protocol. Possible values are `UDP` and `TCP`.
      * 
      */
     @Import(name="transport")
     private @Nullable Output<String> transport;
 
     /**
-     * @return Transport protocol
+     * @return Transport protocol. Possible values are `UDP` and `TCP`.
      * 
      */
     public Optional<Output<String>> transport() {
@@ -136,7 +136,7 @@ public final class SyslogServerProfileServerArgs extends com.pulumi.resources.Re
         }
 
         /**
-         * @param facility Syslog facility
+         * @param facility Syslog facility. Possible values are `LOG_USER`, `LOG_LOCAL0`, `LOG_LOCAL1`, `LOG_LOCAL2`, `LOG_LOCAL3`, `LOG_LOCAL4`, `LOG_LOCAL5`, `LOG_LOCAL6` and `LOG_LOCAL7`.
          * 
          * @return builder
          * 
@@ -147,7 +147,7 @@ public final class SyslogServerProfileServerArgs extends com.pulumi.resources.Re
         }
 
         /**
-         * @param facility Syslog facility
+         * @param facility Syslog facility. Possible values are `LOG_USER`, `LOG_LOCAL0`, `LOG_LOCAL1`, `LOG_LOCAL2`, `LOG_LOCAL3`, `LOG_LOCAL4`, `LOG_LOCAL5`, `LOG_LOCAL6` and `LOG_LOCAL7`.
          * 
          * @return builder
          * 
@@ -157,7 +157,7 @@ public final class SyslogServerProfileServerArgs extends com.pulumi.resources.Re
         }
 
         /**
-         * @param format Syslog format
+         * @param format Syslog format. Possible values are `BSD` and `IETF`.
          * 
          * @return builder
          * 
@@ -168,7 +168,7 @@ public final class SyslogServerProfileServerArgs extends com.pulumi.resources.Re
         }
 
         /**
-         * @param format Syslog format
+         * @param format Syslog format. Possible values are `BSD` and `IETF`.
          * 
          * @return builder
          * 
@@ -241,7 +241,7 @@ public final class SyslogServerProfileServerArgs extends com.pulumi.resources.Re
         }
 
         /**
-         * @param transport Transport protocol
+         * @param transport Transport protocol. Possible values are `UDP` and `TCP`.
          * 
          * @return builder
          * 
@@ -252,7 +252,7 @@ public final class SyslogServerProfileServerArgs extends com.pulumi.resources.Re
         }
 
         /**
-         * @param transport Transport protocol
+         * @param transport Transport protocol. Possible values are `UDP` and `TCP`.
          * 
          * @return builder
          * 

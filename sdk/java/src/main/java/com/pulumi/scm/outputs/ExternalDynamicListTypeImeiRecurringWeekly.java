@@ -16,7 +16,7 @@ public final class ExternalDynamicListTypeImeiRecurringWeekly {
      */
     private String at;
     /**
-     * @return Day of week
+     * @return Day of week. Possible values are `sunday`, `monday`, `tuesday`, `wednesday`, `thursday`, `friday` and `saturday`.
      * 
      */
     private String dayOfWeek;
@@ -30,7 +30,7 @@ public final class ExternalDynamicListTypeImeiRecurringWeekly {
         return this.at;
     }
     /**
-     * @return Day of week
+     * @return Day of week. Possible values are `sunday`, `monday`, `tuesday`, `wednesday`, `thursday`, `friday` and `saturday`.
      * 
      */
     public String dayOfWeek() {

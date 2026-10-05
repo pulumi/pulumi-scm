@@ -26,31 +26,46 @@ func LookupDnsProxy(ctx *pulumi.Context, args *LookupDnsProxyArgs, opts ...pulum
 type LookupDnsProxyArgs struct {
 	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
+	// The folder in which the resource is defined
 	Folder *string `pulumi:"folder"`
 	// UUID of the resource
-	Id      string  `pulumi:"id"`
-	Name    *string `pulumi:"name"`
+	Id string `pulumi:"id"`
+	// DNS proxy name
+	Name *string `pulumi:"name"`
+	// The snippet in which the resource is defined
 	Snippet *string `pulumi:"snippet"`
 }
 
 // A collection of values returned by getDnsProxy.
 type LookupDnsProxyResult struct {
-	Cache   GetDnsProxyCache   `pulumi:"cache"`
+	// Cache
+	Cache GetDnsProxyCache `pulumi:"cache"`
+	// Default
 	Default GetDnsProxyDefault `pulumi:"default"`
 	// The device in which the resource is defined
-	Device        string                    `pulumi:"device"`
+	Device string `pulumi:"device"`
+	// DNS proxy rules
 	DomainServers []GetDnsProxyDomainServer `pulumi:"domainServers"`
-	Enabled       bool                      `pulumi:"enabled"`
-	Folder        string                    `pulumi:"folder"`
+	// Enable DNS proxy?
+	Enabled bool `pulumi:"enabled"`
+	// The folder in which the resource is defined
+	Folder string `pulumi:"folder"`
 	// UUID of the resource
-	Id            string                   `pulumi:"id"`
-	Interfaces    []string                 `pulumi:"interfaces"`
-	Name          string                   `pulumi:"name"`
-	Snippet       string                   `pulumi:"snippet"`
+	Id string `pulumi:"id"`
+	// Interfaces on which to enable DNS proxy service
+	Interfaces []string `pulumi:"interfaces"`
+	// DNS proxy name
+	Name string `pulumi:"name"`
+	// The snippet in which the resource is defined
+	Snippet string `pulumi:"snippet"`
+	// Static entries
 	StaticEntries []GetDnsProxyStaticEntry `pulumi:"staticEntries"`
-	TcpQueries    GetDnsProxyTcpQueries    `pulumi:"tcpQueries"`
-	Tfid          string                   `pulumi:"tfid"`
-	UdpQueries    GetDnsProxyUdpQueries    `pulumi:"udpQueries"`
+	// Tcp queries
+	TcpQueries GetDnsProxyTcpQueries `pulumi:"tcpQueries"`
+	// The Terraform ID.
+	Tfid string `pulumi:"tfid"`
+	// Udp queries
+	UdpQueries GetDnsProxyUdpQueries `pulumi:"udpQueries"`
 }
 
 func LookupDnsProxyOutput(ctx *pulumi.Context, args LookupDnsProxyOutputArgs, opts ...pulumi.InvokeOption) LookupDnsProxyResultOutput {
@@ -62,10 +77,13 @@ func LookupDnsProxyOutput(ctx *pulumi.Context, args LookupDnsProxyOutputArgs, op
 type LookupDnsProxyOutputArgs struct {
 	// The device in which the resource is defined
 	Device pulumi.StringPtrInput `pulumi:"device"`
+	// The folder in which the resource is defined
 	Folder pulumi.StringPtrInput `pulumi:"folder"`
 	// UUID of the resource
-	Id      pulumi.StringInput    `pulumi:"id"`
-	Name    pulumi.StringPtrInput `pulumi:"name"`
+	Id pulumi.StringInput `pulumi:"id"`
+	// DNS proxy name
+	Name pulumi.StringPtrInput `pulumi:"name"`
+	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrInput `pulumi:"snippet"`
 }
 
@@ -88,10 +106,12 @@ func (o LookupDnsProxyResultOutput) ToLookupDnsProxyResultOutputWithContext(ctx 
 	return o
 }
 
+// Cache
 func (o LookupDnsProxyResultOutput) Cache() GetDnsProxyCacheOutput {
 	return o.ApplyT(func(v LookupDnsProxyResult) GetDnsProxyCache { return v.Cache }).(GetDnsProxyCacheOutput)
 }
 
+// Default
 func (o LookupDnsProxyResultOutput) Default() GetDnsProxyDefaultOutput {
 	return o.ApplyT(func(v LookupDnsProxyResult) GetDnsProxyDefault { return v.Default }).(GetDnsProxyDefaultOutput)
 }
@@ -101,14 +121,17 @@ func (o LookupDnsProxyResultOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupDnsProxyResult) string { return v.Device }).(pulumi.StringOutput)
 }
 
+// DNS proxy rules
 func (o LookupDnsProxyResultOutput) DomainServers() GetDnsProxyDomainServerArrayOutput {
 	return o.ApplyT(func(v LookupDnsProxyResult) []GetDnsProxyDomainServer { return v.DomainServers }).(GetDnsProxyDomainServerArrayOutput)
 }
 
+// Enable DNS proxy?
 func (o LookupDnsProxyResultOutput) Enabled() pulumi.BoolOutput {
 	return o.ApplyT(func(v LookupDnsProxyResult) bool { return v.Enabled }).(pulumi.BoolOutput)
 }
 
+// The folder in which the resource is defined
 func (o LookupDnsProxyResultOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupDnsProxyResult) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -118,30 +141,37 @@ func (o LookupDnsProxyResultOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupDnsProxyResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
+// Interfaces on which to enable DNS proxy service
 func (o LookupDnsProxyResultOutput) Interfaces() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupDnsProxyResult) []string { return v.Interfaces }).(pulumi.StringArrayOutput)
 }
 
+// DNS proxy name
 func (o LookupDnsProxyResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupDnsProxyResult) string { return v.Name }).(pulumi.StringOutput)
 }
 
+// The snippet in which the resource is defined
 func (o LookupDnsProxyResultOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupDnsProxyResult) string { return v.Snippet }).(pulumi.StringOutput)
 }
 
+// Static entries
 func (o LookupDnsProxyResultOutput) StaticEntries() GetDnsProxyStaticEntryArrayOutput {
 	return o.ApplyT(func(v LookupDnsProxyResult) []GetDnsProxyStaticEntry { return v.StaticEntries }).(GetDnsProxyStaticEntryArrayOutput)
 }
 
+// Tcp queries
 func (o LookupDnsProxyResultOutput) TcpQueries() GetDnsProxyTcpQueriesOutput {
 	return o.ApplyT(func(v LookupDnsProxyResult) GetDnsProxyTcpQueries { return v.TcpQueries }).(GetDnsProxyTcpQueriesOutput)
 }
 
+// The Terraform ID.
 func (o LookupDnsProxyResultOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupDnsProxyResult) string { return v.Tfid }).(pulumi.StringOutput)
 }
 
+// Udp queries
 func (o LookupDnsProxyResultOutput) UdpQueries() GetDnsProxyUdpQueriesOutput {
 	return o.ApplyT(func(v LookupDnsProxyResult) GetDnsProxyUdpQueries { return v.UdpQueries }).(GetDnsProxyUdpQueriesOutput)
 }

@@ -14,7 +14,7 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetScepProfileListDataAlgorithmRsaResult
     {
         /// <summary>
-        /// Rsa nbits
+        /// Rsa nbits. Possible values are `1024`, `2048` and `3072`.
         /// </summary>
         public readonly string RsaNbits;
 

@@ -109,7 +109,6 @@ import javax.annotation.Nullable;
  *         var scmLogicalRouter = new LogicalRouter("scmLogicalRouter", LogicalRouterArgs.builder()
  *             .folder("ngfw-shared")
  *             .name("scm_logical_router")
- *             .routingStack("advanced")
  *             .vrves(LogicalRouterVrfArgs.builder()
  *                 .name("default")
  *                 .interface_(Arrays.asList("$scm_ethernet_interface"))
@@ -153,7 +152,6 @@ import javax.annotation.Nullable;
  *         var scmBgpRouter = new LogicalRouter("scmBgpRouter", LogicalRouterArgs.builder()
  *             .folder("ngfw-shared")
  *             .name("scm_bgp_router")
- *             .routingStack("advanced")
  *             .vrves(LogicalRouterVrfArgs.builder()
  *                 .name("default")
  *                 .interface_(Arrays.asList("$scm_bgp_interface"))
@@ -231,16 +229,12 @@ public class LogicalRouter extends com.pulumi.resources.CustomResource {
     /**
      * The folder in which the resource is defined
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
      */
     @Export(name="folder", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> folder;
 
     /**
      * @return The folder in which the resource is defined
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public Output<Optional<String>> folder() {
@@ -261,23 +255,7 @@ public class LogicalRouter extends com.pulumi.resources.CustomResource {
         return this.name;
     }
     /**
-     * Routing stack
-     * 
-     */
-    @Export(name="routingStack", refs={String.class}, tree="[0]")
-    private Output</* @Nullable */ String> routingStack;
-
-    /**
-     * @return Routing stack
-     * 
-     */
-    public Output<Optional<String>> routingStack() {
-        return Codegen.optional(this.routingStack);
-    }
-    /**
      * The snippet in which the resource is defined
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     @Export(name="snippet", refs={String.class}, tree="[0]")
@@ -285,8 +263,6 @@ public class LogicalRouter extends com.pulumi.resources.CustomResource {
 
     /**
      * @return The snippet in which the resource is defined
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public Output<Optional<String>> snippet() {

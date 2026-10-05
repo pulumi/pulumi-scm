@@ -28,12 +28,21 @@ export interface GetDnsProxyArgs {
      * The device in which the resource is defined
      */
     device?: string;
+    /**
+     * The folder in which the resource is defined
+     */
     folder?: string;
     /**
      * UUID of the resource
      */
     id: string;
+    /**
+     * DNS proxy name
+     */
     name?: string;
+    /**
+     * The snippet in which the resource is defined
+     */
     snippet?: string;
 }
 
@@ -41,25 +50,61 @@ export interface GetDnsProxyArgs {
  * A collection of values returned by getDnsProxy.
  */
 export interface GetDnsProxyResult {
+    /**
+     * Cache
+     */
     readonly cache: outputs.GetDnsProxyCache;
+    /**
+     * Default
+     */
     readonly default: outputs.GetDnsProxyDefault;
     /**
      * The device in which the resource is defined
      */
     readonly device: string;
+    /**
+     * DNS proxy rules
+     */
     readonly domainServers: outputs.GetDnsProxyDomainServer[];
+    /**
+     * Enable DNS proxy?
+     */
     readonly enabled: boolean;
+    /**
+     * The folder in which the resource is defined
+     */
     readonly folder: string;
     /**
      * UUID of the resource
      */
     readonly id: string;
+    /**
+     * Interfaces on which to enable DNS proxy service
+     */
     readonly interfaces: string[];
+    /**
+     * DNS proxy name
+     */
     readonly name: string;
+    /**
+     * The snippet in which the resource is defined
+     */
     readonly snippet: string;
+    /**
+     * Static entries
+     */
     readonly staticEntries: outputs.GetDnsProxyStaticEntry[];
+    /**
+     * Tcp queries
+     */
     readonly tcpQueries: outputs.GetDnsProxyTcpQueries;
+    /**
+     * The Terraform ID.
+     */
     readonly tfid: string;
+    /**
+     * Udp queries
+     */
     readonly udpQueries: outputs.GetDnsProxyUdpQueries;
 }
 /**
@@ -84,11 +129,20 @@ export interface GetDnsProxyOutputArgs {
      * The device in which the resource is defined
      */
     device?: pulumi.Input<string | undefined>;
+    /**
+     * The folder in which the resource is defined
+     */
     folder?: pulumi.Input<string | undefined>;
     /**
      * UUID of the resource
      */
     id: pulumi.Input<string>;
+    /**
+     * DNS proxy name
+     */
     name?: pulumi.Input<string | undefined>;
+    /**
+     * The snippet in which the resource is defined
+     */
     snippet?: pulumi.Input<string | undefined>;
 }

@@ -53,9 +53,11 @@ func LookupVpnSetting(ctx *pulumi.Context, args *LookupVpnSettingArgs, opts ...p
 type LookupVpnSettingArgs struct {
 	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
+	// The folder in which the resource is defined
 	Folder *string `pulumi:"folder"`
 	// UUID of the resource
-	Id      string  `pulumi:"id"`
+	Id string `pulumi:"id"`
+	// The snippet in which the resource is defined
 	Snippet *string `pulumi:"snippet"`
 }
 
@@ -63,12 +65,16 @@ type LookupVpnSettingArgs struct {
 type LookupVpnSettingResult struct {
 	// The device in which the resource is defined
 	Device string `pulumi:"device"`
+	// The folder in which the resource is defined
 	Folder string `pulumi:"folder"`
 	// UUID of the resource
-	Id      string           `pulumi:"id"`
-	Snippet string           `pulumi:"snippet"`
-	Tfid    string           `pulumi:"tfid"`
-	Vpn     GetVpnSettingVpn `pulumi:"vpn"`
+	Id string `pulumi:"id"`
+	// The snippet in which the resource is defined
+	Snippet string `pulumi:"snippet"`
+	// The Terraform ID.
+	Tfid string `pulumi:"tfid"`
+	// Vpn
+	Vpn GetVpnSettingVpn `pulumi:"vpn"`
 }
 
 func LookupVpnSettingOutput(ctx *pulumi.Context, args LookupVpnSettingOutputArgs, opts ...pulumi.InvokeOption) LookupVpnSettingResultOutput {
@@ -80,9 +86,11 @@ func LookupVpnSettingOutput(ctx *pulumi.Context, args LookupVpnSettingOutputArgs
 type LookupVpnSettingOutputArgs struct {
 	// The device in which the resource is defined
 	Device pulumi.StringPtrInput `pulumi:"device"`
+	// The folder in which the resource is defined
 	Folder pulumi.StringPtrInput `pulumi:"folder"`
 	// UUID of the resource
-	Id      pulumi.StringInput    `pulumi:"id"`
+	Id pulumi.StringInput `pulumi:"id"`
+	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrInput `pulumi:"snippet"`
 }
 
@@ -110,6 +118,7 @@ func (o LookupVpnSettingResultOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupVpnSettingResult) string { return v.Device }).(pulumi.StringOutput)
 }
 
+// The folder in which the resource is defined
 func (o LookupVpnSettingResultOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupVpnSettingResult) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -119,14 +128,17 @@ func (o LookupVpnSettingResultOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupVpnSettingResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
+// The snippet in which the resource is defined
 func (o LookupVpnSettingResultOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupVpnSettingResult) string { return v.Snippet }).(pulumi.StringOutput)
 }
 
+// The Terraform ID.
 func (o LookupVpnSettingResultOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupVpnSettingResult) string { return v.Tfid }).(pulumi.StringOutput)
 }
 
+// Vpn
 func (o LookupVpnSettingResultOutput) Vpn() GetVpnSettingVpnOutput {
 	return o.ApplyT(func(v LookupVpnSettingResult) GetVpnSettingVpn { return v.Vpn }).(GetVpnSettingVpnOutput)
 }

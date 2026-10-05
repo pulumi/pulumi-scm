@@ -22,28 +22,20 @@ public final class LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateExtendedC
     /**
      * @return None
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
-     * 
      */
     private @Nullable LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateExtendedCommunityNone none;
     /**
      * @return Overwrite
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
      * 
      */
     private @Nullable List<String> overwrites;
     /**
      * @return Remove all
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
-     * 
      */
     private @Nullable LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateExtendedCommunityRemoveAll removeAll;
     /**
      * @return Remove regex
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
      * 
      */
     private @Nullable String removeRegex;
@@ -59,16 +51,12 @@ public final class LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateExtendedC
     /**
      * @return None
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
-     * 
      */
     public Optional<LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateExtendedCommunityNone> none() {
         return Optional.ofNullable(this.none);
     }
     /**
      * @return Overwrite
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
      * 
      */
     public List<String> overwrites() {
@@ -77,16 +65,12 @@ public final class LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateExtendedC
     /**
      * @return Remove all
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
-     * 
      */
     public Optional<LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateExtendedCommunityRemoveAll> removeAll() {
         return Optional.ofNullable(this.removeAll);
     }
     /**
      * @return Remove regex
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
      * 
      */
     public Optional<String> removeRegex() {

@@ -21,49 +21,35 @@ public final class LogicalRouterVrfRoutingTableIpStaticRouteNexthop {
     /**
      * @return Fqdn
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipAddress`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
-     * 
      */
     private @Nullable String fqdn;
     /**
      * @return Ip address
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipAddress`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
      * 
      */
     private @Nullable String ipAddress;
     /**
      * @return Ipv6 address
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipAddress`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
-     * 
      */
     private @Nullable String ipv6Address;
     /**
      * @return Next lr
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipAddress`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
      * 
      */
     private @Nullable String nextLr;
     /**
      * @return Next vr
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipAddress`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
-     * 
      */
     private @Nullable String nextVr;
     /**
      * @return Receive
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipAddress`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
-     * 
      */
     private @Nullable LogicalRouterVrfRoutingTableIpStaticRouteNexthopReceive receive;
     /**
      * @return Tunnel
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipAddress`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
      * 
      */
     private @Nullable String tunnel;
@@ -79,16 +65,12 @@ public final class LogicalRouterVrfRoutingTableIpStaticRouteNexthop {
     /**
      * @return Fqdn
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipAddress`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
-     * 
      */
     public Optional<String> fqdn() {
         return Optional.ofNullable(this.fqdn);
     }
     /**
      * @return Ip address
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipAddress`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
      * 
      */
     public Optional<String> ipAddress() {
@@ -97,16 +79,12 @@ public final class LogicalRouterVrfRoutingTableIpStaticRouteNexthop {
     /**
      * @return Ipv6 address
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipAddress`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
-     * 
      */
     public Optional<String> ipv6Address() {
         return Optional.ofNullable(this.ipv6Address);
     }
     /**
      * @return Next lr
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipAddress`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
      * 
      */
     public Optional<String> nextLr() {
@@ -115,8 +93,6 @@ public final class LogicalRouterVrfRoutingTableIpStaticRouteNexthop {
     /**
      * @return Next vr
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipAddress`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
-     * 
      */
     public Optional<String> nextVr() {
         return Optional.ofNullable(this.nextVr);
@@ -124,16 +100,12 @@ public final class LogicalRouterVrfRoutingTableIpStaticRouteNexthop {
     /**
      * @return Receive
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipAddress`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
-     * 
      */
     public Optional<LogicalRouterVrfRoutingTableIpStaticRouteNexthopReceive> receive() {
         return Optional.ofNullable(this.receive);
     }
     /**
      * @return Tunnel
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipAddress`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
      * 
      */
     public Optional<String> tunnel() {

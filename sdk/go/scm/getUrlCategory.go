@@ -56,26 +56,36 @@ func LookupUrlCategory(ctx *pulumi.Context, args *LookupUrlCategoryArgs, opts ..
 type LookupUrlCategoryArgs struct {
 	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
+	// The folder in which the resource is defined
 	Folder *string `pulumi:"folder"`
 	// UUID of the resource
-	Id      string  `pulumi:"id"`
-	Name    *string `pulumi:"name"`
+	Id string `pulumi:"id"`
+	// Name
+	Name *string `pulumi:"name"`
+	// The snippet in which the resource is defined
 	Snippet *string `pulumi:"snippet"`
 }
 
 // A collection of values returned by getUrlCategory.
 type LookupUrlCategoryResult struct {
+	// Description
 	Description string `pulumi:"description"`
 	// The device in which the resource is defined
 	Device string `pulumi:"device"`
+	// The folder in which the resource is defined
 	Folder string `pulumi:"folder"`
 	// UUID of the resource
-	Id      string   `pulumi:"id"`
-	Lists   []string `pulumi:"lists"`
-	Name    string   `pulumi:"name"`
-	Snippet string   `pulumi:"snippet"`
-	Tfid    string   `pulumi:"tfid"`
-	Type    string   `pulumi:"type"`
+	Id string `pulumi:"id"`
+	// List
+	Lists []string `pulumi:"lists"`
+	// Name
+	Name string `pulumi:"name"`
+	// The snippet in which the resource is defined
+	Snippet string `pulumi:"snippet"`
+	// The Terraform ID.
+	Tfid string `pulumi:"tfid"`
+	// Type. Possible values are `URL List` and `Category Match`.
+	Type string `pulumi:"type"`
 }
 
 func LookupUrlCategoryOutput(ctx *pulumi.Context, args LookupUrlCategoryOutputArgs, opts ...pulumi.InvokeOption) LookupUrlCategoryResultOutput {
@@ -87,10 +97,13 @@ func LookupUrlCategoryOutput(ctx *pulumi.Context, args LookupUrlCategoryOutputAr
 type LookupUrlCategoryOutputArgs struct {
 	// The device in which the resource is defined
 	Device pulumi.StringPtrInput `pulumi:"device"`
+	// The folder in which the resource is defined
 	Folder pulumi.StringPtrInput `pulumi:"folder"`
 	// UUID of the resource
-	Id      pulumi.StringInput    `pulumi:"id"`
-	Name    pulumi.StringPtrInput `pulumi:"name"`
+	Id pulumi.StringInput `pulumi:"id"`
+	// Name
+	Name pulumi.StringPtrInput `pulumi:"name"`
+	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrInput `pulumi:"snippet"`
 }
 
@@ -113,6 +126,7 @@ func (o LookupUrlCategoryResultOutput) ToLookupUrlCategoryResultOutputWithContex
 	return o
 }
 
+// Description
 func (o LookupUrlCategoryResultOutput) Description() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupUrlCategoryResult) string { return v.Description }).(pulumi.StringOutput)
 }
@@ -122,6 +136,7 @@ func (o LookupUrlCategoryResultOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupUrlCategoryResult) string { return v.Device }).(pulumi.StringOutput)
 }
 
+// The folder in which the resource is defined
 func (o LookupUrlCategoryResultOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupUrlCategoryResult) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -131,22 +146,27 @@ func (o LookupUrlCategoryResultOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupUrlCategoryResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
+// List
 func (o LookupUrlCategoryResultOutput) Lists() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupUrlCategoryResult) []string { return v.Lists }).(pulumi.StringArrayOutput)
 }
 
+// Name
 func (o LookupUrlCategoryResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupUrlCategoryResult) string { return v.Name }).(pulumi.StringOutput)
 }
 
+// The snippet in which the resource is defined
 func (o LookupUrlCategoryResultOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupUrlCategoryResult) string { return v.Snippet }).(pulumi.StringOutput)
 }
 
+// The Terraform ID.
 func (o LookupUrlCategoryResultOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupUrlCategoryResult) string { return v.Tfid }).(pulumi.StringOutput)
 }
 
+// Type. Possible values are `URL List` and `Category Match`.
 func (o LookupUrlCategoryResultOutput) Type() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupUrlCategoryResult) string { return v.Type }).(pulumi.StringOutput)
 }

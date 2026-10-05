@@ -46,7 +46,7 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly Outputs.BgpRouteMapRouteMapSetMetric? Metric;
         /// <summary>
-        /// Origin
+        /// Origin. Possible values are `None`, `Egp`, `Igp` and `Incomplete`.
         /// </summary>
         public readonly string? Origin;
         /// <summary>
@@ -62,7 +62,7 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly bool? OverwriteRegularCommunity;
         /// <summary>
-        /// Regular community
+        /// Regular community. Possible values are `None`, `Blackhole`, `no-peer`, `graceful-shutdown`, `accept-own`, `local-as`, `route-filter-v4`, `route-filter-v6`, `no-advertise`, `no-export` and `Internet`.
         /// </summary>
         public readonly ImmutableArray<string> RegularCommunities;
         /// <summary>
