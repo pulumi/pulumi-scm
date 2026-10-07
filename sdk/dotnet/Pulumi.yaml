@@ -1,3 +1,0 @@
-name: scm
-description: A Pulumi resource provider for scm.
-language: dotnet
