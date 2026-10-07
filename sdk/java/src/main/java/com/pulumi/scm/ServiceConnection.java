@@ -10,7 +10,6 @@ import com.pulumi.core.internal.Codegen;
 import com.pulumi.scm.ServiceConnectionArgs;
 import com.pulumi.scm.Utilities;
 import com.pulumi.scm.inputs.ServiceConnectionState;
-import com.pulumi.scm.outputs.ServiceConnectionBgpPeer;
 import com.pulumi.scm.outputs.ServiceConnectionProtocol;
 import com.pulumi.scm.outputs.ServiceConnectionQos;
 import java.lang.Boolean;
@@ -186,20 +185,6 @@ public class ServiceConnection extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.backupSc);
     }
     /**
-     * Bgp peer
-     * 
-     */
-    @Export(name="bgpPeer", refs={ServiceConnectionBgpPeer.class}, tree="[0]")
-    private Output</* @Nullable */ ServiceConnectionBgpPeer> bgpPeer;
-
-    /**
-     * @return Bgp peer
-     * 
-     */
-    public Output<Optional<ServiceConnectionBgpPeer>> bgpPeer() {
-        return Codegen.optional(this.bgpPeer);
-    }
-    /**
      * Map of sensitive values returned from the API.
      * 
      */
@@ -270,28 +255,28 @@ public class ServiceConnection extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.natPool);
     }
     /**
-     * No export community
+     * No export community. Possible values are `Disabled`, `Enabled-In`, `Enabled-Out` and `Enabled-Both`.
      * 
      */
     @Export(name="noExportCommunity", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> noExportCommunity;
 
     /**
-     * @return No export community
+     * @return No export community. Possible values are `Disabled`, `Enabled-In`, `Enabled-Out` and `Enabled-Both`.
      * 
      */
     public Output<Optional<String>> noExportCommunity() {
         return Codegen.optional(this.noExportCommunity);
     }
     /**
-     * Onboarding type
+     * Onboarding type. Possible values are `classic`.
      * 
      */
     @Export(name="onboardingType", refs={String.class}, tree="[0]")
     private Output<String> onboardingType;
 
     /**
-     * @return Onboarding type
+     * @return Onboarding type. Possible values are `classic`.
      * 
      */
     public Output<String> onboardingType() {

@@ -28,12 +28,21 @@ export interface GetScheduleArgs {
      * The device in which the resource is defined
      */
     device?: string;
+    /**
+     * The folder in which the resource is defined
+     */
     folder?: string;
     /**
      * The UUID of the schedule
      */
     id: string;
+    /**
+     * The name of the schedule
+     */
     name?: string;
+    /**
+     * The snippet in which the resource is defined
+     */
     snippet?: string;
 }
 
@@ -45,14 +54,29 @@ export interface GetScheduleResult {
      * The device in which the resource is defined
      */
     readonly device: string;
+    /**
+     * The folder in which the resource is defined
+     */
     readonly folder: string;
     /**
      * The UUID of the schedule
      */
     readonly id: string;
+    /**
+     * The name of the schedule
+     */
     readonly name: string;
+    /**
+     * Schedule type
+     */
     readonly scheduleType: outputs.GetScheduleScheduleType;
+    /**
+     * The snippet in which the resource is defined
+     */
     readonly snippet: string;
+    /**
+     * The Terraform ID.
+     */
     readonly tfid: string;
 }
 /**
@@ -77,11 +101,20 @@ export interface GetScheduleOutputArgs {
      * The device in which the resource is defined
      */
     device?: pulumi.Input<string | undefined>;
+    /**
+     * The folder in which the resource is defined
+     */
     folder?: pulumi.Input<string | undefined>;
     /**
      * The UUID of the schedule
      */
     id: pulumi.Input<string>;
+    /**
+     * The name of the schedule
+     */
     name?: pulumi.Input<string | undefined>;
+    /**
+     * The snippet in which the resource is defined
+     */
     snippet?: pulumi.Input<string | undefined>;
 }

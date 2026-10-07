@@ -17,7 +17,7 @@ public final class GetLogicalRouterVrfOspfAreaTypeNssaDefaultInformationOriginat
      */
     private Integer metric;
     /**
-     * @return Metric type
+     * @return Metric type. Possible values are `type-1` and `type-2`.
      * 
      */
     private String metricType;
@@ -31,7 +31,7 @@ public final class GetLogicalRouterVrfOspfAreaTypeNssaDefaultInformationOriginat
         return this.metric;
     }
     /**
-     * @return Metric type
+     * @return Metric type. Possible values are `type-1` and `type-2`.
      * 
      */
     public String metricType() {

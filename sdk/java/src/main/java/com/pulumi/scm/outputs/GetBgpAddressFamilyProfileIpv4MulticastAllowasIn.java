@@ -19,8 +19,6 @@ public final class GetBgpAddressFamilyProfileIpv4MulticastAllowasIn {
     /**
      * @return Origin
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `occurrence` and `origin`.
-     * 
      */
     private GetBgpAddressFamilyProfileIpv4MulticastAllowasInOrigin origin;
 
@@ -34,8 +32,6 @@ public final class GetBgpAddressFamilyProfileIpv4MulticastAllowasIn {
     }
     /**
      * @return Origin
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `occurrence` and `origin`.
      * 
      */
     public GetBgpAddressFamilyProfileIpv4MulticastAllowasInOrigin origin() {

@@ -52,8 +52,6 @@ class ApplicationFilterArgs:
         :param pulumi.Input[_builtins.bool] excessive_bandwidth_use: only True is a valid value
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] excludes: Exclude
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.bool] has_known_vulnerabilities: only True is a valid value
         :param pulumi.Input[_builtins.bool] is_saas: only True is a valid value
         :param pulumi.Input[_builtins.str] name: Alphanumeric string [ 0-9a-zA-Z._-]
@@ -64,8 +62,6 @@ class ApplicationFilterArgs:
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] saas_certifications: Saas certifications
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] saas_risks: Saas risk
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] subcategories: Subcategory
         :param pulumi.Input['ApplicationFilterTaggingArgs'] tagging: Tagging
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] technologies: Technology
@@ -183,8 +179,6 @@ class ApplicationFilterArgs:
     def folder(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
-
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
 
@@ -305,8 +299,6 @@ class ApplicationFilterArgs:
     def snippet(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
-
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
 
@@ -422,8 +414,6 @@ class _ApplicationFilterState:
         :param pulumi.Input[_builtins.bool] excessive_bandwidth_use: only True is a valid value
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] excludes: Exclude
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.bool] has_known_vulnerabilities: only True is a valid value
         :param pulumi.Input[_builtins.bool] is_saas: only True is a valid value
         :param pulumi.Input[_builtins.str] name: Alphanumeric string [ 0-9a-zA-Z._-]
@@ -434,8 +424,6 @@ class _ApplicationFilterState:
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] saas_certifications: Saas certifications
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] saas_risks: Saas risk
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] subcategories: Subcategory
         :param pulumi.Input['ApplicationFilterTaggingArgs'] tagging: Tagging
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] technologies: Technology
@@ -556,8 +544,6 @@ class _ApplicationFilterState:
     def folder(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
-
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
 
@@ -678,8 +664,6 @@ class _ApplicationFilterState:
     def snippet(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
-
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
 
@@ -852,8 +836,6 @@ class ApplicationFilter(pulumi.CustomResource):
         :param pulumi.Input[_builtins.bool] excessive_bandwidth_use: only True is a valid value
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] excludes: Exclude
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.bool] has_known_vulnerabilities: only True is a valid value
         :param pulumi.Input[_builtins.bool] is_saas: only True is a valid value
         :param pulumi.Input[_builtins.str] name: Alphanumeric string [ 0-9a-zA-Z._-]
@@ -864,8 +846,6 @@ class ApplicationFilter(pulumi.CustomResource):
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] saas_certifications: Saas certifications
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] saas_risks: Saas risk
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] subcategories: Subcategory
         :param pulumi.Input[Union['ApplicationFilterTaggingArgs', 'ApplicationFilterTaggingArgsDict', 'outputs.ApplicationFilterTagging']] tagging: Tagging
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] technologies: Technology
@@ -1037,8 +1017,6 @@ class ApplicationFilter(pulumi.CustomResource):
         :param pulumi.Input[_builtins.bool] excessive_bandwidth_use: only True is a valid value
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] excludes: Exclude
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.bool] has_known_vulnerabilities: only True is a valid value
         :param pulumi.Input[_builtins.bool] is_saas: only True is a valid value
         :param pulumi.Input[_builtins.str] name: Alphanumeric string [ 0-9a-zA-Z._-]
@@ -1049,8 +1027,6 @@ class ApplicationFilter(pulumi.CustomResource):
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] saas_certifications: Saas certifications
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] saas_risks: Saas risk
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] subcategories: Subcategory
         :param pulumi.Input[Union['ApplicationFilterTaggingArgs', 'ApplicationFilterTaggingArgsDict', 'outputs.ApplicationFilterTagging']] tagging: Tagging
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] technologies: Technology
@@ -1133,8 +1109,6 @@ class ApplicationFilter(pulumi.CustomResource):
     def folder(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
-
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
 
@@ -1215,8 +1189,6 @@ class ApplicationFilter(pulumi.CustomResource):
     def snippet(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
-
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
 

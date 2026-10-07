@@ -6,7 +6,9 @@ package com.pulumi.scm.outputs;
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
 import com.pulumi.scm.outputs.GetDosProtectionRuleAction;
+import com.pulumi.scm.outputs.GetDosProtectionRuleFrom;
 import com.pulumi.scm.outputs.GetDosProtectionRuleProtection;
+import com.pulumi.scm.outputs.GetDosProtectionRuleTo;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -14,42 +16,126 @@ import java.util.Objects;
 
 @CustomType
 public final class GetDosProtectionRuleResult {
+    /**
+     * @return The action to take on rule match
+     * 
+     */
     private GetDosProtectionRuleAction action;
+    /**
+     * @return Description
+     * 
+     */
     private String description;
+    /**
+     * @return List of destination addresses
+     * 
+     */
     private List<String> destinations;
     /**
      * @return The device in which the resource is defined
      * 
      */
     private String device;
+    /**
+     * @return Rule disabled?
+     * 
+     */
     private Boolean disabled;
+    /**
+     * @return The folder in which the resource is defined
+     * 
+     */
     private String folder;
-    private List<String> froms;
+    /**
+     * @return Source zones and interfaces
+     * 
+     */
+    private GetDosProtectionRuleFrom from;
     /**
      * @return The UUID of the DNS security profile
      * 
      */
     private String id;
+    /**
+     * @return Log forwarding profile name
+     * 
+     */
     private String logSetting;
+    /**
+     * @return Rule name
+     * 
+     */
     private String name;
+    /**
+     * @return Position relative to local device rules. Possible values are `pre` and `post`.
+     * 
+     */
     private String position;
+    /**
+     * @return Protection
+     * 
+     */
     private GetDosProtectionRuleProtection protection;
+    /**
+     * @return Schedule on which to enforce the rule
+     * 
+     */
     private String schedule;
+    /**
+     * @return List of services
+     * 
+     */
     private List<String> services;
+    /**
+     * @return The snippet in which the resource is defined
+     * 
+     */
     private String snippet;
+    /**
+     * @return List of source users and/or groups.  Reserved words include `any`, `pre-login`, `known-user`, and `unknown`.
+     * 
+     */
     private List<String> sourceUsers;
+    /**
+     * @return List of source addresses
+     * 
+     */
     private List<String> sources;
+    /**
+     * @return List of tags
+     * 
+     */
     private List<String> tags;
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     private String tfid;
-    private List<String> tos;
+    /**
+     * @return Destination zones and interfaces
+     * 
+     */
+    private GetDosProtectionRuleTo to;
 
     private GetDosProtectionRuleResult() {}
+    /**
+     * @return The action to take on rule match
+     * 
+     */
     public GetDosProtectionRuleAction action() {
         return this.action;
     }
+    /**
+     * @return Description
+     * 
+     */
     public String description() {
         return this.description;
     }
+    /**
+     * @return List of destination addresses
+     * 
+     */
     public List<String> destinations() {
         return this.destinations;
     }
@@ -60,14 +146,26 @@ public final class GetDosProtectionRuleResult {
     public String device() {
         return this.device;
     }
+    /**
+     * @return Rule disabled?
+     * 
+     */
     public Boolean disabled() {
         return this.disabled;
     }
+    /**
+     * @return The folder in which the resource is defined
+     * 
+     */
     public String folder() {
         return this.folder;
     }
-    public List<String> froms() {
-        return this.froms;
+    /**
+     * @return Source zones and interfaces
+     * 
+     */
+    public GetDosProtectionRuleFrom from() {
+        return this.from;
     }
     /**
      * @return The UUID of the DNS security profile
@@ -76,41 +174,89 @@ public final class GetDosProtectionRuleResult {
     public String id() {
         return this.id;
     }
+    /**
+     * @return Log forwarding profile name
+     * 
+     */
     public String logSetting() {
         return this.logSetting;
     }
+    /**
+     * @return Rule name
+     * 
+     */
     public String name() {
         return this.name;
     }
+    /**
+     * @return Position relative to local device rules. Possible values are `pre` and `post`.
+     * 
+     */
     public String position() {
         return this.position;
     }
+    /**
+     * @return Protection
+     * 
+     */
     public GetDosProtectionRuleProtection protection() {
         return this.protection;
     }
+    /**
+     * @return Schedule on which to enforce the rule
+     * 
+     */
     public String schedule() {
         return this.schedule;
     }
+    /**
+     * @return List of services
+     * 
+     */
     public List<String> services() {
         return this.services;
     }
+    /**
+     * @return The snippet in which the resource is defined
+     * 
+     */
     public String snippet() {
         return this.snippet;
     }
+    /**
+     * @return List of source users and/or groups.  Reserved words include `any`, `pre-login`, `known-user`, and `unknown`.
+     * 
+     */
     public List<String> sourceUsers() {
         return this.sourceUsers;
     }
+    /**
+     * @return List of source addresses
+     * 
+     */
     public List<String> sources() {
         return this.sources;
     }
+    /**
+     * @return List of tags
+     * 
+     */
     public List<String> tags() {
         return this.tags;
     }
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     public String tfid() {
         return this.tfid;
     }
-    public List<String> tos() {
-        return this.tos;
+    /**
+     * @return Destination zones and interfaces
+     * 
+     */
+    public GetDosProtectionRuleTo to() {
+        return this.to;
     }
 
     public static Builder builder() {
@@ -128,7 +274,7 @@ public final class GetDosProtectionRuleResult {
         private String device;
         private Boolean disabled;
         private String folder;
-        private List<String> froms;
+        private GetDosProtectionRuleFrom from;
         private String id;
         private String logSetting;
         private String name;
@@ -141,7 +287,7 @@ public final class GetDosProtectionRuleResult {
         private List<String> sources;
         private List<String> tags;
         private String tfid;
-        private List<String> tos;
+        private GetDosProtectionRuleTo to;
         public Builder() {}
         public Builder(GetDosProtectionRuleResult defaults) {
     	      Objects.requireNonNull(defaults);
@@ -151,7 +297,7 @@ public final class GetDosProtectionRuleResult {
     	      this.device = defaults.device;
     	      this.disabled = defaults.disabled;
     	      this.folder = defaults.folder;
-    	      this.froms = defaults.froms;
+    	      this.from = defaults.from;
     	      this.id = defaults.id;
     	      this.logSetting = defaults.logSetting;
     	      this.name = defaults.name;
@@ -164,7 +310,7 @@ public final class GetDosProtectionRuleResult {
     	      this.sources = defaults.sources;
     	      this.tags = defaults.tags;
     	      this.tfid = defaults.tfid;
-    	      this.tos = defaults.tos;
+    	      this.to = defaults.to;
         }
 
         @CustomType.Setter
@@ -219,15 +365,12 @@ public final class GetDosProtectionRuleResult {
             return this;
         }
         @CustomType.Setter
-        public Builder froms(List<String> froms) {
-            if (froms == null) {
-              throw new MissingRequiredPropertyException("GetDosProtectionRuleResult", "froms");
+        public Builder from(GetDosProtectionRuleFrom from) {
+            if (from == null) {
+              throw new MissingRequiredPropertyException("GetDosProtectionRuleResult", "from");
             }
-            this.froms = froms;
+            this.from = from;
             return this;
-        }
-        public Builder froms(String... froms) {
-            return froms(List.of(froms));
         }
         @CustomType.Setter
         public Builder id(String id) {
@@ -338,15 +481,12 @@ public final class GetDosProtectionRuleResult {
             return this;
         }
         @CustomType.Setter
-        public Builder tos(List<String> tos) {
-            if (tos == null) {
-              throw new MissingRequiredPropertyException("GetDosProtectionRuleResult", "tos");
+        public Builder to(GetDosProtectionRuleTo to) {
+            if (to == null) {
+              throw new MissingRequiredPropertyException("GetDosProtectionRuleResult", "to");
             }
-            this.tos = tos;
+            this.to = to;
             return this;
-        }
-        public Builder tos(String... tos) {
-            return tos(List.of(tos));
         }
         public GetDosProtectionRuleResult build() {
             final var _resultValue = new GetDosProtectionRuleResult();
@@ -356,7 +496,7 @@ public final class GetDosProtectionRuleResult {
             _resultValue.device = device;
             _resultValue.disabled = disabled;
             _resultValue.folder = folder;
-            _resultValue.froms = froms;
+            _resultValue.from = from;
             _resultValue.id = id;
             _resultValue.logSetting = logSetting;
             _resultValue.name = name;
@@ -369,7 +509,7 @@ public final class GetDosProtectionRuleResult {
             _resultValue.sources = sources;
             _resultValue.tags = tags;
             _resultValue.tfid = tfid;
-            _resultValue.tos = tos;
+            _resultValue.to = to;
             return _resultValue;
         }
     }

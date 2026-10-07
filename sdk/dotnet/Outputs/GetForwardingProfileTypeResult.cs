@@ -19,14 +19,10 @@ namespace Pulumi.Scm.Outputs
         public readonly Outputs.GetForwardingProfileTypeGlobalProtectProxyResult GlobalProtectProxy;
         /// <summary>
         /// PAC file based forwarding configuration
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `GlobalProtectProxy`, `PacFile`, and `ZtnaAgent`.
         /// </summary>
         public readonly Outputs.GetForwardingProfileTypePacFileResult PacFile;
         /// <summary>
         /// ZTNA agent-based forwarding configuration
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `GlobalProtectProxy`, `PacFile`, and `ZtnaAgent`.
         /// </summary>
         public readonly Outputs.GetForwardingProfileTypeZtnaAgentResult ZtnaAgent;
 

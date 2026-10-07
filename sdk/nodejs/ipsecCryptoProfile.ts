@@ -95,24 +95,18 @@ export class IpsecCryptoProfile extends pulumi.CustomResource {
     declare public readonly ah: pulumi.Output<outputs.IpsecCryptoProfileAh | undefined>;
     /**
      * The device in which the resource is defined
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly device: pulumi.Output<string | undefined>;
     /**
-     * phase-2 DH group (PFS DH group)
+     * phase-2 DH group (PFS DH group). Possible values are `no-pfs`, `group1`, `group2`, `group5`, `group14`, `group19`, `group20`, `group21`, `ml-kem-512`, `ml-kem-768` and `ml-kem-1024`.
      */
     declare public readonly dhGroup: pulumi.Output<string>;
     /**
      * Esp
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `ah` and `esp`.
      */
     declare public readonly esp: pulumi.Output<outputs.IpsecCryptoProfileEsp | undefined>;
     /**
      * The folder in which the resource is defined
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly folder: pulumi.Output<string | undefined>;
     /**
@@ -129,8 +123,6 @@ export class IpsecCryptoProfile extends pulumi.CustomResource {
     declare public readonly name: pulumi.Output<string>;
     /**
      * The snippet in which the resource is defined
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly snippet: pulumi.Output<string | undefined>;
     /**
@@ -192,24 +184,18 @@ export interface IpsecCryptoProfileState {
     ah?: pulumi.Input<inputs.IpsecCryptoProfileAh | undefined>;
     /**
      * The device in which the resource is defined
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     device?: pulumi.Input<string | undefined>;
     /**
-     * phase-2 DH group (PFS DH group)
+     * phase-2 DH group (PFS DH group). Possible values are `no-pfs`, `group1`, `group2`, `group5`, `group14`, `group19`, `group20`, `group21`, `ml-kem-512`, `ml-kem-768` and `ml-kem-1024`.
      */
     dhGroup?: pulumi.Input<string | undefined>;
     /**
      * Esp
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `ah` and `esp`.
      */
     esp?: pulumi.Input<inputs.IpsecCryptoProfileEsp | undefined>;
     /**
      * The folder in which the resource is defined
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     folder?: pulumi.Input<string | undefined>;
     /**
@@ -226,8 +212,6 @@ export interface IpsecCryptoProfileState {
     name?: pulumi.Input<string | undefined>;
     /**
      * The snippet in which the resource is defined
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     snippet?: pulumi.Input<string | undefined>;
     /**
@@ -246,24 +230,18 @@ export interface IpsecCryptoProfileArgs {
     ah?: pulumi.Input<inputs.IpsecCryptoProfileAh | undefined>;
     /**
      * The device in which the resource is defined
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     device?: pulumi.Input<string | undefined>;
     /**
-     * phase-2 DH group (PFS DH group)
+     * phase-2 DH group (PFS DH group). Possible values are `no-pfs`, `group1`, `group2`, `group5`, `group14`, `group19`, `group20`, `group21`, `ml-kem-512`, `ml-kem-768` and `ml-kem-1024`.
      */
     dhGroup?: pulumi.Input<string | undefined>;
     /**
      * Esp
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `ah` and `esp`.
      */
     esp?: pulumi.Input<inputs.IpsecCryptoProfileEsp | undefined>;
     /**
      * The folder in which the resource is defined
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     folder?: pulumi.Input<string | undefined>;
     /**
@@ -280,8 +258,6 @@ export interface IpsecCryptoProfileArgs {
     name?: pulumi.Input<string | undefined>;
     /**
      * The snippet in which the resource is defined
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     snippet?: pulumi.Input<string | undefined>;
 }

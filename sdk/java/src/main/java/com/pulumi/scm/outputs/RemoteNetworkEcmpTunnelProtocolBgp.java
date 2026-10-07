@@ -43,7 +43,7 @@ public final class RemoteNetworkEcmpTunnelProtocolBgp {
      */
     private @Nullable String peerIpAddress;
     /**
-     * @return Route exchange types
+     * @return Route exchange types. Possible values are `exchange-v4-over-v4`, `exchange-v4-v6-over-v4`, `exchange-v4-over-v4-v6-over-v6` and `exchange-v6-over-v6`.
      * 
      */
     private @Nullable String peeringType;
@@ -102,7 +102,7 @@ public final class RemoteNetworkEcmpTunnelProtocolBgp {
         return Optional.ofNullable(this.peerIpAddress);
     }
     /**
-     * @return Route exchange types
+     * @return Route exchange types. Possible values are `exchange-v4-over-v4`, `exchange-v4-v6-over-v4`, `exchange-v4-over-v4-v6-over-v6` and `exchange-v6-over-v6`.
      * 
      */
     public Optional<String> peeringType() {

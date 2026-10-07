@@ -20,8 +20,6 @@ public final class ManagementInterfaceManagementInterfaceMgmtType {
     /**
      * @return Static
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `static`.
-     * 
      */
     private @Nullable ManagementInterfaceManagementInterfaceMgmtTypeStatic static_;
 
@@ -35,8 +33,6 @@ public final class ManagementInterfaceManagementInterfaceMgmtType {
     }
     /**
      * @return Static
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `static`.
      * 
      */
     public Optional<ManagementInterfaceManagementInterfaceMgmtTypeStatic> static_() {

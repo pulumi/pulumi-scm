@@ -18,21 +18,15 @@ public final class GetIpsecCryptoProfileListDataLifesize {
     /**
      * @return specify lifesize in kilobytes(KB)
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `gb`, `kb`, `mb`, and `tb`.
-     * 
      */
     private Integer kb;
     /**
      * @return specify lifesize in megabytes(MB)
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `gb`, `kb`, `mb`, and `tb`.
-     * 
      */
     private Integer mb;
     /**
      * @return specify lifesize in terabytes(TB)
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `gb`, `kb`, `mb`, and `tb`.
      * 
      */
     private Integer tb;
@@ -48,8 +42,6 @@ public final class GetIpsecCryptoProfileListDataLifesize {
     /**
      * @return specify lifesize in kilobytes(KB)
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `gb`, `kb`, `mb`, and `tb`.
-     * 
      */
     public Integer kb() {
         return this.kb;
@@ -57,16 +49,12 @@ public final class GetIpsecCryptoProfileListDataLifesize {
     /**
      * @return specify lifesize in megabytes(MB)
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `gb`, `kb`, `mb`, and `tb`.
-     * 
      */
     public Integer mb() {
         return this.mb;
     }
     /**
      * @return specify lifesize in terabytes(TB)
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `gb`, `kb`, `mb`, and `tb`.
      * 
      */
     public Integer tb() {

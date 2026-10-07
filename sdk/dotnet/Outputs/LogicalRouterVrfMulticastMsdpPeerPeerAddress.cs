@@ -19,8 +19,6 @@ namespace Pulumi.Scm.Outputs
         public readonly string? Fqdn;
         /// <summary>
         /// Ip
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Fqdn` and `Ip`.
         /// </summary>
         public readonly string? Ip;
 

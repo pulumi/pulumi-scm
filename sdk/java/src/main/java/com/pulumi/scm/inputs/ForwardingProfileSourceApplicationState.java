@@ -47,14 +47,14 @@ public final class ForwardingProfileSourceApplicationState extends com.pulumi.re
     }
 
     /**
-     * The folder in which the resource is defined
+     * The folder in which the resource is defined. Possible values are `Mobile Users`.
      * 
      */
     @Import(name="folder")
     private @Nullable Output<String> folder;
 
     /**
-     * @return The folder in which the resource is defined
+     * @return The folder in which the resource is defined. Possible values are `Mobile Users`.
      * 
      */
     public Optional<Output<String>> folder() {
@@ -172,7 +172,7 @@ public final class ForwardingProfileSourceApplicationState extends com.pulumi.re
         }
 
         /**
-         * @param folder The folder in which the resource is defined
+         * @param folder The folder in which the resource is defined. Possible values are `Mobile Users`.
          * 
          * @return builder
          * 
@@ -183,7 +183,7 @@ public final class ForwardingProfileSourceApplicationState extends com.pulumi.re
         }
 
         /**
-         * @param folder The folder in which the resource is defined
+         * @param folder The folder in which the resource is defined. Possible values are `Mobile Users`.
          * 
          * @return builder
          * 

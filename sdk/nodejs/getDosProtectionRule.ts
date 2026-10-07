@@ -28,12 +28,21 @@ export interface GetDosProtectionRuleArgs {
      * The device in which the resource is defined
      */
     device?: string;
+    /**
+     * The folder in which the resource is defined
+     */
     folder?: string;
     /**
      * The UUID of the DNS security profile
      */
     id: string;
+    /**
+     * Rule name
+     */
     name?: string;
+    /**
+     * The snippet in which the resource is defined
+     */
     snippet?: string;
 }
 
@@ -41,32 +50,86 @@ export interface GetDosProtectionRuleArgs {
  * A collection of values returned by getDosProtectionRule.
  */
 export interface GetDosProtectionRuleResult {
+    /**
+     * The action to take on rule match
+     */
     readonly action: outputs.GetDosProtectionRuleAction;
+    /**
+     * Description
+     */
     readonly description: string;
+    /**
+     * List of destination addresses
+     */
     readonly destinations: string[];
     /**
      * The device in which the resource is defined
      */
     readonly device: string;
+    /**
+     * Rule disabled?
+     */
     readonly disabled: boolean;
+    /**
+     * The folder in which the resource is defined
+     */
     readonly folder: string;
-    readonly froms: string[];
+    /**
+     * Source zones and interfaces
+     */
+    readonly from: outputs.GetDosProtectionRuleFrom;
     /**
      * The UUID of the DNS security profile
      */
     readonly id: string;
+    /**
+     * Log forwarding profile name
+     */
     readonly logSetting: string;
+    /**
+     * Rule name
+     */
     readonly name: string;
+    /**
+     * Position relative to local device rules. Possible values are `pre` and `post`.
+     */
     readonly position: string;
+    /**
+     * Protection
+     */
     readonly protection: outputs.GetDosProtectionRuleProtection;
+    /**
+     * Schedule on which to enforce the rule
+     */
     readonly schedule: string;
+    /**
+     * List of services
+     */
     readonly services: string[];
+    /**
+     * The snippet in which the resource is defined
+     */
     readonly snippet: string;
+    /**
+     * List of source users and/or groups.  Reserved words include `any`, `pre-login`, `known-user`, and `unknown`.
+     */
     readonly sourceUsers: string[];
+    /**
+     * List of source addresses
+     */
     readonly sources: string[];
+    /**
+     * List of tags
+     */
     readonly tags: string[];
+    /**
+     * The Terraform ID.
+     */
     readonly tfid: string;
-    readonly tos: string[];
+    /**
+     * Destination zones and interfaces
+     */
+    readonly to: outputs.GetDosProtectionRuleTo;
 }
 /**
  * DosProtectionRule data source
@@ -90,11 +153,20 @@ export interface GetDosProtectionRuleOutputArgs {
      * The device in which the resource is defined
      */
     device?: pulumi.Input<string | undefined>;
+    /**
+     * The folder in which the resource is defined
+     */
     folder?: pulumi.Input<string | undefined>;
     /**
      * The UUID of the DNS security profile
      */
     id: pulumi.Input<string>;
+    /**
+     * Rule name
+     */
     name?: pulumi.Input<string | undefined>;
+    /**
+     * The snippet in which the resource is defined
+     */
     snippet?: pulumi.Input<string | undefined>;
 }

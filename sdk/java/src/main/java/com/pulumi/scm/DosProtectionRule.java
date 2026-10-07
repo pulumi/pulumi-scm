@@ -11,7 +11,9 @@ import com.pulumi.scm.DosProtectionRuleArgs;
 import com.pulumi.scm.Utilities;
 import com.pulumi.scm.inputs.DosProtectionRuleState;
 import com.pulumi.scm.outputs.DosProtectionRuleAction;
+import com.pulumi.scm.outputs.DosProtectionRuleFrom;
 import com.pulumi.scm.outputs.DosProtectionRuleProtection;
+import com.pulumi.scm.outputs.DosProtectionRuleTo;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -119,8 +121,6 @@ public class DosProtectionRule extends com.pulumi.resources.CustomResource {
     /**
      * The folder in which the resource is defined
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
      */
     @Export(name="folder", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> folder;
@@ -128,25 +128,23 @@ public class DosProtectionRule extends com.pulumi.resources.CustomResource {
     /**
      * @return The folder in which the resource is defined
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
      */
     public Output<Optional<String>> folder() {
         return Codegen.optional(this.folder);
     }
     /**
-     * List of source zones
+     * Source zones and interfaces
      * 
      */
-    @Export(name="froms", refs={List.class,String.class}, tree="[0,1]")
-    private Output</* @Nullable */ List<String>> froms;
+    @Export(name="from", refs={DosProtectionRuleFrom.class}, tree="[0]")
+    private Output<DosProtectionRuleFrom> from;
 
     /**
-     * @return List of source zones
+     * @return Source zones and interfaces
      * 
      */
-    public Output<Optional<List<String>>> froms() {
-        return Codegen.optional(this.froms);
+    public Output<DosProtectionRuleFrom> from() {
+        return this.from;
     }
     /**
      * Log forwarding profile name
@@ -177,14 +175,14 @@ public class DosProtectionRule extends com.pulumi.resources.CustomResource {
         return this.name;
     }
     /**
-     * Position relative to local device rules
+     * Position relative to local device rules. Possible values are `pre` and `post`.
      * 
      */
     @Export(name="position", refs={String.class}, tree="[0]")
     private Output<String> position;
 
     /**
-     * @return Position relative to local device rules
+     * @return Position relative to local device rules. Possible values are `pre` and `post`.
      * 
      */
     public Output<String> position() {
@@ -195,14 +193,14 @@ public class DosProtectionRule extends com.pulumi.resources.CustomResource {
      * 
      */
     @Export(name="protection", refs={DosProtectionRuleProtection.class}, tree="[0]")
-    private Output</* @Nullable */ DosProtectionRuleProtection> protection;
+    private Output<DosProtectionRuleProtection> protection;
 
     /**
      * @return Protection
      * 
      */
-    public Output<Optional<DosProtectionRuleProtection>> protection() {
-        return Codegen.optional(this.protection);
+    public Output<DosProtectionRuleProtection> protection() {
+        return this.protection;
     }
     /**
      * Schedule on which to enforce the rule
@@ -223,19 +221,17 @@ public class DosProtectionRule extends com.pulumi.resources.CustomResource {
      * 
      */
     @Export(name="services", refs={List.class,String.class}, tree="[0,1]")
-    private Output</* @Nullable */ List<String>> services;
+    private Output<List<String>> services;
 
     /**
      * @return List of services
      * 
      */
-    public Output<Optional<List<String>>> services() {
-        return Codegen.optional(this.services);
+    public Output<List<String>> services() {
+        return this.services;
     }
     /**
      * The snippet in which the resource is defined
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     @Export(name="snippet", refs={String.class}, tree="[0]")
@@ -243,8 +239,6 @@ public class DosProtectionRule extends com.pulumi.resources.CustomResource {
 
     /**
      * @return The snippet in which the resource is defined
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public Output<Optional<String>> snippet() {
@@ -269,14 +263,14 @@ public class DosProtectionRule extends com.pulumi.resources.CustomResource {
      * 
      */
     @Export(name="sources", refs={List.class,String.class}, tree="[0,1]")
-    private Output</* @Nullable */ List<String>> sources;
+    private Output<List<String>> sources;
 
     /**
      * @return List of source addresses
      * 
      */
-    public Output<Optional<List<String>>> sources() {
-        return Codegen.optional(this.sources);
+    public Output<List<String>> sources() {
+        return this.sources;
     }
     /**
      * List of tags
@@ -307,18 +301,18 @@ public class DosProtectionRule extends com.pulumi.resources.CustomResource {
         return this.tfid;
     }
     /**
-     * List of destination zones
+     * Destination zones and interfaces
      * 
      */
-    @Export(name="tos", refs={List.class,String.class}, tree="[0,1]")
-    private Output</* @Nullable */ List<String>> tos;
+    @Export(name="to", refs={DosProtectionRuleTo.class}, tree="[0]")
+    private Output<DosProtectionRuleTo> to;
 
     /**
-     * @return List of destination zones
+     * @return Destination zones and interfaces
      * 
      */
-    public Output<Optional<List<String>>> tos() {
-        return Codegen.optional(this.tos);
+    public Output<DosProtectionRuleTo> to() {
+        return this.to;
     }
 
     /**
@@ -333,7 +327,7 @@ public class DosProtectionRule extends com.pulumi.resources.CustomResource {
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public DosProtectionRule(java.lang.String name, @Nullable DosProtectionRuleArgs args) {
+    public DosProtectionRule(java.lang.String name, DosProtectionRuleArgs args) {
         this(name, args, null);
     }
     /**
@@ -342,7 +336,7 @@ public class DosProtectionRule extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public DosProtectionRule(java.lang.String name, @Nullable DosProtectionRuleArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public DosProtectionRule(java.lang.String name, DosProtectionRuleArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("scm:index/dosProtectionRule:DosProtectionRule", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
@@ -350,7 +344,7 @@ public class DosProtectionRule extends com.pulumi.resources.CustomResource {
         super("scm:index/dosProtectionRule:DosProtectionRule", name, state, makeResourceOptions(options, id), false);
     }
 
-    private static DosProtectionRuleArgs makeArgs(@Nullable DosProtectionRuleArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private static DosProtectionRuleArgs makeArgs(DosProtectionRuleArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         if (options != null && options.getUrn().isPresent()) {
             return null;
         }

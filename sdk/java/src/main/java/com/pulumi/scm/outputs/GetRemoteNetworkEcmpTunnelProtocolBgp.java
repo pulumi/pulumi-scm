@@ -42,7 +42,7 @@ public final class GetRemoteNetworkEcmpTunnelProtocolBgp {
      */
     private String peerIpAddress;
     /**
-     * @return Route exchange types
+     * @return Route exchange types. Possible values are `exchange-v4-over-v4`, `exchange-v4-v6-over-v4`, `exchange-v4-over-v4-v6-over-v6` and `exchange-v6-over-v6`.
      * 
      */
     private String peeringType;
@@ -101,7 +101,7 @@ public final class GetRemoteNetworkEcmpTunnelProtocolBgp {
         return this.peerIpAddress;
     }
     /**
-     * @return Route exchange types
+     * @return Route exchange types. Possible values are `exchange-v4-over-v4`, `exchange-v4-v6-over-v4`, `exchange-v4-over-v4-v6-over-v6` and `exchange-v6-over-v6`.
      * 
      */
     public String peeringType() {

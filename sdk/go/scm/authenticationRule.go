@@ -63,9 +63,10 @@ import (
 //				SourceUsers: pulumi.StringArray{
 //					pulumi.String("any"),
 //				},
-//				Timeout:           pulumi.Int(1200),
-//				NegateSource:      pulumi.Bool(false),
-//				NegateDestination: pulumi.Bool(false),
+//				AuthenticationEnforcement: pulumi.String("default-no-captive-portal"),
+//				Timeout:                   pulumi.Int(1200),
+//				NegateSource:              pulumi.Bool(false),
+//				NegateDestination:         pulumi.Bool(false),
 //				Tags: pulumi.StringArray{
 //					appAccessTag.Name,
 //				},
@@ -108,6 +109,7 @@ import (
 //				SourceUsers: pulumi.StringArray{
 //					pulumi.String("any"),
 //				},
+//				AuthenticationEnforcement: pulumi.String("default-no-captive-portal"),
 //			})
 //			if err != nil {
 //				return err
@@ -136,6 +138,7 @@ import (
 //				SourceUsers: pulumi.StringArray{
 //					pulumi.String("any"),
 //				},
+//				AuthenticationEnforcement: pulumi.String("default-no-captive-portal"),
 //			})
 //			if err != nil {
 //				return err
@@ -168,6 +171,7 @@ import (
 //				SourceUsers: pulumi.StringArray{
 //					pulumi.String("any"),
 //				},
+//				AuthenticationEnforcement: pulumi.String("default-no-captive-portal"),
 //			})
 //			if err != nil {
 //				return err
@@ -197,6 +201,7 @@ import (
 //				SourceUsers: pulumi.StringArray{
 //					pulumi.String("any"),
 //				},
+//				AuthenticationEnforcement: pulumi.String("default-no-captive-portal"),
 //			})
 //			if err != nil {
 //				return err
@@ -232,7 +237,7 @@ type AuthenticationRule struct {
 	pulumi.CustomResourceState
 
 	// The authentication profile name
-	AuthenticationEnforcement pulumi.StringPtrOutput `pulumi:"authenticationEnforcement"`
+	AuthenticationEnforcement pulumi.StringOutput `pulumi:"authenticationEnforcement"`
 	// The destination URL categories
 	Categories pulumi.StringArrayOutput `pulumi:"categories"`
 	// The description of the authentication rule
@@ -246,8 +251,6 @@ type AuthenticationRule struct {
 	// Is the authentication rule disabled?
 	Disabled pulumi.BoolOutput `pulumi:"disabled"`
 	// Folder
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrOutput `pulumi:"folder"`
 	// The source security zones
 	Froms pulumi.StringArrayOutput `pulumi:"froms"`
@@ -265,15 +268,13 @@ type AuthenticationRule struct {
 	NegateDestination pulumi.BoolOutput `pulumi:"negateDestination"`
 	// Are the source addresses negated?
 	NegateSource pulumi.BoolOutput `pulumi:"negateSource"`
-	// The relative position of the rule
+	// The relative position of the rule. Possible values are `pre` and `post`.
 	Position pulumi.StringOutput `pulumi:"position"`
 	// Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
 	RelativePosition pulumi.StringPtrOutput `pulumi:"relativePosition"`
 	// The destination ports
 	Services pulumi.StringArrayOutput `pulumi:"services"`
 	// Snippet
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
 	// The source Host Integrity Profile (HIP)
 	SourceHips pulumi.StringArrayOutput `pulumi:"sourceHips"`
@@ -283,7 +284,7 @@ type AuthenticationRule struct {
 	Sources pulumi.StringArrayOutput `pulumi:"sources"`
 	// The authentication rule tags
 	Tags pulumi.StringArrayOutput `pulumi:"tags"`
-	// The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `"before"` or `"after"`.
+	// UUID of the rule to position this rule relative to. Required when `relativePosition` is `"before"` or `"after"`.
 	TargetRule pulumi.StringPtrOutput `pulumi:"targetRule"`
 	// The Terraform ID.
 	Tfid pulumi.StringOutput `pulumi:"tfid"`
@@ -353,8 +354,6 @@ type authenticationRuleState struct {
 	// Is the authentication rule disabled?
 	Disabled *bool `pulumi:"disabled"`
 	// Folder
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// The source security zones
 	Froms []string `pulumi:"froms"`
@@ -372,15 +371,13 @@ type authenticationRuleState struct {
 	NegateDestination *bool `pulumi:"negateDestination"`
 	// Are the source addresses negated?
 	NegateSource *bool `pulumi:"negateSource"`
-	// The relative position of the rule
+	// The relative position of the rule. Possible values are `pre` and `post`.
 	Position *string `pulumi:"position"`
 	// Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
 	RelativePosition *string `pulumi:"relativePosition"`
 	// The destination ports
 	Services []string `pulumi:"services"`
 	// Snippet
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	// The source Host Integrity Profile (HIP)
 	SourceHips []string `pulumi:"sourceHips"`
@@ -390,7 +387,7 @@ type authenticationRuleState struct {
 	Sources []string `pulumi:"sources"`
 	// The authentication rule tags
 	Tags []string `pulumi:"tags"`
-	// The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `"before"` or `"after"`.
+	// UUID of the rule to position this rule relative to. Required when `relativePosition` is `"before"` or `"after"`.
 	TargetRule *string `pulumi:"targetRule"`
 	// The Terraform ID.
 	Tfid *string `pulumi:"tfid"`
@@ -416,8 +413,6 @@ type AuthenticationRuleState struct {
 	// Is the authentication rule disabled?
 	Disabled pulumi.BoolPtrInput
 	// Folder
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// The source security zones
 	Froms pulumi.StringArrayInput
@@ -435,15 +430,13 @@ type AuthenticationRuleState struct {
 	NegateDestination pulumi.BoolPtrInput
 	// Are the source addresses negated?
 	NegateSource pulumi.BoolPtrInput
-	// The relative position of the rule
+	// The relative position of the rule. Possible values are `pre` and `post`.
 	Position pulumi.StringPtrInput
 	// Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
 	RelativePosition pulumi.StringPtrInput
 	// The destination ports
 	Services pulumi.StringArrayInput
 	// Snippet
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	// The source Host Integrity Profile (HIP)
 	SourceHips pulumi.StringArrayInput
@@ -453,7 +446,7 @@ type AuthenticationRuleState struct {
 	Sources pulumi.StringArrayInput
 	// The authentication rule tags
 	Tags pulumi.StringArrayInput
-	// The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `"before"` or `"after"`.
+	// UUID of the rule to position this rule relative to. Required when `relativePosition` is `"before"` or `"after"`.
 	TargetRule pulumi.StringPtrInput
 	// The Terraform ID.
 	Tfid pulumi.StringPtrInput
@@ -483,8 +476,6 @@ type authenticationRuleArgs struct {
 	// Is the authentication rule disabled?
 	Disabled *bool `pulumi:"disabled"`
 	// Folder
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// The source security zones
 	Froms []string `pulumi:"froms"`
@@ -502,15 +493,13 @@ type authenticationRuleArgs struct {
 	NegateDestination *bool `pulumi:"negateDestination"`
 	// Are the source addresses negated?
 	NegateSource *bool `pulumi:"negateSource"`
-	// The relative position of the rule
+	// The relative position of the rule. Possible values are `pre` and `post`.
 	Position *string `pulumi:"position"`
 	// Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
 	RelativePosition *string `pulumi:"relativePosition"`
 	// The destination ports
 	Services []string `pulumi:"services"`
 	// Snippet
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	// The source Host Integrity Profile (HIP)
 	SourceHips []string `pulumi:"sourceHips"`
@@ -520,7 +509,7 @@ type authenticationRuleArgs struct {
 	Sources []string `pulumi:"sources"`
 	// The authentication rule tags
 	Tags []string `pulumi:"tags"`
-	// The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `"before"` or `"after"`.
+	// UUID of the rule to position this rule relative to. Required when `relativePosition` is `"before"` or `"after"`.
 	TargetRule *string `pulumi:"targetRule"`
 	// The authentication session timeout (seconds)
 	Timeout *int `pulumi:"timeout"`
@@ -545,8 +534,6 @@ type AuthenticationRuleArgs struct {
 	// Is the authentication rule disabled?
 	Disabled pulumi.BoolPtrInput
 	// Folder
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// The source security zones
 	Froms pulumi.StringArrayInput
@@ -564,15 +551,13 @@ type AuthenticationRuleArgs struct {
 	NegateDestination pulumi.BoolPtrInput
 	// Are the source addresses negated?
 	NegateSource pulumi.BoolPtrInput
-	// The relative position of the rule
+	// The relative position of the rule. Possible values are `pre` and `post`.
 	Position pulumi.StringPtrInput
 	// Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
 	RelativePosition pulumi.StringPtrInput
 	// The destination ports
 	Services pulumi.StringArrayInput
 	// Snippet
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	// The source Host Integrity Profile (HIP)
 	SourceHips pulumi.StringArrayInput
@@ -582,7 +567,7 @@ type AuthenticationRuleArgs struct {
 	Sources pulumi.StringArrayInput
 	// The authentication rule tags
 	Tags pulumi.StringArrayInput
-	// The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `"before"` or `"after"`.
+	// UUID of the rule to position this rule relative to. Required when `relativePosition` is `"before"` or `"after"`.
 	TargetRule pulumi.StringPtrInput
 	// The authentication session timeout (seconds)
 	Timeout pulumi.IntPtrInput
@@ -678,8 +663,8 @@ func (o AuthenticationRuleOutput) ToAuthenticationRuleOutputWithContext(ctx cont
 }
 
 // The authentication profile name
-func (o AuthenticationRuleOutput) AuthenticationEnforcement() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v *AuthenticationRule) pulumi.StringPtrOutput { return v.AuthenticationEnforcement }).(pulumi.StringPtrOutput)
+func (o AuthenticationRuleOutput) AuthenticationEnforcement() pulumi.StringOutput {
+	return o.ApplyT(func(v *AuthenticationRule) pulumi.StringOutput { return v.AuthenticationEnforcement }).(pulumi.StringOutput)
 }
 
 // The destination URL categories
@@ -713,8 +698,6 @@ func (o AuthenticationRuleOutput) Disabled() pulumi.BoolOutput {
 }
 
 // Folder
-//
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o AuthenticationRuleOutput) Folder() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *AuthenticationRule) pulumi.StringPtrOutput { return v.Folder }).(pulumi.StringPtrOutput)
 }
@@ -759,7 +742,7 @@ func (o AuthenticationRuleOutput) NegateSource() pulumi.BoolOutput {
 	return o.ApplyT(func(v *AuthenticationRule) pulumi.BoolOutput { return v.NegateSource }).(pulumi.BoolOutput)
 }
 
-// The relative position of the rule
+// The relative position of the rule. Possible values are `pre` and `post`.
 func (o AuthenticationRuleOutput) Position() pulumi.StringOutput {
 	return o.ApplyT(func(v *AuthenticationRule) pulumi.StringOutput { return v.Position }).(pulumi.StringOutput)
 }
@@ -775,8 +758,6 @@ func (o AuthenticationRuleOutput) Services() pulumi.StringArrayOutput {
 }
 
 // Snippet
-//
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o AuthenticationRuleOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *AuthenticationRule) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)
 }
@@ -801,7 +782,7 @@ func (o AuthenticationRuleOutput) Tags() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v *AuthenticationRule) pulumi.StringArrayOutput { return v.Tags }).(pulumi.StringArrayOutput)
 }
 
-// The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `"before"` or `"after"`.
+// UUID of the rule to position this rule relative to. Required when `relativePosition` is `"before"` or `"after"`.
 func (o AuthenticationRuleOutput) TargetRule() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *AuthenticationRule) pulumi.StringPtrOutput { return v.TargetRule }).(pulumi.StringPtrOutput)
 }

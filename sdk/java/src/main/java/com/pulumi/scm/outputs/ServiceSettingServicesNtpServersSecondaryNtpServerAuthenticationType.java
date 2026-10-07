@@ -21,14 +21,10 @@ public final class ServiceSettingServicesNtpServersSecondaryNtpServerAuthenticat
     /**
      * @return None
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `autokey`, `none`, and `symmetricKey`.
-     * 
      */
     private @Nullable ServiceSettingServicesNtpServersSecondaryNtpServerAuthenticationTypeNone none;
     /**
      * @return Symmetric key
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `autokey`, `none`, and `symmetricKey`.
      * 
      */
     private @Nullable ServiceSettingServicesNtpServersSecondaryNtpServerAuthenticationTypeSymmetricKey symmetricKey;
@@ -44,16 +40,12 @@ public final class ServiceSettingServicesNtpServersSecondaryNtpServerAuthenticat
     /**
      * @return None
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `autokey`, `none`, and `symmetricKey`.
-     * 
      */
     public Optional<ServiceSettingServicesNtpServersSecondaryNtpServerAuthenticationTypeNone> none() {
         return Optional.ofNullable(this.none);
     }
     /**
      * @return Symmetric key
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `autokey`, `none`, and `symmetricKey`.
      * 
      */
     public Optional<ServiceSettingServicesNtpServersSecondaryNtpServerAuthenticationTypeSymmetricKey> symmetricKey() {

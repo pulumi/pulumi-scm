@@ -271,8 +271,6 @@ public class LdapServerProfile extends com.pulumi.resources.CustomResource {
     /**
      * The folder in which the resource is defined
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
      */
     @Export(name="folder", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> folder;
@@ -280,21 +278,19 @@ public class LdapServerProfile extends com.pulumi.resources.CustomResource {
     /**
      * @return The folder in which the resource is defined
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
      */
     public Output<Optional<String>> folder() {
         return Codegen.optional(this.folder);
     }
     /**
-     * The LDAP server time
+     * The LDAP server time. Possible values are `active-directory`, `e-directory`, `sun` and `other`.
      * 
      */
     @Export(name="ldapType", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> ldapType;
 
     /**
-     * @return The LDAP server time
+     * @return The LDAP server time. Possible values are `active-directory`, `e-directory`, `sun` and `other`.
      * 
      */
     public Output<Optional<String>> ldapType() {
@@ -345,16 +341,12 @@ public class LdapServerProfile extends com.pulumi.resources.CustomResource {
     /**
      * The snippet in which the resource is defined
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
      */
     @Export(name="snippet", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> snippet;
 
     /**
      * @return The snippet in which the resource is defined
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public Output<Optional<String>> snippet() {

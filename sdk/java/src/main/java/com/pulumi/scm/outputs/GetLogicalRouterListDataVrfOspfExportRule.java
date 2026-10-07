@@ -22,7 +22,7 @@ public final class GetLogicalRouterListDataVrfOspfExportRule {
      */
     private String name;
     /**
-     * @return New path type
+     * @return New path type. Possible values are `ext-1` and `ext-2`.
      * 
      */
     private String newPathType;
@@ -48,7 +48,7 @@ public final class GetLogicalRouterListDataVrfOspfExportRule {
         return this.name;
     }
     /**
-     * @return New path type
+     * @return New path type. Possible values are `ext-1` and `ext-2`.
      * 
      */
     public String newPathType() {

@@ -61,7 +61,7 @@ namespace Pulumi.Scm.Inputs
         public Input<Inputs.ManagementInterfaceManagementInterfaceServiceArgs>? Service { get; set; }
 
         /// <summary>
-        /// Speed and duplex
+        /// Speed and duplex. Possible values are `auto-negotiate`, `10Mbps-half-duplex`, `10Mbps-full-duplex`, `100Mbps-half-duplex`, `100Mbps-full-duplex`, `1Gbps-half-duplex` and `1Gbps-full-duplex`.
         /// </summary>
         [Input("speedDuplex")]
         public Input<string>? SpeedDuplex { get; set; }

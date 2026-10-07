@@ -132,6 +132,9 @@ namespace Pulumi.Scm
         [Input("device")]
         public string? Device { get; set; }
 
+        /// <summary>
+        /// The folder in which the resource is defined
+        /// </summary>
         [Input("folder")]
         public string? Folder { get; set; }
 
@@ -141,9 +144,15 @@ namespace Pulumi.Scm
         [Input("id", required: true)]
         public string Id { get; set; } = null!;
 
+        /// <summary>
+        /// The name of the SCEP profile
+        /// </summary>
         [Input("name")]
         public string? Name { get; set; }
 
+        /// <summary>
+        /// The snippet in which the resource is defined
+        /// </summary>
         [Input("snippet")]
         public string? Snippet { get; set; }
 
@@ -161,6 +170,9 @@ namespace Pulumi.Scm
         [Input("device")]
         public Input<string>? Device { get; set; }
 
+        /// <summary>
+        /// The folder in which the resource is defined
+        /// </summary>
         [Input("folder")]
         public Input<string>? Folder { get; set; }
 
@@ -170,9 +182,15 @@ namespace Pulumi.Scm
         [Input("id", required: true)]
         public Input<string> Id { get; set; } = null!;
 
+        /// <summary>
+        /// The name of the SCEP profile
+        /// </summary>
         [Input("name")]
         public Input<string>? Name { get; set; }
 
+        /// <summary>
+        /// The snippet in which the resource is defined
+        /// </summary>
         [Input("snippet")]
         public Input<string>? Snippet { get; set; }
 
@@ -186,30 +204,81 @@ namespace Pulumi.Scm
     [OutputType]
     public sealed class GetScepProfileResult
     {
+        /// <summary>
+        /// Algorithm
+        /// </summary>
         public readonly Outputs.GetScepProfileAlgorithmResult Algorithm;
+        /// <summary>
+        /// Certificate Authority Identity
+        /// </summary>
         public readonly string CaIdentityName;
+        /// <summary>
+        /// Subject Alternative name type
+        /// </summary>
         public readonly Outputs.GetScepProfileCertificateAttributesResult CertificateAttributes;
         /// <summary>
         /// The device in which the resource is defined
         /// </summary>
         public readonly string Device;
+        /// <summary>
+        /// Digest for CSR. Possible values are `Sha1`, `Sha256`, `Sha384` and `Sha512`.
+        /// </summary>
         public readonly string Digest;
+        /// <summary>
+        /// Map of sensitive values returned from the API.
+        /// </summary>
         public readonly ImmutableDictionary<string, string> EncryptedValues;
+        /// <summary>
+        /// CA Certificate Fingerprint
+        /// </summary>
         public readonly string Fingerprint;
+        /// <summary>
+        /// The folder in which the resource is defined
+        /// </summary>
         public readonly string Folder;
         /// <summary>
         /// The UUID of the SCEP profile
         /// </summary>
         public readonly string Id;
+        /// <summary>
+        /// The name of the SCEP profile
+        /// </summary>
         public readonly string Name;
+        /// <summary>
+        /// SCEP Server CA Certificate. Possible values are `Authentication Cookie CA`, `Forward-Trust-CA`, `Forward-Trust-CA-ECDSA`, `Forward-UnTrust-CA`, `Forward-UnTrust-CA-ECDSA`, `Global Authentication Cookie CA`, `GlobalSign-Root-CA` and `Root CA`.
+        /// </summary>
         public readonly string ScepCaCert;
+        /// <summary>
+        /// One Time Password Challenge
+        /// </summary>
         public readonly Outputs.GetScepProfileScepChallengeResult ScepChallenge;
+        /// <summary>
+        /// SCEP Client Certificate. Possible values are `Authentication Cookie CA`, `Forward-Trust-CA`, `Forward-Trust-CA-ECDSA`, `Forward-UnTrust-CA`, `Forward-UnTrust-CA-ECDSA`, `Global Authentication Cookie CA`, `GlobalSign-Root-CA` and `Root CA`.
+        /// </summary>
         public readonly string ScepClientCert;
+        /// <summary>
+        /// SCEP server URL
+        /// </summary>
         public readonly string ScepUrl;
+        /// <summary>
+        /// The snippet in which the resource is defined
+        /// </summary>
         public readonly string Snippet;
+        /// <summary>
+        /// Subject
+        /// </summary>
         public readonly string Subject;
+        /// <summary>
+        /// The Terraform ID.
+        /// </summary>
         public readonly string Tfid;
+        /// <summary>
+        /// Use as digital signature?
+        /// </summary>
         public readonly bool UseAsDigitalSignature;
+        /// <summary>
+        /// Use for key encipherment?
+        /// </summary>
         public readonly bool UseForKeyEncipherment;
 
         [OutputConstructor]

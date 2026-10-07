@@ -14,7 +14,7 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetIpsecCryptoProfileListDataAhResult
     {
         /// <summary>
-        /// Authentication
+        /// Authentication. Possible values are `Md5`, `Sha1`, `Sha256`, `Sha384` and `Sha512`.
         /// </summary>
         public readonly ImmutableArray<string> Authentications;
 

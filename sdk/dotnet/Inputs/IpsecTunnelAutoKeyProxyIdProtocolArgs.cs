@@ -20,16 +20,12 @@ namespace Pulumi.Scm.Inputs
 
         /// <summary>
         /// IPv4 type of ProxyId protocol values for TCP protocol
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Number`, `Tcp`, and `Udp`.
         /// </summary>
         [Input("tcp")]
         public Input<Inputs.IpsecTunnelAutoKeyProxyIdProtocolTcpArgs>? Tcp { get; set; }
 
         /// <summary>
         /// IPv6 type of ProxyId protocol values for UDP protocol
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Number`, `Tcp`, and `Udp`.
         /// </summary>
         [Input("udp")]
         public Input<Inputs.IpsecTunnelAutoKeyProxyIdProtocolUdpArgs>? Udp { get; set; }

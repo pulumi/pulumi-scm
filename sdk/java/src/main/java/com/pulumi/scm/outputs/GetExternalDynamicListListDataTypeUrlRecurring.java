@@ -22,28 +22,20 @@ public final class GetExternalDynamicListListDataTypeUrlRecurring {
     /**
      * @return Five minute settings for URL recurring
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
-     * 
      */
     private GetExternalDynamicListListDataTypeUrlRecurringFiveMinute fiveMinute;
     /**
      * @return Hourly settings for URL recurring
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
      * 
      */
     private GetExternalDynamicListListDataTypeUrlRecurringHourly hourly;
     /**
      * @return Monthly settings for URL recurring
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
-     * 
      */
     private GetExternalDynamicListListDataTypeUrlRecurringMonthly monthly;
     /**
      * @return Weekly settings for URL recurring
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
      * 
      */
     private GetExternalDynamicListListDataTypeUrlRecurringWeekly weekly;
@@ -59,16 +51,12 @@ public final class GetExternalDynamicListListDataTypeUrlRecurring {
     /**
      * @return Five minute settings for URL recurring
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
-     * 
      */
     public GetExternalDynamicListListDataTypeUrlRecurringFiveMinute fiveMinute() {
         return this.fiveMinute;
     }
     /**
      * @return Hourly settings for URL recurring
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
      * 
      */
     public GetExternalDynamicListListDataTypeUrlRecurringHourly hourly() {
@@ -77,16 +65,12 @@ public final class GetExternalDynamicListListDataTypeUrlRecurring {
     /**
      * @return Monthly settings for URL recurring
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
-     * 
      */
     public GetExternalDynamicListListDataTypeUrlRecurringMonthly monthly() {
         return this.monthly;
     }
     /**
      * @return Weekly settings for URL recurring
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
      * 
      */
     public GetExternalDynamicListListDataTypeUrlRecurringWeekly weekly() {

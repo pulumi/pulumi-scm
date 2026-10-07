@@ -72,7 +72,7 @@ public final class GetMotdBannerSettingMotdAndBanner {
      */
     private String motdTitle;
     /**
-     * @return Severity
+     * @return Severity. Possible values are `warning`, `question`, `error` and `info`.
      * 
      */
     private String severity;
@@ -163,7 +163,7 @@ public final class GetMotdBannerSettingMotdAndBanner {
         return this.motdTitle;
     }
     /**
-     * @return Severity
+     * @return Severity. Possible values are `warning`, `question`, `error` and `info`.
      * 
      */
     public String severity() {

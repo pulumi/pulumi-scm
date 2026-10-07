@@ -64,14 +64,14 @@ public final class GeneralSettingGeneralArgs extends com.pulumi.resources.Resour
     }
 
     /**
-     * Locale
+     * Locale. Possible values are `en`, `es`, `ja`, `fr`, `zh_CN` and `zh_TW`.
      * 
      */
     @Import(name="locale")
     private @Nullable Output<String> locale;
 
     /**
-     * @return Locale
+     * @return Locale. Possible values are `en`, `es`, `ja`, `fr`, `zh_CN` and `zh_TW`.
      * 
      */
     public Optional<Output<String>> locale() {
@@ -233,7 +233,7 @@ public final class GeneralSettingGeneralArgs extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param locale Locale
+         * @param locale Locale. Possible values are `en`, `es`, `ja`, `fr`, `zh_CN` and `zh_TW`.
          * 
          * @return builder
          * 
@@ -244,7 +244,7 @@ public final class GeneralSettingGeneralArgs extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param locale Locale
+         * @param locale Locale. Possible values are `en`, `es`, `ja`, `fr`, `zh_CN` and `zh_TW`.
          * 
          * @return builder
          * 

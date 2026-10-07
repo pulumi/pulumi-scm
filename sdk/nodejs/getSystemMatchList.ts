@@ -39,12 +39,21 @@ export interface GetSystemMatchListArgs {
      * The device in which the resource is defined
      */
     device?: string;
+    /**
+     * The folder in which the resource is defined
+     */
     folder?: string;
     /**
      * UUID of the resource
      */
     id: string;
+    /**
+     * Name of the system match list entry
+     */
     name?: string;
+    /**
+     * The snippet in which the resource is defined
+     */
     snippet?: string;
 }
 
@@ -52,24 +61,57 @@ export interface GetSystemMatchListArgs {
  * A collection of values returned by getSystemMatchList.
  */
 export interface GetSystemMatchListResult {
+    /**
+     * Description of the system match list entry
+     */
     readonly description: string;
     /**
      * The device in which the resource is defined
      */
     readonly device: string;
+    /**
+     * Filter of the system match list entry
+     */
     readonly filter: string;
+    /**
+     * The folder in which the resource is defined
+     */
     readonly folder: string;
     /**
      * UUID of the resource
      */
     readonly id: string;
+    /**
+     * Name of the system match list entry
+     */
     readonly name: string;
+    /**
+     * Send Email List of the system match list entry
+     */
     readonly sendEmails: string[];
+    /**
+     * Send HTTP List of the system match list entry
+     */
     readonly sendHttps: string[];
+    /**
+     * Send SNMP Trap List of the system match list entry
+     */
     readonly sendSnmptraps: string[];
+    /**
+     * Send Sys Log List of the system match list entry
+     */
     readonly sendSyslogs: string[];
+    /**
+     * Send to Panorama Flag of the system match list entry
+     */
     readonly sendToPanorama: boolean;
+    /**
+     * The snippet in which the resource is defined
+     */
     readonly snippet: string;
+    /**
+     * The Terraform ID.
+     */
     readonly tfid: string;
 }
 /**
@@ -107,11 +149,20 @@ export interface GetSystemMatchListOutputArgs {
      * The device in which the resource is defined
      */
     device?: pulumi.Input<string | undefined>;
+    /**
+     * The folder in which the resource is defined
+     */
     folder?: pulumi.Input<string | undefined>;
     /**
      * UUID of the resource
      */
     id: pulumi.Input<string>;
+    /**
+     * Name of the system match list entry
+     */
     name?: pulumi.Input<string | undefined>;
+    /**
+     * The snippet in which the resource is defined
+     */
     snippet?: pulumi.Input<string | undefined>;
 }

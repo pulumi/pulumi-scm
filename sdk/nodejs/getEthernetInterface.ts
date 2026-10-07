@@ -47,12 +47,21 @@ export interface GetEthernetInterfaceArgs {
      * The device in which the resource is defined
      */
     device?: string;
+    /**
+     * The folder in which the resource is defined
+     */
     folder?: string;
     /**
      * UUID of the resource
      */
     id: string;
+    /**
+     * Interface name
+     */
     name?: string;
+    /**
+     * The snippet in which the resource is defined
+     */
     snippet?: string;
 }
 
@@ -60,28 +69,73 @@ export interface GetEthernetInterfaceArgs {
  * A collection of values returned by getEthernetInterface.
  */
 export interface GetEthernetInterfaceResult {
+    /**
+     * Aggregate group
+     */
     readonly aggregateGroup: string;
+    /**
+     * Interface description
+     */
     readonly comment: string;
+    /**
+     * Default interface assignment
+     */
     readonly defaultValue: string;
     /**
      * The device in which the resource is defined
      */
     readonly device: string;
+    /**
+     * Map of sensitive values returned from the API.
+     */
     readonly encryptedValues: {[key: string]: string};
+    /**
+     * The folder in which the resource is defined
+     */
     readonly folder: string;
     /**
      * UUID of the resource
      */
     readonly id: string;
+    /**
+     * Layer2
+     */
     readonly layer2: outputs.GetEthernetInterfaceLayer2;
+    /**
+     * Ethernet Interface Layer 3 configuration
+     */
     readonly layer3: outputs.GetEthernetInterfaceLayer3;
+    /**
+     * Link duplex. Possible values are `auto`, `half` and `full`.
+     */
     readonly linkDuplex: string;
+    /**
+     * Link speed. Possible values are `auto`, `10`, `100`, `1000`, `10000`, `40000` and `100000`.
+     */
     readonly linkSpeed: string;
+    /**
+     * Link state. Possible values are `auto`, `up` and `down`.
+     */
     readonly linkState: string;
+    /**
+     * Interface name
+     */
     readonly name: string;
+    /**
+     * Poe
+     */
     readonly poe: outputs.GetEthernetInterfacePoe;
+    /**
+     * The snippet in which the resource is defined
+     */
     readonly snippet: string;
+    /**
+     * Tap
+     */
     readonly tap: outputs.GetEthernetInterfaceTap;
+    /**
+     * The Terraform ID.
+     */
     readonly tfid: string;
 }
 /**
@@ -125,11 +179,20 @@ export interface GetEthernetInterfaceOutputArgs {
      * The device in which the resource is defined
      */
     device?: pulumi.Input<string | undefined>;
+    /**
+     * The folder in which the resource is defined
+     */
     folder?: pulumi.Input<string | undefined>;
     /**
      * UUID of the resource
      */
     id: pulumi.Input<string>;
+    /**
+     * Interface name
+     */
     name?: pulumi.Input<string | undefined>;
+    /**
+     * The snippet in which the resource is defined
+     */
     snippet?: pulumi.Input<string | undefined>;
 }

@@ -123,28 +123,28 @@ public class IkeCryptoProfile extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.device);
     }
     /**
-     * Dh group
+     * Dh group. Possible values are `group1`, `group2`, `group5`, `group14`, `group19`, `group20`, `group21`, `ml-kem-512`, `ml-kem-768` and `ml-kem-1024`.
      * 
      */
     @Export(name="dhGroups", refs={List.class,String.class}, tree="[0,1]")
     private Output<List<String>> dhGroups;
 
     /**
-     * @return Dh group
+     * @return Dh group. Possible values are `group1`, `group2`, `group5`, `group14`, `group19`, `group20`, `group21`, `ml-kem-512`, `ml-kem-768` and `ml-kem-1024`.
      * 
      */
     public Output<List<String>> dhGroups() {
         return this.dhGroups;
     }
     /**
-     * Encryption algorithm
+     * Encryption algorithm. Possible values are `des`, `3des`, `aes-128-cbc`, `aes-192-cbc`, `aes-256-cbc`, `aes-128-gcm` and `aes-256-gcm`.
      * 
      */
     @Export(name="encryptions", refs={List.class,String.class}, tree="[0,1]")
     private Output<List<String>> encryptions;
 
     /**
-     * @return Encryption algorithm
+     * @return Encryption algorithm. Possible values are `des`, `3des`, `aes-128-cbc`, `aes-192-cbc`, `aes-256-cbc`, `aes-128-gcm` and `aes-256-gcm`.
      * 
      */
     public Output<List<String>> encryptions() {
@@ -153,8 +153,6 @@ public class IkeCryptoProfile extends com.pulumi.resources.CustomResource {
     /**
      * The folder in which the resource is defined
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
      */
     @Export(name="folder", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> folder;
@@ -162,21 +160,19 @@ public class IkeCryptoProfile extends com.pulumi.resources.CustomResource {
     /**
      * @return The folder in which the resource is defined
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
      */
     public Output<Optional<String>> folder() {
         return Codegen.optional(this.folder);
     }
     /**
-     * Hash
+     * Hash. Possible values are `md5`, `sha1`, `sha256`, `sha384`, `sha512` and `non-auth`.
      * 
      */
     @Export(name="hashes", refs={List.class,String.class}, tree="[0,1]")
     private Output<List<String>> hashes;
 
     /**
-     * @return Hash
+     * @return Hash. Possible values are `md5`, `sha1`, `sha256`, `sha384`, `sha512` and `non-auth`.
      * 
      */
     public Output<List<String>> hashes() {
@@ -213,16 +209,12 @@ public class IkeCryptoProfile extends com.pulumi.resources.CustomResource {
     /**
      * The snippet in which the resource is defined
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
      */
     @Export(name="snippet", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> snippet;
 
     /**
      * @return The snippet in which the resource is defined
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public Output<Optional<String>> snippet() {

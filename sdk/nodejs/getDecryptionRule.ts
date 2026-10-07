@@ -41,12 +41,21 @@ export interface GetDecryptionRuleArgs {
      * The device in which the resource is defined
      */
     device?: string;
+    /**
+     * The folder in which the resource is defined
+     */
     folder?: string;
     /**
      * The UUID of the decryption rule
      */
     id: string;
+    /**
+     * The name of the decryption rule
+     */
     name?: string;
+    /**
+     * The snippet in which the resource is defined
+     */
     snippet?: string;
 }
 
@@ -54,40 +63,121 @@ export interface GetDecryptionRuleArgs {
  * A collection of values returned by getDecryptionRule.
  */
 export interface GetDecryptionRuleResult {
+    /**
+     * The action to be taken. Possible values are `decrypt` and `no-decrypt`.
+     */
     readonly action: string;
+    /**
+     * The destination URL category
+     */
     readonly categories: string[];
+    /**
+     * The description of the decryption rule
+     */
     readonly description: string;
+    /**
+     * The Host Integrity Profile of the destination host
+     */
     readonly destinationHips: string[];
+    /**
+     * The destination addresses
+     */
     readonly destinations: string[];
     /**
      * The device in which the resource is defined
      */
     readonly device: string;
+    /**
+     * Is the rule disabled?
+     */
     readonly disabled: boolean;
+    /**
+     * The folder in which the resource is defined
+     */
     readonly folder: string;
+    /**
+     * The source security zone
+     */
     readonly froms: string[];
     /**
      * The UUID of the decryption rule
      */
     readonly id: string;
+    /**
+     * Log failed decryption events?
+     */
     readonly logFail: boolean;
+    /**
+     * The log settings of the decryption rule
+     */
     readonly logSetting: string;
+    /**
+     * Log successful decryption events?
+     */
     readonly logSuccess: boolean;
+    /**
+     * The name of the decryption rule
+     */
     readonly name: string;
+    /**
+     * Negate the destination addresses?
+     */
     readonly negateDestination: boolean;
+    /**
+     * Negate the source addresses?
+     */
     readonly negateSource: boolean;
+    /**
+     * The position of a security rule. Possible values are `pre` and `post`.
+     */
     readonly position: string;
+    /**
+     * The decryption profile associated with the decryption rule
+     */
     readonly profile: string;
+    /**
+     * Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
+     */
     readonly relativePosition: string;
+    /**
+     * The destination services and/or service groups
+     */
     readonly services: string[];
+    /**
+     * The snippet in which the resource is defined
+     */
     readonly snippet: string;
+    /**
+     * Source hip
+     */
     readonly sourceHips: string[];
+    /**
+     * List of source users and/or groups.  Reserved words include `any`, `pre-login`, `known-user`, and `unknown`.
+     */
     readonly sourceUsers: string[];
+    /**
+     * The source addresses
+     */
     readonly sources: string[];
+    /**
+     * The tags associated with the decryption rule
+     */
     readonly tags: string[];
+    /**
+     * UUID of the rule to position this rule relative to. Required when `relativePosition` is `"before"` or `"after"`.
+     */
     readonly targetRule: string;
+    /**
+     * The Terraform ID.
+     */
     readonly tfid: string;
+    /**
+     * The destination security zone
+     */
     readonly tos: string[];
+    /**
+     * The type of decryption
+     */
     readonly type: outputs.GetDecryptionRuleType;
 }
 /**
@@ -125,11 +215,20 @@ export interface GetDecryptionRuleOutputArgs {
      * The device in which the resource is defined
      */
     device?: pulumi.Input<string | undefined>;
+    /**
+     * The folder in which the resource is defined
+     */
     folder?: pulumi.Input<string | undefined>;
     /**
      * The UUID of the decryption rule
      */
     id: pulumi.Input<string>;
+    /**
+     * The name of the decryption rule
+     */
     name?: pulumi.Input<string | undefined>;
+    /**
+     * The snippet in which the resource is defined
+     */
     snippet?: pulumi.Input<string | undefined>;
 }

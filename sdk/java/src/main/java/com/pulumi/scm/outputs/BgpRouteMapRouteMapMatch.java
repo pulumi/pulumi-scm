@@ -54,7 +54,7 @@ public final class BgpRouteMapRouteMapMatch {
      */
     private @Nullable String origin;
     /**
-     * @return Peer
+     * @return Peer. Possible values are `local` and `none`.
      * 
      */
     private @Nullable String peer;
@@ -127,7 +127,7 @@ public final class BgpRouteMapRouteMapMatch {
         return Optional.ofNullable(this.origin);
     }
     /**
-     * @return Peer
+     * @return Peer. Possible values are `local` and `none`.
      * 
      */
     public Optional<String> peer() {

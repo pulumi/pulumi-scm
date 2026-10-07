@@ -43,6 +43,17 @@ import javax.annotation.Nullable;
  * 
  *     public static void stack(Context ctx) {
  *         //
+ *         // Creates a variable in ip-netmask format with an empty value
+ *         //
+ *         var scmVariableIpaddrEmpty = new Variable("scmVariableIpaddrEmpty", VariableArgs.builder()
+ *             .folder("ngfw-shared")
+ *             .name("$tf_variable_ipaddr_empty")
+ *             .description("Managed by Pulumi")
+ *             .type("ip-netmask")
+ *             .value("None")
+ *             .build());
+ * 
+ *         //
  *         // Creates a variable in as-number format
  *         //
  *         var scmVariableAsn = new Variable("scmVariableAsn", VariableArgs.builder()
@@ -224,16 +235,12 @@ public class Variable extends com.pulumi.resources.CustomResource {
     /**
      * The folder in which the resource is defined
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
      */
     @Export(name="folder", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> folder;
 
     /**
      * @return The folder in which the resource is defined
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public Output<Optional<String>> folder() {
@@ -270,16 +277,12 @@ public class Variable extends com.pulumi.resources.CustomResource {
     /**
      * The snippet in which the resource is defined
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
      */
     @Export(name="snippet", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> snippet;
 
     /**
      * @return The snippet in which the resource is defined
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public Output<Optional<String>> snippet() {
@@ -300,14 +303,14 @@ public class Variable extends com.pulumi.resources.CustomResource {
         return this.tfid;
     }
     /**
-     * The variable type
+     * The variable type. Possible values are `percent`, `count`, `ip-netmask`, `zone`, `ip-range`, `ip-wildcard`, `device-priority`, `device-id`, `egress-max`, `as-number`, `fqdn`, `port`, `link-tag`, `group-id`, `rate`, `router-id`, `qos-profile` and `timer`.
      * 
      */
     @Export(name="type", refs={String.class}, tree="[0]")
     private Output<String> type;
 
     /**
-     * @return The variable type
+     * @return The variable type. Possible values are `percent`, `count`, `ip-netmask`, `zone`, `ip-range`, `ip-wildcard`, `device-priority`, `device-id`, `egress-max`, `as-number`, `fqdn`, `port`, `link-tag`, `group-id`, `rate`, `router-id`, `qos-profile` and `timer`.
      * 
      */
     public Output<String> type() {

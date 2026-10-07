@@ -19,7 +19,7 @@ public final class AntiSpywareProfileRule {
      */
     private @Nullable AntiSpywareProfileRuleAction action;
     /**
-     * @return Category
+     * @return Category. Possible values are `adns-adtracking`, `adns-benign`, `adns-c2`, `adns-ddns`, `adns-dnsmisconfig`, `adns-grayware`, `adns-hijacking`, `adns-malware`, `adns-new-domain`, `adns-parked`, `adns-phishing`, `adns-proxy`, `adware`, `any`, `autogen`, `backdoor`, `botnet`, `browser-hijack`, `command-and-control`, `cryptominer`, `data-theft`, `dns`, `dns-adtracking`, `dns-benign`, `dns-c2`, `dns-ddns`, `dns-grayware`, `dns-malware`, `dns-new-domain`, `dns-parked`, `dns-phishing`, `dns-proxy`, `dns-security`, `dns-wildfire`, `domain-edl`, `downloader`, `fraud`, `hacktool`, `inline-cloud-c2`, `keylogger`, `net-worm`, `p2p-communication`, `phishing-kit`, `post-exploitation`, `spyware`, `tls-fingerprint` and `webshell`.
      * 
      */
     private @Nullable String category;
@@ -29,7 +29,7 @@ public final class AntiSpywareProfileRule {
      */
     private @Nullable String name;
     /**
-     * @return Packet capture
+     * @return Packet capture. Possible values are `disable`, `single-packet` and `extended-capture`.
      * 
      */
     private @Nullable String packetCapture;
@@ -53,7 +53,7 @@ public final class AntiSpywareProfileRule {
         return Optional.ofNullable(this.action);
     }
     /**
-     * @return Category
+     * @return Category. Possible values are `adns-adtracking`, `adns-benign`, `adns-c2`, `adns-ddns`, `adns-dnsmisconfig`, `adns-grayware`, `adns-hijacking`, `adns-malware`, `adns-new-domain`, `adns-parked`, `adns-phishing`, `adns-proxy`, `adware`, `any`, `autogen`, `backdoor`, `botnet`, `browser-hijack`, `command-and-control`, `cryptominer`, `data-theft`, `dns`, `dns-adtracking`, `dns-benign`, `dns-c2`, `dns-ddns`, `dns-grayware`, `dns-malware`, `dns-new-domain`, `dns-parked`, `dns-phishing`, `dns-proxy`, `dns-security`, `dns-wildfire`, `domain-edl`, `downloader`, `fraud`, `hacktool`, `inline-cloud-c2`, `keylogger`, `net-worm`, `p2p-communication`, `phishing-kit`, `post-exploitation`, `spyware`, `tls-fingerprint` and `webshell`.
      * 
      */
     public Optional<String> category() {
@@ -67,7 +67,7 @@ public final class AntiSpywareProfileRule {
         return Optional.ofNullable(this.name);
     }
     /**
-     * @return Packet capture
+     * @return Packet capture. Possible values are `disable`, `single-packet` and `extended-capture`.
      * 
      */
     public Optional<String> packetCapture() {

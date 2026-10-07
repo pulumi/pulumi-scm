@@ -12,27 +12,59 @@ import java.util.Objects;
 
 @CustomType
 public final class GetQosProfileResult {
+    /**
+     * @return Aggregate bandwidth
+     * 
+     */
     private GetQosProfileAggregateBandwidth aggregateBandwidth;
+    /**
+     * @return Class bandwidth type
+     * 
+     */
     private GetQosProfileClassBandwidthType classBandwidthType;
     /**
      * @return The device in which the resource is defined
      * 
      */
     private String device;
+    /**
+     * @return The folder in which the resource is defined
+     * 
+     */
     private String folder;
     /**
      * @return UUID of the resource
      * 
      */
     private String id;
+    /**
+     * @return Alphanumeric string begin with letter: [0-9a-zA-Z._-]
+     * 
+     */
     private String name;
+    /**
+     * @return The snippet in which the resource is defined
+     * 
+     */
     private String snippet;
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     private String tfid;
 
     private GetQosProfileResult() {}
+    /**
+     * @return Aggregate bandwidth
+     * 
+     */
     public GetQosProfileAggregateBandwidth aggregateBandwidth() {
         return this.aggregateBandwidth;
     }
+    /**
+     * @return Class bandwidth type
+     * 
+     */
     public GetQosProfileClassBandwidthType classBandwidthType() {
         return this.classBandwidthType;
     }
@@ -43,6 +75,10 @@ public final class GetQosProfileResult {
     public String device() {
         return this.device;
     }
+    /**
+     * @return The folder in which the resource is defined
+     * 
+     */
     public String folder() {
         return this.folder;
     }
@@ -53,12 +89,24 @@ public final class GetQosProfileResult {
     public String id() {
         return this.id;
     }
+    /**
+     * @return Alphanumeric string begin with letter: [0-9a-zA-Z._-]
+     * 
+     */
     public String name() {
         return this.name;
     }
+    /**
+     * @return The snippet in which the resource is defined
+     * 
+     */
     public String snippet() {
         return this.snippet;
     }
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     public String tfid() {
         return this.tfid;
     }

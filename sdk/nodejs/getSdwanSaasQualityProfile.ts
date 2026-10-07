@@ -28,12 +28,21 @@ export interface GetSdwanSaasQualityProfileArgs {
      * The device in which the resource is defined
      */
     device?: string;
+    /**
+     * The folder in which the resource is defined
+     */
     folder?: string;
     /**
      * UUID of the resource
      */
     id: string;
+    /**
+     * Profile name
+     */
     name?: string;
+    /**
+     * The snippet in which the resource is defined
+     */
     snippet?: string;
 }
 
@@ -45,14 +54,29 @@ export interface GetSdwanSaasQualityProfileResult {
      * The device in which the resource is defined
      */
     readonly device: string;
+    /**
+     * The folder in which the resource is defined
+     */
     readonly folder: string;
     /**
      * UUID of the resource
      */
     readonly id: string;
+    /**
+     * Monitor mode
+     */
     readonly monitorMode: outputs.GetSdwanSaasQualityProfileMonitorMode;
+    /**
+     * Profile name
+     */
     readonly name: string;
+    /**
+     * The snippet in which the resource is defined
+     */
     readonly snippet: string;
+    /**
+     * The Terraform ID.
+     */
     readonly tfid: string;
 }
 /**
@@ -77,11 +101,20 @@ export interface GetSdwanSaasQualityProfileOutputArgs {
      * The device in which the resource is defined
      */
     device?: pulumi.Input<string | undefined>;
+    /**
+     * The folder in which the resource is defined
+     */
     folder?: pulumi.Input<string | undefined>;
     /**
      * UUID of the resource
      */
     id: pulumi.Input<string>;
+    /**
+     * Profile name
+     */
     name?: pulumi.Input<string | undefined>;
+    /**
+     * The snippet in which the resource is defined
+     */
     snippet?: pulumi.Input<string | undefined>;
 }

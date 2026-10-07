@@ -18,6 +18,12 @@ namespace Pulumi.Scm.Inputs
         [Input("bgp")]
         public Input<Inputs.ServiceConnectionProtocolBgpArgs>? Bgp { get; set; }
 
+        /// <summary>
+        /// Bgp peer
+        /// </summary>
+        [Input("bgpPeer")]
+        public Input<Inputs.ServiceConnectionProtocolBgpPeerArgs>? BgpPeer { get; set; }
+
         public ServiceConnectionProtocolArgs()
         {
         }

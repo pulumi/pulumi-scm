@@ -25,7 +25,7 @@ namespace Pulumi.Scm.Inputs
         public Input<string> Filter { get; set; } = null!;
 
         /// <summary>
-        /// Log type
+        /// Log type. Possible values are `Traffic`, `Threat`, `Wildfire`, `Url`, `Data`, `Tunnel`, `Auth`, `Decryption`, `dns-security`, `Gtp` and `Sctp`.
         /// </summary>
         [Input("logType", required: true)]
         public Input<string> LogType { get; set; } = null!;

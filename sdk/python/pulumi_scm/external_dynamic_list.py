@@ -31,12 +31,8 @@ class ExternalDynamicListArgs:
 
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] name: The name of the external dynamic list
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input['ExternalDynamicListTypeArgs'] type: Type configuration for External Dynamic List
         """
         if device is not None:
@@ -67,8 +63,6 @@ class ExternalDynamicListArgs:
     def folder(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
-
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
 
@@ -93,8 +87,6 @@ class ExternalDynamicListArgs:
     def snippet(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
-
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
 
@@ -131,12 +123,8 @@ class _ExternalDynamicListState:
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input[Mapping[str, pulumi.Input[_builtins.str]]] encrypted_values: Map of sensitive values returned from the API.
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] name: The name of the external dynamic list
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] tfid: The Terraform ID.
         :param pulumi.Input['ExternalDynamicListTypeArgs'] type: Type configuration for External Dynamic List
         """
@@ -184,8 +172,6 @@ class _ExternalDynamicListState:
     def folder(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
-
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
 
@@ -210,8 +196,6 @@ class _ExternalDynamicListState:
     def snippet(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
-
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
 
@@ -363,12 +347,8 @@ class ExternalDynamicList(pulumi.CustomResource):
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] name: The name of the external dynamic list
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[Union['ExternalDynamicListTypeArgs', 'ExternalDynamicListTypeArgsDict', 'outputs.ExternalDynamicListType']] type: Type configuration for External Dynamic List
         """
         ...
@@ -545,12 +525,8 @@ class ExternalDynamicList(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input[Mapping[str, pulumi.Input[_builtins.str]]] encrypted_values: Map of sensitive values returned from the API.
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] name: The name of the external dynamic list
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] tfid: The Terraform ID.
         :param pulumi.Input[Union['ExternalDynamicListTypeArgs', 'ExternalDynamicListTypeArgsDict', 'outputs.ExternalDynamicListType']] type: Type configuration for External Dynamic List
         """
@@ -588,8 +564,6 @@ class ExternalDynamicList(pulumi.CustomResource):
     def folder(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
-
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
 
@@ -606,8 +580,6 @@ class ExternalDynamicList(pulumi.CustomResource):
     def snippet(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
-
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
 

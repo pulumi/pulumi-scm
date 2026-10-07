@@ -7,7 +7,6 @@ import (
 	"context"
 	"reflect"
 
-	"errors"
 	"github.com/pulumi/pulumi-scm/sdk/go/scm/internal"
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
@@ -77,18 +76,14 @@ type AuthenticationPortal struct {
 	// The device in which the resource is defined
 	Device pulumi.StringPtrOutput `pulumi:"device"`
 	// The folder in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrOutput `pulumi:"folder"`
 	// The UDP port for inbound authentication prompts
 	GpUdpPort pulumi.IntPtrOutput `pulumi:"gpUdpPort"`
 	// The idle timeout value (minutes)
 	IdleTimer pulumi.IntPtrOutput `pulumi:"idleTimer"`
 	// The authentication portal IP address or hostname
-	RedirectHost pulumi.StringOutput `pulumi:"redirectHost"`
+	RedirectHost pulumi.StringPtrOutput `pulumi:"redirectHost"`
 	// The snippet in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
 	// The Terraform ID.
 	Tfid pulumi.StringOutput `pulumi:"tfid"`
@@ -102,12 +97,9 @@ type AuthenticationPortal struct {
 func NewAuthenticationPortal(ctx *pulumi.Context,
 	name string, args *AuthenticationPortalArgs, opts ...pulumi.ResourceOption) (*AuthenticationPortal, error) {
 	if args == nil {
-		return nil, errors.New("missing one or more required arguments")
+		args = &AuthenticationPortalArgs{}
 	}
 
-	if args.RedirectHost == nil {
-		return nil, errors.New("invalid value for required argument 'RedirectHost'")
-	}
 	opts = internal.PkgResourceDefaultOpts(opts)
 	var resource AuthenticationPortal
 	err := ctx.RegisterResource("scm:index/authenticationPortal:AuthenticationPortal", name, args, &resource, opts...)
@@ -138,8 +130,6 @@ type authenticationPortalState struct {
 	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
 	// The folder in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// The UDP port for inbound authentication prompts
 	GpUdpPort *int `pulumi:"gpUdpPort"`
@@ -148,8 +138,6 @@ type authenticationPortalState struct {
 	// The authentication portal IP address or hostname
 	RedirectHost *string `pulumi:"redirectHost"`
 	// The snippet in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	// The Terraform ID.
 	Tfid *string `pulumi:"tfid"`
@@ -167,8 +155,6 @@ type AuthenticationPortalState struct {
 	// The device in which the resource is defined
 	Device pulumi.StringPtrInput
 	// The folder in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// The UDP port for inbound authentication prompts
 	GpUdpPort pulumi.IntPtrInput
@@ -177,8 +163,6 @@ type AuthenticationPortalState struct {
 	// The authentication portal IP address or hostname
 	RedirectHost pulumi.StringPtrInput
 	// The snippet in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	// The Terraform ID.
 	Tfid pulumi.StringPtrInput
@@ -200,18 +184,14 @@ type authenticationPortalArgs struct {
 	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
 	// The folder in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// The UDP port for inbound authentication prompts
 	GpUdpPort *int `pulumi:"gpUdpPort"`
 	// The idle timeout value (minutes)
 	IdleTimer *int `pulumi:"idleTimer"`
 	// The authentication portal IP address or hostname
-	RedirectHost string `pulumi:"redirectHost"`
+	RedirectHost *string `pulumi:"redirectHost"`
 	// The snippet in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	// Timer
 	Timer *int `pulumi:"timer"`
@@ -228,18 +208,14 @@ type AuthenticationPortalArgs struct {
 	// The device in which the resource is defined
 	Device pulumi.StringPtrInput
 	// The folder in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// The UDP port for inbound authentication prompts
 	GpUdpPort pulumi.IntPtrInput
 	// The idle timeout value (minutes)
 	IdleTimer pulumi.IntPtrInput
 	// The authentication portal IP address or hostname
-	RedirectHost pulumi.StringInput
+	RedirectHost pulumi.StringPtrInput
 	// The snippet in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	// Timer
 	Timer pulumi.IntPtrInput
@@ -350,8 +326,6 @@ func (o AuthenticationPortalOutput) Device() pulumi.StringPtrOutput {
 }
 
 // The folder in which the resource is defined
-//
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o AuthenticationPortalOutput) Folder() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *AuthenticationPortal) pulumi.StringPtrOutput { return v.Folder }).(pulumi.StringPtrOutput)
 }
@@ -367,13 +341,11 @@ func (o AuthenticationPortalOutput) IdleTimer() pulumi.IntPtrOutput {
 }
 
 // The authentication portal IP address or hostname
-func (o AuthenticationPortalOutput) RedirectHost() pulumi.StringOutput {
-	return o.ApplyT(func(v *AuthenticationPortal) pulumi.StringOutput { return v.RedirectHost }).(pulumi.StringOutput)
+func (o AuthenticationPortalOutput) RedirectHost() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *AuthenticationPortal) pulumi.StringPtrOutput { return v.RedirectHost }).(pulumi.StringPtrOutput)
 }
 
 // The snippet in which the resource is defined
-//
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o AuthenticationPortalOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *AuthenticationPortal) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)
 }

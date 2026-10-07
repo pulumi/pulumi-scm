@@ -13,34 +13,86 @@ import java.util.Objects;
 
 @CustomType
 public final class GetIpsecTunnelResult {
+    /**
+     * @return Enable Anti-Replay check on this tunnel
+     * 
+     */
     private Boolean antiReplay;
+    /**
+     * @return Auto key
+     * 
+     */
     private GetIpsecTunnelAutoKey autoKey;
+    /**
+     * @return Copy IP TOS bits from inner packet to IPSec packet (not recommended)
+     * 
+     */
     private Boolean copyTos;
     /**
      * @return The device in which the resource is defined
      * 
      */
     private String device;
+    /**
+     * @return allow GRE over IPSec
+     * 
+     */
     private Boolean enableGreEncapsulation;
+    /**
+     * @return The folder in which the resource is defined
+     * 
+     */
     private String folder;
     /**
      * @return UUID of the resource
      * 
      */
     private String id;
+    /**
+     * @return Alphanumeric string begin with letter: [0-9a-zA-Z._-]
+     * 
+     */
     private String name;
+    /**
+     * @return The snippet in which the resource is defined
+     * 
+     */
     private String snippet;
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     private String tfid;
+    /**
+     * @return Tunnel interface variable or hardcoded tunnel. Default will be tunnels.
+     * 
+     */
     private String tunnelInterface;
+    /**
+     * @return Tunnel monitor
+     * 
+     */
     private GetIpsecTunnelTunnelMonitor tunnelMonitor;
 
     private GetIpsecTunnelResult() {}
+    /**
+     * @return Enable Anti-Replay check on this tunnel
+     * 
+     */
     public Boolean antiReplay() {
         return this.antiReplay;
     }
+    /**
+     * @return Auto key
+     * 
+     */
     public GetIpsecTunnelAutoKey autoKey() {
         return this.autoKey;
     }
+    /**
+     * @return Copy IP TOS bits from inner packet to IPSec packet (not recommended)
+     * 
+     */
     public Boolean copyTos() {
         return this.copyTos;
     }
@@ -51,9 +103,17 @@ public final class GetIpsecTunnelResult {
     public String device() {
         return this.device;
     }
+    /**
+     * @return allow GRE over IPSec
+     * 
+     */
     public Boolean enableGreEncapsulation() {
         return this.enableGreEncapsulation;
     }
+    /**
+     * @return The folder in which the resource is defined
+     * 
+     */
     public String folder() {
         return this.folder;
     }
@@ -64,18 +124,38 @@ public final class GetIpsecTunnelResult {
     public String id() {
         return this.id;
     }
+    /**
+     * @return Alphanumeric string begin with letter: [0-9a-zA-Z._-]
+     * 
+     */
     public String name() {
         return this.name;
     }
+    /**
+     * @return The snippet in which the resource is defined
+     * 
+     */
     public String snippet() {
         return this.snippet;
     }
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     public String tfid() {
         return this.tfid;
     }
+    /**
+     * @return Tunnel interface variable or hardcoded tunnel. Default will be tunnels.
+     * 
+     */
     public String tunnelInterface() {
         return this.tunnelInterface;
     }
+    /**
+     * @return Tunnel monitor
+     * 
+     */
     public GetIpsecTunnelTunnelMonitor tunnelMonitor() {
         return this.tunnelMonitor;
     }

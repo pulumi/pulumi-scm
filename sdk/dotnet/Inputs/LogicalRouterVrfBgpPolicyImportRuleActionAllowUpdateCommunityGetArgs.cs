@@ -26,8 +26,6 @@ namespace Pulumi.Scm.Inputs
 
         /// <summary>
         /// None
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Append`, `None`, `Overwrite`, `RemoveAll`, and `RemoveRegex`.
         /// </summary>
         [Input("none")]
         public Input<Inputs.LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateCommunityNoneGetArgs>? None { get; set; }
@@ -37,8 +35,6 @@ namespace Pulumi.Scm.Inputs
 
         /// <summary>
         /// Overwrite
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Append`, `None`, `Overwrite`, `RemoveAll`, and `RemoveRegex`.
         /// </summary>
         public InputList<string> Overwrites
         {
@@ -48,16 +44,12 @@ namespace Pulumi.Scm.Inputs
 
         /// <summary>
         /// Remove all
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Append`, `None`, `Overwrite`, `RemoveAll`, and `RemoveRegex`.
         /// </summary>
         [Input("removeAll")]
         public Input<Inputs.LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateCommunityRemoveAllGetArgs>? RemoveAll { get; set; }
 
         /// <summary>
         /// Remove regex
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Append`, `None`, `Overwrite`, `RemoveAll`, and `RemoveRegex`.
         /// </summary>
         [Input("removeRegex")]
         public Input<string>? RemoveRegex { get; set; }

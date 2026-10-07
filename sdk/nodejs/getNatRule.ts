@@ -69,7 +69,7 @@ export interface GetNatRuleArgs {
  */
 export interface GetNatRuleResult {
     /**
-     * Active active device binding
+     * Active active device binding. Possible values are `primary`, `both`, `0` and `1`.
      */
     readonly activeActiveDeviceBinding: string;
     /**
@@ -113,11 +113,11 @@ export interface GetNatRuleResult {
      */
     readonly name: string;
     /**
-     * NAT type
+     * NAT type. Possible values are `ipv4`, `nat64` and `nptv6`.
      */
     readonly natType: string;
     /**
-     * The relative position of the rule
+     * The relative position of the rule. Possible values are `pre` and `post`.
      */
     readonly position: string;
     /**

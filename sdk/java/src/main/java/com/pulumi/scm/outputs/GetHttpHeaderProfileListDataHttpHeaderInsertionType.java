@@ -23,7 +23,7 @@ public final class GetHttpHeaderProfileListDataHttpHeaderInsertionType {
      */
     private List<GetHttpHeaderProfileListDataHttpHeaderInsertionTypeHeader> headers;
     /**
-     * @return The HTTP header insertion type
+     * @return The HTTP header insertion type. Possible values are `Custom`, `Dropbox Network Control`, `Dynamic Fields`, `Google Apps Access Control`, `Microsoft Office365 Tenant Restrictions` and `Youtube Safe Search`.
      * 
      */
     private String name;
@@ -44,7 +44,7 @@ public final class GetHttpHeaderProfileListDataHttpHeaderInsertionType {
         return this.headers;
     }
     /**
-     * @return The HTTP header insertion type
+     * @return The HTTP header insertion type. Possible values are `Custom`, `Dropbox Network Control`, `Dynamic Fields`, `Google Apps Access Control`, `Microsoft Office365 Tenant Restrictions` and `Youtube Safe Search`.
      * 
      */
     public String name() {

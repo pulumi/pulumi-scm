@@ -21,6 +21,7 @@ __all__ = ['VlanInterfaceArgs', 'VlanInterface']
 @pulumi.input_type
 class VlanInterfaceArgs:
     def __init__(__self__, *,
+                 adjust_tcp_mss: pulumi.Input[Optional['VlanInterfaceAdjustTcpMssArgs']] = None,
                  arps: pulumi.Input[Optional[Sequence[pulumi.Input['VlanInterfaceArpArgs']]]] = None,
                  comment: pulumi.Input[Optional[_builtins.str]] = None,
                  ddns_config: pulumi.Input[Optional['VlanInterfaceDdnsConfigArgs']] = None,
@@ -38,29 +39,24 @@ class VlanInterfaceArgs:
         """
         The set of arguments for constructing a VlanInterface resource.
 
+        :param pulumi.Input['VlanInterfaceAdjustTcpMssArgs'] adjust_tcp_mss: TCP MSS adjustment settings for the interface
         :param pulumi.Input[Sequence[pulumi.Input['VlanInterfaceArpArgs']]] arps: ARP configuration
         :param pulumi.Input[_builtins.str] comment: Description
         :param pulumi.Input['VlanInterfaceDdnsConfigArgs'] ddns_config: Dynamic DNS configuration specific to the Vlan Interfaces.
         :param pulumi.Input[_builtins.str] default_value: Default interface assignment
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input['VlanInterfaceDhcpClientArgs'] dhcp_client: Vlan interfaces DHCP Client Object
-               
-               > ℹ️ **Note:** You must specify exactly one of `dhcp_client` and `ip`.
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] interface_management_profile: Interface management profile
         :param pulumi.Input[Sequence[pulumi.Input['VlanInterfaceIpArgs']]] ips: VLAN Interface IP Parent
-               
-               > ℹ️ **Note:** You must specify exactly one of `dhcp_client` and `ip`.
         :param pulumi.Input[_builtins.int] mtu: MTU
         :param pulumi.Input[_builtins.str] name: L3 sub-interface name
         :param pulumi.Input[_builtins.str] netflow_profile: Name of Netflow Profile to assign to Interface
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] vlan_tag: VLAN tag
         """
+        if adjust_tcp_mss is not None:
+            pulumi.set(__self__, "adjust_tcp_mss", adjust_tcp_mss)
         if arps is not None:
             pulumi.set(__self__, "arps", arps)
         if comment is not None:
@@ -89,6 +85,18 @@ class VlanInterfaceArgs:
             pulumi.set(__self__, "snippet", snippet)
         if vlan_tag is not None:
             pulumi.set(__self__, "vlan_tag", vlan_tag)
+
+    @_builtins.property
+    @pulumi.getter(name="adjustTcpMss")
+    def adjust_tcp_mss(self) -> pulumi.Input[Optional['VlanInterfaceAdjustTcpMssArgs']]:
+        """
+        TCP MSS adjustment settings for the interface
+        """
+        return pulumi.get(self, "adjust_tcp_mss")
+
+    @adjust_tcp_mss.setter
+    def adjust_tcp_mss(self, value: pulumi.Input[Optional['VlanInterfaceAdjustTcpMssArgs']]):
+        pulumi.set(self, "adjust_tcp_mss", value)
 
     @_builtins.property
     @pulumi.getter
@@ -155,8 +163,6 @@ class VlanInterfaceArgs:
     def dhcp_client(self) -> pulumi.Input[Optional['VlanInterfaceDhcpClientArgs']]:
         """
         Vlan interfaces DHCP Client Object
-
-        > ℹ️ **Note:** You must specify exactly one of `dhcp_client` and `ip`.
         """
         return pulumi.get(self, "dhcp_client")
 
@@ -169,8 +175,6 @@ class VlanInterfaceArgs:
     def folder(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
-
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
 
@@ -195,8 +199,6 @@ class VlanInterfaceArgs:
     def ips(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['VlanInterfaceIpArgs']]]]:
         """
         VLAN Interface IP Parent
-
-        > ℹ️ **Note:** You must specify exactly one of `dhcp_client` and `ip`.
         """
         return pulumi.get(self, "ips")
 
@@ -245,8 +247,6 @@ class VlanInterfaceArgs:
     def snippet(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
-
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
 
@@ -270,6 +270,7 @@ class VlanInterfaceArgs:
 @pulumi.input_type
 class _VlanInterfaceState:
     def __init__(__self__, *,
+                 adjust_tcp_mss: pulumi.Input[Optional['VlanInterfaceAdjustTcpMssArgs']] = None,
                  arps: pulumi.Input[Optional[Sequence[pulumi.Input['VlanInterfaceArpArgs']]]] = None,
                  comment: pulumi.Input[Optional[_builtins.str]] = None,
                  ddns_config: pulumi.Input[Optional['VlanInterfaceDdnsConfigArgs']] = None,
@@ -288,30 +289,25 @@ class _VlanInterfaceState:
         """
         Input properties used for looking up and filtering VlanInterface resources.
 
+        :param pulumi.Input['VlanInterfaceAdjustTcpMssArgs'] adjust_tcp_mss: TCP MSS adjustment settings for the interface
         :param pulumi.Input[Sequence[pulumi.Input['VlanInterfaceArpArgs']]] arps: ARP configuration
         :param pulumi.Input[_builtins.str] comment: Description
         :param pulumi.Input['VlanInterfaceDdnsConfigArgs'] ddns_config: Dynamic DNS configuration specific to the Vlan Interfaces.
         :param pulumi.Input[_builtins.str] default_value: Default interface assignment
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input['VlanInterfaceDhcpClientArgs'] dhcp_client: Vlan interfaces DHCP Client Object
-               
-               > ℹ️ **Note:** You must specify exactly one of `dhcp_client` and `ip`.
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] interface_management_profile: Interface management profile
         :param pulumi.Input[Sequence[pulumi.Input['VlanInterfaceIpArgs']]] ips: VLAN Interface IP Parent
-               
-               > ℹ️ **Note:** You must specify exactly one of `dhcp_client` and `ip`.
         :param pulumi.Input[_builtins.int] mtu: MTU
         :param pulumi.Input[_builtins.str] name: L3 sub-interface name
         :param pulumi.Input[_builtins.str] netflow_profile: Name of Netflow Profile to assign to Interface
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] tfid: The Terraform ID.
         :param pulumi.Input[_builtins.str] vlan_tag: VLAN tag
         """
+        if adjust_tcp_mss is not None:
+            pulumi.set(__self__, "adjust_tcp_mss", adjust_tcp_mss)
         if arps is not None:
             pulumi.set(__self__, "arps", arps)
         if comment is not None:
@@ -344,6 +340,18 @@ class _VlanInterfaceState:
             pulumi.set(__self__, "vlan_tag", vlan_tag)
 
     @_builtins.property
+    @pulumi.getter(name="adjustTcpMss")
+    def adjust_tcp_mss(self) -> pulumi.Input[Optional['VlanInterfaceAdjustTcpMssArgs']]:
+        """
+        TCP MSS adjustment settings for the interface
+        """
+        return pulumi.get(self, "adjust_tcp_mss")
+
+    @adjust_tcp_mss.setter
+    def adjust_tcp_mss(self, value: pulumi.Input[Optional['VlanInterfaceAdjustTcpMssArgs']]):
+        pulumi.set(self, "adjust_tcp_mss", value)
+
+    @_builtins.property
     @pulumi.getter
     def arps(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['VlanInterfaceArpArgs']]]]:
         """
@@ -408,8 +416,6 @@ class _VlanInterfaceState:
     def dhcp_client(self) -> pulumi.Input[Optional['VlanInterfaceDhcpClientArgs']]:
         """
         Vlan interfaces DHCP Client Object
-
-        > ℹ️ **Note:** You must specify exactly one of `dhcp_client` and `ip`.
         """
         return pulumi.get(self, "dhcp_client")
 
@@ -422,8 +428,6 @@ class _VlanInterfaceState:
     def folder(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
-
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
 
@@ -448,8 +452,6 @@ class _VlanInterfaceState:
     def ips(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['VlanInterfaceIpArgs']]]]:
         """
         VLAN Interface IP Parent
-
-        > ℹ️ **Note:** You must specify exactly one of `dhcp_client` and `ip`.
         """
         return pulumi.get(self, "ips")
 
@@ -498,8 +500,6 @@ class _VlanInterfaceState:
     def snippet(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
-
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
 
@@ -538,6 +538,7 @@ class VlanInterface(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
+                 adjust_tcp_mss: pulumi.Input[Optional[Union['VlanInterfaceAdjustTcpMssArgs', 'VlanInterfaceAdjustTcpMssArgsDict', 'outputs.VlanInterfaceAdjustTcpMss']]] = None,
                  arps: pulumi.Input[Optional[Sequence[pulumi.Input[Union['VlanInterfaceArpArgs', 'VlanInterfaceArpArgsDict', 'outputs.VlanInterfaceArp']]]]] = None,
                  comment: pulumi.Input[Optional[_builtins.str]] = None,
                  ddns_config: pulumi.Input[Optional[Union['VlanInterfaceDdnsConfigArgs', 'VlanInterfaceDdnsConfigArgsDict', 'outputs.VlanInterfaceDdnsConfig']]] = None,
@@ -572,7 +573,12 @@ class VlanInterface(pulumi.CustomResource):
             vlan_tag="1234",
             ips=[{
                 "name": "198.18.1.1/24",
-            }])
+            }],
+            adjust_tcp_mss={
+                "enable": True,
+                "ipv4_mss_adjustment": 40,
+                "ipv6_mss_adjustment": 60,
+            })
         ```
 
         ## Import
@@ -600,27 +606,20 @@ class VlanInterface(pulumi.CustomResource):
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
+        :param pulumi.Input[Union['VlanInterfaceAdjustTcpMssArgs', 'VlanInterfaceAdjustTcpMssArgsDict', 'outputs.VlanInterfaceAdjustTcpMss']] adjust_tcp_mss: TCP MSS adjustment settings for the interface
         :param pulumi.Input[Sequence[pulumi.Input[Union['VlanInterfaceArpArgs', 'VlanInterfaceArpArgsDict', 'outputs.VlanInterfaceArp']]]] arps: ARP configuration
         :param pulumi.Input[_builtins.str] comment: Description
         :param pulumi.Input[Union['VlanInterfaceDdnsConfigArgs', 'VlanInterfaceDdnsConfigArgsDict', 'outputs.VlanInterfaceDdnsConfig']] ddns_config: Dynamic DNS configuration specific to the Vlan Interfaces.
         :param pulumi.Input[_builtins.str] default_value: Default interface assignment
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input[Union['VlanInterfaceDhcpClientArgs', 'VlanInterfaceDhcpClientArgsDict', 'outputs.VlanInterfaceDhcpClient']] dhcp_client: Vlan interfaces DHCP Client Object
-               
-               > ℹ️ **Note:** You must specify exactly one of `dhcp_client` and `ip`.
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] interface_management_profile: Interface management profile
         :param pulumi.Input[Sequence[pulumi.Input[Union['VlanInterfaceIpArgs', 'VlanInterfaceIpArgsDict', 'outputs.VlanInterfaceIp']]]] ips: VLAN Interface IP Parent
-               
-               > ℹ️ **Note:** You must specify exactly one of `dhcp_client` and `ip`.
         :param pulumi.Input[_builtins.int] mtu: MTU
         :param pulumi.Input[_builtins.str] name: L3 sub-interface name
         :param pulumi.Input[_builtins.str] netflow_profile: Name of Netflow Profile to assign to Interface
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] vlan_tag: VLAN tag
         """
         ...
@@ -648,7 +647,12 @@ class VlanInterface(pulumi.CustomResource):
             vlan_tag="1234",
             ips=[{
                 "name": "198.18.1.1/24",
-            }])
+            }],
+            adjust_tcp_mss={
+                "enable": True,
+                "ipv4_mss_adjustment": 40,
+                "ipv6_mss_adjustment": 60,
+            })
         ```
 
         ## Import
@@ -689,6 +693,7 @@ class VlanInterface(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
+                 adjust_tcp_mss: pulumi.Input[Optional[Union['VlanInterfaceAdjustTcpMssArgs', 'VlanInterfaceAdjustTcpMssArgsDict', 'outputs.VlanInterfaceAdjustTcpMss']]] = None,
                  arps: pulumi.Input[Optional[Sequence[pulumi.Input[Union['VlanInterfaceArpArgs', 'VlanInterfaceArpArgsDict', 'outputs.VlanInterfaceArp']]]]] = None,
                  comment: pulumi.Input[Optional[_builtins.str]] = None,
                  ddns_config: pulumi.Input[Optional[Union['VlanInterfaceDdnsConfigArgs', 'VlanInterfaceDdnsConfigArgsDict', 'outputs.VlanInterfaceDdnsConfig']]] = None,
@@ -712,6 +717,7 @@ class VlanInterface(pulumi.CustomResource):
                 raise TypeError('__props__ is only valid when passed in combination with a valid opts.id to get an existing resource')
             __props__ = VlanInterfaceArgs.__new__(VlanInterfaceArgs)
 
+            __props__.__dict__["adjust_tcp_mss"] = adjust_tcp_mss
             __props__.__dict__["arps"] = arps
             __props__.__dict__["comment"] = comment
             __props__.__dict__["ddns_config"] = ddns_config
@@ -737,6 +743,7 @@ class VlanInterface(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
+            adjust_tcp_mss: pulumi.Input[Optional[Union['VlanInterfaceAdjustTcpMssArgs', 'VlanInterfaceAdjustTcpMssArgsDict', 'outputs.VlanInterfaceAdjustTcpMss']]] = None,
             arps: pulumi.Input[Optional[Sequence[pulumi.Input[Union['VlanInterfaceArpArgs', 'VlanInterfaceArpArgsDict', 'outputs.VlanInterfaceArp']]]]] = None,
             comment: pulumi.Input[Optional[_builtins.str]] = None,
             ddns_config: pulumi.Input[Optional[Union['VlanInterfaceDdnsConfigArgs', 'VlanInterfaceDdnsConfigArgsDict', 'outputs.VlanInterfaceDdnsConfig']]] = None,
@@ -759,27 +766,20 @@ class VlanInterface(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
+        :param pulumi.Input[Union['VlanInterfaceAdjustTcpMssArgs', 'VlanInterfaceAdjustTcpMssArgsDict', 'outputs.VlanInterfaceAdjustTcpMss']] adjust_tcp_mss: TCP MSS adjustment settings for the interface
         :param pulumi.Input[Sequence[pulumi.Input[Union['VlanInterfaceArpArgs', 'VlanInterfaceArpArgsDict', 'outputs.VlanInterfaceArp']]]] arps: ARP configuration
         :param pulumi.Input[_builtins.str] comment: Description
         :param pulumi.Input[Union['VlanInterfaceDdnsConfigArgs', 'VlanInterfaceDdnsConfigArgsDict', 'outputs.VlanInterfaceDdnsConfig']] ddns_config: Dynamic DNS configuration specific to the Vlan Interfaces.
         :param pulumi.Input[_builtins.str] default_value: Default interface assignment
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input[Union['VlanInterfaceDhcpClientArgs', 'VlanInterfaceDhcpClientArgsDict', 'outputs.VlanInterfaceDhcpClient']] dhcp_client: Vlan interfaces DHCP Client Object
-               
-               > ℹ️ **Note:** You must specify exactly one of `dhcp_client` and `ip`.
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] interface_management_profile: Interface management profile
         :param pulumi.Input[Sequence[pulumi.Input[Union['VlanInterfaceIpArgs', 'VlanInterfaceIpArgsDict', 'outputs.VlanInterfaceIp']]]] ips: VLAN Interface IP Parent
-               
-               > ℹ️ **Note:** You must specify exactly one of `dhcp_client` and `ip`.
         :param pulumi.Input[_builtins.int] mtu: MTU
         :param pulumi.Input[_builtins.str] name: L3 sub-interface name
         :param pulumi.Input[_builtins.str] netflow_profile: Name of Netflow Profile to assign to Interface
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] tfid: The Terraform ID.
         :param pulumi.Input[_builtins.str] vlan_tag: VLAN tag
         """
@@ -787,6 +787,7 @@ class VlanInterface(pulumi.CustomResource):
 
         __props__ = _VlanInterfaceState.__new__(_VlanInterfaceState)
 
+        __props__.__dict__["adjust_tcp_mss"] = adjust_tcp_mss
         __props__.__dict__["arps"] = arps
         __props__.__dict__["comment"] = comment
         __props__.__dict__["ddns_config"] = ddns_config
@@ -803,6 +804,14 @@ class VlanInterface(pulumi.CustomResource):
         __props__.__dict__["tfid"] = tfid
         __props__.__dict__["vlan_tag"] = vlan_tag
         return VlanInterface(resource_name, opts=opts, __props__=__props__)
+
+    @_builtins.property
+    @pulumi.getter(name="adjustTcpMss")
+    def adjust_tcp_mss(self) -> pulumi.Output[Optional['outputs.VlanInterfaceAdjustTcpMss']]:
+        """
+        TCP MSS adjustment settings for the interface
+        """
+        return pulumi.get(self, "adjust_tcp_mss")
 
     @_builtins.property
     @pulumi.getter
@@ -849,8 +858,6 @@ class VlanInterface(pulumi.CustomResource):
     def dhcp_client(self) -> pulumi.Output[Optional['outputs.VlanInterfaceDhcpClient']]:
         """
         Vlan interfaces DHCP Client Object
-
-        > ℹ️ **Note:** You must specify exactly one of `dhcp_client` and `ip`.
         """
         return pulumi.get(self, "dhcp_client")
 
@@ -859,8 +866,6 @@ class VlanInterface(pulumi.CustomResource):
     def folder(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
-
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
 
@@ -877,8 +882,6 @@ class VlanInterface(pulumi.CustomResource):
     def ips(self) -> pulumi.Output[Optional[Sequence['outputs.VlanInterfaceIp']]]:
         """
         VLAN Interface IP Parent
-
-        > ℹ️ **Note:** You must specify exactly one of `dhcp_client` and `ip`.
         """
         return pulumi.get(self, "ips")
 
@@ -911,8 +914,6 @@ class VlanInterface(pulumi.CustomResource):
     def snippet(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
-
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
 

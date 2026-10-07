@@ -234,11 +234,11 @@ import (
 type ForwardingProfile struct {
 	pulumi.CustomResourceState
 
-	// Enable forwarding rule for forwarding profile
+	// Enable forwarding rule for forwarding profile. Possible values are `rules` and `pac-file`.
 	DefinitionMethod pulumi.StringOutput `pulumi:"definitionMethod"`
 	// Forwarding profile description
 	Description pulumi.StringPtrOutput `pulumi:"description"`
-	// The folder in which the resource is defined
+	// The folder in which the resource is defined. Possible values are `Mobile Users`.
 	Folder pulumi.StringOutput `pulumi:"folder"`
 	// forwarding profile name as an alphanumeric string [ 0-9a-zA-Z._ -]
 	Name pulumi.StringOutput `pulumi:"name"`
@@ -278,11 +278,11 @@ func GetForwardingProfile(ctx *pulumi.Context,
 
 // Input properties used for looking up and filtering ForwardingProfile resources.
 type forwardingProfileState struct {
-	// Enable forwarding rule for forwarding profile
+	// Enable forwarding rule for forwarding profile. Possible values are `rules` and `pac-file`.
 	DefinitionMethod *string `pulumi:"definitionMethod"`
 	// Forwarding profile description
 	Description *string `pulumi:"description"`
-	// The folder in which the resource is defined
+	// The folder in which the resource is defined. Possible values are `Mobile Users`.
 	Folder *string `pulumi:"folder"`
 	// forwarding profile name as an alphanumeric string [ 0-9a-zA-Z._ -]
 	Name *string `pulumi:"name"`
@@ -293,11 +293,11 @@ type forwardingProfileState struct {
 }
 
 type ForwardingProfileState struct {
-	// Enable forwarding rule for forwarding profile
+	// Enable forwarding rule for forwarding profile. Possible values are `rules` and `pac-file`.
 	DefinitionMethod pulumi.StringPtrInput
 	// Forwarding profile description
 	Description pulumi.StringPtrInput
-	// The folder in which the resource is defined
+	// The folder in which the resource is defined. Possible values are `Mobile Users`.
 	Folder pulumi.StringPtrInput
 	// forwarding profile name as an alphanumeric string [ 0-9a-zA-Z._ -]
 	Name pulumi.StringPtrInput
@@ -312,11 +312,11 @@ func (ForwardingProfileState) ElementType() reflect.Type {
 }
 
 type forwardingProfileArgs struct {
-	// Enable forwarding rule for forwarding profile
+	// Enable forwarding rule for forwarding profile. Possible values are `rules` and `pac-file`.
 	DefinitionMethod *string `pulumi:"definitionMethod"`
 	// Forwarding profile description
 	Description *string `pulumi:"description"`
-	// The folder in which the resource is defined
+	// The folder in which the resource is defined. Possible values are `Mobile Users`.
 	Folder *string `pulumi:"folder"`
 	// forwarding profile name as an alphanumeric string [ 0-9a-zA-Z._ -]
 	Name *string `pulumi:"name"`
@@ -326,11 +326,11 @@ type forwardingProfileArgs struct {
 
 // The set of arguments for constructing a ForwardingProfile resource.
 type ForwardingProfileArgs struct {
-	// Enable forwarding rule for forwarding profile
+	// Enable forwarding rule for forwarding profile. Possible values are `rules` and `pac-file`.
 	DefinitionMethod pulumi.StringPtrInput
 	// Forwarding profile description
 	Description pulumi.StringPtrInput
-	// The folder in which the resource is defined
+	// The folder in which the resource is defined. Possible values are `Mobile Users`.
 	Folder pulumi.StringPtrInput
 	// forwarding profile name as an alphanumeric string [ 0-9a-zA-Z._ -]
 	Name pulumi.StringPtrInput
@@ -425,7 +425,7 @@ func (o ForwardingProfileOutput) ToForwardingProfileOutputWithContext(ctx contex
 	return o
 }
 
-// Enable forwarding rule for forwarding profile
+// Enable forwarding rule for forwarding profile. Possible values are `rules` and `pac-file`.
 func (o ForwardingProfileOutput) DefinitionMethod() pulumi.StringOutput {
 	return o.ApplyT(func(v *ForwardingProfile) pulumi.StringOutput { return v.DefinitionMethod }).(pulumi.StringOutput)
 }
@@ -435,7 +435,7 @@ func (o ForwardingProfileOutput) Description() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *ForwardingProfile) pulumi.StringPtrOutput { return v.Description }).(pulumi.StringPtrOutput)
 }
 
-// The folder in which the resource is defined
+// The folder in which the resource is defined. Possible values are `Mobile Users`.
 func (o ForwardingProfileOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v *ForwardingProfile) pulumi.StringOutput { return v.Folder }).(pulumi.StringOutput)
 }

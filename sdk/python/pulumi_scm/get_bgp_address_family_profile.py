@@ -61,6 +61,9 @@ class GetBgpAddressFamilyProfileResult:
     @_builtins.property
     @pulumi.getter
     def folder(self) -> _builtins.str:
+        """
+        The folder in which the resource is defined
+        """
         return pulumi.get(self, "folder")
 
     @_builtins.property
@@ -74,21 +77,33 @@ class GetBgpAddressFamilyProfileResult:
     @_builtins.property
     @pulumi.getter
     def ipv4(self) -> 'outputs.GetBgpAddressFamilyProfileIpv4Result':
+        """
+        IPv4 Address Family
+        """
         return pulumi.get(self, "ipv4")
 
     @_builtins.property
     @pulumi.getter
     def name(self) -> _builtins.str:
+        """
+        Name
+        """
         return pulumi.get(self, "name")
 
     @_builtins.property
     @pulumi.getter
     def snippet(self) -> _builtins.str:
+        """
+        The snippet in which the resource is defined
+        """
         return pulumi.get(self, "snippet")
 
     @_builtins.property
     @pulumi.getter
     def tfid(self) -> _builtins.str:
+        """
+        The Terraform ID.
+        """
         return pulumi.get(self, "tfid")
 
 
@@ -134,7 +149,10 @@ def get_bgp_address_family_profile(device: Optional[_builtins.str] = None,
 
 
     :param _builtins.str device: The device in which the resource is defined
+    :param _builtins.str folder: The folder in which the resource is defined
     :param _builtins.str id: UUID of the resource
+    :param _builtins.str name: Name
+    :param _builtins.str snippet: The snippet in which the resource is defined
     """
     __args__ = dict()
     __args__['device'] = device
@@ -180,7 +198,10 @@ def get_bgp_address_family_profile_output(device: pulumi.Input[Optional[Optional
 
 
     :param _builtins.str device: The device in which the resource is defined
+    :param _builtins.str folder: The folder in which the resource is defined
     :param _builtins.str id: UUID of the resource
+    :param _builtins.str name: Name
+    :param _builtins.str snippet: The snippet in which the resource is defined
     """
     __args__ = dict()
     __args__['device'] = device

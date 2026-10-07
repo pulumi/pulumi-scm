@@ -19,8 +19,6 @@ public final class GetServiceSettingServicesDnsSetting {
     /**
      * @return Servers
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `dnsProxyObject` and `servers`.
-     * 
      */
     private GetServiceSettingServicesDnsSettingServers servers;
 
@@ -34,8 +32,6 @@ public final class GetServiceSettingServicesDnsSetting {
     }
     /**
      * @return Servers
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `dnsProxyObject` and `servers`.
      * 
      */
     public GetServiceSettingServicesDnsSettingServers servers() {

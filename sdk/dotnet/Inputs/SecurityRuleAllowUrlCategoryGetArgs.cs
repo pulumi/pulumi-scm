@@ -13,19 +13,19 @@ namespace Pulumi.Scm.Inputs
     public sealed class SecurityRuleAllowUrlCategoryGetArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Additional action
+        /// Additional action. Possible values are `None`, `Continue`, `Redirect` and `Isolate`.
         /// </summary>
         [Input("additionalAction")]
         public Input<string>? AdditionalAction { get; set; }
 
         /// <summary>
-        /// Credential enforcement
+        /// Credential enforcement. Possible values are `Enabled` and `Disabled`.
         /// </summary>
         [Input("credentialEnforcement")]
         public Input<string>? CredentialEnforcement { get; set; }
 
         /// <summary>
-        /// Decryption
+        /// Decryption. Possible values are `Enabled` and `Disabled`.
         /// </summary>
         [Input("decryption")]
         public Input<string>? Decryption { get; set; }

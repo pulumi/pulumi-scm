@@ -28,12 +28,21 @@ export interface GetDosProtectionProfileArgs {
      * The device in which the resource is defined
      */
     device?: string;
+    /**
+     * The folder in which the resource is defined
+     */
     folder?: string;
     /**
      * The UUID of the DNS security profile
      */
     id: string;
+    /**
+     * Profile name
+     */
     name?: string;
+    /**
+     * The snippet in which the resource is defined
+     */
     snippet?: string;
 }
 
@@ -41,21 +50,45 @@ export interface GetDosProtectionProfileArgs {
  * A collection of values returned by getDosProtectionProfile.
  */
 export interface GetDosProtectionProfileResult {
+    /**
+     * Description
+     */
     readonly description: string;
     /**
      * The device in which the resource is defined
      */
     readonly device: string;
+    /**
+     * Flood
+     */
     readonly flood: outputs.GetDosProtectionProfileFlood;
+    /**
+     * The folder in which the resource is defined
+     */
     readonly folder: string;
     /**
      * The UUID of the DNS security profile
      */
     readonly id: string;
+    /**
+     * Profile name
+     */
     readonly name: string;
+    /**
+     * Resource
+     */
     readonly resource: outputs.GetDosProtectionProfileResource;
+    /**
+     * The snippet in which the resource is defined
+     */
     readonly snippet: string;
+    /**
+     * The Terraform ID.
+     */
     readonly tfid: string;
+    /**
+     * Type. Possible values are `aggregate` and `classified`.
+     */
     readonly type: string;
 }
 /**
@@ -80,11 +113,20 @@ export interface GetDosProtectionProfileOutputArgs {
      * The device in which the resource is defined
      */
     device?: pulumi.Input<string | undefined>;
+    /**
+     * The folder in which the resource is defined
+     */
     folder?: pulumi.Input<string | undefined>;
     /**
      * The UUID of the DNS security profile
      */
     id: pulumi.Input<string>;
+    /**
+     * Profile name
+     */
     name?: pulumi.Input<string | undefined>;
+    /**
+     * The snippet in which the resource is defined
+     */
     snippet?: pulumi.Input<string | undefined>;
 }

@@ -43,7 +43,7 @@ namespace Pulumi.Scm.Inputs
         public Input<bool>? OrderFree { get; set; }
 
         /// <summary>
-        /// Scope
+        /// Scope. Possible values are `protocol-data-unit` and `Session`.
         /// </summary>
         [Input("scope")]
         public Input<string>? Scope { get; set; }

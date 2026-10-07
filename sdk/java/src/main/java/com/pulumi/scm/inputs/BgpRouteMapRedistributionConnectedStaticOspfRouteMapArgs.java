@@ -19,14 +19,14 @@ public final class BgpRouteMapRedistributionConnectedStaticOspfRouteMapArgs exte
     public static final BgpRouteMapRedistributionConnectedStaticOspfRouteMapArgs Empty = new BgpRouteMapRedistributionConnectedStaticOspfRouteMapArgs();
 
     /**
-     * Connected Static BGP OSPF Route map Action
+     * Connected Static BGP OSPF Route map Action. Possible values are `permit` and `deny`.
      * 
      */
     @Import(name="action")
     private @Nullable Output<String> action;
 
     /**
-     * @return Connected Static BGP OSPF Route map Action
+     * @return Connected Static BGP OSPF Route map Action. Possible values are `permit` and `deny`.
      * 
      */
     public Optional<Output<String>> action() {
@@ -122,7 +122,7 @@ public final class BgpRouteMapRedistributionConnectedStaticOspfRouteMapArgs exte
         }
 
         /**
-         * @param action Connected Static BGP OSPF Route map Action
+         * @param action Connected Static BGP OSPF Route map Action. Possible values are `permit` and `deny`.
          * 
          * @return builder
          * 
@@ -133,7 +133,7 @@ public final class BgpRouteMapRedistributionConnectedStaticOspfRouteMapArgs exte
         }
 
         /**
-         * @param action Connected Static BGP OSPF Route map Action
+         * @param action Connected Static BGP OSPF Route map Action. Possible values are `permit` and `deny`.
          * 
          * @return builder
          * 

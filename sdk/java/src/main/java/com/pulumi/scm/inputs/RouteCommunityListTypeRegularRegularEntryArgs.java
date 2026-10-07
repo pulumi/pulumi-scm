@@ -18,14 +18,14 @@ public final class RouteCommunityListTypeRegularRegularEntryArgs extends com.pul
     public static final RouteCommunityListTypeRegularRegularEntryArgs Empty = new RouteCommunityListTypeRegularRegularEntryArgs();
 
     /**
-     * Action
+     * Action. Possible values are `deny` and `permit`.
      * 
      */
     @Import(name="action")
     private @Nullable Output<String> action;
 
     /**
-     * @return Action
+     * @return Action. Possible values are `deny` and `permit`.
      * 
      */
     public Optional<Output<String>> action() {
@@ -89,7 +89,7 @@ public final class RouteCommunityListTypeRegularRegularEntryArgs extends com.pul
         }
 
         /**
-         * @param action Action
+         * @param action Action. Possible values are `deny` and `permit`.
          * 
          * @return builder
          * 
@@ -100,7 +100,7 @@ public final class RouteCommunityListTypeRegularRegularEntryArgs extends com.pul
         }
 
         /**
-         * @param action Action
+         * @param action Action. Possible values are `deny` and `permit`.
          * 
          * @return builder
          * 

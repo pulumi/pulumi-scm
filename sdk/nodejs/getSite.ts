@@ -81,7 +81,7 @@ export interface GetSiteResult {
      */
     readonly latitude: string;
     /**
-     * The license type of the site
+     * The license type of the site. Possible values are `FWAAS-SITE-25Mbps`, `FWAAS-SITE-50Mbps`, `FWAAS-SITE-250Mbps`, `FWAAS-SITE-1000Mbps` and `FWAAS-SITE-2500Mbps`.
      */
     readonly licenseType: string;
     /**
@@ -109,7 +109,7 @@ export interface GetSiteResult {
      */
     readonly tfid: string;
     /**
-     * The site type
+     * The site type. Possible values are `prisma-sdwan`, `third-party-branch` and `third-party-discovered`.
      */
     readonly type: string;
     /**

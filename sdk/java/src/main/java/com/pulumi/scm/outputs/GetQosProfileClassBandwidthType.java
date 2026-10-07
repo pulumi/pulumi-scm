@@ -19,8 +19,6 @@ public final class GetQosProfileClassBandwidthType {
     /**
      * @return Percentage
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `mbps` and `percentage`.
-     * 
      */
     private GetQosProfileClassBandwidthTypePercentage percentage;
 
@@ -34,8 +32,6 @@ public final class GetQosProfileClassBandwidthType {
     }
     /**
      * @return Percentage
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `mbps` and `percentage`.
      * 
      */
     public GetQosProfileClassBandwidthTypePercentage percentage() {

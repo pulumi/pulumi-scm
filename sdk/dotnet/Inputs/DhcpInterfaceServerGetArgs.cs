@@ -25,7 +25,7 @@ namespace Pulumi.Scm.Inputs
         }
 
         /// <summary>
-        /// DHCP server mode
+        /// DHCP server mode. Possible values are `Auto`, `Enabled` and `Disabled`.
         /// </summary>
         [Input("mode")]
         public Input<string>? Mode { get; set; }

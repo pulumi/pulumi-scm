@@ -38,6 +38,12 @@ namespace Pulumi.Scm
     ///                 Name = "198.18.1.1/24",
     ///             },
     ///         },
+    ///         AdjustTcpMss = new Scm.Inputs.VlanInterfaceAdjustTcpMssArgs
+    ///         {
+    ///             Enable = true,
+    ///             Ipv4MssAdjustment = 40,
+    ///             Ipv6MssAdjustment = 60,
+    ///         },
     ///     });
     /// 
     /// });
@@ -68,6 +74,12 @@ namespace Pulumi.Scm
     [ScmResourceType("scm:index/vlanInterface:VlanInterface")]
     public partial class VlanInterface : global::Pulumi.CustomResource
     {
+        /// <summary>
+        /// TCP MSS adjustment settings for the interface
+        /// </summary>
+        [Output("adjustTcpMss")]
+        public Output<Outputs.VlanInterfaceAdjustTcpMss?> AdjustTcpMss { get; private set; } = null!;
+
         /// <summary>
         /// ARP configuration
         /// </summary>
@@ -100,16 +112,12 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// Vlan interfaces DHCP Client Object
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `DhcpClient` and `Ip`.
         /// </summary>
         [Output("dhcpClient")]
         public Output<Outputs.VlanInterfaceDhcpClient?> DhcpClient { get; private set; } = null!;
 
         /// <summary>
         /// The folder in which the resource is defined
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Output("folder")]
         public Output<string?> Folder { get; private set; } = null!;
@@ -122,8 +130,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// VLAN Interface IP Parent
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `DhcpClient` and `Ip`.
         /// </summary>
         [Output("ips")]
         public Output<ImmutableArray<Outputs.VlanInterfaceIp>> Ips { get; private set; } = null!;
@@ -148,8 +154,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The snippet in which the resource is defined
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Output("snippet")]
         public Output<string?> Snippet { get; private set; } = null!;
@@ -212,6 +216,12 @@ namespace Pulumi.Scm
 
     public sealed class VlanInterfaceArgs : global::Pulumi.ResourceArgs
     {
+        /// <summary>
+        /// TCP MSS adjustment settings for the interface
+        /// </summary>
+        [Input("adjustTcpMss")]
+        public Input<Inputs.VlanInterfaceAdjustTcpMssArgs>? AdjustTcpMss { get; set; }
+
         [Input("arps")]
         private InputList<Inputs.VlanInterfaceArpArgs>? _arps;
 
@@ -250,16 +260,12 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// Vlan interfaces DHCP Client Object
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `DhcpClient` and `Ip`.
         /// </summary>
         [Input("dhcpClient")]
         public Input<Inputs.VlanInterfaceDhcpClientArgs>? DhcpClient { get; set; }
 
         /// <summary>
         /// The folder in which the resource is defined
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("folder")]
         public Input<string>? Folder { get; set; }
@@ -275,8 +281,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// VLAN Interface IP Parent
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `DhcpClient` and `Ip`.
         /// </summary>
         public InputList<Inputs.VlanInterfaceIpArgs> Ips
         {
@@ -304,8 +308,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The snippet in which the resource is defined
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("snippet")]
         public Input<string>? Snippet { get; set; }
@@ -324,6 +326,12 @@ namespace Pulumi.Scm
 
     public sealed class VlanInterfaceState : global::Pulumi.ResourceArgs
     {
+        /// <summary>
+        /// TCP MSS adjustment settings for the interface
+        /// </summary>
+        [Input("adjustTcpMss")]
+        public Input<Inputs.VlanInterfaceAdjustTcpMssGetArgs>? AdjustTcpMss { get; set; }
+
         [Input("arps")]
         private InputList<Inputs.VlanInterfaceArpGetArgs>? _arps;
 
@@ -362,16 +370,12 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// Vlan interfaces DHCP Client Object
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `DhcpClient` and `Ip`.
         /// </summary>
         [Input("dhcpClient")]
         public Input<Inputs.VlanInterfaceDhcpClientGetArgs>? DhcpClient { get; set; }
 
         /// <summary>
         /// The folder in which the resource is defined
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("folder")]
         public Input<string>? Folder { get; set; }
@@ -387,8 +391,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// VLAN Interface IP Parent
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `DhcpClient` and `Ip`.
         /// </summary>
         public InputList<Inputs.VlanInterfaceIpGetArgs> Ips
         {
@@ -416,8 +418,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The snippet in which the resource is defined
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("snippet")]
         public Input<string>? Snippet { get; set; }

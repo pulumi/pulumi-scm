@@ -28,7 +28,7 @@ public final class GetLocalUserListData {
      */
     private Map<String,String> encryptedValues;
     /**
-     * @return The folder of the item. Default: Shared.
+     * @return The folder in which the resource is defined
      * 
      */
     private String folder;
@@ -38,7 +38,7 @@ public final class GetLocalUserListData {
      */
     private String id;
     /**
-     * @return The name of the item.
+     * @return The name of the local user
      * 
      */
     private String name;
@@ -48,7 +48,7 @@ public final class GetLocalUserListData {
      */
     private String password;
     /**
-     * @return The snippet of the item.
+     * @return The snippet in which the resource is defined
      * 
      */
     private String snippet;
@@ -81,7 +81,7 @@ public final class GetLocalUserListData {
         return this.encryptedValues;
     }
     /**
-     * @return The folder of the item. Default: Shared.
+     * @return The folder in which the resource is defined
      * 
      */
     public String folder() {
@@ -95,7 +95,7 @@ public final class GetLocalUserListData {
         return this.id;
     }
     /**
-     * @return The name of the item.
+     * @return The name of the local user
      * 
      */
     public String name() {
@@ -109,7 +109,7 @@ public final class GetLocalUserListData {
         return this.password;
     }
     /**
-     * @return The snippet of the item.
+     * @return The snippet in which the resource is defined
      * 
      */
     public String snippet() {

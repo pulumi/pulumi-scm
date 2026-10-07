@@ -86,16 +86,12 @@ type Layer2Subinterface struct {
 	// The device in which the resource is defined
 	Device pulumi.StringPtrOutput `pulumi:"device"`
 	// The folder in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrOutput `pulumi:"folder"`
 	// L2 sub-interface name
 	Name pulumi.StringOutput `pulumi:"name"`
 	// Parent interface
 	ParentInterface pulumi.StringPtrOutput `pulumi:"parentInterface"`
 	// The snippet in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
 	// The Terraform ID.
 	Tfid pulumi.StringOutput `pulumi:"tfid"`
@@ -141,16 +137,12 @@ type layer2SubinterfaceState struct {
 	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
 	// The folder in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// L2 sub-interface name
 	Name *string `pulumi:"name"`
 	// Parent interface
 	ParentInterface *string `pulumi:"parentInterface"`
 	// The snippet in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	// The Terraform ID.
 	Tfid *string `pulumi:"tfid"`
@@ -164,16 +156,12 @@ type Layer2SubinterfaceState struct {
 	// The device in which the resource is defined
 	Device pulumi.StringPtrInput
 	// The folder in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// L2 sub-interface name
 	Name pulumi.StringPtrInput
 	// Parent interface
 	ParentInterface pulumi.StringPtrInput
 	// The snippet in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	// The Terraform ID.
 	Tfid pulumi.StringPtrInput
@@ -191,16 +179,12 @@ type layer2SubinterfaceArgs struct {
 	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
 	// The folder in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// L2 sub-interface name
 	Name *string `pulumi:"name"`
 	// Parent interface
 	ParentInterface *string `pulumi:"parentInterface"`
 	// The snippet in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	// VLAN tag
 	VlanTag string `pulumi:"vlanTag"`
@@ -213,16 +197,12 @@ type Layer2SubinterfaceArgs struct {
 	// The device in which the resource is defined
 	Device pulumi.StringPtrInput
 	// The folder in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// L2 sub-interface name
 	Name pulumi.StringPtrInput
 	// Parent interface
 	ParentInterface pulumi.StringPtrInput
 	// The snippet in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	// VLAN tag
 	VlanTag pulumi.StringInput
@@ -326,8 +306,6 @@ func (o Layer2SubinterfaceOutput) Device() pulumi.StringPtrOutput {
 }
 
 // The folder in which the resource is defined
-//
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o Layer2SubinterfaceOutput) Folder() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *Layer2Subinterface) pulumi.StringPtrOutput { return v.Folder }).(pulumi.StringPtrOutput)
 }
@@ -343,8 +321,6 @@ func (o Layer2SubinterfaceOutput) ParentInterface() pulumi.StringPtrOutput {
 }
 
 // The snippet in which the resource is defined
-//
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o Layer2SubinterfaceOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *Layer2Subinterface) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)
 }

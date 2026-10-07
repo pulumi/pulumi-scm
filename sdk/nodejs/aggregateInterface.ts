@@ -38,6 +38,9 @@ import * as utilities from "./utilities";
  *             fastFailover: true,
  *             systenPriority: 32768,
  *             transmissionRate: "fast",
+ *             highAvailability: {
+ *                 passivePreNegotiation: true,
+ *             },
  *         },
  *         lldp: {
  *             enable: false,
@@ -69,6 +72,9 @@ import * as utilities from "./utilities";
  *             fastFailover: true,
  *             systenPriority: 32768,
  *             transmissionRate: "fast",
+ *             highAvailability: {
+ *                 passivePreNegotiation: true,
+ *             },
  *         },
  *     },
  * });
@@ -95,11 +101,20 @@ import * as utilities from "./utilities";
  *     comment: "Managed by Pulumi",
  *     folder: "ngfw-shared",
  *     layer3: {
- *         ips: [{
- *             name: "198.18.1.1/24",
- *             name: "198.18.1.2/32",
- *         }],
+ *         ips: [
+ *             {
+ *                 name: "198.18.1.1/24",
+ *             },
+ *             {
+ *                 name: "198.18.1.2/32",
+ *             },
+ *         ],
  *         mtu: 1500,
+ *         adjustTcpMss: {
+ *             enable: true,
+ *             ipv4MssAdjustment: 40,
+ *             ipv6MssAdjustment: 60,
+ *         },
  *     },
  * });
  * ```
@@ -168,20 +183,14 @@ export class AggregateInterface extends pulumi.CustomResource {
     declare public readonly device: pulumi.Output<string | undefined>;
     /**
      * The folder in which the resource is defined
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly folder: pulumi.Output<string | undefined>;
     /**
      * Layer2
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `layer2` and `layer3`.
      */
     declare public readonly layer2: pulumi.Output<outputs.AggregateInterfaceLayer2 | undefined>;
     /**
      * Aggregate Interface Layer 3 configuration
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `layer2` and `layer3`.
      */
     declare public readonly layer3: pulumi.Output<outputs.AggregateInterfaceLayer3 | undefined>;
     /**
@@ -190,8 +199,6 @@ export class AggregateInterface extends pulumi.CustomResource {
     declare public readonly name: pulumi.Output<string>;
     /**
      * The snippet in which the resource is defined
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly snippet: pulumi.Output<string | undefined>;
     /**
@@ -256,20 +263,14 @@ export interface AggregateInterfaceState {
     device?: pulumi.Input<string | undefined>;
     /**
      * The folder in which the resource is defined
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     folder?: pulumi.Input<string | undefined>;
     /**
      * Layer2
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `layer2` and `layer3`.
      */
     layer2?: pulumi.Input<inputs.AggregateInterfaceLayer2 | undefined>;
     /**
      * Aggregate Interface Layer 3 configuration
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `layer2` and `layer3`.
      */
     layer3?: pulumi.Input<inputs.AggregateInterfaceLayer3 | undefined>;
     /**
@@ -278,8 +279,6 @@ export interface AggregateInterfaceState {
     name?: pulumi.Input<string | undefined>;
     /**
      * The snippet in which the resource is defined
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     snippet?: pulumi.Input<string | undefined>;
     /**
@@ -306,20 +305,14 @@ export interface AggregateInterfaceArgs {
     device?: pulumi.Input<string | undefined>;
     /**
      * The folder in which the resource is defined
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     folder?: pulumi.Input<string | undefined>;
     /**
      * Layer2
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `layer2` and `layer3`.
      */
     layer2?: pulumi.Input<inputs.AggregateInterfaceLayer2 | undefined>;
     /**
      * Aggregate Interface Layer 3 configuration
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `layer2` and `layer3`.
      */
     layer3?: pulumi.Input<inputs.AggregateInterfaceLayer3 | undefined>;
     /**
@@ -328,8 +321,6 @@ export interface AggregateInterfaceArgs {
     name?: pulumi.Input<string | undefined>;
     /**
      * The snippet in which the resource is defined
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     snippet?: pulumi.Input<string | undefined>;
 }

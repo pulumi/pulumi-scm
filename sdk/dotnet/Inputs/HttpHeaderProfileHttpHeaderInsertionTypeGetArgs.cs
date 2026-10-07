@@ -37,7 +37,7 @@ namespace Pulumi.Scm.Inputs
         }
 
         /// <summary>
-        /// The HTTP header insertion type
+        /// The HTTP header insertion type. Possible values are `Custom`, `Dropbox Network Control`, `Dynamic Fields`, `Google Apps Access Control`, `Microsoft Office365 Tenant Restrictions` and `Youtube Safe Search`.
         /// </summary>
         [Input("name", required: true)]
         public Input<string> Name { get; set; } = null!;

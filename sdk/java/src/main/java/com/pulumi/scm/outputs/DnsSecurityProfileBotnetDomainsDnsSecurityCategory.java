@@ -12,12 +12,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class DnsSecurityProfileBotnetDomainsDnsSecurityCategory {
     /**
-     * @return Action
+     * @return Action. Possible values are `default`, `allow`, `block` and `sinkhole`.
      * 
      */
     private @Nullable String action;
     /**
-     * @return Log level
+     * @return Log level. Possible values are `default`, `none`, `low`, `informational`, `medium`, `high` and `critical`.
      * 
      */
     private @Nullable String logLevel;
@@ -27,21 +27,21 @@ public final class DnsSecurityProfileBotnetDomainsDnsSecurityCategory {
      */
     private @Nullable String name;
     /**
-     * @return Packet capture
+     * @return Packet capture. Possible values are `disable`, `single-packet` and `extended-capture`.
      * 
      */
     private @Nullable String packetCapture;
 
     private DnsSecurityProfileBotnetDomainsDnsSecurityCategory() {}
     /**
-     * @return Action
+     * @return Action. Possible values are `default`, `allow`, `block` and `sinkhole`.
      * 
      */
     public Optional<String> action() {
         return Optional.ofNullable(this.action);
     }
     /**
-     * @return Log level
+     * @return Log level. Possible values are `default`, `none`, `low`, `informational`, `medium`, `high` and `critical`.
      * 
      */
     public Optional<String> logLevel() {
@@ -55,7 +55,7 @@ public final class DnsSecurityProfileBotnetDomainsDnsSecurityCategory {
         return Optional.ofNullable(this.name);
     }
     /**
-     * @return Packet capture
+     * @return Packet capture. Possible values are `disable`, `single-packet` and `extended-capture`.
      * 
      */
     public Optional<String> packetCapture() {

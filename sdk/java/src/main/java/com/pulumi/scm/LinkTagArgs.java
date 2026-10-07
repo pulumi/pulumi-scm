@@ -16,14 +16,14 @@ public final class LinkTagArgs extends com.pulumi.resources.ResourceArgs {
     public static final LinkTagArgs Empty = new LinkTagArgs();
 
     /**
-     * The color of the link tag
+     * The color of the link tag. Possible values are `Red`, `Green`, `Blue`, `Yellow`, `Copper`, `Orange`, `Purple`, `Gray`, `Light Green`, `Cyan`, `Light Gray`, `Blue Gray`, `Lime`, `Black`, `Gold`, `Brown`, `Olive`, `Maroon`, `Red-Orange`, `Yellow-Orange`, `Forest Green`, `Turquoise Blue`, `Azure Blue`, `Cerulean Blue`, `Midnight Blue`, `Medium Blue`, `Cobalt Blue`, `Violet Blue`, `Blue Violet`, `Medium Violet`, `Medium Rose`, `Lavender`, `Orchid`, `Thistle`, `Peach`, `Salmon`, `Magenta`, `Red Violet`, `Mahogany`, `Burnt Sienna` and `Chestnut`.
      * 
      */
     @Import(name="color")
     private @Nullable Output<String> color;
 
     /**
-     * @return The color of the link tag
+     * @return The color of the link tag. Possible values are `Red`, `Green`, `Blue`, `Yellow`, `Copper`, `Orange`, `Purple`, `Gray`, `Light Green`, `Cyan`, `Light Gray`, `Blue Gray`, `Lime`, `Black`, `Gold`, `Brown`, `Olive`, `Maroon`, `Red-Orange`, `Yellow-Orange`, `Forest Green`, `Turquoise Blue`, `Azure Blue`, `Cerulean Blue`, `Midnight Blue`, `Medium Blue`, `Cobalt Blue`, `Violet Blue`, `Blue Violet`, `Medium Violet`, `Medium Rose`, `Lavender`, `Orchid`, `Thistle`, `Peach`, `Salmon`, `Magenta`, `Red Violet`, `Mahogany`, `Burnt Sienna` and `Chestnut`.
      * 
      */
     public Optional<Output<String>> color() {
@@ -63,16 +63,12 @@ public final class LinkTagArgs extends com.pulumi.resources.ResourceArgs {
     /**
      * The folder in which the resource is defined
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
      */
     @Import(name="folder")
     private @Nullable Output<String> folder;
 
     /**
      * @return The folder in which the resource is defined
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public Optional<Output<String>> folder() {
@@ -97,16 +93,12 @@ public final class LinkTagArgs extends com.pulumi.resources.ResourceArgs {
     /**
      * The snippet in which the resource is defined
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
      */
     @Import(name="snippet")
     private @Nullable Output<String> snippet;
 
     /**
      * @return The snippet in which the resource is defined
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public Optional<Output<String>> snippet() {
@@ -143,7 +135,7 @@ public final class LinkTagArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param color The color of the link tag
+         * @param color The color of the link tag. Possible values are `Red`, `Green`, `Blue`, `Yellow`, `Copper`, `Orange`, `Purple`, `Gray`, `Light Green`, `Cyan`, `Light Gray`, `Blue Gray`, `Lime`, `Black`, `Gold`, `Brown`, `Olive`, `Maroon`, `Red-Orange`, `Yellow-Orange`, `Forest Green`, `Turquoise Blue`, `Azure Blue`, `Cerulean Blue`, `Midnight Blue`, `Medium Blue`, `Cobalt Blue`, `Violet Blue`, `Blue Violet`, `Medium Violet`, `Medium Rose`, `Lavender`, `Orchid`, `Thistle`, `Peach`, `Salmon`, `Magenta`, `Red Violet`, `Mahogany`, `Burnt Sienna` and `Chestnut`.
          * 
          * @return builder
          * 
@@ -154,7 +146,7 @@ public final class LinkTagArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param color The color of the link tag
+         * @param color The color of the link tag. Possible values are `Red`, `Green`, `Blue`, `Yellow`, `Copper`, `Orange`, `Purple`, `Gray`, `Light Green`, `Cyan`, `Light Gray`, `Blue Gray`, `Lime`, `Black`, `Gold`, `Brown`, `Olive`, `Maroon`, `Red-Orange`, `Yellow-Orange`, `Forest Green`, `Turquoise Blue`, `Azure Blue`, `Cerulean Blue`, `Midnight Blue`, `Medium Blue`, `Cobalt Blue`, `Violet Blue`, `Blue Violet`, `Medium Violet`, `Medium Rose`, `Lavender`, `Orchid`, `Thistle`, `Peach`, `Salmon`, `Magenta`, `Red Violet`, `Mahogany`, `Burnt Sienna` and `Chestnut`.
          * 
          * @return builder
          * 
@@ -208,8 +200,6 @@ public final class LinkTagArgs extends com.pulumi.resources.ResourceArgs {
         /**
          * @param folder The folder in which the resource is defined
          * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-         * 
          * @return builder
          * 
          */
@@ -220,8 +210,6 @@ public final class LinkTagArgs extends com.pulumi.resources.ResourceArgs {
 
         /**
          * @param folder The folder in which the resource is defined
-         * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
          * 
          * @return builder
          * 
@@ -254,8 +242,6 @@ public final class LinkTagArgs extends com.pulumi.resources.ResourceArgs {
         /**
          * @param snippet The snippet in which the resource is defined
          * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-         * 
          * @return builder
          * 
          */
@@ -266,8 +252,6 @@ public final class LinkTagArgs extends com.pulumi.resources.ResourceArgs {
 
         /**
          * @param snippet The snippet in which the resource is defined
-         * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
          * 
          * @return builder
          * 

@@ -14,7 +14,7 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetNatRuleListDataDynamicDestinationTranslationResult
     {
         /// <summary>
-        /// Distribution method
+        /// Distribution method. Possible values are `round-robin`, `source-ip-hash`, `ip-modulo`, `ip-hash` and `least-sessions`.
         /// </summary>
         public readonly string Distribution;
         /// <summary>

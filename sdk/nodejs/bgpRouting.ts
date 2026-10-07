@@ -79,7 +79,7 @@ export class BgpRouting extends pulumi.CustomResource {
      */
     declare public readonly addHostRouteToIkePeer: pulumi.Output<boolean | undefined>;
     /**
-     * Backbone routing
+     * Backbone routing. Possible values are `no-asymmetric-routing`, `asymmetric-routing-only` and `asymmetric-routing-with-load-share`.
      */
     declare public readonly backboneRouting: pulumi.Output<string | undefined>;
     /**
@@ -147,7 +147,7 @@ export interface BgpRoutingState {
      */
     addHostRouteToIkePeer?: pulumi.Input<boolean | undefined>;
     /**
-     * Backbone routing
+     * Backbone routing. Possible values are `no-asymmetric-routing`, `asymmetric-routing-only` and `asymmetric-routing-with-load-share`.
      */
     backboneRouting?: pulumi.Input<string | undefined>;
     /**
@@ -181,7 +181,7 @@ export interface BgpRoutingArgs {
      */
     addHostRouteToIkePeer?: pulumi.Input<boolean | undefined>;
     /**
-     * Backbone routing
+     * Backbone routing. Possible values are `no-asymmetric-routing`, `asymmetric-routing-only` and `asymmetric-routing-with-load-share`.
      */
     backboneRouting?: pulumi.Input<string | undefined>;
     /**

@@ -14,7 +14,7 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetUpdateScheduleUpdateScheduleAntiVirusRecurringWeeklyResult
     {
         /// <summary>
-        /// Action
+        /// Action. Possible values are `download-only` and `download-and-install`.
         /// </summary>
         public readonly string Action;
         /// <summary>
@@ -22,7 +22,7 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly string At;
         /// <summary>
-        /// Day of week
+        /// Day of week. Possible values are `Sunday`, `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday` and `Saturday`.
         /// </summary>
         public readonly string DayOfWeek;
 

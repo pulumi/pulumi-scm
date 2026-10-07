@@ -8,6 +8,7 @@ import com.pulumi.exceptions.MissingRequiredPropertyException;
 import com.pulumi.scm.outputs.GetPbfRuleListDataAction;
 import com.pulumi.scm.outputs.GetPbfRuleListDataEnforceSymmetricReturn;
 import com.pulumi.scm.outputs.GetPbfRuleListDataFrom;
+import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -45,7 +46,7 @@ public final class GetPbfRuleListData {
      */
     private GetPbfRuleListDataEnforceSymmetricReturn enforceSymmetricReturn;
     /**
-     * @return The folder of the item. Default: Shared.
+     * @return The folder in which the resource is defined
      * 
      */
     private String folder;
@@ -60,10 +61,20 @@ public final class GetPbfRuleListData {
      */
     private String id;
     /**
-     * @return The name of the item.
+     * @return PBF rule name
      * 
      */
     private String name;
+    /**
+     * @return Negate destination address
+     * 
+     */
+    private Boolean negateDestination;
+    /**
+     * @return Negate source address
+     * 
+     */
+    private Boolean negateSource;
     /**
      * @return Schedule
      * 
@@ -75,7 +86,7 @@ public final class GetPbfRuleListData {
      */
     private List<String> services;
     /**
-     * @return The snippet of the item.
+     * @return The snippet in which the resource is defined
      * 
      */
     private String snippet;
@@ -144,7 +155,7 @@ public final class GetPbfRuleListData {
         return this.enforceSymmetricReturn;
     }
     /**
-     * @return The folder of the item. Default: Shared.
+     * @return The folder in which the resource is defined
      * 
      */
     public String folder() {
@@ -165,11 +176,25 @@ public final class GetPbfRuleListData {
         return this.id;
     }
     /**
-     * @return The name of the item.
+     * @return PBF rule name
      * 
      */
     public String name() {
         return this.name;
+    }
+    /**
+     * @return Negate destination address
+     * 
+     */
+    public Boolean negateDestination() {
+        return this.negateDestination;
+    }
+    /**
+     * @return Negate source address
+     * 
+     */
+    public Boolean negateSource() {
+        return this.negateSource;
     }
     /**
      * @return Schedule
@@ -186,7 +211,7 @@ public final class GetPbfRuleListData {
         return this.services;
     }
     /**
-     * @return The snippet of the item.
+     * @return The snippet in which the resource is defined
      * 
      */
     public String snippet() {
@@ -240,6 +265,8 @@ public final class GetPbfRuleListData {
         private GetPbfRuleListDataFrom from;
         private String id;
         private String name;
+        private Boolean negateDestination;
+        private Boolean negateSource;
         private String schedule;
         private List<String> services;
         private String snippet;
@@ -260,6 +287,8 @@ public final class GetPbfRuleListData {
     	      this.from = defaults.from;
     	      this.id = defaults.id;
     	      this.name = defaults.name;
+    	      this.negateDestination = defaults.negateDestination;
+    	      this.negateSource = defaults.negateSource;
     	      this.schedule = defaults.schedule;
     	      this.services = defaults.services;
     	      this.snippet = defaults.snippet;
@@ -356,6 +385,22 @@ public final class GetPbfRuleListData {
             return this;
         }
         @CustomType.Setter
+        public Builder negateDestination(Boolean negateDestination) {
+            if (negateDestination == null) {
+              throw new MissingRequiredPropertyException("GetPbfRuleListData", "negateDestination");
+            }
+            this.negateDestination = negateDestination;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder negateSource(Boolean negateSource) {
+            if (negateSource == null) {
+              throw new MissingRequiredPropertyException("GetPbfRuleListData", "negateSource");
+            }
+            this.negateSource = negateSource;
+            return this;
+        }
+        @CustomType.Setter
         public Builder schedule(String schedule) {
             if (schedule == null) {
               throw new MissingRequiredPropertyException("GetPbfRuleListData", "schedule");
@@ -435,6 +480,8 @@ public final class GetPbfRuleListData {
             _resultValue.from = from;
             _resultValue.id = id;
             _resultValue.name = name;
+            _resultValue.negateDestination = negateDestination;
+            _resultValue.negateSource = negateSource;
             _resultValue.schedule = schedule;
             _resultValue.services = services;
             _resultValue.snippet = snippet;

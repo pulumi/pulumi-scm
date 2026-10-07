@@ -124,7 +124,7 @@ class GetAutoVpnClusterResult:
     @pulumi.getter
     def type(self) -> _builtins.str:
         """
-        VPN cluster type
+        VPN cluster type. Possible values are `hub-spoke` and `mesh`.
         """
         return pulumi.get(self, "type")
 

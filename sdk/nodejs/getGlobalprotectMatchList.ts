@@ -39,12 +39,21 @@ export interface GetGlobalprotectMatchListArgs {
      * The device in which the resource is defined
      */
     device?: string;
+    /**
+     * The folder in which the resource is defined
+     */
     folder?: string;
     /**
      * UUID of the resource
      */
     id: string;
+    /**
+     * Name of the globalprotect match list entry
+     */
     name?: string;
+    /**
+     * The snippet in which the resource is defined
+     */
     snippet?: string;
 }
 
@@ -52,25 +61,61 @@ export interface GetGlobalprotectMatchListArgs {
  * A collection of values returned by getGlobalprotectMatchList.
  */
 export interface GetGlobalprotectMatchListResult {
+    /**
+     * Description of the globalprotect match list entry
+     */
     readonly description: string;
     /**
      * The device in which the resource is defined
      */
     readonly device: string;
+    /**
+     * Filter of the globalprotect match list entry
+     */
     readonly filter: string;
+    /**
+     * The folder in which the resource is defined
+     */
     readonly folder: string;
     /**
      * UUID of the resource
      */
     readonly id: string;
+    /**
+     * Name of the globalprotect match list entry
+     */
     readonly name: string;
+    /**
+     * Quarantine Flag of the globalprotect match list entry
+     */
     readonly quarantine: boolean;
+    /**
+     * Send Email List of the globalprotect match list entry
+     */
     readonly sendEmails: string[];
+    /**
+     * Send HTTP List of the globalprotect match list entry
+     */
     readonly sendHttps: string[];
+    /**
+     * Send SNMP Trap List of the globalprotect match list entry
+     */
     readonly sendSnmptraps: string[];
+    /**
+     * Send Sys log List of the globalprotect match list entry
+     */
     readonly sendSyslogs: string[];
+    /**
+     * Send to Panorama Flag of the globalprotect match list entry
+     */
     readonly sendToPanorama: boolean;
+    /**
+     * The snippet in which the resource is defined
+     */
     readonly snippet: string;
+    /**
+     * The Terraform ID.
+     */
     readonly tfid: string;
 }
 /**
@@ -108,11 +153,20 @@ export interface GetGlobalprotectMatchListOutputArgs {
      * The device in which the resource is defined
      */
     device?: pulumi.Input<string | undefined>;
+    /**
+     * The folder in which the resource is defined
+     */
     folder?: pulumi.Input<string | undefined>;
     /**
      * UUID of the resource
      */
     id: pulumi.Input<string>;
+    /**
+     * Name of the globalprotect match list entry
+     */
     name?: pulumi.Input<string | undefined>;
+    /**
+     * The snippet in which the resource is defined
+     */
     snippet?: pulumi.Input<string | undefined>;
 }

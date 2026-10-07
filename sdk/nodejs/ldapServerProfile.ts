@@ -198,12 +198,10 @@ export class LdapServerProfile extends pulumi.CustomResource {
     declare public /*out*/ readonly encryptedValues: pulumi.Output<{[key: string]: string}>;
     /**
      * The folder in which the resource is defined
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly folder: pulumi.Output<string | undefined>;
     /**
-     * The LDAP server time
+     * The LDAP server time. Possible values are `active-directory`, `e-directory`, `sun` and `other`.
      */
     declare public readonly ldapType: pulumi.Output<string | undefined>;
     /**
@@ -220,8 +218,6 @@ export class LdapServerProfile extends pulumi.CustomResource {
     declare public readonly servers: pulumi.Output<outputs.LdapServerProfileServer[]>;
     /**
      * The snippet in which the resource is defined
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly snippet: pulumi.Output<string | undefined>;
     /**
@@ -329,12 +325,10 @@ export interface LdapServerProfileState {
     encryptedValues?: pulumi.Input<{[key: string]: pulumi.Input<string>} | undefined>;
     /**
      * The folder in which the resource is defined
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     folder?: pulumi.Input<string | undefined>;
     /**
-     * The LDAP server time
+     * The LDAP server time. Possible values are `active-directory`, `e-directory`, `sun` and `other`.
      */
     ldapType?: pulumi.Input<string | undefined>;
     /**
@@ -351,8 +345,6 @@ export interface LdapServerProfileState {
     servers?: pulumi.Input<pulumi.Input<inputs.LdapServerProfileServer>[] | undefined>;
     /**
      * The snippet in which the resource is defined
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     snippet?: pulumi.Input<string | undefined>;
     /**
@@ -399,12 +391,10 @@ export interface LdapServerProfileArgs {
     device?: pulumi.Input<string | undefined>;
     /**
      * The folder in which the resource is defined
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     folder?: pulumi.Input<string | undefined>;
     /**
-     * The LDAP server time
+     * The LDAP server time. Possible values are `active-directory`, `e-directory`, `sun` and `other`.
      */
     ldapType?: pulumi.Input<string | undefined>;
     /**
@@ -421,8 +411,6 @@ export interface LdapServerProfileArgs {
     servers: pulumi.Input<pulumi.Input<inputs.LdapServerProfileServer>[]>;
     /**
      * The snippet in which the resource is defined
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     snippet?: pulumi.Input<string | undefined>;
     /**

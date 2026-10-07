@@ -44,12 +44,21 @@ export interface GetVariableArgs {
      * The device in which the resource is defined
      */
     device?: string;
+    /**
+     * The folder in which the resource is defined
+     */
     folder?: string;
     /**
      * UUID of the variable
      */
     id: string;
+    /**
+     * The name of the variable
+     */
     name?: string;
+    /**
+     * The snippet in which the resource is defined
+     */
     snippet?: string;
 }
 
@@ -57,21 +66,45 @@ export interface GetVariableArgs {
  * A collection of values returned by getVariable.
  */
 export interface GetVariableResult {
+    /**
+     * The description of the variable
+     */
     readonly description: string;
     /**
      * The device in which the resource is defined
      */
     readonly device: string;
+    /**
+     * The folder in which the resource is defined
+     */
     readonly folder: string;
     /**
      * UUID of the variable
      */
     readonly id: string;
+    /**
+     * The name of the variable
+     */
     readonly name: string;
+    /**
+     * Is the variable overridden?
+     */
     readonly overridden: boolean;
+    /**
+     * The snippet in which the resource is defined
+     */
     readonly snippet: string;
+    /**
+     * The Terraform ID.
+     */
     readonly tfid: string;
+    /**
+     * The variable type. Possible values are `percent`, `count`, `ip-netmask`, `zone`, `ip-range`, `ip-wildcard`, `device-priority`, `device-id`, `egress-max`, `as-number`, `fqdn`, `port`, `link-tag`, `group-id`, `rate`, `router-id`, `qos-profile` and `timer`.
+     */
     readonly type: string;
+    /**
+     * The value of the variable
+     */
     readonly value: string;
 }
 /**
@@ -114,11 +147,20 @@ export interface GetVariableOutputArgs {
      * The device in which the resource is defined
      */
     device?: pulumi.Input<string | undefined>;
+    /**
+     * The folder in which the resource is defined
+     */
     folder?: pulumi.Input<string | undefined>;
     /**
      * UUID of the variable
      */
     id: pulumi.Input<string>;
+    /**
+     * The name of the variable
+     */
     name?: pulumi.Input<string | undefined>;
+    /**
+     * The snippet in which the resource is defined
+     */
     snippet?: pulumi.Input<string | undefined>;
 }

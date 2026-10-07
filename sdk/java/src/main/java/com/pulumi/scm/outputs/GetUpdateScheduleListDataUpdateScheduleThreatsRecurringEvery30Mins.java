@@ -13,7 +13,7 @@ import java.util.Objects;
 @CustomType
 public final class GetUpdateScheduleListDataUpdateScheduleThreatsRecurringEvery30Mins {
     /**
-     * @return Action
+     * @return Action. Possible values are `download-only` and `download-and-install`.
      * 
      */
     private String action;
@@ -30,7 +30,7 @@ public final class GetUpdateScheduleListDataUpdateScheduleThreatsRecurringEvery3
 
     private GetUpdateScheduleListDataUpdateScheduleThreatsRecurringEvery30Mins() {}
     /**
-     * @return Action
+     * @return Action. Possible values are `download-only` and `download-and-install`.
      * 
      */
     public String action() {

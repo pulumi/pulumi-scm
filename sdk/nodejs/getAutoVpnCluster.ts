@@ -87,7 +87,7 @@ export interface GetAutoVpnClusterResult {
      */
     readonly tfid: string;
     /**
-     * VPN cluster type
+     * VPN cluster type. Possible values are `hub-spoke` and `mesh`.
      */
     readonly type: string;
 }

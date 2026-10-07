@@ -18,14 +18,14 @@ public final class UpdateScheduleUpdateScheduleThreatsRecurringEvery30MinsArgs e
     public static final UpdateScheduleUpdateScheduleThreatsRecurringEvery30MinsArgs Empty = new UpdateScheduleUpdateScheduleThreatsRecurringEvery30MinsArgs();
 
     /**
-     * Action
+     * Action. Possible values are `download-only` and `download-and-install`.
      * 
      */
     @Import(name="action")
     private @Nullable Output<String> action;
 
     /**
-     * @return Action
+     * @return Action. Possible values are `download-only` and `download-and-install`.
      * 
      */
     public Optional<Output<String>> action() {
@@ -89,7 +89,7 @@ public final class UpdateScheduleUpdateScheduleThreatsRecurringEvery30MinsArgs e
         }
 
         /**
-         * @param action Action
+         * @param action Action. Possible values are `download-only` and `download-and-install`.
          * 
          * @return builder
          * 
@@ -100,7 +100,7 @@ public final class UpdateScheduleUpdateScheduleThreatsRecurringEvery30MinsArgs e
         }
 
         /**
-         * @param action Action
+         * @param action Action. Possible values are `download-only` and `download-and-install`.
          * 
          * @return builder
          * 

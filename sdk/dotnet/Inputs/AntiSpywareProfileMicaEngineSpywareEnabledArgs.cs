@@ -13,7 +13,7 @@ namespace Pulumi.Scm.Inputs
     public sealed class AntiSpywareProfileMicaEngineSpywareEnabledArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Inline policy action
+        /// Inline policy action. Possible values are `Alert`, `Allow`, `Drop`, `reset-both`, `reset-client` and `reset-server`.
         /// </summary>
         [Input("inlinePolicyAction")]
         public Input<string>? InlinePolicyAction { get; set; }

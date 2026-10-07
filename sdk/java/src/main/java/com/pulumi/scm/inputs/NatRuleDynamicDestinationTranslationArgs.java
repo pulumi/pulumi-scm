@@ -17,14 +17,14 @@ public final class NatRuleDynamicDestinationTranslationArgs extends com.pulumi.r
     public static final NatRuleDynamicDestinationTranslationArgs Empty = new NatRuleDynamicDestinationTranslationArgs();
 
     /**
-     * Distribution method
+     * Distribution method. Possible values are `round-robin`, `source-ip-hash`, `ip-modulo`, `ip-hash` and `least-sessions`.
      * 
      */
     @Import(name="distribution")
     private @Nullable Output<String> distribution;
 
     /**
-     * @return Distribution method
+     * @return Distribution method. Possible values are `round-robin`, `source-ip-hash`, `ip-modulo`, `ip-hash` and `least-sessions`.
      * 
      */
     public Optional<Output<String>> distribution() {
@@ -88,7 +88,7 @@ public final class NatRuleDynamicDestinationTranslationArgs extends com.pulumi.r
         }
 
         /**
-         * @param distribution Distribution method
+         * @param distribution Distribution method. Possible values are `round-robin`, `source-ip-hash`, `ip-modulo`, `ip-hash` and `least-sessions`.
          * 
          * @return builder
          * 
@@ -99,7 +99,7 @@ public final class NatRuleDynamicDestinationTranslationArgs extends com.pulumi.r
         }
 
         /**
-         * @param distribution Distribution method
+         * @param distribution Distribution method. Possible values are `round-robin`, `source-ip-hash`, `ip-modulo`, `ip-hash` and `least-sessions`.
          * 
          * @return builder
          * 

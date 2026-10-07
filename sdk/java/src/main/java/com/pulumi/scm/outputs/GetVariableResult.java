@@ -11,26 +11,62 @@ import java.util.Objects;
 
 @CustomType
 public final class GetVariableResult {
+    /**
+     * @return The description of the variable
+     * 
+     */
     private String description;
     /**
      * @return The device in which the resource is defined
      * 
      */
     private String device;
+    /**
+     * @return The folder in which the resource is defined
+     * 
+     */
     private String folder;
     /**
      * @return UUID of the variable
      * 
      */
     private String id;
+    /**
+     * @return The name of the variable
+     * 
+     */
     private String name;
+    /**
+     * @return Is the variable overridden?
+     * 
+     */
     private Boolean overridden;
+    /**
+     * @return The snippet in which the resource is defined
+     * 
+     */
     private String snippet;
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     private String tfid;
+    /**
+     * @return The variable type. Possible values are `percent`, `count`, `ip-netmask`, `zone`, `ip-range`, `ip-wildcard`, `device-priority`, `device-id`, `egress-max`, `as-number`, `fqdn`, `port`, `link-tag`, `group-id`, `rate`, `router-id`, `qos-profile` and `timer`.
+     * 
+     */
     private String type;
+    /**
+     * @return The value of the variable
+     * 
+     */
     private String value;
 
     private GetVariableResult() {}
+    /**
+     * @return The description of the variable
+     * 
+     */
     public String description() {
         return this.description;
     }
@@ -41,6 +77,10 @@ public final class GetVariableResult {
     public String device() {
         return this.device;
     }
+    /**
+     * @return The folder in which the resource is defined
+     * 
+     */
     public String folder() {
         return this.folder;
     }
@@ -51,21 +91,45 @@ public final class GetVariableResult {
     public String id() {
         return this.id;
     }
+    /**
+     * @return The name of the variable
+     * 
+     */
     public String name() {
         return this.name;
     }
+    /**
+     * @return Is the variable overridden?
+     * 
+     */
     public Boolean overridden() {
         return this.overridden;
     }
+    /**
+     * @return The snippet in which the resource is defined
+     * 
+     */
     public String snippet() {
         return this.snippet;
     }
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     public String tfid() {
         return this.tfid;
     }
+    /**
+     * @return The variable type. Possible values are `percent`, `count`, `ip-netmask`, `zone`, `ip-range`, `ip-wildcard`, `device-priority`, `device-id`, `egress-max`, `as-number`, `fqdn`, `port`, `link-tag`, `group-id`, `rate`, `router-id`, `qos-profile` and `timer`.
+     * 
+     */
     public String type() {
         return this.type;
     }
+    /**
+     * @return The value of the variable
+     * 
+     */
     public String value() {
         return this.value;
     }

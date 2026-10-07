@@ -170,7 +170,7 @@ namespace Pulumi.Scm
     public partial class RemoteNetwork : global::Pulumi.CustomResource
     {
         /// <summary>
-        /// Ecmp load balancing
+        /// Ecmp load balancing. Possible values are `Enable` and `Disable`.
         /// </summary>
         [Output("ecmpLoadBalancing")]
         public Output<string> EcmpLoadBalancing { get; private set; } = null!;
@@ -212,7 +212,7 @@ namespace Pulumi.Scm
         public Output<string> Name { get; private set; } = null!;
 
         /// <summary>
-        /// setup the protocol when ecmp*load*balancing is disable
+        /// setup the protocol when ecmp*load*balancing is disabled
         /// </summary>
         [Output("protocol")]
         public Output<Outputs.RemoteNetworkProtocol?> Protocol { get; private set; } = null!;
@@ -298,7 +298,7 @@ namespace Pulumi.Scm
     public sealed class RemoteNetworkArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Ecmp load balancing
+        /// Ecmp load balancing. Possible values are `Enable` and `Disable`.
         /// </summary>
         [Input("ecmpLoadBalancing")]
         public Input<string>? EcmpLoadBalancing { get; set; }
@@ -340,7 +340,7 @@ namespace Pulumi.Scm
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// setup the protocol when ecmp*load*balancing is disable
+        /// setup the protocol when ecmp*load*balancing is disabled
         /// </summary>
         [Input("protocol")]
         public Input<Inputs.RemoteNetworkProtocolArgs>? Protocol { get; set; }
@@ -384,7 +384,7 @@ namespace Pulumi.Scm
     public sealed class RemoteNetworkState : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Ecmp load balancing
+        /// Ecmp load balancing. Possible values are `Enable` and `Disable`.
         /// </summary>
         [Input("ecmpLoadBalancing")]
         public Input<string>? EcmpLoadBalancing { get; set; }
@@ -442,7 +442,7 @@ namespace Pulumi.Scm
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// setup the protocol when ecmp*load*balancing is disable
+        /// setup the protocol when ecmp*load*balancing is disabled
         /// </summary>
         [Input("protocol")]
         public Input<Inputs.RemoteNetworkProtocolGetArgs>? Protocol { get; set; }

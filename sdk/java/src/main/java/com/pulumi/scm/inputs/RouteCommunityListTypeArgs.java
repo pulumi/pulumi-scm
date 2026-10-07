@@ -35,16 +35,12 @@ public final class RouteCommunityListTypeArgs extends com.pulumi.resources.Resou
     /**
      * Large
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `extended`, `large`, and `regular`.
-     * 
      */
     @Import(name="large")
     private @Nullable Output<RouteCommunityListTypeLargeArgs> large;
 
     /**
      * @return Large
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `extended`, `large`, and `regular`.
      * 
      */
     public Optional<Output<RouteCommunityListTypeLargeArgs>> large() {
@@ -54,16 +50,12 @@ public final class RouteCommunityListTypeArgs extends com.pulumi.resources.Resou
     /**
      * Regular
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `extended`, `large`, and `regular`.
-     * 
      */
     @Import(name="regular")
     private @Nullable Output<RouteCommunityListTypeRegularArgs> regular;
 
     /**
      * @return Regular
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `extended`, `large`, and `regular`.
      * 
      */
     public Optional<Output<RouteCommunityListTypeRegularArgs>> regular() {
@@ -120,8 +112,6 @@ public final class RouteCommunityListTypeArgs extends com.pulumi.resources.Resou
         /**
          * @param large Large
          * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `extended`, `large`, and `regular`.
-         * 
          * @return builder
          * 
          */
@@ -133,8 +123,6 @@ public final class RouteCommunityListTypeArgs extends com.pulumi.resources.Resou
         /**
          * @param large Large
          * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `extended`, `large`, and `regular`.
-         * 
          * @return builder
          * 
          */
@@ -144,8 +132,6 @@ public final class RouteCommunityListTypeArgs extends com.pulumi.resources.Resou
 
         /**
          * @param regular Regular
-         * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `extended`, `large`, and `regular`.
          * 
          * @return builder
          * 
@@ -157,8 +143,6 @@ public final class RouteCommunityListTypeArgs extends com.pulumi.resources.Resou
 
         /**
          * @param regular Regular
-         * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `extended`, `large`, and `regular`.
          * 
          * @return builder
          * 

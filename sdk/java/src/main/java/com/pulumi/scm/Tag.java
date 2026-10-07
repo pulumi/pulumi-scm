@@ -92,14 +92,14 @@ import javax.annotation.Nullable;
 @ResourceType(type="scm:index/tag:Tag")
 public class Tag extends com.pulumi.resources.CustomResource {
     /**
-     * The color of the tag
+     * The color of the tag. Possible values are `Red`, `Green`, `Blue`, `Yellow`, `Copper`, `Orange`, `Purple`, `Gray`, `Light Green`, `Cyan`, `Light Gray`, `Blue Gray`, `Lime`, `Black`, `Gold`, `Brown`, `Olive`, `Maroon`, `Red-Orange`, `Yellow-Orange`, `Forest Green`, `Turquoise Blue`, `Azure Blue`, `Cerulean Blue`, `Midnight Blue`, `Medium Blue`, `Cobalt Blue`, `Violet Blue`, `Blue Violet`, `Medium Violet`, `Medium Rose`, `Lavender`, `Orchid`, `Thistle`, `Peach`, `Salmon`, `Magenta`, `Red Violet`, `Mahogany`, `Burnt Sienna` and `Chestnut`.
      * 
      */
     @Export(name="color", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> color;
 
     /**
-     * @return The color of the tag
+     * @return The color of the tag. Possible values are `Red`, `Green`, `Blue`, `Yellow`, `Copper`, `Orange`, `Purple`, `Gray`, `Light Green`, `Cyan`, `Light Gray`, `Blue Gray`, `Lime`, `Black`, `Gold`, `Brown`, `Olive`, `Maroon`, `Red-Orange`, `Yellow-Orange`, `Forest Green`, `Turquoise Blue`, `Azure Blue`, `Cerulean Blue`, `Midnight Blue`, `Medium Blue`, `Cobalt Blue`, `Violet Blue`, `Blue Violet`, `Medium Violet`, `Medium Rose`, `Lavender`, `Orchid`, `Thistle`, `Peach`, `Salmon`, `Magenta`, `Red Violet`, `Mahogany`, `Burnt Sienna` and `Chestnut`.
      * 
      */
     public Output<Optional<String>> color() {
@@ -136,16 +136,12 @@ public class Tag extends com.pulumi.resources.CustomResource {
     /**
      * The folder in which the resource is defined
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
      */
     @Export(name="folder", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> folder;
 
     /**
      * @return The folder in which the resource is defined
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public Output<Optional<String>> folder() {
@@ -168,16 +164,12 @@ public class Tag extends com.pulumi.resources.CustomResource {
     /**
      * The snippet in which the resource is defined
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
      */
     @Export(name="snippet", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> snippet;
 
     /**
      * @return The snippet in which the resource is defined
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public Output<Optional<String>> snippet() {

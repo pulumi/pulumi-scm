@@ -14,6 +14,10 @@ namespace Pulumi.Scm.Outputs
     public sealed class AggregateInterfaceLayer3
     {
         /// <summary>
+        /// TCP MSS adjustment settings for the interface
+        /// </summary>
+        public readonly Outputs.AggregateInterfaceLayer3AdjustTcpMss? AdjustTcpMss;
+        /// <summary>
         /// Aggregate Ethernet ARP configuration
         /// </summary>
         public readonly ImmutableArray<Outputs.AggregateInterfaceLayer3Arp> Arps;
@@ -31,14 +35,16 @@ namespace Pulumi.Scm.Outputs
         public readonly string? InterfaceManagementProfile;
         /// <summary>
         /// Aggregate Interface IP addresses
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `DhcpClient` and `Ip`.
         /// </summary>
         public readonly ImmutableArray<Outputs.AggregateInterfaceLayer3Ip> Ips;
         /// <summary>
         /// Lacp
         /// </summary>
         public readonly Outputs.AggregateInterfaceLayer3Lacp? Lacp;
+        /// <summary>
+        /// LLDP settings for the interface
+        /// </summary>
+        public readonly Outputs.AggregateInterfaceLayer3Lldp? Lldp;
         /// <summary>
         /// MTU
         /// </summary>
@@ -50,6 +56,8 @@ namespace Pulumi.Scm.Outputs
 
         [OutputConstructor]
         private AggregateInterfaceLayer3(
+            Outputs.AggregateInterfaceLayer3AdjustTcpMss? adjustTcpMss,
+
             ImmutableArray<Outputs.AggregateInterfaceLayer3Arp> arps,
 
             Outputs.AggregateInterfaceLayer3DdnsConfig? ddnsConfig,
@@ -62,16 +70,20 @@ namespace Pulumi.Scm.Outputs
 
             Outputs.AggregateInterfaceLayer3Lacp? lacp,
 
+            Outputs.AggregateInterfaceLayer3Lldp? lldp,
+
             int? mtu,
 
             string? netflowProfile)
         {
+            AdjustTcpMss = adjustTcpMss;
             Arps = arps;
             DdnsConfig = ddnsConfig;
             DhcpClient = dhcpClient;
             InterfaceManagementProfile = interfaceManagementProfile;
             Ips = ips;
             Lacp = lacp;
+            Lldp = lldp;
             Mtu = mtu;
             NetflowProfile = netflowProfile;
         }

@@ -57,6 +57,14 @@ export class Provider extends pulumi.ProviderResource {
      * The client scope. Environment variable: `SCM_SCOPE`. JSON config file variable: `scope`.
      */
     declare public readonly scope: pulumi.Output<string | undefined>;
+    /**
+     * The region for ZTNA Connector API requests (x-panw-region header). Required when using ztna_* resources. Valid values: ae, americas, au, br, ca, ch, cn, de, es, europe, fr, id, il, in, it, jp, kr, pl, qa, sa, sg, tw, uk, za. Environment variable: `X_PANW_REGION`. JSON config file variable: `xPanwRegion`.
+     */
+    declare public readonly xPanwRegion: pulumi.Output<string | undefined>;
+    /**
+     * The hostname of the ZTNA Connector API. Required when using ztna_* resources. Default: `api.sase.paloaltonetworks.com`. Environment variable: `ZTNA_HOST`. JSON config file variable: `ztnaHost`.
+     */
+    declare public readonly ztnaHost: pulumi.Output<string | undefined>;
 
     /**
      * Create a Provider resource with the given unique name, arguments, and options.
@@ -79,6 +87,8 @@ export class Provider extends pulumi.ProviderResource {
             resourceInputs["port"] = pulumi.output(args?.port).apply(JSON.stringify);
             resourceInputs["protocol"] = args?.protocol;
             resourceInputs["scope"] = args?.scope;
+            resourceInputs["xPanwRegion"] = args?.xPanwRegion;
+            resourceInputs["ztnaHost"] = args?.ztnaHost;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
         const secretOpts = { additionalSecretOutputs: ["clientSecret"] };
@@ -140,6 +150,14 @@ export interface ProviderArgs {
      * The client scope. Environment variable: `SCM_SCOPE`. JSON config file variable: `scope`.
      */
     scope?: pulumi.Input<string | undefined>;
+    /**
+     * The region for ZTNA Connector API requests (x-panw-region header). Required when using ztna_* resources. Valid values: ae, americas, au, br, ca, ch, cn, de, es, europe, fr, id, il, in, it, jp, kr, pl, qa, sa, sg, tw, uk, za. Environment variable: `X_PANW_REGION`. JSON config file variable: `xPanwRegion`.
+     */
+    xPanwRegion?: pulumi.Input<string | undefined>;
+    /**
+     * The hostname of the ZTNA Connector API. Required when using ztna_* resources. Default: `api.sase.paloaltonetworks.com`. Environment variable: `ZTNA_HOST`. JSON config file variable: `ztnaHost`.
+     */
+    ztnaHost?: pulumi.Input<string | undefined>;
 }
 
 export namespace Provider {

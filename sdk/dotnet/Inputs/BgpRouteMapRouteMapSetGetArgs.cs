@@ -79,7 +79,7 @@ namespace Pulumi.Scm.Inputs
         public Input<Inputs.BgpRouteMapRouteMapSetMetricGetArgs>? Metric { get; set; }
 
         /// <summary>
-        /// Origin
+        /// Origin. Possible values are `None`, `Egp`, `Igp` and `Incomplete`.
         /// </summary>
         [Input("origin")]
         public Input<string>? Origin { get; set; }
@@ -106,7 +106,7 @@ namespace Pulumi.Scm.Inputs
         private InputList<string>? _regularCommunities;
 
         /// <summary>
-        /// Regular community
+        /// Regular community. Possible values are `None`, `Blackhole`, `no-peer`, `graceful-shutdown`, `accept-own`, `local-as`, `route-filter-v4`, `route-filter-v6`, `no-advertise`, `no-export` and `Internet`.
         /// </summary>
         public InputList<string> RegularCommunities
         {

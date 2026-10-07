@@ -107,7 +107,7 @@ type ForwardingProfileSourceApplication struct {
 	Applications pulumi.StringArrayOutput `pulumi:"applications"`
 	// fowarding profile source application description
 	Description pulumi.StringPtrOutput `pulumi:"description"`
-	// The folder in which the resource is defined
+	// The folder in which the resource is defined. Possible values are `Mobile Users`.
 	Folder pulumi.StringOutput `pulumi:"folder"`
 	// The unique name identifying the source application. Must be alphanumeric with allowed characters [0-9a-zA-Z._-]
 	Name pulumi.StringOutput `pulumi:"name"`
@@ -152,7 +152,7 @@ type forwardingProfileSourceApplicationState struct {
 	Applications []string `pulumi:"applications"`
 	// fowarding profile source application description
 	Description *string `pulumi:"description"`
-	// The folder in which the resource is defined
+	// The folder in which the resource is defined. Possible values are `Mobile Users`.
 	Folder *string `pulumi:"folder"`
 	// The unique name identifying the source application. Must be alphanumeric with allowed characters [0-9a-zA-Z._-]
 	Name *string `pulumi:"name"`
@@ -165,7 +165,7 @@ type ForwardingProfileSourceApplicationState struct {
 	Applications pulumi.StringArrayInput
 	// fowarding profile source application description
 	Description pulumi.StringPtrInput
-	// The folder in which the resource is defined
+	// The folder in which the resource is defined. Possible values are `Mobile Users`.
 	Folder pulumi.StringPtrInput
 	// The unique name identifying the source application. Must be alphanumeric with allowed characters [0-9a-zA-Z._-]
 	Name pulumi.StringPtrInput
@@ -182,7 +182,7 @@ type forwardingProfileSourceApplicationArgs struct {
 	Applications []string `pulumi:"applications"`
 	// fowarding profile source application description
 	Description *string `pulumi:"description"`
-	// The folder in which the resource is defined
+	// The folder in which the resource is defined. Possible values are `Mobile Users`.
 	Folder *string `pulumi:"folder"`
 	// The unique name identifying the source application. Must be alphanumeric with allowed characters [0-9a-zA-Z._-]
 	Name *string `pulumi:"name"`
@@ -194,7 +194,7 @@ type ForwardingProfileSourceApplicationArgs struct {
 	Applications pulumi.StringArrayInput
 	// fowarding profile source application description
 	Description pulumi.StringPtrInput
-	// The folder in which the resource is defined
+	// The folder in which the resource is defined. Possible values are `Mobile Users`.
 	Folder pulumi.StringPtrInput
 	// The unique name identifying the source application. Must be alphanumeric with allowed characters [0-9a-zA-Z._-]
 	Name pulumi.StringPtrInput
@@ -297,7 +297,7 @@ func (o ForwardingProfileSourceApplicationOutput) Description() pulumi.StringPtr
 	return o.ApplyT(func(v *ForwardingProfileSourceApplication) pulumi.StringPtrOutput { return v.Description }).(pulumi.StringPtrOutput)
 }
 
-// The folder in which the resource is defined
+// The folder in which the resource is defined. Possible values are `Mobile Users`.
 func (o ForwardingProfileSourceApplicationOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v *ForwardingProfileSourceApplication) pulumi.StringOutput { return v.Folder }).(pulumi.StringOutput)
 }

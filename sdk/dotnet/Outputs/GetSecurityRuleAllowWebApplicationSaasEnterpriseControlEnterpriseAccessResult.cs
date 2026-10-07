@@ -14,7 +14,7 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetSecurityRuleAllowWebApplicationSaasEnterpriseControlEnterpriseAccessResult
     {
         /// <summary>
-        /// Enable
+        /// Enable. Possible values are `Yes` and `No`.
         /// </summary>
         public readonly string Enable;
         /// <summary>

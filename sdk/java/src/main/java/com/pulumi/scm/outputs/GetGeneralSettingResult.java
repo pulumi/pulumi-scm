@@ -16,14 +16,30 @@ public final class GetGeneralSettingResult {
      * 
      */
     private String device;
+    /**
+     * @return The folder in which the resource is defined
+     * 
+     */
     private String folder;
+    /**
+     * @return General
+     * 
+     */
     private GetGeneralSettingGeneral general;
     /**
      * @return UUID of the resource
      * 
      */
     private String id;
+    /**
+     * @return The snippet in which the resource is defined
+     * 
+     */
     private String snippet;
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     private String tfid;
 
     private GetGeneralSettingResult() {}
@@ -34,9 +50,17 @@ public final class GetGeneralSettingResult {
     public String device() {
         return this.device;
     }
+    /**
+     * @return The folder in which the resource is defined
+     * 
+     */
     public String folder() {
         return this.folder;
     }
+    /**
+     * @return General
+     * 
+     */
     public GetGeneralSettingGeneral general() {
         return this.general;
     }
@@ -47,9 +71,17 @@ public final class GetGeneralSettingResult {
     public String id() {
         return this.id;
     }
+    /**
+     * @return The snippet in which the resource is defined
+     * 
+     */
     public String snippet() {
         return this.snippet;
     }
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     public String tfid() {
         return this.tfid;
     }

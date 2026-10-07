@@ -57,7 +57,7 @@ public final class GetBgpRouteMapListDataRouteMapSet {
      */
     private GetBgpRouteMapListDataRouteMapSetMetric metric;
     /**
-     * @return Origin
+     * @return Origin. Possible values are `none`, `egp`, `igp` and `incomplete`.
      * 
      */
     private String origin;
@@ -77,7 +77,7 @@ public final class GetBgpRouteMapListDataRouteMapSet {
      */
     private Boolean overwriteRegularCommunity;
     /**
-     * @return Regular community
+     * @return Regular community. Possible values are `none`, `blackhole`, `no-peer`, `graceful-shutdown`, `accept-own`, `local-as`, `route-filter-v4`, `route-filter-v6`, `no-advertise`, `no-export` and `internet`.
      * 
      */
     private List<String> regularCommunities;
@@ -160,7 +160,7 @@ public final class GetBgpRouteMapListDataRouteMapSet {
         return this.metric;
     }
     /**
-     * @return Origin
+     * @return Origin. Possible values are `none`, `egp`, `igp` and `incomplete`.
      * 
      */
     public String origin() {
@@ -188,7 +188,7 @@ public final class GetBgpRouteMapListDataRouteMapSet {
         return this.overwriteRegularCommunity;
     }
     /**
-     * @return Regular community
+     * @return Regular community. Possible values are `none`, `blackhole`, `no-peer`, `graceful-shutdown`, `accept-own`, `local-as`, `route-filter-v4`, `route-filter-v6`, `no-advertise`, `no-export` and `internet`.
      * 
      */
     public List<String> regularCommunities() {

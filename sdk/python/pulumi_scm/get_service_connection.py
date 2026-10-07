@@ -27,13 +27,10 @@ class GetServiceConnectionResult:
     """
     A collection of values returned by getServiceConnection.
     """
-    def __init__(__self__, backup_sc=None, bgp_peer=None, encrypted_values=None, folder=None, id=None, ipsec_tunnel=None, name=None, nat_pool=None, no_export_community=None, onboarding_type=None, protocol=None, qos=None, region=None, region_tag=None, secondary_ipsec_tunnel=None, source_nat=None, subnets=None, tfid=None):
+    def __init__(__self__, backup_sc=None, encrypted_values=None, folder=None, id=None, ipsec_tunnel=None, name=None, nat_pool=None, no_export_community=None, onboarding_type=None, protocol=None, qos=None, region=None, region_tag=None, secondary_ipsec_tunnel=None, source_nat=None, subnets=None, tfid=None):
         if backup_sc and not isinstance(backup_sc, str):
             raise TypeError("Expected argument 'backup_sc' to be a str")
         pulumi.set(__self__, "backup_sc", backup_sc)
-        if bgp_peer and not isinstance(bgp_peer, dict):
-            raise TypeError("Expected argument 'bgp_peer' to be a dict")
-        pulumi.set(__self__, "bgp_peer", bgp_peer)
         if encrypted_values and not isinstance(encrypted_values, dict):
             raise TypeError("Expected argument 'encrypted_values' to be a dict")
         pulumi.set(__self__, "encrypted_values", encrypted_values)
@@ -92,14 +89,6 @@ class GetServiceConnectionResult:
         return pulumi.get(self, "backup_sc")
 
     @_builtins.property
-    @pulumi.getter(name="bgpPeer")
-    def bgp_peer(self) -> 'outputs.GetServiceConnectionBgpPeerResult':
-        """
-        Bgp peer
-        """
-        return pulumi.get(self, "bgp_peer")
-
-    @_builtins.property
     @pulumi.getter(name="encryptedValues")
     def encrypted_values(self) -> Mapping[str, _builtins.str]:
         """
@@ -151,7 +140,7 @@ class GetServiceConnectionResult:
     @pulumi.getter(name="noExportCommunity")
     def no_export_community(self) -> _builtins.str:
         """
-        No export community
+        No export community. Possible values are `Disabled`, `Enabled-In`, `Enabled-Out` and `Enabled-Both`.
         """
         return pulumi.get(self, "no_export_community")
 
@@ -159,7 +148,7 @@ class GetServiceConnectionResult:
     @pulumi.getter(name="onboardingType")
     def onboarding_type(self) -> _builtins.str:
         """
-        Onboarding type
+        Onboarding type. Possible values are `classic`.
         """
         return pulumi.get(self, "onboarding_type")
 
@@ -235,7 +224,6 @@ class AwaitableGetServiceConnectionResult(GetServiceConnectionResult):
             yield self
         return GetServiceConnectionResult(
             backup_sc=self.backup_sc,
-            bgp_peer=self.bgp_peer,
             encrypted_values=self.encrypted_values,
             folder=self.folder,
             id=self.id,
@@ -290,7 +278,6 @@ def get_service_connection(folder: Optional[_builtins.str] = None,
 
     return AwaitableGetServiceConnectionResult(
         backup_sc=pulumi.get(__ret__, 'backup_sc'),
-        bgp_peer=pulumi.get(__ret__, 'bgp_peer'),
         encrypted_values=pulumi.get(__ret__, 'encrypted_values'),
         folder=pulumi.get(__ret__, 'folder'),
         id=pulumi.get(__ret__, 'id'),
@@ -342,7 +329,6 @@ def get_service_connection_output(folder: pulumi.Input[Optional[Optional[_builti
     __ret__ = pulumi.runtime.invoke_output('scm:index/getServiceConnection:getServiceConnection', __args__, opts=opts, typ=GetServiceConnectionResult)
     return __ret__.apply(lambda __response__: GetServiceConnectionResult(
         backup_sc=pulumi.get(__response__, 'backup_sc'),
-        bgp_peer=pulumi.get(__response__, 'bgp_peer'),
         encrypted_values=pulumi.get(__response__, 'encrypted_values'),
         folder=pulumi.get(__response__, 'folder'),
         id=pulumi.get(__response__, 'id'),

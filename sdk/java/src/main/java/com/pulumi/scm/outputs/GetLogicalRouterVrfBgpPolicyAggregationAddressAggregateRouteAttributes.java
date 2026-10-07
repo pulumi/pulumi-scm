@@ -50,7 +50,7 @@ public final class GetLogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteA
      */
     private String nexthop;
     /**
-     * @return Origin
+     * @return Origin. Possible values are `igp`, `egp` and `incomplete`.
      * 
      */
     private String origin;
@@ -111,7 +111,7 @@ public final class GetLogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteA
         return this.nexthop;
     }
     /**
-     * @return Origin
+     * @return Origin. Possible values are `igp`, `egp` and `incomplete`.
      * 
      */
     public String origin() {

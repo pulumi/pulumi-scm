@@ -82,12 +82,12 @@ public final class GetDecryptionProfileListDataSslProtocolSettings {
      */
     private Boolean keyxchgAlgoRsa;
     /**
-     * @return Max version
+     * @return Max version. Possible values are `sslv3`, `tls1-0`, `tls1-1`, `tls1-2`, `tls1-3` and `max`.
      * 
      */
     private String maxVersion;
     /**
-     * @return Min version
+     * @return Min version. Possible values are `sslv3`, `tls1-0`, `tls1-1`, `tls1-2` and `tls1-3`.
      * 
      */
     private String minVersion;
@@ -192,14 +192,14 @@ public final class GetDecryptionProfileListDataSslProtocolSettings {
         return this.keyxchgAlgoRsa;
     }
     /**
-     * @return Max version
+     * @return Max version. Possible values are `sslv3`, `tls1-0`, `tls1-1`, `tls1-2`, `tls1-3` and `max`.
      * 
      */
     public String maxVersion() {
         return this.maxVersion;
     }
     /**
-     * @return Min version
+     * @return Min version. Possible values are `sslv3`, `tls1-0`, `tls1-1`, `tls1-2` and `tls1-3`.
      * 
      */
     public String minVersion() {

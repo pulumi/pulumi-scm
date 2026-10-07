@@ -14,6 +14,10 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetEthernetInterfaceListDataLayer3Result
     {
         /// <summary>
+        /// TCP MSS adjustment settings for the interface
+        /// </summary>
+        public readonly Outputs.GetEthernetInterfaceListDataLayer3AdjustTcpMssResult AdjustTcpMss;
+        /// <summary>
         /// Ethernet Interfaces ARP configuration
         /// </summary>
         public readonly ImmutableArray<Outputs.GetEthernetInterfaceListDataLayer3ArpResult> Arps;
@@ -31,10 +35,12 @@ namespace Pulumi.Scm.Outputs
         public readonly string InterfaceManagementProfile;
         /// <summary>
         /// Ethernet Interface IP addresses
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `DhcpClient`, `Ip`, and `Pppoe`.
         /// </summary>
         public readonly ImmutableArray<Outputs.GetEthernetInterfaceListDataLayer3IpResult> Ips;
+        /// <summary>
+        /// LLDP settings for the interface
+        /// </summary>
+        public readonly Outputs.GetEthernetInterfaceListDataLayer3LldpResult Lldp;
         /// <summary>
         /// MTU
         /// </summary>
@@ -44,14 +50,14 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly string NetflowProfile;
         /// <summary>
-        /// Pppoe
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `DhcpClient`, `Ip`, and `Pppoe`.
+        /// PPPoE configuration for the interface
         /// </summary>
         public readonly Outputs.GetEthernetInterfaceListDataLayer3PppoeResult Pppoe;
 
         [OutputConstructor]
         private GetEthernetInterfaceListDataLayer3Result(
+            Outputs.GetEthernetInterfaceListDataLayer3AdjustTcpMssResult adjustTcpMss,
+
             ImmutableArray<Outputs.GetEthernetInterfaceListDataLayer3ArpResult> arps,
 
             Outputs.GetEthernetInterfaceListDataLayer3DdnsConfigResult ddnsConfig,
@@ -62,17 +68,21 @@ namespace Pulumi.Scm.Outputs
 
             ImmutableArray<Outputs.GetEthernetInterfaceListDataLayer3IpResult> ips,
 
+            Outputs.GetEthernetInterfaceListDataLayer3LldpResult lldp,
+
             int mtu,
 
             string netflowProfile,
 
             Outputs.GetEthernetInterfaceListDataLayer3PppoeResult pppoe)
         {
+            AdjustTcpMss = adjustTcpMss;
             Arps = arps;
             DdnsConfig = ddnsConfig;
             DhcpClient = dhcpClient;
             InterfaceManagementProfile = interfaceManagementProfile;
             Ips = ips;
+            Lldp = lldp;
             Mtu = mtu;
             NetflowProfile = netflowProfile;
             Pppoe = pppoe;

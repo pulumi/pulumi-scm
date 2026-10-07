@@ -35,16 +35,12 @@ public final class ServiceSettingServicesNtpServersSecondaryNtpServerAuthenticat
     /**
      * None
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `autokey`, `none`, and `symmetricKey`.
-     * 
      */
     @Import(name="none")
     private @Nullable Output<ServiceSettingServicesNtpServersSecondaryNtpServerAuthenticationTypeNoneArgs> none;
 
     /**
      * @return None
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `autokey`, `none`, and `symmetricKey`.
      * 
      */
     public Optional<Output<ServiceSettingServicesNtpServersSecondaryNtpServerAuthenticationTypeNoneArgs>> none() {
@@ -54,16 +50,12 @@ public final class ServiceSettingServicesNtpServersSecondaryNtpServerAuthenticat
     /**
      * Symmetric key
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `autokey`, `none`, and `symmetricKey`.
-     * 
      */
     @Import(name="symmetricKey")
     private @Nullable Output<ServiceSettingServicesNtpServersSecondaryNtpServerAuthenticationTypeSymmetricKeyArgs> symmetricKey;
 
     /**
      * @return Symmetric key
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `autokey`, `none`, and `symmetricKey`.
      * 
      */
     public Optional<Output<ServiceSettingServicesNtpServersSecondaryNtpServerAuthenticationTypeSymmetricKeyArgs>> symmetricKey() {
@@ -120,8 +112,6 @@ public final class ServiceSettingServicesNtpServersSecondaryNtpServerAuthenticat
         /**
          * @param none None
          * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `autokey`, `none`, and `symmetricKey`.
-         * 
          * @return builder
          * 
          */
@@ -133,8 +123,6 @@ public final class ServiceSettingServicesNtpServersSecondaryNtpServerAuthenticat
         /**
          * @param none None
          * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `autokey`, `none`, and `symmetricKey`.
-         * 
          * @return builder
          * 
          */
@@ -144,8 +132,6 @@ public final class ServiceSettingServicesNtpServersSecondaryNtpServerAuthenticat
 
         /**
          * @param symmetricKey Symmetric key
-         * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `autokey`, `none`, and `symmetricKey`.
          * 
          * @return builder
          * 
@@ -157,8 +143,6 @@ public final class ServiceSettingServicesNtpServersSecondaryNtpServerAuthenticat
 
         /**
          * @param symmetricKey Symmetric key
-         * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `autokey`, `none`, and `symmetricKey`.
          * 
          * @return builder
          * 

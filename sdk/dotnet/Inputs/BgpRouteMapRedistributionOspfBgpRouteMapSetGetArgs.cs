@@ -67,7 +67,7 @@ namespace Pulumi.Scm.Inputs
         public Input<Inputs.BgpRouteMapRedistributionOspfBgpRouteMapSetMetricGetArgs>? Metric { get; set; }
 
         /// <summary>
-        /// OSPF BGP Route maps set Origin
+        /// OSPF BGP Route maps set Origin. Possible values are `None`, `Egp`, `Igp` and `Incomplete`.
         /// </summary>
         [Input("origin")]
         public Input<string>? Origin { get; set; }

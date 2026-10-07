@@ -78,8 +78,6 @@ type LldpProfile struct {
 	// The device in which the resource is defined
 	Device pulumi.StringPtrOutput `pulumi:"device"`
 	// The folder in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrOutput `pulumi:"folder"`
 	// LLDP mode
 	Mode pulumi.StringPtrOutput `pulumi:"mode"`
@@ -88,8 +86,6 @@ type LldpProfile struct {
 	// Option tlvs
 	OptionTlvs LldpProfileOptionTlvsPtrOutput `pulumi:"optionTlvs"`
 	// The snippet in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
 	// SNMP syslog notification
 	SnmpSyslogNotification pulumi.BoolPtrOutput `pulumi:"snmpSyslogNotification"`
@@ -130,8 +126,6 @@ type lldpProfileState struct {
 	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
 	// The folder in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// LLDP mode
 	Mode *string `pulumi:"mode"`
@@ -140,8 +134,6 @@ type lldpProfileState struct {
 	// Option tlvs
 	OptionTlvs *LldpProfileOptionTlvs `pulumi:"optionTlvs"`
 	// The snippet in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	// SNMP syslog notification
 	SnmpSyslogNotification *bool `pulumi:"snmpSyslogNotification"`
@@ -153,8 +145,6 @@ type LldpProfileState struct {
 	// The device in which the resource is defined
 	Device pulumi.StringPtrInput
 	// The folder in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// LLDP mode
 	Mode pulumi.StringPtrInput
@@ -163,8 +153,6 @@ type LldpProfileState struct {
 	// Option tlvs
 	OptionTlvs LldpProfileOptionTlvsPtrInput
 	// The snippet in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	// SNMP syslog notification
 	SnmpSyslogNotification pulumi.BoolPtrInput
@@ -180,8 +168,6 @@ type lldpProfileArgs struct {
 	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
 	// The folder in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// LLDP mode
 	Mode *string `pulumi:"mode"`
@@ -190,8 +176,6 @@ type lldpProfileArgs struct {
 	// Option tlvs
 	OptionTlvs *LldpProfileOptionTlvs `pulumi:"optionTlvs"`
 	// The snippet in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	// SNMP syslog notification
 	SnmpSyslogNotification *bool `pulumi:"snmpSyslogNotification"`
@@ -202,8 +186,6 @@ type LldpProfileArgs struct {
 	// The device in which the resource is defined
 	Device pulumi.StringPtrInput
 	// The folder in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// LLDP mode
 	Mode pulumi.StringPtrInput
@@ -212,8 +194,6 @@ type LldpProfileArgs struct {
 	// Option tlvs
 	OptionTlvs LldpProfileOptionTlvsPtrInput
 	// The snippet in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	// SNMP syslog notification
 	SnmpSyslogNotification pulumi.BoolPtrInput
@@ -312,8 +292,6 @@ func (o LldpProfileOutput) Device() pulumi.StringPtrOutput {
 }
 
 // The folder in which the resource is defined
-//
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LldpProfileOutput) Folder() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *LldpProfile) pulumi.StringPtrOutput { return v.Folder }).(pulumi.StringPtrOutput)
 }
@@ -334,8 +312,6 @@ func (o LldpProfileOutput) OptionTlvs() LldpProfileOptionTlvsPtrOutput {
 }
 
 // The snippet in which the resource is defined
-//
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LldpProfileOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *LldpProfile) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)
 }

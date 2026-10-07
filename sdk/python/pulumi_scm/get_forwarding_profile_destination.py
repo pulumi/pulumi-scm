@@ -62,7 +62,7 @@ class GetForwardingProfileDestinationResult:
     @pulumi.getter
     def folder(self) -> _builtins.str:
         """
-        The folder in which the resource is defined
+        The folder in which the resource is defined. Possible values are `Mobile Users`.
         """
         return pulumi.get(self, "folder")
 
@@ -149,7 +149,7 @@ def get_forwarding_profile_destination(folder: Optional[_builtins.str] = None,
     ```
 
 
-    :param _builtins.str folder: The folder in which the resource is defined
+    :param _builtins.str folder: The folder in which the resource is defined. Possible values are `Mobile Users`.
     :param _builtins.str id: The UUID of the destination
     :param _builtins.str name: alphanumeric string [ 0-9a-zA-Z._ -]
     """
@@ -195,7 +195,7 @@ def get_forwarding_profile_destination_output(folder: pulumi.Input[Optional[Opti
     ```
 
 
-    :param _builtins.str folder: The folder in which the resource is defined
+    :param _builtins.str folder: The folder in which the resource is defined. Possible values are `Mobile Users`.
     :param _builtins.str id: The UUID of the destination
     :param _builtins.str name: alphanumeric string [ 0-9a-zA-Z._ -]
     """

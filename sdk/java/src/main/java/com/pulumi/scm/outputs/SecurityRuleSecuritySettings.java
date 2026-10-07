@@ -12,38 +12,38 @@ import javax.annotation.Nullable;
 @CustomType
 public final class SecurityRuleSecuritySettings {
     /**
-     * @return Anti spyware
+     * @return Anti spyware. Possible values are `yes` and `no`.
      * 
      */
     private @Nullable String antiSpyware;
     /**
-     * @return Virus and wildfire analysis
+     * @return Virus and wildfire analysis. Possible values are `yes` and `no`.
      * 
      */
     private @Nullable String virusAndWildfireAnalysis;
     /**
-     * @return Vulnerability
+     * @return Vulnerability. Possible values are `yes` and `no`.
      * 
      */
     private @Nullable String vulnerability;
 
     private SecurityRuleSecuritySettings() {}
     /**
-     * @return Anti spyware
+     * @return Anti spyware. Possible values are `yes` and `no`.
      * 
      */
     public Optional<String> antiSpyware() {
         return Optional.ofNullable(this.antiSpyware);
     }
     /**
-     * @return Virus and wildfire analysis
+     * @return Virus and wildfire analysis. Possible values are `yes` and `no`.
      * 
      */
     public Optional<String> virusAndWildfireAnalysis() {
         return Optional.ofNullable(this.virusAndWildfireAnalysis);
     }
     /**
-     * @return Vulnerability
+     * @return Vulnerability. Possible values are `yes` and `no`.
      * 
      */
     public Optional<String> vulnerability() {

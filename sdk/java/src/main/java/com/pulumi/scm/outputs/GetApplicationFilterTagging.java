@@ -20,8 +20,6 @@ public final class GetApplicationFilterTagging {
     /**
      * @return Tag
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `noTag` and `tag`.
-     * 
      */
     private List<String> tags;
 
@@ -35,8 +33,6 @@ public final class GetApplicationFilterTagging {
     }
     /**
      * @return Tag
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `noTag` and `tag`.
      * 
      */
     public List<String> tags() {

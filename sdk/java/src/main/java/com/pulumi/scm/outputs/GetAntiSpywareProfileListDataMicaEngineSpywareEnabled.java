@@ -11,7 +11,7 @@ import java.util.Objects;
 @CustomType
 public final class GetAntiSpywareProfileListDataMicaEngineSpywareEnabled {
     /**
-     * @return Inline policy action
+     * @return Inline policy action. Possible values are `alert`, `allow`, `drop`, `reset-both`, `reset-client` and `reset-server`.
      * 
      */
     private String inlinePolicyAction;
@@ -23,7 +23,7 @@ public final class GetAntiSpywareProfileListDataMicaEngineSpywareEnabled {
 
     private GetAntiSpywareProfileListDataMicaEngineSpywareEnabled() {}
     /**
-     * @return Inline policy action
+     * @return Inline policy action. Possible values are `alert`, `allow`, `drop`, `reset-both`, `reset-client` and `reset-server`.
      * 
      */
     public String inlinePolicyAction() {

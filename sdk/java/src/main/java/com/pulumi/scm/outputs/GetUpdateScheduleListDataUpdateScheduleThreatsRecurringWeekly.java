@@ -12,7 +12,7 @@ import java.util.Objects;
 @CustomType
 public final class GetUpdateScheduleListDataUpdateScheduleThreatsRecurringWeekly {
     /**
-     * @return Action
+     * @return Action. Possible values are `download-only` and `download-and-install`.
      * 
      */
     private String action;
@@ -22,7 +22,7 @@ public final class GetUpdateScheduleListDataUpdateScheduleThreatsRecurringWeekly
      */
     private String at;
     /**
-     * @return Day of week
+     * @return Day of week. Possible values are `sunday`, `monday`, `tuesday`, `wednesday`, `thursday`, `friday` and `saturday`.
      * 
      */
     private String dayOfWeek;
@@ -34,7 +34,7 @@ public final class GetUpdateScheduleListDataUpdateScheduleThreatsRecurringWeekly
 
     private GetUpdateScheduleListDataUpdateScheduleThreatsRecurringWeekly() {}
     /**
-     * @return Action
+     * @return Action. Possible values are `download-only` and `download-and-install`.
      * 
      */
     public String action() {
@@ -48,7 +48,7 @@ public final class GetUpdateScheduleListDataUpdateScheduleThreatsRecurringWeekly
         return this.at;
     }
     /**
-     * @return Day of week
+     * @return Day of week. Possible values are `sunday`, `monday`, `tuesday`, `wednesday`, `thursday`, `friday` and `saturday`.
      * 
      */
     public String dayOfWeek() {

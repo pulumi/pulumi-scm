@@ -71,11 +71,17 @@ class GetAntiSpywareProfileResult:
     @_builtins.property
     @pulumi.getter(name="cloudInlineAnalysis")
     def cloud_inline_analysis(self) -> _builtins.bool:
+        """
+        Cloud inline analysis
+        """
         return pulumi.get(self, "cloud_inline_analysis")
 
     @_builtins.property
     @pulumi.getter
     def description(self) -> _builtins.str:
+        """
+        Description
+        """
         return pulumi.get(self, "description")
 
     @_builtins.property
@@ -89,6 +95,9 @@ class GetAntiSpywareProfileResult:
     @_builtins.property
     @pulumi.getter
     def folder(self) -> _builtins.str:
+        """
+        The folder in which the resource is defined
+        """
         return pulumi.get(self, "folder")
 
     @_builtins.property
@@ -102,41 +111,65 @@ class GetAntiSpywareProfileResult:
     @_builtins.property
     @pulumi.getter(name="inlineExceptionEdlUrls")
     def inline_exception_edl_urls(self) -> Sequence[_builtins.str]:
+        """
+        Inline exception edl url
+        """
         return pulumi.get(self, "inline_exception_edl_urls")
 
     @_builtins.property
     @pulumi.getter(name="inlineExceptionIpAddresses")
     def inline_exception_ip_addresses(self) -> Sequence[_builtins.str]:
+        """
+        Inline exception ip address
+        """
         return pulumi.get(self, "inline_exception_ip_addresses")
 
     @_builtins.property
     @pulumi.getter(name="micaEngineSpywareEnableds")
     def mica_engine_spyware_enableds(self) -> Sequence['outputs.GetAntiSpywareProfileMicaEngineSpywareEnabledResult']:
+        """
+        Mica engine spyware enabled
+        """
         return pulumi.get(self, "mica_engine_spyware_enableds")
 
     @_builtins.property
     @pulumi.getter
     def name(self) -> _builtins.str:
+        """
+        The name of the anti-spyware profile
+        """
         return pulumi.get(self, "name")
 
     @_builtins.property
     @pulumi.getter
     def rules(self) -> Sequence['outputs.GetAntiSpywareProfileRuleResult']:
+        """
+        Rules
+        """
         return pulumi.get(self, "rules")
 
     @_builtins.property
     @pulumi.getter
     def snippet(self) -> _builtins.str:
+        """
+        The snippet in which the resource is defined
+        """
         return pulumi.get(self, "snippet")
 
     @_builtins.property
     @pulumi.getter
     def tfid(self) -> _builtins.str:
+        """
+        The Terraform ID.
+        """
         return pulumi.get(self, "tfid")
 
     @_builtins.property
     @pulumi.getter(name="threatExceptions")
     def threat_exceptions(self) -> Sequence['outputs.GetAntiSpywareProfileThreatExceptionResult']:
+        """
+        Threat exception
+        """
         return pulumi.get(self, "threat_exceptions")
 
 
@@ -189,7 +222,10 @@ def get_anti_spyware_profile(device: Optional[_builtins.str] = None,
 
 
     :param _builtins.str device: The device in which the resource is defined
+    :param _builtins.str folder: The folder in which the resource is defined
     :param _builtins.str id: The UUID of the anti-spyware profile
+    :param _builtins.str name: The name of the anti-spyware profile
+    :param _builtins.str snippet: The snippet in which the resource is defined
     """
     __args__ = dict()
     __args__['device'] = device
@@ -242,7 +278,10 @@ def get_anti_spyware_profile_output(device: pulumi.Input[Optional[Optional[_buil
 
 
     :param _builtins.str device: The device in which the resource is defined
+    :param _builtins.str folder: The folder in which the resource is defined
     :param _builtins.str id: The UUID of the anti-spyware profile
+    :param _builtins.str name: The name of the anti-spyware profile
+    :param _builtins.str snippet: The snippet in which the resource is defined
     """
     __args__ = dict()
     __args__['device'] = device

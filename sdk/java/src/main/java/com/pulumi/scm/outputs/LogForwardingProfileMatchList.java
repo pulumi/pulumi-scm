@@ -24,7 +24,7 @@ public final class LogForwardingProfileMatchList {
      */
     private String filter;
     /**
-     * @return Log type
+     * @return Log type. Possible values are `traffic`, `threat`, `wildfire`, `url`, `data`, `tunnel`, `auth`, `decryption`, `dns-security`, `gtp` and `sctp`.
      * 
      */
     private String logType;
@@ -70,7 +70,7 @@ public final class LogForwardingProfileMatchList {
         return this.filter;
     }
     /**
-     * @return Log type
+     * @return Log type. Possible values are `traffic`, `threat`, `wildfire`, `url`, `data`, `tunnel`, `auth`, `decryption`, `dns-security`, `gtp` and `sctp`.
      * 
      */
     public String logType() {

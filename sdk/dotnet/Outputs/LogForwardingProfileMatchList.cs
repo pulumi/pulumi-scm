@@ -22,7 +22,7 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly string Filter;
         /// <summary>
-        /// Log type
+        /// Log type. Possible values are `Traffic`, `Threat`, `Wildfire`, `Url`, `Data`, `Tunnel`, `Auth`, `Decryption`, `dns-security`, `Gtp` and `Sctp`.
         /// </summary>
         public readonly string LogType;
         /// <summary>

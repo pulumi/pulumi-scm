@@ -33,8 +33,12 @@ import javax.annotation.Nullable;
  * import com.pulumi.scm.Zone;
  * import com.pulumi.scm.ZoneArgs;
  * import com.pulumi.scm.inputs.ZoneNetworkArgs;
+ * import com.pulumi.scm.EthernetInterface;
+ * import com.pulumi.scm.EthernetInterfaceArgs;
+ * import com.pulumi.scm.inputs.EthernetInterfaceLayer3Args;
  * import com.pulumi.scm.inputs.ZoneDeviceAclArgs;
  * import com.pulumi.scm.inputs.ZoneUserAclArgs;
+ * import com.pulumi.resources.CustomResourceOptions;
  * import java.util.ArrayList;
  * import java.util.Arrays;
  * import java.util.Map;
@@ -93,14 +97,24 @@ import javax.annotation.Nullable;
  *             .build());
  * 
  *         //
- *         // Creates a layer3 zone
- *         // Requires Interface $scm_l3_interface to exist
+ *         // Creates a layer3 ethernet interface for use in zone
+ *         //
+ *         var scmL3Interface = new EthernetInterface("scmL3Interface", EthernetInterfaceArgs.builder()
+ *             .name("$scm_l3_interface")
+ *             .comment("Managed by Pulumi")
+ *             .folder("ngfw-shared")
+ *             .layer3(EthernetInterfaceLayer3Args.builder()
+ *                 .build())
+ *             .build());
+ * 
+ *         //
+ *         // Creates a layer3 zone that references the interface
  *         //
  *         var scmLayer3ZoneComplex = new Zone("scmLayer3ZoneComplex", ZoneArgs.builder()
  *             .name("scm_layer3_zone_complex")
  *             .folder("ngfw-shared")
  *             .network(ZoneNetworkArgs.builder()
- *                 .layer3s("$scm_l3_interface")
+ *                 .layer3s(scmL3Interface.name())
  *                 .zoneProtectionProfile("best-practice")
  *                 .enablePacketBufferProtection(true)
  *                 .build())
@@ -114,7 +128,9 @@ import javax.annotation.Nullable;
  *                 .includeLists("198.18.3.0/24")
  *                 .excludeLists("198.18.4.0/24")
  *                 .build())
- *             .build());
+ *             .build(), CustomResourceOptions.builder()
+ *                 .dependsOn(scmL3Interface)
+ *                 .build());
  * 
  *     }
  * }
@@ -233,16 +249,12 @@ public class Zone extends com.pulumi.resources.CustomResource {
     /**
      * Folder
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
      */
     @Export(name="folder", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> folder;
 
     /**
      * @return Folder
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public Output<Optional<String>> folder() {
@@ -279,16 +291,12 @@ public class Zone extends com.pulumi.resources.CustomResource {
     /**
      * The snippet in which the resource is defined
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
      */
     @Export(name="snippet", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> snippet;
 
     /**
      * @return The snippet in which the resource is defined
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public Output<Optional<String>> snippet() {

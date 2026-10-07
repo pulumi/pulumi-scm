@@ -50,12 +50,21 @@ export interface GetZoneArgs {
      * The device in which the resource is defined
      */
     device?: string;
+    /**
+     * Folder
+     */
     folder?: string;
     /**
      * UUID of the resource
      */
     id: string;
+    /**
+     * Alphanumeric string begin with letter: [0-9a-zA-Z._-]
+     */
     name?: string;
+    /**
+     * The snippet in which the resource is defined
+     */
     snippet?: string;
 }
 
@@ -67,20 +76,53 @@ export interface GetZoneResult {
      * The device in which the resource is defined
      */
     readonly device: string;
+    /**
+     * Device acl
+     */
     readonly deviceAcl: outputs.GetZoneDeviceAcl;
+    /**
+     * Dos log setting
+     */
     readonly dosLogSetting: string;
+    /**
+     * Dos profile
+     */
     readonly dosProfile: string;
+    /**
+     * Enable device identification
+     */
     readonly enableDeviceIdentification: boolean;
+    /**
+     * Enable user identification
+     */
     readonly enableUserIdentification: boolean;
+    /**
+     * Folder
+     */
     readonly folder: string;
     /**
      * UUID of the resource
      */
     readonly id: string;
+    /**
+     * Alphanumeric string begin with letter: [0-9a-zA-Z._-]
+     */
     readonly name: string;
+    /**
+     * Network
+     */
     readonly network: outputs.GetZoneNetwork;
+    /**
+     * The snippet in which the resource is defined
+     */
     readonly snippet: string;
+    /**
+     * The Terraform ID.
+     */
     readonly tfid: string;
+    /**
+     * User acl
+     */
     readonly userAcl: outputs.GetZoneUserAcl;
 }
 /**
@@ -127,11 +169,20 @@ export interface GetZoneOutputArgs {
      * The device in which the resource is defined
      */
     device?: pulumi.Input<string | undefined>;
+    /**
+     * Folder
+     */
     folder?: pulumi.Input<string | undefined>;
     /**
      * UUID of the resource
      */
     id: pulumi.Input<string>;
+    /**
+     * Alphanumeric string begin with letter: [0-9a-zA-Z._-]
+     */
     name?: pulumi.Input<string | undefined>;
+    /**
+     * The snippet in which the resource is defined
+     */
     snippet?: pulumi.Input<string | undefined>;
 }

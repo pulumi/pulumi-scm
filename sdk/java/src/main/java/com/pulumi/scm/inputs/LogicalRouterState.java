@@ -35,16 +35,12 @@ public final class LogicalRouterState extends com.pulumi.resources.ResourceArgs 
     /**
      * The folder in which the resource is defined
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
      */
     @Import(name="folder")
     private @Nullable Output<String> folder;
 
     /**
      * @return The folder in which the resource is defined
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public Optional<Output<String>> folder() {
@@ -67,24 +63,7 @@ public final class LogicalRouterState extends com.pulumi.resources.ResourceArgs 
     }
 
     /**
-     * Routing stack
-     * 
-     */
-    @Import(name="routingStack")
-    private @Nullable Output<String> routingStack;
-
-    /**
-     * @return Routing stack
-     * 
-     */
-    public Optional<Output<String>> routingStack() {
-        return Optional.ofNullable(this.routingStack);
-    }
-
-    /**
      * The snippet in which the resource is defined
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     @Import(name="snippet")
@@ -92,8 +71,6 @@ public final class LogicalRouterState extends com.pulumi.resources.ResourceArgs 
 
     /**
      * @return The snippet in which the resource is defined
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public Optional<Output<String>> snippet() {
@@ -136,7 +113,6 @@ public final class LogicalRouterState extends com.pulumi.resources.ResourceArgs 
         this.device = $.device;
         this.folder = $.folder;
         this.name = $.name;
-        this.routingStack = $.routingStack;
         this.snippet = $.snippet;
         this.tfid = $.tfid;
         this.vrves = $.vrves;
@@ -184,8 +160,6 @@ public final class LogicalRouterState extends com.pulumi.resources.ResourceArgs 
         /**
          * @param folder The folder in which the resource is defined
          * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-         * 
          * @return builder
          * 
          */
@@ -196,8 +170,6 @@ public final class LogicalRouterState extends com.pulumi.resources.ResourceArgs 
 
         /**
          * @param folder The folder in which the resource is defined
-         * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
          * 
          * @return builder
          * 
@@ -228,30 +200,7 @@ public final class LogicalRouterState extends com.pulumi.resources.ResourceArgs 
         }
 
         /**
-         * @param routingStack Routing stack
-         * 
-         * @return builder
-         * 
-         */
-        public Builder routingStack(@Nullable Output<String> routingStack) {
-            $.routingStack = routingStack;
-            return this;
-        }
-
-        /**
-         * @param routingStack Routing stack
-         * 
-         * @return builder
-         * 
-         */
-        public Builder routingStack(String routingStack) {
-            return routingStack(Output.of(routingStack));
-        }
-
-        /**
          * @param snippet The snippet in which the resource is defined
-         * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
          * 
          * @return builder
          * 
@@ -263,8 +212,6 @@ public final class LogicalRouterState extends com.pulumi.resources.ResourceArgs 
 
         /**
          * @param snippet The snippet in which the resource is defined
-         * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
          * 
          * @return builder
          * 

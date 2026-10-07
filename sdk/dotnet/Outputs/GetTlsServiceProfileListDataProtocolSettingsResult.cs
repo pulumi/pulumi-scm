@@ -54,11 +54,11 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly bool KeyxchgAlgoRsa;
         /// <summary>
-        /// Maximum TLS version
+        /// Maximum TLS version. Possible values are `tls1-0`, `tls1-1`, `tls1-2` and `tls1-3`.
         /// </summary>
         public readonly string MaxVersion;
         /// <summary>
-        /// Minimum TLS version
+        /// Minimum TLS version. Possible values are `tls1-0`, `tls1-1`, `tls1-2` and `tls1-3`.
         /// </summary>
         public readonly string MinVersion;
 

@@ -45,12 +45,21 @@ export interface GetPbfRuleArgs {
      * The device in which the resource is defined
      */
     device?: string;
+    /**
+     * The folder in which the resource is defined
+     */
     folder?: string;
     /**
      * UUID of the resource
      */
     id: string;
+    /**
+     * PBF rule name
+     */
     name?: string;
+    /**
+     * The snippet in which the resource is defined
+     */
     snippet?: string;
 }
 
@@ -58,28 +67,81 @@ export interface GetPbfRuleArgs {
  * A collection of values returned by getPbfRule.
  */
 export interface GetPbfRuleResult {
+    /**
+     * Action
+     */
     readonly action: outputs.GetPbfRuleAction;
+    /**
+     * Applications
+     */
     readonly applications: string[];
+    /**
+     * Description
+     */
     readonly description: string;
+    /**
+     * Destination addresses
+     */
     readonly destinations: string[];
     /**
      * The device in which the resource is defined
      */
     readonly device: string;
+    /**
+     * Enforce symmetric return
+     */
     readonly enforceSymmetricReturn: outputs.GetPbfRuleEnforceSymmetricReturn;
+    /**
+     * The folder in which the resource is defined
+     */
     readonly folder: string;
+    /**
+     * From
+     */
     readonly from: outputs.GetPbfRuleFrom;
     /**
      * UUID of the resource
      */
     readonly id: string;
+    /**
+     * PBF rule name
+     */
     readonly name: string;
+    /**
+     * Negate destination address
+     */
+    readonly negateDestination: boolean;
+    /**
+     * Negate source address
+     */
+    readonly negateSource: boolean;
+    /**
+     * Schedule
+     */
     readonly schedule: string;
+    /**
+     * Services
+     */
     readonly services: string[];
+    /**
+     * The snippet in which the resource is defined
+     */
     readonly snippet: string;
+    /**
+     * Source users
+     */
     readonly sourceUsers: string[];
+    /**
+     * Source addresses
+     */
     readonly sources: string[];
+    /**
+     * Tags
+     */
     readonly tags: string[];
+    /**
+     * The Terraform ID.
+     */
     readonly tfid: string;
 }
 /**
@@ -121,11 +183,20 @@ export interface GetPbfRuleOutputArgs {
      * The device in which the resource is defined
      */
     device?: pulumi.Input<string | undefined>;
+    /**
+     * The folder in which the resource is defined
+     */
     folder?: pulumi.Input<string | undefined>;
     /**
      * UUID of the resource
      */
     id: pulumi.Input<string>;
+    /**
+     * PBF rule name
+     */
     name?: pulumi.Input<string | undefined>;
+    /**
+     * The snippet in which the resource is defined
+     */
     snippet?: pulumi.Input<string | undefined>;
 }

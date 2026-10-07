@@ -48,12 +48,21 @@ export interface GetTlsServiceProfileArgs {
      * The device in which the resource is defined
      */
     device?: string;
+    /**
+     * The folder in which the resource is defined
+     */
     folder?: string;
     /**
      * The UUID of the TLS service profile
      */
     id: string;
+    /**
+     * TLS service profile name. The value is `muCustomDomainSSLProfile` when it is used on mobile-agent infra settings.
+     */
     name?: string;
+    /**
+     * The snippet in which the resource is defined
+     */
     snippet?: string;
 }
 
@@ -61,19 +70,37 @@ export interface GetTlsServiceProfileArgs {
  * A collection of values returned by getTlsServiceProfile.
  */
 export interface GetTlsServiceProfileResult {
+    /**
+     * Certificate name
+     */
     readonly certificate: string;
     /**
      * The device in which the resource is defined
      */
     readonly device: string;
+    /**
+     * The folder in which the resource is defined
+     */
     readonly folder: string;
     /**
      * The UUID of the TLS service profile
      */
     readonly id: string;
+    /**
+     * TLS service profile name. The value is `muCustomDomainSSLProfile` when it is used on mobile-agent infra settings.
+     */
     readonly name: string;
+    /**
+     * Protocol settings
+     */
     readonly protocolSettings: outputs.GetTlsServiceProfileProtocolSettings;
+    /**
+     * The snippet in which the resource is defined
+     */
     readonly snippet: string;
+    /**
+     * The Terraform ID.
+     */
     readonly tfid: string;
 }
 /**
@@ -118,11 +145,20 @@ export interface GetTlsServiceProfileOutputArgs {
      * The device in which the resource is defined
      */
     device?: pulumi.Input<string | undefined>;
+    /**
+     * The folder in which the resource is defined
+     */
     folder?: pulumi.Input<string | undefined>;
     /**
      * The UUID of the TLS service profile
      */
     id: pulumi.Input<string>;
+    /**
+     * TLS service profile name. The value is `muCustomDomainSSLProfile` when it is used on mobile-agent infra settings.
+     */
     name?: pulumi.Input<string | undefined>;
+    /**
+     * The snippet in which the resource is defined
+     */
     snippet?: pulumi.Input<string | undefined>;
 }

@@ -5,6 +5,7 @@ package com.pulumi.scm.outputs;
 
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.scm.outputs.ServiceConnectionProtocolBgp;
+import com.pulumi.scm.outputs.ServiceConnectionProtocolBgpPeer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -16,6 +17,11 @@ public final class ServiceConnectionProtocol {
      * 
      */
     private @Nullable ServiceConnectionProtocolBgp bgp;
+    /**
+     * @return Bgp peer
+     * 
+     */
+    private @Nullable ServiceConnectionProtocolBgpPeer bgpPeer;
 
     private ServiceConnectionProtocol() {}
     /**
@@ -24,6 +30,13 @@ public final class ServiceConnectionProtocol {
      */
     public Optional<ServiceConnectionProtocolBgp> bgp() {
         return Optional.ofNullable(this.bgp);
+    }
+    /**
+     * @return Bgp peer
+     * 
+     */
+    public Optional<ServiceConnectionProtocolBgpPeer> bgpPeer() {
+        return Optional.ofNullable(this.bgpPeer);
     }
 
     public static Builder builder() {
@@ -36,10 +49,12 @@ public final class ServiceConnectionProtocol {
     @CustomType.Builder
     public static final class Builder {
         private @Nullable ServiceConnectionProtocolBgp bgp;
+        private @Nullable ServiceConnectionProtocolBgpPeer bgpPeer;
         public Builder() {}
         public Builder(ServiceConnectionProtocol defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.bgp = defaults.bgp;
+    	      this.bgpPeer = defaults.bgpPeer;
         }
 
         @CustomType.Setter
@@ -48,9 +63,16 @@ public final class ServiceConnectionProtocol {
             this.bgp = bgp;
             return this;
         }
+        @CustomType.Setter
+        public Builder bgpPeer(@Nullable ServiceConnectionProtocolBgpPeer bgpPeer) {
+
+            this.bgpPeer = bgpPeer;
+            return this;
+        }
         public ServiceConnectionProtocol build() {
             final var _resultValue = new ServiceConnectionProtocol();
             _resultValue.bgp = bgp;
+            _resultValue.bgpPeer = bgpPeer;
             return _resultValue;
         }
     }

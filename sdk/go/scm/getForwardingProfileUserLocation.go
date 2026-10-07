@@ -70,7 +70,7 @@ func LookupForwardingProfileUserLocation(ctx *pulumi.Context, args *LookupForwar
 
 // A collection of arguments for invoking getForwardingProfileUserLocation.
 type LookupForwardingProfileUserLocationArgs struct {
-	// The folder in which the resource is defined
+	// The folder in which the resource is defined. Possible values are `Mobile Users`.
 	Folder *string `pulumi:"folder"`
 	// The UUID of the user location
 	Id string `pulumi:"id"`
@@ -82,7 +82,7 @@ type LookupForwardingProfileUserLocationArgs struct {
 type LookupForwardingProfileUserLocationResult struct {
 	// Description of the user location
 	Description string `pulumi:"description"`
-	// The folder in which the resource is defined
+	// The folder in which the resource is defined. Possible values are `Mobile Users`.
 	Folder string `pulumi:"folder"`
 	// The UUID of the user location
 	Id string `pulumi:"id"`
@@ -103,7 +103,7 @@ func LookupForwardingProfileUserLocationOutput(ctx *pulumi.Context, args LookupF
 
 // A collection of arguments for invoking getForwardingProfileUserLocation.
 type LookupForwardingProfileUserLocationOutputArgs struct {
-	// The folder in which the resource is defined
+	// The folder in which the resource is defined. Possible values are `Mobile Users`.
 	Folder pulumi.StringPtrInput `pulumi:"folder"`
 	// The UUID of the user location
 	Id pulumi.StringInput `pulumi:"id"`
@@ -135,7 +135,7 @@ func (o LookupForwardingProfileUserLocationResultOutput) Description() pulumi.St
 	return o.ApplyT(func(v LookupForwardingProfileUserLocationResult) string { return v.Description }).(pulumi.StringOutput)
 }
 
-// The folder in which the resource is defined
+// The folder in which the resource is defined. Possible values are `Mobile Users`.
 func (o LookupForwardingProfileUserLocationResultOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupForwardingProfileUserLocationResult) string { return v.Folder }).(pulumi.StringOutput)
 }

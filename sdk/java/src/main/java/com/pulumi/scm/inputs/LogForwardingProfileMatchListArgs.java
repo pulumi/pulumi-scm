@@ -48,14 +48,14 @@ public final class LogForwardingProfileMatchListArgs extends com.pulumi.resource
     }
 
     /**
-     * Log type
+     * Log type. Possible values are `traffic`, `threat`, `wildfire`, `url`, `data`, `tunnel`, `auth`, `decryption`, `dns-security`, `gtp` and `sctp`.
      * 
      */
     @Import(name="logType", required=true)
     private Output<String> logType;
 
     /**
-     * @return Log type
+     * @return Log type. Possible values are `traffic`, `threat`, `wildfire`, `url`, `data`, `tunnel`, `auth`, `decryption`, `dns-security`, `gtp` and `sctp`.
      * 
      */
     public Output<String> logType() {
@@ -211,7 +211,7 @@ public final class LogForwardingProfileMatchListArgs extends com.pulumi.resource
         }
 
         /**
-         * @param logType Log type
+         * @param logType Log type. Possible values are `traffic`, `threat`, `wildfire`, `url`, `data`, `tunnel`, `auth`, `decryption`, `dns-security`, `gtp` and `sctp`.
          * 
          * @return builder
          * 
@@ -222,7 +222,7 @@ public final class LogForwardingProfileMatchListArgs extends com.pulumi.resource
         }
 
         /**
-         * @param logType Log type
+         * @param logType Log type. Possible values are `traffic`, `threat`, `wildfire`, `url`, `data`, `tunnel`, `auth`, `decryption`, `dns-security`, `gtp` and `sctp`.
          * 
          * @return builder
          * 

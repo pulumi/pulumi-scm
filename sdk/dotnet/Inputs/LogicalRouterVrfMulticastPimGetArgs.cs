@@ -55,7 +55,7 @@ namespace Pulumi.Scm.Inputs
         public Input<Inputs.LogicalRouterVrfMulticastPimRpGetArgs>? Rp { get; set; }
 
         /// <summary>
-        /// Rpf lookup mode
+        /// Rpf lookup mode. Possible values are `mrib-then-urib`, `mrib-only` and `urib-only`.
         /// </summary>
         [Input("rpfLookupMode")]
         public Input<string>? RpfLookupMode { get; set; }

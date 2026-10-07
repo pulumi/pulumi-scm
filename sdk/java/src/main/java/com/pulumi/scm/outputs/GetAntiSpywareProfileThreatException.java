@@ -34,7 +34,7 @@ public final class GetAntiSpywareProfileThreatException {
      */
     private String notes;
     /**
-     * @return Packet capture
+     * @return Packet capture. Possible values are `disable`, `single-packet` and `extended-capture`.
      * 
      */
     private String packetCapture;
@@ -69,7 +69,7 @@ public final class GetAntiSpywareProfileThreatException {
         return this.notes;
     }
     /**
-     * @return Packet capture
+     * @return Packet capture. Possible values are `disable`, `single-packet` and `extended-capture`.
      * 
      */
     public String packetCapture() {

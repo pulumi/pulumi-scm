@@ -166,15 +166,15 @@ export class ForwardingProfileRegionalAndCustomProxy extends pulumi.CustomResour
      */
     declare public readonly description: pulumi.Output<string | undefined>;
     /**
-     * Behavior when proxy connection fails - 'fail-open' allows direct internet access, 'fail-safe' blocks traffic until proxy is restored
+     * Behavior when proxy connection fails - 'fail-open' allows direct internet access, 'fail-safe' blocks traffic until proxy is restored. Possible values are `fail-open` and `fail-safe`.
      */
     declare public readonly fallbackOption: pulumi.Output<string | undefined>;
     /**
-     * The folder in which the resource is defined
+     * The folder in which the resource is defined. Possible values are `Mobile Users`.
      */
     declare public readonly folder: pulumi.Output<string>;
     /**
-     * Strategy for selecting Prisma Access location - 'best-available-pa-location' automatically selects optimal location, 'specific-pa-location' uses predefined locations
+     * Strategy for selecting Prisma Access location - 'best-available-pa-location' automatically selects optimal location, 'specific-pa-location' uses predefined locations. Possible values are `best-available-pa-location` and `specific-pa-location`.
      */
     declare public readonly locationPreference: pulumi.Output<string | undefined>;
     /**
@@ -198,7 +198,7 @@ export class ForwardingProfileRegionalAndCustomProxy extends pulumi.CustomResour
      */
     declare public /*out*/ readonly tfid: pulumi.Output<string>;
     /**
-     * Proxy configuration type - 'gp-and-pac' for GlobalProtect and PAC file forwarding, 'ztna-agent' for ZTNA agent forwarding
+     * Proxy configuration type - 'gp-and-pac' for GlobalProtect and PAC file forwarding, 'ztna-agent' for ZTNA agent forwarding. Possible values are `gp-and-pac` and `ztna-agent`.
      */
     declare public readonly type: pulumi.Output<string>;
 
@@ -258,15 +258,15 @@ export interface ForwardingProfileRegionalAndCustomProxyState {
      */
     description?: pulumi.Input<string | undefined>;
     /**
-     * Behavior when proxy connection fails - 'fail-open' allows direct internet access, 'fail-safe' blocks traffic until proxy is restored
+     * Behavior when proxy connection fails - 'fail-open' allows direct internet access, 'fail-safe' blocks traffic until proxy is restored. Possible values are `fail-open` and `fail-safe`.
      */
     fallbackOption?: pulumi.Input<string | undefined>;
     /**
-     * The folder in which the resource is defined
+     * The folder in which the resource is defined. Possible values are `Mobile Users`.
      */
     folder?: pulumi.Input<string | undefined>;
     /**
-     * Strategy for selecting Prisma Access location - 'best-available-pa-location' automatically selects optimal location, 'specific-pa-location' uses predefined locations
+     * Strategy for selecting Prisma Access location - 'best-available-pa-location' automatically selects optimal location, 'specific-pa-location' uses predefined locations. Possible values are `best-available-pa-location` and `specific-pa-location`.
      */
     locationPreference?: pulumi.Input<string | undefined>;
     /**
@@ -290,7 +290,7 @@ export interface ForwardingProfileRegionalAndCustomProxyState {
      */
     tfid?: pulumi.Input<string | undefined>;
     /**
-     * Proxy configuration type - 'gp-and-pac' for GlobalProtect and PAC file forwarding, 'ztna-agent' for ZTNA agent forwarding
+     * Proxy configuration type - 'gp-and-pac' for GlobalProtect and PAC file forwarding, 'ztna-agent' for ZTNA agent forwarding. Possible values are `gp-and-pac` and `ztna-agent`.
      */
     type?: pulumi.Input<string | undefined>;
 }
@@ -308,15 +308,15 @@ export interface ForwardingProfileRegionalAndCustomProxyArgs {
      */
     description?: pulumi.Input<string | undefined>;
     /**
-     * Behavior when proxy connection fails - 'fail-open' allows direct internet access, 'fail-safe' blocks traffic until proxy is restored
+     * Behavior when proxy connection fails - 'fail-open' allows direct internet access, 'fail-safe' blocks traffic until proxy is restored. Possible values are `fail-open` and `fail-safe`.
      */
     fallbackOption?: pulumi.Input<string | undefined>;
     /**
-     * The folder in which the resource is defined
+     * The folder in which the resource is defined. Possible values are `Mobile Users`.
      */
     folder?: pulumi.Input<string | undefined>;
     /**
-     * Strategy for selecting Prisma Access location - 'best-available-pa-location' automatically selects optimal location, 'specific-pa-location' uses predefined locations
+     * Strategy for selecting Prisma Access location - 'best-available-pa-location' automatically selects optimal location, 'specific-pa-location' uses predefined locations. Possible values are `best-available-pa-location` and `specific-pa-location`.
      */
     locationPreference?: pulumi.Input<string | undefined>;
     /**
@@ -336,7 +336,7 @@ export interface ForwardingProfileRegionalAndCustomProxyArgs {
      */
     proxy2?: pulumi.Input<inputs.ForwardingProfileRegionalAndCustomProxyProxy2 | undefined>;
     /**
-     * Proxy configuration type - 'gp-and-pac' for GlobalProtect and PAC file forwarding, 'ztna-agent' for ZTNA agent forwarding
+     * Proxy configuration type - 'gp-and-pac' for GlobalProtect and PAC file forwarding, 'ztna-agent' for ZTNA agent forwarding. Possible values are `gp-and-pac` and `ztna-agent`.
      */
     type?: pulumi.Input<string | undefined>;
 }

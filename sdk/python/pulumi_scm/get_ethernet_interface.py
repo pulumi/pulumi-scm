@@ -83,16 +83,25 @@ class GetEthernetInterfaceResult:
     @_builtins.property
     @pulumi.getter(name="aggregateGroup")
     def aggregate_group(self) -> _builtins.str:
+        """
+        Aggregate group
+        """
         return pulumi.get(self, "aggregate_group")
 
     @_builtins.property
     @pulumi.getter
     def comment(self) -> _builtins.str:
+        """
+        Interface description
+        """
         return pulumi.get(self, "comment")
 
     @_builtins.property
     @pulumi.getter(name="defaultValue")
     def default_value(self) -> _builtins.str:
+        """
+        Default interface assignment
+        """
         return pulumi.get(self, "default_value")
 
     @_builtins.property
@@ -106,11 +115,17 @@ class GetEthernetInterfaceResult:
     @_builtins.property
     @pulumi.getter(name="encryptedValues")
     def encrypted_values(self) -> Mapping[str, _builtins.str]:
+        """
+        Map of sensitive values returned from the API.
+        """
         return pulumi.get(self, "encrypted_values")
 
     @_builtins.property
     @pulumi.getter
     def folder(self) -> _builtins.str:
+        """
+        The folder in which the resource is defined
+        """
         return pulumi.get(self, "folder")
 
     @_builtins.property
@@ -124,51 +139,81 @@ class GetEthernetInterfaceResult:
     @_builtins.property
     @pulumi.getter
     def layer2(self) -> 'outputs.GetEthernetInterfaceLayer2Result':
+        """
+        Layer2
+        """
         return pulumi.get(self, "layer2")
 
     @_builtins.property
     @pulumi.getter
     def layer3(self) -> 'outputs.GetEthernetInterfaceLayer3Result':
+        """
+        Ethernet Interface Layer 3 configuration
+        """
         return pulumi.get(self, "layer3")
 
     @_builtins.property
     @pulumi.getter(name="linkDuplex")
     def link_duplex(self) -> _builtins.str:
+        """
+        Link duplex. Possible values are `auto`, `half` and `full`.
+        """
         return pulumi.get(self, "link_duplex")
 
     @_builtins.property
     @pulumi.getter(name="linkSpeed")
     def link_speed(self) -> _builtins.str:
+        """
+        Link speed. Possible values are `auto`, `10`, `100`, `1000`, `10000`, `40000` and `100000`.
+        """
         return pulumi.get(self, "link_speed")
 
     @_builtins.property
     @pulumi.getter(name="linkState")
     def link_state(self) -> _builtins.str:
+        """
+        Link state. Possible values are `auto`, `up` and `down`.
+        """
         return pulumi.get(self, "link_state")
 
     @_builtins.property
     @pulumi.getter
     def name(self) -> _builtins.str:
+        """
+        Interface name
+        """
         return pulumi.get(self, "name")
 
     @_builtins.property
     @pulumi.getter
     def poe(self) -> 'outputs.GetEthernetInterfacePoeResult':
+        """
+        Poe
+        """
         return pulumi.get(self, "poe")
 
     @_builtins.property
     @pulumi.getter
     def snippet(self) -> _builtins.str:
+        """
+        The snippet in which the resource is defined
+        """
         return pulumi.get(self, "snippet")
 
     @_builtins.property
     @pulumi.getter
     def tap(self) -> 'outputs.GetEthernetInterfaceTapResult':
+        """
+        Tap
+        """
         return pulumi.get(self, "tap")
 
     @_builtins.property
     @pulumi.getter
     def tfid(self) -> _builtins.str:
+        """
+        The Terraform ID.
+        """
         return pulumi.get(self, "tfid")
 
 
@@ -225,7 +270,10 @@ def get_ethernet_interface(device: Optional[_builtins.str] = None,
 
 
     :param _builtins.str device: The device in which the resource is defined
+    :param _builtins.str folder: The folder in which the resource is defined
     :param _builtins.str id: UUID of the resource
+    :param _builtins.str name: Interface name
+    :param _builtins.str snippet: The snippet in which the resource is defined
     """
     __args__ = dict()
     __args__['device'] = device
@@ -282,7 +330,10 @@ def get_ethernet_interface_output(device: pulumi.Input[Optional[Optional[_builti
 
 
     :param _builtins.str device: The device in which the resource is defined
+    :param _builtins.str folder: The folder in which the resource is defined
     :param _builtins.str id: UUID of the resource
+    :param _builtins.str name: Interface name
+    :param _builtins.str snippet: The snippet in which the resource is defined
     """
     __args__ = dict()
     __args__['device'] = device

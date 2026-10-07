@@ -172,12 +172,6 @@ namespace Pulumi.Scm
         public Output<string?> BackupSc { get; private set; } = null!;
 
         /// <summary>
-        /// Bgp peer
-        /// </summary>
-        [Output("bgpPeer")]
-        public Output<Outputs.ServiceConnectionBgpPeer?> BgpPeer { get; private set; } = null!;
-
-        /// <summary>
         /// Map of sensitive values returned from the API.
         /// </summary>
         [Output("encryptedValues")]
@@ -208,13 +202,13 @@ namespace Pulumi.Scm
         public Output<string?> NatPool { get; private set; } = null!;
 
         /// <summary>
-        /// No export community
+        /// No export community. Possible values are `Disabled`, `Enabled-In`, `Enabled-Out` and `Enabled-Both`.
         /// </summary>
         [Output("noExportCommunity")]
         public Output<string?> NoExportCommunity { get; private set; } = null!;
 
         /// <summary>
-        /// Onboarding type
+        /// Onboarding type. Possible values are `Classic`.
         /// </summary>
         [Output("onboardingType")]
         public Output<string> OnboardingType { get; private set; } = null!;
@@ -324,12 +318,6 @@ namespace Pulumi.Scm
         public Input<string>? BackupSc { get; set; }
 
         /// <summary>
-        /// Bgp peer
-        /// </summary>
-        [Input("bgpPeer")]
-        public Input<Inputs.ServiceConnectionBgpPeerArgs>? BgpPeer { get; set; }
-
-        /// <summary>
         /// Ipsec tunnel
         /// </summary>
         [Input("ipsecTunnel", required: true)]
@@ -348,13 +336,13 @@ namespace Pulumi.Scm
         public Input<string>? NatPool { get; set; }
 
         /// <summary>
-        /// No export community
+        /// No export community. Possible values are `Disabled`, `Enabled-In`, `Enabled-Out` and `Enabled-Both`.
         /// </summary>
         [Input("noExportCommunity")]
         public Input<string>? NoExportCommunity { get; set; }
 
         /// <summary>
-        /// Onboarding type
+        /// Onboarding type. Possible values are `Classic`.
         /// </summary>
         [Input("onboardingType")]
         public Input<string>? OnboardingType { get; set; }
@@ -421,12 +409,6 @@ namespace Pulumi.Scm
         [Input("backupSc")]
         public Input<string>? BackupSc { get; set; }
 
-        /// <summary>
-        /// Bgp peer
-        /// </summary>
-        [Input("bgpPeer")]
-        public Input<Inputs.ServiceConnectionBgpPeerGetArgs>? BgpPeer { get; set; }
-
         [Input("encryptedValues")]
         private InputMap<string>? _encryptedValues;
 
@@ -468,13 +450,13 @@ namespace Pulumi.Scm
         public Input<string>? NatPool { get; set; }
 
         /// <summary>
-        /// No export community
+        /// No export community. Possible values are `Disabled`, `Enabled-In`, `Enabled-Out` and `Enabled-Both`.
         /// </summary>
         [Input("noExportCommunity")]
         public Input<string>? NoExportCommunity { get; set; }
 
         /// <summary>
-        /// Onboarding type
+        /// Onboarding type. Possible values are `Classic`.
         /// </summary>
         [Input("onboardingType")]
         public Input<string>? OnboardingType { get; set; }

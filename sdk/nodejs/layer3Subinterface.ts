@@ -36,6 +36,11 @@ import * as utilities from "./utilities";
  *     ips: [{
  *         name: "198.18.1.1/32",
  *     }],
+ *     adjustTcpMss: {
+ *         enable: true,
+ *         ipv4MssAdjustment: 40,
+ *         ipv6MssAdjustment: 60,
+ *     },
  * }, {
  *     dependsOn: [scmParentInterface],
  * });
@@ -65,6 +70,34 @@ import * as utilities from "./utilities";
  *     },
  * }, {
  *     dependsOn: [scmParentDhcpInterface],
+ * });
+ * //
+ * // Creates an ethernet interface used as parent-interface for the pppoe example
+ * //
+ * const scmParentPppoeInterface = new scm.EthernetInterface("scm_parent_pppoe_interface", {
+ *     name: "$scm_parent_tf_pppoe_interface",
+ *     comment: "Managed by Pulumi",
+ *     folder: "ngfw-shared",
+ *     layer3: {},
+ * });
+ * //
+ * // Creates a layer3 sub-interface with pppoe
+ * //
+ * const scmL3PppoeSubinterface = new scm.Layer3Subinterface("scm_l3_pppoe_subinterface", {
+ *     name: "$scm_parent_tf_pppoe_interface.100",
+ *     comment: "Managed by Pulumi",
+ *     folder: "ngfw-shared",
+ *     tag: 100,
+ *     parentInterface: "$scm_parent_tf_pppoe_interface",
+ *     pppoe: {
+ *         enable: true,
+ *         username: "testname",
+ *         password: "testpass",
+ *         authentication: "auto",
+ *         defaultRouteMetric: 10,
+ *     },
+ * }, {
+ *     dependsOn: [scmParentPppoeInterface],
  * });
  * ```
  *
@@ -119,6 +152,10 @@ export class Layer3Subinterface extends pulumi.CustomResource {
     }
 
     /**
+     * TCP MSS adjustment settings for the interface
+     */
+    declare public readonly adjustTcpMss: pulumi.Output<outputs.Layer3SubinterfaceAdjustTcpMss | undefined>;
+    /**
      * Layer 3 sub Interfaces ARP configuration
      */
     declare public readonly arps: pulumi.Output<outputs.Layer3SubinterfaceArp[] | undefined>;
@@ -136,14 +173,14 @@ export class Layer3Subinterface extends pulumi.CustomResource {
     declare public readonly device: pulumi.Output<string | undefined>;
     /**
      * Layer3 sub interfaces DHCP Client Object
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
      */
     declare public readonly dhcpClient: pulumi.Output<outputs.Layer3SubinterfaceDhcpClient | undefined>;
     /**
+     * Map of sensitive values returned from the API.
+     */
+    declare public /*out*/ readonly encryptedValues: pulumi.Output<{[key: string]: string}>;
+    /**
      * The folder in which the resource is defined
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly folder: pulumi.Output<string | undefined>;
     /**
@@ -152,8 +189,6 @@ export class Layer3Subinterface extends pulumi.CustomResource {
     declare public readonly interfaceManagementProfile: pulumi.Output<string | undefined>;
     /**
      * L3 sub-interface IP Parent
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
      */
     declare public readonly ips: pulumi.Output<outputs.Layer3SubinterfaceIp[] | undefined>;
     /**
@@ -173,9 +208,11 @@ export class Layer3Subinterface extends pulumi.CustomResource {
      */
     declare public readonly parentInterface: pulumi.Output<string | undefined>;
     /**
+     * PPPoE configuration for the interface
+     */
+    declare public readonly pppoe: pulumi.Output<outputs.Layer3SubinterfacePppoe | undefined>;
+    /**
      * The snippet in which the resource is defined
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly snippet: pulumi.Output<string | undefined>;
     /**
@@ -200,11 +237,13 @@ export class Layer3Subinterface extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as Layer3SubinterfaceState | undefined;
+            resourceInputs["adjustTcpMss"] = state?.adjustTcpMss;
             resourceInputs["arps"] = state?.arps;
             resourceInputs["comment"] = state?.comment;
             resourceInputs["ddnsConfig"] = state?.ddnsConfig;
             resourceInputs["device"] = state?.device;
             resourceInputs["dhcpClient"] = state?.dhcpClient;
+            resourceInputs["encryptedValues"] = state?.encryptedValues;
             resourceInputs["folder"] = state?.folder;
             resourceInputs["interfaceManagementProfile"] = state?.interfaceManagementProfile;
             resourceInputs["ips"] = state?.ips;
@@ -212,11 +251,13 @@ export class Layer3Subinterface extends pulumi.CustomResource {
             resourceInputs["name"] = state?.name;
             resourceInputs["netflowProfile"] = state?.netflowProfile;
             resourceInputs["parentInterface"] = state?.parentInterface;
+            resourceInputs["pppoe"] = state?.pppoe;
             resourceInputs["snippet"] = state?.snippet;
             resourceInputs["tag"] = state?.tag;
             resourceInputs["tfid"] = state?.tfid;
         } else {
             const args = argsOrState as Layer3SubinterfaceArgs | undefined;
+            resourceInputs["adjustTcpMss"] = args?.adjustTcpMss;
             resourceInputs["arps"] = args?.arps;
             resourceInputs["comment"] = args?.comment;
             resourceInputs["ddnsConfig"] = args?.ddnsConfig;
@@ -229,11 +270,15 @@ export class Layer3Subinterface extends pulumi.CustomResource {
             resourceInputs["name"] = args?.name;
             resourceInputs["netflowProfile"] = args?.netflowProfile;
             resourceInputs["parentInterface"] = args?.parentInterface;
+            resourceInputs["pppoe"] = args?.pppoe;
             resourceInputs["snippet"] = args?.snippet;
             resourceInputs["tag"] = args?.tag;
+            resourceInputs["encryptedValues"] = undefined /*out*/;
             resourceInputs["tfid"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
+        const secretOpts = { additionalSecretOutputs: ["encryptedValues"] };
+        opts = pulumi.mergeOptions(opts, secretOpts);
         super(Layer3Subinterface.__pulumiType, name, resourceInputs, opts);
     }
 }
@@ -242,6 +287,10 @@ export class Layer3Subinterface extends pulumi.CustomResource {
  * Input properties used for looking up and filtering Layer3Subinterface resources.
  */
 export interface Layer3SubinterfaceState {
+    /**
+     * TCP MSS adjustment settings for the interface
+     */
+    adjustTcpMss?: pulumi.Input<inputs.Layer3SubinterfaceAdjustTcpMss | undefined>;
     /**
      * Layer 3 sub Interfaces ARP configuration
      */
@@ -260,14 +309,14 @@ export interface Layer3SubinterfaceState {
     device?: pulumi.Input<string | undefined>;
     /**
      * Layer3 sub interfaces DHCP Client Object
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
      */
     dhcpClient?: pulumi.Input<inputs.Layer3SubinterfaceDhcpClient | undefined>;
     /**
+     * Map of sensitive values returned from the API.
+     */
+    encryptedValues?: pulumi.Input<{[key: string]: pulumi.Input<string>} | undefined>;
+    /**
      * The folder in which the resource is defined
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     folder?: pulumi.Input<string | undefined>;
     /**
@@ -276,8 +325,6 @@ export interface Layer3SubinterfaceState {
     interfaceManagementProfile?: pulumi.Input<string | undefined>;
     /**
      * L3 sub-interface IP Parent
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
      */
     ips?: pulumi.Input<pulumi.Input<inputs.Layer3SubinterfaceIp>[] | undefined>;
     /**
@@ -297,9 +344,11 @@ export interface Layer3SubinterfaceState {
      */
     parentInterface?: pulumi.Input<string | undefined>;
     /**
+     * PPPoE configuration for the interface
+     */
+    pppoe?: pulumi.Input<inputs.Layer3SubinterfacePppoe | undefined>;
+    /**
      * The snippet in which the resource is defined
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     snippet?: pulumi.Input<string | undefined>;
     /**
@@ -317,6 +366,10 @@ export interface Layer3SubinterfaceState {
  */
 export interface Layer3SubinterfaceArgs {
     /**
+     * TCP MSS adjustment settings for the interface
+     */
+    adjustTcpMss?: pulumi.Input<inputs.Layer3SubinterfaceAdjustTcpMss | undefined>;
+    /**
      * Layer 3 sub Interfaces ARP configuration
      */
     arps?: pulumi.Input<pulumi.Input<inputs.Layer3SubinterfaceArp>[] | undefined>;
@@ -334,14 +387,10 @@ export interface Layer3SubinterfaceArgs {
     device?: pulumi.Input<string | undefined>;
     /**
      * Layer3 sub interfaces DHCP Client Object
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
      */
     dhcpClient?: pulumi.Input<inputs.Layer3SubinterfaceDhcpClient | undefined>;
     /**
      * The folder in which the resource is defined
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     folder?: pulumi.Input<string | undefined>;
     /**
@@ -350,8 +399,6 @@ export interface Layer3SubinterfaceArgs {
     interfaceManagementProfile?: pulumi.Input<string | undefined>;
     /**
      * L3 sub-interface IP Parent
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
      */
     ips?: pulumi.Input<pulumi.Input<inputs.Layer3SubinterfaceIp>[] | undefined>;
     /**
@@ -371,9 +418,11 @@ export interface Layer3SubinterfaceArgs {
      */
     parentInterface?: pulumi.Input<string | undefined>;
     /**
+     * PPPoE configuration for the interface
+     */
+    pppoe?: pulumi.Input<inputs.Layer3SubinterfacePppoe | undefined>;
+    /**
      * The snippet in which the resource is defined
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     snippet?: pulumi.Input<string | undefined>;
     /**

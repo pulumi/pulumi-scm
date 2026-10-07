@@ -127,16 +127,12 @@ public final class AuthenticationRuleArgs extends com.pulumi.resources.ResourceA
     /**
      * Folder
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
      */
     @Import(name="folder")
     private @Nullable Output<String> folder;
 
     /**
      * @return Folder
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public Optional<Output<String>> folder() {
@@ -264,14 +260,14 @@ public final class AuthenticationRuleArgs extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * The relative position of the rule
+     * The relative position of the rule. Possible values are `pre` and `post`.
      * 
      */
     @Import(name="position")
     private @Nullable Output<String> position;
 
     /**
-     * @return The relative position of the rule
+     * @return The relative position of the rule. Possible values are `pre` and `post`.
      * 
      */
     public Optional<Output<String>> position() {
@@ -311,16 +307,12 @@ public final class AuthenticationRuleArgs extends com.pulumi.resources.ResourceA
     /**
      * Snippet
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
      */
     @Import(name="snippet")
     private @Nullable Output<String> snippet;
 
     /**
      * @return Snippet
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public Optional<Output<String>> snippet() {
@@ -388,14 +380,14 @@ public final class AuthenticationRuleArgs extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `&#34;before&#34;` or `&#34;after&#34;`.
+     * UUID of the rule to position this rule relative to. Required when `relativePosition` is `&#34;before&#34;` or `&#34;after&#34;`.
      * 
      */
     @Import(name="targetRule")
     private @Nullable Output<String> targetRule;
 
     /**
-     * @return The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `&#34;before&#34;` or `&#34;after&#34;`.
+     * @return UUID of the rule to position this rule relative to. Required when `relativePosition` is `&#34;before&#34;` or `&#34;after&#34;`.
      * 
      */
     public Optional<Output<String>> targetRule() {
@@ -662,8 +654,6 @@ public final class AuthenticationRuleArgs extends com.pulumi.resources.ResourceA
         /**
          * @param folder Folder
          * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-         * 
          * @return builder
          * 
          */
@@ -674,8 +664,6 @@ public final class AuthenticationRuleArgs extends com.pulumi.resources.ResourceA
 
         /**
          * @param folder Folder
-         * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
          * 
          * @return builder
          * 
@@ -873,7 +861,7 @@ public final class AuthenticationRuleArgs extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param position The relative position of the rule
+         * @param position The relative position of the rule. Possible values are `pre` and `post`.
          * 
          * @return builder
          * 
@@ -884,7 +872,7 @@ public final class AuthenticationRuleArgs extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param position The relative position of the rule
+         * @param position The relative position of the rule. Possible values are `pre` and `post`.
          * 
          * @return builder
          * 
@@ -948,8 +936,6 @@ public final class AuthenticationRuleArgs extends com.pulumi.resources.ResourceA
         /**
          * @param snippet Snippet
          * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-         * 
          * @return builder
          * 
          */
@@ -960,8 +946,6 @@ public final class AuthenticationRuleArgs extends com.pulumi.resources.ResourceA
 
         /**
          * @param snippet Snippet
-         * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
          * 
          * @return builder
          * 
@@ -1095,7 +1079,7 @@ public final class AuthenticationRuleArgs extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param targetRule The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `&#34;before&#34;` or `&#34;after&#34;`.
+         * @param targetRule UUID of the rule to position this rule relative to. Required when `relativePosition` is `&#34;before&#34;` or `&#34;after&#34;`.
          * 
          * @return builder
          * 
@@ -1106,7 +1090,7 @@ public final class AuthenticationRuleArgs extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param targetRule The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `&#34;before&#34;` or `&#34;after&#34;`.
+         * @param targetRule UUID of the rule to position this rule relative to. Required when `relativePosition` is `&#34;before&#34;` or `&#34;after&#34;`.
          * 
          * @return builder
          * 

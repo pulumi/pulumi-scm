@@ -18,11 +18,11 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly Outputs.GetQosProfileListDataClassBandwidthTypePercentageClassClassBandwidthResult ClassBandwidth;
         /// <summary>
-        /// Traffic class
+        /// Traffic class. Possible values are `Class1`, `Class2`, `Class3`, `Class4`, `Class5`, `Class6`, `Class7` and `Class8`.
         /// </summary>
         public readonly string Name;
         /// <summary>
-        /// traffic class priority
+        /// traffic class priority. Possible values are `real-time`, `High`, `Medium` and `Low`.
         /// </summary>
         public readonly string Priority;
 

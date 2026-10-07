@@ -19,32 +19,22 @@ namespace Pulumi.Scm.Outputs
         public readonly Outputs.UpdateScheduleUpdateScheduleWildfireRecurringEvery15Mins? Every15Mins;
         /// <summary>
         /// Every30 mins
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Every15Mins`, `Every30Mins`, `EveryHour`, `EveryMin`, `None`, and `RealTime`.
         /// </summary>
         public readonly Outputs.UpdateScheduleUpdateScheduleWildfireRecurringEvery30Mins? Every30Mins;
         /// <summary>
         /// Every hour
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Every15Mins`, `Every30Mins`, `EveryHour`, `EveryMin`, `None`, and `RealTime`.
         /// </summary>
         public readonly Outputs.UpdateScheduleUpdateScheduleWildfireRecurringEveryHour? EveryHour;
         /// <summary>
         /// Every min
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Every15Mins`, `Every30Mins`, `EveryHour`, `EveryMin`, `None`, and `RealTime`.
         /// </summary>
         public readonly Outputs.UpdateScheduleUpdateScheduleWildfireRecurringEveryMin? EveryMin;
         /// <summary>
         /// None
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Every15Mins`, `Every30Mins`, `EveryHour`, `EveryMin`, `None`, and `RealTime`.
         /// </summary>
         public readonly Outputs.UpdateScheduleUpdateScheduleWildfireRecurringNone? None;
         /// <summary>
         /// Real time
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Every15Mins`, `Every30Mins`, `EveryHour`, `EveryMin`, `None`, and `RealTime`.
         /// </summary>
         public readonly Outputs.UpdateScheduleUpdateScheduleWildfireRecurringRealTime? RealTime;
 

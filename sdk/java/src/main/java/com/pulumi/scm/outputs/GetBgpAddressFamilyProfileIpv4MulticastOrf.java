@@ -11,14 +11,14 @@ import java.util.Objects;
 @CustomType
 public final class GetBgpAddressFamilyProfileIpv4MulticastOrf {
     /**
-     * @return ORF prefix list
+     * @return ORF prefix list. Possible values are `none`, `both`, `receive` and `send`.
      * 
      */
     private String orfPrefixList;
 
     private GetBgpAddressFamilyProfileIpv4MulticastOrf() {}
     /**
-     * @return ORF prefix list
+     * @return ORF prefix list. Possible values are `none`, `both`, `receive` and `send`.
      * 
      */
     public String orfPrefixList() {

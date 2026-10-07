@@ -13,13 +13,13 @@ namespace Pulumi.Scm.Inputs
     public sealed class SecurityRuleDefaultProfileSettingsFileControlArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Download
+        /// Download. Possible values are `allow-all-file-types`, `best-practice` and `block-all-file-types`.
         /// </summary>
         [Input("download")]
         public Input<string>? Download { get; set; }
 
         /// <summary>
-        /// Upload
+        /// Upload. Possible values are `allow-all-file-types`, `best-practice` and `block-all-file-types`.
         /// </summary>
         [Input("upload")]
         public Input<string>? Upload { get; set; }

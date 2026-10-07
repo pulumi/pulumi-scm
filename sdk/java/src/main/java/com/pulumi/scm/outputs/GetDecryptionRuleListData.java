@@ -14,7 +14,7 @@ import java.util.Objects;
 @CustomType
 public final class GetDecryptionRuleListData {
     /**
-     * @return The action to be taken
+     * @return The action to be taken. Possible values are `decrypt` and `no-decrypt`.
      * 
      */
     private String action;
@@ -49,7 +49,7 @@ public final class GetDecryptionRuleListData {
      */
     private Boolean disabled;
     /**
-     * @return The folder of the item. Default: Shared.
+     * @return The folder in which the resource is defined
      * 
      */
     private String folder;
@@ -79,7 +79,7 @@ public final class GetDecryptionRuleListData {
      */
     private Boolean logSuccess;
     /**
-     * @return The name of the item.
+     * @return The name of the decryption rule
      * 
      */
     private String name;
@@ -94,7 +94,7 @@ public final class GetDecryptionRuleListData {
      */
     private Boolean negateSource;
     /**
-     * @return The position of a security rule
+     * @return The position of a security rule. Possible values are `pre` and `post`.
      * 
      */
     private String position;
@@ -114,7 +114,7 @@ public final class GetDecryptionRuleListData {
      */
     private List<String> services;
     /**
-     * @return The snippet of the item.
+     * @return The snippet in which the resource is defined
      * 
      */
     private String snippet;
@@ -139,7 +139,7 @@ public final class GetDecryptionRuleListData {
      */
     private List<String> tags;
     /**
-     * @return The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `&#34;before&#34;` or `&#34;after&#34;`.
+     * @return UUID of the rule to position this rule relative to. Required when `relativePosition` is `&#34;before&#34;` or `&#34;after&#34;`.
      * 
      */
     private String targetRule;
@@ -161,7 +161,7 @@ public final class GetDecryptionRuleListData {
 
     private GetDecryptionRuleListData() {}
     /**
-     * @return The action to be taken
+     * @return The action to be taken. Possible values are `decrypt` and `no-decrypt`.
      * 
      */
     public String action() {
@@ -210,7 +210,7 @@ public final class GetDecryptionRuleListData {
         return this.disabled;
     }
     /**
-     * @return The folder of the item. Default: Shared.
+     * @return The folder in which the resource is defined
      * 
      */
     public String folder() {
@@ -252,7 +252,7 @@ public final class GetDecryptionRuleListData {
         return this.logSuccess;
     }
     /**
-     * @return The name of the item.
+     * @return The name of the decryption rule
      * 
      */
     public String name() {
@@ -273,7 +273,7 @@ public final class GetDecryptionRuleListData {
         return this.negateSource;
     }
     /**
-     * @return The position of a security rule
+     * @return The position of a security rule. Possible values are `pre` and `post`.
      * 
      */
     public String position() {
@@ -301,7 +301,7 @@ public final class GetDecryptionRuleListData {
         return this.services;
     }
     /**
-     * @return The snippet of the item.
+     * @return The snippet in which the resource is defined
      * 
      */
     public String snippet() {
@@ -336,7 +336,7 @@ public final class GetDecryptionRuleListData {
         return this.tags;
     }
     /**
-     * @return The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `&#34;before&#34;` or `&#34;after&#34;`.
+     * @return UUID of the rule to position this rule relative to. Required when `relativePosition` is `&#34;before&#34;` or `&#34;after&#34;`.
      * 
      */
     public String targetRule() {

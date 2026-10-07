@@ -174,16 +174,12 @@ public class Address extends com.pulumi.resources.CustomResource {
     /**
      * The folder in which the resource is defined
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
      */
     @Export(name="folder", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> folder;
 
     /**
      * @return The folder in which the resource is defined
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public Output<Optional<String>> folder() {
@@ -192,16 +188,12 @@ public class Address extends com.pulumi.resources.CustomResource {
     /**
      * Fully qualified domain name
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `fqdn`, `ipNetmask`, `ipRange`, and `ipWildcard`.
-     * 
      */
     @Export(name="fqdn", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> fqdn;
 
     /**
      * @return Fully qualified domain name
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `fqdn`, `ipNetmask`, `ipRange`, and `ipWildcard`.
      * 
      */
     public Output<Optional<String>> fqdn() {
@@ -210,16 +202,12 @@ public class Address extends com.pulumi.resources.CustomResource {
     /**
      * IP address with or without CIDR notation
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `fqdn`, `ipNetmask`, `ipRange`, and `ipWildcard`.
-     * 
      */
     @Export(name="ipNetmask", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> ipNetmask;
 
     /**
      * @return IP address with or without CIDR notation
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `fqdn`, `ipNetmask`, `ipRange`, and `ipWildcard`.
      * 
      */
     public Output<Optional<String>> ipNetmask() {
@@ -228,16 +216,12 @@ public class Address extends com.pulumi.resources.CustomResource {
     /**
      * Ip range
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `fqdn`, `ipNetmask`, `ipRange`, and `ipWildcard`.
-     * 
      */
     @Export(name="ipRange", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> ipRange;
 
     /**
      * @return Ip range
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `fqdn`, `ipNetmask`, `ipRange`, and `ipWildcard`.
      * 
      */
     public Output<Optional<String>> ipRange() {
@@ -246,16 +230,12 @@ public class Address extends com.pulumi.resources.CustomResource {
     /**
      * IP wildcard mask
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `fqdn`, `ipNetmask`, `ipRange`, and `ipWildcard`.
-     * 
      */
     @Export(name="ipWildcard", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> ipWildcard;
 
     /**
      * @return IP wildcard mask
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `fqdn`, `ipNetmask`, `ipRange`, and `ipWildcard`.
      * 
      */
     public Output<Optional<String>> ipWildcard() {
@@ -278,16 +258,12 @@ public class Address extends com.pulumi.resources.CustomResource {
     /**
      * The snippet in which the resource is defined
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
      */
     @Export(name="snippet", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> snippet;
 
     /**
      * @return The snippet in which the resource is defined
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public Output<Optional<String>> snippet() {

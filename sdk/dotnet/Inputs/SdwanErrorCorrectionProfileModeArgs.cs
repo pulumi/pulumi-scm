@@ -20,8 +20,6 @@ namespace Pulumi.Scm.Inputs
 
         /// <summary>
         /// Packet duplication
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `ForwardErrorCorrection` and `PacketDuplication`.
         /// </summary>
         [Input("packetDuplication")]
         public Input<Inputs.SdwanErrorCorrectionProfileModePacketDuplicationArgs>? PacketDuplication { get; set; }

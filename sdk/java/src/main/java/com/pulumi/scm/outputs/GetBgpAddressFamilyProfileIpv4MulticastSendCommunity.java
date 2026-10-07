@@ -22,28 +22,20 @@ public final class GetBgpAddressFamilyProfileIpv4MulticastSendCommunity {
     /**
      * @return Both
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
-     * 
      */
     private GetBgpAddressFamilyProfileIpv4MulticastSendCommunityBoth both;
     /**
      * @return Extended
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
      * 
      */
     private GetBgpAddressFamilyProfileIpv4MulticastSendCommunityExtended extended;
     /**
      * @return Large
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
-     * 
      */
     private GetBgpAddressFamilyProfileIpv4MulticastSendCommunityLarge large;
     /**
      * @return Standard
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
      * 
      */
     private GetBgpAddressFamilyProfileIpv4MulticastSendCommunityStandard standard;
@@ -59,16 +51,12 @@ public final class GetBgpAddressFamilyProfileIpv4MulticastSendCommunity {
     /**
      * @return Both
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
-     * 
      */
     public GetBgpAddressFamilyProfileIpv4MulticastSendCommunityBoth both() {
         return this.both;
     }
     /**
      * @return Extended
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
      * 
      */
     public GetBgpAddressFamilyProfileIpv4MulticastSendCommunityExtended extended() {
@@ -77,16 +65,12 @@ public final class GetBgpAddressFamilyProfileIpv4MulticastSendCommunity {
     /**
      * @return Large
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
-     * 
      */
     public GetBgpAddressFamilyProfileIpv4MulticastSendCommunityLarge large() {
         return this.large;
     }
     /**
      * @return Standard
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
      * 
      */
     public GetBgpAddressFamilyProfileIpv4MulticastSendCommunityStandard standard() {

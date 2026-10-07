@@ -27,7 +27,10 @@ class GetVlanInterfaceResult:
     """
     A collection of values returned by getVlanInterface.
     """
-    def __init__(__self__, arps=None, comment=None, ddns_config=None, default_value=None, device=None, dhcp_client=None, folder=None, id=None, interface_management_profile=None, ips=None, mtu=None, name=None, netflow_profile=None, snippet=None, tfid=None, vlan_tag=None):
+    def __init__(__self__, adjust_tcp_mss=None, arps=None, comment=None, ddns_config=None, default_value=None, device=None, dhcp_client=None, folder=None, id=None, interface_management_profile=None, ips=None, mtu=None, name=None, netflow_profile=None, snippet=None, tfid=None, vlan_tag=None):
+        if adjust_tcp_mss and not isinstance(adjust_tcp_mss, dict):
+            raise TypeError("Expected argument 'adjust_tcp_mss' to be a dict")
+        pulumi.set(__self__, "adjust_tcp_mss", adjust_tcp_mss)
         if arps and not isinstance(arps, list):
             raise TypeError("Expected argument 'arps' to be a list")
         pulumi.set(__self__, "arps", arps)
@@ -78,23 +81,43 @@ class GetVlanInterfaceResult:
         pulumi.set(__self__, "vlan_tag", vlan_tag)
 
     @_builtins.property
+    @pulumi.getter(name="adjustTcpMss")
+    def adjust_tcp_mss(self) -> 'outputs.GetVlanInterfaceAdjustTcpMssResult':
+        """
+        TCP MSS adjustment settings for the interface
+        """
+        return pulumi.get(self, "adjust_tcp_mss")
+
+    @_builtins.property
     @pulumi.getter
     def arps(self) -> Sequence['outputs.GetVlanInterfaceArpResult']:
+        """
+        ARP configuration
+        """
         return pulumi.get(self, "arps")
 
     @_builtins.property
     @pulumi.getter
     def comment(self) -> _builtins.str:
+        """
+        Description
+        """
         return pulumi.get(self, "comment")
 
     @_builtins.property
     @pulumi.getter(name="ddnsConfig")
     def ddns_config(self) -> 'outputs.GetVlanInterfaceDdnsConfigResult':
+        """
+        Dynamic DNS configuration specific to the Vlan Interfaces.
+        """
         return pulumi.get(self, "ddns_config")
 
     @_builtins.property
     @pulumi.getter(name="defaultValue")
     def default_value(self) -> _builtins.str:
+        """
+        Default interface assignment
+        """
         return pulumi.get(self, "default_value")
 
     @_builtins.property
@@ -108,11 +131,17 @@ class GetVlanInterfaceResult:
     @_builtins.property
     @pulumi.getter(name="dhcpClient")
     def dhcp_client(self) -> 'outputs.GetVlanInterfaceDhcpClientResult':
+        """
+        Vlan interfaces DHCP Client Object
+        """
         return pulumi.get(self, "dhcp_client")
 
     @_builtins.property
     @pulumi.getter
     def folder(self) -> _builtins.str:
+        """
+        The folder in which the resource is defined
+        """
         return pulumi.get(self, "folder")
 
     @_builtins.property
@@ -126,41 +155,65 @@ class GetVlanInterfaceResult:
     @_builtins.property
     @pulumi.getter(name="interfaceManagementProfile")
     def interface_management_profile(self) -> _builtins.str:
+        """
+        Interface management profile
+        """
         return pulumi.get(self, "interface_management_profile")
 
     @_builtins.property
     @pulumi.getter
     def ips(self) -> Sequence['outputs.GetVlanInterfaceIpResult']:
+        """
+        VLAN Interface IP Parent
+        """
         return pulumi.get(self, "ips")
 
     @_builtins.property
     @pulumi.getter
     def mtu(self) -> _builtins.int:
+        """
+        MTU
+        """
         return pulumi.get(self, "mtu")
 
     @_builtins.property
     @pulumi.getter
     def name(self) -> _builtins.str:
+        """
+        L3 sub-interface name
+        """
         return pulumi.get(self, "name")
 
     @_builtins.property
     @pulumi.getter(name="netflowProfile")
     def netflow_profile(self) -> _builtins.str:
+        """
+        Name of Netflow Profile to assign to Interface
+        """
         return pulumi.get(self, "netflow_profile")
 
     @_builtins.property
     @pulumi.getter
     def snippet(self) -> _builtins.str:
+        """
+        The snippet in which the resource is defined
+        """
         return pulumi.get(self, "snippet")
 
     @_builtins.property
     @pulumi.getter
     def tfid(self) -> _builtins.str:
+        """
+        The Terraform ID.
+        """
         return pulumi.get(self, "tfid")
 
     @_builtins.property
     @pulumi.getter(name="vlanTag")
     def vlan_tag(self) -> _builtins.str:
+        """
+        VLAN tag
+        """
         return pulumi.get(self, "vlan_tag")
 
 
@@ -170,6 +223,7 @@ class AwaitableGetVlanInterfaceResult(GetVlanInterfaceResult):
         if False:
             yield self
         return GetVlanInterfaceResult(
+            adjust_tcp_mss=self.adjust_tcp_mss,
             arps=self.arps,
             comment=self.comment,
             ddns_config=self.ddns_config,
@@ -217,7 +271,10 @@ def get_vlan_interface(device: Optional[_builtins.str] = None,
 
 
     :param _builtins.str device: The device in which the resource is defined
+    :param _builtins.str folder: The folder in which the resource is defined
     :param _builtins.str id: UUID of the resource
+    :param _builtins.str name: L3 sub-interface name
+    :param _builtins.str snippet: The snippet in which the resource is defined
     """
     __args__ = dict()
     __args__['device'] = device
@@ -229,6 +286,7 @@ def get_vlan_interface(device: Optional[_builtins.str] = None,
     __ret__ = pulumi.runtime.invoke('scm:index/getVlanInterface:getVlanInterface', __args__, opts=opts, typ=GetVlanInterfaceResult).value
 
     return AwaitableGetVlanInterfaceResult(
+        adjust_tcp_mss=pulumi.get(__ret__, 'adjust_tcp_mss'),
         arps=pulumi.get(__ret__, 'arps'),
         comment=pulumi.get(__ret__, 'comment'),
         ddns_config=pulumi.get(__ret__, 'ddns_config'),
@@ -274,7 +332,10 @@ def get_vlan_interface_output(device: pulumi.Input[Optional[Optional[_builtins.s
 
 
     :param _builtins.str device: The device in which the resource is defined
+    :param _builtins.str folder: The folder in which the resource is defined
     :param _builtins.str id: UUID of the resource
+    :param _builtins.str name: L3 sub-interface name
+    :param _builtins.str snippet: The snippet in which the resource is defined
     """
     __args__ = dict()
     __args__['device'] = device
@@ -285,6 +346,7 @@ def get_vlan_interface_output(device: pulumi.Input[Optional[Optional[_builtins.s
     opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('scm:index/getVlanInterface:getVlanInterface', __args__, opts=opts, typ=GetVlanInterfaceResult)
     return __ret__.apply(lambda __response__: GetVlanInterfaceResult(
+        adjust_tcp_mss=pulumi.get(__response__, 'adjust_tcp_mss'),
         arps=pulumi.get(__response__, 'arps'),
         comment=pulumi.get(__response__, 'comment'),
         ddns_config=pulumi.get(__response__, 'ddns_config'),

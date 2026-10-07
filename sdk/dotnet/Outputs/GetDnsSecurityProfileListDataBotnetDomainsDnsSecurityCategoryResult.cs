@@ -14,11 +14,11 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetDnsSecurityProfileListDataBotnetDomainsDnsSecurityCategoryResult
     {
         /// <summary>
-        /// Action
+        /// Action. Possible values are `Default`, `Allow`, `Block` and `Sinkhole`.
         /// </summary>
         public readonly string Action;
         /// <summary>
-        /// Log level
+        /// Log level. Possible values are `Default`, `None`, `Low`, `Informational`, `Medium`, `High` and `Critical`.
         /// </summary>
         public readonly string LogLevel;
         /// <summary>
@@ -26,7 +26,7 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly string Name;
         /// <summary>
-        /// Packet capture
+        /// Packet capture. Possible values are `Disable`, `single-packet` and `extended-capture`.
         /// </summary>
         public readonly string PacketCapture;
 

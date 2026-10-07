@@ -30,7 +30,7 @@ public final class GetTunnelInterfaceListData {
      */
     private String device;
     /**
-     * @return The folder of the item. Default: Shared.
+     * @return The folder in which the resource is defined
      * 
      */
     private String folder;
@@ -60,7 +60,7 @@ public final class GetTunnelInterfaceListData {
      */
     private Integer mtu;
     /**
-     * @return The name of the item.
+     * @return L3 sub-interface name for tunnel interface
      * 
      */
     private String name;
@@ -70,7 +70,7 @@ public final class GetTunnelInterfaceListData {
      */
     private String netflowProfile;
     /**
-     * @return The snippet of the item.
+     * @return The snippet in which the resource is defined
      * 
      */
     private String snippet;
@@ -103,7 +103,7 @@ public final class GetTunnelInterfaceListData {
         return this.device;
     }
     /**
-     * @return The folder of the item. Default: Shared.
+     * @return The folder in which the resource is defined
      * 
      */
     public String folder() {
@@ -145,7 +145,7 @@ public final class GetTunnelInterfaceListData {
         return this.mtu;
     }
     /**
-     * @return The name of the item.
+     * @return L3 sub-interface name for tunnel interface
      * 
      */
     public String name() {
@@ -159,7 +159,7 @@ public final class GetTunnelInterfaceListData {
         return this.netflowProfile;
     }
     /**
-     * @return The snippet of the item.
+     * @return The snippet in which the resource is defined
      * 
      */
     public String snippet() {

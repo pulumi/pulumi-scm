@@ -39,12 +39,12 @@ public final class GetAntiSpywareSignatureListData {
      */
     private String device;
     /**
-     * @return Direction
+     * @return Direction. Possible values are `client2server`, `server2client` and `both`.
      * 
      */
     private String direction;
     /**
-     * @return The folder of the item. Default: Shared.
+     * @return The folder in which the resource is defined
      * 
      */
     private String folder;
@@ -59,7 +59,7 @@ public final class GetAntiSpywareSignatureListData {
      */
     private List<String> references;
     /**
-     * @return Severity
+     * @return Severity. Possible values are `critical`, `low`, `high`, `medium` and `informational`.
      * 
      */
     private String severity;
@@ -69,7 +69,7 @@ public final class GetAntiSpywareSignatureListData {
      */
     private GetAntiSpywareSignatureListDataSignature signature;
     /**
-     * @return The snippet of the item.
+     * @return The snippet in which the resource is defined
      * 
      */
     private String snippet;
@@ -79,7 +79,7 @@ public final class GetAntiSpywareSignatureListData {
      */
     private String tfid;
     /**
-     * @return threat id range &lt;15000-18000&gt; and &lt;6900001-7000000&gt;
+     * @return threat id range \n\n and \n\n
      * 
      */
     private String threatId;
@@ -131,14 +131,14 @@ public final class GetAntiSpywareSignatureListData {
         return this.device;
     }
     /**
-     * @return Direction
+     * @return Direction. Possible values are `client2server`, `server2client` and `both`.
      * 
      */
     public String direction() {
         return this.direction;
     }
     /**
-     * @return The folder of the item. Default: Shared.
+     * @return The folder in which the resource is defined
      * 
      */
     public String folder() {
@@ -159,7 +159,7 @@ public final class GetAntiSpywareSignatureListData {
         return this.references;
     }
     /**
-     * @return Severity
+     * @return Severity. Possible values are `critical`, `low`, `high`, `medium` and `informational`.
      * 
      */
     public String severity() {
@@ -173,7 +173,7 @@ public final class GetAntiSpywareSignatureListData {
         return this.signature;
     }
     /**
-     * @return The snippet of the item.
+     * @return The snippet in which the resource is defined
      * 
      */
     public String snippet() {
@@ -187,7 +187,7 @@ public final class GetAntiSpywareSignatureListData {
         return this.tfid;
     }
     /**
-     * @return threat id range &lt;15000-18000&gt; and &lt;6900001-7000000&gt;
+     * @return threat id range \n\n and \n\n
      * 
      */
     public String threatId() {

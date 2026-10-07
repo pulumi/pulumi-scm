@@ -16,14 +16,14 @@ public final class SecurityRuleSecuritySettingsArgs extends com.pulumi.resources
     public static final SecurityRuleSecuritySettingsArgs Empty = new SecurityRuleSecuritySettingsArgs();
 
     /**
-     * Anti spyware
+     * Anti spyware. Possible values are `yes` and `no`.
      * 
      */
     @Import(name="antiSpyware")
     private @Nullable Output<String> antiSpyware;
 
     /**
-     * @return Anti spyware
+     * @return Anti spyware. Possible values are `yes` and `no`.
      * 
      */
     public Optional<Output<String>> antiSpyware() {
@@ -31,14 +31,14 @@ public final class SecurityRuleSecuritySettingsArgs extends com.pulumi.resources
     }
 
     /**
-     * Virus and wildfire analysis
+     * Virus and wildfire analysis. Possible values are `yes` and `no`.
      * 
      */
     @Import(name="virusAndWildfireAnalysis")
     private @Nullable Output<String> virusAndWildfireAnalysis;
 
     /**
-     * @return Virus and wildfire analysis
+     * @return Virus and wildfire analysis. Possible values are `yes` and `no`.
      * 
      */
     public Optional<Output<String>> virusAndWildfireAnalysis() {
@@ -46,14 +46,14 @@ public final class SecurityRuleSecuritySettingsArgs extends com.pulumi.resources
     }
 
     /**
-     * Vulnerability
+     * Vulnerability. Possible values are `yes` and `no`.
      * 
      */
     @Import(name="vulnerability")
     private @Nullable Output<String> vulnerability;
 
     /**
-     * @return Vulnerability
+     * @return Vulnerability. Possible values are `yes` and `no`.
      * 
      */
     public Optional<Output<String>> vulnerability() {
@@ -87,7 +87,7 @@ public final class SecurityRuleSecuritySettingsArgs extends com.pulumi.resources
         }
 
         /**
-         * @param antiSpyware Anti spyware
+         * @param antiSpyware Anti spyware. Possible values are `yes` and `no`.
          * 
          * @return builder
          * 
@@ -98,7 +98,7 @@ public final class SecurityRuleSecuritySettingsArgs extends com.pulumi.resources
         }
 
         /**
-         * @param antiSpyware Anti spyware
+         * @param antiSpyware Anti spyware. Possible values are `yes` and `no`.
          * 
          * @return builder
          * 
@@ -108,7 +108,7 @@ public final class SecurityRuleSecuritySettingsArgs extends com.pulumi.resources
         }
 
         /**
-         * @param virusAndWildfireAnalysis Virus and wildfire analysis
+         * @param virusAndWildfireAnalysis Virus and wildfire analysis. Possible values are `yes` and `no`.
          * 
          * @return builder
          * 
@@ -119,7 +119,7 @@ public final class SecurityRuleSecuritySettingsArgs extends com.pulumi.resources
         }
 
         /**
-         * @param virusAndWildfireAnalysis Virus and wildfire analysis
+         * @param virusAndWildfireAnalysis Virus and wildfire analysis. Possible values are `yes` and `no`.
          * 
          * @return builder
          * 
@@ -129,7 +129,7 @@ public final class SecurityRuleSecuritySettingsArgs extends com.pulumi.resources
         }
 
         /**
-         * @param vulnerability Vulnerability
+         * @param vulnerability Vulnerability. Possible values are `yes` and `no`.
          * 
          * @return builder
          * 
@@ -140,7 +140,7 @@ public final class SecurityRuleSecuritySettingsArgs extends com.pulumi.resources
         }
 
         /**
-         * @param vulnerability Vulnerability
+         * @param vulnerability Vulnerability. Possible values are `yes` and `no`.
          * 
          * @return builder
          * 

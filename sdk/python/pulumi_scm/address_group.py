@@ -35,18 +35,10 @@ class AddressGroupArgs:
         :param pulumi.Input[_builtins.str] description: Description
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input['AddressGroupDynamicArgs'] dynamic: Dynamic
-               
-               > ℹ️ **Note:** You must specify exactly one of `dynamic` and `static`.
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] name: The name of the address group
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] statics: Static
-               
-               > ℹ️ **Note:** You must specify exactly one of `dynamic` and `static`.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tags: Tags for address group object
         """
         if description is not None:
@@ -95,8 +87,6 @@ class AddressGroupArgs:
     def dynamic(self) -> pulumi.Input[Optional['AddressGroupDynamicArgs']]:
         """
         Dynamic
-
-        > ℹ️ **Note:** You must specify exactly one of `dynamic` and `static`.
         """
         return pulumi.get(self, "dynamic")
 
@@ -109,8 +99,6 @@ class AddressGroupArgs:
     def folder(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
-
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
 
@@ -135,8 +123,6 @@ class AddressGroupArgs:
     def snippet(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
-
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
 
@@ -149,8 +135,6 @@ class AddressGroupArgs:
     def statics(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         Static
-
-        > ℹ️ **Note:** You must specify exactly one of `dynamic` and `static`.
         """
         return pulumi.get(self, "statics")
 
@@ -189,18 +173,10 @@ class _AddressGroupState:
         :param pulumi.Input[_builtins.str] description: Description
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input['AddressGroupDynamicArgs'] dynamic: Dynamic
-               
-               > ℹ️ **Note:** You must specify exactly one of `dynamic` and `static`.
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] name: The name of the address group
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] statics: Static
-               
-               > ℹ️ **Note:** You must specify exactly one of `dynamic` and `static`.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tags: Tags for address group object
         :param pulumi.Input[_builtins.str] tfid: The Terraform ID.
         """
@@ -252,8 +228,6 @@ class _AddressGroupState:
     def dynamic(self) -> pulumi.Input[Optional['AddressGroupDynamicArgs']]:
         """
         Dynamic
-
-        > ℹ️ **Note:** You must specify exactly one of `dynamic` and `static`.
         """
         return pulumi.get(self, "dynamic")
 
@@ -266,8 +240,6 @@ class _AddressGroupState:
     def folder(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
-
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
 
@@ -292,8 +264,6 @@ class _AddressGroupState:
     def snippet(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
-
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
 
@@ -306,8 +276,6 @@ class _AddressGroupState:
     def statics(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         Static
-
-        > ℹ️ **Note:** You must specify exactly one of `dynamic` and `static`.
         """
         return pulumi.get(self, "statics")
 
@@ -434,18 +402,10 @@ class AddressGroup(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] description: Description
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input[Union['AddressGroupDynamicArgs', 'AddressGroupDynamicArgsDict', 'outputs.AddressGroupDynamic']] dynamic: Dynamic
-               
-               > ℹ️ **Note:** You must specify exactly one of `dynamic` and `static`.
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] name: The name of the address group
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] statics: Static
-               
-               > ℹ️ **Note:** You must specify exactly one of `dynamic` and `static`.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tags: Tags for address group object
         """
         ...
@@ -598,18 +558,10 @@ class AddressGroup(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] description: Description
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input[Union['AddressGroupDynamicArgs', 'AddressGroupDynamicArgsDict', 'outputs.AddressGroupDynamic']] dynamic: Dynamic
-               
-               > ℹ️ **Note:** You must specify exactly one of `dynamic` and `static`.
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] name: The name of the address group
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] statics: Static
-               
-               > ℹ️ **Note:** You must specify exactly one of `dynamic` and `static`.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tags: Tags for address group object
         :param pulumi.Input[_builtins.str] tfid: The Terraform ID.
         """
@@ -649,8 +601,6 @@ class AddressGroup(pulumi.CustomResource):
     def dynamic(self) -> pulumi.Output[Optional['outputs.AddressGroupDynamic']]:
         """
         Dynamic
-
-        > ℹ️ **Note:** You must specify exactly one of `dynamic` and `static`.
         """
         return pulumi.get(self, "dynamic")
 
@@ -659,8 +609,6 @@ class AddressGroup(pulumi.CustomResource):
     def folder(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
-
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
 
@@ -677,8 +625,6 @@ class AddressGroup(pulumi.CustomResource):
     def snippet(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
-
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
 
@@ -687,8 +633,6 @@ class AddressGroup(pulumi.CustomResource):
     def statics(self) -> pulumi.Output[Optional[Sequence[_builtins.str]]]:
         """
         Static
-
-        > ℹ️ **Note:** You must specify exactly one of `dynamic` and `static`.
         """
         return pulumi.get(self, "statics")
 

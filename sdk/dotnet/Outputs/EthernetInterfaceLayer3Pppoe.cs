@@ -18,7 +18,7 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly string? AccessConcentrator;
         /// <summary>
-        /// Authentication protocol
+        /// Authentication protocol. Possible values are `CHAP`, `PAP` and `Auto`.
         /// </summary>
         public readonly string? Authentication;
         /// <summary>
@@ -26,7 +26,7 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly int? DefaultRouteMetric;
         /// <summary>
-        /// Enable
+        /// Enable PPPoE on the interface
         /// </summary>
         public readonly bool? Enable;
         /// <summary>

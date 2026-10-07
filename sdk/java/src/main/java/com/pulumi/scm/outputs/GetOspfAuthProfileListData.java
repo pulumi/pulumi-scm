@@ -24,7 +24,7 @@ public final class GetOspfAuthProfileListData {
      */
     private Map<String,String> encryptedValues;
     /**
-     * @return The folder of the item. Default: Shared.
+     * @return The folder in which the resource is defined
      * 
      */
     private String folder;
@@ -36,24 +36,20 @@ public final class GetOspfAuthProfileListData {
     /**
      * @return MD5s
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `md5` and `password`.
-     * 
      */
     private List<GetOspfAuthProfileListDataMd5> md5s;
     /**
-     * @return The name of the item.
+     * @return Profile name
      * 
      */
     private String name;
     /**
      * @return Password
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `md5` and `password`.
-     * 
      */
     private String password;
     /**
-     * @return The snippet of the item.
+     * @return The snippet in which the resource is defined
      * 
      */
     private String snippet;
@@ -79,7 +75,7 @@ public final class GetOspfAuthProfileListData {
         return this.encryptedValues;
     }
     /**
-     * @return The folder of the item. Default: Shared.
+     * @return The folder in which the resource is defined
      * 
      */
     public String folder() {
@@ -95,14 +91,12 @@ public final class GetOspfAuthProfileListData {
     /**
      * @return MD5s
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `md5` and `password`.
-     * 
      */
     public List<GetOspfAuthProfileListDataMd5> md5s() {
         return this.md5s;
     }
     /**
-     * @return The name of the item.
+     * @return Profile name
      * 
      */
     public String name() {
@@ -111,14 +105,12 @@ public final class GetOspfAuthProfileListData {
     /**
      * @return Password
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `md5` and `password`.
-     * 
      */
     public String password() {
         return this.password;
     }
     /**
-     * @return The snippet of the item.
+     * @return The snippet in which the resource is defined
      * 
      */
     public String snippet() {

@@ -38,11 +38,11 @@ class RemoteNetworkArgs:
         :param pulumi.Input[_builtins.str] folder: The folder that contains the remote network
         :param pulumi.Input[_builtins.str] license_type: New customer will only be on aggregate bandwidth licensing
         :param pulumi.Input[_builtins.str] region: Region
-        :param pulumi.Input[_builtins.str] ecmp_load_balancing: Ecmp load balancing
+        :param pulumi.Input[_builtins.str] ecmp_load_balancing: Ecmp load balancing. Possible values are `enable` and `disable`.
         :param pulumi.Input[Sequence[pulumi.Input['RemoteNetworkEcmpTunnelArgs']]] ecmp_tunnels: ecmp*tunnels is required when ecmp*load*balancing is enable
         :param pulumi.Input[_builtins.str] ipsec_tunnel: ipsec*tunnel is required when ecmp*load_balancing is disable
         :param pulumi.Input[_builtins.str] name: The name of the remote network
-        :param pulumi.Input['RemoteNetworkProtocolArgs'] protocol: setup the protocol when ecmp*load*balancing is disable
+        :param pulumi.Input['RemoteNetworkProtocolArgs'] protocol: setup the protocol when ecmp*load*balancing is disabled
         :param pulumi.Input[_builtins.str] secondary_ipsec_tunnel: specify secondary ipsec_tunnel if needed
         :param pulumi.Input[_builtins.str] spn_name: spn-name is needed when license_type is FWAAS-AGGREGATE
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] subnets: Subnets
@@ -107,7 +107,7 @@ class RemoteNetworkArgs:
     @pulumi.getter(name="ecmpLoadBalancing")
     def ecmp_load_balancing(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
-        Ecmp load balancing
+        Ecmp load balancing. Possible values are `enable` and `disable`.
         """
         return pulumi.get(self, "ecmp_load_balancing")
 
@@ -155,7 +155,7 @@ class RemoteNetworkArgs:
     @pulumi.getter
     def protocol(self) -> pulumi.Input[Optional['RemoteNetworkProtocolArgs']]:
         """
-        setup the protocol when ecmp*load*balancing is disable
+        setup the protocol when ecmp*load*balancing is disabled
         """
         return pulumi.get(self, "protocol")
 
@@ -219,14 +219,14 @@ class _RemoteNetworkState:
         """
         Input properties used for looking up and filtering RemoteNetwork resources.
 
-        :param pulumi.Input[_builtins.str] ecmp_load_balancing: Ecmp load balancing
+        :param pulumi.Input[_builtins.str] ecmp_load_balancing: Ecmp load balancing. Possible values are `enable` and `disable`.
         :param pulumi.Input[Sequence[pulumi.Input['RemoteNetworkEcmpTunnelArgs']]] ecmp_tunnels: ecmp*tunnels is required when ecmp*load*balancing is enable
         :param pulumi.Input[Mapping[str, pulumi.Input[_builtins.str]]] encrypted_values: Map of sensitive values returned from the API.
         :param pulumi.Input[_builtins.str] folder: The folder that contains the remote network
         :param pulumi.Input[_builtins.str] ipsec_tunnel: ipsec*tunnel is required when ecmp*load_balancing is disable
         :param pulumi.Input[_builtins.str] license_type: New customer will only be on aggregate bandwidth licensing
         :param pulumi.Input[_builtins.str] name: The name of the remote network
-        :param pulumi.Input['RemoteNetworkProtocolArgs'] protocol: setup the protocol when ecmp*load*balancing is disable
+        :param pulumi.Input['RemoteNetworkProtocolArgs'] protocol: setup the protocol when ecmp*load*balancing is disabled
         :param pulumi.Input[_builtins.str] region: Region
         :param pulumi.Input[_builtins.str] secondary_ipsec_tunnel: specify secondary ipsec_tunnel if needed
         :param pulumi.Input[_builtins.str] spn_name: spn-name is needed when license_type is FWAAS-AGGREGATE
@@ -264,7 +264,7 @@ class _RemoteNetworkState:
     @pulumi.getter(name="ecmpLoadBalancing")
     def ecmp_load_balancing(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
-        Ecmp load balancing
+        Ecmp load balancing. Possible values are `enable` and `disable`.
         """
         return pulumi.get(self, "ecmp_load_balancing")
 
@@ -348,7 +348,7 @@ class _RemoteNetworkState:
     @pulumi.getter
     def protocol(self) -> pulumi.Input[Optional['RemoteNetworkProtocolArgs']]:
         """
-        setup the protocol when ecmp*load*balancing is disable
+        setup the protocol when ecmp*load*balancing is disabled
         """
         return pulumi.get(self, "protocol")
 
@@ -539,13 +539,13 @@ class RemoteNetwork(pulumi.CustomResource):
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[_builtins.str] ecmp_load_balancing: Ecmp load balancing
+        :param pulumi.Input[_builtins.str] ecmp_load_balancing: Ecmp load balancing. Possible values are `enable` and `disable`.
         :param pulumi.Input[Sequence[pulumi.Input[Union['RemoteNetworkEcmpTunnelArgs', 'RemoteNetworkEcmpTunnelArgsDict', 'outputs.RemoteNetworkEcmpTunnel']]]] ecmp_tunnels: ecmp*tunnels is required when ecmp*load*balancing is enable
         :param pulumi.Input[_builtins.str] folder: The folder that contains the remote network
         :param pulumi.Input[_builtins.str] ipsec_tunnel: ipsec*tunnel is required when ecmp*load_balancing is disable
         :param pulumi.Input[_builtins.str] license_type: New customer will only be on aggregate bandwidth licensing
         :param pulumi.Input[_builtins.str] name: The name of the remote network
-        :param pulumi.Input[Union['RemoteNetworkProtocolArgs', 'RemoteNetworkProtocolArgsDict', 'outputs.RemoteNetworkProtocol']] protocol: setup the protocol when ecmp*load*balancing is disable
+        :param pulumi.Input[Union['RemoteNetworkProtocolArgs', 'RemoteNetworkProtocolArgsDict', 'outputs.RemoteNetworkProtocol']] protocol: setup the protocol when ecmp*load*balancing is disabled
         :param pulumi.Input[_builtins.str] region: Region
         :param pulumi.Input[_builtins.str] secondary_ipsec_tunnel: specify secondary ipsec_tunnel if needed
         :param pulumi.Input[_builtins.str] spn_name: spn-name is needed when license_type is FWAAS-AGGREGATE
@@ -745,14 +745,14 @@ class RemoteNetwork(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[_builtins.str] ecmp_load_balancing: Ecmp load balancing
+        :param pulumi.Input[_builtins.str] ecmp_load_balancing: Ecmp load balancing. Possible values are `enable` and `disable`.
         :param pulumi.Input[Sequence[pulumi.Input[Union['RemoteNetworkEcmpTunnelArgs', 'RemoteNetworkEcmpTunnelArgsDict', 'outputs.RemoteNetworkEcmpTunnel']]]] ecmp_tunnels: ecmp*tunnels is required when ecmp*load*balancing is enable
         :param pulumi.Input[Mapping[str, pulumi.Input[_builtins.str]]] encrypted_values: Map of sensitive values returned from the API.
         :param pulumi.Input[_builtins.str] folder: The folder that contains the remote network
         :param pulumi.Input[_builtins.str] ipsec_tunnel: ipsec*tunnel is required when ecmp*load_balancing is disable
         :param pulumi.Input[_builtins.str] license_type: New customer will only be on aggregate bandwidth licensing
         :param pulumi.Input[_builtins.str] name: The name of the remote network
-        :param pulumi.Input[Union['RemoteNetworkProtocolArgs', 'RemoteNetworkProtocolArgsDict', 'outputs.RemoteNetworkProtocol']] protocol: setup the protocol when ecmp*load*balancing is disable
+        :param pulumi.Input[Union['RemoteNetworkProtocolArgs', 'RemoteNetworkProtocolArgsDict', 'outputs.RemoteNetworkProtocol']] protocol: setup the protocol when ecmp*load*balancing is disabled
         :param pulumi.Input[_builtins.str] region: Region
         :param pulumi.Input[_builtins.str] secondary_ipsec_tunnel: specify secondary ipsec_tunnel if needed
         :param pulumi.Input[_builtins.str] spn_name: spn-name is needed when license_type is FWAAS-AGGREGATE
@@ -782,7 +782,7 @@ class RemoteNetwork(pulumi.CustomResource):
     @pulumi.getter(name="ecmpLoadBalancing")
     def ecmp_load_balancing(self) -> pulumi.Output[_builtins.str]:
         """
-        Ecmp load balancing
+        Ecmp load balancing. Possible values are `enable` and `disable`.
         """
         return pulumi.get(self, "ecmp_load_balancing")
 
@@ -838,7 +838,7 @@ class RemoteNetwork(pulumi.CustomResource):
     @pulumi.getter
     def protocol(self) -> pulumi.Output[Optional['outputs.RemoteNetworkProtocol']]:
         """
-        setup the protocol when ecmp*load*balancing is disable
+        setup the protocol when ecmp*load*balancing is disabled
         """
         return pulumi.get(self, "protocol")
 

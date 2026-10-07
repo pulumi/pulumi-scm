@@ -13,7 +13,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class HipObjectFirewallCriteria {
     /**
-     * @return is enabled
+     * @return is enabled. Possible values are `no`, `yes` and `not-available`.
      * 
      */
     private @Nullable String isEnabled;
@@ -25,7 +25,7 @@ public final class HipObjectFirewallCriteria {
 
     private HipObjectFirewallCriteria() {}
     /**
-     * @return is enabled
+     * @return is enabled. Possible values are `no`, `yes` and `not-available`.
      * 
      */
     public Optional<String> isEnabled() {

@@ -73,8 +73,6 @@ export class DosProtectionProfile extends pulumi.CustomResource {
     declare public readonly flood: pulumi.Output<outputs.DosProtectionProfileFlood | undefined>;
     /**
      * The folder in which the resource is defined
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly folder: pulumi.Output<string | undefined>;
     /**
@@ -87,8 +85,6 @@ export class DosProtectionProfile extends pulumi.CustomResource {
     declare public readonly resource: pulumi.Output<outputs.DosProtectionProfileResource | undefined>;
     /**
      * The snippet in which the resource is defined
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly snippet: pulumi.Output<string | undefined>;
     /**
@@ -96,7 +92,7 @@ export class DosProtectionProfile extends pulumi.CustomResource {
      */
     declare public /*out*/ readonly tfid: pulumi.Output<string>;
     /**
-     * Type
+     * Type. Possible values are `aggregate` and `classified`.
      */
     declare public readonly type: pulumi.Output<string>;
 
@@ -160,8 +156,6 @@ export interface DosProtectionProfileState {
     flood?: pulumi.Input<inputs.DosProtectionProfileFlood | undefined>;
     /**
      * The folder in which the resource is defined
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     folder?: pulumi.Input<string | undefined>;
     /**
@@ -174,8 +168,6 @@ export interface DosProtectionProfileState {
     resource?: pulumi.Input<inputs.DosProtectionProfileResource | undefined>;
     /**
      * The snippet in which the resource is defined
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     snippet?: pulumi.Input<string | undefined>;
     /**
@@ -183,7 +175,7 @@ export interface DosProtectionProfileState {
      */
     tfid?: pulumi.Input<string | undefined>;
     /**
-     * Type
+     * Type. Possible values are `aggregate` and `classified`.
      */
     type?: pulumi.Input<string | undefined>;
 }
@@ -206,8 +198,6 @@ export interface DosProtectionProfileArgs {
     flood?: pulumi.Input<inputs.DosProtectionProfileFlood | undefined>;
     /**
      * The folder in which the resource is defined
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     folder?: pulumi.Input<string | undefined>;
     /**
@@ -220,12 +210,10 @@ export interface DosProtectionProfileArgs {
     resource?: pulumi.Input<inputs.DosProtectionProfileResource | undefined>;
     /**
      * The snippet in which the resource is defined
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     snippet?: pulumi.Input<string | undefined>;
     /**
-     * Type
+     * Type. Possible values are `aggregate` and `classified`.
      */
     type: pulumi.Input<string>;
 }

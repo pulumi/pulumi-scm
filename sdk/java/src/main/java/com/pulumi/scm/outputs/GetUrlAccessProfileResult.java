@@ -13,55 +13,159 @@ import java.util.Objects;
 
 @CustomType
 public final class GetUrlAccessProfileResult {
+    /**
+     * @return Alert
+     * 
+     */
     private List<String> alerts;
+    /**
+     * @return Allow
+     * 
+     */
     private List<String> allows;
+    /**
+     * @return Block
+     * 
+     */
     private List<String> blocks;
+    /**
+     * @return Cloud inline cat
+     * 
+     */
     private Boolean cloudInlineCat;
+    /**
+     * @return Continue
+     * 
+     */
     private List<String> continues;
+    /**
+     * @return Credential enforcement
+     * 
+     */
     private GetUrlAccessProfileCredentialEnforcement credentialEnforcement;
+    /**
+     * @return Description
+     * 
+     */
     private String description;
     /**
      * @return The device in which the resource is defined
      * 
      */
     private String device;
+    /**
+     * @return The folder in which the resource is defined
+     * 
+     */
     private String folder;
     /**
      * @return UUID of the resource
      * 
      */
     private String id;
+    /**
+     * @return Local inline cat
+     * 
+     */
     private Boolean localInlineCat;
+    /**
+     * @return Log container page only
+     * 
+     */
     private Boolean logContainerPageOnly;
+    /**
+     * @return Log http hdr referer
+     * 
+     */
     private Boolean logHttpHdrReferer;
+    /**
+     * @return Log http hdr user agent
+     * 
+     */
     private Boolean logHttpHdrUserAgent;
+    /**
+     * @return Log http hdr xff
+     * 
+     */
     private Boolean logHttpHdrXff;
+    /**
+     * @return Mlav category exception
+     * 
+     */
     private List<String> mlavCategoryExceptions;
+    /**
+     * @return Name
+     * 
+     */
     private String name;
+    /**
+     * @return Redirect
+     * 
+     */
     private List<String> redirects;
+    /**
+     * @return Safe search enforcement
+     * 
+     */
     private Boolean safeSearchEnforcement;
+    /**
+     * @return The snippet in which the resource is defined
+     * 
+     */
     private String snippet;
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     private String tfid;
 
     private GetUrlAccessProfileResult() {}
+    /**
+     * @return Alert
+     * 
+     */
     public List<String> alerts() {
         return this.alerts;
     }
+    /**
+     * @return Allow
+     * 
+     */
     public List<String> allows() {
         return this.allows;
     }
+    /**
+     * @return Block
+     * 
+     */
     public List<String> blocks() {
         return this.blocks;
     }
+    /**
+     * @return Cloud inline cat
+     * 
+     */
     public Boolean cloudInlineCat() {
         return this.cloudInlineCat;
     }
+    /**
+     * @return Continue
+     * 
+     */
     public List<String> continues() {
         return this.continues;
     }
+    /**
+     * @return Credential enforcement
+     * 
+     */
     public GetUrlAccessProfileCredentialEnforcement credentialEnforcement() {
         return this.credentialEnforcement;
     }
+    /**
+     * @return Description
+     * 
+     */
     public String description() {
         return this.description;
     }
@@ -72,6 +176,10 @@ public final class GetUrlAccessProfileResult {
     public String device() {
         return this.device;
     }
+    /**
+     * @return The folder in which the resource is defined
+     * 
+     */
     public String folder() {
         return this.folder;
     }
@@ -82,36 +190,80 @@ public final class GetUrlAccessProfileResult {
     public String id() {
         return this.id;
     }
+    /**
+     * @return Local inline cat
+     * 
+     */
     public Boolean localInlineCat() {
         return this.localInlineCat;
     }
+    /**
+     * @return Log container page only
+     * 
+     */
     public Boolean logContainerPageOnly() {
         return this.logContainerPageOnly;
     }
+    /**
+     * @return Log http hdr referer
+     * 
+     */
     public Boolean logHttpHdrReferer() {
         return this.logHttpHdrReferer;
     }
+    /**
+     * @return Log http hdr user agent
+     * 
+     */
     public Boolean logHttpHdrUserAgent() {
         return this.logHttpHdrUserAgent;
     }
+    /**
+     * @return Log http hdr xff
+     * 
+     */
     public Boolean logHttpHdrXff() {
         return this.logHttpHdrXff;
     }
+    /**
+     * @return Mlav category exception
+     * 
+     */
     public List<String> mlavCategoryExceptions() {
         return this.mlavCategoryExceptions;
     }
+    /**
+     * @return Name
+     * 
+     */
     public String name() {
         return this.name;
     }
+    /**
+     * @return Redirect
+     * 
+     */
     public List<String> redirects() {
         return this.redirects;
     }
+    /**
+     * @return Safe search enforcement
+     * 
+     */
     public Boolean safeSearchEnforcement() {
         return this.safeSearchEnforcement;
     }
+    /**
+     * @return The snippet in which the resource is defined
+     * 
+     */
     public String snippet() {
         return this.snippet;
     }
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     public String tfid() {
         return this.tfid;
     }

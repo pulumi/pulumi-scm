@@ -16,7 +16,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class LogicalRouterVrfBgpRedistRule {
     /**
-     * @return Address family identifier
+     * @return Address family identifier. Possible values are `ipv4` and `ipv6`.
      * 
      */
     private @Nullable String addressFamilyIdentifier;
@@ -36,7 +36,7 @@ public final class LogicalRouterVrfBgpRedistRule {
      */
     private String name;
     /**
-     * @return Route table
+     * @return Route table. Possible values are `unicast`, `multicast` and `both`.
      * 
      */
     private @Nullable String routeTable;
@@ -66,14 +66,14 @@ public final class LogicalRouterVrfBgpRedistRule {
      */
     private @Nullable Integer setMed;
     /**
-     * @return Set origin
+     * @return Set origin. Possible values are `igp`, `egp` and `incomplete`.
      * 
      */
     private @Nullable String setOrigin;
 
     private LogicalRouterVrfBgpRedistRule() {}
     /**
-     * @return Address family identifier
+     * @return Address family identifier. Possible values are `ipv4` and `ipv6`.
      * 
      */
     public Optional<String> addressFamilyIdentifier() {
@@ -101,7 +101,7 @@ public final class LogicalRouterVrfBgpRedistRule {
         return this.name;
     }
     /**
-     * @return Route table
+     * @return Route table. Possible values are `unicast`, `multicast` and `both`.
      * 
      */
     public Optional<String> routeTable() {
@@ -143,7 +143,7 @@ public final class LogicalRouterVrfBgpRedistRule {
         return Optional.ofNullable(this.setMed);
     }
     /**
-     * @return Set origin
+     * @return Set origin. Possible values are `igp`, `egp` and `incomplete`.
      * 
      */
     public Optional<String> setOrigin() {

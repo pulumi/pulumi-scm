@@ -20,7 +20,7 @@ public final class ZoneProtectionProfileNonIpProtocolArgs extends com.pulumi.res
     /**
      * Specify the type of list you are creating for protocol protection:
      * * Include List—Only the protocols on the list are allowed—in addition to IPv4 (0x0800), IPv6 (0x86DD), ARP (0x0806), and VLAN tagged frames (0x8100). All other protocols are implicitly denied (blocked).
-     * * Exclude List—Only the protocols on the list are denied; all other protocols are implicitly allowed. You cannot exclude IPv4 (0x0800), IPv6 (0x86DD), ARP (0x0806), or VLAN tagged frames (0x8100).
+     * * Exclude List—Only the protocols on the list are denied; all other protocols are implicitly allowed. You cannot exclude IPv4 (0x0800), IPv6 (0x86DD), ARP (0x0806), or VLAN tagged frames (0x8100). Possible values are `exclude` and `include`.
      * 
      */
     @Import(name="listType")
@@ -29,7 +29,7 @@ public final class ZoneProtectionProfileNonIpProtocolArgs extends com.pulumi.res
     /**
      * @return Specify the type of list you are creating for protocol protection:
      * * Include List—Only the protocols on the list are allowed—in addition to IPv4 (0x0800), IPv6 (0x86DD), ARP (0x0806), and VLAN tagged frames (0x8100). All other protocols are implicitly denied (blocked).
-     * * Exclude List—Only the protocols on the list are denied; all other protocols are implicitly allowed. You cannot exclude IPv4 (0x0800), IPv6 (0x86DD), ARP (0x0806), or VLAN tagged frames (0x8100).
+     * * Exclude List—Only the protocols on the list are denied; all other protocols are implicitly allowed. You cannot exclude IPv4 (0x0800), IPv6 (0x86DD), ARP (0x0806), or VLAN tagged frames (0x8100). Possible values are `exclude` and `include`.
      * 
      */
     public Optional<Output<String>> listType() {
@@ -79,7 +79,7 @@ public final class ZoneProtectionProfileNonIpProtocolArgs extends com.pulumi.res
         /**
          * @param listType Specify the type of list you are creating for protocol protection:
          * * Include List—Only the protocols on the list are allowed—in addition to IPv4 (0x0800), IPv6 (0x86DD), ARP (0x0806), and VLAN tagged frames (0x8100). All other protocols are implicitly denied (blocked).
-         * * Exclude List—Only the protocols on the list are denied; all other protocols are implicitly allowed. You cannot exclude IPv4 (0x0800), IPv6 (0x86DD), ARP (0x0806), or VLAN tagged frames (0x8100).
+         * * Exclude List—Only the protocols on the list are denied; all other protocols are implicitly allowed. You cannot exclude IPv4 (0x0800), IPv6 (0x86DD), ARP (0x0806), or VLAN tagged frames (0x8100). Possible values are `exclude` and `include`.
          * 
          * @return builder
          * 
@@ -92,7 +92,7 @@ public final class ZoneProtectionProfileNonIpProtocolArgs extends com.pulumi.res
         /**
          * @param listType Specify the type of list you are creating for protocol protection:
          * * Include List—Only the protocols on the list are allowed—in addition to IPv4 (0x0800), IPv6 (0x86DD), ARP (0x0806), and VLAN tagged frames (0x8100). All other protocols are implicitly denied (blocked).
-         * * Exclude List—Only the protocols on the list are denied; all other protocols are implicitly allowed. You cannot exclude IPv4 (0x0800), IPv6 (0x86DD), ARP (0x0806), or VLAN tagged frames (0x8100).
+         * * Exclude List—Only the protocols on the list are denied; all other protocols are implicitly allowed. You cannot exclude IPv4 (0x0800), IPv6 (0x86DD), ARP (0x0806), or VLAN tagged frames (0x8100). Possible values are `exclude` and `include`.
          * 
          * @return builder
          * 

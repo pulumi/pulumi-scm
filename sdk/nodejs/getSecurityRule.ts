@@ -66,7 +66,7 @@ export interface GetSecurityRuleArgs {
  */
 export interface GetSecurityRuleResult {
     /**
-     * The action to be taken when the rule is matched
+     * The action to be taken when the rule is matched. Possible values are `allow`, `deny`, `drop`, `reset-client`, `reset-server` and `reset-both`.
      */
     readonly action: string;
     /**
@@ -170,7 +170,7 @@ export interface GetSecurityRuleResult {
      */
     readonly policyType: string;
     /**
-     * The position of a security rule
+     * The position of a security rule. Possible values are `pre` and `post`.
      */
     readonly position: string;
     /**
@@ -214,7 +214,7 @@ export interface GetSecurityRuleResult {
      */
     readonly tags: string[];
     /**
-     * The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `"before"` or `"after"`.
+     * UUID of the rule to position this rule relative to. Required when `relativePosition` is `"before"` or `"after"`.
      */
     readonly targetRule: string;
     /**

@@ -71,11 +71,17 @@ class GetTunnelInterfaceResult:
     @_builtins.property
     @pulumi.getter
     def comment(self) -> _builtins.str:
+        """
+        Description for tunnel interface
+        """
         return pulumi.get(self, "comment")
 
     @_builtins.property
     @pulumi.getter(name="defaultValue")
     def default_value(self) -> _builtins.str:
+        """
+        Default interface assignment for tunnel interface
+        """
         return pulumi.get(self, "default_value")
 
     @_builtins.property
@@ -89,6 +95,9 @@ class GetTunnelInterfaceResult:
     @_builtins.property
     @pulumi.getter
     def folder(self) -> _builtins.str:
+        """
+        The folder in which the resource is defined
+        """
         return pulumi.get(self, "folder")
 
     @_builtins.property
@@ -102,41 +111,65 @@ class GetTunnelInterfaceResult:
     @_builtins.property
     @pulumi.getter(name="interfaceManagementProfile")
     def interface_management_profile(self) -> _builtins.str:
+        """
+        Interface management profile for tunnel interface
+        """
         return pulumi.get(self, "interface_management_profile")
 
     @_builtins.property
     @pulumi.getter
     def ips(self) -> Sequence['outputs.GetTunnelInterfaceIpResult']:
+        """
+        Tunnel Interface IP Parent
+        """
         return pulumi.get(self, "ips")
 
     @_builtins.property
     @pulumi.getter
     def ipv6(self) -> 'outputs.GetTunnelInterfaceIpv6Result':
+        """
+        Tunnel Interface IPv6 Configuration
+        """
         return pulumi.get(self, "ipv6")
 
     @_builtins.property
     @pulumi.getter
     def mtu(self) -> _builtins.int:
+        """
+        MTU for tunnel interface
+        """
         return pulumi.get(self, "mtu")
 
     @_builtins.property
     @pulumi.getter
     def name(self) -> _builtins.str:
+        """
+        L3 sub-interface name for tunnel interface
+        """
         return pulumi.get(self, "name")
 
     @_builtins.property
     @pulumi.getter(name="netflowProfile")
     def netflow_profile(self) -> _builtins.str:
+        """
+        Name of Netflow Profile to assign to Interface
+        """
         return pulumi.get(self, "netflow_profile")
 
     @_builtins.property
     @pulumi.getter
     def snippet(self) -> _builtins.str:
+        """
+        The snippet in which the resource is defined
+        """
         return pulumi.get(self, "snippet")
 
     @_builtins.property
     @pulumi.getter
     def tfid(self) -> _builtins.str:
+        """
+        The Terraform ID.
+        """
         return pulumi.get(self, "tfid")
 
 
@@ -189,7 +222,10 @@ def get_tunnel_interface(device: Optional[_builtins.str] = None,
 
 
     :param _builtins.str device: The device in which the resource is defined
+    :param _builtins.str folder: The folder in which the resource is defined
     :param _builtins.str id: UUID of the resource for tunnel interface
+    :param _builtins.str name: L3 sub-interface name for tunnel interface
+    :param _builtins.str snippet: The snippet in which the resource is defined
     """
     __args__ = dict()
     __args__['device'] = device
@@ -242,7 +278,10 @@ def get_tunnel_interface_output(device: pulumi.Input[Optional[Optional[_builtins
 
 
     :param _builtins.str device: The device in which the resource is defined
+    :param _builtins.str folder: The folder in which the resource is defined
     :param _builtins.str id: UUID of the resource for tunnel interface
+    :param _builtins.str name: L3 sub-interface name for tunnel interface
+    :param _builtins.str snippet: The snippet in which the resource is defined
     """
     __args__ = dict()
     __args__['device'] = device

@@ -25,14 +25,10 @@ public final class UpdateScheduleUpdateScheduleAntiVirusRecurring {
     /**
      * @return Hourly
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `hourly`, `none`, and `weekly`.
-     * 
      */
     private @Nullable UpdateScheduleUpdateScheduleAntiVirusRecurringHourly hourly;
     /**
      * @return None
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `hourly`, `none`, and `weekly`.
      * 
      */
     private @Nullable UpdateScheduleUpdateScheduleAntiVirusRecurringNone none;
@@ -49,8 +45,6 @@ public final class UpdateScheduleUpdateScheduleAntiVirusRecurring {
     /**
      * @return Weekly
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `hourly`, `none`, and `weekly`.
-     * 
      */
     private @Nullable UpdateScheduleUpdateScheduleAntiVirusRecurringWeekly weekly;
 
@@ -65,16 +59,12 @@ public final class UpdateScheduleUpdateScheduleAntiVirusRecurring {
     /**
      * @return Hourly
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `hourly`, `none`, and `weekly`.
-     * 
      */
     public Optional<UpdateScheduleUpdateScheduleAntiVirusRecurringHourly> hourly() {
         return Optional.ofNullable(this.hourly);
     }
     /**
      * @return None
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `hourly`, `none`, and `weekly`.
      * 
      */
     public Optional<UpdateScheduleUpdateScheduleAntiVirusRecurringNone> none() {
@@ -96,8 +86,6 @@ public final class UpdateScheduleUpdateScheduleAntiVirusRecurring {
     }
     /**
      * @return Weekly
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `hourly`, `none`, and `weekly`.
      * 
      */
     public Optional<UpdateScheduleUpdateScheduleAntiVirusRecurringWeekly> weekly() {

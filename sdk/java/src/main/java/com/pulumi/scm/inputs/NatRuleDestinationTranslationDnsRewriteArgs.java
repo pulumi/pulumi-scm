@@ -16,14 +16,14 @@ public final class NatRuleDestinationTranslationDnsRewriteArgs extends com.pulum
     public static final NatRuleDestinationTranslationDnsRewriteArgs Empty = new NatRuleDestinationTranslationDnsRewriteArgs();
 
     /**
-     * Direction
+     * Direction. Possible values are `reverse` and `forward`.
      * 
      */
     @Import(name="direction")
     private @Nullable Output<String> direction;
 
     /**
-     * @return Direction
+     * @return Direction. Possible values are `reverse` and `forward`.
      * 
      */
     public Optional<Output<String>> direction() {
@@ -55,7 +55,7 @@ public final class NatRuleDestinationTranslationDnsRewriteArgs extends com.pulum
         }
 
         /**
-         * @param direction Direction
+         * @param direction Direction. Possible values are `reverse` and `forward`.
          * 
          * @return builder
          * 
@@ -66,7 +66,7 @@ public final class NatRuleDestinationTranslationDnsRewriteArgs extends com.pulum
         }
 
         /**
-         * @param direction Direction
+         * @param direction Direction. Possible values are `reverse` and `forward`.
          * 
          * @return builder
          * 

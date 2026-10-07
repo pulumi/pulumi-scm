@@ -21,8 +21,6 @@ public final class AntiSpywareSignatureSignature {
     /**
      * @return Standard
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `combination` and `standard`.
-     * 
      */
     private @Nullable List<AntiSpywareSignatureSignatureStandard> standards;
 
@@ -36,8 +34,6 @@ public final class AntiSpywareSignatureSignature {
     }
     /**
      * @return Standard
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `combination` and `standard`.
      * 
      */
     public List<AntiSpywareSignatureSignatureStandard> standards() {

@@ -30,7 +30,7 @@ class ForwardingProfileUserLocationArgs:
         The set of arguments for constructing a ForwardingProfileUserLocation resource.
 
         :param pulumi.Input[_builtins.str] description: Description of the user location
-        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined. Possible values are `Mobile Users`.
         :param pulumi.Input['ForwardingProfileUserLocationInternalHostDetectionArgs'] internal_host_detection: Configuration for detecting internal hosts using IP address and FQDN
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] ip_addresses: List of IP addresses that define the user location
         :param pulumi.Input[_builtins.str] name: alphanumeric string [ 0-9a-zA-Z._-]
@@ -62,7 +62,7 @@ class ForwardingProfileUserLocationArgs:
     @pulumi.getter
     def folder(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
-        The folder in which the resource is defined
+        The folder in which the resource is defined. Possible values are `Mobile Users`.
         """
         return pulumi.get(self, "folder")
 
@@ -120,7 +120,7 @@ class _ForwardingProfileUserLocationState:
         Input properties used for looking up and filtering ForwardingProfileUserLocation resources.
 
         :param pulumi.Input[_builtins.str] description: Description of the user location
-        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined. Possible values are `Mobile Users`.
         :param pulumi.Input['ForwardingProfileUserLocationInternalHostDetectionArgs'] internal_host_detection: Configuration for detecting internal hosts using IP address and FQDN
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] ip_addresses: List of IP addresses that define the user location
         :param pulumi.Input[_builtins.str] name: alphanumeric string [ 0-9a-zA-Z._-]
@@ -155,7 +155,7 @@ class _ForwardingProfileUserLocationState:
     @pulumi.getter
     def folder(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
-        The folder in which the resource is defined
+        The folder in which the resource is defined. Possible values are `Mobile Users`.
         """
         return pulumi.get(self, "folder")
 
@@ -291,7 +291,7 @@ class ForwardingProfileUserLocation(pulumi.CustomResource):
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] description: Description of the user location
-        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined. Possible values are `Mobile Users`.
         :param pulumi.Input[Union['ForwardingProfileUserLocationInternalHostDetectionArgs', 'ForwardingProfileUserLocationInternalHostDetectionArgsDict', 'outputs.ForwardingProfileUserLocationInternalHostDetection']] internal_host_detection: Configuration for detecting internal hosts using IP address and FQDN
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] ip_addresses: List of IP addresses that define the user location
         :param pulumi.Input[_builtins.str] name: alphanumeric string [ 0-9a-zA-Z._-]
@@ -425,7 +425,7 @@ class ForwardingProfileUserLocation(pulumi.CustomResource):
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] description: Description of the user location
-        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined. Possible values are `Mobile Users`.
         :param pulumi.Input[Union['ForwardingProfileUserLocationInternalHostDetectionArgs', 'ForwardingProfileUserLocationInternalHostDetectionArgsDict', 'outputs.ForwardingProfileUserLocationInternalHostDetection']] internal_host_detection: Configuration for detecting internal hosts using IP address and FQDN
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] ip_addresses: List of IP addresses that define the user location
         :param pulumi.Input[_builtins.str] name: alphanumeric string [ 0-9a-zA-Z._-]
@@ -455,7 +455,7 @@ class ForwardingProfileUserLocation(pulumi.CustomResource):
     @pulumi.getter
     def folder(self) -> pulumi.Output[_builtins.str]:
         """
-        The folder in which the resource is defined
+        The folder in which the resource is defined. Possible values are `Mobile Users`.
         """
         return pulumi.get(self, "folder")
 

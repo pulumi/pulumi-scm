@@ -25,6 +25,11 @@ import * as utilities from "./utilities";
  *     ips: [{
  *         name: "198.18.1.1/32",
  *     }],
+ *     adjustTcpMss: {
+ *         enable: true,
+ *         ipv4MssAdjustment: 40,
+ *         ipv6MssAdjustment: 60,
+ *     },
  * });
  * //
  * // Creates a loopback interface with static ipv4 address, with default value loopback.123
@@ -120,6 +125,10 @@ export class LoopbackInterface extends pulumi.CustomResource {
     }
 
     /**
+     * TCP MSS adjustment settings for the interface
+     */
+    declare public readonly adjustTcpMss: pulumi.Output<outputs.LoopbackInterfaceAdjustTcpMss | undefined>;
+    /**
      * Description for loopback interface
      */
     declare public readonly comment: pulumi.Output<string | undefined>;
@@ -133,8 +142,6 @@ export class LoopbackInterface extends pulumi.CustomResource {
     declare public readonly device: pulumi.Output<string | undefined>;
     /**
      * The folder in which the resource is defined
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly folder: pulumi.Output<string | undefined>;
     /**
@@ -163,8 +170,6 @@ export class LoopbackInterface extends pulumi.CustomResource {
     declare public readonly netflowProfile: pulumi.Output<string | undefined>;
     /**
      * The snippet in which the resource is defined
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly snippet: pulumi.Output<string | undefined>;
     /**
@@ -185,6 +190,7 @@ export class LoopbackInterface extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as LoopbackInterfaceState | undefined;
+            resourceInputs["adjustTcpMss"] = state?.adjustTcpMss;
             resourceInputs["comment"] = state?.comment;
             resourceInputs["defaultValue"] = state?.defaultValue;
             resourceInputs["device"] = state?.device;
@@ -199,6 +205,7 @@ export class LoopbackInterface extends pulumi.CustomResource {
             resourceInputs["tfid"] = state?.tfid;
         } else {
             const args = argsOrState as LoopbackInterfaceArgs | undefined;
+            resourceInputs["adjustTcpMss"] = args?.adjustTcpMss;
             resourceInputs["comment"] = args?.comment;
             resourceInputs["defaultValue"] = args?.defaultValue;
             resourceInputs["device"] = args?.device;
@@ -222,6 +229,10 @@ export class LoopbackInterface extends pulumi.CustomResource {
  */
 export interface LoopbackInterfaceState {
     /**
+     * TCP MSS adjustment settings for the interface
+     */
+    adjustTcpMss?: pulumi.Input<inputs.LoopbackInterfaceAdjustTcpMss | undefined>;
+    /**
      * Description for loopback interface
      */
     comment?: pulumi.Input<string | undefined>;
@@ -235,8 +246,6 @@ export interface LoopbackInterfaceState {
     device?: pulumi.Input<string | undefined>;
     /**
      * The folder in which the resource is defined
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     folder?: pulumi.Input<string | undefined>;
     /**
@@ -265,8 +274,6 @@ export interface LoopbackInterfaceState {
     netflowProfile?: pulumi.Input<string | undefined>;
     /**
      * The snippet in which the resource is defined
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     snippet?: pulumi.Input<string | undefined>;
     /**
@@ -280,6 +287,10 @@ export interface LoopbackInterfaceState {
  */
 export interface LoopbackInterfaceArgs {
     /**
+     * TCP MSS adjustment settings for the interface
+     */
+    adjustTcpMss?: pulumi.Input<inputs.LoopbackInterfaceAdjustTcpMss | undefined>;
+    /**
      * Description for loopback interface
      */
     comment?: pulumi.Input<string | undefined>;
@@ -293,8 +304,6 @@ export interface LoopbackInterfaceArgs {
     device?: pulumi.Input<string | undefined>;
     /**
      * The folder in which the resource is defined
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     folder?: pulumi.Input<string | undefined>;
     /**
@@ -323,8 +332,6 @@ export interface LoopbackInterfaceArgs {
     netflowProfile?: pulumi.Input<string | undefined>;
     /**
      * The snippet in which the resource is defined
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     snippet?: pulumi.Input<string | undefined>;
 }

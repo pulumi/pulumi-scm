@@ -61,6 +61,9 @@ class GetVariableResult:
     @_builtins.property
     @pulumi.getter
     def description(self) -> _builtins.str:
+        """
+        The description of the variable
+        """
         return pulumi.get(self, "description")
 
     @_builtins.property
@@ -74,6 +77,9 @@ class GetVariableResult:
     @_builtins.property
     @pulumi.getter
     def folder(self) -> _builtins.str:
+        """
+        The folder in which the resource is defined
+        """
         return pulumi.get(self, "folder")
 
     @_builtins.property
@@ -87,31 +93,49 @@ class GetVariableResult:
     @_builtins.property
     @pulumi.getter
     def name(self) -> _builtins.str:
+        """
+        The name of the variable
+        """
         return pulumi.get(self, "name")
 
     @_builtins.property
     @pulumi.getter
     def overridden(self) -> _builtins.bool:
+        """
+        Is the variable overridden?
+        """
         return pulumi.get(self, "overridden")
 
     @_builtins.property
     @pulumi.getter
     def snippet(self) -> _builtins.str:
+        """
+        The snippet in which the resource is defined
+        """
         return pulumi.get(self, "snippet")
 
     @_builtins.property
     @pulumi.getter
     def tfid(self) -> _builtins.str:
+        """
+        The Terraform ID.
+        """
         return pulumi.get(self, "tfid")
 
     @_builtins.property
     @pulumi.getter
     def type(self) -> _builtins.str:
+        """
+        The variable type. Possible values are `percent`, `count`, `ip-netmask`, `zone`, `ip-range`, `ip-wildcard`, `device-priority`, `device-id`, `egress-max`, `as-number`, `fqdn`, `port`, `link-tag`, `group-id`, `rate`, `router-id`, `qos-profile` and `timer`.
+        """
         return pulumi.get(self, "type")
 
     @_builtins.property
     @pulumi.getter
     def value(self) -> _builtins.str:
+        """
+        The value of the variable
+        """
         return pulumi.get(self, "value")
 
 
@@ -160,7 +184,10 @@ def get_variable(device: Optional[_builtins.str] = None,
 
 
     :param _builtins.str device: The device in which the resource is defined
+    :param _builtins.str folder: The folder in which the resource is defined
     :param _builtins.str id: UUID of the variable
+    :param _builtins.str name: The name of the variable
+    :param _builtins.str snippet: The snippet in which the resource is defined
     """
     __args__ = dict()
     __args__['device'] = device
@@ -209,7 +236,10 @@ def get_variable_output(device: pulumi.Input[Optional[Optional[_builtins.str]]] 
 
 
     :param _builtins.str device: The device in which the resource is defined
+    :param _builtins.str folder: The folder in which the resource is defined
     :param _builtins.str id: UUID of the variable
+    :param _builtins.str name: The name of the variable
+    :param _builtins.str snippet: The snippet in which the resource is defined
     """
     __args__ = dict()
     __args__['device'] = device

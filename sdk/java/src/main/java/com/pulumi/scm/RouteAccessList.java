@@ -18,6 +18,59 @@ import javax.annotation.Nullable;
 /**
  * RouteAccessList resource
  * 
+ * ## Example Usage
+ * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.scm.RouteAccessList;
+ * import com.pulumi.scm.RouteAccessListArgs;
+ * import com.pulumi.scm.inputs.RouteAccessListTypeArgs;
+ * import com.pulumi.scm.inputs.RouteAccessListTypeIpv4Args;
+ * import com.pulumi.scm.inputs.RouteAccessListTypeIpv4Ipv4EntryArgs;
+ * import com.pulumi.scm.inputs.RouteAccessListTypeIpv4Ipv4EntryDestinationAddressArgs;
+ * import com.pulumi.scm.inputs.RouteAccessListTypeIpv4Ipv4EntryDestinationAddressEntryArgs;
+ * import java.util.ArrayList;
+ * import java.util.Arrays;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new RouteAccessList("example", RouteAccessListArgs.builder()
+ *             .folder("ngfw-shared")
+ *             .name("EXAMPLE-ACL")
+ *             .type(RouteAccessListTypeArgs.builder()
+ *                 .ipv4(RouteAccessListTypeIpv4Args.builder()
+ *                     .ipv4Entries(RouteAccessListTypeIpv4Ipv4EntryArgs.builder()
+ *                         .name(10)
+ *                         .action("permit")
+ *                         .destinationAddress(RouteAccessListTypeIpv4Ipv4EntryDestinationAddressArgs.builder()
+ *                             .entry(RouteAccessListTypeIpv4Ipv4EntryDestinationAddressEntryArgs.builder()
+ *                                 .address("10.0.0.0")
+ *                                 .wildcard("0.0.0.7")
+ *                                 .build())
+ *                             .build())
+ *                         .build())
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *     }
+ * }
+ * }
+ * </pre>
+ * 
  * ## Import
  * 
  * The following command can be used to import a resource not managed by Terraform:
@@ -74,16 +127,12 @@ public class RouteAccessList extends com.pulumi.resources.CustomResource {
     /**
      * The folder in which the resource is defined
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
      */
     @Export(name="folder", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> folder;
 
     /**
      * @return The folder in which the resource is defined
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public Output<Optional<String>> folder() {
@@ -106,16 +155,12 @@ public class RouteAccessList extends com.pulumi.resources.CustomResource {
     /**
      * The snippet in which the resource is defined
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
      */
     @Export(name="snippet", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> snippet;
 
     /**
      * @return The snippet in which the resource is defined
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public Output<Optional<String>> snippet() {

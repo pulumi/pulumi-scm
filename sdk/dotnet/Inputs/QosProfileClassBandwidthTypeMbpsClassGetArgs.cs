@@ -19,13 +19,13 @@ namespace Pulumi.Scm.Inputs
         public Input<Inputs.QosProfileClassBandwidthTypeMbpsClassClassBandwidthGetArgs>? ClassBandwidth { get; set; }
 
         /// <summary>
-        /// Traffic class
+        /// Traffic class. Possible values are `Class1`, `Class2`, `Class3`, `Class4`, `Class5`, `Class6`, `Class7` and `Class8`.
         /// </summary>
         [Input("name")]
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// traffic class priority
+        /// traffic class priority. Possible values are `real-time`, `High`, `Medium` and `Low`.
         /// </summary>
         [Input("priority")]
         public Input<string>? Priority { get; set; }

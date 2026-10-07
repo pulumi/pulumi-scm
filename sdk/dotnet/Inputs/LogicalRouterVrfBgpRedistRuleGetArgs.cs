@@ -13,7 +13,7 @@ namespace Pulumi.Scm.Inputs
     public sealed class LogicalRouterVrfBgpRedistRuleGetArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Address family identifier
+        /// Address family identifier. Possible values are `Ipv4` and `Ipv6`.
         /// </summary>
         [Input("addressFamilyIdentifier")]
         public Input<string>? AddressFamilyIdentifier { get; set; }
@@ -37,7 +37,7 @@ namespace Pulumi.Scm.Inputs
         public Input<string> Name { get; set; } = null!;
 
         /// <summary>
-        /// Route table
+        /// Route table. Possible values are `Unicast`, `Multicast` and `Both`.
         /// </summary>
         [Input("routeTable")]
         public Input<string>? RouteTable { get; set; }
@@ -85,7 +85,7 @@ namespace Pulumi.Scm.Inputs
         public Input<int>? SetMed { get; set; }
 
         /// <summary>
-        /// Set origin
+        /// Set origin. Possible values are `Igp`, `Egp` and `Incomplete`.
         /// </summary>
         [Input("setOrigin")]
         public Input<string>? SetOrigin { get; set; }

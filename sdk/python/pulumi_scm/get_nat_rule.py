@@ -96,7 +96,7 @@ class GetNatRuleResult:
     @pulumi.getter(name="activeActiveDeviceBinding")
     def active_active_device_binding(self) -> _builtins.str:
         """
-        Active active device binding
+        Active active device binding. Possible values are `primary`, `both`, `0` and `1`.
         """
         return pulumi.get(self, "active_active_device_binding")
 
@@ -184,7 +184,7 @@ class GetNatRuleResult:
     @pulumi.getter(name="natType")
     def nat_type(self) -> _builtins.str:
         """
-        NAT type
+        NAT type. Possible values are `ipv4`, `nat64` and `nptv6`.
         """
         return pulumi.get(self, "nat_type")
 
@@ -192,7 +192,7 @@ class GetNatRuleResult:
     @pulumi.getter
     def position(self) -> _builtins.str:
         """
-        The relative position of the rule
+        The relative position of the rule. Possible values are `pre` and `post`.
         """
         return pulumi.get(self, "position")
 

@@ -13,7 +13,7 @@ namespace Pulumi.Scm.Inputs
     public sealed class BgpRouteMapRouteMapSetMetricGetArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Metric action
+        /// Metric action. Possible values are `Set`, `Add` and `Substract`.
         /// </summary>
         [Input("action")]
         public Input<string>? Action { get; set; }

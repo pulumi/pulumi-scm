@@ -24,7 +24,7 @@ public final class LogicalRouterVrfOspfv3ExportRule {
      */
     private String name;
     /**
-     * @return New path type
+     * @return New path type. Possible values are `ext-1` and `ext-2`.
      * 
      */
     private @Nullable String newPathType;
@@ -50,7 +50,7 @@ public final class LogicalRouterVrfOspfv3ExportRule {
         return this.name;
     }
     /**
-     * @return New path type
+     * @return New path type. Possible values are `ext-1` and `ext-2`.
      * 
      */
     public Optional<String> newPathType() {

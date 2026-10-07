@@ -22,28 +22,20 @@ public final class GetExternalDynamicListListDataTypeIpRecurring {
     /**
      * @return Five minute settings for IP recurring
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
-     * 
      */
     private GetExternalDynamicListListDataTypeIpRecurringFiveMinute fiveMinute;
     /**
      * @return Hourly settings for IP recurring
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
      * 
      */
     private GetExternalDynamicListListDataTypeIpRecurringHourly hourly;
     /**
      * @return Monthly settings for IP recurring
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
-     * 
      */
     private GetExternalDynamicListListDataTypeIpRecurringMonthly monthly;
     /**
      * @return Weekly settings for IP recurring
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
      * 
      */
     private GetExternalDynamicListListDataTypeIpRecurringWeekly weekly;
@@ -59,16 +51,12 @@ public final class GetExternalDynamicListListDataTypeIpRecurring {
     /**
      * @return Five minute settings for IP recurring
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
-     * 
      */
     public GetExternalDynamicListListDataTypeIpRecurringFiveMinute fiveMinute() {
         return this.fiveMinute;
     }
     /**
      * @return Hourly settings for IP recurring
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
      * 
      */
     public GetExternalDynamicListListDataTypeIpRecurringHourly hourly() {
@@ -77,16 +65,12 @@ public final class GetExternalDynamicListListDataTypeIpRecurring {
     /**
      * @return Monthly settings for IP recurring
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
-     * 
      */
     public GetExternalDynamicListListDataTypeIpRecurringMonthly monthly() {
         return this.monthly;
     }
     /**
      * @return Weekly settings for IP recurring
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
      * 
      */
     public GetExternalDynamicListListDataTypeIpRecurringWeekly weekly() {

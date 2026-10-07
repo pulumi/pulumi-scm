@@ -18,7 +18,7 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly Outputs.GetAntiSpywareProfileRuleActionResult Action;
         /// <summary>
-        /// Category
+        /// Category. Possible values are `adns-adtracking`, `adns-benign`, `adns-c2`, `adns-ddns`, `adns-dnsmisconfig`, `adns-grayware`, `adns-hijacking`, `adns-malware`, `adns-new-domain`, `adns-parked`, `adns-phishing`, `adns-proxy`, `Adware`, `Any`, `Autogen`, `Backdoor`, `Botnet`, `browser-hijack`, `command-and-control`, `Cryptominer`, `data-theft`, `Dns`, `dns-adtracking`, `dns-benign`, `dns-c2`, `dns-ddns`, `dns-grayware`, `dns-malware`, `dns-new-domain`, `dns-parked`, `dns-phishing`, `dns-proxy`, `dns-security`, `dns-wildfire`, `domain-edl`, `Downloader`, `Fraud`, `Hacktool`, `inline-cloud-c2`, `Keylogger`, `net-worm`, `p2p-communication`, `phishing-kit`, `post-exploitation`, `Spyware`, `tls-fingerprint` and `Webshell`.
         /// </summary>
         public readonly string Category;
         /// <summary>
@@ -26,7 +26,7 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly string Name;
         /// <summary>
-        /// Packet capture
+        /// Packet capture. Possible values are `Disable`, `single-packet` and `extended-capture`.
         /// </summary>
         public readonly string PacketCapture;
         /// <summary>

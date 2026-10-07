@@ -28,12 +28,21 @@ export interface GetBgpFilteringProfileArgs {
      * The device in which the resource is defined
      */
     device?: string;
+    /**
+     * The folder in which the resource is defined
+     */
     folder?: string;
     /**
      * UUID of the resource
      */
     id: string;
+    /**
+     * Name
+     */
     name?: string;
+    /**
+     * The snippet in which the resource is defined
+     */
     snippet?: string;
 }
 
@@ -41,19 +50,37 @@ export interface GetBgpFilteringProfileArgs {
  * A collection of values returned by getBgpFilteringProfile.
  */
 export interface GetBgpFilteringProfileResult {
+    /**
+     * Description
+     */
     readonly description: string;
     /**
      * The device in which the resource is defined
      */
     readonly device: string;
+    /**
+     * The folder in which the resource is defined
+     */
     readonly folder: string;
     /**
      * UUID of the resource
      */
     readonly id: string;
+    /**
+     * Ipv4
+     */
     readonly ipv4: outputs.GetBgpFilteringProfileIpv4;
+    /**
+     * Name
+     */
     readonly name: string;
+    /**
+     * The snippet in which the resource is defined
+     */
     readonly snippet: string;
+    /**
+     * The Terraform ID.
+     */
     readonly tfid: string;
 }
 /**
@@ -78,11 +105,20 @@ export interface GetBgpFilteringProfileOutputArgs {
      * The device in which the resource is defined
      */
     device?: pulumi.Input<string | undefined>;
+    /**
+     * The folder in which the resource is defined
+     */
     folder?: pulumi.Input<string | undefined>;
     /**
      * UUID of the resource
      */
     id: pulumi.Input<string>;
+    /**
+     * Name
+     */
     name?: pulumi.Input<string | undefined>;
+    /**
+     * The snippet in which the resource is defined
+     */
     snippet?: pulumi.Input<string | undefined>;
 }

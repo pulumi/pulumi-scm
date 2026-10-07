@@ -17,7 +17,7 @@ namespace Pulumi.Scm.Outputs
         /// Determine whether to drop or bypass packets that contain out-of-sync ACKs or out-of-window sequence numbers:
         /// * `Global` — Use system-wide setting that is assigned through TCP Settings or the CLI.
         /// * `Drop` — Drop packets that contain an asymmetric path.
-        /// * `Bypass` — Bypass scanning on packets that contain an asymmetric path.
+        /// * `Bypass` — Bypass scanning on packets that contain an asymmetric path. Possible values are `Global`, `Drop` and `Bypass`.
         /// </summary>
         public readonly string AsymmetricPath;
         /// <summary>
@@ -26,8 +26,6 @@ namespace Pulumi.Scm.Outputs
         public readonly string Description;
         /// <summary>
         /// The device in which the resource is defined
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         public readonly string Device;
         /// <summary>
@@ -40,8 +38,6 @@ namespace Pulumi.Scm.Outputs
         public readonly Outputs.GetZoneProtectionProfileListDataFloodResult Flood;
         /// <summary>
         /// The folder in which the resource is defined
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         public readonly string Folder;
         /// <summary>
@@ -88,7 +84,7 @@ namespace Pulumi.Scm.Outputs
         /// MPTCP is an extension of TCP that allows a client to maintain a connection by simultaneously using multiple paths to connect to the destination host. By default, MPTCP support is disabled, based on the global MPTCP setting.  Review or adjust the MPTCP settings for the security zones associated with this profile:
         /// * `No` — Enable MPTCP support (do not strip the MPTCP option).
         /// * `Yes` — Disable MPTCP support (strip the MPTCP option). With this configured, MPTCP connections are converted to standard TCP connections, as MPTCP is backwards compatible with TCP.
-        /// * `Global` — Support MPTCP based on the global MPTCP setting. By default, the global MPTCP setting is set to yes so that MPTCP is disabled (the MPTCP option is stripped from the packet).
+        /// * `Global` — Support MPTCP based on the global MPTCP setting. By default, the global MPTCP setting is set to yes so that MPTCP is disabled (the MPTCP option is stripped from the packet). Possible values are `No`, `Yes` and `Global`.
         /// </summary>
         public readonly string MptcpOptionStrip;
         /// <summary>
@@ -107,7 +103,7 @@ namespace Pulumi.Scm.Outputs
         /// Determine whether to reject the packet if the first packet for the TCP session setup is not a SYN packet:
         /// * `Global` — Use system-wide setting that is assigned through the CLI.
         /// * `Yes` — Reject non-SYN TCP.
-        /// * `No` — Accept non-SYN TCP.
+        /// * `No` — Accept non-SYN TCP. Possible values are `Global`, `Yes` and `No`.
         /// </summary>
         public readonly string RejectNonSynTcp;
         /// <summary>
@@ -124,8 +120,6 @@ namespace Pulumi.Scm.Outputs
         public readonly bool SecurityDiscard;
         /// <summary>
         /// The snippet in which the resource is defined
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         public readonly string Snippet;
         /// <summary>

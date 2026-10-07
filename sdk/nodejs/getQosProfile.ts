@@ -48,12 +48,21 @@ export interface GetQosProfileArgs {
      * The device in which the resource is defined
      */
     device?: string;
+    /**
+     * The folder in which the resource is defined
+     */
     folder?: string;
     /**
      * UUID of the resource
      */
     id: string;
+    /**
+     * Alphanumeric string begin with letter: [0-9a-zA-Z._-]
+     */
     name?: string;
+    /**
+     * The snippet in which the resource is defined
+     */
     snippet?: string;
 }
 
@@ -61,19 +70,37 @@ export interface GetQosProfileArgs {
  * A collection of values returned by getQosProfile.
  */
 export interface GetQosProfileResult {
+    /**
+     * Aggregate bandwidth
+     */
     readonly aggregateBandwidth: outputs.GetQosProfileAggregateBandwidth;
+    /**
+     * Class bandwidth type
+     */
     readonly classBandwidthType: outputs.GetQosProfileClassBandwidthType;
     /**
      * The device in which the resource is defined
      */
     readonly device: string;
+    /**
+     * The folder in which the resource is defined
+     */
     readonly folder: string;
     /**
      * UUID of the resource
      */
     readonly id: string;
+    /**
+     * Alphanumeric string begin with letter: [0-9a-zA-Z._-]
+     */
     readonly name: string;
+    /**
+     * The snippet in which the resource is defined
+     */
     readonly snippet: string;
+    /**
+     * The Terraform ID.
+     */
     readonly tfid: string;
 }
 /**
@@ -118,11 +145,20 @@ export interface GetQosProfileOutputArgs {
      * The device in which the resource is defined
      */
     device?: pulumi.Input<string | undefined>;
+    /**
+     * The folder in which the resource is defined
+     */
     folder?: pulumi.Input<string | undefined>;
     /**
      * UUID of the resource
      */
     id: pulumi.Input<string>;
+    /**
+     * Alphanumeric string begin with letter: [0-9a-zA-Z._-]
+     */
     name?: pulumi.Input<string | undefined>;
+    /**
+     * The snippet in which the resource is defined
+     */
     snippet?: pulumi.Input<string | undefined>;
 }

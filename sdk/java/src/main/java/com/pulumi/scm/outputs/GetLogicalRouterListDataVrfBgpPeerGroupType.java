@@ -21,21 +21,15 @@ public final class GetLogicalRouterListDataVrfBgpPeerGroupType {
     /**
      * @return Ebgp confed
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `ebgp`, `ebgpConfed`, `ibgp`, and `ibgpConfed`.
-     * 
      */
     private GetLogicalRouterListDataVrfBgpPeerGroupTypeEbgpConfed ebgpConfed;
     /**
      * @return Ibgp
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `ebgp`, `ebgpConfed`, `ibgp`, and `ibgpConfed`.
-     * 
      */
     private GetLogicalRouterListDataVrfBgpPeerGroupTypeIbgp ibgp;
     /**
      * @return Ibgp confed
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `ebgp`, `ebgpConfed`, `ibgp`, and `ibgpConfed`.
      * 
      */
     private GetLogicalRouterListDataVrfBgpPeerGroupTypeIbgpConfed ibgpConfed;
@@ -51,8 +45,6 @@ public final class GetLogicalRouterListDataVrfBgpPeerGroupType {
     /**
      * @return Ebgp confed
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `ebgp`, `ebgpConfed`, `ibgp`, and `ibgpConfed`.
-     * 
      */
     public GetLogicalRouterListDataVrfBgpPeerGroupTypeEbgpConfed ebgpConfed() {
         return this.ebgpConfed;
@@ -60,16 +52,12 @@ public final class GetLogicalRouterListDataVrfBgpPeerGroupType {
     /**
      * @return Ibgp
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `ebgp`, `ebgpConfed`, `ibgp`, and `ibgpConfed`.
-     * 
      */
     public GetLogicalRouterListDataVrfBgpPeerGroupTypeIbgp ibgp() {
         return this.ibgp;
     }
     /**
      * @return Ibgp confed
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `ebgp`, `ebgpConfed`, `ibgp`, and `ibgpConfed`.
      * 
      */
     public GetLogicalRouterListDataVrfBgpPeerGroupTypeIbgpConfed ibgpConfed() {

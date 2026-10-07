@@ -31,14 +31,14 @@ public final class IpsecCryptoProfileEspArgs extends com.pulumi.resources.Resour
     }
 
     /**
-     * Encryption algorithm
+     * Encryption algorithm. Possible values are `des`, `3des`, `aes-128-cbc`, `aes-192-cbc`, `aes-256-cbc`, `aes-128-gcm`, `aes-256-gcm` and `null`.
      * 
      */
     @Import(name="encryptions", required=true)
     private Output<List<String>> encryptions;
 
     /**
-     * @return Encryption algorithm
+     * @return Encryption algorithm. Possible values are `des`, `3des`, `aes-128-cbc`, `aes-192-cbc`, `aes-256-cbc`, `aes-128-gcm`, `aes-256-gcm` and `null`.
      * 
      */
     public Output<List<String>> encryptions() {
@@ -102,7 +102,7 @@ public final class IpsecCryptoProfileEspArgs extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param encryptions Encryption algorithm
+         * @param encryptions Encryption algorithm. Possible values are `des`, `3des`, `aes-128-cbc`, `aes-192-cbc`, `aes-256-cbc`, `aes-128-gcm`, `aes-256-gcm` and `null`.
          * 
          * @return builder
          * 
@@ -113,7 +113,7 @@ public final class IpsecCryptoProfileEspArgs extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param encryptions Encryption algorithm
+         * @param encryptions Encryption algorithm. Possible values are `des`, `3des`, `aes-128-cbc`, `aes-192-cbc`, `aes-256-cbc`, `aes-128-gcm`, `aes-256-gcm` and `null`.
          * 
          * @return builder
          * 
@@ -123,7 +123,7 @@ public final class IpsecCryptoProfileEspArgs extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param encryptions Encryption algorithm
+         * @param encryptions Encryption algorithm. Possible values are `des`, `3des`, `aes-128-cbc`, `aes-192-cbc`, `aes-256-cbc`, `aes-128-gcm`, `aes-256-gcm` and `null`.
          * 
          * @return builder
          * 

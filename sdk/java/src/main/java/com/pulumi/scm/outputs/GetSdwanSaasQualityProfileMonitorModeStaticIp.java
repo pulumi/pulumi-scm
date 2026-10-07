@@ -20,8 +20,6 @@ public final class GetSdwanSaasQualityProfileMonitorModeStaticIp {
     /**
      * @return List of IP addresses
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `fqdn` and `ipAddress`.
-     * 
      */
     private List<GetSdwanSaasQualityProfileMonitorModeStaticIpIpAddress> ipAddresses;
 
@@ -35,8 +33,6 @@ public final class GetSdwanSaasQualityProfileMonitorModeStaticIp {
     }
     /**
      * @return List of IP addresses
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `fqdn` and `ipAddress`.
      * 
      */
     public List<GetSdwanSaasQualityProfileMonitorModeStaticIpIpAddress> ipAddresses() {

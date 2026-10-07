@@ -75,8 +75,18 @@ namespace Pulumi.Scm
     ///     });
     /// 
     ///     //
-    ///     // Creates a layer3 zone
-    ///     // Requires Interface $scm_l3_interface to exist
+    ///     // Creates a layer3 ethernet interface for use in zone
+    ///     //
+    ///     var scmL3Interface = new Scm.EthernetInterface("scm_l3_interface", new()
+    ///     {
+    ///         Name = "$scm_l3_interface",
+    ///         Comment = "Managed by Pulumi",
+    ///         Folder = "ngfw-shared",
+    ///         Layer3 = null,
+    ///     });
+    /// 
+    ///     //
+    ///     // Creates a layer3 zone that references the interface
     ///     //
     ///     var scmLayer3ZoneComplex = new Scm.Zone("scm_layer3_zone_complex", new()
     ///     {
@@ -86,7 +96,7 @@ namespace Pulumi.Scm
     ///         {
     ///             Layer3s = new[]
     ///             {
-    ///                 "$scm_l3_interface",
+    ///                 scmL3Interface.Name,
     ///             },
     ///             ZoneProtectionProfile = "best-practice",
     ///             EnablePacketBufferProtection = true,
@@ -114,6 +124,12 @@ namespace Pulumi.Scm
     ///             {
     ///                 "198.18.4.0/24",
     ///             },
+    ///         },
+    ///     }, new CustomResourceOptions
+    ///     {
+    ///         DependsOn =
+    ///         {
+    ///             scmL3Interface,
     ///         },
     ///     });
     /// 
@@ -183,8 +199,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// Folder
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Output("folder")]
         public Output<string?> Folder { get; private set; } = null!;
@@ -203,8 +217,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The snippet in which the resource is defined
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Output("snippet")]
         public Output<string?> Snippet { get; private set; } = null!;
@@ -305,8 +317,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// Folder
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("folder")]
         public Input<string>? Folder { get; set; }
@@ -325,8 +335,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The snippet in which the resource is defined
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("snippet")]
         public Input<string>? Snippet { get; set; }
@@ -383,8 +391,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// Folder
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("folder")]
         public Input<string>? Folder { get; set; }
@@ -403,8 +409,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The snippet in which the resource is defined
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("snippet")]
         public Input<string>? Snippet { get; set; }

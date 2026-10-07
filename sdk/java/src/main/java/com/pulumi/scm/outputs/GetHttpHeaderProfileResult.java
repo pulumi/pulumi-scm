@@ -12,24 +12,52 @@ import java.util.Objects;
 
 @CustomType
 public final class GetHttpHeaderProfileResult {
+    /**
+     * @return The description of the HTTP header profile
+     * 
+     */
     private String description;
     /**
      * @return The device in which the resource is defined
      * 
      */
     private String device;
+    /**
+     * @return The folder in which the resource is defined
+     * 
+     */
     private String folder;
+    /**
+     * @return A list of HTTP header profile rules
+     * 
+     */
     private List<GetHttpHeaderProfileHttpHeaderInsertion> httpHeaderInsertions;
     /**
      * @return The UUID of the HTTP header profile
      * 
      */
     private String id;
+    /**
+     * @return The name of the HTTP header profile
+     * 
+     */
     private String name;
+    /**
+     * @return The snippet in which the resource is defined
+     * 
+     */
     private String snippet;
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     private String tfid;
 
     private GetHttpHeaderProfileResult() {}
+    /**
+     * @return The description of the HTTP header profile
+     * 
+     */
     public String description() {
         return this.description;
     }
@@ -40,9 +68,17 @@ public final class GetHttpHeaderProfileResult {
     public String device() {
         return this.device;
     }
+    /**
+     * @return The folder in which the resource is defined
+     * 
+     */
     public String folder() {
         return this.folder;
     }
+    /**
+     * @return A list of HTTP header profile rules
+     * 
+     */
     public List<GetHttpHeaderProfileHttpHeaderInsertion> httpHeaderInsertions() {
         return this.httpHeaderInsertions;
     }
@@ -53,12 +89,24 @@ public final class GetHttpHeaderProfileResult {
     public String id() {
         return this.id;
     }
+    /**
+     * @return The name of the HTTP header profile
+     * 
+     */
     public String name() {
         return this.name;
     }
+    /**
+     * @return The snippet in which the resource is defined
+     * 
+     */
     public String snippet() {
         return this.snippet;
     }
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     public String tfid() {
         return this.tfid;
     }

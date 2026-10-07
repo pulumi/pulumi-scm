@@ -41,12 +41,21 @@ export interface GetDataFilteringProfileArgs {
      * The device in which the resource is defined
      */
     device?: string;
+    /**
+     * The folder in which the resource is defined
+     */
     folder?: string;
     /**
      * The UUID of the data filtering profile
      */
     id: string;
+    /**
+     * The name of the data filtering profile
+     */
     name?: string;
+    /**
+     * The snippet in which the resource is defined
+     */
     snippet?: string;
 }
 
@@ -54,21 +63,45 @@ export interface GetDataFilteringProfileArgs {
  * A collection of values returned by getDataFilteringProfile.
  */
 export interface GetDataFilteringProfileResult {
+    /**
+     * Data capture
+     */
     readonly dataCapture: boolean;
+    /**
+     * The description of the data filtering profile
+     */
     readonly description: string;
     /**
      * The device in which the resource is defined
      */
     readonly device: string;
+    /**
+     * Disable override
+     */
     readonly disableOverride: string;
+    /**
+     * The folder in which the resource is defined
+     */
     readonly folder: string;
     /**
      * The UUID of the data filtering profile
      */
     readonly id: string;
+    /**
+     * The name of the data filtering profile
+     */
     readonly name: string;
+    /**
+     * Rules
+     */
     readonly rules: outputs.GetDataFilteringProfileRule[];
+    /**
+     * The snippet in which the resource is defined
+     */
     readonly snippet: string;
+    /**
+     * The Terraform ID.
+     */
     readonly tfid: string;
 }
 /**
@@ -106,11 +139,20 @@ export interface GetDataFilteringProfileOutputArgs {
      * The device in which the resource is defined
      */
     device?: pulumi.Input<string | undefined>;
+    /**
+     * The folder in which the resource is defined
+     */
     folder?: pulumi.Input<string | undefined>;
     /**
      * The UUID of the data filtering profile
      */
     id: pulumi.Input<string>;
+    /**
+     * The name of the data filtering profile
+     */
     name?: pulumi.Input<string | undefined>;
+    /**
+     * The snippet in which the resource is defined
+     */
     snippet?: pulumi.Input<string | undefined>;
 }

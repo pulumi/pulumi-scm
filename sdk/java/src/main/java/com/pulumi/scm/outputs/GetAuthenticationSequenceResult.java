@@ -12,24 +12,52 @@ import java.util.Objects;
 
 @CustomType
 public final class GetAuthenticationSequenceResult {
+    /**
+     * @return An ordered list of authentication profiles
+     * 
+     */
     private List<String> authenticationProfiles;
     /**
      * @return The device in which the resource is defined
      * 
      */
     private String device;
+    /**
+     * @return The folder in which the resource is defined
+     * 
+     */
     private String folder;
     /**
      * @return The UUID of the authentication sequence
      * 
      */
     private String id;
+    /**
+     * @return The name of the authentication sequence
+     * 
+     */
     private String name;
+    /**
+     * @return The snippet in which the resource is defined
+     * 
+     */
     private String snippet;
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     private String tfid;
+    /**
+     * @return Use domain to determine authentication profile?
+     * 
+     */
     private Boolean useDomainFindProfile;
 
     private GetAuthenticationSequenceResult() {}
+    /**
+     * @return An ordered list of authentication profiles
+     * 
+     */
     public List<String> authenticationProfiles() {
         return this.authenticationProfiles;
     }
@@ -40,6 +68,10 @@ public final class GetAuthenticationSequenceResult {
     public String device() {
         return this.device;
     }
+    /**
+     * @return The folder in which the resource is defined
+     * 
+     */
     public String folder() {
         return this.folder;
     }
@@ -50,15 +82,31 @@ public final class GetAuthenticationSequenceResult {
     public String id() {
         return this.id;
     }
+    /**
+     * @return The name of the authentication sequence
+     * 
+     */
     public String name() {
         return this.name;
     }
+    /**
+     * @return The snippet in which the resource is defined
+     * 
+     */
     public String snippet() {
         return this.snippet;
     }
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     public String tfid() {
         return this.tfid;
     }
+    /**
+     * @return Use domain to determine authentication profile?
+     * 
+     */
     public Boolean useDomainFindProfile() {
         return this.useDomainFindProfile;
     }

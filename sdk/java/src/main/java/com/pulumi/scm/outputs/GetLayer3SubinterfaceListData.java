@@ -5,17 +5,25 @@ package com.pulumi.scm.outputs;
 
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
+import com.pulumi.scm.outputs.GetLayer3SubinterfaceListDataAdjustTcpMss;
 import com.pulumi.scm.outputs.GetLayer3SubinterfaceListDataArp;
 import com.pulumi.scm.outputs.GetLayer3SubinterfaceListDataDdnsConfig;
 import com.pulumi.scm.outputs.GetLayer3SubinterfaceListDataDhcpClient;
 import com.pulumi.scm.outputs.GetLayer3SubinterfaceListDataIp;
+import com.pulumi.scm.outputs.GetLayer3SubinterfaceListDataPppoe;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
+import java.util.Map;
 import java.util.Objects;
 
 @CustomType
 public final class GetLayer3SubinterfaceListData {
+    /**
+     * @return TCP MSS adjustment settings for the interface
+     * 
+     */
+    private GetLayer3SubinterfaceListDataAdjustTcpMss adjustTcpMss;
     /**
      * @return Layer 3 sub Interfaces ARP configuration
      * 
@@ -39,12 +47,15 @@ public final class GetLayer3SubinterfaceListData {
     /**
      * @return Layer3 sub interfaces DHCP Client Object
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
-     * 
      */
     private GetLayer3SubinterfaceListDataDhcpClient dhcpClient;
     /**
-     * @return The folder of the item. Default: Shared.
+     * @return Map of sensitive values returned from the API.
+     * 
+     */
+    private Map<String,String> encryptedValues;
+    /**
+     * @return The folder in which the resource is defined
      * 
      */
     private String folder;
@@ -61,8 +72,6 @@ public final class GetLayer3SubinterfaceListData {
     /**
      * @return L3 sub-interface IP Parent
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
-     * 
      */
     private List<GetLayer3SubinterfaceListDataIp> ips;
     /**
@@ -71,7 +80,7 @@ public final class GetLayer3SubinterfaceListData {
      */
     private Integer mtu;
     /**
-     * @return The name of the item.
+     * @return L3 sub-interface name
      * 
      */
     private String name;
@@ -86,7 +95,12 @@ public final class GetLayer3SubinterfaceListData {
      */
     private String parentInterface;
     /**
-     * @return The snippet of the item.
+     * @return PPPoE configuration for the interface
+     * 
+     */
+    private GetLayer3SubinterfaceListDataPppoe pppoe;
+    /**
+     * @return The snippet in which the resource is defined
      * 
      */
     private String snippet;
@@ -102,6 +116,13 @@ public final class GetLayer3SubinterfaceListData {
     private String tfid;
 
     private GetLayer3SubinterfaceListData() {}
+    /**
+     * @return TCP MSS adjustment settings for the interface
+     * 
+     */
+    public GetLayer3SubinterfaceListDataAdjustTcpMss adjustTcpMss() {
+        return this.adjustTcpMss;
+    }
     /**
      * @return Layer 3 sub Interfaces ARP configuration
      * 
@@ -133,14 +154,19 @@ public final class GetLayer3SubinterfaceListData {
     /**
      * @return Layer3 sub interfaces DHCP Client Object
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
-     * 
      */
     public GetLayer3SubinterfaceListDataDhcpClient dhcpClient() {
         return this.dhcpClient;
     }
     /**
-     * @return The folder of the item. Default: Shared.
+     * @return Map of sensitive values returned from the API.
+     * 
+     */
+    public Map<String,String> encryptedValues() {
+        return this.encryptedValues;
+    }
+    /**
+     * @return The folder in which the resource is defined
      * 
      */
     public String folder() {
@@ -163,8 +189,6 @@ public final class GetLayer3SubinterfaceListData {
     /**
      * @return L3 sub-interface IP Parent
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
-     * 
      */
     public List<GetLayer3SubinterfaceListDataIp> ips() {
         return this.ips;
@@ -177,7 +201,7 @@ public final class GetLayer3SubinterfaceListData {
         return this.mtu;
     }
     /**
-     * @return The name of the item.
+     * @return L3 sub-interface name
      * 
      */
     public String name() {
@@ -198,7 +222,14 @@ public final class GetLayer3SubinterfaceListData {
         return this.parentInterface;
     }
     /**
-     * @return The snippet of the item.
+     * @return PPPoE configuration for the interface
+     * 
+     */
+    public GetLayer3SubinterfaceListDataPppoe pppoe() {
+        return this.pppoe;
+    }
+    /**
+     * @return The snippet in which the resource is defined
      * 
      */
     public String snippet() {
@@ -228,11 +259,13 @@ public final class GetLayer3SubinterfaceListData {
     }
     @CustomType.Builder
     public static final class Builder {
+        private GetLayer3SubinterfaceListDataAdjustTcpMss adjustTcpMss;
         private List<GetLayer3SubinterfaceListDataArp> arps;
         private String comment;
         private GetLayer3SubinterfaceListDataDdnsConfig ddnsConfig;
         private String device;
         private GetLayer3SubinterfaceListDataDhcpClient dhcpClient;
+        private Map<String,String> encryptedValues;
         private String folder;
         private String id;
         private String interfaceManagementProfile;
@@ -241,17 +274,20 @@ public final class GetLayer3SubinterfaceListData {
         private String name;
         private String netflowProfile;
         private String parentInterface;
+        private GetLayer3SubinterfaceListDataPppoe pppoe;
         private String snippet;
         private Integer tag;
         private String tfid;
         public Builder() {}
         public Builder(GetLayer3SubinterfaceListData defaults) {
     	      Objects.requireNonNull(defaults);
+    	      this.adjustTcpMss = defaults.adjustTcpMss;
     	      this.arps = defaults.arps;
     	      this.comment = defaults.comment;
     	      this.ddnsConfig = defaults.ddnsConfig;
     	      this.device = defaults.device;
     	      this.dhcpClient = defaults.dhcpClient;
+    	      this.encryptedValues = defaults.encryptedValues;
     	      this.folder = defaults.folder;
     	      this.id = defaults.id;
     	      this.interfaceManagementProfile = defaults.interfaceManagementProfile;
@@ -260,11 +296,20 @@ public final class GetLayer3SubinterfaceListData {
     	      this.name = defaults.name;
     	      this.netflowProfile = defaults.netflowProfile;
     	      this.parentInterface = defaults.parentInterface;
+    	      this.pppoe = defaults.pppoe;
     	      this.snippet = defaults.snippet;
     	      this.tag = defaults.tag;
     	      this.tfid = defaults.tfid;
         }
 
+        @CustomType.Setter
+        public Builder adjustTcpMss(GetLayer3SubinterfaceListDataAdjustTcpMss adjustTcpMss) {
+            if (adjustTcpMss == null) {
+              throw new MissingRequiredPropertyException("GetLayer3SubinterfaceListData", "adjustTcpMss");
+            }
+            this.adjustTcpMss = adjustTcpMss;
+            return this;
+        }
         @CustomType.Setter
         public Builder arps(List<GetLayer3SubinterfaceListDataArp> arps) {
             if (arps == null) {
@@ -306,6 +351,14 @@ public final class GetLayer3SubinterfaceListData {
               throw new MissingRequiredPropertyException("GetLayer3SubinterfaceListData", "dhcpClient");
             }
             this.dhcpClient = dhcpClient;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder encryptedValues(Map<String,String> encryptedValues) {
+            if (encryptedValues == null) {
+              throw new MissingRequiredPropertyException("GetLayer3SubinterfaceListData", "encryptedValues");
+            }
+            this.encryptedValues = encryptedValues;
             return this;
         }
         @CustomType.Setter
@@ -376,6 +429,14 @@ public final class GetLayer3SubinterfaceListData {
             return this;
         }
         @CustomType.Setter
+        public Builder pppoe(GetLayer3SubinterfaceListDataPppoe pppoe) {
+            if (pppoe == null) {
+              throw new MissingRequiredPropertyException("GetLayer3SubinterfaceListData", "pppoe");
+            }
+            this.pppoe = pppoe;
+            return this;
+        }
+        @CustomType.Setter
         public Builder snippet(String snippet) {
             if (snippet == null) {
               throw new MissingRequiredPropertyException("GetLayer3SubinterfaceListData", "snippet");
@@ -401,11 +462,13 @@ public final class GetLayer3SubinterfaceListData {
         }
         public GetLayer3SubinterfaceListData build() {
             final var _resultValue = new GetLayer3SubinterfaceListData();
+            _resultValue.adjustTcpMss = adjustTcpMss;
             _resultValue.arps = arps;
             _resultValue.comment = comment;
             _resultValue.ddnsConfig = ddnsConfig;
             _resultValue.device = device;
             _resultValue.dhcpClient = dhcpClient;
+            _resultValue.encryptedValues = encryptedValues;
             _resultValue.folder = folder;
             _resultValue.id = id;
             _resultValue.interfaceManagementProfile = interfaceManagementProfile;
@@ -414,6 +477,7 @@ public final class GetLayer3SubinterfaceListData {
             _resultValue.name = name;
             _resultValue.netflowProfile = netflowProfile;
             _resultValue.parentInterface = parentInterface;
+            _resultValue.pppoe = pppoe;
             _resultValue.snippet = snippet;
             _resultValue.tag = tag;
             _resultValue.tfid = tfid;

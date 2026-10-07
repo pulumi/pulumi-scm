@@ -26,12 +26,12 @@ public final class GetForwardingProfileRegionalAndCustomProxyListData {
      */
     private String description;
     /**
-     * @return Behavior when proxy connection fails - &#39;fail-open&#39; allows direct internet access, &#39;fail-safe&#39; blocks traffic until proxy is restored
+     * @return Behavior when proxy connection fails - &#39;fail-open&#39; allows direct internet access, &#39;fail-safe&#39; blocks traffic until proxy is restored. Possible values are `fail-open` and `fail-safe`.
      * 
      */
     private String fallbackOption;
     /**
-     * @return The folder in which the resource is defined
+     * @return The folder in which the resource is defined. Possible values are `Mobile Users`.
      * 
      */
     private String folder;
@@ -41,7 +41,7 @@ public final class GetForwardingProfileRegionalAndCustomProxyListData {
      */
     private String id;
     /**
-     * @return Strategy for selecting Prisma Access location - &#39;best-available-pa-location&#39; automatically selects optimal location, &#39;specific-pa-location&#39; uses predefined locations
+     * @return Strategy for selecting Prisma Access location - &#39;best-available-pa-location&#39; automatically selects optimal location, &#39;specific-pa-location&#39; uses predefined locations. Possible values are `best-available-pa-location` and `specific-pa-location`.
      * 
      */
     private String locationPreference;
@@ -71,7 +71,7 @@ public final class GetForwardingProfileRegionalAndCustomProxyListData {
      */
     private String tfid;
     /**
-     * @return Proxy configuration type - &#39;gp-and-pac&#39; for GlobalProtect and PAC file forwarding, &#39;ztna-agent&#39; for ZTNA agent forwarding
+     * @return Proxy configuration type - &#39;gp-and-pac&#39; for GlobalProtect and PAC file forwarding, &#39;ztna-agent&#39; for ZTNA agent forwarding. Possible values are `gp-and-pac` and `ztna-agent`.
      * 
      */
     private String type;
@@ -92,14 +92,14 @@ public final class GetForwardingProfileRegionalAndCustomProxyListData {
         return this.description;
     }
     /**
-     * @return Behavior when proxy connection fails - &#39;fail-open&#39; allows direct internet access, &#39;fail-safe&#39; blocks traffic until proxy is restored
+     * @return Behavior when proxy connection fails - &#39;fail-open&#39; allows direct internet access, &#39;fail-safe&#39; blocks traffic until proxy is restored. Possible values are `fail-open` and `fail-safe`.
      * 
      */
     public String fallbackOption() {
         return this.fallbackOption;
     }
     /**
-     * @return The folder in which the resource is defined
+     * @return The folder in which the resource is defined. Possible values are `Mobile Users`.
      * 
      */
     public String folder() {
@@ -113,7 +113,7 @@ public final class GetForwardingProfileRegionalAndCustomProxyListData {
         return this.id;
     }
     /**
-     * @return Strategy for selecting Prisma Access location - &#39;best-available-pa-location&#39; automatically selects optimal location, &#39;specific-pa-location&#39; uses predefined locations
+     * @return Strategy for selecting Prisma Access location - &#39;best-available-pa-location&#39; automatically selects optimal location, &#39;specific-pa-location&#39; uses predefined locations. Possible values are `best-available-pa-location` and `specific-pa-location`.
      * 
      */
     public String locationPreference() {
@@ -155,7 +155,7 @@ public final class GetForwardingProfileRegionalAndCustomProxyListData {
         return this.tfid;
     }
     /**
-     * @return Proxy configuration type - &#39;gp-and-pac&#39; for GlobalProtect and PAC file forwarding, &#39;ztna-agent&#39; for ZTNA agent forwarding
+     * @return Proxy configuration type - &#39;gp-and-pac&#39; for GlobalProtect and PAC file forwarding, &#39;ztna-agent&#39; for ZTNA agent forwarding. Possible values are `gp-and-pac` and `ztna-agent`.
      * 
      */
     public String type() {

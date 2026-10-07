@@ -12,7 +12,7 @@ import java.util.Objects;
 @CustomType
 public final class GetBgpRouteMapRedistributionBgpOspfRouteMapSetMetric {
     /**
-     * @return BGP Root OSPF Route maps set Metric action
+     * @return BGP Root OSPF Route maps set Metric action. Possible values are `set`, `add` and `subtract`.
      * 
      */
     private String action;
@@ -24,7 +24,7 @@ public final class GetBgpRouteMapRedistributionBgpOspfRouteMapSetMetric {
 
     private GetBgpRouteMapRedistributionBgpOspfRouteMapSetMetric() {}
     /**
-     * @return BGP Root OSPF Route maps set Metric action
+     * @return BGP Root OSPF Route maps set Metric action. Possible values are `set`, `add` and `subtract`.
      * 
      */
     public String action() {

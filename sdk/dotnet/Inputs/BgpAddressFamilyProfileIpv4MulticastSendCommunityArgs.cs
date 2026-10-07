@@ -20,32 +20,24 @@ namespace Pulumi.Scm.Inputs
 
         /// <summary>
         /// Both
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `All`, `Both`, `Extended`, `Large`, and `Standard`.
         /// </summary>
         [Input("both")]
         public Input<Inputs.BgpAddressFamilyProfileIpv4MulticastSendCommunityBothArgs>? Both { get; set; }
 
         /// <summary>
         /// Extended
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `All`, `Both`, `Extended`, `Large`, and `Standard`.
         /// </summary>
         [Input("extended")]
         public Input<Inputs.BgpAddressFamilyProfileIpv4MulticastSendCommunityExtendedArgs>? Extended { get; set; }
 
         /// <summary>
         /// Large
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `All`, `Both`, `Extended`, `Large`, and `Standard`.
         /// </summary>
         [Input("large")]
         public Input<Inputs.BgpAddressFamilyProfileIpv4MulticastSendCommunityLargeArgs>? Large { get; set; }
 
         /// <summary>
         /// Standard
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `All`, `Both`, `Extended`, `Large`, and `Standard`.
         /// </summary>
         [Input("standard")]
         public Input<Inputs.BgpAddressFamilyProfileIpv4MulticastSendCommunityStandardArgs>? Standard { get; set; }

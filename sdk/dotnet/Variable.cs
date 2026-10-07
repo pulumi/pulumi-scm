@@ -23,6 +23,18 @@ namespace Pulumi.Scm
     /// return await Deployment.RunAsync(() =&gt; 
     /// {
     ///     //
+    ///     // Creates a variable in ip-netmask format with an empty value
+    ///     //
+    ///     var scmVariableIpaddrEmpty = new Scm.Variable("scm_variable_ipaddr_empty", new()
+    ///     {
+    ///         Folder = "ngfw-shared",
+    ///         Name = "$tf_variable_ipaddr_empty",
+    ///         Description = "Managed by Pulumi",
+    ///         Type = "ip-netmask",
+    ///         Value = "None",
+    ///     });
+    /// 
+    ///     //
     ///     // Creates a variable in as-number format
     ///     //
     ///     var scmVariableAsn = new Scm.Variable("scm_variable_asn", new()
@@ -196,8 +208,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The folder in which the resource is defined
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Output("folder")]
         public Output<string?> Folder { get; private set; } = null!;
@@ -216,8 +226,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The snippet in which the resource is defined
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Output("snippet")]
         public Output<string?> Snippet { get; private set; } = null!;
@@ -229,7 +237,7 @@ namespace Pulumi.Scm
         public Output<string> Tfid { get; private set; } = null!;
 
         /// <summary>
-        /// The variable type
+        /// The variable type. Possible values are `Percent`, `Count`, `ip-netmask`, `Zone`, `ip-range`, `ip-wildcard`, `device-priority`, `device-id`, `egress-max`, `as-number`, `Fqdn`, `Port`, `link-tag`, `group-id`, `Rate`, `router-id`, `qos-profile` and `Timer`.
         /// </summary>
         [Output("type")]
         public Output<string> Type { get; private set; } = null!;
@@ -300,8 +308,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The folder in which the resource is defined
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("folder")]
         public Input<string>? Folder { get; set; }
@@ -314,14 +320,12 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The snippet in which the resource is defined
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("snippet")]
         public Input<string>? Snippet { get; set; }
 
         /// <summary>
-        /// The variable type
+        /// The variable type. Possible values are `Percent`, `Count`, `ip-netmask`, `Zone`, `ip-range`, `ip-wildcard`, `device-priority`, `device-id`, `egress-max`, `as-number`, `Fqdn`, `Port`, `link-tag`, `group-id`, `Rate`, `router-id`, `qos-profile` and `Timer`.
         /// </summary>
         [Input("type", required: true)]
         public Input<string> Type { get; set; } = null!;
@@ -354,8 +358,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The folder in which the resource is defined
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("folder")]
         public Input<string>? Folder { get; set; }
@@ -374,8 +376,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The snippet in which the resource is defined
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("snippet")]
         public Input<string>? Snippet { get; set; }
@@ -387,7 +387,7 @@ namespace Pulumi.Scm
         public Input<string>? Tfid { get; set; }
 
         /// <summary>
-        /// The variable type
+        /// The variable type. Possible values are `Percent`, `Count`, `ip-netmask`, `Zone`, `ip-range`, `ip-wildcard`, `device-priority`, `device-id`, `egress-max`, `as-number`, `Fqdn`, `Port`, `link-tag`, `group-id`, `Rate`, `router-id`, `qos-profile` and `Timer`.
         /// </summary>
         [Input("type")]
         public Input<string>? Type { get; set; }

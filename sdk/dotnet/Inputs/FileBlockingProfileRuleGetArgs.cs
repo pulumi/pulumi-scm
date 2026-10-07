@@ -13,7 +13,7 @@ namespace Pulumi.Scm.Inputs
     public sealed class FileBlockingProfileRuleGetArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The action to take when the rule match criteria is met
+        /// The action to take when the rule match criteria is met. Possible values are `Alert`, `Block` and `Continue`.
         /// </summary>
         [Input("action", required: true)]
         public Input<string> Action { get; set; } = null!;
@@ -22,7 +22,7 @@ namespace Pulumi.Scm.Inputs
         private InputList<string>? _applications;
 
         /// <summary>
-        /// The application transferring the files (App-ID naming)
+        /// The application transferring the files (App-ID naming). Possible values are `Any`, `Axifile`, `dl-free`, `facebook-mail`, `file.io`, `giphy-base`, `glassdoor-uploading`, `http-proxy`, `Redbooth`, `send-anywhere` and `zoho-mail`.
         /// </summary>
         public InputList<string> Applications
         {
@@ -31,7 +31,7 @@ namespace Pulumi.Scm.Inputs
         }
 
         /// <summary>
-        /// The direction of the file transfer
+        /// The direction of the file transfer. Possible values are `Download`, `Upload` and `Both`.
         /// </summary>
         [Input("direction", required: true)]
         public Input<string> Direction { get; set; } = null!;
@@ -40,7 +40,7 @@ namespace Pulumi.Scm.Inputs
         private InputList<string>? _fileTypes;
 
         /// <summary>
-        /// The file type
+        /// The file type. Possible values are `7z`, `Multi-Level-Encoding`, `PE`, `access-shortcut`, `Ace`, `Ade`, `Adp`, `Ai`, `aip-encrypted-docx`, `aip-encrypted-pptx`, `aip-encrypted-xlsx`, `Any`, `Apk`, `Arj`, `Asp`, `Avi`, `avi-divx`, `avi-xvid`, `Bas`, `Bat`, `Bmp`, `bmp-upload`, `Bzip2`, `Cab`, `Catpart`, `Cdr`, `Chm`, `Cin`, `Class`, `Cmd`, `Com`, `Cpl`, `Csv`, `deflate64-zip`, `Der`, `Dll`, `Dmg`, `Doc`, `Docm`, `Docx`, `Dpx`, `Dsn`, `Dwf`, `Dwg`, `Dxf`, `Edif`, `Elf`, `Emf`, `encrypted-7z`, `encrypted-doc`, `encrypted-docx`, `encrypted-office2007`, `encrypted-pdf`, `encrypted-ppt`, `encrypted-pptx`, `encrypted-rar`, `encrypted-xls`, `encrypted-xlsx`, `encrypted-zip`, `Eps`, `Exe`, `Exr`, `Flash`, `Flv`, `Gds`, `Gif`, `gif-upload`, `Gzip`, `Hlp`, `Hta`, `Hwp`, `Hwpx`, `Ichitaro`, `Iff`, `Inf`, `Ins`, `Iqy`, `Iso`, `Its`, `iwork-keynote`, `iwork-numbers`, `iwork-pages`, `Jar`, `Jpeg`, `jpeg-upload`, `Js`, `Jse`, `Lnk`, `Lzh`, `Ma`, `Macapp`, `mach-o`, `Mb`, `Mda`, `Mdb`, `Mdi`, `Mdt`, `Mdw`, `Mdz`, `Mht`, `microsoft-shell`, `Mif`, `Mkv`, `Mov`, `Mp3`, `Mp4`, `Mpeg`, `mpeg-ts`, `Mpkg`, `Msc`, `Msi`, `Msoffice`, `Msp`, `Ocx`, `Pbix`, `Pbm`, `Pcl`, `Pdf`, `Pem`, `Pgp`, `Pif`, `Pkg`, `Pl`, `Png`, `png-upload`, `Powershell`, `Ppt`, `Pptx`, `Prg`, `Psd`, `Py`, `Rar`, `Reg`, `renamed-zip`, `Rla`, `Rm`, `Rpf`, `Rtf`, `Scf`, `Scr`, `Sgi`, `Sh`, `Shk`, `Shs`, `Slk`, `Softimg`, `split-cab`, `split-rar`, `Stp`, `Svg`, `Sys`, `Tar`, `Tdb`, `Tif`, `Tiff`, `Tmp`, `Torrent`, `Url`, `Vb`, `Vbe`, `Vbs`, `Vxd`, `Webm`, `Wmf`, `Wmv`, `Wri`, `Wsf`, `Wsh`, `Xll`, `Xls`, `Xlsx`, `Xpm`, `Zcompressed` and `Zip`.
         /// </summary>
         public InputList<string> FileTypes
         {

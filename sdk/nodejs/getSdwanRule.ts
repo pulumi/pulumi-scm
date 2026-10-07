@@ -28,12 +28,21 @@ export interface GetSdwanRuleArgs {
      * The device in which the resource is defined
      */
     device?: string;
+    /**
+     * The folder in which the resource is defined
+     */
     folder?: string;
     /**
      * UUID of the resource
      */
     id: string;
+    /**
+     * Rule name
+     */
     name?: string;
+    /**
+     * The snippet in which the resource is defined
+     */
     snippet?: string;
 }
 
@@ -41,34 +50,97 @@ export interface GetSdwanRuleArgs {
  * A collection of values returned by getSdwanRule.
  */
 export interface GetSdwanRuleResult {
+    /**
+     * Action
+     */
     readonly action: outputs.GetSdwanRuleAction;
+    /**
+     * List of applications
+     */
     readonly applications: string[];
+    /**
+     * Rule description
+     */
     readonly description: string;
+    /**
+     * List of destination addresses
+     */
     readonly destinations: string[];
     /**
      * The device in which the resource is defined
      */
     readonly device: string;
+    /**
+     * Disable rule?
+     */
     readonly disabled: boolean;
+    /**
+     * Error correction profile
+     */
     readonly errorCorrectionProfile: string;
+    /**
+     * The folder in which the resource is defined
+     */
     readonly folder: string;
+    /**
+     * List of source zones
+     */
     readonly froms: string[];
     /**
      * UUID of the resource
      */
     readonly id: string;
+    /**
+     * Rule name
+     */
     readonly name: string;
+    /**
+     * Negate destination address(es)?
+     */
     readonly negateDestination: boolean;
+    /**
+     * Negate source address(es)?
+     */
     readonly negateSource: boolean;
+    /**
+     * Path quality profile
+     */
     readonly pathQualityProfile: string;
+    /**
+     * Rule postion relative to device rules. Possible values are `pre` and `post`.
+     */
     readonly position: string;
+    /**
+     * SaaS quality profile
+     */
     readonly saasQualityProfile: string;
+    /**
+     * List of services
+     */
     readonly services: string[];
+    /**
+     * The snippet in which the resource is defined
+     */
     readonly snippet: string;
+    /**
+     * List of source users
+     */
     readonly sourceUsers: string[];
+    /**
+     * List of source addresses
+     */
     readonly sources: string[];
+    /**
+     * List of tags
+     */
     readonly tags: string[];
+    /**
+     * The Terraform ID.
+     */
     readonly tfid: string;
+    /**
+     * List of destination zones
+     */
     readonly tos: string[];
 }
 /**
@@ -93,11 +165,20 @@ export interface GetSdwanRuleOutputArgs {
      * The device in which the resource is defined
      */
     device?: pulumi.Input<string | undefined>;
+    /**
+     * The folder in which the resource is defined
+     */
     folder?: pulumi.Input<string | undefined>;
     /**
      * UUID of the resource
      */
     id: pulumi.Input<string>;
+    /**
+     * Rule name
+     */
     name?: pulumi.Input<string | undefined>;
+    /**
+     * The snippet in which the resource is defined
+     */
     snippet?: pulumi.Input<string | undefined>;
 }

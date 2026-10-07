@@ -117,3 +117,25 @@ Object.defineProperty(exports, "scope", {
     enumerable: true,
 });
 
+/**
+ * The region for ZTNA Connector API requests (x-panw-region header). Required when using ztna_* resources. Valid values: ae, americas, au, br, ca, ch, cn, de, es, europe, fr, id, il, in, it, jp, kr, pl, qa, sa, sg, tw, uk, za. Environment variable: `X_PANW_REGION`. JSON config file variable: `xPanwRegion`.
+ */
+export declare const xPanwRegion: string | undefined;
+Object.defineProperty(exports, "xPanwRegion", {
+    get() {
+        return __config.get("xPanwRegion");
+    },
+    enumerable: true,
+});
+
+/**
+ * The hostname of the ZTNA Connector API. Required when using ztna_* resources. Default: `api.sase.paloaltonetworks.com`. Environment variable: `ZTNA_HOST`. JSON config file variable: `ztnaHost`.
+ */
+export declare const ztnaHost: string | undefined;
+Object.defineProperty(exports, "ztnaHost", {
+    get() {
+        return __config.get("ztnaHost");
+    },
+    enumerable: true,
+});
+

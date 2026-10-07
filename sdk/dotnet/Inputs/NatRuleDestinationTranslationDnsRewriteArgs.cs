@@ -13,7 +13,7 @@ namespace Pulumi.Scm.Inputs
     public sealed class NatRuleDestinationTranslationDnsRewriteArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Direction
+        /// Direction. Possible values are `Reverse` and `Forward`.
         /// </summary>
         [Input("direction")]
         public Input<string>? Direction { get; set; }

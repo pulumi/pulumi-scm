@@ -14,7 +14,7 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetBgpAddressFamilyProfileIpv4MulticastOrfResult
     {
         /// <summary>
-        /// ORF prefix list
+        /// ORF prefix list. Possible values are `None`, `Both`, `Receive` and `Send`.
         /// </summary>
         public readonly string OrfPrefixList;
 

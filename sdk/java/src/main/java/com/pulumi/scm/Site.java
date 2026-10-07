@@ -264,14 +264,14 @@ public class Site extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.latitude);
     }
     /**
-     * The license type of the site
+     * The license type of the site. Possible values are `FWAAS-SITE-25Mbps`, `FWAAS-SITE-50Mbps`, `FWAAS-SITE-250Mbps`, `FWAAS-SITE-1000Mbps` and `FWAAS-SITE-2500Mbps`.
      * 
      */
     @Export(name="licenseType", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> licenseType;
 
     /**
-     * @return The license type of the site
+     * @return The license type of the site. Possible values are `FWAAS-SITE-25Mbps`, `FWAAS-SITE-50Mbps`, `FWAAS-SITE-250Mbps`, `FWAAS-SITE-1000Mbps` and `FWAAS-SITE-2500Mbps`.
      * 
      */
     public Output<Optional<String>> licenseType() {
@@ -362,14 +362,14 @@ public class Site extends com.pulumi.resources.CustomResource {
         return this.tfid;
     }
     /**
-     * The site type
+     * The site type. Possible values are `prisma-sdwan`, `third-party-branch` and `third-party-discovered`.
      * 
      */
     @Export(name="type", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> type;
 
     /**
-     * @return The site type
+     * @return The site type. Possible values are `prisma-sdwan`, `third-party-branch` and `third-party-discovered`.
      * 
      */
     public Output<Optional<String>> type() {

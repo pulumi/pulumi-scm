@@ -102,16 +102,12 @@ type DataObject struct {
 	// Disable override
 	DisableOverride pulumi.StringPtrOutput `pulumi:"disableOverride"`
 	// The folder in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrOutput `pulumi:"folder"`
 	// The name of the data object
 	Name pulumi.StringOutput `pulumi:"name"`
 	// Pattern type
 	PatternType DataObjectPatternTypePtrOutput `pulumi:"patternType"`
 	// The snippet in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
 	// The Terraform ID.
 	Tfid pulumi.StringOutput `pulumi:"tfid"`
@@ -154,16 +150,12 @@ type dataObjectState struct {
 	// Disable override
 	DisableOverride *string `pulumi:"disableOverride"`
 	// The folder in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// The name of the data object
 	Name *string `pulumi:"name"`
 	// Pattern type
 	PatternType *DataObjectPatternType `pulumi:"patternType"`
 	// The snippet in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	// The Terraform ID.
 	Tfid *string `pulumi:"tfid"`
@@ -177,16 +169,12 @@ type DataObjectState struct {
 	// Disable override
 	DisableOverride pulumi.StringPtrInput
 	// The folder in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// The name of the data object
 	Name pulumi.StringPtrInput
 	// Pattern type
 	PatternType DataObjectPatternTypePtrInput
 	// The snippet in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	// The Terraform ID.
 	Tfid pulumi.StringPtrInput
@@ -204,16 +192,12 @@ type dataObjectArgs struct {
 	// Disable override
 	DisableOverride *string `pulumi:"disableOverride"`
 	// The folder in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// The name of the data object
 	Name *string `pulumi:"name"`
 	// Pattern type
 	PatternType *DataObjectPatternType `pulumi:"patternType"`
 	// The snippet in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 }
 
@@ -226,16 +210,12 @@ type DataObjectArgs struct {
 	// Disable override
 	DisableOverride pulumi.StringPtrInput
 	// The folder in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// The name of the data object
 	Name pulumi.StringPtrInput
 	// Pattern type
 	PatternType DataObjectPatternTypePtrInput
 	// The snippet in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 }
 
@@ -342,8 +322,6 @@ func (o DataObjectOutput) DisableOverride() pulumi.StringPtrOutput {
 }
 
 // The folder in which the resource is defined
-//
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o DataObjectOutput) Folder() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *DataObject) pulumi.StringPtrOutput { return v.Folder }).(pulumi.StringPtrOutput)
 }
@@ -359,8 +337,6 @@ func (o DataObjectOutput) PatternType() DataObjectPatternTypePtrOutput {
 }
 
 // The snippet in which the resource is defined
-//
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o DataObjectOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *DataObject) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)
 }

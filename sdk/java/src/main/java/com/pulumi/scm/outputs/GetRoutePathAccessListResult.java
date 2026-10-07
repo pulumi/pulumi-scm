@@ -12,27 +12,59 @@ import java.util.Objects;
 
 @CustomType
 public final class GetRoutePathAccessListResult {
+    /**
+     * @return AS paths
+     * 
+     */
     private List<GetRoutePathAccessListAspathEntry> aspathEntries;
+    /**
+     * @return Description
+     * 
+     */
     private String description;
     /**
      * @return The device in which the resource is defined
      * 
      */
     private String device;
+    /**
+     * @return The folder in which the resource is defined
+     * 
+     */
     private String folder;
     /**
      * @return UUID of the resource
      * 
      */
     private String id;
+    /**
+     * @return AS path access list name
+     * 
+     */
     private String name;
+    /**
+     * @return The snippet in which the resource is defined
+     * 
+     */
     private String snippet;
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     private String tfid;
 
     private GetRoutePathAccessListResult() {}
+    /**
+     * @return AS paths
+     * 
+     */
     public List<GetRoutePathAccessListAspathEntry> aspathEntries() {
         return this.aspathEntries;
     }
+    /**
+     * @return Description
+     * 
+     */
     public String description() {
         return this.description;
     }
@@ -43,6 +75,10 @@ public final class GetRoutePathAccessListResult {
     public String device() {
         return this.device;
     }
+    /**
+     * @return The folder in which the resource is defined
+     * 
+     */
     public String folder() {
         return this.folder;
     }
@@ -53,12 +89,24 @@ public final class GetRoutePathAccessListResult {
     public String id() {
         return this.id;
     }
+    /**
+     * @return AS path access list name
+     * 
+     */
     public String name() {
         return this.name;
     }
+    /**
+     * @return The snippet in which the resource is defined
+     * 
+     */
     public String snippet() {
         return this.snippet;
     }
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     public String tfid() {
         return this.tfid;
     }

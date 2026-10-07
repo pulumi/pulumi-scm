@@ -24,14 +24,14 @@ public final class SecurityRuleArgs extends com.pulumi.resources.ResourceArgs {
     public static final SecurityRuleArgs Empty = new SecurityRuleArgs();
 
     /**
-     * The action to be taken when the rule is matched
+     * The action to be taken when the rule is matched. Possible values are `allow`, `deny`, `drop`, `reset-client`, `reset-server` and `reset-both`.
      * 
      */
     @Import(name="action")
     private @Nullable Output<String> action;
 
     /**
-     * @return The action to be taken when the rule is matched
+     * @return The action to be taken when the rule is matched. Possible values are `allow`, `deny`, `drop`, `reset-client`, `reset-server` and `reset-both`.
      * 
      */
     public Optional<Output<String>> action() {
@@ -399,14 +399,14 @@ public final class SecurityRuleArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The position of a security rule
+     * The position of a security rule. Possible values are `pre` and `post`.
      * 
      */
     @Import(name="position")
     private @Nullable Output<String> position;
 
     /**
-     * @return The position of a security rule
+     * @return The position of a security rule. Possible values are `pre` and `post`.
      * 
      */
     public Optional<Output<String>> position() {
@@ -564,14 +564,14 @@ public final class SecurityRuleArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `&#34;before&#34;` or `&#34;after&#34;`.
+     * UUID of the rule to position this rule relative to. Required when `relativePosition` is `&#34;before&#34;` or `&#34;after&#34;`.
      * 
      */
     @Import(name="targetRule")
     private @Nullable Output<String> targetRule;
 
     /**
-     * @return The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `&#34;before&#34;` or `&#34;after&#34;`.
+     * @return UUID of the rule to position this rule relative to. Required when `relativePosition` is `&#34;before&#34;` or `&#34;after&#34;`.
      * 
      */
     public Optional<Output<String>> targetRule() {
@@ -671,7 +671,7 @@ public final class SecurityRuleArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param action The action to be taken when the rule is matched
+         * @param action The action to be taken when the rule is matched. Possible values are `allow`, `deny`, `drop`, `reset-client`, `reset-server` and `reset-both`.
          * 
          * @return builder
          * 
@@ -682,7 +682,7 @@ public final class SecurityRuleArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param action The action to be taken when the rule is matched
+         * @param action The action to be taken when the rule is matched. Possible values are `allow`, `deny`, `drop`, `reset-client`, `reset-server` and `reset-both`.
          * 
          * @return builder
          * 
@@ -1296,7 +1296,7 @@ public final class SecurityRuleArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param position The position of a security rule
+         * @param position The position of a security rule. Possible values are `pre` and `post`.
          * 
          * @return builder
          * 
@@ -1307,7 +1307,7 @@ public final class SecurityRuleArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param position The position of a security rule
+         * @param position The position of a security rule. Possible values are `pre` and `post`.
          * 
          * @return builder
          * 
@@ -1577,7 +1577,7 @@ public final class SecurityRuleArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param targetRule The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `&#34;before&#34;` or `&#34;after&#34;`.
+         * @param targetRule UUID of the rule to position this rule relative to. Required when `relativePosition` is `&#34;before&#34;` or `&#34;after&#34;`.
          * 
          * @return builder
          * 
@@ -1588,7 +1588,7 @@ public final class SecurityRuleArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param targetRule The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `&#34;before&#34;` or `&#34;after&#34;`.
+         * @param targetRule UUID of the rule to position this rule relative to. Required when `relativePosition` is `&#34;before&#34;` or `&#34;after&#34;`.
          * 
          * @return builder
          * 

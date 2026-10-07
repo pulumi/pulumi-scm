@@ -17,14 +17,14 @@ public final class SecurityRuleAllowUrlCategoryArgs extends com.pulumi.resources
     public static final SecurityRuleAllowUrlCategoryArgs Empty = new SecurityRuleAllowUrlCategoryArgs();
 
     /**
-     * Additional action
+     * Additional action. Possible values are `none`, `continue`, `redirect` and `isolate`.
      * 
      */
     @Import(name="additionalAction")
     private @Nullable Output<String> additionalAction;
 
     /**
-     * @return Additional action
+     * @return Additional action. Possible values are `none`, `continue`, `redirect` and `isolate`.
      * 
      */
     public Optional<Output<String>> additionalAction() {
@@ -32,14 +32,14 @@ public final class SecurityRuleAllowUrlCategoryArgs extends com.pulumi.resources
     }
 
     /**
-     * Credential enforcement
+     * Credential enforcement. Possible values are `enabled` and `disabled`.
      * 
      */
     @Import(name="credentialEnforcement")
     private @Nullable Output<String> credentialEnforcement;
 
     /**
-     * @return Credential enforcement
+     * @return Credential enforcement. Possible values are `enabled` and `disabled`.
      * 
      */
     public Optional<Output<String>> credentialEnforcement() {
@@ -47,14 +47,14 @@ public final class SecurityRuleAllowUrlCategoryArgs extends com.pulumi.resources
     }
 
     /**
-     * Decryption
+     * Decryption. Possible values are `enabled` and `disabled`.
      * 
      */
     @Import(name="decryption")
     private @Nullable Output<String> decryption;
 
     /**
-     * @return Decryption
+     * @return Decryption. Possible values are `enabled` and `disabled`.
      * 
      */
     public Optional<Output<String>> decryption() {
@@ -152,7 +152,7 @@ public final class SecurityRuleAllowUrlCategoryArgs extends com.pulumi.resources
         }
 
         /**
-         * @param additionalAction Additional action
+         * @param additionalAction Additional action. Possible values are `none`, `continue`, `redirect` and `isolate`.
          * 
          * @return builder
          * 
@@ -163,7 +163,7 @@ public final class SecurityRuleAllowUrlCategoryArgs extends com.pulumi.resources
         }
 
         /**
-         * @param additionalAction Additional action
+         * @param additionalAction Additional action. Possible values are `none`, `continue`, `redirect` and `isolate`.
          * 
          * @return builder
          * 
@@ -173,7 +173,7 @@ public final class SecurityRuleAllowUrlCategoryArgs extends com.pulumi.resources
         }
 
         /**
-         * @param credentialEnforcement Credential enforcement
+         * @param credentialEnforcement Credential enforcement. Possible values are `enabled` and `disabled`.
          * 
          * @return builder
          * 
@@ -184,7 +184,7 @@ public final class SecurityRuleAllowUrlCategoryArgs extends com.pulumi.resources
         }
 
         /**
-         * @param credentialEnforcement Credential enforcement
+         * @param credentialEnforcement Credential enforcement. Possible values are `enabled` and `disabled`.
          * 
          * @return builder
          * 
@@ -194,7 +194,7 @@ public final class SecurityRuleAllowUrlCategoryArgs extends com.pulumi.resources
         }
 
         /**
-         * @param decryption Decryption
+         * @param decryption Decryption. Possible values are `enabled` and `disabled`.
          * 
          * @return builder
          * 
@@ -205,7 +205,7 @@ public final class SecurityRuleAllowUrlCategoryArgs extends com.pulumi.resources
         }
 
         /**
-         * @param decryption Decryption
+         * @param decryption Decryption. Possible values are `enabled` and `disabled`.
          * 
          * @return builder
          * 

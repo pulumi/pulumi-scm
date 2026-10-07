@@ -12,26 +12,26 @@ import javax.annotation.Nullable;
 @CustomType
 public final class CertificateProfileUsernameField {
     /**
-     * @return Common name
+     * @return Common name. Possible values are `common-name`.
      * 
      */
     private @Nullable String subject;
     /**
-     * @return Email address
+     * @return Email address. Possible values are `email`.
      * 
      */
     private @Nullable String subjectAlt;
 
     private CertificateProfileUsernameField() {}
     /**
-     * @return Common name
+     * @return Common name. Possible values are `common-name`.
      * 
      */
     public Optional<String> subject() {
         return Optional.ofNullable(this.subject);
     }
     /**
-     * @return Email address
+     * @return Email address. Possible values are `email`.
      * 
      */
     public Optional<String> subjectAlt() {

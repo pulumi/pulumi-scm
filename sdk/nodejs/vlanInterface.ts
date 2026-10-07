@@ -26,6 +26,11 @@ import * as utilities from "./utilities";
  *     ips: [{
  *         name: "198.18.1.1/24",
  *     }],
+ *     adjustTcpMss: {
+ *         enable: true,
+ *         ipv4MssAdjustment: 40,
+ *         ipv6MssAdjustment: 60,
+ *     },
  * });
  * ```
  *
@@ -80,6 +85,10 @@ export class VlanInterface extends pulumi.CustomResource {
     }
 
     /**
+     * TCP MSS adjustment settings for the interface
+     */
+    declare public readonly adjustTcpMss: pulumi.Output<outputs.VlanInterfaceAdjustTcpMss | undefined>;
+    /**
      * ARP configuration
      */
     declare public readonly arps: pulumi.Output<outputs.VlanInterfaceArp[] | undefined>;
@@ -101,14 +110,10 @@ export class VlanInterface extends pulumi.CustomResource {
     declare public readonly device: pulumi.Output<string | undefined>;
     /**
      * Vlan interfaces DHCP Client Object
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
      */
     declare public readonly dhcpClient: pulumi.Output<outputs.VlanInterfaceDhcpClient | undefined>;
     /**
      * The folder in which the resource is defined
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly folder: pulumi.Output<string | undefined>;
     /**
@@ -117,8 +122,6 @@ export class VlanInterface extends pulumi.CustomResource {
     declare public readonly interfaceManagementProfile: pulumi.Output<string | undefined>;
     /**
      * VLAN Interface IP Parent
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
      */
     declare public readonly ips: pulumi.Output<outputs.VlanInterfaceIp[] | undefined>;
     /**
@@ -135,8 +138,6 @@ export class VlanInterface extends pulumi.CustomResource {
     declare public readonly netflowProfile: pulumi.Output<string | undefined>;
     /**
      * The snippet in which the resource is defined
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly snippet: pulumi.Output<string | undefined>;
     /**
@@ -161,6 +162,7 @@ export class VlanInterface extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as VlanInterfaceState | undefined;
+            resourceInputs["adjustTcpMss"] = state?.adjustTcpMss;
             resourceInputs["arps"] = state?.arps;
             resourceInputs["comment"] = state?.comment;
             resourceInputs["ddnsConfig"] = state?.ddnsConfig;
@@ -178,6 +180,7 @@ export class VlanInterface extends pulumi.CustomResource {
             resourceInputs["vlanTag"] = state?.vlanTag;
         } else {
             const args = argsOrState as VlanInterfaceArgs | undefined;
+            resourceInputs["adjustTcpMss"] = args?.adjustTcpMss;
             resourceInputs["arps"] = args?.arps;
             resourceInputs["comment"] = args?.comment;
             resourceInputs["ddnsConfig"] = args?.ddnsConfig;
@@ -204,6 +207,10 @@ export class VlanInterface extends pulumi.CustomResource {
  */
 export interface VlanInterfaceState {
     /**
+     * TCP MSS adjustment settings for the interface
+     */
+    adjustTcpMss?: pulumi.Input<inputs.VlanInterfaceAdjustTcpMss | undefined>;
+    /**
      * ARP configuration
      */
     arps?: pulumi.Input<pulumi.Input<inputs.VlanInterfaceArp>[] | undefined>;
@@ -225,14 +232,10 @@ export interface VlanInterfaceState {
     device?: pulumi.Input<string | undefined>;
     /**
      * Vlan interfaces DHCP Client Object
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
      */
     dhcpClient?: pulumi.Input<inputs.VlanInterfaceDhcpClient | undefined>;
     /**
      * The folder in which the resource is defined
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     folder?: pulumi.Input<string | undefined>;
     /**
@@ -241,8 +244,6 @@ export interface VlanInterfaceState {
     interfaceManagementProfile?: pulumi.Input<string | undefined>;
     /**
      * VLAN Interface IP Parent
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
      */
     ips?: pulumi.Input<pulumi.Input<inputs.VlanInterfaceIp>[] | undefined>;
     /**
@@ -259,8 +260,6 @@ export interface VlanInterfaceState {
     netflowProfile?: pulumi.Input<string | undefined>;
     /**
      * The snippet in which the resource is defined
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     snippet?: pulumi.Input<string | undefined>;
     /**
@@ -278,6 +277,10 @@ export interface VlanInterfaceState {
  */
 export interface VlanInterfaceArgs {
     /**
+     * TCP MSS adjustment settings for the interface
+     */
+    adjustTcpMss?: pulumi.Input<inputs.VlanInterfaceAdjustTcpMss | undefined>;
+    /**
      * ARP configuration
      */
     arps?: pulumi.Input<pulumi.Input<inputs.VlanInterfaceArp>[] | undefined>;
@@ -299,14 +302,10 @@ export interface VlanInterfaceArgs {
     device?: pulumi.Input<string | undefined>;
     /**
      * Vlan interfaces DHCP Client Object
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
      */
     dhcpClient?: pulumi.Input<inputs.VlanInterfaceDhcpClient | undefined>;
     /**
      * The folder in which the resource is defined
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     folder?: pulumi.Input<string | undefined>;
     /**
@@ -315,8 +314,6 @@ export interface VlanInterfaceArgs {
     interfaceManagementProfile?: pulumi.Input<string | undefined>;
     /**
      * VLAN Interface IP Parent
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
      */
     ips?: pulumi.Input<pulumi.Input<inputs.VlanInterfaceIp>[] | undefined>;
     /**
@@ -333,8 +330,6 @@ export interface VlanInterfaceArgs {
     netflowProfile?: pulumi.Input<string | undefined>;
     /**
      * The snippet in which the resource is defined
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     snippet?: pulumi.Input<string | undefined>;
     /**

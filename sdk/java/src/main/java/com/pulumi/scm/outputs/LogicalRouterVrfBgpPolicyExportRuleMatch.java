@@ -23,7 +23,7 @@ public final class LogicalRouterVrfBgpPolicyExportRuleMatch {
      */
     private @Nullable List<LogicalRouterVrfBgpPolicyExportRuleMatchAddressPrefix> addressPrefixes;
     /**
-     * @return Afi
+     * @return Afi. Possible values are `ip` and `ipv6`.
      * 
      */
     private @Nullable String afi;
@@ -58,12 +58,12 @@ public final class LogicalRouterVrfBgpPolicyExportRuleMatch {
      */
     private @Nullable List<String> nexthops;
     /**
-     * @return Route table
+     * @return Route table. Possible values are `unicast`, `multicast` and `both`.
      * 
      */
     private @Nullable String routeTable;
     /**
-     * @return Safi
+     * @return Safi. Possible values are `ip` and `ipv6`.
      * 
      */
     private @Nullable String safi;
@@ -77,7 +77,7 @@ public final class LogicalRouterVrfBgpPolicyExportRuleMatch {
         return this.addressPrefixes == null ? List.of() : this.addressPrefixes;
     }
     /**
-     * @return Afi
+     * @return Afi. Possible values are `ip` and `ipv6`.
      * 
      */
     public Optional<String> afi() {
@@ -126,14 +126,14 @@ public final class LogicalRouterVrfBgpPolicyExportRuleMatch {
         return this.nexthops == null ? List.of() : this.nexthops;
     }
     /**
-     * @return Route table
+     * @return Route table. Possible values are `unicast`, `multicast` and `both`.
      * 
      */
     public Optional<String> routeTable() {
         return Optional.ofNullable(this.routeTable);
     }
     /**
-     * @return Safi
+     * @return Safi. Possible values are `ip` and `ipv6`.
      * 
      */
     public Optional<String> safi() {

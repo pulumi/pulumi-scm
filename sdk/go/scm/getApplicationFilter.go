@@ -53,41 +53,66 @@ func LookupApplicationFilter(ctx *pulumi.Context, args *LookupApplicationFilterA
 type LookupApplicationFilterArgs struct {
 	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
+	// The folder in which the resource is defined
 	Folder *string `pulumi:"folder"`
 	// UUID of the resource
-	Id      string  `pulumi:"id"`
-	Name    *string `pulumi:"name"`
+	Id string `pulumi:"id"`
+	// Alphanumeric string [ 0-9a-zA-Z._-]
+	Name *string `pulumi:"name"`
+	// The snippet in which the resource is defined
 	Snippet *string `pulumi:"snippet"`
 }
 
 // A collection of values returned by getApplicationFilter.
 type LookupApplicationFilterResult struct {
+	// Category
 	Categories []string `pulumi:"categories"`
 	// The device in which the resource is defined
-	Device                  string   `pulumi:"device"`
-	Evasive                 bool     `pulumi:"evasive"`
-	ExcessiveBandwidthUse   bool     `pulumi:"excessiveBandwidthUse"`
-	Excludes                []string `pulumi:"excludes"`
-	Folder                  string   `pulumi:"folder"`
-	HasKnownVulnerabilities bool     `pulumi:"hasKnownVulnerabilities"`
+	Device string `pulumi:"device"`
+	// only True is a valid value
+	Evasive bool `pulumi:"evasive"`
+	// only True is a valid value
+	ExcessiveBandwidthUse bool `pulumi:"excessiveBandwidthUse"`
+	// Exclude
+	Excludes []string `pulumi:"excludes"`
+	// The folder in which the resource is defined
+	Folder string `pulumi:"folder"`
+	// only True is a valid value
+	HasKnownVulnerabilities bool `pulumi:"hasKnownVulnerabilities"`
 	// UUID of the resource
-	Id                 string                      `pulumi:"id"`
-	IsSaas             bool                        `pulumi:"isSaas"`
-	Name               string                      `pulumi:"name"`
-	NewAppid           bool                        `pulumi:"newAppid"`
-	Pervasive          bool                        `pulumi:"pervasive"`
-	ProneToMisuse      bool                        `pulumi:"proneToMisuse"`
-	Risks              []int                       `pulumi:"risks"`
-	SaasCertifications []string                    `pulumi:"saasCertifications"`
-	SaasRisks          []string                    `pulumi:"saasRisks"`
-	Snippet            string                      `pulumi:"snippet"`
-	Subcategories      []string                    `pulumi:"subcategories"`
-	Tagging            GetApplicationFilterTagging `pulumi:"tagging"`
-	Technologies       []string                    `pulumi:"technologies"`
-	Tfid               string                      `pulumi:"tfid"`
-	TransfersFiles     bool                        `pulumi:"transfersFiles"`
-	TunnelsOtherApps   bool                        `pulumi:"tunnelsOtherApps"`
-	UsedByMalware      bool                        `pulumi:"usedByMalware"`
+	Id string `pulumi:"id"`
+	// only True is a valid value
+	IsSaas bool `pulumi:"isSaas"`
+	// Alphanumeric string [ 0-9a-zA-Z._-]
+	Name string `pulumi:"name"`
+	// only True is a valid value
+	NewAppid bool `pulumi:"newAppid"`
+	// only True is a valid value
+	Pervasive bool `pulumi:"pervasive"`
+	// only True is a valid value
+	ProneToMisuse bool `pulumi:"proneToMisuse"`
+	// Risk
+	Risks []int `pulumi:"risks"`
+	// Saas certifications
+	SaasCertifications []string `pulumi:"saasCertifications"`
+	// Saas risk
+	SaasRisks []string `pulumi:"saasRisks"`
+	// The snippet in which the resource is defined
+	Snippet string `pulumi:"snippet"`
+	// Subcategory
+	Subcategories []string `pulumi:"subcategories"`
+	// Tagging
+	Tagging GetApplicationFilterTagging `pulumi:"tagging"`
+	// Technology
+	Technologies []string `pulumi:"technologies"`
+	// The Terraform ID.
+	Tfid string `pulumi:"tfid"`
+	// only True is a valid value
+	TransfersFiles bool `pulumi:"transfersFiles"`
+	// only True is a valid value
+	TunnelsOtherApps bool `pulumi:"tunnelsOtherApps"`
+	// only True is a valid value
+	UsedByMalware bool `pulumi:"usedByMalware"`
 }
 
 func LookupApplicationFilterOutput(ctx *pulumi.Context, args LookupApplicationFilterOutputArgs, opts ...pulumi.InvokeOption) LookupApplicationFilterResultOutput {
@@ -99,10 +124,13 @@ func LookupApplicationFilterOutput(ctx *pulumi.Context, args LookupApplicationFi
 type LookupApplicationFilterOutputArgs struct {
 	// The device in which the resource is defined
 	Device pulumi.StringPtrInput `pulumi:"device"`
+	// The folder in which the resource is defined
 	Folder pulumi.StringPtrInput `pulumi:"folder"`
 	// UUID of the resource
-	Id      pulumi.StringInput    `pulumi:"id"`
-	Name    pulumi.StringPtrInput `pulumi:"name"`
+	Id pulumi.StringInput `pulumi:"id"`
+	// Alphanumeric string [ 0-9a-zA-Z._-]
+	Name pulumi.StringPtrInput `pulumi:"name"`
+	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrInput `pulumi:"snippet"`
 }
 
@@ -125,6 +153,7 @@ func (o LookupApplicationFilterResultOutput) ToLookupApplicationFilterResultOutp
 	return o
 }
 
+// Category
 func (o LookupApplicationFilterResultOutput) Categories() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupApplicationFilterResult) []string { return v.Categories }).(pulumi.StringArrayOutput)
 }
@@ -134,22 +163,27 @@ func (o LookupApplicationFilterResultOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupApplicationFilterResult) string { return v.Device }).(pulumi.StringOutput)
 }
 
+// only True is a valid value
 func (o LookupApplicationFilterResultOutput) Evasive() pulumi.BoolOutput {
 	return o.ApplyT(func(v LookupApplicationFilterResult) bool { return v.Evasive }).(pulumi.BoolOutput)
 }
 
+// only True is a valid value
 func (o LookupApplicationFilterResultOutput) ExcessiveBandwidthUse() pulumi.BoolOutput {
 	return o.ApplyT(func(v LookupApplicationFilterResult) bool { return v.ExcessiveBandwidthUse }).(pulumi.BoolOutput)
 }
 
+// Exclude
 func (o LookupApplicationFilterResultOutput) Excludes() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupApplicationFilterResult) []string { return v.Excludes }).(pulumi.StringArrayOutput)
 }
 
+// The folder in which the resource is defined
 func (o LookupApplicationFilterResultOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupApplicationFilterResult) string { return v.Folder }).(pulumi.StringOutput)
 }
 
+// only True is a valid value
 func (o LookupApplicationFilterResultOutput) HasKnownVulnerabilities() pulumi.BoolOutput {
 	return o.ApplyT(func(v LookupApplicationFilterResult) bool { return v.HasKnownVulnerabilities }).(pulumi.BoolOutput)
 }
@@ -159,66 +193,82 @@ func (o LookupApplicationFilterResultOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupApplicationFilterResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
+// only True is a valid value
 func (o LookupApplicationFilterResultOutput) IsSaas() pulumi.BoolOutput {
 	return o.ApplyT(func(v LookupApplicationFilterResult) bool { return v.IsSaas }).(pulumi.BoolOutput)
 }
 
+// Alphanumeric string [ 0-9a-zA-Z._-]
 func (o LookupApplicationFilterResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupApplicationFilterResult) string { return v.Name }).(pulumi.StringOutput)
 }
 
+// only True is a valid value
 func (o LookupApplicationFilterResultOutput) NewAppid() pulumi.BoolOutput {
 	return o.ApplyT(func(v LookupApplicationFilterResult) bool { return v.NewAppid }).(pulumi.BoolOutput)
 }
 
+// only True is a valid value
 func (o LookupApplicationFilterResultOutput) Pervasive() pulumi.BoolOutput {
 	return o.ApplyT(func(v LookupApplicationFilterResult) bool { return v.Pervasive }).(pulumi.BoolOutput)
 }
 
+// only True is a valid value
 func (o LookupApplicationFilterResultOutput) ProneToMisuse() pulumi.BoolOutput {
 	return o.ApplyT(func(v LookupApplicationFilterResult) bool { return v.ProneToMisuse }).(pulumi.BoolOutput)
 }
 
+// Risk
 func (o LookupApplicationFilterResultOutput) Risks() pulumi.IntArrayOutput {
 	return o.ApplyT(func(v LookupApplicationFilterResult) []int { return v.Risks }).(pulumi.IntArrayOutput)
 }
 
+// Saas certifications
 func (o LookupApplicationFilterResultOutput) SaasCertifications() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupApplicationFilterResult) []string { return v.SaasCertifications }).(pulumi.StringArrayOutput)
 }
 
+// Saas risk
 func (o LookupApplicationFilterResultOutput) SaasRisks() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupApplicationFilterResult) []string { return v.SaasRisks }).(pulumi.StringArrayOutput)
 }
 
+// The snippet in which the resource is defined
 func (o LookupApplicationFilterResultOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupApplicationFilterResult) string { return v.Snippet }).(pulumi.StringOutput)
 }
 
+// Subcategory
 func (o LookupApplicationFilterResultOutput) Subcategories() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupApplicationFilterResult) []string { return v.Subcategories }).(pulumi.StringArrayOutput)
 }
 
+// Tagging
 func (o LookupApplicationFilterResultOutput) Tagging() GetApplicationFilterTaggingOutput {
 	return o.ApplyT(func(v LookupApplicationFilterResult) GetApplicationFilterTagging { return v.Tagging }).(GetApplicationFilterTaggingOutput)
 }
 
+// Technology
 func (o LookupApplicationFilterResultOutput) Technologies() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupApplicationFilterResult) []string { return v.Technologies }).(pulumi.StringArrayOutput)
 }
 
+// The Terraform ID.
 func (o LookupApplicationFilterResultOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupApplicationFilterResult) string { return v.Tfid }).(pulumi.StringOutput)
 }
 
+// only True is a valid value
 func (o LookupApplicationFilterResultOutput) TransfersFiles() pulumi.BoolOutput {
 	return o.ApplyT(func(v LookupApplicationFilterResult) bool { return v.TransfersFiles }).(pulumi.BoolOutput)
 }
 
+// only True is a valid value
 func (o LookupApplicationFilterResultOutput) TunnelsOtherApps() pulumi.BoolOutput {
 	return o.ApplyT(func(v LookupApplicationFilterResult) bool { return v.TunnelsOtherApps }).(pulumi.BoolOutput)
 }
 
+// only True is a valid value
 func (o LookupApplicationFilterResultOutput) UsedByMalware() pulumi.BoolOutput {
 	return o.ApplyT(func(v LookupApplicationFilterResult) bool { return v.UsedByMalware }).(pulumi.BoolOutput)
 }

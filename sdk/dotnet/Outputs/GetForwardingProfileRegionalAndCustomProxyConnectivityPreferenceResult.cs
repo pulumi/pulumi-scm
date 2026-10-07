@@ -18,7 +18,7 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly bool Enabled;
         /// <summary>
-        /// Connectivity method type - 'tunnel' for VPN tunnels, 'proxy' for HTTP/HTTPS proxies, 'adns' for authenticated DNS, 'masque' for MASQUE protocol
+        /// Connectivity method type - 'tunnel' for VPN tunnels, 'proxy' for HTTP/HTTPS proxies, 'adns' for authenticated DNS, 'masque' for MASQUE protocol. Possible values are `Tunnel`, `Proxy`, `Adns` and `Masque`.
         /// </summary>
         public readonly string Name;
 

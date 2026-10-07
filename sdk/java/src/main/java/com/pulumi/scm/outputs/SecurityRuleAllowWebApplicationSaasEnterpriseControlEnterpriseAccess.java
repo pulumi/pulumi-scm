@@ -13,7 +13,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class SecurityRuleAllowWebApplicationSaasEnterpriseControlEnterpriseAccess {
     /**
-     * @return Enable
+     * @return Enable. Possible values are `yes` and `no`.
      * 
      */
     private @Nullable String enable;
@@ -25,7 +25,7 @@ public final class SecurityRuleAllowWebApplicationSaasEnterpriseControlEnterpris
 
     private SecurityRuleAllowWebApplicationSaasEnterpriseControlEnterpriseAccess() {}
     /**
-     * @return Enable
+     * @return Enable. Possible values are `yes` and `no`.
      * 
      */
     public Optional<String> enable() {

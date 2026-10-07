@@ -20,14 +20,10 @@ public final class GetBgpRouteMapRedistributionListDataConnectedStatic {
     /**
      * @return Ospf
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `bgp`, `ospf`, and `rib`.
-     * 
      */
     private GetBgpRouteMapRedistributionListDataConnectedStaticOspf ospf;
     /**
      * @return Rib
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `bgp`, `ospf`, and `rib`.
      * 
      */
     private GetBgpRouteMapRedistributionListDataConnectedStaticRib rib;
@@ -43,16 +39,12 @@ public final class GetBgpRouteMapRedistributionListDataConnectedStatic {
     /**
      * @return Ospf
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `bgp`, `ospf`, and `rib`.
-     * 
      */
     public GetBgpRouteMapRedistributionListDataConnectedStaticOspf ospf() {
         return this.ospf;
     }
     /**
      * @return Rib
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `bgp`, `ospf`, and `rib`.
      * 
      */
     public GetBgpRouteMapRedistributionListDataConnectedStaticRib rib() {

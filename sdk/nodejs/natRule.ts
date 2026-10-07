@@ -177,7 +177,7 @@ export class NatRule extends pulumi.CustomResource {
     }
 
     /**
-     * Active active device binding
+     * Active active device binding. Possible values are `primary`, `both`, `0` and `1`.
      */
     declare public readonly activeActiveDeviceBinding: pulumi.Output<string | undefined>;
     /**
@@ -217,11 +217,11 @@ export class NatRule extends pulumi.CustomResource {
      */
     declare public readonly name: pulumi.Output<string>;
     /**
-     * NAT type
+     * NAT type. Possible values are `ipv4`, `nat64` and `nptv6`.
      */
     declare public readonly natType: pulumi.Output<string>;
     /**
-     * The relative position of the rule
+     * The relative position of the rule. Possible values are `pre` and `post`.
      */
     declare public readonly position: pulumi.Output<string>;
     /**
@@ -338,7 +338,7 @@ export class NatRule extends pulumi.CustomResource {
  */
 export interface NatRuleState {
     /**
-     * Active active device binding
+     * Active active device binding. Possible values are `primary`, `both`, `0` and `1`.
      */
     activeActiveDeviceBinding?: pulumi.Input<string | undefined>;
     /**
@@ -378,11 +378,11 @@ export interface NatRuleState {
      */
     name?: pulumi.Input<string | undefined>;
     /**
-     * NAT type
+     * NAT type. Possible values are `ipv4`, `nat64` and `nptv6`.
      */
     natType?: pulumi.Input<string | undefined>;
     /**
-     * The relative position of the rule
+     * The relative position of the rule. Possible values are `pre` and `post`.
      */
     position?: pulumi.Input<string | undefined>;
     /**
@@ -424,7 +424,7 @@ export interface NatRuleState {
  */
 export interface NatRuleArgs {
     /**
-     * Active active device binding
+     * Active active device binding. Possible values are `primary`, `both`, `0` and `1`.
      */
     activeActiveDeviceBinding?: pulumi.Input<string | undefined>;
     /**
@@ -464,11 +464,11 @@ export interface NatRuleArgs {
      */
     name?: pulumi.Input<string | undefined>;
     /**
-     * NAT type
+     * NAT type. Possible values are `ipv4`, `nat64` and `nptv6`.
      */
     natType?: pulumi.Input<string | undefined>;
     /**
-     * The relative position of the rule
+     * The relative position of the rule. Possible values are `pre` and `post`.
      */
     position?: pulumi.Input<string | undefined>;
     /**

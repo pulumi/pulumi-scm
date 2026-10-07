@@ -60,3 +60,13 @@ func GetProtocol(ctx *pulumi.Context) string {
 func GetScope(ctx *pulumi.Context) string {
 	return config.Get(ctx, "scm:scope")
 }
+
+// The region for ZTNA Connector API requests (x-panw-region header). Required when using ztna_* resources. Valid values: ae, americas, au, br, ca, ch, cn, de, es, europe, fr, id, il, in, it, jp, kr, pl, qa, sa, sg, tw, uk, za. Environment variable: `X_PANW_REGION`. JSON config file variable: `xPanwRegion`.
+func GetXPanwRegion(ctx *pulumi.Context) string {
+	return config.Get(ctx, "scm:xPanwRegion")
+}
+
+// The hostname of the ZTNA Connector API. Required when using ztna_* resources. Default: `api.sase.paloaltonetworks.com`. Environment variable: `ZTNA_HOST`. JSON config file variable: `ztnaHost`.
+func GetZtnaHost(ctx *pulumi.Context) string {
+	return config.Get(ctx, "scm:ztnaHost")
+}

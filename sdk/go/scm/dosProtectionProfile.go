@@ -45,20 +45,16 @@ type DosProtectionProfile struct {
 	// Flood
 	Flood DosProtectionProfileFloodPtrOutput `pulumi:"flood"`
 	// The folder in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrOutput `pulumi:"folder"`
 	// Profile name
 	Name pulumi.StringOutput `pulumi:"name"`
 	// Resource
 	Resource DosProtectionProfileResourcePtrOutput `pulumi:"resource"`
 	// The snippet in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
 	// The Terraform ID.
 	Tfid pulumi.StringOutput `pulumi:"tfid"`
-	// Type
+	// Type. Possible values are `aggregate` and `classified`.
 	Type pulumi.StringOutput `pulumi:"type"`
 }
 
@@ -102,20 +98,16 @@ type dosProtectionProfileState struct {
 	// Flood
 	Flood *DosProtectionProfileFlood `pulumi:"flood"`
 	// The folder in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// Profile name
 	Name *string `pulumi:"name"`
 	// Resource
 	Resource *DosProtectionProfileResource `pulumi:"resource"`
 	// The snippet in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	// The Terraform ID.
 	Tfid *string `pulumi:"tfid"`
-	// Type
+	// Type. Possible values are `aggregate` and `classified`.
 	Type *string `pulumi:"type"`
 }
 
@@ -127,20 +119,16 @@ type DosProtectionProfileState struct {
 	// Flood
 	Flood DosProtectionProfileFloodPtrInput
 	// The folder in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// Profile name
 	Name pulumi.StringPtrInput
 	// Resource
 	Resource DosProtectionProfileResourcePtrInput
 	// The snippet in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	// The Terraform ID.
 	Tfid pulumi.StringPtrInput
-	// Type
+	// Type. Possible values are `aggregate` and `classified`.
 	Type pulumi.StringPtrInput
 }
 
@@ -156,18 +144,14 @@ type dosProtectionProfileArgs struct {
 	// Flood
 	Flood *DosProtectionProfileFlood `pulumi:"flood"`
 	// The folder in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// Profile name
 	Name *string `pulumi:"name"`
 	// Resource
 	Resource *DosProtectionProfileResource `pulumi:"resource"`
 	// The snippet in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
-	// Type
+	// Type. Possible values are `aggregate` and `classified`.
 	Type string `pulumi:"type"`
 }
 
@@ -180,18 +164,14 @@ type DosProtectionProfileArgs struct {
 	// Flood
 	Flood DosProtectionProfileFloodPtrInput
 	// The folder in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// Profile name
 	Name pulumi.StringPtrInput
 	// Resource
 	Resource DosProtectionProfileResourcePtrInput
 	// The snippet in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
-	// Type
+	// Type. Possible values are `aggregate` and `classified`.
 	Type pulumi.StringInput
 }
 
@@ -298,8 +278,6 @@ func (o DosProtectionProfileOutput) Flood() DosProtectionProfileFloodPtrOutput {
 }
 
 // The folder in which the resource is defined
-//
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o DosProtectionProfileOutput) Folder() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *DosProtectionProfile) pulumi.StringPtrOutput { return v.Folder }).(pulumi.StringPtrOutput)
 }
@@ -315,8 +293,6 @@ func (o DosProtectionProfileOutput) Resource() DosProtectionProfileResourcePtrOu
 }
 
 // The snippet in which the resource is defined
-//
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o DosProtectionProfileOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *DosProtectionProfile) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)
 }
@@ -326,7 +302,7 @@ func (o DosProtectionProfileOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v *DosProtectionProfile) pulumi.StringOutput { return v.Tfid }).(pulumi.StringOutput)
 }
 
-// Type
+// Type. Possible values are `aggregate` and `classified`.
 func (o DosProtectionProfileOutput) Type() pulumi.StringOutput {
 	return o.ApplyT(func(v *DosProtectionProfile) pulumi.StringOutput { return v.Type }).(pulumi.StringOutput)
 }

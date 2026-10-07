@@ -19,14 +19,10 @@ public final class GetIkeGatewayPeerAddress {
     /**
      * @return peer gateway FQDN name
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `dynamic`, `fqdn`, and `ip`.
-     * 
      */
     private String fqdn;
     /**
      * @return peer gateway has static IP address
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `dynamic`, `fqdn`, and `ip`.
      * 
      */
     private String ip;
@@ -42,16 +38,12 @@ public final class GetIkeGatewayPeerAddress {
     /**
      * @return peer gateway FQDN name
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `dynamic`, `fqdn`, and `ip`.
-     * 
      */
     public String fqdn() {
         return this.fqdn;
     }
     /**
      * @return peer gateway has static IP address
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `dynamic`, `fqdn`, and `ip`.
      * 
      */
     public String ip() {

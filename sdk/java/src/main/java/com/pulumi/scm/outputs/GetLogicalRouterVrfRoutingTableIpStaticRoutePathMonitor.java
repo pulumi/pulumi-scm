@@ -20,7 +20,7 @@ public final class GetLogicalRouterVrfRoutingTableIpStaticRoutePathMonitor {
      */
     private Boolean enable;
     /**
-     * @return Failure condition
+     * @return Failure condition. Possible values are `any` and `all`.
      * 
      */
     private String failureCondition;
@@ -44,7 +44,7 @@ public final class GetLogicalRouterVrfRoutingTableIpStaticRoutePathMonitor {
         return this.enable;
     }
     /**
-     * @return Failure condition
+     * @return Failure condition. Possible values are `any` and `all`.
      * 
      */
     public String failureCondition() {

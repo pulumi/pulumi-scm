@@ -25,7 +25,7 @@ namespace Pulumi.Scm.Inputs
         public Input<string>? CertificateProfile { get; set; }
 
         /// <summary>
-        /// HTTP operation to perform
+        /// HTTP operation to perform. Possible values are `GET`, `POST`, `PUT` and `DELETE`.
         /// </summary>
         [Input("httpMethod")]
         public Input<string>? HttpMethod { get; set; }
@@ -43,13 +43,13 @@ namespace Pulumi.Scm.Inputs
         public Input<int>? Port { get; set; }
 
         /// <summary>
-        /// HTTP server protocol
+        /// HTTP server protocol. Possible values are `HTTP` and `HTTPS`.
         /// </summary>
         [Input("protocol")]
         public Input<string>? Protocol { get; set; }
 
         /// <summary>
-        /// HTTP server TLS version
+        /// HTTP server TLS version. Possible values are `1.0`, `1.1`, `1.2` and `1.3`.
         /// </summary>
         [Input("tlsVersion")]
         public Input<string>? TlsVersion { get; set; }

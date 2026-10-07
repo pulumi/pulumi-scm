@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.scm.inputs.PbfRuleActionArgs;
 import com.pulumi.scm.inputs.PbfRuleEnforceSymmetricReturnArgs;
 import com.pulumi.scm.inputs.PbfRuleFromArgs;
+import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -112,16 +113,12 @@ public final class PbfRuleArgs extends com.pulumi.resources.ResourceArgs {
     /**
      * The folder in which the resource is defined
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
      */
     @Import(name="folder")
     private @Nullable Output<String> folder;
 
     /**
      * @return The folder in which the resource is defined
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public Optional<Output<String>> folder() {
@@ -159,6 +156,36 @@ public final class PbfRuleArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
+     * Negate destination address
+     * 
+     */
+    @Import(name="negateDestination")
+    private @Nullable Output<Boolean> negateDestination;
+
+    /**
+     * @return Negate destination address
+     * 
+     */
+    public Optional<Output<Boolean>> negateDestination() {
+        return Optional.ofNullable(this.negateDestination);
+    }
+
+    /**
+     * Negate source address
+     * 
+     */
+    @Import(name="negateSource")
+    private @Nullable Output<Boolean> negateSource;
+
+    /**
+     * @return Negate source address
+     * 
+     */
+    public Optional<Output<Boolean>> negateSource() {
+        return Optional.ofNullable(this.negateSource);
+    }
+
+    /**
      * Schedule
      * 
      */
@@ -191,16 +218,12 @@ public final class PbfRuleArgs extends com.pulumi.resources.ResourceArgs {
     /**
      * The snippet in which the resource is defined
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
      */
     @Import(name="snippet")
     private @Nullable Output<String> snippet;
 
     /**
      * @return The snippet in which the resource is defined
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public Optional<Output<String>> snippet() {
@@ -264,6 +287,8 @@ public final class PbfRuleArgs extends com.pulumi.resources.ResourceArgs {
         this.folder = $.folder;
         this.from = $.from;
         this.name = $.name;
+        this.negateDestination = $.negateDestination;
+        this.negateSource = $.negateSource;
         this.schedule = $.schedule;
         this.services = $.services;
         this.snippet = $.snippet;
@@ -439,8 +464,6 @@ public final class PbfRuleArgs extends com.pulumi.resources.ResourceArgs {
         /**
          * @param folder The folder in which the resource is defined
          * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-         * 
          * @return builder
          * 
          */
@@ -451,8 +474,6 @@ public final class PbfRuleArgs extends com.pulumi.resources.ResourceArgs {
 
         /**
          * @param folder The folder in which the resource is defined
-         * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
          * 
          * @return builder
          * 
@@ -501,6 +522,48 @@ public final class PbfRuleArgs extends com.pulumi.resources.ResourceArgs {
          */
         public Builder name(String name) {
             return name(Output.of(name));
+        }
+
+        /**
+         * @param negateDestination Negate destination address
+         * 
+         * @return builder
+         * 
+         */
+        public Builder negateDestination(@Nullable Output<Boolean> negateDestination) {
+            $.negateDestination = negateDestination;
+            return this;
+        }
+
+        /**
+         * @param negateDestination Negate destination address
+         * 
+         * @return builder
+         * 
+         */
+        public Builder negateDestination(Boolean negateDestination) {
+            return negateDestination(Output.of(negateDestination));
+        }
+
+        /**
+         * @param negateSource Negate source address
+         * 
+         * @return builder
+         * 
+         */
+        public Builder negateSource(@Nullable Output<Boolean> negateSource) {
+            $.negateSource = negateSource;
+            return this;
+        }
+
+        /**
+         * @param negateSource Negate source address
+         * 
+         * @return builder
+         * 
+         */
+        public Builder negateSource(Boolean negateSource) {
+            return negateSource(Output.of(negateSource));
         }
 
         /**
@@ -558,8 +621,6 @@ public final class PbfRuleArgs extends com.pulumi.resources.ResourceArgs {
         /**
          * @param snippet The snippet in which the resource is defined
          * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-         * 
          * @return builder
          * 
          */
@@ -570,8 +631,6 @@ public final class PbfRuleArgs extends com.pulumi.resources.ResourceArgs {
 
         /**
          * @param snippet The snippet in which the resource is defined
-         * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
          * 
          * @return builder
          * 

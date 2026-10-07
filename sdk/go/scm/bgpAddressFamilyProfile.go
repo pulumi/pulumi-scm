@@ -78,16 +78,12 @@ type BgpAddressFamilyProfile struct {
 	// The device in which the resource is defined
 	Device pulumi.StringPtrOutput `pulumi:"device"`
 	// The folder in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrOutput `pulumi:"folder"`
 	// IPv4 Address Family
 	Ipv4 BgpAddressFamilyProfileIpv4PtrOutput `pulumi:"ipv4"`
 	// Name
 	Name pulumi.StringOutput `pulumi:"name"`
 	// The snippet in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
 	// The Terraform ID.
 	Tfid pulumi.StringOutput `pulumi:"tfid"`
@@ -126,16 +122,12 @@ type bgpAddressFamilyProfileState struct {
 	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
 	// The folder in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// IPv4 Address Family
 	Ipv4 *BgpAddressFamilyProfileIpv4 `pulumi:"ipv4"`
 	// Name
 	Name *string `pulumi:"name"`
 	// The snippet in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	// The Terraform ID.
 	Tfid *string `pulumi:"tfid"`
@@ -145,16 +137,12 @@ type BgpAddressFamilyProfileState struct {
 	// The device in which the resource is defined
 	Device pulumi.StringPtrInput
 	// The folder in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// IPv4 Address Family
 	Ipv4 BgpAddressFamilyProfileIpv4PtrInput
 	// Name
 	Name pulumi.StringPtrInput
 	// The snippet in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	// The Terraform ID.
 	Tfid pulumi.StringPtrInput
@@ -168,16 +156,12 @@ type bgpAddressFamilyProfileArgs struct {
 	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
 	// The folder in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// IPv4 Address Family
 	Ipv4 *BgpAddressFamilyProfileIpv4 `pulumi:"ipv4"`
 	// Name
 	Name *string `pulumi:"name"`
 	// The snippet in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 }
 
@@ -186,16 +170,12 @@ type BgpAddressFamilyProfileArgs struct {
 	// The device in which the resource is defined
 	Device pulumi.StringPtrInput
 	// The folder in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// IPv4 Address Family
 	Ipv4 BgpAddressFamilyProfileIpv4PtrInput
 	// Name
 	Name pulumi.StringPtrInput
 	// The snippet in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 }
 
@@ -292,8 +272,6 @@ func (o BgpAddressFamilyProfileOutput) Device() pulumi.StringPtrOutput {
 }
 
 // The folder in which the resource is defined
-//
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o BgpAddressFamilyProfileOutput) Folder() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *BgpAddressFamilyProfile) pulumi.StringPtrOutput { return v.Folder }).(pulumi.StringPtrOutput)
 }
@@ -309,8 +287,6 @@ func (o BgpAddressFamilyProfileOutput) Name() pulumi.StringOutput {
 }
 
 // The snippet in which the resource is defined
-//
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o BgpAddressFamilyProfileOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *BgpAddressFamilyProfile) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)
 }

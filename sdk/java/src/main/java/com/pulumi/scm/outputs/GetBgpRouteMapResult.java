@@ -12,24 +12,52 @@ import java.util.Objects;
 
 @CustomType
 public final class GetBgpRouteMapResult {
+    /**
+     * @return Description
+     * 
+     */
     private String description;
     /**
      * @return The device in which the resource is defined
      * 
      */
     private String device;
+    /**
+     * @return The folder in which the resource is defined
+     * 
+     */
     private String folder;
     /**
      * @return UUID of the resource
      * 
      */
     private String id;
+    /**
+     * @return Name
+     * 
+     */
     private String name;
+    /**
+     * @return Route map
+     * 
+     */
     private List<GetBgpRouteMapRouteMap> routeMaps;
+    /**
+     * @return The snippet in which the resource is defined
+     * 
+     */
     private String snippet;
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     private String tfid;
 
     private GetBgpRouteMapResult() {}
+    /**
+     * @return Description
+     * 
+     */
     public String description() {
         return this.description;
     }
@@ -40,6 +68,10 @@ public final class GetBgpRouteMapResult {
     public String device() {
         return this.device;
     }
+    /**
+     * @return The folder in which the resource is defined
+     * 
+     */
     public String folder() {
         return this.folder;
     }
@@ -50,15 +82,31 @@ public final class GetBgpRouteMapResult {
     public String id() {
         return this.id;
     }
+    /**
+     * @return Name
+     * 
+     */
     public String name() {
         return this.name;
     }
+    /**
+     * @return Route map
+     * 
+     */
     public List<GetBgpRouteMapRouteMap> routeMaps() {
         return this.routeMaps;
     }
+    /**
+     * @return The snippet in which the resource is defined
+     * 
+     */
     public String snippet() {
         return this.snippet;
     }
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     public String tfid() {
         return this.tfid;
     }

@@ -194,7 +194,7 @@ namespace Pulumi.Scm
         public Output<string?> Device { get; private set; } = null!;
 
         /// <summary>
-        /// Digest for CSR
+        /// Digest for CSR. Possible values are `Sha1`, `Sha256`, `Sha384` and `Sha512`.
         /// </summary>
         [Output("digest")]
         public Output<string> Digest { get; private set; } = null!;
@@ -213,8 +213,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The folder in which the resource is defined
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Output("folder")]
         public Output<string?> Folder { get; private set; } = null!;
@@ -226,7 +224,7 @@ namespace Pulumi.Scm
         public Output<string> Name { get; private set; } = null!;
 
         /// <summary>
-        /// SCEP Server CA Certificate
+        /// SCEP Server CA Certificate. Possible values are `Authentication Cookie CA`, `Forward-Trust-CA`, `Forward-Trust-CA-ECDSA`, `Forward-UnTrust-CA`, `Forward-UnTrust-CA-ECDSA`, `Global Authentication Cookie CA`, `GlobalSign-Root-CA` and `Root CA`.
         /// </summary>
         [Output("scepCaCert")]
         public Output<string?> ScepCaCert { get; private set; } = null!;
@@ -238,7 +236,7 @@ namespace Pulumi.Scm
         public Output<Outputs.ScepProfileScepChallenge> ScepChallenge { get; private set; } = null!;
 
         /// <summary>
-        /// SCEP Client Certificate
+        /// SCEP Client Certificate. Possible values are `Authentication Cookie CA`, `Forward-Trust-CA`, `Forward-Trust-CA-ECDSA`, `Forward-UnTrust-CA`, `Forward-UnTrust-CA-ECDSA`, `Global Authentication Cookie CA`, `GlobalSign-Root-CA` and `Root CA`.
         /// </summary>
         [Output("scepClientCert")]
         public Output<string?> ScepClientCert { get; private set; } = null!;
@@ -251,8 +249,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The snippet in which the resource is defined
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Output("snippet")]
         public Output<string?> Snippet { get; private set; } = null!;
@@ -356,7 +352,7 @@ namespace Pulumi.Scm
         public Input<string>? Device { get; set; }
 
         /// <summary>
-        /// Digest for CSR
+        /// Digest for CSR. Possible values are `Sha1`, `Sha256`, `Sha384` and `Sha512`.
         /// </summary>
         [Input("digest", required: true)]
         public Input<string> Digest { get; set; } = null!;
@@ -369,8 +365,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The folder in which the resource is defined
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("folder")]
         public Input<string>? Folder { get; set; }
@@ -382,7 +376,7 @@ namespace Pulumi.Scm
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// SCEP Server CA Certificate
+        /// SCEP Server CA Certificate. Possible values are `Authentication Cookie CA`, `Forward-Trust-CA`, `Forward-Trust-CA-ECDSA`, `Forward-UnTrust-CA`, `Forward-UnTrust-CA-ECDSA`, `Global Authentication Cookie CA`, `GlobalSign-Root-CA` and `Root CA`.
         /// </summary>
         [Input("scepCaCert")]
         public Input<string>? ScepCaCert { get; set; }
@@ -394,7 +388,7 @@ namespace Pulumi.Scm
         public Input<Inputs.ScepProfileScepChallengeArgs> ScepChallenge { get; set; } = null!;
 
         /// <summary>
-        /// SCEP Client Certificate
+        /// SCEP Client Certificate. Possible values are `Authentication Cookie CA`, `Forward-Trust-CA`, `Forward-Trust-CA-ECDSA`, `Forward-UnTrust-CA`, `Forward-UnTrust-CA-ECDSA`, `Global Authentication Cookie CA`, `GlobalSign-Root-CA` and `Root CA`.
         /// </summary>
         [Input("scepClientCert")]
         public Input<string>? ScepClientCert { get; set; }
@@ -407,8 +401,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The snippet in which the resource is defined
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("snippet")]
         public Input<string>? Snippet { get; set; }
@@ -464,7 +456,7 @@ namespace Pulumi.Scm
         public Input<string>? Device { get; set; }
 
         /// <summary>
-        /// Digest for CSR
+        /// Digest for CSR. Possible values are `Sha1`, `Sha256`, `Sha384` and `Sha512`.
         /// </summary>
         [Input("digest")]
         public Input<string>? Digest { get; set; }
@@ -493,8 +485,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The folder in which the resource is defined
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("folder")]
         public Input<string>? Folder { get; set; }
@@ -506,7 +496,7 @@ namespace Pulumi.Scm
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// SCEP Server CA Certificate
+        /// SCEP Server CA Certificate. Possible values are `Authentication Cookie CA`, `Forward-Trust-CA`, `Forward-Trust-CA-ECDSA`, `Forward-UnTrust-CA`, `Forward-UnTrust-CA-ECDSA`, `Global Authentication Cookie CA`, `GlobalSign-Root-CA` and `Root CA`.
         /// </summary>
         [Input("scepCaCert")]
         public Input<string>? ScepCaCert { get; set; }
@@ -518,7 +508,7 @@ namespace Pulumi.Scm
         public Input<Inputs.ScepProfileScepChallengeGetArgs>? ScepChallenge { get; set; }
 
         /// <summary>
-        /// SCEP Client Certificate
+        /// SCEP Client Certificate. Possible values are `Authentication Cookie CA`, `Forward-Trust-CA`, `Forward-Trust-CA-ECDSA`, `Forward-UnTrust-CA`, `Forward-UnTrust-CA-ECDSA`, `Global Authentication Cookie CA`, `GlobalSign-Root-CA` and `Root CA`.
         /// </summary>
         [Input("scepClientCert")]
         public Input<string>? ScepClientCert { get; set; }
@@ -531,8 +521,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The snippet in which the resource is defined
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("snippet")]
         public Input<string>? Snippet { get; set; }

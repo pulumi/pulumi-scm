@@ -33,14 +33,14 @@ public final class ForwardingProfileRegionalAndCustomProxyConnectivityPreference
     }
 
     /**
-     * Connectivity method type - &#39;tunnel&#39; for VPN tunnels, &#39;proxy&#39; for HTTP/HTTPS proxies, &#39;adns&#39; for authenticated DNS, &#39;masque&#39; for MASQUE protocol
+     * Connectivity method type - &#39;tunnel&#39; for VPN tunnels, &#39;proxy&#39; for HTTP/HTTPS proxies, &#39;adns&#39; for authenticated DNS, &#39;masque&#39; for MASQUE protocol. Possible values are `tunnel`, `proxy`, `adns` and `masque`.
      * 
      */
     @Import(name="name", required=true)
     private Output<String> name;
 
     /**
-     * @return Connectivity method type - &#39;tunnel&#39; for VPN tunnels, &#39;proxy&#39; for HTTP/HTTPS proxies, &#39;adns&#39; for authenticated DNS, &#39;masque&#39; for MASQUE protocol
+     * @return Connectivity method type - &#39;tunnel&#39; for VPN tunnels, &#39;proxy&#39; for HTTP/HTTPS proxies, &#39;adns&#39; for authenticated DNS, &#39;masque&#39; for MASQUE protocol. Possible values are `tunnel`, `proxy`, `adns` and `masque`.
      * 
      */
     public Output<String> name() {
@@ -94,7 +94,7 @@ public final class ForwardingProfileRegionalAndCustomProxyConnectivityPreference
         }
 
         /**
-         * @param name Connectivity method type - &#39;tunnel&#39; for VPN tunnels, &#39;proxy&#39; for HTTP/HTTPS proxies, &#39;adns&#39; for authenticated DNS, &#39;masque&#39; for MASQUE protocol
+         * @param name Connectivity method type - &#39;tunnel&#39; for VPN tunnels, &#39;proxy&#39; for HTTP/HTTPS proxies, &#39;adns&#39; for authenticated DNS, &#39;masque&#39; for MASQUE protocol. Possible values are `tunnel`, `proxy`, `adns` and `masque`.
          * 
          * @return builder
          * 
@@ -105,7 +105,7 @@ public final class ForwardingProfileRegionalAndCustomProxyConnectivityPreference
         }
 
         /**
-         * @param name Connectivity method type - &#39;tunnel&#39; for VPN tunnels, &#39;proxy&#39; for HTTP/HTTPS proxies, &#39;adns&#39; for authenticated DNS, &#39;masque&#39; for MASQUE protocol
+         * @param name Connectivity method type - &#39;tunnel&#39; for VPN tunnels, &#39;proxy&#39; for HTTP/HTTPS proxies, &#39;adns&#39; for authenticated DNS, &#39;masque&#39; for MASQUE protocol. Possible values are `tunnel`, `proxy`, `adns` and `masque`.
          * 
          * @return builder
          * 

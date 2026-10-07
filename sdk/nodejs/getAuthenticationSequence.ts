@@ -39,12 +39,21 @@ export interface GetAuthenticationSequenceArgs {
      * The device in which the resource is defined
      */
     device?: string;
+    /**
+     * The folder in which the resource is defined
+     */
     folder?: string;
     /**
      * The UUID of the authentication sequence
      */
     id: string;
+    /**
+     * The name of the authentication sequence
+     */
     name?: string;
+    /**
+     * The snippet in which the resource is defined
+     */
     snippet?: string;
 }
 
@@ -52,19 +61,37 @@ export interface GetAuthenticationSequenceArgs {
  * A collection of values returned by getAuthenticationSequence.
  */
 export interface GetAuthenticationSequenceResult {
+    /**
+     * An ordered list of authentication profiles
+     */
     readonly authenticationProfiles: string[];
     /**
      * The device in which the resource is defined
      */
     readonly device: string;
+    /**
+     * The folder in which the resource is defined
+     */
     readonly folder: string;
     /**
      * The UUID of the authentication sequence
      */
     readonly id: string;
+    /**
+     * The name of the authentication sequence
+     */
     readonly name: string;
+    /**
+     * The snippet in which the resource is defined
+     */
     readonly snippet: string;
+    /**
+     * The Terraform ID.
+     */
     readonly tfid: string;
+    /**
+     * Use domain to determine authentication profile?
+     */
     readonly useDomainFindProfile: boolean;
 }
 /**
@@ -102,11 +129,20 @@ export interface GetAuthenticationSequenceOutputArgs {
      * The device in which the resource is defined
      */
     device?: pulumi.Input<string | undefined>;
+    /**
+     * The folder in which the resource is defined
+     */
     folder?: pulumi.Input<string | undefined>;
     /**
      * The UUID of the authentication sequence
      */
     id: pulumi.Input<string>;
+    /**
+     * The name of the authentication sequence
+     */
     name?: pulumi.Input<string | undefined>;
+    /**
+     * The snippet in which the resource is defined
+     */
     snippet?: pulumi.Input<string | undefined>;
 }

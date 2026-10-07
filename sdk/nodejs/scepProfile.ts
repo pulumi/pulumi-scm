@@ -178,7 +178,7 @@ export class ScepProfile extends pulumi.CustomResource {
      */
     declare public readonly device: pulumi.Output<string | undefined>;
     /**
-     * Digest for CSR
+     * Digest for CSR. Possible values are `sha1`, `sha256`, `sha384` and `sha512`.
      */
     declare public readonly digest: pulumi.Output<string>;
     /**
@@ -191,8 +191,6 @@ export class ScepProfile extends pulumi.CustomResource {
     declare public readonly fingerprint: pulumi.Output<string | undefined>;
     /**
      * The folder in which the resource is defined
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly folder: pulumi.Output<string | undefined>;
     /**
@@ -200,7 +198,7 @@ export class ScepProfile extends pulumi.CustomResource {
      */
     declare public readonly name: pulumi.Output<string>;
     /**
-     * SCEP Server CA Certificate
+     * SCEP Server CA Certificate. Possible values are `Authentication Cookie CA`, `Forward-Trust-CA`, `Forward-Trust-CA-ECDSA`, `Forward-UnTrust-CA`, `Forward-UnTrust-CA-ECDSA`, `Global Authentication Cookie CA`, `GlobalSign-Root-CA` and `Root CA`.
      */
     declare public readonly scepCaCert: pulumi.Output<string | undefined>;
     /**
@@ -208,7 +206,7 @@ export class ScepProfile extends pulumi.CustomResource {
      */
     declare public readonly scepChallenge: pulumi.Output<outputs.ScepProfileScepChallenge>;
     /**
-     * SCEP Client Certificate
+     * SCEP Client Certificate. Possible values are `Authentication Cookie CA`, `Forward-Trust-CA`, `Forward-Trust-CA-ECDSA`, `Forward-UnTrust-CA`, `Forward-UnTrust-CA-ECDSA`, `Global Authentication Cookie CA`, `GlobalSign-Root-CA` and `Root CA`.
      */
     declare public readonly scepClientCert: pulumi.Output<string | undefined>;
     /**
@@ -217,8 +215,6 @@ export class ScepProfile extends pulumi.CustomResource {
     declare public readonly scepUrl: pulumi.Output<string>;
     /**
      * The snippet in which the resource is defined
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly snippet: pulumi.Output<string | undefined>;
     /**
@@ -336,7 +332,7 @@ export interface ScepProfileState {
      */
     device?: pulumi.Input<string | undefined>;
     /**
-     * Digest for CSR
+     * Digest for CSR. Possible values are `sha1`, `sha256`, `sha384` and `sha512`.
      */
     digest?: pulumi.Input<string | undefined>;
     /**
@@ -349,8 +345,6 @@ export interface ScepProfileState {
     fingerprint?: pulumi.Input<string | undefined>;
     /**
      * The folder in which the resource is defined
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     folder?: pulumi.Input<string | undefined>;
     /**
@@ -358,7 +352,7 @@ export interface ScepProfileState {
      */
     name?: pulumi.Input<string | undefined>;
     /**
-     * SCEP Server CA Certificate
+     * SCEP Server CA Certificate. Possible values are `Authentication Cookie CA`, `Forward-Trust-CA`, `Forward-Trust-CA-ECDSA`, `Forward-UnTrust-CA`, `Forward-UnTrust-CA-ECDSA`, `Global Authentication Cookie CA`, `GlobalSign-Root-CA` and `Root CA`.
      */
     scepCaCert?: pulumi.Input<string | undefined>;
     /**
@@ -366,7 +360,7 @@ export interface ScepProfileState {
      */
     scepChallenge?: pulumi.Input<inputs.ScepProfileScepChallenge | undefined>;
     /**
-     * SCEP Client Certificate
+     * SCEP Client Certificate. Possible values are `Authentication Cookie CA`, `Forward-Trust-CA`, `Forward-Trust-CA-ECDSA`, `Forward-UnTrust-CA`, `Forward-UnTrust-CA-ECDSA`, `Global Authentication Cookie CA`, `GlobalSign-Root-CA` and `Root CA`.
      */
     scepClientCert?: pulumi.Input<string | undefined>;
     /**
@@ -375,8 +369,6 @@ export interface ScepProfileState {
     scepUrl?: pulumi.Input<string | undefined>;
     /**
      * The snippet in which the resource is defined
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     snippet?: pulumi.Input<string | undefined>;
     /**
@@ -418,7 +410,7 @@ export interface ScepProfileArgs {
      */
     device?: pulumi.Input<string | undefined>;
     /**
-     * Digest for CSR
+     * Digest for CSR. Possible values are `sha1`, `sha256`, `sha384` and `sha512`.
      */
     digest: pulumi.Input<string>;
     /**
@@ -427,8 +419,6 @@ export interface ScepProfileArgs {
     fingerprint?: pulumi.Input<string | undefined>;
     /**
      * The folder in which the resource is defined
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     folder?: pulumi.Input<string | undefined>;
     /**
@@ -436,7 +426,7 @@ export interface ScepProfileArgs {
      */
     name?: pulumi.Input<string | undefined>;
     /**
-     * SCEP Server CA Certificate
+     * SCEP Server CA Certificate. Possible values are `Authentication Cookie CA`, `Forward-Trust-CA`, `Forward-Trust-CA-ECDSA`, `Forward-UnTrust-CA`, `Forward-UnTrust-CA-ECDSA`, `Global Authentication Cookie CA`, `GlobalSign-Root-CA` and `Root CA`.
      */
     scepCaCert?: pulumi.Input<string | undefined>;
     /**
@@ -444,7 +434,7 @@ export interface ScepProfileArgs {
      */
     scepChallenge: pulumi.Input<inputs.ScepProfileScepChallenge>;
     /**
-     * SCEP Client Certificate
+     * SCEP Client Certificate. Possible values are `Authentication Cookie CA`, `Forward-Trust-CA`, `Forward-Trust-CA-ECDSA`, `Forward-UnTrust-CA`, `Forward-UnTrust-CA-ECDSA`, `Global Authentication Cookie CA`, `GlobalSign-Root-CA` and `Root CA`.
      */
     scepClientCert?: pulumi.Input<string | undefined>;
     /**
@@ -453,8 +443,6 @@ export interface ScepProfileArgs {
     scepUrl: pulumi.Input<string>;
     /**
      * The snippet in which the resource is defined
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     snippet?: pulumi.Input<string | undefined>;
     /**

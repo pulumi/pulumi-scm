@@ -19,8 +19,6 @@ public final class GetBgpRoutingRoutingPreference {
     /**
      * @return Hot potato routing
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `default` and `hotPotatoRouting`.
-     * 
      */
     private GetBgpRoutingRoutingPreferenceHotPotatoRouting hotPotatoRouting;
 
@@ -34,8 +32,6 @@ public final class GetBgpRoutingRoutingPreference {
     }
     /**
      * @return Hot potato routing
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `default` and `hotPotatoRouting`.
      * 
      */
     public GetBgpRoutingRoutingPreferenceHotPotatoRouting hotPotatoRouting() {

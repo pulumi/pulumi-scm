@@ -58,8 +58,6 @@ export class BgpAuthProfile extends pulumi.CustomResource {
     declare public /*out*/ readonly encryptedValues: pulumi.Output<{[key: string]: string}>;
     /**
      * The folder in which the resource is defined
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly folder: pulumi.Output<string | undefined>;
     /**
@@ -72,8 +70,6 @@ export class BgpAuthProfile extends pulumi.CustomResource {
     declare public readonly secret: pulumi.Output<string | undefined>;
     /**
      * The snippet in which the resource is defined
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly snippet: pulumi.Output<string | undefined>;
     /**
@@ -132,8 +128,6 @@ export interface BgpAuthProfileState {
     encryptedValues?: pulumi.Input<{[key: string]: pulumi.Input<string>} | undefined>;
     /**
      * The folder in which the resource is defined
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     folder?: pulumi.Input<string | undefined>;
     /**
@@ -146,8 +140,6 @@ export interface BgpAuthProfileState {
     secret?: pulumi.Input<string | undefined>;
     /**
      * The snippet in which the resource is defined
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     snippet?: pulumi.Input<string | undefined>;
     /**
@@ -166,8 +158,6 @@ export interface BgpAuthProfileArgs {
     device?: pulumi.Input<string | undefined>;
     /**
      * The folder in which the resource is defined
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     folder?: pulumi.Input<string | undefined>;
     /**
@@ -180,8 +170,6 @@ export interface BgpAuthProfileArgs {
     secret?: pulumi.Input<string | undefined>;
     /**
      * The snippet in which the resource is defined
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     snippet?: pulumi.Input<string | undefined>;
 }

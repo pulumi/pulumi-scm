@@ -19,14 +19,14 @@ public final class BgpRouteMapRedistributionOspfRibRouteMapArgs extends com.pulu
     public static final BgpRouteMapRedistributionOspfRibRouteMapArgs Empty = new BgpRouteMapRedistributionOspfRibRouteMapArgs();
 
     /**
-     * OSPF RIB Route maps Action
+     * OSPF RIB Route maps Action. Possible values are `permit` and `deny`.
      * 
      */
     @Import(name="action")
     private @Nullable Output<String> action;
 
     /**
-     * @return OSPF RIB Route maps Action
+     * @return OSPF RIB Route maps Action. Possible values are `permit` and `deny`.
      * 
      */
     public Optional<Output<String>> action() {
@@ -122,7 +122,7 @@ public final class BgpRouteMapRedistributionOspfRibRouteMapArgs extends com.pulu
         }
 
         /**
-         * @param action OSPF RIB Route maps Action
+         * @param action OSPF RIB Route maps Action. Possible values are `permit` and `deny`.
          * 
          * @return builder
          * 
@@ -133,7 +133,7 @@ public final class BgpRouteMapRedistributionOspfRibRouteMapArgs extends com.pulu
         }
 
         /**
-         * @param action OSPF RIB Route maps Action
+         * @param action OSPF RIB Route maps Action. Possible values are `permit` and `deny`.
          * 
          * @return builder
          * 

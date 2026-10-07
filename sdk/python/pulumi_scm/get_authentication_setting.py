@@ -50,6 +50,9 @@ class GetAuthenticationSettingResult:
     @_builtins.property
     @pulumi.getter
     def authentication(self) -> 'outputs.GetAuthenticationSettingAuthenticationResult':
+        """
+        Authentication
+        """
         return pulumi.get(self, "authentication")
 
     @_builtins.property
@@ -63,6 +66,9 @@ class GetAuthenticationSettingResult:
     @_builtins.property
     @pulumi.getter
     def folder(self) -> _builtins.str:
+        """
+        The folder in which the resource is defined
+        """
         return pulumi.get(self, "folder")
 
     @_builtins.property
@@ -76,11 +82,17 @@ class GetAuthenticationSettingResult:
     @_builtins.property
     @pulumi.getter
     def snippet(self) -> _builtins.str:
+        """
+        The snippet in which the resource is defined
+        """
         return pulumi.get(self, "snippet")
 
     @_builtins.property
     @pulumi.getter
     def tfid(self) -> _builtins.str:
+        """
+        The Terraform ID.
+        """
         return pulumi.get(self, "tfid")
 
 
@@ -118,7 +130,9 @@ def get_authentication_setting(device: Optional[_builtins.str] = None,
 
 
     :param _builtins.str device: The device in which the resource is defined
+    :param _builtins.str folder: The folder in which the resource is defined
     :param _builtins.str id: UUID of the resource
+    :param _builtins.str snippet: The snippet in which the resource is defined
     """
     __args__ = dict()
     __args__['device'] = device
@@ -155,7 +169,9 @@ def get_authentication_setting_output(device: pulumi.Input[Optional[Optional[_bu
 
 
     :param _builtins.str device: The device in which the resource is defined
+    :param _builtins.str folder: The folder in which the resource is defined
     :param _builtins.str id: UUID of the resource
+    :param _builtins.str snippet: The snippet in which the resource is defined
     """
     __args__ = dict()
     __args__['device'] = device

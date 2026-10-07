@@ -19,8 +19,6 @@ namespace Pulumi.Scm.Outputs
         public readonly Outputs.GetSdwanErrorCorrectionProfileListDataModeForwardErrorCorrectionResult ForwardErrorCorrection;
         /// <summary>
         /// Packet duplication
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `ForwardErrorCorrection` and `PacketDuplication`.
         /// </summary>
         public readonly Outputs.GetSdwanErrorCorrectionProfileListDataModePacketDuplicationResult PacketDuplication;
 

@@ -37,7 +37,7 @@ public final class GetSnippetResult {
      */
     private String tfid;
     /**
-     * @return The snippet type
+     * @return The snippet type. Possible values are `predefined`, `custom` and `readonly`.
      * 
      */
     private String type;
@@ -79,7 +79,7 @@ public final class GetSnippetResult {
         return this.tfid;
     }
     /**
-     * @return The snippet type
+     * @return The snippet type. Possible values are `predefined`, `custom` and `readonly`.
      * 
      */
     public String type() {

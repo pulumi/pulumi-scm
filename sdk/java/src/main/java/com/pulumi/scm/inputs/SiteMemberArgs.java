@@ -32,14 +32,14 @@ public final class SiteMemberArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The mode of the remote network
+     * The mode of the remote network. Possible values are `active` and `backup`.
      * 
      */
     @Import(name="mode", required=true)
     private Output<String> mode;
 
     /**
-     * @return The mode of the remote network
+     * @return The mode of the remote network. Possible values are `active` and `backup`.
      * 
      */
     public Output<String> mode() {
@@ -125,7 +125,7 @@ public final class SiteMemberArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param mode The mode of the remote network
+         * @param mode The mode of the remote network. Possible values are `active` and `backup`.
          * 
          * @return builder
          * 
@@ -136,7 +136,7 @@ public final class SiteMemberArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param mode The mode of the remote network
+         * @param mode The mode of the remote network. Possible values are `active` and `backup`.
          * 
          * @return builder
          * 

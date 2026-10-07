@@ -34,7 +34,7 @@ export function getForwardingProfileSourceApplication(args: GetForwardingProfile
  */
 export interface GetForwardingProfileSourceApplicationArgs {
     /**
-     * The folder in which the resource is defined
+     * The folder in which the resource is defined. Possible values are `Mobile Users`.
      */
     folder?: string;
     /**
@@ -60,7 +60,7 @@ export interface GetForwardingProfileSourceApplicationResult {
      */
     readonly description: string;
     /**
-     * The folder in which the resource is defined
+     * The folder in which the resource is defined. Possible values are `Mobile Users`.
      */
     readonly folder: string;
     /**
@@ -106,7 +106,7 @@ export function getForwardingProfileSourceApplicationOutput(args: GetForwardingP
  */
 export interface GetForwardingProfileSourceApplicationOutputArgs {
     /**
-     * The folder in which the resource is defined
+     * The folder in which the resource is defined. Possible values are `Mobile Users`.
      */
     folder?: pulumi.Input<string | undefined>;
     /**

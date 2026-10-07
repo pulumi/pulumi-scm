@@ -11,14 +11,14 @@ import java.util.Objects;
 @CustomType
 public final class GetScepProfileAlgorithmRsa {
     /**
-     * @return Rsa nbits
+     * @return Rsa nbits. Possible values are `1024`, `2048` and `3072`.
      * 
      */
     private String rsaNbits;
 
     private GetScepProfileAlgorithmRsa() {}
     /**
-     * @return Rsa nbits
+     * @return Rsa nbits. Possible values are `1024`, `2048` and `3072`.
      * 
      */
     public String rsaNbits() {

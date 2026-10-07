@@ -16,14 +16,14 @@ public final class IpsecCryptoProfileAhArgs extends com.pulumi.resources.Resourc
     public static final IpsecCryptoProfileAhArgs Empty = new IpsecCryptoProfileAhArgs();
 
     /**
-     * Authentication
+     * Authentication. Possible values are `md5`, `sha1`, `sha256`, `sha384` and `sha512`.
      * 
      */
     @Import(name="authentications", required=true)
     private Output<List<String>> authentications;
 
     /**
-     * @return Authentication
+     * @return Authentication. Possible values are `md5`, `sha1`, `sha256`, `sha384` and `sha512`.
      * 
      */
     public Output<List<String>> authentications() {
@@ -55,7 +55,7 @@ public final class IpsecCryptoProfileAhArgs extends com.pulumi.resources.Resourc
         }
 
         /**
-         * @param authentications Authentication
+         * @param authentications Authentication. Possible values are `md5`, `sha1`, `sha256`, `sha384` and `sha512`.
          * 
          * @return builder
          * 
@@ -66,7 +66,7 @@ public final class IpsecCryptoProfileAhArgs extends com.pulumi.resources.Resourc
         }
 
         /**
-         * @param authentications Authentication
+         * @param authentications Authentication. Possible values are `md5`, `sha1`, `sha256`, `sha384` and `sha512`.
          * 
          * @return builder
          * 
@@ -76,7 +76,7 @@ public final class IpsecCryptoProfileAhArgs extends com.pulumi.resources.Resourc
         }
 
         /**
-         * @param authentications Authentication
+         * @param authentications Authentication. Possible values are `md5`, `sha1`, `sha256`, `sha384` and `sha512`.
          * 
          * @return builder
          * 

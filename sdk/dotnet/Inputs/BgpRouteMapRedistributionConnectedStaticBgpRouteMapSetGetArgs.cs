@@ -67,7 +67,7 @@ namespace Pulumi.Scm.Inputs
         public Input<Inputs.BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetMetricGetArgs>? Metric { get; set; }
 
         /// <summary>
-        /// Connected Static BGP Route maps set Origin
+        /// Connected Static BGP Route maps set Origin. Possible values are `None`, `Egp`, `Igp` and `Incomplete`.
         /// </summary>
         [Input("origin")]
         public Input<string>? Origin { get; set; }

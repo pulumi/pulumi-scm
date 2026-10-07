@@ -14,7 +14,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class HipObjectPatchManagementCriteria {
     /**
-     * @return is enabled
+     * @return is enabled. Possible values are `no`, `yes` and `not-available`.
      * 
      */
     private @Nullable String isEnabled;
@@ -31,7 +31,7 @@ public final class HipObjectPatchManagementCriteria {
 
     private HipObjectPatchManagementCriteria() {}
     /**
-     * @return is enabled
+     * @return is enabled. Possible values are `no`, `yes` and `not-available`.
      * 
      */
     public Optional<String> isEnabled() {

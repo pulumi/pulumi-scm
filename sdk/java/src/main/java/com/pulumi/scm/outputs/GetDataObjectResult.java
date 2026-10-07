@@ -11,25 +11,57 @@ import java.util.Objects;
 
 @CustomType
 public final class GetDataObjectResult {
+    /**
+     * @return The description of the data object
+     * 
+     */
     private String description;
     /**
      * @return The device in which the resource is defined
      * 
      */
     private String device;
+    /**
+     * @return Disable override
+     * 
+     */
     private String disableOverride;
+    /**
+     * @return The folder in which the resource is defined
+     * 
+     */
     private String folder;
     /**
      * @return The UUID of the data object
      * 
      */
     private String id;
+    /**
+     * @return The name of the data object
+     * 
+     */
     private String name;
+    /**
+     * @return Pattern type
+     * 
+     */
     private GetDataObjectPatternType patternType;
+    /**
+     * @return The snippet in which the resource is defined
+     * 
+     */
     private String snippet;
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     private String tfid;
 
     private GetDataObjectResult() {}
+    /**
+     * @return The description of the data object
+     * 
+     */
     public String description() {
         return this.description;
     }
@@ -40,9 +72,17 @@ public final class GetDataObjectResult {
     public String device() {
         return this.device;
     }
+    /**
+     * @return Disable override
+     * 
+     */
     public String disableOverride() {
         return this.disableOverride;
     }
+    /**
+     * @return The folder in which the resource is defined
+     * 
+     */
     public String folder() {
         return this.folder;
     }
@@ -53,15 +93,31 @@ public final class GetDataObjectResult {
     public String id() {
         return this.id;
     }
+    /**
+     * @return The name of the data object
+     * 
+     */
     public String name() {
         return this.name;
     }
+    /**
+     * @return Pattern type
+     * 
+     */
     public GetDataObjectPatternType patternType() {
         return this.patternType;
     }
+    /**
+     * @return The snippet in which the resource is defined
+     * 
+     */
     public String snippet() {
         return this.snippet;
     }
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     public String tfid() {
         return this.tfid;
     }

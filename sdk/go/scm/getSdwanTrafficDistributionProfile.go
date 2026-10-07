@@ -26,10 +26,13 @@ func LookupSdwanTrafficDistributionProfile(ctx *pulumi.Context, args *LookupSdwa
 type LookupSdwanTrafficDistributionProfileArgs struct {
 	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
+	// The folder in which the resource is defined
 	Folder *string `pulumi:"folder"`
 	// UUID of the resource
-	Id      string  `pulumi:"id"`
-	Name    *string `pulumi:"name"`
+	Id string `pulumi:"id"`
+	// Profile name
+	Name *string `pulumi:"name"`
+	// The snippet in which the resource is defined
 	Snippet *string `pulumi:"snippet"`
 }
 
@@ -37,14 +40,20 @@ type LookupSdwanTrafficDistributionProfileArgs struct {
 type LookupSdwanTrafficDistributionProfileResult struct {
 	// The device in which the resource is defined
 	Device string `pulumi:"device"`
+	// The folder in which the resource is defined
 	Folder string `pulumi:"folder"`
 	// UUID of the resource
-	Id                  string                                      `pulumi:"id"`
-	LinkTags            []GetSdwanTrafficDistributionProfileLinkTag `pulumi:"linkTags"`
-	Name                string                                      `pulumi:"name"`
-	Snippet             string                                      `pulumi:"snippet"`
-	Tfid                string                                      `pulumi:"tfid"`
-	TrafficDistribution string                                      `pulumi:"trafficDistribution"`
+	Id string `pulumi:"id"`
+	// Link-Tags for interfaces identified by defined tags
+	LinkTags []GetSdwanTrafficDistributionProfileLinkTag `pulumi:"linkTags"`
+	// Profile name
+	Name string `pulumi:"name"`
+	// The snippet in which the resource is defined
+	Snippet string `pulumi:"snippet"`
+	// The Terraform ID.
+	Tfid string `pulumi:"tfid"`
+	// Traffic distribution. Possible values are `Best Available Path`, `Top Down Priority` and `Weighted Session Distribution`.
+	TrafficDistribution string `pulumi:"trafficDistribution"`
 }
 
 func LookupSdwanTrafficDistributionProfileOutput(ctx *pulumi.Context, args LookupSdwanTrafficDistributionProfileOutputArgs, opts ...pulumi.InvokeOption) LookupSdwanTrafficDistributionProfileResultOutput {
@@ -56,10 +65,13 @@ func LookupSdwanTrafficDistributionProfileOutput(ctx *pulumi.Context, args Looku
 type LookupSdwanTrafficDistributionProfileOutputArgs struct {
 	// The device in which the resource is defined
 	Device pulumi.StringPtrInput `pulumi:"device"`
+	// The folder in which the resource is defined
 	Folder pulumi.StringPtrInput `pulumi:"folder"`
 	// UUID of the resource
-	Id      pulumi.StringInput    `pulumi:"id"`
-	Name    pulumi.StringPtrInput `pulumi:"name"`
+	Id pulumi.StringInput `pulumi:"id"`
+	// Profile name
+	Name pulumi.StringPtrInput `pulumi:"name"`
+	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrInput `pulumi:"snippet"`
 }
 
@@ -87,6 +99,7 @@ func (o LookupSdwanTrafficDistributionProfileResultOutput) Device() pulumi.Strin
 	return o.ApplyT(func(v LookupSdwanTrafficDistributionProfileResult) string { return v.Device }).(pulumi.StringOutput)
 }
 
+// The folder in which the resource is defined
 func (o LookupSdwanTrafficDistributionProfileResultOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupSdwanTrafficDistributionProfileResult) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -96,24 +109,29 @@ func (o LookupSdwanTrafficDistributionProfileResultOutput) Id() pulumi.StringOut
 	return o.ApplyT(func(v LookupSdwanTrafficDistributionProfileResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
+// Link-Tags for interfaces identified by defined tags
 func (o LookupSdwanTrafficDistributionProfileResultOutput) LinkTags() GetSdwanTrafficDistributionProfileLinkTagArrayOutput {
 	return o.ApplyT(func(v LookupSdwanTrafficDistributionProfileResult) []GetSdwanTrafficDistributionProfileLinkTag {
 		return v.LinkTags
 	}).(GetSdwanTrafficDistributionProfileLinkTagArrayOutput)
 }
 
+// Profile name
 func (o LookupSdwanTrafficDistributionProfileResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupSdwanTrafficDistributionProfileResult) string { return v.Name }).(pulumi.StringOutput)
 }
 
+// The snippet in which the resource is defined
 func (o LookupSdwanTrafficDistributionProfileResultOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupSdwanTrafficDistributionProfileResult) string { return v.Snippet }).(pulumi.StringOutput)
 }
 
+// The Terraform ID.
 func (o LookupSdwanTrafficDistributionProfileResultOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupSdwanTrafficDistributionProfileResult) string { return v.Tfid }).(pulumi.StringOutput)
 }
 
+// Traffic distribution. Possible values are `Best Available Path`, `Top Down Priority` and `Weighted Session Distribution`.
 func (o LookupSdwanTrafficDistributionProfileResultOutput) TrafficDistribution() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupSdwanTrafficDistributionProfileResult) string { return v.TrafficDistribution }).(pulumi.StringOutput)
 }

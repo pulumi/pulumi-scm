@@ -69,7 +69,7 @@ type BgpRouting struct {
 	AcceptRouteOverSc pulumi.BoolPtrOutput `pulumi:"acceptRouteOverSc"`
 	// Add host route to ike peer
 	AddHostRouteToIkePeer pulumi.BoolPtrOutput `pulumi:"addHostRouteToIkePeer"`
-	// Backbone routing
+	// Backbone routing. Possible values are `no-asymmetric-routing`, `asymmetric-routing-only` and `asymmetric-routing-with-load-share`.
 	BackboneRouting pulumi.StringPtrOutput `pulumi:"backboneRouting"`
 	// Outbound routes for services
 	OutboundRoutesForServices pulumi.StringArrayOutput `pulumi:"outboundRoutesForServices"`
@@ -115,7 +115,7 @@ type bgpRoutingState struct {
 	AcceptRouteOverSc *bool `pulumi:"acceptRouteOverSc"`
 	// Add host route to ike peer
 	AddHostRouteToIkePeer *bool `pulumi:"addHostRouteToIkePeer"`
-	// Backbone routing
+	// Backbone routing. Possible values are `no-asymmetric-routing`, `asymmetric-routing-only` and `asymmetric-routing-with-load-share`.
 	BackboneRouting *string `pulumi:"backboneRouting"`
 	// Outbound routes for services
 	OutboundRoutesForServices []string `pulumi:"outboundRoutesForServices"`
@@ -132,7 +132,7 @@ type BgpRoutingState struct {
 	AcceptRouteOverSc pulumi.BoolPtrInput
 	// Add host route to ike peer
 	AddHostRouteToIkePeer pulumi.BoolPtrInput
-	// Backbone routing
+	// Backbone routing. Possible values are `no-asymmetric-routing`, `asymmetric-routing-only` and `asymmetric-routing-with-load-share`.
 	BackboneRouting pulumi.StringPtrInput
 	// Outbound routes for services
 	OutboundRoutesForServices pulumi.StringArrayInput
@@ -153,7 +153,7 @@ type bgpRoutingArgs struct {
 	AcceptRouteOverSc *bool `pulumi:"acceptRouteOverSc"`
 	// Add host route to ike peer
 	AddHostRouteToIkePeer *bool `pulumi:"addHostRouteToIkePeer"`
-	// Backbone routing
+	// Backbone routing. Possible values are `no-asymmetric-routing`, `asymmetric-routing-only` and `asymmetric-routing-with-load-share`.
 	BackboneRouting *string `pulumi:"backboneRouting"`
 	// Outbound routes for services
 	OutboundRoutesForServices []string `pulumi:"outboundRoutesForServices"`
@@ -169,7 +169,7 @@ type BgpRoutingArgs struct {
 	AcceptRouteOverSc pulumi.BoolPtrInput
 	// Add host route to ike peer
 	AddHostRouteToIkePeer pulumi.BoolPtrInput
-	// Backbone routing
+	// Backbone routing. Possible values are `no-asymmetric-routing`, `asymmetric-routing-only` and `asymmetric-routing-with-load-share`.
 	BackboneRouting pulumi.StringPtrInput
 	// Outbound routes for services
 	OutboundRoutesForServices pulumi.StringArrayInput
@@ -276,7 +276,7 @@ func (o BgpRoutingOutput) AddHostRouteToIkePeer() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *BgpRouting) pulumi.BoolPtrOutput { return v.AddHostRouteToIkePeer }).(pulumi.BoolPtrOutput)
 }
 
-// Backbone routing
+// Backbone routing. Possible values are `no-asymmetric-routing`, `asymmetric-routing-only` and `asymmetric-routing-with-load-share`.
 func (o BgpRoutingOutput) BackboneRouting() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *BgpRouting) pulumi.StringPtrOutput { return v.BackboneRouting }).(pulumi.StringPtrOutput)
 }

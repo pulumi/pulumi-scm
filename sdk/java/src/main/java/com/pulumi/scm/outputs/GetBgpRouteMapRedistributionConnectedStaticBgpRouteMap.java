@@ -14,7 +14,7 @@ import java.util.Objects;
 @CustomType
 public final class GetBgpRouteMapRedistributionConnectedStaticBgpRouteMap {
     /**
-     * @return Connected Static BGP Route maps Action
+     * @return Connected Static BGP Route maps Action. Possible values are `permit` and `deny`.
      * 
      */
     private String action;
@@ -41,7 +41,7 @@ public final class GetBgpRouteMapRedistributionConnectedStaticBgpRouteMap {
 
     private GetBgpRouteMapRedistributionConnectedStaticBgpRouteMap() {}
     /**
-     * @return Connected Static BGP Route maps Action
+     * @return Connected Static BGP Route maps Action. Possible values are `permit` and `deny`.
      * 
      */
     public String action() {

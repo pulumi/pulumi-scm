@@ -223,7 +223,7 @@ export class ForwardingProfile extends pulumi.CustomResource {
     }
 
     /**
-     * Enable forwarding rule for forwarding profile
+     * Enable forwarding rule for forwarding profile. Possible values are `rules` and `pac-file`.
      */
     declare public readonly definitionMethod: pulumi.Output<string>;
     /**
@@ -231,7 +231,7 @@ export class ForwardingProfile extends pulumi.CustomResource {
      */
     declare public readonly description: pulumi.Output<string | undefined>;
     /**
-     * The folder in which the resource is defined
+     * The folder in which the resource is defined. Possible values are `Mobile Users`.
      */
     declare public readonly folder: pulumi.Output<string>;
     /**
@@ -285,7 +285,7 @@ export class ForwardingProfile extends pulumi.CustomResource {
  */
 export interface ForwardingProfileState {
     /**
-     * Enable forwarding rule for forwarding profile
+     * Enable forwarding rule for forwarding profile. Possible values are `rules` and `pac-file`.
      */
     definitionMethod?: pulumi.Input<string | undefined>;
     /**
@@ -293,7 +293,7 @@ export interface ForwardingProfileState {
      */
     description?: pulumi.Input<string | undefined>;
     /**
-     * The folder in which the resource is defined
+     * The folder in which the resource is defined. Possible values are `Mobile Users`.
      */
     folder?: pulumi.Input<string | undefined>;
     /**
@@ -315,7 +315,7 @@ export interface ForwardingProfileState {
  */
 export interface ForwardingProfileArgs {
     /**
-     * Enable forwarding rule for forwarding profile
+     * Enable forwarding rule for forwarding profile. Possible values are `rules` and `pac-file`.
      */
     definitionMethod?: pulumi.Input<string | undefined>;
     /**
@@ -323,7 +323,7 @@ export interface ForwardingProfileArgs {
      */
     description?: pulumi.Input<string | undefined>;
     /**
-     * The folder in which the resource is defined
+     * The folder in which the resource is defined. Possible values are `Mobile Users`.
      */
     folder?: pulumi.Input<string | undefined>;
     /**

@@ -54,31 +54,46 @@ func LookupGlobalprotectMatchList(ctx *pulumi.Context, args *LookupGlobalprotect
 type LookupGlobalprotectMatchListArgs struct {
 	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
+	// The folder in which the resource is defined
 	Folder *string `pulumi:"folder"`
 	// UUID of the resource
-	Id      string  `pulumi:"id"`
-	Name    *string `pulumi:"name"`
+	Id string `pulumi:"id"`
+	// Name of the globalprotect match list entry
+	Name *string `pulumi:"name"`
+	// The snippet in which the resource is defined
 	Snippet *string `pulumi:"snippet"`
 }
 
 // A collection of values returned by getGlobalprotectMatchList.
 type LookupGlobalprotectMatchListResult struct {
+	// Description of the globalprotect match list entry
 	Description string `pulumi:"description"`
 	// The device in which the resource is defined
 	Device string `pulumi:"device"`
+	// Filter of the globalprotect match list entry
 	Filter string `pulumi:"filter"`
+	// The folder in which the resource is defined
 	Folder string `pulumi:"folder"`
 	// UUID of the resource
-	Id             string   `pulumi:"id"`
-	Name           string   `pulumi:"name"`
-	Quarantine     bool     `pulumi:"quarantine"`
-	SendEmails     []string `pulumi:"sendEmails"`
-	SendHttps      []string `pulumi:"sendHttps"`
-	SendSnmptraps  []string `pulumi:"sendSnmptraps"`
-	SendSyslogs    []string `pulumi:"sendSyslogs"`
-	SendToPanorama bool     `pulumi:"sendToPanorama"`
-	Snippet        string   `pulumi:"snippet"`
-	Tfid           string   `pulumi:"tfid"`
+	Id string `pulumi:"id"`
+	// Name of the globalprotect match list entry
+	Name string `pulumi:"name"`
+	// Quarantine Flag of the globalprotect match list entry
+	Quarantine bool `pulumi:"quarantine"`
+	// Send Email List of the globalprotect match list entry
+	SendEmails []string `pulumi:"sendEmails"`
+	// Send HTTP List of the globalprotect match list entry
+	SendHttps []string `pulumi:"sendHttps"`
+	// Send SNMP Trap List of the globalprotect match list entry
+	SendSnmptraps []string `pulumi:"sendSnmptraps"`
+	// Send Sys log List of the globalprotect match list entry
+	SendSyslogs []string `pulumi:"sendSyslogs"`
+	// Send to Panorama Flag of the globalprotect match list entry
+	SendToPanorama bool `pulumi:"sendToPanorama"`
+	// The snippet in which the resource is defined
+	Snippet string `pulumi:"snippet"`
+	// The Terraform ID.
+	Tfid string `pulumi:"tfid"`
 }
 
 func LookupGlobalprotectMatchListOutput(ctx *pulumi.Context, args LookupGlobalprotectMatchListOutputArgs, opts ...pulumi.InvokeOption) LookupGlobalprotectMatchListResultOutput {
@@ -90,10 +105,13 @@ func LookupGlobalprotectMatchListOutput(ctx *pulumi.Context, args LookupGlobalpr
 type LookupGlobalprotectMatchListOutputArgs struct {
 	// The device in which the resource is defined
 	Device pulumi.StringPtrInput `pulumi:"device"`
+	// The folder in which the resource is defined
 	Folder pulumi.StringPtrInput `pulumi:"folder"`
 	// UUID of the resource
-	Id      pulumi.StringInput    `pulumi:"id"`
-	Name    pulumi.StringPtrInput `pulumi:"name"`
+	Id pulumi.StringInput `pulumi:"id"`
+	// Name of the globalprotect match list entry
+	Name pulumi.StringPtrInput `pulumi:"name"`
+	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrInput `pulumi:"snippet"`
 }
 
@@ -116,6 +134,7 @@ func (o LookupGlobalprotectMatchListResultOutput) ToLookupGlobalprotectMatchList
 	return o
 }
 
+// Description of the globalprotect match list entry
 func (o LookupGlobalprotectMatchListResultOutput) Description() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupGlobalprotectMatchListResult) string { return v.Description }).(pulumi.StringOutput)
 }
@@ -125,10 +144,12 @@ func (o LookupGlobalprotectMatchListResultOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupGlobalprotectMatchListResult) string { return v.Device }).(pulumi.StringOutput)
 }
 
+// Filter of the globalprotect match list entry
 func (o LookupGlobalprotectMatchListResultOutput) Filter() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupGlobalprotectMatchListResult) string { return v.Filter }).(pulumi.StringOutput)
 }
 
+// The folder in which the resource is defined
 func (o LookupGlobalprotectMatchListResultOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupGlobalprotectMatchListResult) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -138,38 +159,47 @@ func (o LookupGlobalprotectMatchListResultOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupGlobalprotectMatchListResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
+// Name of the globalprotect match list entry
 func (o LookupGlobalprotectMatchListResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupGlobalprotectMatchListResult) string { return v.Name }).(pulumi.StringOutput)
 }
 
+// Quarantine Flag of the globalprotect match list entry
 func (o LookupGlobalprotectMatchListResultOutput) Quarantine() pulumi.BoolOutput {
 	return o.ApplyT(func(v LookupGlobalprotectMatchListResult) bool { return v.Quarantine }).(pulumi.BoolOutput)
 }
 
+// Send Email List of the globalprotect match list entry
 func (o LookupGlobalprotectMatchListResultOutput) SendEmails() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupGlobalprotectMatchListResult) []string { return v.SendEmails }).(pulumi.StringArrayOutput)
 }
 
+// Send HTTP List of the globalprotect match list entry
 func (o LookupGlobalprotectMatchListResultOutput) SendHttps() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupGlobalprotectMatchListResult) []string { return v.SendHttps }).(pulumi.StringArrayOutput)
 }
 
+// Send SNMP Trap List of the globalprotect match list entry
 func (o LookupGlobalprotectMatchListResultOutput) SendSnmptraps() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupGlobalprotectMatchListResult) []string { return v.SendSnmptraps }).(pulumi.StringArrayOutput)
 }
 
+// Send Sys log List of the globalprotect match list entry
 func (o LookupGlobalprotectMatchListResultOutput) SendSyslogs() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupGlobalprotectMatchListResult) []string { return v.SendSyslogs }).(pulumi.StringArrayOutput)
 }
 
+// Send to Panorama Flag of the globalprotect match list entry
 func (o LookupGlobalprotectMatchListResultOutput) SendToPanorama() pulumi.BoolOutput {
 	return o.ApplyT(func(v LookupGlobalprotectMatchListResult) bool { return v.SendToPanorama }).(pulumi.BoolOutput)
 }
 
+// The snippet in which the resource is defined
 func (o LookupGlobalprotectMatchListResultOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupGlobalprotectMatchListResult) string { return v.Snippet }).(pulumi.StringOutput)
 }
 
+// The Terraform ID.
 func (o LookupGlobalprotectMatchListResultOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupGlobalprotectMatchListResult) string { return v.Tfid }).(pulumi.StringOutput)
 }

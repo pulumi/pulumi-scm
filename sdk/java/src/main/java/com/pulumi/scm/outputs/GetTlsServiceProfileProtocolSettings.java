@@ -62,12 +62,12 @@ public final class GetTlsServiceProfileProtocolSettings {
      */
     private Boolean keyxchgAlgoRsa;
     /**
-     * @return Maximum TLS version
+     * @return Maximum TLS version. Possible values are `tls1-0`, `tls1-1`, `tls1-2` and `tls1-3`.
      * 
      */
     private String maxVersion;
     /**
-     * @return Minimum TLS version
+     * @return Minimum TLS version. Possible values are `tls1-0`, `tls1-1`, `tls1-2` and `tls1-3`.
      * 
      */
     private String minVersion;
@@ -144,14 +144,14 @@ public final class GetTlsServiceProfileProtocolSettings {
         return this.keyxchgAlgoRsa;
     }
     /**
-     * @return Maximum TLS version
+     * @return Maximum TLS version. Possible values are `tls1-0`, `tls1-1`, `tls1-2` and `tls1-3`.
      * 
      */
     public String maxVersion() {
         return this.maxVersion;
     }
     /**
-     * @return Minimum TLS version
+     * @return Minimum TLS version. Possible values are `tls1-0`, `tls1-1`, `tls1-2` and `tls1-3`.
      * 
      */
     public String minVersion() {

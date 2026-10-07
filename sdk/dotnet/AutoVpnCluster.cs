@@ -157,7 +157,7 @@ namespace Pulumi.Scm
         public Output<string> Tfid { get; private set; } = null!;
 
         /// <summary>
-        /// VPN cluster type
+        /// VPN cluster type. Possible values are `hub-spoke` and `Mesh`.
         /// </summary>
         [Output("type")]
         public Output<string> Type { get; private set; } = null!;
@@ -257,7 +257,7 @@ namespace Pulumi.Scm
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// VPN cluster type
+        /// VPN cluster type. Possible values are `hub-spoke` and `Mesh`.
         /// </summary>
         [Input("type")]
         public Input<string>? Type { get; set; }
@@ -325,7 +325,7 @@ namespace Pulumi.Scm
         public Input<string>? Tfid { get; set; }
 
         /// <summary>
-        /// VPN cluster type
+        /// VPN cluster type. Possible values are `hub-spoke` and `Mesh`.
         /// </summary>
         [Input("type")]
         public Input<string>? Type { get; set; }

@@ -40,16 +40,12 @@ public final class UpdateScheduleUpdateScheduleThreatsRecurringArgs extends com.
     /**
      * Every30 mins
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `every30Mins`, `hourly`, `none`, and `weekly`.
-     * 
      */
     @Import(name="every30Mins")
     private @Nullable Output<UpdateScheduleUpdateScheduleThreatsRecurringEvery30MinsArgs> every30Mins;
 
     /**
      * @return Every30 mins
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `every30Mins`, `hourly`, `none`, and `weekly`.
      * 
      */
     public Optional<Output<UpdateScheduleUpdateScheduleThreatsRecurringEvery30MinsArgs>> every30Mins() {
@@ -59,16 +55,12 @@ public final class UpdateScheduleUpdateScheduleThreatsRecurringArgs extends com.
     /**
      * Hourly
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `every30Mins`, `hourly`, `none`, and `weekly`.
-     * 
      */
     @Import(name="hourly")
     private @Nullable Output<UpdateScheduleUpdateScheduleThreatsRecurringHourlyArgs> hourly;
 
     /**
      * @return Hourly
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `every30Mins`, `hourly`, `none`, and `weekly`.
      * 
      */
     public Optional<Output<UpdateScheduleUpdateScheduleThreatsRecurringHourlyArgs>> hourly() {
@@ -93,16 +85,12 @@ public final class UpdateScheduleUpdateScheduleThreatsRecurringArgs extends com.
     /**
      * None
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `every30Mins`, `hourly`, `none`, and `weekly`.
-     * 
      */
     @Import(name="none")
     private @Nullable Output<UpdateScheduleUpdateScheduleThreatsRecurringNoneArgs> none;
 
     /**
      * @return None
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `every30Mins`, `hourly`, `none`, and `weekly`.
      * 
      */
     public Optional<Output<UpdateScheduleUpdateScheduleThreatsRecurringNoneArgs>> none() {
@@ -142,16 +130,12 @@ public final class UpdateScheduleUpdateScheduleThreatsRecurringArgs extends com.
     /**
      * Weekly
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `every30Mins`, `hourly`, `none`, and `weekly`.
-     * 
      */
     @Import(name="weekly")
     private @Nullable Output<UpdateScheduleUpdateScheduleThreatsRecurringWeeklyArgs> weekly;
 
     /**
      * @return Weekly
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `every30Mins`, `hourly`, `none`, and `weekly`.
      * 
      */
     public Optional<Output<UpdateScheduleUpdateScheduleThreatsRecurringWeeklyArgs>> weekly() {
@@ -213,8 +197,6 @@ public final class UpdateScheduleUpdateScheduleThreatsRecurringArgs extends com.
         /**
          * @param every30Mins Every30 mins
          * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `every30Mins`, `hourly`, `none`, and `weekly`.
-         * 
          * @return builder
          * 
          */
@@ -226,8 +208,6 @@ public final class UpdateScheduleUpdateScheduleThreatsRecurringArgs extends com.
         /**
          * @param every30Mins Every30 mins
          * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `every30Mins`, `hourly`, `none`, and `weekly`.
-         * 
          * @return builder
          * 
          */
@@ -237,8 +217,6 @@ public final class UpdateScheduleUpdateScheduleThreatsRecurringArgs extends com.
 
         /**
          * @param hourly Hourly
-         * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `every30Mins`, `hourly`, `none`, and `weekly`.
          * 
          * @return builder
          * 
@@ -250,8 +228,6 @@ public final class UpdateScheduleUpdateScheduleThreatsRecurringArgs extends com.
 
         /**
          * @param hourly Hourly
-         * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `every30Mins`, `hourly`, `none`, and `weekly`.
          * 
          * @return builder
          * 
@@ -284,8 +260,6 @@ public final class UpdateScheduleUpdateScheduleThreatsRecurringArgs extends com.
         /**
          * @param none None
          * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `every30Mins`, `hourly`, `none`, and `weekly`.
-         * 
          * @return builder
          * 
          */
@@ -296,8 +270,6 @@ public final class UpdateScheduleUpdateScheduleThreatsRecurringArgs extends com.
 
         /**
          * @param none None
-         * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `every30Mins`, `hourly`, `none`, and `weekly`.
          * 
          * @return builder
          * 
@@ -351,8 +323,6 @@ public final class UpdateScheduleUpdateScheduleThreatsRecurringArgs extends com.
         /**
          * @param weekly Weekly
          * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `every30Mins`, `hourly`, `none`, and `weekly`.
-         * 
          * @return builder
          * 
          */
@@ -363,8 +333,6 @@ public final class UpdateScheduleUpdateScheduleThreatsRecurringArgs extends com.
 
         /**
          * @param weekly Weekly
-         * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `every30Mins`, `hourly`, `none`, and `weekly`.
          * 
          * @return builder
          * 

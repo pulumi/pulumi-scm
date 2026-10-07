@@ -19,14 +19,10 @@ namespace Pulumi.Scm.Outputs
         public readonly Outputs.GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringDailyResult Daily;
         /// <summary>
         /// Hourly
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Daily`, `Hourly`, `None`, and `Weekly`.
         /// </summary>
         public readonly Outputs.GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringHourlyResult Hourly;
         /// <summary>
         /// None
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Daily`, `Hourly`, `None`, and `Weekly`.
         /// </summary>
         public readonly Outputs.GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringNoneResult None;
         /// <summary>
@@ -39,8 +35,6 @@ namespace Pulumi.Scm.Outputs
         public readonly int Threshold;
         /// <summary>
         /// Weekly
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Daily`, `Hourly`, `None`, and `Weekly`.
         /// </summary>
         public readonly Outputs.GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringWeeklyResult Weekly;
 

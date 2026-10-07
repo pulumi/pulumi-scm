@@ -32,7 +32,7 @@ class BgpRoutingArgs:
 
         :param pulumi.Input[_builtins.bool] accept_route_over_sc: Accept route over s c
         :param pulumi.Input[_builtins.bool] add_host_route_to_ike_peer: Add host route to ike peer
-        :param pulumi.Input[_builtins.str] backbone_routing: Backbone routing
+        :param pulumi.Input[_builtins.str] backbone_routing: Backbone routing. Possible values are `no-asymmetric-routing`, `asymmetric-routing-only` and `asymmetric-routing-with-load-share`.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] outbound_routes_for_services: Outbound routes for services
         :param pulumi.Input['BgpRoutingRoutingPreferenceArgs'] routing_preference: Routing preference
         :param pulumi.Input[_builtins.bool] withdraw_static_route: Withdraw static route
@@ -78,7 +78,7 @@ class BgpRoutingArgs:
     @pulumi.getter(name="backboneRouting")
     def backbone_routing(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
-        Backbone routing
+        Backbone routing. Possible values are `no-asymmetric-routing`, `asymmetric-routing-only` and `asymmetric-routing-with-load-share`.
         """
         return pulumi.get(self, "backbone_routing")
 
@@ -138,7 +138,7 @@ class _BgpRoutingState:
 
         :param pulumi.Input[_builtins.bool] accept_route_over_sc: Accept route over s c
         :param pulumi.Input[_builtins.bool] add_host_route_to_ike_peer: Add host route to ike peer
-        :param pulumi.Input[_builtins.str] backbone_routing: Backbone routing
+        :param pulumi.Input[_builtins.str] backbone_routing: Backbone routing. Possible values are `no-asymmetric-routing`, `asymmetric-routing-only` and `asymmetric-routing-with-load-share`.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] outbound_routes_for_services: Outbound routes for services
         :param pulumi.Input['BgpRoutingRoutingPreferenceArgs'] routing_preference: Routing preference
         :param pulumi.Input[_builtins.str] tfid: The Terraform ID.
@@ -187,7 +187,7 @@ class _BgpRoutingState:
     @pulumi.getter(name="backboneRouting")
     def backbone_routing(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
-        Backbone routing
+        Backbone routing. Possible values are `no-asymmetric-routing`, `asymmetric-routing-only` and `asymmetric-routing-with-load-share`.
         """
         return pulumi.get(self, "backbone_routing")
 
@@ -297,7 +297,7 @@ class BgpRouting(pulumi.CustomResource):
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.bool] accept_route_over_sc: Accept route over s c
         :param pulumi.Input[_builtins.bool] add_host_route_to_ike_peer: Add host route to ike peer
-        :param pulumi.Input[_builtins.str] backbone_routing: Backbone routing
+        :param pulumi.Input[_builtins.str] backbone_routing: Backbone routing. Possible values are `no-asymmetric-routing`, `asymmetric-routing-only` and `asymmetric-routing-with-load-share`.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] outbound_routes_for_services: Outbound routes for services
         :param pulumi.Input[Union['BgpRoutingRoutingPreferenceArgs', 'BgpRoutingRoutingPreferenceArgsDict', 'outputs.BgpRoutingRoutingPreference']] routing_preference: Routing preference
         :param pulumi.Input[_builtins.bool] withdraw_static_route: Withdraw static route
@@ -407,7 +407,7 @@ class BgpRouting(pulumi.CustomResource):
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.bool] accept_route_over_sc: Accept route over s c
         :param pulumi.Input[_builtins.bool] add_host_route_to_ike_peer: Add host route to ike peer
-        :param pulumi.Input[_builtins.str] backbone_routing: Backbone routing
+        :param pulumi.Input[_builtins.str] backbone_routing: Backbone routing. Possible values are `no-asymmetric-routing`, `asymmetric-routing-only` and `asymmetric-routing-with-load-share`.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] outbound_routes_for_services: Outbound routes for services
         :param pulumi.Input[Union['BgpRoutingRoutingPreferenceArgs', 'BgpRoutingRoutingPreferenceArgsDict', 'outputs.BgpRoutingRoutingPreference']] routing_preference: Routing preference
         :param pulumi.Input[_builtins.str] tfid: The Terraform ID.
@@ -446,7 +446,7 @@ class BgpRouting(pulumi.CustomResource):
     @pulumi.getter(name="backboneRouting")
     def backbone_routing(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        Backbone routing
+        Backbone routing. Possible values are `no-asymmetric-routing`, `asymmetric-routing-only` and `asymmetric-routing-with-load-share`.
         """
         return pulumi.get(self, "backbone_routing")
 

@@ -33,16 +33,12 @@ public final class AutoVpnClusterGatewayInterfaceSdwanLinkSettingsUpstreamNatSta
     /**
      * IP address
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `fqdn` and `ipAddress`.
-     * 
      */
     @Import(name="ipAddress")
     private @Nullable Output<String> ipAddress;
 
     /**
      * @return IP address
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `fqdn` and `ipAddress`.
      * 
      */
     public Optional<Output<String>> ipAddress() {
@@ -98,8 +94,6 @@ public final class AutoVpnClusterGatewayInterfaceSdwanLinkSettingsUpstreamNatSta
         /**
          * @param ipAddress IP address
          * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `fqdn` and `ipAddress`.
-         * 
          * @return builder
          * 
          */
@@ -110,8 +104,6 @@ public final class AutoVpnClusterGatewayInterfaceSdwanLinkSettingsUpstreamNatSta
 
         /**
          * @param ipAddress IP address
-         * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `fqdn` and `ipAddress`.
          * 
          * @return builder
          * 

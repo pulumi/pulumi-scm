@@ -33,16 +33,12 @@ public final class HipObjectMobileDeviceCriteriaImeiArgs extends com.pulumi.reso
     /**
      * Is
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
-     * 
      */
     @Import(name="is")
     private @Nullable Output<String> is;
 
     /**
      * @return Is
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
      * 
      */
     public Optional<Output<String>> is() {
@@ -52,16 +48,12 @@ public final class HipObjectMobileDeviceCriteriaImeiArgs extends com.pulumi.reso
     /**
      * Is not
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
-     * 
      */
     @Import(name="isNot")
     private @Nullable Output<String> isNot;
 
     /**
      * @return Is not
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
      * 
      */
     public Optional<Output<String>> isNot() {
@@ -118,8 +110,6 @@ public final class HipObjectMobileDeviceCriteriaImeiArgs extends com.pulumi.reso
         /**
          * @param is Is
          * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
-         * 
          * @return builder
          * 
          */
@@ -131,8 +121,6 @@ public final class HipObjectMobileDeviceCriteriaImeiArgs extends com.pulumi.reso
         /**
          * @param is Is
          * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
-         * 
          * @return builder
          * 
          */
@@ -142,8 +130,6 @@ public final class HipObjectMobileDeviceCriteriaImeiArgs extends com.pulumi.reso
 
         /**
          * @param isNot Is not
-         * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
          * 
          * @return builder
          * 
@@ -155,8 +141,6 @@ public final class HipObjectMobileDeviceCriteriaImeiArgs extends com.pulumi.reso
 
         /**
          * @param isNot Is not
-         * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
          * 
          * @return builder
          * 

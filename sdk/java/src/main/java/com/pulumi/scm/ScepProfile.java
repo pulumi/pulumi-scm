@@ -237,14 +237,14 @@ public class ScepProfile extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.device);
     }
     /**
-     * Digest for CSR
+     * Digest for CSR. Possible values are `sha1`, `sha256`, `sha384` and `sha512`.
      * 
      */
     @Export(name="digest", refs={String.class}, tree="[0]")
     private Output<String> digest;
 
     /**
-     * @return Digest for CSR
+     * @return Digest for CSR. Possible values are `sha1`, `sha256`, `sha384` and `sha512`.
      * 
      */
     public Output<String> digest() {
@@ -281,16 +281,12 @@ public class ScepProfile extends com.pulumi.resources.CustomResource {
     /**
      * The folder in which the resource is defined
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
      */
     @Export(name="folder", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> folder;
 
     /**
      * @return The folder in which the resource is defined
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public Output<Optional<String>> folder() {
@@ -311,14 +307,14 @@ public class ScepProfile extends com.pulumi.resources.CustomResource {
         return this.name;
     }
     /**
-     * SCEP Server CA Certificate
+     * SCEP Server CA Certificate. Possible values are `Authentication Cookie CA`, `Forward-Trust-CA`, `Forward-Trust-CA-ECDSA`, `Forward-UnTrust-CA`, `Forward-UnTrust-CA-ECDSA`, `Global Authentication Cookie CA`, `GlobalSign-Root-CA` and `Root CA`.
      * 
      */
     @Export(name="scepCaCert", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> scepCaCert;
 
     /**
-     * @return SCEP Server CA Certificate
+     * @return SCEP Server CA Certificate. Possible values are `Authentication Cookie CA`, `Forward-Trust-CA`, `Forward-Trust-CA-ECDSA`, `Forward-UnTrust-CA`, `Forward-UnTrust-CA-ECDSA`, `Global Authentication Cookie CA`, `GlobalSign-Root-CA` and `Root CA`.
      * 
      */
     public Output<Optional<String>> scepCaCert() {
@@ -339,14 +335,14 @@ public class ScepProfile extends com.pulumi.resources.CustomResource {
         return this.scepChallenge;
     }
     /**
-     * SCEP Client Certificate
+     * SCEP Client Certificate. Possible values are `Authentication Cookie CA`, `Forward-Trust-CA`, `Forward-Trust-CA-ECDSA`, `Forward-UnTrust-CA`, `Forward-UnTrust-CA-ECDSA`, `Global Authentication Cookie CA`, `GlobalSign-Root-CA` and `Root CA`.
      * 
      */
     @Export(name="scepClientCert", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> scepClientCert;
 
     /**
-     * @return SCEP Client Certificate
+     * @return SCEP Client Certificate. Possible values are `Authentication Cookie CA`, `Forward-Trust-CA`, `Forward-Trust-CA-ECDSA`, `Forward-UnTrust-CA`, `Forward-UnTrust-CA-ECDSA`, `Global Authentication Cookie CA`, `GlobalSign-Root-CA` and `Root CA`.
      * 
      */
     public Output<Optional<String>> scepClientCert() {
@@ -369,16 +365,12 @@ public class ScepProfile extends com.pulumi.resources.CustomResource {
     /**
      * The snippet in which the resource is defined
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
      */
     @Export(name="snippet", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> snippet;
 
     /**
      * @return The snippet in which the resource is defined
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public Output<Optional<String>> snippet() {

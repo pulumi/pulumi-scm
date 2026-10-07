@@ -37,19 +37,15 @@ class SamlServerProfileArgs:
 
         :param pulumi.Input[_builtins.str] certificate: The identity provider certificate
         :param pulumi.Input[_builtins.str] entity_id: The identity provider ID
-        :param pulumi.Input[_builtins.str] sso_bindings: SAML HTTP binding for SSO requests to the identity provider
+        :param pulumi.Input[_builtins.str] sso_bindings: SAML HTTP binding for SSO requests to the identity provider. Possible values are `post` and `redirect`.
         :param pulumi.Input[_builtins.str] sso_url: Identity provider SSO URL
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.int] max_clock_skew: Maxiumum clock skew
         :param pulumi.Input[_builtins.str] name: The name of the SAML server profile
-        :param pulumi.Input[_builtins.str] slo_bindings: SAML HTTP binding for SLO requests to the identity provider
+        :param pulumi.Input[_builtins.str] slo_bindings: SAML HTTP binding for SLO requests to the identity provider. Possible values are `post` and `redirect`.
         :param pulumi.Input[_builtins.str] slo_url: Identity provider SLO URL
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.bool] validate_idp_certificate: Validate the identity provider certificate?
         :param pulumi.Input[_builtins.bool] want_auth_requests_signed: Sign SAML message to the identity provider?
         """
@@ -104,7 +100,7 @@ class SamlServerProfileArgs:
     @pulumi.getter(name="ssoBindings")
     def sso_bindings(self) -> pulumi.Input[_builtins.str]:
         """
-        SAML HTTP binding for SSO requests to the identity provider
+        SAML HTTP binding for SSO requests to the identity provider. Possible values are `post` and `redirect`.
         """
         return pulumi.get(self, "sso_bindings")
 
@@ -141,8 +137,6 @@ class SamlServerProfileArgs:
     def folder(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
-
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
 
@@ -178,7 +172,7 @@ class SamlServerProfileArgs:
     @pulumi.getter(name="sloBindings")
     def slo_bindings(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
-        SAML HTTP binding for SLO requests to the identity provider
+        SAML HTTP binding for SLO requests to the identity provider. Possible values are `post` and `redirect`.
         """
         return pulumi.get(self, "slo_bindings")
 
@@ -203,8 +197,6 @@ class SamlServerProfileArgs:
     def snippet(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
-
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
 
@@ -261,16 +253,12 @@ class _SamlServerProfileState:
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input[_builtins.str] entity_id: The identity provider ID
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.int] max_clock_skew: Maxiumum clock skew
         :param pulumi.Input[_builtins.str] name: The name of the SAML server profile
-        :param pulumi.Input[_builtins.str] slo_bindings: SAML HTTP binding for SLO requests to the identity provider
+        :param pulumi.Input[_builtins.str] slo_bindings: SAML HTTP binding for SLO requests to the identity provider. Possible values are `post` and `redirect`.
         :param pulumi.Input[_builtins.str] slo_url: Identity provider SLO URL
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-        :param pulumi.Input[_builtins.str] sso_bindings: SAML HTTP binding for SSO requests to the identity provider
+        :param pulumi.Input[_builtins.str] sso_bindings: SAML HTTP binding for SSO requests to the identity provider. Possible values are `post` and `redirect`.
         :param pulumi.Input[_builtins.str] sso_url: Identity provider SSO URL
         :param pulumi.Input[_builtins.str] tfid: The Terraform ID.
         :param pulumi.Input[_builtins.bool] validate_idp_certificate: Validate the identity provider certificate?
@@ -346,8 +334,6 @@ class _SamlServerProfileState:
     def folder(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
-
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
 
@@ -383,7 +369,7 @@ class _SamlServerProfileState:
     @pulumi.getter(name="sloBindings")
     def slo_bindings(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
-        SAML HTTP binding for SLO requests to the identity provider
+        SAML HTTP binding for SLO requests to the identity provider. Possible values are `post` and `redirect`.
         """
         return pulumi.get(self, "slo_bindings")
 
@@ -408,8 +394,6 @@ class _SamlServerProfileState:
     def snippet(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
-
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
 
@@ -421,7 +405,7 @@ class _SamlServerProfileState:
     @pulumi.getter(name="ssoBindings")
     def sso_bindings(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
-        SAML HTTP binding for SSO requests to the identity provider
+        SAML HTTP binding for SSO requests to the identity provider. Possible values are `post` and `redirect`.
         """
         return pulumi.get(self, "sso_bindings")
 
@@ -567,16 +551,12 @@ class SamlServerProfile(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input[_builtins.str] entity_id: The identity provider ID
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.int] max_clock_skew: Maxiumum clock skew
         :param pulumi.Input[_builtins.str] name: The name of the SAML server profile
-        :param pulumi.Input[_builtins.str] slo_bindings: SAML HTTP binding for SLO requests to the identity provider
+        :param pulumi.Input[_builtins.str] slo_bindings: SAML HTTP binding for SLO requests to the identity provider. Possible values are `post` and `redirect`.
         :param pulumi.Input[_builtins.str] slo_url: Identity provider SLO URL
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-        :param pulumi.Input[_builtins.str] sso_bindings: SAML HTTP binding for SSO requests to the identity provider
+        :param pulumi.Input[_builtins.str] sso_bindings: SAML HTTP binding for SSO requests to the identity provider. Possible values are `post` and `redirect`.
         :param pulumi.Input[_builtins.str] sso_url: Identity provider SSO URL
         :param pulumi.Input[_builtins.bool] validate_idp_certificate: Validate the identity provider certificate?
         :param pulumi.Input[_builtins.bool] want_auth_requests_signed: Sign SAML message to the identity provider?
@@ -744,16 +724,12 @@ class SamlServerProfile(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input[_builtins.str] entity_id: The identity provider ID
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.int] max_clock_skew: Maxiumum clock skew
         :param pulumi.Input[_builtins.str] name: The name of the SAML server profile
-        :param pulumi.Input[_builtins.str] slo_bindings: SAML HTTP binding for SLO requests to the identity provider
+        :param pulumi.Input[_builtins.str] slo_bindings: SAML HTTP binding for SLO requests to the identity provider. Possible values are `post` and `redirect`.
         :param pulumi.Input[_builtins.str] slo_url: Identity provider SLO URL
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-        :param pulumi.Input[_builtins.str] sso_bindings: SAML HTTP binding for SSO requests to the identity provider
+        :param pulumi.Input[_builtins.str] sso_bindings: SAML HTTP binding for SSO requests to the identity provider. Possible values are `post` and `redirect`.
         :param pulumi.Input[_builtins.str] sso_url: Identity provider SSO URL
         :param pulumi.Input[_builtins.str] tfid: The Terraform ID.
         :param pulumi.Input[_builtins.bool] validate_idp_certificate: Validate the identity provider certificate?
@@ -808,8 +784,6 @@ class SamlServerProfile(pulumi.CustomResource):
     def folder(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
-
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
 
@@ -833,7 +807,7 @@ class SamlServerProfile(pulumi.CustomResource):
     @pulumi.getter(name="sloBindings")
     def slo_bindings(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        SAML HTTP binding for SLO requests to the identity provider
+        SAML HTTP binding for SLO requests to the identity provider. Possible values are `post` and `redirect`.
         """
         return pulumi.get(self, "slo_bindings")
 
@@ -850,8 +824,6 @@ class SamlServerProfile(pulumi.CustomResource):
     def snippet(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
-
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
 
@@ -859,7 +831,7 @@ class SamlServerProfile(pulumi.CustomResource):
     @pulumi.getter(name="ssoBindings")
     def sso_bindings(self) -> pulumi.Output[_builtins.str]:
         """
-        SAML HTTP binding for SSO requests to the identity provider
+        SAML HTTP binding for SSO requests to the identity provider. Possible values are `post` and `redirect`.
         """
         return pulumi.get(self, "sso_bindings")
 

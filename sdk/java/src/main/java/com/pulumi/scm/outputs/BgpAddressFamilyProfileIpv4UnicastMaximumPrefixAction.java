@@ -20,8 +20,6 @@ public final class BgpAddressFamilyProfileIpv4UnicastMaximumPrefixAction {
     /**
      * @return Warning only
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `restart` and `warningOnly`.
-     * 
      */
     private @Nullable BgpAddressFamilyProfileIpv4UnicastMaximumPrefixActionWarningOnly warningOnly;
 
@@ -35,8 +33,6 @@ public final class BgpAddressFamilyProfileIpv4UnicastMaximumPrefixAction {
     }
     /**
      * @return Warning only
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `restart` and `warningOnly`.
      * 
      */
     public Optional<BgpAddressFamilyProfileIpv4UnicastMaximumPrefixActionWarningOnly> warningOnly() {

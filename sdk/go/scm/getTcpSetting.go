@@ -53,9 +53,11 @@ func LookupTcpSetting(ctx *pulumi.Context, args *LookupTcpSettingArgs, opts ...p
 type LookupTcpSettingArgs struct {
 	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
+	// The folder in which the resource is defined
 	Folder *string `pulumi:"folder"`
 	// UUID of the resource
-	Id      string  `pulumi:"id"`
+	Id string `pulumi:"id"`
+	// The snippet in which the resource is defined
 	Snippet *string `pulumi:"snippet"`
 }
 
@@ -63,12 +65,16 @@ type LookupTcpSettingArgs struct {
 type LookupTcpSettingResult struct {
 	// The device in which the resource is defined
 	Device string `pulumi:"device"`
+	// The folder in which the resource is defined
 	Folder string `pulumi:"folder"`
 	// UUID of the resource
-	Id      string           `pulumi:"id"`
-	Snippet string           `pulumi:"snippet"`
-	Tcp     GetTcpSettingTcp `pulumi:"tcp"`
-	Tfid    string           `pulumi:"tfid"`
+	Id string `pulumi:"id"`
+	// The snippet in which the resource is defined
+	Snippet string `pulumi:"snippet"`
+	// Tcp
+	Tcp GetTcpSettingTcp `pulumi:"tcp"`
+	// The Terraform ID.
+	Tfid string `pulumi:"tfid"`
 }
 
 func LookupTcpSettingOutput(ctx *pulumi.Context, args LookupTcpSettingOutputArgs, opts ...pulumi.InvokeOption) LookupTcpSettingResultOutput {
@@ -80,9 +86,11 @@ func LookupTcpSettingOutput(ctx *pulumi.Context, args LookupTcpSettingOutputArgs
 type LookupTcpSettingOutputArgs struct {
 	// The device in which the resource is defined
 	Device pulumi.StringPtrInput `pulumi:"device"`
+	// The folder in which the resource is defined
 	Folder pulumi.StringPtrInput `pulumi:"folder"`
 	// UUID of the resource
-	Id      pulumi.StringInput    `pulumi:"id"`
+	Id pulumi.StringInput `pulumi:"id"`
+	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrInput `pulumi:"snippet"`
 }
 
@@ -110,6 +118,7 @@ func (o LookupTcpSettingResultOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupTcpSettingResult) string { return v.Device }).(pulumi.StringOutput)
 }
 
+// The folder in which the resource is defined
 func (o LookupTcpSettingResultOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupTcpSettingResult) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -119,14 +128,17 @@ func (o LookupTcpSettingResultOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupTcpSettingResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
+// The snippet in which the resource is defined
 func (o LookupTcpSettingResultOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupTcpSettingResult) string { return v.Snippet }).(pulumi.StringOutput)
 }
 
+// Tcp
 func (o LookupTcpSettingResultOutput) Tcp() GetTcpSettingTcpOutput {
 	return o.ApplyT(func(v LookupTcpSettingResult) GetTcpSettingTcp { return v.Tcp }).(GetTcpSettingTcpOutput)
 }
 
+// The Terraform ID.
 func (o LookupTcpSettingResultOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupTcpSettingResult) string { return v.Tfid }).(pulumi.StringOutput)
 }

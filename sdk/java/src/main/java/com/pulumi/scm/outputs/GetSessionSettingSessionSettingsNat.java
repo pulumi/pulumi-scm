@@ -11,14 +11,14 @@ import java.util.Objects;
 @CustomType
 public final class GetSessionSettingSessionSettingsNat {
     /**
-     * @return NAT oversubscription rate
+     * @return NAT oversubscription rate. Possible values are `1x`, `2x`, `4x` and `8x`.
      * 
      */
     private String dippOversub;
 
     private GetSessionSettingSessionSettingsNat() {}
     /**
-     * @return NAT oversubscription rate
+     * @return NAT oversubscription rate. Possible values are `1x`, `2x`, `4x` and `8x`.
      * 
      */
     public String dippOversub() {

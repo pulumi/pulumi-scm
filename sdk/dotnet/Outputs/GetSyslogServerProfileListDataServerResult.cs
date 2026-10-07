@@ -14,11 +14,11 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetSyslogServerProfileListDataServerResult
     {
         /// <summary>
-        /// Syslog facility
+        /// Syslog facility. Possible values are `LOG_USER`, `LOG_LOCAL0`, `LOG_LOCAL1`, `LOG_LOCAL2`, `LOG_LOCAL3`, `LOG_LOCAL4`, `LOG_LOCAL5`, `LOG_LOCAL6` and `LOG_LOCAL7`.
         /// </summary>
         public readonly string Facility;
         /// <summary>
-        /// Syslog format
+        /// Syslog format. Possible values are `BSD` and `IETF`.
         /// </summary>
         public readonly string Format;
         /// <summary>
@@ -34,7 +34,7 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly string Server;
         /// <summary>
-        /// Transport protocol
+        /// Transport protocol. Possible values are `UDP` and `TCP`.
         /// </summary>
         public readonly string Transport;
 

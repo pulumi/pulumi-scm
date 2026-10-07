@@ -42,13 +42,13 @@ class SiteArgs:
         :param pulumi.Input[_builtins.str] city: The city in which the site exists
         :param pulumi.Input[_builtins.str] country: The country in which the site exists
         :param pulumi.Input[_builtins.str] latitude: The latitude coordinate for the site
-        :param pulumi.Input[_builtins.str] license_type: The license type of the site
+        :param pulumi.Input[_builtins.str] license_type: The license type of the site. Possible values are `FWAAS-SITE-25Mbps`, `FWAAS-SITE-50Mbps`, `FWAAS-SITE-250Mbps`, `FWAAS-SITE-1000Mbps` and `FWAAS-SITE-2500Mbps`.
         :param pulumi.Input[_builtins.str] longitude: The longitude coordinate for the site
         :param pulumi.Input[Sequence[pulumi.Input['SiteMemberArgs']]] members: Members
         :param pulumi.Input[_builtins.str] name: The name of the site
         :param pulumi.Input['SiteQosArgs'] qos: Qos
         :param pulumi.Input[_builtins.str] state: The state in which the site exists
-        :param pulumi.Input[_builtins.str] type: The site type
+        :param pulumi.Input[_builtins.str] type: The site type. Possible values are `prisma-sdwan`, `third-party-branch` and `third-party-discovered`.
         :param pulumi.Input[_builtins.str] zip_code: The postal code in which the site exists
         """
         if address_line1 is not None:
@@ -142,7 +142,7 @@ class SiteArgs:
     @pulumi.getter(name="licenseType")
     def license_type(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
-        The license type of the site
+        The license type of the site. Possible values are `FWAAS-SITE-25Mbps`, `FWAAS-SITE-50Mbps`, `FWAAS-SITE-250Mbps`, `FWAAS-SITE-1000Mbps` and `FWAAS-SITE-2500Mbps`.
         """
         return pulumi.get(self, "license_type")
 
@@ -214,7 +214,7 @@ class SiteArgs:
     @pulumi.getter
     def type(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
-        The site type
+        The site type. Possible values are `prisma-sdwan`, `third-party-branch` and `third-party-discovered`.
         """
         return pulumi.get(self, "type")
 
@@ -262,14 +262,14 @@ class _SiteState:
         :param pulumi.Input[_builtins.str] country: The country in which the site exists
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
         :param pulumi.Input[_builtins.str] latitude: The latitude coordinate for the site
-        :param pulumi.Input[_builtins.str] license_type: The license type of the site
+        :param pulumi.Input[_builtins.str] license_type: The license type of the site. Possible values are `FWAAS-SITE-25Mbps`, `FWAAS-SITE-50Mbps`, `FWAAS-SITE-250Mbps`, `FWAAS-SITE-1000Mbps` and `FWAAS-SITE-2500Mbps`.
         :param pulumi.Input[_builtins.str] longitude: The longitude coordinate for the site
         :param pulumi.Input[Sequence[pulumi.Input['SiteMemberArgs']]] members: Members
         :param pulumi.Input[_builtins.str] name: The name of the site
         :param pulumi.Input['SiteQosArgs'] qos: Qos
         :param pulumi.Input[_builtins.str] state: The state in which the site exists
         :param pulumi.Input[_builtins.str] tfid: The Terraform ID.
-        :param pulumi.Input[_builtins.str] type: The site type
+        :param pulumi.Input[_builtins.str] type: The site type. Possible values are `prisma-sdwan`, `third-party-branch` and `third-party-discovered`.
         :param pulumi.Input[_builtins.str] zip_code: The postal code in which the site exists
         """
         if address_line1 is not None:
@@ -379,7 +379,7 @@ class _SiteState:
     @pulumi.getter(name="licenseType")
     def license_type(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
-        The license type of the site
+        The license type of the site. Possible values are `FWAAS-SITE-25Mbps`, `FWAAS-SITE-50Mbps`, `FWAAS-SITE-250Mbps`, `FWAAS-SITE-1000Mbps` and `FWAAS-SITE-2500Mbps`.
         """
         return pulumi.get(self, "license_type")
 
@@ -463,7 +463,7 @@ class _SiteState:
     @pulumi.getter
     def type(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
-        The site type
+        The site type. Possible values are `prisma-sdwan`, `third-party-branch` and `third-party-discovered`.
         """
         return pulumi.get(self, "type")
 
@@ -615,13 +615,13 @@ class Site(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] city: The city in which the site exists
         :param pulumi.Input[_builtins.str] country: The country in which the site exists
         :param pulumi.Input[_builtins.str] latitude: The latitude coordinate for the site
-        :param pulumi.Input[_builtins.str] license_type: The license type of the site
+        :param pulumi.Input[_builtins.str] license_type: The license type of the site. Possible values are `FWAAS-SITE-25Mbps`, `FWAAS-SITE-50Mbps`, `FWAAS-SITE-250Mbps`, `FWAAS-SITE-1000Mbps` and `FWAAS-SITE-2500Mbps`.
         :param pulumi.Input[_builtins.str] longitude: The longitude coordinate for the site
         :param pulumi.Input[Sequence[pulumi.Input[Union['SiteMemberArgs', 'SiteMemberArgsDict', 'outputs.SiteMember']]]] members: Members
         :param pulumi.Input[_builtins.str] name: The name of the site
         :param pulumi.Input[Union['SiteQosArgs', 'SiteQosArgsDict', 'outputs.SiteQos']] qos: Qos
         :param pulumi.Input[_builtins.str] state: The state in which the site exists
-        :param pulumi.Input[_builtins.str] type: The site type
+        :param pulumi.Input[_builtins.str] type: The site type. Possible values are `prisma-sdwan`, `third-party-branch` and `third-party-discovered`.
         :param pulumi.Input[_builtins.str] zip_code: The postal code in which the site exists
         """
         ...
@@ -824,14 +824,14 @@ class Site(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] country: The country in which the site exists
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
         :param pulumi.Input[_builtins.str] latitude: The latitude coordinate for the site
-        :param pulumi.Input[_builtins.str] license_type: The license type of the site
+        :param pulumi.Input[_builtins.str] license_type: The license type of the site. Possible values are `FWAAS-SITE-25Mbps`, `FWAAS-SITE-50Mbps`, `FWAAS-SITE-250Mbps`, `FWAAS-SITE-1000Mbps` and `FWAAS-SITE-2500Mbps`.
         :param pulumi.Input[_builtins.str] longitude: The longitude coordinate for the site
         :param pulumi.Input[Sequence[pulumi.Input[Union['SiteMemberArgs', 'SiteMemberArgsDict', 'outputs.SiteMember']]]] members: Members
         :param pulumi.Input[_builtins.str] name: The name of the site
         :param pulumi.Input[Union['SiteQosArgs', 'SiteQosArgsDict', 'outputs.SiteQos']] qos: Qos
         :param pulumi.Input[_builtins.str] state: The state in which the site exists
         :param pulumi.Input[_builtins.str] tfid: The Terraform ID.
-        :param pulumi.Input[_builtins.str] type: The site type
+        :param pulumi.Input[_builtins.str] type: The site type. Possible values are `prisma-sdwan`, `third-party-branch` and `third-party-discovered`.
         :param pulumi.Input[_builtins.str] zip_code: The postal code in which the site exists
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
@@ -907,7 +907,7 @@ class Site(pulumi.CustomResource):
     @pulumi.getter(name="licenseType")
     def license_type(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The license type of the site
+        The license type of the site. Possible values are `FWAAS-SITE-25Mbps`, `FWAAS-SITE-50Mbps`, `FWAAS-SITE-250Mbps`, `FWAAS-SITE-1000Mbps` and `FWAAS-SITE-2500Mbps`.
         """
         return pulumi.get(self, "license_type")
 
@@ -963,7 +963,7 @@ class Site(pulumi.CustomResource):
     @pulumi.getter
     def type(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The site type
+        The site type. Possible values are `prisma-sdwan`, `third-party-branch` and `third-party-discovered`.
         """
         return pulumi.get(self, "type")
 

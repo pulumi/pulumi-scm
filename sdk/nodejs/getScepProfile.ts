@@ -48,12 +48,21 @@ export interface GetScepProfileArgs {
      * The device in which the resource is defined
      */
     device?: string;
+    /**
+     * The folder in which the resource is defined
+     */
     folder?: string;
     /**
      * The UUID of the SCEP profile
      */
     id: string;
+    /**
+     * The name of the SCEP profile
+     */
     name?: string;
+    /**
+     * The snippet in which the resource is defined
+     */
     snippet?: string;
 }
 
@@ -61,30 +70,81 @@ export interface GetScepProfileArgs {
  * A collection of values returned by getScepProfile.
  */
 export interface GetScepProfileResult {
+    /**
+     * Algorithm
+     */
     readonly algorithm: outputs.GetScepProfileAlgorithm;
+    /**
+     * Certificate Authority Identity
+     */
     readonly caIdentityName: string;
+    /**
+     * Subject Alternative name type
+     */
     readonly certificateAttributes: outputs.GetScepProfileCertificateAttributes;
     /**
      * The device in which the resource is defined
      */
     readonly device: string;
+    /**
+     * Digest for CSR. Possible values are `sha1`, `sha256`, `sha384` and `sha512`.
+     */
     readonly digest: string;
+    /**
+     * Map of sensitive values returned from the API.
+     */
     readonly encryptedValues: {[key: string]: string};
+    /**
+     * CA Certificate Fingerprint
+     */
     readonly fingerprint: string;
+    /**
+     * The folder in which the resource is defined
+     */
     readonly folder: string;
     /**
      * The UUID of the SCEP profile
      */
     readonly id: string;
+    /**
+     * The name of the SCEP profile
+     */
     readonly name: string;
+    /**
+     * SCEP Server CA Certificate. Possible values are `Authentication Cookie CA`, `Forward-Trust-CA`, `Forward-Trust-CA-ECDSA`, `Forward-UnTrust-CA`, `Forward-UnTrust-CA-ECDSA`, `Global Authentication Cookie CA`, `GlobalSign-Root-CA` and `Root CA`.
+     */
     readonly scepCaCert: string;
+    /**
+     * One Time Password Challenge
+     */
     readonly scepChallenge: outputs.GetScepProfileScepChallenge;
+    /**
+     * SCEP Client Certificate. Possible values are `Authentication Cookie CA`, `Forward-Trust-CA`, `Forward-Trust-CA-ECDSA`, `Forward-UnTrust-CA`, `Forward-UnTrust-CA-ECDSA`, `Global Authentication Cookie CA`, `GlobalSign-Root-CA` and `Root CA`.
+     */
     readonly scepClientCert: string;
+    /**
+     * SCEP server URL
+     */
     readonly scepUrl: string;
+    /**
+     * The snippet in which the resource is defined
+     */
     readonly snippet: string;
+    /**
+     * Subject
+     */
     readonly subject: string;
+    /**
+     * The Terraform ID.
+     */
     readonly tfid: string;
+    /**
+     * Use as digital signature?
+     */
     readonly useAsDigitalSignature: boolean;
+    /**
+     * Use for key encipherment?
+     */
     readonly useForKeyEncipherment: boolean;
 }
 /**
@@ -129,11 +189,20 @@ export interface GetScepProfileOutputArgs {
      * The device in which the resource is defined
      */
     device?: pulumi.Input<string | undefined>;
+    /**
+     * The folder in which the resource is defined
+     */
     folder?: pulumi.Input<string | undefined>;
     /**
      * The UUID of the SCEP profile
      */
     id: pulumi.Input<string>;
+    /**
+     * The name of the SCEP profile
+     */
     name?: pulumi.Input<string | undefined>;
+    /**
+     * The snippet in which the resource is defined
+     */
     snippet?: pulumi.Input<string | undefined>;
 }

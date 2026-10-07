@@ -16,14 +16,30 @@ public final class GetTcpSettingResult {
      * 
      */
     private String device;
+    /**
+     * @return The folder in which the resource is defined
+     * 
+     */
     private String folder;
     /**
      * @return UUID of the resource
      * 
      */
     private String id;
+    /**
+     * @return The snippet in which the resource is defined
+     * 
+     */
     private String snippet;
+    /**
+     * @return Tcp
+     * 
+     */
     private GetTcpSettingTcp tcp;
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     private String tfid;
 
     private GetTcpSettingResult() {}
@@ -34,6 +50,10 @@ public final class GetTcpSettingResult {
     public String device() {
         return this.device;
     }
+    /**
+     * @return The folder in which the resource is defined
+     * 
+     */
     public String folder() {
         return this.folder;
     }
@@ -44,12 +64,24 @@ public final class GetTcpSettingResult {
     public String id() {
         return this.id;
     }
+    /**
+     * @return The snippet in which the resource is defined
+     * 
+     */
     public String snippet() {
         return this.snippet;
     }
+    /**
+     * @return Tcp
+     * 
+     */
     public GetTcpSettingTcp tcp() {
         return this.tcp;
     }
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     public String tfid() {
         return this.tfid;
     }

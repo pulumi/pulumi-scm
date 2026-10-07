@@ -13,7 +13,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class BgpRouteMapRedistributionOspfBgpRouteMapSetMetric {
     /**
-     * @return OSPF BGP Route maps set Metric action
+     * @return OSPF BGP Route maps set Metric action. Possible values are `set`, `add` and `substract`.
      * 
      */
     private @Nullable String action;
@@ -25,7 +25,7 @@ public final class BgpRouteMapRedistributionOspfBgpRouteMapSetMetric {
 
     private BgpRouteMapRedistributionOspfBgpRouteMapSetMetric() {}
     /**
-     * @return OSPF BGP Route maps set Metric action
+     * @return OSPF BGP Route maps set Metric action. Possible values are `set`, `add` and `substract`.
      * 
      */
     public Optional<String> action() {

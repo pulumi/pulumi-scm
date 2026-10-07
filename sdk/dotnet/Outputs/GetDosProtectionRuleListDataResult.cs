@@ -34,13 +34,13 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly bool Disabled;
         /// <summary>
-        /// The folder of the item. Default: Shared.
+        /// The folder in which the resource is defined
         /// </summary>
         public readonly string Folder;
         /// <summary>
-        /// List of source zones
+        /// Source zones and interfaces
         /// </summary>
-        public readonly ImmutableArray<string> Froms;
+        public readonly Outputs.GetDosProtectionRuleListDataFromResult From;
         /// <summary>
         /// The UUID of the DNS security profile
         /// </summary>
@@ -50,11 +50,11 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly string LogSetting;
         /// <summary>
-        /// The name of the item.
+        /// Rule name
         /// </summary>
         public readonly string Name;
         /// <summary>
-        /// Position relative to local device rules
+        /// Position relative to local device rules. Possible values are `Pre` and `Post`.
         /// </summary>
         public readonly string Position;
         /// <summary>
@@ -70,7 +70,7 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly ImmutableArray<string> Services;
         /// <summary>
-        /// The snippet of the item.
+        /// The snippet in which the resource is defined
         /// </summary>
         public readonly string Snippet;
         /// <summary>
@@ -90,9 +90,9 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly string Tfid;
         /// <summary>
-        /// List of destination zones
+        /// Destination zones and interfaces
         /// </summary>
-        public readonly ImmutableArray<string> Tos;
+        public readonly Outputs.GetDosProtectionRuleListDataToResult To;
 
         [OutputConstructor]
         private GetDosProtectionRuleListDataResult(
@@ -108,7 +108,7 @@ namespace Pulumi.Scm.Outputs
 
             string folder,
 
-            ImmutableArray<string> froms,
+            Outputs.GetDosProtectionRuleListDataFromResult from,
 
             string id,
 
@@ -134,7 +134,7 @@ namespace Pulumi.Scm.Outputs
 
             string tfid,
 
-            ImmutableArray<string> tos)
+            Outputs.GetDosProtectionRuleListDataToResult to)
         {
             Action = action;
             Description = description;
@@ -142,7 +142,7 @@ namespace Pulumi.Scm.Outputs
             Device = device;
             Disabled = disabled;
             Folder = folder;
-            Froms = froms;
+            From = from;
             Id = id;
             LogSetting = logSetting;
             Name = name;
@@ -155,7 +155,7 @@ namespace Pulumi.Scm.Outputs
             Sources = sources;
             Tags = tags;
             Tfid = tfid;
-            Tos = tos;
+            To = to;
         }
     }
 }

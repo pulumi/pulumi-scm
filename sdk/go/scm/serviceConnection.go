@@ -164,8 +164,6 @@ type ServiceConnection struct {
 
 	// Backup s c
 	BackupSc pulumi.StringPtrOutput `pulumi:"backupSc"`
-	// Bgp peer
-	BgpPeer ServiceConnectionBgpPeerPtrOutput `pulumi:"bgpPeer"`
 	// Map of sensitive values returned from the API.
 	EncryptedValues pulumi.StringMapOutput `pulumi:"encryptedValues"`
 	// The folder in which the resource is defined
@@ -176,9 +174,9 @@ type ServiceConnection struct {
 	Name pulumi.StringOutput `pulumi:"name"`
 	// Nat pool
 	NatPool pulumi.StringPtrOutput `pulumi:"natPool"`
-	// No export community
+	// No export community. Possible values are `Disabled`, `Enabled-In`, `Enabled-Out` and `Enabled-Both`.
 	NoExportCommunity pulumi.StringPtrOutput `pulumi:"noExportCommunity"`
-	// Onboarding type
+	// Onboarding type. Possible values are `classic`.
 	OnboardingType pulumi.StringOutput `pulumi:"onboardingType"`
 	// Protocol
 	Protocol ServiceConnectionProtocolPtrOutput `pulumi:"protocol"`
@@ -240,8 +238,6 @@ func GetServiceConnection(ctx *pulumi.Context,
 type serviceConnectionState struct {
 	// Backup s c
 	BackupSc *string `pulumi:"backupSc"`
-	// Bgp peer
-	BgpPeer *ServiceConnectionBgpPeer `pulumi:"bgpPeer"`
 	// Map of sensitive values returned from the API.
 	EncryptedValues map[string]string `pulumi:"encryptedValues"`
 	// The folder in which the resource is defined
@@ -252,9 +248,9 @@ type serviceConnectionState struct {
 	Name *string `pulumi:"name"`
 	// Nat pool
 	NatPool *string `pulumi:"natPool"`
-	// No export community
+	// No export community. Possible values are `Disabled`, `Enabled-In`, `Enabled-Out` and `Enabled-Both`.
 	NoExportCommunity *string `pulumi:"noExportCommunity"`
-	// Onboarding type
+	// Onboarding type. Possible values are `classic`.
 	OnboardingType *string `pulumi:"onboardingType"`
 	// Protocol
 	Protocol *ServiceConnectionProtocol `pulumi:"protocol"`
@@ -277,8 +273,6 @@ type serviceConnectionState struct {
 type ServiceConnectionState struct {
 	// Backup s c
 	BackupSc pulumi.StringPtrInput
-	// Bgp peer
-	BgpPeer ServiceConnectionBgpPeerPtrInput
 	// Map of sensitive values returned from the API.
 	EncryptedValues pulumi.StringMapInput
 	// The folder in which the resource is defined
@@ -289,9 +283,9 @@ type ServiceConnectionState struct {
 	Name pulumi.StringPtrInput
 	// Nat pool
 	NatPool pulumi.StringPtrInput
-	// No export community
+	// No export community. Possible values are `Disabled`, `Enabled-In`, `Enabled-Out` and `Enabled-Both`.
 	NoExportCommunity pulumi.StringPtrInput
-	// Onboarding type
+	// Onboarding type. Possible values are `classic`.
 	OnboardingType pulumi.StringPtrInput
 	// Protocol
 	Protocol ServiceConnectionProtocolPtrInput
@@ -318,17 +312,15 @@ func (ServiceConnectionState) ElementType() reflect.Type {
 type serviceConnectionArgs struct {
 	// Backup s c
 	BackupSc *string `pulumi:"backupSc"`
-	// Bgp peer
-	BgpPeer *ServiceConnectionBgpPeer `pulumi:"bgpPeer"`
 	// Ipsec tunnel
 	IpsecTunnel string `pulumi:"ipsecTunnel"`
 	// The name of the service connection
 	Name *string `pulumi:"name"`
 	// Nat pool
 	NatPool *string `pulumi:"natPool"`
-	// No export community
+	// No export community. Possible values are `Disabled`, `Enabled-In`, `Enabled-Out` and `Enabled-Both`.
 	NoExportCommunity *string `pulumi:"noExportCommunity"`
-	// Onboarding type
+	// Onboarding type. Possible values are `classic`.
 	OnboardingType *string `pulumi:"onboardingType"`
 	// Protocol
 	Protocol *ServiceConnectionProtocol `pulumi:"protocol"`
@@ -350,17 +342,15 @@ type serviceConnectionArgs struct {
 type ServiceConnectionArgs struct {
 	// Backup s c
 	BackupSc pulumi.StringPtrInput
-	// Bgp peer
-	BgpPeer ServiceConnectionBgpPeerPtrInput
 	// Ipsec tunnel
 	IpsecTunnel pulumi.StringInput
 	// The name of the service connection
 	Name pulumi.StringPtrInput
 	// Nat pool
 	NatPool pulumi.StringPtrInput
-	// No export community
+	// No export community. Possible values are `Disabled`, `Enabled-In`, `Enabled-Out` and `Enabled-Both`.
 	NoExportCommunity pulumi.StringPtrInput
-	// Onboarding type
+	// Onboarding type. Possible values are `classic`.
 	OnboardingType pulumi.StringPtrInput
 	// Protocol
 	Protocol ServiceConnectionProtocolPtrInput
@@ -470,11 +460,6 @@ func (o ServiceConnectionOutput) BackupSc() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *ServiceConnection) pulumi.StringPtrOutput { return v.BackupSc }).(pulumi.StringPtrOutput)
 }
 
-// Bgp peer
-func (o ServiceConnectionOutput) BgpPeer() ServiceConnectionBgpPeerPtrOutput {
-	return o.ApplyT(func(v *ServiceConnection) ServiceConnectionBgpPeerPtrOutput { return v.BgpPeer }).(ServiceConnectionBgpPeerPtrOutput)
-}
-
 // Map of sensitive values returned from the API.
 func (o ServiceConnectionOutput) EncryptedValues() pulumi.StringMapOutput {
 	return o.ApplyT(func(v *ServiceConnection) pulumi.StringMapOutput { return v.EncryptedValues }).(pulumi.StringMapOutput)
@@ -500,12 +485,12 @@ func (o ServiceConnectionOutput) NatPool() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *ServiceConnection) pulumi.StringPtrOutput { return v.NatPool }).(pulumi.StringPtrOutput)
 }
 
-// No export community
+// No export community. Possible values are `Disabled`, `Enabled-In`, `Enabled-Out` and `Enabled-Both`.
 func (o ServiceConnectionOutput) NoExportCommunity() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *ServiceConnection) pulumi.StringPtrOutput { return v.NoExportCommunity }).(pulumi.StringPtrOutput)
 }
 
-// Onboarding type
+// Onboarding type. Possible values are `classic`.
 func (o ServiceConnectionOutput) OnboardingType() pulumi.StringOutput {
 	return o.ApplyT(func(v *ServiceConnection) pulumi.StringOutput { return v.OnboardingType }).(pulumi.StringOutput)
 }

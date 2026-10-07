@@ -12,12 +12,12 @@ import java.util.Objects;
 @CustomType
 public final class GetSyslogServerProfileServer {
     /**
-     * @return Syslog facility
+     * @return Syslog facility. Possible values are `LOG_USER`, `LOG_LOCAL0`, `LOG_LOCAL1`, `LOG_LOCAL2`, `LOG_LOCAL3`, `LOG_LOCAL4`, `LOG_LOCAL5`, `LOG_LOCAL6` and `LOG_LOCAL7`.
      * 
      */
     private String facility;
     /**
-     * @return Syslog format
+     * @return Syslog format. Possible values are `BSD` and `IETF`.
      * 
      */
     private String format;
@@ -37,21 +37,21 @@ public final class GetSyslogServerProfileServer {
      */
     private String server;
     /**
-     * @return Transport protocol
+     * @return Transport protocol. Possible values are `UDP` and `TCP`.
      * 
      */
     private String transport;
 
     private GetSyslogServerProfileServer() {}
     /**
-     * @return Syslog facility
+     * @return Syslog facility. Possible values are `LOG_USER`, `LOG_LOCAL0`, `LOG_LOCAL1`, `LOG_LOCAL2`, `LOG_LOCAL3`, `LOG_LOCAL4`, `LOG_LOCAL5`, `LOG_LOCAL6` and `LOG_LOCAL7`.
      * 
      */
     public String facility() {
         return this.facility;
     }
     /**
-     * @return Syslog format
+     * @return Syslog format. Possible values are `BSD` and `IETF`.
      * 
      */
     public String format() {
@@ -79,7 +79,7 @@ public final class GetSyslogServerProfileServer {
         return this.server;
     }
     /**
-     * @return Transport protocol
+     * @return Transport protocol. Possible values are `UDP` and `TCP`.
      * 
      */
     public String transport() {

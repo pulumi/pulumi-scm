@@ -18,9 +18,7 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly Outputs.GetRoutePrefixListListDataTypeIpv4Ipv4EntryPrefixEntryResult Entry;
         /// <summary>
-        /// Network
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Entry` and `Network`.
+        /// Network. Possible values are `Any`.
         /// </summary>
         public readonly string Network;
 

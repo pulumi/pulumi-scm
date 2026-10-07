@@ -12,26 +12,26 @@ import javax.annotation.Nullable;
 @CustomType
 public final class DnsSecurityProfileBotnetDomainsSinkhole {
     /**
-     * @return Ipv4 address
+     * @return Ipv4 address. Possible values are `127.0.0.1` and `pan-sinkhole-default-ip`.
      * 
      */
     private @Nullable String ipv4Address;
     /**
-     * @return Ipv6 address
+     * @return Ipv6 address. Possible values are `::1`.
      * 
      */
     private @Nullable String ipv6Address;
 
     private DnsSecurityProfileBotnetDomainsSinkhole() {}
     /**
-     * @return Ipv4 address
+     * @return Ipv4 address. Possible values are `127.0.0.1` and `pan-sinkhole-default-ip`.
      * 
      */
     public Optional<String> ipv4Address() {
         return Optional.ofNullable(this.ipv4Address);
     }
     /**
-     * @return Ipv6 address
+     * @return Ipv6 address. Possible values are `::1`.
      * 
      */
     public Optional<String> ipv6Address() {

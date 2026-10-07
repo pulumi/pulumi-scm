@@ -28,8 +28,19 @@ import (
 //
 //	func main() {
 //		pulumi.Run(func(ctx *pulumi.Context) error {
+//			// Creates a variable in ip-netmask format with an empty value
+//			_, err := scm.NewVariable(ctx, "scm_variable_ipaddr_empty", &scm.VariableArgs{
+//				Folder:      pulumi.String("ngfw-shared"),
+//				Name:        pulumi.String("$tf_variable_ipaddr_empty"),
+//				Description: pulumi.String("Managed by Pulumi"),
+//				Type:        pulumi.String("ip-netmask"),
+//				Value:       pulumi.String("None"),
+//			})
+//			if err != nil {
+//				return err
+//			}
 //			// Creates a variable in as-number format
-//			_, err := scm.NewVariable(ctx, "scm_variable_asn", &scm.VariableArgs{
+//			_, err = scm.NewVariable(ctx, "scm_variable_asn", &scm.VariableArgs{
 //				Folder:      pulumi.String("ngfw-shared"),
 //				Name:        pulumi.String("$tf_variable_asn"),
 //				Description: pulumi.String("Managed by Pulumi"),
@@ -184,20 +195,16 @@ type Variable struct {
 	// The device in which the resource is defined
 	Device pulumi.StringPtrOutput `pulumi:"device"`
 	// The folder in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrOutput `pulumi:"folder"`
 	// The name of the variable
 	Name pulumi.StringOutput `pulumi:"name"`
 	// Is the variable overridden?
 	Overridden pulumi.BoolOutput `pulumi:"overridden"`
 	// The snippet in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
 	// The Terraform ID.
 	Tfid pulumi.StringOutput `pulumi:"tfid"`
-	// The variable type
+	// The variable type. Possible values are `percent`, `count`, `ip-netmask`, `zone`, `ip-range`, `ip-wildcard`, `device-priority`, `device-id`, `egress-max`, `as-number`, `fqdn`, `port`, `link-tag`, `group-id`, `rate`, `router-id`, `qos-profile` and `timer`.
 	Type pulumi.StringOutput `pulumi:"type"`
 	// The value of the variable
 	Value pulumi.StringOutput `pulumi:"value"`
@@ -244,20 +251,16 @@ type variableState struct {
 	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
 	// The folder in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// The name of the variable
 	Name *string `pulumi:"name"`
 	// Is the variable overridden?
 	Overridden *bool `pulumi:"overridden"`
 	// The snippet in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	// The Terraform ID.
 	Tfid *string `pulumi:"tfid"`
-	// The variable type
+	// The variable type. Possible values are `percent`, `count`, `ip-netmask`, `zone`, `ip-range`, `ip-wildcard`, `device-priority`, `device-id`, `egress-max`, `as-number`, `fqdn`, `port`, `link-tag`, `group-id`, `rate`, `router-id`, `qos-profile` and `timer`.
 	Type *string `pulumi:"type"`
 	// The value of the variable
 	Value *string `pulumi:"value"`
@@ -269,20 +272,16 @@ type VariableState struct {
 	// The device in which the resource is defined
 	Device pulumi.StringPtrInput
 	// The folder in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// The name of the variable
 	Name pulumi.StringPtrInput
 	// Is the variable overridden?
 	Overridden pulumi.BoolPtrInput
 	// The snippet in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	// The Terraform ID.
 	Tfid pulumi.StringPtrInput
-	// The variable type
+	// The variable type. Possible values are `percent`, `count`, `ip-netmask`, `zone`, `ip-range`, `ip-wildcard`, `device-priority`, `device-id`, `egress-max`, `as-number`, `fqdn`, `port`, `link-tag`, `group-id`, `rate`, `router-id`, `qos-profile` and `timer`.
 	Type pulumi.StringPtrInput
 	// The value of the variable
 	Value pulumi.StringPtrInput
@@ -298,16 +297,12 @@ type variableArgs struct {
 	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
 	// The folder in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// The name of the variable
 	Name *string `pulumi:"name"`
 	// The snippet in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
-	// The variable type
+	// The variable type. Possible values are `percent`, `count`, `ip-netmask`, `zone`, `ip-range`, `ip-wildcard`, `device-priority`, `device-id`, `egress-max`, `as-number`, `fqdn`, `port`, `link-tag`, `group-id`, `rate`, `router-id`, `qos-profile` and `timer`.
 	Type string `pulumi:"type"`
 	// The value of the variable
 	Value string `pulumi:"value"`
@@ -320,16 +315,12 @@ type VariableArgs struct {
 	// The device in which the resource is defined
 	Device pulumi.StringPtrInput
 	// The folder in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// The name of the variable
 	Name pulumi.StringPtrInput
 	// The snippet in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
-	// The variable type
+	// The variable type. Possible values are `percent`, `count`, `ip-netmask`, `zone`, `ip-range`, `ip-wildcard`, `device-priority`, `device-id`, `egress-max`, `as-number`, `fqdn`, `port`, `link-tag`, `group-id`, `rate`, `router-id`, `qos-profile` and `timer`.
 	Type pulumi.StringInput
 	// The value of the variable
 	Value pulumi.StringInput
@@ -433,8 +424,6 @@ func (o VariableOutput) Device() pulumi.StringPtrOutput {
 }
 
 // The folder in which the resource is defined
-//
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o VariableOutput) Folder() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *Variable) pulumi.StringPtrOutput { return v.Folder }).(pulumi.StringPtrOutput)
 }
@@ -450,8 +439,6 @@ func (o VariableOutput) Overridden() pulumi.BoolOutput {
 }
 
 // The snippet in which the resource is defined
-//
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o VariableOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *Variable) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)
 }
@@ -461,7 +448,7 @@ func (o VariableOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v *Variable) pulumi.StringOutput { return v.Tfid }).(pulumi.StringOutput)
 }
 
-// The variable type
+// The variable type. Possible values are `percent`, `count`, `ip-netmask`, `zone`, `ip-range`, `ip-wildcard`, `device-priority`, `device-id`, `egress-max`, `as-number`, `fqdn`, `port`, `link-tag`, `group-id`, `rate`, `router-id`, `qos-profile` and `timer`.
 func (o VariableOutput) Type() pulumi.StringOutput {
 	return o.ApplyT(func(v *Variable) pulumi.StringOutput { return v.Type }).(pulumi.StringOutput)
 }

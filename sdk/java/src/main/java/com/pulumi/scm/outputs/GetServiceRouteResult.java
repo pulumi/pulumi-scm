@@ -16,14 +16,30 @@ public final class GetServiceRouteResult {
      * 
      */
     private String device;
+    /**
+     * @return The folder in which the resource is defined
+     * 
+     */
     private String folder;
     /**
      * @return UUID of the resource
      * 
      */
     private String id;
+    /**
+     * @return Route
+     * 
+     */
     private GetServiceRouteRoute route;
+    /**
+     * @return The snippet in which the resource is defined
+     * 
+     */
     private String snippet;
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     private String tfid;
 
     private GetServiceRouteResult() {}
@@ -34,6 +50,10 @@ public final class GetServiceRouteResult {
     public String device() {
         return this.device;
     }
+    /**
+     * @return The folder in which the resource is defined
+     * 
+     */
     public String folder() {
         return this.folder;
     }
@@ -44,12 +64,24 @@ public final class GetServiceRouteResult {
     public String id() {
         return this.id;
     }
+    /**
+     * @return Route
+     * 
+     */
     public GetServiceRouteRoute route() {
         return this.route;
     }
+    /**
+     * @return The snippet in which the resource is defined
+     * 
+     */
     public String snippet() {
         return this.snippet;
     }
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     public String tfid() {
         return this.tfid;
     }

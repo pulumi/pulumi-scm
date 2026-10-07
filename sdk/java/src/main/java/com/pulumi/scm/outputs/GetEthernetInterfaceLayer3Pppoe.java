@@ -20,7 +20,7 @@ public final class GetEthernetInterfaceLayer3Pppoe {
      */
     private String accessConcentrator;
     /**
-     * @return Authentication protocol
+     * @return Authentication protocol. Possible values are `CHAP`, `PAP` and `auto`.
      * 
      */
     private String authentication;
@@ -30,7 +30,7 @@ public final class GetEthernetInterfaceLayer3Pppoe {
      */
     private Integer defaultRouteMetric;
     /**
-     * @return Enable
+     * @return Enable PPPoE on the interface
      * 
      */
     private Boolean enable;
@@ -69,7 +69,7 @@ public final class GetEthernetInterfaceLayer3Pppoe {
         return this.accessConcentrator;
     }
     /**
-     * @return Authentication protocol
+     * @return Authentication protocol. Possible values are `CHAP`, `PAP` and `auto`.
      * 
      */
     public String authentication() {
@@ -83,7 +83,7 @@ public final class GetEthernetInterfaceLayer3Pppoe {
         return this.defaultRouteMetric;
     }
     /**
-     * @return Enable
+     * @return Enable PPPoE on the interface
      * 
      */
     public Boolean enable() {

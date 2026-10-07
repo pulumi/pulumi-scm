@@ -20,48 +20,36 @@ namespace Pulumi.Scm.Inputs
 
         /// <summary>
         /// IMEI Configuration settings
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Domain`, `Imei`, `Imsi`, `Ip`, `PredefinedIp`, `PredefinedUrl`, and `Url`.
         /// </summary>
         [Input("imei")]
         public Input<Inputs.ExternalDynamicListTypeImeiArgs>? Imei { get; set; }
 
         /// <summary>
         /// IMSI Config for Custom IMSI type
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Domain`, `Imei`, `Imsi`, `Ip`, `PredefinedIp`, `PredefinedUrl`, and `Url`.
         /// </summary>
         [Input("imsi")]
         public Input<Inputs.ExternalDynamicListTypeImsiArgs>? Imsi { get; set; }
 
         /// <summary>
         /// IP settings for Custom IP type
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Domain`, `Imei`, `Imsi`, `Ip`, `PredefinedIp`, `PredefinedUrl`, and `Url`.
         /// </summary>
         [Input("ip")]
         public Input<Inputs.ExternalDynamicListTypeIpArgs>? Ip { get; set; }
 
         /// <summary>
         /// Predefined IP settings for EDL type
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Domain`, `Imei`, `Imsi`, `Ip`, `PredefinedIp`, `PredefinedUrl`, and `Url`.
         /// </summary>
         [Input("predefinedIp")]
         public Input<Inputs.ExternalDynamicListTypePredefinedIpArgs>? PredefinedIp { get; set; }
 
         /// <summary>
         /// Predefined URL settings for EDL type
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Domain`, `Imei`, `Imsi`, `Ip`, `PredefinedIp`, `PredefinedUrl`, and `Url`.
         /// </summary>
         [Input("predefinedUrl")]
         public Input<Inputs.ExternalDynamicListTypePredefinedUrlArgs>? PredefinedUrl { get; set; }
 
         /// <summary>
         /// URL settings for Custom URL type
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Domain`, `Imei`, `Imsi`, `Ip`, `PredefinedIp`, `PredefinedUrl`, and `Url`.
         /// </summary>
         [Input("url")]
         public Input<Inputs.ExternalDynamicListTypeUrlArgs>? Url { get; set; }

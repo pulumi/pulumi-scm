@@ -42,7 +42,7 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly string Nexthop;
         /// <summary>
-        /// Origin
+        /// Origin. Possible values are `Igp`, `Egp` and `Multicast`.
         /// </summary>
         public readonly string Origin;
 

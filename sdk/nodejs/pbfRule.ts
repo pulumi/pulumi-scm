@@ -174,8 +174,6 @@ export class PbfRule extends pulumi.CustomResource {
     declare public readonly enforceSymmetricReturn: pulumi.Output<outputs.PbfRuleEnforceSymmetricReturn | undefined>;
     /**
      * The folder in which the resource is defined
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly folder: pulumi.Output<string | undefined>;
     /**
@@ -187,6 +185,14 @@ export class PbfRule extends pulumi.CustomResource {
      */
     declare public readonly name: pulumi.Output<string>;
     /**
+     * Negate destination address
+     */
+    declare public readonly negateDestination: pulumi.Output<boolean>;
+    /**
+     * Negate source address
+     */
+    declare public readonly negateSource: pulumi.Output<boolean>;
+    /**
      * Schedule
      */
     declare public readonly schedule: pulumi.Output<string | undefined>;
@@ -196,8 +202,6 @@ export class PbfRule extends pulumi.CustomResource {
     declare public readonly services: pulumi.Output<string[] | undefined>;
     /**
      * The snippet in which the resource is defined
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly snippet: pulumi.Output<string | undefined>;
     /**
@@ -239,6 +243,8 @@ export class PbfRule extends pulumi.CustomResource {
             resourceInputs["folder"] = state?.folder;
             resourceInputs["from"] = state?.from;
             resourceInputs["name"] = state?.name;
+            resourceInputs["negateDestination"] = state?.negateDestination;
+            resourceInputs["negateSource"] = state?.negateSource;
             resourceInputs["schedule"] = state?.schedule;
             resourceInputs["services"] = state?.services;
             resourceInputs["snippet"] = state?.snippet;
@@ -257,6 +263,8 @@ export class PbfRule extends pulumi.CustomResource {
             resourceInputs["folder"] = args?.folder;
             resourceInputs["from"] = args?.from;
             resourceInputs["name"] = args?.name;
+            resourceInputs["negateDestination"] = args?.negateDestination;
+            resourceInputs["negateSource"] = args?.negateSource;
             resourceInputs["schedule"] = args?.schedule;
             resourceInputs["services"] = args?.services;
             resourceInputs["snippet"] = args?.snippet;
@@ -300,8 +308,6 @@ export interface PbfRuleState {
     enforceSymmetricReturn?: pulumi.Input<inputs.PbfRuleEnforceSymmetricReturn | undefined>;
     /**
      * The folder in which the resource is defined
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     folder?: pulumi.Input<string | undefined>;
     /**
@@ -313,6 +319,14 @@ export interface PbfRuleState {
      */
     name?: pulumi.Input<string | undefined>;
     /**
+     * Negate destination address
+     */
+    negateDestination?: pulumi.Input<boolean | undefined>;
+    /**
+     * Negate source address
+     */
+    negateSource?: pulumi.Input<boolean | undefined>;
+    /**
      * Schedule
      */
     schedule?: pulumi.Input<string | undefined>;
@@ -322,8 +336,6 @@ export interface PbfRuleState {
     services?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * The snippet in which the resource is defined
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     snippet?: pulumi.Input<string | undefined>;
     /**
@@ -374,8 +386,6 @@ export interface PbfRuleArgs {
     enforceSymmetricReturn?: pulumi.Input<inputs.PbfRuleEnforceSymmetricReturn | undefined>;
     /**
      * The folder in which the resource is defined
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     folder?: pulumi.Input<string | undefined>;
     /**
@@ -387,6 +397,14 @@ export interface PbfRuleArgs {
      */
     name?: pulumi.Input<string | undefined>;
     /**
+     * Negate destination address
+     */
+    negateDestination?: pulumi.Input<boolean | undefined>;
+    /**
+     * Negate source address
+     */
+    negateSource?: pulumi.Input<boolean | undefined>;
+    /**
      * Schedule
      */
     schedule?: pulumi.Input<string | undefined>;
@@ -396,8 +414,6 @@ export interface PbfRuleArgs {
     services?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * The snippet in which the resource is defined
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     snippet?: pulumi.Input<string | undefined>;
     /**

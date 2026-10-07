@@ -22,11 +22,11 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly string Description;
         /// <summary>
-        /// Behavior when proxy connection fails - 'fail-open' allows direct internet access, 'fail-safe' blocks traffic until proxy is restored
+        /// Behavior when proxy connection fails - 'fail-open' allows direct internet access, 'fail-safe' blocks traffic until proxy is restored. Possible values are `fail-open` and `fail-safe`.
         /// </summary>
         public readonly string FallbackOption;
         /// <summary>
-        /// The folder in which the resource is defined
+        /// The folder in which the resource is defined. Possible values are `Mobile Users`.
         /// </summary>
         public readonly string Folder;
         /// <summary>
@@ -34,7 +34,7 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly string Id;
         /// <summary>
-        /// Strategy for selecting Prisma Access location - 'best-available-pa-location' automatically selects optimal location, 'specific-pa-location' uses predefined locations
+        /// Strategy for selecting Prisma Access location - 'best-available-pa-location' automatically selects optimal location, 'specific-pa-location' uses predefined locations. Possible values are `best-available-pa-location` and `specific-pa-location`.
         /// </summary>
         public readonly string LocationPreference;
         /// <summary>
@@ -58,7 +58,7 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly string Tfid;
         /// <summary>
-        /// Proxy configuration type - 'gp-and-pac' for GlobalProtect and PAC file forwarding, 'ztna-agent' for ZTNA agent forwarding
+        /// Proxy configuration type - 'gp-and-pac' for GlobalProtect and PAC file forwarding, 'ztna-agent' for ZTNA agent forwarding. Possible values are `gp-and-pac` and `ztna-agent`.
         /// </summary>
         public readonly string Type;
 

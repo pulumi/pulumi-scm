@@ -28,12 +28,21 @@ export interface GetWildfireAntiVirusProfileArgs {
      * The device in which the resource is defined
      */
     device?: string;
+    /**
+     * The folder in which the resource is defined
+     */
     folder?: string;
     /**
      * UUID of the resource
      */
     id: string;
+    /**
+     * Name
+     */
     name?: string;
+    /**
+     * The snippet in which the resource is defined
+     */
     snippet?: string;
 }
 
@@ -41,22 +50,49 @@ export interface GetWildfireAntiVirusProfileArgs {
  * A collection of values returned by getWildfireAntiVirusProfile.
  */
 export interface GetWildfireAntiVirusProfileResult {
+    /**
+     * Description
+     */
     readonly description: string;
     /**
      * The device in which the resource is defined
      */
     readonly device: string;
+    /**
+     * The folder in which the resource is defined
+     */
     readonly folder: string;
     /**
      * UUID of the resource
      */
     readonly id: string;
+    /**
+     * Mlav exception
+     */
     readonly mlavExceptions: outputs.GetWildfireAntiVirusProfileMlavException[];
+    /**
+     * Name
+     */
     readonly name: string;
+    /**
+     * Packet capture
+     */
     readonly packetCapture: boolean;
+    /**
+     * Rules
+     */
     readonly rules: outputs.GetWildfireAntiVirusProfileRule[];
+    /**
+     * The snippet in which the resource is defined
+     */
     readonly snippet: string;
+    /**
+     * The Terraform ID.
+     */
     readonly tfid: string;
+    /**
+     * Threat exception
+     */
     readonly threatExceptions: outputs.GetWildfireAntiVirusProfileThreatException[];
 }
 /**
@@ -81,11 +117,20 @@ export interface GetWildfireAntiVirusProfileOutputArgs {
      * The device in which the resource is defined
      */
     device?: pulumi.Input<string | undefined>;
+    /**
+     * The folder in which the resource is defined
+     */
     folder?: pulumi.Input<string | undefined>;
     /**
      * UUID of the resource
      */
     id: pulumi.Input<string>;
+    /**
+     * Name
+     */
     name?: pulumi.Input<string | undefined>;
+    /**
+     * The snippet in which the resource is defined
+     */
     snippet?: pulumi.Input<string | undefined>;
 }

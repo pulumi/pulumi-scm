@@ -125,14 +125,14 @@ public final class LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateArgs exte
     }
 
     /**
-     * Origin
+     * Origin. Possible values are `igp`, `egp` and `incomplete`.
      * 
      */
     @Import(name="origin")
     private @Nullable Output<String> origin;
 
     /**
-     * @return Origin
+     * @return Origin. Possible values are `igp`, `egp` and `incomplete`.
      * 
      */
     public Optional<Output<String>> origin() {
@@ -334,7 +334,7 @@ public final class LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateArgs exte
         }
 
         /**
-         * @param origin Origin
+         * @param origin Origin. Possible values are `igp`, `egp` and `incomplete`.
          * 
          * @return builder
          * 
@@ -345,7 +345,7 @@ public final class LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateArgs exte
         }
 
         /**
-         * @param origin Origin
+         * @param origin Origin. Possible values are `igp`, `egp` and `incomplete`.
          * 
          * @return builder
          * 

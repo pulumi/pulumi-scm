@@ -36,14 +36,14 @@ public final class EthernetInterfaceLayer3PppoeArgs extends com.pulumi.resources
     }
 
     /**
-     * Authentication protocol
+     * Authentication protocol. Possible values are `CHAP`, `PAP` and `auto`.
      * 
      */
     @Import(name="authentication")
     private @Nullable Output<String> authentication;
 
     /**
-     * @return Authentication protocol
+     * @return Authentication protocol. Possible values are `CHAP`, `PAP` and `auto`.
      * 
      */
     public Optional<Output<String>> authentication() {
@@ -66,14 +66,14 @@ public final class EthernetInterfaceLayer3PppoeArgs extends com.pulumi.resources
     }
 
     /**
-     * Enable
+     * Enable PPPoE on the interface
      * 
      */
     @Import(name="enable")
     private @Nullable Output<Boolean> enable;
 
     /**
-     * @return Enable
+     * @return Enable PPPoE on the interface
      * 
      */
     public Optional<Output<Boolean>> enable() {
@@ -209,7 +209,7 @@ public final class EthernetInterfaceLayer3PppoeArgs extends com.pulumi.resources
         }
 
         /**
-         * @param authentication Authentication protocol
+         * @param authentication Authentication protocol. Possible values are `CHAP`, `PAP` and `auto`.
          * 
          * @return builder
          * 
@@ -220,7 +220,7 @@ public final class EthernetInterfaceLayer3PppoeArgs extends com.pulumi.resources
         }
 
         /**
-         * @param authentication Authentication protocol
+         * @param authentication Authentication protocol. Possible values are `CHAP`, `PAP` and `auto`.
          * 
          * @return builder
          * 
@@ -251,7 +251,7 @@ public final class EthernetInterfaceLayer3PppoeArgs extends com.pulumi.resources
         }
 
         /**
-         * @param enable Enable
+         * @param enable Enable PPPoE on the interface
          * 
          * @return builder
          * 
@@ -262,7 +262,7 @@ public final class EthernetInterfaceLayer3PppoeArgs extends com.pulumi.resources
         }
 
         /**
-         * @param enable Enable
+         * @param enable Enable PPPoE on the interface
          * 
          * @return builder
          * 

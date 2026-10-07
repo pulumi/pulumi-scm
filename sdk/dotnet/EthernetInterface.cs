@@ -154,10 +154,19 @@ namespace Pulumi.Scm
     ///                 new Scm.Inputs.EthernetInterfaceLayer3IpArgs
     ///                 {
     ///                     Name = "198.18.1.1/24",
+    ///                 },
+    ///                 new Scm.Inputs.EthernetInterfaceLayer3IpArgs
+    ///                 {
     ///                     Name = "198.18.1.2/32",
     ///                 },
     ///             },
     ///             Mtu = 1500,
+    ///             AdjustTcpMss = new Scm.Inputs.EthernetInterfaceLayer3AdjustTcpMssArgs
+    ///             {
+    ///                 Enable = true,
+    ///                 Ipv4MssAdjustment = 40,
+    ///                 Ipv6MssAdjustment = 60,
+    ///             },
     ///         },
     ///     });
     /// 
@@ -249,8 +258,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The device in which the resource is defined
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Output("device")]
         public Output<string?> Device { get; private set; } = null!;
@@ -263,42 +270,36 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The folder in which the resource is defined
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Output("folder")]
         public Output<string?> Folder { get; private set; } = null!;
 
         /// <summary>
         /// Layer2
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `AggregateGroup`, `Layer2`, `Layer3`, and `Tap`.
         /// </summary>
         [Output("layer2")]
         public Output<Outputs.EthernetInterfaceLayer2?> Layer2 { get; private set; } = null!;
 
         /// <summary>
         /// Ethernet Interface Layer 3 configuration
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `AggregateGroup`, `Layer2`, `Layer3`, and `Tap`.
         /// </summary>
         [Output("layer3")]
         public Output<Outputs.EthernetInterfaceLayer3?> Layer3 { get; private set; } = null!;
 
         /// <summary>
-        /// Link duplex
+        /// Link duplex. Possible values are `Auto`, `Half` and `Full`.
         /// </summary>
         [Output("linkDuplex")]
         public Output<string> LinkDuplex { get; private set; } = null!;
 
         /// <summary>
-        /// Link speed
+        /// Link speed. Possible values are `Auto`, `10`, `100`, `1000`, `10000`, `40000` and `100000`.
         /// </summary>
         [Output("linkSpeed")]
         public Output<string> LinkSpeed { get; private set; } = null!;
 
         /// <summary>
-        /// Link state
+        /// Link state. Possible values are `Auto`, `Up` and `Down`.
         /// </summary>
         [Output("linkState")]
         public Output<string> LinkState { get; private set; } = null!;
@@ -317,16 +318,12 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The snippet in which the resource is defined
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Output("snippet")]
         public Output<string?> Snippet { get; private set; } = null!;
 
         /// <summary>
         /// Tap
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `AggregateGroup`, `Layer2`, `Layer3`, and `Tap`.
         /// </summary>
         [Output("tap")]
         public Output<Outputs.EthernetInterfaceTap?> Tap { get; private set; } = null!;
@@ -407,50 +404,42 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The device in which the resource is defined
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("device")]
         public Input<string>? Device { get; set; }
 
         /// <summary>
         /// The folder in which the resource is defined
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("folder")]
         public Input<string>? Folder { get; set; }
 
         /// <summary>
         /// Layer2
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `AggregateGroup`, `Layer2`, `Layer3`, and `Tap`.
         /// </summary>
         [Input("layer2")]
         public Input<Inputs.EthernetInterfaceLayer2Args>? Layer2 { get; set; }
 
         /// <summary>
         /// Ethernet Interface Layer 3 configuration
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `AggregateGroup`, `Layer2`, `Layer3`, and `Tap`.
         /// </summary>
         [Input("layer3")]
         public Input<Inputs.EthernetInterfaceLayer3Args>? Layer3 { get; set; }
 
         /// <summary>
-        /// Link duplex
+        /// Link duplex. Possible values are `Auto`, `Half` and `Full`.
         /// </summary>
         [Input("linkDuplex")]
         public Input<string>? LinkDuplex { get; set; }
 
         /// <summary>
-        /// Link speed
+        /// Link speed. Possible values are `Auto`, `10`, `100`, `1000`, `10000`, `40000` and `100000`.
         /// </summary>
         [Input("linkSpeed")]
         public Input<string>? LinkSpeed { get; set; }
 
         /// <summary>
-        /// Link state
+        /// Link state. Possible values are `Auto`, `Up` and `Down`.
         /// </summary>
         [Input("linkState")]
         public Input<string>? LinkState { get; set; }
@@ -469,16 +458,12 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The snippet in which the resource is defined
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("snippet")]
         public Input<string>? Snippet { get; set; }
 
         /// <summary>
         /// Tap
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `AggregateGroup`, `Layer2`, `Layer3`, and `Tap`.
         /// </summary>
         [Input("tap")]
         public Input<Inputs.EthernetInterfaceTapArgs>? Tap { get; set; }
@@ -511,8 +496,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The device in which the resource is defined
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("device")]
         public Input<string>? Device { get; set; }
@@ -535,42 +518,36 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The folder in which the resource is defined
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("folder")]
         public Input<string>? Folder { get; set; }
 
         /// <summary>
         /// Layer2
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `AggregateGroup`, `Layer2`, `Layer3`, and `Tap`.
         /// </summary>
         [Input("layer2")]
         public Input<Inputs.EthernetInterfaceLayer2GetArgs>? Layer2 { get; set; }
 
         /// <summary>
         /// Ethernet Interface Layer 3 configuration
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `AggregateGroup`, `Layer2`, `Layer3`, and `Tap`.
         /// </summary>
         [Input("layer3")]
         public Input<Inputs.EthernetInterfaceLayer3GetArgs>? Layer3 { get; set; }
 
         /// <summary>
-        /// Link duplex
+        /// Link duplex. Possible values are `Auto`, `Half` and `Full`.
         /// </summary>
         [Input("linkDuplex")]
         public Input<string>? LinkDuplex { get; set; }
 
         /// <summary>
-        /// Link speed
+        /// Link speed. Possible values are `Auto`, `10`, `100`, `1000`, `10000`, `40000` and `100000`.
         /// </summary>
         [Input("linkSpeed")]
         public Input<string>? LinkSpeed { get; set; }
 
         /// <summary>
-        /// Link state
+        /// Link state. Possible values are `Auto`, `Up` and `Down`.
         /// </summary>
         [Input("linkState")]
         public Input<string>? LinkState { get; set; }
@@ -589,16 +566,12 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The snippet in which the resource is defined
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("snippet")]
         public Input<string>? Snippet { get; set; }
 
         /// <summary>
         /// Tap
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `AggregateGroup`, `Layer2`, `Layer3`, and `Tap`.
         /// </summary>
         [Input("tap")]
         public Input<Inputs.EthernetInterfaceTapGetArgs>? Tap { get; set; }

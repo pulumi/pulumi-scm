@@ -13,6 +13,49 @@ import (
 
 // RouteAccessList resource
 //
+// ## Example Usage
+//
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-scm/sdk/go/scm"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			_, err := scm.NewRouteAccessList(ctx, "example", &scm.RouteAccessListArgs{
+//				Folder: pulumi.String("ngfw-shared"),
+//				Name:   pulumi.String("EXAMPLE-ACL"),
+//				Type: &scm.RouteAccessListTypeArgs{
+//					Ipv4: &scm.RouteAccessListTypeIpv4Args{
+//						Ipv4Entries: scm.RouteAccessListTypeIpv4Ipv4EntryArray{
+//							&scm.RouteAccessListTypeIpv4Ipv4EntryArgs{
+//								Name:   pulumi.Int(10),
+//								Action: pulumi.String("permit"),
+//								DestinationAddress: &scm.RouteAccessListTypeIpv4Ipv4EntryDestinationAddressArgs{
+//									Entry: &scm.RouteAccessListTypeIpv4Ipv4EntryDestinationAddressEntryArgs{
+//										Address:  pulumi.String("10.0.0.0"),
+//										Wildcard: pulumi.String("0.0.0.7"),
+//									},
+//								},
+//							},
+//						},
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			return nil
+//		})
+//	}
+//
+// ```
+//
 // ## Import
 //
 // The following command can be used to import a resource not managed by Terraform:
@@ -42,14 +85,10 @@ type RouteAccessList struct {
 	// The device in which the resource is defined
 	Device pulumi.StringPtrOutput `pulumi:"device"`
 	// The folder in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrOutput `pulumi:"folder"`
 	// Route access list name
 	Name pulumi.StringOutput `pulumi:"name"`
 	// The snippet in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
 	// The Terraform ID.
 	Tfid pulumi.StringOutput `pulumi:"tfid"`
@@ -92,14 +131,10 @@ type routeAccessListState struct {
 	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
 	// The folder in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// Route access list name
 	Name *string `pulumi:"name"`
 	// The snippet in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	// The Terraform ID.
 	Tfid *string `pulumi:"tfid"`
@@ -113,14 +148,10 @@ type RouteAccessListState struct {
 	// The device in which the resource is defined
 	Device pulumi.StringPtrInput
 	// The folder in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// Route access list name
 	Name pulumi.StringPtrInput
 	// The snippet in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	// The Terraform ID.
 	Tfid pulumi.StringPtrInput
@@ -138,14 +169,10 @@ type routeAccessListArgs struct {
 	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
 	// The folder in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// Route access list name
 	Name *string `pulumi:"name"`
 	// The snippet in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	// Type
 	Type *RouteAccessListType `pulumi:"type"`
@@ -158,14 +185,10 @@ type RouteAccessListArgs struct {
 	// The device in which the resource is defined
 	Device pulumi.StringPtrInput
 	// The folder in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// Route access list name
 	Name pulumi.StringPtrInput
 	// The snippet in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	// Type
 	Type RouteAccessListTypePtrInput
@@ -269,8 +292,6 @@ func (o RouteAccessListOutput) Device() pulumi.StringPtrOutput {
 }
 
 // The folder in which the resource is defined
-//
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o RouteAccessListOutput) Folder() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *RouteAccessList) pulumi.StringPtrOutput { return v.Folder }).(pulumi.StringPtrOutput)
 }
@@ -281,8 +302,6 @@ func (o RouteAccessListOutput) Name() pulumi.StringOutput {
 }
 
 // The snippet in which the resource is defined
-//
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o RouteAccessListOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *RouteAccessList) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)
 }

@@ -138,14 +138,14 @@ public class Snippet extends com.pulumi.resources.CustomResource {
         return this.tfid;
     }
     /**
-     * The snippet type
+     * The snippet type. Possible values are `predefined`, `custom` and `readonly`.
      * 
      */
     @Export(name="type", refs={String.class}, tree="[0]")
     private Output<String> type;
 
     /**
-     * @return The snippet type
+     * @return The snippet type. Possible values are `predefined`, `custom` and `readonly`.
      * 
      */
     public Output<String> type() {

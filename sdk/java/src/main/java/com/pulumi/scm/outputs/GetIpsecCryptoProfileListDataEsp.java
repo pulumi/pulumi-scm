@@ -17,7 +17,7 @@ public final class GetIpsecCryptoProfileListDataEsp {
      */
     private List<String> authentications;
     /**
-     * @return Encryption algorithm
+     * @return Encryption algorithm. Possible values are `des`, `3des`, `aes-128-cbc`, `aes-192-cbc`, `aes-256-cbc`, `aes-128-gcm`, `aes-256-gcm` and `null`.
      * 
      */
     private List<String> encryptions;
@@ -31,7 +31,7 @@ public final class GetIpsecCryptoProfileListDataEsp {
         return this.authentications;
     }
     /**
-     * @return Encryption algorithm
+     * @return Encryption algorithm. Possible values are `des`, `3des`, `aes-128-cbc`, `aes-192-cbc`, `aes-256-cbc`, `aes-128-gcm`, `aes-256-gcm` and `null`.
      * 
      */
     public List<String> encryptions() {

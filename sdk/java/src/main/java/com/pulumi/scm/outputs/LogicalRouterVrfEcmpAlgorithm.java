@@ -22,21 +22,15 @@ public final class LogicalRouterVrfEcmpAlgorithm {
     /**
      * @return Ip hash
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `balancedRoundRobin`, `ipHash`, `ipModulo`, and `weightedRoundRobin`.
-     * 
      */
     private @Nullable LogicalRouterVrfEcmpAlgorithmIpHash ipHash;
     /**
      * @return Ip modulo
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `balancedRoundRobin`, `ipHash`, `ipModulo`, and `weightedRoundRobin`.
-     * 
      */
     private @Nullable LogicalRouterVrfEcmpAlgorithmIpModulo ipModulo;
     /**
      * @return Weighted round robin
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `balancedRoundRobin`, `ipHash`, `ipModulo`, and `weightedRoundRobin`.
      * 
      */
     private @Nullable LogicalRouterVrfEcmpAlgorithmWeightedRoundRobin weightedRoundRobin;
@@ -52,8 +46,6 @@ public final class LogicalRouterVrfEcmpAlgorithm {
     /**
      * @return Ip hash
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `balancedRoundRobin`, `ipHash`, `ipModulo`, and `weightedRoundRobin`.
-     * 
      */
     public Optional<LogicalRouterVrfEcmpAlgorithmIpHash> ipHash() {
         return Optional.ofNullable(this.ipHash);
@@ -61,16 +53,12 @@ public final class LogicalRouterVrfEcmpAlgorithm {
     /**
      * @return Ip modulo
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `balancedRoundRobin`, `ipHash`, `ipModulo`, and `weightedRoundRobin`.
-     * 
      */
     public Optional<LogicalRouterVrfEcmpAlgorithmIpModulo> ipModulo() {
         return Optional.ofNullable(this.ipModulo);
     }
     /**
      * @return Weighted round robin
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `balancedRoundRobin`, `ipHash`, `ipModulo`, and `weightedRoundRobin`.
      * 
      */
     public Optional<LogicalRouterVrfEcmpAlgorithmWeightedRoundRobin> weightedRoundRobin() {

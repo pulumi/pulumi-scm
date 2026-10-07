@@ -56,11 +56,17 @@ class GetQosProfileResult:
     @_builtins.property
     @pulumi.getter(name="aggregateBandwidth")
     def aggregate_bandwidth(self) -> 'outputs.GetQosProfileAggregateBandwidthResult':
+        """
+        Aggregate bandwidth
+        """
         return pulumi.get(self, "aggregate_bandwidth")
 
     @_builtins.property
     @pulumi.getter(name="classBandwidthType")
     def class_bandwidth_type(self) -> 'outputs.GetQosProfileClassBandwidthTypeResult':
+        """
+        Class bandwidth type
+        """
         return pulumi.get(self, "class_bandwidth_type")
 
     @_builtins.property
@@ -74,6 +80,9 @@ class GetQosProfileResult:
     @_builtins.property
     @pulumi.getter
     def folder(self) -> _builtins.str:
+        """
+        The folder in which the resource is defined
+        """
         return pulumi.get(self, "folder")
 
     @_builtins.property
@@ -87,16 +96,25 @@ class GetQosProfileResult:
     @_builtins.property
     @pulumi.getter
     def name(self) -> _builtins.str:
+        """
+        Alphanumeric string begin with letter: [0-9a-zA-Z._-]
+        """
         return pulumi.get(self, "name")
 
     @_builtins.property
     @pulumi.getter
     def snippet(self) -> _builtins.str:
+        """
+        The snippet in which the resource is defined
+        """
         return pulumi.get(self, "snippet")
 
     @_builtins.property
     @pulumi.getter
     def tfid(self) -> _builtins.str:
+        """
+        The Terraform ID.
+        """
         return pulumi.get(self, "tfid")
 
 
@@ -145,7 +163,10 @@ def get_qos_profile(device: Optional[_builtins.str] = None,
 
 
     :param _builtins.str device: The device in which the resource is defined
+    :param _builtins.str folder: The folder in which the resource is defined
     :param _builtins.str id: UUID of the resource
+    :param _builtins.str name: Alphanumeric string begin with letter: [0-9a-zA-Z._-]
+    :param _builtins.str snippet: The snippet in which the resource is defined
     """
     __args__ = dict()
     __args__['device'] = device
@@ -194,7 +215,10 @@ def get_qos_profile_output(device: pulumi.Input[Optional[Optional[_builtins.str]
 
 
     :param _builtins.str device: The device in which the resource is defined
+    :param _builtins.str folder: The folder in which the resource is defined
     :param _builtins.str id: UUID of the resource
+    :param _builtins.str name: Alphanumeric string begin with letter: [0-9a-zA-Z._-]
+    :param _builtins.str snippet: The snippet in which the resource is defined
     """
     __args__ = dict()
     __args__['device'] = device

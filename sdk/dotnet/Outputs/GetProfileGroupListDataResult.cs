@@ -34,7 +34,7 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly ImmutableArray<string> FileBlockings;
         /// <summary>
-        /// The folder of the item. Default: Shared.
+        /// The folder in which the resource is defined
         /// </summary>
         public readonly string Folder;
         /// <summary>
@@ -42,7 +42,7 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly string Id;
         /// <summary>
-        /// The name of the item.
+        /// The name of the profile group
         /// </summary>
         public readonly string Name;
         /// <summary>
@@ -50,7 +50,7 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly ImmutableArray<string> SaasSecurities;
         /// <summary>
-        /// The snippet of the item.
+        /// The snippet in which the resource is defined
         /// </summary>
         public readonly string Snippet;
         /// <summary>

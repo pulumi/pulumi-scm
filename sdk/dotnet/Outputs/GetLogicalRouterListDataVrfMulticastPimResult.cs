@@ -38,7 +38,7 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly Outputs.GetLogicalRouterListDataVrfMulticastPimRpResult Rp;
         /// <summary>
-        /// Rpf lookup mode
+        /// Rpf lookup mode. Possible values are `mrib-then-urib`, `mrib-only` and `urib-only`.
         /// </summary>
         public readonly string RpfLookupMode;
         /// <summary>

@@ -26,12 +26,21 @@ export interface GetProfileGroupArgs {
      * The device in which the resource is defined
      */
     device?: string;
+    /**
+     * The folder in which the resource is defined
+     */
     folder?: string;
     /**
      * The UUID of the profile group
      */
     id: string;
+    /**
+     * The name of the profile group
+     */
     name?: string;
+    /**
+     * The snippet in which the resource is defined
+     */
     snippet?: string;
 }
 
@@ -39,26 +48,65 @@ export interface GetProfileGroupArgs {
  * A collection of values returned by getProfileGroup.
  */
 export interface GetProfileGroupResult {
+    /**
+     * Ai security
+     */
     readonly aiSecurities: string[];
+    /**
+     * Data filtering
+     */
     readonly dataFilterings: string[];
     /**
      * The device in which the resource is defined
      */
     readonly device: string;
+    /**
+     * Dns security
+     */
     readonly dnsSecurities: string[];
+    /**
+     * File blocking
+     */
     readonly fileBlockings: string[];
+    /**
+     * The folder in which the resource is defined
+     */
     readonly folder: string;
     /**
      * The UUID of the profile group
      */
     readonly id: string;
+    /**
+     * The name of the profile group
+     */
     readonly name: string;
+    /**
+     * Saas security
+     */
     readonly saasSecurities: string[];
+    /**
+     * The snippet in which the resource is defined
+     */
     readonly snippet: string;
+    /**
+     * Spyware
+     */
     readonly spywares: string[];
+    /**
+     * The Terraform ID.
+     */
     readonly tfid: string;
+    /**
+     * Url filtering
+     */
     readonly urlFilterings: string[];
+    /**
+     * Virus and wildfire analysis
+     */
     readonly virusAndWildfireAnalyses: string[];
+    /**
+     * Vulnerability
+     */
     readonly vulnerabilities: string[];
 }
 /**
@@ -83,11 +131,20 @@ export interface GetProfileGroupOutputArgs {
      * The device in which the resource is defined
      */
     device?: pulumi.Input<string | undefined>;
+    /**
+     * The folder in which the resource is defined
+     */
     folder?: pulumi.Input<string | undefined>;
     /**
      * The UUID of the profile group
      */
     id: pulumi.Input<string>;
+    /**
+     * The name of the profile group
+     */
     name?: pulumi.Input<string | undefined>;
+    /**
+     * The snippet in which the resource is defined
+     */
     snippet?: pulumi.Input<string | undefined>;
 }

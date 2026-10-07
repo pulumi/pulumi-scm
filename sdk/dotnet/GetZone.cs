@@ -138,6 +138,9 @@ namespace Pulumi.Scm
         [Input("device")]
         public string? Device { get; set; }
 
+        /// <summary>
+        /// Folder
+        /// </summary>
         [Input("folder")]
         public string? Folder { get; set; }
 
@@ -147,9 +150,15 @@ namespace Pulumi.Scm
         [Input("id", required: true)]
         public string Id { get; set; } = null!;
 
+        /// <summary>
+        /// Alphanumeric string begin with letter: [0-9a-zA-Z._-]
+        /// </summary>
         [Input("name")]
         public string? Name { get; set; }
 
+        /// <summary>
+        /// The snippet in which the resource is defined
+        /// </summary>
         [Input("snippet")]
         public string? Snippet { get; set; }
 
@@ -167,6 +176,9 @@ namespace Pulumi.Scm
         [Input("device")]
         public Input<string>? Device { get; set; }
 
+        /// <summary>
+        /// Folder
+        /// </summary>
         [Input("folder")]
         public Input<string>? Folder { get; set; }
 
@@ -176,9 +188,15 @@ namespace Pulumi.Scm
         [Input("id", required: true)]
         public Input<string> Id { get; set; } = null!;
 
+        /// <summary>
+        /// Alphanumeric string begin with letter: [0-9a-zA-Z._-]
+        /// </summary>
         [Input("name")]
         public Input<string>? Name { get; set; }
 
+        /// <summary>
+        /// The snippet in which the resource is defined
+        /// </summary>
         [Input("snippet")]
         public Input<string>? Snippet { get; set; }
 
@@ -196,20 +214,53 @@ namespace Pulumi.Scm
         /// The device in which the resource is defined
         /// </summary>
         public readonly string Device;
+        /// <summary>
+        /// Device acl
+        /// </summary>
         public readonly Outputs.GetZoneDeviceAclResult DeviceAcl;
+        /// <summary>
+        /// Dos log setting
+        /// </summary>
         public readonly string DosLogSetting;
+        /// <summary>
+        /// Dos profile
+        /// </summary>
         public readonly string DosProfile;
+        /// <summary>
+        /// Enable device identification
+        /// </summary>
         public readonly bool EnableDeviceIdentification;
+        /// <summary>
+        /// Enable user identification
+        /// </summary>
         public readonly bool EnableUserIdentification;
+        /// <summary>
+        /// Folder
+        /// </summary>
         public readonly string Folder;
         /// <summary>
         /// UUID of the resource
         /// </summary>
         public readonly string Id;
+        /// <summary>
+        /// Alphanumeric string begin with letter: [0-9a-zA-Z._-]
+        /// </summary>
         public readonly string Name;
+        /// <summary>
+        /// Network
+        /// </summary>
         public readonly Outputs.GetZoneNetworkResult Network;
+        /// <summary>
+        /// The snippet in which the resource is defined
+        /// </summary>
         public readonly string Snippet;
+        /// <summary>
+        /// The Terraform ID.
+        /// </summary>
         public readonly string Tfid;
+        /// <summary>
+        /// User acl
+        /// </summary>
         public readonly Outputs.GetZoneUserAclResult UserAcl;
 
         [OutputConstructor]

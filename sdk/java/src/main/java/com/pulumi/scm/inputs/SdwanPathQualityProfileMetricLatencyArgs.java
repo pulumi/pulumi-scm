@@ -16,14 +16,14 @@ public final class SdwanPathQualityProfileMetricLatencyArgs extends com.pulumi.r
     public static final SdwanPathQualityProfileMetricLatencyArgs Empty = new SdwanPathQualityProfileMetricLatencyArgs();
 
     /**
-     * Latency sensitivity
+     * Latency sensitivity. Possible values are `low`, `medium` and `high`.
      * 
      */
     @Import(name="sensitivity", required=true)
     private Output<String> sensitivity;
 
     /**
-     * @return Latency sensitivity
+     * @return Latency sensitivity. Possible values are `low`, `medium` and `high`.
      * 
      */
     public Output<String> sensitivity() {
@@ -71,7 +71,7 @@ public final class SdwanPathQualityProfileMetricLatencyArgs extends com.pulumi.r
         }
 
         /**
-         * @param sensitivity Latency sensitivity
+         * @param sensitivity Latency sensitivity. Possible values are `low`, `medium` and `high`.
          * 
          * @return builder
          * 
@@ -82,7 +82,7 @@ public final class SdwanPathQualityProfileMetricLatencyArgs extends com.pulumi.r
         }
 
         /**
-         * @param sensitivity Latency sensitivity
+         * @param sensitivity Latency sensitivity. Possible values are `low`, `medium` and `high`.
          * 
          * @return builder
          * 

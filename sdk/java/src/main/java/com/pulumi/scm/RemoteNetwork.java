@@ -171,14 +171,14 @@ import javax.annotation.Nullable;
 @ResourceType(type="scm:index/remoteNetwork:RemoteNetwork")
 public class RemoteNetwork extends com.pulumi.resources.CustomResource {
     /**
-     * Ecmp load balancing
+     * Ecmp load balancing. Possible values are `enable` and `disable`.
      * 
      */
     @Export(name="ecmpLoadBalancing", refs={String.class}, tree="[0]")
     private Output<String> ecmpLoadBalancing;
 
     /**
-     * @return Ecmp load balancing
+     * @return Ecmp load balancing. Possible values are `enable` and `disable`.
      * 
      */
     public Output<String> ecmpLoadBalancing() {
@@ -269,14 +269,14 @@ public class RemoteNetwork extends com.pulumi.resources.CustomResource {
         return this.name;
     }
     /**
-     * setup the protocol when ecmp*load*balancing is disable
+     * setup the protocol when ecmp*load*balancing is disabled
      * 
      */
     @Export(name="protocol", refs={RemoteNetworkProtocol.class}, tree="[0]")
     private Output</* @Nullable */ RemoteNetworkProtocol> protocol;
 
     /**
-     * @return setup the protocol when ecmp*load*balancing is disable
+     * @return setup the protocol when ecmp*load*balancing is disabled
      * 
      */
     public Output<Optional<RemoteNetworkProtocol>> protocol() {

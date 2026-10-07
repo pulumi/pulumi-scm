@@ -22,7 +22,7 @@ public final class GetHttpServerProfileListDataServer {
      */
     private String certificateProfile;
     /**
-     * @return HTTP operation to perform
+     * @return HTTP operation to perform. Possible values are `GET`, `POST`, `PUT` and `DELETE`.
      * 
      */
     private String httpMethod;
@@ -37,12 +37,12 @@ public final class GetHttpServerProfileListDataServer {
      */
     private Integer port;
     /**
-     * @return HTTP server protocol
+     * @return HTTP server protocol. Possible values are `HTTP` and `HTTPS`.
      * 
      */
     private String protocol;
     /**
-     * @return HTTP server TLS version
+     * @return HTTP server TLS version. Possible values are `1.0`, `1.1`, `1.2` and `1.3`.
      * 
      */
     private String tlsVersion;
@@ -63,7 +63,7 @@ public final class GetHttpServerProfileListDataServer {
         return this.certificateProfile;
     }
     /**
-     * @return HTTP operation to perform
+     * @return HTTP operation to perform. Possible values are `GET`, `POST`, `PUT` and `DELETE`.
      * 
      */
     public String httpMethod() {
@@ -84,14 +84,14 @@ public final class GetHttpServerProfileListDataServer {
         return this.port;
     }
     /**
-     * @return HTTP server protocol
+     * @return HTTP server protocol. Possible values are `HTTP` and `HTTPS`.
      * 
      */
     public String protocol() {
         return this.protocol;
     }
     /**
-     * @return HTTP server TLS version
+     * @return HTTP server TLS version. Possible values are `1.0`, `1.1`, `1.2` and `1.3`.
      * 
      */
     public String tlsVersion() {

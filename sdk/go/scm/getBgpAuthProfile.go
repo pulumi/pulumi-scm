@@ -59,25 +59,34 @@ func LookupBgpAuthProfile(ctx *pulumi.Context, args *LookupBgpAuthProfileArgs, o
 type LookupBgpAuthProfileArgs struct {
 	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
+	// The folder in which the resource is defined
 	Folder *string `pulumi:"folder"`
 	// UUID of the resource
-	Id      string  `pulumi:"id"`
-	Name    *string `pulumi:"name"`
+	Id string `pulumi:"id"`
+	// Profile name
+	Name *string `pulumi:"name"`
+	// The snippet in which the resource is defined
 	Snippet *string `pulumi:"snippet"`
 }
 
 // A collection of values returned by getBgpAuthProfile.
 type LookupBgpAuthProfileResult struct {
 	// The device in which the resource is defined
-	Device          string            `pulumi:"device"`
+	Device string `pulumi:"device"`
+	// Map of sensitive values returned from the API.
 	EncryptedValues map[string]string `pulumi:"encryptedValues"`
-	Folder          string            `pulumi:"folder"`
+	// The folder in which the resource is defined
+	Folder string `pulumi:"folder"`
 	// UUID of the resource
-	Id      string `pulumi:"id"`
-	Name    string `pulumi:"name"`
-	Secret  string `pulumi:"secret"`
+	Id string `pulumi:"id"`
+	// Profile name
+	Name string `pulumi:"name"`
+	// BGP authentication key
+	Secret string `pulumi:"secret"`
+	// The snippet in which the resource is defined
 	Snippet string `pulumi:"snippet"`
-	Tfid    string `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid string `pulumi:"tfid"`
 }
 
 func LookupBgpAuthProfileOutput(ctx *pulumi.Context, args LookupBgpAuthProfileOutputArgs, opts ...pulumi.InvokeOption) LookupBgpAuthProfileResultOutput {
@@ -89,10 +98,13 @@ func LookupBgpAuthProfileOutput(ctx *pulumi.Context, args LookupBgpAuthProfileOu
 type LookupBgpAuthProfileOutputArgs struct {
 	// The device in which the resource is defined
 	Device pulumi.StringPtrInput `pulumi:"device"`
+	// The folder in which the resource is defined
 	Folder pulumi.StringPtrInput `pulumi:"folder"`
 	// UUID of the resource
-	Id      pulumi.StringInput    `pulumi:"id"`
-	Name    pulumi.StringPtrInput `pulumi:"name"`
+	Id pulumi.StringInput `pulumi:"id"`
+	// Profile name
+	Name pulumi.StringPtrInput `pulumi:"name"`
+	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrInput `pulumi:"snippet"`
 }
 
@@ -120,10 +132,12 @@ func (o LookupBgpAuthProfileResultOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupBgpAuthProfileResult) string { return v.Device }).(pulumi.StringOutput)
 }
 
+// Map of sensitive values returned from the API.
 func (o LookupBgpAuthProfileResultOutput) EncryptedValues() pulumi.StringMapOutput {
 	return o.ApplyT(func(v LookupBgpAuthProfileResult) map[string]string { return v.EncryptedValues }).(pulumi.StringMapOutput)
 }
 
+// The folder in which the resource is defined
 func (o LookupBgpAuthProfileResultOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupBgpAuthProfileResult) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -133,18 +147,22 @@ func (o LookupBgpAuthProfileResultOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupBgpAuthProfileResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
+// Profile name
 func (o LookupBgpAuthProfileResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupBgpAuthProfileResult) string { return v.Name }).(pulumi.StringOutput)
 }
 
+// BGP authentication key
 func (o LookupBgpAuthProfileResultOutput) Secret() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupBgpAuthProfileResult) string { return v.Secret }).(pulumi.StringOutput)
 }
 
+// The snippet in which the resource is defined
 func (o LookupBgpAuthProfileResultOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupBgpAuthProfileResult) string { return v.Snippet }).(pulumi.StringOutput)
 }
 
+// The Terraform ID.
 func (o LookupBgpAuthProfileResultOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupBgpAuthProfileResult) string { return v.Tfid }).(pulumi.StringOutput)
 }

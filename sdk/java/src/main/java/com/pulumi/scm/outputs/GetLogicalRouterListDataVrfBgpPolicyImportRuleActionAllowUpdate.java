@@ -50,7 +50,7 @@ public final class GetLogicalRouterListDataVrfBgpPolicyImportRuleActionAllowUpda
      */
     private String nexthop;
     /**
-     * @return Origin
+     * @return Origin. Possible values are `igp`, `egp` and `incomplete`.
      * 
      */
     private String origin;
@@ -111,7 +111,7 @@ public final class GetLogicalRouterListDataVrfBgpPolicyImportRuleActionAllowUpda
         return this.nexthop;
     }
     /**
-     * @return Origin
+     * @return Origin. Possible values are `igp`, `egp` and `incomplete`.
      * 
      */
     public String origin() {

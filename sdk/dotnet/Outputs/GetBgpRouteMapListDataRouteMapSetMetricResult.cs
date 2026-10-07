@@ -14,7 +14,7 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetBgpRouteMapListDataRouteMapSetMetricResult
     {
         /// <summary>
-        /// Metric action
+        /// Metric action. Possible values are `Set`, `Add` and `Substract`.
         /// </summary>
         public readonly string Action;
         /// <summary>

@@ -32,14 +32,10 @@ class SdwanTrafficDistributionProfileArgs:
 
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[Sequence[pulumi.Input['SdwanTrafficDistributionProfileLinkTagArgs']]] link_tags: Link-Tags for interfaces identified by defined tags
         :param pulumi.Input[_builtins.str] name: Profile name
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-        :param pulumi.Input[_builtins.str] traffic_distribution: Traffic distribution
+        :param pulumi.Input[_builtins.str] traffic_distribution: Traffic distribution. Possible values are `Best Available Path`, `Top Down Priority` and `Weighted Session Distribution`.
         """
         if device is not None:
             pulumi.set(__self__, "device", device)
@@ -71,8 +67,6 @@ class SdwanTrafficDistributionProfileArgs:
     def folder(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
-
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
 
@@ -109,8 +103,6 @@ class SdwanTrafficDistributionProfileArgs:
     def snippet(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
-
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
 
@@ -122,7 +114,7 @@ class SdwanTrafficDistributionProfileArgs:
     @pulumi.getter(name="trafficDistribution")
     def traffic_distribution(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
-        Traffic distribution
+        Traffic distribution. Possible values are `Best Available Path`, `Top Down Priority` and `Weighted Session Distribution`.
         """
         return pulumi.get(self, "traffic_distribution")
 
@@ -146,15 +138,11 @@ class _SdwanTrafficDistributionProfileState:
 
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[Sequence[pulumi.Input['SdwanTrafficDistributionProfileLinkTagArgs']]] link_tags: Link-Tags for interfaces identified by defined tags
         :param pulumi.Input[_builtins.str] name: Profile name
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] tfid: The Terraform ID.
-        :param pulumi.Input[_builtins.str] traffic_distribution: Traffic distribution
+        :param pulumi.Input[_builtins.str] traffic_distribution: Traffic distribution. Possible values are `Best Available Path`, `Top Down Priority` and `Weighted Session Distribution`.
         """
         if device is not None:
             pulumi.set(__self__, "device", device)
@@ -188,8 +176,6 @@ class _SdwanTrafficDistributionProfileState:
     def folder(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
-
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
 
@@ -226,8 +212,6 @@ class _SdwanTrafficDistributionProfileState:
     def snippet(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
-
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
 
@@ -251,7 +235,7 @@ class _SdwanTrafficDistributionProfileState:
     @pulumi.getter(name="trafficDistribution")
     def traffic_distribution(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
-        Traffic distribution
+        Traffic distribution. Possible values are `Best Available Path`, `Top Down Priority` and `Weighted Session Distribution`.
         """
         return pulumi.get(self, "traffic_distribution")
 
@@ -303,14 +287,10 @@ class SdwanTrafficDistributionProfile(pulumi.CustomResource):
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[Sequence[pulumi.Input[Union['SdwanTrafficDistributionProfileLinkTagArgs', 'SdwanTrafficDistributionProfileLinkTagArgsDict', 'outputs.SdwanTrafficDistributionProfileLinkTag']]]] link_tags: Link-Tags for interfaces identified by defined tags
         :param pulumi.Input[_builtins.str] name: Profile name
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-        :param pulumi.Input[_builtins.str] traffic_distribution: Traffic distribution
+        :param pulumi.Input[_builtins.str] traffic_distribution: Traffic distribution. Possible values are `Best Available Path`, `Top Down Priority` and `Weighted Session Distribution`.
         """
         ...
     @overload
@@ -407,15 +387,11 @@ class SdwanTrafficDistributionProfile(pulumi.CustomResource):
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[Sequence[pulumi.Input[Union['SdwanTrafficDistributionProfileLinkTagArgs', 'SdwanTrafficDistributionProfileLinkTagArgsDict', 'outputs.SdwanTrafficDistributionProfileLinkTag']]]] link_tags: Link-Tags for interfaces identified by defined tags
         :param pulumi.Input[_builtins.str] name: Profile name
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] tfid: The Terraform ID.
-        :param pulumi.Input[_builtins.str] traffic_distribution: Traffic distribution
+        :param pulumi.Input[_builtins.str] traffic_distribution: Traffic distribution. Possible values are `Best Available Path`, `Top Down Priority` and `Weighted Session Distribution`.
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
 
@@ -443,8 +419,6 @@ class SdwanTrafficDistributionProfile(pulumi.CustomResource):
     def folder(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
-
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
 
@@ -469,8 +443,6 @@ class SdwanTrafficDistributionProfile(pulumi.CustomResource):
     def snippet(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
-
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
 
@@ -486,7 +458,7 @@ class SdwanTrafficDistributionProfile(pulumi.CustomResource):
     @pulumi.getter(name="trafficDistribution")
     def traffic_distribution(self) -> pulumi.Output[_builtins.str]:
         """
-        Traffic distribution
+        Traffic distribution. Possible values are `Best Available Path`, `Top Down Priority` and `Weighted Session Distribution`.
         """
         return pulumi.get(self, "traffic_distribution")
 

@@ -21,7 +21,7 @@ public final class DhcpInterfaceServer {
      */
     private @Nullable List<String> ipPools;
     /**
-     * @return DHCP server mode
+     * @return DHCP server mode. Possible values are `auto`, `enabled` and `disabled`.
      * 
      */
     private @Nullable String mode;
@@ -50,7 +50,7 @@ public final class DhcpInterfaceServer {
         return this.ipPools == null ? List.of() : this.ipPools;
     }
     /**
-     * @return DHCP server mode
+     * @return DHCP server mode. Possible values are `auto`, `enabled` and `disabled`.
      * 
      */
     public Optional<String> mode() {

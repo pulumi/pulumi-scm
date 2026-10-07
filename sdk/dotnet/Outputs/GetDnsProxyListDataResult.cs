@@ -34,7 +34,7 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly bool Enabled;
         /// <summary>
-        /// The folder of the item. Default: Shared.
+        /// The folder in which the resource is defined
         /// </summary>
         public readonly string Folder;
         /// <summary>
@@ -46,11 +46,11 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly ImmutableArray<string> Interfaces;
         /// <summary>
-        /// The name of the item.
+        /// DNS proxy name
         /// </summary>
         public readonly string Name;
         /// <summary>
-        /// The snippet of the item.
+        /// The snippet in which the resource is defined
         /// </summary>
         public readonly string Snippet;
         /// <summary>

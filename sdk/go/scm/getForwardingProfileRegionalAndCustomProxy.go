@@ -78,7 +78,7 @@ func LookupForwardingProfileRegionalAndCustomProxy(ctx *pulumi.Context, args *Lo
 
 // A collection of arguments for invoking getForwardingProfileRegionalAndCustomProxy.
 type LookupForwardingProfileRegionalAndCustomProxyArgs struct {
-	// The folder in which the resource is defined
+	// The folder in which the resource is defined. Possible values are `Mobile Users`.
 	Folder *string `pulumi:"folder"`
 	// The UUID of the regional and custom proxy
 	Id string `pulumi:"id"`
@@ -92,13 +92,13 @@ type LookupForwardingProfileRegionalAndCustomProxyResult struct {
 	ConnectivityPreferences []GetForwardingProfileRegionalAndCustomProxyConnectivityPreference `pulumi:"connectivityPreferences"`
 	// regional and custom proxy configuration description
 	Description string `pulumi:"description"`
-	// Behavior when proxy connection fails - 'fail-open' allows direct internet access, 'fail-safe' blocks traffic until proxy is restored
+	// Behavior when proxy connection fails - 'fail-open' allows direct internet access, 'fail-safe' blocks traffic until proxy is restored. Possible values are `fail-open` and `fail-safe`.
 	FallbackOption string `pulumi:"fallbackOption"`
-	// The folder in which the resource is defined
+	// The folder in which the resource is defined. Possible values are `Mobile Users`.
 	Folder string `pulumi:"folder"`
 	// The UUID of the regional and custom proxy
 	Id string `pulumi:"id"`
-	// Strategy for selecting Prisma Access location - 'best-available-pa-location' automatically selects optimal location, 'specific-pa-location' uses predefined locations
+	// Strategy for selecting Prisma Access location - 'best-available-pa-location' automatically selects optimal location, 'specific-pa-location' uses predefined locations. Possible values are `best-available-pa-location` and `specific-pa-location`.
 	LocationPreference string `pulumi:"locationPreference"`
 	// alphanumeric string [ 0-9a-zA-Z ._-]
 	Name string `pulumi:"name"`
@@ -110,7 +110,7 @@ type LookupForwardingProfileRegionalAndCustomProxyResult struct {
 	Proxy2 GetForwardingProfileRegionalAndCustomProxyProxy2 `pulumi:"proxy2"`
 	// The Terraform ID.
 	Tfid string `pulumi:"tfid"`
-	// Proxy configuration type - 'gp-and-pac' for GlobalProtect and PAC file forwarding, 'ztna-agent' for ZTNA agent forwarding
+	// Proxy configuration type - 'gp-and-pac' for GlobalProtect and PAC file forwarding, 'ztna-agent' for ZTNA agent forwarding. Possible values are `gp-and-pac` and `ztna-agent`.
 	Type string `pulumi:"type"`
 }
 
@@ -121,7 +121,7 @@ func LookupForwardingProfileRegionalAndCustomProxyOutput(ctx *pulumi.Context, ar
 
 // A collection of arguments for invoking getForwardingProfileRegionalAndCustomProxy.
 type LookupForwardingProfileRegionalAndCustomProxyOutputArgs struct {
-	// The folder in which the resource is defined
+	// The folder in which the resource is defined. Possible values are `Mobile Users`.
 	Folder pulumi.StringPtrInput `pulumi:"folder"`
 	// The UUID of the regional and custom proxy
 	Id pulumi.StringInput `pulumi:"id"`
@@ -160,12 +160,12 @@ func (o LookupForwardingProfileRegionalAndCustomProxyResultOutput) Description()
 	return o.ApplyT(func(v LookupForwardingProfileRegionalAndCustomProxyResult) string { return v.Description }).(pulumi.StringOutput)
 }
 
-// Behavior when proxy connection fails - 'fail-open' allows direct internet access, 'fail-safe' blocks traffic until proxy is restored
+// Behavior when proxy connection fails - 'fail-open' allows direct internet access, 'fail-safe' blocks traffic until proxy is restored. Possible values are `fail-open` and `fail-safe`.
 func (o LookupForwardingProfileRegionalAndCustomProxyResultOutput) FallbackOption() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupForwardingProfileRegionalAndCustomProxyResult) string { return v.FallbackOption }).(pulumi.StringOutput)
 }
 
-// The folder in which the resource is defined
+// The folder in which the resource is defined. Possible values are `Mobile Users`.
 func (o LookupForwardingProfileRegionalAndCustomProxyResultOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupForwardingProfileRegionalAndCustomProxyResult) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -175,7 +175,7 @@ func (o LookupForwardingProfileRegionalAndCustomProxyResultOutput) Id() pulumi.S
 	return o.ApplyT(func(v LookupForwardingProfileRegionalAndCustomProxyResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
-// Strategy for selecting Prisma Access location - 'best-available-pa-location' automatically selects optimal location, 'specific-pa-location' uses predefined locations
+// Strategy for selecting Prisma Access location - 'best-available-pa-location' automatically selects optimal location, 'specific-pa-location' uses predefined locations. Possible values are `best-available-pa-location` and `specific-pa-location`.
 func (o LookupForwardingProfileRegionalAndCustomProxyResultOutput) LocationPreference() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupForwardingProfileRegionalAndCustomProxyResult) string { return v.LocationPreference }).(pulumi.StringOutput)
 }
@@ -211,7 +211,7 @@ func (o LookupForwardingProfileRegionalAndCustomProxyResultOutput) Tfid() pulumi
 	return o.ApplyT(func(v LookupForwardingProfileRegionalAndCustomProxyResult) string { return v.Tfid }).(pulumi.StringOutput)
 }
 
-// Proxy configuration type - 'gp-and-pac' for GlobalProtect and PAC file forwarding, 'ztna-agent' for ZTNA agent forwarding
+// Proxy configuration type - 'gp-and-pac' for GlobalProtect and PAC file forwarding, 'ztna-agent' for ZTNA agent forwarding. Possible values are `gp-and-pac` and `ztna-agent`.
 func (o LookupForwardingProfileRegionalAndCustomProxyResultOutput) Type() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupForwardingProfileRegionalAndCustomProxyResult) string { return v.Type }).(pulumi.StringOutput)
 }

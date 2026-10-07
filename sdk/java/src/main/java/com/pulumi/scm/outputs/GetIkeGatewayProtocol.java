@@ -23,7 +23,7 @@ public final class GetIkeGatewayProtocol {
      */
     private GetIkeGatewayProtocolIkev2 ikev2;
     /**
-     * @return Version
+     * @return Version. Possible values are `ikev2-preferred`, `ikev1` and `ikev2`.
      * 
      */
     private String version;
@@ -44,7 +44,7 @@ public final class GetIkeGatewayProtocol {
         return this.ikev2;
     }
     /**
-     * @return Version
+     * @return Version. Possible values are `ikev2-preferred`, `ikev1` and `ikev2`.
      * 
      */
     public String version() {

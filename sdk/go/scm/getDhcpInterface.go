@@ -54,10 +54,13 @@ func LookupDhcpInterface(ctx *pulumi.Context, args *LookupDhcpInterfaceArgs, opt
 type LookupDhcpInterfaceArgs struct {
 	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
+	// The folder in which the resource is defined
 	Folder *string `pulumi:"folder"`
 	// UUID of the resource
-	Id      string  `pulumi:"id"`
-	Name    *string `pulumi:"name"`
+	Id string `pulumi:"id"`
+	// Interface name
+	Name *string `pulumi:"name"`
+	// The snippet in which the resource is defined
 	Snippet *string `pulumi:"snippet"`
 }
 
@@ -65,14 +68,20 @@ type LookupDhcpInterfaceArgs struct {
 type LookupDhcpInterfaceResult struct {
 	// The device in which the resource is defined
 	Device string `pulumi:"device"`
+	// The folder in which the resource is defined
 	Folder string `pulumi:"folder"`
 	// UUID of the resource
-	Id      string                 `pulumi:"id"`
-	Name    string                 `pulumi:"name"`
-	Relay   GetDhcpInterfaceRelay  `pulumi:"relay"`
-	Server  GetDhcpInterfaceServer `pulumi:"server"`
-	Snippet string                 `pulumi:"snippet"`
-	Tfid    string                 `pulumi:"tfid"`
+	Id string `pulumi:"id"`
+	// Interface name
+	Name string `pulumi:"name"`
+	// Relay
+	Relay GetDhcpInterfaceRelay `pulumi:"relay"`
+	// Server
+	Server GetDhcpInterfaceServer `pulumi:"server"`
+	// The snippet in which the resource is defined
+	Snippet string `pulumi:"snippet"`
+	// The Terraform ID.
+	Tfid string `pulumi:"tfid"`
 }
 
 func LookupDhcpInterfaceOutput(ctx *pulumi.Context, args LookupDhcpInterfaceOutputArgs, opts ...pulumi.InvokeOption) LookupDhcpInterfaceResultOutput {
@@ -84,10 +93,13 @@ func LookupDhcpInterfaceOutput(ctx *pulumi.Context, args LookupDhcpInterfaceOutp
 type LookupDhcpInterfaceOutputArgs struct {
 	// The device in which the resource is defined
 	Device pulumi.StringPtrInput `pulumi:"device"`
+	// The folder in which the resource is defined
 	Folder pulumi.StringPtrInput `pulumi:"folder"`
 	// UUID of the resource
-	Id      pulumi.StringInput    `pulumi:"id"`
-	Name    pulumi.StringPtrInput `pulumi:"name"`
+	Id pulumi.StringInput `pulumi:"id"`
+	// Interface name
+	Name pulumi.StringPtrInput `pulumi:"name"`
+	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrInput `pulumi:"snippet"`
 }
 
@@ -115,6 +127,7 @@ func (o LookupDhcpInterfaceResultOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupDhcpInterfaceResult) string { return v.Device }).(pulumi.StringOutput)
 }
 
+// The folder in which the resource is defined
 func (o LookupDhcpInterfaceResultOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupDhcpInterfaceResult) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -124,22 +137,27 @@ func (o LookupDhcpInterfaceResultOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupDhcpInterfaceResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
+// Interface name
 func (o LookupDhcpInterfaceResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupDhcpInterfaceResult) string { return v.Name }).(pulumi.StringOutput)
 }
 
+// Relay
 func (o LookupDhcpInterfaceResultOutput) Relay() GetDhcpInterfaceRelayOutput {
 	return o.ApplyT(func(v LookupDhcpInterfaceResult) GetDhcpInterfaceRelay { return v.Relay }).(GetDhcpInterfaceRelayOutput)
 }
 
+// Server
 func (o LookupDhcpInterfaceResultOutput) Server() GetDhcpInterfaceServerOutput {
 	return o.ApplyT(func(v LookupDhcpInterfaceResult) GetDhcpInterfaceServer { return v.Server }).(GetDhcpInterfaceServerOutput)
 }
 
+// The snippet in which the resource is defined
 func (o LookupDhcpInterfaceResultOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupDhcpInterfaceResult) string { return v.Snippet }).(pulumi.StringOutput)
 }
 
+// The Terraform ID.
 func (o LookupDhcpInterfaceResultOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupDhcpInterfaceResult) string { return v.Tfid }).(pulumi.StringOutput)
 }

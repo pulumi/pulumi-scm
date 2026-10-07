@@ -37,16 +37,12 @@ public final class ExternalDynamicListTypeUrlRecurringArgs extends com.pulumi.re
     /**
      * Five minute settings for URL recurring
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
-     * 
      */
     @Import(name="fiveMinute")
     private @Nullable Output<ExternalDynamicListTypeUrlRecurringFiveMinuteArgs> fiveMinute;
 
     /**
      * @return Five minute settings for URL recurring
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
      * 
      */
     public Optional<Output<ExternalDynamicListTypeUrlRecurringFiveMinuteArgs>> fiveMinute() {
@@ -56,16 +52,12 @@ public final class ExternalDynamicListTypeUrlRecurringArgs extends com.pulumi.re
     /**
      * Hourly settings for URL recurring
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
-     * 
      */
     @Import(name="hourly")
     private @Nullable Output<ExternalDynamicListTypeUrlRecurringHourlyArgs> hourly;
 
     /**
      * @return Hourly settings for URL recurring
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
      * 
      */
     public Optional<Output<ExternalDynamicListTypeUrlRecurringHourlyArgs>> hourly() {
@@ -75,16 +67,12 @@ public final class ExternalDynamicListTypeUrlRecurringArgs extends com.pulumi.re
     /**
      * Monthly settings for URL recurring
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
-     * 
      */
     @Import(name="monthly")
     private @Nullable Output<ExternalDynamicListTypeUrlRecurringMonthlyArgs> monthly;
 
     /**
      * @return Monthly settings for URL recurring
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
      * 
      */
     public Optional<Output<ExternalDynamicListTypeUrlRecurringMonthlyArgs>> monthly() {
@@ -94,16 +82,12 @@ public final class ExternalDynamicListTypeUrlRecurringArgs extends com.pulumi.re
     /**
      * Weekly settings for URL recurring
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
-     * 
      */
     @Import(name="weekly")
     private @Nullable Output<ExternalDynamicListTypeUrlRecurringWeeklyArgs> weekly;
 
     /**
      * @return Weekly settings for URL recurring
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
      * 
      */
     public Optional<Output<ExternalDynamicListTypeUrlRecurringWeeklyArgs>> weekly() {
@@ -162,8 +146,6 @@ public final class ExternalDynamicListTypeUrlRecurringArgs extends com.pulumi.re
         /**
          * @param fiveMinute Five minute settings for URL recurring
          * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
-         * 
          * @return builder
          * 
          */
@@ -175,8 +157,6 @@ public final class ExternalDynamicListTypeUrlRecurringArgs extends com.pulumi.re
         /**
          * @param fiveMinute Five minute settings for URL recurring
          * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
-         * 
          * @return builder
          * 
          */
@@ -186,8 +166,6 @@ public final class ExternalDynamicListTypeUrlRecurringArgs extends com.pulumi.re
 
         /**
          * @param hourly Hourly settings for URL recurring
-         * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
          * 
          * @return builder
          * 
@@ -200,8 +178,6 @@ public final class ExternalDynamicListTypeUrlRecurringArgs extends com.pulumi.re
         /**
          * @param hourly Hourly settings for URL recurring
          * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
-         * 
          * @return builder
          * 
          */
@@ -211,8 +187,6 @@ public final class ExternalDynamicListTypeUrlRecurringArgs extends com.pulumi.re
 
         /**
          * @param monthly Monthly settings for URL recurring
-         * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
          * 
          * @return builder
          * 
@@ -225,8 +199,6 @@ public final class ExternalDynamicListTypeUrlRecurringArgs extends com.pulumi.re
         /**
          * @param monthly Monthly settings for URL recurring
          * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
-         * 
          * @return builder
          * 
          */
@@ -236,8 +208,6 @@ public final class ExternalDynamicListTypeUrlRecurringArgs extends com.pulumi.re
 
         /**
          * @param weekly Weekly settings for URL recurring
-         * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
          * 
          * @return builder
          * 
@@ -249,8 +219,6 @@ public final class ExternalDynamicListTypeUrlRecurringArgs extends com.pulumi.re
 
         /**
          * @param weekly Weekly settings for URL recurring
-         * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
          * 
          * @return builder
          * 

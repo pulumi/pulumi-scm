@@ -46,7 +46,7 @@ public final class GetLdapServerProfileListData {
      */
     private Map<String,String> encryptedValues;
     /**
-     * @return The folder of the item. Default: Shared.
+     * @return The folder in which the resource is defined
      * 
      */
     private String folder;
@@ -56,12 +56,12 @@ public final class GetLdapServerProfileListData {
      */
     private String id;
     /**
-     * @return The LDAP server time
+     * @return The LDAP server time. Possible values are `active-directory`, `e-directory`, `sun` and `other`.
      * 
      */
     private String ldapType;
     /**
-     * @return The name of the item.
+     * @return The name of the LDAP server profile
      * 
      */
     private String name;
@@ -76,7 +76,7 @@ public final class GetLdapServerProfileListData {
      */
     private List<GetLdapServerProfileListDataServer> servers;
     /**
-     * @return The snippet of the item.
+     * @return The snippet in which the resource is defined
      * 
      */
     private String snippet;
@@ -145,7 +145,7 @@ public final class GetLdapServerProfileListData {
         return this.encryptedValues;
     }
     /**
-     * @return The folder of the item. Default: Shared.
+     * @return The folder in which the resource is defined
      * 
      */
     public String folder() {
@@ -159,14 +159,14 @@ public final class GetLdapServerProfileListData {
         return this.id;
     }
     /**
-     * @return The LDAP server time
+     * @return The LDAP server time. Possible values are `active-directory`, `e-directory`, `sun` and `other`.
      * 
      */
     public String ldapType() {
         return this.ldapType;
     }
     /**
-     * @return The name of the item.
+     * @return The name of the LDAP server profile
      * 
      */
     public String name() {
@@ -187,7 +187,7 @@ public final class GetLdapServerProfileListData {
         return this.servers;
     }
     /**
-     * @return The snippet of the item.
+     * @return The snippet in which the resource is defined
      * 
      */
     public String snippet() {

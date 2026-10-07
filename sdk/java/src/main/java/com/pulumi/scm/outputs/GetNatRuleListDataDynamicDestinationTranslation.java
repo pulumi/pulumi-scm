@@ -12,7 +12,7 @@ import java.util.Objects;
 @CustomType
 public final class GetNatRuleListDataDynamicDestinationTranslation {
     /**
-     * @return Distribution method
+     * @return Distribution method. Possible values are `round-robin`, `source-ip-hash`, `ip-modulo`, `ip-hash` and `least-sessions`.
      * 
      */
     private String distribution;
@@ -29,7 +29,7 @@ public final class GetNatRuleListDataDynamicDestinationTranslation {
 
     private GetNatRuleListDataDynamicDestinationTranslation() {}
     /**
-     * @return Distribution method
+     * @return Distribution method. Possible values are `round-robin`, `source-ip-hash`, `ip-modulo`, `ip-hash` and `least-sessions`.
      * 
      */
     public String distribution() {

@@ -26,37 +26,58 @@ func LookupDosProtectionRule(ctx *pulumi.Context, args *LookupDosProtectionRuleA
 type LookupDosProtectionRuleArgs struct {
 	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
+	// The folder in which the resource is defined
 	Folder *string `pulumi:"folder"`
 	// The UUID of the DNS security profile
-	Id      string  `pulumi:"id"`
-	Name    *string `pulumi:"name"`
+	Id string `pulumi:"id"`
+	// Rule name
+	Name *string `pulumi:"name"`
+	// The snippet in which the resource is defined
 	Snippet *string `pulumi:"snippet"`
 }
 
 // A collection of values returned by getDosProtectionRule.
 type LookupDosProtectionRuleResult struct {
-	Action       GetDosProtectionRuleAction `pulumi:"action"`
-	Description  string                     `pulumi:"description"`
-	Destinations []string                   `pulumi:"destinations"`
+	// The action to take on rule match
+	Action GetDosProtectionRuleAction `pulumi:"action"`
+	// Description
+	Description string `pulumi:"description"`
+	// List of destination addresses
+	Destinations []string `pulumi:"destinations"`
 	// The device in which the resource is defined
-	Device   string   `pulumi:"device"`
-	Disabled bool     `pulumi:"disabled"`
-	Folder   string   `pulumi:"folder"`
-	Froms    []string `pulumi:"froms"`
+	Device string `pulumi:"device"`
+	// Rule disabled?
+	Disabled bool `pulumi:"disabled"`
+	// The folder in which the resource is defined
+	Folder string `pulumi:"folder"`
+	// Source zones and interfaces
+	From GetDosProtectionRuleFrom `pulumi:"from"`
 	// The UUID of the DNS security profile
-	Id          string                         `pulumi:"id"`
-	LogSetting  string                         `pulumi:"logSetting"`
-	Name        string                         `pulumi:"name"`
-	Position    string                         `pulumi:"position"`
-	Protection  GetDosProtectionRuleProtection `pulumi:"protection"`
-	Schedule    string                         `pulumi:"schedule"`
-	Services    []string                       `pulumi:"services"`
-	Snippet     string                         `pulumi:"snippet"`
-	SourceUsers []string                       `pulumi:"sourceUsers"`
-	Sources     []string                       `pulumi:"sources"`
-	Tags        []string                       `pulumi:"tags"`
-	Tfid        string                         `pulumi:"tfid"`
-	Tos         []string                       `pulumi:"tos"`
+	Id string `pulumi:"id"`
+	// Log forwarding profile name
+	LogSetting string `pulumi:"logSetting"`
+	// Rule name
+	Name string `pulumi:"name"`
+	// Position relative to local device rules. Possible values are `pre` and `post`.
+	Position string `pulumi:"position"`
+	// Protection
+	Protection GetDosProtectionRuleProtection `pulumi:"protection"`
+	// Schedule on which to enforce the rule
+	Schedule string `pulumi:"schedule"`
+	// List of services
+	Services []string `pulumi:"services"`
+	// The snippet in which the resource is defined
+	Snippet string `pulumi:"snippet"`
+	// List of source users and/or groups.  Reserved words include `any`, `pre-login`, `known-user`, and `unknown`.
+	SourceUsers []string `pulumi:"sourceUsers"`
+	// List of source addresses
+	Sources []string `pulumi:"sources"`
+	// List of tags
+	Tags []string `pulumi:"tags"`
+	// The Terraform ID.
+	Tfid string `pulumi:"tfid"`
+	// Destination zones and interfaces
+	To GetDosProtectionRuleTo `pulumi:"to"`
 }
 
 func LookupDosProtectionRuleOutput(ctx *pulumi.Context, args LookupDosProtectionRuleOutputArgs, opts ...pulumi.InvokeOption) LookupDosProtectionRuleResultOutput {
@@ -68,10 +89,13 @@ func LookupDosProtectionRuleOutput(ctx *pulumi.Context, args LookupDosProtection
 type LookupDosProtectionRuleOutputArgs struct {
 	// The device in which the resource is defined
 	Device pulumi.StringPtrInput `pulumi:"device"`
+	// The folder in which the resource is defined
 	Folder pulumi.StringPtrInput `pulumi:"folder"`
 	// The UUID of the DNS security profile
-	Id      pulumi.StringInput    `pulumi:"id"`
-	Name    pulumi.StringPtrInput `pulumi:"name"`
+	Id pulumi.StringInput `pulumi:"id"`
+	// Rule name
+	Name pulumi.StringPtrInput `pulumi:"name"`
+	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrInput `pulumi:"snippet"`
 }
 
@@ -94,14 +118,17 @@ func (o LookupDosProtectionRuleResultOutput) ToLookupDosProtectionRuleResultOutp
 	return o
 }
 
+// The action to take on rule match
 func (o LookupDosProtectionRuleResultOutput) Action() GetDosProtectionRuleActionOutput {
 	return o.ApplyT(func(v LookupDosProtectionRuleResult) GetDosProtectionRuleAction { return v.Action }).(GetDosProtectionRuleActionOutput)
 }
 
+// Description
 func (o LookupDosProtectionRuleResultOutput) Description() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupDosProtectionRuleResult) string { return v.Description }).(pulumi.StringOutput)
 }
 
+// List of destination addresses
 func (o LookupDosProtectionRuleResultOutput) Destinations() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupDosProtectionRuleResult) []string { return v.Destinations }).(pulumi.StringArrayOutput)
 }
@@ -111,16 +138,19 @@ func (o LookupDosProtectionRuleResultOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupDosProtectionRuleResult) string { return v.Device }).(pulumi.StringOutput)
 }
 
+// Rule disabled?
 func (o LookupDosProtectionRuleResultOutput) Disabled() pulumi.BoolOutput {
 	return o.ApplyT(func(v LookupDosProtectionRuleResult) bool { return v.Disabled }).(pulumi.BoolOutput)
 }
 
+// The folder in which the resource is defined
 func (o LookupDosProtectionRuleResultOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupDosProtectionRuleResult) string { return v.Folder }).(pulumi.StringOutput)
 }
 
-func (o LookupDosProtectionRuleResultOutput) Froms() pulumi.StringArrayOutput {
-	return o.ApplyT(func(v LookupDosProtectionRuleResult) []string { return v.Froms }).(pulumi.StringArrayOutput)
+// Source zones and interfaces
+func (o LookupDosProtectionRuleResultOutput) From() GetDosProtectionRuleFromOutput {
+	return o.ApplyT(func(v LookupDosProtectionRuleResult) GetDosProtectionRuleFrom { return v.From }).(GetDosProtectionRuleFromOutput)
 }
 
 // The UUID of the DNS security profile
@@ -128,52 +158,64 @@ func (o LookupDosProtectionRuleResultOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupDosProtectionRuleResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
+// Log forwarding profile name
 func (o LookupDosProtectionRuleResultOutput) LogSetting() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupDosProtectionRuleResult) string { return v.LogSetting }).(pulumi.StringOutput)
 }
 
+// Rule name
 func (o LookupDosProtectionRuleResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupDosProtectionRuleResult) string { return v.Name }).(pulumi.StringOutput)
 }
 
+// Position relative to local device rules. Possible values are `pre` and `post`.
 func (o LookupDosProtectionRuleResultOutput) Position() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupDosProtectionRuleResult) string { return v.Position }).(pulumi.StringOutput)
 }
 
+// Protection
 func (o LookupDosProtectionRuleResultOutput) Protection() GetDosProtectionRuleProtectionOutput {
 	return o.ApplyT(func(v LookupDosProtectionRuleResult) GetDosProtectionRuleProtection { return v.Protection }).(GetDosProtectionRuleProtectionOutput)
 }
 
+// Schedule on which to enforce the rule
 func (o LookupDosProtectionRuleResultOutput) Schedule() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupDosProtectionRuleResult) string { return v.Schedule }).(pulumi.StringOutput)
 }
 
+// List of services
 func (o LookupDosProtectionRuleResultOutput) Services() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupDosProtectionRuleResult) []string { return v.Services }).(pulumi.StringArrayOutput)
 }
 
+// The snippet in which the resource is defined
 func (o LookupDosProtectionRuleResultOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupDosProtectionRuleResult) string { return v.Snippet }).(pulumi.StringOutput)
 }
 
+// List of source users and/or groups.  Reserved words include `any`, `pre-login`, `known-user`, and `unknown`.
 func (o LookupDosProtectionRuleResultOutput) SourceUsers() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupDosProtectionRuleResult) []string { return v.SourceUsers }).(pulumi.StringArrayOutput)
 }
 
+// List of source addresses
 func (o LookupDosProtectionRuleResultOutput) Sources() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupDosProtectionRuleResult) []string { return v.Sources }).(pulumi.StringArrayOutput)
 }
 
+// List of tags
 func (o LookupDosProtectionRuleResultOutput) Tags() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupDosProtectionRuleResult) []string { return v.Tags }).(pulumi.StringArrayOutput)
 }
 
+// The Terraform ID.
 func (o LookupDosProtectionRuleResultOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupDosProtectionRuleResult) string { return v.Tfid }).(pulumi.StringOutput)
 }
 
-func (o LookupDosProtectionRuleResultOutput) Tos() pulumi.StringArrayOutput {
-	return o.ApplyT(func(v LookupDosProtectionRuleResult) []string { return v.Tos }).(pulumi.StringArrayOutput)
+// Destination zones and interfaces
+func (o LookupDosProtectionRuleResultOutput) To() GetDosProtectionRuleToOutput {
+	return o.ApplyT(func(v LookupDosProtectionRuleResult) GetDosProtectionRuleTo { return v.To }).(GetDosProtectionRuleToOutput)
 }
 
 func init() {

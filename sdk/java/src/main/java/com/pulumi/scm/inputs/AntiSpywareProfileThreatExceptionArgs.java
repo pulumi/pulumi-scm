@@ -79,14 +79,14 @@ public final class AntiSpywareProfileThreatExceptionArgs extends com.pulumi.reso
     }
 
     /**
-     * Packet capture
+     * Packet capture. Possible values are `disable`, `single-packet` and `extended-capture`.
      * 
      */
     @Import(name="packetCapture")
     private @Nullable Output<String> packetCapture;
 
     /**
-     * @return Packet capture
+     * @return Packet capture. Possible values are `disable`, `single-packet` and `extended-capture`.
      * 
      */
     public Optional<Output<String>> packetCapture() {
@@ -216,7 +216,7 @@ public final class AntiSpywareProfileThreatExceptionArgs extends com.pulumi.reso
         }
 
         /**
-         * @param packetCapture Packet capture
+         * @param packetCapture Packet capture. Possible values are `disable`, `single-packet` and `extended-capture`.
          * 
          * @return builder
          * 
@@ -227,7 +227,7 @@ public final class AntiSpywareProfileThreatExceptionArgs extends com.pulumi.reso
         }
 
         /**
-         * @param packetCapture Packet capture
+         * @param packetCapture Packet capture. Possible values are `disable`, `single-packet` and `extended-capture`.
          * 
          * @return builder
          * 

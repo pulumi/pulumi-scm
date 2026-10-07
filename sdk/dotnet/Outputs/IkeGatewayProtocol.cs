@@ -22,7 +22,7 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly Outputs.IkeGatewayProtocolIkev2? Ikev2;
         /// <summary>
-        /// Version
+        /// Version. Possible values are `ikev2-preferred`, `Ikev1` and `Ikev2`.
         /// </summary>
         public readonly string? Version;
 

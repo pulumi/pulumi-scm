@@ -19,8 +19,6 @@ namespace Pulumi.Scm.Outputs
         public readonly Outputs.GetManagementInterfaceManagementInterfaceMgmtTypeDhcpClientResult DhcpClient;
         /// <summary>
         /// Static
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `DhcpClient` and `Static`.
         /// </summary>
         public readonly Outputs.GetManagementInterfaceManagementInterfaceMgmtTypeStaticResult Static;
 

@@ -135,6 +135,9 @@ namespace Pulumi.Scm
         [Input("device")]
         public string? Device { get; set; }
 
+        /// <summary>
+        /// The folder in which the resource is defined
+        /// </summary>
         [Input("folder")]
         public string? Folder { get; set; }
 
@@ -144,9 +147,15 @@ namespace Pulumi.Scm
         [Input("id", required: true)]
         public string Id { get; set; } = null!;
 
+        /// <summary>
+        /// L3 sub-interface name
+        /// </summary>
         [Input("name")]
         public string? Name { get; set; }
 
+        /// <summary>
+        /// The snippet in which the resource is defined
+        /// </summary>
         [Input("snippet")]
         public string? Snippet { get; set; }
 
@@ -164,6 +173,9 @@ namespace Pulumi.Scm
         [Input("device")]
         public Input<string>? Device { get; set; }
 
+        /// <summary>
+        /// The folder in which the resource is defined
+        /// </summary>
         [Input("folder")]
         public Input<string>? Folder { get; set; }
 
@@ -173,9 +185,15 @@ namespace Pulumi.Scm
         [Input("id", required: true)]
         public Input<string> Id { get; set; } = null!;
 
+        /// <summary>
+        /// L3 sub-interface name
+        /// </summary>
         [Input("name")]
         public Input<string>? Name { get; set; }
 
+        /// <summary>
+        /// The snippet in which the resource is defined
+        /// </summary>
         [Input("snippet")]
         public Input<string>? Snippet { get; set; }
 
@@ -189,31 +207,87 @@ namespace Pulumi.Scm
     [OutputType]
     public sealed class GetLayer3SubinterfaceResult
     {
+        /// <summary>
+        /// TCP MSS adjustment settings for the interface
+        /// </summary>
+        public readonly Outputs.GetLayer3SubinterfaceAdjustTcpMssResult AdjustTcpMss;
+        /// <summary>
+        /// Layer 3 sub Interfaces ARP configuration
+        /// </summary>
         public readonly ImmutableArray<Outputs.GetLayer3SubinterfaceArpResult> Arps;
+        /// <summary>
+        /// Description
+        /// </summary>
         public readonly string Comment;
+        /// <summary>
+        /// Dynamic DNS configuration specific to the Layer 3 sub Interfaces.
+        /// </summary>
         public readonly Outputs.GetLayer3SubinterfaceDdnsConfigResult DdnsConfig;
         /// <summary>
         /// The device in which the resource is defined
         /// </summary>
         public readonly string Device;
+        /// <summary>
+        /// Layer3 sub interfaces DHCP Client Object
+        /// </summary>
         public readonly Outputs.GetLayer3SubinterfaceDhcpClientResult DhcpClient;
+        /// <summary>
+        /// Map of sensitive values returned from the API.
+        /// </summary>
+        public readonly ImmutableDictionary<string, string> EncryptedValues;
+        /// <summary>
+        /// The folder in which the resource is defined
+        /// </summary>
         public readonly string Folder;
         /// <summary>
         /// UUID of the resource
         /// </summary>
         public readonly string Id;
+        /// <summary>
+        /// Interface management profile
+        /// </summary>
         public readonly string InterfaceManagementProfile;
+        /// <summary>
+        /// L3 sub-interface IP Parent
+        /// </summary>
         public readonly ImmutableArray<Outputs.GetLayer3SubinterfaceIpResult> Ips;
+        /// <summary>
+        /// MTU
+        /// </summary>
         public readonly int Mtu;
+        /// <summary>
+        /// L3 sub-interface name
+        /// </summary>
         public readonly string Name;
+        /// <summary>
+        /// Name of Netflow Profile to assign to Interface
+        /// </summary>
         public readonly string NetflowProfile;
+        /// <summary>
+        /// Parent interface
+        /// </summary>
         public readonly string ParentInterface;
+        /// <summary>
+        /// PPPoE configuration for the interface
+        /// </summary>
+        public readonly Outputs.GetLayer3SubinterfacePppoeResult Pppoe;
+        /// <summary>
+        /// The snippet in which the resource is defined
+        /// </summary>
         public readonly string Snippet;
+        /// <summary>
+        /// VLAN tag
+        /// </summary>
         public readonly int Tag;
+        /// <summary>
+        /// The Terraform ID.
+        /// </summary>
         public readonly string Tfid;
 
         [OutputConstructor]
         private GetLayer3SubinterfaceResult(
+            Outputs.GetLayer3SubinterfaceAdjustTcpMssResult adjustTcpMss,
+
             ImmutableArray<Outputs.GetLayer3SubinterfaceArpResult> arps,
 
             string comment,
@@ -223,6 +297,8 @@ namespace Pulumi.Scm
             string device,
 
             Outputs.GetLayer3SubinterfaceDhcpClientResult dhcpClient,
+
+            ImmutableDictionary<string, string> encryptedValues,
 
             string folder,
 
@@ -240,17 +316,21 @@ namespace Pulumi.Scm
 
             string parentInterface,
 
+            Outputs.GetLayer3SubinterfacePppoeResult pppoe,
+
             string snippet,
 
             int tag,
 
             string tfid)
         {
+            AdjustTcpMss = adjustTcpMss;
             Arps = arps;
             Comment = comment;
             DdnsConfig = ddnsConfig;
             Device = device;
             DhcpClient = dhcpClient;
+            EncryptedValues = encryptedValues;
             Folder = folder;
             Id = id;
             InterfaceManagementProfile = interfaceManagementProfile;
@@ -259,6 +339,7 @@ namespace Pulumi.Scm
             Name = name;
             NetflowProfile = netflowProfile;
             ParentInterface = parentInterface;
+            Pppoe = pppoe;
             Snippet = snippet;
             Tag = tag;
             Tfid = tfid;

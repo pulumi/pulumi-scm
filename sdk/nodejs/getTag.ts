@@ -45,12 +45,21 @@ export interface GetTagArgs {
      * The device in which the resource is defined
      */
     device?: string;
+    /**
+     * The folder in which the resource is defined
+     */
     folder?: string;
     /**
      * The UUID of the tag
      */
     id: string;
+    /**
+     * The name of the tag
+     */
     name?: string;
+    /**
+     * The snippet in which the resource is defined
+     */
     snippet?: string;
 }
 
@@ -58,19 +67,37 @@ export interface GetTagArgs {
  * A collection of values returned by getTag.
  */
 export interface GetTagResult {
+    /**
+     * The color of the tag. Possible values are `Red`, `Green`, `Blue`, `Yellow`, `Copper`, `Orange`, `Purple`, `Gray`, `Light Green`, `Cyan`, `Light Gray`, `Blue Gray`, `Lime`, `Black`, `Gold`, `Brown`, `Olive`, `Maroon`, `Red-Orange`, `Yellow-Orange`, `Forest Green`, `Turquoise Blue`, `Azure Blue`, `Cerulean Blue`, `Midnight Blue`, `Medium Blue`, `Cobalt Blue`, `Violet Blue`, `Blue Violet`, `Medium Violet`, `Medium Rose`, `Lavender`, `Orchid`, `Thistle`, `Peach`, `Salmon`, `Magenta`, `Red Violet`, `Mahogany`, `Burnt Sienna` and `Chestnut`.
+     */
     readonly color: string;
+    /**
+     * The description of the tag
+     */
     readonly comments: string;
     /**
      * The device in which the resource is defined
      */
     readonly device: string;
+    /**
+     * The folder in which the resource is defined
+     */
     readonly folder: string;
     /**
      * The UUID of the tag
      */
     readonly id: string;
+    /**
+     * The name of the tag
+     */
     readonly name: string;
+    /**
+     * The snippet in which the resource is defined
+     */
     readonly snippet: string;
+    /**
+     * The Terraform ID.
+     */
     readonly tfid: string;
 }
 /**
@@ -114,11 +141,20 @@ export interface GetTagOutputArgs {
      * The device in which the resource is defined
      */
     device?: pulumi.Input<string | undefined>;
+    /**
+     * The folder in which the resource is defined
+     */
     folder?: pulumi.Input<string | undefined>;
     /**
      * The UUID of the tag
      */
     id: pulumi.Input<string>;
+    /**
+     * The name of the tag
+     */
     name?: pulumi.Input<string | undefined>;
+    /**
+     * The snippet in which the resource is defined
+     */
     snippet?: pulumi.Input<string | undefined>;
 }

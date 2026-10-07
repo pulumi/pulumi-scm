@@ -5,10 +5,12 @@ package com.pulumi.scm.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.scm.inputs.EthernetInterfaceLayer3AdjustTcpMssArgs;
 import com.pulumi.scm.inputs.EthernetInterfaceLayer3ArpArgs;
 import com.pulumi.scm.inputs.EthernetInterfaceLayer3DdnsConfigArgs;
 import com.pulumi.scm.inputs.EthernetInterfaceLayer3DhcpClientArgs;
 import com.pulumi.scm.inputs.EthernetInterfaceLayer3IpArgs;
+import com.pulumi.scm.inputs.EthernetInterfaceLayer3LldpArgs;
 import com.pulumi.scm.inputs.EthernetInterfaceLayer3PppoeArgs;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,6 +23,21 @@ import javax.annotation.Nullable;
 public final class EthernetInterfaceLayer3Args extends com.pulumi.resources.ResourceArgs {
 
     public static final EthernetInterfaceLayer3Args Empty = new EthernetInterfaceLayer3Args();
+
+    /**
+     * TCP MSS adjustment settings for the interface
+     * 
+     */
+    @Import(name="adjustTcpMss")
+    private @Nullable Output<EthernetInterfaceLayer3AdjustTcpMssArgs> adjustTcpMss;
+
+    /**
+     * @return TCP MSS adjustment settings for the interface
+     * 
+     */
+    public Optional<Output<EthernetInterfaceLayer3AdjustTcpMssArgs>> adjustTcpMss() {
+        return Optional.ofNullable(this.adjustTcpMss);
+    }
 
     /**
      * Ethernet Interfaces ARP configuration
@@ -85,8 +102,6 @@ public final class EthernetInterfaceLayer3Args extends com.pulumi.resources.Reso
     /**
      * Ethernet Interface IP addresses
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `dhcpClient`, `ip`, and `pppoe`.
-     * 
      */
     @Import(name="ips")
     private @Nullable Output<List<EthernetInterfaceLayer3IpArgs>> ips;
@@ -94,11 +109,24 @@ public final class EthernetInterfaceLayer3Args extends com.pulumi.resources.Reso
     /**
      * @return Ethernet Interface IP addresses
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `dhcpClient`, `ip`, and `pppoe`.
-     * 
      */
     public Optional<Output<List<EthernetInterfaceLayer3IpArgs>>> ips() {
         return Optional.ofNullable(this.ips);
+    }
+
+    /**
+     * LLDP settings for the interface
+     * 
+     */
+    @Import(name="lldp")
+    private @Nullable Output<EthernetInterfaceLayer3LldpArgs> lldp;
+
+    /**
+     * @return LLDP settings for the interface
+     * 
+     */
+    public Optional<Output<EthernetInterfaceLayer3LldpArgs>> lldp() {
+        return Optional.ofNullable(this.lldp);
     }
 
     /**
@@ -132,18 +160,14 @@ public final class EthernetInterfaceLayer3Args extends com.pulumi.resources.Reso
     }
 
     /**
-     * Pppoe
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `dhcpClient`, `ip`, and `pppoe`.
+     * PPPoE configuration for the interface
      * 
      */
     @Import(name="pppoe")
     private @Nullable Output<EthernetInterfaceLayer3PppoeArgs> pppoe;
 
     /**
-     * @return Pppoe
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `dhcpClient`, `ip`, and `pppoe`.
+     * @return PPPoE configuration for the interface
      * 
      */
     public Optional<Output<EthernetInterfaceLayer3PppoeArgs>> pppoe() {
@@ -153,11 +177,13 @@ public final class EthernetInterfaceLayer3Args extends com.pulumi.resources.Reso
     private EthernetInterfaceLayer3Args() {}
 
     private EthernetInterfaceLayer3Args(EthernetInterfaceLayer3Args $) {
+        this.adjustTcpMss = $.adjustTcpMss;
         this.arps = $.arps;
         this.ddnsConfig = $.ddnsConfig;
         this.dhcpClient = $.dhcpClient;
         this.interfaceManagementProfile = $.interfaceManagementProfile;
         this.ips = $.ips;
+        this.lldp = $.lldp;
         this.mtu = $.mtu;
         this.netflowProfile = $.netflowProfile;
         this.pppoe = $.pppoe;
@@ -179,6 +205,27 @@ public final class EthernetInterfaceLayer3Args extends com.pulumi.resources.Reso
 
         public Builder(EthernetInterfaceLayer3Args defaults) {
             $ = new EthernetInterfaceLayer3Args(Objects.requireNonNull(defaults));
+        }
+
+        /**
+         * @param adjustTcpMss TCP MSS adjustment settings for the interface
+         * 
+         * @return builder
+         * 
+         */
+        public Builder adjustTcpMss(@Nullable Output<EthernetInterfaceLayer3AdjustTcpMssArgs> adjustTcpMss) {
+            $.adjustTcpMss = adjustTcpMss;
+            return this;
+        }
+
+        /**
+         * @param adjustTcpMss TCP MSS adjustment settings for the interface
+         * 
+         * @return builder
+         * 
+         */
+        public Builder adjustTcpMss(EthernetInterfaceLayer3AdjustTcpMssArgs adjustTcpMss) {
+            return adjustTcpMss(Output.of(adjustTcpMss));
         }
 
         /**
@@ -278,8 +325,6 @@ public final class EthernetInterfaceLayer3Args extends com.pulumi.resources.Reso
         /**
          * @param ips Ethernet Interface IP addresses
          * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `dhcpClient`, `ip`, and `pppoe`.
-         * 
          * @return builder
          * 
          */
@@ -291,8 +336,6 @@ public final class EthernetInterfaceLayer3Args extends com.pulumi.resources.Reso
         /**
          * @param ips Ethernet Interface IP addresses
          * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `dhcpClient`, `ip`, and `pppoe`.
-         * 
          * @return builder
          * 
          */
@@ -303,13 +346,32 @@ public final class EthernetInterfaceLayer3Args extends com.pulumi.resources.Reso
         /**
          * @param ips Ethernet Interface IP addresses
          * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `dhcpClient`, `ip`, and `pppoe`.
-         * 
          * @return builder
          * 
          */
         public Builder ips(EthernetInterfaceLayer3IpArgs... ips) {
             return ips(List.of(ips));
+        }
+
+        /**
+         * @param lldp LLDP settings for the interface
+         * 
+         * @return builder
+         * 
+         */
+        public Builder lldp(@Nullable Output<EthernetInterfaceLayer3LldpArgs> lldp) {
+            $.lldp = lldp;
+            return this;
+        }
+
+        /**
+         * @param lldp LLDP settings for the interface
+         * 
+         * @return builder
+         * 
+         */
+        public Builder lldp(EthernetInterfaceLayer3LldpArgs lldp) {
+            return lldp(Output.of(lldp));
         }
 
         /**
@@ -355,9 +417,7 @@ public final class EthernetInterfaceLayer3Args extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param pppoe Pppoe
-         * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `dhcpClient`, `ip`, and `pppoe`.
+         * @param pppoe PPPoE configuration for the interface
          * 
          * @return builder
          * 
@@ -368,9 +428,7 @@ public final class EthernetInterfaceLayer3Args extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param pppoe Pppoe
-         * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `dhcpClient`, `ip`, and `pppoe`.
+         * @param pppoe PPPoE configuration for the interface
          * 
          * @return builder
          * 

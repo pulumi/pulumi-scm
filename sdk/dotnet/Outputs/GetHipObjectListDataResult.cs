@@ -50,7 +50,7 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly Outputs.GetHipObjectListDataFirewallResult Firewall;
         /// <summary>
-        /// The folder of the item. Default: Shared.
+        /// The folder in which the resource is defined
         /// </summary>
         public readonly string Folder;
         /// <summary>
@@ -66,7 +66,7 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly Outputs.GetHipObjectListDataMobileDeviceResult MobileDevice;
         /// <summary>
-        /// The name of the item.
+        /// The name of the HIP object
         /// </summary>
         public readonly string Name;
         /// <summary>
@@ -78,7 +78,7 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly Outputs.GetHipObjectListDataPatchManagementResult PatchManagement;
         /// <summary>
-        /// The snippet of the item.
+        /// The snippet in which the resource is defined
         /// </summary>
         public readonly string Snippet;
         /// <summary>

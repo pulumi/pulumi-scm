@@ -35,16 +35,12 @@ public final class ScepProfileScepChallengeArgs extends com.pulumi.resources.Res
     /**
      * Challenge to use for SCEP server on mobile clients
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `dynamic`, `fixed`, and `none`.
-     * 
      */
     @Import(name="fixed")
     private @Nullable Output<String> fixed;
 
     /**
      * @return Challenge to use for SCEP server on mobile clients
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `dynamic`, `fixed`, and `none`.
      * 
      */
     public Optional<Output<String>> fixed() {
@@ -54,16 +50,12 @@ public final class ScepProfileScepChallengeArgs extends com.pulumi.resources.Res
     /**
      * No OTP
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `dynamic`, `fixed`, and `none`.
-     * 
      */
     @Import(name="none")
     private @Nullable Output<ScepProfileScepChallengeNoneArgs> none;
 
     /**
      * @return No OTP
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `dynamic`, `fixed`, and `none`.
      * 
      */
     public Optional<Output<ScepProfileScepChallengeNoneArgs>> none() {
@@ -120,8 +112,6 @@ public final class ScepProfileScepChallengeArgs extends com.pulumi.resources.Res
         /**
          * @param fixed Challenge to use for SCEP server on mobile clients
          * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `dynamic`, `fixed`, and `none`.
-         * 
          * @return builder
          * 
          */
@@ -133,8 +123,6 @@ public final class ScepProfileScepChallengeArgs extends com.pulumi.resources.Res
         /**
          * @param fixed Challenge to use for SCEP server on mobile clients
          * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `dynamic`, `fixed`, and `none`.
-         * 
          * @return builder
          * 
          */
@@ -144,8 +132,6 @@ public final class ScepProfileScepChallengeArgs extends com.pulumi.resources.Res
 
         /**
          * @param none No OTP
-         * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `dynamic`, `fixed`, and `none`.
          * 
          * @return builder
          * 
@@ -157,8 +143,6 @@ public final class ScepProfileScepChallengeArgs extends com.pulumi.resources.Res
 
         /**
          * @param none No OTP
-         * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `dynamic`, `fixed`, and `none`.
          * 
          * @return builder
          * 

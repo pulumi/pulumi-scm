@@ -12,6 +12,12 @@ namespace Pulumi.Scm.Inputs
 
     public sealed class AggregateInterfaceLayer3GetArgs : global::Pulumi.ResourceArgs
     {
+        /// <summary>
+        /// TCP MSS adjustment settings for the interface
+        /// </summary>
+        [Input("adjustTcpMss")]
+        public Input<Inputs.AggregateInterfaceLayer3AdjustTcpMssGetArgs>? AdjustTcpMss { get; set; }
+
         [Input("arps")]
         private InputList<Inputs.AggregateInterfaceLayer3ArpGetArgs>? _arps;
 
@@ -47,8 +53,6 @@ namespace Pulumi.Scm.Inputs
 
         /// <summary>
         /// Aggregate Interface IP addresses
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `DhcpClient` and `Ip`.
         /// </summary>
         public InputList<Inputs.AggregateInterfaceLayer3IpGetArgs> Ips
         {
@@ -61,6 +65,12 @@ namespace Pulumi.Scm.Inputs
         /// </summary>
         [Input("lacp")]
         public Input<Inputs.AggregateInterfaceLayer3LacpGetArgs>? Lacp { get; set; }
+
+        /// <summary>
+        /// LLDP settings for the interface
+        /// </summary>
+        [Input("lldp")]
+        public Input<Inputs.AggregateInterfaceLayer3LldpGetArgs>? Lldp { get; set; }
 
         /// <summary>
         /// MTU

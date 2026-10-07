@@ -13,7 +13,7 @@ namespace Pulumi.Scm.Inputs
     public sealed class BgpRouteMapRedistributionOspfBgpRouteMapArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// OSPF BGP Route maps Action
+        /// OSPF BGP Route maps Action. Possible values are `Permit` and `Deny`.
         /// </summary>
         [Input("action")]
         public Input<string>? Action { get; set; }

@@ -18,14 +18,14 @@ public final class HipObjectPatchManagementCriteriaArgs extends com.pulumi.resou
     public static final HipObjectPatchManagementCriteriaArgs Empty = new HipObjectPatchManagementCriteriaArgs();
 
     /**
-     * is enabled
+     * is enabled. Possible values are `no`, `yes` and `not-available`.
      * 
      */
     @Import(name="isEnabled")
     private @Nullable Output<String> isEnabled;
 
     /**
-     * @return is enabled
+     * @return is enabled. Possible values are `no`, `yes` and `not-available`.
      * 
      */
     public Optional<Output<String>> isEnabled() {
@@ -89,7 +89,7 @@ public final class HipObjectPatchManagementCriteriaArgs extends com.pulumi.resou
         }
 
         /**
-         * @param isEnabled is enabled
+         * @param isEnabled is enabled. Possible values are `no`, `yes` and `not-available`.
          * 
          * @return builder
          * 
@@ -100,7 +100,7 @@ public final class HipObjectPatchManagementCriteriaArgs extends com.pulumi.resou
         }
 
         /**
-         * @param isEnabled is enabled
+         * @param isEnabled is enabled. Possible values are `no`, `yes` and `not-available`.
          * 
          * @return builder
          * 

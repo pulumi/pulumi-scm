@@ -19,8 +19,6 @@ public final class HipObjectDiskBackupCriteriaLastBackupTimeWithin {
     /**
      * @return specify time in hours
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `days` and `hours`.
-     * 
      */
     private @Nullable Integer hours;
 
@@ -34,8 +32,6 @@ public final class HipObjectDiskBackupCriteriaLastBackupTimeWithin {
     }
     /**
      * @return specify time in hours
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `days` and `hours`.
      * 
      */
     public Optional<Integer> hours() {

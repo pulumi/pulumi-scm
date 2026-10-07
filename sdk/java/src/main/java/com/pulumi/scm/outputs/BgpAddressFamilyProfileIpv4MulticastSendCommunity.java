@@ -23,28 +23,20 @@ public final class BgpAddressFamilyProfileIpv4MulticastSendCommunity {
     /**
      * @return Both
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
-     * 
      */
     private @Nullable BgpAddressFamilyProfileIpv4MulticastSendCommunityBoth both;
     /**
      * @return Extended
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
      * 
      */
     private @Nullable BgpAddressFamilyProfileIpv4MulticastSendCommunityExtended extended;
     /**
      * @return Large
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
-     * 
      */
     private @Nullable BgpAddressFamilyProfileIpv4MulticastSendCommunityLarge large;
     /**
      * @return Standard
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
      * 
      */
     private @Nullable BgpAddressFamilyProfileIpv4MulticastSendCommunityStandard standard;
@@ -60,16 +52,12 @@ public final class BgpAddressFamilyProfileIpv4MulticastSendCommunity {
     /**
      * @return Both
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
-     * 
      */
     public Optional<BgpAddressFamilyProfileIpv4MulticastSendCommunityBoth> both() {
         return Optional.ofNullable(this.both);
     }
     /**
      * @return Extended
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
      * 
      */
     public Optional<BgpAddressFamilyProfileIpv4MulticastSendCommunityExtended> extended() {
@@ -78,16 +66,12 @@ public final class BgpAddressFamilyProfileIpv4MulticastSendCommunity {
     /**
      * @return Large
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
-     * 
      */
     public Optional<BgpAddressFamilyProfileIpv4MulticastSendCommunityLarge> large() {
         return Optional.ofNullable(this.large);
     }
     /**
      * @return Standard
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
      * 
      */
     public Optional<BgpAddressFamilyProfileIpv4MulticastSendCommunityStandard> standard() {

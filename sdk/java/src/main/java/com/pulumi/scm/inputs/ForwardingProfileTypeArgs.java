@@ -35,16 +35,12 @@ public final class ForwardingProfileTypeArgs extends com.pulumi.resources.Resour
     /**
      * PAC file based forwarding configuration
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `globalProtectProxy`, `pacFile`, and `ztnaAgent`.
-     * 
      */
     @Import(name="pacFile")
     private @Nullable Output<ForwardingProfileTypePacFileArgs> pacFile;
 
     /**
      * @return PAC file based forwarding configuration
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `globalProtectProxy`, `pacFile`, and `ztnaAgent`.
      * 
      */
     public Optional<Output<ForwardingProfileTypePacFileArgs>> pacFile() {
@@ -54,16 +50,12 @@ public final class ForwardingProfileTypeArgs extends com.pulumi.resources.Resour
     /**
      * ZTNA agent-based forwarding configuration
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `globalProtectProxy`, `pacFile`, and `ztnaAgent`.
-     * 
      */
     @Import(name="ztnaAgent")
     private @Nullable Output<ForwardingProfileTypeZtnaAgentArgs> ztnaAgent;
 
     /**
      * @return ZTNA agent-based forwarding configuration
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `globalProtectProxy`, `pacFile`, and `ztnaAgent`.
      * 
      */
     public Optional<Output<ForwardingProfileTypeZtnaAgentArgs>> ztnaAgent() {
@@ -120,8 +112,6 @@ public final class ForwardingProfileTypeArgs extends com.pulumi.resources.Resour
         /**
          * @param pacFile PAC file based forwarding configuration
          * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `globalProtectProxy`, `pacFile`, and `ztnaAgent`.
-         * 
          * @return builder
          * 
          */
@@ -133,8 +123,6 @@ public final class ForwardingProfileTypeArgs extends com.pulumi.resources.Resour
         /**
          * @param pacFile PAC file based forwarding configuration
          * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `globalProtectProxy`, `pacFile`, and `ztnaAgent`.
-         * 
          * @return builder
          * 
          */
@@ -144,8 +132,6 @@ public final class ForwardingProfileTypeArgs extends com.pulumi.resources.Resour
 
         /**
          * @param ztnaAgent ZTNA agent-based forwarding configuration
-         * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `globalProtectProxy`, `pacFile`, and `ztnaAgent`.
          * 
          * @return builder
          * 
@@ -157,8 +143,6 @@ public final class ForwardingProfileTypeArgs extends com.pulumi.resources.Resour
 
         /**
          * @param ztnaAgent ZTNA agent-based forwarding configuration
-         * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `globalProtectProxy`, `pacFile`, and `ztnaAgent`.
          * 
          * @return builder
          * 

@@ -19,8 +19,6 @@ namespace Pulumi.Scm.Outputs
         public readonly ImmutableArray<string> Interfaces;
         /// <summary>
         /// Source zones
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Interface` and `Zone`.
         /// </summary>
         public readonly ImmutableArray<string> Zones;
 

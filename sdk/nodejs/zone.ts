@@ -56,14 +56,22 @@ import * as utilities from "./utilities";
  *     },
  * });
  * //
- * // Creates a layer3 zone
- * // Requires Interface $scm_l3_interface to exist
+ * // Creates a layer3 ethernet interface for use in zone
+ * //
+ * const scmL3Interface = new scm.EthernetInterface("scm_l3_interface", {
+ *     name: "$scm_l3_interface",
+ *     comment: "Managed by Pulumi",
+ *     folder: "ngfw-shared",
+ *     layer3: {},
+ * });
+ * //
+ * // Creates a layer3 zone that references the interface
  * //
  * const scmLayer3ZoneComplex = new scm.Zone("scm_layer3_zone_complex", {
  *     name: "scm_layer3_zone_complex",
  *     folder: "ngfw-shared",
  *     network: {
- *         layer3s: ["$scm_l3_interface"],
+ *         layer3s: [scmL3Interface.name],
  *         zoneProtectionProfile: "best-practice",
  *         enablePacketBufferProtection: true,
  *     },
@@ -77,6 +85,8 @@ import * as utilities from "./utilities";
  *         includeLists: ["198.18.3.0/24"],
  *         excludeLists: ["198.18.4.0/24"],
  *     },
+ * }, {
+ *     dependsOn: [scmL3Interface],
  * });
  * ```
  *
@@ -156,8 +166,6 @@ export class Zone extends pulumi.CustomResource {
     declare public readonly enableUserIdentification: pulumi.Output<boolean | undefined>;
     /**
      * Folder
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly folder: pulumi.Output<string | undefined>;
     /**
@@ -170,8 +178,6 @@ export class Zone extends pulumi.CustomResource {
     declare public readonly network: pulumi.Output<outputs.ZoneNetwork | undefined>;
     /**
      * The snippet in which the resource is defined
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly snippet: pulumi.Output<string | undefined>;
     /**
@@ -258,8 +264,6 @@ export interface ZoneState {
     enableUserIdentification?: pulumi.Input<boolean | undefined>;
     /**
      * Folder
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     folder?: pulumi.Input<string | undefined>;
     /**
@@ -272,8 +276,6 @@ export interface ZoneState {
     network?: pulumi.Input<inputs.ZoneNetwork | undefined>;
     /**
      * The snippet in which the resource is defined
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     snippet?: pulumi.Input<string | undefined>;
     /**
@@ -316,8 +318,6 @@ export interface ZoneArgs {
     enableUserIdentification?: pulumi.Input<boolean | undefined>;
     /**
      * Folder
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     folder?: pulumi.Input<string | undefined>;
     /**
@@ -330,8 +330,6 @@ export interface ZoneArgs {
     network?: pulumi.Input<inputs.ZoneNetwork | undefined>;
     /**
      * The snippet in which the resource is defined
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     snippet?: pulumi.Input<string | undefined>;
     /**

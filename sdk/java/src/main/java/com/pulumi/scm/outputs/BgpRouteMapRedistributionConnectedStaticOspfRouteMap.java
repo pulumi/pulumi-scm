@@ -15,7 +15,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class BgpRouteMapRedistributionConnectedStaticOspfRouteMap {
     /**
-     * @return Connected Static BGP OSPF Route map Action
+     * @return Connected Static BGP OSPF Route map Action. Possible values are `permit` and `deny`.
      * 
      */
     private @Nullable String action;
@@ -42,7 +42,7 @@ public final class BgpRouteMapRedistributionConnectedStaticOspfRouteMap {
 
     private BgpRouteMapRedistributionConnectedStaticOspfRouteMap() {}
     /**
-     * @return Connected Static BGP OSPF Route map Action
+     * @return Connected Static BGP OSPF Route map Action. Possible values are `permit` and `deny`.
      * 
      */
     public Optional<String> action() {

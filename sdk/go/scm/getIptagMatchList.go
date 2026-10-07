@@ -54,31 +54,46 @@ func LookupIptagMatchList(ctx *pulumi.Context, args *LookupIptagMatchListArgs, o
 type LookupIptagMatchListArgs struct {
 	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
+	// The folder in which the resource is defined
 	Folder *string `pulumi:"folder"`
 	// UUID of the resource
-	Id      string  `pulumi:"id"`
-	Name    *string `pulumi:"name"`
+	Id string `pulumi:"id"`
+	// Name of the iptag match list entry
+	Name *string `pulumi:"name"`
+	// The snippet in which the resource is defined
 	Snippet *string `pulumi:"snippet"`
 }
 
 // A collection of values returned by getIptagMatchList.
 type LookupIptagMatchListResult struct {
+	// Description of the iptag match list entry
 	Description string `pulumi:"description"`
 	// The device in which the resource is defined
 	Device string `pulumi:"device"`
+	// Filter of the iptag match list entry
 	Filter string `pulumi:"filter"`
+	// The folder in which the resource is defined
 	Folder string `pulumi:"folder"`
 	// UUID of the resource
-	Id             string   `pulumi:"id"`
-	Name           string   `pulumi:"name"`
-	Quarantine     bool     `pulumi:"quarantine"`
-	SendEmails     []string `pulumi:"sendEmails"`
-	SendHttps      []string `pulumi:"sendHttps"`
-	SendSnmptraps  []string `pulumi:"sendSnmptraps"`
-	SendSyslogs    []string `pulumi:"sendSyslogs"`
-	SendToPanorama bool     `pulumi:"sendToPanorama"`
-	Snippet        string   `pulumi:"snippet"`
-	Tfid           string   `pulumi:"tfid"`
+	Id string `pulumi:"id"`
+	// Name of the iptag match list entry
+	Name string `pulumi:"name"`
+	// Quarantine Flag of the iptag match list entry
+	Quarantine bool `pulumi:"quarantine"`
+	// Send Email List of the iptag match list entry
+	SendEmails []string `pulumi:"sendEmails"`
+	// Send HTTP List of the iptag match list entry
+	SendHttps []string `pulumi:"sendHttps"`
+	// Send SNMP Trap List of the iptag match list entry
+	SendSnmptraps []string `pulumi:"sendSnmptraps"`
+	// Send Sys Log List of the iptag match list entry
+	SendSyslogs []string `pulumi:"sendSyslogs"`
+	// Send to Panorama Flag of the iptag match list entry
+	SendToPanorama bool `pulumi:"sendToPanorama"`
+	// The snippet in which the resource is defined
+	Snippet string `pulumi:"snippet"`
+	// The Terraform ID.
+	Tfid string `pulumi:"tfid"`
 }
 
 func LookupIptagMatchListOutput(ctx *pulumi.Context, args LookupIptagMatchListOutputArgs, opts ...pulumi.InvokeOption) LookupIptagMatchListResultOutput {
@@ -90,10 +105,13 @@ func LookupIptagMatchListOutput(ctx *pulumi.Context, args LookupIptagMatchListOu
 type LookupIptagMatchListOutputArgs struct {
 	// The device in which the resource is defined
 	Device pulumi.StringPtrInput `pulumi:"device"`
+	// The folder in which the resource is defined
 	Folder pulumi.StringPtrInput `pulumi:"folder"`
 	// UUID of the resource
-	Id      pulumi.StringInput    `pulumi:"id"`
-	Name    pulumi.StringPtrInput `pulumi:"name"`
+	Id pulumi.StringInput `pulumi:"id"`
+	// Name of the iptag match list entry
+	Name pulumi.StringPtrInput `pulumi:"name"`
+	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrInput `pulumi:"snippet"`
 }
 
@@ -116,6 +134,7 @@ func (o LookupIptagMatchListResultOutput) ToLookupIptagMatchListResultOutputWith
 	return o
 }
 
+// Description of the iptag match list entry
 func (o LookupIptagMatchListResultOutput) Description() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupIptagMatchListResult) string { return v.Description }).(pulumi.StringOutput)
 }
@@ -125,10 +144,12 @@ func (o LookupIptagMatchListResultOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupIptagMatchListResult) string { return v.Device }).(pulumi.StringOutput)
 }
 
+// Filter of the iptag match list entry
 func (o LookupIptagMatchListResultOutput) Filter() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupIptagMatchListResult) string { return v.Filter }).(pulumi.StringOutput)
 }
 
+// The folder in which the resource is defined
 func (o LookupIptagMatchListResultOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupIptagMatchListResult) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -138,38 +159,47 @@ func (o LookupIptagMatchListResultOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupIptagMatchListResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
+// Name of the iptag match list entry
 func (o LookupIptagMatchListResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupIptagMatchListResult) string { return v.Name }).(pulumi.StringOutput)
 }
 
+// Quarantine Flag of the iptag match list entry
 func (o LookupIptagMatchListResultOutput) Quarantine() pulumi.BoolOutput {
 	return o.ApplyT(func(v LookupIptagMatchListResult) bool { return v.Quarantine }).(pulumi.BoolOutput)
 }
 
+// Send Email List of the iptag match list entry
 func (o LookupIptagMatchListResultOutput) SendEmails() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupIptagMatchListResult) []string { return v.SendEmails }).(pulumi.StringArrayOutput)
 }
 
+// Send HTTP List of the iptag match list entry
 func (o LookupIptagMatchListResultOutput) SendHttps() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupIptagMatchListResult) []string { return v.SendHttps }).(pulumi.StringArrayOutput)
 }
 
+// Send SNMP Trap List of the iptag match list entry
 func (o LookupIptagMatchListResultOutput) SendSnmptraps() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupIptagMatchListResult) []string { return v.SendSnmptraps }).(pulumi.StringArrayOutput)
 }
 
+// Send Sys Log List of the iptag match list entry
 func (o LookupIptagMatchListResultOutput) SendSyslogs() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupIptagMatchListResult) []string { return v.SendSyslogs }).(pulumi.StringArrayOutput)
 }
 
+// Send to Panorama Flag of the iptag match list entry
 func (o LookupIptagMatchListResultOutput) SendToPanorama() pulumi.BoolOutput {
 	return o.ApplyT(func(v LookupIptagMatchListResult) bool { return v.SendToPanorama }).(pulumi.BoolOutput)
 }
 
+// The snippet in which the resource is defined
 func (o LookupIptagMatchListResultOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupIptagMatchListResult) string { return v.Snippet }).(pulumi.StringOutput)
 }
 
+// The Terraform ID.
 func (o LookupIptagMatchListResultOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupIptagMatchListResult) string { return v.Tfid }).(pulumi.StringOutput)
 }

@@ -199,7 +199,7 @@ namespace Pulumi.Scm
     public sealed class GetNatRuleResult
     {
         /// <summary>
-        /// Active active device binding
+        /// Active active device binding. Possible values are `Primary`, `Both`, `0` and `1`.
         /// </summary>
         public readonly string ActiveActiveDeviceBinding;
         /// <summary>
@@ -243,11 +243,11 @@ namespace Pulumi.Scm
         /// </summary>
         public readonly string Name;
         /// <summary>
-        /// NAT type
+        /// NAT type. Possible values are `Ipv4`, `Nat64` and `Nptv6`.
         /// </summary>
         public readonly string NatType;
         /// <summary>
-        /// The relative position of the rule
+        /// The relative position of the rule. Possible values are `Pre` and `Post`.
         /// </summary>
         public readonly string Position;
         /// <summary>

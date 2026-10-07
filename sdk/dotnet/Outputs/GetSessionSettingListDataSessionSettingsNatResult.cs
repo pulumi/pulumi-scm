@@ -14,7 +14,7 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetSessionSettingListDataSessionSettingsNatResult
     {
         /// <summary>
-        /// NAT oversubscription rate
+        /// NAT oversubscription rate. Possible values are `1x`, `2x`, `4x` and `8x`.
         /// </summary>
         public readonly string DippOversub;
 

@@ -10,6 +10,7 @@ import com.pulumi.core.internal.Codegen;
 import com.pulumi.scm.LoopbackInterfaceArgs;
 import com.pulumi.scm.Utilities;
 import com.pulumi.scm.inputs.LoopbackInterfaceState;
+import com.pulumi.scm.outputs.LoopbackInterfaceAdjustTcpMss;
 import com.pulumi.scm.outputs.LoopbackInterfaceIp;
 import com.pulumi.scm.outputs.LoopbackInterfaceIpv6;
 import java.lang.Integer;
@@ -33,6 +34,7 @@ import javax.annotation.Nullable;
  * import com.pulumi.scm.LoopbackInterface;
  * import com.pulumi.scm.LoopbackInterfaceArgs;
  * import com.pulumi.scm.inputs.LoopbackInterfaceIpArgs;
+ * import com.pulumi.scm.inputs.LoopbackInterfaceAdjustTcpMssArgs;
  * import com.pulumi.scm.Variable;
  * import com.pulumi.scm.VariableArgs;
  * import com.pulumi.scm.inputs.LoopbackInterfaceIpv6Args;
@@ -60,54 +62,60 @@ import javax.annotation.Nullable;
  *             .comment("Managed by Pulumi")
  *             .folder("ngfw-shared")
  *             .ips(LoopbackInterfaceIpArgs.builder()
+ *                 .name("198.18.1.1/32")
+ *                 .build())
+ *             .adjustTcpMss(LoopbackInterfaceAdjustTcpMssArgs.builder()
+ *                 .enable(true)
+ *                 .ipv4MssAdjustment(40)
+ *                 .ipv6MssAdjustment(60)
+ *                 .build())
+ *             .build());
+ * 
+ *         //
+ *         // Creates a loopback interface with static ipv4 address, with default value loopback.123
+ *         //
+ *         var scmLoopbackIntf2 = new LoopbackInterface("scmLoopbackIntf2", LoopbackInterfaceArgs.builder()
+ *             .name("$scm_loopback_intf_2")
+ *             .comment("Managed by Pulumi")
+ *             .folder("ngfw-shared")
+ *             .defaultValue("loopback.123")
+ *             .ips(LoopbackInterfaceIpArgs.builder()
  * %!v(PANIC=Format method: interface conversion: model.Expression is *model.TemplateExpression, not *model.LiteralValueExpression))
  *                 .build());
  * 
  *             //
- *             // Creates a loopback interface with static ipv4 address, with default value loopback.123
+ *             // Creates an ip subnet variable used in the subsequent example
  *             //
- *             var scmLoopbackIntf2 = new LoopbackInterface("scmLoopbackIntf2", LoopbackInterfaceArgs.builder()
- *                 .name("$scm_loopback_intf_2")
+ *             var scmIpv6Prefix = new Variable("scmIpv6Prefix", VariableArgs.builder()
+ *                 .folder("ngfw-shared")
+ *                 .name("$scm_ipv6_prefix")
+ *                 .description("Managed by Pulumi")
+ *                 .type("ip-netmask")
+ *                 .value("2001:0db8:abcd:0001::/64")
+ *                 .build());
+ * 
+ *             //
+ *             // Creates a loopback interface with ipv6 address, with default value loopback.321
+ *             //
+ *             var scmLoopbackIntf3 = new LoopbackInterface("scmLoopbackIntf3", LoopbackInterfaceArgs.builder()
+ *                 .name("$scm_loopback_intf3")
  *                 .comment("Managed by Pulumi")
  *                 .folder("ngfw-shared")
- *                 .defaultValue("loopback.123")
- *                 .ips(LoopbackInterfaceIpArgs.builder()
- * %!v(PANIC=Format method: interface conversion: model.Expression is *model.TemplateExpression, not *model.LiteralValueExpression))
- *                     .build());
- * 
- *                 //
- *                 // Creates an ip subnet variable used in the subsequent example
- *                 //
- *                 var scmIpv6Prefix = new Variable("scmIpv6Prefix", VariableArgs.builder()
- *                     .folder("ngfw-shared")
- *                     .name("$scm_ipv6_prefix")
- *                     .description("Managed by Pulumi")
- *                     .type("ip-netmask")
- *                     .value("2001:0db8:abcd:0001::/64")
- *                     .build());
- * 
- *                 //
- *                 // Creates a loopback interface with ipv6 address, with default value loopback.321
- *                 //
- *                 var scmLoopbackIntf3 = new LoopbackInterface("scmLoopbackIntf3", LoopbackInterfaceArgs.builder()
- *                     .name("$scm_loopback_intf3")
- *                     .comment("Managed by Pulumi")
- *                     .folder("ngfw-shared")
- *                     .defaultValue("loopback.321")
- *                     .ipv6(LoopbackInterfaceIpv6Args.builder()
- *                         .enabled(true)
- *                         .interfaceId("EUI-64")
- *                         .addresses(LoopbackInterfaceIpv6AddressArgs.builder()
- *                             .name("$scm_ipv6_prefix")
- *                             .prefix(LoopbackInterfaceIpv6AddressPrefixArgs.builder()
- *                                 .build())
+ *                 .defaultValue("loopback.321")
+ *                 .ipv6(LoopbackInterfaceIpv6Args.builder()
+ *                     .enabled(true)
+ *                     .interfaceId("EUI-64")
+ *                     .addresses(LoopbackInterfaceIpv6AddressArgs.builder()
+ *                         .name("$scm_ipv6_prefix")
+ *                         .prefix(LoopbackInterfaceIpv6AddressPrefixArgs.builder()
  *                             .build())
  *                         .build())
- *                     .build(), CustomResourceOptions.builder()
- *                         .dependsOn(scmIpv6Prefix)
- *                         .build());
+ *                     .build())
+ *                 .build(), CustomResourceOptions.builder()
+ *                     .dependsOn(scmIpv6Prefix)
+ *                     .build());
  * 
- *             }
+ *         }
  * }
  * }
  * </pre>
@@ -137,6 +145,20 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="scm:index/loopbackInterface:LoopbackInterface")
 public class LoopbackInterface extends com.pulumi.resources.CustomResource {
+    /**
+     * TCP MSS adjustment settings for the interface
+     * 
+     */
+    @Export(name="adjustTcpMss", refs={LoopbackInterfaceAdjustTcpMss.class}, tree="[0]")
+    private Output</* @Nullable */ LoopbackInterfaceAdjustTcpMss> adjustTcpMss;
+
+    /**
+     * @return TCP MSS adjustment settings for the interface
+     * 
+     */
+    public Output<Optional<LoopbackInterfaceAdjustTcpMss>> adjustTcpMss() {
+        return Codegen.optional(this.adjustTcpMss);
+    }
     /**
      * Description for loopback interface
      * 
@@ -182,16 +204,12 @@ public class LoopbackInterface extends com.pulumi.resources.CustomResource {
     /**
      * The folder in which the resource is defined
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
      */
     @Export(name="folder", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> folder;
 
     /**
      * @return The folder in which the resource is defined
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public Output<Optional<String>> folder() {
@@ -284,16 +302,12 @@ public class LoopbackInterface extends com.pulumi.resources.CustomResource {
     /**
      * The snippet in which the resource is defined
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
      */
     @Export(name="snippet", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> snippet;
 
     /**
      * @return The snippet in which the resource is defined
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public Output<Optional<String>> snippet() {

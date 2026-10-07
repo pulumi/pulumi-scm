@@ -14,7 +14,7 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetUpdateScheduleListDataUpdateScheduleThreatsRecurringHourlyResult
     {
         /// <summary>
-        /// Action
+        /// Action. Possible values are `download-only` and `download-and-install`.
         /// </summary>
         public readonly string Action;
         /// <summary>

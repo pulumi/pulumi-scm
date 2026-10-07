@@ -12,14 +12,14 @@ import javax.annotation.Nullable;
 @CustomType
 public final class SecurityRuleAllowWebApplicationSaasEnterpriseControlConsumerAccess {
     /**
-     * @return Enable
+     * @return Enable. Possible values are `yes` and `no`.
      * 
      */
     private @Nullable String enable;
 
     private SecurityRuleAllowWebApplicationSaasEnterpriseControlConsumerAccess() {}
     /**
-     * @return Enable
+     * @return Enable. Possible values are `yes` and `no`.
      * 
      */
     public Optional<String> enable() {

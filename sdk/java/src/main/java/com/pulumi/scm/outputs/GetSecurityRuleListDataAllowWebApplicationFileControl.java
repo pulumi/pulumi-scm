@@ -11,26 +11,26 @@ import java.util.Objects;
 @CustomType
 public final class GetSecurityRuleListDataAllowWebApplicationFileControl {
     /**
-     * @return Download
+     * @return Download. Possible values are `allow-all-file-types`, `best-practice` and `block-all-file-types`.
      * 
      */
     private String download;
     /**
-     * @return Upload
+     * @return Upload. Possible values are `allow-all-file-types`, `best-practice` and `block-all-file-types`.
      * 
      */
     private String upload;
 
     private GetSecurityRuleListDataAllowWebApplicationFileControl() {}
     /**
-     * @return Download
+     * @return Download. Possible values are `allow-all-file-types`, `best-practice` and `block-all-file-types`.
      * 
      */
     public String download() {
         return this.download;
     }
     /**
-     * @return Upload
+     * @return Upload. Possible values are `allow-all-file-types`, `best-practice` and `block-all-file-types`.
      * 
      */
     public String upload() {

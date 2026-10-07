@@ -31,9 +31,17 @@ public final class GetServiceRouteArgs extends com.pulumi.resources.InvokeArgs {
         return Optional.ofNullable(this.device);
     }
 
+    /**
+     * The folder in which the resource is defined
+     * 
+     */
     @Import(name="folder")
     private @Nullable Output<String> folder;
 
+    /**
+     * @return The folder in which the resource is defined
+     * 
+     */
     public Optional<Output<String>> folder() {
         return Optional.ofNullable(this.folder);
     }
@@ -53,9 +61,17 @@ public final class GetServiceRouteArgs extends com.pulumi.resources.InvokeArgs {
         return this.id;
     }
 
+    /**
+     * The snippet in which the resource is defined
+     * 
+     */
     @Import(name="snippet")
     private @Nullable Output<String> snippet;
 
+    /**
+     * @return The snippet in which the resource is defined
+     * 
+     */
     public Optional<Output<String>> snippet() {
         return Optional.ofNullable(this.snippet);
     }
@@ -108,11 +124,23 @@ public final class GetServiceRouteArgs extends com.pulumi.resources.InvokeArgs {
             return device(Output.of(device));
         }
 
+        /**
+         * @param folder The folder in which the resource is defined
+         * 
+         * @return builder
+         * 
+         */
         public Builder folder(@Nullable Output<String> folder) {
             $.folder = folder;
             return this;
         }
 
+        /**
+         * @param folder The folder in which the resource is defined
+         * 
+         * @return builder
+         * 
+         */
         public Builder folder(String folder) {
             return folder(Output.of(folder));
         }
@@ -138,11 +166,23 @@ public final class GetServiceRouteArgs extends com.pulumi.resources.InvokeArgs {
             return id(Output.of(id));
         }
 
+        /**
+         * @param snippet The snippet in which the resource is defined
+         * 
+         * @return builder
+         * 
+         */
         public Builder snippet(@Nullable Output<String> snippet) {
             $.snippet = snippet;
             return this;
         }
 
+        /**
+         * @param snippet The snippet in which the resource is defined
+         * 
+         * @return builder
+         * 
+         */
         public Builder snippet(String snippet) {
             return snippet(Output.of(snippet));
         }

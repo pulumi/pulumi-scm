@@ -18,7 +18,7 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly int Metric;
         /// <summary>
-        /// Type
+        /// Type. Possible values are `ext-1` and `ext-2`.
         /// </summary>
         public readonly string Type;
 

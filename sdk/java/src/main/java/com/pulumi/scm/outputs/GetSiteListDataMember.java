@@ -16,7 +16,7 @@ public final class GetSiteListDataMember {
      */
     private String id;
     /**
-     * @return The mode of the remote network
+     * @return The mode of the remote network. Possible values are `active` and `backup`.
      * 
      */
     private String mode;
@@ -40,7 +40,7 @@ public final class GetSiteListDataMember {
         return this.id;
     }
     /**
-     * @return The mode of the remote network
+     * @return The mode of the remote network. Possible values are `active` and `backup`.
      * 
      */
     public String mode() {

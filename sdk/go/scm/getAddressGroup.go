@@ -60,27 +60,38 @@ func LookupAddressGroup(ctx *pulumi.Context, args *LookupAddressGroupArgs, opts 
 type LookupAddressGroupArgs struct {
 	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
+	// The folder in which the resource is defined
 	Folder *string `pulumi:"folder"`
 	// The UUID of the address group
-	Id      string  `pulumi:"id"`
-	Name    *string `pulumi:"name"`
+	Id string `pulumi:"id"`
+	// The name of the address group
+	Name *string `pulumi:"name"`
+	// The snippet in which the resource is defined
 	Snippet *string `pulumi:"snippet"`
 }
 
 // A collection of values returned by getAddressGroup.
 type LookupAddressGroupResult struct {
+	// Description
 	Description string `pulumi:"description"`
 	// The device in which the resource is defined
-	Device  string                 `pulumi:"device"`
+	Device string `pulumi:"device"`
+	// Dynamic
 	Dynamic GetAddressGroupDynamic `pulumi:"dynamic"`
-	Folder  string                 `pulumi:"folder"`
+	// The folder in which the resource is defined
+	Folder string `pulumi:"folder"`
 	// The UUID of the address group
-	Id      string   `pulumi:"id"`
-	Name    string   `pulumi:"name"`
-	Snippet string   `pulumi:"snippet"`
+	Id string `pulumi:"id"`
+	// The name of the address group
+	Name string `pulumi:"name"`
+	// The snippet in which the resource is defined
+	Snippet string `pulumi:"snippet"`
+	// Static
 	Statics []string `pulumi:"statics"`
-	Tags    []string `pulumi:"tags"`
-	Tfid    string   `pulumi:"tfid"`
+	// Tags for address group object
+	Tags []string `pulumi:"tags"`
+	// The Terraform ID.
+	Tfid string `pulumi:"tfid"`
 }
 
 func LookupAddressGroupOutput(ctx *pulumi.Context, args LookupAddressGroupOutputArgs, opts ...pulumi.InvokeOption) LookupAddressGroupResultOutput {
@@ -92,10 +103,13 @@ func LookupAddressGroupOutput(ctx *pulumi.Context, args LookupAddressGroupOutput
 type LookupAddressGroupOutputArgs struct {
 	// The device in which the resource is defined
 	Device pulumi.StringPtrInput `pulumi:"device"`
+	// The folder in which the resource is defined
 	Folder pulumi.StringPtrInput `pulumi:"folder"`
 	// The UUID of the address group
-	Id      pulumi.StringInput    `pulumi:"id"`
-	Name    pulumi.StringPtrInput `pulumi:"name"`
+	Id pulumi.StringInput `pulumi:"id"`
+	// The name of the address group
+	Name pulumi.StringPtrInput `pulumi:"name"`
+	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrInput `pulumi:"snippet"`
 }
 
@@ -118,6 +132,7 @@ func (o LookupAddressGroupResultOutput) ToLookupAddressGroupResultOutputWithCont
 	return o
 }
 
+// Description
 func (o LookupAddressGroupResultOutput) Description() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupAddressGroupResult) string { return v.Description }).(pulumi.StringOutput)
 }
@@ -127,10 +142,12 @@ func (o LookupAddressGroupResultOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupAddressGroupResult) string { return v.Device }).(pulumi.StringOutput)
 }
 
+// Dynamic
 func (o LookupAddressGroupResultOutput) Dynamic() GetAddressGroupDynamicOutput {
 	return o.ApplyT(func(v LookupAddressGroupResult) GetAddressGroupDynamic { return v.Dynamic }).(GetAddressGroupDynamicOutput)
 }
 
+// The folder in which the resource is defined
 func (o LookupAddressGroupResultOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupAddressGroupResult) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -140,22 +157,27 @@ func (o LookupAddressGroupResultOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupAddressGroupResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
+// The name of the address group
 func (o LookupAddressGroupResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupAddressGroupResult) string { return v.Name }).(pulumi.StringOutput)
 }
 
+// The snippet in which the resource is defined
 func (o LookupAddressGroupResultOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupAddressGroupResult) string { return v.Snippet }).(pulumi.StringOutput)
 }
 
+// Static
 func (o LookupAddressGroupResultOutput) Statics() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupAddressGroupResult) []string { return v.Statics }).(pulumi.StringArrayOutput)
 }
 
+// Tags for address group object
 func (o LookupAddressGroupResultOutput) Tags() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupAddressGroupResult) []string { return v.Tags }).(pulumi.StringArrayOutput)
 }
 
+// The Terraform ID.
 func (o LookupAddressGroupResultOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupAddressGroupResult) string { return v.Tfid }).(pulumi.StringOutput)
 }

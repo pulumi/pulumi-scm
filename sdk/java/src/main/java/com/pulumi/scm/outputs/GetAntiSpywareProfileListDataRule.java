@@ -18,7 +18,7 @@ public final class GetAntiSpywareProfileListDataRule {
      */
     private GetAntiSpywareProfileListDataRuleAction action;
     /**
-     * @return Category
+     * @return Category. Possible values are `adns-adtracking`, `adns-benign`, `adns-c2`, `adns-ddns`, `adns-dnsmisconfig`, `adns-grayware`, `adns-hijacking`, `adns-malware`, `adns-new-domain`, `adns-parked`, `adns-phishing`, `adns-proxy`, `adware`, `any`, `autogen`, `backdoor`, `botnet`, `browser-hijack`, `command-and-control`, `cryptominer`, `data-theft`, `dns`, `dns-adtracking`, `dns-benign`, `dns-c2`, `dns-ddns`, `dns-grayware`, `dns-malware`, `dns-new-domain`, `dns-parked`, `dns-phishing`, `dns-proxy`, `dns-security`, `dns-wildfire`, `domain-edl`, `downloader`, `fraud`, `hacktool`, `inline-cloud-c2`, `keylogger`, `net-worm`, `p2p-communication`, `phishing-kit`, `post-exploitation`, `spyware`, `tls-fingerprint` and `webshell`.
      * 
      */
     private String category;
@@ -28,7 +28,7 @@ public final class GetAntiSpywareProfileListDataRule {
      */
     private String name;
     /**
-     * @return Packet capture
+     * @return Packet capture. Possible values are `disable`, `single-packet` and `extended-capture`.
      * 
      */
     private String packetCapture;
@@ -52,7 +52,7 @@ public final class GetAntiSpywareProfileListDataRule {
         return this.action;
     }
     /**
-     * @return Category
+     * @return Category. Possible values are `adns-adtracking`, `adns-benign`, `adns-c2`, `adns-ddns`, `adns-dnsmisconfig`, `adns-grayware`, `adns-hijacking`, `adns-malware`, `adns-new-domain`, `adns-parked`, `adns-phishing`, `adns-proxy`, `adware`, `any`, `autogen`, `backdoor`, `botnet`, `browser-hijack`, `command-and-control`, `cryptominer`, `data-theft`, `dns`, `dns-adtracking`, `dns-benign`, `dns-c2`, `dns-ddns`, `dns-grayware`, `dns-malware`, `dns-new-domain`, `dns-parked`, `dns-phishing`, `dns-proxy`, `dns-security`, `dns-wildfire`, `domain-edl`, `downloader`, `fraud`, `hacktool`, `inline-cloud-c2`, `keylogger`, `net-worm`, `p2p-communication`, `phishing-kit`, `post-exploitation`, `spyware`, `tls-fingerprint` and `webshell`.
      * 
      */
     public String category() {
@@ -66,7 +66,7 @@ public final class GetAntiSpywareProfileListDataRule {
         return this.name;
     }
     /**
-     * @return Packet capture
+     * @return Packet capture. Possible values are `disable`, `single-packet` and `extended-capture`.
      * 
      */
     public String packetCapture() {

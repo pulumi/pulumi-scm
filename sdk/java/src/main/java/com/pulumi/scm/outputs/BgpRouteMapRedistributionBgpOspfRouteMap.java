@@ -15,7 +15,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class BgpRouteMapRedistributionBgpOspfRouteMap {
     /**
-     * @return BGP Root OSPF Route maps Action
+     * @return BGP Root OSPF Route maps Action. Possible values are `permit` and `deny`.
      * 
      */
     private @Nullable String action;
@@ -42,7 +42,7 @@ public final class BgpRouteMapRedistributionBgpOspfRouteMap {
 
     private BgpRouteMapRedistributionBgpOspfRouteMap() {}
     /**
-     * @return BGP Root OSPF Route maps Action
+     * @return BGP Root OSPF Route maps Action. Possible values are `permit` and `deny`.
      * 
      */
     public Optional<String> action() {

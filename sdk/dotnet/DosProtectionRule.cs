@@ -69,17 +69,15 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The folder in which the resource is defined
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Output("folder")]
         public Output<string?> Folder { get; private set; } = null!;
 
         /// <summary>
-        /// List of source zones
+        /// Source zones and interfaces
         /// </summary>
-        [Output("froms")]
-        public Output<ImmutableArray<string>> Froms { get; private set; } = null!;
+        [Output("from")]
+        public Output<Outputs.DosProtectionRuleFrom> From { get; private set; } = null!;
 
         /// <summary>
         /// Log forwarding profile name
@@ -94,7 +92,7 @@ namespace Pulumi.Scm
         public Output<string> Name { get; private set; } = null!;
 
         /// <summary>
-        /// Position relative to local device rules
+        /// Position relative to local device rules. Possible values are `Pre` and `Post`.
         /// </summary>
         [Output("position")]
         public Output<string> Position { get; private set; } = null!;
@@ -103,7 +101,7 @@ namespace Pulumi.Scm
         /// Protection
         /// </summary>
         [Output("protection")]
-        public Output<Outputs.DosProtectionRuleProtection?> Protection { get; private set; } = null!;
+        public Output<Outputs.DosProtectionRuleProtection> Protection { get; private set; } = null!;
 
         /// <summary>
         /// Schedule on which to enforce the rule
@@ -119,8 +117,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The snippet in which the resource is defined
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Output("snippet")]
         public Output<string?> Snippet { get; private set; } = null!;
@@ -150,10 +146,10 @@ namespace Pulumi.Scm
         public Output<string> Tfid { get; private set; } = null!;
 
         /// <summary>
-        /// List of destination zones
+        /// Destination zones and interfaces
         /// </summary>
-        [Output("tos")]
-        public Output<ImmutableArray<string>> Tos { get; private set; } = null!;
+        [Output("to")]
+        public Output<Outputs.DosProtectionRuleTo> To { get; private set; } = null!;
 
 
         /// <summary>
@@ -163,7 +159,7 @@ namespace Pulumi.Scm
         /// <param name="name">The unique name of the resource</param>
         /// <param name="args">The arguments used to populate this resource's properties</param>
         /// <param name="options">A bag of options that control this resource's behavior</param>
-        public DosProtectionRule(string name, DosProtectionRuleArgs? args = null, CustomResourceOptions? options = null)
+        public DosProtectionRule(string name, DosProtectionRuleArgs args, CustomResourceOptions? options = null)
             : base("scm:index/dosProtectionRule:DosProtectionRule", name, args ?? new DosProtectionRuleArgs(), MakeResourceOptions(options, ""))
         {
         }
@@ -239,23 +235,15 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The folder in which the resource is defined
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("folder")]
         public Input<string>? Folder { get; set; }
 
-        [Input("froms")]
-        private InputList<string>? _froms;
-
         /// <summary>
-        /// List of source zones
+        /// Source zones and interfaces
         /// </summary>
-        public InputList<string> Froms
-        {
-            get => _froms ?? (_froms = new InputList<string>());
-            set => _froms = value;
-        }
+        [Input("from", required: true)]
+        public Input<Inputs.DosProtectionRuleFromArgs> From { get; set; } = null!;
 
         /// <summary>
         /// Log forwarding profile name
@@ -270,7 +258,7 @@ namespace Pulumi.Scm
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// Position relative to local device rules
+        /// Position relative to local device rules. Possible values are `Pre` and `Post`.
         /// </summary>
         [Input("position")]
         public Input<string>? Position { get; set; }
@@ -278,8 +266,8 @@ namespace Pulumi.Scm
         /// <summary>
         /// Protection
         /// </summary>
-        [Input("protection")]
-        public Input<Inputs.DosProtectionRuleProtectionArgs>? Protection { get; set; }
+        [Input("protection", required: true)]
+        public Input<Inputs.DosProtectionRuleProtectionArgs> Protection { get; set; } = null!;
 
         /// <summary>
         /// Schedule on which to enforce the rule
@@ -287,7 +275,7 @@ namespace Pulumi.Scm
         [Input("schedule")]
         public Input<string>? Schedule { get; set; }
 
-        [Input("services")]
+        [Input("services", required: true)]
         private InputList<string>? _services;
 
         /// <summary>
@@ -301,8 +289,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The snippet in which the resource is defined
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("snippet")]
         public Input<string>? Snippet { get; set; }
@@ -319,7 +305,7 @@ namespace Pulumi.Scm
             set => _sourceUsers = value;
         }
 
-        [Input("sources")]
+        [Input("sources", required: true)]
         private InputList<string>? _sources;
 
         /// <summary>
@@ -343,17 +329,11 @@ namespace Pulumi.Scm
             set => _tags = value;
         }
 
-        [Input("tos")]
-        private InputList<string>? _tos;
-
         /// <summary>
-        /// List of destination zones
+        /// Destination zones and interfaces
         /// </summary>
-        public InputList<string> Tos
-        {
-            get => _tos ?? (_tos = new InputList<string>());
-            set => _tos = value;
-        }
+        [Input("to", required: true)]
+        public Input<Inputs.DosProtectionRuleToArgs> To { get; set; } = null!;
 
         public DosProtectionRuleArgs()
         {
@@ -401,23 +381,15 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The folder in which the resource is defined
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("folder")]
         public Input<string>? Folder { get; set; }
 
-        [Input("froms")]
-        private InputList<string>? _froms;
-
         /// <summary>
-        /// List of source zones
+        /// Source zones and interfaces
         /// </summary>
-        public InputList<string> Froms
-        {
-            get => _froms ?? (_froms = new InputList<string>());
-            set => _froms = value;
-        }
+        [Input("from")]
+        public Input<Inputs.DosProtectionRuleFromGetArgs>? From { get; set; }
 
         /// <summary>
         /// Log forwarding profile name
@@ -432,7 +404,7 @@ namespace Pulumi.Scm
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// Position relative to local device rules
+        /// Position relative to local device rules. Possible values are `Pre` and `Post`.
         /// </summary>
         [Input("position")]
         public Input<string>? Position { get; set; }
@@ -463,8 +435,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The snippet in which the resource is defined
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("snippet")]
         public Input<string>? Snippet { get; set; }
@@ -511,17 +481,11 @@ namespace Pulumi.Scm
         [Input("tfid")]
         public Input<string>? Tfid { get; set; }
 
-        [Input("tos")]
-        private InputList<string>? _tos;
-
         /// <summary>
-        /// List of destination zones
+        /// Destination zones and interfaces
         /// </summary>
-        public InputList<string> Tos
-        {
-            get => _tos ?? (_tos = new InputList<string>());
-            set => _tos = value;
-        }
+        [Input("to")]
+        public Input<Inputs.DosProtectionRuleToGetArgs>? To { get; set; }
 
         public DosProtectionRuleState()
         {

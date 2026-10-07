@@ -26,25 +26,34 @@ func LookupRouteAccessList(ctx *pulumi.Context, args *LookupRouteAccessListArgs,
 type LookupRouteAccessListArgs struct {
 	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
+	// The folder in which the resource is defined
 	Folder *string `pulumi:"folder"`
 	// UUID of the resource
-	Id      string  `pulumi:"id"`
-	Name    *string `pulumi:"name"`
+	Id string `pulumi:"id"`
+	// Route access list name
+	Name *string `pulumi:"name"`
+	// The snippet in which the resource is defined
 	Snippet *string `pulumi:"snippet"`
 }
 
 // A collection of values returned by getRouteAccessList.
 type LookupRouteAccessListResult struct {
+	// Description
 	Description string `pulumi:"description"`
 	// The device in which the resource is defined
 	Device string `pulumi:"device"`
+	// The folder in which the resource is defined
 	Folder string `pulumi:"folder"`
 	// UUID of the resource
-	Id      string                 `pulumi:"id"`
-	Name    string                 `pulumi:"name"`
-	Snippet string                 `pulumi:"snippet"`
-	Tfid    string                 `pulumi:"tfid"`
-	Type    GetRouteAccessListType `pulumi:"type"`
+	Id string `pulumi:"id"`
+	// Route access list name
+	Name string `pulumi:"name"`
+	// The snippet in which the resource is defined
+	Snippet string `pulumi:"snippet"`
+	// The Terraform ID.
+	Tfid string `pulumi:"tfid"`
+	// Type
+	Type GetRouteAccessListType `pulumi:"type"`
 }
 
 func LookupRouteAccessListOutput(ctx *pulumi.Context, args LookupRouteAccessListOutputArgs, opts ...pulumi.InvokeOption) LookupRouteAccessListResultOutput {
@@ -56,10 +65,13 @@ func LookupRouteAccessListOutput(ctx *pulumi.Context, args LookupRouteAccessList
 type LookupRouteAccessListOutputArgs struct {
 	// The device in which the resource is defined
 	Device pulumi.StringPtrInput `pulumi:"device"`
+	// The folder in which the resource is defined
 	Folder pulumi.StringPtrInput `pulumi:"folder"`
 	// UUID of the resource
-	Id      pulumi.StringInput    `pulumi:"id"`
-	Name    pulumi.StringPtrInput `pulumi:"name"`
+	Id pulumi.StringInput `pulumi:"id"`
+	// Route access list name
+	Name pulumi.StringPtrInput `pulumi:"name"`
+	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrInput `pulumi:"snippet"`
 }
 
@@ -82,6 +94,7 @@ func (o LookupRouteAccessListResultOutput) ToLookupRouteAccessListResultOutputWi
 	return o
 }
 
+// Description
 func (o LookupRouteAccessListResultOutput) Description() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupRouteAccessListResult) string { return v.Description }).(pulumi.StringOutput)
 }
@@ -91,6 +104,7 @@ func (o LookupRouteAccessListResultOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupRouteAccessListResult) string { return v.Device }).(pulumi.StringOutput)
 }
 
+// The folder in which the resource is defined
 func (o LookupRouteAccessListResultOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupRouteAccessListResult) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -100,18 +114,22 @@ func (o LookupRouteAccessListResultOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupRouteAccessListResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
+// Route access list name
 func (o LookupRouteAccessListResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupRouteAccessListResult) string { return v.Name }).(pulumi.StringOutput)
 }
 
+// The snippet in which the resource is defined
 func (o LookupRouteAccessListResultOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupRouteAccessListResult) string { return v.Snippet }).(pulumi.StringOutput)
 }
 
+// The Terraform ID.
 func (o LookupRouteAccessListResultOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupRouteAccessListResult) string { return v.Tfid }).(pulumi.StringOutput)
 }
 
+// Type
 func (o LookupRouteAccessListResultOutput) Type() GetRouteAccessListTypeOutput {
 	return o.ApplyT(func(v LookupRouteAccessListResult) GetRouteAccessListType { return v.Type }).(GetRouteAccessListTypeOutput)
 }

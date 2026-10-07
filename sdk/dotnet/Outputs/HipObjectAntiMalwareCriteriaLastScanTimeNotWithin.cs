@@ -19,8 +19,6 @@ namespace Pulumi.Scm.Outputs
         public readonly int? Days;
         /// <summary>
         /// specify time in hours
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Days` and `Hours`.
         /// </summary>
         public readonly int? Hours;
 

@@ -135,6 +135,34 @@ public class Provider extends com.pulumi.resources.ProviderResource {
     public Output<Optional<String>> scope() {
         return Codegen.optional(this.scope);
     }
+    /**
+     * The region for ZTNA Connector API requests (x-panw-region header). Required when using ztna_* resources. Valid values: ae, americas, au, br, ca, ch, cn, de, es, europe, fr, id, il, in, it, jp, kr, pl, qa, sa, sg, tw, uk, za. Environment variable: `X_PANW_REGION`. JSON config file variable: `xPanwRegion`.
+     * 
+     */
+    @Export(name="xPanwRegion", refs={String.class}, tree="[0]")
+    private Output</* @Nullable */ String> xPanwRegion;
+
+    /**
+     * @return The region for ZTNA Connector API requests (x-panw-region header). Required when using ztna_* resources. Valid values: ae, americas, au, br, ca, ch, cn, de, es, europe, fr, id, il, in, it, jp, kr, pl, qa, sa, sg, tw, uk, za. Environment variable: `X_PANW_REGION`. JSON config file variable: `xPanwRegion`.
+     * 
+     */
+    public Output<Optional<String>> xPanwRegion() {
+        return Codegen.optional(this.xPanwRegion);
+    }
+    /**
+     * The hostname of the ZTNA Connector API. Required when using ztna_* resources. Default: `api.sase.paloaltonetworks.com`. Environment variable: `ZTNA_HOST`. JSON config file variable: `ztnaHost`.
+     * 
+     */
+    @Export(name="ztnaHost", refs={String.class}, tree="[0]")
+    private Output</* @Nullable */ String> ztnaHost;
+
+    /**
+     * @return The hostname of the ZTNA Connector API. Required when using ztna_* resources. Default: `api.sase.paloaltonetworks.com`. Environment variable: `ZTNA_HOST`. JSON config file variable: `ztnaHost`.
+     * 
+     */
+    public Output<Optional<String>> ztnaHost() {
+        return Codegen.optional(this.ztnaHost);
+    }
 
     /**
      *

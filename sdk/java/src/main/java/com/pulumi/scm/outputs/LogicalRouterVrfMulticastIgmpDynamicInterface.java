@@ -39,7 +39,7 @@ public final class LogicalRouterVrfMulticastIgmpDynamicInterface {
      */
     private @Nullable String queryProfile;
     /**
-     * @return Robustness
+     * @return Robustness. Possible values are `1`, `2`, `3`, `4`, `5`, `6` and `7`.
      * 
      */
     private @Nullable String robustness;
@@ -49,7 +49,7 @@ public final class LogicalRouterVrfMulticastIgmpDynamicInterface {
      */
     private @Nullable Boolean routerAlertPolicing;
     /**
-     * @return Version
+     * @return Version. Possible values are `2` and `3`.
      * 
      */
     private @Nullable String version;
@@ -91,7 +91,7 @@ public final class LogicalRouterVrfMulticastIgmpDynamicInterface {
         return Optional.ofNullable(this.queryProfile);
     }
     /**
-     * @return Robustness
+     * @return Robustness. Possible values are `1`, `2`, `3`, `4`, `5`, `6` and `7`.
      * 
      */
     public Optional<String> robustness() {
@@ -105,7 +105,7 @@ public final class LogicalRouterVrfMulticastIgmpDynamicInterface {
         return Optional.ofNullable(this.routerAlertPolicing);
     }
     /**
-     * @return Version
+     * @return Version. Possible values are `2` and `3`.
      * 
      */
     public Optional<String> version() {

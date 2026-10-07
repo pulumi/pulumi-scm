@@ -22,7 +22,7 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly string Device;
         /// <summary>
-        /// The folder of the item. Default: Shared.
+        /// The folder in which the resource is defined
         /// </summary>
         public readonly string Folder;
         /// <summary>
@@ -42,7 +42,7 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly Outputs.GetAuthenticationProfileListDataMultiFactorAuthResult MultiFactorAuth;
         /// <summary>
-        /// The name of the item.
+        /// The name of the authentication profile
         /// </summary>
         public readonly string Name;
         /// <summary>
@@ -50,7 +50,7 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly Outputs.GetAuthenticationProfileListDataSingleSignOnResult SingleSignOn;
         /// <summary>
-        /// The snippet of the item.
+        /// The snippet in which the resource is defined
         /// </summary>
         public readonly string Snippet;
         /// <summary>
@@ -62,7 +62,7 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly string UserDomain;
         /// <summary>
-        /// Username modifier
+        /// Username modifier. Possible values are `%USERINPUT%`, `%USERINPUT%@%USERDOMAIN%` and `%USERDOMAIN%\\%USERINPUT%`.
         /// </summary>
         public readonly string UsernameModifier;
 

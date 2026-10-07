@@ -16,14 +16,14 @@ public final class AntiSpywareProfileMicaEngineSpywareEnabledArgs extends com.pu
     public static final AntiSpywareProfileMicaEngineSpywareEnabledArgs Empty = new AntiSpywareProfileMicaEngineSpywareEnabledArgs();
 
     /**
-     * Inline policy action
+     * Inline policy action. Possible values are `alert`, `allow`, `drop`, `reset-both`, `reset-client` and `reset-server`.
      * 
      */
     @Import(name="inlinePolicyAction")
     private @Nullable Output<String> inlinePolicyAction;
 
     /**
-     * @return Inline policy action
+     * @return Inline policy action. Possible values are `alert`, `allow`, `drop`, `reset-both`, `reset-client` and `reset-server`.
      * 
      */
     public Optional<Output<String>> inlinePolicyAction() {
@@ -71,7 +71,7 @@ public final class AntiSpywareProfileMicaEngineSpywareEnabledArgs extends com.pu
         }
 
         /**
-         * @param inlinePolicyAction Inline policy action
+         * @param inlinePolicyAction Inline policy action. Possible values are `alert`, `allow`, `drop`, `reset-both`, `reset-client` and `reset-server`.
          * 
          * @return builder
          * 
@@ -82,7 +82,7 @@ public final class AntiSpywareProfileMicaEngineSpywareEnabledArgs extends com.pu
         }
 
         /**
-         * @param inlinePolicyAction Inline policy action
+         * @param inlinePolicyAction Inline policy action. Possible values are `alert`, `allow`, `drop`, `reset-both`, `reset-client` and `reset-server`.
          * 
          * @return builder
          * 

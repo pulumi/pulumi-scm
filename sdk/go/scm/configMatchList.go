@@ -86,8 +86,6 @@ type ConfigMatchList struct {
 	// Filter of the config match list entry
 	Filter pulumi.StringPtrOutput `pulumi:"filter"`
 	// The folder in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrOutput `pulumi:"folder"`
 	// Name of the config match list entry
 	Name pulumi.StringOutput `pulumi:"name"`
@@ -102,8 +100,6 @@ type ConfigMatchList struct {
 	// Send Panorama Flag of the config match list entry
 	SendToPanorama pulumi.BoolPtrOutput `pulumi:"sendToPanorama"`
 	// The snippet in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
 	// The Terraform ID.
 	Tfid pulumi.StringOutput `pulumi:"tfid"`
@@ -146,8 +142,6 @@ type configMatchListState struct {
 	// Filter of the config match list entry
 	Filter *string `pulumi:"filter"`
 	// The folder in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// Name of the config match list entry
 	Name *string `pulumi:"name"`
@@ -162,8 +156,6 @@ type configMatchListState struct {
 	// Send Panorama Flag of the config match list entry
 	SendToPanorama *bool `pulumi:"sendToPanorama"`
 	// The snippet in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	// The Terraform ID.
 	Tfid *string `pulumi:"tfid"`
@@ -177,8 +169,6 @@ type ConfigMatchListState struct {
 	// Filter of the config match list entry
 	Filter pulumi.StringPtrInput
 	// The folder in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// Name of the config match list entry
 	Name pulumi.StringPtrInput
@@ -193,8 +183,6 @@ type ConfigMatchListState struct {
 	// Send Panorama Flag of the config match list entry
 	SendToPanorama pulumi.BoolPtrInput
 	// The snippet in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	// The Terraform ID.
 	Tfid pulumi.StringPtrInput
@@ -212,8 +200,6 @@ type configMatchListArgs struct {
 	// Filter of the config match list entry
 	Filter *string `pulumi:"filter"`
 	// The folder in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// Name of the config match list entry
 	Name *string `pulumi:"name"`
@@ -228,8 +214,6 @@ type configMatchListArgs struct {
 	// Send Panorama Flag of the config match list entry
 	SendToPanorama *bool `pulumi:"sendToPanorama"`
 	// The snippet in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 }
 
@@ -242,8 +226,6 @@ type ConfigMatchListArgs struct {
 	// Filter of the config match list entry
 	Filter pulumi.StringPtrInput
 	// The folder in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// Name of the config match list entry
 	Name pulumi.StringPtrInput
@@ -258,8 +240,6 @@ type ConfigMatchListArgs struct {
 	// Send Panorama Flag of the config match list entry
 	SendToPanorama pulumi.BoolPtrInput
 	// The snippet in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 }
 
@@ -366,8 +346,6 @@ func (o ConfigMatchListOutput) Filter() pulumi.StringPtrOutput {
 }
 
 // The folder in which the resource is defined
-//
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o ConfigMatchListOutput) Folder() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *ConfigMatchList) pulumi.StringPtrOutput { return v.Folder }).(pulumi.StringPtrOutput)
 }
@@ -403,8 +381,6 @@ func (o ConfigMatchListOutput) SendToPanorama() pulumi.BoolPtrOutput {
 }
 
 // The snippet in which the resource is defined
-//
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o ConfigMatchListOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *ConfigMatchList) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)
 }

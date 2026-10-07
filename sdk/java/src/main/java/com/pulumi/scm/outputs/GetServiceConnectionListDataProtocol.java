@@ -6,6 +6,7 @@ package com.pulumi.scm.outputs;
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
 import com.pulumi.scm.outputs.GetServiceConnectionListDataProtocolBgp;
+import com.pulumi.scm.outputs.GetServiceConnectionListDataProtocolBgpPeer;
 import java.util.Objects;
 
 @CustomType
@@ -15,6 +16,11 @@ public final class GetServiceConnectionListDataProtocol {
      * 
      */
     private GetServiceConnectionListDataProtocolBgp bgp;
+    /**
+     * @return Bgp peer
+     * 
+     */
+    private GetServiceConnectionListDataProtocolBgpPeer bgpPeer;
 
     private GetServiceConnectionListDataProtocol() {}
     /**
@@ -23,6 +29,13 @@ public final class GetServiceConnectionListDataProtocol {
      */
     public GetServiceConnectionListDataProtocolBgp bgp() {
         return this.bgp;
+    }
+    /**
+     * @return Bgp peer
+     * 
+     */
+    public GetServiceConnectionListDataProtocolBgpPeer bgpPeer() {
+        return this.bgpPeer;
     }
 
     public static Builder builder() {
@@ -35,10 +48,12 @@ public final class GetServiceConnectionListDataProtocol {
     @CustomType.Builder
     public static final class Builder {
         private GetServiceConnectionListDataProtocolBgp bgp;
+        private GetServiceConnectionListDataProtocolBgpPeer bgpPeer;
         public Builder() {}
         public Builder(GetServiceConnectionListDataProtocol defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.bgp = defaults.bgp;
+    	      this.bgpPeer = defaults.bgpPeer;
         }
 
         @CustomType.Setter
@@ -49,9 +64,18 @@ public final class GetServiceConnectionListDataProtocol {
             this.bgp = bgp;
             return this;
         }
+        @CustomType.Setter
+        public Builder bgpPeer(GetServiceConnectionListDataProtocolBgpPeer bgpPeer) {
+            if (bgpPeer == null) {
+              throw new MissingRequiredPropertyException("GetServiceConnectionListDataProtocol", "bgpPeer");
+            }
+            this.bgpPeer = bgpPeer;
+            return this;
+        }
         public GetServiceConnectionListDataProtocol build() {
             final var _resultValue = new GetServiceConnectionListDataProtocol();
             _resultValue.bgp = bgp;
+            _resultValue.bgpPeer = bgpPeer;
             return _resultValue;
         }
     }

@@ -53,7 +53,7 @@ public final class BgpRouteMapRedistributionConnectedStaticBgpRouteMapSet {
      */
     private @Nullable BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetMetric metric;
     /**
-     * @return Connected Static BGP Route maps set Origin
+     * @return Connected Static BGP Route maps set Origin. Possible values are `none`, `egp`, `igp` and `incomplete`.
      * 
      */
     private @Nullable String origin;
@@ -129,7 +129,7 @@ public final class BgpRouteMapRedistributionConnectedStaticBgpRouteMapSet {
         return Optional.ofNullable(this.metric);
     }
     /**
-     * @return Connected Static BGP Route maps set Origin
+     * @return Connected Static BGP Route maps set Origin. Possible values are `none`, `egp`, `igp` and `incomplete`.
      * 
      */
     public Optional<String> origin() {

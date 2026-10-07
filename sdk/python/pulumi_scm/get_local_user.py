@@ -66,16 +66,25 @@ class GetLocalUserResult:
     @_builtins.property
     @pulumi.getter
     def disabled(self) -> _builtins.bool:
+        """
+        Is the local user disabled?
+        """
         return pulumi.get(self, "disabled")
 
     @_builtins.property
     @pulumi.getter(name="encryptedValues")
     def encrypted_values(self) -> Mapping[str, _builtins.str]:
+        """
+        Map of sensitive values returned from the API.
+        """
         return pulumi.get(self, "encrypted_values")
 
     @_builtins.property
     @pulumi.getter
     def folder(self) -> _builtins.str:
+        """
+        The folder in which the resource is defined
+        """
         return pulumi.get(self, "folder")
 
     @_builtins.property
@@ -89,21 +98,33 @@ class GetLocalUserResult:
     @_builtins.property
     @pulumi.getter
     def name(self) -> _builtins.str:
+        """
+        The name of the local user
+        """
         return pulumi.get(self, "name")
 
     @_builtins.property
     @pulumi.getter
     def password(self) -> _builtins.str:
+        """
+        The password of the local user
+        """
         return pulumi.get(self, "password")
 
     @_builtins.property
     @pulumi.getter
     def snippet(self) -> _builtins.str:
+        """
+        The snippet in which the resource is defined
+        """
         return pulumi.get(self, "snippet")
 
     @_builtins.property
     @pulumi.getter
     def tfid(self) -> _builtins.str:
+        """
+        The Terraform ID.
+        """
         return pulumi.get(self, "tfid")
 
 
@@ -135,7 +156,10 @@ def get_local_user(device: Optional[_builtins.str] = None,
 
 
     :param _builtins.str device: The device in which the resource is defined
+    :param _builtins.str folder: The folder in which the resource is defined
     :param _builtins.str id: The UUID of the local user
+    :param _builtins.str name: The name of the local user
+    :param _builtins.str snippet: The snippet in which the resource is defined
     """
     __args__ = dict()
     __args__['device'] = device
@@ -167,7 +191,10 @@ def get_local_user_output(device: pulumi.Input[Optional[Optional[_builtins.str]]
 
 
     :param _builtins.str device: The device in which the resource is defined
+    :param _builtins.str folder: The folder in which the resource is defined
     :param _builtins.str id: The UUID of the local user
+    :param _builtins.str name: The name of the local user
+    :param _builtins.str snippet: The snippet in which the resource is defined
     """
     __args__ = dict()
     __args__['device'] = device

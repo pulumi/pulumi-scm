@@ -34,16 +34,12 @@ public final class HipObjectNetworkInfoCriteriaNetworkArgs extends com.pulumi.re
     /**
      * Is not
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `is` and `isNot`.
-     * 
      */
     @Import(name="isNot")
     private @Nullable Output<HipObjectNetworkInfoCriteriaNetworkIsNotArgs> isNot;
 
     /**
      * @return Is not
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `is` and `isNot`.
      * 
      */
     public Optional<Output<HipObjectNetworkInfoCriteriaNetworkIsNotArgs>> isNot() {
@@ -99,8 +95,6 @@ public final class HipObjectNetworkInfoCriteriaNetworkArgs extends com.pulumi.re
         /**
          * @param isNot Is not
          * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `is` and `isNot`.
-         * 
          * @return builder
          * 
          */
@@ -111,8 +105,6 @@ public final class HipObjectNetworkInfoCriteriaNetworkArgs extends com.pulumi.re
 
         /**
          * @param isNot Is not
-         * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `is` and `isNot`.
          * 
          * @return builder
          * 

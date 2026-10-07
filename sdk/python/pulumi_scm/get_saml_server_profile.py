@@ -76,6 +76,9 @@ class GetSamlServerProfileResult:
     @_builtins.property
     @pulumi.getter
     def certificate(self) -> _builtins.str:
+        """
+        The identity provider certificate
+        """
         return pulumi.get(self, "certificate")
 
     @_builtins.property
@@ -89,11 +92,17 @@ class GetSamlServerProfileResult:
     @_builtins.property
     @pulumi.getter(name="entityId")
     def entity_id(self) -> _builtins.str:
+        """
+        The identity provider ID
+        """
         return pulumi.get(self, "entity_id")
 
     @_builtins.property
     @pulumi.getter
     def folder(self) -> _builtins.str:
+        """
+        The folder in which the resource is defined
+        """
         return pulumi.get(self, "folder")
 
     @_builtins.property
@@ -107,51 +116,81 @@ class GetSamlServerProfileResult:
     @_builtins.property
     @pulumi.getter(name="maxClockSkew")
     def max_clock_skew(self) -> _builtins.int:
+        """
+        Maxiumum clock skew
+        """
         return pulumi.get(self, "max_clock_skew")
 
     @_builtins.property
     @pulumi.getter
     def name(self) -> _builtins.str:
+        """
+        The name of the SAML server profile
+        """
         return pulumi.get(self, "name")
 
     @_builtins.property
     @pulumi.getter(name="sloBindings")
     def slo_bindings(self) -> _builtins.str:
+        """
+        SAML HTTP binding for SLO requests to the identity provider. Possible values are `post` and `redirect`.
+        """
         return pulumi.get(self, "slo_bindings")
 
     @_builtins.property
     @pulumi.getter(name="sloUrl")
     def slo_url(self) -> _builtins.str:
+        """
+        Identity provider SLO URL
+        """
         return pulumi.get(self, "slo_url")
 
     @_builtins.property
     @pulumi.getter
     def snippet(self) -> _builtins.str:
+        """
+        The snippet in which the resource is defined
+        """
         return pulumi.get(self, "snippet")
 
     @_builtins.property
     @pulumi.getter(name="ssoBindings")
     def sso_bindings(self) -> _builtins.str:
+        """
+        SAML HTTP binding for SSO requests to the identity provider. Possible values are `post` and `redirect`.
+        """
         return pulumi.get(self, "sso_bindings")
 
     @_builtins.property
     @pulumi.getter(name="ssoUrl")
     def sso_url(self) -> _builtins.str:
+        """
+        Identity provider SSO URL
+        """
         return pulumi.get(self, "sso_url")
 
     @_builtins.property
     @pulumi.getter
     def tfid(self) -> _builtins.str:
+        """
+        The Terraform ID.
+        """
         return pulumi.get(self, "tfid")
 
     @_builtins.property
     @pulumi.getter(name="validateIdpCertificate")
     def validate_idp_certificate(self) -> _builtins.bool:
+        """
+        Validate the identity provider certificate?
+        """
         return pulumi.get(self, "validate_idp_certificate")
 
     @_builtins.property
     @pulumi.getter(name="wantAuthRequestsSigned")
     def want_auth_requests_signed(self) -> _builtins.bool:
+        """
+        Sign SAML message to the identity provider?
+        """
         return pulumi.get(self, "want_auth_requests_signed")
 
 
@@ -208,7 +247,10 @@ def get_saml_server_profile(device: Optional[_builtins.str] = None,
 
 
     :param _builtins.str device: The device in which the resource is defined
+    :param _builtins.str folder: The folder in which the resource is defined
     :param _builtins.str id: The UUID of the SAML server profile
+    :param _builtins.str name: The name of the SAML server profile
+    :param _builtins.str snippet: The snippet in which the resource is defined
     """
     __args__ = dict()
     __args__['device'] = device
@@ -265,7 +307,10 @@ def get_saml_server_profile_output(device: pulumi.Input[Optional[Optional[_built
 
 
     :param _builtins.str device: The device in which the resource is defined
+    :param _builtins.str folder: The folder in which the resource is defined
     :param _builtins.str id: The UUID of the SAML server profile
+    :param _builtins.str name: The name of the SAML server profile
+    :param _builtins.str snippet: The snippet in which the resource is defined
     """
     __args__ = dict()
     __args__['device'] = device

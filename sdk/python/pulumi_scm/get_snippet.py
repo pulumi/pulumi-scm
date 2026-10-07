@@ -90,7 +90,7 @@ class GetSnippetResult:
     @pulumi.getter
     def type(self) -> _builtins.str:
         """
-        The snippet type
+        The snippet type. Possible values are `predefined`, `custom` and `readonly`.
         """
         return pulumi.get(self, "type")
 

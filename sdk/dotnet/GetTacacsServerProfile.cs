@@ -129,6 +129,9 @@ namespace Pulumi.Scm
         [Input("device")]
         public string? Device { get; set; }
 
+        /// <summary>
+        /// The folder in which the resource is defined
+        /// </summary>
         [Input("folder")]
         public string? Folder { get; set; }
 
@@ -138,9 +141,15 @@ namespace Pulumi.Scm
         [Input("id", required: true)]
         public string Id { get; set; } = null!;
 
+        /// <summary>
+        /// The name of the TACACS+ server profile
+        /// </summary>
         [Input("name")]
         public string? Name { get; set; }
 
+        /// <summary>
+        /// The snippet in which the resource is defined
+        /// </summary>
         [Input("snippet")]
         public string? Snippet { get; set; }
 
@@ -158,6 +167,9 @@ namespace Pulumi.Scm
         [Input("device")]
         public Input<string>? Device { get; set; }
 
+        /// <summary>
+        /// The folder in which the resource is defined
+        /// </summary>
         [Input("folder")]
         public Input<string>? Folder { get; set; }
 
@@ -167,9 +179,15 @@ namespace Pulumi.Scm
         [Input("id", required: true)]
         public Input<string> Id { get; set; } = null!;
 
+        /// <summary>
+        /// The name of the TACACS+ server profile
+        /// </summary>
         [Input("name")]
         public Input<string>? Name { get; set; }
 
+        /// <summary>
+        /// The snippet in which the resource is defined
+        /// </summary>
         [Input("snippet")]
         public Input<string>? Snippet { get; set; }
 
@@ -187,18 +205,45 @@ namespace Pulumi.Scm
         /// The device in which the resource is defined
         /// </summary>
         public readonly string Device;
+        /// <summary>
+        /// Map of sensitive values returned from the API.
+        /// </summary>
         public readonly ImmutableDictionary<string, string> EncryptedValues;
+        /// <summary>
+        /// The folder in which the resource is defined
+        /// </summary>
         public readonly string Folder;
         /// <summary>
         /// The UUID of the TACACS+ server profile
         /// </summary>
         public readonly string Id;
+        /// <summary>
+        /// The name of the TACACS+ server profile
+        /// </summary>
         public readonly string Name;
+        /// <summary>
+        /// The TACACS+ authentication protocol. Possible values are `CHAP` and `PAP`.
+        /// </summary>
         public readonly string Protocol;
+        /// <summary>
+        /// The TACACS+ server configuration
+        /// </summary>
         public readonly ImmutableArray<Outputs.GetTacacsServerProfileServerResult> Servers;
+        /// <summary>
+        /// The snippet in which the resource is defined
+        /// </summary>
         public readonly string Snippet;
+        /// <summary>
+        /// The Terraform ID.
+        /// </summary>
         public readonly string Tfid;
+        /// <summary>
+        /// The TACACS+ timeout (seconds)
+        /// </summary>
         public readonly int Timeout;
+        /// <summary>
+        /// Use a single TACACS+ connection?
+        /// </summary>
         public readonly bool UseSingleConnection;
 
         [OutputConstructor]

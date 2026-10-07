@@ -11,22 +11,42 @@ import java.util.Objects;
 
 @CustomType
 public final class GetContentIdSettingResult {
+    /**
+     * @return Content id
+     * 
+     */
     private GetContentIdSettingContentId contentId;
     /**
      * @return The device in which the resource is defined
      * 
      */
     private String device;
+    /**
+     * @return The folder in which the resource is defined
+     * 
+     */
     private String folder;
     /**
      * @return UUID of the resource
      * 
      */
     private String id;
+    /**
+     * @return The snippet in which the resource is defined
+     * 
+     */
     private String snippet;
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     private String tfid;
 
     private GetContentIdSettingResult() {}
+    /**
+     * @return Content id
+     * 
+     */
     public GetContentIdSettingContentId contentId() {
         return this.contentId;
     }
@@ -37,6 +57,10 @@ public final class GetContentIdSettingResult {
     public String device() {
         return this.device;
     }
+    /**
+     * @return The folder in which the resource is defined
+     * 
+     */
     public String folder() {
         return this.folder;
     }
@@ -47,9 +71,17 @@ public final class GetContentIdSettingResult {
     public String id() {
         return this.id;
     }
+    /**
+     * @return The snippet in which the resource is defined
+     * 
+     */
     public String snippet() {
         return this.snippet;
     }
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     public String tfid() {
         return this.tfid;
     }

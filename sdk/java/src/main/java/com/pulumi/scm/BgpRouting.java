@@ -110,14 +110,14 @@ public class BgpRouting extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.addHostRouteToIkePeer);
     }
     /**
-     * Backbone routing
+     * Backbone routing. Possible values are `no-asymmetric-routing`, `asymmetric-routing-only` and `asymmetric-routing-with-load-share`.
      * 
      */
     @Export(name="backboneRouting", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> backboneRouting;
 
     /**
-     * @return Backbone routing
+     * @return Backbone routing. Possible values are `no-asymmetric-routing`, `asymmetric-routing-only` and `asymmetric-routing-with-load-share`.
      * 
      */
     public Output<Optional<String>> backboneRouting() {

@@ -35,16 +35,12 @@ public final class SdwanTrafficDistributionProfileArgs extends com.pulumi.resour
     /**
      * The folder in which the resource is defined
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
      */
     @Import(name="folder")
     private @Nullable Output<String> folder;
 
     /**
      * @return The folder in which the resource is defined
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public Optional<Output<String>> folder() {
@@ -84,8 +80,6 @@ public final class SdwanTrafficDistributionProfileArgs extends com.pulumi.resour
     /**
      * The snippet in which the resource is defined
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
      */
     @Import(name="snippet")
     private @Nullable Output<String> snippet;
@@ -93,22 +87,20 @@ public final class SdwanTrafficDistributionProfileArgs extends com.pulumi.resour
     /**
      * @return The snippet in which the resource is defined
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
      */
     public Optional<Output<String>> snippet() {
         return Optional.ofNullable(this.snippet);
     }
 
     /**
-     * Traffic distribution
+     * Traffic distribution. Possible values are `Best Available Path`, `Top Down Priority` and `Weighted Session Distribution`.
      * 
      */
     @Import(name="trafficDistribution")
     private @Nullable Output<String> trafficDistribution;
 
     /**
-     * @return Traffic distribution
+     * @return Traffic distribution. Possible values are `Best Available Path`, `Top Down Priority` and `Weighted Session Distribution`.
      * 
      */
     public Optional<Output<String>> trafficDistribution() {
@@ -168,8 +160,6 @@ public final class SdwanTrafficDistributionProfileArgs extends com.pulumi.resour
         /**
          * @param folder The folder in which the resource is defined
          * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-         * 
          * @return builder
          * 
          */
@@ -180,8 +170,6 @@ public final class SdwanTrafficDistributionProfileArgs extends com.pulumi.resour
 
         /**
          * @param folder The folder in which the resource is defined
-         * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
          * 
          * @return builder
          * 
@@ -245,8 +233,6 @@ public final class SdwanTrafficDistributionProfileArgs extends com.pulumi.resour
         /**
          * @param snippet The snippet in which the resource is defined
          * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-         * 
          * @return builder
          * 
          */
@@ -258,8 +244,6 @@ public final class SdwanTrafficDistributionProfileArgs extends com.pulumi.resour
         /**
          * @param snippet The snippet in which the resource is defined
          * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-         * 
          * @return builder
          * 
          */
@@ -268,7 +252,7 @@ public final class SdwanTrafficDistributionProfileArgs extends com.pulumi.resour
         }
 
         /**
-         * @param trafficDistribution Traffic distribution
+         * @param trafficDistribution Traffic distribution. Possible values are `Best Available Path`, `Top Down Priority` and `Weighted Session Distribution`.
          * 
          * @return builder
          * 
@@ -279,7 +263,7 @@ public final class SdwanTrafficDistributionProfileArgs extends com.pulumi.resour
         }
 
         /**
-         * @param trafficDistribution Traffic distribution
+         * @param trafficDistribution Traffic distribution. Possible values are `Best Available Path`, `Top Down Priority` and `Weighted Session Distribution`.
          * 
          * @return builder
          * 

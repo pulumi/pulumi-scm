@@ -20,14 +20,10 @@ public final class GetSdwanSaasQualityProfileListDataMonitorMode {
     /**
      * @return Http https
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `adaptive`, `httpHttps`, and `staticIp`.
-     * 
      */
     private GetSdwanSaasQualityProfileListDataMonitorModeHttpHttps httpHttps;
     /**
      * @return Static ip
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `adaptive`, `httpHttps`, and `staticIp`.
      * 
      */
     private GetSdwanSaasQualityProfileListDataMonitorModeStaticIp staticIp;
@@ -43,16 +39,12 @@ public final class GetSdwanSaasQualityProfileListDataMonitorMode {
     /**
      * @return Http https
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `adaptive`, `httpHttps`, and `staticIp`.
-     * 
      */
     public GetSdwanSaasQualityProfileListDataMonitorModeHttpHttps httpHttps() {
         return this.httpHttps;
     }
     /**
      * @return Static ip
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `adaptive`, `httpHttps`, and `staticIp`.
      * 
      */
     public GetSdwanSaasQualityProfileListDataMonitorModeStaticIp staticIp() {

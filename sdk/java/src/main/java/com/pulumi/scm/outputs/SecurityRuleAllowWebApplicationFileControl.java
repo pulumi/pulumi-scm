@@ -12,26 +12,26 @@ import javax.annotation.Nullable;
 @CustomType
 public final class SecurityRuleAllowWebApplicationFileControl {
     /**
-     * @return Download
+     * @return Download. Possible values are `allow-all-file-types`, `best-practice` and `block-all-file-types`.
      * 
      */
     private @Nullable String download;
     /**
-     * @return Upload
+     * @return Upload. Possible values are `allow-all-file-types`, `best-practice` and `block-all-file-types`.
      * 
      */
     private @Nullable String upload;
 
     private SecurityRuleAllowWebApplicationFileControl() {}
     /**
-     * @return Download
+     * @return Download. Possible values are `allow-all-file-types`, `best-practice` and `block-all-file-types`.
      * 
      */
     public Optional<String> download() {
         return Optional.ofNullable(this.download);
     }
     /**
-     * @return Upload
+     * @return Upload. Possible values are `allow-all-file-types`, `best-practice` and `block-all-file-types`.
      * 
      */
     public Optional<String> upload() {

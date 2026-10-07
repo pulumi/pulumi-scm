@@ -14,7 +14,7 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetBgpRouteMapRedistributionListDataBgpOspfRouteMapSetMetricResult
     {
         /// <summary>
-        /// BGP Root OSPF Route maps set Metric action
+        /// BGP Root OSPF Route maps set Metric action. Possible values are `Set`, `Add` and `Subtract`.
         /// </summary>
         public readonly string Action;
         /// <summary>

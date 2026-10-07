@@ -22,10 +22,32 @@ namespace Pulumi.Scm
     /// 
     /// return await Deployment.RunAsync(() =&gt; 
     /// {
+    ///     // Create a Layer3 ethernet interface first
+    ///     var testInterface = new Scm.EthernetInterface("test_interface", new()
+    ///     {
+    ///         Name = "$test-interface",
+    ///         Comment = "Interface for DHCP server - Managed by Terraform",
+    ///         Folder = "ngfw-shared",
+    ///         LinkSpeed = "auto",
+    ///         LinkDuplex = "full",
+    ///         LinkState = "auto",
+    ///         Layer3 = new Scm.Inputs.EthernetInterfaceLayer3Args
+    ///         {
+    ///             Ips = new[]
+    ///             {
+    ///                 new Scm.Inputs.EthernetInterfaceLayer3IpArgs
+    ///                 {
+    ///                     Name = "10.10.10.1/24",
+    ///                 },
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    ///     // Configure DHCP server on the interface
     ///     var dhcpServerExample = new Scm.DhcpInterface("dhcp_server_example", new()
     ///     {
     ///         Folder = "ngfw-shared",
-    ///         Name = "$test-interface-must-exist",
+    ///         Name = testInterface.Name,
     ///         Server = new Scm.Inputs.DhcpInterfaceServerArgs
     ///         {
     ///             IpPools = new[]
@@ -89,6 +111,12 @@ namespace Pulumi.Scm
     ///                 },
     ///             },
     ///         },
+    ///     }, new CustomResourceOptions
+    ///     {
+    ///         DependsOn =
+    ///         {
+    ///             testInterface,
+    ///         },
     ///     });
     /// 
     /// });
@@ -127,8 +155,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The folder in which the resource is defined
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Output("folder")]
         public Output<string?> Folder { get; private set; } = null!;
@@ -141,24 +167,18 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// Relay
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Relay` and `Server`.
         /// </summary>
         [Output("relay")]
         public Output<Outputs.DhcpInterfaceRelay?> Relay { get; private set; } = null!;
 
         /// <summary>
         /// Server
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Relay` and `Server`.
         /// </summary>
         [Output("server")]
         public Output<Outputs.DhcpInterfaceServer?> Server { get; private set; } = null!;
 
         /// <summary>
         /// The snippet in which the resource is defined
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Output("snippet")]
         public Output<string?> Snippet { get; private set; } = null!;
@@ -223,8 +243,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The folder in which the resource is defined
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("folder")]
         public Input<string>? Folder { get; set; }
@@ -237,24 +255,18 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// Relay
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Relay` and `Server`.
         /// </summary>
         [Input("relay")]
         public Input<Inputs.DhcpInterfaceRelayArgs>? Relay { get; set; }
 
         /// <summary>
         /// Server
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Relay` and `Server`.
         /// </summary>
         [Input("server")]
         public Input<Inputs.DhcpInterfaceServerArgs>? Server { get; set; }
 
         /// <summary>
         /// The snippet in which the resource is defined
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("snippet")]
         public Input<string>? Snippet { get; set; }
@@ -275,8 +287,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The folder in which the resource is defined
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("folder")]
         public Input<string>? Folder { get; set; }
@@ -289,24 +299,18 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// Relay
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Relay` and `Server`.
         /// </summary>
         [Input("relay")]
         public Input<Inputs.DhcpInterfaceRelayGetArgs>? Relay { get; set; }
 
         /// <summary>
         /// Server
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Relay` and `Server`.
         /// </summary>
         [Input("server")]
         public Input<Inputs.DhcpInterfaceServerGetArgs>? Server { get; set; }
 
         /// <summary>
         /// The snippet in which the resource is defined
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("snippet")]
         public Input<string>? Snippet { get; set; }

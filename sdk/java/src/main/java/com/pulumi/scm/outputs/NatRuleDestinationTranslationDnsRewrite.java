@@ -12,14 +12,14 @@ import javax.annotation.Nullable;
 @CustomType
 public final class NatRuleDestinationTranslationDnsRewrite {
     /**
-     * @return Direction
+     * @return Direction. Possible values are `reverse` and `forward`.
      * 
      */
     private @Nullable String direction;
 
     private NatRuleDestinationTranslationDnsRewrite() {}
     /**
-     * @return Direction
+     * @return Direction. Possible values are `reverse` and `forward`.
      * 
      */
     public Optional<String> direction() {

@@ -5,8 +5,11 @@ package com.pulumi.scm;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import com.pulumi.scm.inputs.DosProtectionRuleActionArgs;
+import com.pulumi.scm.inputs.DosProtectionRuleFromArgs;
 import com.pulumi.scm.inputs.DosProtectionRuleProtectionArgs;
+import com.pulumi.scm.inputs.DosProtectionRuleToArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -97,8 +100,6 @@ public final class DosProtectionRuleArgs extends com.pulumi.resources.ResourceAr
     /**
      * The folder in which the resource is defined
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
      */
     @Import(name="folder")
     private @Nullable Output<String> folder;
@@ -106,26 +107,24 @@ public final class DosProtectionRuleArgs extends com.pulumi.resources.ResourceAr
     /**
      * @return The folder in which the resource is defined
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
      */
     public Optional<Output<String>> folder() {
         return Optional.ofNullable(this.folder);
     }
 
     /**
-     * List of source zones
+     * Source zones and interfaces
      * 
      */
-    @Import(name="froms")
-    private @Nullable Output<List<String>> froms;
+    @Import(name="from", required=true)
+    private Output<DosProtectionRuleFromArgs> from;
 
     /**
-     * @return List of source zones
+     * @return Source zones and interfaces
      * 
      */
-    public Optional<Output<List<String>>> froms() {
-        return Optional.ofNullable(this.froms);
+    public Output<DosProtectionRuleFromArgs> from() {
+        return this.from;
     }
 
     /**
@@ -159,14 +158,14 @@ public final class DosProtectionRuleArgs extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * Position relative to local device rules
+     * Position relative to local device rules. Possible values are `pre` and `post`.
      * 
      */
     @Import(name="position")
     private @Nullable Output<String> position;
 
     /**
-     * @return Position relative to local device rules
+     * @return Position relative to local device rules. Possible values are `pre` and `post`.
      * 
      */
     public Optional<Output<String>> position() {
@@ -177,15 +176,15 @@ public final class DosProtectionRuleArgs extends com.pulumi.resources.ResourceAr
      * Protection
      * 
      */
-    @Import(name="protection")
-    private @Nullable Output<DosProtectionRuleProtectionArgs> protection;
+    @Import(name="protection", required=true)
+    private Output<DosProtectionRuleProtectionArgs> protection;
 
     /**
      * @return Protection
      * 
      */
-    public Optional<Output<DosProtectionRuleProtectionArgs>> protection() {
-        return Optional.ofNullable(this.protection);
+    public Output<DosProtectionRuleProtectionArgs> protection() {
+        return this.protection;
     }
 
     /**
@@ -207,21 +206,19 @@ public final class DosProtectionRuleArgs extends com.pulumi.resources.ResourceAr
      * List of services
      * 
      */
-    @Import(name="services")
-    private @Nullable Output<List<String>> services;
+    @Import(name="services", required=true)
+    private Output<List<String>> services;
 
     /**
      * @return List of services
      * 
      */
-    public Optional<Output<List<String>>> services() {
-        return Optional.ofNullable(this.services);
+    public Output<List<String>> services() {
+        return this.services;
     }
 
     /**
      * The snippet in which the resource is defined
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     @Import(name="snippet")
@@ -229,8 +226,6 @@ public final class DosProtectionRuleArgs extends com.pulumi.resources.ResourceAr
 
     /**
      * @return The snippet in which the resource is defined
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public Optional<Output<String>> snippet() {
@@ -256,15 +251,15 @@ public final class DosProtectionRuleArgs extends com.pulumi.resources.ResourceAr
      * List of source addresses
      * 
      */
-    @Import(name="sources")
-    private @Nullable Output<List<String>> sources;
+    @Import(name="sources", required=true)
+    private Output<List<String>> sources;
 
     /**
      * @return List of source addresses
      * 
      */
-    public Optional<Output<List<String>>> sources() {
-        return Optional.ofNullable(this.sources);
+    public Output<List<String>> sources() {
+        return this.sources;
     }
 
     /**
@@ -283,18 +278,18 @@ public final class DosProtectionRuleArgs extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * List of destination zones
+     * Destination zones and interfaces
      * 
      */
-    @Import(name="tos")
-    private @Nullable Output<List<String>> tos;
+    @Import(name="to", required=true)
+    private Output<DosProtectionRuleToArgs> to;
 
     /**
-     * @return List of destination zones
+     * @return Destination zones and interfaces
      * 
      */
-    public Optional<Output<List<String>>> tos() {
-        return Optional.ofNullable(this.tos);
+    public Output<DosProtectionRuleToArgs> to() {
+        return this.to;
     }
 
     private DosProtectionRuleArgs() {}
@@ -306,7 +301,7 @@ public final class DosProtectionRuleArgs extends com.pulumi.resources.ResourceAr
         this.device = $.device;
         this.disabled = $.disabled;
         this.folder = $.folder;
-        this.froms = $.froms;
+        this.from = $.from;
         this.logSetting = $.logSetting;
         this.name = $.name;
         this.position = $.position;
@@ -317,7 +312,7 @@ public final class DosProtectionRuleArgs extends com.pulumi.resources.ResourceAr
         this.sourceUsers = $.sourceUsers;
         this.sources = $.sources;
         this.tags = $.tags;
-        this.tos = $.tos;
+        this.to = $.to;
     }
 
     public static Builder builder() {
@@ -456,8 +451,6 @@ public final class DosProtectionRuleArgs extends com.pulumi.resources.ResourceAr
         /**
          * @param folder The folder in which the resource is defined
          * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-         * 
          * @return builder
          * 
          */
@@ -469,8 +462,6 @@ public final class DosProtectionRuleArgs extends com.pulumi.resources.ResourceAr
         /**
          * @param folder The folder in which the resource is defined
          * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-         * 
          * @return builder
          * 
          */
@@ -479,34 +470,24 @@ public final class DosProtectionRuleArgs extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param froms List of source zones
+         * @param from Source zones and interfaces
          * 
          * @return builder
          * 
          */
-        public Builder froms(@Nullable Output<List<String>> froms) {
-            $.froms = froms;
+        public Builder from(Output<DosProtectionRuleFromArgs> from) {
+            $.from = from;
             return this;
         }
 
         /**
-         * @param froms List of source zones
+         * @param from Source zones and interfaces
          * 
          * @return builder
          * 
          */
-        public Builder froms(List<String> froms) {
-            return froms(Output.of(froms));
-        }
-
-        /**
-         * @param froms List of source zones
-         * 
-         * @return builder
-         * 
-         */
-        public Builder froms(String... froms) {
-            return froms(List.of(froms));
+        public Builder from(DosProtectionRuleFromArgs from) {
+            return from(Output.of(from));
         }
 
         /**
@@ -552,7 +533,7 @@ public final class DosProtectionRuleArgs extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param position Position relative to local device rules
+         * @param position Position relative to local device rules. Possible values are `pre` and `post`.
          * 
          * @return builder
          * 
@@ -563,7 +544,7 @@ public final class DosProtectionRuleArgs extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param position Position relative to local device rules
+         * @param position Position relative to local device rules. Possible values are `pre` and `post`.
          * 
          * @return builder
          * 
@@ -578,7 +559,7 @@ public final class DosProtectionRuleArgs extends com.pulumi.resources.ResourceAr
          * @return builder
          * 
          */
-        public Builder protection(@Nullable Output<DosProtectionRuleProtectionArgs> protection) {
+        public Builder protection(Output<DosProtectionRuleProtectionArgs> protection) {
             $.protection = protection;
             return this;
         }
@@ -620,7 +601,7 @@ public final class DosProtectionRuleArgs extends com.pulumi.resources.ResourceAr
          * @return builder
          * 
          */
-        public Builder services(@Nullable Output<List<String>> services) {
+        public Builder services(Output<List<String>> services) {
             $.services = services;
             return this;
         }
@@ -648,8 +629,6 @@ public final class DosProtectionRuleArgs extends com.pulumi.resources.ResourceAr
         /**
          * @param snippet The snippet in which the resource is defined
          * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-         * 
          * @return builder
          * 
          */
@@ -660,8 +639,6 @@ public final class DosProtectionRuleArgs extends com.pulumi.resources.ResourceAr
 
         /**
          * @param snippet The snippet in which the resource is defined
-         * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
          * 
          * @return builder
          * 
@@ -707,7 +684,7 @@ public final class DosProtectionRuleArgs extends com.pulumi.resources.ResourceAr
          * @return builder
          * 
          */
-        public Builder sources(@Nullable Output<List<String>> sources) {
+        public Builder sources(Output<List<String>> sources) {
             $.sources = sources;
             return this;
         }
@@ -764,37 +741,42 @@ public final class DosProtectionRuleArgs extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param tos List of destination zones
+         * @param to Destination zones and interfaces
          * 
          * @return builder
          * 
          */
-        public Builder tos(@Nullable Output<List<String>> tos) {
-            $.tos = tos;
+        public Builder to(Output<DosProtectionRuleToArgs> to) {
+            $.to = to;
             return this;
         }
 
         /**
-         * @param tos List of destination zones
+         * @param to Destination zones and interfaces
          * 
          * @return builder
          * 
          */
-        public Builder tos(List<String> tos) {
-            return tos(Output.of(tos));
-        }
-
-        /**
-         * @param tos List of destination zones
-         * 
-         * @return builder
-         * 
-         */
-        public Builder tos(String... tos) {
-            return tos(List.of(tos));
+        public Builder to(DosProtectionRuleToArgs to) {
+            return to(Output.of(to));
         }
 
         public DosProtectionRuleArgs build() {
+            if ($.from == null) {
+                throw new MissingRequiredPropertyException("DosProtectionRuleArgs", "from");
+            }
+            if ($.protection == null) {
+                throw new MissingRequiredPropertyException("DosProtectionRuleArgs", "protection");
+            }
+            if ($.services == null) {
+                throw new MissingRequiredPropertyException("DosProtectionRuleArgs", "services");
+            }
+            if ($.sources == null) {
+                throw new MissingRequiredPropertyException("DosProtectionRuleArgs", "sources");
+            }
+            if ($.to == null) {
+                throw new MissingRequiredPropertyException("DosProtectionRuleArgs", "to");
+            }
             return $;
         }
     }

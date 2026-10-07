@@ -62,11 +62,17 @@ class GetAggregateInterfaceResult:
     @_builtins.property
     @pulumi.getter
     def comment(self) -> _builtins.str:
+        """
+        Aggregate interface description
+        """
         return pulumi.get(self, "comment")
 
     @_builtins.property
     @pulumi.getter(name="defaultValue")
     def default_value(self) -> _builtins.str:
+        """
+        Default interface assignment
+        """
         return pulumi.get(self, "default_value")
 
     @_builtins.property
@@ -80,6 +86,9 @@ class GetAggregateInterfaceResult:
     @_builtins.property
     @pulumi.getter
     def folder(self) -> _builtins.str:
+        """
+        The folder in which the resource is defined
+        """
         return pulumi.get(self, "folder")
 
     @_builtins.property
@@ -93,26 +102,41 @@ class GetAggregateInterfaceResult:
     @_builtins.property
     @pulumi.getter
     def layer2(self) -> 'outputs.GetAggregateInterfaceLayer2Result':
+        """
+        Layer2
+        """
         return pulumi.get(self, "layer2")
 
     @_builtins.property
     @pulumi.getter
     def layer3(self) -> 'outputs.GetAggregateInterfaceLayer3Result':
+        """
+        Aggregate Interface Layer 3 configuration
+        """
         return pulumi.get(self, "layer3")
 
     @_builtins.property
     @pulumi.getter
     def name(self) -> _builtins.str:
+        """
+        Aggregate interface name
+        """
         return pulumi.get(self, "name")
 
     @_builtins.property
     @pulumi.getter
     def snippet(self) -> _builtins.str:
+        """
+        The snippet in which the resource is defined
+        """
         return pulumi.get(self, "snippet")
 
     @_builtins.property
     @pulumi.getter
     def tfid(self) -> _builtins.str:
+        """
+        The Terraform ID.
+        """
         return pulumi.get(self, "tfid")
 
 
@@ -162,7 +186,10 @@ def get_aggregate_interface(device: Optional[_builtins.str] = None,
 
 
     :param _builtins.str device: The device in which the resource is defined
+    :param _builtins.str folder: The folder in which the resource is defined
     :param _builtins.str id: UUID of the resource
+    :param _builtins.str name: Aggregate interface name
+    :param _builtins.str snippet: The snippet in which the resource is defined
     """
     __args__ = dict()
     __args__['device'] = device
@@ -212,7 +239,10 @@ def get_aggregate_interface_output(device: pulumi.Input[Optional[Optional[_built
 
 
     :param _builtins.str device: The device in which the resource is defined
+    :param _builtins.str folder: The folder in which the resource is defined
     :param _builtins.str id: UUID of the resource
+    :param _builtins.str name: Aggregate interface name
+    :param _builtins.str snippet: The snippet in which the resource is defined
     """
     __args__ = dict()
     __args__['device'] = device

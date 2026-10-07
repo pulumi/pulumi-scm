@@ -40,12 +40,21 @@ export interface GetRadiusServerProfileArgs {
      * The device in which the resource is defined
      */
     device?: string;
+    /**
+     * The folder in which the resource is defined
+     */
     folder?: string;
     /**
      * The UUID of the RADIUS server profile
      */
     id: string;
+    /**
+     * The name of the RADIUS server profile
+     */
     name?: string;
+    /**
+     * The snippet in which the resource is defined
+     */
     snippet?: string;
 }
 
@@ -57,18 +66,45 @@ export interface GetRadiusServerProfileResult {
      * The device in which the resource is defined
      */
     readonly device: string;
+    /**
+     * Map of sensitive values returned from the API.
+     */
     readonly encryptedValues: {[key: string]: string};
+    /**
+     * The folder in which the resource is defined
+     */
     readonly folder: string;
     /**
      * The UUID of the RADIUS server profile
      */
     readonly id: string;
+    /**
+     * The name of the RADIUS server profile
+     */
     readonly name: string;
+    /**
+     * The RADIUS authentication protocol
+     */
     readonly protocol: outputs.GetRadiusServerProfileProtocol;
+    /**
+     * The number of RADIUS server retries
+     */
     readonly retries: number;
+    /**
+     * Server
+     */
     readonly servers: outputs.GetRadiusServerProfileServer[];
+    /**
+     * The snippet in which the resource is defined
+     */
     readonly snippet: string;
+    /**
+     * The Terraform ID.
+     */
     readonly tfid: string;
+    /**
+     * The RADIUS server authentication timeout (seconds)
+     */
     readonly timeout: number;
 }
 /**
@@ -105,11 +141,20 @@ export interface GetRadiusServerProfileOutputArgs {
      * The device in which the resource is defined
      */
     device?: pulumi.Input<string | undefined>;
+    /**
+     * The folder in which the resource is defined
+     */
     folder?: pulumi.Input<string | undefined>;
     /**
      * The UUID of the RADIUS server profile
      */
     id: pulumi.Input<string>;
+    /**
+     * The name of the RADIUS server profile
+     */
     name?: pulumi.Input<string | undefined>;
+    /**
+     * The snippet in which the resource is defined
+     */
     snippet?: pulumi.Input<string | undefined>;
 }

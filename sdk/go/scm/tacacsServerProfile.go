@@ -93,18 +93,14 @@ type TacacsServerProfile struct {
 	// Map of sensitive values returned from the API.
 	EncryptedValues pulumi.StringMapOutput `pulumi:"encryptedValues"`
 	// The folder in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrOutput `pulumi:"folder"`
 	// The name of the TACACS+ server profile
 	Name pulumi.StringOutput `pulumi:"name"`
-	// The TACACS+ authentication protocol
+	// The TACACS+ authentication protocol. Possible values are `CHAP` and `PAP`.
 	Protocol pulumi.StringOutput `pulumi:"protocol"`
 	// The TACACS+ server configuration
 	Servers TacacsServerProfileServerArrayOutput `pulumi:"servers"`
 	// The snippet in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
 	// The Terraform ID.
 	Tfid pulumi.StringOutput `pulumi:"tfid"`
@@ -159,18 +155,14 @@ type tacacsServerProfileState struct {
 	// Map of sensitive values returned from the API.
 	EncryptedValues map[string]string `pulumi:"encryptedValues"`
 	// The folder in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// The name of the TACACS+ server profile
 	Name *string `pulumi:"name"`
-	// The TACACS+ authentication protocol
+	// The TACACS+ authentication protocol. Possible values are `CHAP` and `PAP`.
 	Protocol *string `pulumi:"protocol"`
 	// The TACACS+ server configuration
 	Servers []TacacsServerProfileServer `pulumi:"servers"`
 	// The snippet in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	// The Terraform ID.
 	Tfid *string `pulumi:"tfid"`
@@ -186,18 +178,14 @@ type TacacsServerProfileState struct {
 	// Map of sensitive values returned from the API.
 	EncryptedValues pulumi.StringMapInput
 	// The folder in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// The name of the TACACS+ server profile
 	Name pulumi.StringPtrInput
-	// The TACACS+ authentication protocol
+	// The TACACS+ authentication protocol. Possible values are `CHAP` and `PAP`.
 	Protocol pulumi.StringPtrInput
 	// The TACACS+ server configuration
 	Servers TacacsServerProfileServerArrayInput
 	// The snippet in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	// The Terraform ID.
 	Tfid pulumi.StringPtrInput
@@ -215,18 +203,14 @@ type tacacsServerProfileArgs struct {
 	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
 	// The folder in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// The name of the TACACS+ server profile
 	Name *string `pulumi:"name"`
-	// The TACACS+ authentication protocol
+	// The TACACS+ authentication protocol. Possible values are `CHAP` and `PAP`.
 	Protocol string `pulumi:"protocol"`
 	// The TACACS+ server configuration
 	Servers []TacacsServerProfileServer `pulumi:"servers"`
 	// The snippet in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	// The TACACS+ timeout (seconds)
 	Timeout *int `pulumi:"timeout"`
@@ -239,18 +223,14 @@ type TacacsServerProfileArgs struct {
 	// The device in which the resource is defined
 	Device pulumi.StringPtrInput
 	// The folder in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// The name of the TACACS+ server profile
 	Name pulumi.StringPtrInput
-	// The TACACS+ authentication protocol
+	// The TACACS+ authentication protocol. Possible values are `CHAP` and `PAP`.
 	Protocol pulumi.StringInput
 	// The TACACS+ server configuration
 	Servers TacacsServerProfileServerArrayInput
 	// The snippet in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	// The TACACS+ timeout (seconds)
 	Timeout pulumi.IntPtrInput
@@ -356,8 +336,6 @@ func (o TacacsServerProfileOutput) EncryptedValues() pulumi.StringMapOutput {
 }
 
 // The folder in which the resource is defined
-//
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o TacacsServerProfileOutput) Folder() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TacacsServerProfile) pulumi.StringPtrOutput { return v.Folder }).(pulumi.StringPtrOutput)
 }
@@ -367,7 +345,7 @@ func (o TacacsServerProfileOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v *TacacsServerProfile) pulumi.StringOutput { return v.Name }).(pulumi.StringOutput)
 }
 
-// The TACACS+ authentication protocol
+// The TACACS+ authentication protocol. Possible values are `CHAP` and `PAP`.
 func (o TacacsServerProfileOutput) Protocol() pulumi.StringOutput {
 	return o.ApplyT(func(v *TacacsServerProfile) pulumi.StringOutput { return v.Protocol }).(pulumi.StringOutput)
 }
@@ -378,8 +356,6 @@ func (o TacacsServerProfileOutput) Servers() TacacsServerProfileServerArrayOutpu
 }
 
 // The snippet in which the resource is defined
-//
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o TacacsServerProfileOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TacacsServerProfile) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)
 }

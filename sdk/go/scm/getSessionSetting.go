@@ -53,9 +53,11 @@ func LookupSessionSetting(ctx *pulumi.Context, args *LookupSessionSettingArgs, o
 type LookupSessionSettingArgs struct {
 	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
+	// The folder in which the resource is defined
 	Folder *string `pulumi:"folder"`
 	// UUID of the resource
-	Id      string  `pulumi:"id"`
+	Id string `pulumi:"id"`
+	// The snippet in which the resource is defined
 	Snippet *string `pulumi:"snippet"`
 }
 
@@ -63,12 +65,16 @@ type LookupSessionSettingArgs struct {
 type LookupSessionSettingResult struct {
 	// The device in which the resource is defined
 	Device string `pulumi:"device"`
+	// The folder in which the resource is defined
 	Folder string `pulumi:"folder"`
 	// UUID of the resource
-	Id              string                           `pulumi:"id"`
+	Id string `pulumi:"id"`
+	// Session settings
 	SessionSettings GetSessionSettingSessionSettings `pulumi:"sessionSettings"`
-	Snippet         string                           `pulumi:"snippet"`
-	Tfid            string                           `pulumi:"tfid"`
+	// The snippet in which the resource is defined
+	Snippet string `pulumi:"snippet"`
+	// The Terraform ID.
+	Tfid string `pulumi:"tfid"`
 }
 
 func LookupSessionSettingOutput(ctx *pulumi.Context, args LookupSessionSettingOutputArgs, opts ...pulumi.InvokeOption) LookupSessionSettingResultOutput {
@@ -80,9 +86,11 @@ func LookupSessionSettingOutput(ctx *pulumi.Context, args LookupSessionSettingOu
 type LookupSessionSettingOutputArgs struct {
 	// The device in which the resource is defined
 	Device pulumi.StringPtrInput `pulumi:"device"`
+	// The folder in which the resource is defined
 	Folder pulumi.StringPtrInput `pulumi:"folder"`
 	// UUID of the resource
-	Id      pulumi.StringInput    `pulumi:"id"`
+	Id pulumi.StringInput `pulumi:"id"`
+	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrInput `pulumi:"snippet"`
 }
 
@@ -110,6 +118,7 @@ func (o LookupSessionSettingResultOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupSessionSettingResult) string { return v.Device }).(pulumi.StringOutput)
 }
 
+// The folder in which the resource is defined
 func (o LookupSessionSettingResultOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupSessionSettingResult) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -119,14 +128,17 @@ func (o LookupSessionSettingResultOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupSessionSettingResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
+// Session settings
 func (o LookupSessionSettingResultOutput) SessionSettings() GetSessionSettingSessionSettingsOutput {
 	return o.ApplyT(func(v LookupSessionSettingResult) GetSessionSettingSessionSettings { return v.SessionSettings }).(GetSessionSettingSessionSettingsOutput)
 }
 
+// The snippet in which the resource is defined
 func (o LookupSessionSettingResultOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupSessionSettingResult) string { return v.Snippet }).(pulumi.StringOutput)
 }
 
+// The Terraform ID.
 func (o LookupSessionSettingResultOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupSessionSettingResult) string { return v.Tfid }).(pulumi.StringOutput)
 }

@@ -85,7 +85,7 @@ namespace Pulumi.Scm.Inputs
         public Input<string>? MotdTitle { get; set; }
 
         /// <summary>
-        /// Severity
+        /// Severity. Possible values are `Warning`, `Question`, `Error` and `Info`.
         /// </summary>
         [Input("severity")]
         public Input<string>? Severity { get; set; }

@@ -22,14 +22,12 @@ public final class GetAddressListData {
      */
     private String device;
     /**
-     * @return The folder of the item. Default: Shared.
+     * @return The folder in which the resource is defined
      * 
      */
     private String folder;
     /**
      * @return Fully qualified domain name
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `fqdn`, `ipNetmask`, `ipRange`, and `ipWildcard`.
      * 
      */
     private String fqdn;
@@ -41,31 +39,25 @@ public final class GetAddressListData {
     /**
      * @return IP address with or without CIDR notation
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `fqdn`, `ipNetmask`, `ipRange`, and `ipWildcard`.
-     * 
      */
     private String ipNetmask;
     /**
      * @return Ip range
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `fqdn`, `ipNetmask`, `ipRange`, and `ipWildcard`.
      * 
      */
     private String ipRange;
     /**
      * @return IP wildcard mask
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `fqdn`, `ipNetmask`, `ipRange`, and `ipWildcard`.
-     * 
      */
     private String ipWildcard;
     /**
-     * @return The name of the item.
+     * @return The name of the address object
      * 
      */
     private String name;
     /**
-     * @return The snippet of the item.
+     * @return The snippet in which the resource is defined
      * 
      */
     private String snippet;
@@ -96,7 +88,7 @@ public final class GetAddressListData {
         return this.device;
     }
     /**
-     * @return The folder of the item. Default: Shared.
+     * @return The folder in which the resource is defined
      * 
      */
     public String folder() {
@@ -104,8 +96,6 @@ public final class GetAddressListData {
     }
     /**
      * @return Fully qualified domain name
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `fqdn`, `ipNetmask`, `ipRange`, and `ipWildcard`.
      * 
      */
     public String fqdn() {
@@ -121,16 +111,12 @@ public final class GetAddressListData {
     /**
      * @return IP address with or without CIDR notation
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `fqdn`, `ipNetmask`, `ipRange`, and `ipWildcard`.
-     * 
      */
     public String ipNetmask() {
         return this.ipNetmask;
     }
     /**
      * @return Ip range
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `fqdn`, `ipNetmask`, `ipRange`, and `ipWildcard`.
      * 
      */
     public String ipRange() {
@@ -139,21 +125,19 @@ public final class GetAddressListData {
     /**
      * @return IP wildcard mask
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `fqdn`, `ipNetmask`, `ipRange`, and `ipWildcard`.
-     * 
      */
     public String ipWildcard() {
         return this.ipWildcard;
     }
     /**
-     * @return The name of the item.
+     * @return The name of the address object
      * 
      */
     public String name() {
         return this.name;
     }
     /**
-     * @return The snippet of the item.
+     * @return The snippet in which the resource is defined
      * 
      */
     public String snippet() {

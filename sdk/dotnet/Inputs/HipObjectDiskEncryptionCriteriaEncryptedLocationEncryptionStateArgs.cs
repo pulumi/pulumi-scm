@@ -13,15 +13,13 @@ namespace Pulumi.Scm.Inputs
     public sealed class HipObjectDiskEncryptionCriteriaEncryptedLocationEncryptionStateArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Is
+        /// Is. Possible values are `Encrypted`, `Unencrypted`, `Partial` and `Unknown`.
         /// </summary>
         [Input("is")]
         public Input<string>? Is { get; set; }
 
         /// <summary>
-        /// Is not
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Is` and `IsNot`.
+        /// Is not. Possible values are `Encrypted`, `Unencrypted`, `Partial` and `Unknown`.
         /// </summary>
         [Input("isNot")]
         public Input<string>? IsNot { get; set; }

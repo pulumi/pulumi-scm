@@ -31,9 +31,17 @@ public final class GetAuthenticationRuleArgs extends com.pulumi.resources.Invoke
         return Optional.ofNullable(this.device);
     }
 
+    /**
+     * Folder
+     * 
+     */
     @Import(name="folder")
     private @Nullable Output<String> folder;
 
+    /**
+     * @return Folder
+     * 
+     */
     public Optional<Output<String>> folder() {
         return Optional.ofNullable(this.folder);
     }
@@ -53,16 +61,32 @@ public final class GetAuthenticationRuleArgs extends com.pulumi.resources.Invoke
         return this.id;
     }
 
+    /**
+     * The name of the authentication rule
+     * 
+     */
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the authentication rule
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
 
+    /**
+     * Snippet
+     * 
+     */
     @Import(name="snippet")
     private @Nullable Output<String> snippet;
 
+    /**
+     * @return Snippet
+     * 
+     */
     public Optional<Output<String>> snippet() {
         return Optional.ofNullable(this.snippet);
     }
@@ -116,11 +140,23 @@ public final class GetAuthenticationRuleArgs extends com.pulumi.resources.Invoke
             return device(Output.of(device));
         }
 
+        /**
+         * @param folder Folder
+         * 
+         * @return builder
+         * 
+         */
         public Builder folder(@Nullable Output<String> folder) {
             $.folder = folder;
             return this;
         }
 
+        /**
+         * @param folder Folder
+         * 
+         * @return builder
+         * 
+         */
         public Builder folder(String folder) {
             return folder(Output.of(folder));
         }
@@ -146,20 +182,44 @@ public final class GetAuthenticationRuleArgs extends com.pulumi.resources.Invoke
             return id(Output.of(id));
         }
 
+        /**
+         * @param name The name of the authentication rule
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the authentication rule
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param snippet Snippet
+         * 
+         * @return builder
+         * 
+         */
         public Builder snippet(@Nullable Output<String> snippet) {
             $.snippet = snippet;
             return this;
         }
 
+        /**
+         * @param snippet Snippet
+         * 
+         * @return builder
+         * 
+         */
         public Builder snippet(String snippet) {
             return snippet(Output.of(snippet));
         }

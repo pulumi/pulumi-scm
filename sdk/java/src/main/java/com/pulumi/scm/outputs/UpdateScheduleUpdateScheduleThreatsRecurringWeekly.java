@@ -14,7 +14,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class UpdateScheduleUpdateScheduleThreatsRecurringWeekly {
     /**
-     * @return Action
+     * @return Action. Possible values are `download-only` and `download-and-install`.
      * 
      */
     private @Nullable String action;
@@ -24,7 +24,7 @@ public final class UpdateScheduleUpdateScheduleThreatsRecurringWeekly {
      */
     private String at;
     /**
-     * @return Day of week
+     * @return Day of week. Possible values are `sunday`, `monday`, `tuesday`, `wednesday`, `thursday`, `friday` and `saturday`.
      * 
      */
     private String dayOfWeek;
@@ -36,7 +36,7 @@ public final class UpdateScheduleUpdateScheduleThreatsRecurringWeekly {
 
     private UpdateScheduleUpdateScheduleThreatsRecurringWeekly() {}
     /**
-     * @return Action
+     * @return Action. Possible values are `download-only` and `download-and-install`.
      * 
      */
     public Optional<String> action() {
@@ -50,7 +50,7 @@ public final class UpdateScheduleUpdateScheduleThreatsRecurringWeekly {
         return this.at;
     }
     /**
-     * @return Day of week
+     * @return Day of week. Possible values are `sunday`, `monday`, `tuesday`, `wednesday`, `thursday`, `friday` and `saturday`.
      * 
      */
     public String dayOfWeek() {

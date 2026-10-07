@@ -14,7 +14,7 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetSdwanPathQualityProfileMetricJitterResult
     {
         /// <summary>
-        /// Jitter sensitivity
+        /// Jitter sensitivity. Possible values are `Low`, `Medium` and `High`.
         /// </summary>
         public readonly string Sensitivity;
         /// <summary>

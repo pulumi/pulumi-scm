@@ -142,14 +142,14 @@ public final class BgpRouteMapRouteMapSetArgs extends com.pulumi.resources.Resou
     }
 
     /**
-     * Origin
+     * Origin. Possible values are `none`, `egp`, `igp` and `incomplete`.
      * 
      */
     @Import(name="origin")
     private @Nullable Output<String> origin;
 
     /**
-     * @return Origin
+     * @return Origin. Possible values are `none`, `egp`, `igp` and `incomplete`.
      * 
      */
     public Optional<Output<String>> origin() {
@@ -202,14 +202,14 @@ public final class BgpRouteMapRouteMapSetArgs extends com.pulumi.resources.Resou
     }
 
     /**
-     * Regular community
+     * Regular community. Possible values are `none`, `blackhole`, `no-peer`, `graceful-shutdown`, `accept-own`, `local-as`, `route-filter-v4`, `route-filter-v6`, `no-advertise`, `no-export` and `internet`.
      * 
      */
     @Import(name="regularCommunities")
     private @Nullable Output<List<String>> regularCommunities;
 
     /**
-     * @return Regular community
+     * @return Regular community. Possible values are `none`, `blackhole`, `no-peer`, `graceful-shutdown`, `accept-own`, `local-as`, `route-filter-v4`, `route-filter-v6`, `no-advertise`, `no-export` and `internet`.
      * 
      */
     public Optional<Output<List<String>>> regularCommunities() {
@@ -515,7 +515,7 @@ public final class BgpRouteMapRouteMapSetArgs extends com.pulumi.resources.Resou
         }
 
         /**
-         * @param origin Origin
+         * @param origin Origin. Possible values are `none`, `egp`, `igp` and `incomplete`.
          * 
          * @return builder
          * 
@@ -526,7 +526,7 @@ public final class BgpRouteMapRouteMapSetArgs extends com.pulumi.resources.Resou
         }
 
         /**
-         * @param origin Origin
+         * @param origin Origin. Possible values are `none`, `egp`, `igp` and `incomplete`.
          * 
          * @return builder
          * 
@@ -599,7 +599,7 @@ public final class BgpRouteMapRouteMapSetArgs extends com.pulumi.resources.Resou
         }
 
         /**
-         * @param regularCommunities Regular community
+         * @param regularCommunities Regular community. Possible values are `none`, `blackhole`, `no-peer`, `graceful-shutdown`, `accept-own`, `local-as`, `route-filter-v4`, `route-filter-v6`, `no-advertise`, `no-export` and `internet`.
          * 
          * @return builder
          * 
@@ -610,7 +610,7 @@ public final class BgpRouteMapRouteMapSetArgs extends com.pulumi.resources.Resou
         }
 
         /**
-         * @param regularCommunities Regular community
+         * @param regularCommunities Regular community. Possible values are `none`, `blackhole`, `no-peer`, `graceful-shutdown`, `accept-own`, `local-as`, `route-filter-v4`, `route-filter-v6`, `no-advertise`, `no-export` and `internet`.
          * 
          * @return builder
          * 
@@ -620,7 +620,7 @@ public final class BgpRouteMapRouteMapSetArgs extends com.pulumi.resources.Resou
         }
 
         /**
-         * @param regularCommunities Regular community
+         * @param regularCommunities Regular community. Possible values are `none`, `blackhole`, `no-peer`, `graceful-shutdown`, `accept-own`, `local-as`, `route-filter-v4`, `route-filter-v6`, `no-advertise`, `no-export` and `internet`.
          * 
          * @return builder
          * 

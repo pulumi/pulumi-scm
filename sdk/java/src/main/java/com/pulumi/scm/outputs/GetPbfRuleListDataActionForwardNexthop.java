@@ -18,8 +18,6 @@ public final class GetPbfRuleListDataActionForwardNexthop {
     /**
      * @return Next hop IP address
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `fqdn` and `ipAddress`.
-     * 
      */
     private String ipAddress;
 
@@ -33,8 +31,6 @@ public final class GetPbfRuleListDataActionForwardNexthop {
     }
     /**
      * @return Next hop IP address
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `fqdn` and `ipAddress`.
      * 
      */
     public String ipAddress() {

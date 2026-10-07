@@ -18,7 +18,7 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly string At;
         /// <summary>
-        /// Day of week
+        /// Day of week. Possible values are `Sunday`, `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday` and `Saturday`.
         /// </summary>
         public readonly string DayOfWeek;
 

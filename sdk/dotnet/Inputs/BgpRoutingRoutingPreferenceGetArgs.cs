@@ -20,8 +20,6 @@ namespace Pulumi.Scm.Inputs
 
         /// <summary>
         /// Hot potato routing
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Default` and `HotPotatoRouting`.
         /// </summary>
         [Input("hotPotatoRouting")]
         public Input<Inputs.BgpRoutingRoutingPreferenceHotPotatoRoutingGetArgs>? HotPotatoRouting { get; set; }

@@ -123,7 +123,7 @@ export class ForwardingProfileDestination extends pulumi.CustomResource {
      */
     declare public readonly description: pulumi.Output<string | undefined>;
     /**
-     * The folder in which the resource is defined
+     * The folder in which the resource is defined. Possible values are `Mobile Users`.
      */
     declare public readonly folder: pulumi.Output<string>;
     /**
@@ -185,7 +185,7 @@ export interface ForwardingProfileDestinationState {
      */
     description?: pulumi.Input<string | undefined>;
     /**
-     * The folder in which the resource is defined
+     * The folder in which the resource is defined. Possible values are `Mobile Users`.
      */
     folder?: pulumi.Input<string | undefined>;
     /**
@@ -215,7 +215,7 @@ export interface ForwardingProfileDestinationArgs {
      */
     description?: pulumi.Input<string | undefined>;
     /**
-     * The folder in which the resource is defined
+     * The folder in which the resource is defined. Possible values are `Mobile Users`.
      */
     folder?: pulumi.Input<string | undefined>;
     /**

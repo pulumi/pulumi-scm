@@ -25,13 +25,19 @@ namespace Pulumi.Scm.Inputs
         public Input<bool>? FastFailover { get; set; }
 
         /// <summary>
+        /// High Availability settings
+        /// </summary>
+        [Input("highAvailability")]
+        public Input<Inputs.AggregateInterfaceLayer3LacpHighAvailabilityGetArgs>? HighAvailability { get; set; }
+
+        /// <summary>
         /// Maximum number of physical ports bundled in the LAG
         /// </summary>
         [Input("maxPorts")]
         public Input<int>? MaxPorts { get; set; }
 
         /// <summary>
-        /// Mode
+        /// Mode. Possible values are `Passive` and `Active`.
         /// </summary>
         [Input("mode")]
         public Input<string>? Mode { get; set; }
@@ -43,7 +49,7 @@ namespace Pulumi.Scm.Inputs
         public Input<int>? SystemPriority { get; set; }
 
         /// <summary>
-        /// Transmission mode
+        /// Transmission mode. Possible values are `Fast` and `Slow`.
         /// </summary>
         [Input("transmissionRate")]
         public Input<string>? TransmissionRate { get; set; }

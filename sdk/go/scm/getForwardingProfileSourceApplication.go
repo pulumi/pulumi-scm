@@ -52,7 +52,7 @@ func LookupForwardingProfileSourceApplication(ctx *pulumi.Context, args *LookupF
 
 // A collection of arguments for invoking getForwardingProfileSourceApplication.
 type LookupForwardingProfileSourceApplicationArgs struct {
-	// The folder in which the resource is defined
+	// The folder in which the resource is defined. Possible values are `Mobile Users`.
 	Folder *string `pulumi:"folder"`
 	// The id of the source application
 	Id string `pulumi:"id"`
@@ -66,7 +66,7 @@ type LookupForwardingProfileSourceApplicationResult struct {
 	Applications []string `pulumi:"applications"`
 	// fowarding profile source application description
 	Description string `pulumi:"description"`
-	// The folder in which the resource is defined
+	// The folder in which the resource is defined. Possible values are `Mobile Users`.
 	Folder string `pulumi:"folder"`
 	// The id of the source application
 	Id string `pulumi:"id"`
@@ -83,7 +83,7 @@ func LookupForwardingProfileSourceApplicationOutput(ctx *pulumi.Context, args Lo
 
 // A collection of arguments for invoking getForwardingProfileSourceApplication.
 type LookupForwardingProfileSourceApplicationOutputArgs struct {
-	// The folder in which the resource is defined
+	// The folder in which the resource is defined. Possible values are `Mobile Users`.
 	Folder pulumi.StringPtrInput `pulumi:"folder"`
 	// The id of the source application
 	Id pulumi.StringInput `pulumi:"id"`
@@ -120,7 +120,7 @@ func (o LookupForwardingProfileSourceApplicationResultOutput) Description() pulu
 	return o.ApplyT(func(v LookupForwardingProfileSourceApplicationResult) string { return v.Description }).(pulumi.StringOutput)
 }
 
-// The folder in which the resource is defined
+// The folder in which the resource is defined. Possible values are `Mobile Users`.
 func (o LookupForwardingProfileSourceApplicationResultOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupForwardingProfileSourceApplicationResult) string { return v.Folder }).(pulumi.StringOutput)
 }

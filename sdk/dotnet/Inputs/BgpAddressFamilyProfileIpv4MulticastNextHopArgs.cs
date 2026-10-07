@@ -20,8 +20,6 @@ namespace Pulumi.Scm.Inputs
 
         /// <summary>
         /// Self force
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Self` and `SelfForce`.
         /// </summary>
         [Input("selfForce")]
         public Input<Inputs.BgpAddressFamilyProfileIpv4MulticastNextHopSelfForceArgs>? SelfForce { get; set; }

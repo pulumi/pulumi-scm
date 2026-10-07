@@ -14,27 +14,67 @@ import java.util.Objects;
 
 @CustomType
 public final class GetIpsecCryptoProfileResult {
+    /**
+     * @return Ah
+     * 
+     */
     private GetIpsecCryptoProfileAh ah;
     /**
      * @return The device in which the resource is defined
      * 
      */
     private String device;
+    /**
+     * @return phase-2 DH group (PFS DH group). Possible values are `no-pfs`, `group1`, `group2`, `group5`, `group14`, `group19`, `group20`, `group21`, `ml-kem-512`, `ml-kem-768` and `ml-kem-1024`.
+     * 
+     */
     private String dhGroup;
+    /**
+     * @return Esp
+     * 
+     */
     private GetIpsecCryptoProfileEsp esp;
+    /**
+     * @return The folder in which the resource is defined
+     * 
+     */
     private String folder;
     /**
      * @return UUID of the resource
      * 
      */
     private String id;
+    /**
+     * @return Lifesize
+     * 
+     */
     private GetIpsecCryptoProfileLifesize lifesize;
+    /**
+     * @return Ipsec crypto profile lifetime
+     * 
+     */
     private GetIpsecCryptoProfileLifetime lifetime;
+    /**
+     * @return Alphanumeric string begin with letter: [0-9a-zA-Z._-]
+     * 
+     */
     private String name;
+    /**
+     * @return The snippet in which the resource is defined
+     * 
+     */
     private String snippet;
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     private String tfid;
 
     private GetIpsecCryptoProfileResult() {}
+    /**
+     * @return Ah
+     * 
+     */
     public GetIpsecCryptoProfileAh ah() {
         return this.ah;
     }
@@ -45,12 +85,24 @@ public final class GetIpsecCryptoProfileResult {
     public String device() {
         return this.device;
     }
+    /**
+     * @return phase-2 DH group (PFS DH group). Possible values are `no-pfs`, `group1`, `group2`, `group5`, `group14`, `group19`, `group20`, `group21`, `ml-kem-512`, `ml-kem-768` and `ml-kem-1024`.
+     * 
+     */
     public String dhGroup() {
         return this.dhGroup;
     }
+    /**
+     * @return Esp
+     * 
+     */
     public GetIpsecCryptoProfileEsp esp() {
         return this.esp;
     }
+    /**
+     * @return The folder in which the resource is defined
+     * 
+     */
     public String folder() {
         return this.folder;
     }
@@ -61,18 +113,38 @@ public final class GetIpsecCryptoProfileResult {
     public String id() {
         return this.id;
     }
+    /**
+     * @return Lifesize
+     * 
+     */
     public GetIpsecCryptoProfileLifesize lifesize() {
         return this.lifesize;
     }
+    /**
+     * @return Ipsec crypto profile lifetime
+     * 
+     */
     public GetIpsecCryptoProfileLifetime lifetime() {
         return this.lifetime;
     }
+    /**
+     * @return Alphanumeric string begin with letter: [0-9a-zA-Z._-]
+     * 
+     */
     public String name() {
         return this.name;
     }
+    /**
+     * @return The snippet in which the resource is defined
+     * 
+     */
     public String snippet() {
         return this.snippet;
     }
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     public String tfid() {
         return this.tfid;
     }

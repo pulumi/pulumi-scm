@@ -35,16 +35,12 @@ public final class LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateAsPathArg
     /**
      * Prepend
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
-     * 
      */
     @Import(name="prepend")
     private @Nullable Output<Integer> prepend;
 
     /**
      * @return Prepend
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
      * 
      */
     public Optional<Output<Integer>> prepend() {
@@ -54,16 +50,12 @@ public final class LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateAsPathArg
     /**
      * Remove
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
-     * 
      */
     @Import(name="remove")
     private @Nullable Output<LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateAsPathRemoveArgs> remove;
 
     /**
      * @return Remove
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
      * 
      */
     public Optional<Output<LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateAsPathRemoveArgs>> remove() {
@@ -73,16 +65,12 @@ public final class LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateAsPathArg
     /**
      * Remove and prepend
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
-     * 
      */
     @Import(name="removeAndPrepend")
     private @Nullable Output<Integer> removeAndPrepend;
 
     /**
      * @return Remove and prepend
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
      * 
      */
     public Optional<Output<Integer>> removeAndPrepend() {
@@ -140,8 +128,6 @@ public final class LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateAsPathArg
         /**
          * @param prepend Prepend
          * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
-         * 
          * @return builder
          * 
          */
@@ -153,8 +139,6 @@ public final class LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateAsPathArg
         /**
          * @param prepend Prepend
          * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
-         * 
          * @return builder
          * 
          */
@@ -164,8 +148,6 @@ public final class LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateAsPathArg
 
         /**
          * @param remove Remove
-         * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
          * 
          * @return builder
          * 
@@ -178,8 +160,6 @@ public final class LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateAsPathArg
         /**
          * @param remove Remove
          * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
-         * 
          * @return builder
          * 
          */
@@ -189,8 +169,6 @@ public final class LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateAsPathArg
 
         /**
          * @param removeAndPrepend Remove and prepend
-         * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
          * 
          * @return builder
          * 
@@ -202,8 +180,6 @@ public final class LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateAsPathArg
 
         /**
          * @param removeAndPrepend Remove and prepend
-         * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
          * 
          * @return builder
          * 

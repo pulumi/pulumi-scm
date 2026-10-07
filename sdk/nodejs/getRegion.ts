@@ -28,12 +28,21 @@ export interface GetRegionArgs {
      * The device in which the resource is defined
      */
     device?: string;
+    /**
+     * The folder in which the resource is defined
+     */
     folder?: string;
     /**
      * The UUID of the region
      */
     id: string;
+    /**
+     * The name of the region
+     */
     name?: string;
+    /**
+     * The snippet in which the resource is defined
+     */
     snippet?: string;
 }
 
@@ -41,19 +50,37 @@ export interface GetRegionArgs {
  * A collection of values returned by getRegion.
  */
 export interface GetRegionResult {
+    /**
+     * Address
+     */
     readonly addresses: string[];
     /**
      * The device in which the resource is defined
      */
     readonly device: string;
+    /**
+     * The folder in which the resource is defined
+     */
     readonly folder: string;
+    /**
+     * Geo location
+     */
     readonly geoLocation: outputs.GetRegionGeoLocation;
     /**
      * The UUID of the region
      */
     readonly id: string;
+    /**
+     * The name of the region
+     */
     readonly name: string;
+    /**
+     * The snippet in which the resource is defined
+     */
     readonly snippet: string;
+    /**
+     * The Terraform ID.
+     */
     readonly tfid: string;
 }
 /**
@@ -78,11 +105,20 @@ export interface GetRegionOutputArgs {
      * The device in which the resource is defined
      */
     device?: pulumi.Input<string | undefined>;
+    /**
+     * The folder in which the resource is defined
+     */
     folder?: pulumi.Input<string | undefined>;
     /**
      * The UUID of the region
      */
     id: pulumi.Input<string>;
+    /**
+     * The name of the region
+     */
     name?: pulumi.Input<string | undefined>;
+    /**
+     * The snippet in which the resource is defined
+     */
     snippet?: pulumi.Input<string | undefined>;
 }

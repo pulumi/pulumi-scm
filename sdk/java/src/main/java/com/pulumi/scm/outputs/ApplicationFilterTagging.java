@@ -21,8 +21,6 @@ public final class ApplicationFilterTagging {
     /**
      * @return Tag
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `noTag` and `tag`.
-     * 
      */
     private @Nullable List<String> tags;
 
@@ -36,8 +34,6 @@ public final class ApplicationFilterTagging {
     }
     /**
      * @return Tag
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `noTag` and `tag`.
      * 
      */
     public List<String> tags() {

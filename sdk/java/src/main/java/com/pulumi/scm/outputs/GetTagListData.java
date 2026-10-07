@@ -11,7 +11,7 @@ import java.util.Objects;
 @CustomType
 public final class GetTagListData {
     /**
-     * @return The color of the tag
+     * @return The color of the tag. Possible values are `Red`, `Green`, `Blue`, `Yellow`, `Copper`, `Orange`, `Purple`, `Gray`, `Light Green`, `Cyan`, `Light Gray`, `Blue Gray`, `Lime`, `Black`, `Gold`, `Brown`, `Olive`, `Maroon`, `Red-Orange`, `Yellow-Orange`, `Forest Green`, `Turquoise Blue`, `Azure Blue`, `Cerulean Blue`, `Midnight Blue`, `Medium Blue`, `Cobalt Blue`, `Violet Blue`, `Blue Violet`, `Medium Violet`, `Medium Rose`, `Lavender`, `Orchid`, `Thistle`, `Peach`, `Salmon`, `Magenta`, `Red Violet`, `Mahogany`, `Burnt Sienna` and `Chestnut`.
      * 
      */
     private String color;
@@ -26,7 +26,7 @@ public final class GetTagListData {
      */
     private String device;
     /**
-     * @return The folder of the item. Default: Shared.
+     * @return The folder in which the resource is defined
      * 
      */
     private String folder;
@@ -36,12 +36,12 @@ public final class GetTagListData {
      */
     private String id;
     /**
-     * @return The name of the item.
+     * @return The name of the tag
      * 
      */
     private String name;
     /**
-     * @return The snippet of the item.
+     * @return The snippet in which the resource is defined
      * 
      */
     private String snippet;
@@ -53,7 +53,7 @@ public final class GetTagListData {
 
     private GetTagListData() {}
     /**
-     * @return The color of the tag
+     * @return The color of the tag. Possible values are `Red`, `Green`, `Blue`, `Yellow`, `Copper`, `Orange`, `Purple`, `Gray`, `Light Green`, `Cyan`, `Light Gray`, `Blue Gray`, `Lime`, `Black`, `Gold`, `Brown`, `Olive`, `Maroon`, `Red-Orange`, `Yellow-Orange`, `Forest Green`, `Turquoise Blue`, `Azure Blue`, `Cerulean Blue`, `Midnight Blue`, `Medium Blue`, `Cobalt Blue`, `Violet Blue`, `Blue Violet`, `Medium Violet`, `Medium Rose`, `Lavender`, `Orchid`, `Thistle`, `Peach`, `Salmon`, `Magenta`, `Red Violet`, `Mahogany`, `Burnt Sienna` and `Chestnut`.
      * 
      */
     public String color() {
@@ -74,7 +74,7 @@ public final class GetTagListData {
         return this.device;
     }
     /**
-     * @return The folder of the item. Default: Shared.
+     * @return The folder in which the resource is defined
      * 
      */
     public String folder() {
@@ -88,14 +88,14 @@ public final class GetTagListData {
         return this.id;
     }
     /**
-     * @return The name of the item.
+     * @return The name of the tag
      * 
      */
     public String name() {
         return this.name;
     }
     /**
-     * @return The snippet of the item.
+     * @return The snippet in which the resource is defined
      * 
      */
     public String snippet() {

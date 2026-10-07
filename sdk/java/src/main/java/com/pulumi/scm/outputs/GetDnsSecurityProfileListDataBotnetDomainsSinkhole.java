@@ -11,26 +11,26 @@ import java.util.Objects;
 @CustomType
 public final class GetDnsSecurityProfileListDataBotnetDomainsSinkhole {
     /**
-     * @return Ipv4 address
+     * @return Ipv4 address. Possible values are `127.0.0.1` and `pan-sinkhole-default-ip`.
      * 
      */
     private String ipv4Address;
     /**
-     * @return Ipv6 address
+     * @return Ipv6 address. Possible values are `::1`.
      * 
      */
     private String ipv6Address;
 
     private GetDnsSecurityProfileListDataBotnetDomainsSinkhole() {}
     /**
-     * @return Ipv4 address
+     * @return Ipv4 address. Possible values are `127.0.0.1` and `pan-sinkhole-default-ip`.
      * 
      */
     public String ipv4Address() {
         return this.ipv4Address;
     }
     /**
-     * @return Ipv6 address
+     * @return Ipv6 address. Possible values are `::1`.
      * 
      */
     public String ipv6Address() {

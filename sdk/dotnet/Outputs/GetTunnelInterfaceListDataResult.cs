@@ -26,7 +26,7 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly string Device;
         /// <summary>
-        /// The folder of the item. Default: Shared.
+        /// The folder in which the resource is defined
         /// </summary>
         public readonly string Folder;
         /// <summary>
@@ -50,7 +50,7 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly int Mtu;
         /// <summary>
-        /// The name of the item.
+        /// L3 sub-interface name for tunnel interface
         /// </summary>
         public readonly string Name;
         /// <summary>
@@ -58,7 +58,7 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly string NetflowProfile;
         /// <summary>
-        /// The snippet of the item.
+        /// The snippet in which the resource is defined
         /// </summary>
         public readonly string Snippet;
         /// <summary>

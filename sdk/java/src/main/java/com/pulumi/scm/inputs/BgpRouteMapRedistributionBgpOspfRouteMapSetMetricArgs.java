@@ -17,14 +17,14 @@ public final class BgpRouteMapRedistributionBgpOspfRouteMapSetMetricArgs extends
     public static final BgpRouteMapRedistributionBgpOspfRouteMapSetMetricArgs Empty = new BgpRouteMapRedistributionBgpOspfRouteMapSetMetricArgs();
 
     /**
-     * BGP Root OSPF Route maps set Metric action
+     * BGP Root OSPF Route maps set Metric action. Possible values are `set`, `add` and `subtract`.
      * 
      */
     @Import(name="action")
     private @Nullable Output<String> action;
 
     /**
-     * @return BGP Root OSPF Route maps set Metric action
+     * @return BGP Root OSPF Route maps set Metric action. Possible values are `set`, `add` and `subtract`.
      * 
      */
     public Optional<Output<String>> action() {
@@ -72,7 +72,7 @@ public final class BgpRouteMapRedistributionBgpOspfRouteMapSetMetricArgs extends
         }
 
         /**
-         * @param action BGP Root OSPF Route maps set Metric action
+         * @param action BGP Root OSPF Route maps set Metric action. Possible values are `set`, `add` and `subtract`.
          * 
          * @return builder
          * 
@@ -83,7 +83,7 @@ public final class BgpRouteMapRedistributionBgpOspfRouteMapSetMetricArgs extends
         }
 
         /**
-         * @param action BGP Root OSPF Route maps set Metric action
+         * @param action BGP Root OSPF Route maps set Metric action. Possible values are `set`, `add` and `subtract`.
          * 
          * @return builder
          * 

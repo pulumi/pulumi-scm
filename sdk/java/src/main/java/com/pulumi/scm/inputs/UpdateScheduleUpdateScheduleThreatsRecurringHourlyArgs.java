@@ -19,14 +19,14 @@ public final class UpdateScheduleUpdateScheduleThreatsRecurringHourlyArgs extend
     public static final UpdateScheduleUpdateScheduleThreatsRecurringHourlyArgs Empty = new UpdateScheduleUpdateScheduleThreatsRecurringHourlyArgs();
 
     /**
-     * Action
+     * Action. Possible values are `download-only` and `download-and-install`.
      * 
      */
     @Import(name="action")
     private @Nullable Output<String> action;
 
     /**
-     * @return Action
+     * @return Action. Possible values are `download-only` and `download-and-install`.
      * 
      */
     public Optional<Output<String>> action() {
@@ -90,7 +90,7 @@ public final class UpdateScheduleUpdateScheduleThreatsRecurringHourlyArgs extend
         }
 
         /**
-         * @param action Action
+         * @param action Action. Possible values are `download-only` and `download-and-install`.
          * 
          * @return builder
          * 
@@ -101,7 +101,7 @@ public final class UpdateScheduleUpdateScheduleThreatsRecurringHourlyArgs extend
         }
 
         /**
-         * @param action Action
+         * @param action Action. Possible values are `download-only` and `download-and-install`.
          * 
          * @return builder
          * 

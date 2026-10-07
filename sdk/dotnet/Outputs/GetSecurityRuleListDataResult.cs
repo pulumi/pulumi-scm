@@ -14,7 +14,7 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetSecurityRuleListDataResult
     {
         /// <summary>
-        /// The action to be taken when the rule is matched
+        /// The action to be taken when the rule is matched. Possible values are `Allow`, `Deny`, `Drop`, `reset-client`, `reset-server` and `reset-both`.
         /// </summary>
         public readonly string Action;
         /// <summary>
@@ -118,7 +118,7 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly string PolicyType;
         /// <summary>
-        /// The position of a security rule
+        /// The position of a security rule. Possible values are `Pre` and `Post`.
         /// </summary>
         public readonly string Position;
         /// <summary>
@@ -162,7 +162,7 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly ImmutableArray<string> Tags;
         /// <summary>
-        /// The name or UUID of the rule to position this rule relative to. Required when `RelativePosition` is `"before"` or `"after"`.
+        /// UUID of the rule to position this rule relative to. Required when `RelativePosition` is `"before"` or `"after"`.
         /// </summary>
         public readonly string TargetRule;
         /// <summary>

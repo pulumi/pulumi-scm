@@ -49,14 +49,14 @@ public final class IkeCryptoProfileState extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * Dh group
+     * Dh group. Possible values are `group1`, `group2`, `group5`, `group14`, `group19`, `group20`, `group21`, `ml-kem-512`, `ml-kem-768` and `ml-kem-1024`.
      * 
      */
     @Import(name="dhGroups")
     private @Nullable Output<List<String>> dhGroups;
 
     /**
-     * @return Dh group
+     * @return Dh group. Possible values are `group1`, `group2`, `group5`, `group14`, `group19`, `group20`, `group21`, `ml-kem-512`, `ml-kem-768` and `ml-kem-1024`.
      * 
      */
     public Optional<Output<List<String>>> dhGroups() {
@@ -64,14 +64,14 @@ public final class IkeCryptoProfileState extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * Encryption algorithm
+     * Encryption algorithm. Possible values are `des`, `3des`, `aes-128-cbc`, `aes-192-cbc`, `aes-256-cbc`, `aes-128-gcm` and `aes-256-gcm`.
      * 
      */
     @Import(name="encryptions")
     private @Nullable Output<List<String>> encryptions;
 
     /**
-     * @return Encryption algorithm
+     * @return Encryption algorithm. Possible values are `des`, `3des`, `aes-128-cbc`, `aes-192-cbc`, `aes-256-cbc`, `aes-128-gcm` and `aes-256-gcm`.
      * 
      */
     public Optional<Output<List<String>>> encryptions() {
@@ -81,8 +81,6 @@ public final class IkeCryptoProfileState extends com.pulumi.resources.ResourceAr
     /**
      * The folder in which the resource is defined
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
      */
     @Import(name="folder")
     private @Nullable Output<String> folder;
@@ -90,22 +88,20 @@ public final class IkeCryptoProfileState extends com.pulumi.resources.ResourceAr
     /**
      * @return The folder in which the resource is defined
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
      */
     public Optional<Output<String>> folder() {
         return Optional.ofNullable(this.folder);
     }
 
     /**
-     * Hash
+     * Hash. Possible values are `md5`, `sha1`, `sha256`, `sha384`, `sha512` and `non-auth`.
      * 
      */
     @Import(name="hashes")
     private @Nullable Output<List<String>> hashes;
 
     /**
-     * @return Hash
+     * @return Hash. Possible values are `md5`, `sha1`, `sha256`, `sha384`, `sha512` and `non-auth`.
      * 
      */
     public Optional<Output<List<String>>> hashes() {
@@ -145,16 +141,12 @@ public final class IkeCryptoProfileState extends com.pulumi.resources.ResourceAr
     /**
      * The snippet in which the resource is defined
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
      */
     @Import(name="snippet")
     private @Nullable Output<String> snippet;
 
     /**
      * @return The snippet in which the resource is defined
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public Optional<Output<String>> snippet() {
@@ -252,7 +244,7 @@ public final class IkeCryptoProfileState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param dhGroups Dh group
+         * @param dhGroups Dh group. Possible values are `group1`, `group2`, `group5`, `group14`, `group19`, `group20`, `group21`, `ml-kem-512`, `ml-kem-768` and `ml-kem-1024`.
          * 
          * @return builder
          * 
@@ -263,7 +255,7 @@ public final class IkeCryptoProfileState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param dhGroups Dh group
+         * @param dhGroups Dh group. Possible values are `group1`, `group2`, `group5`, `group14`, `group19`, `group20`, `group21`, `ml-kem-512`, `ml-kem-768` and `ml-kem-1024`.
          * 
          * @return builder
          * 
@@ -273,7 +265,7 @@ public final class IkeCryptoProfileState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param dhGroups Dh group
+         * @param dhGroups Dh group. Possible values are `group1`, `group2`, `group5`, `group14`, `group19`, `group20`, `group21`, `ml-kem-512`, `ml-kem-768` and `ml-kem-1024`.
          * 
          * @return builder
          * 
@@ -283,7 +275,7 @@ public final class IkeCryptoProfileState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param encryptions Encryption algorithm
+         * @param encryptions Encryption algorithm. Possible values are `des`, `3des`, `aes-128-cbc`, `aes-192-cbc`, `aes-256-cbc`, `aes-128-gcm` and `aes-256-gcm`.
          * 
          * @return builder
          * 
@@ -294,7 +286,7 @@ public final class IkeCryptoProfileState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param encryptions Encryption algorithm
+         * @param encryptions Encryption algorithm. Possible values are `des`, `3des`, `aes-128-cbc`, `aes-192-cbc`, `aes-256-cbc`, `aes-128-gcm` and `aes-256-gcm`.
          * 
          * @return builder
          * 
@@ -304,7 +296,7 @@ public final class IkeCryptoProfileState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param encryptions Encryption algorithm
+         * @param encryptions Encryption algorithm. Possible values are `des`, `3des`, `aes-128-cbc`, `aes-192-cbc`, `aes-256-cbc`, `aes-128-gcm` and `aes-256-gcm`.
          * 
          * @return builder
          * 
@@ -315,8 +307,6 @@ public final class IkeCryptoProfileState extends com.pulumi.resources.ResourceAr
 
         /**
          * @param folder The folder in which the resource is defined
-         * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
          * 
          * @return builder
          * 
@@ -329,8 +319,6 @@ public final class IkeCryptoProfileState extends com.pulumi.resources.ResourceAr
         /**
          * @param folder The folder in which the resource is defined
          * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-         * 
          * @return builder
          * 
          */
@@ -339,7 +327,7 @@ public final class IkeCryptoProfileState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param hashes Hash
+         * @param hashes Hash. Possible values are `md5`, `sha1`, `sha256`, `sha384`, `sha512` and `non-auth`.
          * 
          * @return builder
          * 
@@ -350,7 +338,7 @@ public final class IkeCryptoProfileState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param hashes Hash
+         * @param hashes Hash. Possible values are `md5`, `sha1`, `sha256`, `sha384`, `sha512` and `non-auth`.
          * 
          * @return builder
          * 
@@ -360,7 +348,7 @@ public final class IkeCryptoProfileState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param hashes Hash
+         * @param hashes Hash. Possible values are `md5`, `sha1`, `sha256`, `sha384`, `sha512` and `non-auth`.
          * 
          * @return builder
          * 
@@ -414,8 +402,6 @@ public final class IkeCryptoProfileState extends com.pulumi.resources.ResourceAr
         /**
          * @param snippet The snippet in which the resource is defined
          * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-         * 
          * @return builder
          * 
          */
@@ -426,8 +412,6 @@ public final class IkeCryptoProfileState extends com.pulumi.resources.ResourceAr
 
         /**
          * @param snippet The snippet in which the resource is defined
-         * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
          * 
          * @return builder
          * 

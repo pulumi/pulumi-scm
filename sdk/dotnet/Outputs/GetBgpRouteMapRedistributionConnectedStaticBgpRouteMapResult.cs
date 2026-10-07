@@ -14,7 +14,7 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetBgpRouteMapRedistributionConnectedStaticBgpRouteMapResult
     {
         /// <summary>
-        /// Connected Static BGP Route maps Action
+        /// Connected Static BGP Route maps Action. Possible values are `Permit` and `Deny`.
         /// </summary>
         public readonly string Action;
         /// <summary>

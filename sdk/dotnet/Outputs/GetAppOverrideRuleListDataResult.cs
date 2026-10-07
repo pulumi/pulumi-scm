@@ -34,7 +34,7 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly bool Disabled;
         /// <summary>
-        /// The folder of the item. Default: Shared.
+        /// The folder in which the resource is defined
         /// </summary>
         public readonly string Folder;
         /// <summary>
@@ -50,7 +50,7 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly string Id;
         /// <summary>
-        /// The name of the item.
+        /// Name
         /// </summary>
         public readonly string Name;
         /// <summary>
@@ -66,11 +66,11 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly string Port;
         /// <summary>
-        /// The position of a security rule
+        /// The position of a security rule. Possible values are `Pre` and `Post`.
         /// </summary>
         public readonly string Position;
         /// <summary>
-        /// Protocol
+        /// Protocol. Possible values are `Tcp` and `Udp`.
         /// </summary>
         public readonly string Protocol;
         /// <summary>
@@ -78,7 +78,7 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly string RelativePosition;
         /// <summary>
-        /// The snippet of the item.
+        /// The snippet in which the resource is defined
         /// </summary>
         public readonly string Snippet;
         /// <summary>
@@ -90,7 +90,7 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly ImmutableArray<string> Tags;
         /// <summary>
-        /// The name or UUID of the rule to position this rule relative to. Required when `RelativePosition` is `"before"` or `"after"`.
+        /// UUID of the rule to position this rule relative to. Required when `RelativePosition` is `"before"` or `"after"`.
         /// </summary>
         public readonly string TargetRule;
         /// <summary>

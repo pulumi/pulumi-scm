@@ -16,14 +16,14 @@ public final class SecurityRuleAllowWebApplicationSaasEnterpriseControlConsumerA
     public static final SecurityRuleAllowWebApplicationSaasEnterpriseControlConsumerAccessArgs Empty = new SecurityRuleAllowWebApplicationSaasEnterpriseControlConsumerAccessArgs();
 
     /**
-     * Enable
+     * Enable. Possible values are `yes` and `no`.
      * 
      */
     @Import(name="enable")
     private @Nullable Output<String> enable;
 
     /**
-     * @return Enable
+     * @return Enable. Possible values are `yes` and `no`.
      * 
      */
     public Optional<Output<String>> enable() {
@@ -55,7 +55,7 @@ public final class SecurityRuleAllowWebApplicationSaasEnterpriseControlConsumerA
         }
 
         /**
-         * @param enable Enable
+         * @param enable Enable. Possible values are `yes` and `no`.
          * 
          * @return builder
          * 
@@ -66,7 +66,7 @@ public final class SecurityRuleAllowWebApplicationSaasEnterpriseControlConsumerA
         }
 
         /**
-         * @param enable Enable
+         * @param enable Enable. Possible values are `yes` and `no`.
          * 
          * @return builder
          * 

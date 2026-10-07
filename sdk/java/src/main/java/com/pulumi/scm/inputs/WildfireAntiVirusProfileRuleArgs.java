@@ -17,14 +17,14 @@ public final class WildfireAntiVirusProfileRuleArgs extends com.pulumi.resources
     public static final WildfireAntiVirusProfileRuleArgs Empty = new WildfireAntiVirusProfileRuleArgs();
 
     /**
-     * Analysis
+     * Analysis. Possible values are `public-cloud` and `private-cloud`.
      * 
      */
     @Import(name="analysis")
     private @Nullable Output<String> analysis;
 
     /**
-     * @return Analysis
+     * @return Analysis. Possible values are `public-cloud` and `private-cloud`.
      * 
      */
     public Optional<Output<String>> analysis() {
@@ -47,14 +47,14 @@ public final class WildfireAntiVirusProfileRuleArgs extends com.pulumi.resources
     }
 
     /**
-     * Direction
+     * Direction. Possible values are `download`, `upload` and `both`.
      * 
      */
     @Import(name="direction")
     private @Nullable Output<String> direction;
 
     /**
-     * @return Direction
+     * @return Direction. Possible values are `download`, `upload` and `both`.
      * 
      */
     public Optional<Output<String>> direction() {
@@ -120,7 +120,7 @@ public final class WildfireAntiVirusProfileRuleArgs extends com.pulumi.resources
         }
 
         /**
-         * @param analysis Analysis
+         * @param analysis Analysis. Possible values are `public-cloud` and `private-cloud`.
          * 
          * @return builder
          * 
@@ -131,7 +131,7 @@ public final class WildfireAntiVirusProfileRuleArgs extends com.pulumi.resources
         }
 
         /**
-         * @param analysis Analysis
+         * @param analysis Analysis. Possible values are `public-cloud` and `private-cloud`.
          * 
          * @return builder
          * 
@@ -172,7 +172,7 @@ public final class WildfireAntiVirusProfileRuleArgs extends com.pulumi.resources
         }
 
         /**
-         * @param direction Direction
+         * @param direction Direction. Possible values are `download`, `upload` and `both`.
          * 
          * @return builder
          * 
@@ -183,7 +183,7 @@ public final class WildfireAntiVirusProfileRuleArgs extends com.pulumi.resources
         }
 
         /**
-         * @param direction Direction
+         * @param direction Direction. Possible values are `download`, `upload` and `both`.
          * 
          * @return builder
          * 

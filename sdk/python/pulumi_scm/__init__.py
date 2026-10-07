@@ -193,6 +193,7 @@ from .get_local_user import *
 from .get_local_user_group import *
 from .get_local_user_group_list import *
 from .get_local_user_list import *
+from .get_location_list import *
 from .get_log_forwarding_profile import *
 from .get_log_forwarding_profile_list import *
 from .get_logical_router import *
@@ -266,6 +267,8 @@ from .get_session_timeout_list import *
 from .get_site import *
 from .get_site_list import *
 from .get_snippet import *
+from .get_snippet_category import *
+from .get_snippet_category_list import *
 from .get_snippet_list import *
 from .get_syslog_server_profile import *
 from .get_syslog_server_profile_list import *
@@ -281,6 +284,7 @@ from .get_tls_service_profile import *
 from .get_tls_service_profile_list import *
 from .get_traffic_steering_rule import *
 from .get_traffic_steering_rule_list import *
+from .get_trusted_tenant_overview import *
 from .get_tunnel_interface import *
 from .get_tunnel_interface_list import *
 from .get_update_schedule import *

@@ -48,14 +48,14 @@ public final class DnsSecurityProfileBotnetDomainsListArgs extends com.pulumi.re
     }
 
     /**
-     * Packet capture
+     * Packet capture. Possible values are `disable`, `single-packet` and `extended-capture`.
      * 
      */
     @Import(name="packetCapture")
     private @Nullable Output<String> packetCapture;
 
     /**
-     * @return Packet capture
+     * @return Packet capture. Possible values are `disable`, `single-packet` and `extended-capture`.
      * 
      */
     public Optional<Output<String>> packetCapture() {
@@ -131,7 +131,7 @@ public final class DnsSecurityProfileBotnetDomainsListArgs extends com.pulumi.re
         }
 
         /**
-         * @param packetCapture Packet capture
+         * @param packetCapture Packet capture. Possible values are `disable`, `single-packet` and `extended-capture`.
          * 
          * @return builder
          * 
@@ -142,7 +142,7 @@ public final class DnsSecurityProfileBotnetDomainsListArgs extends com.pulumi.re
         }
 
         /**
-         * @param packetCapture Packet capture
+         * @param packetCapture Packet capture. Possible values are `disable`, `single-packet` and `extended-capture`.
          * 
          * @return builder
          * 

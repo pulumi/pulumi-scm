@@ -39,6 +39,9 @@ namespace Pulumi.Scm
         [Input("device")]
         public string? Device { get; set; }
 
+        /// <summary>
+        /// The folder in which the resource is defined
+        /// </summary>
         [Input("folder")]
         public string? Folder { get; set; }
 
@@ -48,9 +51,15 @@ namespace Pulumi.Scm
         [Input("id", required: true)]
         public string Id { get; set; } = null!;
 
+        /// <summary>
+        /// Rule name
+        /// </summary>
         [Input("name")]
         public string? Name { get; set; }
 
+        /// <summary>
+        /// The snippet in which the resource is defined
+        /// </summary>
         [Input("snippet")]
         public string? Snippet { get; set; }
 
@@ -68,6 +77,9 @@ namespace Pulumi.Scm
         [Input("device")]
         public Input<string>? Device { get; set; }
 
+        /// <summary>
+        /// The folder in which the resource is defined
+        /// </summary>
         [Input("folder")]
         public Input<string>? Folder { get; set; }
 
@@ -77,9 +89,15 @@ namespace Pulumi.Scm
         [Input("id", required: true)]
         public Input<string> Id { get; set; } = null!;
 
+        /// <summary>
+        /// Rule name
+        /// </summary>
         [Input("name")]
         public Input<string>? Name { get; set; }
 
+        /// <summary>
+        /// The snippet in which the resource is defined
+        /// </summary>
         [Input("snippet")]
         public Input<string>? Snippet { get; set; }
 
@@ -93,32 +111,86 @@ namespace Pulumi.Scm
     [OutputType]
     public sealed class GetDosProtectionRuleResult
     {
+        /// <summary>
+        /// The action to take on rule match
+        /// </summary>
         public readonly Outputs.GetDosProtectionRuleActionResult Action;
+        /// <summary>
+        /// Description
+        /// </summary>
         public readonly string Description;
+        /// <summary>
+        /// List of destination addresses
+        /// </summary>
         public readonly ImmutableArray<string> Destinations;
         /// <summary>
         /// The device in which the resource is defined
         /// </summary>
         public readonly string Device;
+        /// <summary>
+        /// Rule disabled?
+        /// </summary>
         public readonly bool Disabled;
+        /// <summary>
+        /// The folder in which the resource is defined
+        /// </summary>
         public readonly string Folder;
-        public readonly ImmutableArray<string> Froms;
+        /// <summary>
+        /// Source zones and interfaces
+        /// </summary>
+        public readonly Outputs.GetDosProtectionRuleFromResult From;
         /// <summary>
         /// The UUID of the DNS security profile
         /// </summary>
         public readonly string Id;
+        /// <summary>
+        /// Log forwarding profile name
+        /// </summary>
         public readonly string LogSetting;
+        /// <summary>
+        /// Rule name
+        /// </summary>
         public readonly string Name;
+        /// <summary>
+        /// Position relative to local device rules. Possible values are `Pre` and `Post`.
+        /// </summary>
         public readonly string Position;
+        /// <summary>
+        /// Protection
+        /// </summary>
         public readonly Outputs.GetDosProtectionRuleProtectionResult Protection;
+        /// <summary>
+        /// Schedule on which to enforce the rule
+        /// </summary>
         public readonly string Schedule;
+        /// <summary>
+        /// List of services
+        /// </summary>
         public readonly ImmutableArray<string> Services;
+        /// <summary>
+        /// The snippet in which the resource is defined
+        /// </summary>
         public readonly string Snippet;
+        /// <summary>
+        /// List of source users and/or groups.  Reserved words include `Any`, `pre-login`, `known-user`, and `Unknown`.
+        /// </summary>
         public readonly ImmutableArray<string> SourceUsers;
+        /// <summary>
+        /// List of source addresses
+        /// </summary>
         public readonly ImmutableArray<string> Sources;
+        /// <summary>
+        /// List of tags
+        /// </summary>
         public readonly ImmutableArray<string> Tags;
+        /// <summary>
+        /// The Terraform ID.
+        /// </summary>
         public readonly string Tfid;
-        public readonly ImmutableArray<string> Tos;
+        /// <summary>
+        /// Destination zones and interfaces
+        /// </summary>
+        public readonly Outputs.GetDosProtectionRuleToResult To;
 
         [OutputConstructor]
         private GetDosProtectionRuleResult(
@@ -134,7 +206,7 @@ namespace Pulumi.Scm
 
             string folder,
 
-            ImmutableArray<string> froms,
+            Outputs.GetDosProtectionRuleFromResult from,
 
             string id,
 
@@ -160,7 +232,7 @@ namespace Pulumi.Scm
 
             string tfid,
 
-            ImmutableArray<string> tos)
+            Outputs.GetDosProtectionRuleToResult to)
         {
             Action = action;
             Description = description;
@@ -168,7 +240,7 @@ namespace Pulumi.Scm
             Device = device;
             Disabled = disabled;
             Folder = folder;
-            Froms = froms;
+            From = from;
             Id = id;
             LogSetting = logSetting;
             Name = name;
@@ -181,7 +253,7 @@ namespace Pulumi.Scm
             Sources = sources;
             Tags = tags;
             Tfid = tfid;
-            Tos = tos;
+            To = to;
         }
     }
 }

@@ -24,22 +24,22 @@ public final class GetIkeCryptoProfileListData {
      */
     private String device;
     /**
-     * @return Dh group
+     * @return Dh group. Possible values are `group1`, `group2`, `group5`, `group14`, `group19`, `group20`, `group21`, `ml-kem-512`, `ml-kem-768` and `ml-kem-1024`.
      * 
      */
     private List<String> dhGroups;
     /**
-     * @return Encryption algorithm
+     * @return Encryption algorithm. Possible values are `des`, `3des`, `aes-128-cbc`, `aes-192-cbc`, `aes-256-cbc`, `aes-128-gcm` and `aes-256-gcm`.
      * 
      */
     private List<String> encryptions;
     /**
-     * @return The folder of the item. Default: Shared.
+     * @return The folder in which the resource is defined
      * 
      */
     private String folder;
     /**
-     * @return Hash
+     * @return Hash. Possible values are `md5`, `sha1`, `sha256`, `sha384`, `sha512` and `non-auth`.
      * 
      */
     private List<String> hashes;
@@ -54,12 +54,12 @@ public final class GetIkeCryptoProfileListData {
      */
     private GetIkeCryptoProfileListDataLifetime lifetime;
     /**
-     * @return The name of the item.
+     * @return Alphanumeric string begin with letter: [0-9a-zA-Z._-]
      * 
      */
     private String name;
     /**
-     * @return The snippet of the item.
+     * @return The snippet in which the resource is defined
      * 
      */
     private String snippet;
@@ -85,28 +85,28 @@ public final class GetIkeCryptoProfileListData {
         return this.device;
     }
     /**
-     * @return Dh group
+     * @return Dh group. Possible values are `group1`, `group2`, `group5`, `group14`, `group19`, `group20`, `group21`, `ml-kem-512`, `ml-kem-768` and `ml-kem-1024`.
      * 
      */
     public List<String> dhGroups() {
         return this.dhGroups;
     }
     /**
-     * @return Encryption algorithm
+     * @return Encryption algorithm. Possible values are `des`, `3des`, `aes-128-cbc`, `aes-192-cbc`, `aes-256-cbc`, `aes-128-gcm` and `aes-256-gcm`.
      * 
      */
     public List<String> encryptions() {
         return this.encryptions;
     }
     /**
-     * @return The folder of the item. Default: Shared.
+     * @return The folder in which the resource is defined
      * 
      */
     public String folder() {
         return this.folder;
     }
     /**
-     * @return Hash
+     * @return Hash. Possible values are `md5`, `sha1`, `sha256`, `sha384`, `sha512` and `non-auth`.
      * 
      */
     public List<String> hashes() {
@@ -127,14 +127,14 @@ public final class GetIkeCryptoProfileListData {
         return this.lifetime;
     }
     /**
-     * @return The name of the item.
+     * @return Alphanumeric string begin with letter: [0-9a-zA-Z._-]
      * 
      */
     public String name() {
         return this.name;
     }
     /**
-     * @return The snippet of the item.
+     * @return The snippet in which the resource is defined
      * 
      */
     public String snippet() {

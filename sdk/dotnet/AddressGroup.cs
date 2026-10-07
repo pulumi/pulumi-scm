@@ -124,16 +124,12 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// Dynamic
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Dynamic` and `Static`.
         /// </summary>
         [Output("dynamic")]
         public Output<Outputs.AddressGroupDynamic?> Dynamic { get; private set; } = null!;
 
         /// <summary>
         /// The folder in which the resource is defined
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Output("folder")]
         public Output<string?> Folder { get; private set; } = null!;
@@ -146,16 +142,12 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The snippet in which the resource is defined
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Output("snippet")]
         public Output<string?> Snippet { get; private set; } = null!;
 
         /// <summary>
         /// Static
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Dynamic` and `Static`.
         /// </summary>
         [Output("statics")]
         public Output<ImmutableArray<string>> Statics { get; private set; } = null!;
@@ -232,16 +224,12 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// Dynamic
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Dynamic` and `Static`.
         /// </summary>
         [Input("dynamic")]
         public Input<Inputs.AddressGroupDynamicArgs>? Dynamic { get; set; }
 
         /// <summary>
         /// The folder in which the resource is defined
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("folder")]
         public Input<string>? Folder { get; set; }
@@ -254,8 +242,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The snippet in which the resource is defined
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("snippet")]
         public Input<string>? Snippet { get; set; }
@@ -265,8 +251,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// Static
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Dynamic` and `Static`.
         /// </summary>
         public InputList<string> Statics
         {
@@ -308,16 +292,12 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// Dynamic
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Dynamic` and `Static`.
         /// </summary>
         [Input("dynamic")]
         public Input<Inputs.AddressGroupDynamicGetArgs>? Dynamic { get; set; }
 
         /// <summary>
         /// The folder in which the resource is defined
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("folder")]
         public Input<string>? Folder { get; set; }
@@ -330,8 +310,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The snippet in which the resource is defined
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("snippet")]
         public Input<string>? Snippet { get; set; }
@@ -341,8 +319,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// Static
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Dynamic` and `Static`.
         /// </summary>
         public InputList<string> Statics
         {

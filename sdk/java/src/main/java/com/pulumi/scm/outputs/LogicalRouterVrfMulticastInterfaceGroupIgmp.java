@@ -44,7 +44,7 @@ public final class LogicalRouterVrfMulticastInterfaceGroupIgmp {
      */
     private @Nullable String maxSources;
     /**
-     * @return Mode
+     * @return Mode. Possible values are `router` and `host`.
      * 
      */
     private @Nullable String mode;
@@ -54,7 +54,7 @@ public final class LogicalRouterVrfMulticastInterfaceGroupIgmp {
      */
     private @Nullable Integer queryInterval;
     /**
-     * @return Robustness
+     * @return Robustness. Possible values are `1`, `2`, `3`, `4`, `5`, `6` and `7`.
      * 
      */
     private @Nullable String robustness;
@@ -64,7 +64,7 @@ public final class LogicalRouterVrfMulticastInterfaceGroupIgmp {
      */
     private @Nullable Boolean routerAlertPolicing;
     /**
-     * @return Version
+     * @return Version. Possible values are `1`, `2` and `3`.
      * 
      */
     private @Nullable String version;
@@ -113,7 +113,7 @@ public final class LogicalRouterVrfMulticastInterfaceGroupIgmp {
         return Optional.ofNullable(this.maxSources);
     }
     /**
-     * @return Mode
+     * @return Mode. Possible values are `router` and `host`.
      * 
      */
     public Optional<String> mode() {
@@ -127,7 +127,7 @@ public final class LogicalRouterVrfMulticastInterfaceGroupIgmp {
         return Optional.ofNullable(this.queryInterval);
     }
     /**
-     * @return Robustness
+     * @return Robustness. Possible values are `1`, `2`, `3`, `4`, `5`, `6` and `7`.
      * 
      */
     public Optional<String> robustness() {
@@ -141,7 +141,7 @@ public final class LogicalRouterVrfMulticastInterfaceGroupIgmp {
         return Optional.ofNullable(this.routerAlertPolicing);
     }
     /**
-     * @return Version
+     * @return Version. Possible values are `1`, `2` and `3`.
      * 
      */
     public Optional<String> version() {

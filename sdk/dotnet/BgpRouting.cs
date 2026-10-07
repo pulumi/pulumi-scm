@@ -72,7 +72,7 @@ namespace Pulumi.Scm
         public Output<bool?> AddHostRouteToIkePeer { get; private set; } = null!;
 
         /// <summary>
-        /// Backbone routing
+        /// Backbone routing. Possible values are `no-asymmetric-routing`, `asymmetric-routing-only` and `asymmetric-routing-with-load-share`.
         /// </summary>
         [Output("backboneRouting")]
         public Output<string?> BackboneRouting { get; private set; } = null!;
@@ -160,7 +160,7 @@ namespace Pulumi.Scm
         public Input<bool>? AddHostRouteToIkePeer { get; set; }
 
         /// <summary>
-        /// Backbone routing
+        /// Backbone routing. Possible values are `no-asymmetric-routing`, `asymmetric-routing-only` and `asymmetric-routing-with-load-share`.
         /// </summary>
         [Input("backboneRouting")]
         public Input<string>? BackboneRouting { get; set; }
@@ -210,7 +210,7 @@ namespace Pulumi.Scm
         public Input<bool>? AddHostRouteToIkePeer { get; set; }
 
         /// <summary>
-        /// Backbone routing
+        /// Backbone routing. Possible values are `no-asymmetric-routing`, `asymmetric-routing-only` and `asymmetric-routing-with-load-share`.
         /// </summary>
         [Input("backboneRouting")]
         public Input<string>? BackboneRouting { get; set; }

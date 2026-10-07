@@ -68,16 +68,12 @@ public final class EthernetInterfaceState extends com.pulumi.resources.ResourceA
     /**
      * The device in which the resource is defined
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
      */
     @Import(name="device")
     private @Nullable Output<String> device;
 
     /**
      * @return The device in which the resource is defined
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public Optional<Output<String>> device() {
@@ -102,16 +98,12 @@ public final class EthernetInterfaceState extends com.pulumi.resources.ResourceA
     /**
      * The folder in which the resource is defined
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
      */
     @Import(name="folder")
     private @Nullable Output<String> folder;
 
     /**
      * @return The folder in which the resource is defined
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public Optional<Output<String>> folder() {
@@ -121,16 +113,12 @@ public final class EthernetInterfaceState extends com.pulumi.resources.ResourceA
     /**
      * Layer2
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `aggregateGroup`, `layer2`, `layer3`, and `tap`.
-     * 
      */
     @Import(name="layer2")
     private @Nullable Output<EthernetInterfaceLayer2Args> layer2;
 
     /**
      * @return Layer2
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `aggregateGroup`, `layer2`, `layer3`, and `tap`.
      * 
      */
     public Optional<Output<EthernetInterfaceLayer2Args>> layer2() {
@@ -140,8 +128,6 @@ public final class EthernetInterfaceState extends com.pulumi.resources.ResourceA
     /**
      * Ethernet Interface Layer 3 configuration
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `aggregateGroup`, `layer2`, `layer3`, and `tap`.
-     * 
      */
     @Import(name="layer3")
     private @Nullable Output<EthernetInterfaceLayer3Args> layer3;
@@ -149,22 +135,20 @@ public final class EthernetInterfaceState extends com.pulumi.resources.ResourceA
     /**
      * @return Ethernet Interface Layer 3 configuration
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `aggregateGroup`, `layer2`, `layer3`, and `tap`.
-     * 
      */
     public Optional<Output<EthernetInterfaceLayer3Args>> layer3() {
         return Optional.ofNullable(this.layer3);
     }
 
     /**
-     * Link duplex
+     * Link duplex. Possible values are `auto`, `half` and `full`.
      * 
      */
     @Import(name="linkDuplex")
     private @Nullable Output<String> linkDuplex;
 
     /**
-     * @return Link duplex
+     * @return Link duplex. Possible values are `auto`, `half` and `full`.
      * 
      */
     public Optional<Output<String>> linkDuplex() {
@@ -172,14 +156,14 @@ public final class EthernetInterfaceState extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * Link speed
+     * Link speed. Possible values are `auto`, `10`, `100`, `1000`, `10000`, `40000` and `100000`.
      * 
      */
     @Import(name="linkSpeed")
     private @Nullable Output<String> linkSpeed;
 
     /**
-     * @return Link speed
+     * @return Link speed. Possible values are `auto`, `10`, `100`, `1000`, `10000`, `40000` and `100000`.
      * 
      */
     public Optional<Output<String>> linkSpeed() {
@@ -187,14 +171,14 @@ public final class EthernetInterfaceState extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * Link state
+     * Link state. Possible values are `auto`, `up` and `down`.
      * 
      */
     @Import(name="linkState")
     private @Nullable Output<String> linkState;
 
     /**
-     * @return Link state
+     * @return Link state. Possible values are `auto`, `up` and `down`.
      * 
      */
     public Optional<Output<String>> linkState() {
@@ -234,16 +218,12 @@ public final class EthernetInterfaceState extends com.pulumi.resources.ResourceA
     /**
      * The snippet in which the resource is defined
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
      */
     @Import(name="snippet")
     private @Nullable Output<String> snippet;
 
     /**
      * @return The snippet in which the resource is defined
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public Optional<Output<String>> snippet() {
@@ -253,16 +233,12 @@ public final class EthernetInterfaceState extends com.pulumi.resources.ResourceA
     /**
      * Tap
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `aggregateGroup`, `layer2`, `layer3`, and `tap`.
-     * 
      */
     @Import(name="tap")
     private @Nullable Output<EthernetInterfaceTapArgs> tap;
 
     /**
      * @return Tap
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `aggregateGroup`, `layer2`, `layer3`, and `tap`.
      * 
      */
     public Optional<Output<EthernetInterfaceTapArgs>> tap() {
@@ -389,8 +365,6 @@ public final class EthernetInterfaceState extends com.pulumi.resources.ResourceA
         /**
          * @param device The device in which the resource is defined
          * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-         * 
          * @return builder
          * 
          */
@@ -401,8 +375,6 @@ public final class EthernetInterfaceState extends com.pulumi.resources.ResourceA
 
         /**
          * @param device The device in which the resource is defined
-         * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
          * 
          * @return builder
          * 
@@ -435,8 +407,6 @@ public final class EthernetInterfaceState extends com.pulumi.resources.ResourceA
         /**
          * @param folder The folder in which the resource is defined
          * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-         * 
          * @return builder
          * 
          */
@@ -448,8 +418,6 @@ public final class EthernetInterfaceState extends com.pulumi.resources.ResourceA
         /**
          * @param folder The folder in which the resource is defined
          * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-         * 
          * @return builder
          * 
          */
@@ -459,8 +427,6 @@ public final class EthernetInterfaceState extends com.pulumi.resources.ResourceA
 
         /**
          * @param layer2 Layer2
-         * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `aggregateGroup`, `layer2`, `layer3`, and `tap`.
          * 
          * @return builder
          * 
@@ -473,8 +439,6 @@ public final class EthernetInterfaceState extends com.pulumi.resources.ResourceA
         /**
          * @param layer2 Layer2
          * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `aggregateGroup`, `layer2`, `layer3`, and `tap`.
-         * 
          * @return builder
          * 
          */
@@ -484,8 +448,6 @@ public final class EthernetInterfaceState extends com.pulumi.resources.ResourceA
 
         /**
          * @param layer3 Ethernet Interface Layer 3 configuration
-         * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `aggregateGroup`, `layer2`, `layer3`, and `tap`.
          * 
          * @return builder
          * 
@@ -498,8 +460,6 @@ public final class EthernetInterfaceState extends com.pulumi.resources.ResourceA
         /**
          * @param layer3 Ethernet Interface Layer 3 configuration
          * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `aggregateGroup`, `layer2`, `layer3`, and `tap`.
-         * 
          * @return builder
          * 
          */
@@ -508,7 +468,7 @@ public final class EthernetInterfaceState extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param linkDuplex Link duplex
+         * @param linkDuplex Link duplex. Possible values are `auto`, `half` and `full`.
          * 
          * @return builder
          * 
@@ -519,7 +479,7 @@ public final class EthernetInterfaceState extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param linkDuplex Link duplex
+         * @param linkDuplex Link duplex. Possible values are `auto`, `half` and `full`.
          * 
          * @return builder
          * 
@@ -529,7 +489,7 @@ public final class EthernetInterfaceState extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param linkSpeed Link speed
+         * @param linkSpeed Link speed. Possible values are `auto`, `10`, `100`, `1000`, `10000`, `40000` and `100000`.
          * 
          * @return builder
          * 
@@ -540,7 +500,7 @@ public final class EthernetInterfaceState extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param linkSpeed Link speed
+         * @param linkSpeed Link speed. Possible values are `auto`, `10`, `100`, `1000`, `10000`, `40000` and `100000`.
          * 
          * @return builder
          * 
@@ -550,7 +510,7 @@ public final class EthernetInterfaceState extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param linkState Link state
+         * @param linkState Link state. Possible values are `auto`, `up` and `down`.
          * 
          * @return builder
          * 
@@ -561,7 +521,7 @@ public final class EthernetInterfaceState extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param linkState Link state
+         * @param linkState Link state. Possible values are `auto`, `up` and `down`.
          * 
          * @return builder
          * 
@@ -615,8 +575,6 @@ public final class EthernetInterfaceState extends com.pulumi.resources.ResourceA
         /**
          * @param snippet The snippet in which the resource is defined
          * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-         * 
          * @return builder
          * 
          */
@@ -628,8 +586,6 @@ public final class EthernetInterfaceState extends com.pulumi.resources.ResourceA
         /**
          * @param snippet The snippet in which the resource is defined
          * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-         * 
          * @return builder
          * 
          */
@@ -639,8 +595,6 @@ public final class EthernetInterfaceState extends com.pulumi.resources.ResourceA
 
         /**
          * @param tap Tap
-         * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `aggregateGroup`, `layer2`, `layer3`, and `tap`.
          * 
          * @return builder
          * 
@@ -652,8 +606,6 @@ public final class EthernetInterfaceState extends com.pulumi.resources.ResourceA
 
         /**
          * @param tap Tap
-         * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `aggregateGroup`, `layer2`, `layer3`, and `tap`.
          * 
          * @return builder
          * 

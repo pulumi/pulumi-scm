@@ -4,10 +4,12 @@
 package com.pulumi.scm.outputs;
 
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.scm.outputs.EthernetInterfaceLayer3AdjustTcpMss;
 import com.pulumi.scm.outputs.EthernetInterfaceLayer3Arp;
 import com.pulumi.scm.outputs.EthernetInterfaceLayer3DdnsConfig;
 import com.pulumi.scm.outputs.EthernetInterfaceLayer3DhcpClient;
 import com.pulumi.scm.outputs.EthernetInterfaceLayer3Ip;
+import com.pulumi.scm.outputs.EthernetInterfaceLayer3Lldp;
 import com.pulumi.scm.outputs.EthernetInterfaceLayer3Pppoe;
 import java.lang.Integer;
 import java.lang.String;
@@ -18,6 +20,11 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class EthernetInterfaceLayer3 {
+    /**
+     * @return TCP MSS adjustment settings for the interface
+     * 
+     */
+    private @Nullable EthernetInterfaceLayer3AdjustTcpMss adjustTcpMss;
     /**
      * @return Ethernet Interfaces ARP configuration
      * 
@@ -41,10 +48,13 @@ public final class EthernetInterfaceLayer3 {
     /**
      * @return Ethernet Interface IP addresses
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `dhcpClient`, `ip`, and `pppoe`.
-     * 
      */
     private @Nullable List<EthernetInterfaceLayer3Ip> ips;
+    /**
+     * @return LLDP settings for the interface
+     * 
+     */
+    private @Nullable EthernetInterfaceLayer3Lldp lldp;
     /**
      * @return MTU
      * 
@@ -56,14 +66,19 @@ public final class EthernetInterfaceLayer3 {
      */
     private @Nullable String netflowProfile;
     /**
-     * @return Pppoe
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `dhcpClient`, `ip`, and `pppoe`.
+     * @return PPPoE configuration for the interface
      * 
      */
     private @Nullable EthernetInterfaceLayer3Pppoe pppoe;
 
     private EthernetInterfaceLayer3() {}
+    /**
+     * @return TCP MSS adjustment settings for the interface
+     * 
+     */
+    public Optional<EthernetInterfaceLayer3AdjustTcpMss> adjustTcpMss() {
+        return Optional.ofNullable(this.adjustTcpMss);
+    }
     /**
      * @return Ethernet Interfaces ARP configuration
      * 
@@ -95,11 +110,16 @@ public final class EthernetInterfaceLayer3 {
     /**
      * @return Ethernet Interface IP addresses
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `dhcpClient`, `ip`, and `pppoe`.
-     * 
      */
     public List<EthernetInterfaceLayer3Ip> ips() {
         return this.ips == null ? List.of() : this.ips;
+    }
+    /**
+     * @return LLDP settings for the interface
+     * 
+     */
+    public Optional<EthernetInterfaceLayer3Lldp> lldp() {
+        return Optional.ofNullable(this.lldp);
     }
     /**
      * @return MTU
@@ -116,9 +136,7 @@ public final class EthernetInterfaceLayer3 {
         return Optional.ofNullable(this.netflowProfile);
     }
     /**
-     * @return Pppoe
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `dhcpClient`, `ip`, and `pppoe`.
+     * @return PPPoE configuration for the interface
      * 
      */
     public Optional<EthernetInterfaceLayer3Pppoe> pppoe() {
@@ -134,27 +152,37 @@ public final class EthernetInterfaceLayer3 {
     }
     @CustomType.Builder
     public static final class Builder {
+        private @Nullable EthernetInterfaceLayer3AdjustTcpMss adjustTcpMss;
         private @Nullable List<EthernetInterfaceLayer3Arp> arps;
         private @Nullable EthernetInterfaceLayer3DdnsConfig ddnsConfig;
         private @Nullable EthernetInterfaceLayer3DhcpClient dhcpClient;
         private @Nullable String interfaceManagementProfile;
         private @Nullable List<EthernetInterfaceLayer3Ip> ips;
+        private @Nullable EthernetInterfaceLayer3Lldp lldp;
         private @Nullable Integer mtu;
         private @Nullable String netflowProfile;
         private @Nullable EthernetInterfaceLayer3Pppoe pppoe;
         public Builder() {}
         public Builder(EthernetInterfaceLayer3 defaults) {
     	      Objects.requireNonNull(defaults);
+    	      this.adjustTcpMss = defaults.adjustTcpMss;
     	      this.arps = defaults.arps;
     	      this.ddnsConfig = defaults.ddnsConfig;
     	      this.dhcpClient = defaults.dhcpClient;
     	      this.interfaceManagementProfile = defaults.interfaceManagementProfile;
     	      this.ips = defaults.ips;
+    	      this.lldp = defaults.lldp;
     	      this.mtu = defaults.mtu;
     	      this.netflowProfile = defaults.netflowProfile;
     	      this.pppoe = defaults.pppoe;
         }
 
+        @CustomType.Setter
+        public Builder adjustTcpMss(@Nullable EthernetInterfaceLayer3AdjustTcpMss adjustTcpMss) {
+
+            this.adjustTcpMss = adjustTcpMss;
+            return this;
+        }
         @CustomType.Setter
         public Builder arps(@Nullable List<EthernetInterfaceLayer3Arp> arps) {
 
@@ -192,6 +220,12 @@ public final class EthernetInterfaceLayer3 {
             return ips(List.of(ips));
         }
         @CustomType.Setter
+        public Builder lldp(@Nullable EthernetInterfaceLayer3Lldp lldp) {
+
+            this.lldp = lldp;
+            return this;
+        }
+        @CustomType.Setter
         public Builder mtu(@Nullable Integer mtu) {
 
             this.mtu = mtu;
@@ -211,11 +245,13 @@ public final class EthernetInterfaceLayer3 {
         }
         public EthernetInterfaceLayer3 build() {
             final var _resultValue = new EthernetInterfaceLayer3();
+            _resultValue.adjustTcpMss = adjustTcpMss;
             _resultValue.arps = arps;
             _resultValue.ddnsConfig = ddnsConfig;
             _resultValue.dhcpClient = dhcpClient;
             _resultValue.interfaceManagementProfile = interfaceManagementProfile;
             _resultValue.ips = ips;
+            _resultValue.lldp = lldp;
             _resultValue.mtu = mtu;
             _resultValue.netflowProfile = netflowProfile;
             _resultValue.pppoe = pppoe;

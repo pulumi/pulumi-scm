@@ -180,7 +180,7 @@ type Site struct {
 	Folder pulumi.StringOutput `pulumi:"folder"`
 	// The latitude coordinate for the site
 	Latitude pulumi.StringPtrOutput `pulumi:"latitude"`
-	// The license type of the site
+	// The license type of the site. Possible values are `FWAAS-SITE-25Mbps`, `FWAAS-SITE-50Mbps`, `FWAAS-SITE-250Mbps`, `FWAAS-SITE-1000Mbps` and `FWAAS-SITE-2500Mbps`.
 	LicenseType pulumi.StringPtrOutput `pulumi:"licenseType"`
 	// The longitude coordinate for the site
 	Longitude pulumi.StringPtrOutput `pulumi:"longitude"`
@@ -194,7 +194,7 @@ type Site struct {
 	State pulumi.StringPtrOutput `pulumi:"state"`
 	// The Terraform ID.
 	Tfid pulumi.StringOutput `pulumi:"tfid"`
-	// The site type
+	// The site type. Possible values are `prisma-sdwan`, `third-party-branch` and `third-party-discovered`.
 	Type pulumi.StringPtrOutput `pulumi:"type"`
 	// The postal code in which the site exists
 	ZipCode pulumi.StringPtrOutput `pulumi:"zipCode"`
@@ -242,7 +242,7 @@ type siteState struct {
 	Folder *string `pulumi:"folder"`
 	// The latitude coordinate for the site
 	Latitude *string `pulumi:"latitude"`
-	// The license type of the site
+	// The license type of the site. Possible values are `FWAAS-SITE-25Mbps`, `FWAAS-SITE-50Mbps`, `FWAAS-SITE-250Mbps`, `FWAAS-SITE-1000Mbps` and `FWAAS-SITE-2500Mbps`.
 	LicenseType *string `pulumi:"licenseType"`
 	// The longitude coordinate for the site
 	Longitude *string `pulumi:"longitude"`
@@ -256,7 +256,7 @@ type siteState struct {
 	State *string `pulumi:"state"`
 	// The Terraform ID.
 	Tfid *string `pulumi:"tfid"`
-	// The site type
+	// The site type. Possible values are `prisma-sdwan`, `third-party-branch` and `third-party-discovered`.
 	Type *string `pulumi:"type"`
 	// The postal code in which the site exists
 	ZipCode *string `pulumi:"zipCode"`
@@ -275,7 +275,7 @@ type SiteState struct {
 	Folder pulumi.StringPtrInput
 	// The latitude coordinate for the site
 	Latitude pulumi.StringPtrInput
-	// The license type of the site
+	// The license type of the site. Possible values are `FWAAS-SITE-25Mbps`, `FWAAS-SITE-50Mbps`, `FWAAS-SITE-250Mbps`, `FWAAS-SITE-1000Mbps` and `FWAAS-SITE-2500Mbps`.
 	LicenseType pulumi.StringPtrInput
 	// The longitude coordinate for the site
 	Longitude pulumi.StringPtrInput
@@ -289,7 +289,7 @@ type SiteState struct {
 	State pulumi.StringPtrInput
 	// The Terraform ID.
 	Tfid pulumi.StringPtrInput
-	// The site type
+	// The site type. Possible values are `prisma-sdwan`, `third-party-branch` and `third-party-discovered`.
 	Type pulumi.StringPtrInput
 	// The postal code in which the site exists
 	ZipCode pulumi.StringPtrInput
@@ -310,7 +310,7 @@ type siteArgs struct {
 	Country *string `pulumi:"country"`
 	// The latitude coordinate for the site
 	Latitude *string `pulumi:"latitude"`
-	// The license type of the site
+	// The license type of the site. Possible values are `FWAAS-SITE-25Mbps`, `FWAAS-SITE-50Mbps`, `FWAAS-SITE-250Mbps`, `FWAAS-SITE-1000Mbps` and `FWAAS-SITE-2500Mbps`.
 	LicenseType *string `pulumi:"licenseType"`
 	// The longitude coordinate for the site
 	Longitude *string `pulumi:"longitude"`
@@ -322,7 +322,7 @@ type siteArgs struct {
 	Qos *SiteQos `pulumi:"qos"`
 	// The state in which the site exists
 	State *string `pulumi:"state"`
-	// The site type
+	// The site type. Possible values are `prisma-sdwan`, `third-party-branch` and `third-party-discovered`.
 	Type *string `pulumi:"type"`
 	// The postal code in which the site exists
 	ZipCode *string `pulumi:"zipCode"`
@@ -340,7 +340,7 @@ type SiteArgs struct {
 	Country pulumi.StringPtrInput
 	// The latitude coordinate for the site
 	Latitude pulumi.StringPtrInput
-	// The license type of the site
+	// The license type of the site. Possible values are `FWAAS-SITE-25Mbps`, `FWAAS-SITE-50Mbps`, `FWAAS-SITE-250Mbps`, `FWAAS-SITE-1000Mbps` and `FWAAS-SITE-2500Mbps`.
 	LicenseType pulumi.StringPtrInput
 	// The longitude coordinate for the site
 	Longitude pulumi.StringPtrInput
@@ -352,7 +352,7 @@ type SiteArgs struct {
 	Qos SiteQosPtrInput
 	// The state in which the site exists
 	State pulumi.StringPtrInput
-	// The site type
+	// The site type. Possible values are `prisma-sdwan`, `third-party-branch` and `third-party-discovered`.
 	Type pulumi.StringPtrInput
 	// The postal code in which the site exists
 	ZipCode pulumi.StringPtrInput
@@ -475,7 +475,7 @@ func (o SiteOutput) Latitude() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *Site) pulumi.StringPtrOutput { return v.Latitude }).(pulumi.StringPtrOutput)
 }
 
-// The license type of the site
+// The license type of the site. Possible values are `FWAAS-SITE-25Mbps`, `FWAAS-SITE-50Mbps`, `FWAAS-SITE-250Mbps`, `FWAAS-SITE-1000Mbps` and `FWAAS-SITE-2500Mbps`.
 func (o SiteOutput) LicenseType() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *Site) pulumi.StringPtrOutput { return v.LicenseType }).(pulumi.StringPtrOutput)
 }
@@ -510,7 +510,7 @@ func (o SiteOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v *Site) pulumi.StringOutput { return v.Tfid }).(pulumi.StringOutput)
 }
 
-// The site type
+// The site type. Possible values are `prisma-sdwan`, `third-party-branch` and `third-party-discovered`.
 func (o SiteOutput) Type() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *Site) pulumi.StringPtrOutput { return v.Type }).(pulumi.StringPtrOutput)
 }

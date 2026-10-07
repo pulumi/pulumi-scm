@@ -38,7 +38,7 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly string? PeerIpAddress;
         /// <summary>
-        /// Route exchange types
+        /// Route exchange types. Possible values are `exchange-v4-over-v4`, `exchange-v4-v6-over-v4`, `exchange-v4-over-v4-v6-over-v6` and `exchange-v6-over-v6`.
         /// </summary>
         public readonly string? PeeringType;
         /// <summary>

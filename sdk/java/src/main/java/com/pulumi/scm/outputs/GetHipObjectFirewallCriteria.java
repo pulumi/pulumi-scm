@@ -12,7 +12,7 @@ import java.util.Objects;
 @CustomType
 public final class GetHipObjectFirewallCriteria {
     /**
-     * @return is enabled
+     * @return is enabled. Possible values are `no`, `yes` and `not-available`.
      * 
      */
     private String isEnabled;
@@ -24,7 +24,7 @@ public final class GetHipObjectFirewallCriteria {
 
     private GetHipObjectFirewallCriteria() {}
     /**
-     * @return is enabled
+     * @return is enabled. Possible values are `no`, `yes` and `not-available`.
      * 
      */
     public String isEnabled() {

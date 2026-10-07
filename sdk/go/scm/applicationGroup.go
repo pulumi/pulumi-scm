@@ -98,16 +98,12 @@ type ApplicationGroup struct {
 	// The device in which the resource is defined
 	Device pulumi.StringPtrOutput `pulumi:"device"`
 	// The folder in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrOutput `pulumi:"folder"`
 	// Members
 	Members pulumi.StringArrayOutput `pulumi:"members"`
 	// Alphanumeric string [ 0-9a-zA-Z._-]
 	Name pulumi.StringOutput `pulumi:"name"`
 	// The snippet in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
 	// The Terraform ID.
 	Tfid pulumi.StringOutput `pulumi:"tfid"`
@@ -149,16 +145,12 @@ type applicationGroupState struct {
 	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
 	// The folder in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// Members
 	Members []string `pulumi:"members"`
 	// Alphanumeric string [ 0-9a-zA-Z._-]
 	Name *string `pulumi:"name"`
 	// The snippet in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	// The Terraform ID.
 	Tfid *string `pulumi:"tfid"`
@@ -168,16 +160,12 @@ type ApplicationGroupState struct {
 	// The device in which the resource is defined
 	Device pulumi.StringPtrInput
 	// The folder in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// Members
 	Members pulumi.StringArrayInput
 	// Alphanumeric string [ 0-9a-zA-Z._-]
 	Name pulumi.StringPtrInput
 	// The snippet in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	// The Terraform ID.
 	Tfid pulumi.StringPtrInput
@@ -191,16 +179,12 @@ type applicationGroupArgs struct {
 	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
 	// The folder in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// Members
 	Members []string `pulumi:"members"`
 	// Alphanumeric string [ 0-9a-zA-Z._-]
 	Name *string `pulumi:"name"`
 	// The snippet in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 }
 
@@ -209,16 +193,12 @@ type ApplicationGroupArgs struct {
 	// The device in which the resource is defined
 	Device pulumi.StringPtrInput
 	// The folder in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// Members
 	Members pulumi.StringArrayInput
 	// Alphanumeric string [ 0-9a-zA-Z._-]
 	Name pulumi.StringPtrInput
 	// The snippet in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 }
 
@@ -315,8 +295,6 @@ func (o ApplicationGroupOutput) Device() pulumi.StringPtrOutput {
 }
 
 // The folder in which the resource is defined
-//
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o ApplicationGroupOutput) Folder() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *ApplicationGroup) pulumi.StringPtrOutput { return v.Folder }).(pulumi.StringPtrOutput)
 }
@@ -332,8 +310,6 @@ func (o ApplicationGroupOutput) Name() pulumi.StringOutput {
 }
 
 // The snippet in which the resource is defined
-//
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o ApplicationGroupOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *ApplicationGroup) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)
 }

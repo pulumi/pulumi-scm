@@ -23,7 +23,7 @@ public final class GetLogForwardingProfileListData {
      */
     private String device;
     /**
-     * @return The folder of the item. Default: Shared.
+     * @return The folder in which the resource is defined
      * 
      */
     private String folder;
@@ -38,12 +38,12 @@ public final class GetLogForwardingProfileListData {
      */
     private List<GetLogForwardingProfileListDataMatchList> matchLists;
     /**
-     * @return The name of the item.
+     * @return The name of the log forwarding profile
      * 
      */
     private String name;
     /**
-     * @return The snippet of the item.
+     * @return The snippet in which the resource is defined
      * 
      */
     private String snippet;
@@ -69,7 +69,7 @@ public final class GetLogForwardingProfileListData {
         return this.device;
     }
     /**
-     * @return The folder of the item. Default: Shared.
+     * @return The folder in which the resource is defined
      * 
      */
     public String folder() {
@@ -90,14 +90,14 @@ public final class GetLogForwardingProfileListData {
         return this.matchLists;
     }
     /**
-     * @return The name of the item.
+     * @return The name of the log forwarding profile
      * 
      */
     public String name() {
         return this.name;
     }
     /**
-     * @return The snippet of the item.
+     * @return The snippet in which the resource is defined
      * 
      */
     public String snippet() {

@@ -51,7 +51,7 @@ public final class LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdate {
      */
     private @Nullable String nexthop;
     /**
-     * @return Origin
+     * @return Origin. Possible values are `igp`, `egp` and `incomplete`.
      * 
      */
     private @Nullable String origin;
@@ -112,7 +112,7 @@ public final class LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdate {
         return Optional.ofNullable(this.nexthop);
     }
     /**
-     * @return Origin
+     * @return Origin. Possible values are `igp`, `egp` and `incomplete`.
      * 
      */
     public Optional<String> origin() {

@@ -49,6 +49,11 @@ import (
 //						Name: pulumi.String("198.18.1.1/32"),
 //					},
 //				},
+//				AdjustTcpMss: &scm.Layer3SubinterfaceAdjustTcpMssArgs{
+//					Enable:            pulumi.Bool(true),
+//					Ipv4MssAdjustment: pulumi.Int(40),
+//					Ipv6MssAdjustment: pulumi.Int(60),
+//				},
 //			}, pulumi.DependsOn([]pulumi.Resource{
 //				scmParentInterface,
 //			}))
@@ -86,6 +91,36 @@ import (
 //			if err != nil {
 //				return err
 //			}
+//			// Creates an ethernet interface used as parent-interface for the pppoe example
+//			scmParentPppoeInterface, err := scm.NewEthernetInterface(ctx, "scm_parent_pppoe_interface", &scm.EthernetInterfaceArgs{
+//				Name:    pulumi.String("$scm_parent_tf_pppoe_interface"),
+//				Comment: pulumi.String("Managed by Pulumi"),
+//				Folder:  pulumi.String("ngfw-shared"),
+//				Layer3:  &scm.EthernetInterfaceLayer3Args{},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			// Creates a layer3 sub-interface with pppoe
+//			_, err = scm.NewLayer3Subinterface(ctx, "scm_l3_pppoe_subinterface", &scm.Layer3SubinterfaceArgs{
+//				Name:            pulumi.String("$scm_parent_tf_pppoe_interface.100"),
+//				Comment:         pulumi.String("Managed by Pulumi"),
+//				Folder:          pulumi.String("ngfw-shared"),
+//				Tag:             pulumi.Int(100),
+//				ParentInterface: pulumi.String("$scm_parent_tf_pppoe_interface"),
+//				Pppoe: &scm.Layer3SubinterfacePppoeArgs{
+//					Enable:             pulumi.Bool(true),
+//					Username:           pulumi.String("testname"),
+//					Password:           pulumi.String("testpass"),
+//					Authentication:     pulumi.String("auto"),
+//					DefaultRouteMetric: pulumi.Int(10),
+//				},
+//			}, pulumi.DependsOn([]pulumi.Resource{
+//				scmParentPppoeInterface,
+//			}))
+//			if err != nil {
+//				return err
+//			}
 //			return nil
 //		})
 //	}
@@ -116,6 +151,8 @@ import (
 type Layer3Subinterface struct {
 	pulumi.CustomResourceState
 
+	// TCP MSS adjustment settings for the interface
+	AdjustTcpMss Layer3SubinterfaceAdjustTcpMssPtrOutput `pulumi:"adjustTcpMss"`
 	// Layer 3 sub Interfaces ARP configuration
 	Arps Layer3SubinterfaceArpArrayOutput `pulumi:"arps"`
 	// Description
@@ -125,18 +162,14 @@ type Layer3Subinterface struct {
 	// The device in which the resource is defined
 	Device pulumi.StringPtrOutput `pulumi:"device"`
 	// Layer3 sub interfaces DHCP Client Object
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
 	DhcpClient Layer3SubinterfaceDhcpClientPtrOutput `pulumi:"dhcpClient"`
+	// Map of sensitive values returned from the API.
+	EncryptedValues pulumi.StringMapOutput `pulumi:"encryptedValues"`
 	// The folder in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrOutput `pulumi:"folder"`
 	// Interface management profile
 	InterfaceManagementProfile pulumi.StringPtrOutput `pulumi:"interfaceManagementProfile"`
 	// L3 sub-interface IP Parent
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
 	Ips Layer3SubinterfaceIpArrayOutput `pulumi:"ips"`
 	// MTU
 	Mtu pulumi.IntPtrOutput `pulumi:"mtu"`
@@ -146,9 +179,9 @@ type Layer3Subinterface struct {
 	NetflowProfile pulumi.StringPtrOutput `pulumi:"netflowProfile"`
 	// Parent interface
 	ParentInterface pulumi.StringPtrOutput `pulumi:"parentInterface"`
+	// PPPoE configuration for the interface
+	Pppoe Layer3SubinterfacePppoePtrOutput `pulumi:"pppoe"`
 	// The snippet in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
 	// VLAN tag
 	Tag pulumi.IntPtrOutput `pulumi:"tag"`
@@ -163,6 +196,10 @@ func NewLayer3Subinterface(ctx *pulumi.Context,
 		args = &Layer3SubinterfaceArgs{}
 	}
 
+	secrets := pulumi.AdditionalSecretOutputs([]string{
+		"encryptedValues",
+	})
+	opts = append(opts, secrets)
 	opts = internal.PkgResourceDefaultOpts(opts)
 	var resource Layer3Subinterface
 	err := ctx.RegisterResource("scm:index/layer3Subinterface:Layer3Subinterface", name, args, &resource, opts...)
@@ -186,6 +223,8 @@ func GetLayer3Subinterface(ctx *pulumi.Context,
 
 // Input properties used for looking up and filtering Layer3Subinterface resources.
 type layer3SubinterfaceState struct {
+	// TCP MSS adjustment settings for the interface
+	AdjustTcpMss *Layer3SubinterfaceAdjustTcpMss `pulumi:"adjustTcpMss"`
 	// Layer 3 sub Interfaces ARP configuration
 	Arps []Layer3SubinterfaceArp `pulumi:"arps"`
 	// Description
@@ -195,18 +234,14 @@ type layer3SubinterfaceState struct {
 	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
 	// Layer3 sub interfaces DHCP Client Object
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
 	DhcpClient *Layer3SubinterfaceDhcpClient `pulumi:"dhcpClient"`
+	// Map of sensitive values returned from the API.
+	EncryptedValues map[string]string `pulumi:"encryptedValues"`
 	// The folder in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// Interface management profile
 	InterfaceManagementProfile *string `pulumi:"interfaceManagementProfile"`
 	// L3 sub-interface IP Parent
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
 	Ips []Layer3SubinterfaceIp `pulumi:"ips"`
 	// MTU
 	Mtu *int `pulumi:"mtu"`
@@ -216,9 +251,9 @@ type layer3SubinterfaceState struct {
 	NetflowProfile *string `pulumi:"netflowProfile"`
 	// Parent interface
 	ParentInterface *string `pulumi:"parentInterface"`
+	// PPPoE configuration for the interface
+	Pppoe *Layer3SubinterfacePppoe `pulumi:"pppoe"`
 	// The snippet in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	// VLAN tag
 	Tag *int `pulumi:"tag"`
@@ -227,6 +262,8 @@ type layer3SubinterfaceState struct {
 }
 
 type Layer3SubinterfaceState struct {
+	// TCP MSS adjustment settings for the interface
+	AdjustTcpMss Layer3SubinterfaceAdjustTcpMssPtrInput
 	// Layer 3 sub Interfaces ARP configuration
 	Arps Layer3SubinterfaceArpArrayInput
 	// Description
@@ -236,18 +273,14 @@ type Layer3SubinterfaceState struct {
 	// The device in which the resource is defined
 	Device pulumi.StringPtrInput
 	// Layer3 sub interfaces DHCP Client Object
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
 	DhcpClient Layer3SubinterfaceDhcpClientPtrInput
+	// Map of sensitive values returned from the API.
+	EncryptedValues pulumi.StringMapInput
 	// The folder in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// Interface management profile
 	InterfaceManagementProfile pulumi.StringPtrInput
 	// L3 sub-interface IP Parent
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
 	Ips Layer3SubinterfaceIpArrayInput
 	// MTU
 	Mtu pulumi.IntPtrInput
@@ -257,9 +290,9 @@ type Layer3SubinterfaceState struct {
 	NetflowProfile pulumi.StringPtrInput
 	// Parent interface
 	ParentInterface pulumi.StringPtrInput
+	// PPPoE configuration for the interface
+	Pppoe Layer3SubinterfacePppoePtrInput
 	// The snippet in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	// VLAN tag
 	Tag pulumi.IntPtrInput
@@ -272,6 +305,8 @@ func (Layer3SubinterfaceState) ElementType() reflect.Type {
 }
 
 type layer3SubinterfaceArgs struct {
+	// TCP MSS adjustment settings for the interface
+	AdjustTcpMss *Layer3SubinterfaceAdjustTcpMss `pulumi:"adjustTcpMss"`
 	// Layer 3 sub Interfaces ARP configuration
 	Arps []Layer3SubinterfaceArp `pulumi:"arps"`
 	// Description
@@ -281,18 +316,12 @@ type layer3SubinterfaceArgs struct {
 	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
 	// Layer3 sub interfaces DHCP Client Object
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
 	DhcpClient *Layer3SubinterfaceDhcpClient `pulumi:"dhcpClient"`
 	// The folder in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// Interface management profile
 	InterfaceManagementProfile *string `pulumi:"interfaceManagementProfile"`
 	// L3 sub-interface IP Parent
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
 	Ips []Layer3SubinterfaceIp `pulumi:"ips"`
 	// MTU
 	Mtu *int `pulumi:"mtu"`
@@ -302,9 +331,9 @@ type layer3SubinterfaceArgs struct {
 	NetflowProfile *string `pulumi:"netflowProfile"`
 	// Parent interface
 	ParentInterface *string `pulumi:"parentInterface"`
+	// PPPoE configuration for the interface
+	Pppoe *Layer3SubinterfacePppoe `pulumi:"pppoe"`
 	// The snippet in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	// VLAN tag
 	Tag *int `pulumi:"tag"`
@@ -312,6 +341,8 @@ type layer3SubinterfaceArgs struct {
 
 // The set of arguments for constructing a Layer3Subinterface resource.
 type Layer3SubinterfaceArgs struct {
+	// TCP MSS adjustment settings for the interface
+	AdjustTcpMss Layer3SubinterfaceAdjustTcpMssPtrInput
 	// Layer 3 sub Interfaces ARP configuration
 	Arps Layer3SubinterfaceArpArrayInput
 	// Description
@@ -321,18 +352,12 @@ type Layer3SubinterfaceArgs struct {
 	// The device in which the resource is defined
 	Device pulumi.StringPtrInput
 	// Layer3 sub interfaces DHCP Client Object
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
 	DhcpClient Layer3SubinterfaceDhcpClientPtrInput
 	// The folder in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// Interface management profile
 	InterfaceManagementProfile pulumi.StringPtrInput
 	// L3 sub-interface IP Parent
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
 	Ips Layer3SubinterfaceIpArrayInput
 	// MTU
 	Mtu pulumi.IntPtrInput
@@ -342,9 +367,9 @@ type Layer3SubinterfaceArgs struct {
 	NetflowProfile pulumi.StringPtrInput
 	// Parent interface
 	ParentInterface pulumi.StringPtrInput
+	// PPPoE configuration for the interface
+	Pppoe Layer3SubinterfacePppoePtrInput
 	// The snippet in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	// VLAN tag
 	Tag pulumi.IntPtrInput
@@ -437,6 +462,11 @@ func (o Layer3SubinterfaceOutput) ToLayer3SubinterfaceOutputWithContext(ctx cont
 	return o
 }
 
+// TCP MSS adjustment settings for the interface
+func (o Layer3SubinterfaceOutput) AdjustTcpMss() Layer3SubinterfaceAdjustTcpMssPtrOutput {
+	return o.ApplyT(func(v *Layer3Subinterface) Layer3SubinterfaceAdjustTcpMssPtrOutput { return v.AdjustTcpMss }).(Layer3SubinterfaceAdjustTcpMssPtrOutput)
+}
+
 // Layer 3 sub Interfaces ARP configuration
 func (o Layer3SubinterfaceOutput) Arps() Layer3SubinterfaceArpArrayOutput {
 	return o.ApplyT(func(v *Layer3Subinterface) Layer3SubinterfaceArpArrayOutput { return v.Arps }).(Layer3SubinterfaceArpArrayOutput)
@@ -458,15 +488,16 @@ func (o Layer3SubinterfaceOutput) Device() pulumi.StringPtrOutput {
 }
 
 // Layer3 sub interfaces DHCP Client Object
-//
-// > ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
 func (o Layer3SubinterfaceOutput) DhcpClient() Layer3SubinterfaceDhcpClientPtrOutput {
 	return o.ApplyT(func(v *Layer3Subinterface) Layer3SubinterfaceDhcpClientPtrOutput { return v.DhcpClient }).(Layer3SubinterfaceDhcpClientPtrOutput)
 }
 
+// Map of sensitive values returned from the API.
+func (o Layer3SubinterfaceOutput) EncryptedValues() pulumi.StringMapOutput {
+	return o.ApplyT(func(v *Layer3Subinterface) pulumi.StringMapOutput { return v.EncryptedValues }).(pulumi.StringMapOutput)
+}
+
 // The folder in which the resource is defined
-//
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o Layer3SubinterfaceOutput) Folder() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *Layer3Subinterface) pulumi.StringPtrOutput { return v.Folder }).(pulumi.StringPtrOutput)
 }
@@ -477,8 +508,6 @@ func (o Layer3SubinterfaceOutput) InterfaceManagementProfile() pulumi.StringPtrO
 }
 
 // L3 sub-interface IP Parent
-//
-// > ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
 func (o Layer3SubinterfaceOutput) Ips() Layer3SubinterfaceIpArrayOutput {
 	return o.ApplyT(func(v *Layer3Subinterface) Layer3SubinterfaceIpArrayOutput { return v.Ips }).(Layer3SubinterfaceIpArrayOutput)
 }
@@ -503,9 +532,12 @@ func (o Layer3SubinterfaceOutput) ParentInterface() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *Layer3Subinterface) pulumi.StringPtrOutput { return v.ParentInterface }).(pulumi.StringPtrOutput)
 }
 
+// PPPoE configuration for the interface
+func (o Layer3SubinterfaceOutput) Pppoe() Layer3SubinterfacePppoePtrOutput {
+	return o.ApplyT(func(v *Layer3Subinterface) Layer3SubinterfacePppoePtrOutput { return v.Pppoe }).(Layer3SubinterfacePppoePtrOutput)
+}
+
 // The snippet in which the resource is defined
-//
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o Layer3SubinterfaceOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *Layer3Subinterface) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)
 }

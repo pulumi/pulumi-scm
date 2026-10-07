@@ -13,13 +13,13 @@ namespace Pulumi.Scm.Inputs
     public sealed class SyslogServerProfileServerArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Syslog facility
+        /// Syslog facility. Possible values are `LOG_USER`, `LOG_LOCAL0`, `LOG_LOCAL1`, `LOG_LOCAL2`, `LOG_LOCAL3`, `LOG_LOCAL4`, `LOG_LOCAL5`, `LOG_LOCAL6` and `LOG_LOCAL7`.
         /// </summary>
         [Input("facility")]
         public Input<string>? Facility { get; set; }
 
         /// <summary>
-        /// Syslog format
+        /// Syslog format. Possible values are `BSD` and `IETF`.
         /// </summary>
         [Input("format")]
         public Input<string>? Format { get; set; }
@@ -43,7 +43,7 @@ namespace Pulumi.Scm.Inputs
         public Input<string>? Server { get; set; }
 
         /// <summary>
-        /// Transport protocol
+        /// Transport protocol. Possible values are `UDP` and `TCP`.
         /// </summary>
         [Input("transport")]
         public Input<string>? Transport { get; set; }

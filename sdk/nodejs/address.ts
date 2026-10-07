@@ -137,32 +137,22 @@ export class Address extends pulumi.CustomResource {
     declare public readonly device: pulumi.Output<string | undefined>;
     /**
      * The folder in which the resource is defined
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly folder: pulumi.Output<string | undefined>;
     /**
      * Fully qualified domain name
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `fqdn`, `ipNetmask`, `ipRange`, and `ipWildcard`.
      */
     declare public readonly fqdn: pulumi.Output<string | undefined>;
     /**
      * IP address with or without CIDR notation
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `fqdn`, `ipNetmask`, `ipRange`, and `ipWildcard`.
      */
     declare public readonly ipNetmask: pulumi.Output<string | undefined>;
     /**
      * Ip range
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `fqdn`, `ipNetmask`, `ipRange`, and `ipWildcard`.
      */
     declare public readonly ipRange: pulumi.Output<string | undefined>;
     /**
      * IP wildcard mask
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `fqdn`, `ipNetmask`, `ipRange`, and `ipWildcard`.
      */
     declare public readonly ipWildcard: pulumi.Output<string | undefined>;
     /**
@@ -171,8 +161,6 @@ export class Address extends pulumi.CustomResource {
     declare public readonly name: pulumi.Output<string>;
     /**
      * The snippet in which the resource is defined
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly snippet: pulumi.Output<string | undefined>;
     /**
@@ -241,32 +229,22 @@ export interface AddressState {
     device?: pulumi.Input<string | undefined>;
     /**
      * The folder in which the resource is defined
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     folder?: pulumi.Input<string | undefined>;
     /**
      * Fully qualified domain name
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `fqdn`, `ipNetmask`, `ipRange`, and `ipWildcard`.
      */
     fqdn?: pulumi.Input<string | undefined>;
     /**
      * IP address with or without CIDR notation
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `fqdn`, `ipNetmask`, `ipRange`, and `ipWildcard`.
      */
     ipNetmask?: pulumi.Input<string | undefined>;
     /**
      * Ip range
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `fqdn`, `ipNetmask`, `ipRange`, and `ipWildcard`.
      */
     ipRange?: pulumi.Input<string | undefined>;
     /**
      * IP wildcard mask
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `fqdn`, `ipNetmask`, `ipRange`, and `ipWildcard`.
      */
     ipWildcard?: pulumi.Input<string | undefined>;
     /**
@@ -275,8 +253,6 @@ export interface AddressState {
     name?: pulumi.Input<string | undefined>;
     /**
      * The snippet in which the resource is defined
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     snippet?: pulumi.Input<string | undefined>;
     /**
@@ -303,32 +279,22 @@ export interface AddressArgs {
     device?: pulumi.Input<string | undefined>;
     /**
      * The folder in which the resource is defined
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     folder?: pulumi.Input<string | undefined>;
     /**
      * Fully qualified domain name
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `fqdn`, `ipNetmask`, `ipRange`, and `ipWildcard`.
      */
     fqdn?: pulumi.Input<string | undefined>;
     /**
      * IP address with or without CIDR notation
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `fqdn`, `ipNetmask`, `ipRange`, and `ipWildcard`.
      */
     ipNetmask?: pulumi.Input<string | undefined>;
     /**
      * Ip range
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `fqdn`, `ipNetmask`, `ipRange`, and `ipWildcard`.
      */
     ipRange?: pulumi.Input<string | undefined>;
     /**
      * IP wildcard mask
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `fqdn`, `ipNetmask`, `ipRange`, and `ipWildcard`.
      */
     ipWildcard?: pulumi.Input<string | undefined>;
     /**
@@ -337,8 +303,6 @@ export interface AddressArgs {
     name?: pulumi.Input<string | undefined>;
     /**
      * The snippet in which the resource is defined
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     snippet?: pulumi.Input<string | undefined>;
     /**

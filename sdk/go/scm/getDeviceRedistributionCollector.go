@@ -53,9 +53,11 @@ func LookupDeviceRedistributionCollector(ctx *pulumi.Context, args *LookupDevice
 type LookupDeviceRedistributionCollectorArgs struct {
 	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
+	// The folder in which the resource is defined
 	Folder *string `pulumi:"folder"`
 	// UUID of the resource
-	Id      string  `pulumi:"id"`
+	Id string `pulumi:"id"`
+	// The snippet in which the resource is defined
 	Snippet *string `pulumi:"snippet"`
 }
 
@@ -63,12 +65,16 @@ type LookupDeviceRedistributionCollectorArgs struct {
 type LookupDeviceRedistributionCollectorResult struct {
 	// The device in which the resource is defined
 	Device string `pulumi:"device"`
+	// The folder in which the resource is defined
 	Folder string `pulumi:"folder"`
 	// UUID of the resource
-	Id                      string                                                  `pulumi:"id"`
+	Id string `pulumi:"id"`
+	// Redistribution collector
 	RedistributionCollector GetDeviceRedistributionCollectorRedistributionCollector `pulumi:"redistributionCollector"`
-	Snippet                 string                                                  `pulumi:"snippet"`
-	Tfid                    string                                                  `pulumi:"tfid"`
+	// The snippet in which the resource is defined
+	Snippet string `pulumi:"snippet"`
+	// The Terraform ID.
+	Tfid string `pulumi:"tfid"`
 }
 
 func LookupDeviceRedistributionCollectorOutput(ctx *pulumi.Context, args LookupDeviceRedistributionCollectorOutputArgs, opts ...pulumi.InvokeOption) LookupDeviceRedistributionCollectorResultOutput {
@@ -80,9 +86,11 @@ func LookupDeviceRedistributionCollectorOutput(ctx *pulumi.Context, args LookupD
 type LookupDeviceRedistributionCollectorOutputArgs struct {
 	// The device in which the resource is defined
 	Device pulumi.StringPtrInput `pulumi:"device"`
+	// The folder in which the resource is defined
 	Folder pulumi.StringPtrInput `pulumi:"folder"`
 	// UUID of the resource
-	Id      pulumi.StringInput    `pulumi:"id"`
+	Id pulumi.StringInput `pulumi:"id"`
+	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrInput `pulumi:"snippet"`
 }
 
@@ -110,6 +118,7 @@ func (o LookupDeviceRedistributionCollectorResultOutput) Device() pulumi.StringO
 	return o.ApplyT(func(v LookupDeviceRedistributionCollectorResult) string { return v.Device }).(pulumi.StringOutput)
 }
 
+// The folder in which the resource is defined
 func (o LookupDeviceRedistributionCollectorResultOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupDeviceRedistributionCollectorResult) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -119,16 +128,19 @@ func (o LookupDeviceRedistributionCollectorResultOutput) Id() pulumi.StringOutpu
 	return o.ApplyT(func(v LookupDeviceRedistributionCollectorResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
+// Redistribution collector
 func (o LookupDeviceRedistributionCollectorResultOutput) RedistributionCollector() GetDeviceRedistributionCollectorRedistributionCollectorOutput {
 	return o.ApplyT(func(v LookupDeviceRedistributionCollectorResult) GetDeviceRedistributionCollectorRedistributionCollector {
 		return v.RedistributionCollector
 	}).(GetDeviceRedistributionCollectorRedistributionCollectorOutput)
 }
 
+// The snippet in which the resource is defined
 func (o LookupDeviceRedistributionCollectorResultOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupDeviceRedistributionCollectorResult) string { return v.Snippet }).(pulumi.StringOutput)
 }
 
+// The Terraform ID.
 func (o LookupDeviceRedistributionCollectorResultOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupDeviceRedistributionCollectorResult) string { return v.Tfid }).(pulumi.StringOutput)
 }

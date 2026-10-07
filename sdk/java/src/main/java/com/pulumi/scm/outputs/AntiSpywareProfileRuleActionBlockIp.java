@@ -18,7 +18,7 @@ public final class AntiSpywareProfileRuleActionBlockIp {
      */
     private @Nullable Integer duration;
     /**
-     * @return Track by
+     * @return Track by. Possible values are `source-and-destination` and `source`.
      * 
      */
     private @Nullable String trackBy;
@@ -32,7 +32,7 @@ public final class AntiSpywareProfileRuleActionBlockIp {
         return Optional.ofNullable(this.duration);
     }
     /**
-     * @return Track by
+     * @return Track by. Possible values are `source-and-destination` and `source`.
      * 
      */
     public Optional<String> trackBy() {

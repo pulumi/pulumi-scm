@@ -153,16 +153,12 @@ public class SamlServerProfile extends com.pulumi.resources.CustomResource {
     /**
      * The folder in which the resource is defined
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
      */
     @Export(name="folder", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> folder;
 
     /**
      * @return The folder in which the resource is defined
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public Output<Optional<String>> folder() {
@@ -197,14 +193,14 @@ public class SamlServerProfile extends com.pulumi.resources.CustomResource {
         return this.name;
     }
     /**
-     * SAML HTTP binding for SLO requests to the identity provider
+     * SAML HTTP binding for SLO requests to the identity provider. Possible values are `post` and `redirect`.
      * 
      */
     @Export(name="sloBindings", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> sloBindings;
 
     /**
-     * @return SAML HTTP binding for SLO requests to the identity provider
+     * @return SAML HTTP binding for SLO requests to the identity provider. Possible values are `post` and `redirect`.
      * 
      */
     public Output<Optional<String>> sloBindings() {
@@ -227,8 +223,6 @@ public class SamlServerProfile extends com.pulumi.resources.CustomResource {
     /**
      * The snippet in which the resource is defined
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
      */
     @Export(name="snippet", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> snippet;
@@ -236,21 +230,19 @@ public class SamlServerProfile extends com.pulumi.resources.CustomResource {
     /**
      * @return The snippet in which the resource is defined
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
      */
     public Output<Optional<String>> snippet() {
         return Codegen.optional(this.snippet);
     }
     /**
-     * SAML HTTP binding for SSO requests to the identity provider
+     * SAML HTTP binding for SSO requests to the identity provider. Possible values are `post` and `redirect`.
      * 
      */
     @Export(name="ssoBindings", refs={String.class}, tree="[0]")
     private Output<String> ssoBindings;
 
     /**
-     * @return SAML HTTP binding for SSO requests to the identity provider
+     * @return SAML HTTP binding for SSO requests to the identity provider. Possible values are `post` and `redirect`.
      * 
      */
     public Output<String> ssoBindings() {

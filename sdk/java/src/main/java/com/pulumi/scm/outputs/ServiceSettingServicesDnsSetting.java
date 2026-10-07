@@ -20,8 +20,6 @@ public final class ServiceSettingServicesDnsSetting {
     /**
      * @return Servers
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `dnsProxyObject` and `servers`.
-     * 
      */
     private @Nullable ServiceSettingServicesDnsSettingServers servers;
 
@@ -35,8 +33,6 @@ public final class ServiceSettingServicesDnsSetting {
     }
     /**
      * @return Servers
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `dnsProxyObject` and `servers`.
      * 
      */
     public Optional<ServiceSettingServicesDnsSettingServers> servers() {

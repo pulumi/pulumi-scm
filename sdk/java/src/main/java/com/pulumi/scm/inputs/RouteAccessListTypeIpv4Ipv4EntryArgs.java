@@ -19,14 +19,14 @@ public final class RouteAccessListTypeIpv4Ipv4EntryArgs extends com.pulumi.resou
     public static final RouteAccessListTypeIpv4Ipv4EntryArgs Empty = new RouteAccessListTypeIpv4Ipv4EntryArgs();
 
     /**
-     * Action
+     * Action. Possible values are `deny` and `permit`.
      * 
      */
     @Import(name="action")
     private @Nullable Output<String> action;
 
     /**
-     * @return Action
+     * @return Action. Possible values are `deny` and `permit`.
      * 
      */
     public Optional<Output<String>> action() {
@@ -106,7 +106,7 @@ public final class RouteAccessListTypeIpv4Ipv4EntryArgs extends com.pulumi.resou
         }
 
         /**
-         * @param action Action
+         * @param action Action. Possible values are `deny` and `permit`.
          * 
          * @return builder
          * 
@@ -117,7 +117,7 @@ public final class RouteAccessListTypeIpv4Ipv4EntryArgs extends com.pulumi.resou
         }
 
         /**
-         * @param action Action
+         * @param action Action. Possible values are `deny` and `permit`.
          * 
          * @return builder
          * 

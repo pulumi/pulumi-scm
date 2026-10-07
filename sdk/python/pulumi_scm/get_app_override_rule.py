@@ -97,16 +97,25 @@ class GetAppOverrideRuleResult:
     @_builtins.property
     @pulumi.getter
     def application(self) -> _builtins.str:
+        """
+        Application
+        """
         return pulumi.get(self, "application")
 
     @_builtins.property
     @pulumi.getter
     def description(self) -> _builtins.str:
+        """
+        Description
+        """
         return pulumi.get(self, "description")
 
     @_builtins.property
     @pulumi.getter
     def destinations(self) -> Sequence[_builtins.str]:
+        """
+        Destination
+        """
         return pulumi.get(self, "destinations")
 
     @_builtins.property
@@ -120,21 +129,33 @@ class GetAppOverrideRuleResult:
     @_builtins.property
     @pulumi.getter
     def disabled(self) -> _builtins.bool:
+        """
+        Disabled
+        """
         return pulumi.get(self, "disabled")
 
     @_builtins.property
     @pulumi.getter
     def folder(self) -> _builtins.str:
+        """
+        The folder in which the resource is defined
+        """
         return pulumi.get(self, "folder")
 
     @_builtins.property
     @pulumi.getter
     def froms(self) -> Sequence[_builtins.str]:
+        """
+        From
+        """
         return pulumi.get(self, "froms")
 
     @_builtins.property
     @pulumi.getter(name="groupTag")
     def group_tag(self) -> _builtins.str:
+        """
+        Group tag
+        """
         return pulumi.get(self, "group_tag")
 
     @_builtins.property
@@ -148,66 +169,105 @@ class GetAppOverrideRuleResult:
     @_builtins.property
     @pulumi.getter
     def name(self) -> _builtins.str:
+        """
+        Name
+        """
         return pulumi.get(self, "name")
 
     @_builtins.property
     @pulumi.getter(name="negateDestination")
     def negate_destination(self) -> _builtins.bool:
+        """
+        Negate destination
+        """
         return pulumi.get(self, "negate_destination")
 
     @_builtins.property
     @pulumi.getter(name="negateSource")
     def negate_source(self) -> _builtins.bool:
+        """
+        Negate source
+        """
         return pulumi.get(self, "negate_source")
 
     @_builtins.property
     @pulumi.getter
     def port(self) -> _builtins.str:
+        """
+        Port
+        """
         return pulumi.get(self, "port")
 
     @_builtins.property
     @pulumi.getter
     def position(self) -> _builtins.str:
+        """
+        The position of a security rule. Possible values are `pre` and `post`.
+        """
         return pulumi.get(self, "position")
 
     @_builtins.property
     @pulumi.getter
     def protocol(self) -> _builtins.str:
+        """
+        Protocol. Possible values are `tcp` and `udp`.
+        """
         return pulumi.get(self, "protocol")
 
     @_builtins.property
     @pulumi.getter(name="relativePosition")
     def relative_position(self) -> _builtins.str:
+        """
+        Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
+        """
         return pulumi.get(self, "relative_position")
 
     @_builtins.property
     @pulumi.getter
     def snippet(self) -> _builtins.str:
+        """
+        The snippet in which the resource is defined
+        """
         return pulumi.get(self, "snippet")
 
     @_builtins.property
     @pulumi.getter
     def sources(self) -> Sequence[_builtins.str]:
+        """
+        Source
+        """
         return pulumi.get(self, "sources")
 
     @_builtins.property
     @pulumi.getter
     def tags(self) -> Sequence[_builtins.str]:
+        """
+        Tag
+        """
         return pulumi.get(self, "tags")
 
     @_builtins.property
     @pulumi.getter(name="targetRule")
     def target_rule(self) -> _builtins.str:
+        """
+        UUID of the rule to position this rule relative to. Required when `relative_position` is `"before"` or `"after"`.
+        """
         return pulumi.get(self, "target_rule")
 
     @_builtins.property
     @pulumi.getter
     def tfid(self) -> _builtins.str:
+        """
+        The Terraform ID.
+        """
         return pulumi.get(self, "tfid")
 
     @_builtins.property
     @pulumi.getter
     def tos(self) -> Sequence[_builtins.str]:
+        """
+        To
+        """
         return pulumi.get(self, "tos")
 
 
@@ -262,7 +322,10 @@ def get_app_override_rule(device: Optional[_builtins.str] = None,
 
 
     :param _builtins.str device: The device in which the resource is defined
+    :param _builtins.str folder: The folder in which the resource is defined
     :param _builtins.str id: UUID of the resource
+    :param _builtins.str name: Name
+    :param _builtins.str snippet: The snippet in which the resource is defined
     """
     __args__ = dict()
     __args__['device'] = device
@@ -317,7 +380,10 @@ def get_app_override_rule_output(device: pulumi.Input[Optional[Optional[_builtin
 
 
     :param _builtins.str device: The device in which the resource is defined
+    :param _builtins.str folder: The folder in which the resource is defined
     :param _builtins.str id: UUID of the resource
+    :param _builtins.str name: Name
+    :param _builtins.str snippet: The snippet in which the resource is defined
     """
     __args__ = dict()
     __args__['device'] = device

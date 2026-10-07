@@ -38,6 +38,11 @@ import (
 //						Name: pulumi.String("198.18.1.1/24"),
 //					},
 //				},
+//				AdjustTcpMss: &scm.VlanInterfaceAdjustTcpMssArgs{
+//					Enable:            pulumi.Bool(true),
+//					Ipv4MssAdjustment: pulumi.Int(40),
+//					Ipv6MssAdjustment: pulumi.Int(60),
+//				},
 //			})
 //			if err != nil {
 //				return err
@@ -72,6 +77,8 @@ import (
 type VlanInterface struct {
 	pulumi.CustomResourceState
 
+	// TCP MSS adjustment settings for the interface
+	AdjustTcpMss VlanInterfaceAdjustTcpMssPtrOutput `pulumi:"adjustTcpMss"`
 	// ARP configuration
 	Arps VlanInterfaceArpArrayOutput `pulumi:"arps"`
 	// Description
@@ -83,18 +90,12 @@ type VlanInterface struct {
 	// The device in which the resource is defined
 	Device pulumi.StringPtrOutput `pulumi:"device"`
 	// Vlan interfaces DHCP Client Object
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
 	DhcpClient VlanInterfaceDhcpClientPtrOutput `pulumi:"dhcpClient"`
 	// The folder in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrOutput `pulumi:"folder"`
 	// Interface management profile
 	InterfaceManagementProfile pulumi.StringPtrOutput `pulumi:"interfaceManagementProfile"`
 	// VLAN Interface IP Parent
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
 	Ips VlanInterfaceIpArrayOutput `pulumi:"ips"`
 	// MTU
 	Mtu pulumi.IntPtrOutput `pulumi:"mtu"`
@@ -103,8 +104,6 @@ type VlanInterface struct {
 	// Name of Netflow Profile to assign to Interface
 	NetflowProfile pulumi.StringPtrOutput `pulumi:"netflowProfile"`
 	// The snippet in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
 	// The Terraform ID.
 	Tfid pulumi.StringOutput `pulumi:"tfid"`
@@ -142,6 +141,8 @@ func GetVlanInterface(ctx *pulumi.Context,
 
 // Input properties used for looking up and filtering VlanInterface resources.
 type vlanInterfaceState struct {
+	// TCP MSS adjustment settings for the interface
+	AdjustTcpMss *VlanInterfaceAdjustTcpMss `pulumi:"adjustTcpMss"`
 	// ARP configuration
 	Arps []VlanInterfaceArp `pulumi:"arps"`
 	// Description
@@ -153,18 +154,12 @@ type vlanInterfaceState struct {
 	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
 	// Vlan interfaces DHCP Client Object
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
 	DhcpClient *VlanInterfaceDhcpClient `pulumi:"dhcpClient"`
 	// The folder in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// Interface management profile
 	InterfaceManagementProfile *string `pulumi:"interfaceManagementProfile"`
 	// VLAN Interface IP Parent
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
 	Ips []VlanInterfaceIp `pulumi:"ips"`
 	// MTU
 	Mtu *int `pulumi:"mtu"`
@@ -173,8 +168,6 @@ type vlanInterfaceState struct {
 	// Name of Netflow Profile to assign to Interface
 	NetflowProfile *string `pulumi:"netflowProfile"`
 	// The snippet in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	// The Terraform ID.
 	Tfid *string `pulumi:"tfid"`
@@ -183,6 +176,8 @@ type vlanInterfaceState struct {
 }
 
 type VlanInterfaceState struct {
+	// TCP MSS adjustment settings for the interface
+	AdjustTcpMss VlanInterfaceAdjustTcpMssPtrInput
 	// ARP configuration
 	Arps VlanInterfaceArpArrayInput
 	// Description
@@ -194,18 +189,12 @@ type VlanInterfaceState struct {
 	// The device in which the resource is defined
 	Device pulumi.StringPtrInput
 	// Vlan interfaces DHCP Client Object
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
 	DhcpClient VlanInterfaceDhcpClientPtrInput
 	// The folder in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// Interface management profile
 	InterfaceManagementProfile pulumi.StringPtrInput
 	// VLAN Interface IP Parent
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
 	Ips VlanInterfaceIpArrayInput
 	// MTU
 	Mtu pulumi.IntPtrInput
@@ -214,8 +203,6 @@ type VlanInterfaceState struct {
 	// Name of Netflow Profile to assign to Interface
 	NetflowProfile pulumi.StringPtrInput
 	// The snippet in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	// The Terraform ID.
 	Tfid pulumi.StringPtrInput
@@ -228,6 +215,8 @@ func (VlanInterfaceState) ElementType() reflect.Type {
 }
 
 type vlanInterfaceArgs struct {
+	// TCP MSS adjustment settings for the interface
+	AdjustTcpMss *VlanInterfaceAdjustTcpMss `pulumi:"adjustTcpMss"`
 	// ARP configuration
 	Arps []VlanInterfaceArp `pulumi:"arps"`
 	// Description
@@ -239,18 +228,12 @@ type vlanInterfaceArgs struct {
 	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
 	// Vlan interfaces DHCP Client Object
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
 	DhcpClient *VlanInterfaceDhcpClient `pulumi:"dhcpClient"`
 	// The folder in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// Interface management profile
 	InterfaceManagementProfile *string `pulumi:"interfaceManagementProfile"`
 	// VLAN Interface IP Parent
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
 	Ips []VlanInterfaceIp `pulumi:"ips"`
 	// MTU
 	Mtu *int `pulumi:"mtu"`
@@ -259,8 +242,6 @@ type vlanInterfaceArgs struct {
 	// Name of Netflow Profile to assign to Interface
 	NetflowProfile *string `pulumi:"netflowProfile"`
 	// The snippet in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	// VLAN tag
 	VlanTag *string `pulumi:"vlanTag"`
@@ -268,6 +249,8 @@ type vlanInterfaceArgs struct {
 
 // The set of arguments for constructing a VlanInterface resource.
 type VlanInterfaceArgs struct {
+	// TCP MSS adjustment settings for the interface
+	AdjustTcpMss VlanInterfaceAdjustTcpMssPtrInput
 	// ARP configuration
 	Arps VlanInterfaceArpArrayInput
 	// Description
@@ -279,18 +262,12 @@ type VlanInterfaceArgs struct {
 	// The device in which the resource is defined
 	Device pulumi.StringPtrInput
 	// Vlan interfaces DHCP Client Object
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
 	DhcpClient VlanInterfaceDhcpClientPtrInput
 	// The folder in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// Interface management profile
 	InterfaceManagementProfile pulumi.StringPtrInput
 	// VLAN Interface IP Parent
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
 	Ips VlanInterfaceIpArrayInput
 	// MTU
 	Mtu pulumi.IntPtrInput
@@ -299,8 +276,6 @@ type VlanInterfaceArgs struct {
 	// Name of Netflow Profile to assign to Interface
 	NetflowProfile pulumi.StringPtrInput
 	// The snippet in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	// VLAN tag
 	VlanTag pulumi.StringPtrInput
@@ -393,6 +368,11 @@ func (o VlanInterfaceOutput) ToVlanInterfaceOutputWithContext(ctx context.Contex
 	return o
 }
 
+// TCP MSS adjustment settings for the interface
+func (o VlanInterfaceOutput) AdjustTcpMss() VlanInterfaceAdjustTcpMssPtrOutput {
+	return o.ApplyT(func(v *VlanInterface) VlanInterfaceAdjustTcpMssPtrOutput { return v.AdjustTcpMss }).(VlanInterfaceAdjustTcpMssPtrOutput)
+}
+
 // ARP configuration
 func (o VlanInterfaceOutput) Arps() VlanInterfaceArpArrayOutput {
 	return o.ApplyT(func(v *VlanInterface) VlanInterfaceArpArrayOutput { return v.Arps }).(VlanInterfaceArpArrayOutput)
@@ -419,15 +399,11 @@ func (o VlanInterfaceOutput) Device() pulumi.StringPtrOutput {
 }
 
 // Vlan interfaces DHCP Client Object
-//
-// > ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
 func (o VlanInterfaceOutput) DhcpClient() VlanInterfaceDhcpClientPtrOutput {
 	return o.ApplyT(func(v *VlanInterface) VlanInterfaceDhcpClientPtrOutput { return v.DhcpClient }).(VlanInterfaceDhcpClientPtrOutput)
 }
 
 // The folder in which the resource is defined
-//
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o VlanInterfaceOutput) Folder() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *VlanInterface) pulumi.StringPtrOutput { return v.Folder }).(pulumi.StringPtrOutput)
 }
@@ -438,8 +414,6 @@ func (o VlanInterfaceOutput) InterfaceManagementProfile() pulumi.StringPtrOutput
 }
 
 // VLAN Interface IP Parent
-//
-// > ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
 func (o VlanInterfaceOutput) Ips() VlanInterfaceIpArrayOutput {
 	return o.ApplyT(func(v *VlanInterface) VlanInterfaceIpArrayOutput { return v.Ips }).(VlanInterfaceIpArrayOutput)
 }
@@ -460,8 +434,6 @@ func (o VlanInterfaceOutput) NetflowProfile() pulumi.StringPtrOutput {
 }
 
 // The snippet in which the resource is defined
-//
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o VlanInterfaceOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *VlanInterface) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)
 }

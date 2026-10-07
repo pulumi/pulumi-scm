@@ -5,7 +5,9 @@ package com.pulumi.scm.outputs;
 
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
+import com.pulumi.scm.outputs.GetEthernetInterfaceListDataLayer2LldpHighAvailability;
 import java.lang.Boolean;
+import java.lang.String;
 import java.util.Objects;
 
 @CustomType
@@ -15,6 +17,16 @@ public final class GetEthernetInterfaceListDataLayer2Lldp {
      * 
      */
     private Boolean enable;
+    /**
+     * @return LLDP high availability settings
+     * 
+     */
+    private GetEthernetInterfaceListDataLayer2LldpHighAvailability highAvailability;
+    /**
+     * @return Name of the LLDP profile to assign to the interface
+     * 
+     */
+    private String profile;
 
     private GetEthernetInterfaceListDataLayer2Lldp() {}
     /**
@@ -23,6 +35,20 @@ public final class GetEthernetInterfaceListDataLayer2Lldp {
      */
     public Boolean enable() {
         return this.enable;
+    }
+    /**
+     * @return LLDP high availability settings
+     * 
+     */
+    public GetEthernetInterfaceListDataLayer2LldpHighAvailability highAvailability() {
+        return this.highAvailability;
+    }
+    /**
+     * @return Name of the LLDP profile to assign to the interface
+     * 
+     */
+    public String profile() {
+        return this.profile;
     }
 
     public static Builder builder() {
@@ -35,10 +61,14 @@ public final class GetEthernetInterfaceListDataLayer2Lldp {
     @CustomType.Builder
     public static final class Builder {
         private Boolean enable;
+        private GetEthernetInterfaceListDataLayer2LldpHighAvailability highAvailability;
+        private String profile;
         public Builder() {}
         public Builder(GetEthernetInterfaceListDataLayer2Lldp defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.enable = defaults.enable;
+    	      this.highAvailability = defaults.highAvailability;
+    	      this.profile = defaults.profile;
         }
 
         @CustomType.Setter
@@ -49,9 +79,27 @@ public final class GetEthernetInterfaceListDataLayer2Lldp {
             this.enable = enable;
             return this;
         }
+        @CustomType.Setter
+        public Builder highAvailability(GetEthernetInterfaceListDataLayer2LldpHighAvailability highAvailability) {
+            if (highAvailability == null) {
+              throw new MissingRequiredPropertyException("GetEthernetInterfaceListDataLayer2Lldp", "highAvailability");
+            }
+            this.highAvailability = highAvailability;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder profile(String profile) {
+            if (profile == null) {
+              throw new MissingRequiredPropertyException("GetEthernetInterfaceListDataLayer2Lldp", "profile");
+            }
+            this.profile = profile;
+            return this;
+        }
         public GetEthernetInterfaceListDataLayer2Lldp build() {
             final var _resultValue = new GetEthernetInterfaceListDataLayer2Lldp();
             _resultValue.enable = enable;
+            _resultValue.highAvailability = highAvailability;
+            _resultValue.profile = profile;
             return _resultValue;
         }
     }

@@ -14,15 +14,15 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetSecurityRuleListDataSecuritySettingsResult
     {
         /// <summary>
-        /// Anti spyware
+        /// Anti spyware. Possible values are `Yes` and `No`.
         /// </summary>
         public readonly string AntiSpyware;
         /// <summary>
-        /// Virus and wildfire analysis
+        /// Virus and wildfire analysis. Possible values are `Yes` and `No`.
         /// </summary>
         public readonly string VirusAndWildfireAnalysis;
         /// <summary>
-        /// Vulnerability
+        /// Vulnerability. Possible values are `Yes` and `No`.
         /// </summary>
         public readonly string Vulnerability;
 

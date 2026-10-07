@@ -54,30 +54,44 @@ func LookupConfigMatchList(ctx *pulumi.Context, args *LookupConfigMatchListArgs,
 type LookupConfigMatchListArgs struct {
 	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
+	// The folder in which the resource is defined
 	Folder *string `pulumi:"folder"`
 	// UUID of the resource
-	Id      string  `pulumi:"id"`
-	Name    *string `pulumi:"name"`
+	Id string `pulumi:"id"`
+	// Name of the config match list entry
+	Name *string `pulumi:"name"`
+	// The snippet in which the resource is defined
 	Snippet *string `pulumi:"snippet"`
 }
 
 // A collection of values returned by getConfigMatchList.
 type LookupConfigMatchListResult struct {
+	// Description of the config match list entry
 	Description string `pulumi:"description"`
 	// The device in which the resource is defined
 	Device string `pulumi:"device"`
+	// Filter of the config match list entry
 	Filter string `pulumi:"filter"`
+	// The folder in which the resource is defined
 	Folder string `pulumi:"folder"`
 	// UUID of the resource
-	Id             string   `pulumi:"id"`
-	Name           string   `pulumi:"name"`
-	SendEmails     []string `pulumi:"sendEmails"`
-	SendHttps      []string `pulumi:"sendHttps"`
-	SendSnmptraps  []string `pulumi:"sendSnmptraps"`
-	SendSyslogs    []string `pulumi:"sendSyslogs"`
-	SendToPanorama bool     `pulumi:"sendToPanorama"`
-	Snippet        string   `pulumi:"snippet"`
-	Tfid           string   `pulumi:"tfid"`
+	Id string `pulumi:"id"`
+	// Name of the config match list entry
+	Name string `pulumi:"name"`
+	// Send Email List of the config match list entry
+	SendEmails []string `pulumi:"sendEmails"`
+	// Send HTTP List of the config match list entry
+	SendHttps []string `pulumi:"sendHttps"`
+	// Send SNMP Trap List of the config match list entry
+	SendSnmptraps []string `pulumi:"sendSnmptraps"`
+	// Send Sys Log List of the config match list entry
+	SendSyslogs []string `pulumi:"sendSyslogs"`
+	// Send Panorama Flag of the config match list entry
+	SendToPanorama bool `pulumi:"sendToPanorama"`
+	// The snippet in which the resource is defined
+	Snippet string `pulumi:"snippet"`
+	// The Terraform ID.
+	Tfid string `pulumi:"tfid"`
 }
 
 func LookupConfigMatchListOutput(ctx *pulumi.Context, args LookupConfigMatchListOutputArgs, opts ...pulumi.InvokeOption) LookupConfigMatchListResultOutput {
@@ -89,10 +103,13 @@ func LookupConfigMatchListOutput(ctx *pulumi.Context, args LookupConfigMatchList
 type LookupConfigMatchListOutputArgs struct {
 	// The device in which the resource is defined
 	Device pulumi.StringPtrInput `pulumi:"device"`
+	// The folder in which the resource is defined
 	Folder pulumi.StringPtrInput `pulumi:"folder"`
 	// UUID of the resource
-	Id      pulumi.StringInput    `pulumi:"id"`
-	Name    pulumi.StringPtrInput `pulumi:"name"`
+	Id pulumi.StringInput `pulumi:"id"`
+	// Name of the config match list entry
+	Name pulumi.StringPtrInput `pulumi:"name"`
+	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrInput `pulumi:"snippet"`
 }
 
@@ -115,6 +132,7 @@ func (o LookupConfigMatchListResultOutput) ToLookupConfigMatchListResultOutputWi
 	return o
 }
 
+// Description of the config match list entry
 func (o LookupConfigMatchListResultOutput) Description() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupConfigMatchListResult) string { return v.Description }).(pulumi.StringOutput)
 }
@@ -124,10 +142,12 @@ func (o LookupConfigMatchListResultOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupConfigMatchListResult) string { return v.Device }).(pulumi.StringOutput)
 }
 
+// Filter of the config match list entry
 func (o LookupConfigMatchListResultOutput) Filter() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupConfigMatchListResult) string { return v.Filter }).(pulumi.StringOutput)
 }
 
+// The folder in which the resource is defined
 func (o LookupConfigMatchListResultOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupConfigMatchListResult) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -137,34 +157,42 @@ func (o LookupConfigMatchListResultOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupConfigMatchListResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
+// Name of the config match list entry
 func (o LookupConfigMatchListResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupConfigMatchListResult) string { return v.Name }).(pulumi.StringOutput)
 }
 
+// Send Email List of the config match list entry
 func (o LookupConfigMatchListResultOutput) SendEmails() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupConfigMatchListResult) []string { return v.SendEmails }).(pulumi.StringArrayOutput)
 }
 
+// Send HTTP List of the config match list entry
 func (o LookupConfigMatchListResultOutput) SendHttps() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupConfigMatchListResult) []string { return v.SendHttps }).(pulumi.StringArrayOutput)
 }
 
+// Send SNMP Trap List of the config match list entry
 func (o LookupConfigMatchListResultOutput) SendSnmptraps() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupConfigMatchListResult) []string { return v.SendSnmptraps }).(pulumi.StringArrayOutput)
 }
 
+// Send Sys Log List of the config match list entry
 func (o LookupConfigMatchListResultOutput) SendSyslogs() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupConfigMatchListResult) []string { return v.SendSyslogs }).(pulumi.StringArrayOutput)
 }
 
+// Send Panorama Flag of the config match list entry
 func (o LookupConfigMatchListResultOutput) SendToPanorama() pulumi.BoolOutput {
 	return o.ApplyT(func(v LookupConfigMatchListResult) bool { return v.SendToPanorama }).(pulumi.BoolOutput)
 }
 
+// The snippet in which the resource is defined
 func (o LookupConfigMatchListResultOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupConfigMatchListResult) string { return v.Snippet }).(pulumi.StringOutput)
 }
 
+// The Terraform ID.
 func (o LookupConfigMatchListResultOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupConfigMatchListResult) string { return v.Tfid }).(pulumi.StringOutput)
 }

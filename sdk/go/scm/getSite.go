@@ -75,7 +75,7 @@ type LookupSiteResult struct {
 	Id string `pulumi:"id"`
 	// The latitude coordinate for the site
 	Latitude string `pulumi:"latitude"`
-	// The license type of the site
+	// The license type of the site. Possible values are `FWAAS-SITE-25Mbps`, `FWAAS-SITE-50Mbps`, `FWAAS-SITE-250Mbps`, `FWAAS-SITE-1000Mbps` and `FWAAS-SITE-2500Mbps`.
 	LicenseType string `pulumi:"licenseType"`
 	// The longitude coordinate for the site
 	Longitude string `pulumi:"longitude"`
@@ -89,7 +89,7 @@ type LookupSiteResult struct {
 	State string `pulumi:"state"`
 	// The Terraform ID.
 	Tfid string `pulumi:"tfid"`
-	// The site type
+	// The site type. Possible values are `prisma-sdwan`, `third-party-branch` and `third-party-discovered`.
 	Type string `pulumi:"type"`
 	// The postal code in which the site exists
 	ZipCode string `pulumi:"zipCode"`
@@ -164,7 +164,7 @@ func (o LookupSiteResultOutput) Latitude() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupSiteResult) string { return v.Latitude }).(pulumi.StringOutput)
 }
 
-// The license type of the site
+// The license type of the site. Possible values are `FWAAS-SITE-25Mbps`, `FWAAS-SITE-50Mbps`, `FWAAS-SITE-250Mbps`, `FWAAS-SITE-1000Mbps` and `FWAAS-SITE-2500Mbps`.
 func (o LookupSiteResultOutput) LicenseType() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupSiteResult) string { return v.LicenseType }).(pulumi.StringOutput)
 }
@@ -199,7 +199,7 @@ func (o LookupSiteResultOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupSiteResult) string { return v.Tfid }).(pulumi.StringOutput)
 }
 
-// The site type
+// The site type. Possible values are `prisma-sdwan`, `third-party-branch` and `third-party-discovered`.
 func (o LookupSiteResultOutput) Type() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupSiteResult) string { return v.Type }).(pulumi.StringOutput)
 }

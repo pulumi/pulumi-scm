@@ -140,8 +140,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The folder in which the resource is defined
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Output("folder")]
         public Output<string?> Folder { get; private set; } = null!;
@@ -178,8 +176,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The snippet in which the resource is defined
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Output("snippet")]
         public Output<string?> Snippet { get; private set; } = null!;
@@ -197,7 +193,7 @@ namespace Pulumi.Scm
         public Output<string?> UserDomain { get; private set; } = null!;
 
         /// <summary>
-        /// Username modifier
+        /// Username modifier. Possible values are `%USERINPUT%`, `%USERINPUT%@%USERDOMAIN%` and `%USERDOMAIN%\\%USERINPUT%`.
         /// </summary>
         [Output("usernameModifier")]
         public Output<string?> UsernameModifier { get; private set; } = null!;
@@ -268,8 +264,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The folder in which the resource is defined
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("folder")]
         public Input<string>? Folder { get; set; }
@@ -306,8 +300,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The snippet in which the resource is defined
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("snippet")]
         public Input<string>? Snippet { get; set; }
@@ -319,7 +311,7 @@ namespace Pulumi.Scm
         public Input<string>? UserDomain { get; set; }
 
         /// <summary>
-        /// Username modifier
+        /// Username modifier. Possible values are `%USERINPUT%`, `%USERINPUT%@%USERDOMAIN%` and `%USERDOMAIN%\\%USERINPUT%`.
         /// </summary>
         [Input("usernameModifier")]
         public Input<string>? UsernameModifier { get; set; }
@@ -352,8 +344,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The folder in which the resource is defined
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("folder")]
         public Input<string>? Folder { get; set; }
@@ -390,8 +380,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The snippet in which the resource is defined
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("snippet")]
         public Input<string>? Snippet { get; set; }
@@ -409,7 +397,7 @@ namespace Pulumi.Scm
         public Input<string>? UserDomain { get; set; }
 
         /// <summary>
-        /// Username modifier
+        /// Username modifier. Possible values are `%USERINPUT%`, `%USERINPUT%@%USERDOMAIN%` and `%USERDOMAIN%\\%USERINPUT%`.
         /// </summary>
         [Input("usernameModifier")]
         public Input<string>? UsernameModifier { get; set; }

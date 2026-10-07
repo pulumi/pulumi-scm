@@ -18,8 +18,6 @@ public final class GetLogicalRouterVrfMulticastMsdpPeerPeerAddress {
     /**
      * @return Ip
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `fqdn` and `ip`.
-     * 
      */
     private String ip;
 
@@ -33,8 +31,6 @@ public final class GetLogicalRouterVrfMulticastMsdpPeerPeerAddress {
     }
     /**
      * @return Ip
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `fqdn` and `ip`.
      * 
      */
     public String ip() {

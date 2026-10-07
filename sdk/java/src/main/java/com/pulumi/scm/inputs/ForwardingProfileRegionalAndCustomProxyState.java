@@ -51,14 +51,14 @@ public final class ForwardingProfileRegionalAndCustomProxyState extends com.pulu
     }
 
     /**
-     * Behavior when proxy connection fails - &#39;fail-open&#39; allows direct internet access, &#39;fail-safe&#39; blocks traffic until proxy is restored
+     * Behavior when proxy connection fails - &#39;fail-open&#39; allows direct internet access, &#39;fail-safe&#39; blocks traffic until proxy is restored. Possible values are `fail-open` and `fail-safe`.
      * 
      */
     @Import(name="fallbackOption")
     private @Nullable Output<String> fallbackOption;
 
     /**
-     * @return Behavior when proxy connection fails - &#39;fail-open&#39; allows direct internet access, &#39;fail-safe&#39; blocks traffic until proxy is restored
+     * @return Behavior when proxy connection fails - &#39;fail-open&#39; allows direct internet access, &#39;fail-safe&#39; blocks traffic until proxy is restored. Possible values are `fail-open` and `fail-safe`.
      * 
      */
     public Optional<Output<String>> fallbackOption() {
@@ -66,14 +66,14 @@ public final class ForwardingProfileRegionalAndCustomProxyState extends com.pulu
     }
 
     /**
-     * The folder in which the resource is defined
+     * The folder in which the resource is defined. Possible values are `Mobile Users`.
      * 
      */
     @Import(name="folder")
     private @Nullable Output<String> folder;
 
     /**
-     * @return The folder in which the resource is defined
+     * @return The folder in which the resource is defined. Possible values are `Mobile Users`.
      * 
      */
     public Optional<Output<String>> folder() {
@@ -81,14 +81,14 @@ public final class ForwardingProfileRegionalAndCustomProxyState extends com.pulu
     }
 
     /**
-     * Strategy for selecting Prisma Access location - &#39;best-available-pa-location&#39; automatically selects optimal location, &#39;specific-pa-location&#39; uses predefined locations
+     * Strategy for selecting Prisma Access location - &#39;best-available-pa-location&#39; automatically selects optimal location, &#39;specific-pa-location&#39; uses predefined locations. Possible values are `best-available-pa-location` and `specific-pa-location`.
      * 
      */
     @Import(name="locationPreference")
     private @Nullable Output<String> locationPreference;
 
     /**
-     * @return Strategy for selecting Prisma Access location - &#39;best-available-pa-location&#39; automatically selects optimal location, &#39;specific-pa-location&#39; uses predefined locations
+     * @return Strategy for selecting Prisma Access location - &#39;best-available-pa-location&#39; automatically selects optimal location, &#39;specific-pa-location&#39; uses predefined locations. Possible values are `best-available-pa-location` and `specific-pa-location`.
      * 
      */
     public Optional<Output<String>> locationPreference() {
@@ -171,14 +171,14 @@ public final class ForwardingProfileRegionalAndCustomProxyState extends com.pulu
     }
 
     /**
-     * Proxy configuration type - &#39;gp-and-pac&#39; for GlobalProtect and PAC file forwarding, &#39;ztna-agent&#39; for ZTNA agent forwarding
+     * Proxy configuration type - &#39;gp-and-pac&#39; for GlobalProtect and PAC file forwarding, &#39;ztna-agent&#39; for ZTNA agent forwarding. Possible values are `gp-and-pac` and `ztna-agent`.
      * 
      */
     @Import(name="type")
     private @Nullable Output<String> type;
 
     /**
-     * @return Proxy configuration type - &#39;gp-and-pac&#39; for GlobalProtect and PAC file forwarding, &#39;ztna-agent&#39; for ZTNA agent forwarding
+     * @return Proxy configuration type - &#39;gp-and-pac&#39; for GlobalProtect and PAC file forwarding, &#39;ztna-agent&#39; for ZTNA agent forwarding. Possible values are `gp-and-pac` and `ztna-agent`.
      * 
      */
     public Optional<Output<String>> type() {
@@ -272,7 +272,7 @@ public final class ForwardingProfileRegionalAndCustomProxyState extends com.pulu
         }
 
         /**
-         * @param fallbackOption Behavior when proxy connection fails - &#39;fail-open&#39; allows direct internet access, &#39;fail-safe&#39; blocks traffic until proxy is restored
+         * @param fallbackOption Behavior when proxy connection fails - &#39;fail-open&#39; allows direct internet access, &#39;fail-safe&#39; blocks traffic until proxy is restored. Possible values are `fail-open` and `fail-safe`.
          * 
          * @return builder
          * 
@@ -283,7 +283,7 @@ public final class ForwardingProfileRegionalAndCustomProxyState extends com.pulu
         }
 
         /**
-         * @param fallbackOption Behavior when proxy connection fails - &#39;fail-open&#39; allows direct internet access, &#39;fail-safe&#39; blocks traffic until proxy is restored
+         * @param fallbackOption Behavior when proxy connection fails - &#39;fail-open&#39; allows direct internet access, &#39;fail-safe&#39; blocks traffic until proxy is restored. Possible values are `fail-open` and `fail-safe`.
          * 
          * @return builder
          * 
@@ -293,7 +293,7 @@ public final class ForwardingProfileRegionalAndCustomProxyState extends com.pulu
         }
 
         /**
-         * @param folder The folder in which the resource is defined
+         * @param folder The folder in which the resource is defined. Possible values are `Mobile Users`.
          * 
          * @return builder
          * 
@@ -304,7 +304,7 @@ public final class ForwardingProfileRegionalAndCustomProxyState extends com.pulu
         }
 
         /**
-         * @param folder The folder in which the resource is defined
+         * @param folder The folder in which the resource is defined. Possible values are `Mobile Users`.
          * 
          * @return builder
          * 
@@ -314,7 +314,7 @@ public final class ForwardingProfileRegionalAndCustomProxyState extends com.pulu
         }
 
         /**
-         * @param locationPreference Strategy for selecting Prisma Access location - &#39;best-available-pa-location&#39; automatically selects optimal location, &#39;specific-pa-location&#39; uses predefined locations
+         * @param locationPreference Strategy for selecting Prisma Access location - &#39;best-available-pa-location&#39; automatically selects optimal location, &#39;specific-pa-location&#39; uses predefined locations. Possible values are `best-available-pa-location` and `specific-pa-location`.
          * 
          * @return builder
          * 
@@ -325,7 +325,7 @@ public final class ForwardingProfileRegionalAndCustomProxyState extends com.pulu
         }
 
         /**
-         * @param locationPreference Strategy for selecting Prisma Access location - &#39;best-available-pa-location&#39; automatically selects optimal location, &#39;specific-pa-location&#39; uses predefined locations
+         * @param locationPreference Strategy for selecting Prisma Access location - &#39;best-available-pa-location&#39; automatically selects optimal location, &#39;specific-pa-location&#39; uses predefined locations. Possible values are `best-available-pa-location` and `specific-pa-location`.
          * 
          * @return builder
          * 
@@ -450,7 +450,7 @@ public final class ForwardingProfileRegionalAndCustomProxyState extends com.pulu
         }
 
         /**
-         * @param type Proxy configuration type - &#39;gp-and-pac&#39; for GlobalProtect and PAC file forwarding, &#39;ztna-agent&#39; for ZTNA agent forwarding
+         * @param type Proxy configuration type - &#39;gp-and-pac&#39; for GlobalProtect and PAC file forwarding, &#39;ztna-agent&#39; for ZTNA agent forwarding. Possible values are `gp-and-pac` and `ztna-agent`.
          * 
          * @return builder
          * 
@@ -461,7 +461,7 @@ public final class ForwardingProfileRegionalAndCustomProxyState extends com.pulu
         }
 
         /**
-         * @param type Proxy configuration type - &#39;gp-and-pac&#39; for GlobalProtect and PAC file forwarding, &#39;ztna-agent&#39; for ZTNA agent forwarding
+         * @param type Proxy configuration type - &#39;gp-and-pac&#39; for GlobalProtect and PAC file forwarding, &#39;ztna-agent&#39; for ZTNA agent forwarding. Possible values are `gp-and-pac` and `ztna-agent`.
          * 
          * @return builder
          * 

@@ -20,16 +20,12 @@ namespace Pulumi.Scm.Inputs
 
         /// <summary>
         /// Challenge to use for SCEP server on mobile clients
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Dynamic`, `Fixed`, and `None`.
         /// </summary>
         [Input("fixed")]
         public Input<string>? Fixed { get; set; }
 
         /// <summary>
         /// No OTP
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Dynamic`, `Fixed`, and `None`.
         /// </summary>
         [Input("none")]
         public Input<Inputs.ScepProfileScepChallengeNoneGetArgs>? None { get; set; }

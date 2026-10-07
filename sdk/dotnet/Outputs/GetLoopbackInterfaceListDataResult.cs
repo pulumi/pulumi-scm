@@ -14,6 +14,10 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetLoopbackInterfaceListDataResult
     {
         /// <summary>
+        /// TCP MSS adjustment settings for the interface
+        /// </summary>
+        public readonly Outputs.GetLoopbackInterfaceListDataAdjustTcpMssResult AdjustTcpMss;
+        /// <summary>
         /// Description for loopback interface
         /// </summary>
         public readonly string Comment;
@@ -26,7 +30,7 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly string Device;
         /// <summary>
-        /// The folder of the item. Default: Shared.
+        /// The folder in which the resource is defined
         /// </summary>
         public readonly string Folder;
         /// <summary>
@@ -50,7 +54,7 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly int Mtu;
         /// <summary>
-        /// The name of the item.
+        /// Loopback Interface name
         /// </summary>
         public readonly string Name;
         /// <summary>
@@ -58,7 +62,7 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly string NetflowProfile;
         /// <summary>
-        /// The snippet of the item.
+        /// The snippet in which the resource is defined
         /// </summary>
         public readonly string Snippet;
         /// <summary>
@@ -68,6 +72,8 @@ namespace Pulumi.Scm.Outputs
 
         [OutputConstructor]
         private GetLoopbackInterfaceListDataResult(
+            Outputs.GetLoopbackInterfaceListDataAdjustTcpMssResult adjustTcpMss,
+
             string comment,
 
             string defaultValue,
@@ -94,6 +100,7 @@ namespace Pulumi.Scm.Outputs
 
             string tfid)
         {
+            AdjustTcpMss = adjustTcpMss;
             Comment = comment;
             DefaultValue = defaultValue;
             Device = device;

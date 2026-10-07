@@ -14,13 +14,11 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetHipObjectListDataDiskEncryptionCriteriaEncryptedLocationEncryptionStateResult
     {
         /// <summary>
-        /// Is
+        /// Is. Possible values are `Encrypted`, `Unencrypted`, `Partial` and `Unknown`.
         /// </summary>
         public readonly string Is;
         /// <summary>
-        /// Is not
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Is` and `IsNot`.
+        /// Is not. Possible values are `Encrypted`, `Unencrypted`, `Partial` and `Unknown`.
         /// </summary>
         public readonly string IsNot;
 

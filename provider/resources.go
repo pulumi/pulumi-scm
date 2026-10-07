@@ -101,6 +101,43 @@ func Provider() tfbridge.ProviderInfo {
 			},
 		},
 		DataSources: map[string]*tfbridge.DataSourceInfo{},
+		// Starting with terraform-provider-scm v1.0.13, ZTNA Connector support was introduced
+		// under a new "ztna_*" resource/data source prefix, intentionally separate from the
+		// existing "scm_*" resources (see upstream release notes for v1.0.13). These names
+		// don't fit the SingleModule token strategy below, which assumes every TF entity is
+		// prefixed with "scm_". Ignore them here to unblock the upgrade; proper Pulumi support
+		// for the ZTNA Connector resources can be added in a follow-up.
+		IgnoreMappings: []string{
+			"ztna_application_filters",
+			"ztna_connector",
+			"ztna_connector_filters",
+			"ztna_connector_group",
+			"ztna_connector_group_connectors",
+			"ztna_connector_group_filters",
+			"ztna_connector_group_fqdn_rules",
+			"ztna_connector_group_list",
+			"ztna_connector_group_scheduled_upgrade",
+			"ztna_connector_group_subnet_rules",
+			"ztna_connector_group_upgrade_status",
+			"ztna_connector_group_wildcards",
+			"ztna_connector_image_list",
+			"ztna_connector_list",
+			"ztna_connector_quiesce",
+			"ztna_connector_scheduled_upgrade",
+			"ztna_connector_upgrade_status",
+			"ztna_discovered_application_filters",
+			"ztna_discovered_application_list",
+			"ztna_fqdn_application",
+			"ztna_fqdn_application_list",
+			"ztna_license",
+			"ztna_subnet",
+			"ztna_subnet_filters",
+			"ztna_subnet_list",
+			"ztna_tenant_status",
+			"ztna_wildcard",
+			"ztna_wildcard_filters",
+			"ztna_wildcard_list",
+		},
 		JavaScript: &tfbridge.JavaScriptInfo{
 			PackageName: "@pulumi/scm",
 

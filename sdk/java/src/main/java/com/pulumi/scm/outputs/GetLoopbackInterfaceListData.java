@@ -5,6 +5,7 @@ package com.pulumi.scm.outputs;
 
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
+import com.pulumi.scm.outputs.GetLoopbackInterfaceListDataAdjustTcpMss;
 import com.pulumi.scm.outputs.GetLoopbackInterfaceListDataIp;
 import com.pulumi.scm.outputs.GetLoopbackInterfaceListDataIpv6;
 import java.lang.Integer;
@@ -14,6 +15,11 @@ import java.util.Objects;
 
 @CustomType
 public final class GetLoopbackInterfaceListData {
+    /**
+     * @return TCP MSS adjustment settings for the interface
+     * 
+     */
+    private GetLoopbackInterfaceListDataAdjustTcpMss adjustTcpMss;
     /**
      * @return Description for loopback interface
      * 
@@ -30,7 +36,7 @@ public final class GetLoopbackInterfaceListData {
      */
     private String device;
     /**
-     * @return The folder of the item. Default: Shared.
+     * @return The folder in which the resource is defined
      * 
      */
     private String folder;
@@ -60,7 +66,7 @@ public final class GetLoopbackInterfaceListData {
      */
     private Integer mtu;
     /**
-     * @return The name of the item.
+     * @return Loopback Interface name
      * 
      */
     private String name;
@@ -70,7 +76,7 @@ public final class GetLoopbackInterfaceListData {
      */
     private String netflowProfile;
     /**
-     * @return The snippet of the item.
+     * @return The snippet in which the resource is defined
      * 
      */
     private String snippet;
@@ -81,6 +87,13 @@ public final class GetLoopbackInterfaceListData {
     private String tfid;
 
     private GetLoopbackInterfaceListData() {}
+    /**
+     * @return TCP MSS adjustment settings for the interface
+     * 
+     */
+    public GetLoopbackInterfaceListDataAdjustTcpMss adjustTcpMss() {
+        return this.adjustTcpMss;
+    }
     /**
      * @return Description for loopback interface
      * 
@@ -103,7 +116,7 @@ public final class GetLoopbackInterfaceListData {
         return this.device;
     }
     /**
-     * @return The folder of the item. Default: Shared.
+     * @return The folder in which the resource is defined
      * 
      */
     public String folder() {
@@ -145,7 +158,7 @@ public final class GetLoopbackInterfaceListData {
         return this.mtu;
     }
     /**
-     * @return The name of the item.
+     * @return Loopback Interface name
      * 
      */
     public String name() {
@@ -159,7 +172,7 @@ public final class GetLoopbackInterfaceListData {
         return this.netflowProfile;
     }
     /**
-     * @return The snippet of the item.
+     * @return The snippet in which the resource is defined
      * 
      */
     public String snippet() {
@@ -182,6 +195,7 @@ public final class GetLoopbackInterfaceListData {
     }
     @CustomType.Builder
     public static final class Builder {
+        private GetLoopbackInterfaceListDataAdjustTcpMss adjustTcpMss;
         private String comment;
         private String defaultValue;
         private String device;
@@ -198,6 +212,7 @@ public final class GetLoopbackInterfaceListData {
         public Builder() {}
         public Builder(GetLoopbackInterfaceListData defaults) {
     	      Objects.requireNonNull(defaults);
+    	      this.adjustTcpMss = defaults.adjustTcpMss;
     	      this.comment = defaults.comment;
     	      this.defaultValue = defaults.defaultValue;
     	      this.device = defaults.device;
@@ -213,6 +228,14 @@ public final class GetLoopbackInterfaceListData {
     	      this.tfid = defaults.tfid;
         }
 
+        @CustomType.Setter
+        public Builder adjustTcpMss(GetLoopbackInterfaceListDataAdjustTcpMss adjustTcpMss) {
+            if (adjustTcpMss == null) {
+              throw new MissingRequiredPropertyException("GetLoopbackInterfaceListData", "adjustTcpMss");
+            }
+            this.adjustTcpMss = adjustTcpMss;
+            return this;
+        }
         @CustomType.Setter
         public Builder comment(String comment) {
             if (comment == null) {
@@ -322,6 +345,7 @@ public final class GetLoopbackInterfaceListData {
         }
         public GetLoopbackInterfaceListData build() {
             final var _resultValue = new GetLoopbackInterfaceListData();
+            _resultValue.adjustTcpMss = adjustTcpMss;
             _resultValue.comment = comment;
             _resultValue.defaultValue = defaultValue;
             _resultValue.device = device;

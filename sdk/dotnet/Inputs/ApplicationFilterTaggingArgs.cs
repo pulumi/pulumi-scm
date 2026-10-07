@@ -23,8 +23,6 @@ namespace Pulumi.Scm.Inputs
 
         /// <summary>
         /// Tag
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `NoTag` and `Tag`.
         /// </summary>
         public InputList<string> Tags
         {

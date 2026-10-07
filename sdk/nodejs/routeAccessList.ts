@@ -9,6 +9,32 @@ import * as utilities from "./utilities";
 /**
  * RouteAccessList resource
  *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * const example = new scm.RouteAccessList("example", {
+ *     folder: "ngfw-shared",
+ *     name: "EXAMPLE-ACL",
+ *     type: {
+ *         ipv4: {
+ *             ipv4Entries: [{
+ *                 name: 10,
+ *                 action: "permit",
+ *                 destinationAddress: {
+ *                     entry: {
+ *                         address: "10.0.0.0",
+ *                         wildcard: "0.0.0.7",
+ *                     },
+ *                 },
+ *             }],
+ *         },
+ *     },
+ * });
+ * ```
+ *
  * ## Import
  *
  * The following command can be used to import a resource not managed by Terraform:
@@ -69,8 +95,6 @@ export class RouteAccessList extends pulumi.CustomResource {
     declare public readonly device: pulumi.Output<string | undefined>;
     /**
      * The folder in which the resource is defined
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly folder: pulumi.Output<string | undefined>;
     /**
@@ -79,8 +103,6 @@ export class RouteAccessList extends pulumi.CustomResource {
     declare public readonly name: pulumi.Output<string>;
     /**
      * The snippet in which the resource is defined
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly snippet: pulumi.Output<string | undefined>;
     /**
@@ -141,8 +163,6 @@ export interface RouteAccessListState {
     device?: pulumi.Input<string | undefined>;
     /**
      * The folder in which the resource is defined
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     folder?: pulumi.Input<string | undefined>;
     /**
@@ -151,8 +171,6 @@ export interface RouteAccessListState {
     name?: pulumi.Input<string | undefined>;
     /**
      * The snippet in which the resource is defined
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     snippet?: pulumi.Input<string | undefined>;
     /**
@@ -179,8 +197,6 @@ export interface RouteAccessListArgs {
     device?: pulumi.Input<string | undefined>;
     /**
      * The folder in which the resource is defined
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     folder?: pulumi.Input<string | undefined>;
     /**
@@ -189,8 +205,6 @@ export interface RouteAccessListArgs {
     name?: pulumi.Input<string | undefined>;
     /**
      * The snippet in which the resource is defined
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     snippet?: pulumi.Input<string | undefined>;
     /**

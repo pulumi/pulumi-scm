@@ -22,28 +22,20 @@ public final class GetQosPolicyRuleDscpTosCodepointType {
     /**
      * @return Cs
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `af`, `cs`, `custom`, `ef`, and `tos`.
-     * 
      */
     private GetQosPolicyRuleDscpTosCodepointTypeCs cs;
     /**
      * @return Custom
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `af`, `cs`, `custom`, `ef`, and `tos`.
      * 
      */
     private GetQosPolicyRuleDscpTosCodepointTypeCustom custom;
     /**
      * @return Ef
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `af`, `cs`, `custom`, `ef`, and `tos`.
-     * 
      */
     private GetQosPolicyRuleDscpTosCodepointTypeEf ef;
     /**
      * @return Tos
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `af`, `cs`, `custom`, `ef`, and `tos`.
      * 
      */
     private GetQosPolicyRuleDscpTosCodepointTypeTos tos;
@@ -59,16 +51,12 @@ public final class GetQosPolicyRuleDscpTosCodepointType {
     /**
      * @return Cs
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `af`, `cs`, `custom`, `ef`, and `tos`.
-     * 
      */
     public GetQosPolicyRuleDscpTosCodepointTypeCs cs() {
         return this.cs;
     }
     /**
      * @return Custom
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `af`, `cs`, `custom`, `ef`, and `tos`.
      * 
      */
     public GetQosPolicyRuleDscpTosCodepointTypeCustom custom() {
@@ -77,16 +65,12 @@ public final class GetQosPolicyRuleDscpTosCodepointType {
     /**
      * @return Ef
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `af`, `cs`, `custom`, `ef`, and `tos`.
-     * 
      */
     public GetQosPolicyRuleDscpTosCodepointTypeEf ef() {
         return this.ef;
     }
     /**
      * @return Tos
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `af`, `cs`, `custom`, `ef`, and `tos`.
      * 
      */
     public GetQosPolicyRuleDscpTosCodepointTypeTos tos() {

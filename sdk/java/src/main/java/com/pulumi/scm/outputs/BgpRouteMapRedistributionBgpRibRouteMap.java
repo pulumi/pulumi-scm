@@ -15,7 +15,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class BgpRouteMapRedistributionBgpRibRouteMap {
     /**
-     * @return BGP Root RIB Route maps Action
+     * @return BGP Root RIB Route maps Action. Possible values are `permit` and `deny`.
      * 
      */
     private @Nullable String action;
@@ -42,7 +42,7 @@ public final class BgpRouteMapRedistributionBgpRibRouteMap {
 
     private BgpRouteMapRedistributionBgpRibRouteMap() {}
     /**
-     * @return BGP Root RIB Route maps Action
+     * @return BGP Root RIB Route maps Action. Possible values are `permit` and `deny`.
      * 
      */
     public Optional<String> action() {

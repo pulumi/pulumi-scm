@@ -181,14 +181,14 @@ public class AntiSpywareSignature extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.device);
     }
     /**
-     * Direction
+     * Direction. Possible values are `client2server`, `server2client` and `both`.
      * 
      */
     @Export(name="direction", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> direction;
 
     /**
-     * @return Direction
+     * @return Direction. Possible values are `client2server`, `server2client` and `both`.
      * 
      */
     public Output<Optional<String>> direction() {
@@ -197,16 +197,12 @@ public class AntiSpywareSignature extends com.pulumi.resources.CustomResource {
     /**
      * The folder in which the resource is defined
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
      */
     @Export(name="folder", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> folder;
 
     /**
      * @return The folder in which the resource is defined
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public Output<Optional<String>> folder() {
@@ -227,14 +223,14 @@ public class AntiSpywareSignature extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.references);
     }
     /**
-     * Severity
+     * Severity. Possible values are `critical`, `low`, `high`, `medium` and `informational`.
      * 
      */
     @Export(name="severity", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> severity;
 
     /**
-     * @return Severity
+     * @return Severity. Possible values are `critical`, `low`, `high`, `medium` and `informational`.
      * 
      */
     public Output<Optional<String>> severity() {
@@ -257,16 +253,12 @@ public class AntiSpywareSignature extends com.pulumi.resources.CustomResource {
     /**
      * The snippet in which the resource is defined
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
      */
     @Export(name="snippet", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> snippet;
 
     /**
      * @return The snippet in which the resource is defined
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public Output<Optional<String>> snippet() {

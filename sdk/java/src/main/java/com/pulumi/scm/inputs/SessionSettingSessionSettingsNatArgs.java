@@ -16,14 +16,14 @@ public final class SessionSettingSessionSettingsNatArgs extends com.pulumi.resou
     public static final SessionSettingSessionSettingsNatArgs Empty = new SessionSettingSessionSettingsNatArgs();
 
     /**
-     * NAT oversubscription rate
+     * NAT oversubscription rate. Possible values are `1x`, `2x`, `4x` and `8x`.
      * 
      */
     @Import(name="dippOversub")
     private @Nullable Output<String> dippOversub;
 
     /**
-     * @return NAT oversubscription rate
+     * @return NAT oversubscription rate. Possible values are `1x`, `2x`, `4x` and `8x`.
      * 
      */
     public Optional<Output<String>> dippOversub() {
@@ -55,7 +55,7 @@ public final class SessionSettingSessionSettingsNatArgs extends com.pulumi.resou
         }
 
         /**
-         * @param dippOversub NAT oversubscription rate
+         * @param dippOversub NAT oversubscription rate. Possible values are `1x`, `2x`, `4x` and `8x`.
          * 
          * @return builder
          * 
@@ -66,7 +66,7 @@ public final class SessionSettingSessionSettingsNatArgs extends com.pulumi.resou
         }
 
         /**
-         * @param dippOversub NAT oversubscription rate
+         * @param dippOversub NAT oversubscription rate. Possible values are `1x`, `2x`, `4x` and `8x`.
          * 
          * @return builder
          * 

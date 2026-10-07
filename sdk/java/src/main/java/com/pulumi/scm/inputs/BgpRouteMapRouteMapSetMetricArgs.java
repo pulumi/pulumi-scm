@@ -17,14 +17,14 @@ public final class BgpRouteMapRouteMapSetMetricArgs extends com.pulumi.resources
     public static final BgpRouteMapRouteMapSetMetricArgs Empty = new BgpRouteMapRouteMapSetMetricArgs();
 
     /**
-     * Metric action
+     * Metric action. Possible values are `set`, `add` and `substract`.
      * 
      */
     @Import(name="action")
     private @Nullable Output<String> action;
 
     /**
-     * @return Metric action
+     * @return Metric action. Possible values are `set`, `add` and `substract`.
      * 
      */
     public Optional<Output<String>> action() {
@@ -72,7 +72,7 @@ public final class BgpRouteMapRouteMapSetMetricArgs extends com.pulumi.resources
         }
 
         /**
-         * @param action Metric action
+         * @param action Metric action. Possible values are `set`, `add` and `substract`.
          * 
          * @return builder
          * 
@@ -83,7 +83,7 @@ public final class BgpRouteMapRouteMapSetMetricArgs extends com.pulumi.resources
         }
 
         /**
-         * @param action Metric action
+         * @param action Metric action. Possible values are `set`, `add` and `substract`.
          * 
          * @return builder
          * 

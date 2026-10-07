@@ -75,7 +75,7 @@ class GetRemoteNetworkResult:
     @pulumi.getter(name="ecmpLoadBalancing")
     def ecmp_load_balancing(self) -> _builtins.str:
         """
-        Ecmp load balancing
+        Ecmp load balancing. Possible values are `enable` and `disable`.
         """
         return pulumi.get(self, "ecmp_load_balancing")
 
@@ -139,7 +139,7 @@ class GetRemoteNetworkResult:
     @pulumi.getter
     def protocol(self) -> 'outputs.GetRemoteNetworkProtocolResult':
         """
-        setup the protocol when ecmp*load*balancing is disable
+        setup the protocol when ecmp*load*balancing is disabled
         """
         return pulumi.get(self, "protocol")
 

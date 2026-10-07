@@ -306,7 +306,7 @@ import (
 type DecryptionRule struct {
 	pulumi.CustomResourceState
 
-	// The action to be taken
+	// The action to be taken. Possible values are `decrypt` and `no-decrypt`.
 	Action pulumi.StringOutput `pulumi:"action"`
 	// The destination URL category
 	Categories pulumi.StringArrayOutput `pulumi:"categories"`
@@ -321,8 +321,6 @@ type DecryptionRule struct {
 	// Is the rule disabled?
 	Disabled pulumi.BoolPtrOutput `pulumi:"disabled"`
 	// The folder in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrOutput `pulumi:"folder"`
 	// The source security zone
 	Froms pulumi.StringArrayOutput `pulumi:"froms"`
@@ -338,7 +336,7 @@ type DecryptionRule struct {
 	NegateDestination pulumi.BoolPtrOutput `pulumi:"negateDestination"`
 	// Negate the source addresses?
 	NegateSource pulumi.BoolPtrOutput `pulumi:"negateSource"`
-	// The position of a security rule
+	// The position of a security rule. Possible values are `pre` and `post`.
 	Position pulumi.StringOutput `pulumi:"position"`
 	// The decryption profile associated with the decryption rule
 	Profile pulumi.StringPtrOutput `pulumi:"profile"`
@@ -347,8 +345,6 @@ type DecryptionRule struct {
 	// The destination services and/or service groups
 	Services pulumi.StringArrayOutput `pulumi:"services"`
 	// The snippet in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
 	// Source hip
 	SourceHips pulumi.StringArrayOutput `pulumi:"sourceHips"`
@@ -358,7 +354,7 @@ type DecryptionRule struct {
 	Sources pulumi.StringArrayOutput `pulumi:"sources"`
 	// The tags associated with the decryption rule
 	Tags pulumi.StringArrayOutput `pulumi:"tags"`
-	// The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `"before"` or `"after"`.
+	// UUID of the rule to position this rule relative to. Required when `relativePosition` is `"before"` or `"after"`.
 	TargetRule pulumi.StringPtrOutput `pulumi:"targetRule"`
 	// The Terraform ID.
 	Tfid pulumi.StringOutput `pulumi:"tfid"`
@@ -422,7 +418,7 @@ func GetDecryptionRule(ctx *pulumi.Context,
 
 // Input properties used for looking up and filtering DecryptionRule resources.
 type decryptionRuleState struct {
-	// The action to be taken
+	// The action to be taken. Possible values are `decrypt` and `no-decrypt`.
 	Action *string `pulumi:"action"`
 	// The destination URL category
 	Categories []string `pulumi:"categories"`
@@ -437,8 +433,6 @@ type decryptionRuleState struct {
 	// Is the rule disabled?
 	Disabled *bool `pulumi:"disabled"`
 	// The folder in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// The source security zone
 	Froms []string `pulumi:"froms"`
@@ -454,7 +448,7 @@ type decryptionRuleState struct {
 	NegateDestination *bool `pulumi:"negateDestination"`
 	// Negate the source addresses?
 	NegateSource *bool `pulumi:"negateSource"`
-	// The position of a security rule
+	// The position of a security rule. Possible values are `pre` and `post`.
 	Position *string `pulumi:"position"`
 	// The decryption profile associated with the decryption rule
 	Profile *string `pulumi:"profile"`
@@ -463,8 +457,6 @@ type decryptionRuleState struct {
 	// The destination services and/or service groups
 	Services []string `pulumi:"services"`
 	// The snippet in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	// Source hip
 	SourceHips []string `pulumi:"sourceHips"`
@@ -474,7 +466,7 @@ type decryptionRuleState struct {
 	Sources []string `pulumi:"sources"`
 	// The tags associated with the decryption rule
 	Tags []string `pulumi:"tags"`
-	// The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `"before"` or `"after"`.
+	// UUID of the rule to position this rule relative to. Required when `relativePosition` is `"before"` or `"after"`.
 	TargetRule *string `pulumi:"targetRule"`
 	// The Terraform ID.
 	Tfid *string `pulumi:"tfid"`
@@ -485,7 +477,7 @@ type decryptionRuleState struct {
 }
 
 type DecryptionRuleState struct {
-	// The action to be taken
+	// The action to be taken. Possible values are `decrypt` and `no-decrypt`.
 	Action pulumi.StringPtrInput
 	// The destination URL category
 	Categories pulumi.StringArrayInput
@@ -500,8 +492,6 @@ type DecryptionRuleState struct {
 	// Is the rule disabled?
 	Disabled pulumi.BoolPtrInput
 	// The folder in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// The source security zone
 	Froms pulumi.StringArrayInput
@@ -517,7 +507,7 @@ type DecryptionRuleState struct {
 	NegateDestination pulumi.BoolPtrInput
 	// Negate the source addresses?
 	NegateSource pulumi.BoolPtrInput
-	// The position of a security rule
+	// The position of a security rule. Possible values are `pre` and `post`.
 	Position pulumi.StringPtrInput
 	// The decryption profile associated with the decryption rule
 	Profile pulumi.StringPtrInput
@@ -526,8 +516,6 @@ type DecryptionRuleState struct {
 	// The destination services and/or service groups
 	Services pulumi.StringArrayInput
 	// The snippet in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	// Source hip
 	SourceHips pulumi.StringArrayInput
@@ -537,7 +525,7 @@ type DecryptionRuleState struct {
 	Sources pulumi.StringArrayInput
 	// The tags associated with the decryption rule
 	Tags pulumi.StringArrayInput
-	// The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `"before"` or `"after"`.
+	// UUID of the rule to position this rule relative to. Required when `relativePosition` is `"before"` or `"after"`.
 	TargetRule pulumi.StringPtrInput
 	// The Terraform ID.
 	Tfid pulumi.StringPtrInput
@@ -552,7 +540,7 @@ func (DecryptionRuleState) ElementType() reflect.Type {
 }
 
 type decryptionRuleArgs struct {
-	// The action to be taken
+	// The action to be taken. Possible values are `decrypt` and `no-decrypt`.
 	Action string `pulumi:"action"`
 	// The destination URL category
 	Categories []string `pulumi:"categories"`
@@ -567,8 +555,6 @@ type decryptionRuleArgs struct {
 	// Is the rule disabled?
 	Disabled *bool `pulumi:"disabled"`
 	// The folder in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// The source security zone
 	Froms []string `pulumi:"froms"`
@@ -584,7 +570,7 @@ type decryptionRuleArgs struct {
 	NegateDestination *bool `pulumi:"negateDestination"`
 	// Negate the source addresses?
 	NegateSource *bool `pulumi:"negateSource"`
-	// The position of a security rule
+	// The position of a security rule. Possible values are `pre` and `post`.
 	Position *string `pulumi:"position"`
 	// The decryption profile associated with the decryption rule
 	Profile *string `pulumi:"profile"`
@@ -593,8 +579,6 @@ type decryptionRuleArgs struct {
 	// The destination services and/or service groups
 	Services []string `pulumi:"services"`
 	// The snippet in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	// Source hip
 	SourceHips []string `pulumi:"sourceHips"`
@@ -604,7 +588,7 @@ type decryptionRuleArgs struct {
 	Sources []string `pulumi:"sources"`
 	// The tags associated with the decryption rule
 	Tags []string `pulumi:"tags"`
-	// The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `"before"` or `"after"`.
+	// UUID of the rule to position this rule relative to. Required when `relativePosition` is `"before"` or `"after"`.
 	TargetRule *string `pulumi:"targetRule"`
 	// The destination security zone
 	Tos []string `pulumi:"tos"`
@@ -614,7 +598,7 @@ type decryptionRuleArgs struct {
 
 // The set of arguments for constructing a DecryptionRule resource.
 type DecryptionRuleArgs struct {
-	// The action to be taken
+	// The action to be taken. Possible values are `decrypt` and `no-decrypt`.
 	Action pulumi.StringInput
 	// The destination URL category
 	Categories pulumi.StringArrayInput
@@ -629,8 +613,6 @@ type DecryptionRuleArgs struct {
 	// Is the rule disabled?
 	Disabled pulumi.BoolPtrInput
 	// The folder in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// The source security zone
 	Froms pulumi.StringArrayInput
@@ -646,7 +628,7 @@ type DecryptionRuleArgs struct {
 	NegateDestination pulumi.BoolPtrInput
 	// Negate the source addresses?
 	NegateSource pulumi.BoolPtrInput
-	// The position of a security rule
+	// The position of a security rule. Possible values are `pre` and `post`.
 	Position pulumi.StringPtrInput
 	// The decryption profile associated with the decryption rule
 	Profile pulumi.StringPtrInput
@@ -655,8 +637,6 @@ type DecryptionRuleArgs struct {
 	// The destination services and/or service groups
 	Services pulumi.StringArrayInput
 	// The snippet in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	// Source hip
 	SourceHips pulumi.StringArrayInput
@@ -666,7 +646,7 @@ type DecryptionRuleArgs struct {
 	Sources pulumi.StringArrayInput
 	// The tags associated with the decryption rule
 	Tags pulumi.StringArrayInput
-	// The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `"before"` or `"after"`.
+	// UUID of the rule to position this rule relative to. Required when `relativePosition` is `"before"` or `"after"`.
 	TargetRule pulumi.StringPtrInput
 	// The destination security zone
 	Tos pulumi.StringArrayInput
@@ -761,7 +741,7 @@ func (o DecryptionRuleOutput) ToDecryptionRuleOutputWithContext(ctx context.Cont
 	return o
 }
 
-// The action to be taken
+// The action to be taken. Possible values are `decrypt` and `no-decrypt`.
 func (o DecryptionRuleOutput) Action() pulumi.StringOutput {
 	return o.ApplyT(func(v *DecryptionRule) pulumi.StringOutput { return v.Action }).(pulumi.StringOutput)
 }
@@ -797,8 +777,6 @@ func (o DecryptionRuleOutput) Disabled() pulumi.BoolPtrOutput {
 }
 
 // The folder in which the resource is defined
-//
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o DecryptionRuleOutput) Folder() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *DecryptionRule) pulumi.StringPtrOutput { return v.Folder }).(pulumi.StringPtrOutput)
 }
@@ -838,7 +816,7 @@ func (o DecryptionRuleOutput) NegateSource() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *DecryptionRule) pulumi.BoolPtrOutput { return v.NegateSource }).(pulumi.BoolPtrOutput)
 }
 
-// The position of a security rule
+// The position of a security rule. Possible values are `pre` and `post`.
 func (o DecryptionRuleOutput) Position() pulumi.StringOutput {
 	return o.ApplyT(func(v *DecryptionRule) pulumi.StringOutput { return v.Position }).(pulumi.StringOutput)
 }
@@ -859,8 +837,6 @@ func (o DecryptionRuleOutput) Services() pulumi.StringArrayOutput {
 }
 
 // The snippet in which the resource is defined
-//
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o DecryptionRuleOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *DecryptionRule) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)
 }
@@ -885,7 +861,7 @@ func (o DecryptionRuleOutput) Tags() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v *DecryptionRule) pulumi.StringArrayOutput { return v.Tags }).(pulumi.StringArrayOutput)
 }
 
-// The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `"before"` or `"after"`.
+// UUID of the rule to position this rule relative to. Required when `relativePosition` is `"before"` or `"after"`.
 func (o DecryptionRuleOutput) TargetRule() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *DecryptionRule) pulumi.StringPtrOutput { return v.TargetRule }).(pulumi.StringPtrOutput)
 }

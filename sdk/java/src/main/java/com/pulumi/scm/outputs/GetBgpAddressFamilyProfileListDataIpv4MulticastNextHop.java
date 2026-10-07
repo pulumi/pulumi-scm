@@ -19,8 +19,6 @@ public final class GetBgpAddressFamilyProfileListDataIpv4MulticastNextHop {
     /**
      * @return Self force
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `self` and `selfForce`.
-     * 
      */
     private GetBgpAddressFamilyProfileListDataIpv4MulticastNextHopSelfForce selfForce;
 
@@ -34,8 +32,6 @@ public final class GetBgpAddressFamilyProfileListDataIpv4MulticastNextHop {
     }
     /**
      * @return Self force
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `self` and `selfForce`.
      * 
      */
     public GetBgpAddressFamilyProfileListDataIpv4MulticastNextHopSelfForce selfForce() {

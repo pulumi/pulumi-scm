@@ -132,5 +132,25 @@ namespace Pulumi.Scm
             set => _scope.Set(value);
         }
 
+        private static readonly __Value<string?> _xPanwRegion = new __Value<string?>(() => __config.Get("xPanwRegion"));
+        /// <summary>
+        /// The region for ZTNA Connector API requests (x-panw-region header). Required when using ztna_* resources. Valid values: ae, americas, au, br, ca, ch, cn, de, es, europe, fr, id, il, in, it, jp, kr, pl, qa, sa, sg, tw, uk, za. Environment variable: `X_PANW_REGION`. JSON config file variable: `XPanwRegion`.
+        /// </summary>
+        public static string? XPanwRegion
+        {
+            get => _xPanwRegion.Get();
+            set => _xPanwRegion.Set(value);
+        }
+
+        private static readonly __Value<string?> _ztnaHost = new __Value<string?>(() => __config.Get("ztnaHost"));
+        /// <summary>
+        /// The hostname of the ZTNA Connector API. Required when using ztna_* resources. Default: `api.sase.paloaltonetworks.com`. Environment variable: `ZTNA_HOST`. JSON config file variable: `ZtnaHost`.
+        /// </summary>
+        public static string? ZtnaHost
+        {
+            get => _ztnaHost.Get();
+            set => _ztnaHost.Set(value);
+        }
+
     }
 }

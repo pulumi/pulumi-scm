@@ -18,16 +18,40 @@ public final class GetSyslogServerProfileResult {
      * 
      */
     private String device;
+    /**
+     * @return The folder in which the resource is defined
+     * 
+     */
     private String folder;
+    /**
+     * @return Format
+     * 
+     */
     private GetSyslogServerProfileFormat format;
     /**
      * @return The UUID of the syslog server profile
      * 
      */
     private String id;
+    /**
+     * @return The name of the syslog server profile
+     * 
+     */
     private String name;
+    /**
+     * @return A list of syslog server configurations. At least one server is required.
+     * 
+     */
     private List<GetSyslogServerProfileServer> servers;
+    /**
+     * @return The snippet in which the resource is defined
+     * 
+     */
     private String snippet;
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     private String tfid;
 
     private GetSyslogServerProfileResult() {}
@@ -38,9 +62,17 @@ public final class GetSyslogServerProfileResult {
     public String device() {
         return this.device;
     }
+    /**
+     * @return The folder in which the resource is defined
+     * 
+     */
     public String folder() {
         return this.folder;
     }
+    /**
+     * @return Format
+     * 
+     */
     public GetSyslogServerProfileFormat format() {
         return this.format;
     }
@@ -51,15 +83,31 @@ public final class GetSyslogServerProfileResult {
     public String id() {
         return this.id;
     }
+    /**
+     * @return The name of the syslog server profile
+     * 
+     */
     public String name() {
         return this.name;
     }
+    /**
+     * @return A list of syslog server configurations. At least one server is required.
+     * 
+     */
     public List<GetSyslogServerProfileServer> servers() {
         return this.servers;
     }
+    /**
+     * @return The snippet in which the resource is defined
+     * 
+     */
     public String snippet() {
         return this.snippet;
     }
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     public String tfid() {
         return this.tfid;
     }

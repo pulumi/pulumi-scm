@@ -18,7 +18,7 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly string Id;
         /// <summary>
-        /// The mode of the remote network
+        /// The mode of the remote network. Possible values are `Active` and `Backup`.
         /// </summary>
         public readonly string Mode;
         /// <summary>

@@ -47,11 +47,17 @@ export interface GetAntiSpywareSignatureArgs {
      * The device in which the resource is defined
      */
     device?: string;
+    /**
+     * The folder in which the resource is defined
+     */
     folder?: string;
     /**
      * UUID of the resource
      */
     id: string;
+    /**
+     * The snippet in which the resource is defined
+     */
     snippet?: string;
 }
 
@@ -59,27 +65,69 @@ export interface GetAntiSpywareSignatureArgs {
  * A collection of values returned by getAntiSpywareSignature.
  */
 export interface GetAntiSpywareSignatureResult {
+    /**
+     * Bugtraq
+     */
     readonly bugtraqs: string[];
+    /**
+     * Comment
+     */
     readonly comment: string;
+    /**
+     * Cve
+     */
     readonly cves: string[];
+    /**
+     * anti spyware signature default action
+     */
     readonly defaultAction: outputs.GetAntiSpywareSignatureDefaultAction;
     /**
      * The device in which the resource is defined
      */
     readonly device: string;
+    /**
+     * Direction. Possible values are `client2server`, `server2client` and `both`.
+     */
     readonly direction: string;
+    /**
+     * The folder in which the resource is defined
+     */
     readonly folder: string;
     /**
      * UUID of the resource
      */
     readonly id: string;
+    /**
+     * Reference
+     */
     readonly references: string[];
+    /**
+     * Severity. Possible values are `critical`, `low`, `high`, `medium` and `informational`.
+     */
     readonly severity: string;
+    /**
+     * anti spyware signature
+     */
     readonly signature: outputs.GetAntiSpywareSignatureSignature;
+    /**
+     * The snippet in which the resource is defined
+     */
     readonly snippet: string;
+    /**
+     * The Terraform ID.
+     */
     readonly tfid: string;
+    /**
+     * threat id range \n\n and \n\n
+     */
     readonly threatId: string;
+    /**
+     * Threatname
+     */
     readonly threatname: string;
+    /**
+     * Vendor
+     */
     readonly vendors: string[];
 }
 /**
@@ -123,10 +171,16 @@ export interface GetAntiSpywareSignatureOutputArgs {
      * The device in which the resource is defined
      */
     device?: pulumi.Input<string | undefined>;
+    /**
+     * The folder in which the resource is defined
+     */
     folder?: pulumi.Input<string | undefined>;
     /**
      * UUID of the resource
      */
     id: pulumi.Input<string>;
+    /**
+     * The snippet in which the resource is defined
+     */
     snippet?: pulumi.Input<string | undefined>;
 }

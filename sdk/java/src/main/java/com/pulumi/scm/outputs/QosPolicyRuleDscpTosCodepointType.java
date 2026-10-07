@@ -23,28 +23,20 @@ public final class QosPolicyRuleDscpTosCodepointType {
     /**
      * @return Cs
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `af`, `cs`, `custom`, `ef`, and `tos`.
-     * 
      */
     private @Nullable QosPolicyRuleDscpTosCodepointTypeCs cs;
     /**
      * @return Custom
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `af`, `cs`, `custom`, `ef`, and `tos`.
      * 
      */
     private @Nullable QosPolicyRuleDscpTosCodepointTypeCustom custom;
     /**
      * @return Ef
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `af`, `cs`, `custom`, `ef`, and `tos`.
-     * 
      */
     private @Nullable QosPolicyRuleDscpTosCodepointTypeEf ef;
     /**
      * @return Tos
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `af`, `cs`, `custom`, `ef`, and `tos`.
      * 
      */
     private @Nullable QosPolicyRuleDscpTosCodepointTypeTos tos;
@@ -60,16 +52,12 @@ public final class QosPolicyRuleDscpTosCodepointType {
     /**
      * @return Cs
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `af`, `cs`, `custom`, `ef`, and `tos`.
-     * 
      */
     public Optional<QosPolicyRuleDscpTosCodepointTypeCs> cs() {
         return Optional.ofNullable(this.cs);
     }
     /**
      * @return Custom
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `af`, `cs`, `custom`, `ef`, and `tos`.
      * 
      */
     public Optional<QosPolicyRuleDscpTosCodepointTypeCustom> custom() {
@@ -78,16 +66,12 @@ public final class QosPolicyRuleDscpTosCodepointType {
     /**
      * @return Ef
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `af`, `cs`, `custom`, `ef`, and `tos`.
-     * 
      */
     public Optional<QosPolicyRuleDscpTosCodepointTypeEf> ef() {
         return Optional.ofNullable(this.ef);
     }
     /**
      * @return Tos
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `af`, `cs`, `custom`, `ef`, and `tos`.
      * 
      */
     public Optional<QosPolicyRuleDscpTosCodepointTypeTos> tos() {

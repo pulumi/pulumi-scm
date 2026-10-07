@@ -129,6 +129,9 @@ namespace Pulumi.Scm
         [Input("device")]
         public string? Device { get; set; }
 
+        /// <summary>
+        /// The folder in which the resource is defined
+        /// </summary>
         [Input("folder")]
         public string? Folder { get; set; }
 
@@ -138,9 +141,15 @@ namespace Pulumi.Scm
         [Input("id", required: true)]
         public string Id { get; set; } = null!;
 
+        /// <summary>
+        /// Interface name
+        /// </summary>
         [Input("name")]
         public string? Name { get; set; }
 
+        /// <summary>
+        /// The snippet in which the resource is defined
+        /// </summary>
         [Input("snippet")]
         public string? Snippet { get; set; }
 
@@ -158,6 +167,9 @@ namespace Pulumi.Scm
         [Input("device")]
         public Input<string>? Device { get; set; }
 
+        /// <summary>
+        /// The folder in which the resource is defined
+        /// </summary>
         [Input("folder")]
         public Input<string>? Folder { get; set; }
 
@@ -167,9 +179,15 @@ namespace Pulumi.Scm
         [Input("id", required: true)]
         public Input<string> Id { get; set; } = null!;
 
+        /// <summary>
+        /// Interface name
+        /// </summary>
         [Input("name")]
         public Input<string>? Name { get; set; }
 
+        /// <summary>
+        /// The snippet in which the resource is defined
+        /// </summary>
         [Input("snippet")]
         public Input<string>? Snippet { get; set; }
 
@@ -183,28 +201,73 @@ namespace Pulumi.Scm
     [OutputType]
     public sealed class GetEthernetInterfaceResult
     {
+        /// <summary>
+        /// Aggregate group
+        /// </summary>
         public readonly string AggregateGroup;
+        /// <summary>
+        /// Interface description
+        /// </summary>
         public readonly string Comment;
+        /// <summary>
+        /// Default interface assignment
+        /// </summary>
         public readonly string DefaultValue;
         /// <summary>
         /// The device in which the resource is defined
         /// </summary>
         public readonly string Device;
+        /// <summary>
+        /// Map of sensitive values returned from the API.
+        /// </summary>
         public readonly ImmutableDictionary<string, string> EncryptedValues;
+        /// <summary>
+        /// The folder in which the resource is defined
+        /// </summary>
         public readonly string Folder;
         /// <summary>
         /// UUID of the resource
         /// </summary>
         public readonly string Id;
+        /// <summary>
+        /// Layer2
+        /// </summary>
         public readonly Outputs.GetEthernetInterfaceLayer2Result Layer2;
+        /// <summary>
+        /// Ethernet Interface Layer 3 configuration
+        /// </summary>
         public readonly Outputs.GetEthernetInterfaceLayer3Result Layer3;
+        /// <summary>
+        /// Link duplex. Possible values are `Auto`, `Half` and `Full`.
+        /// </summary>
         public readonly string LinkDuplex;
+        /// <summary>
+        /// Link speed. Possible values are `Auto`, `10`, `100`, `1000`, `10000`, `40000` and `100000`.
+        /// </summary>
         public readonly string LinkSpeed;
+        /// <summary>
+        /// Link state. Possible values are `Auto`, `Up` and `Down`.
+        /// </summary>
         public readonly string LinkState;
+        /// <summary>
+        /// Interface name
+        /// </summary>
         public readonly string Name;
+        /// <summary>
+        /// Poe
+        /// </summary>
         public readonly Outputs.GetEthernetInterfacePoeResult Poe;
+        /// <summary>
+        /// The snippet in which the resource is defined
+        /// </summary>
         public readonly string Snippet;
+        /// <summary>
+        /// Tap
+        /// </summary>
         public readonly Outputs.GetEthernetInterfaceTapResult Tap;
+        /// <summary>
+        /// The Terraform ID.
+        /// </summary>
         public readonly string Tfid;
 
         [OutputConstructor]

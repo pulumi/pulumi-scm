@@ -29,7 +29,7 @@ public final class GetGeneralSettingGeneral {
      */
     private GetGeneralSettingGeneralGeoLocation geoLocation;
     /**
-     * @return Locale
+     * @return Locale. Possible values are `en`, `es`, `ja`, `fr`, `zh_CN` and `zh_TW`.
      * 
      */
     private String locale;
@@ -77,7 +77,7 @@ public final class GetGeneralSettingGeneral {
         return this.geoLocation;
     }
     /**
-     * @return Locale
+     * @return Locale. Possible values are `en`, `es`, `ja`, `fr`, `zh_CN` and `zh_TW`.
      * 
      */
     public String locale() {

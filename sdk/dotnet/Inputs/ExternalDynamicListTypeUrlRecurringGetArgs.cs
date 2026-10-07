@@ -20,32 +20,24 @@ namespace Pulumi.Scm.Inputs
 
         /// <summary>
         /// Five minute settings for URL recurring
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Daily`, `FiveMinute`, `Hourly`, `Monthly`, and `Weekly`.
         /// </summary>
         [Input("fiveMinute")]
         public Input<Inputs.ExternalDynamicListTypeUrlRecurringFiveMinuteGetArgs>? FiveMinute { get; set; }
 
         /// <summary>
         /// Hourly settings for URL recurring
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Daily`, `FiveMinute`, `Hourly`, `Monthly`, and `Weekly`.
         /// </summary>
         [Input("hourly")]
         public Input<Inputs.ExternalDynamicListTypeUrlRecurringHourlyGetArgs>? Hourly { get; set; }
 
         /// <summary>
         /// Monthly settings for URL recurring
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Daily`, `FiveMinute`, `Hourly`, `Monthly`, and `Weekly`.
         /// </summary>
         [Input("monthly")]
         public Input<Inputs.ExternalDynamicListTypeUrlRecurringMonthlyGetArgs>? Monthly { get; set; }
 
         /// <summary>
         /// Weekly settings for URL recurring
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Daily`, `FiveMinute`, `Hourly`, `Monthly`, and `Weekly`.
         /// </summary>
         [Input("weekly")]
         public Input<Inputs.ExternalDynamicListTypeUrlRecurringWeeklyGetArgs>? Weekly { get; set; }

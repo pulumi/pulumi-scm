@@ -34,16 +34,12 @@ public final class ServiceSettingServicesDnsSettingArgs extends com.pulumi.resou
     /**
      * Servers
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `dnsProxyObject` and `servers`.
-     * 
      */
     @Import(name="servers")
     private @Nullable Output<ServiceSettingServicesDnsSettingServersArgs> servers;
 
     /**
      * @return Servers
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `dnsProxyObject` and `servers`.
      * 
      */
     public Optional<Output<ServiceSettingServicesDnsSettingServersArgs>> servers() {
@@ -99,8 +95,6 @@ public final class ServiceSettingServicesDnsSettingArgs extends com.pulumi.resou
         /**
          * @param servers Servers
          * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `dnsProxyObject` and `servers`.
-         * 
          * @return builder
          * 
          */
@@ -111,8 +105,6 @@ public final class ServiceSettingServicesDnsSettingArgs extends com.pulumi.resou
 
         /**
          * @param servers Servers
-         * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `dnsProxyObject` and `servers`.
          * 
          * @return builder
          * 

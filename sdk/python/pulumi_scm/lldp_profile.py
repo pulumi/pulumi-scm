@@ -33,14 +33,10 @@ class LldpProfileArgs:
 
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] mode: LLDP mode
         :param pulumi.Input[_builtins.str] name: LLDP profile name
         :param pulumi.Input['LldpProfileOptionTlvsArgs'] option_tlvs: Option tlvs
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.bool] snmp_syslog_notification: SNMP syslog notification
         """
         if device is not None:
@@ -75,8 +71,6 @@ class LldpProfileArgs:
     def folder(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
-
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
 
@@ -125,8 +119,6 @@ class LldpProfileArgs:
     def snippet(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
-
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
 
@@ -163,14 +155,10 @@ class _LldpProfileState:
 
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] mode: LLDP mode
         :param pulumi.Input[_builtins.str] name: LLDP profile name
         :param pulumi.Input['LldpProfileOptionTlvsArgs'] option_tlvs: Option tlvs
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.bool] snmp_syslog_notification: SNMP syslog notification
         :param pulumi.Input[_builtins.str] tfid: The Terraform ID.
         """
@@ -208,8 +196,6 @@ class _LldpProfileState:
     def folder(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
-
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
 
@@ -258,8 +244,6 @@ class _LldpProfileState:
     def snippet(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
-
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
 
@@ -358,14 +342,10 @@ class LldpProfile(pulumi.CustomResource):
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] mode: LLDP mode
         :param pulumi.Input[_builtins.str] name: LLDP profile name
         :param pulumi.Input[Union['LldpProfileOptionTlvsArgs', 'LldpProfileOptionTlvsArgsDict', 'outputs.LldpProfileOptionTlvs']] option_tlvs: Option tlvs
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.bool] snmp_syslog_notification: SNMP syslog notification
         """
         ...
@@ -488,14 +468,10 @@ class LldpProfile(pulumi.CustomResource):
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] mode: LLDP mode
         :param pulumi.Input[_builtins.str] name: LLDP profile name
         :param pulumi.Input[Union['LldpProfileOptionTlvsArgs', 'LldpProfileOptionTlvsArgsDict', 'outputs.LldpProfileOptionTlvs']] option_tlvs: Option tlvs
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.bool] snmp_syslog_notification: SNMP syslog notification
         :param pulumi.Input[_builtins.str] tfid: The Terraform ID.
         """
@@ -526,8 +502,6 @@ class LldpProfile(pulumi.CustomResource):
     def folder(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
-
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
 
@@ -560,8 +534,6 @@ class LldpProfile(pulumi.CustomResource):
     def snippet(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
-
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
 

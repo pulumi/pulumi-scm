@@ -97,13 +97,13 @@ namespace Pulumi.Scm.Inputs
         public Input<bool>? KeyxchgAlgoRsa { get; set; }
 
         /// <summary>
-        /// Max version
+        /// Max version. Possible values are `Sslv3`, `tls1-0`, `tls1-1`, `tls1-2`, `tls1-3` and `Max`.
         /// </summary>
         [Input("maxVersion")]
         public Input<string>? MaxVersion { get; set; }
 
         /// <summary>
-        /// Min version
+        /// Min version. Possible values are `Sslv3`, `tls1-0`, `tls1-1`, `tls1-2` and `tls1-3`.
         /// </summary>
         [Input("minVersion")]
         public Input<string>? MinVersion { get; set; }

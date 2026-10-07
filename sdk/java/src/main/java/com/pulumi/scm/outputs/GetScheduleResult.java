@@ -16,15 +16,35 @@ public final class GetScheduleResult {
      * 
      */
     private String device;
+    /**
+     * @return The folder in which the resource is defined
+     * 
+     */
     private String folder;
     /**
      * @return The UUID of the schedule
      * 
      */
     private String id;
+    /**
+     * @return The name of the schedule
+     * 
+     */
     private String name;
+    /**
+     * @return Schedule type
+     * 
+     */
     private GetScheduleScheduleType scheduleType;
+    /**
+     * @return The snippet in which the resource is defined
+     * 
+     */
     private String snippet;
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     private String tfid;
 
     private GetScheduleResult() {}
@@ -35,6 +55,10 @@ public final class GetScheduleResult {
     public String device() {
         return this.device;
     }
+    /**
+     * @return The folder in which the resource is defined
+     * 
+     */
     public String folder() {
         return this.folder;
     }
@@ -45,15 +69,31 @@ public final class GetScheduleResult {
     public String id() {
         return this.id;
     }
+    /**
+     * @return The name of the schedule
+     * 
+     */
     public String name() {
         return this.name;
     }
+    /**
+     * @return Schedule type
+     * 
+     */
     public GetScheduleScheduleType scheduleType() {
         return this.scheduleType;
     }
+    /**
+     * @return The snippet in which the resource is defined
+     * 
+     */
     public String snippet() {
         return this.snippet;
     }
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     public String tfid() {
         return this.tfid;
     }

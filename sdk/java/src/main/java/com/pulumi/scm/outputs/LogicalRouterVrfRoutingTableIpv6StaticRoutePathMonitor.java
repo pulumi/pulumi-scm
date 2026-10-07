@@ -21,7 +21,7 @@ public final class LogicalRouterVrfRoutingTableIpv6StaticRoutePathMonitor {
      */
     private @Nullable Boolean enable;
     /**
-     * @return Failure condition
+     * @return Failure condition. Possible values are `any` and `all`.
      * 
      */
     private @Nullable String failureCondition;
@@ -45,7 +45,7 @@ public final class LogicalRouterVrfRoutingTableIpv6StaticRoutePathMonitor {
         return Optional.ofNullable(this.enable);
     }
     /**
-     * @return Failure condition
+     * @return Failure condition. Possible values are `any` and `all`.
      * 
      */
     public Optional<String> failureCondition() {

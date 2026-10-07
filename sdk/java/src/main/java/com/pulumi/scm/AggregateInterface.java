@@ -32,10 +32,14 @@ import javax.annotation.Nullable;
  * import com.pulumi.scm.AggregateInterfaceArgs;
  * import com.pulumi.scm.inputs.AggregateInterfaceLayer2Args;
  * import com.pulumi.scm.inputs.AggregateInterfaceLayer2LacpArgs;
+ * import com.pulumi.scm.inputs.AggregateInterfaceLayer2LacpHighAvailabilityArgs;
+ * import com.pulumi.scm.inputs.AggregateInterfaceLayer2LldpArgs;
  * import com.pulumi.scm.inputs.AggregateInterfaceLayer3Args;
  * import com.pulumi.scm.inputs.AggregateInterfaceLayer3IpArgs;
  * import com.pulumi.scm.inputs.AggregateInterfaceLayer3LacpArgs;
+ * import com.pulumi.scm.inputs.AggregateInterfaceLayer3LacpHighAvailabilityArgs;
  * import com.pulumi.scm.inputs.AggregateInterfaceLayer3DhcpClientArgs;
+ * import com.pulumi.scm.inputs.AggregateInterfaceLayer3AdjustTcpMssArgs;
  * import java.util.ArrayList;
  * import java.util.Arrays;
  * import java.util.Map;
@@ -74,8 +78,13 @@ import javax.annotation.Nullable;
  *                     .fastFailover(true)
  *                     .systenPriority(32768)
  *                     .transmissionRate("fast")
+ *                     .highAvailability(AggregateInterfaceLayer2LacpHighAvailabilityArgs.builder()
+ *                         .passivePreNegotiation(true)
+ *                         .build())
  *                     .build())
- *                 .lldp(Map.of("enable", false))
+ *                 .lldp(AggregateInterfaceLayer2LldpArgs.builder()
+ *                     .enable(false)
+ *                     .build())
  *                 .build())
  *             .build());
  * 
@@ -106,6 +115,9 @@ import javax.annotation.Nullable;
  *                     .fastFailover(true)
  *                     .systenPriority(32768)
  *                     .transmissionRate("fast")
+ *                     .highAvailability(AggregateInterfaceLayer3LacpHighAvailabilityArgs.builder()
+ *                         .passivePreNegotiation(true)
+ *                         .build())
  *                     .build())
  *                 .build())
  *             .build());
@@ -134,11 +146,19 @@ import javax.annotation.Nullable;
  *             .comment("Managed by Pulumi")
  *             .folder("ngfw-shared")
  *             .layer3(AggregateInterfaceLayer3Args.builder()
- *                 .ips(AggregateInterfaceLayer3IpArgs.builder()
- *                     .name("198.18.1.1/24")
- *                     .name("198.18.1.2/32")
- *                     .build())
+ *                 .ips(                
+ *                     AggregateInterfaceLayer3IpArgs.builder()
+ *                         .name("198.18.1.1/24")
+ *                         .build(),
+ *                     AggregateInterfaceLayer3IpArgs.builder()
+ *                         .name("198.18.1.2/32")
+ *                         .build())
  *                 .mtu(1500)
+ *                 .adjustTcpMss(AggregateInterfaceLayer3AdjustTcpMssArgs.builder()
+ *                     .enable(true)
+ *                     .ipv4MssAdjustment(40)
+ *                     .ipv6MssAdjustment(60)
+ *                     .build())
  *                 .build())
  *             .build());
  * 
@@ -217,16 +237,12 @@ public class AggregateInterface extends com.pulumi.resources.CustomResource {
     /**
      * The folder in which the resource is defined
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
      */
     @Export(name="folder", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> folder;
 
     /**
      * @return The folder in which the resource is defined
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public Output<Optional<String>> folder() {
@@ -235,16 +251,12 @@ public class AggregateInterface extends com.pulumi.resources.CustomResource {
     /**
      * Layer2
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `layer2` and `layer3`.
-     * 
      */
     @Export(name="layer2", refs={AggregateInterfaceLayer2.class}, tree="[0]")
     private Output</* @Nullable */ AggregateInterfaceLayer2> layer2;
 
     /**
      * @return Layer2
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `layer2` and `layer3`.
      * 
      */
     public Output<Optional<AggregateInterfaceLayer2>> layer2() {
@@ -253,16 +265,12 @@ public class AggregateInterface extends com.pulumi.resources.CustomResource {
     /**
      * Aggregate Interface Layer 3 configuration
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `layer2` and `layer3`.
-     * 
      */
     @Export(name="layer3", refs={AggregateInterfaceLayer3.class}, tree="[0]")
     private Output</* @Nullable */ AggregateInterfaceLayer3> layer3;
 
     /**
      * @return Aggregate Interface Layer 3 configuration
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `layer2` and `layer3`.
      * 
      */
     public Output<Optional<AggregateInterfaceLayer3>> layer3() {
@@ -285,16 +293,12 @@ public class AggregateInterface extends com.pulumi.resources.CustomResource {
     /**
      * The snippet in which the resource is defined
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
      */
     @Export(name="snippet", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> snippet;
 
     /**
      * @return The snippet in which the resource is defined
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public Output<Optional<String>> snippet() {

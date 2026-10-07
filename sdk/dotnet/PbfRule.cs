@@ -252,8 +252,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The folder in which the resource is defined
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Output("folder")]
         public Output<string?> Folder { get; private set; } = null!;
@@ -271,6 +269,18 @@ namespace Pulumi.Scm
         public Output<string> Name { get; private set; } = null!;
 
         /// <summary>
+        /// Negate destination address
+        /// </summary>
+        [Output("negateDestination")]
+        public Output<bool> NegateDestination { get; private set; } = null!;
+
+        /// <summary>
+        /// Negate source address
+        /// </summary>
+        [Output("negateSource")]
+        public Output<bool> NegateSource { get; private set; } = null!;
+
+        /// <summary>
         /// Schedule
         /// </summary>
         [Output("schedule")]
@@ -284,8 +294,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The snippet in which the resource is defined
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Output("snippet")]
         public Output<string?> Snippet { get; private set; } = null!;
@@ -410,8 +418,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The folder in which the resource is defined
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("folder")]
         public Input<string>? Folder { get; set; }
@@ -427,6 +433,18 @@ namespace Pulumi.Scm
         /// </summary>
         [Input("name")]
         public Input<string>? Name { get; set; }
+
+        /// <summary>
+        /// Negate destination address
+        /// </summary>
+        [Input("negateDestination")]
+        public Input<bool>? NegateDestination { get; set; }
+
+        /// <summary>
+        /// Negate source address
+        /// </summary>
+        [Input("negateSource")]
+        public Input<bool>? NegateSource { get; set; }
 
         /// <summary>
         /// Schedule
@@ -448,8 +466,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The snippet in which the resource is defined
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("snippet")]
         public Input<string>? Snippet { get; set; }
@@ -548,8 +564,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The folder in which the resource is defined
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("folder")]
         public Input<string>? Folder { get; set; }
@@ -565,6 +579,18 @@ namespace Pulumi.Scm
         /// </summary>
         [Input("name")]
         public Input<string>? Name { get; set; }
+
+        /// <summary>
+        /// Negate destination address
+        /// </summary>
+        [Input("negateDestination")]
+        public Input<bool>? NegateDestination { get; set; }
+
+        /// <summary>
+        /// Negate source address
+        /// </summary>
+        [Input("negateSource")]
+        public Input<bool>? NegateSource { get; set; }
 
         /// <summary>
         /// Schedule
@@ -586,8 +612,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The snippet in which the resource is defined
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("snippet")]
         public Input<string>? Snippet { get; set; }

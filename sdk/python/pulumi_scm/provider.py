@@ -28,7 +28,9 @@ class ProviderArgs:
                  logging: pulumi.Input[Optional[_builtins.str]] = None,
                  port: pulumi.Input[Optional[_builtins.int]] = None,
                  protocol: pulumi.Input[Optional[_builtins.str]] = None,
-                 scope: pulumi.Input[Optional[_builtins.str]] = None):
+                 scope: pulumi.Input[Optional[_builtins.str]] = None,
+                 x_panw_region: pulumi.Input[Optional[_builtins.str]] = None,
+                 ztna_host: pulumi.Input[Optional[_builtins.str]] = None):
         """
         The set of arguments for constructing a Provider resource.
 
@@ -42,6 +44,8 @@ class ProviderArgs:
         :param pulumi.Input[_builtins.int] port: The port number to use for API commands, if non-standard for the given protocol. Environment variable: `SCM_PORT`. JSON config file variable: `port`.
         :param pulumi.Input[_builtins.str] protocol: The protocol to use for SCM. This should be 'http' or 'https'. Default: `https`. Environment variable: `SCM_PROTOCOL`. JSON config file variable: `protocol`.
         :param pulumi.Input[_builtins.str] scope: The client scope. Environment variable: `SCM_SCOPE`. JSON config file variable: `scope`.
+        :param pulumi.Input[_builtins.str] x_panw_region: The region for ZTNA Connector API requests (x-panw-region header). Required when using ztna_* resources. Valid values: ae, americas, au, br, ca, ch, cn, de, es, europe, fr, id, il, in, it, jp, kr, pl, qa, sa, sg, tw, uk, za. Environment variable: `X_PANW_REGION`. JSON config file variable: `x_panw_region`.
+        :param pulumi.Input[_builtins.str] ztna_host: The hostname of the ZTNA Connector API. Required when using ztna_* resources. Default: `api.sase.paloaltonetworks.com`. Environment variable: `ZTNA_HOST`. JSON config file variable: `ztna_host`.
         """
         if auth_file is not None:
             pulumi.set(__self__, "auth_file", auth_file)
@@ -63,6 +67,10 @@ class ProviderArgs:
             pulumi.set(__self__, "protocol", protocol)
         if scope is not None:
             pulumi.set(__self__, "scope", scope)
+        if x_panw_region is not None:
+            pulumi.set(__self__, "x_panw_region", x_panw_region)
+        if ztna_host is not None:
+            pulumi.set(__self__, "ztna_host", ztna_host)
 
     @_builtins.property
     @pulumi.getter(name="authFile")
@@ -184,6 +192,30 @@ class ProviderArgs:
     def scope(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "scope", value)
 
+    @_builtins.property
+    @pulumi.getter(name="xPanwRegion")
+    def x_panw_region(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        The region for ZTNA Connector API requests (x-panw-region header). Required when using ztna_* resources. Valid values: ae, americas, au, br, ca, ch, cn, de, es, europe, fr, id, il, in, it, jp, kr, pl, qa, sa, sg, tw, uk, za. Environment variable: `X_PANW_REGION`. JSON config file variable: `x_panw_region`.
+        """
+        return pulumi.get(self, "x_panw_region")
+
+    @x_panw_region.setter
+    def x_panw_region(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "x_panw_region", value)
+
+    @_builtins.property
+    @pulumi.getter(name="ztnaHost")
+    def ztna_host(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        The hostname of the ZTNA Connector API. Required when using ztna_* resources. Default: `api.sase.paloaltonetworks.com`. Environment variable: `ZTNA_HOST`. JSON config file variable: `ztna_host`.
+        """
+        return pulumi.get(self, "ztna_host")
+
+    @ztna_host.setter
+    def ztna_host(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "ztna_host", value)
+
 
 @pulumi.type_token("pulumi:providers:scm")
 class Provider(pulumi.ProviderResource):
@@ -201,6 +233,8 @@ class Provider(pulumi.ProviderResource):
                  port: pulumi.Input[Optional[_builtins.int]] = None,
                  protocol: pulumi.Input[Optional[_builtins.str]] = None,
                  scope: pulumi.Input[Optional[_builtins.str]] = None,
+                 x_panw_region: pulumi.Input[Optional[_builtins.str]] = None,
+                 ztna_host: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
         The provider type for the scm package. By default, resources use package-wide configuration
@@ -221,6 +255,8 @@ class Provider(pulumi.ProviderResource):
         :param pulumi.Input[_builtins.int] port: The port number to use for API commands, if non-standard for the given protocol. Environment variable: `SCM_PORT`. JSON config file variable: `port`.
         :param pulumi.Input[_builtins.str] protocol: The protocol to use for SCM. This should be 'http' or 'https'. Default: `https`. Environment variable: `SCM_PROTOCOL`. JSON config file variable: `protocol`.
         :param pulumi.Input[_builtins.str] scope: The client scope. Environment variable: `SCM_SCOPE`. JSON config file variable: `scope`.
+        :param pulumi.Input[_builtins.str] x_panw_region: The region for ZTNA Connector API requests (x-panw-region header). Required when using ztna_* resources. Valid values: ae, americas, au, br, ca, ch, cn, de, es, europe, fr, id, il, in, it, jp, kr, pl, qa, sa, sg, tw, uk, za. Environment variable: `X_PANW_REGION`. JSON config file variable: `x_panw_region`.
+        :param pulumi.Input[_builtins.str] ztna_host: The hostname of the ZTNA Connector API. Required when using ztna_* resources. Default: `api.sase.paloaltonetworks.com`. Environment variable: `ZTNA_HOST`. JSON config file variable: `ztna_host`.
         """
         ...
     @overload
@@ -260,6 +296,8 @@ class Provider(pulumi.ProviderResource):
                  port: pulumi.Input[Optional[_builtins.int]] = None,
                  protocol: pulumi.Input[Optional[_builtins.str]] = None,
                  scope: pulumi.Input[Optional[_builtins.str]] = None,
+                 x_panw_region: pulumi.Input[Optional[_builtins.str]] = None,
+                 ztna_host: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -279,6 +317,8 @@ class Provider(pulumi.ProviderResource):
             __props__.__dict__["port"] = pulumi.Output.from_input(port).apply(pulumi.runtime.to_json) if port is not None else None
             __props__.__dict__["protocol"] = protocol
             __props__.__dict__["scope"] = scope
+            __props__.__dict__["x_panw_region"] = x_panw_region
+            __props__.__dict__["ztna_host"] = ztna_host
         secret_opts = pulumi.ResourceOptions(additional_secret_outputs=["clientSecret"])
         opts = pulumi.ResourceOptions.merge(opts, secret_opts)
         super(Provider, __self__).__init__(
@@ -350,6 +390,22 @@ class Provider(pulumi.ProviderResource):
         The client scope. Environment variable: `SCM_SCOPE`. JSON config file variable: `scope`.
         """
         return pulumi.get(self, "scope")
+
+    @_builtins.property
+    @pulumi.getter(name="xPanwRegion")
+    def x_panw_region(self) -> pulumi.Output[Optional[_builtins.str]]:
+        """
+        The region for ZTNA Connector API requests (x-panw-region header). Required when using ztna_* resources. Valid values: ae, americas, au, br, ca, ch, cn, de, es, europe, fr, id, il, in, it, jp, kr, pl, qa, sa, sg, tw, uk, za. Environment variable: `X_PANW_REGION`. JSON config file variable: `x_panw_region`.
+        """
+        return pulumi.get(self, "x_panw_region")
+
+    @_builtins.property
+    @pulumi.getter(name="ztnaHost")
+    def ztna_host(self) -> pulumi.Output[Optional[_builtins.str]]:
+        """
+        The hostname of the ZTNA Connector API. Required when using ztna_* resources. Default: `api.sase.paloaltonetworks.com`. Environment variable: `ZTNA_HOST`. JSON config file variable: `ztna_host`.
+        """
+        return pulumi.get(self, "ztna_host")
 
     @pulumi.output_type
     class TerraformConfigResult:

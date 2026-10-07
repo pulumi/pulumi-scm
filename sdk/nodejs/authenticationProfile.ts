@@ -129,8 +129,6 @@ export class AuthenticationProfile extends pulumi.CustomResource {
     declare public readonly device: pulumi.Output<string | undefined>;
     /**
      * The folder in which the resource is defined
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly folder: pulumi.Output<string | undefined>;
     /**
@@ -155,8 +153,6 @@ export class AuthenticationProfile extends pulumi.CustomResource {
     declare public readonly singleSignOn: pulumi.Output<outputs.AuthenticationProfileSingleSignOn | undefined>;
     /**
      * The snippet in which the resource is defined
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly snippet: pulumi.Output<string | undefined>;
     /**
@@ -168,7 +164,7 @@ export class AuthenticationProfile extends pulumi.CustomResource {
      */
     declare public readonly userDomain: pulumi.Output<string | undefined>;
     /**
-     * Username modifier
+     * Username modifier. Possible values are `%USERINPUT%`, `%USERINPUT%@%USERDOMAIN%` and `%USERDOMAIN%\\%USERINPUT%`.
      */
     declare public readonly usernameModifier: pulumi.Output<string | undefined>;
 
@@ -231,8 +227,6 @@ export interface AuthenticationProfileState {
     device?: pulumi.Input<string | undefined>;
     /**
      * The folder in which the resource is defined
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     folder?: pulumi.Input<string | undefined>;
     /**
@@ -257,8 +251,6 @@ export interface AuthenticationProfileState {
     singleSignOn?: pulumi.Input<inputs.AuthenticationProfileSingleSignOn | undefined>;
     /**
      * The snippet in which the resource is defined
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     snippet?: pulumi.Input<string | undefined>;
     /**
@@ -270,7 +262,7 @@ export interface AuthenticationProfileState {
      */
     userDomain?: pulumi.Input<string | undefined>;
     /**
-     * Username modifier
+     * Username modifier. Possible values are `%USERINPUT%`, `%USERINPUT%@%USERDOMAIN%` and `%USERDOMAIN%\\%USERINPUT%`.
      */
     usernameModifier?: pulumi.Input<string | undefined>;
 }
@@ -289,8 +281,6 @@ export interface AuthenticationProfileArgs {
     device?: pulumi.Input<string | undefined>;
     /**
      * The folder in which the resource is defined
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     folder?: pulumi.Input<string | undefined>;
     /**
@@ -315,8 +305,6 @@ export interface AuthenticationProfileArgs {
     singleSignOn?: pulumi.Input<inputs.AuthenticationProfileSingleSignOn | undefined>;
     /**
      * The snippet in which the resource is defined
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     snippet?: pulumi.Input<string | undefined>;
     /**
@@ -324,7 +312,7 @@ export interface AuthenticationProfileArgs {
      */
     userDomain?: pulumi.Input<string | undefined>;
     /**
-     * Username modifier
+     * Username modifier. Possible values are `%USERINPUT%`, `%USERINPUT%@%USERDOMAIN%` and `%USERDOMAIN%\\%USERINPUT%`.
      */
     usernameModifier?: pulumi.Input<string | undefined>;
 }

@@ -16,14 +16,14 @@ public final class DnsSecurityProfileBotnetDomainsSinkholeArgs extends com.pulum
     public static final DnsSecurityProfileBotnetDomainsSinkholeArgs Empty = new DnsSecurityProfileBotnetDomainsSinkholeArgs();
 
     /**
-     * Ipv4 address
+     * Ipv4 address. Possible values are `127.0.0.1` and `pan-sinkhole-default-ip`.
      * 
      */
     @Import(name="ipv4Address")
     private @Nullable Output<String> ipv4Address;
 
     /**
-     * @return Ipv4 address
+     * @return Ipv4 address. Possible values are `127.0.0.1` and `pan-sinkhole-default-ip`.
      * 
      */
     public Optional<Output<String>> ipv4Address() {
@@ -31,14 +31,14 @@ public final class DnsSecurityProfileBotnetDomainsSinkholeArgs extends com.pulum
     }
 
     /**
-     * Ipv6 address
+     * Ipv6 address. Possible values are `::1`.
      * 
      */
     @Import(name="ipv6Address")
     private @Nullable Output<String> ipv6Address;
 
     /**
-     * @return Ipv6 address
+     * @return Ipv6 address. Possible values are `::1`.
      * 
      */
     public Optional<Output<String>> ipv6Address() {
@@ -71,7 +71,7 @@ public final class DnsSecurityProfileBotnetDomainsSinkholeArgs extends com.pulum
         }
 
         /**
-         * @param ipv4Address Ipv4 address
+         * @param ipv4Address Ipv4 address. Possible values are `127.0.0.1` and `pan-sinkhole-default-ip`.
          * 
          * @return builder
          * 
@@ -82,7 +82,7 @@ public final class DnsSecurityProfileBotnetDomainsSinkholeArgs extends com.pulum
         }
 
         /**
-         * @param ipv4Address Ipv4 address
+         * @param ipv4Address Ipv4 address. Possible values are `127.0.0.1` and `pan-sinkhole-default-ip`.
          * 
          * @return builder
          * 
@@ -92,7 +92,7 @@ public final class DnsSecurityProfileBotnetDomainsSinkholeArgs extends com.pulum
         }
 
         /**
-         * @param ipv6Address Ipv6 address
+         * @param ipv6Address Ipv6 address. Possible values are `::1`.
          * 
          * @return builder
          * 
@@ -103,7 +103,7 @@ public final class DnsSecurityProfileBotnetDomainsSinkholeArgs extends com.pulum
         }
 
         /**
-         * @param ipv6Address Ipv6 address
+         * @param ipv6Address Ipv6 address. Possible values are `::1`.
          * 
          * @return builder
          * 

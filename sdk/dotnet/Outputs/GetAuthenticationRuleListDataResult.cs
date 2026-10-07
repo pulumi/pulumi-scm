@@ -42,7 +42,7 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly bool Disabled;
         /// <summary>
-        /// The folder of the item. Default: Shared.
+        /// Folder
         /// </summary>
         public readonly string Folder;
         /// <summary>
@@ -70,7 +70,7 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly string LogSetting;
         /// <summary>
-        /// The name of the item.
+        /// The name of the authentication rule
         /// </summary>
         public readonly string Name;
         /// <summary>
@@ -82,7 +82,7 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly bool NegateSource;
         /// <summary>
-        /// The relative position of the rule
+        /// The relative position of the rule. Possible values are `Pre` and `Post`.
         /// </summary>
         public readonly string Position;
         /// <summary>
@@ -94,7 +94,7 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly ImmutableArray<string> Services;
         /// <summary>
-        /// The snippet of the item.
+        /// Snippet
         /// </summary>
         public readonly string Snippet;
         /// <summary>
@@ -114,7 +114,7 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly ImmutableArray<string> Tags;
         /// <summary>
-        /// The name or UUID of the rule to position this rule relative to. Required when `RelativePosition` is `"before"` or `"after"`.
+        /// UUID of the rule to position this rule relative to. Required when `RelativePosition` is `"before"` or `"after"`.
         /// </summary>
         public readonly string TargetRule;
         /// <summary>

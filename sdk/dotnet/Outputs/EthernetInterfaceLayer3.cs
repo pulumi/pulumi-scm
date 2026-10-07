@@ -14,6 +14,10 @@ namespace Pulumi.Scm.Outputs
     public sealed class EthernetInterfaceLayer3
     {
         /// <summary>
+        /// TCP MSS adjustment settings for the interface
+        /// </summary>
+        public readonly Outputs.EthernetInterfaceLayer3AdjustTcpMss? AdjustTcpMss;
+        /// <summary>
         /// Ethernet Interfaces ARP configuration
         /// </summary>
         public readonly ImmutableArray<Outputs.EthernetInterfaceLayer3Arp> Arps;
@@ -31,10 +35,12 @@ namespace Pulumi.Scm.Outputs
         public readonly string? InterfaceManagementProfile;
         /// <summary>
         /// Ethernet Interface IP addresses
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `DhcpClient`, `Ip`, and `Pppoe`.
         /// </summary>
         public readonly ImmutableArray<Outputs.EthernetInterfaceLayer3Ip> Ips;
+        /// <summary>
+        /// LLDP settings for the interface
+        /// </summary>
+        public readonly Outputs.EthernetInterfaceLayer3Lldp? Lldp;
         /// <summary>
         /// MTU
         /// </summary>
@@ -44,14 +50,14 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly string? NetflowProfile;
         /// <summary>
-        /// Pppoe
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `DhcpClient`, `Ip`, and `Pppoe`.
+        /// PPPoE configuration for the interface
         /// </summary>
         public readonly Outputs.EthernetInterfaceLayer3Pppoe? Pppoe;
 
         [OutputConstructor]
         private EthernetInterfaceLayer3(
+            Outputs.EthernetInterfaceLayer3AdjustTcpMss? adjustTcpMss,
+
             ImmutableArray<Outputs.EthernetInterfaceLayer3Arp> arps,
 
             Outputs.EthernetInterfaceLayer3DdnsConfig? ddnsConfig,
@@ -62,17 +68,21 @@ namespace Pulumi.Scm.Outputs
 
             ImmutableArray<Outputs.EthernetInterfaceLayer3Ip> ips,
 
+            Outputs.EthernetInterfaceLayer3Lldp? lldp,
+
             int? mtu,
 
             string? netflowProfile,
 
             Outputs.EthernetInterfaceLayer3Pppoe? pppoe)
         {
+            AdjustTcpMss = adjustTcpMss;
             Arps = arps;
             DdnsConfig = ddnsConfig;
             DhcpClient = dhcpClient;
             InterfaceManagementProfile = interfaceManagementProfile;
             Ips = ips;
+            Lldp = lldp;
             Mtu = mtu;
             NetflowProfile = netflowProfile;
             Pppoe = pppoe;

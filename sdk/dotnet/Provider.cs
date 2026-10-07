@@ -66,6 +66,18 @@ namespace Pulumi.Scm
         [Output("scope")]
         public Output<string?> Scope { get; private set; } = null!;
 
+        /// <summary>
+        /// The region for ZTNA Connector API requests (x-panw-region header). Required when using ztna_* resources. Valid values: ae, americas, au, br, ca, ch, cn, de, es, europe, fr, id, il, in, it, jp, kr, pl, qa, sa, sg, tw, uk, za. Environment variable: `X_PANW_REGION`. JSON config file variable: `XPanwRegion`.
+        /// </summary>
+        [Output("xPanwRegion")]
+        public Output<string?> XPanwRegion { get; private set; } = null!;
+
+        /// <summary>
+        /// The hostname of the ZTNA Connector API. Required when using ztna_* resources. Default: `api.sase.paloaltonetworks.com`. Environment variable: `ZTNA_HOST`. JSON config file variable: `ZtnaHost`.
+        /// </summary>
+        [Output("ztnaHost")]
+        public Output<string?> ZtnaHost { get; private set; } = null!;
+
 
         /// <summary>
         /// Create a Provider resource with the given unique name, arguments, and options.
@@ -179,6 +191,18 @@ namespace Pulumi.Scm
         /// </summary>
         [Input("scope")]
         public Input<string>? Scope { get; set; }
+
+        /// <summary>
+        /// The region for ZTNA Connector API requests (x-panw-region header). Required when using ztna_* resources. Valid values: ae, americas, au, br, ca, ch, cn, de, es, europe, fr, id, il, in, it, jp, kr, pl, qa, sa, sg, tw, uk, za. Environment variable: `X_PANW_REGION`. JSON config file variable: `XPanwRegion`.
+        /// </summary>
+        [Input("xPanwRegion")]
+        public Input<string>? XPanwRegion { get; set; }
+
+        /// <summary>
+        /// The hostname of the ZTNA Connector API. Required when using ztna_* resources. Default: `api.sase.paloaltonetworks.com`. Environment variable: `ZTNA_HOST`. JSON config file variable: `ZtnaHost`.
+        /// </summary>
+        [Input("ztnaHost")]
+        public Input<string>? ZtnaHost { get; set; }
 
         public ProviderArgs()
         {

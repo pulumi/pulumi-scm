@@ -167,11 +167,11 @@ type ForwardingProfileRegionalAndCustomProxy struct {
 	ConnectivityPreferences ForwardingProfileRegionalAndCustomProxyConnectivityPreferenceArrayOutput `pulumi:"connectivityPreferences"`
 	// regional and custom proxy configuration description
 	Description pulumi.StringPtrOutput `pulumi:"description"`
-	// Behavior when proxy connection fails - 'fail-open' allows direct internet access, 'fail-safe' blocks traffic until proxy is restored
+	// Behavior when proxy connection fails - 'fail-open' allows direct internet access, 'fail-safe' blocks traffic until proxy is restored. Possible values are `fail-open` and `fail-safe`.
 	FallbackOption pulumi.StringPtrOutput `pulumi:"fallbackOption"`
-	// The folder in which the resource is defined
+	// The folder in which the resource is defined. Possible values are `Mobile Users`.
 	Folder pulumi.StringOutput `pulumi:"folder"`
-	// Strategy for selecting Prisma Access location - 'best-available-pa-location' automatically selects optimal location, 'specific-pa-location' uses predefined locations
+	// Strategy for selecting Prisma Access location - 'best-available-pa-location' automatically selects optimal location, 'specific-pa-location' uses predefined locations. Possible values are `best-available-pa-location` and `specific-pa-location`.
 	LocationPreference pulumi.StringPtrOutput `pulumi:"locationPreference"`
 	// alphanumeric string [ 0-9a-zA-Z ._-]
 	Name pulumi.StringOutput `pulumi:"name"`
@@ -183,7 +183,7 @@ type ForwardingProfileRegionalAndCustomProxy struct {
 	Proxy2 ForwardingProfileRegionalAndCustomProxyProxy2PtrOutput `pulumi:"proxy2"`
 	// The Terraform ID.
 	Tfid pulumi.StringOutput `pulumi:"tfid"`
-	// Proxy configuration type - 'gp-and-pac' for GlobalProtect and PAC file forwarding, 'ztna-agent' for ZTNA agent forwarding
+	// Proxy configuration type - 'gp-and-pac' for GlobalProtect and PAC file forwarding, 'ztna-agent' for ZTNA agent forwarding. Possible values are `gp-and-pac` and `ztna-agent`.
 	Type pulumi.StringOutput `pulumi:"type"`
 }
 
@@ -221,11 +221,11 @@ type forwardingProfileRegionalAndCustomProxyState struct {
 	ConnectivityPreferences []ForwardingProfileRegionalAndCustomProxyConnectivityPreference `pulumi:"connectivityPreferences"`
 	// regional and custom proxy configuration description
 	Description *string `pulumi:"description"`
-	// Behavior when proxy connection fails - 'fail-open' allows direct internet access, 'fail-safe' blocks traffic until proxy is restored
+	// Behavior when proxy connection fails - 'fail-open' allows direct internet access, 'fail-safe' blocks traffic until proxy is restored. Possible values are `fail-open` and `fail-safe`.
 	FallbackOption *string `pulumi:"fallbackOption"`
-	// The folder in which the resource is defined
+	// The folder in which the resource is defined. Possible values are `Mobile Users`.
 	Folder *string `pulumi:"folder"`
-	// Strategy for selecting Prisma Access location - 'best-available-pa-location' automatically selects optimal location, 'specific-pa-location' uses predefined locations
+	// Strategy for selecting Prisma Access location - 'best-available-pa-location' automatically selects optimal location, 'specific-pa-location' uses predefined locations. Possible values are `best-available-pa-location` and `specific-pa-location`.
 	LocationPreference *string `pulumi:"locationPreference"`
 	// alphanumeric string [ 0-9a-zA-Z ._-]
 	Name *string `pulumi:"name"`
@@ -237,7 +237,7 @@ type forwardingProfileRegionalAndCustomProxyState struct {
 	Proxy2 *ForwardingProfileRegionalAndCustomProxyProxy2 `pulumi:"proxy2"`
 	// The Terraform ID.
 	Tfid *string `pulumi:"tfid"`
-	// Proxy configuration type - 'gp-and-pac' for GlobalProtect and PAC file forwarding, 'ztna-agent' for ZTNA agent forwarding
+	// Proxy configuration type - 'gp-and-pac' for GlobalProtect and PAC file forwarding, 'ztna-agent' for ZTNA agent forwarding. Possible values are `gp-and-pac` and `ztna-agent`.
 	Type *string `pulumi:"type"`
 }
 
@@ -246,11 +246,11 @@ type ForwardingProfileRegionalAndCustomProxyState struct {
 	ConnectivityPreferences ForwardingProfileRegionalAndCustomProxyConnectivityPreferenceArrayInput
 	// regional and custom proxy configuration description
 	Description pulumi.StringPtrInput
-	// Behavior when proxy connection fails - 'fail-open' allows direct internet access, 'fail-safe' blocks traffic until proxy is restored
+	// Behavior when proxy connection fails - 'fail-open' allows direct internet access, 'fail-safe' blocks traffic until proxy is restored. Possible values are `fail-open` and `fail-safe`.
 	FallbackOption pulumi.StringPtrInput
-	// The folder in which the resource is defined
+	// The folder in which the resource is defined. Possible values are `Mobile Users`.
 	Folder pulumi.StringPtrInput
-	// Strategy for selecting Prisma Access location - 'best-available-pa-location' automatically selects optimal location, 'specific-pa-location' uses predefined locations
+	// Strategy for selecting Prisma Access location - 'best-available-pa-location' automatically selects optimal location, 'specific-pa-location' uses predefined locations. Possible values are `best-available-pa-location` and `specific-pa-location`.
 	LocationPreference pulumi.StringPtrInput
 	// alphanumeric string [ 0-9a-zA-Z ._-]
 	Name pulumi.StringPtrInput
@@ -262,7 +262,7 @@ type ForwardingProfileRegionalAndCustomProxyState struct {
 	Proxy2 ForwardingProfileRegionalAndCustomProxyProxy2PtrInput
 	// The Terraform ID.
 	Tfid pulumi.StringPtrInput
-	// Proxy configuration type - 'gp-and-pac' for GlobalProtect and PAC file forwarding, 'ztna-agent' for ZTNA agent forwarding
+	// Proxy configuration type - 'gp-and-pac' for GlobalProtect and PAC file forwarding, 'ztna-agent' for ZTNA agent forwarding. Possible values are `gp-and-pac` and `ztna-agent`.
 	Type pulumi.StringPtrInput
 }
 
@@ -275,11 +275,11 @@ type forwardingProfileRegionalAndCustomProxyArgs struct {
 	ConnectivityPreferences []ForwardingProfileRegionalAndCustomProxyConnectivityPreference `pulumi:"connectivityPreferences"`
 	// regional and custom proxy configuration description
 	Description *string `pulumi:"description"`
-	// Behavior when proxy connection fails - 'fail-open' allows direct internet access, 'fail-safe' blocks traffic until proxy is restored
+	// Behavior when proxy connection fails - 'fail-open' allows direct internet access, 'fail-safe' blocks traffic until proxy is restored. Possible values are `fail-open` and `fail-safe`.
 	FallbackOption *string `pulumi:"fallbackOption"`
-	// The folder in which the resource is defined
+	// The folder in which the resource is defined. Possible values are `Mobile Users`.
 	Folder *string `pulumi:"folder"`
-	// Strategy for selecting Prisma Access location - 'best-available-pa-location' automatically selects optimal location, 'specific-pa-location' uses predefined locations
+	// Strategy for selecting Prisma Access location - 'best-available-pa-location' automatically selects optimal location, 'specific-pa-location' uses predefined locations. Possible values are `best-available-pa-location` and `specific-pa-location`.
 	LocationPreference *string `pulumi:"locationPreference"`
 	// alphanumeric string [ 0-9a-zA-Z ._-]
 	Name *string `pulumi:"name"`
@@ -289,7 +289,7 @@ type forwardingProfileRegionalAndCustomProxyArgs struct {
 	Proxy1 *ForwardingProfileRegionalAndCustomProxyProxy1 `pulumi:"proxy1"`
 	// secondary regional and custom proxy
 	Proxy2 *ForwardingProfileRegionalAndCustomProxyProxy2 `pulumi:"proxy2"`
-	// Proxy configuration type - 'gp-and-pac' for GlobalProtect and PAC file forwarding, 'ztna-agent' for ZTNA agent forwarding
+	// Proxy configuration type - 'gp-and-pac' for GlobalProtect and PAC file forwarding, 'ztna-agent' for ZTNA agent forwarding. Possible values are `gp-and-pac` and `ztna-agent`.
 	Type *string `pulumi:"type"`
 }
 
@@ -299,11 +299,11 @@ type ForwardingProfileRegionalAndCustomProxyArgs struct {
 	ConnectivityPreferences ForwardingProfileRegionalAndCustomProxyConnectivityPreferenceArrayInput
 	// regional and custom proxy configuration description
 	Description pulumi.StringPtrInput
-	// Behavior when proxy connection fails - 'fail-open' allows direct internet access, 'fail-safe' blocks traffic until proxy is restored
+	// Behavior when proxy connection fails - 'fail-open' allows direct internet access, 'fail-safe' blocks traffic until proxy is restored. Possible values are `fail-open` and `fail-safe`.
 	FallbackOption pulumi.StringPtrInput
-	// The folder in which the resource is defined
+	// The folder in which the resource is defined. Possible values are `Mobile Users`.
 	Folder pulumi.StringPtrInput
-	// Strategy for selecting Prisma Access location - 'best-available-pa-location' automatically selects optimal location, 'specific-pa-location' uses predefined locations
+	// Strategy for selecting Prisma Access location - 'best-available-pa-location' automatically selects optimal location, 'specific-pa-location' uses predefined locations. Possible values are `best-available-pa-location` and `specific-pa-location`.
 	LocationPreference pulumi.StringPtrInput
 	// alphanumeric string [ 0-9a-zA-Z ._-]
 	Name pulumi.StringPtrInput
@@ -313,7 +313,7 @@ type ForwardingProfileRegionalAndCustomProxyArgs struct {
 	Proxy1 ForwardingProfileRegionalAndCustomProxyProxy1PtrInput
 	// secondary regional and custom proxy
 	Proxy2 ForwardingProfileRegionalAndCustomProxyProxy2PtrInput
-	// Proxy configuration type - 'gp-and-pac' for GlobalProtect and PAC file forwarding, 'ztna-agent' for ZTNA agent forwarding
+	// Proxy configuration type - 'gp-and-pac' for GlobalProtect and PAC file forwarding, 'ztna-agent' for ZTNA agent forwarding. Possible values are `gp-and-pac` and `ztna-agent`.
 	Type pulumi.StringPtrInput
 }
 
@@ -416,17 +416,17 @@ func (o ForwardingProfileRegionalAndCustomProxyOutput) Description() pulumi.Stri
 	return o.ApplyT(func(v *ForwardingProfileRegionalAndCustomProxy) pulumi.StringPtrOutput { return v.Description }).(pulumi.StringPtrOutput)
 }
 
-// Behavior when proxy connection fails - 'fail-open' allows direct internet access, 'fail-safe' blocks traffic until proxy is restored
+// Behavior when proxy connection fails - 'fail-open' allows direct internet access, 'fail-safe' blocks traffic until proxy is restored. Possible values are `fail-open` and `fail-safe`.
 func (o ForwardingProfileRegionalAndCustomProxyOutput) FallbackOption() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *ForwardingProfileRegionalAndCustomProxy) pulumi.StringPtrOutput { return v.FallbackOption }).(pulumi.StringPtrOutput)
 }
 
-// The folder in which the resource is defined
+// The folder in which the resource is defined. Possible values are `Mobile Users`.
 func (o ForwardingProfileRegionalAndCustomProxyOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v *ForwardingProfileRegionalAndCustomProxy) pulumi.StringOutput { return v.Folder }).(pulumi.StringOutput)
 }
 
-// Strategy for selecting Prisma Access location - 'best-available-pa-location' automatically selects optimal location, 'specific-pa-location' uses predefined locations
+// Strategy for selecting Prisma Access location - 'best-available-pa-location' automatically selects optimal location, 'specific-pa-location' uses predefined locations. Possible values are `best-available-pa-location` and `specific-pa-location`.
 func (o ForwardingProfileRegionalAndCustomProxyOutput) LocationPreference() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *ForwardingProfileRegionalAndCustomProxy) pulumi.StringPtrOutput { return v.LocationPreference }).(pulumi.StringPtrOutput)
 }
@@ -462,7 +462,7 @@ func (o ForwardingProfileRegionalAndCustomProxyOutput) Tfid() pulumi.StringOutpu
 	return o.ApplyT(func(v *ForwardingProfileRegionalAndCustomProxy) pulumi.StringOutput { return v.Tfid }).(pulumi.StringOutput)
 }
 
-// Proxy configuration type - 'gp-and-pac' for GlobalProtect and PAC file forwarding, 'ztna-agent' for ZTNA agent forwarding
+// Proxy configuration type - 'gp-and-pac' for GlobalProtect and PAC file forwarding, 'ztna-agent' for ZTNA agent forwarding. Possible values are `gp-and-pac` and `ztna-agent`.
 func (o ForwardingProfileRegionalAndCustomProxyOutput) Type() pulumi.StringOutput {
 	return o.ApplyT(func(v *ForwardingProfileRegionalAndCustomProxy) pulumi.StringOutput { return v.Type }).(pulumi.StringOutput)
 }

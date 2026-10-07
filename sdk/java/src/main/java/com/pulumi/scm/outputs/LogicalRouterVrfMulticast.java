@@ -43,7 +43,7 @@ public final class LogicalRouterVrfMulticast {
      */
     private @Nullable List<LogicalRouterVrfMulticastInterfaceGroup> interfaceGroups;
     /**
-     * @return Mode
+     * @return Mode. Possible values are `PIM-SM` and `IGMP-Proxy`.
      * 
      */
     private @Nullable String mode;
@@ -113,7 +113,7 @@ public final class LogicalRouterVrfMulticast {
         return this.interfaceGroups == null ? List.of() : this.interfaceGroups;
     }
     /**
-     * @return Mode
+     * @return Mode. Possible values are `PIM-SM` and `IGMP-Proxy`.
      * 
      */
     public Optional<String> mode() {

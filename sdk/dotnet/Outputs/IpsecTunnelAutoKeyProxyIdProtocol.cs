@@ -19,14 +19,10 @@ namespace Pulumi.Scm.Outputs
         public readonly int? Number;
         /// <summary>
         /// IPv4 type of ProxyId protocol values for TCP protocol
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Number`, `Tcp`, and `Udp`.
         /// </summary>
         public readonly Outputs.IpsecTunnelAutoKeyProxyIdProtocolTcp? Tcp;
         /// <summary>
         /// IPv6 type of ProxyId protocol values for UDP protocol
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Number`, `Tcp`, and `Udp`.
         /// </summary>
         public readonly Outputs.IpsecTunnelAutoKeyProxyIdProtocolUdp? Udp;
 

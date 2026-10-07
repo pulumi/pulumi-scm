@@ -27,7 +27,10 @@ class GetLoopbackInterfaceResult:
     """
     A collection of values returned by getLoopbackInterface.
     """
-    def __init__(__self__, comment=None, default_value=None, device=None, folder=None, id=None, interface_management_profile=None, ips=None, ipv6=None, mtu=None, name=None, netflow_profile=None, snippet=None, tfid=None):
+    def __init__(__self__, adjust_tcp_mss=None, comment=None, default_value=None, device=None, folder=None, id=None, interface_management_profile=None, ips=None, ipv6=None, mtu=None, name=None, netflow_profile=None, snippet=None, tfid=None):
+        if adjust_tcp_mss and not isinstance(adjust_tcp_mss, dict):
+            raise TypeError("Expected argument 'adjust_tcp_mss' to be a dict")
+        pulumi.set(__self__, "adjust_tcp_mss", adjust_tcp_mss)
         if comment and not isinstance(comment, str):
             raise TypeError("Expected argument 'comment' to be a str")
         pulumi.set(__self__, "comment", comment)
@@ -69,13 +72,27 @@ class GetLoopbackInterfaceResult:
         pulumi.set(__self__, "tfid", tfid)
 
     @_builtins.property
+    @pulumi.getter(name="adjustTcpMss")
+    def adjust_tcp_mss(self) -> 'outputs.GetLoopbackInterfaceAdjustTcpMssResult':
+        """
+        TCP MSS adjustment settings for the interface
+        """
+        return pulumi.get(self, "adjust_tcp_mss")
+
+    @_builtins.property
     @pulumi.getter
     def comment(self) -> _builtins.str:
+        """
+        Description for loopback interface
+        """
         return pulumi.get(self, "comment")
 
     @_builtins.property
     @pulumi.getter(name="defaultValue")
     def default_value(self) -> _builtins.str:
+        """
+        Default interface assignment for loopback interface
+        """
         return pulumi.get(self, "default_value")
 
     @_builtins.property
@@ -89,6 +106,9 @@ class GetLoopbackInterfaceResult:
     @_builtins.property
     @pulumi.getter
     def folder(self) -> _builtins.str:
+        """
+        The folder in which the resource is defined
+        """
         return pulumi.get(self, "folder")
 
     @_builtins.property
@@ -102,41 +122,65 @@ class GetLoopbackInterfaceResult:
     @_builtins.property
     @pulumi.getter(name="interfaceManagementProfile")
     def interface_management_profile(self) -> _builtins.str:
+        """
+        Interface management profile for loopback interface
+        """
         return pulumi.get(self, "interface_management_profile")
 
     @_builtins.property
     @pulumi.getter
     def ips(self) -> Sequence['outputs.GetLoopbackInterfaceIpResult']:
+        """
+        Loopback IP Parent
+        """
         return pulumi.get(self, "ips")
 
     @_builtins.property
     @pulumi.getter
     def ipv6(self) -> 'outputs.GetLoopbackInterfaceIpv6Result':
+        """
+        Loopback IPv6 Configuration
+        """
         return pulumi.get(self, "ipv6")
 
     @_builtins.property
     @pulumi.getter
     def mtu(self) -> _builtins.int:
+        """
+        MTU for loopback interface
+        """
         return pulumi.get(self, "mtu")
 
     @_builtins.property
     @pulumi.getter
     def name(self) -> _builtins.str:
+        """
+        Loopback Interface name
+        """
         return pulumi.get(self, "name")
 
     @_builtins.property
     @pulumi.getter(name="netflowProfile")
     def netflow_profile(self) -> _builtins.str:
+        """
+        Name of Netflow Profile to assign to Interface
+        """
         return pulumi.get(self, "netflow_profile")
 
     @_builtins.property
     @pulumi.getter
     def snippet(self) -> _builtins.str:
+        """
+        The snippet in which the resource is defined
+        """
         return pulumi.get(self, "snippet")
 
     @_builtins.property
     @pulumi.getter
     def tfid(self) -> _builtins.str:
+        """
+        The Terraform ID.
+        """
         return pulumi.get(self, "tfid")
 
 
@@ -146,6 +190,7 @@ class AwaitableGetLoopbackInterfaceResult(GetLoopbackInterfaceResult):
         if False:
             yield self
         return GetLoopbackInterfaceResult(
+            adjust_tcp_mss=self.adjust_tcp_mss,
             comment=self.comment,
             default_value=self.default_value,
             device=self.device,
@@ -189,7 +234,10 @@ def get_loopback_interface(device: Optional[_builtins.str] = None,
 
 
     :param _builtins.str device: The device in which the resource is defined
+    :param _builtins.str folder: The folder in which the resource is defined
     :param _builtins.str id: UUID of the resource loopback interface
+    :param _builtins.str name: Loopback Interface name
+    :param _builtins.str snippet: The snippet in which the resource is defined
     """
     __args__ = dict()
     __args__['device'] = device
@@ -201,6 +249,7 @@ def get_loopback_interface(device: Optional[_builtins.str] = None,
     __ret__ = pulumi.runtime.invoke('scm:index/getLoopbackInterface:getLoopbackInterface', __args__, opts=opts, typ=GetLoopbackInterfaceResult).value
 
     return AwaitableGetLoopbackInterfaceResult(
+        adjust_tcp_mss=pulumi.get(__ret__, 'adjust_tcp_mss'),
         comment=pulumi.get(__ret__, 'comment'),
         default_value=pulumi.get(__ret__, 'default_value'),
         device=pulumi.get(__ret__, 'device'),
@@ -242,7 +291,10 @@ def get_loopback_interface_output(device: pulumi.Input[Optional[Optional[_builti
 
 
     :param _builtins.str device: The device in which the resource is defined
+    :param _builtins.str folder: The folder in which the resource is defined
     :param _builtins.str id: UUID of the resource loopback interface
+    :param _builtins.str name: Loopback Interface name
+    :param _builtins.str snippet: The snippet in which the resource is defined
     """
     __args__ = dict()
     __args__['device'] = device
@@ -253,6 +305,7 @@ def get_loopback_interface_output(device: pulumi.Input[Optional[Optional[_builti
     opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('scm:index/getLoopbackInterface:getLoopbackInterface', __args__, opts=opts, typ=GetLoopbackInterfaceResult)
     return __ret__.apply(lambda __response__: GetLoopbackInterfaceResult(
+        adjust_tcp_mss=pulumi.get(__response__, 'adjust_tcp_mss'),
         comment=pulumi.get(__response__, 'comment'),
         default_value=pulumi.get(__response__, 'default_value'),
         device=pulumi.get(__response__, 'device'),

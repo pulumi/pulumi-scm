@@ -19,8 +19,6 @@ namespace Pulumi.Scm.Outputs
         public readonly Outputs.GetBgpRouteMapRedistributionListDataOspfBgpResult Bgp;
         /// <summary>
         /// Rib
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Bgp` and `Rib`.
         /// </summary>
         public readonly Outputs.GetBgpRouteMapRedistributionListDataOspfRibResult Rib;
 

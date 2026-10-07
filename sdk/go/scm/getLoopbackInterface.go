@@ -60,30 +60,46 @@ func LookupLoopbackInterface(ctx *pulumi.Context, args *LookupLoopbackInterfaceA
 type LookupLoopbackInterfaceArgs struct {
 	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
+	// The folder in which the resource is defined
 	Folder *string `pulumi:"folder"`
 	// UUID of the resource loopback interface
-	Id      string  `pulumi:"id"`
-	Name    *string `pulumi:"name"`
+	Id string `pulumi:"id"`
+	// Loopback Interface name
+	Name *string `pulumi:"name"`
+	// The snippet in which the resource is defined
 	Snippet *string `pulumi:"snippet"`
 }
 
 // A collection of values returned by getLoopbackInterface.
 type LookupLoopbackInterfaceResult struct {
-	Comment      string `pulumi:"comment"`
+	// TCP MSS adjustment settings for the interface
+	AdjustTcpMss GetLoopbackInterfaceAdjustTcpMss `pulumi:"adjustTcpMss"`
+	// Description for loopback interface
+	Comment string `pulumi:"comment"`
+	// Default interface assignment for loopback interface
 	DefaultValue string `pulumi:"defaultValue"`
 	// The device in which the resource is defined
 	Device string `pulumi:"device"`
+	// The folder in which the resource is defined
 	Folder string `pulumi:"folder"`
 	// UUID of the resource loopback interface
-	Id                         string                   `pulumi:"id"`
-	InterfaceManagementProfile string                   `pulumi:"interfaceManagementProfile"`
-	Ips                        []GetLoopbackInterfaceIp `pulumi:"ips"`
-	Ipv6                       GetLoopbackInterfaceIpv6 `pulumi:"ipv6"`
-	Mtu                        int                      `pulumi:"mtu"`
-	Name                       string                   `pulumi:"name"`
-	NetflowProfile             string                   `pulumi:"netflowProfile"`
-	Snippet                    string                   `pulumi:"snippet"`
-	Tfid                       string                   `pulumi:"tfid"`
+	Id string `pulumi:"id"`
+	// Interface management profile for loopback interface
+	InterfaceManagementProfile string `pulumi:"interfaceManagementProfile"`
+	// Loopback IP Parent
+	Ips []GetLoopbackInterfaceIp `pulumi:"ips"`
+	// Loopback IPv6 Configuration
+	Ipv6 GetLoopbackInterfaceIpv6 `pulumi:"ipv6"`
+	// MTU for loopback interface
+	Mtu int `pulumi:"mtu"`
+	// Loopback Interface name
+	Name string `pulumi:"name"`
+	// Name of Netflow Profile to assign to Interface
+	NetflowProfile string `pulumi:"netflowProfile"`
+	// The snippet in which the resource is defined
+	Snippet string `pulumi:"snippet"`
+	// The Terraform ID.
+	Tfid string `pulumi:"tfid"`
 }
 
 func LookupLoopbackInterfaceOutput(ctx *pulumi.Context, args LookupLoopbackInterfaceOutputArgs, opts ...pulumi.InvokeOption) LookupLoopbackInterfaceResultOutput {
@@ -95,10 +111,13 @@ func LookupLoopbackInterfaceOutput(ctx *pulumi.Context, args LookupLoopbackInter
 type LookupLoopbackInterfaceOutputArgs struct {
 	// The device in which the resource is defined
 	Device pulumi.StringPtrInput `pulumi:"device"`
+	// The folder in which the resource is defined
 	Folder pulumi.StringPtrInput `pulumi:"folder"`
 	// UUID of the resource loopback interface
-	Id      pulumi.StringInput    `pulumi:"id"`
-	Name    pulumi.StringPtrInput `pulumi:"name"`
+	Id pulumi.StringInput `pulumi:"id"`
+	// Loopback Interface name
+	Name pulumi.StringPtrInput `pulumi:"name"`
+	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrInput `pulumi:"snippet"`
 }
 
@@ -121,10 +140,17 @@ func (o LookupLoopbackInterfaceResultOutput) ToLookupLoopbackInterfaceResultOutp
 	return o
 }
 
+// TCP MSS adjustment settings for the interface
+func (o LookupLoopbackInterfaceResultOutput) AdjustTcpMss() GetLoopbackInterfaceAdjustTcpMssOutput {
+	return o.ApplyT(func(v LookupLoopbackInterfaceResult) GetLoopbackInterfaceAdjustTcpMss { return v.AdjustTcpMss }).(GetLoopbackInterfaceAdjustTcpMssOutput)
+}
+
+// Description for loopback interface
 func (o LookupLoopbackInterfaceResultOutput) Comment() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupLoopbackInterfaceResult) string { return v.Comment }).(pulumi.StringOutput)
 }
 
+// Default interface assignment for loopback interface
 func (o LookupLoopbackInterfaceResultOutput) DefaultValue() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupLoopbackInterfaceResult) string { return v.DefaultValue }).(pulumi.StringOutput)
 }
@@ -134,6 +160,7 @@ func (o LookupLoopbackInterfaceResultOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupLoopbackInterfaceResult) string { return v.Device }).(pulumi.StringOutput)
 }
 
+// The folder in which the resource is defined
 func (o LookupLoopbackInterfaceResultOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupLoopbackInterfaceResult) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -143,34 +170,42 @@ func (o LookupLoopbackInterfaceResultOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupLoopbackInterfaceResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
+// Interface management profile for loopback interface
 func (o LookupLoopbackInterfaceResultOutput) InterfaceManagementProfile() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupLoopbackInterfaceResult) string { return v.InterfaceManagementProfile }).(pulumi.StringOutput)
 }
 
+// Loopback IP Parent
 func (o LookupLoopbackInterfaceResultOutput) Ips() GetLoopbackInterfaceIpArrayOutput {
 	return o.ApplyT(func(v LookupLoopbackInterfaceResult) []GetLoopbackInterfaceIp { return v.Ips }).(GetLoopbackInterfaceIpArrayOutput)
 }
 
+// Loopback IPv6 Configuration
 func (o LookupLoopbackInterfaceResultOutput) Ipv6() GetLoopbackInterfaceIpv6Output {
 	return o.ApplyT(func(v LookupLoopbackInterfaceResult) GetLoopbackInterfaceIpv6 { return v.Ipv6 }).(GetLoopbackInterfaceIpv6Output)
 }
 
+// MTU for loopback interface
 func (o LookupLoopbackInterfaceResultOutput) Mtu() pulumi.IntOutput {
 	return o.ApplyT(func(v LookupLoopbackInterfaceResult) int { return v.Mtu }).(pulumi.IntOutput)
 }
 
+// Loopback Interface name
 func (o LookupLoopbackInterfaceResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupLoopbackInterfaceResult) string { return v.Name }).(pulumi.StringOutput)
 }
 
+// Name of Netflow Profile to assign to Interface
 func (o LookupLoopbackInterfaceResultOutput) NetflowProfile() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupLoopbackInterfaceResult) string { return v.NetflowProfile }).(pulumi.StringOutput)
 }
 
+// The snippet in which the resource is defined
 func (o LookupLoopbackInterfaceResultOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupLoopbackInterfaceResult) string { return v.Snippet }).(pulumi.StringOutput)
 }
 
+// The Terraform ID.
 func (o LookupLoopbackInterfaceResultOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupLoopbackInterfaceResult) string { return v.Tfid }).(pulumi.StringOutput)
 }

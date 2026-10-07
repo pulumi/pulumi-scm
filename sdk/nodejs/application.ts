@@ -172,8 +172,6 @@ export class Application extends pulumi.CustomResource {
     declare public readonly fileTypeIdent: pulumi.Output<boolean | undefined>;
     /**
      * The folder in which the resource is defined
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly folder: pulumi.Output<string | undefined>;
     /**
@@ -210,8 +208,6 @@ export class Application extends pulumi.CustomResource {
     declare public readonly signatures: pulumi.Output<outputs.ApplicationSignature[] | undefined>;
     /**
      * The snippet in which the resource is defined
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly snippet: pulumi.Output<string | undefined>;
     /**
@@ -400,8 +396,6 @@ export interface ApplicationState {
     fileTypeIdent?: pulumi.Input<boolean | undefined>;
     /**
      * The folder in which the resource is defined
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     folder?: pulumi.Input<string | undefined>;
     /**
@@ -438,8 +432,6 @@ export interface ApplicationState {
     signatures?: pulumi.Input<pulumi.Input<inputs.ApplicationSignature>[] | undefined>;
     /**
      * The snippet in which the resource is defined
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     snippet?: pulumi.Input<string | undefined>;
     /**
@@ -538,8 +530,6 @@ export interface ApplicationArgs {
     fileTypeIdent?: pulumi.Input<boolean | undefined>;
     /**
      * The folder in which the resource is defined
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     folder?: pulumi.Input<string | undefined>;
     /**
@@ -576,8 +566,6 @@ export interface ApplicationArgs {
     signatures?: pulumi.Input<pulumi.Input<inputs.ApplicationSignature>[] | undefined>;
     /**
      * The snippet in which the resource is defined
-     *
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     snippet?: pulumi.Input<string | undefined>;
     /**

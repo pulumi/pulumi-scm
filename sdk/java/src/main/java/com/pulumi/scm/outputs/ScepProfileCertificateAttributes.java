@@ -19,14 +19,10 @@ public final class ScepProfileCertificateAttributes {
     /**
      * @return Rfc822name
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `dnsname`, `rfc822name`, and `uniformResourceIdentifier`.
-     * 
      */
     private @Nullable String rfc822name;
     /**
      * @return Uniform resource identifier
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `dnsname`, `rfc822name`, and `uniformResourceIdentifier`.
      * 
      */
     private @Nullable String uniformResourceIdentifier;
@@ -42,16 +38,12 @@ public final class ScepProfileCertificateAttributes {
     /**
      * @return Rfc822name
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `dnsname`, `rfc822name`, and `uniformResourceIdentifier`.
-     * 
      */
     public Optional<String> rfc822name() {
         return Optional.ofNullable(this.rfc822name);
     }
     /**
      * @return Uniform resource identifier
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `dnsname`, `rfc822name`, and `uniformResourceIdentifier`.
      * 
      */
     public Optional<String> uniformResourceIdentifier() {

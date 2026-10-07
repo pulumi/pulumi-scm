@@ -30,7 +30,7 @@ public final class GeneralSettingGeneral {
      */
     private @Nullable GeneralSettingGeneralGeoLocation geoLocation;
     /**
-     * @return Locale
+     * @return Locale. Possible values are `en`, `es`, `ja`, `fr`, `zh_CN` and `zh_TW`.
      * 
      */
     private @Nullable String locale;
@@ -78,7 +78,7 @@ public final class GeneralSettingGeneral {
         return Optional.ofNullable(this.geoLocation);
     }
     /**
-     * @return Locale
+     * @return Locale. Possible values are `en`, `es`, `ja`, `fr`, `zh_CN` and `zh_TW`.
      * 
      */
     public Optional<String> locale() {

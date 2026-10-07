@@ -30,6 +30,8 @@ class PbfRuleArgs:
                  folder: pulumi.Input[Optional[_builtins.str]] = None,
                  from_: pulumi.Input[Optional['PbfRuleFromArgs']] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
+                 negate_destination: pulumi.Input[Optional[_builtins.bool]] = None,
+                 negate_source: pulumi.Input[Optional[_builtins.bool]] = None,
                  schedule: pulumi.Input[Optional[_builtins.str]] = None,
                  services: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  snippet: pulumi.Input[Optional[_builtins.str]] = None,
@@ -46,15 +48,13 @@ class PbfRuleArgs:
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input['PbfRuleEnforceSymmetricReturnArgs'] enforce_symmetric_return: Enforce symmetric return
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input['PbfRuleFromArgs'] from_: From
         :param pulumi.Input[_builtins.str] name: PBF rule name
+        :param pulumi.Input[_builtins.bool] negate_destination: Negate destination address
+        :param pulumi.Input[_builtins.bool] negate_source: Negate source address
         :param pulumi.Input[_builtins.str] schedule: Schedule
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] services: Services
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] source_users: Source users
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] sources: Source addresses
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tags: Tags
@@ -77,6 +77,10 @@ class PbfRuleArgs:
             pulumi.set(__self__, "from_", from_)
         if name is not None:
             pulumi.set(__self__, "name", name)
+        if negate_destination is not None:
+            pulumi.set(__self__, "negate_destination", negate_destination)
+        if negate_source is not None:
+            pulumi.set(__self__, "negate_source", negate_source)
         if schedule is not None:
             pulumi.set(__self__, "schedule", schedule)
         if services is not None:
@@ -167,8 +171,6 @@ class PbfRuleArgs:
     def folder(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
-
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
 
@@ -201,6 +203,30 @@ class PbfRuleArgs:
         pulumi.set(self, "name", value)
 
     @_builtins.property
+    @pulumi.getter(name="negateDestination")
+    def negate_destination(self) -> pulumi.Input[Optional[_builtins.bool]]:
+        """
+        Negate destination address
+        """
+        return pulumi.get(self, "negate_destination")
+
+    @negate_destination.setter
+    def negate_destination(self, value: pulumi.Input[Optional[_builtins.bool]]):
+        pulumi.set(self, "negate_destination", value)
+
+    @_builtins.property
+    @pulumi.getter(name="negateSource")
+    def negate_source(self) -> pulumi.Input[Optional[_builtins.bool]]:
+        """
+        Negate source address
+        """
+        return pulumi.get(self, "negate_source")
+
+    @negate_source.setter
+    def negate_source(self, value: pulumi.Input[Optional[_builtins.bool]]):
+        pulumi.set(self, "negate_source", value)
+
+    @_builtins.property
     @pulumi.getter
     def schedule(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
@@ -229,8 +255,6 @@ class PbfRuleArgs:
     def snippet(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
-
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
 
@@ -287,6 +311,8 @@ class _PbfRuleState:
                  folder: pulumi.Input[Optional[_builtins.str]] = None,
                  from_: pulumi.Input[Optional['PbfRuleFromArgs']] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
+                 negate_destination: pulumi.Input[Optional[_builtins.bool]] = None,
+                 negate_source: pulumi.Input[Optional[_builtins.bool]] = None,
                  schedule: pulumi.Input[Optional[_builtins.str]] = None,
                  services: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  snippet: pulumi.Input[Optional[_builtins.str]] = None,
@@ -304,15 +330,13 @@ class _PbfRuleState:
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input['PbfRuleEnforceSymmetricReturnArgs'] enforce_symmetric_return: Enforce symmetric return
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input['PbfRuleFromArgs'] from_: From
         :param pulumi.Input[_builtins.str] name: PBF rule name
+        :param pulumi.Input[_builtins.bool] negate_destination: Negate destination address
+        :param pulumi.Input[_builtins.bool] negate_source: Negate source address
         :param pulumi.Input[_builtins.str] schedule: Schedule
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] services: Services
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] source_users: Source users
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] sources: Source addresses
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tags: Tags
@@ -336,6 +360,10 @@ class _PbfRuleState:
             pulumi.set(__self__, "from_", from_)
         if name is not None:
             pulumi.set(__self__, "name", name)
+        if negate_destination is not None:
+            pulumi.set(__self__, "negate_destination", negate_destination)
+        if negate_source is not None:
+            pulumi.set(__self__, "negate_source", negate_source)
         if schedule is not None:
             pulumi.set(__self__, "schedule", schedule)
         if services is not None:
@@ -428,8 +456,6 @@ class _PbfRuleState:
     def folder(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
-
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
 
@@ -462,6 +488,30 @@ class _PbfRuleState:
         pulumi.set(self, "name", value)
 
     @_builtins.property
+    @pulumi.getter(name="negateDestination")
+    def negate_destination(self) -> pulumi.Input[Optional[_builtins.bool]]:
+        """
+        Negate destination address
+        """
+        return pulumi.get(self, "negate_destination")
+
+    @negate_destination.setter
+    def negate_destination(self, value: pulumi.Input[Optional[_builtins.bool]]):
+        pulumi.set(self, "negate_destination", value)
+
+    @_builtins.property
+    @pulumi.getter(name="negateSource")
+    def negate_source(self) -> pulumi.Input[Optional[_builtins.bool]]:
+        """
+        Negate source address
+        """
+        return pulumi.get(self, "negate_source")
+
+    @negate_source.setter
+    def negate_source(self, value: pulumi.Input[Optional[_builtins.bool]]):
+        pulumi.set(self, "negate_source", value)
+
+    @_builtins.property
     @pulumi.getter
     def schedule(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
@@ -490,8 +540,6 @@ class _PbfRuleState:
     def snippet(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
-
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
 
@@ -563,6 +611,8 @@ class PbfRule(pulumi.CustomResource):
                  folder: pulumi.Input[Optional[_builtins.str]] = None,
                  from_: pulumi.Input[Optional[Union['PbfRuleFromArgs', 'PbfRuleFromArgsDict', 'outputs.PbfRuleFrom']]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
+                 negate_destination: pulumi.Input[Optional[_builtins.bool]] = None,
+                 negate_source: pulumi.Input[Optional[_builtins.bool]] = None,
                  schedule: pulumi.Input[Optional[_builtins.str]] = None,
                  services: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  snippet: pulumi.Input[Optional[_builtins.str]] = None,
@@ -690,15 +740,13 @@ class PbfRule(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input[Union['PbfRuleEnforceSymmetricReturnArgs', 'PbfRuleEnforceSymmetricReturnArgsDict', 'outputs.PbfRuleEnforceSymmetricReturn']] enforce_symmetric_return: Enforce symmetric return
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[Union['PbfRuleFromArgs', 'PbfRuleFromArgsDict', 'outputs.PbfRuleFrom']] from_: From
         :param pulumi.Input[_builtins.str] name: PBF rule name
+        :param pulumi.Input[_builtins.bool] negate_destination: Negate destination address
+        :param pulumi.Input[_builtins.bool] negate_source: Negate source address
         :param pulumi.Input[_builtins.str] schedule: Schedule
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] services: Services
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] source_users: Source users
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] sources: Source addresses
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tags: Tags
@@ -844,6 +892,8 @@ class PbfRule(pulumi.CustomResource):
                  folder: pulumi.Input[Optional[_builtins.str]] = None,
                  from_: pulumi.Input[Optional[Union['PbfRuleFromArgs', 'PbfRuleFromArgsDict', 'outputs.PbfRuleFrom']]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
+                 negate_destination: pulumi.Input[Optional[_builtins.bool]] = None,
+                 negate_source: pulumi.Input[Optional[_builtins.bool]] = None,
                  schedule: pulumi.Input[Optional[_builtins.str]] = None,
                  services: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  snippet: pulumi.Input[Optional[_builtins.str]] = None,
@@ -868,6 +918,8 @@ class PbfRule(pulumi.CustomResource):
             __props__.__dict__["folder"] = folder
             __props__.__dict__["from_"] = from_
             __props__.__dict__["name"] = name
+            __props__.__dict__["negate_destination"] = negate_destination
+            __props__.__dict__["negate_source"] = negate_source
             __props__.__dict__["schedule"] = schedule
             __props__.__dict__["services"] = services
             __props__.__dict__["snippet"] = snippet
@@ -894,6 +946,8 @@ class PbfRule(pulumi.CustomResource):
             folder: pulumi.Input[Optional[_builtins.str]] = None,
             from_: pulumi.Input[Optional[Union['PbfRuleFromArgs', 'PbfRuleFromArgsDict', 'outputs.PbfRuleFrom']]] = None,
             name: pulumi.Input[Optional[_builtins.str]] = None,
+            negate_destination: pulumi.Input[Optional[_builtins.bool]] = None,
+            negate_source: pulumi.Input[Optional[_builtins.bool]] = None,
             schedule: pulumi.Input[Optional[_builtins.str]] = None,
             services: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
             snippet: pulumi.Input[Optional[_builtins.str]] = None,
@@ -915,15 +969,13 @@ class PbfRule(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input[Union['PbfRuleEnforceSymmetricReturnArgs', 'PbfRuleEnforceSymmetricReturnArgsDict', 'outputs.PbfRuleEnforceSymmetricReturn']] enforce_symmetric_return: Enforce symmetric return
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[Union['PbfRuleFromArgs', 'PbfRuleFromArgsDict', 'outputs.PbfRuleFrom']] from_: From
         :param pulumi.Input[_builtins.str] name: PBF rule name
+        :param pulumi.Input[_builtins.bool] negate_destination: Negate destination address
+        :param pulumi.Input[_builtins.bool] negate_source: Negate source address
         :param pulumi.Input[_builtins.str] schedule: Schedule
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] services: Services
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] source_users: Source users
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] sources: Source addresses
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tags: Tags
@@ -942,6 +994,8 @@ class PbfRule(pulumi.CustomResource):
         __props__.__dict__["folder"] = folder
         __props__.__dict__["from_"] = from_
         __props__.__dict__["name"] = name
+        __props__.__dict__["negate_destination"] = negate_destination
+        __props__.__dict__["negate_source"] = negate_source
         __props__.__dict__["schedule"] = schedule
         __props__.__dict__["services"] = services
         __props__.__dict__["snippet"] = snippet
@@ -1004,8 +1058,6 @@ class PbfRule(pulumi.CustomResource):
     def folder(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
-
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
 
@@ -1024,6 +1076,22 @@ class PbfRule(pulumi.CustomResource):
         PBF rule name
         """
         return pulumi.get(self, "name")
+
+    @_builtins.property
+    @pulumi.getter(name="negateDestination")
+    def negate_destination(self) -> pulumi.Output[_builtins.bool]:
+        """
+        Negate destination address
+        """
+        return pulumi.get(self, "negate_destination")
+
+    @_builtins.property
+    @pulumi.getter(name="negateSource")
+    def negate_source(self) -> pulumi.Output[_builtins.bool]:
+        """
+        Negate source address
+        """
+        return pulumi.get(self, "negate_source")
 
     @_builtins.property
     @pulumi.getter
@@ -1046,8 +1114,6 @@ class PbfRule(pulumi.CustomResource):
     def snippet(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
-
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
 

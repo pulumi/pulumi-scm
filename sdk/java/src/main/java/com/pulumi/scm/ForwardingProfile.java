@@ -245,14 +245,14 @@ import javax.annotation.Nullable;
 @ResourceType(type="scm:index/forwardingProfile:ForwardingProfile")
 public class ForwardingProfile extends com.pulumi.resources.CustomResource {
     /**
-     * Enable forwarding rule for forwarding profile
+     * Enable forwarding rule for forwarding profile. Possible values are `rules` and `pac-file`.
      * 
      */
     @Export(name="definitionMethod", refs={String.class}, tree="[0]")
     private Output<String> definitionMethod;
 
     /**
-     * @return Enable forwarding rule for forwarding profile
+     * @return Enable forwarding rule for forwarding profile. Possible values are `rules` and `pac-file`.
      * 
      */
     public Output<String> definitionMethod() {
@@ -273,14 +273,14 @@ public class ForwardingProfile extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.description);
     }
     /**
-     * The folder in which the resource is defined
+     * The folder in which the resource is defined. Possible values are `Mobile Users`.
      * 
      */
     @Export(name="folder", refs={String.class}, tree="[0]")
     private Output<String> folder;
 
     /**
-     * @return The folder in which the resource is defined
+     * @return The folder in which the resource is defined. Possible values are `Mobile Users`.
      * 
      */
     public Output<String> folder() {

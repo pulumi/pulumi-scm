@@ -54,7 +54,7 @@ public final class BgpRouteMapRedistributionBgpRibRouteMapMatch {
      */
     private @Nullable String origin;
     /**
-     * @return BGP Root RIB Route maps match Peer
+     * @return BGP Root RIB Route maps match Peer. Possible values are `local` and `none`.
      * 
      */
     private @Nullable String peer;
@@ -127,7 +127,7 @@ public final class BgpRouteMapRedistributionBgpRibRouteMapMatch {
         return Optional.ofNullable(this.origin);
     }
     /**
-     * @return BGP Root RIB Route maps match Peer
+     * @return BGP Root RIB Route maps match Peer. Possible values are `local` and `none`.
      * 
      */
     public Optional<String> peer() {

@@ -5,6 +5,7 @@ package com.pulumi.scm.outputs;
 
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
+import com.pulumi.scm.outputs.GetAggregateInterfaceListDataLayer3LacpHighAvailability;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -23,12 +24,17 @@ public final class GetAggregateInterfaceListDataLayer3Lacp {
      */
     private Boolean fastFailover;
     /**
+     * @return High Availability settings
+     * 
+     */
+    private GetAggregateInterfaceListDataLayer3LacpHighAvailability highAvailability;
+    /**
      * @return Maximum number of physical ports bundled in the LAG
      * 
      */
     private Integer maxPorts;
     /**
-     * @return Mode
+     * @return Mode. Possible values are `passive` and `active`.
      * 
      */
     private String mode;
@@ -38,7 +44,7 @@ public final class GetAggregateInterfaceListDataLayer3Lacp {
      */
     private Integer systemPriority;
     /**
-     * @return Transmission mode
+     * @return Transmission mode. Possible values are `fast` and `slow`.
      * 
      */
     private String transmissionRate;
@@ -59,6 +65,13 @@ public final class GetAggregateInterfaceListDataLayer3Lacp {
         return this.fastFailover;
     }
     /**
+     * @return High Availability settings
+     * 
+     */
+    public GetAggregateInterfaceListDataLayer3LacpHighAvailability highAvailability() {
+        return this.highAvailability;
+    }
+    /**
      * @return Maximum number of physical ports bundled in the LAG
      * 
      */
@@ -66,7 +79,7 @@ public final class GetAggregateInterfaceListDataLayer3Lacp {
         return this.maxPorts;
     }
     /**
-     * @return Mode
+     * @return Mode. Possible values are `passive` and `active`.
      * 
      */
     public String mode() {
@@ -80,7 +93,7 @@ public final class GetAggregateInterfaceListDataLayer3Lacp {
         return this.systemPriority;
     }
     /**
-     * @return Transmission mode
+     * @return Transmission mode. Possible values are `fast` and `slow`.
      * 
      */
     public String transmissionRate() {
@@ -98,6 +111,7 @@ public final class GetAggregateInterfaceListDataLayer3Lacp {
     public static final class Builder {
         private Boolean enable;
         private Boolean fastFailover;
+        private GetAggregateInterfaceListDataLayer3LacpHighAvailability highAvailability;
         private Integer maxPorts;
         private String mode;
         private Integer systemPriority;
@@ -107,6 +121,7 @@ public final class GetAggregateInterfaceListDataLayer3Lacp {
     	      Objects.requireNonNull(defaults);
     	      this.enable = defaults.enable;
     	      this.fastFailover = defaults.fastFailover;
+    	      this.highAvailability = defaults.highAvailability;
     	      this.maxPorts = defaults.maxPorts;
     	      this.mode = defaults.mode;
     	      this.systemPriority = defaults.systemPriority;
@@ -127,6 +142,14 @@ public final class GetAggregateInterfaceListDataLayer3Lacp {
               throw new MissingRequiredPropertyException("GetAggregateInterfaceListDataLayer3Lacp", "fastFailover");
             }
             this.fastFailover = fastFailover;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder highAvailability(GetAggregateInterfaceListDataLayer3LacpHighAvailability highAvailability) {
+            if (highAvailability == null) {
+              throw new MissingRequiredPropertyException("GetAggregateInterfaceListDataLayer3Lacp", "highAvailability");
+            }
+            this.highAvailability = highAvailability;
             return this;
         }
         @CustomType.Setter
@@ -165,6 +188,7 @@ public final class GetAggregateInterfaceListDataLayer3Lacp {
             final var _resultValue = new GetAggregateInterfaceListDataLayer3Lacp();
             _resultValue.enable = enable;
             _resultValue.fastFailover = fastFailover;
+            _resultValue.highAvailability = highAvailability;
             _resultValue.maxPorts = maxPorts;
             _resultValue.mode = mode;
             _resultValue.systemPriority = systemPriority;

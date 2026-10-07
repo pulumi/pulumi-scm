@@ -108,14 +108,14 @@ public final class LogicalRouterVrfMulticastInterfaceGroupIgmpArgs extends com.p
     }
 
     /**
-     * Mode
+     * Mode. Possible values are `router` and `host`.
      * 
      */
     @Import(name="mode")
     private @Nullable Output<String> mode;
 
     /**
-     * @return Mode
+     * @return Mode. Possible values are `router` and `host`.
      * 
      */
     public Optional<Output<String>> mode() {
@@ -138,14 +138,14 @@ public final class LogicalRouterVrfMulticastInterfaceGroupIgmpArgs extends com.p
     }
 
     /**
-     * Robustness
+     * Robustness. Possible values are `1`, `2`, `3`, `4`, `5`, `6` and `7`.
      * 
      */
     @Import(name="robustness")
     private @Nullable Output<String> robustness;
 
     /**
-     * @return Robustness
+     * @return Robustness. Possible values are `1`, `2`, `3`, `4`, `5`, `6` and `7`.
      * 
      */
     public Optional<Output<String>> robustness() {
@@ -168,14 +168,14 @@ public final class LogicalRouterVrfMulticastInterfaceGroupIgmpArgs extends com.p
     }
 
     /**
-     * Version
+     * Version. Possible values are `1`, `2` and `3`.
      * 
      */
     @Import(name="version")
     private @Nullable Output<String> version;
 
     /**
-     * @return Version
+     * @return Version. Possible values are `1`, `2` and `3`.
      * 
      */
     public Optional<Output<String>> version() {
@@ -343,7 +343,7 @@ public final class LogicalRouterVrfMulticastInterfaceGroupIgmpArgs extends com.p
         }
 
         /**
-         * @param mode Mode
+         * @param mode Mode. Possible values are `router` and `host`.
          * 
          * @return builder
          * 
@@ -354,7 +354,7 @@ public final class LogicalRouterVrfMulticastInterfaceGroupIgmpArgs extends com.p
         }
 
         /**
-         * @param mode Mode
+         * @param mode Mode. Possible values are `router` and `host`.
          * 
          * @return builder
          * 
@@ -385,7 +385,7 @@ public final class LogicalRouterVrfMulticastInterfaceGroupIgmpArgs extends com.p
         }
 
         /**
-         * @param robustness Robustness
+         * @param robustness Robustness. Possible values are `1`, `2`, `3`, `4`, `5`, `6` and `7`.
          * 
          * @return builder
          * 
@@ -396,7 +396,7 @@ public final class LogicalRouterVrfMulticastInterfaceGroupIgmpArgs extends com.p
         }
 
         /**
-         * @param robustness Robustness
+         * @param robustness Robustness. Possible values are `1`, `2`, `3`, `4`, `5`, `6` and `7`.
          * 
          * @return builder
          * 
@@ -427,7 +427,7 @@ public final class LogicalRouterVrfMulticastInterfaceGroupIgmpArgs extends com.p
         }
 
         /**
-         * @param version Version
+         * @param version Version. Possible values are `1`, `2` and `3`.
          * 
          * @return builder
          * 
@@ -438,7 +438,7 @@ public final class LogicalRouterVrfMulticastInterfaceGroupIgmpArgs extends com.p
         }
 
         /**
-         * @param version Version
+         * @param version Version. Possible values are `1`, `2` and `3`.
          * 
          * @return builder
          * 

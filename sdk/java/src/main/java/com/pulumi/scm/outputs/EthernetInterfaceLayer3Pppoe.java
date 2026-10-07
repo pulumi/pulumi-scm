@@ -22,7 +22,7 @@ public final class EthernetInterfaceLayer3Pppoe {
      */
     private @Nullable String accessConcentrator;
     /**
-     * @return Authentication protocol
+     * @return Authentication protocol. Possible values are `CHAP`, `PAP` and `auto`.
      * 
      */
     private @Nullable String authentication;
@@ -32,7 +32,7 @@ public final class EthernetInterfaceLayer3Pppoe {
      */
     private @Nullable Integer defaultRouteMetric;
     /**
-     * @return Enable
+     * @return Enable PPPoE on the interface
      * 
      */
     private @Nullable Boolean enable;
@@ -71,7 +71,7 @@ public final class EthernetInterfaceLayer3Pppoe {
         return Optional.ofNullable(this.accessConcentrator);
     }
     /**
-     * @return Authentication protocol
+     * @return Authentication protocol. Possible values are `CHAP`, `PAP` and `auto`.
      * 
      */
     public Optional<String> authentication() {
@@ -85,7 +85,7 @@ public final class EthernetInterfaceLayer3Pppoe {
         return Optional.ofNullable(this.defaultRouteMetric);
     }
     /**
-     * @return Enable
+     * @return Enable PPPoE on the interface
      * 
      */
     public Optional<Boolean> enable() {

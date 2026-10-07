@@ -38,7 +38,7 @@ export interface GetBgpRoutingResult {
      */
     readonly addHostRouteToIkePeer: boolean;
     /**
-     * Backbone routing
+     * Backbone routing. Possible values are `no-asymmetric-routing`, `asymmetric-routing-only` and `asymmetric-routing-with-load-share`.
      */
     readonly backboneRouting: string;
     /**

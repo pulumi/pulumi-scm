@@ -11,26 +11,26 @@ import java.util.Objects;
 @CustomType
 public final class GetCertificateProfileListDataUsernameField {
     /**
-     * @return Common name
+     * @return Common name. Possible values are `common-name`.
      * 
      */
     private String subject;
     /**
-     * @return Email address
+     * @return Email address. Possible values are `email`.
      * 
      */
     private String subjectAlt;
 
     private GetCertificateProfileListDataUsernameField() {}
     /**
-     * @return Common name
+     * @return Common name. Possible values are `common-name`.
      * 
      */
     public String subject() {
         return this.subject;
     }
     /**
-     * @return Email address
+     * @return Email address. Possible values are `email`.
      * 
      */
     public String subjectAlt() {

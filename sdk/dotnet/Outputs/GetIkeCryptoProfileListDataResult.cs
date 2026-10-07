@@ -22,19 +22,19 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly string Device;
         /// <summary>
-        /// Dh group
+        /// Dh group. Possible values are `Group1`, `Group2`, `Group5`, `Group14`, `Group19`, `Group20`, `Group21`, `ml-kem-512`, `ml-kem-768` and `ml-kem-1024`.
         /// </summary>
         public readonly ImmutableArray<string> DhGroups;
         /// <summary>
-        /// Encryption algorithm
+        /// Encryption algorithm. Possible values are `Des`, `3des`, `aes-128-cbc`, `aes-192-cbc`, `aes-256-cbc`, `aes-128-gcm` and `aes-256-gcm`.
         /// </summary>
         public readonly ImmutableArray<string> Encryptions;
         /// <summary>
-        /// The folder of the item. Default: Shared.
+        /// The folder in which the resource is defined
         /// </summary>
         public readonly string Folder;
         /// <summary>
-        /// Hash
+        /// Hash. Possible values are `Md5`, `Sha1`, `Sha256`, `Sha384`, `Sha512` and `non-auth`.
         /// </summary>
         public readonly ImmutableArray<string> Hashes;
         /// <summary>
@@ -46,11 +46,11 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly Outputs.GetIkeCryptoProfileListDataLifetimeResult Lifetime;
         /// <summary>
-        /// The name of the item.
+        /// Alphanumeric string begin with letter: [0-9a-zA-Z._-]
         /// </summary>
         public readonly string Name;
         /// <summary>
-        /// The snippet of the item.
+        /// The snippet in which the resource is defined
         /// </summary>
         public readonly string Snippet;
         /// <summary>

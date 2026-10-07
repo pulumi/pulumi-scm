@@ -83,7 +83,7 @@ export class Snippet extends pulumi.CustomResource {
      */
     declare public /*out*/ readonly tfid: pulumi.Output<string>;
     /**
-     * The snippet type
+     * The snippet type. Possible values are `predefined`, `custom` and `readonly`.
      */
     declare public /*out*/ readonly type: pulumi.Output<string>;
 
@@ -139,7 +139,7 @@ export interface SnippetState {
      */
     tfid?: pulumi.Input<string | undefined>;
     /**
-     * The snippet type
+     * The snippet type. Possible values are `predefined`, `custom` and `readonly`.
      */
     type?: pulumi.Input<string | undefined>;
 }

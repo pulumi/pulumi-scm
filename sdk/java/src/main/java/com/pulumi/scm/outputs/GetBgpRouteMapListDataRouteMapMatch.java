@@ -53,7 +53,7 @@ public final class GetBgpRouteMapListDataRouteMapMatch {
      */
     private String origin;
     /**
-     * @return Peer
+     * @return Peer. Possible values are `local` and `none`.
      * 
      */
     private String peer;
@@ -126,7 +126,7 @@ public final class GetBgpRouteMapListDataRouteMapMatch {
         return this.origin;
     }
     /**
-     * @return Peer
+     * @return Peer. Possible values are `local` and `none`.
      * 
      */
     public String peer() {

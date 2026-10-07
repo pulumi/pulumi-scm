@@ -32,14 +32,14 @@ public final class LogicalRouterVrfOspfAreaTypeNssaDefaultInformationOriginateAr
     }
 
     /**
-     * Metric type
+     * Metric type. Possible values are `type-1` and `type-2`.
      * 
      */
     @Import(name="metricType")
     private @Nullable Output<String> metricType;
 
     /**
-     * @return Metric type
+     * @return Metric type. Possible values are `type-1` and `type-2`.
      * 
      */
     public Optional<Output<String>> metricType() {
@@ -93,7 +93,7 @@ public final class LogicalRouterVrfOspfAreaTypeNssaDefaultInformationOriginateAr
         }
 
         /**
-         * @param metricType Metric type
+         * @param metricType Metric type. Possible values are `type-1` and `type-2`.
          * 
          * @return builder
          * 
@@ -104,7 +104,7 @@ public final class LogicalRouterVrfOspfAreaTypeNssaDefaultInformationOriginateAr
         }
 
         /**
-         * @param metricType Metric type
+         * @param metricType Metric type. Possible values are `type-1` and `type-2`.
          * 
          * @return builder
          * 

@@ -20,8 +20,6 @@ public final class LogicalRouterVrfBgpPolicyExportRuleAction {
     /**
      * @return Deny
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `allow` and `deny`.
-     * 
      */
     private @Nullable LogicalRouterVrfBgpPolicyExportRuleActionDeny deny;
 
@@ -35,8 +33,6 @@ public final class LogicalRouterVrfBgpPolicyExportRuleAction {
     }
     /**
      * @return Deny
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `allow` and `deny`.
      * 
      */
     public Optional<LogicalRouterVrfBgpPolicyExportRuleActionDeny> deny() {

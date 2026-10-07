@@ -61,26 +61,36 @@ func LookupLayer2Subinterface(ctx *pulumi.Context, args *LookupLayer2Subinterfac
 type LookupLayer2SubinterfaceArgs struct {
 	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
+	// The folder in which the resource is defined
 	Folder *string `pulumi:"folder"`
 	// UUID of the resource
-	Id      string  `pulumi:"id"`
-	Name    *string `pulumi:"name"`
+	Id string `pulumi:"id"`
+	// L2 sub-interface name
+	Name *string `pulumi:"name"`
+	// The snippet in which the resource is defined
 	Snippet *string `pulumi:"snippet"`
 }
 
 // A collection of values returned by getLayer2Subinterface.
 type LookupLayer2SubinterfaceResult struct {
+	// Description
 	Comment string `pulumi:"comment"`
 	// The device in which the resource is defined
 	Device string `pulumi:"device"`
+	// The folder in which the resource is defined
 	Folder string `pulumi:"folder"`
 	// UUID of the resource
-	Id              string `pulumi:"id"`
-	Name            string `pulumi:"name"`
+	Id string `pulumi:"id"`
+	// L2 sub-interface name
+	Name string `pulumi:"name"`
+	// Parent interface
 	ParentInterface string `pulumi:"parentInterface"`
-	Snippet         string `pulumi:"snippet"`
-	Tfid            string `pulumi:"tfid"`
-	VlanTag         string `pulumi:"vlanTag"`
+	// The snippet in which the resource is defined
+	Snippet string `pulumi:"snippet"`
+	// The Terraform ID.
+	Tfid string `pulumi:"tfid"`
+	// VLAN tag
+	VlanTag string `pulumi:"vlanTag"`
 }
 
 func LookupLayer2SubinterfaceOutput(ctx *pulumi.Context, args LookupLayer2SubinterfaceOutputArgs, opts ...pulumi.InvokeOption) LookupLayer2SubinterfaceResultOutput {
@@ -92,10 +102,13 @@ func LookupLayer2SubinterfaceOutput(ctx *pulumi.Context, args LookupLayer2Subint
 type LookupLayer2SubinterfaceOutputArgs struct {
 	// The device in which the resource is defined
 	Device pulumi.StringPtrInput `pulumi:"device"`
+	// The folder in which the resource is defined
 	Folder pulumi.StringPtrInput `pulumi:"folder"`
 	// UUID of the resource
-	Id      pulumi.StringInput    `pulumi:"id"`
-	Name    pulumi.StringPtrInput `pulumi:"name"`
+	Id pulumi.StringInput `pulumi:"id"`
+	// L2 sub-interface name
+	Name pulumi.StringPtrInput `pulumi:"name"`
+	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrInput `pulumi:"snippet"`
 }
 
@@ -118,6 +131,7 @@ func (o LookupLayer2SubinterfaceResultOutput) ToLookupLayer2SubinterfaceResultOu
 	return o
 }
 
+// Description
 func (o LookupLayer2SubinterfaceResultOutput) Comment() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupLayer2SubinterfaceResult) string { return v.Comment }).(pulumi.StringOutput)
 }
@@ -127,6 +141,7 @@ func (o LookupLayer2SubinterfaceResultOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupLayer2SubinterfaceResult) string { return v.Device }).(pulumi.StringOutput)
 }
 
+// The folder in which the resource is defined
 func (o LookupLayer2SubinterfaceResultOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupLayer2SubinterfaceResult) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -136,22 +151,27 @@ func (o LookupLayer2SubinterfaceResultOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupLayer2SubinterfaceResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
+// L2 sub-interface name
 func (o LookupLayer2SubinterfaceResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupLayer2SubinterfaceResult) string { return v.Name }).(pulumi.StringOutput)
 }
 
+// Parent interface
 func (o LookupLayer2SubinterfaceResultOutput) ParentInterface() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupLayer2SubinterfaceResult) string { return v.ParentInterface }).(pulumi.StringOutput)
 }
 
+// The snippet in which the resource is defined
 func (o LookupLayer2SubinterfaceResultOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupLayer2SubinterfaceResult) string { return v.Snippet }).(pulumi.StringOutput)
 }
 
+// The Terraform ID.
 func (o LookupLayer2SubinterfaceResultOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupLayer2SubinterfaceResult) string { return v.Tfid }).(pulumi.StringOutput)
 }
 
+// VLAN tag
 func (o LookupLayer2SubinterfaceResultOutput) VlanTag() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupLayer2SubinterfaceResult) string { return v.VlanTag }).(pulumi.StringOutput)
 }

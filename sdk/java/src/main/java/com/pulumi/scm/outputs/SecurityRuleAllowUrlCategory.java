@@ -13,17 +13,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class SecurityRuleAllowUrlCategory {
     /**
-     * @return Additional action
+     * @return Additional action. Possible values are `none`, `continue`, `redirect` and `isolate`.
      * 
      */
     private @Nullable String additionalAction;
     /**
-     * @return Credential enforcement
+     * @return Credential enforcement. Possible values are `enabled` and `disabled`.
      * 
      */
     private @Nullable String credentialEnforcement;
     /**
-     * @return Decryption
+     * @return Decryption. Possible values are `enabled` and `disabled`.
      * 
      */
     private @Nullable String decryption;
@@ -50,21 +50,21 @@ public final class SecurityRuleAllowUrlCategory {
 
     private SecurityRuleAllowUrlCategory() {}
     /**
-     * @return Additional action
+     * @return Additional action. Possible values are `none`, `continue`, `redirect` and `isolate`.
      * 
      */
     public Optional<String> additionalAction() {
         return Optional.ofNullable(this.additionalAction);
     }
     /**
-     * @return Credential enforcement
+     * @return Credential enforcement. Possible values are `enabled` and `disabled`.
      * 
      */
     public Optional<String> credentialEnforcement() {
         return Optional.ofNullable(this.credentialEnforcement);
     }
     /**
-     * @return Decryption
+     * @return Decryption. Possible values are `enabled` and `disabled`.
      * 
      */
     public Optional<String> decryption() {

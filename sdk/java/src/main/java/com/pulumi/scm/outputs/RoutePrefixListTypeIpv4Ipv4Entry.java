@@ -14,7 +14,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class RoutePrefixListTypeIpv4Ipv4Entry {
     /**
-     * @return Action
+     * @return Action. Possible values are `deny` and `permit`.
      * 
      */
     private @Nullable String action;
@@ -31,7 +31,7 @@ public final class RoutePrefixListTypeIpv4Ipv4Entry {
 
     private RoutePrefixListTypeIpv4Ipv4Entry() {}
     /**
-     * @return Action
+     * @return Action. Possible values are `deny` and `permit`.
      * 
      */
     public Optional<String> action() {

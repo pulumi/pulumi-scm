@@ -41,7 +41,7 @@ public final class AutoVpnClusterGateway {
      */
     private @Nullable String name;
     /**
-     * @return Priority
+     * @return Priority. Possible values are `1`, `2`, `3`, `4`, `5`, `6`, `7` and `8`.
      * 
      */
     private @Nullable String priority;
@@ -93,7 +93,7 @@ public final class AutoVpnClusterGateway {
         return Optional.ofNullable(this.name);
     }
     /**
-     * @return Priority
+     * @return Priority. Possible values are `1`, `2`, `3`, `4`, `5`, `6`, `7` and `8`.
      * 
      */
     public Optional<String> priority() {

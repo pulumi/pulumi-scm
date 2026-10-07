@@ -21,21 +21,15 @@ public final class LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttr
     /**
      * @return Prepend
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
-     * 
      */
     private @Nullable Integer prepend;
     /**
      * @return Remove
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
-     * 
      */
     private @Nullable LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesAsPathRemove remove;
     /**
      * @return Remove and prepend
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
      * 
      */
     private @Nullable Integer removeAndPrepend;
@@ -51,8 +45,6 @@ public final class LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttr
     /**
      * @return Prepend
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
-     * 
      */
     public Optional<Integer> prepend() {
         return Optional.ofNullable(this.prepend);
@@ -60,16 +52,12 @@ public final class LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttr
     /**
      * @return Remove
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
-     * 
      */
     public Optional<LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesAsPathRemove> remove() {
         return Optional.ofNullable(this.remove);
     }
     /**
      * @return Remove and prepend
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
      * 
      */
     public Optional<Integer> removeAndPrepend() {

@@ -26,26 +26,36 @@ func LookupLocalUser(ctx *pulumi.Context, args *LookupLocalUserArgs, opts ...pul
 type LookupLocalUserArgs struct {
 	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
+	// The folder in which the resource is defined
 	Folder *string `pulumi:"folder"`
 	// The UUID of the local user
-	Id      string  `pulumi:"id"`
-	Name    *string `pulumi:"name"`
+	Id string `pulumi:"id"`
+	// The name of the local user
+	Name *string `pulumi:"name"`
+	// The snippet in which the resource is defined
 	Snippet *string `pulumi:"snippet"`
 }
 
 // A collection of values returned by getLocalUser.
 type LookupLocalUserResult struct {
 	// The device in which the resource is defined
-	Device          string            `pulumi:"device"`
-	Disabled        bool              `pulumi:"disabled"`
+	Device string `pulumi:"device"`
+	// Is the local user disabled?
+	Disabled bool `pulumi:"disabled"`
+	// Map of sensitive values returned from the API.
 	EncryptedValues map[string]string `pulumi:"encryptedValues"`
-	Folder          string            `pulumi:"folder"`
+	// The folder in which the resource is defined
+	Folder string `pulumi:"folder"`
 	// The UUID of the local user
-	Id       string `pulumi:"id"`
-	Name     string `pulumi:"name"`
+	Id string `pulumi:"id"`
+	// The name of the local user
+	Name string `pulumi:"name"`
+	// The password of the local user
 	Password string `pulumi:"password"`
-	Snippet  string `pulumi:"snippet"`
-	Tfid     string `pulumi:"tfid"`
+	// The snippet in which the resource is defined
+	Snippet string `pulumi:"snippet"`
+	// The Terraform ID.
+	Tfid string `pulumi:"tfid"`
 }
 
 func LookupLocalUserOutput(ctx *pulumi.Context, args LookupLocalUserOutputArgs, opts ...pulumi.InvokeOption) LookupLocalUserResultOutput {
@@ -57,10 +67,13 @@ func LookupLocalUserOutput(ctx *pulumi.Context, args LookupLocalUserOutputArgs, 
 type LookupLocalUserOutputArgs struct {
 	// The device in which the resource is defined
 	Device pulumi.StringPtrInput `pulumi:"device"`
+	// The folder in which the resource is defined
 	Folder pulumi.StringPtrInput `pulumi:"folder"`
 	// The UUID of the local user
-	Id      pulumi.StringInput    `pulumi:"id"`
-	Name    pulumi.StringPtrInput `pulumi:"name"`
+	Id pulumi.StringInput `pulumi:"id"`
+	// The name of the local user
+	Name pulumi.StringPtrInput `pulumi:"name"`
+	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrInput `pulumi:"snippet"`
 }
 
@@ -88,14 +101,17 @@ func (o LookupLocalUserResultOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupLocalUserResult) string { return v.Device }).(pulumi.StringOutput)
 }
 
+// Is the local user disabled?
 func (o LookupLocalUserResultOutput) Disabled() pulumi.BoolOutput {
 	return o.ApplyT(func(v LookupLocalUserResult) bool { return v.Disabled }).(pulumi.BoolOutput)
 }
 
+// Map of sensitive values returned from the API.
 func (o LookupLocalUserResultOutput) EncryptedValues() pulumi.StringMapOutput {
 	return o.ApplyT(func(v LookupLocalUserResult) map[string]string { return v.EncryptedValues }).(pulumi.StringMapOutput)
 }
 
+// The folder in which the resource is defined
 func (o LookupLocalUserResultOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupLocalUserResult) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -105,18 +121,22 @@ func (o LookupLocalUserResultOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupLocalUserResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
+// The name of the local user
 func (o LookupLocalUserResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupLocalUserResult) string { return v.Name }).(pulumi.StringOutput)
 }
 
+// The password of the local user
 func (o LookupLocalUserResultOutput) Password() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupLocalUserResult) string { return v.Password }).(pulumi.StringOutput)
 }
 
+// The snippet in which the resource is defined
 func (o LookupLocalUserResultOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupLocalUserResult) string { return v.Snippet }).(pulumi.StringOutput)
 }
 
+// The Terraform ID.
 func (o LookupLocalUserResultOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupLocalUserResult) string { return v.Tfid }).(pulumi.StringOutput)
 }

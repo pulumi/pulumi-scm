@@ -264,14 +264,14 @@ import javax.annotation.Nullable;
 @ResourceType(type="scm:index/securityRule:SecurityRule")
 public class SecurityRule extends com.pulumi.resources.CustomResource {
     /**
-     * The action to be taken when the rule is matched
+     * The action to be taken when the rule is matched. Possible values are `allow`, `deny`, `drop`, `reset-client`, `reset-server` and `reset-both`.
      * 
      */
     @Export(name="action", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> action;
 
     /**
-     * @return The action to be taken when the rule is matched
+     * @return The action to be taken when the rule is matched. Possible values are `allow`, `deny`, `drop`, `reset-client`, `reset-server` and `reset-both`.
      * 
      */
     public Output<Optional<String>> action() {
@@ -614,14 +614,14 @@ public class SecurityRule extends com.pulumi.resources.CustomResource {
         return this.policyType;
     }
     /**
-     * The position of a security rule
+     * The position of a security rule. Possible values are `pre` and `post`.
      * 
      */
     @Export(name="position", refs={String.class}, tree="[0]")
     private Output<String> position;
 
     /**
-     * @return The position of a security rule
+     * @return The position of a security rule. Possible values are `pre` and `post`.
      * 
      */
     public Output<String> position() {
@@ -768,14 +768,14 @@ public class SecurityRule extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.tags);
     }
     /**
-     * The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `&#34;before&#34;` or `&#34;after&#34;`.
+     * UUID of the rule to position this rule relative to. Required when `relativePosition` is `&#34;before&#34;` or `&#34;after&#34;`.
      * 
      */
     @Export(name="targetRule", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> targetRule;
 
     /**
-     * @return The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `&#34;before&#34;` or `&#34;after&#34;`.
+     * @return UUID of the rule to position this rule relative to. Required when `relativePosition` is `&#34;before&#34;` or `&#34;after&#34;`.
      * 
      */
     public Output<Optional<String>> targetRule() {

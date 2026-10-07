@@ -18,7 +18,7 @@ public final class TcpSettingTcp {
      */
     private @Nullable Boolean allowChallengeAck;
     /**
-     * @return Asymmetric path action
+     * @return Asymmetric path action. Possible values are `drop` and `bypass`.
      * 
      */
     private @Nullable String asymmetricPath;
@@ -38,7 +38,7 @@ public final class TcpSettingTcp {
      */
     private @Nullable Boolean dropZeroFlag;
     /**
-     * @return SIP TCP cleartext action (`&#39;0&#39;` = Always Off, `&#39;1&#39;` = Always Enabled, `&#39;2&#39;` = Automatically enable proxy when needed)
+     * @return SIP TCP cleartext action (`&#39;0&#39;` = Always Off, `&#39;1&#39;` = Always Enabled, `&#39;2&#39;` = Automatically enable proxy when needed). Possible values are `0`, `2` and `3`.
      * 
      */
     private @Nullable String siptcpCleartextProxy;
@@ -53,7 +53,7 @@ public final class TcpSettingTcp {
      */
     private @Nullable Boolean tcpRetransmitScan;
     /**
-     * @return Urgent data flag action
+     * @return Urgent data flag action. Possible values are `clear` and `oobinline`.
      * 
      */
     private @Nullable String urgentData;
@@ -67,7 +67,7 @@ public final class TcpSettingTcp {
         return Optional.ofNullable(this.allowChallengeAck);
     }
     /**
-     * @return Asymmetric path action
+     * @return Asymmetric path action. Possible values are `drop` and `bypass`.
      * 
      */
     public Optional<String> asymmetricPath() {
@@ -95,7 +95,7 @@ public final class TcpSettingTcp {
         return Optional.ofNullable(this.dropZeroFlag);
     }
     /**
-     * @return SIP TCP cleartext action (`&#39;0&#39;` = Always Off, `&#39;1&#39;` = Always Enabled, `&#39;2&#39;` = Automatically enable proxy when needed)
+     * @return SIP TCP cleartext action (`&#39;0&#39;` = Always Off, `&#39;1&#39;` = Always Enabled, `&#39;2&#39;` = Automatically enable proxy when needed). Possible values are `0`, `2` and `3`.
      * 
      */
     public Optional<String> siptcpCleartextProxy() {
@@ -116,7 +116,7 @@ public final class TcpSettingTcp {
         return Optional.ofNullable(this.tcpRetransmitScan);
     }
     /**
-     * @return Urgent data flag action
+     * @return Urgent data flag action. Possible values are `clear` and `oobinline`.
      * 
      */
     public Optional<String> urgentData() {

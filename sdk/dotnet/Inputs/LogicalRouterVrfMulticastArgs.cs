@@ -43,7 +43,7 @@ namespace Pulumi.Scm.Inputs
         }
 
         /// <summary>
-        /// Mode
+        /// Mode. Possible values are `PIM-SM` and `IGMP-Proxy`.
         /// </summary>
         [Input("mode")]
         public Input<string>? Mode { get; set; }

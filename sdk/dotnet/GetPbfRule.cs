@@ -123,6 +123,9 @@ namespace Pulumi.Scm
         [Input("device")]
         public string? Device { get; set; }
 
+        /// <summary>
+        /// The folder in which the resource is defined
+        /// </summary>
         [Input("folder")]
         public string? Folder { get; set; }
 
@@ -132,9 +135,15 @@ namespace Pulumi.Scm
         [Input("id", required: true)]
         public string Id { get; set; } = null!;
 
+        /// <summary>
+        /// PBF rule name
+        /// </summary>
         [Input("name")]
         public string? Name { get; set; }
 
+        /// <summary>
+        /// The snippet in which the resource is defined
+        /// </summary>
         [Input("snippet")]
         public string? Snippet { get; set; }
 
@@ -152,6 +161,9 @@ namespace Pulumi.Scm
         [Input("device")]
         public Input<string>? Device { get; set; }
 
+        /// <summary>
+        /// The folder in which the resource is defined
+        /// </summary>
         [Input("folder")]
         public Input<string>? Folder { get; set; }
 
@@ -161,9 +173,15 @@ namespace Pulumi.Scm
         [Input("id", required: true)]
         public Input<string> Id { get; set; } = null!;
 
+        /// <summary>
+        /// PBF rule name
+        /// </summary>
         [Input("name")]
         public Input<string>? Name { get; set; }
 
+        /// <summary>
+        /// The snippet in which the resource is defined
+        /// </summary>
         [Input("snippet")]
         public Input<string>? Snippet { get; set; }
 
@@ -177,28 +195,81 @@ namespace Pulumi.Scm
     [OutputType]
     public sealed class GetPbfRuleResult
     {
+        /// <summary>
+        /// Action
+        /// </summary>
         public readonly Outputs.GetPbfRuleActionResult Action;
+        /// <summary>
+        /// Applications
+        /// </summary>
         public readonly ImmutableArray<string> Applications;
+        /// <summary>
+        /// Description
+        /// </summary>
         public readonly string Description;
+        /// <summary>
+        /// Destination addresses
+        /// </summary>
         public readonly ImmutableArray<string> Destinations;
         /// <summary>
         /// The device in which the resource is defined
         /// </summary>
         public readonly string Device;
+        /// <summary>
+        /// Enforce symmetric return
+        /// </summary>
         public readonly Outputs.GetPbfRuleEnforceSymmetricReturnResult EnforceSymmetricReturn;
+        /// <summary>
+        /// The folder in which the resource is defined
+        /// </summary>
         public readonly string Folder;
+        /// <summary>
+        /// From
+        /// </summary>
         public readonly Outputs.GetPbfRuleFromResult From;
         /// <summary>
         /// UUID of the resource
         /// </summary>
         public readonly string Id;
+        /// <summary>
+        /// PBF rule name
+        /// </summary>
         public readonly string Name;
+        /// <summary>
+        /// Negate destination address
+        /// </summary>
+        public readonly bool NegateDestination;
+        /// <summary>
+        /// Negate source address
+        /// </summary>
+        public readonly bool NegateSource;
+        /// <summary>
+        /// Schedule
+        /// </summary>
         public readonly string Schedule;
+        /// <summary>
+        /// Services
+        /// </summary>
         public readonly ImmutableArray<string> Services;
+        /// <summary>
+        /// The snippet in which the resource is defined
+        /// </summary>
         public readonly string Snippet;
+        /// <summary>
+        /// Source users
+        /// </summary>
         public readonly ImmutableArray<string> SourceUsers;
+        /// <summary>
+        /// Source addresses
+        /// </summary>
         public readonly ImmutableArray<string> Sources;
+        /// <summary>
+        /// Tags
+        /// </summary>
         public readonly ImmutableArray<string> Tags;
+        /// <summary>
+        /// The Terraform ID.
+        /// </summary>
         public readonly string Tfid;
 
         [OutputConstructor]
@@ -222,6 +293,10 @@ namespace Pulumi.Scm
             string id,
 
             string name,
+
+            bool negateDestination,
+
+            bool negateSource,
 
             string schedule,
 
@@ -247,6 +322,8 @@ namespace Pulumi.Scm
             From = from;
             Id = id;
             Name = name;
+            NegateDestination = negateDestination;
+            NegateSource = negateSource;
             Schedule = schedule;
             Services = services;
             Snippet = snippet;

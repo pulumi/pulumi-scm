@@ -25,7 +25,7 @@ namespace Pulumi.Scm.Inputs
         public Input<string> Name { get; set; } = null!;
 
         /// <summary>
-        /// New path type
+        /// New path type. Possible values are `ext-1` and `ext-2`.
         /// </summary>
         [Input("newPathType")]
         public Input<string>? NewPathType { get; set; }

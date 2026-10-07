@@ -212,14 +212,10 @@ type DecryptionProfile struct {
 	// The device in which the resource is defined
 	Device pulumi.StringPtrOutput `pulumi:"device"`
 	// The folder in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrOutput `pulumi:"folder"`
 	// Must start with alphanumeric char and should contain only alphanemeric, underscore, hyphen, dot or space
 	Name pulumi.StringOutput `pulumi:"name"`
 	// The snippet in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
 	// Ssl forward proxy
 	SslForwardProxy DecryptionProfileSslForwardProxyPtrOutput `pulumi:"sslForwardProxy"`
@@ -266,14 +262,10 @@ type decryptionProfileState struct {
 	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
 	// The folder in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// Must start with alphanumeric char and should contain only alphanemeric, underscore, hyphen, dot or space
 	Name *string `pulumi:"name"`
 	// The snippet in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	// Ssl forward proxy
 	SslForwardProxy *DecryptionProfileSslForwardProxy `pulumi:"sslForwardProxy"`
@@ -291,14 +283,10 @@ type DecryptionProfileState struct {
 	// The device in which the resource is defined
 	Device pulumi.StringPtrInput
 	// The folder in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// Must start with alphanumeric char and should contain only alphanemeric, underscore, hyphen, dot or space
 	Name pulumi.StringPtrInput
 	// The snippet in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	// Ssl forward proxy
 	SslForwardProxy DecryptionProfileSslForwardProxyPtrInput
@@ -320,14 +308,10 @@ type decryptionProfileArgs struct {
 	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
 	// The folder in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// Must start with alphanumeric char and should contain only alphanemeric, underscore, hyphen, dot or space
 	Name *string `pulumi:"name"`
 	// The snippet in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	// Ssl forward proxy
 	SslForwardProxy *DecryptionProfileSslForwardProxy `pulumi:"sslForwardProxy"`
@@ -344,14 +328,10 @@ type DecryptionProfileArgs struct {
 	// The device in which the resource is defined
 	Device pulumi.StringPtrInput
 	// The folder in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// Must start with alphanumeric char and should contain only alphanemeric, underscore, hyphen, dot or space
 	Name pulumi.StringPtrInput
 	// The snippet in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	// Ssl forward proxy
 	SslForwardProxy DecryptionProfileSslForwardProxyPtrInput
@@ -456,8 +436,6 @@ func (o DecryptionProfileOutput) Device() pulumi.StringPtrOutput {
 }
 
 // The folder in which the resource is defined
-//
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o DecryptionProfileOutput) Folder() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *DecryptionProfile) pulumi.StringPtrOutput { return v.Folder }).(pulumi.StringPtrOutput)
 }
@@ -468,8 +446,6 @@ func (o DecryptionProfileOutput) Name() pulumi.StringOutput {
 }
 
 // The snippet in which the resource is defined
-//
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o DecryptionProfileOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *DecryptionProfile) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)
 }

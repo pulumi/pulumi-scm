@@ -20,7 +20,7 @@ public final class GetHttpServerProfileListData {
      */
     private String device;
     /**
-     * @return The folder of the item. Default: Shared.
+     * @return The folder in which the resource is defined
      * 
      */
     private String folder;
@@ -35,7 +35,7 @@ public final class GetHttpServerProfileListData {
      */
     private String id;
     /**
-     * @return The name of the item.
+     * @return The name of the profile
      * 
      */
     private String name;
@@ -45,7 +45,7 @@ public final class GetHttpServerProfileListData {
      */
     private List<GetHttpServerProfileListDataServer> servers;
     /**
-     * @return The snippet of the item.
+     * @return The snippet in which the resource is defined
      * 
      */
     private String snippet;
@@ -69,7 +69,7 @@ public final class GetHttpServerProfileListData {
         return this.device;
     }
     /**
-     * @return The folder of the item. Default: Shared.
+     * @return The folder in which the resource is defined
      * 
      */
     public String folder() {
@@ -90,7 +90,7 @@ public final class GetHttpServerProfileListData {
         return this.id;
     }
     /**
-     * @return The name of the item.
+     * @return The name of the profile
      * 
      */
     public String name() {
@@ -104,7 +104,7 @@ public final class GetHttpServerProfileListData {
         return this.servers;
     }
     /**
-     * @return The snippet of the item.
+     * @return The snippet in which the resource is defined
      * 
      */
     public String snippet() {

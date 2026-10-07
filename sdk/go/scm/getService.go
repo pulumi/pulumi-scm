@@ -62,26 +62,36 @@ func LookupService(ctx *pulumi.Context, args *LookupServiceArgs, opts ...pulumi.
 type LookupServiceArgs struct {
 	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
+	// The folder in which the resource is defined
 	Folder *string `pulumi:"folder"`
 	// The UUID of the service
-	Id      string  `pulumi:"id"`
-	Name    *string `pulumi:"name"`
+	Id string `pulumi:"id"`
+	// The name of the service
+	Name *string `pulumi:"name"`
+	// The snippet in which the resource is defined
 	Snippet *string `pulumi:"snippet"`
 }
 
 // A collection of values returned by getService.
 type LookupServiceResult struct {
+	// Description
 	Description string `pulumi:"description"`
 	// The device in which the resource is defined
 	Device string `pulumi:"device"`
+	// The folder in which the resource is defined
 	Folder string `pulumi:"folder"`
 	// The UUID of the service
-	Id       string             `pulumi:"id"`
-	Name     string             `pulumi:"name"`
+	Id string `pulumi:"id"`
+	// The name of the service
+	Name string `pulumi:"name"`
+	// Protocol
 	Protocol GetServiceProtocol `pulumi:"protocol"`
-	Snippet  string             `pulumi:"snippet"`
-	Tags     []string           `pulumi:"tags"`
-	Tfid     string             `pulumi:"tfid"`
+	// The snippet in which the resource is defined
+	Snippet string `pulumi:"snippet"`
+	// Tags for service object
+	Tags []string `pulumi:"tags"`
+	// The Terraform ID.
+	Tfid string `pulumi:"tfid"`
 }
 
 func LookupServiceOutput(ctx *pulumi.Context, args LookupServiceOutputArgs, opts ...pulumi.InvokeOption) LookupServiceResultOutput {
@@ -93,10 +103,13 @@ func LookupServiceOutput(ctx *pulumi.Context, args LookupServiceOutputArgs, opts
 type LookupServiceOutputArgs struct {
 	// The device in which the resource is defined
 	Device pulumi.StringPtrInput `pulumi:"device"`
+	// The folder in which the resource is defined
 	Folder pulumi.StringPtrInput `pulumi:"folder"`
 	// The UUID of the service
-	Id      pulumi.StringInput    `pulumi:"id"`
-	Name    pulumi.StringPtrInput `pulumi:"name"`
+	Id pulumi.StringInput `pulumi:"id"`
+	// The name of the service
+	Name pulumi.StringPtrInput `pulumi:"name"`
+	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrInput `pulumi:"snippet"`
 }
 
@@ -119,6 +132,7 @@ func (o LookupServiceResultOutput) ToLookupServiceResultOutputWithContext(ctx co
 	return o
 }
 
+// Description
 func (o LookupServiceResultOutput) Description() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupServiceResult) string { return v.Description }).(pulumi.StringOutput)
 }
@@ -128,6 +142,7 @@ func (o LookupServiceResultOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupServiceResult) string { return v.Device }).(pulumi.StringOutput)
 }
 
+// The folder in which the resource is defined
 func (o LookupServiceResultOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupServiceResult) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -137,22 +152,27 @@ func (o LookupServiceResultOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupServiceResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
+// The name of the service
 func (o LookupServiceResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupServiceResult) string { return v.Name }).(pulumi.StringOutput)
 }
 
+// Protocol
 func (o LookupServiceResultOutput) Protocol() GetServiceProtocolOutput {
 	return o.ApplyT(func(v LookupServiceResult) GetServiceProtocol { return v.Protocol }).(GetServiceProtocolOutput)
 }
 
+// The snippet in which the resource is defined
 func (o LookupServiceResultOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupServiceResult) string { return v.Snippet }).(pulumi.StringOutput)
 }
 
+// Tags for service object
 func (o LookupServiceResultOutput) Tags() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupServiceResult) []string { return v.Tags }).(pulumi.StringArrayOutput)
 }
 
+// The Terraform ID.
 func (o LookupServiceResultOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupServiceResult) string { return v.Tfid }).(pulumi.StringOutput)
 }

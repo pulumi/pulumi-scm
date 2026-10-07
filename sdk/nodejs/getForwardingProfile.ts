@@ -53,7 +53,7 @@ export function getForwardingProfile(args: GetForwardingProfileArgs, opts?: pulu
  */
 export interface GetForwardingProfileArgs {
     /**
-     * The folder in which the resource is defined
+     * The folder in which the resource is defined. Possible values are `Mobile Users`.
      */
     folder?: string;
     /**
@@ -71,7 +71,7 @@ export interface GetForwardingProfileArgs {
  */
 export interface GetForwardingProfileResult {
     /**
-     * Enable forwarding rule for forwarding profile
+     * Enable forwarding rule for forwarding profile. Possible values are `rules` and `pac-file`.
      */
     readonly definitionMethod: string;
     /**
@@ -79,7 +79,7 @@ export interface GetForwardingProfileResult {
      */
     readonly description: string;
     /**
-     * The folder in which the resource is defined
+     * The folder in which the resource is defined. Possible values are `Mobile Users`.
      */
     readonly folder: string;
     /**
@@ -146,7 +146,7 @@ export function getForwardingProfileOutput(args: GetForwardingProfileOutputArgs,
  */
 export interface GetForwardingProfileOutputArgs {
     /**
-     * The folder in which the resource is defined
+     * The folder in which the resource is defined. Possible values are `Mobile Users`.
      */
     folder?: pulumi.Input<string | undefined>;
     /**

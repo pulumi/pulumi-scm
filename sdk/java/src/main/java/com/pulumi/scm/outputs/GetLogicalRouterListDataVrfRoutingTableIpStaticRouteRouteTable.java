@@ -21,21 +21,15 @@ public final class GetLogicalRouterListDataVrfRoutingTableIpStaticRouteRouteTabl
     /**
      * @return Multicast
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `both`, `multicast`, `noInstall`, and `unicast`.
-     * 
      */
     private GetLogicalRouterListDataVrfRoutingTableIpStaticRouteRouteTableMulticast multicast;
     /**
      * @return No install
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `both`, `multicast`, `noInstall`, and `unicast`.
-     * 
      */
     private GetLogicalRouterListDataVrfRoutingTableIpStaticRouteRouteTableNoInstall noInstall;
     /**
      * @return Unicast
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `both`, `multicast`, `noInstall`, and `unicast`.
      * 
      */
     private GetLogicalRouterListDataVrfRoutingTableIpStaticRouteRouteTableUnicast unicast;
@@ -51,8 +45,6 @@ public final class GetLogicalRouterListDataVrfRoutingTableIpStaticRouteRouteTabl
     /**
      * @return Multicast
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `both`, `multicast`, `noInstall`, and `unicast`.
-     * 
      */
     public GetLogicalRouterListDataVrfRoutingTableIpStaticRouteRouteTableMulticast multicast() {
         return this.multicast;
@@ -60,16 +52,12 @@ public final class GetLogicalRouterListDataVrfRoutingTableIpStaticRouteRouteTabl
     /**
      * @return No install
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `both`, `multicast`, `noInstall`, and `unicast`.
-     * 
      */
     public GetLogicalRouterListDataVrfRoutingTableIpStaticRouteRouteTableNoInstall noInstall() {
         return this.noInstall;
     }
     /**
      * @return Unicast
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `both`, `multicast`, `noInstall`, and `unicast`.
      * 
      */
     public GetLogicalRouterListDataVrfRoutingTableIpStaticRouteRouteTableUnicast unicast() {

@@ -20,16 +20,12 @@ namespace Pulumi.Scm.Inputs
 
         /// <summary>
         /// Every30 mins
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Daily`, `Every30Mins`, `Hourly`, `None`, and `Weekly`.
         /// </summary>
         [Input("every30Mins")]
         public Input<Inputs.UpdateScheduleUpdateScheduleThreatsRecurringEvery30MinsArgs>? Every30Mins { get; set; }
 
         /// <summary>
         /// Hourly
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Daily`, `Every30Mins`, `Hourly`, `None`, and `Weekly`.
         /// </summary>
         [Input("hourly")]
         public Input<Inputs.UpdateScheduleUpdateScheduleThreatsRecurringHourlyArgs>? Hourly { get; set; }
@@ -42,8 +38,6 @@ namespace Pulumi.Scm.Inputs
 
         /// <summary>
         /// None
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Daily`, `Every30Mins`, `Hourly`, `None`, and `Weekly`.
         /// </summary>
         [Input("none")]
         public Input<Inputs.UpdateScheduleUpdateScheduleThreatsRecurringNoneArgs>? None { get; set; }
@@ -62,8 +56,6 @@ namespace Pulumi.Scm.Inputs
 
         /// <summary>
         /// Weekly
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Daily`, `Every30Mins`, `Hourly`, `None`, and `Weekly`.
         /// </summary>
         [Input("weekly")]
         public Input<Inputs.UpdateScheduleUpdateScheduleThreatsRecurringWeeklyArgs>? Weekly { get; set; }

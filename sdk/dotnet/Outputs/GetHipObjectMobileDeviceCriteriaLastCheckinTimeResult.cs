@@ -19,8 +19,6 @@ namespace Pulumi.Scm.Outputs
         public readonly Outputs.GetHipObjectMobileDeviceCriteriaLastCheckinTimeNotWithinResult NotWithin;
         /// <summary>
         /// Within
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `NotWithin` and `Within`.
         /// </summary>
         public readonly Outputs.GetHipObjectMobileDeviceCriteriaLastCheckinTimeWithinResult Within;
 

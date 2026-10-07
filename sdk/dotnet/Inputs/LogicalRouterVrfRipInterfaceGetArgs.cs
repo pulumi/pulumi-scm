@@ -43,7 +43,7 @@ namespace Pulumi.Scm.Inputs
         public Input<Inputs.LogicalRouterVrfRipInterfaceInterfaceOutboundDistributeListGetArgs>? InterfaceOutboundDistributeList { get; set; }
 
         /// <summary>
-        /// Mode
+        /// Mode. Possible values are `Active`, `Passive` and `send-only`.
         /// </summary>
         [Input("mode")]
         public Input<string>? Mode { get; set; }
@@ -55,7 +55,7 @@ namespace Pulumi.Scm.Inputs
         public Input<string> Name { get; set; } = null!;
 
         /// <summary>
-        /// Split horizon
+        /// Split horizon. Possible values are `split-horizon`, `no-split-horizon` and `no-split-horizon-with-poison-reverse`.
         /// </summary>
         [Input("splitHorizon")]
         public Input<string>? SplitHorizon { get; set; }

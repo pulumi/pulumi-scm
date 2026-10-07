@@ -54,27 +54,38 @@ func LookupDataFilteringProfile(ctx *pulumi.Context, args *LookupDataFilteringPr
 type LookupDataFilteringProfileArgs struct {
 	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
+	// The folder in which the resource is defined
 	Folder *string `pulumi:"folder"`
 	// The UUID of the data filtering profile
-	Id      string  `pulumi:"id"`
-	Name    *string `pulumi:"name"`
+	Id string `pulumi:"id"`
+	// The name of the data filtering profile
+	Name *string `pulumi:"name"`
+	// The snippet in which the resource is defined
 	Snippet *string `pulumi:"snippet"`
 }
 
 // A collection of values returned by getDataFilteringProfile.
 type LookupDataFilteringProfileResult struct {
-	DataCapture bool   `pulumi:"dataCapture"`
+	// Data capture
+	DataCapture bool `pulumi:"dataCapture"`
+	// The description of the data filtering profile
 	Description string `pulumi:"description"`
 	// The device in which the resource is defined
-	Device          string `pulumi:"device"`
+	Device string `pulumi:"device"`
+	// Disable override
 	DisableOverride string `pulumi:"disableOverride"`
-	Folder          string `pulumi:"folder"`
+	// The folder in which the resource is defined
+	Folder string `pulumi:"folder"`
 	// The UUID of the data filtering profile
-	Id      string                        `pulumi:"id"`
-	Name    string                        `pulumi:"name"`
-	Rules   []GetDataFilteringProfileRule `pulumi:"rules"`
-	Snippet string                        `pulumi:"snippet"`
-	Tfid    string                        `pulumi:"tfid"`
+	Id string `pulumi:"id"`
+	// The name of the data filtering profile
+	Name string `pulumi:"name"`
+	// Rules
+	Rules []GetDataFilteringProfileRule `pulumi:"rules"`
+	// The snippet in which the resource is defined
+	Snippet string `pulumi:"snippet"`
+	// The Terraform ID.
+	Tfid string `pulumi:"tfid"`
 }
 
 func LookupDataFilteringProfileOutput(ctx *pulumi.Context, args LookupDataFilteringProfileOutputArgs, opts ...pulumi.InvokeOption) LookupDataFilteringProfileResultOutput {
@@ -86,10 +97,13 @@ func LookupDataFilteringProfileOutput(ctx *pulumi.Context, args LookupDataFilter
 type LookupDataFilteringProfileOutputArgs struct {
 	// The device in which the resource is defined
 	Device pulumi.StringPtrInput `pulumi:"device"`
+	// The folder in which the resource is defined
 	Folder pulumi.StringPtrInput `pulumi:"folder"`
 	// The UUID of the data filtering profile
-	Id      pulumi.StringInput    `pulumi:"id"`
-	Name    pulumi.StringPtrInput `pulumi:"name"`
+	Id pulumi.StringInput `pulumi:"id"`
+	// The name of the data filtering profile
+	Name pulumi.StringPtrInput `pulumi:"name"`
+	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrInput `pulumi:"snippet"`
 }
 
@@ -112,10 +126,12 @@ func (o LookupDataFilteringProfileResultOutput) ToLookupDataFilteringProfileResu
 	return o
 }
 
+// Data capture
 func (o LookupDataFilteringProfileResultOutput) DataCapture() pulumi.BoolOutput {
 	return o.ApplyT(func(v LookupDataFilteringProfileResult) bool { return v.DataCapture }).(pulumi.BoolOutput)
 }
 
+// The description of the data filtering profile
 func (o LookupDataFilteringProfileResultOutput) Description() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupDataFilteringProfileResult) string { return v.Description }).(pulumi.StringOutput)
 }
@@ -125,10 +141,12 @@ func (o LookupDataFilteringProfileResultOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupDataFilteringProfileResult) string { return v.Device }).(pulumi.StringOutput)
 }
 
+// Disable override
 func (o LookupDataFilteringProfileResultOutput) DisableOverride() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupDataFilteringProfileResult) string { return v.DisableOverride }).(pulumi.StringOutput)
 }
 
+// The folder in which the resource is defined
 func (o LookupDataFilteringProfileResultOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupDataFilteringProfileResult) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -138,18 +156,22 @@ func (o LookupDataFilteringProfileResultOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupDataFilteringProfileResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
+// The name of the data filtering profile
 func (o LookupDataFilteringProfileResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupDataFilteringProfileResult) string { return v.Name }).(pulumi.StringOutput)
 }
 
+// Rules
 func (o LookupDataFilteringProfileResultOutput) Rules() GetDataFilteringProfileRuleArrayOutput {
 	return o.ApplyT(func(v LookupDataFilteringProfileResult) []GetDataFilteringProfileRule { return v.Rules }).(GetDataFilteringProfileRuleArrayOutput)
 }
 
+// The snippet in which the resource is defined
 func (o LookupDataFilteringProfileResultOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupDataFilteringProfileResult) string { return v.Snippet }).(pulumi.StringOutput)
 }
 
+// The Terraform ID.
 func (o LookupDataFilteringProfileResultOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupDataFilteringProfileResult) string { return v.Tfid }).(pulumi.StringOutput)
 }

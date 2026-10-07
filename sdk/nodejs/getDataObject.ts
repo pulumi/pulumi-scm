@@ -41,12 +41,21 @@ export interface GetDataObjectArgs {
      * The device in which the resource is defined
      */
     device?: string;
+    /**
+     * The folder in which the resource is defined
+     */
     folder?: string;
     /**
      * The UUID of the data object
      */
     id: string;
+    /**
+     * The name of the data object
+     */
     name?: string;
+    /**
+     * The snippet in which the resource is defined
+     */
     snippet?: string;
 }
 
@@ -54,20 +63,41 @@ export interface GetDataObjectArgs {
  * A collection of values returned by getDataObject.
  */
 export interface GetDataObjectResult {
+    /**
+     * The description of the data object
+     */
     readonly description: string;
     /**
      * The device in which the resource is defined
      */
     readonly device: string;
+    /**
+     * Disable override
+     */
     readonly disableOverride: string;
+    /**
+     * The folder in which the resource is defined
+     */
     readonly folder: string;
     /**
      * The UUID of the data object
      */
     readonly id: string;
+    /**
+     * The name of the data object
+     */
     readonly name: string;
+    /**
+     * Pattern type
+     */
     readonly patternType: outputs.GetDataObjectPatternType;
+    /**
+     * The snippet in which the resource is defined
+     */
     readonly snippet: string;
+    /**
+     * The Terraform ID.
+     */
     readonly tfid: string;
 }
 /**
@@ -105,11 +135,20 @@ export interface GetDataObjectOutputArgs {
      * The device in which the resource is defined
      */
     device?: pulumi.Input<string | undefined>;
+    /**
+     * The folder in which the resource is defined
+     */
     folder?: pulumi.Input<string | undefined>;
     /**
      * The UUID of the data object
      */
     id: pulumi.Input<string>;
+    /**
+     * The name of the data object
+     */
     name?: pulumi.Input<string | undefined>;
+    /**
+     * The snippet in which the resource is defined
+     */
     snippet?: pulumi.Input<string | undefined>;
 }

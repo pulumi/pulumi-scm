@@ -87,8 +87,6 @@ type HipmatchMatchList struct {
 	// Filter of the hipmatch match list entry
 	Filter pulumi.StringPtrOutput `pulumi:"filter"`
 	// The folder in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrOutput `pulumi:"folder"`
 	// Name of the hipmatch match list entry
 	Name pulumi.StringOutput `pulumi:"name"`
@@ -105,8 +103,6 @@ type HipmatchMatchList struct {
 	// Send to Panorama Flag of the hipmatch match list entry
 	SendToPanorama pulumi.BoolPtrOutput `pulumi:"sendToPanorama"`
 	// The snippet in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
 	// The Terraform ID.
 	Tfid pulumi.StringOutput `pulumi:"tfid"`
@@ -149,8 +145,6 @@ type hipmatchMatchListState struct {
 	// Filter of the hipmatch match list entry
 	Filter *string `pulumi:"filter"`
 	// The folder in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// Name of the hipmatch match list entry
 	Name *string `pulumi:"name"`
@@ -167,8 +161,6 @@ type hipmatchMatchListState struct {
 	// Send to Panorama Flag of the hipmatch match list entry
 	SendToPanorama *bool `pulumi:"sendToPanorama"`
 	// The snippet in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	// The Terraform ID.
 	Tfid *string `pulumi:"tfid"`
@@ -182,8 +174,6 @@ type HipmatchMatchListState struct {
 	// Filter of the hipmatch match list entry
 	Filter pulumi.StringPtrInput
 	// The folder in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// Name of the hipmatch match list entry
 	Name pulumi.StringPtrInput
@@ -200,8 +190,6 @@ type HipmatchMatchListState struct {
 	// Send to Panorama Flag of the hipmatch match list entry
 	SendToPanorama pulumi.BoolPtrInput
 	// The snippet in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	// The Terraform ID.
 	Tfid pulumi.StringPtrInput
@@ -219,8 +207,6 @@ type hipmatchMatchListArgs struct {
 	// Filter of the hipmatch match list entry
 	Filter *string `pulumi:"filter"`
 	// The folder in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// Name of the hipmatch match list entry
 	Name *string `pulumi:"name"`
@@ -237,8 +223,6 @@ type hipmatchMatchListArgs struct {
 	// Send to Panorama Flag of the hipmatch match list entry
 	SendToPanorama *bool `pulumi:"sendToPanorama"`
 	// The snippet in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 }
 
@@ -251,8 +235,6 @@ type HipmatchMatchListArgs struct {
 	// Filter of the hipmatch match list entry
 	Filter pulumi.StringPtrInput
 	// The folder in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// Name of the hipmatch match list entry
 	Name pulumi.StringPtrInput
@@ -269,8 +251,6 @@ type HipmatchMatchListArgs struct {
 	// Send to Panorama Flag of the hipmatch match list entry
 	SendToPanorama pulumi.BoolPtrInput
 	// The snippet in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 }
 
@@ -377,8 +357,6 @@ func (o HipmatchMatchListOutput) Filter() pulumi.StringPtrOutput {
 }
 
 // The folder in which the resource is defined
-//
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o HipmatchMatchListOutput) Folder() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *HipmatchMatchList) pulumi.StringPtrOutput { return v.Folder }).(pulumi.StringPtrOutput)
 }
@@ -419,8 +397,6 @@ func (o HipmatchMatchListOutput) SendToPanorama() pulumi.BoolPtrOutput {
 }
 
 // The snippet in which the resource is defined
-//
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o HipmatchMatchListOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *HipmatchMatchList) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)
 }

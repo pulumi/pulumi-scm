@@ -13,7 +13,7 @@ import java.util.Objects;
 @CustomType
 public final class GetRouteCommunityListListDataTypeLargeLargeEntry {
     /**
-     * @return Action
+     * @return Action. Possible values are `deny` and `permit`.
      * 
      */
     private String action;
@@ -30,7 +30,7 @@ public final class GetRouteCommunityListListDataTypeLargeLargeEntry {
 
     private GetRouteCommunityListListDataTypeLargeLargeEntry() {}
     /**
-     * @return Action
+     * @return Action. Possible values are `deny` and `permit`.
      * 
      */
     public String action() {

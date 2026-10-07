@@ -16,14 +16,14 @@ public final class FileBlockingProfileRuleArgs extends com.pulumi.resources.Reso
     public static final FileBlockingProfileRuleArgs Empty = new FileBlockingProfileRuleArgs();
 
     /**
-     * The action to take when the rule match criteria is met
+     * The action to take when the rule match criteria is met. Possible values are `alert`, `block` and `continue`.
      * 
      */
     @Import(name="action", required=true)
     private Output<String> action;
 
     /**
-     * @return The action to take when the rule match criteria is met
+     * @return The action to take when the rule match criteria is met. Possible values are `alert`, `block` and `continue`.
      * 
      */
     public Output<String> action() {
@@ -31,14 +31,14 @@ public final class FileBlockingProfileRuleArgs extends com.pulumi.resources.Reso
     }
 
     /**
-     * The application transferring the files (App-ID naming)
+     * The application transferring the files (App-ID naming). Possible values are `any`, `axifile`, `dl-free`, `facebook-mail`, `file.io`, `giphy-base`, `glassdoor-uploading`, `http-proxy`, `redbooth`, `send-anywhere` and `zoho-mail`.
      * 
      */
     @Import(name="applications", required=true)
     private Output<List<String>> applications;
 
     /**
-     * @return The application transferring the files (App-ID naming)
+     * @return The application transferring the files (App-ID naming). Possible values are `any`, `axifile`, `dl-free`, `facebook-mail`, `file.io`, `giphy-base`, `glassdoor-uploading`, `http-proxy`, `redbooth`, `send-anywhere` and `zoho-mail`.
      * 
      */
     public Output<List<String>> applications() {
@@ -46,14 +46,14 @@ public final class FileBlockingProfileRuleArgs extends com.pulumi.resources.Reso
     }
 
     /**
-     * The direction of the file transfer
+     * The direction of the file transfer. Possible values are `download`, `upload` and `both`.
      * 
      */
     @Import(name="direction", required=true)
     private Output<String> direction;
 
     /**
-     * @return The direction of the file transfer
+     * @return The direction of the file transfer. Possible values are `download`, `upload` and `both`.
      * 
      */
     public Output<String> direction() {
@@ -61,14 +61,14 @@ public final class FileBlockingProfileRuleArgs extends com.pulumi.resources.Reso
     }
 
     /**
-     * The file type
+     * The file type. Possible values are `7z`, `Multi-Level-Encoding`, `PE`, `access-shortcut`, `ace`, `ade`, `adp`, `ai`, `aip-encrypted-docx`, `aip-encrypted-pptx`, `aip-encrypted-xlsx`, `any`, `apk`, `arj`, `asp`, `avi`, `avi-divx`, `avi-xvid`, `bas`, `bat`, `bmp`, `bmp-upload`, `bzip2`, `cab`, `catpart`, `cdr`, `chm`, `cin`, `class`, `cmd`, `com`, `cpl`, `csv`, `deflate64-zip`, `der`, `dll`, `dmg`, `doc`, `docm`, `docx`, `dpx`, `dsn`, `dwf`, `dwg`, `dxf`, `edif`, `elf`, `emf`, `encrypted-7z`, `encrypted-doc`, `encrypted-docx`, `encrypted-office2007`, `encrypted-pdf`, `encrypted-ppt`, `encrypted-pptx`, `encrypted-rar`, `encrypted-xls`, `encrypted-xlsx`, `encrypted-zip`, `eps`, `exe`, `exr`, `flash`, `flv`, `gds`, `gif`, `gif-upload`, `gzip`, `hlp`, `hta`, `hwp`, `hwpx`, `ichitaro`, `iff`, `inf`, `ins`, `iqy`, `iso`, `its`, `iwork-keynote`, `iwork-numbers`, `iwork-pages`, `jar`, `jpeg`, `jpeg-upload`, `js`, `jse`, `lnk`, `lzh`, `ma`, `macapp`, `mach-o`, `mb`, `mda`, `mdb`, `mdi`, `mdt`, `mdw`, `mdz`, `mht`, `microsoft-shell`, `mif`, `mkv`, `mov`, `mp3`, `mp4`, `mpeg`, `mpeg-ts`, `mpkg`, `msc`, `msi`, `msoffice`, `msp`, `ocx`, `pbix`, `pbm`, `pcl`, `pdf`, `pem`, `pgp`, `pif`, `pkg`, `pl`, `png`, `png-upload`, `powershell`, `ppt`, `pptx`, `prg`, `psd`, `py`, `rar`, `reg`, `renamed-zip`, `rla`, `rm`, `rpf`, `rtf`, `scf`, `scr`, `sgi`, `sh`, `shk`, `shs`, `slk`, `softimg`, `split-cab`, `split-rar`, `stp`, `svg`, `sys`, `tar`, `tdb`, `tif`, `tiff`, `tmp`, `torrent`, `url`, `vb`, `vbe`, `vbs`, `vxd`, `webm`, `wmf`, `wmv`, `wri`, `wsf`, `wsh`, `xll`, `xls`, `xlsx`, `xpm`, `zcompressed` and `zip`.
      * 
      */
     @Import(name="fileTypes", required=true)
     private Output<List<String>> fileTypes;
 
     /**
-     * @return The file type
+     * @return The file type. Possible values are `7z`, `Multi-Level-Encoding`, `PE`, `access-shortcut`, `ace`, `ade`, `adp`, `ai`, `aip-encrypted-docx`, `aip-encrypted-pptx`, `aip-encrypted-xlsx`, `any`, `apk`, `arj`, `asp`, `avi`, `avi-divx`, `avi-xvid`, `bas`, `bat`, `bmp`, `bmp-upload`, `bzip2`, `cab`, `catpart`, `cdr`, `chm`, `cin`, `class`, `cmd`, `com`, `cpl`, `csv`, `deflate64-zip`, `der`, `dll`, `dmg`, `doc`, `docm`, `docx`, `dpx`, `dsn`, `dwf`, `dwg`, `dxf`, `edif`, `elf`, `emf`, `encrypted-7z`, `encrypted-doc`, `encrypted-docx`, `encrypted-office2007`, `encrypted-pdf`, `encrypted-ppt`, `encrypted-pptx`, `encrypted-rar`, `encrypted-xls`, `encrypted-xlsx`, `encrypted-zip`, `eps`, `exe`, `exr`, `flash`, `flv`, `gds`, `gif`, `gif-upload`, `gzip`, `hlp`, `hta`, `hwp`, `hwpx`, `ichitaro`, `iff`, `inf`, `ins`, `iqy`, `iso`, `its`, `iwork-keynote`, `iwork-numbers`, `iwork-pages`, `jar`, `jpeg`, `jpeg-upload`, `js`, `jse`, `lnk`, `lzh`, `ma`, `macapp`, `mach-o`, `mb`, `mda`, `mdb`, `mdi`, `mdt`, `mdw`, `mdz`, `mht`, `microsoft-shell`, `mif`, `mkv`, `mov`, `mp3`, `mp4`, `mpeg`, `mpeg-ts`, `mpkg`, `msc`, `msi`, `msoffice`, `msp`, `ocx`, `pbix`, `pbm`, `pcl`, `pdf`, `pem`, `pgp`, `pif`, `pkg`, `pl`, `png`, `png-upload`, `powershell`, `ppt`, `pptx`, `prg`, `psd`, `py`, `rar`, `reg`, `renamed-zip`, `rla`, `rm`, `rpf`, `rtf`, `scf`, `scr`, `sgi`, `sh`, `shk`, `shs`, `slk`, `softimg`, `split-cab`, `split-rar`, `stp`, `svg`, `sys`, `tar`, `tdb`, `tif`, `tiff`, `tmp`, `torrent`, `url`, `vb`, `vbe`, `vbs`, `vxd`, `webm`, `wmf`, `wmv`, `wri`, `wsf`, `wsh`, `xll`, `xls`, `xlsx`, `xpm`, `zcompressed` and `zip`.
      * 
      */
     public Output<List<String>> fileTypes() {
@@ -119,7 +119,7 @@ public final class FileBlockingProfileRuleArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param action The action to take when the rule match criteria is met
+         * @param action The action to take when the rule match criteria is met. Possible values are `alert`, `block` and `continue`.
          * 
          * @return builder
          * 
@@ -130,7 +130,7 @@ public final class FileBlockingProfileRuleArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param action The action to take when the rule match criteria is met
+         * @param action The action to take when the rule match criteria is met. Possible values are `alert`, `block` and `continue`.
          * 
          * @return builder
          * 
@@ -140,7 +140,7 @@ public final class FileBlockingProfileRuleArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param applications The application transferring the files (App-ID naming)
+         * @param applications The application transferring the files (App-ID naming). Possible values are `any`, `axifile`, `dl-free`, `facebook-mail`, `file.io`, `giphy-base`, `glassdoor-uploading`, `http-proxy`, `redbooth`, `send-anywhere` and `zoho-mail`.
          * 
          * @return builder
          * 
@@ -151,7 +151,7 @@ public final class FileBlockingProfileRuleArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param applications The application transferring the files (App-ID naming)
+         * @param applications The application transferring the files (App-ID naming). Possible values are `any`, `axifile`, `dl-free`, `facebook-mail`, `file.io`, `giphy-base`, `glassdoor-uploading`, `http-proxy`, `redbooth`, `send-anywhere` and `zoho-mail`.
          * 
          * @return builder
          * 
@@ -161,7 +161,7 @@ public final class FileBlockingProfileRuleArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param applications The application transferring the files (App-ID naming)
+         * @param applications The application transferring the files (App-ID naming). Possible values are `any`, `axifile`, `dl-free`, `facebook-mail`, `file.io`, `giphy-base`, `glassdoor-uploading`, `http-proxy`, `redbooth`, `send-anywhere` and `zoho-mail`.
          * 
          * @return builder
          * 
@@ -171,7 +171,7 @@ public final class FileBlockingProfileRuleArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param direction The direction of the file transfer
+         * @param direction The direction of the file transfer. Possible values are `download`, `upload` and `both`.
          * 
          * @return builder
          * 
@@ -182,7 +182,7 @@ public final class FileBlockingProfileRuleArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param direction The direction of the file transfer
+         * @param direction The direction of the file transfer. Possible values are `download`, `upload` and `both`.
          * 
          * @return builder
          * 
@@ -192,7 +192,7 @@ public final class FileBlockingProfileRuleArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param fileTypes The file type
+         * @param fileTypes The file type. Possible values are `7z`, `Multi-Level-Encoding`, `PE`, `access-shortcut`, `ace`, `ade`, `adp`, `ai`, `aip-encrypted-docx`, `aip-encrypted-pptx`, `aip-encrypted-xlsx`, `any`, `apk`, `arj`, `asp`, `avi`, `avi-divx`, `avi-xvid`, `bas`, `bat`, `bmp`, `bmp-upload`, `bzip2`, `cab`, `catpart`, `cdr`, `chm`, `cin`, `class`, `cmd`, `com`, `cpl`, `csv`, `deflate64-zip`, `der`, `dll`, `dmg`, `doc`, `docm`, `docx`, `dpx`, `dsn`, `dwf`, `dwg`, `dxf`, `edif`, `elf`, `emf`, `encrypted-7z`, `encrypted-doc`, `encrypted-docx`, `encrypted-office2007`, `encrypted-pdf`, `encrypted-ppt`, `encrypted-pptx`, `encrypted-rar`, `encrypted-xls`, `encrypted-xlsx`, `encrypted-zip`, `eps`, `exe`, `exr`, `flash`, `flv`, `gds`, `gif`, `gif-upload`, `gzip`, `hlp`, `hta`, `hwp`, `hwpx`, `ichitaro`, `iff`, `inf`, `ins`, `iqy`, `iso`, `its`, `iwork-keynote`, `iwork-numbers`, `iwork-pages`, `jar`, `jpeg`, `jpeg-upload`, `js`, `jse`, `lnk`, `lzh`, `ma`, `macapp`, `mach-o`, `mb`, `mda`, `mdb`, `mdi`, `mdt`, `mdw`, `mdz`, `mht`, `microsoft-shell`, `mif`, `mkv`, `mov`, `mp3`, `mp4`, `mpeg`, `mpeg-ts`, `mpkg`, `msc`, `msi`, `msoffice`, `msp`, `ocx`, `pbix`, `pbm`, `pcl`, `pdf`, `pem`, `pgp`, `pif`, `pkg`, `pl`, `png`, `png-upload`, `powershell`, `ppt`, `pptx`, `prg`, `psd`, `py`, `rar`, `reg`, `renamed-zip`, `rla`, `rm`, `rpf`, `rtf`, `scf`, `scr`, `sgi`, `sh`, `shk`, `shs`, `slk`, `softimg`, `split-cab`, `split-rar`, `stp`, `svg`, `sys`, `tar`, `tdb`, `tif`, `tiff`, `tmp`, `torrent`, `url`, `vb`, `vbe`, `vbs`, `vxd`, `webm`, `wmf`, `wmv`, `wri`, `wsf`, `wsh`, `xll`, `xls`, `xlsx`, `xpm`, `zcompressed` and `zip`.
          * 
          * @return builder
          * 
@@ -203,7 +203,7 @@ public final class FileBlockingProfileRuleArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param fileTypes The file type
+         * @param fileTypes The file type. Possible values are `7z`, `Multi-Level-Encoding`, `PE`, `access-shortcut`, `ace`, `ade`, `adp`, `ai`, `aip-encrypted-docx`, `aip-encrypted-pptx`, `aip-encrypted-xlsx`, `any`, `apk`, `arj`, `asp`, `avi`, `avi-divx`, `avi-xvid`, `bas`, `bat`, `bmp`, `bmp-upload`, `bzip2`, `cab`, `catpart`, `cdr`, `chm`, `cin`, `class`, `cmd`, `com`, `cpl`, `csv`, `deflate64-zip`, `der`, `dll`, `dmg`, `doc`, `docm`, `docx`, `dpx`, `dsn`, `dwf`, `dwg`, `dxf`, `edif`, `elf`, `emf`, `encrypted-7z`, `encrypted-doc`, `encrypted-docx`, `encrypted-office2007`, `encrypted-pdf`, `encrypted-ppt`, `encrypted-pptx`, `encrypted-rar`, `encrypted-xls`, `encrypted-xlsx`, `encrypted-zip`, `eps`, `exe`, `exr`, `flash`, `flv`, `gds`, `gif`, `gif-upload`, `gzip`, `hlp`, `hta`, `hwp`, `hwpx`, `ichitaro`, `iff`, `inf`, `ins`, `iqy`, `iso`, `its`, `iwork-keynote`, `iwork-numbers`, `iwork-pages`, `jar`, `jpeg`, `jpeg-upload`, `js`, `jse`, `lnk`, `lzh`, `ma`, `macapp`, `mach-o`, `mb`, `mda`, `mdb`, `mdi`, `mdt`, `mdw`, `mdz`, `mht`, `microsoft-shell`, `mif`, `mkv`, `mov`, `mp3`, `mp4`, `mpeg`, `mpeg-ts`, `mpkg`, `msc`, `msi`, `msoffice`, `msp`, `ocx`, `pbix`, `pbm`, `pcl`, `pdf`, `pem`, `pgp`, `pif`, `pkg`, `pl`, `png`, `png-upload`, `powershell`, `ppt`, `pptx`, `prg`, `psd`, `py`, `rar`, `reg`, `renamed-zip`, `rla`, `rm`, `rpf`, `rtf`, `scf`, `scr`, `sgi`, `sh`, `shk`, `shs`, `slk`, `softimg`, `split-cab`, `split-rar`, `stp`, `svg`, `sys`, `tar`, `tdb`, `tif`, `tiff`, `tmp`, `torrent`, `url`, `vb`, `vbe`, `vbs`, `vxd`, `webm`, `wmf`, `wmv`, `wri`, `wsf`, `wsh`, `xll`, `xls`, `xlsx`, `xpm`, `zcompressed` and `zip`.
          * 
          * @return builder
          * 
@@ -213,7 +213,7 @@ public final class FileBlockingProfileRuleArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param fileTypes The file type
+         * @param fileTypes The file type. Possible values are `7z`, `Multi-Level-Encoding`, `PE`, `access-shortcut`, `ace`, `ade`, `adp`, `ai`, `aip-encrypted-docx`, `aip-encrypted-pptx`, `aip-encrypted-xlsx`, `any`, `apk`, `arj`, `asp`, `avi`, `avi-divx`, `avi-xvid`, `bas`, `bat`, `bmp`, `bmp-upload`, `bzip2`, `cab`, `catpart`, `cdr`, `chm`, `cin`, `class`, `cmd`, `com`, `cpl`, `csv`, `deflate64-zip`, `der`, `dll`, `dmg`, `doc`, `docm`, `docx`, `dpx`, `dsn`, `dwf`, `dwg`, `dxf`, `edif`, `elf`, `emf`, `encrypted-7z`, `encrypted-doc`, `encrypted-docx`, `encrypted-office2007`, `encrypted-pdf`, `encrypted-ppt`, `encrypted-pptx`, `encrypted-rar`, `encrypted-xls`, `encrypted-xlsx`, `encrypted-zip`, `eps`, `exe`, `exr`, `flash`, `flv`, `gds`, `gif`, `gif-upload`, `gzip`, `hlp`, `hta`, `hwp`, `hwpx`, `ichitaro`, `iff`, `inf`, `ins`, `iqy`, `iso`, `its`, `iwork-keynote`, `iwork-numbers`, `iwork-pages`, `jar`, `jpeg`, `jpeg-upload`, `js`, `jse`, `lnk`, `lzh`, `ma`, `macapp`, `mach-o`, `mb`, `mda`, `mdb`, `mdi`, `mdt`, `mdw`, `mdz`, `mht`, `microsoft-shell`, `mif`, `mkv`, `mov`, `mp3`, `mp4`, `mpeg`, `mpeg-ts`, `mpkg`, `msc`, `msi`, `msoffice`, `msp`, `ocx`, `pbix`, `pbm`, `pcl`, `pdf`, `pem`, `pgp`, `pif`, `pkg`, `pl`, `png`, `png-upload`, `powershell`, `ppt`, `pptx`, `prg`, `psd`, `py`, `rar`, `reg`, `renamed-zip`, `rla`, `rm`, `rpf`, `rtf`, `scf`, `scr`, `sgi`, `sh`, `shk`, `shs`, `slk`, `softimg`, `split-cab`, `split-rar`, `stp`, `svg`, `sys`, `tar`, `tdb`, `tif`, `tiff`, `tmp`, `torrent`, `url`, `vb`, `vbe`, `vbs`, `vxd`, `webm`, `wmf`, `wmv`, `wri`, `wsf`, `wsh`, `xll`, `xls`, `xlsx`, `xpm`, `zcompressed` and `zip`.
          * 
          * @return builder
          * 

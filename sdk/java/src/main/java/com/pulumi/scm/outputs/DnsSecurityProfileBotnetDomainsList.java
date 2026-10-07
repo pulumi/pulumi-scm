@@ -24,7 +24,7 @@ public final class DnsSecurityProfileBotnetDomainsList {
      */
     private String name;
     /**
-     * @return Packet capture
+     * @return Packet capture. Possible values are `disable`, `single-packet` and `extended-capture`.
      * 
      */
     private @Nullable String packetCapture;
@@ -45,7 +45,7 @@ public final class DnsSecurityProfileBotnetDomainsList {
         return this.name;
     }
     /**
-     * @return Packet capture
+     * @return Packet capture. Possible values are `disable`, `single-packet` and `extended-capture`.
      * 
      */
     public Optional<String> packetCapture() {

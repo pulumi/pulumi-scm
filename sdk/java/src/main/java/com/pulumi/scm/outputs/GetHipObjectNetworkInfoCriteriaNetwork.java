@@ -19,8 +19,6 @@ public final class GetHipObjectNetworkInfoCriteriaNetwork {
     /**
      * @return Is not
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `is` and `isNot`.
-     * 
      */
     private GetHipObjectNetworkInfoCriteriaNetworkIsNot isNot;
 
@@ -34,8 +32,6 @@ public final class GetHipObjectNetworkInfoCriteriaNetwork {
     }
     /**
      * @return Is not
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `is` and `isNot`.
      * 
      */
     public GetHipObjectNetworkInfoCriteriaNetworkIsNot isNot() {

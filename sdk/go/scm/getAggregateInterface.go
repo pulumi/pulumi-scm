@@ -60,27 +60,38 @@ func LookupAggregateInterface(ctx *pulumi.Context, args *LookupAggregateInterfac
 type LookupAggregateInterfaceArgs struct {
 	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
+	// The folder in which the resource is defined
 	Folder *string `pulumi:"folder"`
 	// UUID of the resource
-	Id      string  `pulumi:"id"`
-	Name    *string `pulumi:"name"`
+	Id string `pulumi:"id"`
+	// Aggregate interface name
+	Name *string `pulumi:"name"`
+	// The snippet in which the resource is defined
 	Snippet *string `pulumi:"snippet"`
 }
 
 // A collection of values returned by getAggregateInterface.
 type LookupAggregateInterfaceResult struct {
-	Comment      string `pulumi:"comment"`
+	// Aggregate interface description
+	Comment string `pulumi:"comment"`
+	// Default interface assignment
 	DefaultValue string `pulumi:"defaultValue"`
 	// The device in which the resource is defined
 	Device string `pulumi:"device"`
+	// The folder in which the resource is defined
 	Folder string `pulumi:"folder"`
 	// UUID of the resource
-	Id      string                      `pulumi:"id"`
-	Layer2  GetAggregateInterfaceLayer2 `pulumi:"layer2"`
-	Layer3  GetAggregateInterfaceLayer3 `pulumi:"layer3"`
-	Name    string                      `pulumi:"name"`
-	Snippet string                      `pulumi:"snippet"`
-	Tfid    string                      `pulumi:"tfid"`
+	Id string `pulumi:"id"`
+	// Layer2
+	Layer2 GetAggregateInterfaceLayer2 `pulumi:"layer2"`
+	// Aggregate Interface Layer 3 configuration
+	Layer3 GetAggregateInterfaceLayer3 `pulumi:"layer3"`
+	// Aggregate interface name
+	Name string `pulumi:"name"`
+	// The snippet in which the resource is defined
+	Snippet string `pulumi:"snippet"`
+	// The Terraform ID.
+	Tfid string `pulumi:"tfid"`
 }
 
 func LookupAggregateInterfaceOutput(ctx *pulumi.Context, args LookupAggregateInterfaceOutputArgs, opts ...pulumi.InvokeOption) LookupAggregateInterfaceResultOutput {
@@ -92,10 +103,13 @@ func LookupAggregateInterfaceOutput(ctx *pulumi.Context, args LookupAggregateInt
 type LookupAggregateInterfaceOutputArgs struct {
 	// The device in which the resource is defined
 	Device pulumi.StringPtrInput `pulumi:"device"`
+	// The folder in which the resource is defined
 	Folder pulumi.StringPtrInput `pulumi:"folder"`
 	// UUID of the resource
-	Id      pulumi.StringInput    `pulumi:"id"`
-	Name    pulumi.StringPtrInput `pulumi:"name"`
+	Id pulumi.StringInput `pulumi:"id"`
+	// Aggregate interface name
+	Name pulumi.StringPtrInput `pulumi:"name"`
+	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrInput `pulumi:"snippet"`
 }
 
@@ -118,10 +132,12 @@ func (o LookupAggregateInterfaceResultOutput) ToLookupAggregateInterfaceResultOu
 	return o
 }
 
+// Aggregate interface description
 func (o LookupAggregateInterfaceResultOutput) Comment() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupAggregateInterfaceResult) string { return v.Comment }).(pulumi.StringOutput)
 }
 
+// Default interface assignment
 func (o LookupAggregateInterfaceResultOutput) DefaultValue() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupAggregateInterfaceResult) string { return v.DefaultValue }).(pulumi.StringOutput)
 }
@@ -131,6 +147,7 @@ func (o LookupAggregateInterfaceResultOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupAggregateInterfaceResult) string { return v.Device }).(pulumi.StringOutput)
 }
 
+// The folder in which the resource is defined
 func (o LookupAggregateInterfaceResultOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupAggregateInterfaceResult) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -140,22 +157,27 @@ func (o LookupAggregateInterfaceResultOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupAggregateInterfaceResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
+// Layer2
 func (o LookupAggregateInterfaceResultOutput) Layer2() GetAggregateInterfaceLayer2Output {
 	return o.ApplyT(func(v LookupAggregateInterfaceResult) GetAggregateInterfaceLayer2 { return v.Layer2 }).(GetAggregateInterfaceLayer2Output)
 }
 
+// Aggregate Interface Layer 3 configuration
 func (o LookupAggregateInterfaceResultOutput) Layer3() GetAggregateInterfaceLayer3Output {
 	return o.ApplyT(func(v LookupAggregateInterfaceResult) GetAggregateInterfaceLayer3 { return v.Layer3 }).(GetAggregateInterfaceLayer3Output)
 }
 
+// Aggregate interface name
 func (o LookupAggregateInterfaceResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupAggregateInterfaceResult) string { return v.Name }).(pulumi.StringOutput)
 }
 
+// The snippet in which the resource is defined
 func (o LookupAggregateInterfaceResultOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupAggregateInterfaceResult) string { return v.Snippet }).(pulumi.StringOutput)
 }
 
+// The Terraform ID.
 func (o LookupAggregateInterfaceResultOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupAggregateInterfaceResult) string { return v.Tfid }).(pulumi.StringOutput)
 }

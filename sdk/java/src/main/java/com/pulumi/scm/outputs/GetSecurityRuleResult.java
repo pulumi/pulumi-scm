@@ -19,7 +19,7 @@ import java.util.Objects;
 @CustomType
 public final class GetSecurityRuleResult {
     /**
-     * @return The action to be taken when the rule is matched
+     * @return The action to be taken when the rule is matched. Possible values are `allow`, `deny`, `drop`, `reset-client`, `reset-server` and `reset-both`.
      * 
      */
     private String action;
@@ -149,7 +149,7 @@ public final class GetSecurityRuleResult {
      */
     private String policyType;
     /**
-     * @return The position of a security rule
+     * @return The position of a security rule. Possible values are `pre` and `post`.
      * 
      */
     private String position;
@@ -204,7 +204,7 @@ public final class GetSecurityRuleResult {
      */
     private List<String> tags;
     /**
-     * @return The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `&#34;before&#34;` or `&#34;after&#34;`.
+     * @return UUID of the rule to position this rule relative to. Required when `relativePosition` is `&#34;before&#34;` or `&#34;after&#34;`.
      * 
      */
     private String targetRule;
@@ -226,7 +226,7 @@ public final class GetSecurityRuleResult {
 
     private GetSecurityRuleResult() {}
     /**
-     * @return The action to be taken when the rule is matched
+     * @return The action to be taken when the rule is matched. Possible values are `allow`, `deny`, `drop`, `reset-client`, `reset-server` and `reset-both`.
      * 
      */
     public String action() {
@@ -408,7 +408,7 @@ public final class GetSecurityRuleResult {
         return this.policyType;
     }
     /**
-     * @return The position of a security rule
+     * @return The position of a security rule. Possible values are `pre` and `post`.
      * 
      */
     public String position() {
@@ -485,7 +485,7 @@ public final class GetSecurityRuleResult {
         return this.tags;
     }
     /**
-     * @return The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `&#34;before&#34;` or `&#34;after&#34;`.
+     * @return UUID of the rule to position this rule relative to. Required when `relativePosition` is `&#34;before&#34;` or `&#34;after&#34;`.
      * 
      */
     public String targetRule() {

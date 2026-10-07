@@ -22,11 +22,15 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly bool FastFailover;
         /// <summary>
+        /// High Availability settings
+        /// </summary>
+        public readonly Outputs.GetAggregateInterfaceListDataLayer3LacpHighAvailabilityResult HighAvailability;
+        /// <summary>
         /// Maximum number of physical ports bundled in the LAG
         /// </summary>
         public readonly int MaxPorts;
         /// <summary>
-        /// Mode
+        /// Mode. Possible values are `Passive` and `Active`.
         /// </summary>
         public readonly string Mode;
         /// <summary>
@@ -34,7 +38,7 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly int SystemPriority;
         /// <summary>
-        /// Transmission mode
+        /// Transmission mode. Possible values are `Fast` and `Slow`.
         /// </summary>
         public readonly string TransmissionRate;
 
@@ -43,6 +47,8 @@ namespace Pulumi.Scm.Outputs
             bool enable,
 
             bool fastFailover,
+
+            Outputs.GetAggregateInterfaceListDataLayer3LacpHighAvailabilityResult highAvailability,
 
             int maxPorts,
 
@@ -54,6 +60,7 @@ namespace Pulumi.Scm.Outputs
         {
             Enable = enable;
             FastFailover = fastFailover;
+            HighAvailability = highAvailability;
             MaxPorts = maxPorts;
             Mode = mode;
             SystemPriority = systemPriority;

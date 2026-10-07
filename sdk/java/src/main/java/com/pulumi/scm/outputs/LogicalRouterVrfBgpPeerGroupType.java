@@ -22,21 +22,15 @@ public final class LogicalRouterVrfBgpPeerGroupType {
     /**
      * @return Ebgp confed
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `ebgp`, `ebgpConfed`, `ibgp`, and `ibgpConfed`.
-     * 
      */
     private @Nullable LogicalRouterVrfBgpPeerGroupTypeEbgpConfed ebgpConfed;
     /**
      * @return Ibgp
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `ebgp`, `ebgpConfed`, `ibgp`, and `ibgpConfed`.
-     * 
      */
     private @Nullable LogicalRouterVrfBgpPeerGroupTypeIbgp ibgp;
     /**
      * @return Ibgp confed
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `ebgp`, `ebgpConfed`, `ibgp`, and `ibgpConfed`.
      * 
      */
     private @Nullable LogicalRouterVrfBgpPeerGroupTypeIbgpConfed ibgpConfed;
@@ -52,8 +46,6 @@ public final class LogicalRouterVrfBgpPeerGroupType {
     /**
      * @return Ebgp confed
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `ebgp`, `ebgpConfed`, `ibgp`, and `ibgpConfed`.
-     * 
      */
     public Optional<LogicalRouterVrfBgpPeerGroupTypeEbgpConfed> ebgpConfed() {
         return Optional.ofNullable(this.ebgpConfed);
@@ -61,16 +53,12 @@ public final class LogicalRouterVrfBgpPeerGroupType {
     /**
      * @return Ibgp
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `ebgp`, `ebgpConfed`, `ibgp`, and `ibgpConfed`.
-     * 
      */
     public Optional<LogicalRouterVrfBgpPeerGroupTypeIbgp> ibgp() {
         return Optional.ofNullable(this.ibgp);
     }
     /**
      * @return Ibgp confed
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `ebgp`, `ebgpConfed`, `ibgp`, and `ibgpConfed`.
      * 
      */
     public Optional<LogicalRouterVrfBgpPeerGroupTypeIbgpConfed> ibgpConfed() {

@@ -33,7 +33,7 @@ public final class GetQosPolicyRuleListData {
      */
     private GetQosPolicyRuleListDataDscpTos dscpTos;
     /**
-     * @return The folder of the item. Default: Shared.
+     * @return The folder in which the resource is defined
      * 
      */
     private String folder;
@@ -43,12 +43,12 @@ public final class GetQosPolicyRuleListData {
      */
     private String id;
     /**
-     * @return The name of the item.
+     * @return Name
      * 
      */
     private String name;
     /**
-     * @return The relative position of the rule
+     * @return The relative position of the rule. Possible values are `pre` and `post`.
      * 
      */
     private String position;
@@ -63,12 +63,12 @@ public final class GetQosPolicyRuleListData {
      */
     private String schedule;
     /**
-     * @return The snippet of the item.
+     * @return The snippet in which the resource is defined
      * 
      */
     private String snippet;
     /**
-     * @return The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `&#34;before&#34;` or `&#34;after&#34;`.
+     * @return UUID of the rule to position this rule relative to. Required when `relativePosition` is `&#34;before&#34;` or `&#34;after&#34;`.
      * 
      */
     private String targetRule;
@@ -108,7 +108,7 @@ public final class GetQosPolicyRuleListData {
         return this.dscpTos;
     }
     /**
-     * @return The folder of the item. Default: Shared.
+     * @return The folder in which the resource is defined
      * 
      */
     public String folder() {
@@ -122,14 +122,14 @@ public final class GetQosPolicyRuleListData {
         return this.id;
     }
     /**
-     * @return The name of the item.
+     * @return Name
      * 
      */
     public String name() {
         return this.name;
     }
     /**
-     * @return The relative position of the rule
+     * @return The relative position of the rule. Possible values are `pre` and `post`.
      * 
      */
     public String position() {
@@ -150,14 +150,14 @@ public final class GetQosPolicyRuleListData {
         return this.schedule;
     }
     /**
-     * @return The snippet of the item.
+     * @return The snippet in which the resource is defined
      * 
      */
     public String snippet() {
         return this.snippet;
     }
     /**
-     * @return The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `&#34;before&#34;` or `&#34;after&#34;`.
+     * @return UUID of the rule to position this rule relative to. Required when `relativePosition` is `&#34;before&#34;` or `&#34;after&#34;`.
      * 
      */
     public String targetRule() {

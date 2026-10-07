@@ -5,11 +5,13 @@ package com.pulumi.scm.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.scm.inputs.AggregateInterfaceLayer3AdjustTcpMssArgs;
 import com.pulumi.scm.inputs.AggregateInterfaceLayer3ArpArgs;
 import com.pulumi.scm.inputs.AggregateInterfaceLayer3DdnsConfigArgs;
 import com.pulumi.scm.inputs.AggregateInterfaceLayer3DhcpClientArgs;
 import com.pulumi.scm.inputs.AggregateInterfaceLayer3IpArgs;
 import com.pulumi.scm.inputs.AggregateInterfaceLayer3LacpArgs;
+import com.pulumi.scm.inputs.AggregateInterfaceLayer3LldpArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -21,6 +23,21 @@ import javax.annotation.Nullable;
 public final class AggregateInterfaceLayer3Args extends com.pulumi.resources.ResourceArgs {
 
     public static final AggregateInterfaceLayer3Args Empty = new AggregateInterfaceLayer3Args();
+
+    /**
+     * TCP MSS adjustment settings for the interface
+     * 
+     */
+    @Import(name="adjustTcpMss")
+    private @Nullable Output<AggregateInterfaceLayer3AdjustTcpMssArgs> adjustTcpMss;
+
+    /**
+     * @return TCP MSS adjustment settings for the interface
+     * 
+     */
+    public Optional<Output<AggregateInterfaceLayer3AdjustTcpMssArgs>> adjustTcpMss() {
+        return Optional.ofNullable(this.adjustTcpMss);
+    }
 
     /**
      * Aggregate Ethernet ARP configuration
@@ -85,16 +102,12 @@ public final class AggregateInterfaceLayer3Args extends com.pulumi.resources.Res
     /**
      * Aggregate Interface IP addresses
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
-     * 
      */
     @Import(name="ips")
     private @Nullable Output<List<AggregateInterfaceLayer3IpArgs>> ips;
 
     /**
      * @return Aggregate Interface IP addresses
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
      * 
      */
     public Optional<Output<List<AggregateInterfaceLayer3IpArgs>>> ips() {
@@ -114,6 +127,21 @@ public final class AggregateInterfaceLayer3Args extends com.pulumi.resources.Res
      */
     public Optional<Output<AggregateInterfaceLayer3LacpArgs>> lacp() {
         return Optional.ofNullable(this.lacp);
+    }
+
+    /**
+     * LLDP settings for the interface
+     * 
+     */
+    @Import(name="lldp")
+    private @Nullable Output<AggregateInterfaceLayer3LldpArgs> lldp;
+
+    /**
+     * @return LLDP settings for the interface
+     * 
+     */
+    public Optional<Output<AggregateInterfaceLayer3LldpArgs>> lldp() {
+        return Optional.ofNullable(this.lldp);
     }
 
     /**
@@ -149,12 +177,14 @@ public final class AggregateInterfaceLayer3Args extends com.pulumi.resources.Res
     private AggregateInterfaceLayer3Args() {}
 
     private AggregateInterfaceLayer3Args(AggregateInterfaceLayer3Args $) {
+        this.adjustTcpMss = $.adjustTcpMss;
         this.arps = $.arps;
         this.ddnsConfig = $.ddnsConfig;
         this.dhcpClient = $.dhcpClient;
         this.interfaceManagementProfile = $.interfaceManagementProfile;
         this.ips = $.ips;
         this.lacp = $.lacp;
+        this.lldp = $.lldp;
         this.mtu = $.mtu;
         this.netflowProfile = $.netflowProfile;
     }
@@ -175,6 +205,27 @@ public final class AggregateInterfaceLayer3Args extends com.pulumi.resources.Res
 
         public Builder(AggregateInterfaceLayer3Args defaults) {
             $ = new AggregateInterfaceLayer3Args(Objects.requireNonNull(defaults));
+        }
+
+        /**
+         * @param adjustTcpMss TCP MSS adjustment settings for the interface
+         * 
+         * @return builder
+         * 
+         */
+        public Builder adjustTcpMss(@Nullable Output<AggregateInterfaceLayer3AdjustTcpMssArgs> adjustTcpMss) {
+            $.adjustTcpMss = adjustTcpMss;
+            return this;
+        }
+
+        /**
+         * @param adjustTcpMss TCP MSS adjustment settings for the interface
+         * 
+         * @return builder
+         * 
+         */
+        public Builder adjustTcpMss(AggregateInterfaceLayer3AdjustTcpMssArgs adjustTcpMss) {
+            return adjustTcpMss(Output.of(adjustTcpMss));
         }
 
         /**
@@ -274,8 +325,6 @@ public final class AggregateInterfaceLayer3Args extends com.pulumi.resources.Res
         /**
          * @param ips Aggregate Interface IP addresses
          * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
-         * 
          * @return builder
          * 
          */
@@ -287,8 +336,6 @@ public final class AggregateInterfaceLayer3Args extends com.pulumi.resources.Res
         /**
          * @param ips Aggregate Interface IP addresses
          * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
-         * 
          * @return builder
          * 
          */
@@ -298,8 +345,6 @@ public final class AggregateInterfaceLayer3Args extends com.pulumi.resources.Res
 
         /**
          * @param ips Aggregate Interface IP addresses
-         * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
          * 
          * @return builder
          * 
@@ -327,6 +372,27 @@ public final class AggregateInterfaceLayer3Args extends com.pulumi.resources.Res
          */
         public Builder lacp(AggregateInterfaceLayer3LacpArgs lacp) {
             return lacp(Output.of(lacp));
+        }
+
+        /**
+         * @param lldp LLDP settings for the interface
+         * 
+         * @return builder
+         * 
+         */
+        public Builder lldp(@Nullable Output<AggregateInterfaceLayer3LldpArgs> lldp) {
+            $.lldp = lldp;
+            return this;
+        }
+
+        /**
+         * @param lldp LLDP settings for the interface
+         * 
+         * @return builder
+         * 
+         */
+        public Builder lldp(AggregateInterfaceLayer3LldpArgs lldp) {
+            return lldp(Output.of(lldp));
         }
 
         /**

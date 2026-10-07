@@ -15,7 +15,7 @@ import java.util.Objects;
 @CustomType
 public final class GetRemoteNetworkResult {
     /**
-     * @return Ecmp load balancing
+     * @return Ecmp load balancing. Possible values are `enable` and `disable`.
      * 
      */
     private String ecmpLoadBalancing;
@@ -55,7 +55,7 @@ public final class GetRemoteNetworkResult {
      */
     private String name;
     /**
-     * @return setup the protocol when ecmp*load*balancing is disable
+     * @return setup the protocol when ecmp*load*balancing is disabled
      * 
      */
     private GetRemoteNetworkProtocol protocol;
@@ -87,7 +87,7 @@ public final class GetRemoteNetworkResult {
 
     private GetRemoteNetworkResult() {}
     /**
-     * @return Ecmp load balancing
+     * @return Ecmp load balancing. Possible values are `enable` and `disable`.
      * 
      */
     public String ecmpLoadBalancing() {
@@ -143,7 +143,7 @@ public final class GetRemoteNetworkResult {
         return this.name;
     }
     /**
-     * @return setup the protocol when ecmp*load*balancing is disable
+     * @return setup the protocol when ecmp*load*balancing is disabled
      * 
      */
     public GetRemoteNetworkProtocol protocol() {

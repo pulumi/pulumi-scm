@@ -48,14 +48,14 @@ public final class IkeGatewayProtocolArgs extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * Version
+     * Version. Possible values are `ikev2-preferred`, `ikev1` and `ikev2`.
      * 
      */
     @Import(name="version")
     private @Nullable Output<String> version;
 
     /**
-     * @return Version
+     * @return Version. Possible values are `ikev2-preferred`, `ikev1` and `ikev2`.
      * 
      */
     public Optional<Output<String>> version() {
@@ -131,7 +131,7 @@ public final class IkeGatewayProtocolArgs extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param version Version
+         * @param version Version. Possible values are `ikev2-preferred`, `ikev1` and `ikev2`.
          * 
          * @return builder
          * 
@@ -142,7 +142,7 @@ public final class IkeGatewayProtocolArgs extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param version Version
+         * @param version Version. Possible values are `ikev2-preferred`, `ikev1` and `ikev2`.
          * 
          * @return builder
          * 

@@ -16,14 +16,14 @@ public final class UpdateScheduleUpdateScheduleAntiVirusRecurringWeeklyArgs exte
     public static final UpdateScheduleUpdateScheduleAntiVirusRecurringWeeklyArgs Empty = new UpdateScheduleUpdateScheduleAntiVirusRecurringWeeklyArgs();
 
     /**
-     * Action
+     * Action. Possible values are `download-only` and `download-and-install`.
      * 
      */
     @Import(name="action")
     private @Nullable Output<String> action;
 
     /**
-     * @return Action
+     * @return Action. Possible values are `download-only` and `download-and-install`.
      * 
      */
     public Optional<Output<String>> action() {
@@ -46,14 +46,14 @@ public final class UpdateScheduleUpdateScheduleAntiVirusRecurringWeeklyArgs exte
     }
 
     /**
-     * Day of week
+     * Day of week. Possible values are `sunday`, `monday`, `tuesday`, `wednesday`, `thursday`, `friday` and `saturday`.
      * 
      */
     @Import(name="dayOfWeek")
     private @Nullable Output<String> dayOfWeek;
 
     /**
-     * @return Day of week
+     * @return Day of week. Possible values are `sunday`, `monday`, `tuesday`, `wednesday`, `thursday`, `friday` and `saturday`.
      * 
      */
     public Optional<Output<String>> dayOfWeek() {
@@ -87,7 +87,7 @@ public final class UpdateScheduleUpdateScheduleAntiVirusRecurringWeeklyArgs exte
         }
 
         /**
-         * @param action Action
+         * @param action Action. Possible values are `download-only` and `download-and-install`.
          * 
          * @return builder
          * 
@@ -98,7 +98,7 @@ public final class UpdateScheduleUpdateScheduleAntiVirusRecurringWeeklyArgs exte
         }
 
         /**
-         * @param action Action
+         * @param action Action. Possible values are `download-only` and `download-and-install`.
          * 
          * @return builder
          * 
@@ -129,7 +129,7 @@ public final class UpdateScheduleUpdateScheduleAntiVirusRecurringWeeklyArgs exte
         }
 
         /**
-         * @param dayOfWeek Day of week
+         * @param dayOfWeek Day of week. Possible values are `sunday`, `monday`, `tuesday`, `wednesday`, `thursday`, `friday` and `saturday`.
          * 
          * @return builder
          * 
@@ -140,7 +140,7 @@ public final class UpdateScheduleUpdateScheduleAntiVirusRecurringWeeklyArgs exte
         }
 
         /**
-         * @param dayOfWeek Day of week
+         * @param dayOfWeek Day of week. Possible values are `sunday`, `monday`, `tuesday`, `wednesday`, `thursday`, `friday` and `saturday`.
          * 
          * @return builder
          * 

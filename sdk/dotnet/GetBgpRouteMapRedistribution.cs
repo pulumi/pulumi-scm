@@ -39,6 +39,9 @@ namespace Pulumi.Scm
         [Input("device")]
         public string? Device { get; set; }
 
+        /// <summary>
+        /// The folder in which the resource is defined
+        /// </summary>
         [Input("folder")]
         public string? Folder { get; set; }
 
@@ -48,9 +51,15 @@ namespace Pulumi.Scm
         [Input("id", required: true)]
         public string Id { get; set; } = null!;
 
+        /// <summary>
+        /// BGP Route Map Redistributions Name
+        /// </summary>
         [Input("name")]
         public string? Name { get; set; }
 
+        /// <summary>
+        /// The snippet in which the resource is defined
+        /// </summary>
         [Input("snippet")]
         public string? Snippet { get; set; }
 
@@ -68,6 +77,9 @@ namespace Pulumi.Scm
         [Input("device")]
         public Input<string>? Device { get; set; }
 
+        /// <summary>
+        /// The folder in which the resource is defined
+        /// </summary>
         [Input("folder")]
         public Input<string>? Folder { get; set; }
 
@@ -77,9 +89,15 @@ namespace Pulumi.Scm
         [Input("id", required: true)]
         public Input<string> Id { get; set; } = null!;
 
+        /// <summary>
+        /// BGP Route Map Redistributions Name
+        /// </summary>
         [Input("name")]
         public Input<string>? Name { get; set; }
 
+        /// <summary>
+        /// The snippet in which the resource is defined
+        /// </summary>
         [Input("snippet")]
         public Input<string>? Snippet { get; set; }
 
@@ -93,21 +111,45 @@ namespace Pulumi.Scm
     [OutputType]
     public sealed class GetBgpRouteMapRedistributionResult
     {
+        /// <summary>
+        /// Bgp
+        /// </summary>
         public readonly Outputs.GetBgpRouteMapRedistributionBgpResult Bgp;
+        /// <summary>
+        /// Connected static
+        /// </summary>
         public readonly Outputs.GetBgpRouteMapRedistributionConnectedStaticResult ConnectedStatic;
+        /// <summary>
+        /// BGP Route Map Redistributions Description
+        /// </summary>
         public readonly string Description;
         /// <summary>
         /// The device in which the resource is defined
         /// </summary>
         public readonly string Device;
+        /// <summary>
+        /// The folder in which the resource is defined
+        /// </summary>
         public readonly string Folder;
         /// <summary>
         /// BGP Route Map Redistributions UUID of the resource
         /// </summary>
         public readonly string Id;
+        /// <summary>
+        /// BGP Route Map Redistributions Name
+        /// </summary>
         public readonly string Name;
+        /// <summary>
+        /// Ospf
+        /// </summary>
         public readonly Outputs.GetBgpRouteMapRedistributionOspfResult Ospf;
+        /// <summary>
+        /// The snippet in which the resource is defined
+        /// </summary>
         public readonly string Snippet;
+        /// <summary>
+        /// The Terraform ID.
+        /// </summary>
         public readonly string Tfid;
 
         [OutputConstructor]

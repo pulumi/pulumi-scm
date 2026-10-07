@@ -135,6 +135,9 @@ namespace Pulumi.Scm
         [Input("device")]
         public string? Device { get; set; }
 
+        /// <summary>
+        /// The folder in which the resource is defined
+        /// </summary>
         [Input("folder")]
         public string? Folder { get; set; }
 
@@ -144,9 +147,15 @@ namespace Pulumi.Scm
         [Input("id", required: true)]
         public string Id { get; set; } = null!;
 
+        /// <summary>
+        /// The name of the SAML server profile
+        /// </summary>
         [Input("name")]
         public string? Name { get; set; }
 
+        /// <summary>
+        /// The snippet in which the resource is defined
+        /// </summary>
         [Input("snippet")]
         public string? Snippet { get; set; }
 
@@ -164,6 +173,9 @@ namespace Pulumi.Scm
         [Input("device")]
         public Input<string>? Device { get; set; }
 
+        /// <summary>
+        /// The folder in which the resource is defined
+        /// </summary>
         [Input("folder")]
         public Input<string>? Folder { get; set; }
 
@@ -173,9 +185,15 @@ namespace Pulumi.Scm
         [Input("id", required: true)]
         public Input<string> Id { get; set; } = null!;
 
+        /// <summary>
+        /// The name of the SAML server profile
+        /// </summary>
         [Input("name")]
         public Input<string>? Name { get; set; }
 
+        /// <summary>
+        /// The snippet in which the resource is defined
+        /// </summary>
         [Input("snippet")]
         public Input<string>? Snippet { get; set; }
 
@@ -189,26 +207,65 @@ namespace Pulumi.Scm
     [OutputType]
     public sealed class GetSamlServerProfileResult
     {
+        /// <summary>
+        /// The identity provider certificate
+        /// </summary>
         public readonly string Certificate;
         /// <summary>
         /// The device in which the resource is defined
         /// </summary>
         public readonly string Device;
+        /// <summary>
+        /// The identity provider ID
+        /// </summary>
         public readonly string EntityId;
+        /// <summary>
+        /// The folder in which the resource is defined
+        /// </summary>
         public readonly string Folder;
         /// <summary>
         /// The UUID of the SAML server profile
         /// </summary>
         public readonly string Id;
+        /// <summary>
+        /// Maxiumum clock skew
+        /// </summary>
         public readonly int MaxClockSkew;
+        /// <summary>
+        /// The name of the SAML server profile
+        /// </summary>
         public readonly string Name;
+        /// <summary>
+        /// SAML HTTP binding for SLO requests to the identity provider. Possible values are `Post` and `Redirect`.
+        /// </summary>
         public readonly string SloBindings;
+        /// <summary>
+        /// Identity provider SLO URL
+        /// </summary>
         public readonly string SloUrl;
+        /// <summary>
+        /// The snippet in which the resource is defined
+        /// </summary>
         public readonly string Snippet;
+        /// <summary>
+        /// SAML HTTP binding for SSO requests to the identity provider. Possible values are `Post` and `Redirect`.
+        /// </summary>
         public readonly string SsoBindings;
+        /// <summary>
+        /// Identity provider SSO URL
+        /// </summary>
         public readonly string SsoUrl;
+        /// <summary>
+        /// The Terraform ID.
+        /// </summary>
         public readonly string Tfid;
+        /// <summary>
+        /// Validate the identity provider certificate?
+        /// </summary>
         public readonly bool ValidateIdpCertificate;
+        /// <summary>
+        /// Sign SAML message to the identity provider?
+        /// </summary>
         public readonly bool WantAuthRequestsSigned;
 
         [OutputConstructor]

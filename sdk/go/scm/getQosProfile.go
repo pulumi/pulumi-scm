@@ -60,25 +60,34 @@ func LookupQosProfile(ctx *pulumi.Context, args *LookupQosProfileArgs, opts ...p
 type LookupQosProfileArgs struct {
 	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
+	// The folder in which the resource is defined
 	Folder *string `pulumi:"folder"`
 	// UUID of the resource
-	Id      string  `pulumi:"id"`
-	Name    *string `pulumi:"name"`
+	Id string `pulumi:"id"`
+	// Alphanumeric string begin with letter: [0-9a-zA-Z._-]
+	Name *string `pulumi:"name"`
+	// The snippet in which the resource is defined
 	Snippet *string `pulumi:"snippet"`
 }
 
 // A collection of values returned by getQosProfile.
 type LookupQosProfileResult struct {
+	// Aggregate bandwidth
 	AggregateBandwidth GetQosProfileAggregateBandwidth `pulumi:"aggregateBandwidth"`
+	// Class bandwidth type
 	ClassBandwidthType GetQosProfileClassBandwidthType `pulumi:"classBandwidthType"`
 	// The device in which the resource is defined
 	Device string `pulumi:"device"`
+	// The folder in which the resource is defined
 	Folder string `pulumi:"folder"`
 	// UUID of the resource
-	Id      string `pulumi:"id"`
-	Name    string `pulumi:"name"`
+	Id string `pulumi:"id"`
+	// Alphanumeric string begin with letter: [0-9a-zA-Z._-]
+	Name string `pulumi:"name"`
+	// The snippet in which the resource is defined
 	Snippet string `pulumi:"snippet"`
-	Tfid    string `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid string `pulumi:"tfid"`
 }
 
 func LookupQosProfileOutput(ctx *pulumi.Context, args LookupQosProfileOutputArgs, opts ...pulumi.InvokeOption) LookupQosProfileResultOutput {
@@ -90,10 +99,13 @@ func LookupQosProfileOutput(ctx *pulumi.Context, args LookupQosProfileOutputArgs
 type LookupQosProfileOutputArgs struct {
 	// The device in which the resource is defined
 	Device pulumi.StringPtrInput `pulumi:"device"`
+	// The folder in which the resource is defined
 	Folder pulumi.StringPtrInput `pulumi:"folder"`
 	// UUID of the resource
-	Id      pulumi.StringInput    `pulumi:"id"`
-	Name    pulumi.StringPtrInput `pulumi:"name"`
+	Id pulumi.StringInput `pulumi:"id"`
+	// Alphanumeric string begin with letter: [0-9a-zA-Z._-]
+	Name pulumi.StringPtrInput `pulumi:"name"`
+	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrInput `pulumi:"snippet"`
 }
 
@@ -116,10 +128,12 @@ func (o LookupQosProfileResultOutput) ToLookupQosProfileResultOutputWithContext(
 	return o
 }
 
+// Aggregate bandwidth
 func (o LookupQosProfileResultOutput) AggregateBandwidth() GetQosProfileAggregateBandwidthOutput {
 	return o.ApplyT(func(v LookupQosProfileResult) GetQosProfileAggregateBandwidth { return v.AggregateBandwidth }).(GetQosProfileAggregateBandwidthOutput)
 }
 
+// Class bandwidth type
 func (o LookupQosProfileResultOutput) ClassBandwidthType() GetQosProfileClassBandwidthTypeOutput {
 	return o.ApplyT(func(v LookupQosProfileResult) GetQosProfileClassBandwidthType { return v.ClassBandwidthType }).(GetQosProfileClassBandwidthTypeOutput)
 }
@@ -129,6 +143,7 @@ func (o LookupQosProfileResultOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupQosProfileResult) string { return v.Device }).(pulumi.StringOutput)
 }
 
+// The folder in which the resource is defined
 func (o LookupQosProfileResultOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupQosProfileResult) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -138,14 +153,17 @@ func (o LookupQosProfileResultOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupQosProfileResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
+// Alphanumeric string begin with letter: [0-9a-zA-Z._-]
 func (o LookupQosProfileResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupQosProfileResult) string { return v.Name }).(pulumi.StringOutput)
 }
 
+// The snippet in which the resource is defined
 func (o LookupQosProfileResultOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupQosProfileResult) string { return v.Snippet }).(pulumi.StringOutput)
 }
 
+// The Terraform ID.
 func (o LookupQosProfileResultOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupQosProfileResult) string { return v.Tfid }).(pulumi.StringOutput)
 }

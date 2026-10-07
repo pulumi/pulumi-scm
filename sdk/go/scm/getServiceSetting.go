@@ -69,23 +69,30 @@ func LookupServiceSetting(ctx *pulumi.Context, args *LookupServiceSettingArgs, o
 type LookupServiceSettingArgs struct {
 	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
+	// The folder in which the resource is defined
 	Folder *string `pulumi:"folder"`
 	// UUID of the resource
-	Id      string  `pulumi:"id"`
+	Id string `pulumi:"id"`
+	// The snippet in which the resource is defined
 	Snippet *string `pulumi:"snippet"`
 }
 
 // A collection of values returned by getServiceSetting.
 type LookupServiceSettingResult struct {
 	// The device in which the resource is defined
-	Device          string            `pulumi:"device"`
+	Device string `pulumi:"device"`
+	// Map of sensitive values returned from the API.
 	EncryptedValues map[string]string `pulumi:"encryptedValues"`
-	Folder          string            `pulumi:"folder"`
+	// The folder in which the resource is defined
+	Folder string `pulumi:"folder"`
 	// UUID of the resource
-	Id       string                    `pulumi:"id"`
+	Id string `pulumi:"id"`
+	// Services
 	Services GetServiceSettingServices `pulumi:"services"`
-	Snippet  string                    `pulumi:"snippet"`
-	Tfid     string                    `pulumi:"tfid"`
+	// The snippet in which the resource is defined
+	Snippet string `pulumi:"snippet"`
+	// The Terraform ID.
+	Tfid string `pulumi:"tfid"`
 }
 
 func LookupServiceSettingOutput(ctx *pulumi.Context, args LookupServiceSettingOutputArgs, opts ...pulumi.InvokeOption) LookupServiceSettingResultOutput {
@@ -97,9 +104,11 @@ func LookupServiceSettingOutput(ctx *pulumi.Context, args LookupServiceSettingOu
 type LookupServiceSettingOutputArgs struct {
 	// The device in which the resource is defined
 	Device pulumi.StringPtrInput `pulumi:"device"`
+	// The folder in which the resource is defined
 	Folder pulumi.StringPtrInput `pulumi:"folder"`
 	// UUID of the resource
-	Id      pulumi.StringInput    `pulumi:"id"`
+	Id pulumi.StringInput `pulumi:"id"`
+	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrInput `pulumi:"snippet"`
 }
 
@@ -127,10 +136,12 @@ func (o LookupServiceSettingResultOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupServiceSettingResult) string { return v.Device }).(pulumi.StringOutput)
 }
 
+// Map of sensitive values returned from the API.
 func (o LookupServiceSettingResultOutput) EncryptedValues() pulumi.StringMapOutput {
 	return o.ApplyT(func(v LookupServiceSettingResult) map[string]string { return v.EncryptedValues }).(pulumi.StringMapOutput)
 }
 
+// The folder in which the resource is defined
 func (o LookupServiceSettingResultOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupServiceSettingResult) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -140,14 +151,17 @@ func (o LookupServiceSettingResultOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupServiceSettingResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
+// Services
 func (o LookupServiceSettingResultOutput) Services() GetServiceSettingServicesOutput {
 	return o.ApplyT(func(v LookupServiceSettingResult) GetServiceSettingServices { return v.Services }).(GetServiceSettingServicesOutput)
 }
 
+// The snippet in which the resource is defined
 func (o LookupServiceSettingResultOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupServiceSettingResult) string { return v.Snippet }).(pulumi.StringOutput)
 }
 
+// The Terraform ID.
 func (o LookupServiceSettingResultOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupServiceSettingResult) string { return v.Tfid }).(pulumi.StringOutput)
 }

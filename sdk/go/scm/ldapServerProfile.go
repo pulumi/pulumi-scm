@@ -195,10 +195,8 @@ type LdapServerProfile struct {
 	// Map of sensitive values returned from the API.
 	EncryptedValues pulumi.StringMapOutput `pulumi:"encryptedValues"`
 	// The folder in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrOutput `pulumi:"folder"`
-	// The LDAP server time
+	// The LDAP server time. Possible values are `active-directory`, `e-directory`, `sun` and `other`.
 	LdapType pulumi.StringPtrOutput `pulumi:"ldapType"`
 	// The name of the LDAP server profile
 	Name pulumi.StringOutput `pulumi:"name"`
@@ -207,8 +205,6 @@ type LdapServerProfile struct {
 	// The LDAP server configuration
 	Servers LdapServerProfileServerArrayOutput `pulumi:"servers"`
 	// The snippet in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
 	// Require SSL/TLS secured connection?
 	Ssl pulumi.BoolPtrOutput `pulumi:"ssl"`
@@ -274,10 +270,8 @@ type ldapServerProfileState struct {
 	// Map of sensitive values returned from the API.
 	EncryptedValues map[string]string `pulumi:"encryptedValues"`
 	// The folder in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
-	// The LDAP server time
+	// The LDAP server time. Possible values are `active-directory`, `e-directory`, `sun` and `other`.
 	LdapType *string `pulumi:"ldapType"`
 	// The name of the LDAP server profile
 	Name *string `pulumi:"name"`
@@ -286,8 +280,6 @@ type ldapServerProfileState struct {
 	// The LDAP server configuration
 	Servers []LdapServerProfileServer `pulumi:"servers"`
 	// The snippet in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	// Require SSL/TLS secured connection?
 	Ssl *bool `pulumi:"ssl"`
@@ -313,10 +305,8 @@ type LdapServerProfileState struct {
 	// Map of sensitive values returned from the API.
 	EncryptedValues pulumi.StringMapInput
 	// The folder in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
-	// The LDAP server time
+	// The LDAP server time. Possible values are `active-directory`, `e-directory`, `sun` and `other`.
 	LdapType pulumi.StringPtrInput
 	// The name of the LDAP server profile
 	Name pulumi.StringPtrInput
@@ -325,8 +315,6 @@ type LdapServerProfileState struct {
 	// The LDAP server configuration
 	Servers LdapServerProfileServerArrayInput
 	// The snippet in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	// Require SSL/TLS secured connection?
 	Ssl pulumi.BoolPtrInput
@@ -354,10 +342,8 @@ type ldapServerProfileArgs struct {
 	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
 	// The folder in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
-	// The LDAP server time
+	// The LDAP server time. Possible values are `active-directory`, `e-directory`, `sun` and `other`.
 	LdapType *string `pulumi:"ldapType"`
 	// The name of the LDAP server profile
 	Name *string `pulumi:"name"`
@@ -366,8 +352,6 @@ type ldapServerProfileArgs struct {
 	// The LDAP server configuration
 	Servers []LdapServerProfileServer `pulumi:"servers"`
 	// The snippet in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	// Require SSL/TLS secured connection?
 	Ssl *bool `pulumi:"ssl"`
@@ -390,10 +374,8 @@ type LdapServerProfileArgs struct {
 	// The device in which the resource is defined
 	Device pulumi.StringPtrInput
 	// The folder in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
-	// The LDAP server time
+	// The LDAP server time. Possible values are `active-directory`, `e-directory`, `sun` and `other`.
 	LdapType pulumi.StringPtrInput
 	// The name of the LDAP server profile
 	Name pulumi.StringPtrInput
@@ -402,8 +384,6 @@ type LdapServerProfileArgs struct {
 	// The LDAP server configuration
 	Servers LdapServerProfileServerArrayInput
 	// The snippet in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	// Require SSL/TLS secured connection?
 	Ssl pulumi.BoolPtrInput
@@ -531,13 +511,11 @@ func (o LdapServerProfileOutput) EncryptedValues() pulumi.StringMapOutput {
 }
 
 // The folder in which the resource is defined
-//
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LdapServerProfileOutput) Folder() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *LdapServerProfile) pulumi.StringPtrOutput { return v.Folder }).(pulumi.StringPtrOutput)
 }
 
-// The LDAP server time
+// The LDAP server time. Possible values are `active-directory`, `e-directory`, `sun` and `other`.
 func (o LdapServerProfileOutput) LdapType() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *LdapServerProfile) pulumi.StringPtrOutput { return v.LdapType }).(pulumi.StringPtrOutput)
 }
@@ -558,8 +536,6 @@ func (o LdapServerProfileOutput) Servers() LdapServerProfileServerArrayOutput {
 }
 
 // The snippet in which the resource is defined
-//
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LdapServerProfileOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *LdapServerProfile) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)
 }

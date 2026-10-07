@@ -12,6 +12,12 @@ namespace Pulumi.Scm.Inputs
 
     public sealed class EthernetInterfaceLayer3Args : global::Pulumi.ResourceArgs
     {
+        /// <summary>
+        /// TCP MSS adjustment settings for the interface
+        /// </summary>
+        [Input("adjustTcpMss")]
+        public Input<Inputs.EthernetInterfaceLayer3AdjustTcpMssArgs>? AdjustTcpMss { get; set; }
+
         [Input("arps")]
         private InputList<Inputs.EthernetInterfaceLayer3ArpArgs>? _arps;
 
@@ -47,14 +53,18 @@ namespace Pulumi.Scm.Inputs
 
         /// <summary>
         /// Ethernet Interface IP addresses
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `DhcpClient`, `Ip`, and `Pppoe`.
         /// </summary>
         public InputList<Inputs.EthernetInterfaceLayer3IpArgs> Ips
         {
             get => _ips ?? (_ips = new InputList<Inputs.EthernetInterfaceLayer3IpArgs>());
             set => _ips = value;
         }
+
+        /// <summary>
+        /// LLDP settings for the interface
+        /// </summary>
+        [Input("lldp")]
+        public Input<Inputs.EthernetInterfaceLayer3LldpArgs>? Lldp { get; set; }
 
         /// <summary>
         /// MTU
@@ -69,9 +79,7 @@ namespace Pulumi.Scm.Inputs
         public Input<string>? NetflowProfile { get; set; }
 
         /// <summary>
-        /// Pppoe
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `DhcpClient`, `Ip`, and `Pppoe`.
+        /// PPPoE configuration for the interface
         /// </summary>
         [Input("pppoe")]
         public Input<Inputs.EthernetInterfaceLayer3PppoeArgs>? Pppoe { get; set; }

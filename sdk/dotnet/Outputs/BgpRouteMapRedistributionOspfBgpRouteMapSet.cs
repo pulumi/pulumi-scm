@@ -42,7 +42,7 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly Outputs.BgpRouteMapRedistributionOspfBgpRouteMapSetMetric? Metric;
         /// <summary>
-        /// OSPF BGP Route maps set Origin
+        /// OSPF BGP Route maps set Origin. Possible values are `None`, `Egp`, `Igp` and `Incomplete`.
         /// </summary>
         public readonly string? Origin;
         /// <summary>

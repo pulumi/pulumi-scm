@@ -415,7 +415,7 @@ namespace Pulumi.Scm
     public partial class SecurityRule : global::Pulumi.CustomResource
     {
         /// <summary>
-        /// The action to be taken when the rule is matched
+        /// The action to be taken when the rule is matched. Possible values are `Allow`, `Deny`, `Drop`, `reset-client`, `reset-server` and `reset-both`.
         /// </summary>
         [Output("action")]
         public Output<string?> Action { get; private set; } = null!;
@@ -565,7 +565,7 @@ namespace Pulumi.Scm
         public Output<string> PolicyType { get; private set; } = null!;
 
         /// <summary>
-        /// The position of a security rule
+        /// The position of a security rule. Possible values are `Pre` and `Post`.
         /// </summary>
         [Output("position")]
         public Output<string> Position { get; private set; } = null!;
@@ -631,7 +631,7 @@ namespace Pulumi.Scm
         public Output<ImmutableArray<string>> Tags { get; private set; } = null!;
 
         /// <summary>
-        /// The name or UUID of the rule to position this rule relative to. Required when `RelativePosition` is `"before"` or `"after"`.
+        /// UUID of the rule to position this rule relative to. Required when `RelativePosition` is `"before"` or `"after"`.
         /// </summary>
         [Output("targetRule")]
         public Output<string?> TargetRule { get; private set; } = null!;
@@ -701,7 +701,7 @@ namespace Pulumi.Scm
     public sealed class SecurityRuleArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The action to be taken when the rule is matched
+        /// The action to be taken when the rule is matched. Possible values are `Allow`, `Deny`, `Drop`, `reset-client`, `reset-server` and `reset-both`.
         /// </summary>
         [Input("action")]
         public Input<string>? Action { get; set; }
@@ -911,7 +911,7 @@ namespace Pulumi.Scm
         public Input<string>? PolicyType { get; set; }
 
         /// <summary>
-        /// The position of a security rule
+        /// The position of a security rule. Possible values are `Pre` and `Post`.
         /// </summary>
         [Input("position")]
         public Input<string>? Position { get; set; }
@@ -1007,7 +1007,7 @@ namespace Pulumi.Scm
         }
 
         /// <summary>
-        /// The name or UUID of the rule to position this rule relative to. Required when `RelativePosition` is `"before"` or `"after"`.
+        /// UUID of the rule to position this rule relative to. Required when `RelativePosition` is `"before"` or `"after"`.
         /// </summary>
         [Input("targetRule")]
         public Input<string>? TargetRule { get; set; }
@@ -1045,7 +1045,7 @@ namespace Pulumi.Scm
     public sealed class SecurityRuleState : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The action to be taken when the rule is matched
+        /// The action to be taken when the rule is matched. Possible values are `Allow`, `Deny`, `Drop`, `reset-client`, `reset-server` and `reset-both`.
         /// </summary>
         [Input("action")]
         public Input<string>? Action { get; set; }
@@ -1255,7 +1255,7 @@ namespace Pulumi.Scm
         public Input<string>? PolicyType { get; set; }
 
         /// <summary>
-        /// The position of a security rule
+        /// The position of a security rule. Possible values are `Pre` and `Post`.
         /// </summary>
         [Input("position")]
         public Input<string>? Position { get; set; }
@@ -1351,7 +1351,7 @@ namespace Pulumi.Scm
         }
 
         /// <summary>
-        /// The name or UUID of the rule to position this rule relative to. Required when `RelativePosition` is `"before"` or `"after"`.
+        /// UUID of the rule to position this rule relative to. Required when `RelativePosition` is `"before"` or `"after"`.
         /// </summary>
         [Input("targetRule")]
         public Input<string>? TargetRule { get; set; }

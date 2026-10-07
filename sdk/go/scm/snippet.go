@@ -82,7 +82,7 @@ type Snippet struct {
 	Name pulumi.StringOutput `pulumi:"name"`
 	// The Terraform ID.
 	Tfid pulumi.StringOutput `pulumi:"tfid"`
-	// The snippet type
+	// The snippet type. Possible values are `predefined`, `custom` and `readonly`.
 	Type pulumi.StringOutput `pulumi:"type"`
 }
 
@@ -124,7 +124,7 @@ type snippetState struct {
 	Name *string `pulumi:"name"`
 	// The Terraform ID.
 	Tfid *string `pulumi:"tfid"`
-	// The snippet type
+	// The snippet type. Possible values are `predefined`, `custom` and `readonly`.
 	Type *string `pulumi:"type"`
 }
 
@@ -137,7 +137,7 @@ type SnippetState struct {
 	Name pulumi.StringPtrInput
 	// The Terraform ID.
 	Tfid pulumi.StringPtrInput
-	// The snippet type
+	// The snippet type. Possible values are `predefined`, `custom` and `readonly`.
 	Type pulumi.StringPtrInput
 }
 
@@ -271,7 +271,7 @@ func (o SnippetOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v *Snippet) pulumi.StringOutput { return v.Tfid }).(pulumi.StringOutput)
 }
 
-// The snippet type
+// The snippet type. Possible values are `predefined`, `custom` and `readonly`.
 func (o SnippetOutput) Type() pulumi.StringOutput {
 	return o.ApplyT(func(v *Snippet) pulumi.StringOutput { return v.Type }).(pulumi.StringOutput)
 }

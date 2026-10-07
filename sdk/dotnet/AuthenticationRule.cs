@@ -63,6 +63,7 @@ namespace Pulumi.Scm
     ///         {
     ///             "any",
     ///         },
+    ///         AuthenticationEnforcement = "default-no-captive-portal",
     ///         Timeout = 1200,
     ///         NegateSource = false,
     ///         NegateDestination = false,
@@ -116,6 +117,7 @@ namespace Pulumi.Scm
     ///         {
     ///             "any",
     ///         },
+    ///         AuthenticationEnforcement = "default-no-captive-portal",
     ///     });
     /// 
     ///     var ruleBottomOfList = new Scm.AuthenticationRule("rule_bottom_of_list", new()
@@ -149,6 +151,7 @@ namespace Pulumi.Scm
     ///         {
     ///             "any",
     ///         },
+    ///         AuthenticationEnforcement = "default-no-captive-portal",
     ///     });
     /// 
     ///     // -----------------------------------------------------------------------------
@@ -186,6 +189,7 @@ namespace Pulumi.Scm
     ///         {
     ///             "any",
     ///         },
+    ///         AuthenticationEnforcement = "default-no-captive-portal",
     ///     });
     /// 
     ///     var ruleAfterAnchor = new Scm.AuthenticationRule("rule_after_anchor", new()
@@ -220,6 +224,7 @@ namespace Pulumi.Scm
     ///         {
     ///             "any",
     ///         },
+    ///         AuthenticationEnforcement = "default-no-captive-portal",
     ///     });
     /// 
     /// });
@@ -254,7 +259,7 @@ namespace Pulumi.Scm
         /// The authentication profile name
         /// </summary>
         [Output("authenticationEnforcement")]
-        public Output<string?> AuthenticationEnforcement { get; private set; } = null!;
+        public Output<string> AuthenticationEnforcement { get; private set; } = null!;
 
         /// <summary>
         /// The destination URL categories
@@ -294,8 +299,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// Folder
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Output("folder")]
         public Output<string?> Folder { get; private set; } = null!;
@@ -349,7 +352,7 @@ namespace Pulumi.Scm
         public Output<bool> NegateSource { get; private set; } = null!;
 
         /// <summary>
-        /// The relative position of the rule
+        /// The relative position of the rule. Possible values are `Pre` and `Post`.
         /// </summary>
         [Output("position")]
         public Output<string> Position { get; private set; } = null!;
@@ -368,8 +371,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// Snippet
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Output("snippet")]
         public Output<string?> Snippet { get; private set; } = null!;
@@ -399,7 +400,7 @@ namespace Pulumi.Scm
         public Output<ImmutableArray<string>> Tags { get; private set; } = null!;
 
         /// <summary>
-        /// The name or UUID of the rule to position this rule relative to. Required when `RelativePosition` is `"before"` or `"after"`.
+        /// UUID of the rule to position this rule relative to. Required when `RelativePosition` is `"before"` or `"after"`.
         /// </summary>
         [Output("targetRule")]
         public Output<string?> TargetRule { get; private set; } = null!;
@@ -530,8 +531,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// Folder
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("folder")]
         public Input<string>? Folder { get; set; }
@@ -597,7 +596,7 @@ namespace Pulumi.Scm
         public Input<bool>? NegateSource { get; set; }
 
         /// <summary>
-        /// The relative position of the rule
+        /// The relative position of the rule. Possible values are `Pre` and `Post`.
         /// </summary>
         [Input("position")]
         public Input<string>? Position { get; set; }
@@ -622,8 +621,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// Snippet
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("snippet")]
         public Input<string>? Snippet { get; set; }
@@ -677,7 +674,7 @@ namespace Pulumi.Scm
         }
 
         /// <summary>
-        /// The name or UUID of the rule to position this rule relative to. Required when `RelativePosition` is `"before"` or `"after"`.
+        /// UUID of the rule to position this rule relative to. Required when `RelativePosition` is `"before"` or `"after"`.
         /// </summary>
         [Input("targetRule")]
         public Input<string>? TargetRule { get; set; }
@@ -770,8 +767,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// Folder
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("folder")]
         public Input<string>? Folder { get; set; }
@@ -837,7 +832,7 @@ namespace Pulumi.Scm
         public Input<bool>? NegateSource { get; set; }
 
         /// <summary>
-        /// The relative position of the rule
+        /// The relative position of the rule. Possible values are `Pre` and `Post`.
         /// </summary>
         [Input("position")]
         public Input<string>? Position { get; set; }
@@ -862,8 +857,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// Snippet
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("snippet")]
         public Input<string>? Snippet { get; set; }
@@ -917,7 +910,7 @@ namespace Pulumi.Scm
         }
 
         /// <summary>
-        /// The name or UUID of the rule to position this rule relative to. Required when `RelativePosition` is `"before"` or `"after"`.
+        /// UUID of the rule to position this rule relative to. Required when `RelativePosition` is `"before"` or `"after"`.
         /// </summary>
         [Input("targetRule")]
         public Input<string>? TargetRule { get; set; }

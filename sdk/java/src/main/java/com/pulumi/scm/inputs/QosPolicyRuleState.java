@@ -80,16 +80,12 @@ public final class QosPolicyRuleState extends com.pulumi.resources.ResourceArgs 
     /**
      * The folder in which the resource is defined
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
      */
     @Import(name="folder")
     private @Nullable Output<String> folder;
 
     /**
      * @return The folder in which the resource is defined
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public Optional<Output<String>> folder() {
@@ -112,14 +108,14 @@ public final class QosPolicyRuleState extends com.pulumi.resources.ResourceArgs 
     }
 
     /**
-     * The relative position of the rule
+     * The relative position of the rule. Possible values are `pre` and `post`.
      * 
      */
     @Import(name="position")
     private @Nullable Output<String> position;
 
     /**
-     * @return The relative position of the rule
+     * @return The relative position of the rule. Possible values are `pre` and `post`.
      * 
      */
     public Optional<Output<String>> position() {
@@ -159,8 +155,6 @@ public final class QosPolicyRuleState extends com.pulumi.resources.ResourceArgs 
     /**
      * The snippet in which the resource is defined
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
      */
     @Import(name="snippet")
     private @Nullable Output<String> snippet;
@@ -168,22 +162,20 @@ public final class QosPolicyRuleState extends com.pulumi.resources.ResourceArgs 
     /**
      * @return The snippet in which the resource is defined
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
      */
     public Optional<Output<String>> snippet() {
         return Optional.ofNullable(this.snippet);
     }
 
     /**
-     * The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `&#34;before&#34;` or `&#34;after&#34;`.
+     * UUID of the rule to position this rule relative to. Required when `relativePosition` is `&#34;before&#34;` or `&#34;after&#34;`.
      * 
      */
     @Import(name="targetRule")
     private @Nullable Output<String> targetRule;
 
     /**
-     * @return The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `&#34;before&#34;` or `&#34;after&#34;`.
+     * @return UUID of the rule to position this rule relative to. Required when `relativePosition` is `&#34;before&#34;` or `&#34;after&#34;`.
      * 
      */
     public Optional<Output<String>> targetRule() {
@@ -327,8 +319,6 @@ public final class QosPolicyRuleState extends com.pulumi.resources.ResourceArgs 
         /**
          * @param folder The folder in which the resource is defined
          * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-         * 
          * @return builder
          * 
          */
@@ -339,8 +329,6 @@ public final class QosPolicyRuleState extends com.pulumi.resources.ResourceArgs 
 
         /**
          * @param folder The folder in which the resource is defined
-         * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
          * 
          * @return builder
          * 
@@ -371,7 +359,7 @@ public final class QosPolicyRuleState extends com.pulumi.resources.ResourceArgs 
         }
 
         /**
-         * @param position The relative position of the rule
+         * @param position The relative position of the rule. Possible values are `pre` and `post`.
          * 
          * @return builder
          * 
@@ -382,7 +370,7 @@ public final class QosPolicyRuleState extends com.pulumi.resources.ResourceArgs 
         }
 
         /**
-         * @param position The relative position of the rule
+         * @param position The relative position of the rule. Possible values are `pre` and `post`.
          * 
          * @return builder
          * 
@@ -436,8 +424,6 @@ public final class QosPolicyRuleState extends com.pulumi.resources.ResourceArgs 
         /**
          * @param snippet The snippet in which the resource is defined
          * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-         * 
          * @return builder
          * 
          */
@@ -449,8 +435,6 @@ public final class QosPolicyRuleState extends com.pulumi.resources.ResourceArgs 
         /**
          * @param snippet The snippet in which the resource is defined
          * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-         * 
          * @return builder
          * 
          */
@@ -459,7 +443,7 @@ public final class QosPolicyRuleState extends com.pulumi.resources.ResourceArgs 
         }
 
         /**
-         * @param targetRule The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `&#34;before&#34;` or `&#34;after&#34;`.
+         * @param targetRule UUID of the rule to position this rule relative to. Required when `relativePosition` is `&#34;before&#34;` or `&#34;after&#34;`.
          * 
          * @return builder
          * 
@@ -470,7 +454,7 @@ public final class QosPolicyRuleState extends com.pulumi.resources.ResourceArgs 
         }
 
         /**
-         * @param targetRule The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `&#34;before&#34;` or `&#34;after&#34;`.
+         * @param targetRule UUID of the rule to position this rule relative to. Required when `relativePosition` is `&#34;before&#34;` or `&#34;after&#34;`.
          * 
          * @return builder
          * 

@@ -13,13 +13,13 @@ namespace Pulumi.Scm.Inputs
     public sealed class DnsSecurityProfileBotnetDomainsSinkholeGetArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Ipv4 address
+        /// Ipv4 address. Possible values are `127.0.0.1` and `pan-sinkhole-default-ip`.
         /// </summary>
         [Input("ipv4Address")]
         public Input<string>? Ipv4Address { get; set; }
 
         /// <summary>
-        /// Ipv6 address
+        /// Ipv6 address. Possible values are `::1`.
         /// </summary>
         [Input("ipv6Address")]
         public Input<string>? Ipv6Address { get; set; }

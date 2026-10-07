@@ -26,7 +26,7 @@ public final class GetWildfireAntiVirusProfileListData {
      */
     private String device;
     /**
-     * @return The folder of the item. Default: Shared.
+     * @return The folder in which the resource is defined
      * 
      */
     private String folder;
@@ -41,7 +41,7 @@ public final class GetWildfireAntiVirusProfileListData {
      */
     private List<GetWildfireAntiVirusProfileListDataMlavException> mlavExceptions;
     /**
-     * @return The name of the item.
+     * @return Name
      * 
      */
     private String name;
@@ -56,7 +56,7 @@ public final class GetWildfireAntiVirusProfileListData {
      */
     private List<GetWildfireAntiVirusProfileListDataRule> rules;
     /**
-     * @return The snippet of the item.
+     * @return The snippet in which the resource is defined
      * 
      */
     private String snippet;
@@ -87,7 +87,7 @@ public final class GetWildfireAntiVirusProfileListData {
         return this.device;
     }
     /**
-     * @return The folder of the item. Default: Shared.
+     * @return The folder in which the resource is defined
      * 
      */
     public String folder() {
@@ -108,7 +108,7 @@ public final class GetWildfireAntiVirusProfileListData {
         return this.mlavExceptions;
     }
     /**
-     * @return The name of the item.
+     * @return Name
      * 
      */
     public String name() {
@@ -129,7 +129,7 @@ public final class GetWildfireAntiVirusProfileListData {
         return this.rules;
     }
     /**
-     * @return The snippet of the item.
+     * @return The snippet in which the resource is defined
      * 
      */
     public String snippet() {

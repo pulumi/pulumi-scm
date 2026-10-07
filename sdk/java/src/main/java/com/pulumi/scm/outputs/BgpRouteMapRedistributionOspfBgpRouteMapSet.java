@@ -53,7 +53,7 @@ public final class BgpRouteMapRedistributionOspfBgpRouteMapSet {
      */
     private @Nullable BgpRouteMapRedistributionOspfBgpRouteMapSetMetric metric;
     /**
-     * @return OSPF BGP Route maps set Origin
+     * @return OSPF BGP Route maps set Origin. Possible values are `none`, `egp`, `igp` and `incomplete`.
      * 
      */
     private @Nullable String origin;
@@ -129,7 +129,7 @@ public final class BgpRouteMapRedistributionOspfBgpRouteMapSet {
         return Optional.ofNullable(this.metric);
     }
     /**
-     * @return OSPF BGP Route maps set Origin
+     * @return OSPF BGP Route maps set Origin. Possible values are `none`, `egp`, `igp` and `incomplete`.
      * 
      */
     public Optional<String> origin() {

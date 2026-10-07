@@ -68,8 +68,6 @@ type LookupServiceConnectionArgs struct {
 type LookupServiceConnectionResult struct {
 	// Backup s c
 	BackupSc string `pulumi:"backupSc"`
-	// Bgp peer
-	BgpPeer GetServiceConnectionBgpPeer `pulumi:"bgpPeer"`
 	// Map of sensitive values returned from the API.
 	EncryptedValues map[string]string `pulumi:"encryptedValues"`
 	// The folder in which the resource is defined
@@ -82,9 +80,9 @@ type LookupServiceConnectionResult struct {
 	Name string `pulumi:"name"`
 	// Nat pool
 	NatPool string `pulumi:"natPool"`
-	// No export community
+	// No export community. Possible values are `Disabled`, `Enabled-In`, `Enabled-Out` and `Enabled-Both`.
 	NoExportCommunity string `pulumi:"noExportCommunity"`
-	// Onboarding type
+	// Onboarding type. Possible values are `classic`.
 	OnboardingType string `pulumi:"onboardingType"`
 	// Protocol
 	Protocol GetServiceConnectionProtocol `pulumi:"protocol"`
@@ -143,11 +141,6 @@ func (o LookupServiceConnectionResultOutput) BackupSc() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupServiceConnectionResult) string { return v.BackupSc }).(pulumi.StringOutput)
 }
 
-// Bgp peer
-func (o LookupServiceConnectionResultOutput) BgpPeer() GetServiceConnectionBgpPeerOutput {
-	return o.ApplyT(func(v LookupServiceConnectionResult) GetServiceConnectionBgpPeer { return v.BgpPeer }).(GetServiceConnectionBgpPeerOutput)
-}
-
 // Map of sensitive values returned from the API.
 func (o LookupServiceConnectionResultOutput) EncryptedValues() pulumi.StringMapOutput {
 	return o.ApplyT(func(v LookupServiceConnectionResult) map[string]string { return v.EncryptedValues }).(pulumi.StringMapOutput)
@@ -178,12 +171,12 @@ func (o LookupServiceConnectionResultOutput) NatPool() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupServiceConnectionResult) string { return v.NatPool }).(pulumi.StringOutput)
 }
 
-// No export community
+// No export community. Possible values are `Disabled`, `Enabled-In`, `Enabled-Out` and `Enabled-Both`.
 func (o LookupServiceConnectionResultOutput) NoExportCommunity() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupServiceConnectionResult) string { return v.NoExportCommunity }).(pulumi.StringOutput)
 }
 
-// Onboarding type
+// Onboarding type. Possible values are `classic`.
 func (o LookupServiceConnectionResultOutput) OnboardingType() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupServiceConnectionResult) string { return v.OnboardingType }).(pulumi.StringOutput)
 }

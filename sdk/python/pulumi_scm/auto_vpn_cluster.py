@@ -37,7 +37,7 @@ class AutoVpnClusterArgs:
         :param pulumi.Input[_builtins.bool] enable_sdwan: Enable SD-WAN?
         :param pulumi.Input[Sequence[pulumi.Input['AutoVpnClusterGatewayArgs']]] gateways: Hubs
         :param pulumi.Input[_builtins.str] name: VPN cluster name
-        :param pulumi.Input[_builtins.str] type: VPN cluster type
+        :param pulumi.Input[_builtins.str] type: VPN cluster type. Possible values are `hub-spoke` and `mesh`.
         """
         if branches is not None:
             pulumi.set(__self__, "branches", branches)
@@ -130,7 +130,7 @@ class AutoVpnClusterArgs:
     @pulumi.getter
     def type(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
-        VPN cluster type
+        VPN cluster type. Possible values are `hub-spoke` and `mesh`.
         """
         return pulumi.get(self, "type")
 
@@ -160,7 +160,7 @@ class _AutoVpnClusterState:
         :param pulumi.Input[Sequence[pulumi.Input['AutoVpnClusterGatewayArgs']]] gateways: Hubs
         :param pulumi.Input[_builtins.str] name: VPN cluster name
         :param pulumi.Input[_builtins.str] tfid: The Terraform ID.
-        :param pulumi.Input[_builtins.str] type: VPN cluster type
+        :param pulumi.Input[_builtins.str] type: VPN cluster type. Possible values are `hub-spoke` and `mesh`.
         """
         if branches is not None:
             pulumi.set(__self__, "branches", branches)
@@ -267,7 +267,7 @@ class _AutoVpnClusterState:
     @pulumi.getter
     def type(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
-        VPN cluster type
+        VPN cluster type. Possible values are `hub-spoke` and `mesh`.
         """
         return pulumi.get(self, "type")
 
@@ -372,7 +372,7 @@ class AutoVpnCluster(pulumi.CustomResource):
         :param pulumi.Input[_builtins.bool] enable_sdwan: Enable SD-WAN?
         :param pulumi.Input[Sequence[pulumi.Input[Union['AutoVpnClusterGatewayArgs', 'AutoVpnClusterGatewayArgsDict', 'outputs.AutoVpnClusterGateway']]]] gateways: Hubs
         :param pulumi.Input[_builtins.str] name: VPN cluster name
-        :param pulumi.Input[_builtins.str] type: VPN cluster type
+        :param pulumi.Input[_builtins.str] type: VPN cluster type. Possible values are `hub-spoke` and `mesh`.
         """
         ...
     @overload
@@ -525,7 +525,7 @@ class AutoVpnCluster(pulumi.CustomResource):
         :param pulumi.Input[Sequence[pulumi.Input[Union['AutoVpnClusterGatewayArgs', 'AutoVpnClusterGatewayArgsDict', 'outputs.AutoVpnClusterGateway']]]] gateways: Hubs
         :param pulumi.Input[_builtins.str] name: VPN cluster name
         :param pulumi.Input[_builtins.str] tfid: The Terraform ID.
-        :param pulumi.Input[_builtins.str] type: VPN cluster type
+        :param pulumi.Input[_builtins.str] type: VPN cluster type. Possible values are `hub-spoke` and `mesh`.
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
 
@@ -601,7 +601,7 @@ class AutoVpnCluster(pulumi.CustomResource):
     @pulumi.getter
     def type(self) -> pulumi.Output[_builtins.str]:
         """
-        VPN cluster type
+        VPN cluster type. Possible values are `hub-spoke` and `mesh`.
         """
         return pulumi.get(self, "type")
 

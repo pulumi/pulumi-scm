@@ -12,31 +12,87 @@ import java.util.Objects;
 
 @CustomType
 public final class GetSamlServerProfileResult {
+    /**
+     * @return The identity provider certificate
+     * 
+     */
     private String certificate;
     /**
      * @return The device in which the resource is defined
      * 
      */
     private String device;
+    /**
+     * @return The identity provider ID
+     * 
+     */
     private String entityId;
+    /**
+     * @return The folder in which the resource is defined
+     * 
+     */
     private String folder;
     /**
      * @return The UUID of the SAML server profile
      * 
      */
     private String id;
+    /**
+     * @return Maxiumum clock skew
+     * 
+     */
     private Integer maxClockSkew;
+    /**
+     * @return The name of the SAML server profile
+     * 
+     */
     private String name;
+    /**
+     * @return SAML HTTP binding for SLO requests to the identity provider. Possible values are `post` and `redirect`.
+     * 
+     */
     private String sloBindings;
+    /**
+     * @return Identity provider SLO URL
+     * 
+     */
     private String sloUrl;
+    /**
+     * @return The snippet in which the resource is defined
+     * 
+     */
     private String snippet;
+    /**
+     * @return SAML HTTP binding for SSO requests to the identity provider. Possible values are `post` and `redirect`.
+     * 
+     */
     private String ssoBindings;
+    /**
+     * @return Identity provider SSO URL
+     * 
+     */
     private String ssoUrl;
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     private String tfid;
+    /**
+     * @return Validate the identity provider certificate?
+     * 
+     */
     private Boolean validateIdpCertificate;
+    /**
+     * @return Sign SAML message to the identity provider?
+     * 
+     */
     private Boolean wantAuthRequestsSigned;
 
     private GetSamlServerProfileResult() {}
+    /**
+     * @return The identity provider certificate
+     * 
+     */
     public String certificate() {
         return this.certificate;
     }
@@ -47,9 +103,17 @@ public final class GetSamlServerProfileResult {
     public String device() {
         return this.device;
     }
+    /**
+     * @return The identity provider ID
+     * 
+     */
     public String entityId() {
         return this.entityId;
     }
+    /**
+     * @return The folder in which the resource is defined
+     * 
+     */
     public String folder() {
         return this.folder;
     }
@@ -60,33 +124,73 @@ public final class GetSamlServerProfileResult {
     public String id() {
         return this.id;
     }
+    /**
+     * @return Maxiumum clock skew
+     * 
+     */
     public Integer maxClockSkew() {
         return this.maxClockSkew;
     }
+    /**
+     * @return The name of the SAML server profile
+     * 
+     */
     public String name() {
         return this.name;
     }
+    /**
+     * @return SAML HTTP binding for SLO requests to the identity provider. Possible values are `post` and `redirect`.
+     * 
+     */
     public String sloBindings() {
         return this.sloBindings;
     }
+    /**
+     * @return Identity provider SLO URL
+     * 
+     */
     public String sloUrl() {
         return this.sloUrl;
     }
+    /**
+     * @return The snippet in which the resource is defined
+     * 
+     */
     public String snippet() {
         return this.snippet;
     }
+    /**
+     * @return SAML HTTP binding for SSO requests to the identity provider. Possible values are `post` and `redirect`.
+     * 
+     */
     public String ssoBindings() {
         return this.ssoBindings;
     }
+    /**
+     * @return Identity provider SSO URL
+     * 
+     */
     public String ssoUrl() {
         return this.ssoUrl;
     }
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     public String tfid() {
         return this.tfid;
     }
+    /**
+     * @return Validate the identity provider certificate?
+     * 
+     */
     public Boolean validateIdpCertificate() {
         return this.validateIdpCertificate;
     }
+    /**
+     * @return Sign SAML message to the identity provider?
+     * 
+     */
     public Boolean wantAuthRequestsSigned() {
         return this.wantAuthRequestsSigned;
     }

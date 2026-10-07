@@ -17,7 +17,7 @@ public final class GetTcpSettingListDataTcp {
      */
     private Boolean allowChallengeAck;
     /**
-     * @return Asymmetric path action
+     * @return Asymmetric path action. Possible values are `drop` and `bypass`.
      * 
      */
     private String asymmetricPath;
@@ -37,7 +37,7 @@ public final class GetTcpSettingListDataTcp {
      */
     private Boolean dropZeroFlag;
     /**
-     * @return SIP TCP cleartext action (`&#39;0&#39;` = Always Off, `&#39;1&#39;` = Always Enabled, `&#39;2&#39;` = Automatically enable proxy when needed)
+     * @return SIP TCP cleartext action (`&#39;0&#39;` = Always Off, `&#39;1&#39;` = Always Enabled, `&#39;2&#39;` = Automatically enable proxy when needed). Possible values are `0`, `2` and `3`.
      * 
      */
     private String siptcpCleartextProxy;
@@ -52,7 +52,7 @@ public final class GetTcpSettingListDataTcp {
      */
     private Boolean tcpRetransmitScan;
     /**
-     * @return Urgent data flag action
+     * @return Urgent data flag action. Possible values are `clear` and `oobinline`.
      * 
      */
     private String urgentData;
@@ -66,7 +66,7 @@ public final class GetTcpSettingListDataTcp {
         return this.allowChallengeAck;
     }
     /**
-     * @return Asymmetric path action
+     * @return Asymmetric path action. Possible values are `drop` and `bypass`.
      * 
      */
     public String asymmetricPath() {
@@ -94,7 +94,7 @@ public final class GetTcpSettingListDataTcp {
         return this.dropZeroFlag;
     }
     /**
-     * @return SIP TCP cleartext action (`&#39;0&#39;` = Always Off, `&#39;1&#39;` = Always Enabled, `&#39;2&#39;` = Automatically enable proxy when needed)
+     * @return SIP TCP cleartext action (`&#39;0&#39;` = Always Off, `&#39;1&#39;` = Always Enabled, `&#39;2&#39;` = Automatically enable proxy when needed). Possible values are `0`, `2` and `3`.
      * 
      */
     public String siptcpCleartextProxy() {
@@ -115,7 +115,7 @@ public final class GetTcpSettingListDataTcp {
         return this.tcpRetransmitScan;
     }
     /**
-     * @return Urgent data flag action
+     * @return Urgent data flag action. Possible values are `clear` and `oobinline`.
      * 
      */
     public String urgentData() {

@@ -127,16 +127,12 @@ public class AuthenticationPortal extends com.pulumi.resources.CustomResource {
     /**
      * The folder in which the resource is defined
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
      */
     @Export(name="folder", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> folder;
 
     /**
      * @return The folder in which the resource is defined
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public Output<Optional<String>> folder() {
@@ -175,19 +171,17 @@ public class AuthenticationPortal extends com.pulumi.resources.CustomResource {
      * 
      */
     @Export(name="redirectHost", refs={String.class}, tree="[0]")
-    private Output<String> redirectHost;
+    private Output</* @Nullable */ String> redirectHost;
 
     /**
      * @return The authentication portal IP address or hostname
      * 
      */
-    public Output<String> redirectHost() {
-        return this.redirectHost;
+    public Output<Optional<String>> redirectHost() {
+        return Codegen.optional(this.redirectHost);
     }
     /**
      * The snippet in which the resource is defined
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     @Export(name="snippet", refs={String.class}, tree="[0]")
@@ -195,8 +189,6 @@ public class AuthenticationPortal extends com.pulumi.resources.CustomResource {
 
     /**
      * @return The snippet in which the resource is defined
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public Output<Optional<String>> snippet() {
@@ -257,7 +249,7 @@ public class AuthenticationPortal extends com.pulumi.resources.CustomResource {
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public AuthenticationPortal(java.lang.String name, AuthenticationPortalArgs args) {
+    public AuthenticationPortal(java.lang.String name, @Nullable AuthenticationPortalArgs args) {
         this(name, args, null);
     }
     /**
@@ -266,7 +258,7 @@ public class AuthenticationPortal extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public AuthenticationPortal(java.lang.String name, AuthenticationPortalArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public AuthenticationPortal(java.lang.String name, @Nullable AuthenticationPortalArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("scm:index/authenticationPortal:AuthenticationPortal", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
@@ -274,7 +266,7 @@ public class AuthenticationPortal extends com.pulumi.resources.CustomResource {
         super("scm:index/authenticationPortal:AuthenticationPortal", name, state, makeResourceOptions(options, id), false);
     }
 
-    private static AuthenticationPortalArgs makeArgs(AuthenticationPortalArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private static AuthenticationPortalArgs makeArgs(@Nullable AuthenticationPortalArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         if (options != null && options.getUrn().isPresent()) {
             return null;
         }

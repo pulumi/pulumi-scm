@@ -282,6 +282,8 @@ import com.pulumi.scm.inputs.GetLocalUserGroupPlainArgs;
 import com.pulumi.scm.inputs.GetLocalUserListArgs;
 import com.pulumi.scm.inputs.GetLocalUserListPlainArgs;
 import com.pulumi.scm.inputs.GetLocalUserPlainArgs;
+import com.pulumi.scm.inputs.GetLocationListArgs;
+import com.pulumi.scm.inputs.GetLocationListPlainArgs;
 import com.pulumi.scm.inputs.GetLogForwardingProfileArgs;
 import com.pulumi.scm.inputs.GetLogForwardingProfileListArgs;
 import com.pulumi.scm.inputs.GetLogForwardingProfileListPlainArgs;
@@ -427,6 +429,10 @@ import com.pulumi.scm.inputs.GetSiteListArgs;
 import com.pulumi.scm.inputs.GetSiteListPlainArgs;
 import com.pulumi.scm.inputs.GetSitePlainArgs;
 import com.pulumi.scm.inputs.GetSnippetArgs;
+import com.pulumi.scm.inputs.GetSnippetCategoryArgs;
+import com.pulumi.scm.inputs.GetSnippetCategoryListArgs;
+import com.pulumi.scm.inputs.GetSnippetCategoryListPlainArgs;
+import com.pulumi.scm.inputs.GetSnippetCategoryPlainArgs;
 import com.pulumi.scm.inputs.GetSnippetListArgs;
 import com.pulumi.scm.inputs.GetSnippetListPlainArgs;
 import com.pulumi.scm.inputs.GetSnippetPlainArgs;
@@ -648,6 +654,7 @@ import com.pulumi.scm.outputs.GetLocalUserGroupListResult;
 import com.pulumi.scm.outputs.GetLocalUserGroupResult;
 import com.pulumi.scm.outputs.GetLocalUserListResult;
 import com.pulumi.scm.outputs.GetLocalUserResult;
+import com.pulumi.scm.outputs.GetLocationListResult;
 import com.pulumi.scm.outputs.GetLogForwardingProfileListResult;
 import com.pulumi.scm.outputs.GetLogForwardingProfileResult;
 import com.pulumi.scm.outputs.GetLogicalRouterListResult;
@@ -720,6 +727,8 @@ import com.pulumi.scm.outputs.GetSessionTimeoutListResult;
 import com.pulumi.scm.outputs.GetSessionTimeoutResult;
 import com.pulumi.scm.outputs.GetSiteListResult;
 import com.pulumi.scm.outputs.GetSiteResult;
+import com.pulumi.scm.outputs.GetSnippetCategoryListResult;
+import com.pulumi.scm.outputs.GetSnippetCategoryResult;
 import com.pulumi.scm.outputs.GetSnippetListResult;
 import com.pulumi.scm.outputs.GetSnippetResult;
 import com.pulumi.scm.outputs.GetSyslogServerProfileListResult;
@@ -736,6 +745,7 @@ import com.pulumi.scm.outputs.GetTlsServiceProfileListResult;
 import com.pulumi.scm.outputs.GetTlsServiceProfileResult;
 import com.pulumi.scm.outputs.GetTrafficSteeringRuleListResult;
 import com.pulumi.scm.outputs.GetTrafficSteeringRuleResult;
+import com.pulumi.scm.outputs.GetTrustedTenantOverviewResult;
 import com.pulumi.scm.outputs.GetTunnelInterfaceListResult;
 import com.pulumi.scm.outputs.GetTunnelInterfaceResult;
 import com.pulumi.scm.outputs.GetUpdateScheduleListResult;
@@ -26853,6 +26863,55 @@ public final class ScmFunctions {
         return Deployment.getInstance().invokeAsync("scm:index/getLocalUserList:getLocalUserList", TypeShape.of(GetLocalUserListResult.class), args, Utilities.withVersion(options));
     }
     /**
+     * Retrieves a listing of config items.
+     * 
+     */
+    public static Output<GetLocationListResult> getLocationList() {
+        return getLocationList(GetLocationListArgs.Empty, InvokeOptions.Empty);
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     */
+    public static CompletableFuture<GetLocationListResult> getLocationListPlain() {
+        return getLocationListPlain(GetLocationListPlainArgs.Empty, InvokeOptions.Empty);
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     */
+    public static Output<GetLocationListResult> getLocationList(GetLocationListArgs args) {
+        return getLocationList(args, InvokeOptions.Empty);
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     */
+    public static CompletableFuture<GetLocationListResult> getLocationListPlain(GetLocationListPlainArgs args) {
+        return getLocationListPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     */
+    public static Output<GetLocationListResult> getLocationList(GetLocationListArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("scm:index/getLocationList:getLocationList", TypeShape.of(GetLocationListResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     */
+    public static Output<GetLocationListResult> getLocationList(GetLocationListArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("scm:index/getLocationList:getLocationList", TypeShape.of(GetLocationListResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     */
+    public static CompletableFuture<GetLocationListResult> getLocationListPlain(GetLocationListPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("scm:index/getLocationList:getLocationList", TypeShape.of(GetLocationListResult.class), args, Utilities.withVersion(options));
+    }
+    /**
      * LogForwardingProfile data source
      * 
      * ## Example Usage
@@ -38332,6 +38391,90 @@ public final class ScmFunctions {
         return Deployment.getInstance().invokeAsync("scm:index/getSnippet:getSnippet", TypeShape.of(GetSnippetResult.class), args, Utilities.withVersion(options));
     }
     /**
+     * SnippetCategory data source
+     * 
+     */
+    public static Output<GetSnippetCategoryResult> getSnippetCategory(GetSnippetCategoryArgs args) {
+        return getSnippetCategory(args, InvokeOptions.Empty);
+    }
+    /**
+     * SnippetCategory data source
+     * 
+     */
+    public static CompletableFuture<GetSnippetCategoryResult> getSnippetCategoryPlain(GetSnippetCategoryPlainArgs args) {
+        return getSnippetCategoryPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * SnippetCategory data source
+     * 
+     */
+    public static Output<GetSnippetCategoryResult> getSnippetCategory(GetSnippetCategoryArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("scm:index/getSnippetCategory:getSnippetCategory", TypeShape.of(GetSnippetCategoryResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * SnippetCategory data source
+     * 
+     */
+    public static Output<GetSnippetCategoryResult> getSnippetCategory(GetSnippetCategoryArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("scm:index/getSnippetCategory:getSnippetCategory", TypeShape.of(GetSnippetCategoryResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * SnippetCategory data source
+     * 
+     */
+    public static CompletableFuture<GetSnippetCategoryResult> getSnippetCategoryPlain(GetSnippetCategoryPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("scm:index/getSnippetCategory:getSnippetCategory", TypeShape.of(GetSnippetCategoryResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     */
+    public static Output<GetSnippetCategoryListResult> getSnippetCategoryList() {
+        return getSnippetCategoryList(GetSnippetCategoryListArgs.Empty, InvokeOptions.Empty);
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     */
+    public static CompletableFuture<GetSnippetCategoryListResult> getSnippetCategoryListPlain() {
+        return getSnippetCategoryListPlain(GetSnippetCategoryListPlainArgs.Empty, InvokeOptions.Empty);
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     */
+    public static Output<GetSnippetCategoryListResult> getSnippetCategoryList(GetSnippetCategoryListArgs args) {
+        return getSnippetCategoryList(args, InvokeOptions.Empty);
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     */
+    public static CompletableFuture<GetSnippetCategoryListResult> getSnippetCategoryListPlain(GetSnippetCategoryListPlainArgs args) {
+        return getSnippetCategoryListPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     */
+    public static Output<GetSnippetCategoryListResult> getSnippetCategoryList(GetSnippetCategoryListArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("scm:index/getSnippetCategoryList:getSnippetCategoryList", TypeShape.of(GetSnippetCategoryListResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     */
+    public static Output<GetSnippetCategoryListResult> getSnippetCategoryList(GetSnippetCategoryListArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("scm:index/getSnippetCategoryList:getSnippetCategoryList", TypeShape.of(GetSnippetCategoryListResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     */
+    public static CompletableFuture<GetSnippetCategoryListResult> getSnippetCategoryListPlain(GetSnippetCategoryListPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("scm:index/getSnippetCategoryList:getSnippetCategoryList", TypeShape.of(GetSnippetCategoryListResult.class), args, Utilities.withVersion(options));
+    }
+    /**
      * Retrieves a listing of config items.
      * 
      * ## Example Usage
@@ -41451,6 +41594,55 @@ public final class ScmFunctions {
      */
     public static CompletableFuture<GetTrafficSteeringRuleListResult> getTrafficSteeringRuleListPlain(GetTrafficSteeringRuleListPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("scm:index/getTrafficSteeringRuleList:getTrafficSteeringRuleList", TypeShape.of(GetTrafficSteeringRuleListResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * TrustedTenantOverview data source
+     * 
+     */
+    public static Output<GetTrustedTenantOverviewResult> getTrustedTenantOverview() {
+        return getTrustedTenantOverview(InvokeArgs.Empty, InvokeOptions.Empty);
+    }
+    /**
+     * TrustedTenantOverview data source
+     * 
+     */
+    public static CompletableFuture<GetTrustedTenantOverviewResult> getTrustedTenantOverviewPlain() {
+        return getTrustedTenantOverviewPlain(InvokeArgs.Empty, InvokeOptions.Empty);
+    }
+    /**
+     * TrustedTenantOverview data source
+     * 
+     */
+    public static Output<GetTrustedTenantOverviewResult> getTrustedTenantOverview(InvokeArgs args) {
+        return getTrustedTenantOverview(args, InvokeOptions.Empty);
+    }
+    /**
+     * TrustedTenantOverview data source
+     * 
+     */
+    public static CompletableFuture<GetTrustedTenantOverviewResult> getTrustedTenantOverviewPlain(InvokeArgs args) {
+        return getTrustedTenantOverviewPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * TrustedTenantOverview data source
+     * 
+     */
+    public static Output<GetTrustedTenantOverviewResult> getTrustedTenantOverview(InvokeArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("scm:index/getTrustedTenantOverview:getTrustedTenantOverview", TypeShape.of(GetTrustedTenantOverviewResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * TrustedTenantOverview data source
+     * 
+     */
+    public static Output<GetTrustedTenantOverviewResult> getTrustedTenantOverview(InvokeArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("scm:index/getTrustedTenantOverview:getTrustedTenantOverview", TypeShape.of(GetTrustedTenantOverviewResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * TrustedTenantOverview data source
+     * 
+     */
+    public static CompletableFuture<GetTrustedTenantOverviewResult> getTrustedTenantOverviewPlain(InvokeArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("scm:index/getTrustedTenantOverview:getTrustedTenantOverview", TypeShape.of(GetTrustedTenantOverviewResult.class), args, Utilities.withVersion(options));
     }
     /**
      * TunnelInterface data source

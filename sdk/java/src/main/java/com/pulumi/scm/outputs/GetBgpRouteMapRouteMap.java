@@ -14,7 +14,7 @@ import java.util.Objects;
 @CustomType
 public final class GetBgpRouteMapRouteMap {
     /**
-     * @return Action
+     * @return Action. Possible values are `permit` and `deny`.
      * 
      */
     private String action;
@@ -41,7 +41,7 @@ public final class GetBgpRouteMapRouteMap {
 
     private GetBgpRouteMapRouteMap() {}
     /**
-     * @return Action
+     * @return Action. Possible values are `permit` and `deny`.
      * 
      */
     public String action() {

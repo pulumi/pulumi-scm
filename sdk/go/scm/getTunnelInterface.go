@@ -60,30 +60,44 @@ func LookupTunnelInterface(ctx *pulumi.Context, args *LookupTunnelInterfaceArgs,
 type LookupTunnelInterfaceArgs struct {
 	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
+	// The folder in which the resource is defined
 	Folder *string `pulumi:"folder"`
 	// UUID of the resource for tunnel interface
-	Id      string  `pulumi:"id"`
-	Name    *string `pulumi:"name"`
+	Id string `pulumi:"id"`
+	// L3 sub-interface name for tunnel interface
+	Name *string `pulumi:"name"`
+	// The snippet in which the resource is defined
 	Snippet *string `pulumi:"snippet"`
 }
 
 // A collection of values returned by getTunnelInterface.
 type LookupTunnelInterfaceResult struct {
-	Comment      string `pulumi:"comment"`
+	// Description for tunnel interface
+	Comment string `pulumi:"comment"`
+	// Default interface assignment for tunnel interface
 	DefaultValue string `pulumi:"defaultValue"`
 	// The device in which the resource is defined
 	Device string `pulumi:"device"`
+	// The folder in which the resource is defined
 	Folder string `pulumi:"folder"`
 	// UUID of the resource for tunnel interface
-	Id                         string                 `pulumi:"id"`
-	InterfaceManagementProfile string                 `pulumi:"interfaceManagementProfile"`
-	Ips                        []GetTunnelInterfaceIp `pulumi:"ips"`
-	Ipv6                       GetTunnelInterfaceIpv6 `pulumi:"ipv6"`
-	Mtu                        int                    `pulumi:"mtu"`
-	Name                       string                 `pulumi:"name"`
-	NetflowProfile             string                 `pulumi:"netflowProfile"`
-	Snippet                    string                 `pulumi:"snippet"`
-	Tfid                       string                 `pulumi:"tfid"`
+	Id string `pulumi:"id"`
+	// Interface management profile for tunnel interface
+	InterfaceManagementProfile string `pulumi:"interfaceManagementProfile"`
+	// Tunnel Interface IP Parent
+	Ips []GetTunnelInterfaceIp `pulumi:"ips"`
+	// Tunnel Interface IPv6 Configuration
+	Ipv6 GetTunnelInterfaceIpv6 `pulumi:"ipv6"`
+	// MTU for tunnel interface
+	Mtu int `pulumi:"mtu"`
+	// L3 sub-interface name for tunnel interface
+	Name string `pulumi:"name"`
+	// Name of Netflow Profile to assign to Interface
+	NetflowProfile string `pulumi:"netflowProfile"`
+	// The snippet in which the resource is defined
+	Snippet string `pulumi:"snippet"`
+	// The Terraform ID.
+	Tfid string `pulumi:"tfid"`
 }
 
 func LookupTunnelInterfaceOutput(ctx *pulumi.Context, args LookupTunnelInterfaceOutputArgs, opts ...pulumi.InvokeOption) LookupTunnelInterfaceResultOutput {
@@ -95,10 +109,13 @@ func LookupTunnelInterfaceOutput(ctx *pulumi.Context, args LookupTunnelInterface
 type LookupTunnelInterfaceOutputArgs struct {
 	// The device in which the resource is defined
 	Device pulumi.StringPtrInput `pulumi:"device"`
+	// The folder in which the resource is defined
 	Folder pulumi.StringPtrInput `pulumi:"folder"`
 	// UUID of the resource for tunnel interface
-	Id      pulumi.StringInput    `pulumi:"id"`
-	Name    pulumi.StringPtrInput `pulumi:"name"`
+	Id pulumi.StringInput `pulumi:"id"`
+	// L3 sub-interface name for tunnel interface
+	Name pulumi.StringPtrInput `pulumi:"name"`
+	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrInput `pulumi:"snippet"`
 }
 
@@ -121,10 +138,12 @@ func (o LookupTunnelInterfaceResultOutput) ToLookupTunnelInterfaceResultOutputWi
 	return o
 }
 
+// Description for tunnel interface
 func (o LookupTunnelInterfaceResultOutput) Comment() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupTunnelInterfaceResult) string { return v.Comment }).(pulumi.StringOutput)
 }
 
+// Default interface assignment for tunnel interface
 func (o LookupTunnelInterfaceResultOutput) DefaultValue() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupTunnelInterfaceResult) string { return v.DefaultValue }).(pulumi.StringOutput)
 }
@@ -134,6 +153,7 @@ func (o LookupTunnelInterfaceResultOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupTunnelInterfaceResult) string { return v.Device }).(pulumi.StringOutput)
 }
 
+// The folder in which the resource is defined
 func (o LookupTunnelInterfaceResultOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupTunnelInterfaceResult) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -143,34 +163,42 @@ func (o LookupTunnelInterfaceResultOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupTunnelInterfaceResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
+// Interface management profile for tunnel interface
 func (o LookupTunnelInterfaceResultOutput) InterfaceManagementProfile() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupTunnelInterfaceResult) string { return v.InterfaceManagementProfile }).(pulumi.StringOutput)
 }
 
+// Tunnel Interface IP Parent
 func (o LookupTunnelInterfaceResultOutput) Ips() GetTunnelInterfaceIpArrayOutput {
 	return o.ApplyT(func(v LookupTunnelInterfaceResult) []GetTunnelInterfaceIp { return v.Ips }).(GetTunnelInterfaceIpArrayOutput)
 }
 
+// Tunnel Interface IPv6 Configuration
 func (o LookupTunnelInterfaceResultOutput) Ipv6() GetTunnelInterfaceIpv6Output {
 	return o.ApplyT(func(v LookupTunnelInterfaceResult) GetTunnelInterfaceIpv6 { return v.Ipv6 }).(GetTunnelInterfaceIpv6Output)
 }
 
+// MTU for tunnel interface
 func (o LookupTunnelInterfaceResultOutput) Mtu() pulumi.IntOutput {
 	return o.ApplyT(func(v LookupTunnelInterfaceResult) int { return v.Mtu }).(pulumi.IntOutput)
 }
 
+// L3 sub-interface name for tunnel interface
 func (o LookupTunnelInterfaceResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupTunnelInterfaceResult) string { return v.Name }).(pulumi.StringOutput)
 }
 
+// Name of Netflow Profile to assign to Interface
 func (o LookupTunnelInterfaceResultOutput) NetflowProfile() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupTunnelInterfaceResult) string { return v.NetflowProfile }).(pulumi.StringOutput)
 }
 
+// The snippet in which the resource is defined
 func (o LookupTunnelInterfaceResultOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupTunnelInterfaceResult) string { return v.Snippet }).(pulumi.StringOutput)
 }
 
+// The Terraform ID.
 func (o LookupTunnelInterfaceResultOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupTunnelInterfaceResult) string { return v.Tfid }).(pulumi.StringOutput)
 }

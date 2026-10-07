@@ -35,16 +35,12 @@ public final class LogicalRouterVrfOspfAreaInterfaceLinkTypeArgs extends com.pul
     /**
      * P2mp
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `broadcast`, `p2mp`, and `p2p`.
-     * 
      */
     @Import(name="p2mp")
     private @Nullable Output<LogicalRouterVrfOspfAreaInterfaceLinkTypeP2mpArgs> p2mp;
 
     /**
      * @return P2mp
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `broadcast`, `p2mp`, and `p2p`.
      * 
      */
     public Optional<Output<LogicalRouterVrfOspfAreaInterfaceLinkTypeP2mpArgs>> p2mp() {
@@ -54,16 +50,12 @@ public final class LogicalRouterVrfOspfAreaInterfaceLinkTypeArgs extends com.pul
     /**
      * P2p
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `broadcast`, `p2mp`, and `p2p`.
-     * 
      */
     @Import(name="p2p")
     private @Nullable Output<LogicalRouterVrfOspfAreaInterfaceLinkTypeP2pArgs> p2p;
 
     /**
      * @return P2p
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `broadcast`, `p2mp`, and `p2p`.
      * 
      */
     public Optional<Output<LogicalRouterVrfOspfAreaInterfaceLinkTypeP2pArgs>> p2p() {
@@ -120,8 +112,6 @@ public final class LogicalRouterVrfOspfAreaInterfaceLinkTypeArgs extends com.pul
         /**
          * @param p2mp P2mp
          * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `broadcast`, `p2mp`, and `p2p`.
-         * 
          * @return builder
          * 
          */
@@ -133,8 +123,6 @@ public final class LogicalRouterVrfOspfAreaInterfaceLinkTypeArgs extends com.pul
         /**
          * @param p2mp P2mp
          * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `broadcast`, `p2mp`, and `p2p`.
-         * 
          * @return builder
          * 
          */
@@ -144,8 +132,6 @@ public final class LogicalRouterVrfOspfAreaInterfaceLinkTypeArgs extends com.pul
 
         /**
          * @param p2p P2p
-         * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `broadcast`, `p2mp`, and `p2p`.
          * 
          * @return builder
          * 
@@ -157,8 +143,6 @@ public final class LogicalRouterVrfOspfAreaInterfaceLinkTypeArgs extends com.pul
 
         /**
          * @param p2p P2p
-         * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `broadcast`, `p2mp`, and `p2p`.
          * 
          * @return builder
          * 

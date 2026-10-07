@@ -24,42 +24,30 @@ public final class GetAntiSpywareSignatureListDataDefaultAction {
     /**
      * @return Allow
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
-     * 
      */
     private GetAntiSpywareSignatureListDataDefaultActionAllow allow;
     /**
      * @return anti spyware signature block ip
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      * 
      */
     private GetAntiSpywareSignatureListDataDefaultActionBlockIp blockIp;
     /**
      * @return Drop
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
-     * 
      */
     private GetAntiSpywareSignatureListDataDefaultActionDrop drop;
     /**
      * @return Reset both
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      * 
      */
     private GetAntiSpywareSignatureListDataDefaultActionResetBoth resetBoth;
     /**
      * @return Reset client
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
-     * 
      */
     private GetAntiSpywareSignatureListDataDefaultActionResetClient resetClient;
     /**
      * @return Reset server
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      * 
      */
     private GetAntiSpywareSignatureListDataDefaultActionResetServer resetServer;
@@ -75,16 +63,12 @@ public final class GetAntiSpywareSignatureListDataDefaultAction {
     /**
      * @return Allow
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
-     * 
      */
     public GetAntiSpywareSignatureListDataDefaultActionAllow allow() {
         return this.allow;
     }
     /**
      * @return anti spyware signature block ip
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      * 
      */
     public GetAntiSpywareSignatureListDataDefaultActionBlockIp blockIp() {
@@ -93,16 +77,12 @@ public final class GetAntiSpywareSignatureListDataDefaultAction {
     /**
      * @return Drop
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
-     * 
      */
     public GetAntiSpywareSignatureListDataDefaultActionDrop drop() {
         return this.drop;
     }
     /**
      * @return Reset both
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      * 
      */
     public GetAntiSpywareSignatureListDataDefaultActionResetBoth resetBoth() {
@@ -111,16 +91,12 @@ public final class GetAntiSpywareSignatureListDataDefaultAction {
     /**
      * @return Reset client
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
-     * 
      */
     public GetAntiSpywareSignatureListDataDefaultActionResetClient resetClient() {
         return this.resetClient;
     }
     /**
      * @return Reset server
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      * 
      */
     public GetAntiSpywareSignatureListDataDefaultActionResetServer resetServer() {

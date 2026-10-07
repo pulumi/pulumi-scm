@@ -62,7 +62,7 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly string? MotdTitle;
         /// <summary>
-        /// Severity
+        /// Severity. Possible values are `Warning`, `Question`, `Error` and `Info`.
         /// </summary>
         public readonly string? Severity;
 

@@ -22,28 +22,20 @@ public final class GetQosPolicyRuleListDataDscpTosCodepointType {
     /**
      * @return Cs
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `af`, `cs`, `custom`, `ef`, and `tos`.
-     * 
      */
     private GetQosPolicyRuleListDataDscpTosCodepointTypeCs cs;
     /**
      * @return Custom
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `af`, `cs`, `custom`, `ef`, and `tos`.
      * 
      */
     private GetQosPolicyRuleListDataDscpTosCodepointTypeCustom custom;
     /**
      * @return Ef
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `af`, `cs`, `custom`, `ef`, and `tos`.
-     * 
      */
     private GetQosPolicyRuleListDataDscpTosCodepointTypeEf ef;
     /**
      * @return Tos
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `af`, `cs`, `custom`, `ef`, and `tos`.
      * 
      */
     private GetQosPolicyRuleListDataDscpTosCodepointTypeTos tos;
@@ -59,16 +51,12 @@ public final class GetQosPolicyRuleListDataDscpTosCodepointType {
     /**
      * @return Cs
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `af`, `cs`, `custom`, `ef`, and `tos`.
-     * 
      */
     public GetQosPolicyRuleListDataDscpTosCodepointTypeCs cs() {
         return this.cs;
     }
     /**
      * @return Custom
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `af`, `cs`, `custom`, `ef`, and `tos`.
      * 
      */
     public GetQosPolicyRuleListDataDscpTosCodepointTypeCustom custom() {
@@ -77,16 +65,12 @@ public final class GetQosPolicyRuleListDataDscpTosCodepointType {
     /**
      * @return Ef
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `af`, `cs`, `custom`, `ef`, and `tos`.
-     * 
      */
     public GetQosPolicyRuleListDataDscpTosCodepointTypeEf ef() {
         return this.ef;
     }
     /**
      * @return Tos
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `af`, `cs`, `custom`, `ef`, and `tos`.
      * 
      */
     public GetQosPolicyRuleListDataDscpTosCodepointTypeTos tos() {

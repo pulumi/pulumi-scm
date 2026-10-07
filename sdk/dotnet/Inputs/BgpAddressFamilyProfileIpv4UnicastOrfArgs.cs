@@ -13,7 +13,7 @@ namespace Pulumi.Scm.Inputs
     public sealed class BgpAddressFamilyProfileIpv4UnicastOrfArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// ORF prefix list
+        /// ORF prefix list. Possible values are `None`, `Both`, `Receive` and `Send`.
         /// </summary>
         [Input("orfPrefixList")]
         public Input<string>? OrfPrefixList { get; set; }

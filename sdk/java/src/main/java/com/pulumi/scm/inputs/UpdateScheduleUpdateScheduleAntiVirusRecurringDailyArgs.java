@@ -17,14 +17,14 @@ public final class UpdateScheduleUpdateScheduleAntiVirusRecurringDailyArgs exten
     public static final UpdateScheduleUpdateScheduleAntiVirusRecurringDailyArgs Empty = new UpdateScheduleUpdateScheduleAntiVirusRecurringDailyArgs();
 
     /**
-     * Action
+     * Action. Possible values are `download-only` and `download-and-install`.
      * 
      */
     @Import(name="action")
     private @Nullable Output<String> action;
 
     /**
-     * @return Action
+     * @return Action. Possible values are `download-only` and `download-and-install`.
      * 
      */
     public Optional<Output<String>> action() {
@@ -72,7 +72,7 @@ public final class UpdateScheduleUpdateScheduleAntiVirusRecurringDailyArgs exten
         }
 
         /**
-         * @param action Action
+         * @param action Action. Possible values are `download-only` and `download-and-install`.
          * 
          * @return builder
          * 
@@ -83,7 +83,7 @@ public final class UpdateScheduleUpdateScheduleAntiVirusRecurringDailyArgs exten
         }
 
         /**
-         * @param action Action
+         * @param action Action. Possible values are `download-only` and `download-and-install`.
          * 
          * @return builder
          * 

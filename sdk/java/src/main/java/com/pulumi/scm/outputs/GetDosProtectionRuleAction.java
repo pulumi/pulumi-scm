@@ -20,14 +20,10 @@ public final class GetDosProtectionRuleAction {
     /**
      * @return Deny
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `allow`, `deny`, and `protect`.
-     * 
      */
     private GetDosProtectionRuleActionDeny deny;
     /**
      * @return Protect
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `allow`, `deny`, and `protect`.
      * 
      */
     private GetDosProtectionRuleActionProtect protect;
@@ -43,16 +39,12 @@ public final class GetDosProtectionRuleAction {
     /**
      * @return Deny
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `allow`, `deny`, and `protect`.
-     * 
      */
     public GetDosProtectionRuleActionDeny deny() {
         return this.deny;
     }
     /**
      * @return Protect
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `allow`, `deny`, and `protect`.
      * 
      */
     public GetDosProtectionRuleActionProtect protect() {

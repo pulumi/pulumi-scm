@@ -55,31 +55,46 @@ func LookupIkeGateway(ctx *pulumi.Context, args *LookupIkeGatewayArgs, opts ...p
 type LookupIkeGatewayArgs struct {
 	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
+	// The folder in which the resource is defined
 	Folder *string `pulumi:"folder"`
 	// UUID of the resource
-	Id      string  `pulumi:"id"`
-	Name    *string `pulumi:"name"`
+	Id string `pulumi:"id"`
+	// Alphanumeric string begin with letter: [0-9a-zA-Z._-]
+	Name *string `pulumi:"name"`
+	// The snippet in which the resource is defined
 	Snippet *string `pulumi:"snippet"`
 }
 
 // A collection of values returned by getIkeGateway.
 type LookupIkeGatewayResult struct {
+	// Authentication
 	Authentication GetIkeGatewayAuthentication `pulumi:"authentication"`
 	// The device in which the resource is defined
-	Device          string            `pulumi:"device"`
+	Device string `pulumi:"device"`
+	// Map of sensitive values returned from the API.
 	EncryptedValues map[string]string `pulumi:"encryptedValues"`
-	Folder          string            `pulumi:"folder"`
+	// The folder in which the resource is defined
+	Folder string `pulumi:"folder"`
 	// UUID of the resource
-	Id             string                      `pulumi:"id"`
-	LocalAddress   GetIkeGatewayLocalAddress   `pulumi:"localAddress"`
-	LocalId        GetIkeGatewayLocalId        `pulumi:"localId"`
-	Name           string                      `pulumi:"name"`
-	PeerAddress    GetIkeGatewayPeerAddress    `pulumi:"peerAddress"`
-	PeerId         GetIkeGatewayPeerId         `pulumi:"peerId"`
-	Protocol       GetIkeGatewayProtocol       `pulumi:"protocol"`
+	Id string `pulumi:"id"`
+	// Local address
+	LocalAddress GetIkeGatewayLocalAddress `pulumi:"localAddress"`
+	// Local id
+	LocalId GetIkeGatewayLocalId `pulumi:"localId"`
+	// Alphanumeric string begin with letter: [0-9a-zA-Z._-]
+	Name string `pulumi:"name"`
+	// Peer address
+	PeerAddress GetIkeGatewayPeerAddress `pulumi:"peerAddress"`
+	// Peer id
+	PeerId GetIkeGatewayPeerId `pulumi:"peerId"`
+	// Protocol
+	Protocol GetIkeGatewayProtocol `pulumi:"protocol"`
+	// Protocol common
 	ProtocolCommon GetIkeGatewayProtocolCommon `pulumi:"protocolCommon"`
-	Snippet        string                      `pulumi:"snippet"`
-	Tfid           string                      `pulumi:"tfid"`
+	// The snippet in which the resource is defined
+	Snippet string `pulumi:"snippet"`
+	// The Terraform ID.
+	Tfid string `pulumi:"tfid"`
 }
 
 func LookupIkeGatewayOutput(ctx *pulumi.Context, args LookupIkeGatewayOutputArgs, opts ...pulumi.InvokeOption) LookupIkeGatewayResultOutput {
@@ -91,10 +106,13 @@ func LookupIkeGatewayOutput(ctx *pulumi.Context, args LookupIkeGatewayOutputArgs
 type LookupIkeGatewayOutputArgs struct {
 	// The device in which the resource is defined
 	Device pulumi.StringPtrInput `pulumi:"device"`
+	// The folder in which the resource is defined
 	Folder pulumi.StringPtrInput `pulumi:"folder"`
 	// UUID of the resource
-	Id      pulumi.StringInput    `pulumi:"id"`
-	Name    pulumi.StringPtrInput `pulumi:"name"`
+	Id pulumi.StringInput `pulumi:"id"`
+	// Alphanumeric string begin with letter: [0-9a-zA-Z._-]
+	Name pulumi.StringPtrInput `pulumi:"name"`
+	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrInput `pulumi:"snippet"`
 }
 
@@ -117,6 +135,7 @@ func (o LookupIkeGatewayResultOutput) ToLookupIkeGatewayResultOutputWithContext(
 	return o
 }
 
+// Authentication
 func (o LookupIkeGatewayResultOutput) Authentication() GetIkeGatewayAuthenticationOutput {
 	return o.ApplyT(func(v LookupIkeGatewayResult) GetIkeGatewayAuthentication { return v.Authentication }).(GetIkeGatewayAuthenticationOutput)
 }
@@ -126,10 +145,12 @@ func (o LookupIkeGatewayResultOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupIkeGatewayResult) string { return v.Device }).(pulumi.StringOutput)
 }
 
+// Map of sensitive values returned from the API.
 func (o LookupIkeGatewayResultOutput) EncryptedValues() pulumi.StringMapOutput {
 	return o.ApplyT(func(v LookupIkeGatewayResult) map[string]string { return v.EncryptedValues }).(pulumi.StringMapOutput)
 }
 
+// The folder in which the resource is defined
 func (o LookupIkeGatewayResultOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupIkeGatewayResult) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -139,38 +160,47 @@ func (o LookupIkeGatewayResultOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupIkeGatewayResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
+// Local address
 func (o LookupIkeGatewayResultOutput) LocalAddress() GetIkeGatewayLocalAddressOutput {
 	return o.ApplyT(func(v LookupIkeGatewayResult) GetIkeGatewayLocalAddress { return v.LocalAddress }).(GetIkeGatewayLocalAddressOutput)
 }
 
+// Local id
 func (o LookupIkeGatewayResultOutput) LocalId() GetIkeGatewayLocalIdOutput {
 	return o.ApplyT(func(v LookupIkeGatewayResult) GetIkeGatewayLocalId { return v.LocalId }).(GetIkeGatewayLocalIdOutput)
 }
 
+// Alphanumeric string begin with letter: [0-9a-zA-Z._-]
 func (o LookupIkeGatewayResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupIkeGatewayResult) string { return v.Name }).(pulumi.StringOutput)
 }
 
+// Peer address
 func (o LookupIkeGatewayResultOutput) PeerAddress() GetIkeGatewayPeerAddressOutput {
 	return o.ApplyT(func(v LookupIkeGatewayResult) GetIkeGatewayPeerAddress { return v.PeerAddress }).(GetIkeGatewayPeerAddressOutput)
 }
 
+// Peer id
 func (o LookupIkeGatewayResultOutput) PeerId() GetIkeGatewayPeerIdOutput {
 	return o.ApplyT(func(v LookupIkeGatewayResult) GetIkeGatewayPeerId { return v.PeerId }).(GetIkeGatewayPeerIdOutput)
 }
 
+// Protocol
 func (o LookupIkeGatewayResultOutput) Protocol() GetIkeGatewayProtocolOutput {
 	return o.ApplyT(func(v LookupIkeGatewayResult) GetIkeGatewayProtocol { return v.Protocol }).(GetIkeGatewayProtocolOutput)
 }
 
+// Protocol common
 func (o LookupIkeGatewayResultOutput) ProtocolCommon() GetIkeGatewayProtocolCommonOutput {
 	return o.ApplyT(func(v LookupIkeGatewayResult) GetIkeGatewayProtocolCommon { return v.ProtocolCommon }).(GetIkeGatewayProtocolCommonOutput)
 }
 
+// The snippet in which the resource is defined
 func (o LookupIkeGatewayResultOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupIkeGatewayResult) string { return v.Snippet }).(pulumi.StringOutput)
 }
 
+// The Terraform ID.
 func (o LookupIkeGatewayResultOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupIkeGatewayResult) string { return v.Tfid }).(pulumi.StringOutput)
 }

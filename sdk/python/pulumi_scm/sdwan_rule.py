@@ -50,7 +50,7 @@ class SdwanRuleArgs:
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] destinations: List of destination addresses
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] froms: List of source zones
         :param pulumi.Input[_builtins.str] path_quality_profile: Path quality profile
-        :param pulumi.Input[_builtins.str] position: Rule postion relative to device rules
+        :param pulumi.Input[_builtins.str] position: Rule postion relative to device rules. Possible values are `pre` and `post`.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] services: List of services
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] source_users: List of source users
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] sources: List of source addresses
@@ -60,15 +60,11 @@ class SdwanRuleArgs:
         :param pulumi.Input[_builtins.bool] disabled: Disable rule?
         :param pulumi.Input[_builtins.str] error_correction_profile: Error correction profile
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] name: Rule name
         :param pulumi.Input[_builtins.bool] negate_destination: Negate destination address(es)?
         :param pulumi.Input[_builtins.bool] negate_source: Negate source address(es)?
         :param pulumi.Input[_builtins.str] saas_quality_profile: SaaS quality profile
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tags: List of tags
         """
         pulumi.set(__self__, "action", action)
@@ -168,7 +164,7 @@ class SdwanRuleArgs:
     @pulumi.getter
     def position(self) -> pulumi.Input[_builtins.str]:
         """
-        Rule postion relative to device rules
+        Rule postion relative to device rules. Possible values are `pre` and `post`.
         """
         return pulumi.get(self, "position")
 
@@ -277,8 +273,6 @@ class SdwanRuleArgs:
     def folder(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
-
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
 
@@ -339,8 +333,6 @@ class SdwanRuleArgs:
     def snippet(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
-
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
 
@@ -397,19 +389,15 @@ class _SdwanRuleState:
         :param pulumi.Input[_builtins.bool] disabled: Disable rule?
         :param pulumi.Input[_builtins.str] error_correction_profile: Error correction profile
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] froms: List of source zones
         :param pulumi.Input[_builtins.str] name: Rule name
         :param pulumi.Input[_builtins.bool] negate_destination: Negate destination address(es)?
         :param pulumi.Input[_builtins.bool] negate_source: Negate source address(es)?
         :param pulumi.Input[_builtins.str] path_quality_profile: Path quality profile
-        :param pulumi.Input[_builtins.str] position: Rule postion relative to device rules
+        :param pulumi.Input[_builtins.str] position: Rule postion relative to device rules. Possible values are `pre` and `post`.
         :param pulumi.Input[_builtins.str] saas_quality_profile: SaaS quality profile
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] services: List of services
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] source_users: List of source users
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] sources: List of source addresses
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tags: List of tags
@@ -550,8 +538,6 @@ class _SdwanRuleState:
     def folder(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
-
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
 
@@ -623,7 +609,7 @@ class _SdwanRuleState:
     @pulumi.getter
     def position(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
-        Rule postion relative to device rules
+        Rule postion relative to device rules. Possible values are `pre` and `post`.
         """
         return pulumi.get(self, "position")
 
@@ -660,8 +646,6 @@ class _SdwanRuleState:
     def snippet(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
-
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
 
@@ -794,19 +778,15 @@ class SdwanRule(pulumi.CustomResource):
         :param pulumi.Input[_builtins.bool] disabled: Disable rule?
         :param pulumi.Input[_builtins.str] error_correction_profile: Error correction profile
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] froms: List of source zones
         :param pulumi.Input[_builtins.str] name: Rule name
         :param pulumi.Input[_builtins.bool] negate_destination: Negate destination address(es)?
         :param pulumi.Input[_builtins.bool] negate_source: Negate source address(es)?
         :param pulumi.Input[_builtins.str] path_quality_profile: Path quality profile
-        :param pulumi.Input[_builtins.str] position: Rule postion relative to device rules
+        :param pulumi.Input[_builtins.str] position: Rule postion relative to device rules. Possible values are `pre` and `post`.
         :param pulumi.Input[_builtins.str] saas_quality_profile: SaaS quality profile
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] services: List of services
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] source_users: List of source users
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] sources: List of source addresses
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tags: List of tags
@@ -978,19 +958,15 @@ class SdwanRule(pulumi.CustomResource):
         :param pulumi.Input[_builtins.bool] disabled: Disable rule?
         :param pulumi.Input[_builtins.str] error_correction_profile: Error correction profile
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] froms: List of source zones
         :param pulumi.Input[_builtins.str] name: Rule name
         :param pulumi.Input[_builtins.bool] negate_destination: Negate destination address(es)?
         :param pulumi.Input[_builtins.bool] negate_source: Negate source address(es)?
         :param pulumi.Input[_builtins.str] path_quality_profile: Path quality profile
-        :param pulumi.Input[_builtins.str] position: Rule postion relative to device rules
+        :param pulumi.Input[_builtins.str] position: Rule postion relative to device rules. Possible values are `pre` and `post`.
         :param pulumi.Input[_builtins.str] saas_quality_profile: SaaS quality profile
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] services: List of services
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-               
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] source_users: List of source users
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] sources: List of source addresses
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tags: List of tags
@@ -1086,8 +1062,6 @@ class SdwanRule(pulumi.CustomResource):
     def folder(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
-
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
 
@@ -1135,7 +1109,7 @@ class SdwanRule(pulumi.CustomResource):
     @pulumi.getter
     def position(self) -> pulumi.Output[_builtins.str]:
         """
-        Rule postion relative to device rules
+        Rule postion relative to device rules. Possible values are `pre` and `post`.
         """
         return pulumi.get(self, "position")
 
@@ -1160,8 +1134,6 @@ class SdwanRule(pulumi.CustomResource):
     def snippet(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
-
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
 

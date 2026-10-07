@@ -30,9 +30,17 @@ public final class GetAuthenticationRulePlainArgs extends com.pulumi.resources.I
         return Optional.ofNullable(this.device);
     }
 
+    /**
+     * Folder
+     * 
+     */
     @Import(name="folder")
     private @Nullable String folder;
 
+    /**
+     * @return Folder
+     * 
+     */
     public Optional<String> folder() {
         return Optional.ofNullable(this.folder);
     }
@@ -52,16 +60,32 @@ public final class GetAuthenticationRulePlainArgs extends com.pulumi.resources.I
         return this.id;
     }
 
+    /**
+     * The name of the authentication rule
+     * 
+     */
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return The name of the authentication rule
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
 
+    /**
+     * Snippet
+     * 
+     */
     @Import(name="snippet")
     private @Nullable String snippet;
 
+    /**
+     * @return Snippet
+     * 
+     */
     public Optional<String> snippet() {
         return Optional.ofNullable(this.snippet);
     }
@@ -105,6 +129,12 @@ public final class GetAuthenticationRulePlainArgs extends com.pulumi.resources.I
             return this;
         }
 
+        /**
+         * @param folder Folder
+         * 
+         * @return builder
+         * 
+         */
         public Builder folder(@Nullable String folder) {
             $.folder = folder;
             return this;
@@ -121,11 +151,23 @@ public final class GetAuthenticationRulePlainArgs extends com.pulumi.resources.I
             return this;
         }
 
+        /**
+         * @param name The name of the authentication rule
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param snippet Snippet
+         * 
+         * @return builder
+         * 
+         */
         public Builder snippet(@Nullable String snippet) {
             $.snippet = snippet;
             return this;

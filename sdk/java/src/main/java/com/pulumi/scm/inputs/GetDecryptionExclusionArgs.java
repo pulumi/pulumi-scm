@@ -31,9 +31,17 @@ public final class GetDecryptionExclusionArgs extends com.pulumi.resources.Invok
         return Optional.ofNullable(this.device);
     }
 
+    /**
+     * The folder in which the resource is defined
+     * 
+     */
     @Import(name="folder")
     private @Nullable Output<String> folder;
 
+    /**
+     * @return The folder in which the resource is defined
+     * 
+     */
     public Optional<Output<String>> folder() {
         return Optional.ofNullable(this.folder);
     }
@@ -53,16 +61,32 @@ public final class GetDecryptionExclusionArgs extends com.pulumi.resources.Invok
         return this.id;
     }
 
+    /**
+     * Name
+     * 
+     */
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
 
+    /**
+     * The snippet in which the resource is defined
+     * 
+     */
     @Import(name="snippet")
     private @Nullable Output<String> snippet;
 
+    /**
+     * @return The snippet in which the resource is defined
+     * 
+     */
     public Optional<Output<String>> snippet() {
         return Optional.ofNullable(this.snippet);
     }
@@ -116,11 +140,23 @@ public final class GetDecryptionExclusionArgs extends com.pulumi.resources.Invok
             return device(Output.of(device));
         }
 
+        /**
+         * @param folder The folder in which the resource is defined
+         * 
+         * @return builder
+         * 
+         */
         public Builder folder(@Nullable Output<String> folder) {
             $.folder = folder;
             return this;
         }
 
+        /**
+         * @param folder The folder in which the resource is defined
+         * 
+         * @return builder
+         * 
+         */
         public Builder folder(String folder) {
             return folder(Output.of(folder));
         }
@@ -146,20 +182,44 @@ public final class GetDecryptionExclusionArgs extends com.pulumi.resources.Invok
             return id(Output.of(id));
         }
 
+        /**
+         * @param name Name
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param snippet The snippet in which the resource is defined
+         * 
+         * @return builder
+         * 
+         */
         public Builder snippet(@Nullable Output<String> snippet) {
             $.snippet = snippet;
             return this;
         }
 
+        /**
+         * @param snippet The snippet in which the resource is defined
+         * 
+         * @return builder
+         * 
+         */
         public Builder snippet(String snippet) {
             return snippet(Output.of(snippet));
         }

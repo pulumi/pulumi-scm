@@ -47,12 +47,21 @@ export interface GetSamlServerProfileArgs {
      * The device in which the resource is defined
      */
     device?: string;
+    /**
+     * The folder in which the resource is defined
+     */
     folder?: string;
     /**
      * The UUID of the SAML server profile
      */
     id: string;
+    /**
+     * The name of the SAML server profile
+     */
     name?: string;
+    /**
+     * The snippet in which the resource is defined
+     */
     snippet?: string;
 }
 
@@ -60,26 +69,65 @@ export interface GetSamlServerProfileArgs {
  * A collection of values returned by getSamlServerProfile.
  */
 export interface GetSamlServerProfileResult {
+    /**
+     * The identity provider certificate
+     */
     readonly certificate: string;
     /**
      * The device in which the resource is defined
      */
     readonly device: string;
+    /**
+     * The identity provider ID
+     */
     readonly entityId: string;
+    /**
+     * The folder in which the resource is defined
+     */
     readonly folder: string;
     /**
      * The UUID of the SAML server profile
      */
     readonly id: string;
+    /**
+     * Maxiumum clock skew
+     */
     readonly maxClockSkew: number;
+    /**
+     * The name of the SAML server profile
+     */
     readonly name: string;
+    /**
+     * SAML HTTP binding for SLO requests to the identity provider. Possible values are `post` and `redirect`.
+     */
     readonly sloBindings: string;
+    /**
+     * Identity provider SLO URL
+     */
     readonly sloUrl: string;
+    /**
+     * The snippet in which the resource is defined
+     */
     readonly snippet: string;
+    /**
+     * SAML HTTP binding for SSO requests to the identity provider. Possible values are `post` and `redirect`.
+     */
     readonly ssoBindings: string;
+    /**
+     * Identity provider SSO URL
+     */
     readonly ssoUrl: string;
+    /**
+     * The Terraform ID.
+     */
     readonly tfid: string;
+    /**
+     * Validate the identity provider certificate?
+     */
     readonly validateIdpCertificate: boolean;
+    /**
+     * Sign SAML message to the identity provider?
+     */
     readonly wantAuthRequestsSigned: boolean;
 }
 /**
@@ -125,11 +173,20 @@ export interface GetSamlServerProfileOutputArgs {
      * The device in which the resource is defined
      */
     device?: pulumi.Input<string | undefined>;
+    /**
+     * The folder in which the resource is defined
+     */
     folder?: pulumi.Input<string | undefined>;
     /**
      * The UUID of the SAML server profile
      */
     id: pulumi.Input<string>;
+    /**
+     * The name of the SAML server profile
+     */
     name?: pulumi.Input<string | undefined>;
+    /**
+     * The snippet in which the resource is defined
+     */
     snippet?: pulumi.Input<string | undefined>;
 }

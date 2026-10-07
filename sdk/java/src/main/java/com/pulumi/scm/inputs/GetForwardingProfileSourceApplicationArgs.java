@@ -17,14 +17,14 @@ public final class GetForwardingProfileSourceApplicationArgs extends com.pulumi.
     public static final GetForwardingProfileSourceApplicationArgs Empty = new GetForwardingProfileSourceApplicationArgs();
 
     /**
-     * The folder in which the resource is defined
+     * The folder in which the resource is defined. Possible values are `Mobile Users`.
      * 
      */
     @Import(name="folder")
     private @Nullable Output<String> folder;
 
     /**
-     * @return The folder in which the resource is defined
+     * @return The folder in which the resource is defined. Possible values are `Mobile Users`.
      * 
      */
     public Optional<Output<String>> folder() {
@@ -88,7 +88,7 @@ public final class GetForwardingProfileSourceApplicationArgs extends com.pulumi.
         }
 
         /**
-         * @param folder The folder in which the resource is defined
+         * @param folder The folder in which the resource is defined. Possible values are `Mobile Users`.
          * 
          * @return builder
          * 
@@ -99,7 +99,7 @@ public final class GetForwardingProfileSourceApplicationArgs extends com.pulumi.
         }
 
         /**
-         * @param folder The folder in which the resource is defined
+         * @param folder The folder in which the resource is defined. Possible values are `Mobile Users`.
          * 
          * @return builder
          * 

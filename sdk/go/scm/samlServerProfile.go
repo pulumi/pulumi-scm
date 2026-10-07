@@ -106,22 +106,18 @@ type SamlServerProfile struct {
 	// The identity provider ID
 	EntityId pulumi.StringOutput `pulumi:"entityId"`
 	// The folder in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrOutput `pulumi:"folder"`
 	// Maxiumum clock skew
 	MaxClockSkew pulumi.IntPtrOutput `pulumi:"maxClockSkew"`
 	// The name of the SAML server profile
 	Name pulumi.StringOutput `pulumi:"name"`
-	// SAML HTTP binding for SLO requests to the identity provider
+	// SAML HTTP binding for SLO requests to the identity provider. Possible values are `post` and `redirect`.
 	SloBindings pulumi.StringPtrOutput `pulumi:"sloBindings"`
 	// Identity provider SLO URL
 	SloUrl pulumi.StringPtrOutput `pulumi:"sloUrl"`
 	// The snippet in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
-	// SAML HTTP binding for SSO requests to the identity provider
+	// SAML HTTP binding for SSO requests to the identity provider. Possible values are `post` and `redirect`.
 	SsoBindings pulumi.StringOutput `pulumi:"ssoBindings"`
 	// Identity provider SSO URL
 	SsoUrl pulumi.StringOutput `pulumi:"ssoUrl"`
@@ -182,22 +178,18 @@ type samlServerProfileState struct {
 	// The identity provider ID
 	EntityId *string `pulumi:"entityId"`
 	// The folder in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// Maxiumum clock skew
 	MaxClockSkew *int `pulumi:"maxClockSkew"`
 	// The name of the SAML server profile
 	Name *string `pulumi:"name"`
-	// SAML HTTP binding for SLO requests to the identity provider
+	// SAML HTTP binding for SLO requests to the identity provider. Possible values are `post` and `redirect`.
 	SloBindings *string `pulumi:"sloBindings"`
 	// Identity provider SLO URL
 	SloUrl *string `pulumi:"sloUrl"`
 	// The snippet in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
-	// SAML HTTP binding for SSO requests to the identity provider
+	// SAML HTTP binding for SSO requests to the identity provider. Possible values are `post` and `redirect`.
 	SsoBindings *string `pulumi:"ssoBindings"`
 	// Identity provider SSO URL
 	SsoUrl *string `pulumi:"ssoUrl"`
@@ -217,22 +209,18 @@ type SamlServerProfileState struct {
 	// The identity provider ID
 	EntityId pulumi.StringPtrInput
 	// The folder in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// Maxiumum clock skew
 	MaxClockSkew pulumi.IntPtrInput
 	// The name of the SAML server profile
 	Name pulumi.StringPtrInput
-	// SAML HTTP binding for SLO requests to the identity provider
+	// SAML HTTP binding for SLO requests to the identity provider. Possible values are `post` and `redirect`.
 	SloBindings pulumi.StringPtrInput
 	// Identity provider SLO URL
 	SloUrl pulumi.StringPtrInput
 	// The snippet in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
-	// SAML HTTP binding for SSO requests to the identity provider
+	// SAML HTTP binding for SSO requests to the identity provider. Possible values are `post` and `redirect`.
 	SsoBindings pulumi.StringPtrInput
 	// Identity provider SSO URL
 	SsoUrl pulumi.StringPtrInput
@@ -256,22 +244,18 @@ type samlServerProfileArgs struct {
 	// The identity provider ID
 	EntityId string `pulumi:"entityId"`
 	// The folder in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// Maxiumum clock skew
 	MaxClockSkew *int `pulumi:"maxClockSkew"`
 	// The name of the SAML server profile
 	Name *string `pulumi:"name"`
-	// SAML HTTP binding for SLO requests to the identity provider
+	// SAML HTTP binding for SLO requests to the identity provider. Possible values are `post` and `redirect`.
 	SloBindings *string `pulumi:"sloBindings"`
 	// Identity provider SLO URL
 	SloUrl *string `pulumi:"sloUrl"`
 	// The snippet in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
-	// SAML HTTP binding for SSO requests to the identity provider
+	// SAML HTTP binding for SSO requests to the identity provider. Possible values are `post` and `redirect`.
 	SsoBindings string `pulumi:"ssoBindings"`
 	// Identity provider SSO URL
 	SsoUrl string `pulumi:"ssoUrl"`
@@ -290,22 +274,18 @@ type SamlServerProfileArgs struct {
 	// The identity provider ID
 	EntityId pulumi.StringInput
 	// The folder in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// Maxiumum clock skew
 	MaxClockSkew pulumi.IntPtrInput
 	// The name of the SAML server profile
 	Name pulumi.StringPtrInput
-	// SAML HTTP binding for SLO requests to the identity provider
+	// SAML HTTP binding for SLO requests to the identity provider. Possible values are `post` and `redirect`.
 	SloBindings pulumi.StringPtrInput
 	// Identity provider SLO URL
 	SloUrl pulumi.StringPtrInput
 	// The snippet in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
-	// SAML HTTP binding for SSO requests to the identity provider
+	// SAML HTTP binding for SSO requests to the identity provider. Possible values are `post` and `redirect`.
 	SsoBindings pulumi.StringInput
 	// Identity provider SSO URL
 	SsoUrl pulumi.StringInput
@@ -418,8 +398,6 @@ func (o SamlServerProfileOutput) EntityId() pulumi.StringOutput {
 }
 
 // The folder in which the resource is defined
-//
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o SamlServerProfileOutput) Folder() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *SamlServerProfile) pulumi.StringPtrOutput { return v.Folder }).(pulumi.StringPtrOutput)
 }
@@ -434,7 +412,7 @@ func (o SamlServerProfileOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v *SamlServerProfile) pulumi.StringOutput { return v.Name }).(pulumi.StringOutput)
 }
 
-// SAML HTTP binding for SLO requests to the identity provider
+// SAML HTTP binding for SLO requests to the identity provider. Possible values are `post` and `redirect`.
 func (o SamlServerProfileOutput) SloBindings() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *SamlServerProfile) pulumi.StringPtrOutput { return v.SloBindings }).(pulumi.StringPtrOutput)
 }
@@ -445,13 +423,11 @@ func (o SamlServerProfileOutput) SloUrl() pulumi.StringPtrOutput {
 }
 
 // The snippet in which the resource is defined
-//
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o SamlServerProfileOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *SamlServerProfile) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)
 }
 
-// SAML HTTP binding for SSO requests to the identity provider
+// SAML HTTP binding for SSO requests to the identity provider. Possible values are `post` and `redirect`.
 func (o SamlServerProfileOutput) SsoBindings() pulumi.StringOutput {
 	return o.ApplyT(func(v *SamlServerProfile) pulumi.StringOutput { return v.SsoBindings }).(pulumi.StringOutput)
 }

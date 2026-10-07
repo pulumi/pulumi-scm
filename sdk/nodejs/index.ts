@@ -940,6 +940,11 @@ export const getLocalUserList: typeof import("./getLocalUserList").getLocalUserL
 export const getLocalUserListOutput: typeof import("./getLocalUserList").getLocalUserListOutput = null as any;
 utilities.lazyLoad(exports, ["getLocalUserList","getLocalUserListOutput"], () => require("./getLocalUserList"));
 
+export { GetLocationListArgs, GetLocationListResult, GetLocationListOutputArgs } from "./getLocationList";
+export const getLocationList: typeof import("./getLocationList").getLocationList = null as any;
+export const getLocationListOutput: typeof import("./getLocationList").getLocationListOutput = null as any;
+utilities.lazyLoad(exports, ["getLocationList","getLocationListOutput"], () => require("./getLocationList"));
+
 export { GetLogForwardingProfileArgs, GetLogForwardingProfileResult, GetLogForwardingProfileOutputArgs } from "./getLogForwardingProfile";
 export const getLogForwardingProfile: typeof import("./getLogForwardingProfile").getLogForwardingProfile = null as any;
 export const getLogForwardingProfileOutput: typeof import("./getLogForwardingProfile").getLogForwardingProfileOutput = null as any;
@@ -1305,6 +1310,16 @@ export const getSnippet: typeof import("./getSnippet").getSnippet = null as any;
 export const getSnippetOutput: typeof import("./getSnippet").getSnippetOutput = null as any;
 utilities.lazyLoad(exports, ["getSnippet","getSnippetOutput"], () => require("./getSnippet"));
 
+export { GetSnippetCategoryArgs, GetSnippetCategoryResult, GetSnippetCategoryOutputArgs } from "./getSnippetCategory";
+export const getSnippetCategory: typeof import("./getSnippetCategory").getSnippetCategory = null as any;
+export const getSnippetCategoryOutput: typeof import("./getSnippetCategory").getSnippetCategoryOutput = null as any;
+utilities.lazyLoad(exports, ["getSnippetCategory","getSnippetCategoryOutput"], () => require("./getSnippetCategory"));
+
+export { GetSnippetCategoryListArgs, GetSnippetCategoryListResult, GetSnippetCategoryListOutputArgs } from "./getSnippetCategoryList";
+export const getSnippetCategoryList: typeof import("./getSnippetCategoryList").getSnippetCategoryList = null as any;
+export const getSnippetCategoryListOutput: typeof import("./getSnippetCategoryList").getSnippetCategoryListOutput = null as any;
+utilities.lazyLoad(exports, ["getSnippetCategoryList","getSnippetCategoryListOutput"], () => require("./getSnippetCategoryList"));
+
 export { GetSnippetListArgs, GetSnippetListResult, GetSnippetListOutputArgs } from "./getSnippetList";
 export const getSnippetList: typeof import("./getSnippetList").getSnippetList = null as any;
 export const getSnippetListOutput: typeof import("./getSnippetList").getSnippetListOutput = null as any;
@@ -1379,6 +1394,11 @@ export { GetTrafficSteeringRuleListArgs, GetTrafficSteeringRuleListResult, GetTr
 export const getTrafficSteeringRuleList: typeof import("./getTrafficSteeringRuleList").getTrafficSteeringRuleList = null as any;
 export const getTrafficSteeringRuleListOutput: typeof import("./getTrafficSteeringRuleList").getTrafficSteeringRuleListOutput = null as any;
 utilities.lazyLoad(exports, ["getTrafficSteeringRuleList","getTrafficSteeringRuleListOutput"], () => require("./getTrafficSteeringRuleList"));
+
+export { GetTrustedTenantOverviewResult } from "./getTrustedTenantOverview";
+export const getTrustedTenantOverview: typeof import("./getTrustedTenantOverview").getTrustedTenantOverview = null as any;
+export const getTrustedTenantOverviewOutput: typeof import("./getTrustedTenantOverview").getTrustedTenantOverviewOutput = null as any;
+utilities.lazyLoad(exports, ["getTrustedTenantOverview","getTrustedTenantOverviewOutput"], () => require("./getTrustedTenantOverview"));
 
 export { GetTunnelInterfaceArgs, GetTunnelInterfaceResult, GetTunnelInterfaceOutputArgs } from "./getTunnelInterface";
 export const getTunnelInterface: typeof import("./getTunnelInterface").getTunnelInterface = null as any;

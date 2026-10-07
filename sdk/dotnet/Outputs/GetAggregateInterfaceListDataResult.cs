@@ -26,7 +26,7 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly string Device;
         /// <summary>
-        /// The folder of the item. Default: Shared.
+        /// The folder in which the resource is defined
         /// </summary>
         public readonly string Folder;
         /// <summary>
@@ -35,22 +35,18 @@ namespace Pulumi.Scm.Outputs
         public readonly string Id;
         /// <summary>
         /// Layer2
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Layer2` and `Layer3`.
         /// </summary>
         public readonly Outputs.GetAggregateInterfaceListDataLayer2Result Layer2;
         /// <summary>
         /// Aggregate Interface Layer 3 configuration
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Layer2` and `Layer3`.
         /// </summary>
         public readonly Outputs.GetAggregateInterfaceListDataLayer3Result Layer3;
         /// <summary>
-        /// The name of the item.
+        /// Aggregate interface name
         /// </summary>
         public readonly string Name;
         /// <summary>
-        /// The snippet of the item.
+        /// The snippet in which the resource is defined
         /// </summary>
         public readonly string Snippet;
         /// <summary>

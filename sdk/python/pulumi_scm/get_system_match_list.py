@@ -70,6 +70,9 @@ class GetSystemMatchListResult:
     @_builtins.property
     @pulumi.getter
     def description(self) -> _builtins.str:
+        """
+        Description of the system match list entry
+        """
         return pulumi.get(self, "description")
 
     @_builtins.property
@@ -83,11 +86,17 @@ class GetSystemMatchListResult:
     @_builtins.property
     @pulumi.getter
     def filter(self) -> _builtins.str:
+        """
+        Filter of the system match list entry
+        """
         return pulumi.get(self, "filter")
 
     @_builtins.property
     @pulumi.getter
     def folder(self) -> _builtins.str:
+        """
+        The folder in which the resource is defined
+        """
         return pulumi.get(self, "folder")
 
     @_builtins.property
@@ -101,41 +110,65 @@ class GetSystemMatchListResult:
     @_builtins.property
     @pulumi.getter
     def name(self) -> _builtins.str:
+        """
+        Name of the system match list entry
+        """
         return pulumi.get(self, "name")
 
     @_builtins.property
     @pulumi.getter(name="sendEmails")
     def send_emails(self) -> Sequence[_builtins.str]:
+        """
+        Send Email List of the system match list entry
+        """
         return pulumi.get(self, "send_emails")
 
     @_builtins.property
     @pulumi.getter(name="sendHttps")
     def send_https(self) -> Sequence[_builtins.str]:
+        """
+        Send HTTP List of the system match list entry
+        """
         return pulumi.get(self, "send_https")
 
     @_builtins.property
     @pulumi.getter(name="sendSnmptraps")
     def send_snmptraps(self) -> Sequence[_builtins.str]:
+        """
+        Send SNMP Trap List of the system match list entry
+        """
         return pulumi.get(self, "send_snmptraps")
 
     @_builtins.property
     @pulumi.getter(name="sendSyslogs")
     def send_syslogs(self) -> Sequence[_builtins.str]:
+        """
+        Send Sys Log List of the system match list entry
+        """
         return pulumi.get(self, "send_syslogs")
 
     @_builtins.property
     @pulumi.getter(name="sendToPanorama")
     def send_to_panorama(self) -> _builtins.bool:
+        """
+        Send to Panorama Flag of the system match list entry
+        """
         return pulumi.get(self, "send_to_panorama")
 
     @_builtins.property
     @pulumi.getter
     def snippet(self) -> _builtins.str:
+        """
+        The snippet in which the resource is defined
+        """
         return pulumi.get(self, "snippet")
 
     @_builtins.property
     @pulumi.getter
     def tfid(self) -> _builtins.str:
+        """
+        The Terraform ID.
+        """
         return pulumi.get(self, "tfid")
 
 
@@ -182,7 +215,10 @@ def get_system_match_list(device: Optional[_builtins.str] = None,
 
 
     :param _builtins.str device: The device in which the resource is defined
+    :param _builtins.str folder: The folder in which the resource is defined
     :param _builtins.str id: UUID of the resource
+    :param _builtins.str name: Name of the system match list entry
+    :param _builtins.str snippet: The snippet in which the resource is defined
     """
     __args__ = dict()
     __args__['device'] = device
@@ -229,7 +265,10 @@ def get_system_match_list_output(device: pulumi.Input[Optional[Optional[_builtin
 
 
     :param _builtins.str device: The device in which the resource is defined
+    :param _builtins.str folder: The folder in which the resource is defined
     :param _builtins.str id: UUID of the resource
+    :param _builtins.str name: Name of the system match list entry
+    :param _builtins.str snippet: The snippet in which the resource is defined
     """
     __args__ = dict()
     __args__['device'] = device

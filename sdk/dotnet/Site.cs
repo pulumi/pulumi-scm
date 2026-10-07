@@ -215,7 +215,7 @@ namespace Pulumi.Scm
         public Output<string?> Latitude { get; private set; } = null!;
 
         /// <summary>
-        /// The license type of the site
+        /// The license type of the site. Possible values are `FWAAS-SITE-25Mbps`, `FWAAS-SITE-50Mbps`, `FWAAS-SITE-250Mbps`, `FWAAS-SITE-1000Mbps` and `FWAAS-SITE-2500Mbps`.
         /// </summary>
         [Output("licenseType")]
         public Output<string?> LicenseType { get; private set; } = null!;
@@ -257,7 +257,7 @@ namespace Pulumi.Scm
         public Output<string> Tfid { get; private set; } = null!;
 
         /// <summary>
-        /// The site type
+        /// The site type. Possible values are `prisma-sdwan`, `third-party-branch` and `third-party-discovered`.
         /// </summary>
         [Output("type")]
         public Output<string?> Type { get; private set; } = null!;
@@ -345,7 +345,7 @@ namespace Pulumi.Scm
         public Input<string>? Latitude { get; set; }
 
         /// <summary>
-        /// The license type of the site
+        /// The license type of the site. Possible values are `FWAAS-SITE-25Mbps`, `FWAAS-SITE-50Mbps`, `FWAAS-SITE-250Mbps`, `FWAAS-SITE-1000Mbps` and `FWAAS-SITE-2500Mbps`.
         /// </summary>
         [Input("licenseType")]
         public Input<string>? LicenseType { get; set; }
@@ -387,7 +387,7 @@ namespace Pulumi.Scm
         public Input<string>? State { get; set; }
 
         /// <summary>
-        /// The site type
+        /// The site type. Possible values are `prisma-sdwan`, `third-party-branch` and `third-party-discovered`.
         /// </summary>
         [Input("type")]
         public Input<string>? Type { get; set; }
@@ -443,7 +443,7 @@ namespace Pulumi.Scm
         public Input<string>? Latitude { get; set; }
 
         /// <summary>
-        /// The license type of the site
+        /// The license type of the site. Possible values are `FWAAS-SITE-25Mbps`, `FWAAS-SITE-50Mbps`, `FWAAS-SITE-250Mbps`, `FWAAS-SITE-1000Mbps` and `FWAAS-SITE-2500Mbps`.
         /// </summary>
         [Input("licenseType")]
         public Input<string>? LicenseType { get; set; }
@@ -491,7 +491,7 @@ namespace Pulumi.Scm
         public Input<string>? Tfid { get; set; }
 
         /// <summary>
-        /// The site type
+        /// The site type. Possible values are `prisma-sdwan`, `third-party-branch` and `third-party-discovered`.
         /// </summary>
         [Input("type")]
         public Input<string>? Type { get; set; }

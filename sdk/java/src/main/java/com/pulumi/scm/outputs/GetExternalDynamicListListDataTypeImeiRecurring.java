@@ -22,28 +22,20 @@ public final class GetExternalDynamicListListDataTypeImeiRecurring {
     /**
      * @return Five-minute interval settings for IMEI updates
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
-     * 
      */
     private GetExternalDynamicListListDataTypeImeiRecurringFiveMinute fiveMinute;
     /**
      * @return Hourly interval settings for IMEI updates
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
      * 
      */
     private GetExternalDynamicListListDataTypeImeiRecurringHourly hourly;
     /**
      * @return Monthly interval settings for IMEI updates
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
-     * 
      */
     private GetExternalDynamicListListDataTypeImeiRecurringMonthly monthly;
     /**
      * @return Weekly interval settings for IMEI updates
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
      * 
      */
     private GetExternalDynamicListListDataTypeImeiRecurringWeekly weekly;
@@ -59,16 +51,12 @@ public final class GetExternalDynamicListListDataTypeImeiRecurring {
     /**
      * @return Five-minute interval settings for IMEI updates
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
-     * 
      */
     public GetExternalDynamicListListDataTypeImeiRecurringFiveMinute fiveMinute() {
         return this.fiveMinute;
     }
     /**
      * @return Hourly interval settings for IMEI updates
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
      * 
      */
     public GetExternalDynamicListListDataTypeImeiRecurringHourly hourly() {
@@ -77,16 +65,12 @@ public final class GetExternalDynamicListListDataTypeImeiRecurring {
     /**
      * @return Monthly interval settings for IMEI updates
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
-     * 
      */
     public GetExternalDynamicListListDataTypeImeiRecurringMonthly monthly() {
         return this.monthly;
     }
     /**
      * @return Weekly interval settings for IMEI updates
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
      * 
      */
     public GetExternalDynamicListListDataTypeImeiRecurringWeekly weekly() {

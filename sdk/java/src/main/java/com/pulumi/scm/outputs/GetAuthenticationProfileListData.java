@@ -26,7 +26,7 @@ public final class GetAuthenticationProfileListData {
      */
     private String device;
     /**
-     * @return The folder of the item. Default: Shared.
+     * @return The folder in which the resource is defined
      * 
      */
     private String folder;
@@ -51,7 +51,7 @@ public final class GetAuthenticationProfileListData {
      */
     private GetAuthenticationProfileListDataMultiFactorAuth multiFactorAuth;
     /**
-     * @return The name of the item.
+     * @return The name of the authentication profile
      * 
      */
     private String name;
@@ -61,7 +61,7 @@ public final class GetAuthenticationProfileListData {
      */
     private GetAuthenticationProfileListDataSingleSignOn singleSignOn;
     /**
-     * @return The snippet of the item.
+     * @return The snippet in which the resource is defined
      * 
      */
     private String snippet;
@@ -76,7 +76,7 @@ public final class GetAuthenticationProfileListData {
      */
     private String userDomain;
     /**
-     * @return Username modifier
+     * @return Username modifier. Possible values are `%USERINPUT%`, `%USERINPUT%{@literal @}%USERDOMAIN%` and `%USERDOMAIN%\\%USERINPUT%`.
      * 
      */
     private String usernameModifier;
@@ -97,7 +97,7 @@ public final class GetAuthenticationProfileListData {
         return this.device;
     }
     /**
-     * @return The folder of the item. Default: Shared.
+     * @return The folder in which the resource is defined
      * 
      */
     public String folder() {
@@ -132,7 +132,7 @@ public final class GetAuthenticationProfileListData {
         return this.multiFactorAuth;
     }
     /**
-     * @return The name of the item.
+     * @return The name of the authentication profile
      * 
      */
     public String name() {
@@ -146,7 +146,7 @@ public final class GetAuthenticationProfileListData {
         return this.singleSignOn;
     }
     /**
-     * @return The snippet of the item.
+     * @return The snippet in which the resource is defined
      * 
      */
     public String snippet() {
@@ -167,7 +167,7 @@ public final class GetAuthenticationProfileListData {
         return this.userDomain;
     }
     /**
-     * @return Username modifier
+     * @return Username modifier. Possible values are `%USERINPUT%`, `%USERINPUT%{@literal @}%USERDOMAIN%` and `%USERDOMAIN%\\%USERINPUT%`.
      * 
      */
     public String usernameModifier() {

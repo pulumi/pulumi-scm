@@ -16,7 +16,7 @@ import java.util.Objects;
 @CustomType
 public final class GetNatRuleListData {
     /**
-     * @return Active active device binding
+     * @return Active active device binding. Possible values are `primary`, `both`, `0` and `1`.
      * 
      */
     private String activeActiveDeviceBinding;
@@ -71,12 +71,12 @@ public final class GetNatRuleListData {
      */
     private String name;
     /**
-     * @return NAT type
+     * @return NAT type. Possible values are `ipv4`, `nat64` and `nptv6`.
      * 
      */
     private String natType;
     /**
-     * @return The relative position of the rule
+     * @return The relative position of the rule. Possible values are `pre` and `post`.
      * 
      */
     private String position;
@@ -123,7 +123,7 @@ public final class GetNatRuleListData {
 
     private GetNatRuleListData() {}
     /**
-     * @return Active active device binding
+     * @return Active active device binding. Possible values are `primary`, `both`, `0` and `1`.
      * 
      */
     public String activeActiveDeviceBinding() {
@@ -200,14 +200,14 @@ public final class GetNatRuleListData {
         return this.name;
     }
     /**
-     * @return NAT type
+     * @return NAT type. Possible values are `ipv4`, `nat64` and `nptv6`.
      * 
      */
     public String natType() {
         return this.natType;
     }
     /**
-     * @return The relative position of the rule
+     * @return The relative position of the rule. Possible values are `pre` and `post`.
      * 
      */
     public String position() {

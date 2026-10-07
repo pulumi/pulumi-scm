@@ -16,14 +16,14 @@ public final class SecurityRuleAllowWebApplicationFileControlArgs extends com.pu
     public static final SecurityRuleAllowWebApplicationFileControlArgs Empty = new SecurityRuleAllowWebApplicationFileControlArgs();
 
     /**
-     * Download
+     * Download. Possible values are `allow-all-file-types`, `best-practice` and `block-all-file-types`.
      * 
      */
     @Import(name="download")
     private @Nullable Output<String> download;
 
     /**
-     * @return Download
+     * @return Download. Possible values are `allow-all-file-types`, `best-practice` and `block-all-file-types`.
      * 
      */
     public Optional<Output<String>> download() {
@@ -31,14 +31,14 @@ public final class SecurityRuleAllowWebApplicationFileControlArgs extends com.pu
     }
 
     /**
-     * Upload
+     * Upload. Possible values are `allow-all-file-types`, `best-practice` and `block-all-file-types`.
      * 
      */
     @Import(name="upload")
     private @Nullable Output<String> upload;
 
     /**
-     * @return Upload
+     * @return Upload. Possible values are `allow-all-file-types`, `best-practice` and `block-all-file-types`.
      * 
      */
     public Optional<Output<String>> upload() {
@@ -71,7 +71,7 @@ public final class SecurityRuleAllowWebApplicationFileControlArgs extends com.pu
         }
 
         /**
-         * @param download Download
+         * @param download Download. Possible values are `allow-all-file-types`, `best-practice` and `block-all-file-types`.
          * 
          * @return builder
          * 
@@ -82,7 +82,7 @@ public final class SecurityRuleAllowWebApplicationFileControlArgs extends com.pu
         }
 
         /**
-         * @param download Download
+         * @param download Download. Possible values are `allow-all-file-types`, `best-practice` and `block-all-file-types`.
          * 
          * @return builder
          * 
@@ -92,7 +92,7 @@ public final class SecurityRuleAllowWebApplicationFileControlArgs extends com.pu
         }
 
         /**
-         * @param upload Upload
+         * @param upload Upload. Possible values are `allow-all-file-types`, `best-practice` and `block-all-file-types`.
          * 
          * @return builder
          * 
@@ -103,7 +103,7 @@ public final class SecurityRuleAllowWebApplicationFileControlArgs extends com.pu
         }
 
         /**
-         * @param upload Upload
+         * @param upload Upload. Possible values are `allow-all-file-types`, `best-practice` and `block-all-file-types`.
          * 
          * @return builder
          * 

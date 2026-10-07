@@ -11,24 +11,52 @@ import java.util.Objects;
 
 @CustomType
 public final class GetRouteCommunityListResult {
+    /**
+     * @return Description
+     * 
+     */
     private String description;
     /**
      * @return The device in which the resource is defined
      * 
      */
     private String device;
+    /**
+     * @return The folder in which the resource is defined
+     * 
+     */
     private String folder;
     /**
      * @return UUID of the resource
      * 
      */
     private String id;
+    /**
+     * @return Route community list name
+     * 
+     */
     private String name;
+    /**
+     * @return The snippet in which the resource is defined
+     * 
+     */
     private String snippet;
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     private String tfid;
+    /**
+     * @return Type
+     * 
+     */
     private GetRouteCommunityListType type;
 
     private GetRouteCommunityListResult() {}
+    /**
+     * @return Description
+     * 
+     */
     public String description() {
         return this.description;
     }
@@ -39,6 +67,10 @@ public final class GetRouteCommunityListResult {
     public String device() {
         return this.device;
     }
+    /**
+     * @return The folder in which the resource is defined
+     * 
+     */
     public String folder() {
         return this.folder;
     }
@@ -49,15 +81,31 @@ public final class GetRouteCommunityListResult {
     public String id() {
         return this.id;
     }
+    /**
+     * @return Route community list name
+     * 
+     */
     public String name() {
         return this.name;
     }
+    /**
+     * @return The snippet in which the resource is defined
+     * 
+     */
     public String snippet() {
         return this.snippet;
     }
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     public String tfid() {
         return this.tfid;
     }
+    /**
+     * @return Type
+     * 
+     */
     public GetRouteCommunityListType type() {
         return this.type;
     }

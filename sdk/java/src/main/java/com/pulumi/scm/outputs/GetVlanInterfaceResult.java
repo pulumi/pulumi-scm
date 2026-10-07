@@ -5,6 +5,7 @@ package com.pulumi.scm.outputs;
 
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
+import com.pulumi.scm.outputs.GetVlanInterfaceAdjustTcpMss;
 import com.pulumi.scm.outputs.GetVlanInterfaceArp;
 import com.pulumi.scm.outputs.GetVlanInterfaceDdnsConfig;
 import com.pulumi.scm.outputs.GetVlanInterfaceDhcpClient;
@@ -16,41 +17,125 @@ import java.util.Objects;
 
 @CustomType
 public final class GetVlanInterfaceResult {
+    /**
+     * @return TCP MSS adjustment settings for the interface
+     * 
+     */
+    private GetVlanInterfaceAdjustTcpMss adjustTcpMss;
+    /**
+     * @return ARP configuration
+     * 
+     */
     private List<GetVlanInterfaceArp> arps;
+    /**
+     * @return Description
+     * 
+     */
     private String comment;
+    /**
+     * @return Dynamic DNS configuration specific to the Vlan Interfaces.
+     * 
+     */
     private GetVlanInterfaceDdnsConfig ddnsConfig;
+    /**
+     * @return Default interface assignment
+     * 
+     */
     private String defaultValue;
     /**
      * @return The device in which the resource is defined
      * 
      */
     private String device;
+    /**
+     * @return Vlan interfaces DHCP Client Object
+     * 
+     */
     private GetVlanInterfaceDhcpClient dhcpClient;
+    /**
+     * @return The folder in which the resource is defined
+     * 
+     */
     private String folder;
     /**
      * @return UUID of the resource
      * 
      */
     private String id;
+    /**
+     * @return Interface management profile
+     * 
+     */
     private String interfaceManagementProfile;
+    /**
+     * @return VLAN Interface IP Parent
+     * 
+     */
     private List<GetVlanInterfaceIp> ips;
+    /**
+     * @return MTU
+     * 
+     */
     private Integer mtu;
+    /**
+     * @return L3 sub-interface name
+     * 
+     */
     private String name;
+    /**
+     * @return Name of Netflow Profile to assign to Interface
+     * 
+     */
     private String netflowProfile;
+    /**
+     * @return The snippet in which the resource is defined
+     * 
+     */
     private String snippet;
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     private String tfid;
+    /**
+     * @return VLAN tag
+     * 
+     */
     private String vlanTag;
 
     private GetVlanInterfaceResult() {}
+    /**
+     * @return TCP MSS adjustment settings for the interface
+     * 
+     */
+    public GetVlanInterfaceAdjustTcpMss adjustTcpMss() {
+        return this.adjustTcpMss;
+    }
+    /**
+     * @return ARP configuration
+     * 
+     */
     public List<GetVlanInterfaceArp> arps() {
         return this.arps;
     }
+    /**
+     * @return Description
+     * 
+     */
     public String comment() {
         return this.comment;
     }
+    /**
+     * @return Dynamic DNS configuration specific to the Vlan Interfaces.
+     * 
+     */
     public GetVlanInterfaceDdnsConfig ddnsConfig() {
         return this.ddnsConfig;
     }
+    /**
+     * @return Default interface assignment
+     * 
+     */
     public String defaultValue() {
         return this.defaultValue;
     }
@@ -61,9 +146,17 @@ public final class GetVlanInterfaceResult {
     public String device() {
         return this.device;
     }
+    /**
+     * @return Vlan interfaces DHCP Client Object
+     * 
+     */
     public GetVlanInterfaceDhcpClient dhcpClient() {
         return this.dhcpClient;
     }
+    /**
+     * @return The folder in which the resource is defined
+     * 
+     */
     public String folder() {
         return this.folder;
     }
@@ -74,27 +167,59 @@ public final class GetVlanInterfaceResult {
     public String id() {
         return this.id;
     }
+    /**
+     * @return Interface management profile
+     * 
+     */
     public String interfaceManagementProfile() {
         return this.interfaceManagementProfile;
     }
+    /**
+     * @return VLAN Interface IP Parent
+     * 
+     */
     public List<GetVlanInterfaceIp> ips() {
         return this.ips;
     }
+    /**
+     * @return MTU
+     * 
+     */
     public Integer mtu() {
         return this.mtu;
     }
+    /**
+     * @return L3 sub-interface name
+     * 
+     */
     public String name() {
         return this.name;
     }
+    /**
+     * @return Name of Netflow Profile to assign to Interface
+     * 
+     */
     public String netflowProfile() {
         return this.netflowProfile;
     }
+    /**
+     * @return The snippet in which the resource is defined
+     * 
+     */
     public String snippet() {
         return this.snippet;
     }
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     public String tfid() {
         return this.tfid;
     }
+    /**
+     * @return VLAN tag
+     * 
+     */
     public String vlanTag() {
         return this.vlanTag;
     }
@@ -108,6 +233,7 @@ public final class GetVlanInterfaceResult {
     }
     @CustomType.Builder
     public static final class Builder {
+        private GetVlanInterfaceAdjustTcpMss adjustTcpMss;
         private List<GetVlanInterfaceArp> arps;
         private String comment;
         private GetVlanInterfaceDdnsConfig ddnsConfig;
@@ -127,6 +253,7 @@ public final class GetVlanInterfaceResult {
         public Builder() {}
         public Builder(GetVlanInterfaceResult defaults) {
     	      Objects.requireNonNull(defaults);
+    	      this.adjustTcpMss = defaults.adjustTcpMss;
     	      this.arps = defaults.arps;
     	      this.comment = defaults.comment;
     	      this.ddnsConfig = defaults.ddnsConfig;
@@ -145,6 +272,14 @@ public final class GetVlanInterfaceResult {
     	      this.vlanTag = defaults.vlanTag;
         }
 
+        @CustomType.Setter
+        public Builder adjustTcpMss(GetVlanInterfaceAdjustTcpMss adjustTcpMss) {
+            if (adjustTcpMss == null) {
+              throw new MissingRequiredPropertyException("GetVlanInterfaceResult", "adjustTcpMss");
+            }
+            this.adjustTcpMss = adjustTcpMss;
+            return this;
+        }
         @CustomType.Setter
         public Builder arps(List<GetVlanInterfaceArp> arps) {
             if (arps == null) {
@@ -281,6 +416,7 @@ public final class GetVlanInterfaceResult {
         }
         public GetVlanInterfaceResult build() {
             final var _resultValue = new GetVlanInterfaceResult();
+            _resultValue.adjustTcpMss = adjustTcpMss;
             _resultValue.arps = arps;
             _resultValue.comment = comment;
             _resultValue.ddnsConfig = ddnsConfig;

@@ -37,6 +37,11 @@ import (
 //						Name: pulumi.String("198.18.1.1/32"),
 //					},
 //				},
+//				AdjustTcpMss: &scm.LoopbackInterfaceAdjustTcpMssArgs{
+//					Enable:            pulumi.Bool(true),
+//					Ipv4MssAdjustment: pulumi.Int(40),
+//					Ipv6MssAdjustment: pulumi.Int(60),
+//				},
 //			})
 //			if err != nil {
 //				return err
@@ -119,6 +124,8 @@ import (
 type LoopbackInterface struct {
 	pulumi.CustomResourceState
 
+	// TCP MSS adjustment settings for the interface
+	AdjustTcpMss LoopbackInterfaceAdjustTcpMssPtrOutput `pulumi:"adjustTcpMss"`
 	// Description for loopback interface
 	Comment pulumi.StringPtrOutput `pulumi:"comment"`
 	// Default interface assignment for loopback interface
@@ -126,8 +133,6 @@ type LoopbackInterface struct {
 	// The device in which the resource is defined
 	Device pulumi.StringPtrOutput `pulumi:"device"`
 	// The folder in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrOutput `pulumi:"folder"`
 	// Interface management profile for loopback interface
 	InterfaceManagementProfile pulumi.StringPtrOutput `pulumi:"interfaceManagementProfile"`
@@ -142,8 +147,6 @@ type LoopbackInterface struct {
 	// Name of Netflow Profile to assign to Interface
 	NetflowProfile pulumi.StringPtrOutput `pulumi:"netflowProfile"`
 	// The snippet in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
 	// The Terraform ID.
 	Tfid pulumi.StringOutput `pulumi:"tfid"`
@@ -179,6 +182,8 @@ func GetLoopbackInterface(ctx *pulumi.Context,
 
 // Input properties used for looking up and filtering LoopbackInterface resources.
 type loopbackInterfaceState struct {
+	// TCP MSS adjustment settings for the interface
+	AdjustTcpMss *LoopbackInterfaceAdjustTcpMss `pulumi:"adjustTcpMss"`
 	// Description for loopback interface
 	Comment *string `pulumi:"comment"`
 	// Default interface assignment for loopback interface
@@ -186,8 +191,6 @@ type loopbackInterfaceState struct {
 	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
 	// The folder in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// Interface management profile for loopback interface
 	InterfaceManagementProfile *string `pulumi:"interfaceManagementProfile"`
@@ -202,14 +205,14 @@ type loopbackInterfaceState struct {
 	// Name of Netflow Profile to assign to Interface
 	NetflowProfile *string `pulumi:"netflowProfile"`
 	// The snippet in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	// The Terraform ID.
 	Tfid *string `pulumi:"tfid"`
 }
 
 type LoopbackInterfaceState struct {
+	// TCP MSS adjustment settings for the interface
+	AdjustTcpMss LoopbackInterfaceAdjustTcpMssPtrInput
 	// Description for loopback interface
 	Comment pulumi.StringPtrInput
 	// Default interface assignment for loopback interface
@@ -217,8 +220,6 @@ type LoopbackInterfaceState struct {
 	// The device in which the resource is defined
 	Device pulumi.StringPtrInput
 	// The folder in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// Interface management profile for loopback interface
 	InterfaceManagementProfile pulumi.StringPtrInput
@@ -233,8 +234,6 @@ type LoopbackInterfaceState struct {
 	// Name of Netflow Profile to assign to Interface
 	NetflowProfile pulumi.StringPtrInput
 	// The snippet in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	// The Terraform ID.
 	Tfid pulumi.StringPtrInput
@@ -245,6 +244,8 @@ func (LoopbackInterfaceState) ElementType() reflect.Type {
 }
 
 type loopbackInterfaceArgs struct {
+	// TCP MSS adjustment settings for the interface
+	AdjustTcpMss *LoopbackInterfaceAdjustTcpMss `pulumi:"adjustTcpMss"`
 	// Description for loopback interface
 	Comment *string `pulumi:"comment"`
 	// Default interface assignment for loopback interface
@@ -252,8 +253,6 @@ type loopbackInterfaceArgs struct {
 	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
 	// The folder in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// Interface management profile for loopback interface
 	InterfaceManagementProfile *string `pulumi:"interfaceManagementProfile"`
@@ -268,13 +267,13 @@ type loopbackInterfaceArgs struct {
 	// Name of Netflow Profile to assign to Interface
 	NetflowProfile *string `pulumi:"netflowProfile"`
 	// The snippet in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 }
 
 // The set of arguments for constructing a LoopbackInterface resource.
 type LoopbackInterfaceArgs struct {
+	// TCP MSS adjustment settings for the interface
+	AdjustTcpMss LoopbackInterfaceAdjustTcpMssPtrInput
 	// Description for loopback interface
 	Comment pulumi.StringPtrInput
 	// Default interface assignment for loopback interface
@@ -282,8 +281,6 @@ type LoopbackInterfaceArgs struct {
 	// The device in which the resource is defined
 	Device pulumi.StringPtrInput
 	// The folder in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// Interface management profile for loopback interface
 	InterfaceManagementProfile pulumi.StringPtrInput
@@ -298,8 +295,6 @@ type LoopbackInterfaceArgs struct {
 	// Name of Netflow Profile to assign to Interface
 	NetflowProfile pulumi.StringPtrInput
 	// The snippet in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 }
 
@@ -390,6 +385,11 @@ func (o LoopbackInterfaceOutput) ToLoopbackInterfaceOutputWithContext(ctx contex
 	return o
 }
 
+// TCP MSS adjustment settings for the interface
+func (o LoopbackInterfaceOutput) AdjustTcpMss() LoopbackInterfaceAdjustTcpMssPtrOutput {
+	return o.ApplyT(func(v *LoopbackInterface) LoopbackInterfaceAdjustTcpMssPtrOutput { return v.AdjustTcpMss }).(LoopbackInterfaceAdjustTcpMssPtrOutput)
+}
+
 // Description for loopback interface
 func (o LoopbackInterfaceOutput) Comment() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *LoopbackInterface) pulumi.StringPtrOutput { return v.Comment }).(pulumi.StringPtrOutput)
@@ -406,8 +406,6 @@ func (o LoopbackInterfaceOutput) Device() pulumi.StringPtrOutput {
 }
 
 // The folder in which the resource is defined
-//
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LoopbackInterfaceOutput) Folder() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *LoopbackInterface) pulumi.StringPtrOutput { return v.Folder }).(pulumi.StringPtrOutput)
 }
@@ -443,8 +441,6 @@ func (o LoopbackInterfaceOutput) NetflowProfile() pulumi.StringPtrOutput {
 }
 
 // The snippet in which the resource is defined
-//
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LoopbackInterfaceOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *LoopbackInterface) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)
 }

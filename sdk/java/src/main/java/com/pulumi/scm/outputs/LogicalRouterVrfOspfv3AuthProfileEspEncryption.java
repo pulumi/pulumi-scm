@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class LogicalRouterVrfOspfv3AuthProfileEspEncryption {
     /**
-     * @return Algorithm
+     * @return Algorithm. Possible values are `3des`, `aes-128-cbc`, `aes-192-cbc`, `aes-256-cbc` and `null`.
      * 
      */
     private @Nullable String algorithm;
@@ -24,7 +24,7 @@ public final class LogicalRouterVrfOspfv3AuthProfileEspEncryption {
 
     private LogicalRouterVrfOspfv3AuthProfileEspEncryption() {}
     /**
-     * @return Algorithm
+     * @return Algorithm. Possible values are `3des`, `aes-128-cbc`, `aes-192-cbc`, `aes-256-cbc` and `null`.
      * 
      */
     public Optional<String> algorithm() {

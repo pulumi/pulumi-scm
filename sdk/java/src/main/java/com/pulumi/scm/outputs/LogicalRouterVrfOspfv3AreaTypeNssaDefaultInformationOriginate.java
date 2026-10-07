@@ -18,7 +18,7 @@ public final class LogicalRouterVrfOspfv3AreaTypeNssaDefaultInformationOriginate
      */
     private @Nullable Integer metric;
     /**
-     * @return Metric type
+     * @return Metric type. Possible values are `type-1` and `type-2`.
      * 
      */
     private @Nullable String metricType;
@@ -32,7 +32,7 @@ public final class LogicalRouterVrfOspfv3AreaTypeNssaDefaultInformationOriginate
         return Optional.ofNullable(this.metric);
     }
     /**
-     * @return Metric type
+     * @return Metric type. Possible values are `type-1` and `type-2`.
      * 
      */
     public Optional<String> metricType() {

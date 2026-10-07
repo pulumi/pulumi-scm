@@ -20,8 +20,6 @@ namespace Pulumi.Scm.Inputs
 
         /// <summary>
         /// Pre shared key
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Certificate` and `PreSharedKey`.
         /// </summary>
         [Input("preSharedKey")]
         public Input<Inputs.IkeGatewayAuthenticationPreSharedKeyArgs>? PreSharedKey { get; set; }

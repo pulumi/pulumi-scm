@@ -14,7 +14,7 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetSdwanPathQualityProfileListDataMetricPktLossResult
     {
         /// <summary>
-        /// Packet loss sensitivity
+        /// Packet loss sensitivity. Possible values are `Low`, `Medium` and `High`.
         /// </summary>
         public readonly string Sensitivity;
         /// <summary>

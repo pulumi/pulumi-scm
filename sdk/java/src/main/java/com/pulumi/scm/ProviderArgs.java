@@ -167,6 +167,36 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
         return Optional.ofNullable(this.scope);
     }
 
+    /**
+     * The region for ZTNA Connector API requests (x-panw-region header). Required when using ztna_* resources. Valid values: ae, americas, au, br, ca, ch, cn, de, es, europe, fr, id, il, in, it, jp, kr, pl, qa, sa, sg, tw, uk, za. Environment variable: `X_PANW_REGION`. JSON config file variable: `xPanwRegion`.
+     * 
+     */
+    @Import(name="xPanwRegion")
+    private @Nullable Output<String> xPanwRegion;
+
+    /**
+     * @return The region for ZTNA Connector API requests (x-panw-region header). Required when using ztna_* resources. Valid values: ae, americas, au, br, ca, ch, cn, de, es, europe, fr, id, il, in, it, jp, kr, pl, qa, sa, sg, tw, uk, za. Environment variable: `X_PANW_REGION`. JSON config file variable: `xPanwRegion`.
+     * 
+     */
+    public Optional<Output<String>> xPanwRegion() {
+        return Optional.ofNullable(this.xPanwRegion);
+    }
+
+    /**
+     * The hostname of the ZTNA Connector API. Required when using ztna_* resources. Default: `api.sase.paloaltonetworks.com`. Environment variable: `ZTNA_HOST`. JSON config file variable: `ztnaHost`.
+     * 
+     */
+    @Import(name="ztnaHost")
+    private @Nullable Output<String> ztnaHost;
+
+    /**
+     * @return The hostname of the ZTNA Connector API. Required when using ztna_* resources. Default: `api.sase.paloaltonetworks.com`. Environment variable: `ZTNA_HOST`. JSON config file variable: `ztnaHost`.
+     * 
+     */
+    public Optional<Output<String>> ztnaHost() {
+        return Optional.ofNullable(this.ztnaHost);
+    }
+
     private ProviderArgs() {}
 
     private ProviderArgs(ProviderArgs $) {
@@ -180,6 +210,8 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
         this.port = $.port;
         this.protocol = $.protocol;
         this.scope = $.scope;
+        this.xPanwRegion = $.xPanwRegion;
+        this.ztnaHost = $.ztnaHost;
     }
 
     public static Builder builder() {
@@ -408,6 +440,48 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
          */
         public Builder scope(String scope) {
             return scope(Output.of(scope));
+        }
+
+        /**
+         * @param xPanwRegion The region for ZTNA Connector API requests (x-panw-region header). Required when using ztna_* resources. Valid values: ae, americas, au, br, ca, ch, cn, de, es, europe, fr, id, il, in, it, jp, kr, pl, qa, sa, sg, tw, uk, za. Environment variable: `X_PANW_REGION`. JSON config file variable: `xPanwRegion`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder xPanwRegion(@Nullable Output<String> xPanwRegion) {
+            $.xPanwRegion = xPanwRegion;
+            return this;
+        }
+
+        /**
+         * @param xPanwRegion The region for ZTNA Connector API requests (x-panw-region header). Required when using ztna_* resources. Valid values: ae, americas, au, br, ca, ch, cn, de, es, europe, fr, id, il, in, it, jp, kr, pl, qa, sa, sg, tw, uk, za. Environment variable: `X_PANW_REGION`. JSON config file variable: `xPanwRegion`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder xPanwRegion(String xPanwRegion) {
+            return xPanwRegion(Output.of(xPanwRegion));
+        }
+
+        /**
+         * @param ztnaHost The hostname of the ZTNA Connector API. Required when using ztna_* resources. Default: `api.sase.paloaltonetworks.com`. Environment variable: `ZTNA_HOST`. JSON config file variable: `ztnaHost`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ztnaHost(@Nullable Output<String> ztnaHost) {
+            $.ztnaHost = ztnaHost;
+            return this;
+        }
+
+        /**
+         * @param ztnaHost The hostname of the ZTNA Connector API. Required when using ztna_* resources. Default: `api.sase.paloaltonetworks.com`. Environment variable: `ZTNA_HOST`. JSON config file variable: `ztnaHost`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ztnaHost(String ztnaHost) {
+            return ztnaHost(Output.of(ztnaHost));
         }
 
         public ProviderArgs build() {

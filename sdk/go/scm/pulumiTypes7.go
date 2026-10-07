@@ -13,24 +13,5473 @@ import (
 
 var _ = internal.GetEnvOrDefault
 
+type GetSyslogServerProfileListDataFormatEscaping struct {
+	// Escape sequence delimiter
+	EscapeCharacter string `pulumi:"escapeCharacter"`
+	// A list of all the characters to be escaped (without spaces).
+	EscapedCharacters string `pulumi:"escapedCharacters"`
+}
+
+// GetSyslogServerProfileListDataFormatEscapingInput is an input type that accepts GetSyslogServerProfileListDataFormatEscapingArgs and GetSyslogServerProfileListDataFormatEscapingOutput values.
+// You can construct a concrete instance of `GetSyslogServerProfileListDataFormatEscapingInput` via:
+//
+//	GetSyslogServerProfileListDataFormatEscapingArgs{...}
+type GetSyslogServerProfileListDataFormatEscapingInput interface {
+	pulumi.Input
+
+	ToGetSyslogServerProfileListDataFormatEscapingOutput() GetSyslogServerProfileListDataFormatEscapingOutput
+	ToGetSyslogServerProfileListDataFormatEscapingOutputWithContext(context.Context) GetSyslogServerProfileListDataFormatEscapingOutput
+}
+
+type GetSyslogServerProfileListDataFormatEscapingArgs struct {
+	// Escape sequence delimiter
+	EscapeCharacter pulumi.StringInput `pulumi:"escapeCharacter"`
+	// A list of all the characters to be escaped (without spaces).
+	EscapedCharacters pulumi.StringInput `pulumi:"escapedCharacters"`
+}
+
+func (GetSyslogServerProfileListDataFormatEscapingArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetSyslogServerProfileListDataFormatEscaping)(nil)).Elem()
+}
+
+func (i GetSyslogServerProfileListDataFormatEscapingArgs) ToGetSyslogServerProfileListDataFormatEscapingOutput() GetSyslogServerProfileListDataFormatEscapingOutput {
+	return i.ToGetSyslogServerProfileListDataFormatEscapingOutputWithContext(context.Background())
+}
+
+func (i GetSyslogServerProfileListDataFormatEscapingArgs) ToGetSyslogServerProfileListDataFormatEscapingOutputWithContext(ctx context.Context) GetSyslogServerProfileListDataFormatEscapingOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetSyslogServerProfileListDataFormatEscapingOutput)
+}
+
+type GetSyslogServerProfileListDataFormatEscapingOutput struct{ *pulumi.OutputState }
+
+func (GetSyslogServerProfileListDataFormatEscapingOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetSyslogServerProfileListDataFormatEscaping)(nil)).Elem()
+}
+
+func (o GetSyslogServerProfileListDataFormatEscapingOutput) ToGetSyslogServerProfileListDataFormatEscapingOutput() GetSyslogServerProfileListDataFormatEscapingOutput {
+	return o
+}
+
+func (o GetSyslogServerProfileListDataFormatEscapingOutput) ToGetSyslogServerProfileListDataFormatEscapingOutputWithContext(ctx context.Context) GetSyslogServerProfileListDataFormatEscapingOutput {
+	return o
+}
+
+// Escape sequence delimiter
+func (o GetSyslogServerProfileListDataFormatEscapingOutput) EscapeCharacter() pulumi.StringOutput {
+	return o.ApplyT(func(v GetSyslogServerProfileListDataFormatEscaping) string { return v.EscapeCharacter }).(pulumi.StringOutput)
+}
+
+// A list of all the characters to be escaped (without spaces).
+func (o GetSyslogServerProfileListDataFormatEscapingOutput) EscapedCharacters() pulumi.StringOutput {
+	return o.ApplyT(func(v GetSyslogServerProfileListDataFormatEscaping) string { return v.EscapedCharacters }).(pulumi.StringOutput)
+}
+
+type GetSyslogServerProfileListDataServer struct {
+	// Syslog facility. Possible values are `LOG_USER`, `LOG_LOCAL0`, `LOG_LOCAL1`, `LOG_LOCAL2`, `LOG_LOCAL3`, `LOG_LOCAL4`, `LOG_LOCAL5`, `LOG_LOCAL6` and `LOG_LOCAL7`.
+	Facility string `pulumi:"facility"`
+	// Syslog format. Possible values are `BSD` and `IETF`.
+	Format string `pulumi:"format"`
+	// Syslog server name
+	Name string `pulumi:"name"`
+	// Syslog server port
+	Port int `pulumi:"port"`
+	// Syslog server address
+	Server string `pulumi:"server"`
+	// Transport protocol. Possible values are `UDP` and `TCP`.
+	Transport string `pulumi:"transport"`
+}
+
+// GetSyslogServerProfileListDataServerInput is an input type that accepts GetSyslogServerProfileListDataServerArgs and GetSyslogServerProfileListDataServerOutput values.
+// You can construct a concrete instance of `GetSyslogServerProfileListDataServerInput` via:
+//
+//	GetSyslogServerProfileListDataServerArgs{...}
+type GetSyslogServerProfileListDataServerInput interface {
+	pulumi.Input
+
+	ToGetSyslogServerProfileListDataServerOutput() GetSyslogServerProfileListDataServerOutput
+	ToGetSyslogServerProfileListDataServerOutputWithContext(context.Context) GetSyslogServerProfileListDataServerOutput
+}
+
+type GetSyslogServerProfileListDataServerArgs struct {
+	// Syslog facility. Possible values are `LOG_USER`, `LOG_LOCAL0`, `LOG_LOCAL1`, `LOG_LOCAL2`, `LOG_LOCAL3`, `LOG_LOCAL4`, `LOG_LOCAL5`, `LOG_LOCAL6` and `LOG_LOCAL7`.
+	Facility pulumi.StringInput `pulumi:"facility"`
+	// Syslog format. Possible values are `BSD` and `IETF`.
+	Format pulumi.StringInput `pulumi:"format"`
+	// Syslog server name
+	Name pulumi.StringInput `pulumi:"name"`
+	// Syslog server port
+	Port pulumi.IntInput `pulumi:"port"`
+	// Syslog server address
+	Server pulumi.StringInput `pulumi:"server"`
+	// Transport protocol. Possible values are `UDP` and `TCP`.
+	Transport pulumi.StringInput `pulumi:"transport"`
+}
+
+func (GetSyslogServerProfileListDataServerArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetSyslogServerProfileListDataServer)(nil)).Elem()
+}
+
+func (i GetSyslogServerProfileListDataServerArgs) ToGetSyslogServerProfileListDataServerOutput() GetSyslogServerProfileListDataServerOutput {
+	return i.ToGetSyslogServerProfileListDataServerOutputWithContext(context.Background())
+}
+
+func (i GetSyslogServerProfileListDataServerArgs) ToGetSyslogServerProfileListDataServerOutputWithContext(ctx context.Context) GetSyslogServerProfileListDataServerOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetSyslogServerProfileListDataServerOutput)
+}
+
+// GetSyslogServerProfileListDataServerArrayInput is an input type that accepts GetSyslogServerProfileListDataServerArray and GetSyslogServerProfileListDataServerArrayOutput values.
+// You can construct a concrete instance of `GetSyslogServerProfileListDataServerArrayInput` via:
+//
+//	GetSyslogServerProfileListDataServerArray{ GetSyslogServerProfileListDataServerArgs{...} }
+type GetSyslogServerProfileListDataServerArrayInput interface {
+	pulumi.Input
+
+	ToGetSyslogServerProfileListDataServerArrayOutput() GetSyslogServerProfileListDataServerArrayOutput
+	ToGetSyslogServerProfileListDataServerArrayOutputWithContext(context.Context) GetSyslogServerProfileListDataServerArrayOutput
+}
+
+type GetSyslogServerProfileListDataServerArray []GetSyslogServerProfileListDataServerInput
+
+func (GetSyslogServerProfileListDataServerArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetSyslogServerProfileListDataServer)(nil)).Elem()
+}
+
+func (i GetSyslogServerProfileListDataServerArray) ToGetSyslogServerProfileListDataServerArrayOutput() GetSyslogServerProfileListDataServerArrayOutput {
+	return i.ToGetSyslogServerProfileListDataServerArrayOutputWithContext(context.Background())
+}
+
+func (i GetSyslogServerProfileListDataServerArray) ToGetSyslogServerProfileListDataServerArrayOutputWithContext(ctx context.Context) GetSyslogServerProfileListDataServerArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetSyslogServerProfileListDataServerArrayOutput)
+}
+
+type GetSyslogServerProfileListDataServerOutput struct{ *pulumi.OutputState }
+
+func (GetSyslogServerProfileListDataServerOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetSyslogServerProfileListDataServer)(nil)).Elem()
+}
+
+func (o GetSyslogServerProfileListDataServerOutput) ToGetSyslogServerProfileListDataServerOutput() GetSyslogServerProfileListDataServerOutput {
+	return o
+}
+
+func (o GetSyslogServerProfileListDataServerOutput) ToGetSyslogServerProfileListDataServerOutputWithContext(ctx context.Context) GetSyslogServerProfileListDataServerOutput {
+	return o
+}
+
+// Syslog facility. Possible values are `LOG_USER`, `LOG_LOCAL0`, `LOG_LOCAL1`, `LOG_LOCAL2`, `LOG_LOCAL3`, `LOG_LOCAL4`, `LOG_LOCAL5`, `LOG_LOCAL6` and `LOG_LOCAL7`.
+func (o GetSyslogServerProfileListDataServerOutput) Facility() pulumi.StringOutput {
+	return o.ApplyT(func(v GetSyslogServerProfileListDataServer) string { return v.Facility }).(pulumi.StringOutput)
+}
+
+// Syslog format. Possible values are `BSD` and `IETF`.
+func (o GetSyslogServerProfileListDataServerOutput) Format() pulumi.StringOutput {
+	return o.ApplyT(func(v GetSyslogServerProfileListDataServer) string { return v.Format }).(pulumi.StringOutput)
+}
+
+// Syslog server name
+func (o GetSyslogServerProfileListDataServerOutput) Name() pulumi.StringOutput {
+	return o.ApplyT(func(v GetSyslogServerProfileListDataServer) string { return v.Name }).(pulumi.StringOutput)
+}
+
+// Syslog server port
+func (o GetSyslogServerProfileListDataServerOutput) Port() pulumi.IntOutput {
+	return o.ApplyT(func(v GetSyslogServerProfileListDataServer) int { return v.Port }).(pulumi.IntOutput)
+}
+
+// Syslog server address
+func (o GetSyslogServerProfileListDataServerOutput) Server() pulumi.StringOutput {
+	return o.ApplyT(func(v GetSyslogServerProfileListDataServer) string { return v.Server }).(pulumi.StringOutput)
+}
+
+// Transport protocol. Possible values are `UDP` and `TCP`.
+func (o GetSyslogServerProfileListDataServerOutput) Transport() pulumi.StringOutput {
+	return o.ApplyT(func(v GetSyslogServerProfileListDataServer) string { return v.Transport }).(pulumi.StringOutput)
+}
+
+type GetSyslogServerProfileListDataServerArrayOutput struct{ *pulumi.OutputState }
+
+func (GetSyslogServerProfileListDataServerArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetSyslogServerProfileListDataServer)(nil)).Elem()
+}
+
+func (o GetSyslogServerProfileListDataServerArrayOutput) ToGetSyslogServerProfileListDataServerArrayOutput() GetSyslogServerProfileListDataServerArrayOutput {
+	return o
+}
+
+func (o GetSyslogServerProfileListDataServerArrayOutput) ToGetSyslogServerProfileListDataServerArrayOutputWithContext(ctx context.Context) GetSyslogServerProfileListDataServerArrayOutput {
+	return o
+}
+
+func (o GetSyslogServerProfileListDataServerArrayOutput) Index(i pulumi.IntInput) GetSyslogServerProfileListDataServerOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetSyslogServerProfileListDataServer {
+		return vs[0].([]GetSyslogServerProfileListDataServer)[vs[1].(int)]
+	}).(GetSyslogServerProfileListDataServerOutput)
+}
+
+type GetSyslogServerProfileServer struct {
+	// Syslog facility. Possible values are `LOG_USER`, `LOG_LOCAL0`, `LOG_LOCAL1`, `LOG_LOCAL2`, `LOG_LOCAL3`, `LOG_LOCAL4`, `LOG_LOCAL5`, `LOG_LOCAL6` and `LOG_LOCAL7`.
+	Facility string `pulumi:"facility"`
+	// Syslog format. Possible values are `BSD` and `IETF`.
+	Format string `pulumi:"format"`
+	// Syslog server name
+	Name string `pulumi:"name"`
+	// Syslog server port
+	Port int `pulumi:"port"`
+	// Syslog server address
+	Server string `pulumi:"server"`
+	// Transport protocol. Possible values are `UDP` and `TCP`.
+	Transport string `pulumi:"transport"`
+}
+
+// GetSyslogServerProfileServerInput is an input type that accepts GetSyslogServerProfileServerArgs and GetSyslogServerProfileServerOutput values.
+// You can construct a concrete instance of `GetSyslogServerProfileServerInput` via:
+//
+//	GetSyslogServerProfileServerArgs{...}
+type GetSyslogServerProfileServerInput interface {
+	pulumi.Input
+
+	ToGetSyslogServerProfileServerOutput() GetSyslogServerProfileServerOutput
+	ToGetSyslogServerProfileServerOutputWithContext(context.Context) GetSyslogServerProfileServerOutput
+}
+
+type GetSyslogServerProfileServerArgs struct {
+	// Syslog facility. Possible values are `LOG_USER`, `LOG_LOCAL0`, `LOG_LOCAL1`, `LOG_LOCAL2`, `LOG_LOCAL3`, `LOG_LOCAL4`, `LOG_LOCAL5`, `LOG_LOCAL6` and `LOG_LOCAL7`.
+	Facility pulumi.StringInput `pulumi:"facility"`
+	// Syslog format. Possible values are `BSD` and `IETF`.
+	Format pulumi.StringInput `pulumi:"format"`
+	// Syslog server name
+	Name pulumi.StringInput `pulumi:"name"`
+	// Syslog server port
+	Port pulumi.IntInput `pulumi:"port"`
+	// Syslog server address
+	Server pulumi.StringInput `pulumi:"server"`
+	// Transport protocol. Possible values are `UDP` and `TCP`.
+	Transport pulumi.StringInput `pulumi:"transport"`
+}
+
+func (GetSyslogServerProfileServerArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetSyslogServerProfileServer)(nil)).Elem()
+}
+
+func (i GetSyslogServerProfileServerArgs) ToGetSyslogServerProfileServerOutput() GetSyslogServerProfileServerOutput {
+	return i.ToGetSyslogServerProfileServerOutputWithContext(context.Background())
+}
+
+func (i GetSyslogServerProfileServerArgs) ToGetSyslogServerProfileServerOutputWithContext(ctx context.Context) GetSyslogServerProfileServerOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetSyslogServerProfileServerOutput)
+}
+
+// GetSyslogServerProfileServerArrayInput is an input type that accepts GetSyslogServerProfileServerArray and GetSyslogServerProfileServerArrayOutput values.
+// You can construct a concrete instance of `GetSyslogServerProfileServerArrayInput` via:
+//
+//	GetSyslogServerProfileServerArray{ GetSyslogServerProfileServerArgs{...} }
+type GetSyslogServerProfileServerArrayInput interface {
+	pulumi.Input
+
+	ToGetSyslogServerProfileServerArrayOutput() GetSyslogServerProfileServerArrayOutput
+	ToGetSyslogServerProfileServerArrayOutputWithContext(context.Context) GetSyslogServerProfileServerArrayOutput
+}
+
+type GetSyslogServerProfileServerArray []GetSyslogServerProfileServerInput
+
+func (GetSyslogServerProfileServerArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetSyslogServerProfileServer)(nil)).Elem()
+}
+
+func (i GetSyslogServerProfileServerArray) ToGetSyslogServerProfileServerArrayOutput() GetSyslogServerProfileServerArrayOutput {
+	return i.ToGetSyslogServerProfileServerArrayOutputWithContext(context.Background())
+}
+
+func (i GetSyslogServerProfileServerArray) ToGetSyslogServerProfileServerArrayOutputWithContext(ctx context.Context) GetSyslogServerProfileServerArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetSyslogServerProfileServerArrayOutput)
+}
+
+type GetSyslogServerProfileServerOutput struct{ *pulumi.OutputState }
+
+func (GetSyslogServerProfileServerOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetSyslogServerProfileServer)(nil)).Elem()
+}
+
+func (o GetSyslogServerProfileServerOutput) ToGetSyslogServerProfileServerOutput() GetSyslogServerProfileServerOutput {
+	return o
+}
+
+func (o GetSyslogServerProfileServerOutput) ToGetSyslogServerProfileServerOutputWithContext(ctx context.Context) GetSyslogServerProfileServerOutput {
+	return o
+}
+
+// Syslog facility. Possible values are `LOG_USER`, `LOG_LOCAL0`, `LOG_LOCAL1`, `LOG_LOCAL2`, `LOG_LOCAL3`, `LOG_LOCAL4`, `LOG_LOCAL5`, `LOG_LOCAL6` and `LOG_LOCAL7`.
+func (o GetSyslogServerProfileServerOutput) Facility() pulumi.StringOutput {
+	return o.ApplyT(func(v GetSyslogServerProfileServer) string { return v.Facility }).(pulumi.StringOutput)
+}
+
+// Syslog format. Possible values are `BSD` and `IETF`.
+func (o GetSyslogServerProfileServerOutput) Format() pulumi.StringOutput {
+	return o.ApplyT(func(v GetSyslogServerProfileServer) string { return v.Format }).(pulumi.StringOutput)
+}
+
+// Syslog server name
+func (o GetSyslogServerProfileServerOutput) Name() pulumi.StringOutput {
+	return o.ApplyT(func(v GetSyslogServerProfileServer) string { return v.Name }).(pulumi.StringOutput)
+}
+
+// Syslog server port
+func (o GetSyslogServerProfileServerOutput) Port() pulumi.IntOutput {
+	return o.ApplyT(func(v GetSyslogServerProfileServer) int { return v.Port }).(pulumi.IntOutput)
+}
+
+// Syslog server address
+func (o GetSyslogServerProfileServerOutput) Server() pulumi.StringOutput {
+	return o.ApplyT(func(v GetSyslogServerProfileServer) string { return v.Server }).(pulumi.StringOutput)
+}
+
+// Transport protocol. Possible values are `UDP` and `TCP`.
+func (o GetSyslogServerProfileServerOutput) Transport() pulumi.StringOutput {
+	return o.ApplyT(func(v GetSyslogServerProfileServer) string { return v.Transport }).(pulumi.StringOutput)
+}
+
+type GetSyslogServerProfileServerArrayOutput struct{ *pulumi.OutputState }
+
+func (GetSyslogServerProfileServerArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetSyslogServerProfileServer)(nil)).Elem()
+}
+
+func (o GetSyslogServerProfileServerArrayOutput) ToGetSyslogServerProfileServerArrayOutput() GetSyslogServerProfileServerArrayOutput {
+	return o
+}
+
+func (o GetSyslogServerProfileServerArrayOutput) ToGetSyslogServerProfileServerArrayOutputWithContext(ctx context.Context) GetSyslogServerProfileServerArrayOutput {
+	return o
+}
+
+func (o GetSyslogServerProfileServerArrayOutput) Index(i pulumi.IntInput) GetSyslogServerProfileServerOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetSyslogServerProfileServer {
+		return vs[0].([]GetSyslogServerProfileServer)[vs[1].(int)]
+	}).(GetSyslogServerProfileServerOutput)
+}
+
+type GetSystemMatchListListData struct {
+	// Description of the system match list entry
+	Description string `pulumi:"description"`
+	// The device in which the resource is defined
+	Device string `pulumi:"device"`
+	// Filter of the system match list entry
+	Filter string `pulumi:"filter"`
+	// The folder in which the resource is defined
+	Folder string `pulumi:"folder"`
+	// UUID of the resource
+	Id string `pulumi:"id"`
+	// Name of the system match list entry
+	Name string `pulumi:"name"`
+	// Send Email List of the system match list entry
+	SendEmails []string `pulumi:"sendEmails"`
+	// Send HTTP List of the system match list entry
+	SendHttps []string `pulumi:"sendHttps"`
+	// Send SNMP Trap List of the system match list entry
+	SendSnmptraps []string `pulumi:"sendSnmptraps"`
+	// Send Sys Log List of the system match list entry
+	SendSyslogs []string `pulumi:"sendSyslogs"`
+	// Send to Panorama Flag of the system match list entry
+	SendToPanorama bool `pulumi:"sendToPanorama"`
+	// The snippet in which the resource is defined
+	Snippet string `pulumi:"snippet"`
+	// The Terraform ID.
+	Tfid string `pulumi:"tfid"`
+}
+
+// GetSystemMatchListListDataInput is an input type that accepts GetSystemMatchListListDataArgs and GetSystemMatchListListDataOutput values.
+// You can construct a concrete instance of `GetSystemMatchListListDataInput` via:
+//
+//	GetSystemMatchListListDataArgs{...}
+type GetSystemMatchListListDataInput interface {
+	pulumi.Input
+
+	ToGetSystemMatchListListDataOutput() GetSystemMatchListListDataOutput
+	ToGetSystemMatchListListDataOutputWithContext(context.Context) GetSystemMatchListListDataOutput
+}
+
+type GetSystemMatchListListDataArgs struct {
+	// Description of the system match list entry
+	Description pulumi.StringInput `pulumi:"description"`
+	// The device in which the resource is defined
+	Device pulumi.StringInput `pulumi:"device"`
+	// Filter of the system match list entry
+	Filter pulumi.StringInput `pulumi:"filter"`
+	// The folder in which the resource is defined
+	Folder pulumi.StringInput `pulumi:"folder"`
+	// UUID of the resource
+	Id pulumi.StringInput `pulumi:"id"`
+	// Name of the system match list entry
+	Name pulumi.StringInput `pulumi:"name"`
+	// Send Email List of the system match list entry
+	SendEmails pulumi.StringArrayInput `pulumi:"sendEmails"`
+	// Send HTTP List of the system match list entry
+	SendHttps pulumi.StringArrayInput `pulumi:"sendHttps"`
+	// Send SNMP Trap List of the system match list entry
+	SendSnmptraps pulumi.StringArrayInput `pulumi:"sendSnmptraps"`
+	// Send Sys Log List of the system match list entry
+	SendSyslogs pulumi.StringArrayInput `pulumi:"sendSyslogs"`
+	// Send to Panorama Flag of the system match list entry
+	SendToPanorama pulumi.BoolInput `pulumi:"sendToPanorama"`
+	// The snippet in which the resource is defined
+	Snippet pulumi.StringInput `pulumi:"snippet"`
+	// The Terraform ID.
+	Tfid pulumi.StringInput `pulumi:"tfid"`
+}
+
+func (GetSystemMatchListListDataArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetSystemMatchListListData)(nil)).Elem()
+}
+
+func (i GetSystemMatchListListDataArgs) ToGetSystemMatchListListDataOutput() GetSystemMatchListListDataOutput {
+	return i.ToGetSystemMatchListListDataOutputWithContext(context.Background())
+}
+
+func (i GetSystemMatchListListDataArgs) ToGetSystemMatchListListDataOutputWithContext(ctx context.Context) GetSystemMatchListListDataOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetSystemMatchListListDataOutput)
+}
+
+// GetSystemMatchListListDataArrayInput is an input type that accepts GetSystemMatchListListDataArray and GetSystemMatchListListDataArrayOutput values.
+// You can construct a concrete instance of `GetSystemMatchListListDataArrayInput` via:
+//
+//	GetSystemMatchListListDataArray{ GetSystemMatchListListDataArgs{...} }
+type GetSystemMatchListListDataArrayInput interface {
+	pulumi.Input
+
+	ToGetSystemMatchListListDataArrayOutput() GetSystemMatchListListDataArrayOutput
+	ToGetSystemMatchListListDataArrayOutputWithContext(context.Context) GetSystemMatchListListDataArrayOutput
+}
+
+type GetSystemMatchListListDataArray []GetSystemMatchListListDataInput
+
+func (GetSystemMatchListListDataArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetSystemMatchListListData)(nil)).Elem()
+}
+
+func (i GetSystemMatchListListDataArray) ToGetSystemMatchListListDataArrayOutput() GetSystemMatchListListDataArrayOutput {
+	return i.ToGetSystemMatchListListDataArrayOutputWithContext(context.Background())
+}
+
+func (i GetSystemMatchListListDataArray) ToGetSystemMatchListListDataArrayOutputWithContext(ctx context.Context) GetSystemMatchListListDataArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetSystemMatchListListDataArrayOutput)
+}
+
+type GetSystemMatchListListDataOutput struct{ *pulumi.OutputState }
+
+func (GetSystemMatchListListDataOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetSystemMatchListListData)(nil)).Elem()
+}
+
+func (o GetSystemMatchListListDataOutput) ToGetSystemMatchListListDataOutput() GetSystemMatchListListDataOutput {
+	return o
+}
+
+func (o GetSystemMatchListListDataOutput) ToGetSystemMatchListListDataOutputWithContext(ctx context.Context) GetSystemMatchListListDataOutput {
+	return o
+}
+
+// Description of the system match list entry
+func (o GetSystemMatchListListDataOutput) Description() pulumi.StringOutput {
+	return o.ApplyT(func(v GetSystemMatchListListData) string { return v.Description }).(pulumi.StringOutput)
+}
+
+// The device in which the resource is defined
+func (o GetSystemMatchListListDataOutput) Device() pulumi.StringOutput {
+	return o.ApplyT(func(v GetSystemMatchListListData) string { return v.Device }).(pulumi.StringOutput)
+}
+
+// Filter of the system match list entry
+func (o GetSystemMatchListListDataOutput) Filter() pulumi.StringOutput {
+	return o.ApplyT(func(v GetSystemMatchListListData) string { return v.Filter }).(pulumi.StringOutput)
+}
+
+// The folder in which the resource is defined
+func (o GetSystemMatchListListDataOutput) Folder() pulumi.StringOutput {
+	return o.ApplyT(func(v GetSystemMatchListListData) string { return v.Folder }).(pulumi.StringOutput)
+}
+
+// UUID of the resource
+func (o GetSystemMatchListListDataOutput) Id() pulumi.StringOutput {
+	return o.ApplyT(func(v GetSystemMatchListListData) string { return v.Id }).(pulumi.StringOutput)
+}
+
+// Name of the system match list entry
+func (o GetSystemMatchListListDataOutput) Name() pulumi.StringOutput {
+	return o.ApplyT(func(v GetSystemMatchListListData) string { return v.Name }).(pulumi.StringOutput)
+}
+
+// Send Email List of the system match list entry
+func (o GetSystemMatchListListDataOutput) SendEmails() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v GetSystemMatchListListData) []string { return v.SendEmails }).(pulumi.StringArrayOutput)
+}
+
+// Send HTTP List of the system match list entry
+func (o GetSystemMatchListListDataOutput) SendHttps() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v GetSystemMatchListListData) []string { return v.SendHttps }).(pulumi.StringArrayOutput)
+}
+
+// Send SNMP Trap List of the system match list entry
+func (o GetSystemMatchListListDataOutput) SendSnmptraps() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v GetSystemMatchListListData) []string { return v.SendSnmptraps }).(pulumi.StringArrayOutput)
+}
+
+// Send Sys Log List of the system match list entry
+func (o GetSystemMatchListListDataOutput) SendSyslogs() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v GetSystemMatchListListData) []string { return v.SendSyslogs }).(pulumi.StringArrayOutput)
+}
+
+// Send to Panorama Flag of the system match list entry
+func (o GetSystemMatchListListDataOutput) SendToPanorama() pulumi.BoolOutput {
+	return o.ApplyT(func(v GetSystemMatchListListData) bool { return v.SendToPanorama }).(pulumi.BoolOutput)
+}
+
+// The snippet in which the resource is defined
+func (o GetSystemMatchListListDataOutput) Snippet() pulumi.StringOutput {
+	return o.ApplyT(func(v GetSystemMatchListListData) string { return v.Snippet }).(pulumi.StringOutput)
+}
+
+// The Terraform ID.
+func (o GetSystemMatchListListDataOutput) Tfid() pulumi.StringOutput {
+	return o.ApplyT(func(v GetSystemMatchListListData) string { return v.Tfid }).(pulumi.StringOutput)
+}
+
+type GetSystemMatchListListDataArrayOutput struct{ *pulumi.OutputState }
+
+func (GetSystemMatchListListDataArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetSystemMatchListListData)(nil)).Elem()
+}
+
+func (o GetSystemMatchListListDataArrayOutput) ToGetSystemMatchListListDataArrayOutput() GetSystemMatchListListDataArrayOutput {
+	return o
+}
+
+func (o GetSystemMatchListListDataArrayOutput) ToGetSystemMatchListListDataArrayOutputWithContext(ctx context.Context) GetSystemMatchListListDataArrayOutput {
+	return o
+}
+
+func (o GetSystemMatchListListDataArrayOutput) Index(i pulumi.IntInput) GetSystemMatchListListDataOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetSystemMatchListListData {
+		return vs[0].([]GetSystemMatchListListData)[vs[1].(int)]
+	}).(GetSystemMatchListListDataOutput)
+}
+
+type GetTacacsServerProfileListData struct {
+	// The device in which the resource is defined
+	Device string `pulumi:"device"`
+	// Map of sensitive values returned from the API.
+	EncryptedValues map[string]string `pulumi:"encryptedValues"`
+	// The folder in which the resource is defined
+	Folder string `pulumi:"folder"`
+	// The UUID of the TACACS+ server profile
+	Id string `pulumi:"id"`
+	// The name of the TACACS+ server profile
+	Name string `pulumi:"name"`
+	// The TACACS+ authentication protocol. Possible values are `CHAP` and `PAP`.
+	Protocol string `pulumi:"protocol"`
+	// The TACACS+ server configuration
+	Servers []GetTacacsServerProfileListDataServer `pulumi:"servers"`
+	// The snippet in which the resource is defined
+	Snippet string `pulumi:"snippet"`
+	// The Terraform ID.
+	Tfid string `pulumi:"tfid"`
+	// The TACACS+ timeout (seconds)
+	Timeout int `pulumi:"timeout"`
+	// Use a single TACACS+ connection?
+	UseSingleConnection bool `pulumi:"useSingleConnection"`
+}
+
+// GetTacacsServerProfileListDataInput is an input type that accepts GetTacacsServerProfileListDataArgs and GetTacacsServerProfileListDataOutput values.
+// You can construct a concrete instance of `GetTacacsServerProfileListDataInput` via:
+//
+//	GetTacacsServerProfileListDataArgs{...}
+type GetTacacsServerProfileListDataInput interface {
+	pulumi.Input
+
+	ToGetTacacsServerProfileListDataOutput() GetTacacsServerProfileListDataOutput
+	ToGetTacacsServerProfileListDataOutputWithContext(context.Context) GetTacacsServerProfileListDataOutput
+}
+
+type GetTacacsServerProfileListDataArgs struct {
+	// The device in which the resource is defined
+	Device pulumi.StringInput `pulumi:"device"`
+	// Map of sensitive values returned from the API.
+	EncryptedValues pulumi.StringMapInput `pulumi:"encryptedValues"`
+	// The folder in which the resource is defined
+	Folder pulumi.StringInput `pulumi:"folder"`
+	// The UUID of the TACACS+ server profile
+	Id pulumi.StringInput `pulumi:"id"`
+	// The name of the TACACS+ server profile
+	Name pulumi.StringInput `pulumi:"name"`
+	// The TACACS+ authentication protocol. Possible values are `CHAP` and `PAP`.
+	Protocol pulumi.StringInput `pulumi:"protocol"`
+	// The TACACS+ server configuration
+	Servers GetTacacsServerProfileListDataServerArrayInput `pulumi:"servers"`
+	// The snippet in which the resource is defined
+	Snippet pulumi.StringInput `pulumi:"snippet"`
+	// The Terraform ID.
+	Tfid pulumi.StringInput `pulumi:"tfid"`
+	// The TACACS+ timeout (seconds)
+	Timeout pulumi.IntInput `pulumi:"timeout"`
+	// Use a single TACACS+ connection?
+	UseSingleConnection pulumi.BoolInput `pulumi:"useSingleConnection"`
+}
+
+func (GetTacacsServerProfileListDataArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetTacacsServerProfileListData)(nil)).Elem()
+}
+
+func (i GetTacacsServerProfileListDataArgs) ToGetTacacsServerProfileListDataOutput() GetTacacsServerProfileListDataOutput {
+	return i.ToGetTacacsServerProfileListDataOutputWithContext(context.Background())
+}
+
+func (i GetTacacsServerProfileListDataArgs) ToGetTacacsServerProfileListDataOutputWithContext(ctx context.Context) GetTacacsServerProfileListDataOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetTacacsServerProfileListDataOutput)
+}
+
+// GetTacacsServerProfileListDataArrayInput is an input type that accepts GetTacacsServerProfileListDataArray and GetTacacsServerProfileListDataArrayOutput values.
+// You can construct a concrete instance of `GetTacacsServerProfileListDataArrayInput` via:
+//
+//	GetTacacsServerProfileListDataArray{ GetTacacsServerProfileListDataArgs{...} }
+type GetTacacsServerProfileListDataArrayInput interface {
+	pulumi.Input
+
+	ToGetTacacsServerProfileListDataArrayOutput() GetTacacsServerProfileListDataArrayOutput
+	ToGetTacacsServerProfileListDataArrayOutputWithContext(context.Context) GetTacacsServerProfileListDataArrayOutput
+}
+
+type GetTacacsServerProfileListDataArray []GetTacacsServerProfileListDataInput
+
+func (GetTacacsServerProfileListDataArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetTacacsServerProfileListData)(nil)).Elem()
+}
+
+func (i GetTacacsServerProfileListDataArray) ToGetTacacsServerProfileListDataArrayOutput() GetTacacsServerProfileListDataArrayOutput {
+	return i.ToGetTacacsServerProfileListDataArrayOutputWithContext(context.Background())
+}
+
+func (i GetTacacsServerProfileListDataArray) ToGetTacacsServerProfileListDataArrayOutputWithContext(ctx context.Context) GetTacacsServerProfileListDataArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetTacacsServerProfileListDataArrayOutput)
+}
+
+type GetTacacsServerProfileListDataOutput struct{ *pulumi.OutputState }
+
+func (GetTacacsServerProfileListDataOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetTacacsServerProfileListData)(nil)).Elem()
+}
+
+func (o GetTacacsServerProfileListDataOutput) ToGetTacacsServerProfileListDataOutput() GetTacacsServerProfileListDataOutput {
+	return o
+}
+
+func (o GetTacacsServerProfileListDataOutput) ToGetTacacsServerProfileListDataOutputWithContext(ctx context.Context) GetTacacsServerProfileListDataOutput {
+	return o
+}
+
+// The device in which the resource is defined
+func (o GetTacacsServerProfileListDataOutput) Device() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTacacsServerProfileListData) string { return v.Device }).(pulumi.StringOutput)
+}
+
+// Map of sensitive values returned from the API.
+func (o GetTacacsServerProfileListDataOutput) EncryptedValues() pulumi.StringMapOutput {
+	return o.ApplyT(func(v GetTacacsServerProfileListData) map[string]string { return v.EncryptedValues }).(pulumi.StringMapOutput)
+}
+
+// The folder in which the resource is defined
+func (o GetTacacsServerProfileListDataOutput) Folder() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTacacsServerProfileListData) string { return v.Folder }).(pulumi.StringOutput)
+}
+
+// The UUID of the TACACS+ server profile
+func (o GetTacacsServerProfileListDataOutput) Id() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTacacsServerProfileListData) string { return v.Id }).(pulumi.StringOutput)
+}
+
+// The name of the TACACS+ server profile
+func (o GetTacacsServerProfileListDataOutput) Name() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTacacsServerProfileListData) string { return v.Name }).(pulumi.StringOutput)
+}
+
+// The TACACS+ authentication protocol. Possible values are `CHAP` and `PAP`.
+func (o GetTacacsServerProfileListDataOutput) Protocol() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTacacsServerProfileListData) string { return v.Protocol }).(pulumi.StringOutput)
+}
+
+// The TACACS+ server configuration
+func (o GetTacacsServerProfileListDataOutput) Servers() GetTacacsServerProfileListDataServerArrayOutput {
+	return o.ApplyT(func(v GetTacacsServerProfileListData) []GetTacacsServerProfileListDataServer { return v.Servers }).(GetTacacsServerProfileListDataServerArrayOutput)
+}
+
+// The snippet in which the resource is defined
+func (o GetTacacsServerProfileListDataOutput) Snippet() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTacacsServerProfileListData) string { return v.Snippet }).(pulumi.StringOutput)
+}
+
+// The Terraform ID.
+func (o GetTacacsServerProfileListDataOutput) Tfid() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTacacsServerProfileListData) string { return v.Tfid }).(pulumi.StringOutput)
+}
+
+// The TACACS+ timeout (seconds)
+func (o GetTacacsServerProfileListDataOutput) Timeout() pulumi.IntOutput {
+	return o.ApplyT(func(v GetTacacsServerProfileListData) int { return v.Timeout }).(pulumi.IntOutput)
+}
+
+// Use a single TACACS+ connection?
+func (o GetTacacsServerProfileListDataOutput) UseSingleConnection() pulumi.BoolOutput {
+	return o.ApplyT(func(v GetTacacsServerProfileListData) bool { return v.UseSingleConnection }).(pulumi.BoolOutput)
+}
+
+type GetTacacsServerProfileListDataArrayOutput struct{ *pulumi.OutputState }
+
+func (GetTacacsServerProfileListDataArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetTacacsServerProfileListData)(nil)).Elem()
+}
+
+func (o GetTacacsServerProfileListDataArrayOutput) ToGetTacacsServerProfileListDataArrayOutput() GetTacacsServerProfileListDataArrayOutput {
+	return o
+}
+
+func (o GetTacacsServerProfileListDataArrayOutput) ToGetTacacsServerProfileListDataArrayOutputWithContext(ctx context.Context) GetTacacsServerProfileListDataArrayOutput {
+	return o
+}
+
+func (o GetTacacsServerProfileListDataArrayOutput) Index(i pulumi.IntInput) GetTacacsServerProfileListDataOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetTacacsServerProfileListData {
+		return vs[0].([]GetTacacsServerProfileListData)[vs[1].(int)]
+	}).(GetTacacsServerProfileListDataOutput)
+}
+
+type GetTacacsServerProfileListDataServer struct {
+	// The IP address of the TACACS+ server
+	Address string `pulumi:"address"`
+	// The name of the TACACS+ server
+	Name string `pulumi:"name"`
+	// The TACACS+ server port
+	Port int `pulumi:"port"`
+	// The TACACS+ secret
+	Secret string `pulumi:"secret"`
+}
+
+// GetTacacsServerProfileListDataServerInput is an input type that accepts GetTacacsServerProfileListDataServerArgs and GetTacacsServerProfileListDataServerOutput values.
+// You can construct a concrete instance of `GetTacacsServerProfileListDataServerInput` via:
+//
+//	GetTacacsServerProfileListDataServerArgs{...}
+type GetTacacsServerProfileListDataServerInput interface {
+	pulumi.Input
+
+	ToGetTacacsServerProfileListDataServerOutput() GetTacacsServerProfileListDataServerOutput
+	ToGetTacacsServerProfileListDataServerOutputWithContext(context.Context) GetTacacsServerProfileListDataServerOutput
+}
+
+type GetTacacsServerProfileListDataServerArgs struct {
+	// The IP address of the TACACS+ server
+	Address pulumi.StringInput `pulumi:"address"`
+	// The name of the TACACS+ server
+	Name pulumi.StringInput `pulumi:"name"`
+	// The TACACS+ server port
+	Port pulumi.IntInput `pulumi:"port"`
+	// The TACACS+ secret
+	Secret pulumi.StringInput `pulumi:"secret"`
+}
+
+func (GetTacacsServerProfileListDataServerArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetTacacsServerProfileListDataServer)(nil)).Elem()
+}
+
+func (i GetTacacsServerProfileListDataServerArgs) ToGetTacacsServerProfileListDataServerOutput() GetTacacsServerProfileListDataServerOutput {
+	return i.ToGetTacacsServerProfileListDataServerOutputWithContext(context.Background())
+}
+
+func (i GetTacacsServerProfileListDataServerArgs) ToGetTacacsServerProfileListDataServerOutputWithContext(ctx context.Context) GetTacacsServerProfileListDataServerOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetTacacsServerProfileListDataServerOutput)
+}
+
+// GetTacacsServerProfileListDataServerArrayInput is an input type that accepts GetTacacsServerProfileListDataServerArray and GetTacacsServerProfileListDataServerArrayOutput values.
+// You can construct a concrete instance of `GetTacacsServerProfileListDataServerArrayInput` via:
+//
+//	GetTacacsServerProfileListDataServerArray{ GetTacacsServerProfileListDataServerArgs{...} }
+type GetTacacsServerProfileListDataServerArrayInput interface {
+	pulumi.Input
+
+	ToGetTacacsServerProfileListDataServerArrayOutput() GetTacacsServerProfileListDataServerArrayOutput
+	ToGetTacacsServerProfileListDataServerArrayOutputWithContext(context.Context) GetTacacsServerProfileListDataServerArrayOutput
+}
+
+type GetTacacsServerProfileListDataServerArray []GetTacacsServerProfileListDataServerInput
+
+func (GetTacacsServerProfileListDataServerArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetTacacsServerProfileListDataServer)(nil)).Elem()
+}
+
+func (i GetTacacsServerProfileListDataServerArray) ToGetTacacsServerProfileListDataServerArrayOutput() GetTacacsServerProfileListDataServerArrayOutput {
+	return i.ToGetTacacsServerProfileListDataServerArrayOutputWithContext(context.Background())
+}
+
+func (i GetTacacsServerProfileListDataServerArray) ToGetTacacsServerProfileListDataServerArrayOutputWithContext(ctx context.Context) GetTacacsServerProfileListDataServerArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetTacacsServerProfileListDataServerArrayOutput)
+}
+
+type GetTacacsServerProfileListDataServerOutput struct{ *pulumi.OutputState }
+
+func (GetTacacsServerProfileListDataServerOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetTacacsServerProfileListDataServer)(nil)).Elem()
+}
+
+func (o GetTacacsServerProfileListDataServerOutput) ToGetTacacsServerProfileListDataServerOutput() GetTacacsServerProfileListDataServerOutput {
+	return o
+}
+
+func (o GetTacacsServerProfileListDataServerOutput) ToGetTacacsServerProfileListDataServerOutputWithContext(ctx context.Context) GetTacacsServerProfileListDataServerOutput {
+	return o
+}
+
+// The IP address of the TACACS+ server
+func (o GetTacacsServerProfileListDataServerOutput) Address() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTacacsServerProfileListDataServer) string { return v.Address }).(pulumi.StringOutput)
+}
+
+// The name of the TACACS+ server
+func (o GetTacacsServerProfileListDataServerOutput) Name() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTacacsServerProfileListDataServer) string { return v.Name }).(pulumi.StringOutput)
+}
+
+// The TACACS+ server port
+func (o GetTacacsServerProfileListDataServerOutput) Port() pulumi.IntOutput {
+	return o.ApplyT(func(v GetTacacsServerProfileListDataServer) int { return v.Port }).(pulumi.IntOutput)
+}
+
+// The TACACS+ secret
+func (o GetTacacsServerProfileListDataServerOutput) Secret() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTacacsServerProfileListDataServer) string { return v.Secret }).(pulumi.StringOutput)
+}
+
+type GetTacacsServerProfileListDataServerArrayOutput struct{ *pulumi.OutputState }
+
+func (GetTacacsServerProfileListDataServerArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetTacacsServerProfileListDataServer)(nil)).Elem()
+}
+
+func (o GetTacacsServerProfileListDataServerArrayOutput) ToGetTacacsServerProfileListDataServerArrayOutput() GetTacacsServerProfileListDataServerArrayOutput {
+	return o
+}
+
+func (o GetTacacsServerProfileListDataServerArrayOutput) ToGetTacacsServerProfileListDataServerArrayOutputWithContext(ctx context.Context) GetTacacsServerProfileListDataServerArrayOutput {
+	return o
+}
+
+func (o GetTacacsServerProfileListDataServerArrayOutput) Index(i pulumi.IntInput) GetTacacsServerProfileListDataServerOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetTacacsServerProfileListDataServer {
+		return vs[0].([]GetTacacsServerProfileListDataServer)[vs[1].(int)]
+	}).(GetTacacsServerProfileListDataServerOutput)
+}
+
+type GetTacacsServerProfileServer struct {
+	// The IP address of the TACACS+ server
+	Address string `pulumi:"address"`
+	// The name of the TACACS+ server
+	Name string `pulumi:"name"`
+	// The TACACS+ server port
+	Port int `pulumi:"port"`
+	// The TACACS+ secret
+	Secret string `pulumi:"secret"`
+}
+
+// GetTacacsServerProfileServerInput is an input type that accepts GetTacacsServerProfileServerArgs and GetTacacsServerProfileServerOutput values.
+// You can construct a concrete instance of `GetTacacsServerProfileServerInput` via:
+//
+//	GetTacacsServerProfileServerArgs{...}
+type GetTacacsServerProfileServerInput interface {
+	pulumi.Input
+
+	ToGetTacacsServerProfileServerOutput() GetTacacsServerProfileServerOutput
+	ToGetTacacsServerProfileServerOutputWithContext(context.Context) GetTacacsServerProfileServerOutput
+}
+
+type GetTacacsServerProfileServerArgs struct {
+	// The IP address of the TACACS+ server
+	Address pulumi.StringInput `pulumi:"address"`
+	// The name of the TACACS+ server
+	Name pulumi.StringInput `pulumi:"name"`
+	// The TACACS+ server port
+	Port pulumi.IntInput `pulumi:"port"`
+	// The TACACS+ secret
+	Secret pulumi.StringInput `pulumi:"secret"`
+}
+
+func (GetTacacsServerProfileServerArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetTacacsServerProfileServer)(nil)).Elem()
+}
+
+func (i GetTacacsServerProfileServerArgs) ToGetTacacsServerProfileServerOutput() GetTacacsServerProfileServerOutput {
+	return i.ToGetTacacsServerProfileServerOutputWithContext(context.Background())
+}
+
+func (i GetTacacsServerProfileServerArgs) ToGetTacacsServerProfileServerOutputWithContext(ctx context.Context) GetTacacsServerProfileServerOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetTacacsServerProfileServerOutput)
+}
+
+// GetTacacsServerProfileServerArrayInput is an input type that accepts GetTacacsServerProfileServerArray and GetTacacsServerProfileServerArrayOutput values.
+// You can construct a concrete instance of `GetTacacsServerProfileServerArrayInput` via:
+//
+//	GetTacacsServerProfileServerArray{ GetTacacsServerProfileServerArgs{...} }
+type GetTacacsServerProfileServerArrayInput interface {
+	pulumi.Input
+
+	ToGetTacacsServerProfileServerArrayOutput() GetTacacsServerProfileServerArrayOutput
+	ToGetTacacsServerProfileServerArrayOutputWithContext(context.Context) GetTacacsServerProfileServerArrayOutput
+}
+
+type GetTacacsServerProfileServerArray []GetTacacsServerProfileServerInput
+
+func (GetTacacsServerProfileServerArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetTacacsServerProfileServer)(nil)).Elem()
+}
+
+func (i GetTacacsServerProfileServerArray) ToGetTacacsServerProfileServerArrayOutput() GetTacacsServerProfileServerArrayOutput {
+	return i.ToGetTacacsServerProfileServerArrayOutputWithContext(context.Background())
+}
+
+func (i GetTacacsServerProfileServerArray) ToGetTacacsServerProfileServerArrayOutputWithContext(ctx context.Context) GetTacacsServerProfileServerArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetTacacsServerProfileServerArrayOutput)
+}
+
+type GetTacacsServerProfileServerOutput struct{ *pulumi.OutputState }
+
+func (GetTacacsServerProfileServerOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetTacacsServerProfileServer)(nil)).Elem()
+}
+
+func (o GetTacacsServerProfileServerOutput) ToGetTacacsServerProfileServerOutput() GetTacacsServerProfileServerOutput {
+	return o
+}
+
+func (o GetTacacsServerProfileServerOutput) ToGetTacacsServerProfileServerOutputWithContext(ctx context.Context) GetTacacsServerProfileServerOutput {
+	return o
+}
+
+// The IP address of the TACACS+ server
+func (o GetTacacsServerProfileServerOutput) Address() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTacacsServerProfileServer) string { return v.Address }).(pulumi.StringOutput)
+}
+
+// The name of the TACACS+ server
+func (o GetTacacsServerProfileServerOutput) Name() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTacacsServerProfileServer) string { return v.Name }).(pulumi.StringOutput)
+}
+
+// The TACACS+ server port
+func (o GetTacacsServerProfileServerOutput) Port() pulumi.IntOutput {
+	return o.ApplyT(func(v GetTacacsServerProfileServer) int { return v.Port }).(pulumi.IntOutput)
+}
+
+// The TACACS+ secret
+func (o GetTacacsServerProfileServerOutput) Secret() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTacacsServerProfileServer) string { return v.Secret }).(pulumi.StringOutput)
+}
+
+type GetTacacsServerProfileServerArrayOutput struct{ *pulumi.OutputState }
+
+func (GetTacacsServerProfileServerArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetTacacsServerProfileServer)(nil)).Elem()
+}
+
+func (o GetTacacsServerProfileServerArrayOutput) ToGetTacacsServerProfileServerArrayOutput() GetTacacsServerProfileServerArrayOutput {
+	return o
+}
+
+func (o GetTacacsServerProfileServerArrayOutput) ToGetTacacsServerProfileServerArrayOutputWithContext(ctx context.Context) GetTacacsServerProfileServerArrayOutput {
+	return o
+}
+
+func (o GetTacacsServerProfileServerArrayOutput) Index(i pulumi.IntInput) GetTacacsServerProfileServerOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetTacacsServerProfileServer {
+		return vs[0].([]GetTacacsServerProfileServer)[vs[1].(int)]
+	}).(GetTacacsServerProfileServerOutput)
+}
+
+type GetTagListData struct {
+	// The color of the tag. Possible values are `Red`, `Green`, `Blue`, `Yellow`, `Copper`, `Orange`, `Purple`, `Gray`, `Light Green`, `Cyan`, `Light Gray`, `Blue Gray`, `Lime`, `Black`, `Gold`, `Brown`, `Olive`, `Maroon`, `Red-Orange`, `Yellow-Orange`, `Forest Green`, `Turquoise Blue`, `Azure Blue`, `Cerulean Blue`, `Midnight Blue`, `Medium Blue`, `Cobalt Blue`, `Violet Blue`, `Blue Violet`, `Medium Violet`, `Medium Rose`, `Lavender`, `Orchid`, `Thistle`, `Peach`, `Salmon`, `Magenta`, `Red Violet`, `Mahogany`, `Burnt Sienna` and `Chestnut`.
+	Color string `pulumi:"color"`
+	// The description of the tag
+	Comments string `pulumi:"comments"`
+	// The device in which the resource is defined
+	Device string `pulumi:"device"`
+	// The folder in which the resource is defined
+	Folder string `pulumi:"folder"`
+	// The UUID of the tag
+	Id string `pulumi:"id"`
+	// The name of the tag
+	Name string `pulumi:"name"`
+	// The snippet in which the resource is defined
+	Snippet string `pulumi:"snippet"`
+	// The Terraform ID.
+	Tfid string `pulumi:"tfid"`
+}
+
+// GetTagListDataInput is an input type that accepts GetTagListDataArgs and GetTagListDataOutput values.
+// You can construct a concrete instance of `GetTagListDataInput` via:
+//
+//	GetTagListDataArgs{...}
+type GetTagListDataInput interface {
+	pulumi.Input
+
+	ToGetTagListDataOutput() GetTagListDataOutput
+	ToGetTagListDataOutputWithContext(context.Context) GetTagListDataOutput
+}
+
+type GetTagListDataArgs struct {
+	// The color of the tag. Possible values are `Red`, `Green`, `Blue`, `Yellow`, `Copper`, `Orange`, `Purple`, `Gray`, `Light Green`, `Cyan`, `Light Gray`, `Blue Gray`, `Lime`, `Black`, `Gold`, `Brown`, `Olive`, `Maroon`, `Red-Orange`, `Yellow-Orange`, `Forest Green`, `Turquoise Blue`, `Azure Blue`, `Cerulean Blue`, `Midnight Blue`, `Medium Blue`, `Cobalt Blue`, `Violet Blue`, `Blue Violet`, `Medium Violet`, `Medium Rose`, `Lavender`, `Orchid`, `Thistle`, `Peach`, `Salmon`, `Magenta`, `Red Violet`, `Mahogany`, `Burnt Sienna` and `Chestnut`.
+	Color pulumi.StringInput `pulumi:"color"`
+	// The description of the tag
+	Comments pulumi.StringInput `pulumi:"comments"`
+	// The device in which the resource is defined
+	Device pulumi.StringInput `pulumi:"device"`
+	// The folder in which the resource is defined
+	Folder pulumi.StringInput `pulumi:"folder"`
+	// The UUID of the tag
+	Id pulumi.StringInput `pulumi:"id"`
+	// The name of the tag
+	Name pulumi.StringInput `pulumi:"name"`
+	// The snippet in which the resource is defined
+	Snippet pulumi.StringInput `pulumi:"snippet"`
+	// The Terraform ID.
+	Tfid pulumi.StringInput `pulumi:"tfid"`
+}
+
+func (GetTagListDataArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetTagListData)(nil)).Elem()
+}
+
+func (i GetTagListDataArgs) ToGetTagListDataOutput() GetTagListDataOutput {
+	return i.ToGetTagListDataOutputWithContext(context.Background())
+}
+
+func (i GetTagListDataArgs) ToGetTagListDataOutputWithContext(ctx context.Context) GetTagListDataOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetTagListDataOutput)
+}
+
+// GetTagListDataArrayInput is an input type that accepts GetTagListDataArray and GetTagListDataArrayOutput values.
+// You can construct a concrete instance of `GetTagListDataArrayInput` via:
+//
+//	GetTagListDataArray{ GetTagListDataArgs{...} }
+type GetTagListDataArrayInput interface {
+	pulumi.Input
+
+	ToGetTagListDataArrayOutput() GetTagListDataArrayOutput
+	ToGetTagListDataArrayOutputWithContext(context.Context) GetTagListDataArrayOutput
+}
+
+type GetTagListDataArray []GetTagListDataInput
+
+func (GetTagListDataArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetTagListData)(nil)).Elem()
+}
+
+func (i GetTagListDataArray) ToGetTagListDataArrayOutput() GetTagListDataArrayOutput {
+	return i.ToGetTagListDataArrayOutputWithContext(context.Background())
+}
+
+func (i GetTagListDataArray) ToGetTagListDataArrayOutputWithContext(ctx context.Context) GetTagListDataArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetTagListDataArrayOutput)
+}
+
+type GetTagListDataOutput struct{ *pulumi.OutputState }
+
+func (GetTagListDataOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetTagListData)(nil)).Elem()
+}
+
+func (o GetTagListDataOutput) ToGetTagListDataOutput() GetTagListDataOutput {
+	return o
+}
+
+func (o GetTagListDataOutput) ToGetTagListDataOutputWithContext(ctx context.Context) GetTagListDataOutput {
+	return o
+}
+
+// The color of the tag. Possible values are `Red`, `Green`, `Blue`, `Yellow`, `Copper`, `Orange`, `Purple`, `Gray`, `Light Green`, `Cyan`, `Light Gray`, `Blue Gray`, `Lime`, `Black`, `Gold`, `Brown`, `Olive`, `Maroon`, `Red-Orange`, `Yellow-Orange`, `Forest Green`, `Turquoise Blue`, `Azure Blue`, `Cerulean Blue`, `Midnight Blue`, `Medium Blue`, `Cobalt Blue`, `Violet Blue`, `Blue Violet`, `Medium Violet`, `Medium Rose`, `Lavender`, `Orchid`, `Thistle`, `Peach`, `Salmon`, `Magenta`, `Red Violet`, `Mahogany`, `Burnt Sienna` and `Chestnut`.
+func (o GetTagListDataOutput) Color() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTagListData) string { return v.Color }).(pulumi.StringOutput)
+}
+
+// The description of the tag
+func (o GetTagListDataOutput) Comments() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTagListData) string { return v.Comments }).(pulumi.StringOutput)
+}
+
+// The device in which the resource is defined
+func (o GetTagListDataOutput) Device() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTagListData) string { return v.Device }).(pulumi.StringOutput)
+}
+
+// The folder in which the resource is defined
+func (o GetTagListDataOutput) Folder() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTagListData) string { return v.Folder }).(pulumi.StringOutput)
+}
+
+// The UUID of the tag
+func (o GetTagListDataOutput) Id() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTagListData) string { return v.Id }).(pulumi.StringOutput)
+}
+
+// The name of the tag
+func (o GetTagListDataOutput) Name() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTagListData) string { return v.Name }).(pulumi.StringOutput)
+}
+
+// The snippet in which the resource is defined
+func (o GetTagListDataOutput) Snippet() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTagListData) string { return v.Snippet }).(pulumi.StringOutput)
+}
+
+// The Terraform ID.
+func (o GetTagListDataOutput) Tfid() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTagListData) string { return v.Tfid }).(pulumi.StringOutput)
+}
+
+type GetTagListDataArrayOutput struct{ *pulumi.OutputState }
+
+func (GetTagListDataArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetTagListData)(nil)).Elem()
+}
+
+func (o GetTagListDataArrayOutput) ToGetTagListDataArrayOutput() GetTagListDataArrayOutput {
+	return o
+}
+
+func (o GetTagListDataArrayOutput) ToGetTagListDataArrayOutputWithContext(ctx context.Context) GetTagListDataArrayOutput {
+	return o
+}
+
+func (o GetTagListDataArrayOutput) Index(i pulumi.IntInput) GetTagListDataOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetTagListData {
+		return vs[0].([]GetTagListData)[vs[1].(int)]
+	}).(GetTagListDataOutput)
+}
+
+type GetTcpSettingListData struct {
+	// The device in which the resource is defined
+	Device string `pulumi:"device"`
+	// The folder in which the resource is defined
+	Folder string `pulumi:"folder"`
+	// UUID of the resource
+	Id string `pulumi:"id"`
+	// The snippet in which the resource is defined
+	Snippet string `pulumi:"snippet"`
+	// Tcp
+	Tcp GetTcpSettingListDataTcp `pulumi:"tcp"`
+	// The Terraform ID.
+	Tfid string `pulumi:"tfid"`
+}
+
+// GetTcpSettingListDataInput is an input type that accepts GetTcpSettingListDataArgs and GetTcpSettingListDataOutput values.
+// You can construct a concrete instance of `GetTcpSettingListDataInput` via:
+//
+//	GetTcpSettingListDataArgs{...}
+type GetTcpSettingListDataInput interface {
+	pulumi.Input
+
+	ToGetTcpSettingListDataOutput() GetTcpSettingListDataOutput
+	ToGetTcpSettingListDataOutputWithContext(context.Context) GetTcpSettingListDataOutput
+}
+
+type GetTcpSettingListDataArgs struct {
+	// The device in which the resource is defined
+	Device pulumi.StringInput `pulumi:"device"`
+	// The folder in which the resource is defined
+	Folder pulumi.StringInput `pulumi:"folder"`
+	// UUID of the resource
+	Id pulumi.StringInput `pulumi:"id"`
+	// The snippet in which the resource is defined
+	Snippet pulumi.StringInput `pulumi:"snippet"`
+	// Tcp
+	Tcp GetTcpSettingListDataTcpInput `pulumi:"tcp"`
+	// The Terraform ID.
+	Tfid pulumi.StringInput `pulumi:"tfid"`
+}
+
+func (GetTcpSettingListDataArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetTcpSettingListData)(nil)).Elem()
+}
+
+func (i GetTcpSettingListDataArgs) ToGetTcpSettingListDataOutput() GetTcpSettingListDataOutput {
+	return i.ToGetTcpSettingListDataOutputWithContext(context.Background())
+}
+
+func (i GetTcpSettingListDataArgs) ToGetTcpSettingListDataOutputWithContext(ctx context.Context) GetTcpSettingListDataOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetTcpSettingListDataOutput)
+}
+
+// GetTcpSettingListDataArrayInput is an input type that accepts GetTcpSettingListDataArray and GetTcpSettingListDataArrayOutput values.
+// You can construct a concrete instance of `GetTcpSettingListDataArrayInput` via:
+//
+//	GetTcpSettingListDataArray{ GetTcpSettingListDataArgs{...} }
+type GetTcpSettingListDataArrayInput interface {
+	pulumi.Input
+
+	ToGetTcpSettingListDataArrayOutput() GetTcpSettingListDataArrayOutput
+	ToGetTcpSettingListDataArrayOutputWithContext(context.Context) GetTcpSettingListDataArrayOutput
+}
+
+type GetTcpSettingListDataArray []GetTcpSettingListDataInput
+
+func (GetTcpSettingListDataArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetTcpSettingListData)(nil)).Elem()
+}
+
+func (i GetTcpSettingListDataArray) ToGetTcpSettingListDataArrayOutput() GetTcpSettingListDataArrayOutput {
+	return i.ToGetTcpSettingListDataArrayOutputWithContext(context.Background())
+}
+
+func (i GetTcpSettingListDataArray) ToGetTcpSettingListDataArrayOutputWithContext(ctx context.Context) GetTcpSettingListDataArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetTcpSettingListDataArrayOutput)
+}
+
+type GetTcpSettingListDataOutput struct{ *pulumi.OutputState }
+
+func (GetTcpSettingListDataOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetTcpSettingListData)(nil)).Elem()
+}
+
+func (o GetTcpSettingListDataOutput) ToGetTcpSettingListDataOutput() GetTcpSettingListDataOutput {
+	return o
+}
+
+func (o GetTcpSettingListDataOutput) ToGetTcpSettingListDataOutputWithContext(ctx context.Context) GetTcpSettingListDataOutput {
+	return o
+}
+
+// The device in which the resource is defined
+func (o GetTcpSettingListDataOutput) Device() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTcpSettingListData) string { return v.Device }).(pulumi.StringOutput)
+}
+
+// The folder in which the resource is defined
+func (o GetTcpSettingListDataOutput) Folder() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTcpSettingListData) string { return v.Folder }).(pulumi.StringOutput)
+}
+
+// UUID of the resource
+func (o GetTcpSettingListDataOutput) Id() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTcpSettingListData) string { return v.Id }).(pulumi.StringOutput)
+}
+
+// The snippet in which the resource is defined
+func (o GetTcpSettingListDataOutput) Snippet() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTcpSettingListData) string { return v.Snippet }).(pulumi.StringOutput)
+}
+
+// Tcp
+func (o GetTcpSettingListDataOutput) Tcp() GetTcpSettingListDataTcpOutput {
+	return o.ApplyT(func(v GetTcpSettingListData) GetTcpSettingListDataTcp { return v.Tcp }).(GetTcpSettingListDataTcpOutput)
+}
+
+// The Terraform ID.
+func (o GetTcpSettingListDataOutput) Tfid() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTcpSettingListData) string { return v.Tfid }).(pulumi.StringOutput)
+}
+
+type GetTcpSettingListDataArrayOutput struct{ *pulumi.OutputState }
+
+func (GetTcpSettingListDataArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetTcpSettingListData)(nil)).Elem()
+}
+
+func (o GetTcpSettingListDataArrayOutput) ToGetTcpSettingListDataArrayOutput() GetTcpSettingListDataArrayOutput {
+	return o
+}
+
+func (o GetTcpSettingListDataArrayOutput) ToGetTcpSettingListDataArrayOutputWithContext(ctx context.Context) GetTcpSettingListDataArrayOutput {
+	return o
+}
+
+func (o GetTcpSettingListDataArrayOutput) Index(i pulumi.IntInput) GetTcpSettingListDataOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetTcpSettingListData {
+		return vs[0].([]GetTcpSettingListData)[vs[1].(int)]
+	}).(GetTcpSettingListDataOutput)
+}
+
+type GetTcpSettingListDataTcp struct {
+	// Allow arbitrary ACK in response to SYN?
+	AllowChallengeAck bool `pulumi:"allowChallengeAck"`
+	// Asymmetric path action. Possible values are `drop` and `bypass`.
+	AsymmetricPath string `pulumi:"asymmetricPath"`
+	// Forward segments exceeding TCP out-of-order queue?
+	BypassExceedOoQueue bool `pulumi:"bypassExceedOoQueue"`
+	// Drop segments with null timestamp option?
+	CheckTimestampOption bool `pulumi:"checkTimestampOption"`
+	// Drop segments without flag?
+	DropZeroFlag bool `pulumi:"dropZeroFlag"`
+	// SIP TCP cleartext action (`'0'` = Always Off, `'1'` = Always Enabled, `'2'` = Automatically enable proxy when needed). Possible values are `0`, `2` and `3`.
+	SiptcpCleartextProxy string `pulumi:"siptcpCleartextProxy"`
+	// Strip MPTCP option?
+	StripMptcpOption bool `pulumi:"stripMptcpOption"`
+	// TCP retransmit scan?
+	TcpRetransmitScan bool `pulumi:"tcpRetransmitScan"`
+	// Urgent data flag action. Possible values are `clear` and `oobinline`.
+	UrgentData string `pulumi:"urgentData"`
+}
+
+// GetTcpSettingListDataTcpInput is an input type that accepts GetTcpSettingListDataTcpArgs and GetTcpSettingListDataTcpOutput values.
+// You can construct a concrete instance of `GetTcpSettingListDataTcpInput` via:
+//
+//	GetTcpSettingListDataTcpArgs{...}
+type GetTcpSettingListDataTcpInput interface {
+	pulumi.Input
+
+	ToGetTcpSettingListDataTcpOutput() GetTcpSettingListDataTcpOutput
+	ToGetTcpSettingListDataTcpOutputWithContext(context.Context) GetTcpSettingListDataTcpOutput
+}
+
+type GetTcpSettingListDataTcpArgs struct {
+	// Allow arbitrary ACK in response to SYN?
+	AllowChallengeAck pulumi.BoolInput `pulumi:"allowChallengeAck"`
+	// Asymmetric path action. Possible values are `drop` and `bypass`.
+	AsymmetricPath pulumi.StringInput `pulumi:"asymmetricPath"`
+	// Forward segments exceeding TCP out-of-order queue?
+	BypassExceedOoQueue pulumi.BoolInput `pulumi:"bypassExceedOoQueue"`
+	// Drop segments with null timestamp option?
+	CheckTimestampOption pulumi.BoolInput `pulumi:"checkTimestampOption"`
+	// Drop segments without flag?
+	DropZeroFlag pulumi.BoolInput `pulumi:"dropZeroFlag"`
+	// SIP TCP cleartext action (`'0'` = Always Off, `'1'` = Always Enabled, `'2'` = Automatically enable proxy when needed). Possible values are `0`, `2` and `3`.
+	SiptcpCleartextProxy pulumi.StringInput `pulumi:"siptcpCleartextProxy"`
+	// Strip MPTCP option?
+	StripMptcpOption pulumi.BoolInput `pulumi:"stripMptcpOption"`
+	// TCP retransmit scan?
+	TcpRetransmitScan pulumi.BoolInput `pulumi:"tcpRetransmitScan"`
+	// Urgent data flag action. Possible values are `clear` and `oobinline`.
+	UrgentData pulumi.StringInput `pulumi:"urgentData"`
+}
+
+func (GetTcpSettingListDataTcpArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetTcpSettingListDataTcp)(nil)).Elem()
+}
+
+func (i GetTcpSettingListDataTcpArgs) ToGetTcpSettingListDataTcpOutput() GetTcpSettingListDataTcpOutput {
+	return i.ToGetTcpSettingListDataTcpOutputWithContext(context.Background())
+}
+
+func (i GetTcpSettingListDataTcpArgs) ToGetTcpSettingListDataTcpOutputWithContext(ctx context.Context) GetTcpSettingListDataTcpOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetTcpSettingListDataTcpOutput)
+}
+
+type GetTcpSettingListDataTcpOutput struct{ *pulumi.OutputState }
+
+func (GetTcpSettingListDataTcpOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetTcpSettingListDataTcp)(nil)).Elem()
+}
+
+func (o GetTcpSettingListDataTcpOutput) ToGetTcpSettingListDataTcpOutput() GetTcpSettingListDataTcpOutput {
+	return o
+}
+
+func (o GetTcpSettingListDataTcpOutput) ToGetTcpSettingListDataTcpOutputWithContext(ctx context.Context) GetTcpSettingListDataTcpOutput {
+	return o
+}
+
+// Allow arbitrary ACK in response to SYN?
+func (o GetTcpSettingListDataTcpOutput) AllowChallengeAck() pulumi.BoolOutput {
+	return o.ApplyT(func(v GetTcpSettingListDataTcp) bool { return v.AllowChallengeAck }).(pulumi.BoolOutput)
+}
+
+// Asymmetric path action. Possible values are `drop` and `bypass`.
+func (o GetTcpSettingListDataTcpOutput) AsymmetricPath() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTcpSettingListDataTcp) string { return v.AsymmetricPath }).(pulumi.StringOutput)
+}
+
+// Forward segments exceeding TCP out-of-order queue?
+func (o GetTcpSettingListDataTcpOutput) BypassExceedOoQueue() pulumi.BoolOutput {
+	return o.ApplyT(func(v GetTcpSettingListDataTcp) bool { return v.BypassExceedOoQueue }).(pulumi.BoolOutput)
+}
+
+// Drop segments with null timestamp option?
+func (o GetTcpSettingListDataTcpOutput) CheckTimestampOption() pulumi.BoolOutput {
+	return o.ApplyT(func(v GetTcpSettingListDataTcp) bool { return v.CheckTimestampOption }).(pulumi.BoolOutput)
+}
+
+// Drop segments without flag?
+func (o GetTcpSettingListDataTcpOutput) DropZeroFlag() pulumi.BoolOutput {
+	return o.ApplyT(func(v GetTcpSettingListDataTcp) bool { return v.DropZeroFlag }).(pulumi.BoolOutput)
+}
+
+// SIP TCP cleartext action (`'0'` = Always Off, `'1'` = Always Enabled, `'2'` = Automatically enable proxy when needed). Possible values are `0`, `2` and `3`.
+func (o GetTcpSettingListDataTcpOutput) SiptcpCleartextProxy() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTcpSettingListDataTcp) string { return v.SiptcpCleartextProxy }).(pulumi.StringOutput)
+}
+
+// Strip MPTCP option?
+func (o GetTcpSettingListDataTcpOutput) StripMptcpOption() pulumi.BoolOutput {
+	return o.ApplyT(func(v GetTcpSettingListDataTcp) bool { return v.StripMptcpOption }).(pulumi.BoolOutput)
+}
+
+// TCP retransmit scan?
+func (o GetTcpSettingListDataTcpOutput) TcpRetransmitScan() pulumi.BoolOutput {
+	return o.ApplyT(func(v GetTcpSettingListDataTcp) bool { return v.TcpRetransmitScan }).(pulumi.BoolOutput)
+}
+
+// Urgent data flag action. Possible values are `clear` and `oobinline`.
+func (o GetTcpSettingListDataTcpOutput) UrgentData() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTcpSettingListDataTcp) string { return v.UrgentData }).(pulumi.StringOutput)
+}
+
+type GetTcpSettingTcp struct {
+	// Allow arbitrary ACK in response to SYN?
+	AllowChallengeAck bool `pulumi:"allowChallengeAck"`
+	// Asymmetric path action. Possible values are `drop` and `bypass`.
+	AsymmetricPath string `pulumi:"asymmetricPath"`
+	// Forward segments exceeding TCP out-of-order queue?
+	BypassExceedOoQueue bool `pulumi:"bypassExceedOoQueue"`
+	// Drop segments with null timestamp option?
+	CheckTimestampOption bool `pulumi:"checkTimestampOption"`
+	// Drop segments without flag?
+	DropZeroFlag bool `pulumi:"dropZeroFlag"`
+	// SIP TCP cleartext action (`'0'` = Always Off, `'1'` = Always Enabled, `'2'` = Automatically enable proxy when needed). Possible values are `0`, `2` and `3`.
+	SiptcpCleartextProxy string `pulumi:"siptcpCleartextProxy"`
+	// Strip MPTCP option?
+	StripMptcpOption bool `pulumi:"stripMptcpOption"`
+	// TCP retransmit scan?
+	TcpRetransmitScan bool `pulumi:"tcpRetransmitScan"`
+	// Urgent data flag action. Possible values are `clear` and `oobinline`.
+	UrgentData string `pulumi:"urgentData"`
+}
+
+// GetTcpSettingTcpInput is an input type that accepts GetTcpSettingTcpArgs and GetTcpSettingTcpOutput values.
+// You can construct a concrete instance of `GetTcpSettingTcpInput` via:
+//
+//	GetTcpSettingTcpArgs{...}
+type GetTcpSettingTcpInput interface {
+	pulumi.Input
+
+	ToGetTcpSettingTcpOutput() GetTcpSettingTcpOutput
+	ToGetTcpSettingTcpOutputWithContext(context.Context) GetTcpSettingTcpOutput
+}
+
+type GetTcpSettingTcpArgs struct {
+	// Allow arbitrary ACK in response to SYN?
+	AllowChallengeAck pulumi.BoolInput `pulumi:"allowChallengeAck"`
+	// Asymmetric path action. Possible values are `drop` and `bypass`.
+	AsymmetricPath pulumi.StringInput `pulumi:"asymmetricPath"`
+	// Forward segments exceeding TCP out-of-order queue?
+	BypassExceedOoQueue pulumi.BoolInput `pulumi:"bypassExceedOoQueue"`
+	// Drop segments with null timestamp option?
+	CheckTimestampOption pulumi.BoolInput `pulumi:"checkTimestampOption"`
+	// Drop segments without flag?
+	DropZeroFlag pulumi.BoolInput `pulumi:"dropZeroFlag"`
+	// SIP TCP cleartext action (`'0'` = Always Off, `'1'` = Always Enabled, `'2'` = Automatically enable proxy when needed). Possible values are `0`, `2` and `3`.
+	SiptcpCleartextProxy pulumi.StringInput `pulumi:"siptcpCleartextProxy"`
+	// Strip MPTCP option?
+	StripMptcpOption pulumi.BoolInput `pulumi:"stripMptcpOption"`
+	// TCP retransmit scan?
+	TcpRetransmitScan pulumi.BoolInput `pulumi:"tcpRetransmitScan"`
+	// Urgent data flag action. Possible values are `clear` and `oobinline`.
+	UrgentData pulumi.StringInput `pulumi:"urgentData"`
+}
+
+func (GetTcpSettingTcpArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetTcpSettingTcp)(nil)).Elem()
+}
+
+func (i GetTcpSettingTcpArgs) ToGetTcpSettingTcpOutput() GetTcpSettingTcpOutput {
+	return i.ToGetTcpSettingTcpOutputWithContext(context.Background())
+}
+
+func (i GetTcpSettingTcpArgs) ToGetTcpSettingTcpOutputWithContext(ctx context.Context) GetTcpSettingTcpOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetTcpSettingTcpOutput)
+}
+
+type GetTcpSettingTcpOutput struct{ *pulumi.OutputState }
+
+func (GetTcpSettingTcpOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetTcpSettingTcp)(nil)).Elem()
+}
+
+func (o GetTcpSettingTcpOutput) ToGetTcpSettingTcpOutput() GetTcpSettingTcpOutput {
+	return o
+}
+
+func (o GetTcpSettingTcpOutput) ToGetTcpSettingTcpOutputWithContext(ctx context.Context) GetTcpSettingTcpOutput {
+	return o
+}
+
+// Allow arbitrary ACK in response to SYN?
+func (o GetTcpSettingTcpOutput) AllowChallengeAck() pulumi.BoolOutput {
+	return o.ApplyT(func(v GetTcpSettingTcp) bool { return v.AllowChallengeAck }).(pulumi.BoolOutput)
+}
+
+// Asymmetric path action. Possible values are `drop` and `bypass`.
+func (o GetTcpSettingTcpOutput) AsymmetricPath() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTcpSettingTcp) string { return v.AsymmetricPath }).(pulumi.StringOutput)
+}
+
+// Forward segments exceeding TCP out-of-order queue?
+func (o GetTcpSettingTcpOutput) BypassExceedOoQueue() pulumi.BoolOutput {
+	return o.ApplyT(func(v GetTcpSettingTcp) bool { return v.BypassExceedOoQueue }).(pulumi.BoolOutput)
+}
+
+// Drop segments with null timestamp option?
+func (o GetTcpSettingTcpOutput) CheckTimestampOption() pulumi.BoolOutput {
+	return o.ApplyT(func(v GetTcpSettingTcp) bool { return v.CheckTimestampOption }).(pulumi.BoolOutput)
+}
+
+// Drop segments without flag?
+func (o GetTcpSettingTcpOutput) DropZeroFlag() pulumi.BoolOutput {
+	return o.ApplyT(func(v GetTcpSettingTcp) bool { return v.DropZeroFlag }).(pulumi.BoolOutput)
+}
+
+// SIP TCP cleartext action (`'0'` = Always Off, `'1'` = Always Enabled, `'2'` = Automatically enable proxy when needed). Possible values are `0`, `2` and `3`.
+func (o GetTcpSettingTcpOutput) SiptcpCleartextProxy() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTcpSettingTcp) string { return v.SiptcpCleartextProxy }).(pulumi.StringOutput)
+}
+
+// Strip MPTCP option?
+func (o GetTcpSettingTcpOutput) StripMptcpOption() pulumi.BoolOutput {
+	return o.ApplyT(func(v GetTcpSettingTcp) bool { return v.StripMptcpOption }).(pulumi.BoolOutput)
+}
+
+// TCP retransmit scan?
+func (o GetTcpSettingTcpOutput) TcpRetransmitScan() pulumi.BoolOutput {
+	return o.ApplyT(func(v GetTcpSettingTcp) bool { return v.TcpRetransmitScan }).(pulumi.BoolOutput)
+}
+
+// Urgent data flag action. Possible values are `clear` and `oobinline`.
+func (o GetTcpSettingTcpOutput) UrgentData() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTcpSettingTcp) string { return v.UrgentData }).(pulumi.StringOutput)
+}
+
+type GetTlsServiceProfileListData struct {
+	// Certificate name
+	Certificate string `pulumi:"certificate"`
+	// The device in which the resource is defined
+	Device string `pulumi:"device"`
+	// The folder in which the resource is defined
+	Folder string `pulumi:"folder"`
+	// The UUID of the TLS service profile
+	Id string `pulumi:"id"`
+	// TLS service profile name. The value is `muCustomDomainSSLProfile` when it is used on mobile-agent infra settings.
+	Name string `pulumi:"name"`
+	// Protocol settings
+	ProtocolSettings GetTlsServiceProfileListDataProtocolSettings `pulumi:"protocolSettings"`
+	// The snippet in which the resource is defined
+	Snippet string `pulumi:"snippet"`
+	// The Terraform ID.
+	Tfid string `pulumi:"tfid"`
+}
+
+// GetTlsServiceProfileListDataInput is an input type that accepts GetTlsServiceProfileListDataArgs and GetTlsServiceProfileListDataOutput values.
+// You can construct a concrete instance of `GetTlsServiceProfileListDataInput` via:
+//
+//	GetTlsServiceProfileListDataArgs{...}
+type GetTlsServiceProfileListDataInput interface {
+	pulumi.Input
+
+	ToGetTlsServiceProfileListDataOutput() GetTlsServiceProfileListDataOutput
+	ToGetTlsServiceProfileListDataOutputWithContext(context.Context) GetTlsServiceProfileListDataOutput
+}
+
+type GetTlsServiceProfileListDataArgs struct {
+	// Certificate name
+	Certificate pulumi.StringInput `pulumi:"certificate"`
+	// The device in which the resource is defined
+	Device pulumi.StringInput `pulumi:"device"`
+	// The folder in which the resource is defined
+	Folder pulumi.StringInput `pulumi:"folder"`
+	// The UUID of the TLS service profile
+	Id pulumi.StringInput `pulumi:"id"`
+	// TLS service profile name. The value is `muCustomDomainSSLProfile` when it is used on mobile-agent infra settings.
+	Name pulumi.StringInput `pulumi:"name"`
+	// Protocol settings
+	ProtocolSettings GetTlsServiceProfileListDataProtocolSettingsInput `pulumi:"protocolSettings"`
+	// The snippet in which the resource is defined
+	Snippet pulumi.StringInput `pulumi:"snippet"`
+	// The Terraform ID.
+	Tfid pulumi.StringInput `pulumi:"tfid"`
+}
+
+func (GetTlsServiceProfileListDataArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetTlsServiceProfileListData)(nil)).Elem()
+}
+
+func (i GetTlsServiceProfileListDataArgs) ToGetTlsServiceProfileListDataOutput() GetTlsServiceProfileListDataOutput {
+	return i.ToGetTlsServiceProfileListDataOutputWithContext(context.Background())
+}
+
+func (i GetTlsServiceProfileListDataArgs) ToGetTlsServiceProfileListDataOutputWithContext(ctx context.Context) GetTlsServiceProfileListDataOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetTlsServiceProfileListDataOutput)
+}
+
+// GetTlsServiceProfileListDataArrayInput is an input type that accepts GetTlsServiceProfileListDataArray and GetTlsServiceProfileListDataArrayOutput values.
+// You can construct a concrete instance of `GetTlsServiceProfileListDataArrayInput` via:
+//
+//	GetTlsServiceProfileListDataArray{ GetTlsServiceProfileListDataArgs{...} }
+type GetTlsServiceProfileListDataArrayInput interface {
+	pulumi.Input
+
+	ToGetTlsServiceProfileListDataArrayOutput() GetTlsServiceProfileListDataArrayOutput
+	ToGetTlsServiceProfileListDataArrayOutputWithContext(context.Context) GetTlsServiceProfileListDataArrayOutput
+}
+
+type GetTlsServiceProfileListDataArray []GetTlsServiceProfileListDataInput
+
+func (GetTlsServiceProfileListDataArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetTlsServiceProfileListData)(nil)).Elem()
+}
+
+func (i GetTlsServiceProfileListDataArray) ToGetTlsServiceProfileListDataArrayOutput() GetTlsServiceProfileListDataArrayOutput {
+	return i.ToGetTlsServiceProfileListDataArrayOutputWithContext(context.Background())
+}
+
+func (i GetTlsServiceProfileListDataArray) ToGetTlsServiceProfileListDataArrayOutputWithContext(ctx context.Context) GetTlsServiceProfileListDataArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetTlsServiceProfileListDataArrayOutput)
+}
+
+type GetTlsServiceProfileListDataOutput struct{ *pulumi.OutputState }
+
+func (GetTlsServiceProfileListDataOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetTlsServiceProfileListData)(nil)).Elem()
+}
+
+func (o GetTlsServiceProfileListDataOutput) ToGetTlsServiceProfileListDataOutput() GetTlsServiceProfileListDataOutput {
+	return o
+}
+
+func (o GetTlsServiceProfileListDataOutput) ToGetTlsServiceProfileListDataOutputWithContext(ctx context.Context) GetTlsServiceProfileListDataOutput {
+	return o
+}
+
+// Certificate name
+func (o GetTlsServiceProfileListDataOutput) Certificate() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTlsServiceProfileListData) string { return v.Certificate }).(pulumi.StringOutput)
+}
+
+// The device in which the resource is defined
+func (o GetTlsServiceProfileListDataOutput) Device() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTlsServiceProfileListData) string { return v.Device }).(pulumi.StringOutput)
+}
+
+// The folder in which the resource is defined
+func (o GetTlsServiceProfileListDataOutput) Folder() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTlsServiceProfileListData) string { return v.Folder }).(pulumi.StringOutput)
+}
+
+// The UUID of the TLS service profile
+func (o GetTlsServiceProfileListDataOutput) Id() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTlsServiceProfileListData) string { return v.Id }).(pulumi.StringOutput)
+}
+
+// TLS service profile name. The value is `muCustomDomainSSLProfile` when it is used on mobile-agent infra settings.
+func (o GetTlsServiceProfileListDataOutput) Name() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTlsServiceProfileListData) string { return v.Name }).(pulumi.StringOutput)
+}
+
+// Protocol settings
+func (o GetTlsServiceProfileListDataOutput) ProtocolSettings() GetTlsServiceProfileListDataProtocolSettingsOutput {
+	return o.ApplyT(func(v GetTlsServiceProfileListData) GetTlsServiceProfileListDataProtocolSettings {
+		return v.ProtocolSettings
+	}).(GetTlsServiceProfileListDataProtocolSettingsOutput)
+}
+
+// The snippet in which the resource is defined
+func (o GetTlsServiceProfileListDataOutput) Snippet() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTlsServiceProfileListData) string { return v.Snippet }).(pulumi.StringOutput)
+}
+
+// The Terraform ID.
+func (o GetTlsServiceProfileListDataOutput) Tfid() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTlsServiceProfileListData) string { return v.Tfid }).(pulumi.StringOutput)
+}
+
+type GetTlsServiceProfileListDataArrayOutput struct{ *pulumi.OutputState }
+
+func (GetTlsServiceProfileListDataArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetTlsServiceProfileListData)(nil)).Elem()
+}
+
+func (o GetTlsServiceProfileListDataArrayOutput) ToGetTlsServiceProfileListDataArrayOutput() GetTlsServiceProfileListDataArrayOutput {
+	return o
+}
+
+func (o GetTlsServiceProfileListDataArrayOutput) ToGetTlsServiceProfileListDataArrayOutputWithContext(ctx context.Context) GetTlsServiceProfileListDataArrayOutput {
+	return o
+}
+
+func (o GetTlsServiceProfileListDataArrayOutput) Index(i pulumi.IntInput) GetTlsServiceProfileListDataOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetTlsServiceProfileListData {
+		return vs[0].([]GetTlsServiceProfileListData)[vs[1].(int)]
+	}).(GetTlsServiceProfileListDataOutput)
+}
+
+type GetTlsServiceProfileListDataProtocolSettings struct {
+	// Allow SHA1 authentication?
+	AuthAlgoSha1 bool `pulumi:"authAlgoSha1"`
+	// Allow SHA256 authentication?
+	AuthAlgoSha256 bool `pulumi:"authAlgoSha256"`
+	// Allow SHA384 authentication?
+	AuthAlgoSha384 bool `pulumi:"authAlgoSha384"`
+	// Allow AES-128-CBC algorithm?
+	EncAlgoAes128Cbc bool `pulumi:"encAlgoAes128Cbc"`
+	// Allow AES-128-GCM algorithm?
+	EncAlgoAes128Gcm bool `pulumi:"encAlgoAes128Gcm"`
+	// Allow AES-256-CBC algorithm?
+	EncAlgoAes256Cbc bool `pulumi:"encAlgoAes256Cbc"`
+	// Allow algorithm AES-256-GCM
+	EncAlgoAes256Gcm bool `pulumi:"encAlgoAes256Gcm"`
+	// Allow DHE algorithm?
+	KeyxchgAlgoDhe bool `pulumi:"keyxchgAlgoDhe"`
+	// Allow ECDHE algorithm?
+	KeyxchgAlgoEcdhe bool `pulumi:"keyxchgAlgoEcdhe"`
+	// Allow RSA algorithm?
+	KeyxchgAlgoRsa bool `pulumi:"keyxchgAlgoRsa"`
+	// Maximum TLS version. Possible values are `tls1-0`, `tls1-1`, `tls1-2` and `tls1-3`.
+	MaxVersion string `pulumi:"maxVersion"`
+	// Minimum TLS version. Possible values are `tls1-0`, `tls1-1`, `tls1-2` and `tls1-3`.
+	MinVersion string `pulumi:"minVersion"`
+}
+
+// GetTlsServiceProfileListDataProtocolSettingsInput is an input type that accepts GetTlsServiceProfileListDataProtocolSettingsArgs and GetTlsServiceProfileListDataProtocolSettingsOutput values.
+// You can construct a concrete instance of `GetTlsServiceProfileListDataProtocolSettingsInput` via:
+//
+//	GetTlsServiceProfileListDataProtocolSettingsArgs{...}
+type GetTlsServiceProfileListDataProtocolSettingsInput interface {
+	pulumi.Input
+
+	ToGetTlsServiceProfileListDataProtocolSettingsOutput() GetTlsServiceProfileListDataProtocolSettingsOutput
+	ToGetTlsServiceProfileListDataProtocolSettingsOutputWithContext(context.Context) GetTlsServiceProfileListDataProtocolSettingsOutput
+}
+
+type GetTlsServiceProfileListDataProtocolSettingsArgs struct {
+	// Allow SHA1 authentication?
+	AuthAlgoSha1 pulumi.BoolInput `pulumi:"authAlgoSha1"`
+	// Allow SHA256 authentication?
+	AuthAlgoSha256 pulumi.BoolInput `pulumi:"authAlgoSha256"`
+	// Allow SHA384 authentication?
+	AuthAlgoSha384 pulumi.BoolInput `pulumi:"authAlgoSha384"`
+	// Allow AES-128-CBC algorithm?
+	EncAlgoAes128Cbc pulumi.BoolInput `pulumi:"encAlgoAes128Cbc"`
+	// Allow AES-128-GCM algorithm?
+	EncAlgoAes128Gcm pulumi.BoolInput `pulumi:"encAlgoAes128Gcm"`
+	// Allow AES-256-CBC algorithm?
+	EncAlgoAes256Cbc pulumi.BoolInput `pulumi:"encAlgoAes256Cbc"`
+	// Allow algorithm AES-256-GCM
+	EncAlgoAes256Gcm pulumi.BoolInput `pulumi:"encAlgoAes256Gcm"`
+	// Allow DHE algorithm?
+	KeyxchgAlgoDhe pulumi.BoolInput `pulumi:"keyxchgAlgoDhe"`
+	// Allow ECDHE algorithm?
+	KeyxchgAlgoEcdhe pulumi.BoolInput `pulumi:"keyxchgAlgoEcdhe"`
+	// Allow RSA algorithm?
+	KeyxchgAlgoRsa pulumi.BoolInput `pulumi:"keyxchgAlgoRsa"`
+	// Maximum TLS version. Possible values are `tls1-0`, `tls1-1`, `tls1-2` and `tls1-3`.
+	MaxVersion pulumi.StringInput `pulumi:"maxVersion"`
+	// Minimum TLS version. Possible values are `tls1-0`, `tls1-1`, `tls1-2` and `tls1-3`.
+	MinVersion pulumi.StringInput `pulumi:"minVersion"`
+}
+
+func (GetTlsServiceProfileListDataProtocolSettingsArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetTlsServiceProfileListDataProtocolSettings)(nil)).Elem()
+}
+
+func (i GetTlsServiceProfileListDataProtocolSettingsArgs) ToGetTlsServiceProfileListDataProtocolSettingsOutput() GetTlsServiceProfileListDataProtocolSettingsOutput {
+	return i.ToGetTlsServiceProfileListDataProtocolSettingsOutputWithContext(context.Background())
+}
+
+func (i GetTlsServiceProfileListDataProtocolSettingsArgs) ToGetTlsServiceProfileListDataProtocolSettingsOutputWithContext(ctx context.Context) GetTlsServiceProfileListDataProtocolSettingsOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetTlsServiceProfileListDataProtocolSettingsOutput)
+}
+
+type GetTlsServiceProfileListDataProtocolSettingsOutput struct{ *pulumi.OutputState }
+
+func (GetTlsServiceProfileListDataProtocolSettingsOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetTlsServiceProfileListDataProtocolSettings)(nil)).Elem()
+}
+
+func (o GetTlsServiceProfileListDataProtocolSettingsOutput) ToGetTlsServiceProfileListDataProtocolSettingsOutput() GetTlsServiceProfileListDataProtocolSettingsOutput {
+	return o
+}
+
+func (o GetTlsServiceProfileListDataProtocolSettingsOutput) ToGetTlsServiceProfileListDataProtocolSettingsOutputWithContext(ctx context.Context) GetTlsServiceProfileListDataProtocolSettingsOutput {
+	return o
+}
+
+// Allow SHA1 authentication?
+func (o GetTlsServiceProfileListDataProtocolSettingsOutput) AuthAlgoSha1() pulumi.BoolOutput {
+	return o.ApplyT(func(v GetTlsServiceProfileListDataProtocolSettings) bool { return v.AuthAlgoSha1 }).(pulumi.BoolOutput)
+}
+
+// Allow SHA256 authentication?
+func (o GetTlsServiceProfileListDataProtocolSettingsOutput) AuthAlgoSha256() pulumi.BoolOutput {
+	return o.ApplyT(func(v GetTlsServiceProfileListDataProtocolSettings) bool { return v.AuthAlgoSha256 }).(pulumi.BoolOutput)
+}
+
+// Allow SHA384 authentication?
+func (o GetTlsServiceProfileListDataProtocolSettingsOutput) AuthAlgoSha384() pulumi.BoolOutput {
+	return o.ApplyT(func(v GetTlsServiceProfileListDataProtocolSettings) bool { return v.AuthAlgoSha384 }).(pulumi.BoolOutput)
+}
+
+// Allow AES-128-CBC algorithm?
+func (o GetTlsServiceProfileListDataProtocolSettingsOutput) EncAlgoAes128Cbc() pulumi.BoolOutput {
+	return o.ApplyT(func(v GetTlsServiceProfileListDataProtocolSettings) bool { return v.EncAlgoAes128Cbc }).(pulumi.BoolOutput)
+}
+
+// Allow AES-128-GCM algorithm?
+func (o GetTlsServiceProfileListDataProtocolSettingsOutput) EncAlgoAes128Gcm() pulumi.BoolOutput {
+	return o.ApplyT(func(v GetTlsServiceProfileListDataProtocolSettings) bool { return v.EncAlgoAes128Gcm }).(pulumi.BoolOutput)
+}
+
+// Allow AES-256-CBC algorithm?
+func (o GetTlsServiceProfileListDataProtocolSettingsOutput) EncAlgoAes256Cbc() pulumi.BoolOutput {
+	return o.ApplyT(func(v GetTlsServiceProfileListDataProtocolSettings) bool { return v.EncAlgoAes256Cbc }).(pulumi.BoolOutput)
+}
+
+// Allow algorithm AES-256-GCM
+func (o GetTlsServiceProfileListDataProtocolSettingsOutput) EncAlgoAes256Gcm() pulumi.BoolOutput {
+	return o.ApplyT(func(v GetTlsServiceProfileListDataProtocolSettings) bool { return v.EncAlgoAes256Gcm }).(pulumi.BoolOutput)
+}
+
+// Allow DHE algorithm?
+func (o GetTlsServiceProfileListDataProtocolSettingsOutput) KeyxchgAlgoDhe() pulumi.BoolOutput {
+	return o.ApplyT(func(v GetTlsServiceProfileListDataProtocolSettings) bool { return v.KeyxchgAlgoDhe }).(pulumi.BoolOutput)
+}
+
+// Allow ECDHE algorithm?
+func (o GetTlsServiceProfileListDataProtocolSettingsOutput) KeyxchgAlgoEcdhe() pulumi.BoolOutput {
+	return o.ApplyT(func(v GetTlsServiceProfileListDataProtocolSettings) bool { return v.KeyxchgAlgoEcdhe }).(pulumi.BoolOutput)
+}
+
+// Allow RSA algorithm?
+func (o GetTlsServiceProfileListDataProtocolSettingsOutput) KeyxchgAlgoRsa() pulumi.BoolOutput {
+	return o.ApplyT(func(v GetTlsServiceProfileListDataProtocolSettings) bool { return v.KeyxchgAlgoRsa }).(pulumi.BoolOutput)
+}
+
+// Maximum TLS version. Possible values are `tls1-0`, `tls1-1`, `tls1-2` and `tls1-3`.
+func (o GetTlsServiceProfileListDataProtocolSettingsOutput) MaxVersion() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTlsServiceProfileListDataProtocolSettings) string { return v.MaxVersion }).(pulumi.StringOutput)
+}
+
+// Minimum TLS version. Possible values are `tls1-0`, `tls1-1`, `tls1-2` and `tls1-3`.
+func (o GetTlsServiceProfileListDataProtocolSettingsOutput) MinVersion() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTlsServiceProfileListDataProtocolSettings) string { return v.MinVersion }).(pulumi.StringOutput)
+}
+
+type GetTlsServiceProfileProtocolSettings struct {
+	// Allow SHA1 authentication?
+	AuthAlgoSha1 bool `pulumi:"authAlgoSha1"`
+	// Allow SHA256 authentication?
+	AuthAlgoSha256 bool `pulumi:"authAlgoSha256"`
+	// Allow SHA384 authentication?
+	AuthAlgoSha384 bool `pulumi:"authAlgoSha384"`
+	// Allow AES-128-CBC algorithm?
+	EncAlgoAes128Cbc bool `pulumi:"encAlgoAes128Cbc"`
+	// Allow AES-128-GCM algorithm?
+	EncAlgoAes128Gcm bool `pulumi:"encAlgoAes128Gcm"`
+	// Allow AES-256-CBC algorithm?
+	EncAlgoAes256Cbc bool `pulumi:"encAlgoAes256Cbc"`
+	// Allow algorithm AES-256-GCM
+	EncAlgoAes256Gcm bool `pulumi:"encAlgoAes256Gcm"`
+	// Allow DHE algorithm?
+	KeyxchgAlgoDhe bool `pulumi:"keyxchgAlgoDhe"`
+	// Allow ECDHE algorithm?
+	KeyxchgAlgoEcdhe bool `pulumi:"keyxchgAlgoEcdhe"`
+	// Allow RSA algorithm?
+	KeyxchgAlgoRsa bool `pulumi:"keyxchgAlgoRsa"`
+	// Maximum TLS version. Possible values are `tls1-0`, `tls1-1`, `tls1-2` and `tls1-3`.
+	MaxVersion string `pulumi:"maxVersion"`
+	// Minimum TLS version. Possible values are `tls1-0`, `tls1-1`, `tls1-2` and `tls1-3`.
+	MinVersion string `pulumi:"minVersion"`
+}
+
+// GetTlsServiceProfileProtocolSettingsInput is an input type that accepts GetTlsServiceProfileProtocolSettingsArgs and GetTlsServiceProfileProtocolSettingsOutput values.
+// You can construct a concrete instance of `GetTlsServiceProfileProtocolSettingsInput` via:
+//
+//	GetTlsServiceProfileProtocolSettingsArgs{...}
+type GetTlsServiceProfileProtocolSettingsInput interface {
+	pulumi.Input
+
+	ToGetTlsServiceProfileProtocolSettingsOutput() GetTlsServiceProfileProtocolSettingsOutput
+	ToGetTlsServiceProfileProtocolSettingsOutputWithContext(context.Context) GetTlsServiceProfileProtocolSettingsOutput
+}
+
+type GetTlsServiceProfileProtocolSettingsArgs struct {
+	// Allow SHA1 authentication?
+	AuthAlgoSha1 pulumi.BoolInput `pulumi:"authAlgoSha1"`
+	// Allow SHA256 authentication?
+	AuthAlgoSha256 pulumi.BoolInput `pulumi:"authAlgoSha256"`
+	// Allow SHA384 authentication?
+	AuthAlgoSha384 pulumi.BoolInput `pulumi:"authAlgoSha384"`
+	// Allow AES-128-CBC algorithm?
+	EncAlgoAes128Cbc pulumi.BoolInput `pulumi:"encAlgoAes128Cbc"`
+	// Allow AES-128-GCM algorithm?
+	EncAlgoAes128Gcm pulumi.BoolInput `pulumi:"encAlgoAes128Gcm"`
+	// Allow AES-256-CBC algorithm?
+	EncAlgoAes256Cbc pulumi.BoolInput `pulumi:"encAlgoAes256Cbc"`
+	// Allow algorithm AES-256-GCM
+	EncAlgoAes256Gcm pulumi.BoolInput `pulumi:"encAlgoAes256Gcm"`
+	// Allow DHE algorithm?
+	KeyxchgAlgoDhe pulumi.BoolInput `pulumi:"keyxchgAlgoDhe"`
+	// Allow ECDHE algorithm?
+	KeyxchgAlgoEcdhe pulumi.BoolInput `pulumi:"keyxchgAlgoEcdhe"`
+	// Allow RSA algorithm?
+	KeyxchgAlgoRsa pulumi.BoolInput `pulumi:"keyxchgAlgoRsa"`
+	// Maximum TLS version. Possible values are `tls1-0`, `tls1-1`, `tls1-2` and `tls1-3`.
+	MaxVersion pulumi.StringInput `pulumi:"maxVersion"`
+	// Minimum TLS version. Possible values are `tls1-0`, `tls1-1`, `tls1-2` and `tls1-3`.
+	MinVersion pulumi.StringInput `pulumi:"minVersion"`
+}
+
+func (GetTlsServiceProfileProtocolSettingsArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetTlsServiceProfileProtocolSettings)(nil)).Elem()
+}
+
+func (i GetTlsServiceProfileProtocolSettingsArgs) ToGetTlsServiceProfileProtocolSettingsOutput() GetTlsServiceProfileProtocolSettingsOutput {
+	return i.ToGetTlsServiceProfileProtocolSettingsOutputWithContext(context.Background())
+}
+
+func (i GetTlsServiceProfileProtocolSettingsArgs) ToGetTlsServiceProfileProtocolSettingsOutputWithContext(ctx context.Context) GetTlsServiceProfileProtocolSettingsOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetTlsServiceProfileProtocolSettingsOutput)
+}
+
+type GetTlsServiceProfileProtocolSettingsOutput struct{ *pulumi.OutputState }
+
+func (GetTlsServiceProfileProtocolSettingsOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetTlsServiceProfileProtocolSettings)(nil)).Elem()
+}
+
+func (o GetTlsServiceProfileProtocolSettingsOutput) ToGetTlsServiceProfileProtocolSettingsOutput() GetTlsServiceProfileProtocolSettingsOutput {
+	return o
+}
+
+func (o GetTlsServiceProfileProtocolSettingsOutput) ToGetTlsServiceProfileProtocolSettingsOutputWithContext(ctx context.Context) GetTlsServiceProfileProtocolSettingsOutput {
+	return o
+}
+
+// Allow SHA1 authentication?
+func (o GetTlsServiceProfileProtocolSettingsOutput) AuthAlgoSha1() pulumi.BoolOutput {
+	return o.ApplyT(func(v GetTlsServiceProfileProtocolSettings) bool { return v.AuthAlgoSha1 }).(pulumi.BoolOutput)
+}
+
+// Allow SHA256 authentication?
+func (o GetTlsServiceProfileProtocolSettingsOutput) AuthAlgoSha256() pulumi.BoolOutput {
+	return o.ApplyT(func(v GetTlsServiceProfileProtocolSettings) bool { return v.AuthAlgoSha256 }).(pulumi.BoolOutput)
+}
+
+// Allow SHA384 authentication?
+func (o GetTlsServiceProfileProtocolSettingsOutput) AuthAlgoSha384() pulumi.BoolOutput {
+	return o.ApplyT(func(v GetTlsServiceProfileProtocolSettings) bool { return v.AuthAlgoSha384 }).(pulumi.BoolOutput)
+}
+
+// Allow AES-128-CBC algorithm?
+func (o GetTlsServiceProfileProtocolSettingsOutput) EncAlgoAes128Cbc() pulumi.BoolOutput {
+	return o.ApplyT(func(v GetTlsServiceProfileProtocolSettings) bool { return v.EncAlgoAes128Cbc }).(pulumi.BoolOutput)
+}
+
+// Allow AES-128-GCM algorithm?
+func (o GetTlsServiceProfileProtocolSettingsOutput) EncAlgoAes128Gcm() pulumi.BoolOutput {
+	return o.ApplyT(func(v GetTlsServiceProfileProtocolSettings) bool { return v.EncAlgoAes128Gcm }).(pulumi.BoolOutput)
+}
+
+// Allow AES-256-CBC algorithm?
+func (o GetTlsServiceProfileProtocolSettingsOutput) EncAlgoAes256Cbc() pulumi.BoolOutput {
+	return o.ApplyT(func(v GetTlsServiceProfileProtocolSettings) bool { return v.EncAlgoAes256Cbc }).(pulumi.BoolOutput)
+}
+
+// Allow algorithm AES-256-GCM
+func (o GetTlsServiceProfileProtocolSettingsOutput) EncAlgoAes256Gcm() pulumi.BoolOutput {
+	return o.ApplyT(func(v GetTlsServiceProfileProtocolSettings) bool { return v.EncAlgoAes256Gcm }).(pulumi.BoolOutput)
+}
+
+// Allow DHE algorithm?
+func (o GetTlsServiceProfileProtocolSettingsOutput) KeyxchgAlgoDhe() pulumi.BoolOutput {
+	return o.ApplyT(func(v GetTlsServiceProfileProtocolSettings) bool { return v.KeyxchgAlgoDhe }).(pulumi.BoolOutput)
+}
+
+// Allow ECDHE algorithm?
+func (o GetTlsServiceProfileProtocolSettingsOutput) KeyxchgAlgoEcdhe() pulumi.BoolOutput {
+	return o.ApplyT(func(v GetTlsServiceProfileProtocolSettings) bool { return v.KeyxchgAlgoEcdhe }).(pulumi.BoolOutput)
+}
+
+// Allow RSA algorithm?
+func (o GetTlsServiceProfileProtocolSettingsOutput) KeyxchgAlgoRsa() pulumi.BoolOutput {
+	return o.ApplyT(func(v GetTlsServiceProfileProtocolSettings) bool { return v.KeyxchgAlgoRsa }).(pulumi.BoolOutput)
+}
+
+// Maximum TLS version. Possible values are `tls1-0`, `tls1-1`, `tls1-2` and `tls1-3`.
+func (o GetTlsServiceProfileProtocolSettingsOutput) MaxVersion() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTlsServiceProfileProtocolSettings) string { return v.MaxVersion }).(pulumi.StringOutput)
+}
+
+// Minimum TLS version. Possible values are `tls1-0`, `tls1-1`, `tls1-2` and `tls1-3`.
+func (o GetTlsServiceProfileProtocolSettingsOutput) MinVersion() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTlsServiceProfileProtocolSettings) string { return v.MinVersion }).(pulumi.StringOutput)
+}
+
+type GetTrafficSteeringRuleAction struct {
+	// Forward
+	Forward GetTrafficSteeringRuleActionForward `pulumi:"forward"`
+}
+
+// GetTrafficSteeringRuleActionInput is an input type that accepts GetTrafficSteeringRuleActionArgs and GetTrafficSteeringRuleActionOutput values.
+// You can construct a concrete instance of `GetTrafficSteeringRuleActionInput` via:
+//
+//	GetTrafficSteeringRuleActionArgs{...}
+type GetTrafficSteeringRuleActionInput interface {
+	pulumi.Input
+
+	ToGetTrafficSteeringRuleActionOutput() GetTrafficSteeringRuleActionOutput
+	ToGetTrafficSteeringRuleActionOutputWithContext(context.Context) GetTrafficSteeringRuleActionOutput
+}
+
+type GetTrafficSteeringRuleActionArgs struct {
+	// Forward
+	Forward GetTrafficSteeringRuleActionForwardInput `pulumi:"forward"`
+}
+
+func (GetTrafficSteeringRuleActionArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetTrafficSteeringRuleAction)(nil)).Elem()
+}
+
+func (i GetTrafficSteeringRuleActionArgs) ToGetTrafficSteeringRuleActionOutput() GetTrafficSteeringRuleActionOutput {
+	return i.ToGetTrafficSteeringRuleActionOutputWithContext(context.Background())
+}
+
+func (i GetTrafficSteeringRuleActionArgs) ToGetTrafficSteeringRuleActionOutputWithContext(ctx context.Context) GetTrafficSteeringRuleActionOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetTrafficSteeringRuleActionOutput)
+}
+
+type GetTrafficSteeringRuleActionOutput struct{ *pulumi.OutputState }
+
+func (GetTrafficSteeringRuleActionOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetTrafficSteeringRuleAction)(nil)).Elem()
+}
+
+func (o GetTrafficSteeringRuleActionOutput) ToGetTrafficSteeringRuleActionOutput() GetTrafficSteeringRuleActionOutput {
+	return o
+}
+
+func (o GetTrafficSteeringRuleActionOutput) ToGetTrafficSteeringRuleActionOutputWithContext(ctx context.Context) GetTrafficSteeringRuleActionOutput {
+	return o
+}
+
+// Forward
+func (o GetTrafficSteeringRuleActionOutput) Forward() GetTrafficSteeringRuleActionForwardOutput {
+	return o.ApplyT(func(v GetTrafficSteeringRuleAction) GetTrafficSteeringRuleActionForward { return v.Forward }).(GetTrafficSteeringRuleActionForwardOutput)
+}
+
+type GetTrafficSteeringRuleActionForward struct {
+	// Forward
+	Forward GetTrafficSteeringRuleActionForwardForward `pulumi:"forward"`
+	// No pbf
+	NoPbf GetTrafficSteeringRuleActionForwardNoPbf `pulumi:"noPbf"`
+}
+
+// GetTrafficSteeringRuleActionForwardInput is an input type that accepts GetTrafficSteeringRuleActionForwardArgs and GetTrafficSteeringRuleActionForwardOutput values.
+// You can construct a concrete instance of `GetTrafficSteeringRuleActionForwardInput` via:
+//
+//	GetTrafficSteeringRuleActionForwardArgs{...}
+type GetTrafficSteeringRuleActionForwardInput interface {
+	pulumi.Input
+
+	ToGetTrafficSteeringRuleActionForwardOutput() GetTrafficSteeringRuleActionForwardOutput
+	ToGetTrafficSteeringRuleActionForwardOutputWithContext(context.Context) GetTrafficSteeringRuleActionForwardOutput
+}
+
+type GetTrafficSteeringRuleActionForwardArgs struct {
+	// Forward
+	Forward GetTrafficSteeringRuleActionForwardForwardInput `pulumi:"forward"`
+	// No pbf
+	NoPbf GetTrafficSteeringRuleActionForwardNoPbfInput `pulumi:"noPbf"`
+}
+
+func (GetTrafficSteeringRuleActionForwardArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetTrafficSteeringRuleActionForward)(nil)).Elem()
+}
+
+func (i GetTrafficSteeringRuleActionForwardArgs) ToGetTrafficSteeringRuleActionForwardOutput() GetTrafficSteeringRuleActionForwardOutput {
+	return i.ToGetTrafficSteeringRuleActionForwardOutputWithContext(context.Background())
+}
+
+func (i GetTrafficSteeringRuleActionForwardArgs) ToGetTrafficSteeringRuleActionForwardOutputWithContext(ctx context.Context) GetTrafficSteeringRuleActionForwardOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetTrafficSteeringRuleActionForwardOutput)
+}
+
+type GetTrafficSteeringRuleActionForwardOutput struct{ *pulumi.OutputState }
+
+func (GetTrafficSteeringRuleActionForwardOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetTrafficSteeringRuleActionForward)(nil)).Elem()
+}
+
+func (o GetTrafficSteeringRuleActionForwardOutput) ToGetTrafficSteeringRuleActionForwardOutput() GetTrafficSteeringRuleActionForwardOutput {
+	return o
+}
+
+func (o GetTrafficSteeringRuleActionForwardOutput) ToGetTrafficSteeringRuleActionForwardOutputWithContext(ctx context.Context) GetTrafficSteeringRuleActionForwardOutput {
+	return o
+}
+
+// Forward
+func (o GetTrafficSteeringRuleActionForwardOutput) Forward() GetTrafficSteeringRuleActionForwardForwardOutput {
+	return o.ApplyT(func(v GetTrafficSteeringRuleActionForward) GetTrafficSteeringRuleActionForwardForward {
+		return v.Forward
+	}).(GetTrafficSteeringRuleActionForwardForwardOutput)
+}
+
+// No pbf
+func (o GetTrafficSteeringRuleActionForwardOutput) NoPbf() GetTrafficSteeringRuleActionForwardNoPbfOutput {
+	return o.ApplyT(func(v GetTrafficSteeringRuleActionForward) GetTrafficSteeringRuleActionForwardNoPbf { return v.NoPbf }).(GetTrafficSteeringRuleActionForwardNoPbfOutput)
+}
+
+type GetTrafficSteeringRuleActionForwardForward struct {
+	// Target
+	Target string `pulumi:"target"`
+}
+
+// GetTrafficSteeringRuleActionForwardForwardInput is an input type that accepts GetTrafficSteeringRuleActionForwardForwardArgs and GetTrafficSteeringRuleActionForwardForwardOutput values.
+// You can construct a concrete instance of `GetTrafficSteeringRuleActionForwardForwardInput` via:
+//
+//	GetTrafficSteeringRuleActionForwardForwardArgs{...}
+type GetTrafficSteeringRuleActionForwardForwardInput interface {
+	pulumi.Input
+
+	ToGetTrafficSteeringRuleActionForwardForwardOutput() GetTrafficSteeringRuleActionForwardForwardOutput
+	ToGetTrafficSteeringRuleActionForwardForwardOutputWithContext(context.Context) GetTrafficSteeringRuleActionForwardForwardOutput
+}
+
+type GetTrafficSteeringRuleActionForwardForwardArgs struct {
+	// Target
+	Target pulumi.StringInput `pulumi:"target"`
+}
+
+func (GetTrafficSteeringRuleActionForwardForwardArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetTrafficSteeringRuleActionForwardForward)(nil)).Elem()
+}
+
+func (i GetTrafficSteeringRuleActionForwardForwardArgs) ToGetTrafficSteeringRuleActionForwardForwardOutput() GetTrafficSteeringRuleActionForwardForwardOutput {
+	return i.ToGetTrafficSteeringRuleActionForwardForwardOutputWithContext(context.Background())
+}
+
+func (i GetTrafficSteeringRuleActionForwardForwardArgs) ToGetTrafficSteeringRuleActionForwardForwardOutputWithContext(ctx context.Context) GetTrafficSteeringRuleActionForwardForwardOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetTrafficSteeringRuleActionForwardForwardOutput)
+}
+
+type GetTrafficSteeringRuleActionForwardForwardOutput struct{ *pulumi.OutputState }
+
+func (GetTrafficSteeringRuleActionForwardForwardOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetTrafficSteeringRuleActionForwardForward)(nil)).Elem()
+}
+
+func (o GetTrafficSteeringRuleActionForwardForwardOutput) ToGetTrafficSteeringRuleActionForwardForwardOutput() GetTrafficSteeringRuleActionForwardForwardOutput {
+	return o
+}
+
+func (o GetTrafficSteeringRuleActionForwardForwardOutput) ToGetTrafficSteeringRuleActionForwardForwardOutputWithContext(ctx context.Context) GetTrafficSteeringRuleActionForwardForwardOutput {
+	return o
+}
+
+// Target
+func (o GetTrafficSteeringRuleActionForwardForwardOutput) Target() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTrafficSteeringRuleActionForwardForward) string { return v.Target }).(pulumi.StringOutput)
+}
+
+type GetTrafficSteeringRuleActionForwardNoPbf struct {
+}
+
+// GetTrafficSteeringRuleActionForwardNoPbfInput is an input type that accepts GetTrafficSteeringRuleActionForwardNoPbfArgs and GetTrafficSteeringRuleActionForwardNoPbfOutput values.
+// You can construct a concrete instance of `GetTrafficSteeringRuleActionForwardNoPbfInput` via:
+//
+//	GetTrafficSteeringRuleActionForwardNoPbfArgs{...}
+type GetTrafficSteeringRuleActionForwardNoPbfInput interface {
+	pulumi.Input
+
+	ToGetTrafficSteeringRuleActionForwardNoPbfOutput() GetTrafficSteeringRuleActionForwardNoPbfOutput
+	ToGetTrafficSteeringRuleActionForwardNoPbfOutputWithContext(context.Context) GetTrafficSteeringRuleActionForwardNoPbfOutput
+}
+
+type GetTrafficSteeringRuleActionForwardNoPbfArgs struct {
+}
+
+func (GetTrafficSteeringRuleActionForwardNoPbfArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetTrafficSteeringRuleActionForwardNoPbf)(nil)).Elem()
+}
+
+func (i GetTrafficSteeringRuleActionForwardNoPbfArgs) ToGetTrafficSteeringRuleActionForwardNoPbfOutput() GetTrafficSteeringRuleActionForwardNoPbfOutput {
+	return i.ToGetTrafficSteeringRuleActionForwardNoPbfOutputWithContext(context.Background())
+}
+
+func (i GetTrafficSteeringRuleActionForwardNoPbfArgs) ToGetTrafficSteeringRuleActionForwardNoPbfOutputWithContext(ctx context.Context) GetTrafficSteeringRuleActionForwardNoPbfOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetTrafficSteeringRuleActionForwardNoPbfOutput)
+}
+
+type GetTrafficSteeringRuleActionForwardNoPbfOutput struct{ *pulumi.OutputState }
+
+func (GetTrafficSteeringRuleActionForwardNoPbfOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetTrafficSteeringRuleActionForwardNoPbf)(nil)).Elem()
+}
+
+func (o GetTrafficSteeringRuleActionForwardNoPbfOutput) ToGetTrafficSteeringRuleActionForwardNoPbfOutput() GetTrafficSteeringRuleActionForwardNoPbfOutput {
+	return o
+}
+
+func (o GetTrafficSteeringRuleActionForwardNoPbfOutput) ToGetTrafficSteeringRuleActionForwardNoPbfOutputWithContext(ctx context.Context) GetTrafficSteeringRuleActionForwardNoPbfOutput {
+	return o
+}
+
+type GetTrafficSteeringRuleListData struct {
+	// Action
+	Action GetTrafficSteeringRuleListDataAction `pulumi:"action"`
+	// Category
+	Categories []string `pulumi:"categories"`
+	// Destination
+	Destinations []string `pulumi:"destinations"`
+	// The folder containing the traffic steering rule
+	Folder string `pulumi:"folder"`
+	// The UUID of the traffic steering rule
+	Id string `pulumi:"id"`
+	// Name
+	Name string `pulumi:"name"`
+	// Service
+	Services []string `pulumi:"services"`
+	// Source user
+	SourceUsers []string `pulumi:"sourceUsers"`
+	// Source
+	Sources []string `pulumi:"sources"`
+	// The Terraform ID.
+	Tfid string `pulumi:"tfid"`
+}
+
+// GetTrafficSteeringRuleListDataInput is an input type that accepts GetTrafficSteeringRuleListDataArgs and GetTrafficSteeringRuleListDataOutput values.
+// You can construct a concrete instance of `GetTrafficSteeringRuleListDataInput` via:
+//
+//	GetTrafficSteeringRuleListDataArgs{...}
+type GetTrafficSteeringRuleListDataInput interface {
+	pulumi.Input
+
+	ToGetTrafficSteeringRuleListDataOutput() GetTrafficSteeringRuleListDataOutput
+	ToGetTrafficSteeringRuleListDataOutputWithContext(context.Context) GetTrafficSteeringRuleListDataOutput
+}
+
+type GetTrafficSteeringRuleListDataArgs struct {
+	// Action
+	Action GetTrafficSteeringRuleListDataActionInput `pulumi:"action"`
+	// Category
+	Categories pulumi.StringArrayInput `pulumi:"categories"`
+	// Destination
+	Destinations pulumi.StringArrayInput `pulumi:"destinations"`
+	// The folder containing the traffic steering rule
+	Folder pulumi.StringInput `pulumi:"folder"`
+	// The UUID of the traffic steering rule
+	Id pulumi.StringInput `pulumi:"id"`
+	// Name
+	Name pulumi.StringInput `pulumi:"name"`
+	// Service
+	Services pulumi.StringArrayInput `pulumi:"services"`
+	// Source user
+	SourceUsers pulumi.StringArrayInput `pulumi:"sourceUsers"`
+	// Source
+	Sources pulumi.StringArrayInput `pulumi:"sources"`
+	// The Terraform ID.
+	Tfid pulumi.StringInput `pulumi:"tfid"`
+}
+
+func (GetTrafficSteeringRuleListDataArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetTrafficSteeringRuleListData)(nil)).Elem()
+}
+
+func (i GetTrafficSteeringRuleListDataArgs) ToGetTrafficSteeringRuleListDataOutput() GetTrafficSteeringRuleListDataOutput {
+	return i.ToGetTrafficSteeringRuleListDataOutputWithContext(context.Background())
+}
+
+func (i GetTrafficSteeringRuleListDataArgs) ToGetTrafficSteeringRuleListDataOutputWithContext(ctx context.Context) GetTrafficSteeringRuleListDataOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetTrafficSteeringRuleListDataOutput)
+}
+
+// GetTrafficSteeringRuleListDataArrayInput is an input type that accepts GetTrafficSteeringRuleListDataArray and GetTrafficSteeringRuleListDataArrayOutput values.
+// You can construct a concrete instance of `GetTrafficSteeringRuleListDataArrayInput` via:
+//
+//	GetTrafficSteeringRuleListDataArray{ GetTrafficSteeringRuleListDataArgs{...} }
+type GetTrafficSteeringRuleListDataArrayInput interface {
+	pulumi.Input
+
+	ToGetTrafficSteeringRuleListDataArrayOutput() GetTrafficSteeringRuleListDataArrayOutput
+	ToGetTrafficSteeringRuleListDataArrayOutputWithContext(context.Context) GetTrafficSteeringRuleListDataArrayOutput
+}
+
+type GetTrafficSteeringRuleListDataArray []GetTrafficSteeringRuleListDataInput
+
+func (GetTrafficSteeringRuleListDataArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetTrafficSteeringRuleListData)(nil)).Elem()
+}
+
+func (i GetTrafficSteeringRuleListDataArray) ToGetTrafficSteeringRuleListDataArrayOutput() GetTrafficSteeringRuleListDataArrayOutput {
+	return i.ToGetTrafficSteeringRuleListDataArrayOutputWithContext(context.Background())
+}
+
+func (i GetTrafficSteeringRuleListDataArray) ToGetTrafficSteeringRuleListDataArrayOutputWithContext(ctx context.Context) GetTrafficSteeringRuleListDataArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetTrafficSteeringRuleListDataArrayOutput)
+}
+
+type GetTrafficSteeringRuleListDataOutput struct{ *pulumi.OutputState }
+
+func (GetTrafficSteeringRuleListDataOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetTrafficSteeringRuleListData)(nil)).Elem()
+}
+
+func (o GetTrafficSteeringRuleListDataOutput) ToGetTrafficSteeringRuleListDataOutput() GetTrafficSteeringRuleListDataOutput {
+	return o
+}
+
+func (o GetTrafficSteeringRuleListDataOutput) ToGetTrafficSteeringRuleListDataOutputWithContext(ctx context.Context) GetTrafficSteeringRuleListDataOutput {
+	return o
+}
+
+// Action
+func (o GetTrafficSteeringRuleListDataOutput) Action() GetTrafficSteeringRuleListDataActionOutput {
+	return o.ApplyT(func(v GetTrafficSteeringRuleListData) GetTrafficSteeringRuleListDataAction { return v.Action }).(GetTrafficSteeringRuleListDataActionOutput)
+}
+
+// Category
+func (o GetTrafficSteeringRuleListDataOutput) Categories() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v GetTrafficSteeringRuleListData) []string { return v.Categories }).(pulumi.StringArrayOutput)
+}
+
+// Destination
+func (o GetTrafficSteeringRuleListDataOutput) Destinations() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v GetTrafficSteeringRuleListData) []string { return v.Destinations }).(pulumi.StringArrayOutput)
+}
+
+// The folder containing the traffic steering rule
+func (o GetTrafficSteeringRuleListDataOutput) Folder() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTrafficSteeringRuleListData) string { return v.Folder }).(pulumi.StringOutput)
+}
+
+// The UUID of the traffic steering rule
+func (o GetTrafficSteeringRuleListDataOutput) Id() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTrafficSteeringRuleListData) string { return v.Id }).(pulumi.StringOutput)
+}
+
+// Name
+func (o GetTrafficSteeringRuleListDataOutput) Name() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTrafficSteeringRuleListData) string { return v.Name }).(pulumi.StringOutput)
+}
+
+// Service
+func (o GetTrafficSteeringRuleListDataOutput) Services() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v GetTrafficSteeringRuleListData) []string { return v.Services }).(pulumi.StringArrayOutput)
+}
+
+// Source user
+func (o GetTrafficSteeringRuleListDataOutput) SourceUsers() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v GetTrafficSteeringRuleListData) []string { return v.SourceUsers }).(pulumi.StringArrayOutput)
+}
+
+// Source
+func (o GetTrafficSteeringRuleListDataOutput) Sources() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v GetTrafficSteeringRuleListData) []string { return v.Sources }).(pulumi.StringArrayOutput)
+}
+
+// The Terraform ID.
+func (o GetTrafficSteeringRuleListDataOutput) Tfid() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTrafficSteeringRuleListData) string { return v.Tfid }).(pulumi.StringOutput)
+}
+
+type GetTrafficSteeringRuleListDataArrayOutput struct{ *pulumi.OutputState }
+
+func (GetTrafficSteeringRuleListDataArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetTrafficSteeringRuleListData)(nil)).Elem()
+}
+
+func (o GetTrafficSteeringRuleListDataArrayOutput) ToGetTrafficSteeringRuleListDataArrayOutput() GetTrafficSteeringRuleListDataArrayOutput {
+	return o
+}
+
+func (o GetTrafficSteeringRuleListDataArrayOutput) ToGetTrafficSteeringRuleListDataArrayOutputWithContext(ctx context.Context) GetTrafficSteeringRuleListDataArrayOutput {
+	return o
+}
+
+func (o GetTrafficSteeringRuleListDataArrayOutput) Index(i pulumi.IntInput) GetTrafficSteeringRuleListDataOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetTrafficSteeringRuleListData {
+		return vs[0].([]GetTrafficSteeringRuleListData)[vs[1].(int)]
+	}).(GetTrafficSteeringRuleListDataOutput)
+}
+
+type GetTrafficSteeringRuleListDataAction struct {
+	// Forward
+	Forward GetTrafficSteeringRuleListDataActionForward `pulumi:"forward"`
+}
+
+// GetTrafficSteeringRuleListDataActionInput is an input type that accepts GetTrafficSteeringRuleListDataActionArgs and GetTrafficSteeringRuleListDataActionOutput values.
+// You can construct a concrete instance of `GetTrafficSteeringRuleListDataActionInput` via:
+//
+//	GetTrafficSteeringRuleListDataActionArgs{...}
+type GetTrafficSteeringRuleListDataActionInput interface {
+	pulumi.Input
+
+	ToGetTrafficSteeringRuleListDataActionOutput() GetTrafficSteeringRuleListDataActionOutput
+	ToGetTrafficSteeringRuleListDataActionOutputWithContext(context.Context) GetTrafficSteeringRuleListDataActionOutput
+}
+
+type GetTrafficSteeringRuleListDataActionArgs struct {
+	// Forward
+	Forward GetTrafficSteeringRuleListDataActionForwardInput `pulumi:"forward"`
+}
+
+func (GetTrafficSteeringRuleListDataActionArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetTrafficSteeringRuleListDataAction)(nil)).Elem()
+}
+
+func (i GetTrafficSteeringRuleListDataActionArgs) ToGetTrafficSteeringRuleListDataActionOutput() GetTrafficSteeringRuleListDataActionOutput {
+	return i.ToGetTrafficSteeringRuleListDataActionOutputWithContext(context.Background())
+}
+
+func (i GetTrafficSteeringRuleListDataActionArgs) ToGetTrafficSteeringRuleListDataActionOutputWithContext(ctx context.Context) GetTrafficSteeringRuleListDataActionOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetTrafficSteeringRuleListDataActionOutput)
+}
+
+type GetTrafficSteeringRuleListDataActionOutput struct{ *pulumi.OutputState }
+
+func (GetTrafficSteeringRuleListDataActionOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetTrafficSteeringRuleListDataAction)(nil)).Elem()
+}
+
+func (o GetTrafficSteeringRuleListDataActionOutput) ToGetTrafficSteeringRuleListDataActionOutput() GetTrafficSteeringRuleListDataActionOutput {
+	return o
+}
+
+func (o GetTrafficSteeringRuleListDataActionOutput) ToGetTrafficSteeringRuleListDataActionOutputWithContext(ctx context.Context) GetTrafficSteeringRuleListDataActionOutput {
+	return o
+}
+
+// Forward
+func (o GetTrafficSteeringRuleListDataActionOutput) Forward() GetTrafficSteeringRuleListDataActionForwardOutput {
+	return o.ApplyT(func(v GetTrafficSteeringRuleListDataAction) GetTrafficSteeringRuleListDataActionForward {
+		return v.Forward
+	}).(GetTrafficSteeringRuleListDataActionForwardOutput)
+}
+
+type GetTrafficSteeringRuleListDataActionForward struct {
+	// Forward
+	Forward GetTrafficSteeringRuleListDataActionForwardForward `pulumi:"forward"`
+	// No pbf
+	NoPbf GetTrafficSteeringRuleListDataActionForwardNoPbf `pulumi:"noPbf"`
+}
+
+// GetTrafficSteeringRuleListDataActionForwardInput is an input type that accepts GetTrafficSteeringRuleListDataActionForwardArgs and GetTrafficSteeringRuleListDataActionForwardOutput values.
+// You can construct a concrete instance of `GetTrafficSteeringRuleListDataActionForwardInput` via:
+//
+//	GetTrafficSteeringRuleListDataActionForwardArgs{...}
+type GetTrafficSteeringRuleListDataActionForwardInput interface {
+	pulumi.Input
+
+	ToGetTrafficSteeringRuleListDataActionForwardOutput() GetTrafficSteeringRuleListDataActionForwardOutput
+	ToGetTrafficSteeringRuleListDataActionForwardOutputWithContext(context.Context) GetTrafficSteeringRuleListDataActionForwardOutput
+}
+
+type GetTrafficSteeringRuleListDataActionForwardArgs struct {
+	// Forward
+	Forward GetTrafficSteeringRuleListDataActionForwardForwardInput `pulumi:"forward"`
+	// No pbf
+	NoPbf GetTrafficSteeringRuleListDataActionForwardNoPbfInput `pulumi:"noPbf"`
+}
+
+func (GetTrafficSteeringRuleListDataActionForwardArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetTrafficSteeringRuleListDataActionForward)(nil)).Elem()
+}
+
+func (i GetTrafficSteeringRuleListDataActionForwardArgs) ToGetTrafficSteeringRuleListDataActionForwardOutput() GetTrafficSteeringRuleListDataActionForwardOutput {
+	return i.ToGetTrafficSteeringRuleListDataActionForwardOutputWithContext(context.Background())
+}
+
+func (i GetTrafficSteeringRuleListDataActionForwardArgs) ToGetTrafficSteeringRuleListDataActionForwardOutputWithContext(ctx context.Context) GetTrafficSteeringRuleListDataActionForwardOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetTrafficSteeringRuleListDataActionForwardOutput)
+}
+
+type GetTrafficSteeringRuleListDataActionForwardOutput struct{ *pulumi.OutputState }
+
+func (GetTrafficSteeringRuleListDataActionForwardOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetTrafficSteeringRuleListDataActionForward)(nil)).Elem()
+}
+
+func (o GetTrafficSteeringRuleListDataActionForwardOutput) ToGetTrafficSteeringRuleListDataActionForwardOutput() GetTrafficSteeringRuleListDataActionForwardOutput {
+	return o
+}
+
+func (o GetTrafficSteeringRuleListDataActionForwardOutput) ToGetTrafficSteeringRuleListDataActionForwardOutputWithContext(ctx context.Context) GetTrafficSteeringRuleListDataActionForwardOutput {
+	return o
+}
+
+// Forward
+func (o GetTrafficSteeringRuleListDataActionForwardOutput) Forward() GetTrafficSteeringRuleListDataActionForwardForwardOutput {
+	return o.ApplyT(func(v GetTrafficSteeringRuleListDataActionForward) GetTrafficSteeringRuleListDataActionForwardForward {
+		return v.Forward
+	}).(GetTrafficSteeringRuleListDataActionForwardForwardOutput)
+}
+
+// No pbf
+func (o GetTrafficSteeringRuleListDataActionForwardOutput) NoPbf() GetTrafficSteeringRuleListDataActionForwardNoPbfOutput {
+	return o.ApplyT(func(v GetTrafficSteeringRuleListDataActionForward) GetTrafficSteeringRuleListDataActionForwardNoPbf {
+		return v.NoPbf
+	}).(GetTrafficSteeringRuleListDataActionForwardNoPbfOutput)
+}
+
+type GetTrafficSteeringRuleListDataActionForwardForward struct {
+	// Target
+	Target string `pulumi:"target"`
+}
+
+// GetTrafficSteeringRuleListDataActionForwardForwardInput is an input type that accepts GetTrafficSteeringRuleListDataActionForwardForwardArgs and GetTrafficSteeringRuleListDataActionForwardForwardOutput values.
+// You can construct a concrete instance of `GetTrafficSteeringRuleListDataActionForwardForwardInput` via:
+//
+//	GetTrafficSteeringRuleListDataActionForwardForwardArgs{...}
+type GetTrafficSteeringRuleListDataActionForwardForwardInput interface {
+	pulumi.Input
+
+	ToGetTrafficSteeringRuleListDataActionForwardForwardOutput() GetTrafficSteeringRuleListDataActionForwardForwardOutput
+	ToGetTrafficSteeringRuleListDataActionForwardForwardOutputWithContext(context.Context) GetTrafficSteeringRuleListDataActionForwardForwardOutput
+}
+
+type GetTrafficSteeringRuleListDataActionForwardForwardArgs struct {
+	// Target
+	Target pulumi.StringInput `pulumi:"target"`
+}
+
+func (GetTrafficSteeringRuleListDataActionForwardForwardArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetTrafficSteeringRuleListDataActionForwardForward)(nil)).Elem()
+}
+
+func (i GetTrafficSteeringRuleListDataActionForwardForwardArgs) ToGetTrafficSteeringRuleListDataActionForwardForwardOutput() GetTrafficSteeringRuleListDataActionForwardForwardOutput {
+	return i.ToGetTrafficSteeringRuleListDataActionForwardForwardOutputWithContext(context.Background())
+}
+
+func (i GetTrafficSteeringRuleListDataActionForwardForwardArgs) ToGetTrafficSteeringRuleListDataActionForwardForwardOutputWithContext(ctx context.Context) GetTrafficSteeringRuleListDataActionForwardForwardOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetTrafficSteeringRuleListDataActionForwardForwardOutput)
+}
+
+type GetTrafficSteeringRuleListDataActionForwardForwardOutput struct{ *pulumi.OutputState }
+
+func (GetTrafficSteeringRuleListDataActionForwardForwardOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetTrafficSteeringRuleListDataActionForwardForward)(nil)).Elem()
+}
+
+func (o GetTrafficSteeringRuleListDataActionForwardForwardOutput) ToGetTrafficSteeringRuleListDataActionForwardForwardOutput() GetTrafficSteeringRuleListDataActionForwardForwardOutput {
+	return o
+}
+
+func (o GetTrafficSteeringRuleListDataActionForwardForwardOutput) ToGetTrafficSteeringRuleListDataActionForwardForwardOutputWithContext(ctx context.Context) GetTrafficSteeringRuleListDataActionForwardForwardOutput {
+	return o
+}
+
+// Target
+func (o GetTrafficSteeringRuleListDataActionForwardForwardOutput) Target() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTrafficSteeringRuleListDataActionForwardForward) string { return v.Target }).(pulumi.StringOutput)
+}
+
+type GetTrafficSteeringRuleListDataActionForwardNoPbf struct {
+}
+
+// GetTrafficSteeringRuleListDataActionForwardNoPbfInput is an input type that accepts GetTrafficSteeringRuleListDataActionForwardNoPbfArgs and GetTrafficSteeringRuleListDataActionForwardNoPbfOutput values.
+// You can construct a concrete instance of `GetTrafficSteeringRuleListDataActionForwardNoPbfInput` via:
+//
+//	GetTrafficSteeringRuleListDataActionForwardNoPbfArgs{...}
+type GetTrafficSteeringRuleListDataActionForwardNoPbfInput interface {
+	pulumi.Input
+
+	ToGetTrafficSteeringRuleListDataActionForwardNoPbfOutput() GetTrafficSteeringRuleListDataActionForwardNoPbfOutput
+	ToGetTrafficSteeringRuleListDataActionForwardNoPbfOutputWithContext(context.Context) GetTrafficSteeringRuleListDataActionForwardNoPbfOutput
+}
+
+type GetTrafficSteeringRuleListDataActionForwardNoPbfArgs struct {
+}
+
+func (GetTrafficSteeringRuleListDataActionForwardNoPbfArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetTrafficSteeringRuleListDataActionForwardNoPbf)(nil)).Elem()
+}
+
+func (i GetTrafficSteeringRuleListDataActionForwardNoPbfArgs) ToGetTrafficSteeringRuleListDataActionForwardNoPbfOutput() GetTrafficSteeringRuleListDataActionForwardNoPbfOutput {
+	return i.ToGetTrafficSteeringRuleListDataActionForwardNoPbfOutputWithContext(context.Background())
+}
+
+func (i GetTrafficSteeringRuleListDataActionForwardNoPbfArgs) ToGetTrafficSteeringRuleListDataActionForwardNoPbfOutputWithContext(ctx context.Context) GetTrafficSteeringRuleListDataActionForwardNoPbfOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetTrafficSteeringRuleListDataActionForwardNoPbfOutput)
+}
+
+type GetTrafficSteeringRuleListDataActionForwardNoPbfOutput struct{ *pulumi.OutputState }
+
+func (GetTrafficSteeringRuleListDataActionForwardNoPbfOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetTrafficSteeringRuleListDataActionForwardNoPbf)(nil)).Elem()
+}
+
+func (o GetTrafficSteeringRuleListDataActionForwardNoPbfOutput) ToGetTrafficSteeringRuleListDataActionForwardNoPbfOutput() GetTrafficSteeringRuleListDataActionForwardNoPbfOutput {
+	return o
+}
+
+func (o GetTrafficSteeringRuleListDataActionForwardNoPbfOutput) ToGetTrafficSteeringRuleListDataActionForwardNoPbfOutputWithContext(ctx context.Context) GetTrafficSteeringRuleListDataActionForwardNoPbfOutput {
+	return o
+}
+
+type GetTrustedTenantOverviewPublisher struct {
+	// Pending
+	Pending int `pulumi:"pending"`
+	// Total
+	Total int `pulumi:"total"`
+}
+
+// GetTrustedTenantOverviewPublisherInput is an input type that accepts GetTrustedTenantOverviewPublisherArgs and GetTrustedTenantOverviewPublisherOutput values.
+// You can construct a concrete instance of `GetTrustedTenantOverviewPublisherInput` via:
+//
+//	GetTrustedTenantOverviewPublisherArgs{...}
+type GetTrustedTenantOverviewPublisherInput interface {
+	pulumi.Input
+
+	ToGetTrustedTenantOverviewPublisherOutput() GetTrustedTenantOverviewPublisherOutput
+	ToGetTrustedTenantOverviewPublisherOutputWithContext(context.Context) GetTrustedTenantOverviewPublisherOutput
+}
+
+type GetTrustedTenantOverviewPublisherArgs struct {
+	// Pending
+	Pending pulumi.IntInput `pulumi:"pending"`
+	// Total
+	Total pulumi.IntInput `pulumi:"total"`
+}
+
+func (GetTrustedTenantOverviewPublisherArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetTrustedTenantOverviewPublisher)(nil)).Elem()
+}
+
+func (i GetTrustedTenantOverviewPublisherArgs) ToGetTrustedTenantOverviewPublisherOutput() GetTrustedTenantOverviewPublisherOutput {
+	return i.ToGetTrustedTenantOverviewPublisherOutputWithContext(context.Background())
+}
+
+func (i GetTrustedTenantOverviewPublisherArgs) ToGetTrustedTenantOverviewPublisherOutputWithContext(ctx context.Context) GetTrustedTenantOverviewPublisherOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetTrustedTenantOverviewPublisherOutput)
+}
+
+type GetTrustedTenantOverviewPublisherOutput struct{ *pulumi.OutputState }
+
+func (GetTrustedTenantOverviewPublisherOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetTrustedTenantOverviewPublisher)(nil)).Elem()
+}
+
+func (o GetTrustedTenantOverviewPublisherOutput) ToGetTrustedTenantOverviewPublisherOutput() GetTrustedTenantOverviewPublisherOutput {
+	return o
+}
+
+func (o GetTrustedTenantOverviewPublisherOutput) ToGetTrustedTenantOverviewPublisherOutputWithContext(ctx context.Context) GetTrustedTenantOverviewPublisherOutput {
+	return o
+}
+
+// Pending
+func (o GetTrustedTenantOverviewPublisherOutput) Pending() pulumi.IntOutput {
+	return o.ApplyT(func(v GetTrustedTenantOverviewPublisher) int { return v.Pending }).(pulumi.IntOutput)
+}
+
+// Total
+func (o GetTrustedTenantOverviewPublisherOutput) Total() pulumi.IntOutput {
+	return o.ApplyT(func(v GetTrustedTenantOverviewPublisher) int { return v.Total }).(pulumi.IntOutput)
+}
+
+type GetTrustedTenantOverviewSubscriber struct {
+	// Pending
+	Pending int `pulumi:"pending"`
+	// Total
+	Total int `pulumi:"total"`
+}
+
+// GetTrustedTenantOverviewSubscriberInput is an input type that accepts GetTrustedTenantOverviewSubscriberArgs and GetTrustedTenantOverviewSubscriberOutput values.
+// You can construct a concrete instance of `GetTrustedTenantOverviewSubscriberInput` via:
+//
+//	GetTrustedTenantOverviewSubscriberArgs{...}
+type GetTrustedTenantOverviewSubscriberInput interface {
+	pulumi.Input
+
+	ToGetTrustedTenantOverviewSubscriberOutput() GetTrustedTenantOverviewSubscriberOutput
+	ToGetTrustedTenantOverviewSubscriberOutputWithContext(context.Context) GetTrustedTenantOverviewSubscriberOutput
+}
+
+type GetTrustedTenantOverviewSubscriberArgs struct {
+	// Pending
+	Pending pulumi.IntInput `pulumi:"pending"`
+	// Total
+	Total pulumi.IntInput `pulumi:"total"`
+}
+
+func (GetTrustedTenantOverviewSubscriberArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetTrustedTenantOverviewSubscriber)(nil)).Elem()
+}
+
+func (i GetTrustedTenantOverviewSubscriberArgs) ToGetTrustedTenantOverviewSubscriberOutput() GetTrustedTenantOverviewSubscriberOutput {
+	return i.ToGetTrustedTenantOverviewSubscriberOutputWithContext(context.Background())
+}
+
+func (i GetTrustedTenantOverviewSubscriberArgs) ToGetTrustedTenantOverviewSubscriberOutputWithContext(ctx context.Context) GetTrustedTenantOverviewSubscriberOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetTrustedTenantOverviewSubscriberOutput)
+}
+
+type GetTrustedTenantOverviewSubscriberOutput struct{ *pulumi.OutputState }
+
+func (GetTrustedTenantOverviewSubscriberOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetTrustedTenantOverviewSubscriber)(nil)).Elem()
+}
+
+func (o GetTrustedTenantOverviewSubscriberOutput) ToGetTrustedTenantOverviewSubscriberOutput() GetTrustedTenantOverviewSubscriberOutput {
+	return o
+}
+
+func (o GetTrustedTenantOverviewSubscriberOutput) ToGetTrustedTenantOverviewSubscriberOutputWithContext(ctx context.Context) GetTrustedTenantOverviewSubscriberOutput {
+	return o
+}
+
+// Pending
+func (o GetTrustedTenantOverviewSubscriberOutput) Pending() pulumi.IntOutput {
+	return o.ApplyT(func(v GetTrustedTenantOverviewSubscriber) int { return v.Pending }).(pulumi.IntOutput)
+}
+
+// Total
+func (o GetTrustedTenantOverviewSubscriberOutput) Total() pulumi.IntOutput {
+	return o.ApplyT(func(v GetTrustedTenantOverviewSubscriber) int { return v.Total }).(pulumi.IntOutput)
+}
+
+type GetTunnelInterfaceIp struct {
+	// Tunnel Interface IP address(es)
+	Name string `pulumi:"name"`
+}
+
+// GetTunnelInterfaceIpInput is an input type that accepts GetTunnelInterfaceIpArgs and GetTunnelInterfaceIpOutput values.
+// You can construct a concrete instance of `GetTunnelInterfaceIpInput` via:
+//
+//	GetTunnelInterfaceIpArgs{...}
+type GetTunnelInterfaceIpInput interface {
+	pulumi.Input
+
+	ToGetTunnelInterfaceIpOutput() GetTunnelInterfaceIpOutput
+	ToGetTunnelInterfaceIpOutputWithContext(context.Context) GetTunnelInterfaceIpOutput
+}
+
+type GetTunnelInterfaceIpArgs struct {
+	// Tunnel Interface IP address(es)
+	Name pulumi.StringInput `pulumi:"name"`
+}
+
+func (GetTunnelInterfaceIpArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetTunnelInterfaceIp)(nil)).Elem()
+}
+
+func (i GetTunnelInterfaceIpArgs) ToGetTunnelInterfaceIpOutput() GetTunnelInterfaceIpOutput {
+	return i.ToGetTunnelInterfaceIpOutputWithContext(context.Background())
+}
+
+func (i GetTunnelInterfaceIpArgs) ToGetTunnelInterfaceIpOutputWithContext(ctx context.Context) GetTunnelInterfaceIpOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetTunnelInterfaceIpOutput)
+}
+
+// GetTunnelInterfaceIpArrayInput is an input type that accepts GetTunnelInterfaceIpArray and GetTunnelInterfaceIpArrayOutput values.
+// You can construct a concrete instance of `GetTunnelInterfaceIpArrayInput` via:
+//
+//	GetTunnelInterfaceIpArray{ GetTunnelInterfaceIpArgs{...} }
+type GetTunnelInterfaceIpArrayInput interface {
+	pulumi.Input
+
+	ToGetTunnelInterfaceIpArrayOutput() GetTunnelInterfaceIpArrayOutput
+	ToGetTunnelInterfaceIpArrayOutputWithContext(context.Context) GetTunnelInterfaceIpArrayOutput
+}
+
+type GetTunnelInterfaceIpArray []GetTunnelInterfaceIpInput
+
+func (GetTunnelInterfaceIpArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetTunnelInterfaceIp)(nil)).Elem()
+}
+
+func (i GetTunnelInterfaceIpArray) ToGetTunnelInterfaceIpArrayOutput() GetTunnelInterfaceIpArrayOutput {
+	return i.ToGetTunnelInterfaceIpArrayOutputWithContext(context.Background())
+}
+
+func (i GetTunnelInterfaceIpArray) ToGetTunnelInterfaceIpArrayOutputWithContext(ctx context.Context) GetTunnelInterfaceIpArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetTunnelInterfaceIpArrayOutput)
+}
+
+type GetTunnelInterfaceIpOutput struct{ *pulumi.OutputState }
+
+func (GetTunnelInterfaceIpOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetTunnelInterfaceIp)(nil)).Elem()
+}
+
+func (o GetTunnelInterfaceIpOutput) ToGetTunnelInterfaceIpOutput() GetTunnelInterfaceIpOutput {
+	return o
+}
+
+func (o GetTunnelInterfaceIpOutput) ToGetTunnelInterfaceIpOutputWithContext(ctx context.Context) GetTunnelInterfaceIpOutput {
+	return o
+}
+
+// Tunnel Interface IP address(es)
+func (o GetTunnelInterfaceIpOutput) Name() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTunnelInterfaceIp) string { return v.Name }).(pulumi.StringOutput)
+}
+
+type GetTunnelInterfaceIpArrayOutput struct{ *pulumi.OutputState }
+
+func (GetTunnelInterfaceIpArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetTunnelInterfaceIp)(nil)).Elem()
+}
+
+func (o GetTunnelInterfaceIpArrayOutput) ToGetTunnelInterfaceIpArrayOutput() GetTunnelInterfaceIpArrayOutput {
+	return o
+}
+
+func (o GetTunnelInterfaceIpArrayOutput) ToGetTunnelInterfaceIpArrayOutputWithContext(ctx context.Context) GetTunnelInterfaceIpArrayOutput {
+	return o
+}
+
+func (o GetTunnelInterfaceIpArrayOutput) Index(i pulumi.IntInput) GetTunnelInterfaceIpOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetTunnelInterfaceIp {
+		return vs[0].([]GetTunnelInterfaceIp)[vs[1].(int)]
+	}).(GetTunnelInterfaceIpOutput)
+}
+
+type GetTunnelInterfaceIpv6 struct {
+	// IPv6 Address Parent for tunnel interface
+	Addresses []GetTunnelInterfaceIpv6Address `pulumi:"addresses"`
+	// Enable IPv6 for tunnel interface
+	Enabled bool `pulumi:"enabled"`
+	// Interface ID for tunnel interface
+	InterfaceId string `pulumi:"interfaceId"`
+}
+
+// GetTunnelInterfaceIpv6Input is an input type that accepts GetTunnelInterfaceIpv6Args and GetTunnelInterfaceIpv6Output values.
+// You can construct a concrete instance of `GetTunnelInterfaceIpv6Input` via:
+//
+//	GetTunnelInterfaceIpv6Args{...}
+type GetTunnelInterfaceIpv6Input interface {
+	pulumi.Input
+
+	ToGetTunnelInterfaceIpv6Output() GetTunnelInterfaceIpv6Output
+	ToGetTunnelInterfaceIpv6OutputWithContext(context.Context) GetTunnelInterfaceIpv6Output
+}
+
+type GetTunnelInterfaceIpv6Args struct {
+	// IPv6 Address Parent for tunnel interface
+	Addresses GetTunnelInterfaceIpv6AddressArrayInput `pulumi:"addresses"`
+	// Enable IPv6 for tunnel interface
+	Enabled pulumi.BoolInput `pulumi:"enabled"`
+	// Interface ID for tunnel interface
+	InterfaceId pulumi.StringInput `pulumi:"interfaceId"`
+}
+
+func (GetTunnelInterfaceIpv6Args) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetTunnelInterfaceIpv6)(nil)).Elem()
+}
+
+func (i GetTunnelInterfaceIpv6Args) ToGetTunnelInterfaceIpv6Output() GetTunnelInterfaceIpv6Output {
+	return i.ToGetTunnelInterfaceIpv6OutputWithContext(context.Background())
+}
+
+func (i GetTunnelInterfaceIpv6Args) ToGetTunnelInterfaceIpv6OutputWithContext(ctx context.Context) GetTunnelInterfaceIpv6Output {
+	return pulumi.ToOutputWithContext(ctx, i).(GetTunnelInterfaceIpv6Output)
+}
+
+type GetTunnelInterfaceIpv6Output struct{ *pulumi.OutputState }
+
+func (GetTunnelInterfaceIpv6Output) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetTunnelInterfaceIpv6)(nil)).Elem()
+}
+
+func (o GetTunnelInterfaceIpv6Output) ToGetTunnelInterfaceIpv6Output() GetTunnelInterfaceIpv6Output {
+	return o
+}
+
+func (o GetTunnelInterfaceIpv6Output) ToGetTunnelInterfaceIpv6OutputWithContext(ctx context.Context) GetTunnelInterfaceIpv6Output {
+	return o
+}
+
+// IPv6 Address Parent for tunnel interface
+func (o GetTunnelInterfaceIpv6Output) Addresses() GetTunnelInterfaceIpv6AddressArrayOutput {
+	return o.ApplyT(func(v GetTunnelInterfaceIpv6) []GetTunnelInterfaceIpv6Address { return v.Addresses }).(GetTunnelInterfaceIpv6AddressArrayOutput)
+}
+
+// Enable IPv6 for tunnel interface
+func (o GetTunnelInterfaceIpv6Output) Enabled() pulumi.BoolOutput {
+	return o.ApplyT(func(v GetTunnelInterfaceIpv6) bool { return v.Enabled }).(pulumi.BoolOutput)
+}
+
+// Interface ID for tunnel interface
+func (o GetTunnelInterfaceIpv6Output) InterfaceId() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTunnelInterfaceIpv6) string { return v.InterfaceId }).(pulumi.StringOutput)
+}
+
+type GetTunnelInterfaceIpv6Address struct {
+	// Anycast for tunnel interface
+	Anycast GetTunnelInterfaceIpv6AddressAnycast `pulumi:"anycast"`
+	// Enable Address on Interface for tunnel interface
+	EnableOnInterface bool `pulumi:"enableOnInterface"`
+	// IPv6 Address for tunnel interface
+	Name string `pulumi:"name"`
+	// Use interface ID as host portion for tunnel interface
+	Prefix GetTunnelInterfaceIpv6AddressPrefix `pulumi:"prefix"`
+}
+
+// GetTunnelInterfaceIpv6AddressInput is an input type that accepts GetTunnelInterfaceIpv6AddressArgs and GetTunnelInterfaceIpv6AddressOutput values.
+// You can construct a concrete instance of `GetTunnelInterfaceIpv6AddressInput` via:
+//
+//	GetTunnelInterfaceIpv6AddressArgs{...}
+type GetTunnelInterfaceIpv6AddressInput interface {
+	pulumi.Input
+
+	ToGetTunnelInterfaceIpv6AddressOutput() GetTunnelInterfaceIpv6AddressOutput
+	ToGetTunnelInterfaceIpv6AddressOutputWithContext(context.Context) GetTunnelInterfaceIpv6AddressOutput
+}
+
+type GetTunnelInterfaceIpv6AddressArgs struct {
+	// Anycast for tunnel interface
+	Anycast GetTunnelInterfaceIpv6AddressAnycastInput `pulumi:"anycast"`
+	// Enable Address on Interface for tunnel interface
+	EnableOnInterface pulumi.BoolInput `pulumi:"enableOnInterface"`
+	// IPv6 Address for tunnel interface
+	Name pulumi.StringInput `pulumi:"name"`
+	// Use interface ID as host portion for tunnel interface
+	Prefix GetTunnelInterfaceIpv6AddressPrefixInput `pulumi:"prefix"`
+}
+
+func (GetTunnelInterfaceIpv6AddressArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetTunnelInterfaceIpv6Address)(nil)).Elem()
+}
+
+func (i GetTunnelInterfaceIpv6AddressArgs) ToGetTunnelInterfaceIpv6AddressOutput() GetTunnelInterfaceIpv6AddressOutput {
+	return i.ToGetTunnelInterfaceIpv6AddressOutputWithContext(context.Background())
+}
+
+func (i GetTunnelInterfaceIpv6AddressArgs) ToGetTunnelInterfaceIpv6AddressOutputWithContext(ctx context.Context) GetTunnelInterfaceIpv6AddressOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetTunnelInterfaceIpv6AddressOutput)
+}
+
+// GetTunnelInterfaceIpv6AddressArrayInput is an input type that accepts GetTunnelInterfaceIpv6AddressArray and GetTunnelInterfaceIpv6AddressArrayOutput values.
+// You can construct a concrete instance of `GetTunnelInterfaceIpv6AddressArrayInput` via:
+//
+//	GetTunnelInterfaceIpv6AddressArray{ GetTunnelInterfaceIpv6AddressArgs{...} }
+type GetTunnelInterfaceIpv6AddressArrayInput interface {
+	pulumi.Input
+
+	ToGetTunnelInterfaceIpv6AddressArrayOutput() GetTunnelInterfaceIpv6AddressArrayOutput
+	ToGetTunnelInterfaceIpv6AddressArrayOutputWithContext(context.Context) GetTunnelInterfaceIpv6AddressArrayOutput
+}
+
+type GetTunnelInterfaceIpv6AddressArray []GetTunnelInterfaceIpv6AddressInput
+
+func (GetTunnelInterfaceIpv6AddressArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetTunnelInterfaceIpv6Address)(nil)).Elem()
+}
+
+func (i GetTunnelInterfaceIpv6AddressArray) ToGetTunnelInterfaceIpv6AddressArrayOutput() GetTunnelInterfaceIpv6AddressArrayOutput {
+	return i.ToGetTunnelInterfaceIpv6AddressArrayOutputWithContext(context.Background())
+}
+
+func (i GetTunnelInterfaceIpv6AddressArray) ToGetTunnelInterfaceIpv6AddressArrayOutputWithContext(ctx context.Context) GetTunnelInterfaceIpv6AddressArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetTunnelInterfaceIpv6AddressArrayOutput)
+}
+
+type GetTunnelInterfaceIpv6AddressOutput struct{ *pulumi.OutputState }
+
+func (GetTunnelInterfaceIpv6AddressOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetTunnelInterfaceIpv6Address)(nil)).Elem()
+}
+
+func (o GetTunnelInterfaceIpv6AddressOutput) ToGetTunnelInterfaceIpv6AddressOutput() GetTunnelInterfaceIpv6AddressOutput {
+	return o
+}
+
+func (o GetTunnelInterfaceIpv6AddressOutput) ToGetTunnelInterfaceIpv6AddressOutputWithContext(ctx context.Context) GetTunnelInterfaceIpv6AddressOutput {
+	return o
+}
+
+// Anycast for tunnel interface
+func (o GetTunnelInterfaceIpv6AddressOutput) Anycast() GetTunnelInterfaceIpv6AddressAnycastOutput {
+	return o.ApplyT(func(v GetTunnelInterfaceIpv6Address) GetTunnelInterfaceIpv6AddressAnycast { return v.Anycast }).(GetTunnelInterfaceIpv6AddressAnycastOutput)
+}
+
+// Enable Address on Interface for tunnel interface
+func (o GetTunnelInterfaceIpv6AddressOutput) EnableOnInterface() pulumi.BoolOutput {
+	return o.ApplyT(func(v GetTunnelInterfaceIpv6Address) bool { return v.EnableOnInterface }).(pulumi.BoolOutput)
+}
+
+// IPv6 Address for tunnel interface
+func (o GetTunnelInterfaceIpv6AddressOutput) Name() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTunnelInterfaceIpv6Address) string { return v.Name }).(pulumi.StringOutput)
+}
+
+// Use interface ID as host portion for tunnel interface
+func (o GetTunnelInterfaceIpv6AddressOutput) Prefix() GetTunnelInterfaceIpv6AddressPrefixOutput {
+	return o.ApplyT(func(v GetTunnelInterfaceIpv6Address) GetTunnelInterfaceIpv6AddressPrefix { return v.Prefix }).(GetTunnelInterfaceIpv6AddressPrefixOutput)
+}
+
+type GetTunnelInterfaceIpv6AddressArrayOutput struct{ *pulumi.OutputState }
+
+func (GetTunnelInterfaceIpv6AddressArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetTunnelInterfaceIpv6Address)(nil)).Elem()
+}
+
+func (o GetTunnelInterfaceIpv6AddressArrayOutput) ToGetTunnelInterfaceIpv6AddressArrayOutput() GetTunnelInterfaceIpv6AddressArrayOutput {
+	return o
+}
+
+func (o GetTunnelInterfaceIpv6AddressArrayOutput) ToGetTunnelInterfaceIpv6AddressArrayOutputWithContext(ctx context.Context) GetTunnelInterfaceIpv6AddressArrayOutput {
+	return o
+}
+
+func (o GetTunnelInterfaceIpv6AddressArrayOutput) Index(i pulumi.IntInput) GetTunnelInterfaceIpv6AddressOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetTunnelInterfaceIpv6Address {
+		return vs[0].([]GetTunnelInterfaceIpv6Address)[vs[1].(int)]
+	}).(GetTunnelInterfaceIpv6AddressOutput)
+}
+
+type GetTunnelInterfaceIpv6AddressAnycast struct {
+}
+
+// GetTunnelInterfaceIpv6AddressAnycastInput is an input type that accepts GetTunnelInterfaceIpv6AddressAnycastArgs and GetTunnelInterfaceIpv6AddressAnycastOutput values.
+// You can construct a concrete instance of `GetTunnelInterfaceIpv6AddressAnycastInput` via:
+//
+//	GetTunnelInterfaceIpv6AddressAnycastArgs{...}
+type GetTunnelInterfaceIpv6AddressAnycastInput interface {
+	pulumi.Input
+
+	ToGetTunnelInterfaceIpv6AddressAnycastOutput() GetTunnelInterfaceIpv6AddressAnycastOutput
+	ToGetTunnelInterfaceIpv6AddressAnycastOutputWithContext(context.Context) GetTunnelInterfaceIpv6AddressAnycastOutput
+}
+
+type GetTunnelInterfaceIpv6AddressAnycastArgs struct {
+}
+
+func (GetTunnelInterfaceIpv6AddressAnycastArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetTunnelInterfaceIpv6AddressAnycast)(nil)).Elem()
+}
+
+func (i GetTunnelInterfaceIpv6AddressAnycastArgs) ToGetTunnelInterfaceIpv6AddressAnycastOutput() GetTunnelInterfaceIpv6AddressAnycastOutput {
+	return i.ToGetTunnelInterfaceIpv6AddressAnycastOutputWithContext(context.Background())
+}
+
+func (i GetTunnelInterfaceIpv6AddressAnycastArgs) ToGetTunnelInterfaceIpv6AddressAnycastOutputWithContext(ctx context.Context) GetTunnelInterfaceIpv6AddressAnycastOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetTunnelInterfaceIpv6AddressAnycastOutput)
+}
+
+type GetTunnelInterfaceIpv6AddressAnycastOutput struct{ *pulumi.OutputState }
+
+func (GetTunnelInterfaceIpv6AddressAnycastOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetTunnelInterfaceIpv6AddressAnycast)(nil)).Elem()
+}
+
+func (o GetTunnelInterfaceIpv6AddressAnycastOutput) ToGetTunnelInterfaceIpv6AddressAnycastOutput() GetTunnelInterfaceIpv6AddressAnycastOutput {
+	return o
+}
+
+func (o GetTunnelInterfaceIpv6AddressAnycastOutput) ToGetTunnelInterfaceIpv6AddressAnycastOutputWithContext(ctx context.Context) GetTunnelInterfaceIpv6AddressAnycastOutput {
+	return o
+}
+
+type GetTunnelInterfaceIpv6AddressPrefix struct {
+}
+
+// GetTunnelInterfaceIpv6AddressPrefixInput is an input type that accepts GetTunnelInterfaceIpv6AddressPrefixArgs and GetTunnelInterfaceIpv6AddressPrefixOutput values.
+// You can construct a concrete instance of `GetTunnelInterfaceIpv6AddressPrefixInput` via:
+//
+//	GetTunnelInterfaceIpv6AddressPrefixArgs{...}
+type GetTunnelInterfaceIpv6AddressPrefixInput interface {
+	pulumi.Input
+
+	ToGetTunnelInterfaceIpv6AddressPrefixOutput() GetTunnelInterfaceIpv6AddressPrefixOutput
+	ToGetTunnelInterfaceIpv6AddressPrefixOutputWithContext(context.Context) GetTunnelInterfaceIpv6AddressPrefixOutput
+}
+
+type GetTunnelInterfaceIpv6AddressPrefixArgs struct {
+}
+
+func (GetTunnelInterfaceIpv6AddressPrefixArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetTunnelInterfaceIpv6AddressPrefix)(nil)).Elem()
+}
+
+func (i GetTunnelInterfaceIpv6AddressPrefixArgs) ToGetTunnelInterfaceIpv6AddressPrefixOutput() GetTunnelInterfaceIpv6AddressPrefixOutput {
+	return i.ToGetTunnelInterfaceIpv6AddressPrefixOutputWithContext(context.Background())
+}
+
+func (i GetTunnelInterfaceIpv6AddressPrefixArgs) ToGetTunnelInterfaceIpv6AddressPrefixOutputWithContext(ctx context.Context) GetTunnelInterfaceIpv6AddressPrefixOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetTunnelInterfaceIpv6AddressPrefixOutput)
+}
+
+type GetTunnelInterfaceIpv6AddressPrefixOutput struct{ *pulumi.OutputState }
+
+func (GetTunnelInterfaceIpv6AddressPrefixOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetTunnelInterfaceIpv6AddressPrefix)(nil)).Elem()
+}
+
+func (o GetTunnelInterfaceIpv6AddressPrefixOutput) ToGetTunnelInterfaceIpv6AddressPrefixOutput() GetTunnelInterfaceIpv6AddressPrefixOutput {
+	return o
+}
+
+func (o GetTunnelInterfaceIpv6AddressPrefixOutput) ToGetTunnelInterfaceIpv6AddressPrefixOutputWithContext(ctx context.Context) GetTunnelInterfaceIpv6AddressPrefixOutput {
+	return o
+}
+
+type GetTunnelInterfaceListData struct {
+	// Description for tunnel interface
+	Comment string `pulumi:"comment"`
+	// Default interface assignment for tunnel interface
+	DefaultValue string `pulumi:"defaultValue"`
+	// The device in which the resource is defined
+	Device string `pulumi:"device"`
+	// The folder in which the resource is defined
+	Folder string `pulumi:"folder"`
+	// UUID of the resource for tunnel interface
+	Id string `pulumi:"id"`
+	// Interface management profile for tunnel interface
+	InterfaceManagementProfile string `pulumi:"interfaceManagementProfile"`
+	// Tunnel Interface IP Parent
+	Ips []GetTunnelInterfaceListDataIp `pulumi:"ips"`
+	// Tunnel Interface IPv6 Configuration
+	Ipv6 GetTunnelInterfaceListDataIpv6 `pulumi:"ipv6"`
+	// MTU for tunnel interface
+	Mtu int `pulumi:"mtu"`
+	// L3 sub-interface name for tunnel interface
+	Name string `pulumi:"name"`
+	// Name of Netflow Profile to assign to Interface
+	NetflowProfile string `pulumi:"netflowProfile"`
+	// The snippet in which the resource is defined
+	Snippet string `pulumi:"snippet"`
+	// The Terraform ID.
+	Tfid string `pulumi:"tfid"`
+}
+
+// GetTunnelInterfaceListDataInput is an input type that accepts GetTunnelInterfaceListDataArgs and GetTunnelInterfaceListDataOutput values.
+// You can construct a concrete instance of `GetTunnelInterfaceListDataInput` via:
+//
+//	GetTunnelInterfaceListDataArgs{...}
+type GetTunnelInterfaceListDataInput interface {
+	pulumi.Input
+
+	ToGetTunnelInterfaceListDataOutput() GetTunnelInterfaceListDataOutput
+	ToGetTunnelInterfaceListDataOutputWithContext(context.Context) GetTunnelInterfaceListDataOutput
+}
+
+type GetTunnelInterfaceListDataArgs struct {
+	// Description for tunnel interface
+	Comment pulumi.StringInput `pulumi:"comment"`
+	// Default interface assignment for tunnel interface
+	DefaultValue pulumi.StringInput `pulumi:"defaultValue"`
+	// The device in which the resource is defined
+	Device pulumi.StringInput `pulumi:"device"`
+	// The folder in which the resource is defined
+	Folder pulumi.StringInput `pulumi:"folder"`
+	// UUID of the resource for tunnel interface
+	Id pulumi.StringInput `pulumi:"id"`
+	// Interface management profile for tunnel interface
+	InterfaceManagementProfile pulumi.StringInput `pulumi:"interfaceManagementProfile"`
+	// Tunnel Interface IP Parent
+	Ips GetTunnelInterfaceListDataIpArrayInput `pulumi:"ips"`
+	// Tunnel Interface IPv6 Configuration
+	Ipv6 GetTunnelInterfaceListDataIpv6Input `pulumi:"ipv6"`
+	// MTU for tunnel interface
+	Mtu pulumi.IntInput `pulumi:"mtu"`
+	// L3 sub-interface name for tunnel interface
+	Name pulumi.StringInput `pulumi:"name"`
+	// Name of Netflow Profile to assign to Interface
+	NetflowProfile pulumi.StringInput `pulumi:"netflowProfile"`
+	// The snippet in which the resource is defined
+	Snippet pulumi.StringInput `pulumi:"snippet"`
+	// The Terraform ID.
+	Tfid pulumi.StringInput `pulumi:"tfid"`
+}
+
+func (GetTunnelInterfaceListDataArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetTunnelInterfaceListData)(nil)).Elem()
+}
+
+func (i GetTunnelInterfaceListDataArgs) ToGetTunnelInterfaceListDataOutput() GetTunnelInterfaceListDataOutput {
+	return i.ToGetTunnelInterfaceListDataOutputWithContext(context.Background())
+}
+
+func (i GetTunnelInterfaceListDataArgs) ToGetTunnelInterfaceListDataOutputWithContext(ctx context.Context) GetTunnelInterfaceListDataOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetTunnelInterfaceListDataOutput)
+}
+
+// GetTunnelInterfaceListDataArrayInput is an input type that accepts GetTunnelInterfaceListDataArray and GetTunnelInterfaceListDataArrayOutput values.
+// You can construct a concrete instance of `GetTunnelInterfaceListDataArrayInput` via:
+//
+//	GetTunnelInterfaceListDataArray{ GetTunnelInterfaceListDataArgs{...} }
+type GetTunnelInterfaceListDataArrayInput interface {
+	pulumi.Input
+
+	ToGetTunnelInterfaceListDataArrayOutput() GetTunnelInterfaceListDataArrayOutput
+	ToGetTunnelInterfaceListDataArrayOutputWithContext(context.Context) GetTunnelInterfaceListDataArrayOutput
+}
+
+type GetTunnelInterfaceListDataArray []GetTunnelInterfaceListDataInput
+
+func (GetTunnelInterfaceListDataArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetTunnelInterfaceListData)(nil)).Elem()
+}
+
+func (i GetTunnelInterfaceListDataArray) ToGetTunnelInterfaceListDataArrayOutput() GetTunnelInterfaceListDataArrayOutput {
+	return i.ToGetTunnelInterfaceListDataArrayOutputWithContext(context.Background())
+}
+
+func (i GetTunnelInterfaceListDataArray) ToGetTunnelInterfaceListDataArrayOutputWithContext(ctx context.Context) GetTunnelInterfaceListDataArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetTunnelInterfaceListDataArrayOutput)
+}
+
+type GetTunnelInterfaceListDataOutput struct{ *pulumi.OutputState }
+
+func (GetTunnelInterfaceListDataOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetTunnelInterfaceListData)(nil)).Elem()
+}
+
+func (o GetTunnelInterfaceListDataOutput) ToGetTunnelInterfaceListDataOutput() GetTunnelInterfaceListDataOutput {
+	return o
+}
+
+func (o GetTunnelInterfaceListDataOutput) ToGetTunnelInterfaceListDataOutputWithContext(ctx context.Context) GetTunnelInterfaceListDataOutput {
+	return o
+}
+
+// Description for tunnel interface
+func (o GetTunnelInterfaceListDataOutput) Comment() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTunnelInterfaceListData) string { return v.Comment }).(pulumi.StringOutput)
+}
+
+// Default interface assignment for tunnel interface
+func (o GetTunnelInterfaceListDataOutput) DefaultValue() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTunnelInterfaceListData) string { return v.DefaultValue }).(pulumi.StringOutput)
+}
+
+// The device in which the resource is defined
+func (o GetTunnelInterfaceListDataOutput) Device() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTunnelInterfaceListData) string { return v.Device }).(pulumi.StringOutput)
+}
+
+// The folder in which the resource is defined
+func (o GetTunnelInterfaceListDataOutput) Folder() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTunnelInterfaceListData) string { return v.Folder }).(pulumi.StringOutput)
+}
+
+// UUID of the resource for tunnel interface
+func (o GetTunnelInterfaceListDataOutput) Id() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTunnelInterfaceListData) string { return v.Id }).(pulumi.StringOutput)
+}
+
+// Interface management profile for tunnel interface
+func (o GetTunnelInterfaceListDataOutput) InterfaceManagementProfile() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTunnelInterfaceListData) string { return v.InterfaceManagementProfile }).(pulumi.StringOutput)
+}
+
+// Tunnel Interface IP Parent
+func (o GetTunnelInterfaceListDataOutput) Ips() GetTunnelInterfaceListDataIpArrayOutput {
+	return o.ApplyT(func(v GetTunnelInterfaceListData) []GetTunnelInterfaceListDataIp { return v.Ips }).(GetTunnelInterfaceListDataIpArrayOutput)
+}
+
+// Tunnel Interface IPv6 Configuration
+func (o GetTunnelInterfaceListDataOutput) Ipv6() GetTunnelInterfaceListDataIpv6Output {
+	return o.ApplyT(func(v GetTunnelInterfaceListData) GetTunnelInterfaceListDataIpv6 { return v.Ipv6 }).(GetTunnelInterfaceListDataIpv6Output)
+}
+
+// MTU for tunnel interface
+func (o GetTunnelInterfaceListDataOutput) Mtu() pulumi.IntOutput {
+	return o.ApplyT(func(v GetTunnelInterfaceListData) int { return v.Mtu }).(pulumi.IntOutput)
+}
+
+// L3 sub-interface name for tunnel interface
+func (o GetTunnelInterfaceListDataOutput) Name() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTunnelInterfaceListData) string { return v.Name }).(pulumi.StringOutput)
+}
+
+// Name of Netflow Profile to assign to Interface
+func (o GetTunnelInterfaceListDataOutput) NetflowProfile() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTunnelInterfaceListData) string { return v.NetflowProfile }).(pulumi.StringOutput)
+}
+
+// The snippet in which the resource is defined
+func (o GetTunnelInterfaceListDataOutput) Snippet() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTunnelInterfaceListData) string { return v.Snippet }).(pulumi.StringOutput)
+}
+
+// The Terraform ID.
+func (o GetTunnelInterfaceListDataOutput) Tfid() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTunnelInterfaceListData) string { return v.Tfid }).(pulumi.StringOutput)
+}
+
+type GetTunnelInterfaceListDataArrayOutput struct{ *pulumi.OutputState }
+
+func (GetTunnelInterfaceListDataArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetTunnelInterfaceListData)(nil)).Elem()
+}
+
+func (o GetTunnelInterfaceListDataArrayOutput) ToGetTunnelInterfaceListDataArrayOutput() GetTunnelInterfaceListDataArrayOutput {
+	return o
+}
+
+func (o GetTunnelInterfaceListDataArrayOutput) ToGetTunnelInterfaceListDataArrayOutputWithContext(ctx context.Context) GetTunnelInterfaceListDataArrayOutput {
+	return o
+}
+
+func (o GetTunnelInterfaceListDataArrayOutput) Index(i pulumi.IntInput) GetTunnelInterfaceListDataOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetTunnelInterfaceListData {
+		return vs[0].([]GetTunnelInterfaceListData)[vs[1].(int)]
+	}).(GetTunnelInterfaceListDataOutput)
+}
+
+type GetTunnelInterfaceListDataIp struct {
+	// Tunnel Interface IP address(es)
+	Name string `pulumi:"name"`
+}
+
+// GetTunnelInterfaceListDataIpInput is an input type that accepts GetTunnelInterfaceListDataIpArgs and GetTunnelInterfaceListDataIpOutput values.
+// You can construct a concrete instance of `GetTunnelInterfaceListDataIpInput` via:
+//
+//	GetTunnelInterfaceListDataIpArgs{...}
+type GetTunnelInterfaceListDataIpInput interface {
+	pulumi.Input
+
+	ToGetTunnelInterfaceListDataIpOutput() GetTunnelInterfaceListDataIpOutput
+	ToGetTunnelInterfaceListDataIpOutputWithContext(context.Context) GetTunnelInterfaceListDataIpOutput
+}
+
+type GetTunnelInterfaceListDataIpArgs struct {
+	// Tunnel Interface IP address(es)
+	Name pulumi.StringInput `pulumi:"name"`
+}
+
+func (GetTunnelInterfaceListDataIpArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetTunnelInterfaceListDataIp)(nil)).Elem()
+}
+
+func (i GetTunnelInterfaceListDataIpArgs) ToGetTunnelInterfaceListDataIpOutput() GetTunnelInterfaceListDataIpOutput {
+	return i.ToGetTunnelInterfaceListDataIpOutputWithContext(context.Background())
+}
+
+func (i GetTunnelInterfaceListDataIpArgs) ToGetTunnelInterfaceListDataIpOutputWithContext(ctx context.Context) GetTunnelInterfaceListDataIpOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetTunnelInterfaceListDataIpOutput)
+}
+
+// GetTunnelInterfaceListDataIpArrayInput is an input type that accepts GetTunnelInterfaceListDataIpArray and GetTunnelInterfaceListDataIpArrayOutput values.
+// You can construct a concrete instance of `GetTunnelInterfaceListDataIpArrayInput` via:
+//
+//	GetTunnelInterfaceListDataIpArray{ GetTunnelInterfaceListDataIpArgs{...} }
+type GetTunnelInterfaceListDataIpArrayInput interface {
+	pulumi.Input
+
+	ToGetTunnelInterfaceListDataIpArrayOutput() GetTunnelInterfaceListDataIpArrayOutput
+	ToGetTunnelInterfaceListDataIpArrayOutputWithContext(context.Context) GetTunnelInterfaceListDataIpArrayOutput
+}
+
+type GetTunnelInterfaceListDataIpArray []GetTunnelInterfaceListDataIpInput
+
+func (GetTunnelInterfaceListDataIpArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetTunnelInterfaceListDataIp)(nil)).Elem()
+}
+
+func (i GetTunnelInterfaceListDataIpArray) ToGetTunnelInterfaceListDataIpArrayOutput() GetTunnelInterfaceListDataIpArrayOutput {
+	return i.ToGetTunnelInterfaceListDataIpArrayOutputWithContext(context.Background())
+}
+
+func (i GetTunnelInterfaceListDataIpArray) ToGetTunnelInterfaceListDataIpArrayOutputWithContext(ctx context.Context) GetTunnelInterfaceListDataIpArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetTunnelInterfaceListDataIpArrayOutput)
+}
+
+type GetTunnelInterfaceListDataIpOutput struct{ *pulumi.OutputState }
+
+func (GetTunnelInterfaceListDataIpOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetTunnelInterfaceListDataIp)(nil)).Elem()
+}
+
+func (o GetTunnelInterfaceListDataIpOutput) ToGetTunnelInterfaceListDataIpOutput() GetTunnelInterfaceListDataIpOutput {
+	return o
+}
+
+func (o GetTunnelInterfaceListDataIpOutput) ToGetTunnelInterfaceListDataIpOutputWithContext(ctx context.Context) GetTunnelInterfaceListDataIpOutput {
+	return o
+}
+
+// Tunnel Interface IP address(es)
+func (o GetTunnelInterfaceListDataIpOutput) Name() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTunnelInterfaceListDataIp) string { return v.Name }).(pulumi.StringOutput)
+}
+
+type GetTunnelInterfaceListDataIpArrayOutput struct{ *pulumi.OutputState }
+
+func (GetTunnelInterfaceListDataIpArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetTunnelInterfaceListDataIp)(nil)).Elem()
+}
+
+func (o GetTunnelInterfaceListDataIpArrayOutput) ToGetTunnelInterfaceListDataIpArrayOutput() GetTunnelInterfaceListDataIpArrayOutput {
+	return o
+}
+
+func (o GetTunnelInterfaceListDataIpArrayOutput) ToGetTunnelInterfaceListDataIpArrayOutputWithContext(ctx context.Context) GetTunnelInterfaceListDataIpArrayOutput {
+	return o
+}
+
+func (o GetTunnelInterfaceListDataIpArrayOutput) Index(i pulumi.IntInput) GetTunnelInterfaceListDataIpOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetTunnelInterfaceListDataIp {
+		return vs[0].([]GetTunnelInterfaceListDataIp)[vs[1].(int)]
+	}).(GetTunnelInterfaceListDataIpOutput)
+}
+
+type GetTunnelInterfaceListDataIpv6 struct {
+	// IPv6 Address Parent for tunnel interface
+	Addresses []GetTunnelInterfaceListDataIpv6Address `pulumi:"addresses"`
+	// Enable IPv6 for tunnel interface
+	Enabled bool `pulumi:"enabled"`
+	// Interface ID for tunnel interface
+	InterfaceId string `pulumi:"interfaceId"`
+}
+
+// GetTunnelInterfaceListDataIpv6Input is an input type that accepts GetTunnelInterfaceListDataIpv6Args and GetTunnelInterfaceListDataIpv6Output values.
+// You can construct a concrete instance of `GetTunnelInterfaceListDataIpv6Input` via:
+//
+//	GetTunnelInterfaceListDataIpv6Args{...}
+type GetTunnelInterfaceListDataIpv6Input interface {
+	pulumi.Input
+
+	ToGetTunnelInterfaceListDataIpv6Output() GetTunnelInterfaceListDataIpv6Output
+	ToGetTunnelInterfaceListDataIpv6OutputWithContext(context.Context) GetTunnelInterfaceListDataIpv6Output
+}
+
+type GetTunnelInterfaceListDataIpv6Args struct {
+	// IPv6 Address Parent for tunnel interface
+	Addresses GetTunnelInterfaceListDataIpv6AddressArrayInput `pulumi:"addresses"`
+	// Enable IPv6 for tunnel interface
+	Enabled pulumi.BoolInput `pulumi:"enabled"`
+	// Interface ID for tunnel interface
+	InterfaceId pulumi.StringInput `pulumi:"interfaceId"`
+}
+
+func (GetTunnelInterfaceListDataIpv6Args) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetTunnelInterfaceListDataIpv6)(nil)).Elem()
+}
+
+func (i GetTunnelInterfaceListDataIpv6Args) ToGetTunnelInterfaceListDataIpv6Output() GetTunnelInterfaceListDataIpv6Output {
+	return i.ToGetTunnelInterfaceListDataIpv6OutputWithContext(context.Background())
+}
+
+func (i GetTunnelInterfaceListDataIpv6Args) ToGetTunnelInterfaceListDataIpv6OutputWithContext(ctx context.Context) GetTunnelInterfaceListDataIpv6Output {
+	return pulumi.ToOutputWithContext(ctx, i).(GetTunnelInterfaceListDataIpv6Output)
+}
+
+type GetTunnelInterfaceListDataIpv6Output struct{ *pulumi.OutputState }
+
+func (GetTunnelInterfaceListDataIpv6Output) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetTunnelInterfaceListDataIpv6)(nil)).Elem()
+}
+
+func (o GetTunnelInterfaceListDataIpv6Output) ToGetTunnelInterfaceListDataIpv6Output() GetTunnelInterfaceListDataIpv6Output {
+	return o
+}
+
+func (o GetTunnelInterfaceListDataIpv6Output) ToGetTunnelInterfaceListDataIpv6OutputWithContext(ctx context.Context) GetTunnelInterfaceListDataIpv6Output {
+	return o
+}
+
+// IPv6 Address Parent for tunnel interface
+func (o GetTunnelInterfaceListDataIpv6Output) Addresses() GetTunnelInterfaceListDataIpv6AddressArrayOutput {
+	return o.ApplyT(func(v GetTunnelInterfaceListDataIpv6) []GetTunnelInterfaceListDataIpv6Address { return v.Addresses }).(GetTunnelInterfaceListDataIpv6AddressArrayOutput)
+}
+
+// Enable IPv6 for tunnel interface
+func (o GetTunnelInterfaceListDataIpv6Output) Enabled() pulumi.BoolOutput {
+	return o.ApplyT(func(v GetTunnelInterfaceListDataIpv6) bool { return v.Enabled }).(pulumi.BoolOutput)
+}
+
+// Interface ID for tunnel interface
+func (o GetTunnelInterfaceListDataIpv6Output) InterfaceId() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTunnelInterfaceListDataIpv6) string { return v.InterfaceId }).(pulumi.StringOutput)
+}
+
+type GetTunnelInterfaceListDataIpv6Address struct {
+	// Anycast for tunnel interface
+	Anycast GetTunnelInterfaceListDataIpv6AddressAnycast `pulumi:"anycast"`
+	// Enable Address on Interface for tunnel interface
+	EnableOnInterface bool `pulumi:"enableOnInterface"`
+	// IPv6 Address for tunnel interface
+	Name string `pulumi:"name"`
+	// Use interface ID as host portion for tunnel interface
+	Prefix GetTunnelInterfaceListDataIpv6AddressPrefix `pulumi:"prefix"`
+}
+
+// GetTunnelInterfaceListDataIpv6AddressInput is an input type that accepts GetTunnelInterfaceListDataIpv6AddressArgs and GetTunnelInterfaceListDataIpv6AddressOutput values.
+// You can construct a concrete instance of `GetTunnelInterfaceListDataIpv6AddressInput` via:
+//
+//	GetTunnelInterfaceListDataIpv6AddressArgs{...}
+type GetTunnelInterfaceListDataIpv6AddressInput interface {
+	pulumi.Input
+
+	ToGetTunnelInterfaceListDataIpv6AddressOutput() GetTunnelInterfaceListDataIpv6AddressOutput
+	ToGetTunnelInterfaceListDataIpv6AddressOutputWithContext(context.Context) GetTunnelInterfaceListDataIpv6AddressOutput
+}
+
+type GetTunnelInterfaceListDataIpv6AddressArgs struct {
+	// Anycast for tunnel interface
+	Anycast GetTunnelInterfaceListDataIpv6AddressAnycastInput `pulumi:"anycast"`
+	// Enable Address on Interface for tunnel interface
+	EnableOnInterface pulumi.BoolInput `pulumi:"enableOnInterface"`
+	// IPv6 Address for tunnel interface
+	Name pulumi.StringInput `pulumi:"name"`
+	// Use interface ID as host portion for tunnel interface
+	Prefix GetTunnelInterfaceListDataIpv6AddressPrefixInput `pulumi:"prefix"`
+}
+
+func (GetTunnelInterfaceListDataIpv6AddressArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetTunnelInterfaceListDataIpv6Address)(nil)).Elem()
+}
+
+func (i GetTunnelInterfaceListDataIpv6AddressArgs) ToGetTunnelInterfaceListDataIpv6AddressOutput() GetTunnelInterfaceListDataIpv6AddressOutput {
+	return i.ToGetTunnelInterfaceListDataIpv6AddressOutputWithContext(context.Background())
+}
+
+func (i GetTunnelInterfaceListDataIpv6AddressArgs) ToGetTunnelInterfaceListDataIpv6AddressOutputWithContext(ctx context.Context) GetTunnelInterfaceListDataIpv6AddressOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetTunnelInterfaceListDataIpv6AddressOutput)
+}
+
+// GetTunnelInterfaceListDataIpv6AddressArrayInput is an input type that accepts GetTunnelInterfaceListDataIpv6AddressArray and GetTunnelInterfaceListDataIpv6AddressArrayOutput values.
+// You can construct a concrete instance of `GetTunnelInterfaceListDataIpv6AddressArrayInput` via:
+//
+//	GetTunnelInterfaceListDataIpv6AddressArray{ GetTunnelInterfaceListDataIpv6AddressArgs{...} }
+type GetTunnelInterfaceListDataIpv6AddressArrayInput interface {
+	pulumi.Input
+
+	ToGetTunnelInterfaceListDataIpv6AddressArrayOutput() GetTunnelInterfaceListDataIpv6AddressArrayOutput
+	ToGetTunnelInterfaceListDataIpv6AddressArrayOutputWithContext(context.Context) GetTunnelInterfaceListDataIpv6AddressArrayOutput
+}
+
+type GetTunnelInterfaceListDataIpv6AddressArray []GetTunnelInterfaceListDataIpv6AddressInput
+
+func (GetTunnelInterfaceListDataIpv6AddressArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetTunnelInterfaceListDataIpv6Address)(nil)).Elem()
+}
+
+func (i GetTunnelInterfaceListDataIpv6AddressArray) ToGetTunnelInterfaceListDataIpv6AddressArrayOutput() GetTunnelInterfaceListDataIpv6AddressArrayOutput {
+	return i.ToGetTunnelInterfaceListDataIpv6AddressArrayOutputWithContext(context.Background())
+}
+
+func (i GetTunnelInterfaceListDataIpv6AddressArray) ToGetTunnelInterfaceListDataIpv6AddressArrayOutputWithContext(ctx context.Context) GetTunnelInterfaceListDataIpv6AddressArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetTunnelInterfaceListDataIpv6AddressArrayOutput)
+}
+
+type GetTunnelInterfaceListDataIpv6AddressOutput struct{ *pulumi.OutputState }
+
+func (GetTunnelInterfaceListDataIpv6AddressOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetTunnelInterfaceListDataIpv6Address)(nil)).Elem()
+}
+
+func (o GetTunnelInterfaceListDataIpv6AddressOutput) ToGetTunnelInterfaceListDataIpv6AddressOutput() GetTunnelInterfaceListDataIpv6AddressOutput {
+	return o
+}
+
+func (o GetTunnelInterfaceListDataIpv6AddressOutput) ToGetTunnelInterfaceListDataIpv6AddressOutputWithContext(ctx context.Context) GetTunnelInterfaceListDataIpv6AddressOutput {
+	return o
+}
+
+// Anycast for tunnel interface
+func (o GetTunnelInterfaceListDataIpv6AddressOutput) Anycast() GetTunnelInterfaceListDataIpv6AddressAnycastOutput {
+	return o.ApplyT(func(v GetTunnelInterfaceListDataIpv6Address) GetTunnelInterfaceListDataIpv6AddressAnycast {
+		return v.Anycast
+	}).(GetTunnelInterfaceListDataIpv6AddressAnycastOutput)
+}
+
+// Enable Address on Interface for tunnel interface
+func (o GetTunnelInterfaceListDataIpv6AddressOutput) EnableOnInterface() pulumi.BoolOutput {
+	return o.ApplyT(func(v GetTunnelInterfaceListDataIpv6Address) bool { return v.EnableOnInterface }).(pulumi.BoolOutput)
+}
+
+// IPv6 Address for tunnel interface
+func (o GetTunnelInterfaceListDataIpv6AddressOutput) Name() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTunnelInterfaceListDataIpv6Address) string { return v.Name }).(pulumi.StringOutput)
+}
+
+// Use interface ID as host portion for tunnel interface
+func (o GetTunnelInterfaceListDataIpv6AddressOutput) Prefix() GetTunnelInterfaceListDataIpv6AddressPrefixOutput {
+	return o.ApplyT(func(v GetTunnelInterfaceListDataIpv6Address) GetTunnelInterfaceListDataIpv6AddressPrefix {
+		return v.Prefix
+	}).(GetTunnelInterfaceListDataIpv6AddressPrefixOutput)
+}
+
+type GetTunnelInterfaceListDataIpv6AddressArrayOutput struct{ *pulumi.OutputState }
+
+func (GetTunnelInterfaceListDataIpv6AddressArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetTunnelInterfaceListDataIpv6Address)(nil)).Elem()
+}
+
+func (o GetTunnelInterfaceListDataIpv6AddressArrayOutput) ToGetTunnelInterfaceListDataIpv6AddressArrayOutput() GetTunnelInterfaceListDataIpv6AddressArrayOutput {
+	return o
+}
+
+func (o GetTunnelInterfaceListDataIpv6AddressArrayOutput) ToGetTunnelInterfaceListDataIpv6AddressArrayOutputWithContext(ctx context.Context) GetTunnelInterfaceListDataIpv6AddressArrayOutput {
+	return o
+}
+
+func (o GetTunnelInterfaceListDataIpv6AddressArrayOutput) Index(i pulumi.IntInput) GetTunnelInterfaceListDataIpv6AddressOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetTunnelInterfaceListDataIpv6Address {
+		return vs[0].([]GetTunnelInterfaceListDataIpv6Address)[vs[1].(int)]
+	}).(GetTunnelInterfaceListDataIpv6AddressOutput)
+}
+
+type GetTunnelInterfaceListDataIpv6AddressAnycast struct {
+}
+
+// GetTunnelInterfaceListDataIpv6AddressAnycastInput is an input type that accepts GetTunnelInterfaceListDataIpv6AddressAnycastArgs and GetTunnelInterfaceListDataIpv6AddressAnycastOutput values.
+// You can construct a concrete instance of `GetTunnelInterfaceListDataIpv6AddressAnycastInput` via:
+//
+//	GetTunnelInterfaceListDataIpv6AddressAnycastArgs{...}
+type GetTunnelInterfaceListDataIpv6AddressAnycastInput interface {
+	pulumi.Input
+
+	ToGetTunnelInterfaceListDataIpv6AddressAnycastOutput() GetTunnelInterfaceListDataIpv6AddressAnycastOutput
+	ToGetTunnelInterfaceListDataIpv6AddressAnycastOutputWithContext(context.Context) GetTunnelInterfaceListDataIpv6AddressAnycastOutput
+}
+
+type GetTunnelInterfaceListDataIpv6AddressAnycastArgs struct {
+}
+
+func (GetTunnelInterfaceListDataIpv6AddressAnycastArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetTunnelInterfaceListDataIpv6AddressAnycast)(nil)).Elem()
+}
+
+func (i GetTunnelInterfaceListDataIpv6AddressAnycastArgs) ToGetTunnelInterfaceListDataIpv6AddressAnycastOutput() GetTunnelInterfaceListDataIpv6AddressAnycastOutput {
+	return i.ToGetTunnelInterfaceListDataIpv6AddressAnycastOutputWithContext(context.Background())
+}
+
+func (i GetTunnelInterfaceListDataIpv6AddressAnycastArgs) ToGetTunnelInterfaceListDataIpv6AddressAnycastOutputWithContext(ctx context.Context) GetTunnelInterfaceListDataIpv6AddressAnycastOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetTunnelInterfaceListDataIpv6AddressAnycastOutput)
+}
+
+type GetTunnelInterfaceListDataIpv6AddressAnycastOutput struct{ *pulumi.OutputState }
+
+func (GetTunnelInterfaceListDataIpv6AddressAnycastOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetTunnelInterfaceListDataIpv6AddressAnycast)(nil)).Elem()
+}
+
+func (o GetTunnelInterfaceListDataIpv6AddressAnycastOutput) ToGetTunnelInterfaceListDataIpv6AddressAnycastOutput() GetTunnelInterfaceListDataIpv6AddressAnycastOutput {
+	return o
+}
+
+func (o GetTunnelInterfaceListDataIpv6AddressAnycastOutput) ToGetTunnelInterfaceListDataIpv6AddressAnycastOutputWithContext(ctx context.Context) GetTunnelInterfaceListDataIpv6AddressAnycastOutput {
+	return o
+}
+
+type GetTunnelInterfaceListDataIpv6AddressPrefix struct {
+}
+
+// GetTunnelInterfaceListDataIpv6AddressPrefixInput is an input type that accepts GetTunnelInterfaceListDataIpv6AddressPrefixArgs and GetTunnelInterfaceListDataIpv6AddressPrefixOutput values.
+// You can construct a concrete instance of `GetTunnelInterfaceListDataIpv6AddressPrefixInput` via:
+//
+//	GetTunnelInterfaceListDataIpv6AddressPrefixArgs{...}
+type GetTunnelInterfaceListDataIpv6AddressPrefixInput interface {
+	pulumi.Input
+
+	ToGetTunnelInterfaceListDataIpv6AddressPrefixOutput() GetTunnelInterfaceListDataIpv6AddressPrefixOutput
+	ToGetTunnelInterfaceListDataIpv6AddressPrefixOutputWithContext(context.Context) GetTunnelInterfaceListDataIpv6AddressPrefixOutput
+}
+
+type GetTunnelInterfaceListDataIpv6AddressPrefixArgs struct {
+}
+
+func (GetTunnelInterfaceListDataIpv6AddressPrefixArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetTunnelInterfaceListDataIpv6AddressPrefix)(nil)).Elem()
+}
+
+func (i GetTunnelInterfaceListDataIpv6AddressPrefixArgs) ToGetTunnelInterfaceListDataIpv6AddressPrefixOutput() GetTunnelInterfaceListDataIpv6AddressPrefixOutput {
+	return i.ToGetTunnelInterfaceListDataIpv6AddressPrefixOutputWithContext(context.Background())
+}
+
+func (i GetTunnelInterfaceListDataIpv6AddressPrefixArgs) ToGetTunnelInterfaceListDataIpv6AddressPrefixOutputWithContext(ctx context.Context) GetTunnelInterfaceListDataIpv6AddressPrefixOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetTunnelInterfaceListDataIpv6AddressPrefixOutput)
+}
+
+type GetTunnelInterfaceListDataIpv6AddressPrefixOutput struct{ *pulumi.OutputState }
+
+func (GetTunnelInterfaceListDataIpv6AddressPrefixOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetTunnelInterfaceListDataIpv6AddressPrefix)(nil)).Elem()
+}
+
+func (o GetTunnelInterfaceListDataIpv6AddressPrefixOutput) ToGetTunnelInterfaceListDataIpv6AddressPrefixOutput() GetTunnelInterfaceListDataIpv6AddressPrefixOutput {
+	return o
+}
+
+func (o GetTunnelInterfaceListDataIpv6AddressPrefixOutput) ToGetTunnelInterfaceListDataIpv6AddressPrefixOutputWithContext(ctx context.Context) GetTunnelInterfaceListDataIpv6AddressPrefixOutput {
+	return o
+}
+
+type GetUpdateScheduleListData struct {
+	// The device in which the resource is defined
+	Device string `pulumi:"device"`
+	// The folder in which the resource is defined
+	Folder string `pulumi:"folder"`
+	// UUID of the resource
+	Id string `pulumi:"id"`
+	// The snippet in which the resource is defined
+	Snippet string `pulumi:"snippet"`
+	// The Terraform ID.
+	Tfid string `pulumi:"tfid"`
+	// Update schedule
+	UpdateSchedule GetUpdateScheduleListDataUpdateSchedule `pulumi:"updateSchedule"`
+}
+
+// GetUpdateScheduleListDataInput is an input type that accepts GetUpdateScheduleListDataArgs and GetUpdateScheduleListDataOutput values.
+// You can construct a concrete instance of `GetUpdateScheduleListDataInput` via:
+//
+//	GetUpdateScheduleListDataArgs{...}
+type GetUpdateScheduleListDataInput interface {
+	pulumi.Input
+
+	ToGetUpdateScheduleListDataOutput() GetUpdateScheduleListDataOutput
+	ToGetUpdateScheduleListDataOutputWithContext(context.Context) GetUpdateScheduleListDataOutput
+}
+
+type GetUpdateScheduleListDataArgs struct {
+	// The device in which the resource is defined
+	Device pulumi.StringInput `pulumi:"device"`
+	// The folder in which the resource is defined
+	Folder pulumi.StringInput `pulumi:"folder"`
+	// UUID of the resource
+	Id pulumi.StringInput `pulumi:"id"`
+	// The snippet in which the resource is defined
+	Snippet pulumi.StringInput `pulumi:"snippet"`
+	// The Terraform ID.
+	Tfid pulumi.StringInput `pulumi:"tfid"`
+	// Update schedule
+	UpdateSchedule GetUpdateScheduleListDataUpdateScheduleInput `pulumi:"updateSchedule"`
+}
+
+func (GetUpdateScheduleListDataArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetUpdateScheduleListData)(nil)).Elem()
+}
+
+func (i GetUpdateScheduleListDataArgs) ToGetUpdateScheduleListDataOutput() GetUpdateScheduleListDataOutput {
+	return i.ToGetUpdateScheduleListDataOutputWithContext(context.Background())
+}
+
+func (i GetUpdateScheduleListDataArgs) ToGetUpdateScheduleListDataOutputWithContext(ctx context.Context) GetUpdateScheduleListDataOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetUpdateScheduleListDataOutput)
+}
+
+// GetUpdateScheduleListDataArrayInput is an input type that accepts GetUpdateScheduleListDataArray and GetUpdateScheduleListDataArrayOutput values.
+// You can construct a concrete instance of `GetUpdateScheduleListDataArrayInput` via:
+//
+//	GetUpdateScheduleListDataArray{ GetUpdateScheduleListDataArgs{...} }
+type GetUpdateScheduleListDataArrayInput interface {
+	pulumi.Input
+
+	ToGetUpdateScheduleListDataArrayOutput() GetUpdateScheduleListDataArrayOutput
+	ToGetUpdateScheduleListDataArrayOutputWithContext(context.Context) GetUpdateScheduleListDataArrayOutput
+}
+
+type GetUpdateScheduleListDataArray []GetUpdateScheduleListDataInput
+
+func (GetUpdateScheduleListDataArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetUpdateScheduleListData)(nil)).Elem()
+}
+
+func (i GetUpdateScheduleListDataArray) ToGetUpdateScheduleListDataArrayOutput() GetUpdateScheduleListDataArrayOutput {
+	return i.ToGetUpdateScheduleListDataArrayOutputWithContext(context.Background())
+}
+
+func (i GetUpdateScheduleListDataArray) ToGetUpdateScheduleListDataArrayOutputWithContext(ctx context.Context) GetUpdateScheduleListDataArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetUpdateScheduleListDataArrayOutput)
+}
+
+type GetUpdateScheduleListDataOutput struct{ *pulumi.OutputState }
+
+func (GetUpdateScheduleListDataOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetUpdateScheduleListData)(nil)).Elem()
+}
+
+func (o GetUpdateScheduleListDataOutput) ToGetUpdateScheduleListDataOutput() GetUpdateScheduleListDataOutput {
+	return o
+}
+
+func (o GetUpdateScheduleListDataOutput) ToGetUpdateScheduleListDataOutputWithContext(ctx context.Context) GetUpdateScheduleListDataOutput {
+	return o
+}
+
+// The device in which the resource is defined
+func (o GetUpdateScheduleListDataOutput) Device() pulumi.StringOutput {
+	return o.ApplyT(func(v GetUpdateScheduleListData) string { return v.Device }).(pulumi.StringOutput)
+}
+
+// The folder in which the resource is defined
+func (o GetUpdateScheduleListDataOutput) Folder() pulumi.StringOutput {
+	return o.ApplyT(func(v GetUpdateScheduleListData) string { return v.Folder }).(pulumi.StringOutput)
+}
+
+// UUID of the resource
+func (o GetUpdateScheduleListDataOutput) Id() pulumi.StringOutput {
+	return o.ApplyT(func(v GetUpdateScheduleListData) string { return v.Id }).(pulumi.StringOutput)
+}
+
+// The snippet in which the resource is defined
+func (o GetUpdateScheduleListDataOutput) Snippet() pulumi.StringOutput {
+	return o.ApplyT(func(v GetUpdateScheduleListData) string { return v.Snippet }).(pulumi.StringOutput)
+}
+
+// The Terraform ID.
+func (o GetUpdateScheduleListDataOutput) Tfid() pulumi.StringOutput {
+	return o.ApplyT(func(v GetUpdateScheduleListData) string { return v.Tfid }).(pulumi.StringOutput)
+}
+
+// Update schedule
+func (o GetUpdateScheduleListDataOutput) UpdateSchedule() GetUpdateScheduleListDataUpdateScheduleOutput {
+	return o.ApplyT(func(v GetUpdateScheduleListData) GetUpdateScheduleListDataUpdateSchedule { return v.UpdateSchedule }).(GetUpdateScheduleListDataUpdateScheduleOutput)
+}
+
+type GetUpdateScheduleListDataArrayOutput struct{ *pulumi.OutputState }
+
+func (GetUpdateScheduleListDataArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetUpdateScheduleListData)(nil)).Elem()
+}
+
+func (o GetUpdateScheduleListDataArrayOutput) ToGetUpdateScheduleListDataArrayOutput() GetUpdateScheduleListDataArrayOutput {
+	return o
+}
+
+func (o GetUpdateScheduleListDataArrayOutput) ToGetUpdateScheduleListDataArrayOutputWithContext(ctx context.Context) GetUpdateScheduleListDataArrayOutput {
+	return o
+}
+
+func (o GetUpdateScheduleListDataArrayOutput) Index(i pulumi.IntInput) GetUpdateScheduleListDataOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetUpdateScheduleListData {
+		return vs[0].([]GetUpdateScheduleListData)[vs[1].(int)]
+	}).(GetUpdateScheduleListDataOutput)
+}
+
+type GetUpdateScheduleListDataUpdateSchedule struct {
+	// Anti virus
+	AntiVirus GetUpdateScheduleListDataUpdateScheduleAntiVirus `pulumi:"antiVirus"`
+	// Threats
+	Threats GetUpdateScheduleListDataUpdateScheduleThreats `pulumi:"threats"`
+	// Wildfire
+	Wildfire GetUpdateScheduleListDataUpdateScheduleWildfire `pulumi:"wildfire"`
+}
+
+// GetUpdateScheduleListDataUpdateScheduleInput is an input type that accepts GetUpdateScheduleListDataUpdateScheduleArgs and GetUpdateScheduleListDataUpdateScheduleOutput values.
+// You can construct a concrete instance of `GetUpdateScheduleListDataUpdateScheduleInput` via:
+//
+//	GetUpdateScheduleListDataUpdateScheduleArgs{...}
+type GetUpdateScheduleListDataUpdateScheduleInput interface {
+	pulumi.Input
+
+	ToGetUpdateScheduleListDataUpdateScheduleOutput() GetUpdateScheduleListDataUpdateScheduleOutput
+	ToGetUpdateScheduleListDataUpdateScheduleOutputWithContext(context.Context) GetUpdateScheduleListDataUpdateScheduleOutput
+}
+
+type GetUpdateScheduleListDataUpdateScheduleArgs struct {
+	// Anti virus
+	AntiVirus GetUpdateScheduleListDataUpdateScheduleAntiVirusInput `pulumi:"antiVirus"`
+	// Threats
+	Threats GetUpdateScheduleListDataUpdateScheduleThreatsInput `pulumi:"threats"`
+	// Wildfire
+	Wildfire GetUpdateScheduleListDataUpdateScheduleWildfireInput `pulumi:"wildfire"`
+}
+
+func (GetUpdateScheduleListDataUpdateScheduleArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetUpdateScheduleListDataUpdateSchedule)(nil)).Elem()
+}
+
+func (i GetUpdateScheduleListDataUpdateScheduleArgs) ToGetUpdateScheduleListDataUpdateScheduleOutput() GetUpdateScheduleListDataUpdateScheduleOutput {
+	return i.ToGetUpdateScheduleListDataUpdateScheduleOutputWithContext(context.Background())
+}
+
+func (i GetUpdateScheduleListDataUpdateScheduleArgs) ToGetUpdateScheduleListDataUpdateScheduleOutputWithContext(ctx context.Context) GetUpdateScheduleListDataUpdateScheduleOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetUpdateScheduleListDataUpdateScheduleOutput)
+}
+
+type GetUpdateScheduleListDataUpdateScheduleOutput struct{ *pulumi.OutputState }
+
+func (GetUpdateScheduleListDataUpdateScheduleOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetUpdateScheduleListDataUpdateSchedule)(nil)).Elem()
+}
+
+func (o GetUpdateScheduleListDataUpdateScheduleOutput) ToGetUpdateScheduleListDataUpdateScheduleOutput() GetUpdateScheduleListDataUpdateScheduleOutput {
+	return o
+}
+
+func (o GetUpdateScheduleListDataUpdateScheduleOutput) ToGetUpdateScheduleListDataUpdateScheduleOutputWithContext(ctx context.Context) GetUpdateScheduleListDataUpdateScheduleOutput {
+	return o
+}
+
+// Anti virus
+func (o GetUpdateScheduleListDataUpdateScheduleOutput) AntiVirus() GetUpdateScheduleListDataUpdateScheduleAntiVirusOutput {
+	return o.ApplyT(func(v GetUpdateScheduleListDataUpdateSchedule) GetUpdateScheduleListDataUpdateScheduleAntiVirus {
+		return v.AntiVirus
+	}).(GetUpdateScheduleListDataUpdateScheduleAntiVirusOutput)
+}
+
+// Threats
+func (o GetUpdateScheduleListDataUpdateScheduleOutput) Threats() GetUpdateScheduleListDataUpdateScheduleThreatsOutput {
+	return o.ApplyT(func(v GetUpdateScheduleListDataUpdateSchedule) GetUpdateScheduleListDataUpdateScheduleThreats {
+		return v.Threats
+	}).(GetUpdateScheduleListDataUpdateScheduleThreatsOutput)
+}
+
+// Wildfire
+func (o GetUpdateScheduleListDataUpdateScheduleOutput) Wildfire() GetUpdateScheduleListDataUpdateScheduleWildfireOutput {
+	return o.ApplyT(func(v GetUpdateScheduleListDataUpdateSchedule) GetUpdateScheduleListDataUpdateScheduleWildfire {
+		return v.Wildfire
+	}).(GetUpdateScheduleListDataUpdateScheduleWildfireOutput)
+}
+
+type GetUpdateScheduleListDataUpdateScheduleAntiVirus struct {
+	// Recurring
+	Recurring GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurring `pulumi:"recurring"`
+}
+
+// GetUpdateScheduleListDataUpdateScheduleAntiVirusInput is an input type that accepts GetUpdateScheduleListDataUpdateScheduleAntiVirusArgs and GetUpdateScheduleListDataUpdateScheduleAntiVirusOutput values.
+// You can construct a concrete instance of `GetUpdateScheduleListDataUpdateScheduleAntiVirusInput` via:
+//
+//	GetUpdateScheduleListDataUpdateScheduleAntiVirusArgs{...}
+type GetUpdateScheduleListDataUpdateScheduleAntiVirusInput interface {
+	pulumi.Input
+
+	ToGetUpdateScheduleListDataUpdateScheduleAntiVirusOutput() GetUpdateScheduleListDataUpdateScheduleAntiVirusOutput
+	ToGetUpdateScheduleListDataUpdateScheduleAntiVirusOutputWithContext(context.Context) GetUpdateScheduleListDataUpdateScheduleAntiVirusOutput
+}
+
+type GetUpdateScheduleListDataUpdateScheduleAntiVirusArgs struct {
+	// Recurring
+	Recurring GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringInput `pulumi:"recurring"`
+}
+
+func (GetUpdateScheduleListDataUpdateScheduleAntiVirusArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetUpdateScheduleListDataUpdateScheduleAntiVirus)(nil)).Elem()
+}
+
+func (i GetUpdateScheduleListDataUpdateScheduleAntiVirusArgs) ToGetUpdateScheduleListDataUpdateScheduleAntiVirusOutput() GetUpdateScheduleListDataUpdateScheduleAntiVirusOutput {
+	return i.ToGetUpdateScheduleListDataUpdateScheduleAntiVirusOutputWithContext(context.Background())
+}
+
+func (i GetUpdateScheduleListDataUpdateScheduleAntiVirusArgs) ToGetUpdateScheduleListDataUpdateScheduleAntiVirusOutputWithContext(ctx context.Context) GetUpdateScheduleListDataUpdateScheduleAntiVirusOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetUpdateScheduleListDataUpdateScheduleAntiVirusOutput)
+}
+
+type GetUpdateScheduleListDataUpdateScheduleAntiVirusOutput struct{ *pulumi.OutputState }
+
+func (GetUpdateScheduleListDataUpdateScheduleAntiVirusOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetUpdateScheduleListDataUpdateScheduleAntiVirus)(nil)).Elem()
+}
+
+func (o GetUpdateScheduleListDataUpdateScheduleAntiVirusOutput) ToGetUpdateScheduleListDataUpdateScheduleAntiVirusOutput() GetUpdateScheduleListDataUpdateScheduleAntiVirusOutput {
+	return o
+}
+
+func (o GetUpdateScheduleListDataUpdateScheduleAntiVirusOutput) ToGetUpdateScheduleListDataUpdateScheduleAntiVirusOutputWithContext(ctx context.Context) GetUpdateScheduleListDataUpdateScheduleAntiVirusOutput {
+	return o
+}
+
+// Recurring
+func (o GetUpdateScheduleListDataUpdateScheduleAntiVirusOutput) Recurring() GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringOutput {
+	return o.ApplyT(func(v GetUpdateScheduleListDataUpdateScheduleAntiVirus) GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurring {
+		return v.Recurring
+	}).(GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringOutput)
+}
+
+type GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurring struct {
+	// Daily
+	Daily GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringDaily `pulumi:"daily"`
+	// Hourly
+	Hourly GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringHourly `pulumi:"hourly"`
+	// None
+	None GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringNone `pulumi:"none"`
+	// Sync to peer
+	SyncToPeer bool `pulumi:"syncToPeer"`
+	// Threshold
+	Threshold int `pulumi:"threshold"`
+	// Weekly
+	Weekly GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringWeekly `pulumi:"weekly"`
+}
+
+// GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringInput is an input type that accepts GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringArgs and GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringOutput values.
+// You can construct a concrete instance of `GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringInput` via:
+//
+//	GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringArgs{...}
+type GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringInput interface {
+	pulumi.Input
+
+	ToGetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringOutput() GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringOutput
+	ToGetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringOutputWithContext(context.Context) GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringOutput
+}
+
+type GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringArgs struct {
+	// Daily
+	Daily GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringDailyInput `pulumi:"daily"`
+	// Hourly
+	Hourly GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringHourlyInput `pulumi:"hourly"`
+	// None
+	None GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringNoneInput `pulumi:"none"`
+	// Sync to peer
+	SyncToPeer pulumi.BoolInput `pulumi:"syncToPeer"`
+	// Threshold
+	Threshold pulumi.IntInput `pulumi:"threshold"`
+	// Weekly
+	Weekly GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringWeeklyInput `pulumi:"weekly"`
+}
+
+func (GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurring)(nil)).Elem()
+}
+
+func (i GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringArgs) ToGetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringOutput() GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringOutput {
+	return i.ToGetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringOutputWithContext(context.Background())
+}
+
+func (i GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringArgs) ToGetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringOutputWithContext(ctx context.Context) GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringOutput)
+}
+
+type GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringOutput struct{ *pulumi.OutputState }
+
+func (GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurring)(nil)).Elem()
+}
+
+func (o GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringOutput) ToGetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringOutput() GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringOutput {
+	return o
+}
+
+func (o GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringOutput) ToGetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringOutputWithContext(ctx context.Context) GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringOutput {
+	return o
+}
+
+// Daily
+func (o GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringOutput) Daily() GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringDailyOutput {
+	return o.ApplyT(func(v GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurring) GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringDaily {
+		return v.Daily
+	}).(GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringDailyOutput)
+}
+
+// Hourly
+func (o GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringOutput) Hourly() GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringHourlyOutput {
+	return o.ApplyT(func(v GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurring) GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringHourly {
+		return v.Hourly
+	}).(GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringHourlyOutput)
+}
+
+// None
+func (o GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringOutput) None() GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringNoneOutput {
+	return o.ApplyT(func(v GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurring) GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringNone {
+		return v.None
+	}).(GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringNoneOutput)
+}
+
+// Sync to peer
+func (o GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringOutput) SyncToPeer() pulumi.BoolOutput {
+	return o.ApplyT(func(v GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurring) bool { return v.SyncToPeer }).(pulumi.BoolOutput)
+}
+
+// Threshold
+func (o GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringOutput) Threshold() pulumi.IntOutput {
+	return o.ApplyT(func(v GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurring) int { return v.Threshold }).(pulumi.IntOutput)
+}
+
+// Weekly
+func (o GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringOutput) Weekly() GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringWeeklyOutput {
+	return o.ApplyT(func(v GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurring) GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringWeekly {
+		return v.Weekly
+	}).(GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringWeeklyOutput)
+}
+
+type GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringDaily struct {
+	// Action. Possible values are `download-only` and `download-and-install`.
+	Action string `pulumi:"action"`
+	// At
+	At string `pulumi:"at"`
+}
+
+// GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringDailyInput is an input type that accepts GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringDailyArgs and GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringDailyOutput values.
+// You can construct a concrete instance of `GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringDailyInput` via:
+//
+//	GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringDailyArgs{...}
+type GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringDailyInput interface {
+	pulumi.Input
+
+	ToGetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringDailyOutput() GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringDailyOutput
+	ToGetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringDailyOutputWithContext(context.Context) GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringDailyOutput
+}
+
+type GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringDailyArgs struct {
+	// Action. Possible values are `download-only` and `download-and-install`.
+	Action pulumi.StringInput `pulumi:"action"`
+	// At
+	At pulumi.StringInput `pulumi:"at"`
+}
+
+func (GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringDailyArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringDaily)(nil)).Elem()
+}
+
+func (i GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringDailyArgs) ToGetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringDailyOutput() GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringDailyOutput {
+	return i.ToGetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringDailyOutputWithContext(context.Background())
+}
+
+func (i GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringDailyArgs) ToGetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringDailyOutputWithContext(ctx context.Context) GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringDailyOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringDailyOutput)
+}
+
+type GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringDailyOutput struct{ *pulumi.OutputState }
+
+func (GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringDailyOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringDaily)(nil)).Elem()
+}
+
+func (o GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringDailyOutput) ToGetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringDailyOutput() GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringDailyOutput {
+	return o
+}
+
+func (o GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringDailyOutput) ToGetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringDailyOutputWithContext(ctx context.Context) GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringDailyOutput {
+	return o
+}
+
+// Action. Possible values are `download-only` and `download-and-install`.
+func (o GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringDailyOutput) Action() pulumi.StringOutput {
+	return o.ApplyT(func(v GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringDaily) string { return v.Action }).(pulumi.StringOutput)
+}
+
+// At
+func (o GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringDailyOutput) At() pulumi.StringOutput {
+	return o.ApplyT(func(v GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringDaily) string { return v.At }).(pulumi.StringOutput)
+}
+
+type GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringHourly struct {
+	// Action. Possible values are `download-only` and `download-and-install`.
+	Action string `pulumi:"action"`
+	// At
+	At int `pulumi:"at"`
+}
+
+// GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringHourlyInput is an input type that accepts GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringHourlyArgs and GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringHourlyOutput values.
+// You can construct a concrete instance of `GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringHourlyInput` via:
+//
+//	GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringHourlyArgs{...}
+type GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringHourlyInput interface {
+	pulumi.Input
+
+	ToGetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringHourlyOutput() GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringHourlyOutput
+	ToGetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringHourlyOutputWithContext(context.Context) GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringHourlyOutput
+}
+
+type GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringHourlyArgs struct {
+	// Action. Possible values are `download-only` and `download-and-install`.
+	Action pulumi.StringInput `pulumi:"action"`
+	// At
+	At pulumi.IntInput `pulumi:"at"`
+}
+
+func (GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringHourlyArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringHourly)(nil)).Elem()
+}
+
+func (i GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringHourlyArgs) ToGetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringHourlyOutput() GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringHourlyOutput {
+	return i.ToGetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringHourlyOutputWithContext(context.Background())
+}
+
+func (i GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringHourlyArgs) ToGetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringHourlyOutputWithContext(ctx context.Context) GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringHourlyOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringHourlyOutput)
+}
+
+type GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringHourlyOutput struct{ *pulumi.OutputState }
+
+func (GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringHourlyOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringHourly)(nil)).Elem()
+}
+
+func (o GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringHourlyOutput) ToGetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringHourlyOutput() GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringHourlyOutput {
+	return o
+}
+
+func (o GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringHourlyOutput) ToGetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringHourlyOutputWithContext(ctx context.Context) GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringHourlyOutput {
+	return o
+}
+
+// Action. Possible values are `download-only` and `download-and-install`.
+func (o GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringHourlyOutput) Action() pulumi.StringOutput {
+	return o.ApplyT(func(v GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringHourly) string { return v.Action }).(pulumi.StringOutput)
+}
+
+// At
+func (o GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringHourlyOutput) At() pulumi.IntOutput {
+	return o.ApplyT(func(v GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringHourly) int { return v.At }).(pulumi.IntOutput)
+}
+
+type GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringNone struct {
+}
+
+// GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringNoneInput is an input type that accepts GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringNoneArgs and GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringNoneOutput values.
+// You can construct a concrete instance of `GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringNoneInput` via:
+//
+//	GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringNoneArgs{...}
+type GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringNoneInput interface {
+	pulumi.Input
+
+	ToGetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringNoneOutput() GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringNoneOutput
+	ToGetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringNoneOutputWithContext(context.Context) GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringNoneOutput
+}
+
+type GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringNoneArgs struct {
+}
+
+func (GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringNoneArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringNone)(nil)).Elem()
+}
+
+func (i GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringNoneArgs) ToGetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringNoneOutput() GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringNoneOutput {
+	return i.ToGetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringNoneOutputWithContext(context.Background())
+}
+
+func (i GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringNoneArgs) ToGetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringNoneOutputWithContext(ctx context.Context) GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringNoneOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringNoneOutput)
+}
+
+type GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringNoneOutput struct{ *pulumi.OutputState }
+
+func (GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringNoneOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringNone)(nil)).Elem()
+}
+
+func (o GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringNoneOutput) ToGetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringNoneOutput() GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringNoneOutput {
+	return o
+}
+
+func (o GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringNoneOutput) ToGetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringNoneOutputWithContext(ctx context.Context) GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringNoneOutput {
+	return o
+}
+
+type GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringWeekly struct {
+	// Action. Possible values are `download-only` and `download-and-install`.
+	Action string `pulumi:"action"`
+	// At
+	At string `pulumi:"at"`
+	// Day of week. Possible values are `sunday`, `monday`, `tuesday`, `wednesday`, `thursday`, `friday` and `saturday`.
+	DayOfWeek string `pulumi:"dayOfWeek"`
+}
+
+// GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringWeeklyInput is an input type that accepts GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringWeeklyArgs and GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringWeeklyOutput values.
+// You can construct a concrete instance of `GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringWeeklyInput` via:
+//
+//	GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringWeeklyArgs{...}
+type GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringWeeklyInput interface {
+	pulumi.Input
+
+	ToGetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringWeeklyOutput() GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringWeeklyOutput
+	ToGetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringWeeklyOutputWithContext(context.Context) GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringWeeklyOutput
+}
+
+type GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringWeeklyArgs struct {
+	// Action. Possible values are `download-only` and `download-and-install`.
+	Action pulumi.StringInput `pulumi:"action"`
+	// At
+	At pulumi.StringInput `pulumi:"at"`
+	// Day of week. Possible values are `sunday`, `monday`, `tuesday`, `wednesday`, `thursday`, `friday` and `saturday`.
+	DayOfWeek pulumi.StringInput `pulumi:"dayOfWeek"`
+}
+
+func (GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringWeeklyArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringWeekly)(nil)).Elem()
+}
+
+func (i GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringWeeklyArgs) ToGetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringWeeklyOutput() GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringWeeklyOutput {
+	return i.ToGetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringWeeklyOutputWithContext(context.Background())
+}
+
+func (i GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringWeeklyArgs) ToGetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringWeeklyOutputWithContext(ctx context.Context) GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringWeeklyOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringWeeklyOutput)
+}
+
+type GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringWeeklyOutput struct{ *pulumi.OutputState }
+
+func (GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringWeeklyOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringWeekly)(nil)).Elem()
+}
+
+func (o GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringWeeklyOutput) ToGetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringWeeklyOutput() GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringWeeklyOutput {
+	return o
+}
+
+func (o GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringWeeklyOutput) ToGetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringWeeklyOutputWithContext(ctx context.Context) GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringWeeklyOutput {
+	return o
+}
+
+// Action. Possible values are `download-only` and `download-and-install`.
+func (o GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringWeeklyOutput) Action() pulumi.StringOutput {
+	return o.ApplyT(func(v GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringWeekly) string { return v.Action }).(pulumi.StringOutput)
+}
+
+// At
+func (o GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringWeeklyOutput) At() pulumi.StringOutput {
+	return o.ApplyT(func(v GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringWeekly) string { return v.At }).(pulumi.StringOutput)
+}
+
+// Day of week. Possible values are `sunday`, `monday`, `tuesday`, `wednesday`, `thursday`, `friday` and `saturday`.
+func (o GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringWeeklyOutput) DayOfWeek() pulumi.StringOutput {
+	return o.ApplyT(func(v GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringWeekly) string { return v.DayOfWeek }).(pulumi.StringOutput)
+}
+
+type GetUpdateScheduleListDataUpdateScheduleThreats struct {
+	// Recurring
+	Recurring GetUpdateScheduleListDataUpdateScheduleThreatsRecurring `pulumi:"recurring"`
+}
+
+// GetUpdateScheduleListDataUpdateScheduleThreatsInput is an input type that accepts GetUpdateScheduleListDataUpdateScheduleThreatsArgs and GetUpdateScheduleListDataUpdateScheduleThreatsOutput values.
+// You can construct a concrete instance of `GetUpdateScheduleListDataUpdateScheduleThreatsInput` via:
+//
+//	GetUpdateScheduleListDataUpdateScheduleThreatsArgs{...}
+type GetUpdateScheduleListDataUpdateScheduleThreatsInput interface {
+	pulumi.Input
+
+	ToGetUpdateScheduleListDataUpdateScheduleThreatsOutput() GetUpdateScheduleListDataUpdateScheduleThreatsOutput
+	ToGetUpdateScheduleListDataUpdateScheduleThreatsOutputWithContext(context.Context) GetUpdateScheduleListDataUpdateScheduleThreatsOutput
+}
+
+type GetUpdateScheduleListDataUpdateScheduleThreatsArgs struct {
+	// Recurring
+	Recurring GetUpdateScheduleListDataUpdateScheduleThreatsRecurringInput `pulumi:"recurring"`
+}
+
+func (GetUpdateScheduleListDataUpdateScheduleThreatsArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetUpdateScheduleListDataUpdateScheduleThreats)(nil)).Elem()
+}
+
+func (i GetUpdateScheduleListDataUpdateScheduleThreatsArgs) ToGetUpdateScheduleListDataUpdateScheduleThreatsOutput() GetUpdateScheduleListDataUpdateScheduleThreatsOutput {
+	return i.ToGetUpdateScheduleListDataUpdateScheduleThreatsOutputWithContext(context.Background())
+}
+
+func (i GetUpdateScheduleListDataUpdateScheduleThreatsArgs) ToGetUpdateScheduleListDataUpdateScheduleThreatsOutputWithContext(ctx context.Context) GetUpdateScheduleListDataUpdateScheduleThreatsOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetUpdateScheduleListDataUpdateScheduleThreatsOutput)
+}
+
+type GetUpdateScheduleListDataUpdateScheduleThreatsOutput struct{ *pulumi.OutputState }
+
+func (GetUpdateScheduleListDataUpdateScheduleThreatsOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetUpdateScheduleListDataUpdateScheduleThreats)(nil)).Elem()
+}
+
+func (o GetUpdateScheduleListDataUpdateScheduleThreatsOutput) ToGetUpdateScheduleListDataUpdateScheduleThreatsOutput() GetUpdateScheduleListDataUpdateScheduleThreatsOutput {
+	return o
+}
+
+func (o GetUpdateScheduleListDataUpdateScheduleThreatsOutput) ToGetUpdateScheduleListDataUpdateScheduleThreatsOutputWithContext(ctx context.Context) GetUpdateScheduleListDataUpdateScheduleThreatsOutput {
+	return o
+}
+
+// Recurring
+func (o GetUpdateScheduleListDataUpdateScheduleThreatsOutput) Recurring() GetUpdateScheduleListDataUpdateScheduleThreatsRecurringOutput {
+	return o.ApplyT(func(v GetUpdateScheduleListDataUpdateScheduleThreats) GetUpdateScheduleListDataUpdateScheduleThreatsRecurring {
+		return v.Recurring
+	}).(GetUpdateScheduleListDataUpdateScheduleThreatsRecurringOutput)
+}
+
+type GetUpdateScheduleListDataUpdateScheduleThreatsRecurring struct {
+	// Daily
+	Daily GetUpdateScheduleListDataUpdateScheduleThreatsRecurringDaily `pulumi:"daily"`
+	// Every30 mins
+	Every30Mins GetUpdateScheduleListDataUpdateScheduleThreatsRecurringEvery30Mins `pulumi:"every30Mins"`
+	// Hourly
+	Hourly GetUpdateScheduleListDataUpdateScheduleThreatsRecurringHourly `pulumi:"hourly"`
+	// New app threshold
+	NewAppThreshold int `pulumi:"newAppThreshold"`
+	// None
+	None GetUpdateScheduleListDataUpdateScheduleThreatsRecurringNone `pulumi:"none"`
+	// Sync to peer
+	SyncToPeer bool `pulumi:"syncToPeer"`
+	// Threshold
+	Threshold int `pulumi:"threshold"`
+	// Weekly
+	Weekly GetUpdateScheduleListDataUpdateScheduleThreatsRecurringWeekly `pulumi:"weekly"`
+}
+
+// GetUpdateScheduleListDataUpdateScheduleThreatsRecurringInput is an input type that accepts GetUpdateScheduleListDataUpdateScheduleThreatsRecurringArgs and GetUpdateScheduleListDataUpdateScheduleThreatsRecurringOutput values.
+// You can construct a concrete instance of `GetUpdateScheduleListDataUpdateScheduleThreatsRecurringInput` via:
+//
+//	GetUpdateScheduleListDataUpdateScheduleThreatsRecurringArgs{...}
+type GetUpdateScheduleListDataUpdateScheduleThreatsRecurringInput interface {
+	pulumi.Input
+
+	ToGetUpdateScheduleListDataUpdateScheduleThreatsRecurringOutput() GetUpdateScheduleListDataUpdateScheduleThreatsRecurringOutput
+	ToGetUpdateScheduleListDataUpdateScheduleThreatsRecurringOutputWithContext(context.Context) GetUpdateScheduleListDataUpdateScheduleThreatsRecurringOutput
+}
+
+type GetUpdateScheduleListDataUpdateScheduleThreatsRecurringArgs struct {
+	// Daily
+	Daily GetUpdateScheduleListDataUpdateScheduleThreatsRecurringDailyInput `pulumi:"daily"`
+	// Every30 mins
+	Every30Mins GetUpdateScheduleListDataUpdateScheduleThreatsRecurringEvery30MinsInput `pulumi:"every30Mins"`
+	// Hourly
+	Hourly GetUpdateScheduleListDataUpdateScheduleThreatsRecurringHourlyInput `pulumi:"hourly"`
+	// New app threshold
+	NewAppThreshold pulumi.IntInput `pulumi:"newAppThreshold"`
+	// None
+	None GetUpdateScheduleListDataUpdateScheduleThreatsRecurringNoneInput `pulumi:"none"`
+	// Sync to peer
+	SyncToPeer pulumi.BoolInput `pulumi:"syncToPeer"`
+	// Threshold
+	Threshold pulumi.IntInput `pulumi:"threshold"`
+	// Weekly
+	Weekly GetUpdateScheduleListDataUpdateScheduleThreatsRecurringWeeklyInput `pulumi:"weekly"`
+}
+
+func (GetUpdateScheduleListDataUpdateScheduleThreatsRecurringArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetUpdateScheduleListDataUpdateScheduleThreatsRecurring)(nil)).Elem()
+}
+
+func (i GetUpdateScheduleListDataUpdateScheduleThreatsRecurringArgs) ToGetUpdateScheduleListDataUpdateScheduleThreatsRecurringOutput() GetUpdateScheduleListDataUpdateScheduleThreatsRecurringOutput {
+	return i.ToGetUpdateScheduleListDataUpdateScheduleThreatsRecurringOutputWithContext(context.Background())
+}
+
+func (i GetUpdateScheduleListDataUpdateScheduleThreatsRecurringArgs) ToGetUpdateScheduleListDataUpdateScheduleThreatsRecurringOutputWithContext(ctx context.Context) GetUpdateScheduleListDataUpdateScheduleThreatsRecurringOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetUpdateScheduleListDataUpdateScheduleThreatsRecurringOutput)
+}
+
+type GetUpdateScheduleListDataUpdateScheduleThreatsRecurringOutput struct{ *pulumi.OutputState }
+
+func (GetUpdateScheduleListDataUpdateScheduleThreatsRecurringOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetUpdateScheduleListDataUpdateScheduleThreatsRecurring)(nil)).Elem()
+}
+
+func (o GetUpdateScheduleListDataUpdateScheduleThreatsRecurringOutput) ToGetUpdateScheduleListDataUpdateScheduleThreatsRecurringOutput() GetUpdateScheduleListDataUpdateScheduleThreatsRecurringOutput {
+	return o
+}
+
+func (o GetUpdateScheduleListDataUpdateScheduleThreatsRecurringOutput) ToGetUpdateScheduleListDataUpdateScheduleThreatsRecurringOutputWithContext(ctx context.Context) GetUpdateScheduleListDataUpdateScheduleThreatsRecurringOutput {
+	return o
+}
+
+// Daily
+func (o GetUpdateScheduleListDataUpdateScheduleThreatsRecurringOutput) Daily() GetUpdateScheduleListDataUpdateScheduleThreatsRecurringDailyOutput {
+	return o.ApplyT(func(v GetUpdateScheduleListDataUpdateScheduleThreatsRecurring) GetUpdateScheduleListDataUpdateScheduleThreatsRecurringDaily {
+		return v.Daily
+	}).(GetUpdateScheduleListDataUpdateScheduleThreatsRecurringDailyOutput)
+}
+
+// Every30 mins
+func (o GetUpdateScheduleListDataUpdateScheduleThreatsRecurringOutput) Every30Mins() GetUpdateScheduleListDataUpdateScheduleThreatsRecurringEvery30MinsOutput {
+	return o.ApplyT(func(v GetUpdateScheduleListDataUpdateScheduleThreatsRecurring) GetUpdateScheduleListDataUpdateScheduleThreatsRecurringEvery30Mins {
+		return v.Every30Mins
+	}).(GetUpdateScheduleListDataUpdateScheduleThreatsRecurringEvery30MinsOutput)
+}
+
+// Hourly
+func (o GetUpdateScheduleListDataUpdateScheduleThreatsRecurringOutput) Hourly() GetUpdateScheduleListDataUpdateScheduleThreatsRecurringHourlyOutput {
+	return o.ApplyT(func(v GetUpdateScheduleListDataUpdateScheduleThreatsRecurring) GetUpdateScheduleListDataUpdateScheduleThreatsRecurringHourly {
+		return v.Hourly
+	}).(GetUpdateScheduleListDataUpdateScheduleThreatsRecurringHourlyOutput)
+}
+
+// New app threshold
+func (o GetUpdateScheduleListDataUpdateScheduleThreatsRecurringOutput) NewAppThreshold() pulumi.IntOutput {
+	return o.ApplyT(func(v GetUpdateScheduleListDataUpdateScheduleThreatsRecurring) int { return v.NewAppThreshold }).(pulumi.IntOutput)
+}
+
+// None
+func (o GetUpdateScheduleListDataUpdateScheduleThreatsRecurringOutput) None() GetUpdateScheduleListDataUpdateScheduleThreatsRecurringNoneOutput {
+	return o.ApplyT(func(v GetUpdateScheduleListDataUpdateScheduleThreatsRecurring) GetUpdateScheduleListDataUpdateScheduleThreatsRecurringNone {
+		return v.None
+	}).(GetUpdateScheduleListDataUpdateScheduleThreatsRecurringNoneOutput)
+}
+
+// Sync to peer
+func (o GetUpdateScheduleListDataUpdateScheduleThreatsRecurringOutput) SyncToPeer() pulumi.BoolOutput {
+	return o.ApplyT(func(v GetUpdateScheduleListDataUpdateScheduleThreatsRecurring) bool { return v.SyncToPeer }).(pulumi.BoolOutput)
+}
+
+// Threshold
+func (o GetUpdateScheduleListDataUpdateScheduleThreatsRecurringOutput) Threshold() pulumi.IntOutput {
+	return o.ApplyT(func(v GetUpdateScheduleListDataUpdateScheduleThreatsRecurring) int { return v.Threshold }).(pulumi.IntOutput)
+}
+
+// Weekly
+func (o GetUpdateScheduleListDataUpdateScheduleThreatsRecurringOutput) Weekly() GetUpdateScheduleListDataUpdateScheduleThreatsRecurringWeeklyOutput {
+	return o.ApplyT(func(v GetUpdateScheduleListDataUpdateScheduleThreatsRecurring) GetUpdateScheduleListDataUpdateScheduleThreatsRecurringWeekly {
+		return v.Weekly
+	}).(GetUpdateScheduleListDataUpdateScheduleThreatsRecurringWeeklyOutput)
+}
+
+type GetUpdateScheduleListDataUpdateScheduleThreatsRecurringDaily struct {
+	// Action. Possible values are `download-only` and `download-and-install`.
+	Action string `pulumi:"action"`
+	// At
+	At string `pulumi:"at"`
+	// Disable new content
+	DisableNewContent bool `pulumi:"disableNewContent"`
+}
+
+// GetUpdateScheduleListDataUpdateScheduleThreatsRecurringDailyInput is an input type that accepts GetUpdateScheduleListDataUpdateScheduleThreatsRecurringDailyArgs and GetUpdateScheduleListDataUpdateScheduleThreatsRecurringDailyOutput values.
+// You can construct a concrete instance of `GetUpdateScheduleListDataUpdateScheduleThreatsRecurringDailyInput` via:
+//
+//	GetUpdateScheduleListDataUpdateScheduleThreatsRecurringDailyArgs{...}
+type GetUpdateScheduleListDataUpdateScheduleThreatsRecurringDailyInput interface {
+	pulumi.Input
+
+	ToGetUpdateScheduleListDataUpdateScheduleThreatsRecurringDailyOutput() GetUpdateScheduleListDataUpdateScheduleThreatsRecurringDailyOutput
+	ToGetUpdateScheduleListDataUpdateScheduleThreatsRecurringDailyOutputWithContext(context.Context) GetUpdateScheduleListDataUpdateScheduleThreatsRecurringDailyOutput
+}
+
+type GetUpdateScheduleListDataUpdateScheduleThreatsRecurringDailyArgs struct {
+	// Action. Possible values are `download-only` and `download-and-install`.
+	Action pulumi.StringInput `pulumi:"action"`
+	// At
+	At pulumi.StringInput `pulumi:"at"`
+	// Disable new content
+	DisableNewContent pulumi.BoolInput `pulumi:"disableNewContent"`
+}
+
+func (GetUpdateScheduleListDataUpdateScheduleThreatsRecurringDailyArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetUpdateScheduleListDataUpdateScheduleThreatsRecurringDaily)(nil)).Elem()
+}
+
+func (i GetUpdateScheduleListDataUpdateScheduleThreatsRecurringDailyArgs) ToGetUpdateScheduleListDataUpdateScheduleThreatsRecurringDailyOutput() GetUpdateScheduleListDataUpdateScheduleThreatsRecurringDailyOutput {
+	return i.ToGetUpdateScheduleListDataUpdateScheduleThreatsRecurringDailyOutputWithContext(context.Background())
+}
+
+func (i GetUpdateScheduleListDataUpdateScheduleThreatsRecurringDailyArgs) ToGetUpdateScheduleListDataUpdateScheduleThreatsRecurringDailyOutputWithContext(ctx context.Context) GetUpdateScheduleListDataUpdateScheduleThreatsRecurringDailyOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetUpdateScheduleListDataUpdateScheduleThreatsRecurringDailyOutput)
+}
+
+type GetUpdateScheduleListDataUpdateScheduleThreatsRecurringDailyOutput struct{ *pulumi.OutputState }
+
+func (GetUpdateScheduleListDataUpdateScheduleThreatsRecurringDailyOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetUpdateScheduleListDataUpdateScheduleThreatsRecurringDaily)(nil)).Elem()
+}
+
+func (o GetUpdateScheduleListDataUpdateScheduleThreatsRecurringDailyOutput) ToGetUpdateScheduleListDataUpdateScheduleThreatsRecurringDailyOutput() GetUpdateScheduleListDataUpdateScheduleThreatsRecurringDailyOutput {
+	return o
+}
+
+func (o GetUpdateScheduleListDataUpdateScheduleThreatsRecurringDailyOutput) ToGetUpdateScheduleListDataUpdateScheduleThreatsRecurringDailyOutputWithContext(ctx context.Context) GetUpdateScheduleListDataUpdateScheduleThreatsRecurringDailyOutput {
+	return o
+}
+
+// Action. Possible values are `download-only` and `download-and-install`.
+func (o GetUpdateScheduleListDataUpdateScheduleThreatsRecurringDailyOutput) Action() pulumi.StringOutput {
+	return o.ApplyT(func(v GetUpdateScheduleListDataUpdateScheduleThreatsRecurringDaily) string { return v.Action }).(pulumi.StringOutput)
+}
+
+// At
+func (o GetUpdateScheduleListDataUpdateScheduleThreatsRecurringDailyOutput) At() pulumi.StringOutput {
+	return o.ApplyT(func(v GetUpdateScheduleListDataUpdateScheduleThreatsRecurringDaily) string { return v.At }).(pulumi.StringOutput)
+}
+
+// Disable new content
+func (o GetUpdateScheduleListDataUpdateScheduleThreatsRecurringDailyOutput) DisableNewContent() pulumi.BoolOutput {
+	return o.ApplyT(func(v GetUpdateScheduleListDataUpdateScheduleThreatsRecurringDaily) bool { return v.DisableNewContent }).(pulumi.BoolOutput)
+}
+
+type GetUpdateScheduleListDataUpdateScheduleThreatsRecurringEvery30Mins struct {
+	// Action. Possible values are `download-only` and `download-and-install`.
+	Action string `pulumi:"action"`
+	// At
+	At int `pulumi:"at"`
+	// Disable new content
+	DisableNewContent bool `pulumi:"disableNewContent"`
+}
+
+// GetUpdateScheduleListDataUpdateScheduleThreatsRecurringEvery30MinsInput is an input type that accepts GetUpdateScheduleListDataUpdateScheduleThreatsRecurringEvery30MinsArgs and GetUpdateScheduleListDataUpdateScheduleThreatsRecurringEvery30MinsOutput values.
+// You can construct a concrete instance of `GetUpdateScheduleListDataUpdateScheduleThreatsRecurringEvery30MinsInput` via:
+//
+//	GetUpdateScheduleListDataUpdateScheduleThreatsRecurringEvery30MinsArgs{...}
+type GetUpdateScheduleListDataUpdateScheduleThreatsRecurringEvery30MinsInput interface {
+	pulumi.Input
+
+	ToGetUpdateScheduleListDataUpdateScheduleThreatsRecurringEvery30MinsOutput() GetUpdateScheduleListDataUpdateScheduleThreatsRecurringEvery30MinsOutput
+	ToGetUpdateScheduleListDataUpdateScheduleThreatsRecurringEvery30MinsOutputWithContext(context.Context) GetUpdateScheduleListDataUpdateScheduleThreatsRecurringEvery30MinsOutput
+}
+
+type GetUpdateScheduleListDataUpdateScheduleThreatsRecurringEvery30MinsArgs struct {
+	// Action. Possible values are `download-only` and `download-and-install`.
+	Action pulumi.StringInput `pulumi:"action"`
+	// At
+	At pulumi.IntInput `pulumi:"at"`
+	// Disable new content
+	DisableNewContent pulumi.BoolInput `pulumi:"disableNewContent"`
+}
+
+func (GetUpdateScheduleListDataUpdateScheduleThreatsRecurringEvery30MinsArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetUpdateScheduleListDataUpdateScheduleThreatsRecurringEvery30Mins)(nil)).Elem()
+}
+
+func (i GetUpdateScheduleListDataUpdateScheduleThreatsRecurringEvery30MinsArgs) ToGetUpdateScheduleListDataUpdateScheduleThreatsRecurringEvery30MinsOutput() GetUpdateScheduleListDataUpdateScheduleThreatsRecurringEvery30MinsOutput {
+	return i.ToGetUpdateScheduleListDataUpdateScheduleThreatsRecurringEvery30MinsOutputWithContext(context.Background())
+}
+
+func (i GetUpdateScheduleListDataUpdateScheduleThreatsRecurringEvery30MinsArgs) ToGetUpdateScheduleListDataUpdateScheduleThreatsRecurringEvery30MinsOutputWithContext(ctx context.Context) GetUpdateScheduleListDataUpdateScheduleThreatsRecurringEvery30MinsOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetUpdateScheduleListDataUpdateScheduleThreatsRecurringEvery30MinsOutput)
+}
+
+type GetUpdateScheduleListDataUpdateScheduleThreatsRecurringEvery30MinsOutput struct{ *pulumi.OutputState }
+
+func (GetUpdateScheduleListDataUpdateScheduleThreatsRecurringEvery30MinsOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetUpdateScheduleListDataUpdateScheduleThreatsRecurringEvery30Mins)(nil)).Elem()
+}
+
+func (o GetUpdateScheduleListDataUpdateScheduleThreatsRecurringEvery30MinsOutput) ToGetUpdateScheduleListDataUpdateScheduleThreatsRecurringEvery30MinsOutput() GetUpdateScheduleListDataUpdateScheduleThreatsRecurringEvery30MinsOutput {
+	return o
+}
+
+func (o GetUpdateScheduleListDataUpdateScheduleThreatsRecurringEvery30MinsOutput) ToGetUpdateScheduleListDataUpdateScheduleThreatsRecurringEvery30MinsOutputWithContext(ctx context.Context) GetUpdateScheduleListDataUpdateScheduleThreatsRecurringEvery30MinsOutput {
+	return o
+}
+
+// Action. Possible values are `download-only` and `download-and-install`.
+func (o GetUpdateScheduleListDataUpdateScheduleThreatsRecurringEvery30MinsOutput) Action() pulumi.StringOutput {
+	return o.ApplyT(func(v GetUpdateScheduleListDataUpdateScheduleThreatsRecurringEvery30Mins) string { return v.Action }).(pulumi.StringOutput)
+}
+
+// At
+func (o GetUpdateScheduleListDataUpdateScheduleThreatsRecurringEvery30MinsOutput) At() pulumi.IntOutput {
+	return o.ApplyT(func(v GetUpdateScheduleListDataUpdateScheduleThreatsRecurringEvery30Mins) int { return v.At }).(pulumi.IntOutput)
+}
+
+// Disable new content
+func (o GetUpdateScheduleListDataUpdateScheduleThreatsRecurringEvery30MinsOutput) DisableNewContent() pulumi.BoolOutput {
+	return o.ApplyT(func(v GetUpdateScheduleListDataUpdateScheduleThreatsRecurringEvery30Mins) bool {
+		return v.DisableNewContent
+	}).(pulumi.BoolOutput)
+}
+
+type GetUpdateScheduleListDataUpdateScheduleThreatsRecurringHourly struct {
+	// Action. Possible values are `download-only` and `download-and-install`.
+	Action string `pulumi:"action"`
+	// At
+	At float64 `pulumi:"at"`
+	// Disable new content
+	DisableNewContent bool `pulumi:"disableNewContent"`
+}
+
+// GetUpdateScheduleListDataUpdateScheduleThreatsRecurringHourlyInput is an input type that accepts GetUpdateScheduleListDataUpdateScheduleThreatsRecurringHourlyArgs and GetUpdateScheduleListDataUpdateScheduleThreatsRecurringHourlyOutput values.
+// You can construct a concrete instance of `GetUpdateScheduleListDataUpdateScheduleThreatsRecurringHourlyInput` via:
+//
+//	GetUpdateScheduleListDataUpdateScheduleThreatsRecurringHourlyArgs{...}
+type GetUpdateScheduleListDataUpdateScheduleThreatsRecurringHourlyInput interface {
+	pulumi.Input
+
+	ToGetUpdateScheduleListDataUpdateScheduleThreatsRecurringHourlyOutput() GetUpdateScheduleListDataUpdateScheduleThreatsRecurringHourlyOutput
+	ToGetUpdateScheduleListDataUpdateScheduleThreatsRecurringHourlyOutputWithContext(context.Context) GetUpdateScheduleListDataUpdateScheduleThreatsRecurringHourlyOutput
+}
+
+type GetUpdateScheduleListDataUpdateScheduleThreatsRecurringHourlyArgs struct {
+	// Action. Possible values are `download-only` and `download-and-install`.
+	Action pulumi.StringInput `pulumi:"action"`
+	// At
+	At pulumi.Float64Input `pulumi:"at"`
+	// Disable new content
+	DisableNewContent pulumi.BoolInput `pulumi:"disableNewContent"`
+}
+
+func (GetUpdateScheduleListDataUpdateScheduleThreatsRecurringHourlyArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetUpdateScheduleListDataUpdateScheduleThreatsRecurringHourly)(nil)).Elem()
+}
+
+func (i GetUpdateScheduleListDataUpdateScheduleThreatsRecurringHourlyArgs) ToGetUpdateScheduleListDataUpdateScheduleThreatsRecurringHourlyOutput() GetUpdateScheduleListDataUpdateScheduleThreatsRecurringHourlyOutput {
+	return i.ToGetUpdateScheduleListDataUpdateScheduleThreatsRecurringHourlyOutputWithContext(context.Background())
+}
+
+func (i GetUpdateScheduleListDataUpdateScheduleThreatsRecurringHourlyArgs) ToGetUpdateScheduleListDataUpdateScheduleThreatsRecurringHourlyOutputWithContext(ctx context.Context) GetUpdateScheduleListDataUpdateScheduleThreatsRecurringHourlyOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetUpdateScheduleListDataUpdateScheduleThreatsRecurringHourlyOutput)
+}
+
+type GetUpdateScheduleListDataUpdateScheduleThreatsRecurringHourlyOutput struct{ *pulumi.OutputState }
+
+func (GetUpdateScheduleListDataUpdateScheduleThreatsRecurringHourlyOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetUpdateScheduleListDataUpdateScheduleThreatsRecurringHourly)(nil)).Elem()
+}
+
+func (o GetUpdateScheduleListDataUpdateScheduleThreatsRecurringHourlyOutput) ToGetUpdateScheduleListDataUpdateScheduleThreatsRecurringHourlyOutput() GetUpdateScheduleListDataUpdateScheduleThreatsRecurringHourlyOutput {
+	return o
+}
+
+func (o GetUpdateScheduleListDataUpdateScheduleThreatsRecurringHourlyOutput) ToGetUpdateScheduleListDataUpdateScheduleThreatsRecurringHourlyOutputWithContext(ctx context.Context) GetUpdateScheduleListDataUpdateScheduleThreatsRecurringHourlyOutput {
+	return o
+}
+
+// Action. Possible values are `download-only` and `download-and-install`.
+func (o GetUpdateScheduleListDataUpdateScheduleThreatsRecurringHourlyOutput) Action() pulumi.StringOutput {
+	return o.ApplyT(func(v GetUpdateScheduleListDataUpdateScheduleThreatsRecurringHourly) string { return v.Action }).(pulumi.StringOutput)
+}
+
+// At
+func (o GetUpdateScheduleListDataUpdateScheduleThreatsRecurringHourlyOutput) At() pulumi.Float64Output {
+	return o.ApplyT(func(v GetUpdateScheduleListDataUpdateScheduleThreatsRecurringHourly) float64 { return v.At }).(pulumi.Float64Output)
+}
+
+// Disable new content
+func (o GetUpdateScheduleListDataUpdateScheduleThreatsRecurringHourlyOutput) DisableNewContent() pulumi.BoolOutput {
+	return o.ApplyT(func(v GetUpdateScheduleListDataUpdateScheduleThreatsRecurringHourly) bool { return v.DisableNewContent }).(pulumi.BoolOutput)
+}
+
+type GetUpdateScheduleListDataUpdateScheduleThreatsRecurringNone struct {
+}
+
+// GetUpdateScheduleListDataUpdateScheduleThreatsRecurringNoneInput is an input type that accepts GetUpdateScheduleListDataUpdateScheduleThreatsRecurringNoneArgs and GetUpdateScheduleListDataUpdateScheduleThreatsRecurringNoneOutput values.
+// You can construct a concrete instance of `GetUpdateScheduleListDataUpdateScheduleThreatsRecurringNoneInput` via:
+//
+//	GetUpdateScheduleListDataUpdateScheduleThreatsRecurringNoneArgs{...}
+type GetUpdateScheduleListDataUpdateScheduleThreatsRecurringNoneInput interface {
+	pulumi.Input
+
+	ToGetUpdateScheduleListDataUpdateScheduleThreatsRecurringNoneOutput() GetUpdateScheduleListDataUpdateScheduleThreatsRecurringNoneOutput
+	ToGetUpdateScheduleListDataUpdateScheduleThreatsRecurringNoneOutputWithContext(context.Context) GetUpdateScheduleListDataUpdateScheduleThreatsRecurringNoneOutput
+}
+
+type GetUpdateScheduleListDataUpdateScheduleThreatsRecurringNoneArgs struct {
+}
+
+func (GetUpdateScheduleListDataUpdateScheduleThreatsRecurringNoneArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetUpdateScheduleListDataUpdateScheduleThreatsRecurringNone)(nil)).Elem()
+}
+
+func (i GetUpdateScheduleListDataUpdateScheduleThreatsRecurringNoneArgs) ToGetUpdateScheduleListDataUpdateScheduleThreatsRecurringNoneOutput() GetUpdateScheduleListDataUpdateScheduleThreatsRecurringNoneOutput {
+	return i.ToGetUpdateScheduleListDataUpdateScheduleThreatsRecurringNoneOutputWithContext(context.Background())
+}
+
+func (i GetUpdateScheduleListDataUpdateScheduleThreatsRecurringNoneArgs) ToGetUpdateScheduleListDataUpdateScheduleThreatsRecurringNoneOutputWithContext(ctx context.Context) GetUpdateScheduleListDataUpdateScheduleThreatsRecurringNoneOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetUpdateScheduleListDataUpdateScheduleThreatsRecurringNoneOutput)
+}
+
+type GetUpdateScheduleListDataUpdateScheduleThreatsRecurringNoneOutput struct{ *pulumi.OutputState }
+
+func (GetUpdateScheduleListDataUpdateScheduleThreatsRecurringNoneOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetUpdateScheduleListDataUpdateScheduleThreatsRecurringNone)(nil)).Elem()
+}
+
+func (o GetUpdateScheduleListDataUpdateScheduleThreatsRecurringNoneOutput) ToGetUpdateScheduleListDataUpdateScheduleThreatsRecurringNoneOutput() GetUpdateScheduleListDataUpdateScheduleThreatsRecurringNoneOutput {
+	return o
+}
+
+func (o GetUpdateScheduleListDataUpdateScheduleThreatsRecurringNoneOutput) ToGetUpdateScheduleListDataUpdateScheduleThreatsRecurringNoneOutputWithContext(ctx context.Context) GetUpdateScheduleListDataUpdateScheduleThreatsRecurringNoneOutput {
+	return o
+}
+
+type GetUpdateScheduleListDataUpdateScheduleThreatsRecurringWeekly struct {
+	// Action. Possible values are `download-only` and `download-and-install`.
+	Action string `pulumi:"action"`
+	// At
+	At string `pulumi:"at"`
+	// Day of week. Possible values are `sunday`, `monday`, `tuesday`, `wednesday`, `thursday`, `friday` and `saturday`.
+	DayOfWeek string `pulumi:"dayOfWeek"`
+	// Disable new content
+	DisableNewContent bool `pulumi:"disableNewContent"`
+}
+
+// GetUpdateScheduleListDataUpdateScheduleThreatsRecurringWeeklyInput is an input type that accepts GetUpdateScheduleListDataUpdateScheduleThreatsRecurringWeeklyArgs and GetUpdateScheduleListDataUpdateScheduleThreatsRecurringWeeklyOutput values.
+// You can construct a concrete instance of `GetUpdateScheduleListDataUpdateScheduleThreatsRecurringWeeklyInput` via:
+//
+//	GetUpdateScheduleListDataUpdateScheduleThreatsRecurringWeeklyArgs{...}
+type GetUpdateScheduleListDataUpdateScheduleThreatsRecurringWeeklyInput interface {
+	pulumi.Input
+
+	ToGetUpdateScheduleListDataUpdateScheduleThreatsRecurringWeeklyOutput() GetUpdateScheduleListDataUpdateScheduleThreatsRecurringWeeklyOutput
+	ToGetUpdateScheduleListDataUpdateScheduleThreatsRecurringWeeklyOutputWithContext(context.Context) GetUpdateScheduleListDataUpdateScheduleThreatsRecurringWeeklyOutput
+}
+
+type GetUpdateScheduleListDataUpdateScheduleThreatsRecurringWeeklyArgs struct {
+	// Action. Possible values are `download-only` and `download-and-install`.
+	Action pulumi.StringInput `pulumi:"action"`
+	// At
+	At pulumi.StringInput `pulumi:"at"`
+	// Day of week. Possible values are `sunday`, `monday`, `tuesday`, `wednesday`, `thursday`, `friday` and `saturday`.
+	DayOfWeek pulumi.StringInput `pulumi:"dayOfWeek"`
+	// Disable new content
+	DisableNewContent pulumi.BoolInput `pulumi:"disableNewContent"`
+}
+
+func (GetUpdateScheduleListDataUpdateScheduleThreatsRecurringWeeklyArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetUpdateScheduleListDataUpdateScheduleThreatsRecurringWeekly)(nil)).Elem()
+}
+
+func (i GetUpdateScheduleListDataUpdateScheduleThreatsRecurringWeeklyArgs) ToGetUpdateScheduleListDataUpdateScheduleThreatsRecurringWeeklyOutput() GetUpdateScheduleListDataUpdateScheduleThreatsRecurringWeeklyOutput {
+	return i.ToGetUpdateScheduleListDataUpdateScheduleThreatsRecurringWeeklyOutputWithContext(context.Background())
+}
+
+func (i GetUpdateScheduleListDataUpdateScheduleThreatsRecurringWeeklyArgs) ToGetUpdateScheduleListDataUpdateScheduleThreatsRecurringWeeklyOutputWithContext(ctx context.Context) GetUpdateScheduleListDataUpdateScheduleThreatsRecurringWeeklyOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetUpdateScheduleListDataUpdateScheduleThreatsRecurringWeeklyOutput)
+}
+
+type GetUpdateScheduleListDataUpdateScheduleThreatsRecurringWeeklyOutput struct{ *pulumi.OutputState }
+
+func (GetUpdateScheduleListDataUpdateScheduleThreatsRecurringWeeklyOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetUpdateScheduleListDataUpdateScheduleThreatsRecurringWeekly)(nil)).Elem()
+}
+
+func (o GetUpdateScheduleListDataUpdateScheduleThreatsRecurringWeeklyOutput) ToGetUpdateScheduleListDataUpdateScheduleThreatsRecurringWeeklyOutput() GetUpdateScheduleListDataUpdateScheduleThreatsRecurringWeeklyOutput {
+	return o
+}
+
+func (o GetUpdateScheduleListDataUpdateScheduleThreatsRecurringWeeklyOutput) ToGetUpdateScheduleListDataUpdateScheduleThreatsRecurringWeeklyOutputWithContext(ctx context.Context) GetUpdateScheduleListDataUpdateScheduleThreatsRecurringWeeklyOutput {
+	return o
+}
+
+// Action. Possible values are `download-only` and `download-and-install`.
+func (o GetUpdateScheduleListDataUpdateScheduleThreatsRecurringWeeklyOutput) Action() pulumi.StringOutput {
+	return o.ApplyT(func(v GetUpdateScheduleListDataUpdateScheduleThreatsRecurringWeekly) string { return v.Action }).(pulumi.StringOutput)
+}
+
+// At
+func (o GetUpdateScheduleListDataUpdateScheduleThreatsRecurringWeeklyOutput) At() pulumi.StringOutput {
+	return o.ApplyT(func(v GetUpdateScheduleListDataUpdateScheduleThreatsRecurringWeekly) string { return v.At }).(pulumi.StringOutput)
+}
+
+// Day of week. Possible values are `sunday`, `monday`, `tuesday`, `wednesday`, `thursday`, `friday` and `saturday`.
+func (o GetUpdateScheduleListDataUpdateScheduleThreatsRecurringWeeklyOutput) DayOfWeek() pulumi.StringOutput {
+	return o.ApplyT(func(v GetUpdateScheduleListDataUpdateScheduleThreatsRecurringWeekly) string { return v.DayOfWeek }).(pulumi.StringOutput)
+}
+
+// Disable new content
+func (o GetUpdateScheduleListDataUpdateScheduleThreatsRecurringWeeklyOutput) DisableNewContent() pulumi.BoolOutput {
+	return o.ApplyT(func(v GetUpdateScheduleListDataUpdateScheduleThreatsRecurringWeekly) bool { return v.DisableNewContent }).(pulumi.BoolOutput)
+}
+
+type GetUpdateScheduleListDataUpdateScheduleWildfire struct {
+	// Recurring
+	Recurring GetUpdateScheduleListDataUpdateScheduleWildfireRecurring `pulumi:"recurring"`
+}
+
+// GetUpdateScheduleListDataUpdateScheduleWildfireInput is an input type that accepts GetUpdateScheduleListDataUpdateScheduleWildfireArgs and GetUpdateScheduleListDataUpdateScheduleWildfireOutput values.
+// You can construct a concrete instance of `GetUpdateScheduleListDataUpdateScheduleWildfireInput` via:
+//
+//	GetUpdateScheduleListDataUpdateScheduleWildfireArgs{...}
+type GetUpdateScheduleListDataUpdateScheduleWildfireInput interface {
+	pulumi.Input
+
+	ToGetUpdateScheduleListDataUpdateScheduleWildfireOutput() GetUpdateScheduleListDataUpdateScheduleWildfireOutput
+	ToGetUpdateScheduleListDataUpdateScheduleWildfireOutputWithContext(context.Context) GetUpdateScheduleListDataUpdateScheduleWildfireOutput
+}
+
+type GetUpdateScheduleListDataUpdateScheduleWildfireArgs struct {
+	// Recurring
+	Recurring GetUpdateScheduleListDataUpdateScheduleWildfireRecurringInput `pulumi:"recurring"`
+}
+
+func (GetUpdateScheduleListDataUpdateScheduleWildfireArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetUpdateScheduleListDataUpdateScheduleWildfire)(nil)).Elem()
+}
+
+func (i GetUpdateScheduleListDataUpdateScheduleWildfireArgs) ToGetUpdateScheduleListDataUpdateScheduleWildfireOutput() GetUpdateScheduleListDataUpdateScheduleWildfireOutput {
+	return i.ToGetUpdateScheduleListDataUpdateScheduleWildfireOutputWithContext(context.Background())
+}
+
+func (i GetUpdateScheduleListDataUpdateScheduleWildfireArgs) ToGetUpdateScheduleListDataUpdateScheduleWildfireOutputWithContext(ctx context.Context) GetUpdateScheduleListDataUpdateScheduleWildfireOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetUpdateScheduleListDataUpdateScheduleWildfireOutput)
+}
+
+type GetUpdateScheduleListDataUpdateScheduleWildfireOutput struct{ *pulumi.OutputState }
+
+func (GetUpdateScheduleListDataUpdateScheduleWildfireOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetUpdateScheduleListDataUpdateScheduleWildfire)(nil)).Elem()
+}
+
+func (o GetUpdateScheduleListDataUpdateScheduleWildfireOutput) ToGetUpdateScheduleListDataUpdateScheduleWildfireOutput() GetUpdateScheduleListDataUpdateScheduleWildfireOutput {
+	return o
+}
+
+func (o GetUpdateScheduleListDataUpdateScheduleWildfireOutput) ToGetUpdateScheduleListDataUpdateScheduleWildfireOutputWithContext(ctx context.Context) GetUpdateScheduleListDataUpdateScheduleWildfireOutput {
+	return o
+}
+
+// Recurring
+func (o GetUpdateScheduleListDataUpdateScheduleWildfireOutput) Recurring() GetUpdateScheduleListDataUpdateScheduleWildfireRecurringOutput {
+	return o.ApplyT(func(v GetUpdateScheduleListDataUpdateScheduleWildfire) GetUpdateScheduleListDataUpdateScheduleWildfireRecurring {
+		return v.Recurring
+	}).(GetUpdateScheduleListDataUpdateScheduleWildfireRecurringOutput)
+}
+
+type GetUpdateScheduleListDataUpdateScheduleWildfireRecurring struct {
+	// Every15 mins
+	Every15Mins GetUpdateScheduleListDataUpdateScheduleWildfireRecurringEvery15Mins `pulumi:"every15Mins"`
+	// Every30 mins
+	Every30Mins GetUpdateScheduleListDataUpdateScheduleWildfireRecurringEvery30Mins `pulumi:"every30Mins"`
+	// Every hour
+	EveryHour GetUpdateScheduleListDataUpdateScheduleWildfireRecurringEveryHour `pulumi:"everyHour"`
+	// Every min
+	EveryMin GetUpdateScheduleListDataUpdateScheduleWildfireRecurringEveryMin `pulumi:"everyMin"`
+	// None
+	None GetUpdateScheduleListDataUpdateScheduleWildfireRecurringNone `pulumi:"none"`
+	// Real time
+	RealTime GetUpdateScheduleListDataUpdateScheduleWildfireRecurringRealTime `pulumi:"realTime"`
+}
+
+// GetUpdateScheduleListDataUpdateScheduleWildfireRecurringInput is an input type that accepts GetUpdateScheduleListDataUpdateScheduleWildfireRecurringArgs and GetUpdateScheduleListDataUpdateScheduleWildfireRecurringOutput values.
+// You can construct a concrete instance of `GetUpdateScheduleListDataUpdateScheduleWildfireRecurringInput` via:
+//
+//	GetUpdateScheduleListDataUpdateScheduleWildfireRecurringArgs{...}
+type GetUpdateScheduleListDataUpdateScheduleWildfireRecurringInput interface {
+	pulumi.Input
+
+	ToGetUpdateScheduleListDataUpdateScheduleWildfireRecurringOutput() GetUpdateScheduleListDataUpdateScheduleWildfireRecurringOutput
+	ToGetUpdateScheduleListDataUpdateScheduleWildfireRecurringOutputWithContext(context.Context) GetUpdateScheduleListDataUpdateScheduleWildfireRecurringOutput
+}
+
+type GetUpdateScheduleListDataUpdateScheduleWildfireRecurringArgs struct {
+	// Every15 mins
+	Every15Mins GetUpdateScheduleListDataUpdateScheduleWildfireRecurringEvery15MinsInput `pulumi:"every15Mins"`
+	// Every30 mins
+	Every30Mins GetUpdateScheduleListDataUpdateScheduleWildfireRecurringEvery30MinsInput `pulumi:"every30Mins"`
+	// Every hour
+	EveryHour GetUpdateScheduleListDataUpdateScheduleWildfireRecurringEveryHourInput `pulumi:"everyHour"`
+	// Every min
+	EveryMin GetUpdateScheduleListDataUpdateScheduleWildfireRecurringEveryMinInput `pulumi:"everyMin"`
+	// None
+	None GetUpdateScheduleListDataUpdateScheduleWildfireRecurringNoneInput `pulumi:"none"`
+	// Real time
+	RealTime GetUpdateScheduleListDataUpdateScheduleWildfireRecurringRealTimeInput `pulumi:"realTime"`
+}
+
+func (GetUpdateScheduleListDataUpdateScheduleWildfireRecurringArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetUpdateScheduleListDataUpdateScheduleWildfireRecurring)(nil)).Elem()
+}
+
+func (i GetUpdateScheduleListDataUpdateScheduleWildfireRecurringArgs) ToGetUpdateScheduleListDataUpdateScheduleWildfireRecurringOutput() GetUpdateScheduleListDataUpdateScheduleWildfireRecurringOutput {
+	return i.ToGetUpdateScheduleListDataUpdateScheduleWildfireRecurringOutputWithContext(context.Background())
+}
+
+func (i GetUpdateScheduleListDataUpdateScheduleWildfireRecurringArgs) ToGetUpdateScheduleListDataUpdateScheduleWildfireRecurringOutputWithContext(ctx context.Context) GetUpdateScheduleListDataUpdateScheduleWildfireRecurringOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetUpdateScheduleListDataUpdateScheduleWildfireRecurringOutput)
+}
+
+type GetUpdateScheduleListDataUpdateScheduleWildfireRecurringOutput struct{ *pulumi.OutputState }
+
+func (GetUpdateScheduleListDataUpdateScheduleWildfireRecurringOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetUpdateScheduleListDataUpdateScheduleWildfireRecurring)(nil)).Elem()
+}
+
+func (o GetUpdateScheduleListDataUpdateScheduleWildfireRecurringOutput) ToGetUpdateScheduleListDataUpdateScheduleWildfireRecurringOutput() GetUpdateScheduleListDataUpdateScheduleWildfireRecurringOutput {
+	return o
+}
+
+func (o GetUpdateScheduleListDataUpdateScheduleWildfireRecurringOutput) ToGetUpdateScheduleListDataUpdateScheduleWildfireRecurringOutputWithContext(ctx context.Context) GetUpdateScheduleListDataUpdateScheduleWildfireRecurringOutput {
+	return o
+}
+
+// Every15 mins
+func (o GetUpdateScheduleListDataUpdateScheduleWildfireRecurringOutput) Every15Mins() GetUpdateScheduleListDataUpdateScheduleWildfireRecurringEvery15MinsOutput {
+	return o.ApplyT(func(v GetUpdateScheduleListDataUpdateScheduleWildfireRecurring) GetUpdateScheduleListDataUpdateScheduleWildfireRecurringEvery15Mins {
+		return v.Every15Mins
+	}).(GetUpdateScheduleListDataUpdateScheduleWildfireRecurringEvery15MinsOutput)
+}
+
+// Every30 mins
+func (o GetUpdateScheduleListDataUpdateScheduleWildfireRecurringOutput) Every30Mins() GetUpdateScheduleListDataUpdateScheduleWildfireRecurringEvery30MinsOutput {
+	return o.ApplyT(func(v GetUpdateScheduleListDataUpdateScheduleWildfireRecurring) GetUpdateScheduleListDataUpdateScheduleWildfireRecurringEvery30Mins {
+		return v.Every30Mins
+	}).(GetUpdateScheduleListDataUpdateScheduleWildfireRecurringEvery30MinsOutput)
+}
+
+// Every hour
+func (o GetUpdateScheduleListDataUpdateScheduleWildfireRecurringOutput) EveryHour() GetUpdateScheduleListDataUpdateScheduleWildfireRecurringEveryHourOutput {
+	return o.ApplyT(func(v GetUpdateScheduleListDataUpdateScheduleWildfireRecurring) GetUpdateScheduleListDataUpdateScheduleWildfireRecurringEveryHour {
+		return v.EveryHour
+	}).(GetUpdateScheduleListDataUpdateScheduleWildfireRecurringEveryHourOutput)
+}
+
+// Every min
+func (o GetUpdateScheduleListDataUpdateScheduleWildfireRecurringOutput) EveryMin() GetUpdateScheduleListDataUpdateScheduleWildfireRecurringEveryMinOutput {
+	return o.ApplyT(func(v GetUpdateScheduleListDataUpdateScheduleWildfireRecurring) GetUpdateScheduleListDataUpdateScheduleWildfireRecurringEveryMin {
+		return v.EveryMin
+	}).(GetUpdateScheduleListDataUpdateScheduleWildfireRecurringEveryMinOutput)
+}
+
+// None
+func (o GetUpdateScheduleListDataUpdateScheduleWildfireRecurringOutput) None() GetUpdateScheduleListDataUpdateScheduleWildfireRecurringNoneOutput {
+	return o.ApplyT(func(v GetUpdateScheduleListDataUpdateScheduleWildfireRecurring) GetUpdateScheduleListDataUpdateScheduleWildfireRecurringNone {
+		return v.None
+	}).(GetUpdateScheduleListDataUpdateScheduleWildfireRecurringNoneOutput)
+}
+
+// Real time
+func (o GetUpdateScheduleListDataUpdateScheduleWildfireRecurringOutput) RealTime() GetUpdateScheduleListDataUpdateScheduleWildfireRecurringRealTimeOutput {
+	return o.ApplyT(func(v GetUpdateScheduleListDataUpdateScheduleWildfireRecurring) GetUpdateScheduleListDataUpdateScheduleWildfireRecurringRealTime {
+		return v.RealTime
+	}).(GetUpdateScheduleListDataUpdateScheduleWildfireRecurringRealTimeOutput)
+}
+
+type GetUpdateScheduleListDataUpdateScheduleWildfireRecurringEvery15Mins struct {
+	// Action. Possible values are `download-only` and `download-and-install`.
+	Action string `pulumi:"action"`
+	// At
+	At int `pulumi:"at"`
+	// Sync to peer
+	SyncToPeer bool `pulumi:"syncToPeer"`
+}
+
+// GetUpdateScheduleListDataUpdateScheduleWildfireRecurringEvery15MinsInput is an input type that accepts GetUpdateScheduleListDataUpdateScheduleWildfireRecurringEvery15MinsArgs and GetUpdateScheduleListDataUpdateScheduleWildfireRecurringEvery15MinsOutput values.
+// You can construct a concrete instance of `GetUpdateScheduleListDataUpdateScheduleWildfireRecurringEvery15MinsInput` via:
+//
+//	GetUpdateScheduleListDataUpdateScheduleWildfireRecurringEvery15MinsArgs{...}
+type GetUpdateScheduleListDataUpdateScheduleWildfireRecurringEvery15MinsInput interface {
+	pulumi.Input
+
+	ToGetUpdateScheduleListDataUpdateScheduleWildfireRecurringEvery15MinsOutput() GetUpdateScheduleListDataUpdateScheduleWildfireRecurringEvery15MinsOutput
+	ToGetUpdateScheduleListDataUpdateScheduleWildfireRecurringEvery15MinsOutputWithContext(context.Context) GetUpdateScheduleListDataUpdateScheduleWildfireRecurringEvery15MinsOutput
+}
+
+type GetUpdateScheduleListDataUpdateScheduleWildfireRecurringEvery15MinsArgs struct {
+	// Action. Possible values are `download-only` and `download-and-install`.
+	Action pulumi.StringInput `pulumi:"action"`
+	// At
+	At pulumi.IntInput `pulumi:"at"`
+	// Sync to peer
+	SyncToPeer pulumi.BoolInput `pulumi:"syncToPeer"`
+}
+
+func (GetUpdateScheduleListDataUpdateScheduleWildfireRecurringEvery15MinsArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetUpdateScheduleListDataUpdateScheduleWildfireRecurringEvery15Mins)(nil)).Elem()
+}
+
+func (i GetUpdateScheduleListDataUpdateScheduleWildfireRecurringEvery15MinsArgs) ToGetUpdateScheduleListDataUpdateScheduleWildfireRecurringEvery15MinsOutput() GetUpdateScheduleListDataUpdateScheduleWildfireRecurringEvery15MinsOutput {
+	return i.ToGetUpdateScheduleListDataUpdateScheduleWildfireRecurringEvery15MinsOutputWithContext(context.Background())
+}
+
+func (i GetUpdateScheduleListDataUpdateScheduleWildfireRecurringEvery15MinsArgs) ToGetUpdateScheduleListDataUpdateScheduleWildfireRecurringEvery15MinsOutputWithContext(ctx context.Context) GetUpdateScheduleListDataUpdateScheduleWildfireRecurringEvery15MinsOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetUpdateScheduleListDataUpdateScheduleWildfireRecurringEvery15MinsOutput)
+}
+
+type GetUpdateScheduleListDataUpdateScheduleWildfireRecurringEvery15MinsOutput struct{ *pulumi.OutputState }
+
+func (GetUpdateScheduleListDataUpdateScheduleWildfireRecurringEvery15MinsOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetUpdateScheduleListDataUpdateScheduleWildfireRecurringEvery15Mins)(nil)).Elem()
+}
+
+func (o GetUpdateScheduleListDataUpdateScheduleWildfireRecurringEvery15MinsOutput) ToGetUpdateScheduleListDataUpdateScheduleWildfireRecurringEvery15MinsOutput() GetUpdateScheduleListDataUpdateScheduleWildfireRecurringEvery15MinsOutput {
+	return o
+}
+
+func (o GetUpdateScheduleListDataUpdateScheduleWildfireRecurringEvery15MinsOutput) ToGetUpdateScheduleListDataUpdateScheduleWildfireRecurringEvery15MinsOutputWithContext(ctx context.Context) GetUpdateScheduleListDataUpdateScheduleWildfireRecurringEvery15MinsOutput {
+	return o
+}
+
+// Action. Possible values are `download-only` and `download-and-install`.
+func (o GetUpdateScheduleListDataUpdateScheduleWildfireRecurringEvery15MinsOutput) Action() pulumi.StringOutput {
+	return o.ApplyT(func(v GetUpdateScheduleListDataUpdateScheduleWildfireRecurringEvery15Mins) string { return v.Action }).(pulumi.StringOutput)
+}
+
+// At
+func (o GetUpdateScheduleListDataUpdateScheduleWildfireRecurringEvery15MinsOutput) At() pulumi.IntOutput {
+	return o.ApplyT(func(v GetUpdateScheduleListDataUpdateScheduleWildfireRecurringEvery15Mins) int { return v.At }).(pulumi.IntOutput)
+}
+
+// Sync to peer
+func (o GetUpdateScheduleListDataUpdateScheduleWildfireRecurringEvery15MinsOutput) SyncToPeer() pulumi.BoolOutput {
+	return o.ApplyT(func(v GetUpdateScheduleListDataUpdateScheduleWildfireRecurringEvery15Mins) bool { return v.SyncToPeer }).(pulumi.BoolOutput)
+}
+
+type GetUpdateScheduleListDataUpdateScheduleWildfireRecurringEvery30Mins struct {
+	// Action. Possible values are `download-only` and `download-and-install`.
+	Action string `pulumi:"action"`
+	// At
+	At int `pulumi:"at"`
+	// Sync to peer
+	SyncToPeer bool `pulumi:"syncToPeer"`
+}
+
+// GetUpdateScheduleListDataUpdateScheduleWildfireRecurringEvery30MinsInput is an input type that accepts GetUpdateScheduleListDataUpdateScheduleWildfireRecurringEvery30MinsArgs and GetUpdateScheduleListDataUpdateScheduleWildfireRecurringEvery30MinsOutput values.
+// You can construct a concrete instance of `GetUpdateScheduleListDataUpdateScheduleWildfireRecurringEvery30MinsInput` via:
+//
+//	GetUpdateScheduleListDataUpdateScheduleWildfireRecurringEvery30MinsArgs{...}
+type GetUpdateScheduleListDataUpdateScheduleWildfireRecurringEvery30MinsInput interface {
+	pulumi.Input
+
+	ToGetUpdateScheduleListDataUpdateScheduleWildfireRecurringEvery30MinsOutput() GetUpdateScheduleListDataUpdateScheduleWildfireRecurringEvery30MinsOutput
+	ToGetUpdateScheduleListDataUpdateScheduleWildfireRecurringEvery30MinsOutputWithContext(context.Context) GetUpdateScheduleListDataUpdateScheduleWildfireRecurringEvery30MinsOutput
+}
+
+type GetUpdateScheduleListDataUpdateScheduleWildfireRecurringEvery30MinsArgs struct {
+	// Action. Possible values are `download-only` and `download-and-install`.
+	Action pulumi.StringInput `pulumi:"action"`
+	// At
+	At pulumi.IntInput `pulumi:"at"`
+	// Sync to peer
+	SyncToPeer pulumi.BoolInput `pulumi:"syncToPeer"`
+}
+
+func (GetUpdateScheduleListDataUpdateScheduleWildfireRecurringEvery30MinsArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetUpdateScheduleListDataUpdateScheduleWildfireRecurringEvery30Mins)(nil)).Elem()
+}
+
+func (i GetUpdateScheduleListDataUpdateScheduleWildfireRecurringEvery30MinsArgs) ToGetUpdateScheduleListDataUpdateScheduleWildfireRecurringEvery30MinsOutput() GetUpdateScheduleListDataUpdateScheduleWildfireRecurringEvery30MinsOutput {
+	return i.ToGetUpdateScheduleListDataUpdateScheduleWildfireRecurringEvery30MinsOutputWithContext(context.Background())
+}
+
+func (i GetUpdateScheduleListDataUpdateScheduleWildfireRecurringEvery30MinsArgs) ToGetUpdateScheduleListDataUpdateScheduleWildfireRecurringEvery30MinsOutputWithContext(ctx context.Context) GetUpdateScheduleListDataUpdateScheduleWildfireRecurringEvery30MinsOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetUpdateScheduleListDataUpdateScheduleWildfireRecurringEvery30MinsOutput)
+}
+
+type GetUpdateScheduleListDataUpdateScheduleWildfireRecurringEvery30MinsOutput struct{ *pulumi.OutputState }
+
+func (GetUpdateScheduleListDataUpdateScheduleWildfireRecurringEvery30MinsOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetUpdateScheduleListDataUpdateScheduleWildfireRecurringEvery30Mins)(nil)).Elem()
+}
+
+func (o GetUpdateScheduleListDataUpdateScheduleWildfireRecurringEvery30MinsOutput) ToGetUpdateScheduleListDataUpdateScheduleWildfireRecurringEvery30MinsOutput() GetUpdateScheduleListDataUpdateScheduleWildfireRecurringEvery30MinsOutput {
+	return o
+}
+
+func (o GetUpdateScheduleListDataUpdateScheduleWildfireRecurringEvery30MinsOutput) ToGetUpdateScheduleListDataUpdateScheduleWildfireRecurringEvery30MinsOutputWithContext(ctx context.Context) GetUpdateScheduleListDataUpdateScheduleWildfireRecurringEvery30MinsOutput {
+	return o
+}
+
+// Action. Possible values are `download-only` and `download-and-install`.
+func (o GetUpdateScheduleListDataUpdateScheduleWildfireRecurringEvery30MinsOutput) Action() pulumi.StringOutput {
+	return o.ApplyT(func(v GetUpdateScheduleListDataUpdateScheduleWildfireRecurringEvery30Mins) string { return v.Action }).(pulumi.StringOutput)
+}
+
+// At
+func (o GetUpdateScheduleListDataUpdateScheduleWildfireRecurringEvery30MinsOutput) At() pulumi.IntOutput {
+	return o.ApplyT(func(v GetUpdateScheduleListDataUpdateScheduleWildfireRecurringEvery30Mins) int { return v.At }).(pulumi.IntOutput)
+}
+
+// Sync to peer
+func (o GetUpdateScheduleListDataUpdateScheduleWildfireRecurringEvery30MinsOutput) SyncToPeer() pulumi.BoolOutput {
+	return o.ApplyT(func(v GetUpdateScheduleListDataUpdateScheduleWildfireRecurringEvery30Mins) bool { return v.SyncToPeer }).(pulumi.BoolOutput)
+}
+
+type GetUpdateScheduleListDataUpdateScheduleWildfireRecurringEveryHour struct {
+	// Action. Possible values are `download-only` and `download-and-install`.
+	Action string `pulumi:"action"`
+	// At
+	At int `pulumi:"at"`
+	// Sync to peer
+	SyncToPeer bool `pulumi:"syncToPeer"`
+}
+
+// GetUpdateScheduleListDataUpdateScheduleWildfireRecurringEveryHourInput is an input type that accepts GetUpdateScheduleListDataUpdateScheduleWildfireRecurringEveryHourArgs and GetUpdateScheduleListDataUpdateScheduleWildfireRecurringEveryHourOutput values.
+// You can construct a concrete instance of `GetUpdateScheduleListDataUpdateScheduleWildfireRecurringEveryHourInput` via:
+//
+//	GetUpdateScheduleListDataUpdateScheduleWildfireRecurringEveryHourArgs{...}
+type GetUpdateScheduleListDataUpdateScheduleWildfireRecurringEveryHourInput interface {
+	pulumi.Input
+
+	ToGetUpdateScheduleListDataUpdateScheduleWildfireRecurringEveryHourOutput() GetUpdateScheduleListDataUpdateScheduleWildfireRecurringEveryHourOutput
+	ToGetUpdateScheduleListDataUpdateScheduleWildfireRecurringEveryHourOutputWithContext(context.Context) GetUpdateScheduleListDataUpdateScheduleWildfireRecurringEveryHourOutput
+}
+
+type GetUpdateScheduleListDataUpdateScheduleWildfireRecurringEveryHourArgs struct {
+	// Action. Possible values are `download-only` and `download-and-install`.
+	Action pulumi.StringInput `pulumi:"action"`
+	// At
+	At pulumi.IntInput `pulumi:"at"`
+	// Sync to peer
+	SyncToPeer pulumi.BoolInput `pulumi:"syncToPeer"`
+}
+
+func (GetUpdateScheduleListDataUpdateScheduleWildfireRecurringEveryHourArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetUpdateScheduleListDataUpdateScheduleWildfireRecurringEveryHour)(nil)).Elem()
+}
+
+func (i GetUpdateScheduleListDataUpdateScheduleWildfireRecurringEveryHourArgs) ToGetUpdateScheduleListDataUpdateScheduleWildfireRecurringEveryHourOutput() GetUpdateScheduleListDataUpdateScheduleWildfireRecurringEveryHourOutput {
+	return i.ToGetUpdateScheduleListDataUpdateScheduleWildfireRecurringEveryHourOutputWithContext(context.Background())
+}
+
+func (i GetUpdateScheduleListDataUpdateScheduleWildfireRecurringEveryHourArgs) ToGetUpdateScheduleListDataUpdateScheduleWildfireRecurringEveryHourOutputWithContext(ctx context.Context) GetUpdateScheduleListDataUpdateScheduleWildfireRecurringEveryHourOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetUpdateScheduleListDataUpdateScheduleWildfireRecurringEveryHourOutput)
+}
+
+type GetUpdateScheduleListDataUpdateScheduleWildfireRecurringEveryHourOutput struct{ *pulumi.OutputState }
+
+func (GetUpdateScheduleListDataUpdateScheduleWildfireRecurringEveryHourOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetUpdateScheduleListDataUpdateScheduleWildfireRecurringEveryHour)(nil)).Elem()
+}
+
+func (o GetUpdateScheduleListDataUpdateScheduleWildfireRecurringEveryHourOutput) ToGetUpdateScheduleListDataUpdateScheduleWildfireRecurringEveryHourOutput() GetUpdateScheduleListDataUpdateScheduleWildfireRecurringEveryHourOutput {
+	return o
+}
+
+func (o GetUpdateScheduleListDataUpdateScheduleWildfireRecurringEveryHourOutput) ToGetUpdateScheduleListDataUpdateScheduleWildfireRecurringEveryHourOutputWithContext(ctx context.Context) GetUpdateScheduleListDataUpdateScheduleWildfireRecurringEveryHourOutput {
+	return o
+}
+
+// Action. Possible values are `download-only` and `download-and-install`.
+func (o GetUpdateScheduleListDataUpdateScheduleWildfireRecurringEveryHourOutput) Action() pulumi.StringOutput {
+	return o.ApplyT(func(v GetUpdateScheduleListDataUpdateScheduleWildfireRecurringEveryHour) string { return v.Action }).(pulumi.StringOutput)
+}
+
+// At
+func (o GetUpdateScheduleListDataUpdateScheduleWildfireRecurringEveryHourOutput) At() pulumi.IntOutput {
+	return o.ApplyT(func(v GetUpdateScheduleListDataUpdateScheduleWildfireRecurringEveryHour) int { return v.At }).(pulumi.IntOutput)
+}
+
+// Sync to peer
+func (o GetUpdateScheduleListDataUpdateScheduleWildfireRecurringEveryHourOutput) SyncToPeer() pulumi.BoolOutput {
+	return o.ApplyT(func(v GetUpdateScheduleListDataUpdateScheduleWildfireRecurringEveryHour) bool { return v.SyncToPeer }).(pulumi.BoolOutput)
+}
+
+type GetUpdateScheduleListDataUpdateScheduleWildfireRecurringEveryMin struct {
+	// Action. Possible values are `download-only` and `download-and-install`.
+	Action string `pulumi:"action"`
+	// Sync to peer
+	SyncToPeer bool `pulumi:"syncToPeer"`
+}
+
+// GetUpdateScheduleListDataUpdateScheduleWildfireRecurringEveryMinInput is an input type that accepts GetUpdateScheduleListDataUpdateScheduleWildfireRecurringEveryMinArgs and GetUpdateScheduleListDataUpdateScheduleWildfireRecurringEveryMinOutput values.
+// You can construct a concrete instance of `GetUpdateScheduleListDataUpdateScheduleWildfireRecurringEveryMinInput` via:
+//
+//	GetUpdateScheduleListDataUpdateScheduleWildfireRecurringEveryMinArgs{...}
+type GetUpdateScheduleListDataUpdateScheduleWildfireRecurringEveryMinInput interface {
+	pulumi.Input
+
+	ToGetUpdateScheduleListDataUpdateScheduleWildfireRecurringEveryMinOutput() GetUpdateScheduleListDataUpdateScheduleWildfireRecurringEveryMinOutput
+	ToGetUpdateScheduleListDataUpdateScheduleWildfireRecurringEveryMinOutputWithContext(context.Context) GetUpdateScheduleListDataUpdateScheduleWildfireRecurringEveryMinOutput
+}
+
+type GetUpdateScheduleListDataUpdateScheduleWildfireRecurringEveryMinArgs struct {
+	// Action. Possible values are `download-only` and `download-and-install`.
+	Action pulumi.StringInput `pulumi:"action"`
+	// Sync to peer
+	SyncToPeer pulumi.BoolInput `pulumi:"syncToPeer"`
+}
+
+func (GetUpdateScheduleListDataUpdateScheduleWildfireRecurringEveryMinArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetUpdateScheduleListDataUpdateScheduleWildfireRecurringEveryMin)(nil)).Elem()
+}
+
+func (i GetUpdateScheduleListDataUpdateScheduleWildfireRecurringEveryMinArgs) ToGetUpdateScheduleListDataUpdateScheduleWildfireRecurringEveryMinOutput() GetUpdateScheduleListDataUpdateScheduleWildfireRecurringEveryMinOutput {
+	return i.ToGetUpdateScheduleListDataUpdateScheduleWildfireRecurringEveryMinOutputWithContext(context.Background())
+}
+
+func (i GetUpdateScheduleListDataUpdateScheduleWildfireRecurringEveryMinArgs) ToGetUpdateScheduleListDataUpdateScheduleWildfireRecurringEveryMinOutputWithContext(ctx context.Context) GetUpdateScheduleListDataUpdateScheduleWildfireRecurringEveryMinOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetUpdateScheduleListDataUpdateScheduleWildfireRecurringEveryMinOutput)
+}
+
+type GetUpdateScheduleListDataUpdateScheduleWildfireRecurringEveryMinOutput struct{ *pulumi.OutputState }
+
+func (GetUpdateScheduleListDataUpdateScheduleWildfireRecurringEveryMinOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetUpdateScheduleListDataUpdateScheduleWildfireRecurringEveryMin)(nil)).Elem()
+}
+
+func (o GetUpdateScheduleListDataUpdateScheduleWildfireRecurringEveryMinOutput) ToGetUpdateScheduleListDataUpdateScheduleWildfireRecurringEveryMinOutput() GetUpdateScheduleListDataUpdateScheduleWildfireRecurringEveryMinOutput {
+	return o
+}
+
+func (o GetUpdateScheduleListDataUpdateScheduleWildfireRecurringEveryMinOutput) ToGetUpdateScheduleListDataUpdateScheduleWildfireRecurringEveryMinOutputWithContext(ctx context.Context) GetUpdateScheduleListDataUpdateScheduleWildfireRecurringEveryMinOutput {
+	return o
+}
+
+// Action. Possible values are `download-only` and `download-and-install`.
+func (o GetUpdateScheduleListDataUpdateScheduleWildfireRecurringEveryMinOutput) Action() pulumi.StringOutput {
+	return o.ApplyT(func(v GetUpdateScheduleListDataUpdateScheduleWildfireRecurringEveryMin) string { return v.Action }).(pulumi.StringOutput)
+}
+
+// Sync to peer
+func (o GetUpdateScheduleListDataUpdateScheduleWildfireRecurringEveryMinOutput) SyncToPeer() pulumi.BoolOutput {
+	return o.ApplyT(func(v GetUpdateScheduleListDataUpdateScheduleWildfireRecurringEveryMin) bool { return v.SyncToPeer }).(pulumi.BoolOutput)
+}
+
+type GetUpdateScheduleListDataUpdateScheduleWildfireRecurringNone struct {
+}
+
+// GetUpdateScheduleListDataUpdateScheduleWildfireRecurringNoneInput is an input type that accepts GetUpdateScheduleListDataUpdateScheduleWildfireRecurringNoneArgs and GetUpdateScheduleListDataUpdateScheduleWildfireRecurringNoneOutput values.
+// You can construct a concrete instance of `GetUpdateScheduleListDataUpdateScheduleWildfireRecurringNoneInput` via:
+//
+//	GetUpdateScheduleListDataUpdateScheduleWildfireRecurringNoneArgs{...}
+type GetUpdateScheduleListDataUpdateScheduleWildfireRecurringNoneInput interface {
+	pulumi.Input
+
+	ToGetUpdateScheduleListDataUpdateScheduleWildfireRecurringNoneOutput() GetUpdateScheduleListDataUpdateScheduleWildfireRecurringNoneOutput
+	ToGetUpdateScheduleListDataUpdateScheduleWildfireRecurringNoneOutputWithContext(context.Context) GetUpdateScheduleListDataUpdateScheduleWildfireRecurringNoneOutput
+}
+
+type GetUpdateScheduleListDataUpdateScheduleWildfireRecurringNoneArgs struct {
+}
+
+func (GetUpdateScheduleListDataUpdateScheduleWildfireRecurringNoneArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetUpdateScheduleListDataUpdateScheduleWildfireRecurringNone)(nil)).Elem()
+}
+
+func (i GetUpdateScheduleListDataUpdateScheduleWildfireRecurringNoneArgs) ToGetUpdateScheduleListDataUpdateScheduleWildfireRecurringNoneOutput() GetUpdateScheduleListDataUpdateScheduleWildfireRecurringNoneOutput {
+	return i.ToGetUpdateScheduleListDataUpdateScheduleWildfireRecurringNoneOutputWithContext(context.Background())
+}
+
+func (i GetUpdateScheduleListDataUpdateScheduleWildfireRecurringNoneArgs) ToGetUpdateScheduleListDataUpdateScheduleWildfireRecurringNoneOutputWithContext(ctx context.Context) GetUpdateScheduleListDataUpdateScheduleWildfireRecurringNoneOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetUpdateScheduleListDataUpdateScheduleWildfireRecurringNoneOutput)
+}
+
+type GetUpdateScheduleListDataUpdateScheduleWildfireRecurringNoneOutput struct{ *pulumi.OutputState }
+
+func (GetUpdateScheduleListDataUpdateScheduleWildfireRecurringNoneOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetUpdateScheduleListDataUpdateScheduleWildfireRecurringNone)(nil)).Elem()
+}
+
+func (o GetUpdateScheduleListDataUpdateScheduleWildfireRecurringNoneOutput) ToGetUpdateScheduleListDataUpdateScheduleWildfireRecurringNoneOutput() GetUpdateScheduleListDataUpdateScheduleWildfireRecurringNoneOutput {
+	return o
+}
+
+func (o GetUpdateScheduleListDataUpdateScheduleWildfireRecurringNoneOutput) ToGetUpdateScheduleListDataUpdateScheduleWildfireRecurringNoneOutputWithContext(ctx context.Context) GetUpdateScheduleListDataUpdateScheduleWildfireRecurringNoneOutput {
+	return o
+}
+
+type GetUpdateScheduleListDataUpdateScheduleWildfireRecurringRealTime struct {
+}
+
+// GetUpdateScheduleListDataUpdateScheduleWildfireRecurringRealTimeInput is an input type that accepts GetUpdateScheduleListDataUpdateScheduleWildfireRecurringRealTimeArgs and GetUpdateScheduleListDataUpdateScheduleWildfireRecurringRealTimeOutput values.
+// You can construct a concrete instance of `GetUpdateScheduleListDataUpdateScheduleWildfireRecurringRealTimeInput` via:
+//
+//	GetUpdateScheduleListDataUpdateScheduleWildfireRecurringRealTimeArgs{...}
+type GetUpdateScheduleListDataUpdateScheduleWildfireRecurringRealTimeInput interface {
+	pulumi.Input
+
+	ToGetUpdateScheduleListDataUpdateScheduleWildfireRecurringRealTimeOutput() GetUpdateScheduleListDataUpdateScheduleWildfireRecurringRealTimeOutput
+	ToGetUpdateScheduleListDataUpdateScheduleWildfireRecurringRealTimeOutputWithContext(context.Context) GetUpdateScheduleListDataUpdateScheduleWildfireRecurringRealTimeOutput
+}
+
+type GetUpdateScheduleListDataUpdateScheduleWildfireRecurringRealTimeArgs struct {
+}
+
+func (GetUpdateScheduleListDataUpdateScheduleWildfireRecurringRealTimeArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetUpdateScheduleListDataUpdateScheduleWildfireRecurringRealTime)(nil)).Elem()
+}
+
+func (i GetUpdateScheduleListDataUpdateScheduleWildfireRecurringRealTimeArgs) ToGetUpdateScheduleListDataUpdateScheduleWildfireRecurringRealTimeOutput() GetUpdateScheduleListDataUpdateScheduleWildfireRecurringRealTimeOutput {
+	return i.ToGetUpdateScheduleListDataUpdateScheduleWildfireRecurringRealTimeOutputWithContext(context.Background())
+}
+
+func (i GetUpdateScheduleListDataUpdateScheduleWildfireRecurringRealTimeArgs) ToGetUpdateScheduleListDataUpdateScheduleWildfireRecurringRealTimeOutputWithContext(ctx context.Context) GetUpdateScheduleListDataUpdateScheduleWildfireRecurringRealTimeOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetUpdateScheduleListDataUpdateScheduleWildfireRecurringRealTimeOutput)
+}
+
+type GetUpdateScheduleListDataUpdateScheduleWildfireRecurringRealTimeOutput struct{ *pulumi.OutputState }
+
+func (GetUpdateScheduleListDataUpdateScheduleWildfireRecurringRealTimeOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetUpdateScheduleListDataUpdateScheduleWildfireRecurringRealTime)(nil)).Elem()
+}
+
+func (o GetUpdateScheduleListDataUpdateScheduleWildfireRecurringRealTimeOutput) ToGetUpdateScheduleListDataUpdateScheduleWildfireRecurringRealTimeOutput() GetUpdateScheduleListDataUpdateScheduleWildfireRecurringRealTimeOutput {
+	return o
+}
+
+func (o GetUpdateScheduleListDataUpdateScheduleWildfireRecurringRealTimeOutput) ToGetUpdateScheduleListDataUpdateScheduleWildfireRecurringRealTimeOutputWithContext(ctx context.Context) GetUpdateScheduleListDataUpdateScheduleWildfireRecurringRealTimeOutput {
+	return o
+}
+
+type GetUpdateScheduleUpdateSchedule struct {
+	// Anti virus
+	AntiVirus GetUpdateScheduleUpdateScheduleAntiVirus `pulumi:"antiVirus"`
+	// Threats
+	Threats GetUpdateScheduleUpdateScheduleThreats `pulumi:"threats"`
+	// Wildfire
+	Wildfire GetUpdateScheduleUpdateScheduleWildfire `pulumi:"wildfire"`
+}
+
+// GetUpdateScheduleUpdateScheduleInput is an input type that accepts GetUpdateScheduleUpdateScheduleArgs and GetUpdateScheduleUpdateScheduleOutput values.
+// You can construct a concrete instance of `GetUpdateScheduleUpdateScheduleInput` via:
+//
+//	GetUpdateScheduleUpdateScheduleArgs{...}
+type GetUpdateScheduleUpdateScheduleInput interface {
+	pulumi.Input
+
+	ToGetUpdateScheduleUpdateScheduleOutput() GetUpdateScheduleUpdateScheduleOutput
+	ToGetUpdateScheduleUpdateScheduleOutputWithContext(context.Context) GetUpdateScheduleUpdateScheduleOutput
+}
+
+type GetUpdateScheduleUpdateScheduleArgs struct {
+	// Anti virus
+	AntiVirus GetUpdateScheduleUpdateScheduleAntiVirusInput `pulumi:"antiVirus"`
+	// Threats
+	Threats GetUpdateScheduleUpdateScheduleThreatsInput `pulumi:"threats"`
+	// Wildfire
+	Wildfire GetUpdateScheduleUpdateScheduleWildfireInput `pulumi:"wildfire"`
+}
+
+func (GetUpdateScheduleUpdateScheduleArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetUpdateScheduleUpdateSchedule)(nil)).Elem()
+}
+
+func (i GetUpdateScheduleUpdateScheduleArgs) ToGetUpdateScheduleUpdateScheduleOutput() GetUpdateScheduleUpdateScheduleOutput {
+	return i.ToGetUpdateScheduleUpdateScheduleOutputWithContext(context.Background())
+}
+
+func (i GetUpdateScheduleUpdateScheduleArgs) ToGetUpdateScheduleUpdateScheduleOutputWithContext(ctx context.Context) GetUpdateScheduleUpdateScheduleOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetUpdateScheduleUpdateScheduleOutput)
+}
+
+type GetUpdateScheduleUpdateScheduleOutput struct{ *pulumi.OutputState }
+
+func (GetUpdateScheduleUpdateScheduleOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetUpdateScheduleUpdateSchedule)(nil)).Elem()
+}
+
+func (o GetUpdateScheduleUpdateScheduleOutput) ToGetUpdateScheduleUpdateScheduleOutput() GetUpdateScheduleUpdateScheduleOutput {
+	return o
+}
+
+func (o GetUpdateScheduleUpdateScheduleOutput) ToGetUpdateScheduleUpdateScheduleOutputWithContext(ctx context.Context) GetUpdateScheduleUpdateScheduleOutput {
+	return o
+}
+
+// Anti virus
+func (o GetUpdateScheduleUpdateScheduleOutput) AntiVirus() GetUpdateScheduleUpdateScheduleAntiVirusOutput {
+	return o.ApplyT(func(v GetUpdateScheduleUpdateSchedule) GetUpdateScheduleUpdateScheduleAntiVirus { return v.AntiVirus }).(GetUpdateScheduleUpdateScheduleAntiVirusOutput)
+}
+
+// Threats
+func (o GetUpdateScheduleUpdateScheduleOutput) Threats() GetUpdateScheduleUpdateScheduleThreatsOutput {
+	return o.ApplyT(func(v GetUpdateScheduleUpdateSchedule) GetUpdateScheduleUpdateScheduleThreats { return v.Threats }).(GetUpdateScheduleUpdateScheduleThreatsOutput)
+}
+
+// Wildfire
+func (o GetUpdateScheduleUpdateScheduleOutput) Wildfire() GetUpdateScheduleUpdateScheduleWildfireOutput {
+	return o.ApplyT(func(v GetUpdateScheduleUpdateSchedule) GetUpdateScheduleUpdateScheduleWildfire { return v.Wildfire }).(GetUpdateScheduleUpdateScheduleWildfireOutput)
+}
+
+type GetUpdateScheduleUpdateScheduleAntiVirus struct {
+	// Recurring
+	Recurring GetUpdateScheduleUpdateScheduleAntiVirusRecurring `pulumi:"recurring"`
+}
+
+// GetUpdateScheduleUpdateScheduleAntiVirusInput is an input type that accepts GetUpdateScheduleUpdateScheduleAntiVirusArgs and GetUpdateScheduleUpdateScheduleAntiVirusOutput values.
+// You can construct a concrete instance of `GetUpdateScheduleUpdateScheduleAntiVirusInput` via:
+//
+//	GetUpdateScheduleUpdateScheduleAntiVirusArgs{...}
+type GetUpdateScheduleUpdateScheduleAntiVirusInput interface {
+	pulumi.Input
+
+	ToGetUpdateScheduleUpdateScheduleAntiVirusOutput() GetUpdateScheduleUpdateScheduleAntiVirusOutput
+	ToGetUpdateScheduleUpdateScheduleAntiVirusOutputWithContext(context.Context) GetUpdateScheduleUpdateScheduleAntiVirusOutput
+}
+
+type GetUpdateScheduleUpdateScheduleAntiVirusArgs struct {
+	// Recurring
+	Recurring GetUpdateScheduleUpdateScheduleAntiVirusRecurringInput `pulumi:"recurring"`
+}
+
+func (GetUpdateScheduleUpdateScheduleAntiVirusArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetUpdateScheduleUpdateScheduleAntiVirus)(nil)).Elem()
+}
+
+func (i GetUpdateScheduleUpdateScheduleAntiVirusArgs) ToGetUpdateScheduleUpdateScheduleAntiVirusOutput() GetUpdateScheduleUpdateScheduleAntiVirusOutput {
+	return i.ToGetUpdateScheduleUpdateScheduleAntiVirusOutputWithContext(context.Background())
+}
+
+func (i GetUpdateScheduleUpdateScheduleAntiVirusArgs) ToGetUpdateScheduleUpdateScheduleAntiVirusOutputWithContext(ctx context.Context) GetUpdateScheduleUpdateScheduleAntiVirusOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetUpdateScheduleUpdateScheduleAntiVirusOutput)
+}
+
+type GetUpdateScheduleUpdateScheduleAntiVirusOutput struct{ *pulumi.OutputState }
+
+func (GetUpdateScheduleUpdateScheduleAntiVirusOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetUpdateScheduleUpdateScheduleAntiVirus)(nil)).Elem()
+}
+
+func (o GetUpdateScheduleUpdateScheduleAntiVirusOutput) ToGetUpdateScheduleUpdateScheduleAntiVirusOutput() GetUpdateScheduleUpdateScheduleAntiVirusOutput {
+	return o
+}
+
+func (o GetUpdateScheduleUpdateScheduleAntiVirusOutput) ToGetUpdateScheduleUpdateScheduleAntiVirusOutputWithContext(ctx context.Context) GetUpdateScheduleUpdateScheduleAntiVirusOutput {
+	return o
+}
+
+// Recurring
+func (o GetUpdateScheduleUpdateScheduleAntiVirusOutput) Recurring() GetUpdateScheduleUpdateScheduleAntiVirusRecurringOutput {
+	return o.ApplyT(func(v GetUpdateScheduleUpdateScheduleAntiVirus) GetUpdateScheduleUpdateScheduleAntiVirusRecurring {
+		return v.Recurring
+	}).(GetUpdateScheduleUpdateScheduleAntiVirusRecurringOutput)
+}
+
 type GetUpdateScheduleUpdateScheduleAntiVirusRecurring struct {
 	// Daily
 	Daily GetUpdateScheduleUpdateScheduleAntiVirusRecurringDaily `pulumi:"daily"`
 	// Hourly
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `daily`, `hourly`, `none`, and `weekly`.
 	Hourly GetUpdateScheduleUpdateScheduleAntiVirusRecurringHourly `pulumi:"hourly"`
 	// None
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `daily`, `hourly`, `none`, and `weekly`.
 	None GetUpdateScheduleUpdateScheduleAntiVirusRecurringNone `pulumi:"none"`
 	// Sync to peer
 	SyncToPeer bool `pulumi:"syncToPeer"`
 	// Threshold
 	Threshold int `pulumi:"threshold"`
 	// Weekly
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `daily`, `hourly`, `none`, and `weekly`.
 	Weekly GetUpdateScheduleUpdateScheduleAntiVirusRecurringWeekly `pulumi:"weekly"`
 }
 
@@ -49,20 +5498,14 @@ type GetUpdateScheduleUpdateScheduleAntiVirusRecurringArgs struct {
 	// Daily
 	Daily GetUpdateScheduleUpdateScheduleAntiVirusRecurringDailyInput `pulumi:"daily"`
 	// Hourly
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `daily`, `hourly`, `none`, and `weekly`.
 	Hourly GetUpdateScheduleUpdateScheduleAntiVirusRecurringHourlyInput `pulumi:"hourly"`
 	// None
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `daily`, `hourly`, `none`, and `weekly`.
 	None GetUpdateScheduleUpdateScheduleAntiVirusRecurringNoneInput `pulumi:"none"`
 	// Sync to peer
 	SyncToPeer pulumi.BoolInput `pulumi:"syncToPeer"`
 	// Threshold
 	Threshold pulumi.IntInput `pulumi:"threshold"`
 	// Weekly
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `daily`, `hourly`, `none`, and `weekly`.
 	Weekly GetUpdateScheduleUpdateScheduleAntiVirusRecurringWeeklyInput `pulumi:"weekly"`
 }
 
@@ -100,8 +5543,6 @@ func (o GetUpdateScheduleUpdateScheduleAntiVirusRecurringOutput) Daily() GetUpda
 }
 
 // Hourly
-//
-// > ℹ️ **Note:** You must specify exactly one of `daily`, `hourly`, `none`, and `weekly`.
 func (o GetUpdateScheduleUpdateScheduleAntiVirusRecurringOutput) Hourly() GetUpdateScheduleUpdateScheduleAntiVirusRecurringHourlyOutput {
 	return o.ApplyT(func(v GetUpdateScheduleUpdateScheduleAntiVirusRecurring) GetUpdateScheduleUpdateScheduleAntiVirusRecurringHourly {
 		return v.Hourly
@@ -109,8 +5550,6 @@ func (o GetUpdateScheduleUpdateScheduleAntiVirusRecurringOutput) Hourly() GetUpd
 }
 
 // None
-//
-// > ℹ️ **Note:** You must specify exactly one of `daily`, `hourly`, `none`, and `weekly`.
 func (o GetUpdateScheduleUpdateScheduleAntiVirusRecurringOutput) None() GetUpdateScheduleUpdateScheduleAntiVirusRecurringNoneOutput {
 	return o.ApplyT(func(v GetUpdateScheduleUpdateScheduleAntiVirusRecurring) GetUpdateScheduleUpdateScheduleAntiVirusRecurringNone {
 		return v.None
@@ -128,8 +5567,6 @@ func (o GetUpdateScheduleUpdateScheduleAntiVirusRecurringOutput) Threshold() pul
 }
 
 // Weekly
-//
-// > ℹ️ **Note:** You must specify exactly one of `daily`, `hourly`, `none`, and `weekly`.
 func (o GetUpdateScheduleUpdateScheduleAntiVirusRecurringOutput) Weekly() GetUpdateScheduleUpdateScheduleAntiVirusRecurringWeeklyOutput {
 	return o.ApplyT(func(v GetUpdateScheduleUpdateScheduleAntiVirusRecurring) GetUpdateScheduleUpdateScheduleAntiVirusRecurringWeekly {
 		return v.Weekly
@@ -137,7 +5574,7 @@ func (o GetUpdateScheduleUpdateScheduleAntiVirusRecurringOutput) Weekly() GetUpd
 }
 
 type GetUpdateScheduleUpdateScheduleAntiVirusRecurringDaily struct {
-	// Action
+	// Action. Possible values are `download-only` and `download-and-install`.
 	Action string `pulumi:"action"`
 	// At
 	At string `pulumi:"at"`
@@ -155,7 +5592,7 @@ type GetUpdateScheduleUpdateScheduleAntiVirusRecurringDailyInput interface {
 }
 
 type GetUpdateScheduleUpdateScheduleAntiVirusRecurringDailyArgs struct {
-	// Action
+	// Action. Possible values are `download-only` and `download-and-install`.
 	Action pulumi.StringInput `pulumi:"action"`
 	// At
 	At pulumi.StringInput `pulumi:"at"`
@@ -187,7 +5624,7 @@ func (o GetUpdateScheduleUpdateScheduleAntiVirusRecurringDailyOutput) ToGetUpdat
 	return o
 }
 
-// Action
+// Action. Possible values are `download-only` and `download-and-install`.
 func (o GetUpdateScheduleUpdateScheduleAntiVirusRecurringDailyOutput) Action() pulumi.StringOutput {
 	return o.ApplyT(func(v GetUpdateScheduleUpdateScheduleAntiVirusRecurringDaily) string { return v.Action }).(pulumi.StringOutput)
 }
@@ -198,7 +5635,7 @@ func (o GetUpdateScheduleUpdateScheduleAntiVirusRecurringDailyOutput) At() pulum
 }
 
 type GetUpdateScheduleUpdateScheduleAntiVirusRecurringHourly struct {
-	// Action
+	// Action. Possible values are `download-only` and `download-and-install`.
 	Action string `pulumi:"action"`
 	// At
 	At int `pulumi:"at"`
@@ -216,7 +5653,7 @@ type GetUpdateScheduleUpdateScheduleAntiVirusRecurringHourlyInput interface {
 }
 
 type GetUpdateScheduleUpdateScheduleAntiVirusRecurringHourlyArgs struct {
-	// Action
+	// Action. Possible values are `download-only` and `download-and-install`.
 	Action pulumi.StringInput `pulumi:"action"`
 	// At
 	At pulumi.IntInput `pulumi:"at"`
@@ -248,7 +5685,7 @@ func (o GetUpdateScheduleUpdateScheduleAntiVirusRecurringHourlyOutput) ToGetUpda
 	return o
 }
 
-// Action
+// Action. Possible values are `download-only` and `download-and-install`.
 func (o GetUpdateScheduleUpdateScheduleAntiVirusRecurringHourlyOutput) Action() pulumi.StringOutput {
 	return o.ApplyT(func(v GetUpdateScheduleUpdateScheduleAntiVirusRecurringHourly) string { return v.Action }).(pulumi.StringOutput)
 }
@@ -302,11 +5739,11 @@ func (o GetUpdateScheduleUpdateScheduleAntiVirusRecurringNoneOutput) ToGetUpdate
 }
 
 type GetUpdateScheduleUpdateScheduleAntiVirusRecurringWeekly struct {
-	// Action
+	// Action. Possible values are `download-only` and `download-and-install`.
 	Action string `pulumi:"action"`
 	// At
 	At string `pulumi:"at"`
-	// Day of week
+	// Day of week. Possible values are `sunday`, `monday`, `tuesday`, `wednesday`, `thursday`, `friday` and `saturday`.
 	DayOfWeek string `pulumi:"dayOfWeek"`
 }
 
@@ -322,11 +5759,11 @@ type GetUpdateScheduleUpdateScheduleAntiVirusRecurringWeeklyInput interface {
 }
 
 type GetUpdateScheduleUpdateScheduleAntiVirusRecurringWeeklyArgs struct {
-	// Action
+	// Action. Possible values are `download-only` and `download-and-install`.
 	Action pulumi.StringInput `pulumi:"action"`
 	// At
 	At pulumi.StringInput `pulumi:"at"`
-	// Day of week
+	// Day of week. Possible values are `sunday`, `monday`, `tuesday`, `wednesday`, `thursday`, `friday` and `saturday`.
 	DayOfWeek pulumi.StringInput `pulumi:"dayOfWeek"`
 }
 
@@ -356,7 +5793,7 @@ func (o GetUpdateScheduleUpdateScheduleAntiVirusRecurringWeeklyOutput) ToGetUpda
 	return o
 }
 
-// Action
+// Action. Possible values are `download-only` and `download-and-install`.
 func (o GetUpdateScheduleUpdateScheduleAntiVirusRecurringWeeklyOutput) Action() pulumi.StringOutput {
 	return o.ApplyT(func(v GetUpdateScheduleUpdateScheduleAntiVirusRecurringWeekly) string { return v.Action }).(pulumi.StringOutput)
 }
@@ -366,7 +5803,7 @@ func (o GetUpdateScheduleUpdateScheduleAntiVirusRecurringWeeklyOutput) At() pulu
 	return o.ApplyT(func(v GetUpdateScheduleUpdateScheduleAntiVirusRecurringWeekly) string { return v.At }).(pulumi.StringOutput)
 }
 
-// Day of week
+// Day of week. Possible values are `sunday`, `monday`, `tuesday`, `wednesday`, `thursday`, `friday` and `saturday`.
 func (o GetUpdateScheduleUpdateScheduleAntiVirusRecurringWeeklyOutput) DayOfWeek() pulumi.StringOutput {
 	return o.ApplyT(func(v GetUpdateScheduleUpdateScheduleAntiVirusRecurringWeekly) string { return v.DayOfWeek }).(pulumi.StringOutput)
 }
@@ -429,26 +5866,18 @@ type GetUpdateScheduleUpdateScheduleThreatsRecurring struct {
 	// Daily
 	Daily GetUpdateScheduleUpdateScheduleThreatsRecurringDaily `pulumi:"daily"`
 	// Every30 mins
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `daily`, `every30Mins`, `hourly`, `none`, and `weekly`.
 	Every30Mins GetUpdateScheduleUpdateScheduleThreatsRecurringEvery30Mins `pulumi:"every30Mins"`
 	// Hourly
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `daily`, `every30Mins`, `hourly`, `none`, and `weekly`.
 	Hourly GetUpdateScheduleUpdateScheduleThreatsRecurringHourly `pulumi:"hourly"`
 	// New app threshold
 	NewAppThreshold int `pulumi:"newAppThreshold"`
 	// None
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `daily`, `every30Mins`, `hourly`, `none`, and `weekly`.
 	None GetUpdateScheduleUpdateScheduleThreatsRecurringNone `pulumi:"none"`
 	// Sync to peer
 	SyncToPeer bool `pulumi:"syncToPeer"`
 	// Threshold
 	Threshold int `pulumi:"threshold"`
 	// Weekly
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `daily`, `every30Mins`, `hourly`, `none`, and `weekly`.
 	Weekly GetUpdateScheduleUpdateScheduleThreatsRecurringWeekly `pulumi:"weekly"`
 }
 
@@ -467,26 +5896,18 @@ type GetUpdateScheduleUpdateScheduleThreatsRecurringArgs struct {
 	// Daily
 	Daily GetUpdateScheduleUpdateScheduleThreatsRecurringDailyInput `pulumi:"daily"`
 	// Every30 mins
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `daily`, `every30Mins`, `hourly`, `none`, and `weekly`.
 	Every30Mins GetUpdateScheduleUpdateScheduleThreatsRecurringEvery30MinsInput `pulumi:"every30Mins"`
 	// Hourly
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `daily`, `every30Mins`, `hourly`, `none`, and `weekly`.
 	Hourly GetUpdateScheduleUpdateScheduleThreatsRecurringHourlyInput `pulumi:"hourly"`
 	// New app threshold
 	NewAppThreshold pulumi.IntInput `pulumi:"newAppThreshold"`
 	// None
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `daily`, `every30Mins`, `hourly`, `none`, and `weekly`.
 	None GetUpdateScheduleUpdateScheduleThreatsRecurringNoneInput `pulumi:"none"`
 	// Sync to peer
 	SyncToPeer pulumi.BoolInput `pulumi:"syncToPeer"`
 	// Threshold
 	Threshold pulumi.IntInput `pulumi:"threshold"`
 	// Weekly
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `daily`, `every30Mins`, `hourly`, `none`, and `weekly`.
 	Weekly GetUpdateScheduleUpdateScheduleThreatsRecurringWeeklyInput `pulumi:"weekly"`
 }
 
@@ -524,8 +5945,6 @@ func (o GetUpdateScheduleUpdateScheduleThreatsRecurringOutput) Daily() GetUpdate
 }
 
 // Every30 mins
-//
-// > ℹ️ **Note:** You must specify exactly one of `daily`, `every30Mins`, `hourly`, `none`, and `weekly`.
 func (o GetUpdateScheduleUpdateScheduleThreatsRecurringOutput) Every30Mins() GetUpdateScheduleUpdateScheduleThreatsRecurringEvery30MinsOutput {
 	return o.ApplyT(func(v GetUpdateScheduleUpdateScheduleThreatsRecurring) GetUpdateScheduleUpdateScheduleThreatsRecurringEvery30Mins {
 		return v.Every30Mins
@@ -533,8 +5952,6 @@ func (o GetUpdateScheduleUpdateScheduleThreatsRecurringOutput) Every30Mins() Get
 }
 
 // Hourly
-//
-// > ℹ️ **Note:** You must specify exactly one of `daily`, `every30Mins`, `hourly`, `none`, and `weekly`.
 func (o GetUpdateScheduleUpdateScheduleThreatsRecurringOutput) Hourly() GetUpdateScheduleUpdateScheduleThreatsRecurringHourlyOutput {
 	return o.ApplyT(func(v GetUpdateScheduleUpdateScheduleThreatsRecurring) GetUpdateScheduleUpdateScheduleThreatsRecurringHourly {
 		return v.Hourly
@@ -547,8 +5964,6 @@ func (o GetUpdateScheduleUpdateScheduleThreatsRecurringOutput) NewAppThreshold()
 }
 
 // None
-//
-// > ℹ️ **Note:** You must specify exactly one of `daily`, `every30Mins`, `hourly`, `none`, and `weekly`.
 func (o GetUpdateScheduleUpdateScheduleThreatsRecurringOutput) None() GetUpdateScheduleUpdateScheduleThreatsRecurringNoneOutput {
 	return o.ApplyT(func(v GetUpdateScheduleUpdateScheduleThreatsRecurring) GetUpdateScheduleUpdateScheduleThreatsRecurringNone {
 		return v.None
@@ -566,8 +5981,6 @@ func (o GetUpdateScheduleUpdateScheduleThreatsRecurringOutput) Threshold() pulum
 }
 
 // Weekly
-//
-// > ℹ️ **Note:** You must specify exactly one of `daily`, `every30Mins`, `hourly`, `none`, and `weekly`.
 func (o GetUpdateScheduleUpdateScheduleThreatsRecurringOutput) Weekly() GetUpdateScheduleUpdateScheduleThreatsRecurringWeeklyOutput {
 	return o.ApplyT(func(v GetUpdateScheduleUpdateScheduleThreatsRecurring) GetUpdateScheduleUpdateScheduleThreatsRecurringWeekly {
 		return v.Weekly
@@ -575,7 +5988,7 @@ func (o GetUpdateScheduleUpdateScheduleThreatsRecurringOutput) Weekly() GetUpdat
 }
 
 type GetUpdateScheduleUpdateScheduleThreatsRecurringDaily struct {
-	// Action
+	// Action. Possible values are `download-only` and `download-and-install`.
 	Action string `pulumi:"action"`
 	// At
 	At string `pulumi:"at"`
@@ -595,7 +6008,7 @@ type GetUpdateScheduleUpdateScheduleThreatsRecurringDailyInput interface {
 }
 
 type GetUpdateScheduleUpdateScheduleThreatsRecurringDailyArgs struct {
-	// Action
+	// Action. Possible values are `download-only` and `download-and-install`.
 	Action pulumi.StringInput `pulumi:"action"`
 	// At
 	At pulumi.StringInput `pulumi:"at"`
@@ -629,7 +6042,7 @@ func (o GetUpdateScheduleUpdateScheduleThreatsRecurringDailyOutput) ToGetUpdateS
 	return o
 }
 
-// Action
+// Action. Possible values are `download-only` and `download-and-install`.
 func (o GetUpdateScheduleUpdateScheduleThreatsRecurringDailyOutput) Action() pulumi.StringOutput {
 	return o.ApplyT(func(v GetUpdateScheduleUpdateScheduleThreatsRecurringDaily) string { return v.Action }).(pulumi.StringOutput)
 }
@@ -645,7 +6058,7 @@ func (o GetUpdateScheduleUpdateScheduleThreatsRecurringDailyOutput) DisableNewCo
 }
 
 type GetUpdateScheduleUpdateScheduleThreatsRecurringEvery30Mins struct {
-	// Action
+	// Action. Possible values are `download-only` and `download-and-install`.
 	Action string `pulumi:"action"`
 	// At
 	At int `pulumi:"at"`
@@ -665,7 +6078,7 @@ type GetUpdateScheduleUpdateScheduleThreatsRecurringEvery30MinsInput interface {
 }
 
 type GetUpdateScheduleUpdateScheduleThreatsRecurringEvery30MinsArgs struct {
-	// Action
+	// Action. Possible values are `download-only` and `download-and-install`.
 	Action pulumi.StringInput `pulumi:"action"`
 	// At
 	At pulumi.IntInput `pulumi:"at"`
@@ -699,7 +6112,7 @@ func (o GetUpdateScheduleUpdateScheduleThreatsRecurringEvery30MinsOutput) ToGetU
 	return o
 }
 
-// Action
+// Action. Possible values are `download-only` and `download-and-install`.
 func (o GetUpdateScheduleUpdateScheduleThreatsRecurringEvery30MinsOutput) Action() pulumi.StringOutput {
 	return o.ApplyT(func(v GetUpdateScheduleUpdateScheduleThreatsRecurringEvery30Mins) string { return v.Action }).(pulumi.StringOutput)
 }
@@ -715,7 +6128,7 @@ func (o GetUpdateScheduleUpdateScheduleThreatsRecurringEvery30MinsOutput) Disabl
 }
 
 type GetUpdateScheduleUpdateScheduleThreatsRecurringHourly struct {
-	// Action
+	// Action. Possible values are `download-only` and `download-and-install`.
 	Action string `pulumi:"action"`
 	// At
 	At float64 `pulumi:"at"`
@@ -735,7 +6148,7 @@ type GetUpdateScheduleUpdateScheduleThreatsRecurringHourlyInput interface {
 }
 
 type GetUpdateScheduleUpdateScheduleThreatsRecurringHourlyArgs struct {
-	// Action
+	// Action. Possible values are `download-only` and `download-and-install`.
 	Action pulumi.StringInput `pulumi:"action"`
 	// At
 	At pulumi.Float64Input `pulumi:"at"`
@@ -769,7 +6182,7 @@ func (o GetUpdateScheduleUpdateScheduleThreatsRecurringHourlyOutput) ToGetUpdate
 	return o
 }
 
-// Action
+// Action. Possible values are `download-only` and `download-and-install`.
 func (o GetUpdateScheduleUpdateScheduleThreatsRecurringHourlyOutput) Action() pulumi.StringOutput {
 	return o.ApplyT(func(v GetUpdateScheduleUpdateScheduleThreatsRecurringHourly) string { return v.Action }).(pulumi.StringOutput)
 }
@@ -828,11 +6241,11 @@ func (o GetUpdateScheduleUpdateScheduleThreatsRecurringNoneOutput) ToGetUpdateSc
 }
 
 type GetUpdateScheduleUpdateScheduleThreatsRecurringWeekly struct {
-	// Action
+	// Action. Possible values are `download-only` and `download-and-install`.
 	Action string `pulumi:"action"`
 	// At
 	At string `pulumi:"at"`
-	// Day of week
+	// Day of week. Possible values are `sunday`, `monday`, `tuesday`, `wednesday`, `thursday`, `friday` and `saturday`.
 	DayOfWeek string `pulumi:"dayOfWeek"`
 	// Disable new content
 	DisableNewContent bool `pulumi:"disableNewContent"`
@@ -850,11 +6263,11 @@ type GetUpdateScheduleUpdateScheduleThreatsRecurringWeeklyInput interface {
 }
 
 type GetUpdateScheduleUpdateScheduleThreatsRecurringWeeklyArgs struct {
-	// Action
+	// Action. Possible values are `download-only` and `download-and-install`.
 	Action pulumi.StringInput `pulumi:"action"`
 	// At
 	At pulumi.StringInput `pulumi:"at"`
-	// Day of week
+	// Day of week. Possible values are `sunday`, `monday`, `tuesday`, `wednesday`, `thursday`, `friday` and `saturday`.
 	DayOfWeek pulumi.StringInput `pulumi:"dayOfWeek"`
 	// Disable new content
 	DisableNewContent pulumi.BoolInput `pulumi:"disableNewContent"`
@@ -886,7 +6299,7 @@ func (o GetUpdateScheduleUpdateScheduleThreatsRecurringWeeklyOutput) ToGetUpdate
 	return o
 }
 
-// Action
+// Action. Possible values are `download-only` and `download-and-install`.
 func (o GetUpdateScheduleUpdateScheduleThreatsRecurringWeeklyOutput) Action() pulumi.StringOutput {
 	return o.ApplyT(func(v GetUpdateScheduleUpdateScheduleThreatsRecurringWeekly) string { return v.Action }).(pulumi.StringOutput)
 }
@@ -896,7 +6309,7 @@ func (o GetUpdateScheduleUpdateScheduleThreatsRecurringWeeklyOutput) At() pulumi
 	return o.ApplyT(func(v GetUpdateScheduleUpdateScheduleThreatsRecurringWeekly) string { return v.At }).(pulumi.StringOutput)
 }
 
-// Day of week
+// Day of week. Possible values are `sunday`, `monday`, `tuesday`, `wednesday`, `thursday`, `friday` and `saturday`.
 func (o GetUpdateScheduleUpdateScheduleThreatsRecurringWeeklyOutput) DayOfWeek() pulumi.StringOutput {
 	return o.ApplyT(func(v GetUpdateScheduleUpdateScheduleThreatsRecurringWeekly) string { return v.DayOfWeek }).(pulumi.StringOutput)
 }
@@ -964,24 +6377,14 @@ type GetUpdateScheduleUpdateScheduleWildfireRecurring struct {
 	// Every15 mins
 	Every15Mins GetUpdateScheduleUpdateScheduleWildfireRecurringEvery15Mins `pulumi:"every15Mins"`
 	// Every30 mins
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `every15Mins`, `every30Mins`, `everyHour`, `everyMin`, `none`, and `realTime`.
 	Every30Mins GetUpdateScheduleUpdateScheduleWildfireRecurringEvery30Mins `pulumi:"every30Mins"`
 	// Every hour
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `every15Mins`, `every30Mins`, `everyHour`, `everyMin`, `none`, and `realTime`.
 	EveryHour GetUpdateScheduleUpdateScheduleWildfireRecurringEveryHour `pulumi:"everyHour"`
 	// Every min
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `every15Mins`, `every30Mins`, `everyHour`, `everyMin`, `none`, and `realTime`.
 	EveryMin GetUpdateScheduleUpdateScheduleWildfireRecurringEveryMin `pulumi:"everyMin"`
 	// None
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `every15Mins`, `every30Mins`, `everyHour`, `everyMin`, `none`, and `realTime`.
 	None GetUpdateScheduleUpdateScheduleWildfireRecurringNone `pulumi:"none"`
 	// Real time
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `every15Mins`, `every30Mins`, `everyHour`, `everyMin`, `none`, and `realTime`.
 	RealTime GetUpdateScheduleUpdateScheduleWildfireRecurringRealTime `pulumi:"realTime"`
 }
 
@@ -1000,24 +6403,14 @@ type GetUpdateScheduleUpdateScheduleWildfireRecurringArgs struct {
 	// Every15 mins
 	Every15Mins GetUpdateScheduleUpdateScheduleWildfireRecurringEvery15MinsInput `pulumi:"every15Mins"`
 	// Every30 mins
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `every15Mins`, `every30Mins`, `everyHour`, `everyMin`, `none`, and `realTime`.
 	Every30Mins GetUpdateScheduleUpdateScheduleWildfireRecurringEvery30MinsInput `pulumi:"every30Mins"`
 	// Every hour
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `every15Mins`, `every30Mins`, `everyHour`, `everyMin`, `none`, and `realTime`.
 	EveryHour GetUpdateScheduleUpdateScheduleWildfireRecurringEveryHourInput `pulumi:"everyHour"`
 	// Every min
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `every15Mins`, `every30Mins`, `everyHour`, `everyMin`, `none`, and `realTime`.
 	EveryMin GetUpdateScheduleUpdateScheduleWildfireRecurringEveryMinInput `pulumi:"everyMin"`
 	// None
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `every15Mins`, `every30Mins`, `everyHour`, `everyMin`, `none`, and `realTime`.
 	None GetUpdateScheduleUpdateScheduleWildfireRecurringNoneInput `pulumi:"none"`
 	// Real time
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `every15Mins`, `every30Mins`, `everyHour`, `everyMin`, `none`, and `realTime`.
 	RealTime GetUpdateScheduleUpdateScheduleWildfireRecurringRealTimeInput `pulumi:"realTime"`
 }
 
@@ -1055,8 +6448,6 @@ func (o GetUpdateScheduleUpdateScheduleWildfireRecurringOutput) Every15Mins() Ge
 }
 
 // Every30 mins
-//
-// > ℹ️ **Note:** You must specify exactly one of `every15Mins`, `every30Mins`, `everyHour`, `everyMin`, `none`, and `realTime`.
 func (o GetUpdateScheduleUpdateScheduleWildfireRecurringOutput) Every30Mins() GetUpdateScheduleUpdateScheduleWildfireRecurringEvery30MinsOutput {
 	return o.ApplyT(func(v GetUpdateScheduleUpdateScheduleWildfireRecurring) GetUpdateScheduleUpdateScheduleWildfireRecurringEvery30Mins {
 		return v.Every30Mins
@@ -1064,8 +6455,6 @@ func (o GetUpdateScheduleUpdateScheduleWildfireRecurringOutput) Every30Mins() Ge
 }
 
 // Every hour
-//
-// > ℹ️ **Note:** You must specify exactly one of `every15Mins`, `every30Mins`, `everyHour`, `everyMin`, `none`, and `realTime`.
 func (o GetUpdateScheduleUpdateScheduleWildfireRecurringOutput) EveryHour() GetUpdateScheduleUpdateScheduleWildfireRecurringEveryHourOutput {
 	return o.ApplyT(func(v GetUpdateScheduleUpdateScheduleWildfireRecurring) GetUpdateScheduleUpdateScheduleWildfireRecurringEveryHour {
 		return v.EveryHour
@@ -1073,8 +6462,6 @@ func (o GetUpdateScheduleUpdateScheduleWildfireRecurringOutput) EveryHour() GetU
 }
 
 // Every min
-//
-// > ℹ️ **Note:** You must specify exactly one of `every15Mins`, `every30Mins`, `everyHour`, `everyMin`, `none`, and `realTime`.
 func (o GetUpdateScheduleUpdateScheduleWildfireRecurringOutput) EveryMin() GetUpdateScheduleUpdateScheduleWildfireRecurringEveryMinOutput {
 	return o.ApplyT(func(v GetUpdateScheduleUpdateScheduleWildfireRecurring) GetUpdateScheduleUpdateScheduleWildfireRecurringEveryMin {
 		return v.EveryMin
@@ -1082,8 +6469,6 @@ func (o GetUpdateScheduleUpdateScheduleWildfireRecurringOutput) EveryMin() GetUp
 }
 
 // None
-//
-// > ℹ️ **Note:** You must specify exactly one of `every15Mins`, `every30Mins`, `everyHour`, `everyMin`, `none`, and `realTime`.
 func (o GetUpdateScheduleUpdateScheduleWildfireRecurringOutput) None() GetUpdateScheduleUpdateScheduleWildfireRecurringNoneOutput {
 	return o.ApplyT(func(v GetUpdateScheduleUpdateScheduleWildfireRecurring) GetUpdateScheduleUpdateScheduleWildfireRecurringNone {
 		return v.None
@@ -1091,8 +6476,6 @@ func (o GetUpdateScheduleUpdateScheduleWildfireRecurringOutput) None() GetUpdate
 }
 
 // Real time
-//
-// > ℹ️ **Note:** You must specify exactly one of `every15Mins`, `every30Mins`, `everyHour`, `everyMin`, `none`, and `realTime`.
 func (o GetUpdateScheduleUpdateScheduleWildfireRecurringOutput) RealTime() GetUpdateScheduleUpdateScheduleWildfireRecurringRealTimeOutput {
 	return o.ApplyT(func(v GetUpdateScheduleUpdateScheduleWildfireRecurring) GetUpdateScheduleUpdateScheduleWildfireRecurringRealTime {
 		return v.RealTime
@@ -1100,7 +6483,7 @@ func (o GetUpdateScheduleUpdateScheduleWildfireRecurringOutput) RealTime() GetUp
 }
 
 type GetUpdateScheduleUpdateScheduleWildfireRecurringEvery15Mins struct {
-	// Action
+	// Action. Possible values are `download-only` and `download-and-install`.
 	Action string `pulumi:"action"`
 	// At
 	At int `pulumi:"at"`
@@ -1120,7 +6503,7 @@ type GetUpdateScheduleUpdateScheduleWildfireRecurringEvery15MinsInput interface 
 }
 
 type GetUpdateScheduleUpdateScheduleWildfireRecurringEvery15MinsArgs struct {
-	// Action
+	// Action. Possible values are `download-only` and `download-and-install`.
 	Action pulumi.StringInput `pulumi:"action"`
 	// At
 	At pulumi.IntInput `pulumi:"at"`
@@ -1154,7 +6537,7 @@ func (o GetUpdateScheduleUpdateScheduleWildfireRecurringEvery15MinsOutput) ToGet
 	return o
 }
 
-// Action
+// Action. Possible values are `download-only` and `download-and-install`.
 func (o GetUpdateScheduleUpdateScheduleWildfireRecurringEvery15MinsOutput) Action() pulumi.StringOutput {
 	return o.ApplyT(func(v GetUpdateScheduleUpdateScheduleWildfireRecurringEvery15Mins) string { return v.Action }).(pulumi.StringOutput)
 }
@@ -1170,7 +6553,7 @@ func (o GetUpdateScheduleUpdateScheduleWildfireRecurringEvery15MinsOutput) SyncT
 }
 
 type GetUpdateScheduleUpdateScheduleWildfireRecurringEvery30Mins struct {
-	// Action
+	// Action. Possible values are `download-only` and `download-and-install`.
 	Action string `pulumi:"action"`
 	// At
 	At int `pulumi:"at"`
@@ -1190,7 +6573,7 @@ type GetUpdateScheduleUpdateScheduleWildfireRecurringEvery30MinsInput interface 
 }
 
 type GetUpdateScheduleUpdateScheduleWildfireRecurringEvery30MinsArgs struct {
-	// Action
+	// Action. Possible values are `download-only` and `download-and-install`.
 	Action pulumi.StringInput `pulumi:"action"`
 	// At
 	At pulumi.IntInput `pulumi:"at"`
@@ -1224,7 +6607,7 @@ func (o GetUpdateScheduleUpdateScheduleWildfireRecurringEvery30MinsOutput) ToGet
 	return o
 }
 
-// Action
+// Action. Possible values are `download-only` and `download-and-install`.
 func (o GetUpdateScheduleUpdateScheduleWildfireRecurringEvery30MinsOutput) Action() pulumi.StringOutput {
 	return o.ApplyT(func(v GetUpdateScheduleUpdateScheduleWildfireRecurringEvery30Mins) string { return v.Action }).(pulumi.StringOutput)
 }
@@ -1240,7 +6623,7 @@ func (o GetUpdateScheduleUpdateScheduleWildfireRecurringEvery30MinsOutput) SyncT
 }
 
 type GetUpdateScheduleUpdateScheduleWildfireRecurringEveryHour struct {
-	// Action
+	// Action. Possible values are `download-only` and `download-and-install`.
 	Action string `pulumi:"action"`
 	// At
 	At int `pulumi:"at"`
@@ -1260,7 +6643,7 @@ type GetUpdateScheduleUpdateScheduleWildfireRecurringEveryHourInput interface {
 }
 
 type GetUpdateScheduleUpdateScheduleWildfireRecurringEveryHourArgs struct {
-	// Action
+	// Action. Possible values are `download-only` and `download-and-install`.
 	Action pulumi.StringInput `pulumi:"action"`
 	// At
 	At pulumi.IntInput `pulumi:"at"`
@@ -1294,7 +6677,7 @@ func (o GetUpdateScheduleUpdateScheduleWildfireRecurringEveryHourOutput) ToGetUp
 	return o
 }
 
-// Action
+// Action. Possible values are `download-only` and `download-and-install`.
 func (o GetUpdateScheduleUpdateScheduleWildfireRecurringEveryHourOutput) Action() pulumi.StringOutput {
 	return o.ApplyT(func(v GetUpdateScheduleUpdateScheduleWildfireRecurringEveryHour) string { return v.Action }).(pulumi.StringOutput)
 }
@@ -1310,7 +6693,7 @@ func (o GetUpdateScheduleUpdateScheduleWildfireRecurringEveryHourOutput) SyncToP
 }
 
 type GetUpdateScheduleUpdateScheduleWildfireRecurringEveryMin struct {
-	// Action
+	// Action. Possible values are `download-only` and `download-and-install`.
 	Action string `pulumi:"action"`
 	// Sync to peer
 	SyncToPeer bool `pulumi:"syncToPeer"`
@@ -1328,7 +6711,7 @@ type GetUpdateScheduleUpdateScheduleWildfireRecurringEveryMinInput interface {
 }
 
 type GetUpdateScheduleUpdateScheduleWildfireRecurringEveryMinArgs struct {
-	// Action
+	// Action. Possible values are `download-only` and `download-and-install`.
 	Action pulumi.StringInput `pulumi:"action"`
 	// Sync to peer
 	SyncToPeer pulumi.BoolInput `pulumi:"syncToPeer"`
@@ -1360,7 +6743,7 @@ func (o GetUpdateScheduleUpdateScheduleWildfireRecurringEveryMinOutput) ToGetUpd
 	return o
 }
 
-// Action
+// Action. Possible values are `download-only` and `download-and-install`.
 func (o GetUpdateScheduleUpdateScheduleWildfireRecurringEveryMinOutput) Action() pulumi.StringOutput {
 	return o.ApplyT(func(v GetUpdateScheduleUpdateScheduleWildfireRecurringEveryMin) string { return v.Action }).(pulumi.StringOutput)
 }
@@ -1786,7 +7169,7 @@ type GetUrlAccessProfileListData struct {
 	Description string `pulumi:"description"`
 	// The device in which the resource is defined
 	Device string `pulumi:"device"`
-	// The folder of the item. Default: Shared.
+	// The folder in which the resource is defined
 	Folder string `pulumi:"folder"`
 	// UUID of the resource
 	Id string `pulumi:"id"`
@@ -1802,13 +7185,13 @@ type GetUrlAccessProfileListData struct {
 	LogHttpHdrXff bool `pulumi:"logHttpHdrXff"`
 	// Mlav category exception
 	MlavCategoryExceptions []string `pulumi:"mlavCategoryExceptions"`
-	// The name of the item.
+	// Name
 	Name string `pulumi:"name"`
 	// Redirect
 	Redirects []string `pulumi:"redirects"`
 	// Safe search enforcement
 	SafeSearchEnforcement bool `pulumi:"safeSearchEnforcement"`
-	// The snippet of the item.
+	// The snippet in which the resource is defined
 	Snippet string `pulumi:"snippet"`
 	// The Terraform ID.
 	Tfid string `pulumi:"tfid"`
@@ -1842,7 +7225,7 @@ type GetUrlAccessProfileListDataArgs struct {
 	Description pulumi.StringInput `pulumi:"description"`
 	// The device in which the resource is defined
 	Device pulumi.StringInput `pulumi:"device"`
-	// The folder of the item. Default: Shared.
+	// The folder in which the resource is defined
 	Folder pulumi.StringInput `pulumi:"folder"`
 	// UUID of the resource
 	Id pulumi.StringInput `pulumi:"id"`
@@ -1858,13 +7241,13 @@ type GetUrlAccessProfileListDataArgs struct {
 	LogHttpHdrXff pulumi.BoolInput `pulumi:"logHttpHdrXff"`
 	// Mlav category exception
 	MlavCategoryExceptions pulumi.StringArrayInput `pulumi:"mlavCategoryExceptions"`
-	// The name of the item.
+	// Name
 	Name pulumi.StringInput `pulumi:"name"`
 	// Redirect
 	Redirects pulumi.StringArrayInput `pulumi:"redirects"`
 	// Safe search enforcement
 	SafeSearchEnforcement pulumi.BoolInput `pulumi:"safeSearchEnforcement"`
-	// The snippet of the item.
+	// The snippet in which the resource is defined
 	Snippet pulumi.StringInput `pulumi:"snippet"`
 	// The Terraform ID.
 	Tfid pulumi.StringInput `pulumi:"tfid"`
@@ -1963,7 +7346,7 @@ func (o GetUrlAccessProfileListDataOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v GetUrlAccessProfileListData) string { return v.Device }).(pulumi.StringOutput)
 }
 
-// The folder of the item. Default: Shared.
+// The folder in which the resource is defined
 func (o GetUrlAccessProfileListDataOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v GetUrlAccessProfileListData) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -2003,7 +7386,7 @@ func (o GetUrlAccessProfileListDataOutput) MlavCategoryExceptions() pulumi.Strin
 	return o.ApplyT(func(v GetUrlAccessProfileListData) []string { return v.MlavCategoryExceptions }).(pulumi.StringArrayOutput)
 }
 
-// The name of the item.
+// Name
 func (o GetUrlAccessProfileListDataOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v GetUrlAccessProfileListData) string { return v.Name }).(pulumi.StringOutput)
 }
@@ -2018,7 +7401,7 @@ func (o GetUrlAccessProfileListDataOutput) SafeSearchEnforcement() pulumi.BoolOu
 	return o.ApplyT(func(v GetUrlAccessProfileListData) bool { return v.SafeSearchEnforcement }).(pulumi.BoolOutput)
 }
 
-// The snippet of the item.
+// The snippet in which the resource is defined
 func (o GetUrlAccessProfileListDataOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v GetUrlAccessProfileListData) string { return v.Snippet }).(pulumi.StringOutput)
 }
@@ -2366,19 +7749,19 @@ type GetUrlCategoryListData struct {
 	Description string `pulumi:"description"`
 	// The device in which the resource is defined
 	Device string `pulumi:"device"`
-	// The folder of the item. Default: Shared.
+	// The folder in which the resource is defined
 	Folder string `pulumi:"folder"`
 	// UUID of the resource
 	Id string `pulumi:"id"`
 	// List
 	Lists []string `pulumi:"lists"`
-	// The name of the item.
+	// Name
 	Name string `pulumi:"name"`
-	// The snippet of the item.
+	// The snippet in which the resource is defined
 	Snippet string `pulumi:"snippet"`
 	// The Terraform ID.
 	Tfid string `pulumi:"tfid"`
-	// Type
+	// Type. Possible values are `URL List` and `Category Match`.
 	Type string `pulumi:"type"`
 }
 
@@ -2398,19 +7781,19 @@ type GetUrlCategoryListDataArgs struct {
 	Description pulumi.StringInput `pulumi:"description"`
 	// The device in which the resource is defined
 	Device pulumi.StringInput `pulumi:"device"`
-	// The folder of the item. Default: Shared.
+	// The folder in which the resource is defined
 	Folder pulumi.StringInput `pulumi:"folder"`
 	// UUID of the resource
 	Id pulumi.StringInput `pulumi:"id"`
 	// List
 	Lists pulumi.StringArrayInput `pulumi:"lists"`
-	// The name of the item.
+	// Name
 	Name pulumi.StringInput `pulumi:"name"`
-	// The snippet of the item.
+	// The snippet in which the resource is defined
 	Snippet pulumi.StringInput `pulumi:"snippet"`
 	// The Terraform ID.
 	Tfid pulumi.StringInput `pulumi:"tfid"`
-	// Type
+	// Type. Possible values are `URL List` and `Category Match`.
 	Type pulumi.StringInput `pulumi:"type"`
 }
 
@@ -2475,7 +7858,7 @@ func (o GetUrlCategoryListDataOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v GetUrlCategoryListData) string { return v.Device }).(pulumi.StringOutput)
 }
 
-// The folder of the item. Default: Shared.
+// The folder in which the resource is defined
 func (o GetUrlCategoryListDataOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v GetUrlCategoryListData) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -2490,12 +7873,12 @@ func (o GetUrlCategoryListDataOutput) Lists() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v GetUrlCategoryListData) []string { return v.Lists }).(pulumi.StringArrayOutput)
 }
 
-// The name of the item.
+// Name
 func (o GetUrlCategoryListDataOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v GetUrlCategoryListData) string { return v.Name }).(pulumi.StringOutput)
 }
 
-// The snippet of the item.
+// The snippet in which the resource is defined
 func (o GetUrlCategoryListDataOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v GetUrlCategoryListData) string { return v.Snippet }).(pulumi.StringOutput)
 }
@@ -2505,7 +7888,7 @@ func (o GetUrlCategoryListDataOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v GetUrlCategoryListData) string { return v.Tfid }).(pulumi.StringOutput)
 }
 
-// Type
+// Type. Possible values are `URL List` and `Category Match`.
 func (o GetUrlCategoryListDataOutput) Type() pulumi.StringOutput {
 	return o.ApplyT(func(v GetUrlCategoryListData) string { return v.Type }).(pulumi.StringOutput)
 }
@@ -2537,11 +7920,11 @@ type GetUseridMatchListListData struct {
 	Device string `pulumi:"device"`
 	// Filter of the userid match list entry
 	Filter string `pulumi:"filter"`
-	// The folder of the item. Default: Shared.
+	// The folder in which the resource is defined
 	Folder string `pulumi:"folder"`
 	// UUID of the resource
 	Id string `pulumi:"id"`
-	// The name of the item.
+	// Name of the userid match list entry
 	Name string `pulumi:"name"`
 	// Quarantine Flag of the userid match list entry
 	Quarantine bool `pulumi:"quarantine"`
@@ -2555,7 +7938,7 @@ type GetUseridMatchListListData struct {
 	SendSyslogs []string `pulumi:"sendSyslogs"`
 	// Send to Panorama Flag of the userid match list entry
 	SendToPanorama bool `pulumi:"sendToPanorama"`
-	// The snippet of the item.
+	// The snippet in which the resource is defined
 	Snippet string `pulumi:"snippet"`
 	// The Terraform ID.
 	Tfid string `pulumi:"tfid"`
@@ -2579,11 +7962,11 @@ type GetUseridMatchListListDataArgs struct {
 	Device pulumi.StringInput `pulumi:"device"`
 	// Filter of the userid match list entry
 	Filter pulumi.StringInput `pulumi:"filter"`
-	// The folder of the item. Default: Shared.
+	// The folder in which the resource is defined
 	Folder pulumi.StringInput `pulumi:"folder"`
 	// UUID of the resource
 	Id pulumi.StringInput `pulumi:"id"`
-	// The name of the item.
+	// Name of the userid match list entry
 	Name pulumi.StringInput `pulumi:"name"`
 	// Quarantine Flag of the userid match list entry
 	Quarantine pulumi.BoolInput `pulumi:"quarantine"`
@@ -2597,7 +7980,7 @@ type GetUseridMatchListListDataArgs struct {
 	SendSyslogs pulumi.StringArrayInput `pulumi:"sendSyslogs"`
 	// Send to Panorama Flag of the userid match list entry
 	SendToPanorama pulumi.BoolInput `pulumi:"sendToPanorama"`
-	// The snippet of the item.
+	// The snippet in which the resource is defined
 	Snippet pulumi.StringInput `pulumi:"snippet"`
 	// The Terraform ID.
 	Tfid pulumi.StringInput `pulumi:"tfid"`
@@ -2669,7 +8052,7 @@ func (o GetUseridMatchListListDataOutput) Filter() pulumi.StringOutput {
 	return o.ApplyT(func(v GetUseridMatchListListData) string { return v.Filter }).(pulumi.StringOutput)
 }
 
-// The folder of the item. Default: Shared.
+// The folder in which the resource is defined
 func (o GetUseridMatchListListDataOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v GetUseridMatchListListData) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -2679,7 +8062,7 @@ func (o GetUseridMatchListListDataOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v GetUseridMatchListListData) string { return v.Id }).(pulumi.StringOutput)
 }
 
-// The name of the item.
+// Name of the userid match list entry
 func (o GetUseridMatchListListDataOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v GetUseridMatchListListData) string { return v.Name }).(pulumi.StringOutput)
 }
@@ -2714,7 +8097,7 @@ func (o GetUseridMatchListListDataOutput) SendToPanorama() pulumi.BoolOutput {
 	return o.ApplyT(func(v GetUseridMatchListListData) bool { return v.SendToPanorama }).(pulumi.BoolOutput)
 }
 
-// The snippet of the item.
+// The snippet in which the resource is defined
 func (o GetUseridMatchListListDataOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v GetUseridMatchListListData) string { return v.Snippet }).(pulumi.StringOutput)
 }
@@ -2749,19 +8132,19 @@ type GetVariableListData struct {
 	Description string `pulumi:"description"`
 	// The device in which the resource is defined
 	Device string `pulumi:"device"`
-	// The folder of the item. Default: Shared.
+	// The folder in which the resource is defined
 	Folder string `pulumi:"folder"`
 	// UUID of the variable
 	Id string `pulumi:"id"`
-	// The name of the item.
+	// The name of the variable
 	Name string `pulumi:"name"`
 	// Is the variable overridden?
 	Overridden bool `pulumi:"overridden"`
-	// The snippet of the item.
+	// The snippet in which the resource is defined
 	Snippet string `pulumi:"snippet"`
 	// The Terraform ID.
 	Tfid string `pulumi:"tfid"`
-	// The variable type
+	// The variable type. Possible values are `percent`, `count`, `ip-netmask`, `zone`, `ip-range`, `ip-wildcard`, `device-priority`, `device-id`, `egress-max`, `as-number`, `fqdn`, `port`, `link-tag`, `group-id`, `rate`, `router-id`, `qos-profile` and `timer`.
 	Type string `pulumi:"type"`
 	// The value of the variable
 	Value string `pulumi:"value"`
@@ -2783,19 +8166,19 @@ type GetVariableListDataArgs struct {
 	Description pulumi.StringInput `pulumi:"description"`
 	// The device in which the resource is defined
 	Device pulumi.StringInput `pulumi:"device"`
-	// The folder of the item. Default: Shared.
+	// The folder in which the resource is defined
 	Folder pulumi.StringInput `pulumi:"folder"`
 	// UUID of the variable
 	Id pulumi.StringInput `pulumi:"id"`
-	// The name of the item.
+	// The name of the variable
 	Name pulumi.StringInput `pulumi:"name"`
 	// Is the variable overridden?
 	Overridden pulumi.BoolInput `pulumi:"overridden"`
-	// The snippet of the item.
+	// The snippet in which the resource is defined
 	Snippet pulumi.StringInput `pulumi:"snippet"`
 	// The Terraform ID.
 	Tfid pulumi.StringInput `pulumi:"tfid"`
-	// The variable type
+	// The variable type. Possible values are `percent`, `count`, `ip-netmask`, `zone`, `ip-range`, `ip-wildcard`, `device-priority`, `device-id`, `egress-max`, `as-number`, `fqdn`, `port`, `link-tag`, `group-id`, `rate`, `router-id`, `qos-profile` and `timer`.
 	Type pulumi.StringInput `pulumi:"type"`
 	// The value of the variable
 	Value pulumi.StringInput `pulumi:"value"`
@@ -2862,7 +8245,7 @@ func (o GetVariableListDataOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v GetVariableListData) string { return v.Device }).(pulumi.StringOutput)
 }
 
-// The folder of the item. Default: Shared.
+// The folder in which the resource is defined
 func (o GetVariableListDataOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v GetVariableListData) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -2872,7 +8255,7 @@ func (o GetVariableListDataOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v GetVariableListData) string { return v.Id }).(pulumi.StringOutput)
 }
 
-// The name of the item.
+// The name of the variable
 func (o GetVariableListDataOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v GetVariableListData) string { return v.Name }).(pulumi.StringOutput)
 }
@@ -2882,7 +8265,7 @@ func (o GetVariableListDataOutput) Overridden() pulumi.BoolOutput {
 	return o.ApplyT(func(v GetVariableListData) bool { return v.Overridden }).(pulumi.BoolOutput)
 }
 
-// The snippet of the item.
+// The snippet in which the resource is defined
 func (o GetVariableListDataOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v GetVariableListData) string { return v.Snippet }).(pulumi.StringOutput)
 }
@@ -2892,7 +8275,7 @@ func (o GetVariableListDataOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v GetVariableListData) string { return v.Tfid }).(pulumi.StringOutput)
 }
 
-// The variable type
+// The variable type. Possible values are `percent`, `count`, `ip-netmask`, `zone`, `ip-range`, `ip-wildcard`, `device-priority`, `device-id`, `egress-max`, `as-number`, `fqdn`, `port`, `link-tag`, `group-id`, `rate`, `router-id`, `qos-profile` and `timer`.
 func (o GetVariableListDataOutput) Type() pulumi.StringOutput {
 	return o.ApplyT(func(v GetVariableListData) string { return v.Type }).(pulumi.StringOutput)
 }
@@ -2920,6 +8303,76 @@ func (o GetVariableListDataArrayOutput) Index(i pulumi.IntInput) GetVariableList
 	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetVariableListData {
 		return vs[0].([]GetVariableListData)[vs[1].(int)]
 	}).(GetVariableListDataOutput)
+}
+
+type GetVlanInterfaceAdjustTcpMss struct {
+	// Enable TCP MSS adjustment on the interface
+	Enable bool `pulumi:"enable"`
+	// IPv4 MSS adjustment size in bytes
+	Ipv4MssAdjustment int `pulumi:"ipv4MssAdjustment"`
+	// IPv6 MSS adjustment size in bytes
+	Ipv6MssAdjustment int `pulumi:"ipv6MssAdjustment"`
+}
+
+// GetVlanInterfaceAdjustTcpMssInput is an input type that accepts GetVlanInterfaceAdjustTcpMssArgs and GetVlanInterfaceAdjustTcpMssOutput values.
+// You can construct a concrete instance of `GetVlanInterfaceAdjustTcpMssInput` via:
+//
+//	GetVlanInterfaceAdjustTcpMssArgs{...}
+type GetVlanInterfaceAdjustTcpMssInput interface {
+	pulumi.Input
+
+	ToGetVlanInterfaceAdjustTcpMssOutput() GetVlanInterfaceAdjustTcpMssOutput
+	ToGetVlanInterfaceAdjustTcpMssOutputWithContext(context.Context) GetVlanInterfaceAdjustTcpMssOutput
+}
+
+type GetVlanInterfaceAdjustTcpMssArgs struct {
+	// Enable TCP MSS adjustment on the interface
+	Enable pulumi.BoolInput `pulumi:"enable"`
+	// IPv4 MSS adjustment size in bytes
+	Ipv4MssAdjustment pulumi.IntInput `pulumi:"ipv4MssAdjustment"`
+	// IPv6 MSS adjustment size in bytes
+	Ipv6MssAdjustment pulumi.IntInput `pulumi:"ipv6MssAdjustment"`
+}
+
+func (GetVlanInterfaceAdjustTcpMssArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetVlanInterfaceAdjustTcpMss)(nil)).Elem()
+}
+
+func (i GetVlanInterfaceAdjustTcpMssArgs) ToGetVlanInterfaceAdjustTcpMssOutput() GetVlanInterfaceAdjustTcpMssOutput {
+	return i.ToGetVlanInterfaceAdjustTcpMssOutputWithContext(context.Background())
+}
+
+func (i GetVlanInterfaceAdjustTcpMssArgs) ToGetVlanInterfaceAdjustTcpMssOutputWithContext(ctx context.Context) GetVlanInterfaceAdjustTcpMssOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetVlanInterfaceAdjustTcpMssOutput)
+}
+
+type GetVlanInterfaceAdjustTcpMssOutput struct{ *pulumi.OutputState }
+
+func (GetVlanInterfaceAdjustTcpMssOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetVlanInterfaceAdjustTcpMss)(nil)).Elem()
+}
+
+func (o GetVlanInterfaceAdjustTcpMssOutput) ToGetVlanInterfaceAdjustTcpMssOutput() GetVlanInterfaceAdjustTcpMssOutput {
+	return o
+}
+
+func (o GetVlanInterfaceAdjustTcpMssOutput) ToGetVlanInterfaceAdjustTcpMssOutputWithContext(ctx context.Context) GetVlanInterfaceAdjustTcpMssOutput {
+	return o
+}
+
+// Enable TCP MSS adjustment on the interface
+func (o GetVlanInterfaceAdjustTcpMssOutput) Enable() pulumi.BoolOutput {
+	return o.ApplyT(func(v GetVlanInterfaceAdjustTcpMss) bool { return v.Enable }).(pulumi.BoolOutput)
+}
+
+// IPv4 MSS adjustment size in bytes
+func (o GetVlanInterfaceAdjustTcpMssOutput) Ipv4MssAdjustment() pulumi.IntOutput {
+	return o.ApplyT(func(v GetVlanInterfaceAdjustTcpMss) int { return v.Ipv4MssAdjustment }).(pulumi.IntOutput)
+}
+
+// IPv6 MSS adjustment size in bytes
+func (o GetVlanInterfaceAdjustTcpMssOutput) Ipv6MssAdjustment() pulumi.IntOutput {
+	return o.ApplyT(func(v GetVlanInterfaceAdjustTcpMss) int { return v.Ipv6MssAdjustment }).(pulumi.IntOutput)
 }
 
 type GetVlanInterfaceArp struct {
@@ -3381,6 +8834,8 @@ func (o GetVlanInterfaceIpArrayOutput) Index(i pulumi.IntInput) GetVlanInterface
 }
 
 type GetVlanInterfaceListData struct {
+	// TCP MSS adjustment settings for the interface
+	AdjustTcpMss GetVlanInterfaceListDataAdjustTcpMss `pulumi:"adjustTcpMss"`
 	// ARP configuration
 	Arps []GetVlanInterfaceListDataArp `pulumi:"arps"`
 	// Description
@@ -3392,26 +8847,22 @@ type GetVlanInterfaceListData struct {
 	// The device in which the resource is defined
 	Device string `pulumi:"device"`
 	// Vlan interfaces DHCP Client Object
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
 	DhcpClient GetVlanInterfaceListDataDhcpClient `pulumi:"dhcpClient"`
-	// The folder of the item. Default: Shared.
+	// The folder in which the resource is defined
 	Folder string `pulumi:"folder"`
 	// UUID of the resource
 	Id string `pulumi:"id"`
 	// Interface management profile
 	InterfaceManagementProfile string `pulumi:"interfaceManagementProfile"`
 	// VLAN Interface IP Parent
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
 	Ips []GetVlanInterfaceListDataIp `pulumi:"ips"`
 	// MTU
 	Mtu int `pulumi:"mtu"`
-	// The name of the item.
+	// L3 sub-interface name
 	Name string `pulumi:"name"`
 	// Name of Netflow Profile to assign to Interface
 	NetflowProfile string `pulumi:"netflowProfile"`
-	// The snippet of the item.
+	// The snippet in which the resource is defined
 	Snippet string `pulumi:"snippet"`
 	// The Terraform ID.
 	Tfid string `pulumi:"tfid"`
@@ -3431,6 +8882,8 @@ type GetVlanInterfaceListDataInput interface {
 }
 
 type GetVlanInterfaceListDataArgs struct {
+	// TCP MSS adjustment settings for the interface
+	AdjustTcpMss GetVlanInterfaceListDataAdjustTcpMssInput `pulumi:"adjustTcpMss"`
 	// ARP configuration
 	Arps GetVlanInterfaceListDataArpArrayInput `pulumi:"arps"`
 	// Description
@@ -3442,26 +8895,22 @@ type GetVlanInterfaceListDataArgs struct {
 	// The device in which the resource is defined
 	Device pulumi.StringInput `pulumi:"device"`
 	// Vlan interfaces DHCP Client Object
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
 	DhcpClient GetVlanInterfaceListDataDhcpClientInput `pulumi:"dhcpClient"`
-	// The folder of the item. Default: Shared.
+	// The folder in which the resource is defined
 	Folder pulumi.StringInput `pulumi:"folder"`
 	// UUID of the resource
 	Id pulumi.StringInput `pulumi:"id"`
 	// Interface management profile
 	InterfaceManagementProfile pulumi.StringInput `pulumi:"interfaceManagementProfile"`
 	// VLAN Interface IP Parent
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
 	Ips GetVlanInterfaceListDataIpArrayInput `pulumi:"ips"`
 	// MTU
 	Mtu pulumi.IntInput `pulumi:"mtu"`
-	// The name of the item.
+	// L3 sub-interface name
 	Name pulumi.StringInput `pulumi:"name"`
 	// Name of Netflow Profile to assign to Interface
 	NetflowProfile pulumi.StringInput `pulumi:"netflowProfile"`
-	// The snippet of the item.
+	// The snippet in which the resource is defined
 	Snippet pulumi.StringInput `pulumi:"snippet"`
 	// The Terraform ID.
 	Tfid pulumi.StringInput `pulumi:"tfid"`
@@ -3520,6 +8969,11 @@ func (o GetVlanInterfaceListDataOutput) ToGetVlanInterfaceListDataOutputWithCont
 	return o
 }
 
+// TCP MSS adjustment settings for the interface
+func (o GetVlanInterfaceListDataOutput) AdjustTcpMss() GetVlanInterfaceListDataAdjustTcpMssOutput {
+	return o.ApplyT(func(v GetVlanInterfaceListData) GetVlanInterfaceListDataAdjustTcpMss { return v.AdjustTcpMss }).(GetVlanInterfaceListDataAdjustTcpMssOutput)
+}
+
 // ARP configuration
 func (o GetVlanInterfaceListDataOutput) Arps() GetVlanInterfaceListDataArpArrayOutput {
 	return o.ApplyT(func(v GetVlanInterfaceListData) []GetVlanInterfaceListDataArp { return v.Arps }).(GetVlanInterfaceListDataArpArrayOutput)
@@ -3546,13 +9000,11 @@ func (o GetVlanInterfaceListDataOutput) Device() pulumi.StringOutput {
 }
 
 // Vlan interfaces DHCP Client Object
-//
-// > ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
 func (o GetVlanInterfaceListDataOutput) DhcpClient() GetVlanInterfaceListDataDhcpClientOutput {
 	return o.ApplyT(func(v GetVlanInterfaceListData) GetVlanInterfaceListDataDhcpClient { return v.DhcpClient }).(GetVlanInterfaceListDataDhcpClientOutput)
 }
 
-// The folder of the item. Default: Shared.
+// The folder in which the resource is defined
 func (o GetVlanInterfaceListDataOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v GetVlanInterfaceListData) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -3568,8 +9020,6 @@ func (o GetVlanInterfaceListDataOutput) InterfaceManagementProfile() pulumi.Stri
 }
 
 // VLAN Interface IP Parent
-//
-// > ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
 func (o GetVlanInterfaceListDataOutput) Ips() GetVlanInterfaceListDataIpArrayOutput {
 	return o.ApplyT(func(v GetVlanInterfaceListData) []GetVlanInterfaceListDataIp { return v.Ips }).(GetVlanInterfaceListDataIpArrayOutput)
 }
@@ -3579,7 +9029,7 @@ func (o GetVlanInterfaceListDataOutput) Mtu() pulumi.IntOutput {
 	return o.ApplyT(func(v GetVlanInterfaceListData) int { return v.Mtu }).(pulumi.IntOutput)
 }
 
-// The name of the item.
+// L3 sub-interface name
 func (o GetVlanInterfaceListDataOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v GetVlanInterfaceListData) string { return v.Name }).(pulumi.StringOutput)
 }
@@ -3589,7 +9039,7 @@ func (o GetVlanInterfaceListDataOutput) NetflowProfile() pulumi.StringOutput {
 	return o.ApplyT(func(v GetVlanInterfaceListData) string { return v.NetflowProfile }).(pulumi.StringOutput)
 }
 
-// The snippet of the item.
+// The snippet in which the resource is defined
 func (o GetVlanInterfaceListDataOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v GetVlanInterfaceListData) string { return v.Snippet }).(pulumi.StringOutput)
 }
@@ -3622,6 +9072,76 @@ func (o GetVlanInterfaceListDataArrayOutput) Index(i pulumi.IntInput) GetVlanInt
 	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetVlanInterfaceListData {
 		return vs[0].([]GetVlanInterfaceListData)[vs[1].(int)]
 	}).(GetVlanInterfaceListDataOutput)
+}
+
+type GetVlanInterfaceListDataAdjustTcpMss struct {
+	// Enable TCP MSS adjustment on the interface
+	Enable bool `pulumi:"enable"`
+	// IPv4 MSS adjustment size in bytes
+	Ipv4MssAdjustment int `pulumi:"ipv4MssAdjustment"`
+	// IPv6 MSS adjustment size in bytes
+	Ipv6MssAdjustment int `pulumi:"ipv6MssAdjustment"`
+}
+
+// GetVlanInterfaceListDataAdjustTcpMssInput is an input type that accepts GetVlanInterfaceListDataAdjustTcpMssArgs and GetVlanInterfaceListDataAdjustTcpMssOutput values.
+// You can construct a concrete instance of `GetVlanInterfaceListDataAdjustTcpMssInput` via:
+//
+//	GetVlanInterfaceListDataAdjustTcpMssArgs{...}
+type GetVlanInterfaceListDataAdjustTcpMssInput interface {
+	pulumi.Input
+
+	ToGetVlanInterfaceListDataAdjustTcpMssOutput() GetVlanInterfaceListDataAdjustTcpMssOutput
+	ToGetVlanInterfaceListDataAdjustTcpMssOutputWithContext(context.Context) GetVlanInterfaceListDataAdjustTcpMssOutput
+}
+
+type GetVlanInterfaceListDataAdjustTcpMssArgs struct {
+	// Enable TCP MSS adjustment on the interface
+	Enable pulumi.BoolInput `pulumi:"enable"`
+	// IPv4 MSS adjustment size in bytes
+	Ipv4MssAdjustment pulumi.IntInput `pulumi:"ipv4MssAdjustment"`
+	// IPv6 MSS adjustment size in bytes
+	Ipv6MssAdjustment pulumi.IntInput `pulumi:"ipv6MssAdjustment"`
+}
+
+func (GetVlanInterfaceListDataAdjustTcpMssArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetVlanInterfaceListDataAdjustTcpMss)(nil)).Elem()
+}
+
+func (i GetVlanInterfaceListDataAdjustTcpMssArgs) ToGetVlanInterfaceListDataAdjustTcpMssOutput() GetVlanInterfaceListDataAdjustTcpMssOutput {
+	return i.ToGetVlanInterfaceListDataAdjustTcpMssOutputWithContext(context.Background())
+}
+
+func (i GetVlanInterfaceListDataAdjustTcpMssArgs) ToGetVlanInterfaceListDataAdjustTcpMssOutputWithContext(ctx context.Context) GetVlanInterfaceListDataAdjustTcpMssOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetVlanInterfaceListDataAdjustTcpMssOutput)
+}
+
+type GetVlanInterfaceListDataAdjustTcpMssOutput struct{ *pulumi.OutputState }
+
+func (GetVlanInterfaceListDataAdjustTcpMssOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetVlanInterfaceListDataAdjustTcpMss)(nil)).Elem()
+}
+
+func (o GetVlanInterfaceListDataAdjustTcpMssOutput) ToGetVlanInterfaceListDataAdjustTcpMssOutput() GetVlanInterfaceListDataAdjustTcpMssOutput {
+	return o
+}
+
+func (o GetVlanInterfaceListDataAdjustTcpMssOutput) ToGetVlanInterfaceListDataAdjustTcpMssOutputWithContext(ctx context.Context) GetVlanInterfaceListDataAdjustTcpMssOutput {
+	return o
+}
+
+// Enable TCP MSS adjustment on the interface
+func (o GetVlanInterfaceListDataAdjustTcpMssOutput) Enable() pulumi.BoolOutput {
+	return o.ApplyT(func(v GetVlanInterfaceListDataAdjustTcpMss) bool { return v.Enable }).(pulumi.BoolOutput)
+}
+
+// IPv4 MSS adjustment size in bytes
+func (o GetVlanInterfaceListDataAdjustTcpMssOutput) Ipv4MssAdjustment() pulumi.IntOutput {
+	return o.ApplyT(func(v GetVlanInterfaceListDataAdjustTcpMss) int { return v.Ipv4MssAdjustment }).(pulumi.IntOutput)
+}
+
+// IPv6 MSS adjustment size in bytes
+func (o GetVlanInterfaceListDataAdjustTcpMssOutput) Ipv6MssAdjustment() pulumi.IntOutput {
+	return o.ApplyT(func(v GetVlanInterfaceListDataAdjustTcpMss) int { return v.Ipv6MssAdjustment }).(pulumi.IntOutput)
 }
 
 type GetVlanInterfaceListDataArp struct {
@@ -4087,11 +9607,11 @@ func (o GetVlanInterfaceListDataIpArrayOutput) Index(i pulumi.IntInput) GetVlanI
 type GetVpnSettingListData struct {
 	// The device in which the resource is defined
 	Device string `pulumi:"device"`
-	// The folder of the item. Default: Shared.
+	// The folder in which the resource is defined
 	Folder string `pulumi:"folder"`
 	// UUID of the resource
 	Id string `pulumi:"id"`
-	// The snippet of the item.
+	// The snippet in which the resource is defined
 	Snippet string `pulumi:"snippet"`
 	// The Terraform ID.
 	Tfid string `pulumi:"tfid"`
@@ -4113,11 +9633,11 @@ type GetVpnSettingListDataInput interface {
 type GetVpnSettingListDataArgs struct {
 	// The device in which the resource is defined
 	Device pulumi.StringInput `pulumi:"device"`
-	// The folder of the item. Default: Shared.
+	// The folder in which the resource is defined
 	Folder pulumi.StringInput `pulumi:"folder"`
 	// UUID of the resource
 	Id pulumi.StringInput `pulumi:"id"`
-	// The snippet of the item.
+	// The snippet in which the resource is defined
 	Snippet pulumi.StringInput `pulumi:"snippet"`
 	// The Terraform ID.
 	Tfid pulumi.StringInput `pulumi:"tfid"`
@@ -4181,7 +9701,7 @@ func (o GetVpnSettingListDataOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v GetVpnSettingListData) string { return v.Device }).(pulumi.StringOutput)
 }
 
-// The folder of the item. Default: Shared.
+// The folder in which the resource is defined
 func (o GetVpnSettingListDataOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v GetVpnSettingListData) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -4191,7 +9711,7 @@ func (o GetVpnSettingListDataOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v GetVpnSettingListData) string { return v.Id }).(pulumi.StringOutput)
 }
 
-// The snippet of the item.
+// The snippet in which the resource is defined
 func (o GetVpnSettingListDataOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v GetVpnSettingListData) string { return v.Snippet }).(pulumi.StringOutput)
 }
@@ -4475,15 +9995,15 @@ type GetVulnerabilityProtectionProfileListData struct {
 	Description string `pulumi:"description"`
 	// The device in which the resource is defined
 	Device string `pulumi:"device"`
-	// The folder of the item. Default: Shared.
+	// The folder in which the resource is defined
 	Folder string `pulumi:"folder"`
 	// UUID of the resource
 	Id string `pulumi:"id"`
-	// The name of the item.
+	// Name
 	Name string `pulumi:"name"`
 	// Rules
 	Rules []GetVulnerabilityProtectionProfileListDataRule `pulumi:"rules"`
-	// The snippet of the item.
+	// The snippet in which the resource is defined
 	Snippet string `pulumi:"snippet"`
 	// The Terraform ID.
 	Tfid string `pulumi:"tfid"`
@@ -4507,15 +10027,15 @@ type GetVulnerabilityProtectionProfileListDataArgs struct {
 	Description pulumi.StringInput `pulumi:"description"`
 	// The device in which the resource is defined
 	Device pulumi.StringInput `pulumi:"device"`
-	// The folder of the item. Default: Shared.
+	// The folder in which the resource is defined
 	Folder pulumi.StringInput `pulumi:"folder"`
 	// UUID of the resource
 	Id pulumi.StringInput `pulumi:"id"`
-	// The name of the item.
+	// Name
 	Name pulumi.StringInput `pulumi:"name"`
 	// Rules
 	Rules GetVulnerabilityProtectionProfileListDataRuleArrayInput `pulumi:"rules"`
-	// The snippet of the item.
+	// The snippet in which the resource is defined
 	Snippet pulumi.StringInput `pulumi:"snippet"`
 	// The Terraform ID.
 	Tfid pulumi.StringInput `pulumi:"tfid"`
@@ -4584,7 +10104,7 @@ func (o GetVulnerabilityProtectionProfileListDataOutput) Device() pulumi.StringO
 	return o.ApplyT(func(v GetVulnerabilityProtectionProfileListData) string { return v.Device }).(pulumi.StringOutput)
 }
 
-// The folder of the item. Default: Shared.
+// The folder in which the resource is defined
 func (o GetVulnerabilityProtectionProfileListDataOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v GetVulnerabilityProtectionProfileListData) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -4594,7 +10114,7 @@ func (o GetVulnerabilityProtectionProfileListDataOutput) Id() pulumi.StringOutpu
 	return o.ApplyT(func(v GetVulnerabilityProtectionProfileListData) string { return v.Id }).(pulumi.StringOutput)
 }
 
-// The name of the item.
+// Name
 func (o GetVulnerabilityProtectionProfileListDataOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v GetVulnerabilityProtectionProfileListData) string { return v.Name }).(pulumi.StringOutput)
 }
@@ -4606,7 +10126,7 @@ func (o GetVulnerabilityProtectionProfileListDataOutput) Rules() GetVulnerabilit
 	}).(GetVulnerabilityProtectionProfileListDataRuleArrayOutput)
 }
 
-// The snippet of the item.
+// The snippet in which the resource is defined
 func (o GetVulnerabilityProtectionProfileListDataOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v GetVulnerabilityProtectionProfileListData) string { return v.Snippet }).(pulumi.StringOutput)
 }
@@ -4646,7 +10166,7 @@ func (o GetVulnerabilityProtectionProfileListDataArrayOutput) Index(i pulumi.Int
 type GetVulnerabilityProtectionProfileListDataRule struct {
 	// vulnerability profiles threat exception default action
 	Action GetVulnerabilityProtectionProfileListDataRuleAction `pulumi:"action"`
-	// Category
+	// Category. Possible values are `any`, `app-id-change`, `brute-force`, `code-execution`, `code-obfuscation`, `command-execution`, `dos`, `exploit-kit`, `info-leak`, `inline-cloud-exploit`, `insecure-credentials`, `overflow`, `phishing`, `protocol-anomaly`, `scan` and `sql-injection`.
 	Category string `pulumi:"category"`
 	// Cve
 	Cves []string `pulumi:"cves"`
@@ -4654,7 +10174,7 @@ type GetVulnerabilityProtectionProfileListDataRule struct {
 	Host string `pulumi:"host"`
 	// Name
 	Name string `pulumi:"name"`
-	// Packet capture
+	// Packet capture. Possible values are `disable`, `single-packet` and `extended-capture`.
 	PacketCapture string `pulumi:"packetCapture"`
 	// Severity
 	Severities []string `pulumi:"severities"`
@@ -4678,7 +10198,7 @@ type GetVulnerabilityProtectionProfileListDataRuleInput interface {
 type GetVulnerabilityProtectionProfileListDataRuleArgs struct {
 	// vulnerability profiles threat exception default action
 	Action GetVulnerabilityProtectionProfileListDataRuleActionInput `pulumi:"action"`
-	// Category
+	// Category. Possible values are `any`, `app-id-change`, `brute-force`, `code-execution`, `code-obfuscation`, `command-execution`, `dos`, `exploit-kit`, `info-leak`, `inline-cloud-exploit`, `insecure-credentials`, `overflow`, `phishing`, `protocol-anomaly`, `scan` and `sql-injection`.
 	Category pulumi.StringInput `pulumi:"category"`
 	// Cve
 	Cves pulumi.StringArrayInput `pulumi:"cves"`
@@ -4686,7 +10206,7 @@ type GetVulnerabilityProtectionProfileListDataRuleArgs struct {
 	Host pulumi.StringInput `pulumi:"host"`
 	// Name
 	Name pulumi.StringInput `pulumi:"name"`
-	// Packet capture
+	// Packet capture. Possible values are `disable`, `single-packet` and `extended-capture`.
 	PacketCapture pulumi.StringInput `pulumi:"packetCapture"`
 	// Severity
 	Severities pulumi.StringArrayInput `pulumi:"severities"`
@@ -4754,7 +10274,7 @@ func (o GetVulnerabilityProtectionProfileListDataRuleOutput) Action() GetVulnera
 	}).(GetVulnerabilityProtectionProfileListDataRuleActionOutput)
 }
 
-// Category
+// Category. Possible values are `any`, `app-id-change`, `brute-force`, `code-execution`, `code-obfuscation`, `command-execution`, `dos`, `exploit-kit`, `info-leak`, `inline-cloud-exploit`, `insecure-credentials`, `overflow`, `phishing`, `protocol-anomaly`, `scan` and `sql-injection`.
 func (o GetVulnerabilityProtectionProfileListDataRuleOutput) Category() pulumi.StringOutput {
 	return o.ApplyT(func(v GetVulnerabilityProtectionProfileListDataRule) string { return v.Category }).(pulumi.StringOutput)
 }
@@ -4774,7 +10294,7 @@ func (o GetVulnerabilityProtectionProfileListDataRuleOutput) Name() pulumi.Strin
 	return o.ApplyT(func(v GetVulnerabilityProtectionProfileListDataRule) string { return v.Name }).(pulumi.StringOutput)
 }
 
-// Packet capture
+// Packet capture. Possible values are `disable`, `single-packet` and `extended-capture`.
 func (o GetVulnerabilityProtectionProfileListDataRuleOutput) PacketCapture() pulumi.StringOutput {
 	return o.ApplyT(func(v GetVulnerabilityProtectionProfileListDataRule) string { return v.PacketCapture }).(pulumi.StringOutput)
 }
@@ -4818,32 +10338,18 @@ type GetVulnerabilityProtectionProfileListDataRuleAction struct {
 	// Alert
 	Alert GetVulnerabilityProtectionProfileListDataRuleActionAlert `pulumi:"alert"`
 	// Allow
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 	Allow GetVulnerabilityProtectionProfileListDataRuleActionAllow `pulumi:"allow"`
 	// vulnerability protection block ip
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 	BlockIp GetVulnerabilityProtectionProfileListDataRuleActionBlockIp `pulumi:"blockIp"`
 	// Default
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 	Default GetVulnerabilityProtectionProfileListDataRuleActionDefault `pulumi:"default"`
 	// Drop
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 	Drop GetVulnerabilityProtectionProfileListDataRuleActionDrop `pulumi:"drop"`
 	// Reset both
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 	ResetBoth GetVulnerabilityProtectionProfileListDataRuleActionResetBoth `pulumi:"resetBoth"`
 	// Reset client
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 	ResetClient GetVulnerabilityProtectionProfileListDataRuleActionResetClient `pulumi:"resetClient"`
 	// Reset server
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 	ResetServer GetVulnerabilityProtectionProfileListDataRuleActionResetServer `pulumi:"resetServer"`
 }
 
@@ -4862,32 +10368,18 @@ type GetVulnerabilityProtectionProfileListDataRuleActionArgs struct {
 	// Alert
 	Alert GetVulnerabilityProtectionProfileListDataRuleActionAlertInput `pulumi:"alert"`
 	// Allow
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 	Allow GetVulnerabilityProtectionProfileListDataRuleActionAllowInput `pulumi:"allow"`
 	// vulnerability protection block ip
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 	BlockIp GetVulnerabilityProtectionProfileListDataRuleActionBlockIpInput `pulumi:"blockIp"`
 	// Default
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 	Default GetVulnerabilityProtectionProfileListDataRuleActionDefaultInput `pulumi:"default"`
 	// Drop
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 	Drop GetVulnerabilityProtectionProfileListDataRuleActionDropInput `pulumi:"drop"`
 	// Reset both
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 	ResetBoth GetVulnerabilityProtectionProfileListDataRuleActionResetBothInput `pulumi:"resetBoth"`
 	// Reset client
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 	ResetClient GetVulnerabilityProtectionProfileListDataRuleActionResetClientInput `pulumi:"resetClient"`
 	// Reset server
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 	ResetServer GetVulnerabilityProtectionProfileListDataRuleActionResetServerInput `pulumi:"resetServer"`
 }
 
@@ -4925,8 +10417,6 @@ func (o GetVulnerabilityProtectionProfileListDataRuleActionOutput) Alert() GetVu
 }
 
 // Allow
-//
-// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 func (o GetVulnerabilityProtectionProfileListDataRuleActionOutput) Allow() GetVulnerabilityProtectionProfileListDataRuleActionAllowOutput {
 	return o.ApplyT(func(v GetVulnerabilityProtectionProfileListDataRuleAction) GetVulnerabilityProtectionProfileListDataRuleActionAllow {
 		return v.Allow
@@ -4934,8 +10424,6 @@ func (o GetVulnerabilityProtectionProfileListDataRuleActionOutput) Allow() GetVu
 }
 
 // vulnerability protection block ip
-//
-// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 func (o GetVulnerabilityProtectionProfileListDataRuleActionOutput) BlockIp() GetVulnerabilityProtectionProfileListDataRuleActionBlockIpOutput {
 	return o.ApplyT(func(v GetVulnerabilityProtectionProfileListDataRuleAction) GetVulnerabilityProtectionProfileListDataRuleActionBlockIp {
 		return v.BlockIp
@@ -4943,8 +10431,6 @@ func (o GetVulnerabilityProtectionProfileListDataRuleActionOutput) BlockIp() Get
 }
 
 // Default
-//
-// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 func (o GetVulnerabilityProtectionProfileListDataRuleActionOutput) Default() GetVulnerabilityProtectionProfileListDataRuleActionDefaultOutput {
 	return o.ApplyT(func(v GetVulnerabilityProtectionProfileListDataRuleAction) GetVulnerabilityProtectionProfileListDataRuleActionDefault {
 		return v.Default
@@ -4952,8 +10438,6 @@ func (o GetVulnerabilityProtectionProfileListDataRuleActionOutput) Default() Get
 }
 
 // Drop
-//
-// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 func (o GetVulnerabilityProtectionProfileListDataRuleActionOutput) Drop() GetVulnerabilityProtectionProfileListDataRuleActionDropOutput {
 	return o.ApplyT(func(v GetVulnerabilityProtectionProfileListDataRuleAction) GetVulnerabilityProtectionProfileListDataRuleActionDrop {
 		return v.Drop
@@ -4961,8 +10445,6 @@ func (o GetVulnerabilityProtectionProfileListDataRuleActionOutput) Drop() GetVul
 }
 
 // Reset both
-//
-// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 func (o GetVulnerabilityProtectionProfileListDataRuleActionOutput) ResetBoth() GetVulnerabilityProtectionProfileListDataRuleActionResetBothOutput {
 	return o.ApplyT(func(v GetVulnerabilityProtectionProfileListDataRuleAction) GetVulnerabilityProtectionProfileListDataRuleActionResetBoth {
 		return v.ResetBoth
@@ -4970,8 +10452,6 @@ func (o GetVulnerabilityProtectionProfileListDataRuleActionOutput) ResetBoth() G
 }
 
 // Reset client
-//
-// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 func (o GetVulnerabilityProtectionProfileListDataRuleActionOutput) ResetClient() GetVulnerabilityProtectionProfileListDataRuleActionResetClientOutput {
 	return o.ApplyT(func(v GetVulnerabilityProtectionProfileListDataRuleAction) GetVulnerabilityProtectionProfileListDataRuleActionResetClient {
 		return v.ResetClient
@@ -4979,8 +10459,6 @@ func (o GetVulnerabilityProtectionProfileListDataRuleActionOutput) ResetClient()
 }
 
 // Reset server
-//
-// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 func (o GetVulnerabilityProtectionProfileListDataRuleActionOutput) ResetServer() GetVulnerabilityProtectionProfileListDataRuleActionResetServerOutput {
 	return o.ApplyT(func(v GetVulnerabilityProtectionProfileListDataRuleAction) GetVulnerabilityProtectionProfileListDataRuleActionResetServer {
 		return v.ResetServer
@@ -5076,7 +10554,7 @@ func (o GetVulnerabilityProtectionProfileListDataRuleActionAllowOutput) ToGetVul
 type GetVulnerabilityProtectionProfileListDataRuleActionBlockIp struct {
 	// Duration
 	Duration int `pulumi:"duration"`
-	// Track by
+	// Track by. Possible values are `source-and-destination` and `source`.
 	TrackBy string `pulumi:"trackBy"`
 }
 
@@ -5094,7 +10572,7 @@ type GetVulnerabilityProtectionProfileListDataRuleActionBlockIpInput interface {
 type GetVulnerabilityProtectionProfileListDataRuleActionBlockIpArgs struct {
 	// Duration
 	Duration pulumi.IntInput `pulumi:"duration"`
-	// Track by
+	// Track by. Possible values are `source-and-destination` and `source`.
 	TrackBy pulumi.StringInput `pulumi:"trackBy"`
 }
 
@@ -5129,7 +10607,7 @@ func (o GetVulnerabilityProtectionProfileListDataRuleActionBlockIpOutput) Durati
 	return o.ApplyT(func(v GetVulnerabilityProtectionProfileListDataRuleActionBlockIp) int { return v.Duration }).(pulumi.IntOutput)
 }
 
-// Track by
+// Track by. Possible values are `source-and-destination` and `source`.
 func (o GetVulnerabilityProtectionProfileListDataRuleActionBlockIpOutput) TrackBy() pulumi.StringOutput {
 	return o.ApplyT(func(v GetVulnerabilityProtectionProfileListDataRuleActionBlockIp) string { return v.TrackBy }).(pulumi.StringOutput)
 }
@@ -5358,7 +10836,7 @@ type GetVulnerabilityProtectionProfileListDataThreatException struct {
 	Name string `pulumi:"name"`
 	// Notes
 	Notes string `pulumi:"notes"`
-	// Packet capture
+	// Packet capture. Possible values are `disable`, `single-packet` and `extended-capture`.
 	PacketCapture string `pulumi:"packetCapture"`
 	// vulnerability time attribute
 	TimeAttribute GetVulnerabilityProtectionProfileListDataThreatExceptionTimeAttribute `pulumi:"timeAttribute"`
@@ -5384,7 +10862,7 @@ type GetVulnerabilityProtectionProfileListDataThreatExceptionArgs struct {
 	Name pulumi.StringInput `pulumi:"name"`
 	// Notes
 	Notes pulumi.StringInput `pulumi:"notes"`
-	// Packet capture
+	// Packet capture. Possible values are `disable`, `single-packet` and `extended-capture`.
 	PacketCapture pulumi.StringInput `pulumi:"packetCapture"`
 	// vulnerability time attribute
 	TimeAttribute GetVulnerabilityProtectionProfileListDataThreatExceptionTimeAttributeInput `pulumi:"timeAttribute"`
@@ -5465,7 +10943,7 @@ func (o GetVulnerabilityProtectionProfileListDataThreatExceptionOutput) Notes() 
 	return o.ApplyT(func(v GetVulnerabilityProtectionProfileListDataThreatException) string { return v.Notes }).(pulumi.StringOutput)
 }
 
-// Packet capture
+// Packet capture. Possible values are `disable`, `single-packet` and `extended-capture`.
 func (o GetVulnerabilityProtectionProfileListDataThreatExceptionOutput) PacketCapture() pulumi.StringOutput {
 	return o.ApplyT(func(v GetVulnerabilityProtectionProfileListDataThreatException) string { return v.PacketCapture }).(pulumi.StringOutput)
 }
@@ -5501,32 +10979,18 @@ type GetVulnerabilityProtectionProfileListDataThreatExceptionAction struct {
 	// Alert
 	Alert GetVulnerabilityProtectionProfileListDataThreatExceptionActionAlert `pulumi:"alert"`
 	// Allow
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 	Allow GetVulnerabilityProtectionProfileListDataThreatExceptionActionAllow `pulumi:"allow"`
 	// vulnerability protection threat exception block ip
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 	BlockIp GetVulnerabilityProtectionProfileListDataThreatExceptionActionBlockIp `pulumi:"blockIp"`
 	// Default
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 	Default GetVulnerabilityProtectionProfileListDataThreatExceptionActionDefault `pulumi:"default"`
 	// Drop
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 	Drop GetVulnerabilityProtectionProfileListDataThreatExceptionActionDrop `pulumi:"drop"`
 	// Reset both
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 	ResetBoth GetVulnerabilityProtectionProfileListDataThreatExceptionActionResetBoth `pulumi:"resetBoth"`
 	// Reset client
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 	ResetClient GetVulnerabilityProtectionProfileListDataThreatExceptionActionResetClient `pulumi:"resetClient"`
 	// Reset server
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 	ResetServer GetVulnerabilityProtectionProfileListDataThreatExceptionActionResetServer `pulumi:"resetServer"`
 }
 
@@ -5545,32 +11009,18 @@ type GetVulnerabilityProtectionProfileListDataThreatExceptionActionArgs struct {
 	// Alert
 	Alert GetVulnerabilityProtectionProfileListDataThreatExceptionActionAlertInput `pulumi:"alert"`
 	// Allow
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 	Allow GetVulnerabilityProtectionProfileListDataThreatExceptionActionAllowInput `pulumi:"allow"`
 	// vulnerability protection threat exception block ip
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 	BlockIp GetVulnerabilityProtectionProfileListDataThreatExceptionActionBlockIpInput `pulumi:"blockIp"`
 	// Default
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 	Default GetVulnerabilityProtectionProfileListDataThreatExceptionActionDefaultInput `pulumi:"default"`
 	// Drop
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 	Drop GetVulnerabilityProtectionProfileListDataThreatExceptionActionDropInput `pulumi:"drop"`
 	// Reset both
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 	ResetBoth GetVulnerabilityProtectionProfileListDataThreatExceptionActionResetBothInput `pulumi:"resetBoth"`
 	// Reset client
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 	ResetClient GetVulnerabilityProtectionProfileListDataThreatExceptionActionResetClientInput `pulumi:"resetClient"`
 	// Reset server
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 	ResetServer GetVulnerabilityProtectionProfileListDataThreatExceptionActionResetServerInput `pulumi:"resetServer"`
 }
 
@@ -5608,8 +11058,6 @@ func (o GetVulnerabilityProtectionProfileListDataThreatExceptionActionOutput) Al
 }
 
 // Allow
-//
-// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 func (o GetVulnerabilityProtectionProfileListDataThreatExceptionActionOutput) Allow() GetVulnerabilityProtectionProfileListDataThreatExceptionActionAllowOutput {
 	return o.ApplyT(func(v GetVulnerabilityProtectionProfileListDataThreatExceptionAction) GetVulnerabilityProtectionProfileListDataThreatExceptionActionAllow {
 		return v.Allow
@@ -5617,8 +11065,6 @@ func (o GetVulnerabilityProtectionProfileListDataThreatExceptionActionOutput) Al
 }
 
 // vulnerability protection threat exception block ip
-//
-// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 func (o GetVulnerabilityProtectionProfileListDataThreatExceptionActionOutput) BlockIp() GetVulnerabilityProtectionProfileListDataThreatExceptionActionBlockIpOutput {
 	return o.ApplyT(func(v GetVulnerabilityProtectionProfileListDataThreatExceptionAction) GetVulnerabilityProtectionProfileListDataThreatExceptionActionBlockIp {
 		return v.BlockIp
@@ -5626,8 +11072,6 @@ func (o GetVulnerabilityProtectionProfileListDataThreatExceptionActionOutput) Bl
 }
 
 // Default
-//
-// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 func (o GetVulnerabilityProtectionProfileListDataThreatExceptionActionOutput) Default() GetVulnerabilityProtectionProfileListDataThreatExceptionActionDefaultOutput {
 	return o.ApplyT(func(v GetVulnerabilityProtectionProfileListDataThreatExceptionAction) GetVulnerabilityProtectionProfileListDataThreatExceptionActionDefault {
 		return v.Default
@@ -5635,8 +11079,6 @@ func (o GetVulnerabilityProtectionProfileListDataThreatExceptionActionOutput) De
 }
 
 // Drop
-//
-// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 func (o GetVulnerabilityProtectionProfileListDataThreatExceptionActionOutput) Drop() GetVulnerabilityProtectionProfileListDataThreatExceptionActionDropOutput {
 	return o.ApplyT(func(v GetVulnerabilityProtectionProfileListDataThreatExceptionAction) GetVulnerabilityProtectionProfileListDataThreatExceptionActionDrop {
 		return v.Drop
@@ -5644,8 +11086,6 @@ func (o GetVulnerabilityProtectionProfileListDataThreatExceptionActionOutput) Dr
 }
 
 // Reset both
-//
-// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 func (o GetVulnerabilityProtectionProfileListDataThreatExceptionActionOutput) ResetBoth() GetVulnerabilityProtectionProfileListDataThreatExceptionActionResetBothOutput {
 	return o.ApplyT(func(v GetVulnerabilityProtectionProfileListDataThreatExceptionAction) GetVulnerabilityProtectionProfileListDataThreatExceptionActionResetBoth {
 		return v.ResetBoth
@@ -5653,8 +11093,6 @@ func (o GetVulnerabilityProtectionProfileListDataThreatExceptionActionOutput) Re
 }
 
 // Reset client
-//
-// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 func (o GetVulnerabilityProtectionProfileListDataThreatExceptionActionOutput) ResetClient() GetVulnerabilityProtectionProfileListDataThreatExceptionActionResetClientOutput {
 	return o.ApplyT(func(v GetVulnerabilityProtectionProfileListDataThreatExceptionAction) GetVulnerabilityProtectionProfileListDataThreatExceptionActionResetClient {
 		return v.ResetClient
@@ -5662,8 +11100,6 @@ func (o GetVulnerabilityProtectionProfileListDataThreatExceptionActionOutput) Re
 }
 
 // Reset server
-//
-// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 func (o GetVulnerabilityProtectionProfileListDataThreatExceptionActionOutput) ResetServer() GetVulnerabilityProtectionProfileListDataThreatExceptionActionResetServerOutput {
 	return o.ApplyT(func(v GetVulnerabilityProtectionProfileListDataThreatExceptionAction) GetVulnerabilityProtectionProfileListDataThreatExceptionActionResetServer {
 		return v.ResetServer
@@ -5759,7 +11195,7 @@ func (o GetVulnerabilityProtectionProfileListDataThreatExceptionActionAllowOutpu
 type GetVulnerabilityProtectionProfileListDataThreatExceptionActionBlockIp struct {
 	// Duration
 	Duration int `pulumi:"duration"`
-	// Track by
+	// Track by. Possible values are `source-and-destination` and `source`.
 	TrackBy string `pulumi:"trackBy"`
 }
 
@@ -5777,7 +11213,7 @@ type GetVulnerabilityProtectionProfileListDataThreatExceptionActionBlockIpInput 
 type GetVulnerabilityProtectionProfileListDataThreatExceptionActionBlockIpArgs struct {
 	// Duration
 	Duration pulumi.IntInput `pulumi:"duration"`
-	// Track by
+	// Track by. Possible values are `source-and-destination` and `source`.
 	TrackBy pulumi.StringInput `pulumi:"trackBy"`
 }
 
@@ -5812,7 +11248,7 @@ func (o GetVulnerabilityProtectionProfileListDataThreatExceptionActionBlockIpOut
 	return o.ApplyT(func(v GetVulnerabilityProtectionProfileListDataThreatExceptionActionBlockIp) int { return v.Duration }).(pulumi.IntOutput)
 }
 
-// Track by
+// Track by. Possible values are `source-and-destination` and `source`.
 func (o GetVulnerabilityProtectionProfileListDataThreatExceptionActionBlockIpOutput) TrackBy() pulumi.StringOutput {
 	return o.ApplyT(func(v GetVulnerabilityProtectionProfileListDataThreatExceptionActionBlockIp) string { return v.TrackBy }).(pulumi.StringOutput)
 }
@@ -6134,7 +11570,7 @@ type GetVulnerabilityProtectionProfileListDataThreatExceptionTimeAttribute struc
 	Interval int `pulumi:"interval"`
 	// Threshold
 	Threshold int `pulumi:"threshold"`
-	// Track by
+	// Track by. Possible values are `source`, `destination` and `source-and-destination`.
 	TrackBy string `pulumi:"trackBy"`
 }
 
@@ -6154,7 +11590,7 @@ type GetVulnerabilityProtectionProfileListDataThreatExceptionTimeAttributeArgs s
 	Interval pulumi.IntInput `pulumi:"interval"`
 	// Threshold
 	Threshold pulumi.IntInput `pulumi:"threshold"`
-	// Track by
+	// Track by. Possible values are `source`, `destination` and `source-and-destination`.
 	TrackBy pulumi.StringInput `pulumi:"trackBy"`
 }
 
@@ -6194,7 +11630,7 @@ func (o GetVulnerabilityProtectionProfileListDataThreatExceptionTimeAttributeOut
 	return o.ApplyT(func(v GetVulnerabilityProtectionProfileListDataThreatExceptionTimeAttribute) int { return v.Threshold }).(pulumi.IntOutput)
 }
 
-// Track by
+// Track by. Possible values are `source`, `destination` and `source-and-destination`.
 func (o GetVulnerabilityProtectionProfileListDataThreatExceptionTimeAttributeOutput) TrackBy() pulumi.StringOutput {
 	return o.ApplyT(func(v GetVulnerabilityProtectionProfileListDataThreatExceptionTimeAttribute) string { return v.TrackBy }).(pulumi.StringOutput)
 }
@@ -6202,7 +11638,7 @@ func (o GetVulnerabilityProtectionProfileListDataThreatExceptionTimeAttributeOut
 type GetVulnerabilityProtectionProfileRule struct {
 	// vulnerability profiles threat exception default action
 	Action GetVulnerabilityProtectionProfileRuleAction `pulumi:"action"`
-	// Category
+	// Category. Possible values are `any`, `app-id-change`, `brute-force`, `code-execution`, `code-obfuscation`, `command-execution`, `dos`, `exploit-kit`, `info-leak`, `inline-cloud-exploit`, `insecure-credentials`, `overflow`, `phishing`, `protocol-anomaly`, `scan` and `sql-injection`.
 	Category string `pulumi:"category"`
 	// Cve
 	Cves []string `pulumi:"cves"`
@@ -6210,7 +11646,7 @@ type GetVulnerabilityProtectionProfileRule struct {
 	Host string `pulumi:"host"`
 	// Name
 	Name string `pulumi:"name"`
-	// Packet capture
+	// Packet capture. Possible values are `disable`, `single-packet` and `extended-capture`.
 	PacketCapture string `pulumi:"packetCapture"`
 	// Severity
 	Severities []string `pulumi:"severities"`
@@ -6234,7 +11670,7 @@ type GetVulnerabilityProtectionProfileRuleInput interface {
 type GetVulnerabilityProtectionProfileRuleArgs struct {
 	// vulnerability profiles threat exception default action
 	Action GetVulnerabilityProtectionProfileRuleActionInput `pulumi:"action"`
-	// Category
+	// Category. Possible values are `any`, `app-id-change`, `brute-force`, `code-execution`, `code-obfuscation`, `command-execution`, `dos`, `exploit-kit`, `info-leak`, `inline-cloud-exploit`, `insecure-credentials`, `overflow`, `phishing`, `protocol-anomaly`, `scan` and `sql-injection`.
 	Category pulumi.StringInput `pulumi:"category"`
 	// Cve
 	Cves pulumi.StringArrayInput `pulumi:"cves"`
@@ -6242,7 +11678,7 @@ type GetVulnerabilityProtectionProfileRuleArgs struct {
 	Host pulumi.StringInput `pulumi:"host"`
 	// Name
 	Name pulumi.StringInput `pulumi:"name"`
-	// Packet capture
+	// Packet capture. Possible values are `disable`, `single-packet` and `extended-capture`.
 	PacketCapture pulumi.StringInput `pulumi:"packetCapture"`
 	// Severity
 	Severities pulumi.StringArrayInput `pulumi:"severities"`
@@ -6310,7 +11746,7 @@ func (o GetVulnerabilityProtectionProfileRuleOutput) Action() GetVulnerabilityPr
 	}).(GetVulnerabilityProtectionProfileRuleActionOutput)
 }
 
-// Category
+// Category. Possible values are `any`, `app-id-change`, `brute-force`, `code-execution`, `code-obfuscation`, `command-execution`, `dos`, `exploit-kit`, `info-leak`, `inline-cloud-exploit`, `insecure-credentials`, `overflow`, `phishing`, `protocol-anomaly`, `scan` and `sql-injection`.
 func (o GetVulnerabilityProtectionProfileRuleOutput) Category() pulumi.StringOutput {
 	return o.ApplyT(func(v GetVulnerabilityProtectionProfileRule) string { return v.Category }).(pulumi.StringOutput)
 }
@@ -6330,7 +11766,7 @@ func (o GetVulnerabilityProtectionProfileRuleOutput) Name() pulumi.StringOutput 
 	return o.ApplyT(func(v GetVulnerabilityProtectionProfileRule) string { return v.Name }).(pulumi.StringOutput)
 }
 
-// Packet capture
+// Packet capture. Possible values are `disable`, `single-packet` and `extended-capture`.
 func (o GetVulnerabilityProtectionProfileRuleOutput) PacketCapture() pulumi.StringOutput {
 	return o.ApplyT(func(v GetVulnerabilityProtectionProfileRule) string { return v.PacketCapture }).(pulumi.StringOutput)
 }
@@ -6374,32 +11810,18 @@ type GetVulnerabilityProtectionProfileRuleAction struct {
 	// Alert
 	Alert GetVulnerabilityProtectionProfileRuleActionAlert `pulumi:"alert"`
 	// Allow
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 	Allow GetVulnerabilityProtectionProfileRuleActionAllow `pulumi:"allow"`
 	// vulnerability protection block ip
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 	BlockIp GetVulnerabilityProtectionProfileRuleActionBlockIp `pulumi:"blockIp"`
 	// Default
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 	Default GetVulnerabilityProtectionProfileRuleActionDefault `pulumi:"default"`
 	// Drop
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 	Drop GetVulnerabilityProtectionProfileRuleActionDrop `pulumi:"drop"`
 	// Reset both
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 	ResetBoth GetVulnerabilityProtectionProfileRuleActionResetBoth `pulumi:"resetBoth"`
 	// Reset client
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 	ResetClient GetVulnerabilityProtectionProfileRuleActionResetClient `pulumi:"resetClient"`
 	// Reset server
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 	ResetServer GetVulnerabilityProtectionProfileRuleActionResetServer `pulumi:"resetServer"`
 }
 
@@ -6418,32 +11840,18 @@ type GetVulnerabilityProtectionProfileRuleActionArgs struct {
 	// Alert
 	Alert GetVulnerabilityProtectionProfileRuleActionAlertInput `pulumi:"alert"`
 	// Allow
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 	Allow GetVulnerabilityProtectionProfileRuleActionAllowInput `pulumi:"allow"`
 	// vulnerability protection block ip
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 	BlockIp GetVulnerabilityProtectionProfileRuleActionBlockIpInput `pulumi:"blockIp"`
 	// Default
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 	Default GetVulnerabilityProtectionProfileRuleActionDefaultInput `pulumi:"default"`
 	// Drop
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 	Drop GetVulnerabilityProtectionProfileRuleActionDropInput `pulumi:"drop"`
 	// Reset both
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 	ResetBoth GetVulnerabilityProtectionProfileRuleActionResetBothInput `pulumi:"resetBoth"`
 	// Reset client
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 	ResetClient GetVulnerabilityProtectionProfileRuleActionResetClientInput `pulumi:"resetClient"`
 	// Reset server
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 	ResetServer GetVulnerabilityProtectionProfileRuleActionResetServerInput `pulumi:"resetServer"`
 }
 
@@ -6481,8 +11889,6 @@ func (o GetVulnerabilityProtectionProfileRuleActionOutput) Alert() GetVulnerabil
 }
 
 // Allow
-//
-// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 func (o GetVulnerabilityProtectionProfileRuleActionOutput) Allow() GetVulnerabilityProtectionProfileRuleActionAllowOutput {
 	return o.ApplyT(func(v GetVulnerabilityProtectionProfileRuleAction) GetVulnerabilityProtectionProfileRuleActionAllow {
 		return v.Allow
@@ -6490,8 +11896,6 @@ func (o GetVulnerabilityProtectionProfileRuleActionOutput) Allow() GetVulnerabil
 }
 
 // vulnerability protection block ip
-//
-// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 func (o GetVulnerabilityProtectionProfileRuleActionOutput) BlockIp() GetVulnerabilityProtectionProfileRuleActionBlockIpOutput {
 	return o.ApplyT(func(v GetVulnerabilityProtectionProfileRuleAction) GetVulnerabilityProtectionProfileRuleActionBlockIp {
 		return v.BlockIp
@@ -6499,8 +11903,6 @@ func (o GetVulnerabilityProtectionProfileRuleActionOutput) BlockIp() GetVulnerab
 }
 
 // Default
-//
-// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 func (o GetVulnerabilityProtectionProfileRuleActionOutput) Default() GetVulnerabilityProtectionProfileRuleActionDefaultOutput {
 	return o.ApplyT(func(v GetVulnerabilityProtectionProfileRuleAction) GetVulnerabilityProtectionProfileRuleActionDefault {
 		return v.Default
@@ -6508,8 +11910,6 @@ func (o GetVulnerabilityProtectionProfileRuleActionOutput) Default() GetVulnerab
 }
 
 // Drop
-//
-// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 func (o GetVulnerabilityProtectionProfileRuleActionOutput) Drop() GetVulnerabilityProtectionProfileRuleActionDropOutput {
 	return o.ApplyT(func(v GetVulnerabilityProtectionProfileRuleAction) GetVulnerabilityProtectionProfileRuleActionDrop {
 		return v.Drop
@@ -6517,8 +11917,6 @@ func (o GetVulnerabilityProtectionProfileRuleActionOutput) Drop() GetVulnerabili
 }
 
 // Reset both
-//
-// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 func (o GetVulnerabilityProtectionProfileRuleActionOutput) ResetBoth() GetVulnerabilityProtectionProfileRuleActionResetBothOutput {
 	return o.ApplyT(func(v GetVulnerabilityProtectionProfileRuleAction) GetVulnerabilityProtectionProfileRuleActionResetBoth {
 		return v.ResetBoth
@@ -6526,8 +11924,6 @@ func (o GetVulnerabilityProtectionProfileRuleActionOutput) ResetBoth() GetVulner
 }
 
 // Reset client
-//
-// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 func (o GetVulnerabilityProtectionProfileRuleActionOutput) ResetClient() GetVulnerabilityProtectionProfileRuleActionResetClientOutput {
 	return o.ApplyT(func(v GetVulnerabilityProtectionProfileRuleAction) GetVulnerabilityProtectionProfileRuleActionResetClient {
 		return v.ResetClient
@@ -6535,8 +11931,6 @@ func (o GetVulnerabilityProtectionProfileRuleActionOutput) ResetClient() GetVuln
 }
 
 // Reset server
-//
-// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 func (o GetVulnerabilityProtectionProfileRuleActionOutput) ResetServer() GetVulnerabilityProtectionProfileRuleActionResetServerOutput {
 	return o.ApplyT(func(v GetVulnerabilityProtectionProfileRuleAction) GetVulnerabilityProtectionProfileRuleActionResetServer {
 		return v.ResetServer
@@ -6632,7 +12026,7 @@ func (o GetVulnerabilityProtectionProfileRuleActionAllowOutput) ToGetVulnerabili
 type GetVulnerabilityProtectionProfileRuleActionBlockIp struct {
 	// Duration
 	Duration int `pulumi:"duration"`
-	// Track by
+	// Track by. Possible values are `source-and-destination` and `source`.
 	TrackBy string `pulumi:"trackBy"`
 }
 
@@ -6650,7 +12044,7 @@ type GetVulnerabilityProtectionProfileRuleActionBlockIpInput interface {
 type GetVulnerabilityProtectionProfileRuleActionBlockIpArgs struct {
 	// Duration
 	Duration pulumi.IntInput `pulumi:"duration"`
-	// Track by
+	// Track by. Possible values are `source-and-destination` and `source`.
 	TrackBy pulumi.StringInput `pulumi:"trackBy"`
 }
 
@@ -6685,7 +12079,7 @@ func (o GetVulnerabilityProtectionProfileRuleActionBlockIpOutput) Duration() pul
 	return o.ApplyT(func(v GetVulnerabilityProtectionProfileRuleActionBlockIp) int { return v.Duration }).(pulumi.IntOutput)
 }
 
-// Track by
+// Track by. Possible values are `source-and-destination` and `source`.
 func (o GetVulnerabilityProtectionProfileRuleActionBlockIpOutput) TrackBy() pulumi.StringOutput {
 	return o.ApplyT(func(v GetVulnerabilityProtectionProfileRuleActionBlockIp) string { return v.TrackBy }).(pulumi.StringOutput)
 }
@@ -6914,7 +12308,7 @@ type GetVulnerabilityProtectionProfileThreatException struct {
 	Name string `pulumi:"name"`
 	// Notes
 	Notes string `pulumi:"notes"`
-	// Packet capture
+	// Packet capture. Possible values are `disable`, `single-packet` and `extended-capture`.
 	PacketCapture string `pulumi:"packetCapture"`
 	// vulnerability time attribute
 	TimeAttribute GetVulnerabilityProtectionProfileThreatExceptionTimeAttribute `pulumi:"timeAttribute"`
@@ -6940,7 +12334,7 @@ type GetVulnerabilityProtectionProfileThreatExceptionArgs struct {
 	Name pulumi.StringInput `pulumi:"name"`
 	// Notes
 	Notes pulumi.StringInput `pulumi:"notes"`
-	// Packet capture
+	// Packet capture. Possible values are `disable`, `single-packet` and `extended-capture`.
 	PacketCapture pulumi.StringInput `pulumi:"packetCapture"`
 	// vulnerability time attribute
 	TimeAttribute GetVulnerabilityProtectionProfileThreatExceptionTimeAttributeInput `pulumi:"timeAttribute"`
@@ -7021,7 +12415,7 @@ func (o GetVulnerabilityProtectionProfileThreatExceptionOutput) Notes() pulumi.S
 	return o.ApplyT(func(v GetVulnerabilityProtectionProfileThreatException) string { return v.Notes }).(pulumi.StringOutput)
 }
 
-// Packet capture
+// Packet capture. Possible values are `disable`, `single-packet` and `extended-capture`.
 func (o GetVulnerabilityProtectionProfileThreatExceptionOutput) PacketCapture() pulumi.StringOutput {
 	return o.ApplyT(func(v GetVulnerabilityProtectionProfileThreatException) string { return v.PacketCapture }).(pulumi.StringOutput)
 }
@@ -7057,32 +12451,18 @@ type GetVulnerabilityProtectionProfileThreatExceptionAction struct {
 	// Alert
 	Alert GetVulnerabilityProtectionProfileThreatExceptionActionAlert `pulumi:"alert"`
 	// Allow
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 	Allow GetVulnerabilityProtectionProfileThreatExceptionActionAllow `pulumi:"allow"`
 	// vulnerability protection threat exception block ip
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 	BlockIp GetVulnerabilityProtectionProfileThreatExceptionActionBlockIp `pulumi:"blockIp"`
 	// Default
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 	Default GetVulnerabilityProtectionProfileThreatExceptionActionDefault `pulumi:"default"`
 	// Drop
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 	Drop GetVulnerabilityProtectionProfileThreatExceptionActionDrop `pulumi:"drop"`
 	// Reset both
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 	ResetBoth GetVulnerabilityProtectionProfileThreatExceptionActionResetBoth `pulumi:"resetBoth"`
 	// Reset client
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 	ResetClient GetVulnerabilityProtectionProfileThreatExceptionActionResetClient `pulumi:"resetClient"`
 	// Reset server
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 	ResetServer GetVulnerabilityProtectionProfileThreatExceptionActionResetServer `pulumi:"resetServer"`
 }
 
@@ -7101,32 +12481,18 @@ type GetVulnerabilityProtectionProfileThreatExceptionActionArgs struct {
 	// Alert
 	Alert GetVulnerabilityProtectionProfileThreatExceptionActionAlertInput `pulumi:"alert"`
 	// Allow
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 	Allow GetVulnerabilityProtectionProfileThreatExceptionActionAllowInput `pulumi:"allow"`
 	// vulnerability protection threat exception block ip
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 	BlockIp GetVulnerabilityProtectionProfileThreatExceptionActionBlockIpInput `pulumi:"blockIp"`
 	// Default
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 	Default GetVulnerabilityProtectionProfileThreatExceptionActionDefaultInput `pulumi:"default"`
 	// Drop
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 	Drop GetVulnerabilityProtectionProfileThreatExceptionActionDropInput `pulumi:"drop"`
 	// Reset both
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 	ResetBoth GetVulnerabilityProtectionProfileThreatExceptionActionResetBothInput `pulumi:"resetBoth"`
 	// Reset client
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 	ResetClient GetVulnerabilityProtectionProfileThreatExceptionActionResetClientInput `pulumi:"resetClient"`
 	// Reset server
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 	ResetServer GetVulnerabilityProtectionProfileThreatExceptionActionResetServerInput `pulumi:"resetServer"`
 }
 
@@ -7164,8 +12530,6 @@ func (o GetVulnerabilityProtectionProfileThreatExceptionActionOutput) Alert() Ge
 }
 
 // Allow
-//
-// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 func (o GetVulnerabilityProtectionProfileThreatExceptionActionOutput) Allow() GetVulnerabilityProtectionProfileThreatExceptionActionAllowOutput {
 	return o.ApplyT(func(v GetVulnerabilityProtectionProfileThreatExceptionAction) GetVulnerabilityProtectionProfileThreatExceptionActionAllow {
 		return v.Allow
@@ -7173,8 +12537,6 @@ func (o GetVulnerabilityProtectionProfileThreatExceptionActionOutput) Allow() Ge
 }
 
 // vulnerability protection threat exception block ip
-//
-// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 func (o GetVulnerabilityProtectionProfileThreatExceptionActionOutput) BlockIp() GetVulnerabilityProtectionProfileThreatExceptionActionBlockIpOutput {
 	return o.ApplyT(func(v GetVulnerabilityProtectionProfileThreatExceptionAction) GetVulnerabilityProtectionProfileThreatExceptionActionBlockIp {
 		return v.BlockIp
@@ -7182,8 +12544,6 @@ func (o GetVulnerabilityProtectionProfileThreatExceptionActionOutput) BlockIp() 
 }
 
 // Default
-//
-// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 func (o GetVulnerabilityProtectionProfileThreatExceptionActionOutput) Default() GetVulnerabilityProtectionProfileThreatExceptionActionDefaultOutput {
 	return o.ApplyT(func(v GetVulnerabilityProtectionProfileThreatExceptionAction) GetVulnerabilityProtectionProfileThreatExceptionActionDefault {
 		return v.Default
@@ -7191,8 +12551,6 @@ func (o GetVulnerabilityProtectionProfileThreatExceptionActionOutput) Default() 
 }
 
 // Drop
-//
-// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 func (o GetVulnerabilityProtectionProfileThreatExceptionActionOutput) Drop() GetVulnerabilityProtectionProfileThreatExceptionActionDropOutput {
 	return o.ApplyT(func(v GetVulnerabilityProtectionProfileThreatExceptionAction) GetVulnerabilityProtectionProfileThreatExceptionActionDrop {
 		return v.Drop
@@ -7200,8 +12558,6 @@ func (o GetVulnerabilityProtectionProfileThreatExceptionActionOutput) Drop() Get
 }
 
 // Reset both
-//
-// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 func (o GetVulnerabilityProtectionProfileThreatExceptionActionOutput) ResetBoth() GetVulnerabilityProtectionProfileThreatExceptionActionResetBothOutput {
 	return o.ApplyT(func(v GetVulnerabilityProtectionProfileThreatExceptionAction) GetVulnerabilityProtectionProfileThreatExceptionActionResetBoth {
 		return v.ResetBoth
@@ -7209,8 +12565,6 @@ func (o GetVulnerabilityProtectionProfileThreatExceptionActionOutput) ResetBoth(
 }
 
 // Reset client
-//
-// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 func (o GetVulnerabilityProtectionProfileThreatExceptionActionOutput) ResetClient() GetVulnerabilityProtectionProfileThreatExceptionActionResetClientOutput {
 	return o.ApplyT(func(v GetVulnerabilityProtectionProfileThreatExceptionAction) GetVulnerabilityProtectionProfileThreatExceptionActionResetClient {
 		return v.ResetClient
@@ -7218,8 +12572,6 @@ func (o GetVulnerabilityProtectionProfileThreatExceptionActionOutput) ResetClien
 }
 
 // Reset server
-//
-// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 func (o GetVulnerabilityProtectionProfileThreatExceptionActionOutput) ResetServer() GetVulnerabilityProtectionProfileThreatExceptionActionResetServerOutput {
 	return o.ApplyT(func(v GetVulnerabilityProtectionProfileThreatExceptionAction) GetVulnerabilityProtectionProfileThreatExceptionActionResetServer {
 		return v.ResetServer
@@ -7315,7 +12667,7 @@ func (o GetVulnerabilityProtectionProfileThreatExceptionActionAllowOutput) ToGet
 type GetVulnerabilityProtectionProfileThreatExceptionActionBlockIp struct {
 	// Duration
 	Duration int `pulumi:"duration"`
-	// Track by
+	// Track by. Possible values are `source-and-destination` and `source`.
 	TrackBy string `pulumi:"trackBy"`
 }
 
@@ -7333,7 +12685,7 @@ type GetVulnerabilityProtectionProfileThreatExceptionActionBlockIpInput interfac
 type GetVulnerabilityProtectionProfileThreatExceptionActionBlockIpArgs struct {
 	// Duration
 	Duration pulumi.IntInput `pulumi:"duration"`
-	// Track by
+	// Track by. Possible values are `source-and-destination` and `source`.
 	TrackBy pulumi.StringInput `pulumi:"trackBy"`
 }
 
@@ -7368,7 +12720,7 @@ func (o GetVulnerabilityProtectionProfileThreatExceptionActionBlockIpOutput) Dur
 	return o.ApplyT(func(v GetVulnerabilityProtectionProfileThreatExceptionActionBlockIp) int { return v.Duration }).(pulumi.IntOutput)
 }
 
-// Track by
+// Track by. Possible values are `source-and-destination` and `source`.
 func (o GetVulnerabilityProtectionProfileThreatExceptionActionBlockIpOutput) TrackBy() pulumi.StringOutput {
 	return o.ApplyT(func(v GetVulnerabilityProtectionProfileThreatExceptionActionBlockIp) string { return v.TrackBy }).(pulumi.StringOutput)
 }
@@ -7690,7 +13042,7 @@ type GetVulnerabilityProtectionProfileThreatExceptionTimeAttribute struct {
 	Interval int `pulumi:"interval"`
 	// Threshold
 	Threshold int `pulumi:"threshold"`
-	// Track by
+	// Track by. Possible values are `source`, `destination` and `source-and-destination`.
 	TrackBy string `pulumi:"trackBy"`
 }
 
@@ -7710,7 +13062,7 @@ type GetVulnerabilityProtectionProfileThreatExceptionTimeAttributeArgs struct {
 	Interval pulumi.IntInput `pulumi:"interval"`
 	// Threshold
 	Threshold pulumi.IntInput `pulumi:"threshold"`
-	// Track by
+	// Track by. Possible values are `source`, `destination` and `source-and-destination`.
 	TrackBy pulumi.StringInput `pulumi:"trackBy"`
 }
 
@@ -7750,7 +13102,7 @@ func (o GetVulnerabilityProtectionProfileThreatExceptionTimeAttributeOutput) Thr
 	return o.ApplyT(func(v GetVulnerabilityProtectionProfileThreatExceptionTimeAttribute) int { return v.Threshold }).(pulumi.IntOutput)
 }
 
-// Track by
+// Track by. Possible values are `source`, `destination` and `source-and-destination`.
 func (o GetVulnerabilityProtectionProfileThreatExceptionTimeAttributeOutput) TrackBy() pulumi.StringOutput {
 	return o.ApplyT(func(v GetVulnerabilityProtectionProfileThreatExceptionTimeAttribute) string { return v.TrackBy }).(pulumi.StringOutput)
 }
@@ -7759,8 +13111,6 @@ type GetVulnerabilityProtectionSignatureAffectedHost struct {
 	// Client
 	Client bool `pulumi:"client"`
 	// Server
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `client` and `server`.
 	Server bool `pulumi:"server"`
 }
 
@@ -7779,8 +13129,6 @@ type GetVulnerabilityProtectionSignatureAffectedHostArgs struct {
 	// Client
 	Client pulumi.BoolInput `pulumi:"client"`
 	// Server
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `client` and `server`.
 	Server pulumi.BoolInput `pulumi:"server"`
 }
 
@@ -7816,8 +13164,6 @@ func (o GetVulnerabilityProtectionSignatureAffectedHostOutput) Client() pulumi.B
 }
 
 // Server
-//
-// > ℹ️ **Note:** You must specify exactly one of `client` and `server`.
 func (o GetVulnerabilityProtectionSignatureAffectedHostOutput) Server() pulumi.BoolOutput {
 	return o.ApplyT(func(v GetVulnerabilityProtectionSignatureAffectedHost) bool { return v.Server }).(pulumi.BoolOutput)
 }
@@ -7826,28 +13172,16 @@ type GetVulnerabilityProtectionSignatureDefaultAction struct {
 	// Alert
 	Alert GetVulnerabilityProtectionSignatureDefaultActionAlert `pulumi:"alert"`
 	// Allow
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 	Allow GetVulnerabilityProtectionSignatureDefaultActionAllow `pulumi:"allow"`
 	// vulnerability protection bugtraq block ip
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 	BlockIp GetVulnerabilityProtectionSignatureDefaultActionBlockIp `pulumi:"blockIp"`
 	// Drop
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 	Drop GetVulnerabilityProtectionSignatureDefaultActionDrop `pulumi:"drop"`
 	// Reset both
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 	ResetBoth GetVulnerabilityProtectionSignatureDefaultActionResetBoth `pulumi:"resetBoth"`
 	// Reset client
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 	ResetClient GetVulnerabilityProtectionSignatureDefaultActionResetClient `pulumi:"resetClient"`
 	// Reset server
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 	ResetServer GetVulnerabilityProtectionSignatureDefaultActionResetServer `pulumi:"resetServer"`
 }
 
@@ -7866,28 +13200,16 @@ type GetVulnerabilityProtectionSignatureDefaultActionArgs struct {
 	// Alert
 	Alert GetVulnerabilityProtectionSignatureDefaultActionAlertInput `pulumi:"alert"`
 	// Allow
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 	Allow GetVulnerabilityProtectionSignatureDefaultActionAllowInput `pulumi:"allow"`
 	// vulnerability protection bugtraq block ip
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 	BlockIp GetVulnerabilityProtectionSignatureDefaultActionBlockIpInput `pulumi:"blockIp"`
 	// Drop
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 	Drop GetVulnerabilityProtectionSignatureDefaultActionDropInput `pulumi:"drop"`
 	// Reset both
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 	ResetBoth GetVulnerabilityProtectionSignatureDefaultActionResetBothInput `pulumi:"resetBoth"`
 	// Reset client
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 	ResetClient GetVulnerabilityProtectionSignatureDefaultActionResetClientInput `pulumi:"resetClient"`
 	// Reset server
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 	ResetServer GetVulnerabilityProtectionSignatureDefaultActionResetServerInput `pulumi:"resetServer"`
 }
 
@@ -7925,8 +13247,6 @@ func (o GetVulnerabilityProtectionSignatureDefaultActionOutput) Alert() GetVulne
 }
 
 // Allow
-//
-// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 func (o GetVulnerabilityProtectionSignatureDefaultActionOutput) Allow() GetVulnerabilityProtectionSignatureDefaultActionAllowOutput {
 	return o.ApplyT(func(v GetVulnerabilityProtectionSignatureDefaultAction) GetVulnerabilityProtectionSignatureDefaultActionAllow {
 		return v.Allow
@@ -7934,8 +13254,6 @@ func (o GetVulnerabilityProtectionSignatureDefaultActionOutput) Allow() GetVulne
 }
 
 // vulnerability protection bugtraq block ip
-//
-// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 func (o GetVulnerabilityProtectionSignatureDefaultActionOutput) BlockIp() GetVulnerabilityProtectionSignatureDefaultActionBlockIpOutput {
 	return o.ApplyT(func(v GetVulnerabilityProtectionSignatureDefaultAction) GetVulnerabilityProtectionSignatureDefaultActionBlockIp {
 		return v.BlockIp
@@ -7943,8 +13261,6 @@ func (o GetVulnerabilityProtectionSignatureDefaultActionOutput) BlockIp() GetVul
 }
 
 // Drop
-//
-// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 func (o GetVulnerabilityProtectionSignatureDefaultActionOutput) Drop() GetVulnerabilityProtectionSignatureDefaultActionDropOutput {
 	return o.ApplyT(func(v GetVulnerabilityProtectionSignatureDefaultAction) GetVulnerabilityProtectionSignatureDefaultActionDrop {
 		return v.Drop
@@ -7952,8 +13268,6 @@ func (o GetVulnerabilityProtectionSignatureDefaultActionOutput) Drop() GetVulner
 }
 
 // Reset both
-//
-// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 func (o GetVulnerabilityProtectionSignatureDefaultActionOutput) ResetBoth() GetVulnerabilityProtectionSignatureDefaultActionResetBothOutput {
 	return o.ApplyT(func(v GetVulnerabilityProtectionSignatureDefaultAction) GetVulnerabilityProtectionSignatureDefaultActionResetBoth {
 		return v.ResetBoth
@@ -7961,8 +13275,6 @@ func (o GetVulnerabilityProtectionSignatureDefaultActionOutput) ResetBoth() GetV
 }
 
 // Reset client
-//
-// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 func (o GetVulnerabilityProtectionSignatureDefaultActionOutput) ResetClient() GetVulnerabilityProtectionSignatureDefaultActionResetClientOutput {
 	return o.ApplyT(func(v GetVulnerabilityProtectionSignatureDefaultAction) GetVulnerabilityProtectionSignatureDefaultActionResetClient {
 		return v.ResetClient
@@ -7970,8 +13282,6 @@ func (o GetVulnerabilityProtectionSignatureDefaultActionOutput) ResetClient() Ge
 }
 
 // Reset server
-//
-// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 func (o GetVulnerabilityProtectionSignatureDefaultActionOutput) ResetServer() GetVulnerabilityProtectionSignatureDefaultActionResetServerOutput {
 	return o.ApplyT(func(v GetVulnerabilityProtectionSignatureDefaultAction) GetVulnerabilityProtectionSignatureDefaultActionResetServer {
 		return v.ResetServer
@@ -8067,7 +13377,7 @@ func (o GetVulnerabilityProtectionSignatureDefaultActionAllowOutput) ToGetVulner
 type GetVulnerabilityProtectionSignatureDefaultActionBlockIp struct {
 	// Duration
 	Duration int `pulumi:"duration"`
-	// Track by
+	// Track by. Possible values are `source-and-destination` and `source`.
 	TrackBy string `pulumi:"trackBy"`
 }
 
@@ -8085,7 +13395,7 @@ type GetVulnerabilityProtectionSignatureDefaultActionBlockIpInput interface {
 type GetVulnerabilityProtectionSignatureDefaultActionBlockIpArgs struct {
 	// Duration
 	Duration pulumi.IntInput `pulumi:"duration"`
-	// Track by
+	// Track by. Possible values are `source-and-destination` and `source`.
 	TrackBy pulumi.StringInput `pulumi:"trackBy"`
 }
 
@@ -8120,7 +13430,7 @@ func (o GetVulnerabilityProtectionSignatureDefaultActionBlockIpOutput) Duration(
 	return o.ApplyT(func(v GetVulnerabilityProtectionSignatureDefaultActionBlockIp) int { return v.Duration }).(pulumi.IntOutput)
 }
 
-// Track by
+// Track by. Possible values are `source-and-destination` and `source`.
 func (o GetVulnerabilityProtectionSignatureDefaultActionBlockIpOutput) TrackBy() pulumi.StringOutput {
 	return o.ApplyT(func(v GetVulnerabilityProtectionSignatureDefaultActionBlockIp) string { return v.TrackBy }).(pulumi.StringOutput)
 }
@@ -8310,23 +13620,23 @@ type GetVulnerabilityProtectionSignatureListData struct {
 	DefaultAction GetVulnerabilityProtectionSignatureListDataDefaultAction `pulumi:"defaultAction"`
 	// The device in which the resource is defined
 	Device string `pulumi:"device"`
-	// Direction
+	// Direction. Possible values are `client2server`, `server2client` and `both`.
 	Direction string `pulumi:"direction"`
-	// The folder of the item. Default: Shared.
+	// The folder in which the resource is defined
 	Folder string `pulumi:"folder"`
 	// UUID of the resource
 	Id string `pulumi:"id"`
 	// Reference
 	References []string `pulumi:"references"`
-	// Severity
+	// Severity. Possible values are `critical`, `low`, `high`, `medium` and `informational`.
 	Severity string `pulumi:"severity"`
 	// vulnerability protection signature
 	Signature GetVulnerabilityProtectionSignatureListDataSignature `pulumi:"signature"`
-	// The snippet of the item.
+	// The snippet in which the resource is defined
 	Snippet string `pulumi:"snippet"`
 	// The Terraform ID.
 	Tfid string `pulumi:"tfid"`
-	// threat id range <41000-45000> and <6800001-6900000>
+	// threat id range \n\n and \n\n
 	ThreatId string `pulumi:"threatId"`
 	// Threatname
 	Threatname string `pulumi:"threatname"`
@@ -8358,23 +13668,23 @@ type GetVulnerabilityProtectionSignatureListDataArgs struct {
 	DefaultAction GetVulnerabilityProtectionSignatureListDataDefaultActionInput `pulumi:"defaultAction"`
 	// The device in which the resource is defined
 	Device pulumi.StringInput `pulumi:"device"`
-	// Direction
+	// Direction. Possible values are `client2server`, `server2client` and `both`.
 	Direction pulumi.StringInput `pulumi:"direction"`
-	// The folder of the item. Default: Shared.
+	// The folder in which the resource is defined
 	Folder pulumi.StringInput `pulumi:"folder"`
 	// UUID of the resource
 	Id pulumi.StringInput `pulumi:"id"`
 	// Reference
 	References pulumi.StringArrayInput `pulumi:"references"`
-	// Severity
+	// Severity. Possible values are `critical`, `low`, `high`, `medium` and `informational`.
 	Severity pulumi.StringInput `pulumi:"severity"`
 	// vulnerability protection signature
 	Signature GetVulnerabilityProtectionSignatureListDataSignatureInput `pulumi:"signature"`
-	// The snippet of the item.
+	// The snippet in which the resource is defined
 	Snippet pulumi.StringInput `pulumi:"snippet"`
 	// The Terraform ID.
 	Tfid pulumi.StringInput `pulumi:"tfid"`
-	// threat id range <41000-45000> and <6800001-6900000>
+	// threat id range \n\n and \n\n
 	ThreatId pulumi.StringInput `pulumi:"threatId"`
 	// Threatname
 	Threatname pulumi.StringInput `pulumi:"threatname"`
@@ -8467,12 +13777,12 @@ func (o GetVulnerabilityProtectionSignatureListDataOutput) Device() pulumi.Strin
 	return o.ApplyT(func(v GetVulnerabilityProtectionSignatureListData) string { return v.Device }).(pulumi.StringOutput)
 }
 
-// Direction
+// Direction. Possible values are `client2server`, `server2client` and `both`.
 func (o GetVulnerabilityProtectionSignatureListDataOutput) Direction() pulumi.StringOutput {
 	return o.ApplyT(func(v GetVulnerabilityProtectionSignatureListData) string { return v.Direction }).(pulumi.StringOutput)
 }
 
-// The folder of the item. Default: Shared.
+// The folder in which the resource is defined
 func (o GetVulnerabilityProtectionSignatureListDataOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v GetVulnerabilityProtectionSignatureListData) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -8487,7 +13797,7 @@ func (o GetVulnerabilityProtectionSignatureListDataOutput) References() pulumi.S
 	return o.ApplyT(func(v GetVulnerabilityProtectionSignatureListData) []string { return v.References }).(pulumi.StringArrayOutput)
 }
 
-// Severity
+// Severity. Possible values are `critical`, `low`, `high`, `medium` and `informational`.
 func (o GetVulnerabilityProtectionSignatureListDataOutput) Severity() pulumi.StringOutput {
 	return o.ApplyT(func(v GetVulnerabilityProtectionSignatureListData) string { return v.Severity }).(pulumi.StringOutput)
 }
@@ -8499,7 +13809,7 @@ func (o GetVulnerabilityProtectionSignatureListDataOutput) Signature() GetVulner
 	}).(GetVulnerabilityProtectionSignatureListDataSignatureOutput)
 }
 
-// The snippet of the item.
+// The snippet in which the resource is defined
 func (o GetVulnerabilityProtectionSignatureListDataOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v GetVulnerabilityProtectionSignatureListData) string { return v.Snippet }).(pulumi.StringOutput)
 }
@@ -8509,7 +13819,7 @@ func (o GetVulnerabilityProtectionSignatureListDataOutput) Tfid() pulumi.StringO
 	return o.ApplyT(func(v GetVulnerabilityProtectionSignatureListData) string { return v.Tfid }).(pulumi.StringOutput)
 }
 
-// threat id range <41000-45000> and <6800001-6900000>
+// threat id range \n\n and \n\n
 func (o GetVulnerabilityProtectionSignatureListDataOutput) ThreatId() pulumi.StringOutput {
 	return o.ApplyT(func(v GetVulnerabilityProtectionSignatureListData) string { return v.ThreatId }).(pulumi.StringOutput)
 }
@@ -8548,8 +13858,6 @@ type GetVulnerabilityProtectionSignatureListDataAffectedHost struct {
 	// Client
 	Client bool `pulumi:"client"`
 	// Server
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `client` and `server`.
 	Server bool `pulumi:"server"`
 }
 
@@ -8568,8 +13876,6 @@ type GetVulnerabilityProtectionSignatureListDataAffectedHostArgs struct {
 	// Client
 	Client pulumi.BoolInput `pulumi:"client"`
 	// Server
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `client` and `server`.
 	Server pulumi.BoolInput `pulumi:"server"`
 }
 
@@ -8605,8 +13911,6 @@ func (o GetVulnerabilityProtectionSignatureListDataAffectedHostOutput) Client() 
 }
 
 // Server
-//
-// > ℹ️ **Note:** You must specify exactly one of `client` and `server`.
 func (o GetVulnerabilityProtectionSignatureListDataAffectedHostOutput) Server() pulumi.BoolOutput {
 	return o.ApplyT(func(v GetVulnerabilityProtectionSignatureListDataAffectedHost) bool { return v.Server }).(pulumi.BoolOutput)
 }
@@ -8615,28 +13919,16 @@ type GetVulnerabilityProtectionSignatureListDataDefaultAction struct {
 	// Alert
 	Alert GetVulnerabilityProtectionSignatureListDataDefaultActionAlert `pulumi:"alert"`
 	// Allow
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 	Allow GetVulnerabilityProtectionSignatureListDataDefaultActionAllow `pulumi:"allow"`
 	// vulnerability protection bugtraq block ip
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 	BlockIp GetVulnerabilityProtectionSignatureListDataDefaultActionBlockIp `pulumi:"blockIp"`
 	// Drop
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 	Drop GetVulnerabilityProtectionSignatureListDataDefaultActionDrop `pulumi:"drop"`
 	// Reset both
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 	ResetBoth GetVulnerabilityProtectionSignatureListDataDefaultActionResetBoth `pulumi:"resetBoth"`
 	// Reset client
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 	ResetClient GetVulnerabilityProtectionSignatureListDataDefaultActionResetClient `pulumi:"resetClient"`
 	// Reset server
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 	ResetServer GetVulnerabilityProtectionSignatureListDataDefaultActionResetServer `pulumi:"resetServer"`
 }
 
@@ -8655,28 +13947,16 @@ type GetVulnerabilityProtectionSignatureListDataDefaultActionArgs struct {
 	// Alert
 	Alert GetVulnerabilityProtectionSignatureListDataDefaultActionAlertInput `pulumi:"alert"`
 	// Allow
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 	Allow GetVulnerabilityProtectionSignatureListDataDefaultActionAllowInput `pulumi:"allow"`
 	// vulnerability protection bugtraq block ip
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 	BlockIp GetVulnerabilityProtectionSignatureListDataDefaultActionBlockIpInput `pulumi:"blockIp"`
 	// Drop
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 	Drop GetVulnerabilityProtectionSignatureListDataDefaultActionDropInput `pulumi:"drop"`
 	// Reset both
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 	ResetBoth GetVulnerabilityProtectionSignatureListDataDefaultActionResetBothInput `pulumi:"resetBoth"`
 	// Reset client
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 	ResetClient GetVulnerabilityProtectionSignatureListDataDefaultActionResetClientInput `pulumi:"resetClient"`
 	// Reset server
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 	ResetServer GetVulnerabilityProtectionSignatureListDataDefaultActionResetServerInput `pulumi:"resetServer"`
 }
 
@@ -8714,8 +13994,6 @@ func (o GetVulnerabilityProtectionSignatureListDataDefaultActionOutput) Alert() 
 }
 
 // Allow
-//
-// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 func (o GetVulnerabilityProtectionSignatureListDataDefaultActionOutput) Allow() GetVulnerabilityProtectionSignatureListDataDefaultActionAllowOutput {
 	return o.ApplyT(func(v GetVulnerabilityProtectionSignatureListDataDefaultAction) GetVulnerabilityProtectionSignatureListDataDefaultActionAllow {
 		return v.Allow
@@ -8723,8 +14001,6 @@ func (o GetVulnerabilityProtectionSignatureListDataDefaultActionOutput) Allow() 
 }
 
 // vulnerability protection bugtraq block ip
-//
-// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 func (o GetVulnerabilityProtectionSignatureListDataDefaultActionOutput) BlockIp() GetVulnerabilityProtectionSignatureListDataDefaultActionBlockIpOutput {
 	return o.ApplyT(func(v GetVulnerabilityProtectionSignatureListDataDefaultAction) GetVulnerabilityProtectionSignatureListDataDefaultActionBlockIp {
 		return v.BlockIp
@@ -8732,8 +14008,6 @@ func (o GetVulnerabilityProtectionSignatureListDataDefaultActionOutput) BlockIp(
 }
 
 // Drop
-//
-// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 func (o GetVulnerabilityProtectionSignatureListDataDefaultActionOutput) Drop() GetVulnerabilityProtectionSignatureListDataDefaultActionDropOutput {
 	return o.ApplyT(func(v GetVulnerabilityProtectionSignatureListDataDefaultAction) GetVulnerabilityProtectionSignatureListDataDefaultActionDrop {
 		return v.Drop
@@ -8741,8 +14015,6 @@ func (o GetVulnerabilityProtectionSignatureListDataDefaultActionOutput) Drop() G
 }
 
 // Reset both
-//
-// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 func (o GetVulnerabilityProtectionSignatureListDataDefaultActionOutput) ResetBoth() GetVulnerabilityProtectionSignatureListDataDefaultActionResetBothOutput {
 	return o.ApplyT(func(v GetVulnerabilityProtectionSignatureListDataDefaultAction) GetVulnerabilityProtectionSignatureListDataDefaultActionResetBoth {
 		return v.ResetBoth
@@ -8750,8 +14022,6 @@ func (o GetVulnerabilityProtectionSignatureListDataDefaultActionOutput) ResetBot
 }
 
 // Reset client
-//
-// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 func (o GetVulnerabilityProtectionSignatureListDataDefaultActionOutput) ResetClient() GetVulnerabilityProtectionSignatureListDataDefaultActionResetClientOutput {
 	return o.ApplyT(func(v GetVulnerabilityProtectionSignatureListDataDefaultAction) GetVulnerabilityProtectionSignatureListDataDefaultActionResetClient {
 		return v.ResetClient
@@ -8759,8 +14029,6 @@ func (o GetVulnerabilityProtectionSignatureListDataDefaultActionOutput) ResetCli
 }
 
 // Reset server
-//
-// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 func (o GetVulnerabilityProtectionSignatureListDataDefaultActionOutput) ResetServer() GetVulnerabilityProtectionSignatureListDataDefaultActionResetServerOutput {
 	return o.ApplyT(func(v GetVulnerabilityProtectionSignatureListDataDefaultAction) GetVulnerabilityProtectionSignatureListDataDefaultActionResetServer {
 		return v.ResetServer
@@ -8856,7 +14124,7 @@ func (o GetVulnerabilityProtectionSignatureListDataDefaultActionAllowOutput) ToG
 type GetVulnerabilityProtectionSignatureListDataDefaultActionBlockIp struct {
 	// Duration
 	Duration int `pulumi:"duration"`
-	// Track by
+	// Track by. Possible values are `source-and-destination` and `source`.
 	TrackBy string `pulumi:"trackBy"`
 }
 
@@ -8874,7 +14142,7 @@ type GetVulnerabilityProtectionSignatureListDataDefaultActionBlockIpInput interf
 type GetVulnerabilityProtectionSignatureListDataDefaultActionBlockIpArgs struct {
 	// Duration
 	Duration pulumi.IntInput `pulumi:"duration"`
-	// Track by
+	// Track by. Possible values are `source-and-destination` and `source`.
 	TrackBy pulumi.StringInput `pulumi:"trackBy"`
 }
 
@@ -8909,7 +14177,7 @@ func (o GetVulnerabilityProtectionSignatureListDataDefaultActionBlockIpOutput) D
 	return o.ApplyT(func(v GetVulnerabilityProtectionSignatureListDataDefaultActionBlockIp) int { return v.Duration }).(pulumi.IntOutput)
 }
 
-// Track by
+// Track by. Possible values are `source-and-destination` and `source`.
 func (o GetVulnerabilityProtectionSignatureListDataDefaultActionBlockIpOutput) TrackBy() pulumi.StringOutput {
 	return o.ApplyT(func(v GetVulnerabilityProtectionSignatureListDataDefaultActionBlockIp) string { return v.TrackBy }).(pulumi.StringOutput)
 }
@@ -9090,8 +14358,6 @@ type GetVulnerabilityProtectionSignatureListDataSignature struct {
 	// vulnerability protection signature combination object
 	Combination GetVulnerabilityProtectionSignatureListDataSignatureCombination `pulumi:"combination"`
 	// vulnerability protection signature standard array
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `combination` and `standard`.
 	Standards []GetVulnerabilityProtectionSignatureListDataSignatureStandard `pulumi:"standards"`
 }
 
@@ -9110,8 +14376,6 @@ type GetVulnerabilityProtectionSignatureListDataSignatureArgs struct {
 	// vulnerability protection signature combination object
 	Combination GetVulnerabilityProtectionSignatureListDataSignatureCombinationInput `pulumi:"combination"`
 	// vulnerability protection signature standard array
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `combination` and `standard`.
 	Standards GetVulnerabilityProtectionSignatureListDataSignatureStandardArrayInput `pulumi:"standards"`
 }
 
@@ -9149,8 +14413,6 @@ func (o GetVulnerabilityProtectionSignatureListDataSignatureOutput) Combination(
 }
 
 // vulnerability protection signature standard array
-//
-// > ℹ️ **Note:** You must specify exactly one of `combination` and `standard`.
 func (o GetVulnerabilityProtectionSignatureListDataSignatureOutput) Standards() GetVulnerabilityProtectionSignatureListDataSignatureStandardArrayOutput {
 	return o.ApplyT(func(v GetVulnerabilityProtectionSignatureListDataSignature) []GetVulnerabilityProtectionSignatureListDataSignatureStandard {
 		return v.Standards
@@ -9456,7 +14718,7 @@ type GetVulnerabilityProtectionSignatureListDataSignatureCombinationTimeAttribut
 	Interval int `pulumi:"interval"`
 	// Threshold
 	Threshold int `pulumi:"threshold"`
-	// Track by
+	// Track by. Possible values are `source-and-destination`, `source` and `destination`.
 	TrackBy string `pulumi:"trackBy"`
 }
 
@@ -9476,7 +14738,7 @@ type GetVulnerabilityProtectionSignatureListDataSignatureCombinationTimeAttribut
 	Interval pulumi.IntInput `pulumi:"interval"`
 	// Threshold
 	Threshold pulumi.IntInput `pulumi:"threshold"`
-	// Track by
+	// Track by. Possible values are `source-and-destination`, `source` and `destination`.
 	TrackBy pulumi.StringInput `pulumi:"trackBy"`
 }
 
@@ -9520,7 +14782,7 @@ func (o GetVulnerabilityProtectionSignatureListDataSignatureCombinationTimeAttri
 	}).(pulumi.IntOutput)
 }
 
-// Track by
+// Track by. Possible values are `source-and-destination`, `source` and `destination`.
 func (o GetVulnerabilityProtectionSignatureListDataSignatureCombinationTimeAttributeOutput) TrackBy() pulumi.StringOutput {
 	return o.ApplyT(func(v GetVulnerabilityProtectionSignatureListDataSignatureCombinationTimeAttribute) string {
 		return v.TrackBy
@@ -9536,7 +14798,7 @@ type GetVulnerabilityProtectionSignatureListDataSignatureStandard struct {
 	Name string `pulumi:"name"`
 	// Order free
 	OrderFree bool `pulumi:"orderFree"`
-	// Scope
+	// Scope. Possible values are `protocol-data-unit` and `session`.
 	Scope string `pulumi:"scope"`
 }
 
@@ -9560,7 +14822,7 @@ type GetVulnerabilityProtectionSignatureListDataSignatureStandardArgs struct {
 	Name pulumi.StringInput `pulumi:"name"`
 	// Order free
 	OrderFree pulumi.BoolInput `pulumi:"orderFree"`
-	// Scope
+	// Scope. Possible values are `protocol-data-unit` and `session`.
 	Scope pulumi.StringInput `pulumi:"scope"`
 }
 
@@ -9637,7 +14899,7 @@ func (o GetVulnerabilityProtectionSignatureListDataSignatureStandardOutput) Orde
 	return o.ApplyT(func(v GetVulnerabilityProtectionSignatureListDataSignatureStandard) bool { return v.OrderFree }).(pulumi.BoolOutput)
 }
 
-// Scope
+// Scope. Possible values are `protocol-data-unit` and `session`.
 func (o GetVulnerabilityProtectionSignatureListDataSignatureStandardOutput) Scope() pulumi.StringOutput {
 	return o.ApplyT(func(v GetVulnerabilityProtectionSignatureListDataSignatureStandard) string { return v.Scope }).(pulumi.StringOutput)
 }
@@ -10737,8 +15999,6 @@ type GetVulnerabilityProtectionSignatureSignature struct {
 	// vulnerability protection signature combination object
 	Combination GetVulnerabilityProtectionSignatureSignatureCombination `pulumi:"combination"`
 	// vulnerability protection signature standard array
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `combination` and `standard`.
 	Standards []GetVulnerabilityProtectionSignatureSignatureStandard `pulumi:"standards"`
 }
 
@@ -10757,8 +16017,6 @@ type GetVulnerabilityProtectionSignatureSignatureArgs struct {
 	// vulnerability protection signature combination object
 	Combination GetVulnerabilityProtectionSignatureSignatureCombinationInput `pulumi:"combination"`
 	// vulnerability protection signature standard array
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `combination` and `standard`.
 	Standards GetVulnerabilityProtectionSignatureSignatureStandardArrayInput `pulumi:"standards"`
 }
 
@@ -10796,8 +16054,6 @@ func (o GetVulnerabilityProtectionSignatureSignatureOutput) Combination() GetVul
 }
 
 // vulnerability protection signature standard array
-//
-// > ℹ️ **Note:** You must specify exactly one of `combination` and `standard`.
 func (o GetVulnerabilityProtectionSignatureSignatureOutput) Standards() GetVulnerabilityProtectionSignatureSignatureStandardArrayOutput {
 	return o.ApplyT(func(v GetVulnerabilityProtectionSignatureSignature) []GetVulnerabilityProtectionSignatureSignatureStandard {
 		return v.Standards
@@ -11101,7 +16357,7 @@ type GetVulnerabilityProtectionSignatureSignatureCombinationTimeAttribute struct
 	Interval int `pulumi:"interval"`
 	// Threshold
 	Threshold int `pulumi:"threshold"`
-	// Track by
+	// Track by. Possible values are `source-and-destination`, `source` and `destination`.
 	TrackBy string `pulumi:"trackBy"`
 }
 
@@ -11121,7 +16377,7 @@ type GetVulnerabilityProtectionSignatureSignatureCombinationTimeAttributeArgs st
 	Interval pulumi.IntInput `pulumi:"interval"`
 	// Threshold
 	Threshold pulumi.IntInput `pulumi:"threshold"`
-	// Track by
+	// Track by. Possible values are `source-and-destination`, `source` and `destination`.
 	TrackBy pulumi.StringInput `pulumi:"trackBy"`
 }
 
@@ -11161,7 +16417,7 @@ func (o GetVulnerabilityProtectionSignatureSignatureCombinationTimeAttributeOutp
 	return o.ApplyT(func(v GetVulnerabilityProtectionSignatureSignatureCombinationTimeAttribute) int { return v.Threshold }).(pulumi.IntOutput)
 }
 
-// Track by
+// Track by. Possible values are `source-and-destination`, `source` and `destination`.
 func (o GetVulnerabilityProtectionSignatureSignatureCombinationTimeAttributeOutput) TrackBy() pulumi.StringOutput {
 	return o.ApplyT(func(v GetVulnerabilityProtectionSignatureSignatureCombinationTimeAttribute) string { return v.TrackBy }).(pulumi.StringOutput)
 }
@@ -11175,7 +16431,7 @@ type GetVulnerabilityProtectionSignatureSignatureStandard struct {
 	Name string `pulumi:"name"`
 	// Order free
 	OrderFree bool `pulumi:"orderFree"`
-	// Scope
+	// Scope. Possible values are `protocol-data-unit` and `session`.
 	Scope string `pulumi:"scope"`
 }
 
@@ -11199,7 +16455,7 @@ type GetVulnerabilityProtectionSignatureSignatureStandardArgs struct {
 	Name pulumi.StringInput `pulumi:"name"`
 	// Order free
 	OrderFree pulumi.BoolInput `pulumi:"orderFree"`
-	// Scope
+	// Scope. Possible values are `protocol-data-unit` and `session`.
 	Scope pulumi.StringInput `pulumi:"scope"`
 }
 
@@ -11276,7 +16532,7 @@ func (o GetVulnerabilityProtectionSignatureSignatureStandardOutput) OrderFree() 
 	return o.ApplyT(func(v GetVulnerabilityProtectionSignatureSignatureStandard) bool { return v.OrderFree }).(pulumi.BoolOutput)
 }
 
-// Scope
+// Scope. Possible values are `protocol-data-unit` and `session`.
 func (o GetVulnerabilityProtectionSignatureSignatureStandardOutput) Scope() pulumi.StringOutput {
 	return o.ApplyT(func(v GetVulnerabilityProtectionSignatureSignatureStandard) string { return v.Scope }).(pulumi.StringOutput)
 }
@@ -12377,19 +17633,19 @@ type GetWildfireAntiVirusProfileListData struct {
 	Description string `pulumi:"description"`
 	// The device in which the resource is defined
 	Device string `pulumi:"device"`
-	// The folder of the item. Default: Shared.
+	// The folder in which the resource is defined
 	Folder string `pulumi:"folder"`
 	// UUID of the resource
 	Id string `pulumi:"id"`
 	// Mlav exception
 	MlavExceptions []GetWildfireAntiVirusProfileListDataMlavException `pulumi:"mlavExceptions"`
-	// The name of the item.
+	// Name
 	Name string `pulumi:"name"`
 	// Packet capture
 	PacketCapture bool `pulumi:"packetCapture"`
 	// Rules
 	Rules []GetWildfireAntiVirusProfileListDataRule `pulumi:"rules"`
-	// The snippet of the item.
+	// The snippet in which the resource is defined
 	Snippet string `pulumi:"snippet"`
 	// The Terraform ID.
 	Tfid string `pulumi:"tfid"`
@@ -12413,19 +17669,19 @@ type GetWildfireAntiVirusProfileListDataArgs struct {
 	Description pulumi.StringInput `pulumi:"description"`
 	// The device in which the resource is defined
 	Device pulumi.StringInput `pulumi:"device"`
-	// The folder of the item. Default: Shared.
+	// The folder in which the resource is defined
 	Folder pulumi.StringInput `pulumi:"folder"`
 	// UUID of the resource
 	Id pulumi.StringInput `pulumi:"id"`
 	// Mlav exception
 	MlavExceptions GetWildfireAntiVirusProfileListDataMlavExceptionArrayInput `pulumi:"mlavExceptions"`
-	// The name of the item.
+	// Name
 	Name pulumi.StringInput `pulumi:"name"`
 	// Packet capture
 	PacketCapture pulumi.BoolInput `pulumi:"packetCapture"`
 	// Rules
 	Rules GetWildfireAntiVirusProfileListDataRuleArrayInput `pulumi:"rules"`
-	// The snippet of the item.
+	// The snippet in which the resource is defined
 	Snippet pulumi.StringInput `pulumi:"snippet"`
 	// The Terraform ID.
 	Tfid pulumi.StringInput `pulumi:"tfid"`
@@ -12494,7 +17750,7 @@ func (o GetWildfireAntiVirusProfileListDataOutput) Device() pulumi.StringOutput 
 	return o.ApplyT(func(v GetWildfireAntiVirusProfileListData) string { return v.Device }).(pulumi.StringOutput)
 }
 
-// The folder of the item. Default: Shared.
+// The folder in which the resource is defined
 func (o GetWildfireAntiVirusProfileListDataOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v GetWildfireAntiVirusProfileListData) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -12511,7 +17767,7 @@ func (o GetWildfireAntiVirusProfileListDataOutput) MlavExceptions() GetWildfireA
 	}).(GetWildfireAntiVirusProfileListDataMlavExceptionArrayOutput)
 }
 
-// The name of the item.
+// Name
 func (o GetWildfireAntiVirusProfileListDataOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v GetWildfireAntiVirusProfileListData) string { return v.Name }).(pulumi.StringOutput)
 }
@@ -12526,7 +17782,7 @@ func (o GetWildfireAntiVirusProfileListDataOutput) Rules() GetWildfireAntiVirusP
 	return o.ApplyT(func(v GetWildfireAntiVirusProfileListData) []GetWildfireAntiVirusProfileListDataRule { return v.Rules }).(GetWildfireAntiVirusProfileListDataRuleArrayOutput)
 }
 
-// The snippet of the item.
+// The snippet in which the resource is defined
 func (o GetWildfireAntiVirusProfileListDataOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v GetWildfireAntiVirusProfileListData) string { return v.Snippet }).(pulumi.StringOutput)
 }
@@ -12679,11 +17935,11 @@ func (o GetWildfireAntiVirusProfileListDataMlavExceptionArrayOutput) Index(i pul
 }
 
 type GetWildfireAntiVirusProfileListDataRule struct {
-	// Analysis
+	// Analysis. Possible values are `public-cloud` and `private-cloud`.
 	Analysis string `pulumi:"analysis"`
 	// Application
 	Applications []string `pulumi:"applications"`
-	// Direction
+	// Direction. Possible values are `download`, `upload` and `both`.
 	Direction string `pulumi:"direction"`
 	// File type
 	FileTypes []string `pulumi:"fileTypes"`
@@ -12703,11 +17959,11 @@ type GetWildfireAntiVirusProfileListDataRuleInput interface {
 }
 
 type GetWildfireAntiVirusProfileListDataRuleArgs struct {
-	// Analysis
+	// Analysis. Possible values are `public-cloud` and `private-cloud`.
 	Analysis pulumi.StringInput `pulumi:"analysis"`
 	// Application
 	Applications pulumi.StringArrayInput `pulumi:"applications"`
-	// Direction
+	// Direction. Possible values are `download`, `upload` and `both`.
 	Direction pulumi.StringInput `pulumi:"direction"`
 	// File type
 	FileTypes pulumi.StringArrayInput `pulumi:"fileTypes"`
@@ -12766,7 +18022,7 @@ func (o GetWildfireAntiVirusProfileListDataRuleOutput) ToGetWildfireAntiVirusPro
 	return o
 }
 
-// Analysis
+// Analysis. Possible values are `public-cloud` and `private-cloud`.
 func (o GetWildfireAntiVirusProfileListDataRuleOutput) Analysis() pulumi.StringOutput {
 	return o.ApplyT(func(v GetWildfireAntiVirusProfileListDataRule) string { return v.Analysis }).(pulumi.StringOutput)
 }
@@ -12776,7 +18032,7 @@ func (o GetWildfireAntiVirusProfileListDataRuleOutput) Applications() pulumi.Str
 	return o.ApplyT(func(v GetWildfireAntiVirusProfileListDataRule) []string { return v.Applications }).(pulumi.StringArrayOutput)
 }
 
-// Direction
+// Direction. Possible values are `download`, `upload` and `both`.
 func (o GetWildfireAntiVirusProfileListDataRuleOutput) Direction() pulumi.StringOutput {
 	return o.ApplyT(func(v GetWildfireAntiVirusProfileListDataRule) string { return v.Direction }).(pulumi.StringOutput)
 }
@@ -13033,11 +18289,11 @@ func (o GetWildfireAntiVirusProfileMlavExceptionArrayOutput) Index(i pulumi.IntI
 }
 
 type GetWildfireAntiVirusProfileRule struct {
-	// Analysis
+	// Analysis. Possible values are `public-cloud` and `private-cloud`.
 	Analysis string `pulumi:"analysis"`
 	// Application
 	Applications []string `pulumi:"applications"`
-	// Direction
+	// Direction. Possible values are `download`, `upload` and `both`.
 	Direction string `pulumi:"direction"`
 	// File type
 	FileTypes []string `pulumi:"fileTypes"`
@@ -13057,11 +18313,11 @@ type GetWildfireAntiVirusProfileRuleInput interface {
 }
 
 type GetWildfireAntiVirusProfileRuleArgs struct {
-	// Analysis
+	// Analysis. Possible values are `public-cloud` and `private-cloud`.
 	Analysis pulumi.StringInput `pulumi:"analysis"`
 	// Application
 	Applications pulumi.StringArrayInput `pulumi:"applications"`
-	// Direction
+	// Direction. Possible values are `download`, `upload` and `both`.
 	Direction pulumi.StringInput `pulumi:"direction"`
 	// File type
 	FileTypes pulumi.StringArrayInput `pulumi:"fileTypes"`
@@ -13120,7 +18376,7 @@ func (o GetWildfireAntiVirusProfileRuleOutput) ToGetWildfireAntiVirusProfileRule
 	return o
 }
 
-// Analysis
+// Analysis. Possible values are `public-cloud` and `private-cloud`.
 func (o GetWildfireAntiVirusProfileRuleOutput) Analysis() pulumi.StringOutput {
 	return o.ApplyT(func(v GetWildfireAntiVirusProfileRule) string { return v.Analysis }).(pulumi.StringOutput)
 }
@@ -13130,7 +18386,7 @@ func (o GetWildfireAntiVirusProfileRuleOutput) Applications() pulumi.StringArray
 	return o.ApplyT(func(v GetWildfireAntiVirusProfileRule) []string { return v.Applications }).(pulumi.StringArrayOutput)
 }
 
-// Direction
+// Direction. Possible values are `download`, `upload` and `both`.
 func (o GetWildfireAntiVirusProfileRuleOutput) Direction() pulumi.StringOutput {
 	return o.ApplyT(func(v GetWildfireAntiVirusProfileRule) string { return v.Direction }).(pulumi.StringOutput)
 }
@@ -13345,15 +18601,15 @@ type GetZoneListData struct {
 	EnableDeviceIdentification bool `pulumi:"enableDeviceIdentification"`
 	// Enable user identification
 	EnableUserIdentification bool `pulumi:"enableUserIdentification"`
-	// The folder of the item. Default: Shared.
+	// Folder
 	Folder string `pulumi:"folder"`
 	// UUID of the resource
 	Id string `pulumi:"id"`
-	// The name of the item.
+	// Alphanumeric string begin with letter: [0-9a-zA-Z._-]
 	Name string `pulumi:"name"`
 	// Network
 	Network GetZoneListDataNetwork `pulumi:"network"`
-	// The snippet of the item.
+	// The snippet in which the resource is defined
 	Snippet string `pulumi:"snippet"`
 	// The Terraform ID.
 	Tfid string `pulumi:"tfid"`
@@ -13385,15 +18641,15 @@ type GetZoneListDataArgs struct {
 	EnableDeviceIdentification pulumi.BoolInput `pulumi:"enableDeviceIdentification"`
 	// Enable user identification
 	EnableUserIdentification pulumi.BoolInput `pulumi:"enableUserIdentification"`
-	// The folder of the item. Default: Shared.
+	// Folder
 	Folder pulumi.StringInput `pulumi:"folder"`
 	// UUID of the resource
 	Id pulumi.StringInput `pulumi:"id"`
-	// The name of the item.
+	// Alphanumeric string begin with letter: [0-9a-zA-Z._-]
 	Name pulumi.StringInput `pulumi:"name"`
 	// Network
 	Network GetZoneListDataNetworkInput `pulumi:"network"`
-	// The snippet of the item.
+	// The snippet in which the resource is defined
 	Snippet pulumi.StringInput `pulumi:"snippet"`
 	// The Terraform ID.
 	Tfid pulumi.StringInput `pulumi:"tfid"`
@@ -13482,7 +18738,7 @@ func (o GetZoneListDataOutput) EnableUserIdentification() pulumi.BoolOutput {
 	return o.ApplyT(func(v GetZoneListData) bool { return v.EnableUserIdentification }).(pulumi.BoolOutput)
 }
 
-// The folder of the item. Default: Shared.
+// Folder
 func (o GetZoneListDataOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v GetZoneListData) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -13492,7 +18748,7 @@ func (o GetZoneListDataOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v GetZoneListData) string { return v.Id }).(pulumi.StringOutput)
 }
 
-// The name of the item.
+// Alphanumeric string begin with letter: [0-9a-zA-Z._-]
 func (o GetZoneListDataOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v GetZoneListData) string { return v.Name }).(pulumi.StringOutput)
 }
@@ -13502,7 +18758,7 @@ func (o GetZoneListDataOutput) Network() GetZoneListDataNetworkOutput {
 	return o.ApplyT(func(v GetZoneListData) GetZoneListDataNetwork { return v.Network }).(GetZoneListDataNetworkOutput)
 }
 
-// The snippet of the item.
+// The snippet in which the resource is defined
 func (o GetZoneListDataOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v GetZoneListData) string { return v.Snippet }).(pulumi.StringOutput)
 }
@@ -15466,21 +20722,17 @@ type GetZoneProtectionProfileListData struct {
 	// Determine whether to drop or bypass packets that contain out-of-sync ACKs or out-of-window sequence numbers:
 	// * `global` — Use system-wide setting that is assigned through TCP Settings or the CLI.
 	// * `drop` — Drop packets that contain an asymmetric path.
-	// * `bypass` — Bypass scanning on packets that contain an asymmetric path.
+	// * `bypass` — Bypass scanning on packets that contain an asymmetric path. Possible values are `global`, `drop` and `bypass`.
 	AsymmetricPath string `pulumi:"asymmetricPath"`
 	// The description of the profile
 	Description string `pulumi:"description"`
 	// The device in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device string `pulumi:"device"`
 	// Discard ICMP packets that are embedded with an error message.
 	DiscardIcmpEmbeddedError bool `pulumi:"discardIcmpEmbeddedError"`
 	// Flood
 	Flood GetZoneProtectionProfileListDataFlood `pulumi:"flood"`
 	// The folder in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder string `pulumi:"folder"`
 	// Discard fragmented IP packets.
 	FragmentedTrafficDiscard bool `pulumi:"fragmentedTrafficDiscard"`
@@ -15505,7 +20757,7 @@ type GetZoneProtectionProfileListData struct {
 	// MPTCP is an extension of TCP that allows a client to maintain a connection by simultaneously using multiple paths to connect to the destination host. By default, MPTCP support is disabled, based on the global MPTCP setting.  Review or adjust the MPTCP settings for the security zones associated with this profile:
 	// * `no` — Enable MPTCP support (do not strip the MPTCP option).
 	// * `yes` — Disable MPTCP support (strip the MPTCP option). With this configured, MPTCP connections are converted to standard TCP connections, as MPTCP is backwards compatible with TCP.
-	// * `global` — Support MPTCP based on the global MPTCP setting. By default, the global MPTCP setting is set to yes so that MPTCP is disabled (the MPTCP option is stripped from the packet).
+	// * `global` — Support MPTCP based on the global MPTCP setting. By default, the global MPTCP setting is set to yes so that MPTCP is disabled (the MPTCP option is stripped from the packet). Possible values are `no`, `yes` and `global`.
 	MptcpOptionStrip string `pulumi:"mptcpOptionStrip"`
 	// The profile name
 	Name string `pulumi:"name"`
@@ -15516,7 +20768,7 @@ type GetZoneProtectionProfileListData struct {
 	// Determine whether to reject the packet if the first packet for the TCP session setup is not a SYN packet:
 	// * `global` — Use system-wide setting that is assigned through the CLI.
 	// * `yes` — Reject non-SYN TCP.
-	// * `no` — Accept non-SYN TCP.
+	// * `no` — Accept non-SYN TCP. Possible values are `global`, `yes` and `no`.
 	RejectNonSynTcp string `pulumi:"rejectNonSynTcp"`
 	// Scan white list
 	ScanWhiteLists []GetZoneProtectionProfileListDataScanWhiteList `pulumi:"scanWhiteLists"`
@@ -15525,8 +20777,6 @@ type GetZoneProtectionProfileListData struct {
 	// Discard packets if the security option is defined.
 	SecurityDiscard bool `pulumi:"securityDiscard"`
 	// The snippet in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet string `pulumi:"snippet"`
 	// Check that the source IP address of the ingress packet is routable and the routing interface is in the same zone as the ingress interface. If either condition is not true, discard the packet.
 	SpoofedIpDiscard bool `pulumi:"spoofedIpDiscard"`
@@ -15576,21 +20826,17 @@ type GetZoneProtectionProfileListDataArgs struct {
 	// Determine whether to drop or bypass packets that contain out-of-sync ACKs or out-of-window sequence numbers:
 	// * `global` — Use system-wide setting that is assigned through TCP Settings or the CLI.
 	// * `drop` — Drop packets that contain an asymmetric path.
-	// * `bypass` — Bypass scanning on packets that contain an asymmetric path.
+	// * `bypass` — Bypass scanning on packets that contain an asymmetric path. Possible values are `global`, `drop` and `bypass`.
 	AsymmetricPath pulumi.StringInput `pulumi:"asymmetricPath"`
 	// The description of the profile
 	Description pulumi.StringInput `pulumi:"description"`
 	// The device in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringInput `pulumi:"device"`
 	// Discard ICMP packets that are embedded with an error message.
 	DiscardIcmpEmbeddedError pulumi.BoolInput `pulumi:"discardIcmpEmbeddedError"`
 	// Flood
 	Flood GetZoneProtectionProfileListDataFloodInput `pulumi:"flood"`
 	// The folder in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringInput `pulumi:"folder"`
 	// Discard fragmented IP packets.
 	FragmentedTrafficDiscard pulumi.BoolInput `pulumi:"fragmentedTrafficDiscard"`
@@ -15615,7 +20861,7 @@ type GetZoneProtectionProfileListDataArgs struct {
 	// MPTCP is an extension of TCP that allows a client to maintain a connection by simultaneously using multiple paths to connect to the destination host. By default, MPTCP support is disabled, based on the global MPTCP setting.  Review or adjust the MPTCP settings for the security zones associated with this profile:
 	// * `no` — Enable MPTCP support (do not strip the MPTCP option).
 	// * `yes` — Disable MPTCP support (strip the MPTCP option). With this configured, MPTCP connections are converted to standard TCP connections, as MPTCP is backwards compatible with TCP.
-	// * `global` — Support MPTCP based on the global MPTCP setting. By default, the global MPTCP setting is set to yes so that MPTCP is disabled (the MPTCP option is stripped from the packet).
+	// * `global` — Support MPTCP based on the global MPTCP setting. By default, the global MPTCP setting is set to yes so that MPTCP is disabled (the MPTCP option is stripped from the packet). Possible values are `no`, `yes` and `global`.
 	MptcpOptionStrip pulumi.StringInput `pulumi:"mptcpOptionStrip"`
 	// The profile name
 	Name pulumi.StringInput `pulumi:"name"`
@@ -15626,7 +20872,7 @@ type GetZoneProtectionProfileListDataArgs struct {
 	// Determine whether to reject the packet if the first packet for the TCP session setup is not a SYN packet:
 	// * `global` — Use system-wide setting that is assigned through the CLI.
 	// * `yes` — Reject non-SYN TCP.
-	// * `no` — Accept non-SYN TCP.
+	// * `no` — Accept non-SYN TCP. Possible values are `global`, `yes` and `no`.
 	RejectNonSynTcp pulumi.StringInput `pulumi:"rejectNonSynTcp"`
 	// Scan white list
 	ScanWhiteLists GetZoneProtectionProfileListDataScanWhiteListArrayInput `pulumi:"scanWhiteLists"`
@@ -15635,8 +20881,6 @@ type GetZoneProtectionProfileListDataArgs struct {
 	// Discard packets if the security option is defined.
 	SecurityDiscard pulumi.BoolInput `pulumi:"securityDiscard"`
 	// The snippet in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringInput `pulumi:"snippet"`
 	// Check that the source IP address of the ingress packet is routable and the routing interface is in the same zone as the ingress interface. If either condition is not true, discard the packet.
 	SpoofedIpDiscard pulumi.BoolInput `pulumi:"spoofedIpDiscard"`
@@ -15725,7 +20969,7 @@ func (o GetZoneProtectionProfileListDataOutput) ToGetZoneProtectionProfileListDa
 // Determine whether to drop or bypass packets that contain out-of-sync ACKs or out-of-window sequence numbers:
 // * `global` — Use system-wide setting that is assigned through TCP Settings or the CLI.
 // * `drop` — Drop packets that contain an asymmetric path.
-// * `bypass` — Bypass scanning on packets that contain an asymmetric path.
+// * `bypass` — Bypass scanning on packets that contain an asymmetric path. Possible values are `global`, `drop` and `bypass`.
 func (o GetZoneProtectionProfileListDataOutput) AsymmetricPath() pulumi.StringOutput {
 	return o.ApplyT(func(v GetZoneProtectionProfileListData) string { return v.AsymmetricPath }).(pulumi.StringOutput)
 }
@@ -15736,8 +20980,6 @@ func (o GetZoneProtectionProfileListDataOutput) Description() pulumi.StringOutpu
 }
 
 // The device in which the resource is defined
-//
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o GetZoneProtectionProfileListDataOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v GetZoneProtectionProfileListData) string { return v.Device }).(pulumi.StringOutput)
 }
@@ -15753,8 +20995,6 @@ func (o GetZoneProtectionProfileListDataOutput) Flood() GetZoneProtectionProfile
 }
 
 // The folder in which the resource is defined
-//
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o GetZoneProtectionProfileListDataOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v GetZoneProtectionProfileListData) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -15814,7 +21054,7 @@ func (o GetZoneProtectionProfileListDataOutput) MismatchedOverlappingTcpSegmentD
 // MPTCP is an extension of TCP that allows a client to maintain a connection by simultaneously using multiple paths to connect to the destination host. By default, MPTCP support is disabled, based on the global MPTCP setting.  Review or adjust the MPTCP settings for the security zones associated with this profile:
 // * `no` — Enable MPTCP support (do not strip the MPTCP option).
 // * `yes` — Disable MPTCP support (strip the MPTCP option). With this configured, MPTCP connections are converted to standard TCP connections, as MPTCP is backwards compatible with TCP.
-// * `global` — Support MPTCP based on the global MPTCP setting. By default, the global MPTCP setting is set to yes so that MPTCP is disabled (the MPTCP option is stripped from the packet).
+// * `global` — Support MPTCP based on the global MPTCP setting. By default, the global MPTCP setting is set to yes so that MPTCP is disabled (the MPTCP option is stripped from the packet). Possible values are `no`, `yes` and `global`.
 func (o GetZoneProtectionProfileListDataOutput) MptcpOptionStrip() pulumi.StringOutput {
 	return o.ApplyT(func(v GetZoneProtectionProfileListData) string { return v.MptcpOptionStrip }).(pulumi.StringOutput)
 }
@@ -15839,7 +21079,7 @@ func (o GetZoneProtectionProfileListDataOutput) RecordRouteDiscard() pulumi.Bool
 // Determine whether to reject the packet if the first packet for the TCP session setup is not a SYN packet:
 // * `global` — Use system-wide setting that is assigned through the CLI.
 // * `yes` — Reject non-SYN TCP.
-// * `no` — Accept non-SYN TCP.
+// * `no` — Accept non-SYN TCP. Possible values are `global`, `yes` and `no`.
 func (o GetZoneProtectionProfileListDataOutput) RejectNonSynTcp() pulumi.StringOutput {
 	return o.ApplyT(func(v GetZoneProtectionProfileListData) string { return v.RejectNonSynTcp }).(pulumi.StringOutput)
 }
@@ -15862,8 +21102,6 @@ func (o GetZoneProtectionProfileListDataOutput) SecurityDiscard() pulumi.BoolOut
 }
 
 // The snippet in which the resource is defined
-//
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o GetZoneProtectionProfileListDataOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v GetZoneProtectionProfileListData) string { return v.Snippet }).(pulumi.StringOutput)
 }
@@ -17457,7 +22695,7 @@ func (o GetZoneProtectionProfileListDataL2SecGroupTagProtectionTagArrayOutput) I
 type GetZoneProtectionProfileListDataNonIpProtocol struct {
 	// Specify the type of list you are creating for protocol protection:
 	// * Include List—Only the protocols on the list are allowed—in addition to IPv4 (0x0800), IPv6 (0x86DD), ARP (0x0806), and VLAN tagged frames (0x8100). All other protocols are implicitly denied (blocked).
-	// * Exclude List—Only the protocols on the list are denied; all other protocols are implicitly allowed. You cannot exclude IPv4 (0x0800), IPv6 (0x86DD), ARP (0x0806), or VLAN tagged frames (0x8100).
+	// * Exclude List—Only the protocols on the list are denied; all other protocols are implicitly allowed. You cannot exclude IPv4 (0x0800), IPv6 (0x86DD), ARP (0x0806), or VLAN tagged frames (0x8100). Possible values are `exclude` and `include`.
 	ListType string `pulumi:"listType"`
 	// Protocol
 	Protocols []GetZoneProtectionProfileListDataNonIpProtocolProtocol `pulumi:"protocols"`
@@ -17477,7 +22715,7 @@ type GetZoneProtectionProfileListDataNonIpProtocolInput interface {
 type GetZoneProtectionProfileListDataNonIpProtocolArgs struct {
 	// Specify the type of list you are creating for protocol protection:
 	// * Include List—Only the protocols on the list are allowed—in addition to IPv4 (0x0800), IPv6 (0x86DD), ARP (0x0806), and VLAN tagged frames (0x8100). All other protocols are implicitly denied (blocked).
-	// * Exclude List—Only the protocols on the list are denied; all other protocols are implicitly allowed. You cannot exclude IPv4 (0x0800), IPv6 (0x86DD), ARP (0x0806), or VLAN tagged frames (0x8100).
+	// * Exclude List—Only the protocols on the list are denied; all other protocols are implicitly allowed. You cannot exclude IPv4 (0x0800), IPv6 (0x86DD), ARP (0x0806), or VLAN tagged frames (0x8100). Possible values are `exclude` and `include`.
 	ListType pulumi.StringInput `pulumi:"listType"`
 	// Protocol
 	Protocols GetZoneProtectionProfileListDataNonIpProtocolProtocolArrayInput `pulumi:"protocols"`
@@ -17511,7 +22749,7 @@ func (o GetZoneProtectionProfileListDataNonIpProtocolOutput) ToGetZoneProtection
 
 // Specify the type of list you are creating for protocol protection:
 // * Include List—Only the protocols on the list are allowed—in addition to IPv4 (0x0800), IPv6 (0x86DD), ARP (0x0806), and VLAN tagged frames (0x8100). All other protocols are implicitly denied (blocked).
-// * Exclude List—Only the protocols on the list are denied; all other protocols are implicitly allowed. You cannot exclude IPv4 (0x0800), IPv6 (0x86DD), ARP (0x0806), or VLAN tagged frames (0x8100).
+// * Exclude List—Only the protocols on the list are denied; all other protocols are implicitly allowed. You cannot exclude IPv4 (0x0800), IPv6 (0x86DD), ARP (0x0806), or VLAN tagged frames (0x8100). Possible values are `exclude` and `include`.
 func (o GetZoneProtectionProfileListDataNonIpProtocolOutput) ListType() pulumi.StringOutput {
 	return o.ApplyT(func(v GetZoneProtectionProfileListDataNonIpProtocol) string { return v.ListType }).(pulumi.StringOutput)
 }
@@ -17656,7 +22894,7 @@ type GetZoneProtectionProfileListDataScan struct {
 	// * "8001" - TCP Port Scan
 	// * "8002" - Host Sweep
 	// * "8003" - UDP Port Scan
-	// * "8006" - Port Scan
+	// * "8006" - Port Scan. Possible values are `8001`, `8002`, `8003` and `8006`.
 	Name string `pulumi:"name"`
 	// Threshold
 	Threshold int `pulumi:"threshold"`
@@ -17682,7 +22920,7 @@ type GetZoneProtectionProfileListDataScanArgs struct {
 	// * "8001" - TCP Port Scan
 	// * "8002" - Host Sweep
 	// * "8003" - UDP Port Scan
-	// * "8006" - Port Scan
+	// * "8006" - Port Scan. Possible values are `8001`, `8002`, `8003` and `8006`.
 	Name pulumi.StringInput `pulumi:"name"`
 	// Threshold
 	Threshold pulumi.IntInput `pulumi:"threshold"`
@@ -17755,7 +22993,7 @@ func (o GetZoneProtectionProfileListDataScanOutput) Interval() pulumi.IntOutput 
 // * "8001" - TCP Port Scan
 // * "8002" - Host Sweep
 // * "8003" - UDP Port Scan
-// * "8006" - Port Scan
+// * "8006" - Port Scan. Possible values are `8001`, `8002`, `8003` and `8006`.
 func (o GetZoneProtectionProfileListDataScanOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v GetZoneProtectionProfileListDataScan) string { return v.Name }).(pulumi.StringOutput)
 }
@@ -18004,7 +23242,7 @@ func (o GetZoneProtectionProfileListDataScanActionBlockOutput) ToGetZoneProtecti
 type GetZoneProtectionProfileListDataScanActionBlockIp struct {
 	// Duration
 	Duration int `pulumi:"duration"`
-	// Track by
+	// Track by. Possible values are `source-and-destination` and `source`.
 	TrackBy string `pulumi:"trackBy"`
 }
 
@@ -18022,7 +23260,7 @@ type GetZoneProtectionProfileListDataScanActionBlockIpInput interface {
 type GetZoneProtectionProfileListDataScanActionBlockIpArgs struct {
 	// Duration
 	Duration pulumi.IntInput `pulumi:"duration"`
-	// Track by
+	// Track by. Possible values are `source-and-destination` and `source`.
 	TrackBy pulumi.StringInput `pulumi:"trackBy"`
 }
 
@@ -18057,7 +23295,7 @@ func (o GetZoneProtectionProfileListDataScanActionBlockIpOutput) Duration() pulu
 	return o.ApplyT(func(v GetZoneProtectionProfileListDataScanActionBlockIp) int { return v.Duration }).(pulumi.IntOutput)
 }
 
-// Track by
+// Track by. Possible values are `source-and-destination` and `source`.
 func (o GetZoneProtectionProfileListDataScanActionBlockIpOutput) TrackBy() pulumi.StringOutput {
 	return o.ApplyT(func(v GetZoneProtectionProfileListDataScanActionBlockIp) string { return v.TrackBy }).(pulumi.StringOutput)
 }
@@ -18180,7 +23418,7 @@ func (o GetZoneProtectionProfileListDataScanWhiteListArrayOutput) Index(i pulumi
 type GetZoneProtectionProfileNonIpProtocol struct {
 	// Specify the type of list you are creating for protocol protection:
 	// * Include List—Only the protocols on the list are allowed—in addition to IPv4 (0x0800), IPv6 (0x86DD), ARP (0x0806), and VLAN tagged frames (0x8100). All other protocols are implicitly denied (blocked).
-	// * Exclude List—Only the protocols on the list are denied; all other protocols are implicitly allowed. You cannot exclude IPv4 (0x0800), IPv6 (0x86DD), ARP (0x0806), or VLAN tagged frames (0x8100).
+	// * Exclude List—Only the protocols on the list are denied; all other protocols are implicitly allowed. You cannot exclude IPv4 (0x0800), IPv6 (0x86DD), ARP (0x0806), or VLAN tagged frames (0x8100). Possible values are `exclude` and `include`.
 	ListType string `pulumi:"listType"`
 	// Protocol
 	Protocols []GetZoneProtectionProfileNonIpProtocolProtocol `pulumi:"protocols"`
@@ -18200,7 +23438,7 @@ type GetZoneProtectionProfileNonIpProtocolInput interface {
 type GetZoneProtectionProfileNonIpProtocolArgs struct {
 	// Specify the type of list you are creating for protocol protection:
 	// * Include List—Only the protocols on the list are allowed—in addition to IPv4 (0x0800), IPv6 (0x86DD), ARP (0x0806), and VLAN tagged frames (0x8100). All other protocols are implicitly denied (blocked).
-	// * Exclude List—Only the protocols on the list are denied; all other protocols are implicitly allowed. You cannot exclude IPv4 (0x0800), IPv6 (0x86DD), ARP (0x0806), or VLAN tagged frames (0x8100).
+	// * Exclude List—Only the protocols on the list are denied; all other protocols are implicitly allowed. You cannot exclude IPv4 (0x0800), IPv6 (0x86DD), ARP (0x0806), or VLAN tagged frames (0x8100). Possible values are `exclude` and `include`.
 	ListType pulumi.StringInput `pulumi:"listType"`
 	// Protocol
 	Protocols GetZoneProtectionProfileNonIpProtocolProtocolArrayInput `pulumi:"protocols"`
@@ -18234,7 +23472,7 @@ func (o GetZoneProtectionProfileNonIpProtocolOutput) ToGetZoneProtectionProfileN
 
 // Specify the type of list you are creating for protocol protection:
 // * Include List—Only the protocols on the list are allowed—in addition to IPv4 (0x0800), IPv6 (0x86DD), ARP (0x0806), and VLAN tagged frames (0x8100). All other protocols are implicitly denied (blocked).
-// * Exclude List—Only the protocols on the list are denied; all other protocols are implicitly allowed. You cannot exclude IPv4 (0x0800), IPv6 (0x86DD), ARP (0x0806), or VLAN tagged frames (0x8100).
+// * Exclude List—Only the protocols on the list are denied; all other protocols are implicitly allowed. You cannot exclude IPv4 (0x0800), IPv6 (0x86DD), ARP (0x0806), or VLAN tagged frames (0x8100). Possible values are `exclude` and `include`.
 func (o GetZoneProtectionProfileNonIpProtocolOutput) ListType() pulumi.StringOutput {
 	return o.ApplyT(func(v GetZoneProtectionProfileNonIpProtocol) string { return v.ListType }).(pulumi.StringOutput)
 }
@@ -18379,7 +23617,7 @@ type GetZoneProtectionProfileScan struct {
 	// * "8001" - TCP Port Scan
 	// * "8002" - Host Sweep
 	// * "8003" - UDP Port Scan
-	// * "8006" - Port Scan
+	// * "8006" - Port Scan. Possible values are `8001`, `8002`, `8003` and `8006`.
 	Name string `pulumi:"name"`
 	// Threshold
 	Threshold int `pulumi:"threshold"`
@@ -18405,7 +23643,7 @@ type GetZoneProtectionProfileScanArgs struct {
 	// * "8001" - TCP Port Scan
 	// * "8002" - Host Sweep
 	// * "8003" - UDP Port Scan
-	// * "8006" - Port Scan
+	// * "8006" - Port Scan. Possible values are `8001`, `8002`, `8003` and `8006`.
 	Name pulumi.StringInput `pulumi:"name"`
 	// Threshold
 	Threshold pulumi.IntInput `pulumi:"threshold"`
@@ -18476,7 +23714,7 @@ func (o GetZoneProtectionProfileScanOutput) Interval() pulumi.IntOutput {
 // * "8001" - TCP Port Scan
 // * "8002" - Host Sweep
 // * "8003" - UDP Port Scan
-// * "8006" - Port Scan
+// * "8006" - Port Scan. Possible values are `8001`, `8002`, `8003` and `8006`.
 func (o GetZoneProtectionProfileScanOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v GetZoneProtectionProfileScan) string { return v.Name }).(pulumi.StringOutput)
 }
@@ -18717,7 +23955,7 @@ func (o GetZoneProtectionProfileScanActionBlockOutput) ToGetZoneProtectionProfil
 type GetZoneProtectionProfileScanActionBlockIp struct {
 	// Duration
 	Duration int `pulumi:"duration"`
-	// Track by
+	// Track by. Possible values are `source-and-destination` and `source`.
 	TrackBy string `pulumi:"trackBy"`
 }
 
@@ -18735,7 +23973,7 @@ type GetZoneProtectionProfileScanActionBlockIpInput interface {
 type GetZoneProtectionProfileScanActionBlockIpArgs struct {
 	// Duration
 	Duration pulumi.IntInput `pulumi:"duration"`
-	// Track by
+	// Track by. Possible values are `source-and-destination` and `source`.
 	TrackBy pulumi.StringInput `pulumi:"trackBy"`
 }
 
@@ -18770,7 +24008,7 @@ func (o GetZoneProtectionProfileScanActionBlockIpOutput) Duration() pulumi.IntOu
 	return o.ApplyT(func(v GetZoneProtectionProfileScanActionBlockIp) int { return v.Duration }).(pulumi.IntOutput)
 }
 
-// Track by
+// Track by. Possible values are `source-and-destination` and `source`.
 func (o GetZoneProtectionProfileScanActionBlockIpOutput) TrackBy() pulumi.StringOutput {
 	return o.ApplyT(func(v GetZoneProtectionProfileScanActionBlockIp) string { return v.TrackBy }).(pulumi.StringOutput)
 }
@@ -18952,6 +24190,83 @@ func (o GetZoneUserAclOutput) IncludeLists() pulumi.StringArrayOutput {
 }
 
 func init() {
+	pulumi.RegisterInputType(reflect.TypeOf((*GetSyslogServerProfileListDataFormatEscapingInput)(nil)).Elem(), GetSyslogServerProfileListDataFormatEscapingArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetSyslogServerProfileListDataServerInput)(nil)).Elem(), GetSyslogServerProfileListDataServerArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetSyslogServerProfileListDataServerArrayInput)(nil)).Elem(), GetSyslogServerProfileListDataServerArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetSyslogServerProfileServerInput)(nil)).Elem(), GetSyslogServerProfileServerArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetSyslogServerProfileServerArrayInput)(nil)).Elem(), GetSyslogServerProfileServerArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetSystemMatchListListDataInput)(nil)).Elem(), GetSystemMatchListListDataArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetSystemMatchListListDataArrayInput)(nil)).Elem(), GetSystemMatchListListDataArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetTacacsServerProfileListDataInput)(nil)).Elem(), GetTacacsServerProfileListDataArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetTacacsServerProfileListDataArrayInput)(nil)).Elem(), GetTacacsServerProfileListDataArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetTacacsServerProfileListDataServerInput)(nil)).Elem(), GetTacacsServerProfileListDataServerArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetTacacsServerProfileListDataServerArrayInput)(nil)).Elem(), GetTacacsServerProfileListDataServerArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetTacacsServerProfileServerInput)(nil)).Elem(), GetTacacsServerProfileServerArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetTacacsServerProfileServerArrayInput)(nil)).Elem(), GetTacacsServerProfileServerArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetTagListDataInput)(nil)).Elem(), GetTagListDataArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetTagListDataArrayInput)(nil)).Elem(), GetTagListDataArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetTcpSettingListDataInput)(nil)).Elem(), GetTcpSettingListDataArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetTcpSettingListDataArrayInput)(nil)).Elem(), GetTcpSettingListDataArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetTcpSettingListDataTcpInput)(nil)).Elem(), GetTcpSettingListDataTcpArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetTcpSettingTcpInput)(nil)).Elem(), GetTcpSettingTcpArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetTlsServiceProfileListDataInput)(nil)).Elem(), GetTlsServiceProfileListDataArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetTlsServiceProfileListDataArrayInput)(nil)).Elem(), GetTlsServiceProfileListDataArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetTlsServiceProfileListDataProtocolSettingsInput)(nil)).Elem(), GetTlsServiceProfileListDataProtocolSettingsArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetTlsServiceProfileProtocolSettingsInput)(nil)).Elem(), GetTlsServiceProfileProtocolSettingsArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetTrafficSteeringRuleActionInput)(nil)).Elem(), GetTrafficSteeringRuleActionArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetTrafficSteeringRuleActionForwardInput)(nil)).Elem(), GetTrafficSteeringRuleActionForwardArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetTrafficSteeringRuleActionForwardForwardInput)(nil)).Elem(), GetTrafficSteeringRuleActionForwardForwardArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetTrafficSteeringRuleActionForwardNoPbfInput)(nil)).Elem(), GetTrafficSteeringRuleActionForwardNoPbfArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetTrafficSteeringRuleListDataInput)(nil)).Elem(), GetTrafficSteeringRuleListDataArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetTrafficSteeringRuleListDataArrayInput)(nil)).Elem(), GetTrafficSteeringRuleListDataArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetTrafficSteeringRuleListDataActionInput)(nil)).Elem(), GetTrafficSteeringRuleListDataActionArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetTrafficSteeringRuleListDataActionForwardInput)(nil)).Elem(), GetTrafficSteeringRuleListDataActionForwardArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetTrafficSteeringRuleListDataActionForwardForwardInput)(nil)).Elem(), GetTrafficSteeringRuleListDataActionForwardForwardArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetTrafficSteeringRuleListDataActionForwardNoPbfInput)(nil)).Elem(), GetTrafficSteeringRuleListDataActionForwardNoPbfArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetTrustedTenantOverviewPublisherInput)(nil)).Elem(), GetTrustedTenantOverviewPublisherArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetTrustedTenantOverviewSubscriberInput)(nil)).Elem(), GetTrustedTenantOverviewSubscriberArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetTunnelInterfaceIpInput)(nil)).Elem(), GetTunnelInterfaceIpArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetTunnelInterfaceIpArrayInput)(nil)).Elem(), GetTunnelInterfaceIpArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetTunnelInterfaceIpv6Input)(nil)).Elem(), GetTunnelInterfaceIpv6Args{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetTunnelInterfaceIpv6AddressInput)(nil)).Elem(), GetTunnelInterfaceIpv6AddressArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetTunnelInterfaceIpv6AddressArrayInput)(nil)).Elem(), GetTunnelInterfaceIpv6AddressArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetTunnelInterfaceIpv6AddressAnycastInput)(nil)).Elem(), GetTunnelInterfaceIpv6AddressAnycastArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetTunnelInterfaceIpv6AddressPrefixInput)(nil)).Elem(), GetTunnelInterfaceIpv6AddressPrefixArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetTunnelInterfaceListDataInput)(nil)).Elem(), GetTunnelInterfaceListDataArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetTunnelInterfaceListDataArrayInput)(nil)).Elem(), GetTunnelInterfaceListDataArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetTunnelInterfaceListDataIpInput)(nil)).Elem(), GetTunnelInterfaceListDataIpArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetTunnelInterfaceListDataIpArrayInput)(nil)).Elem(), GetTunnelInterfaceListDataIpArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetTunnelInterfaceListDataIpv6Input)(nil)).Elem(), GetTunnelInterfaceListDataIpv6Args{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetTunnelInterfaceListDataIpv6AddressInput)(nil)).Elem(), GetTunnelInterfaceListDataIpv6AddressArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetTunnelInterfaceListDataIpv6AddressArrayInput)(nil)).Elem(), GetTunnelInterfaceListDataIpv6AddressArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetTunnelInterfaceListDataIpv6AddressAnycastInput)(nil)).Elem(), GetTunnelInterfaceListDataIpv6AddressAnycastArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetTunnelInterfaceListDataIpv6AddressPrefixInput)(nil)).Elem(), GetTunnelInterfaceListDataIpv6AddressPrefixArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetUpdateScheduleListDataInput)(nil)).Elem(), GetUpdateScheduleListDataArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetUpdateScheduleListDataArrayInput)(nil)).Elem(), GetUpdateScheduleListDataArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetUpdateScheduleListDataUpdateScheduleInput)(nil)).Elem(), GetUpdateScheduleListDataUpdateScheduleArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetUpdateScheduleListDataUpdateScheduleAntiVirusInput)(nil)).Elem(), GetUpdateScheduleListDataUpdateScheduleAntiVirusArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringInput)(nil)).Elem(), GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringDailyInput)(nil)).Elem(), GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringDailyArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringHourlyInput)(nil)).Elem(), GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringHourlyArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringNoneInput)(nil)).Elem(), GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringNoneArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringWeeklyInput)(nil)).Elem(), GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringWeeklyArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetUpdateScheduleListDataUpdateScheduleThreatsInput)(nil)).Elem(), GetUpdateScheduleListDataUpdateScheduleThreatsArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetUpdateScheduleListDataUpdateScheduleThreatsRecurringInput)(nil)).Elem(), GetUpdateScheduleListDataUpdateScheduleThreatsRecurringArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetUpdateScheduleListDataUpdateScheduleThreatsRecurringDailyInput)(nil)).Elem(), GetUpdateScheduleListDataUpdateScheduleThreatsRecurringDailyArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetUpdateScheduleListDataUpdateScheduleThreatsRecurringEvery30MinsInput)(nil)).Elem(), GetUpdateScheduleListDataUpdateScheduleThreatsRecurringEvery30MinsArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetUpdateScheduleListDataUpdateScheduleThreatsRecurringHourlyInput)(nil)).Elem(), GetUpdateScheduleListDataUpdateScheduleThreatsRecurringHourlyArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetUpdateScheduleListDataUpdateScheduleThreatsRecurringNoneInput)(nil)).Elem(), GetUpdateScheduleListDataUpdateScheduleThreatsRecurringNoneArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetUpdateScheduleListDataUpdateScheduleThreatsRecurringWeeklyInput)(nil)).Elem(), GetUpdateScheduleListDataUpdateScheduleThreatsRecurringWeeklyArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetUpdateScheduleListDataUpdateScheduleWildfireInput)(nil)).Elem(), GetUpdateScheduleListDataUpdateScheduleWildfireArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetUpdateScheduleListDataUpdateScheduleWildfireRecurringInput)(nil)).Elem(), GetUpdateScheduleListDataUpdateScheduleWildfireRecurringArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetUpdateScheduleListDataUpdateScheduleWildfireRecurringEvery15MinsInput)(nil)).Elem(), GetUpdateScheduleListDataUpdateScheduleWildfireRecurringEvery15MinsArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetUpdateScheduleListDataUpdateScheduleWildfireRecurringEvery30MinsInput)(nil)).Elem(), GetUpdateScheduleListDataUpdateScheduleWildfireRecurringEvery30MinsArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetUpdateScheduleListDataUpdateScheduleWildfireRecurringEveryHourInput)(nil)).Elem(), GetUpdateScheduleListDataUpdateScheduleWildfireRecurringEveryHourArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetUpdateScheduleListDataUpdateScheduleWildfireRecurringEveryMinInput)(nil)).Elem(), GetUpdateScheduleListDataUpdateScheduleWildfireRecurringEveryMinArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetUpdateScheduleListDataUpdateScheduleWildfireRecurringNoneInput)(nil)).Elem(), GetUpdateScheduleListDataUpdateScheduleWildfireRecurringNoneArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetUpdateScheduleListDataUpdateScheduleWildfireRecurringRealTimeInput)(nil)).Elem(), GetUpdateScheduleListDataUpdateScheduleWildfireRecurringRealTimeArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetUpdateScheduleUpdateScheduleInput)(nil)).Elem(), GetUpdateScheduleUpdateScheduleArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetUpdateScheduleUpdateScheduleAntiVirusInput)(nil)).Elem(), GetUpdateScheduleUpdateScheduleAntiVirusArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetUpdateScheduleUpdateScheduleAntiVirusRecurringInput)(nil)).Elem(), GetUpdateScheduleUpdateScheduleAntiVirusRecurringArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetUpdateScheduleUpdateScheduleAntiVirusRecurringDailyInput)(nil)).Elem(), GetUpdateScheduleUpdateScheduleAntiVirusRecurringDailyArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetUpdateScheduleUpdateScheduleAntiVirusRecurringHourlyInput)(nil)).Elem(), GetUpdateScheduleUpdateScheduleAntiVirusRecurringHourlyArgs{})
@@ -18990,6 +24305,7 @@ func init() {
 	pulumi.RegisterInputType(reflect.TypeOf((*GetUseridMatchListListDataArrayInput)(nil)).Elem(), GetUseridMatchListListDataArray{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetVariableListDataInput)(nil)).Elem(), GetVariableListDataArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetVariableListDataArrayInput)(nil)).Elem(), GetVariableListDataArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetVlanInterfaceAdjustTcpMssInput)(nil)).Elem(), GetVlanInterfaceAdjustTcpMssArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetVlanInterfaceArpInput)(nil)).Elem(), GetVlanInterfaceArpArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetVlanInterfaceArpArrayInput)(nil)).Elem(), GetVlanInterfaceArpArray{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetVlanInterfaceDdnsConfigInput)(nil)).Elem(), GetVlanInterfaceDdnsConfigArgs{})
@@ -18999,6 +24315,7 @@ func init() {
 	pulumi.RegisterInputType(reflect.TypeOf((*GetVlanInterfaceIpArrayInput)(nil)).Elem(), GetVlanInterfaceIpArray{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetVlanInterfaceListDataInput)(nil)).Elem(), GetVlanInterfaceListDataArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetVlanInterfaceListDataArrayInput)(nil)).Elem(), GetVlanInterfaceListDataArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetVlanInterfaceListDataAdjustTcpMssInput)(nil)).Elem(), GetVlanInterfaceListDataAdjustTcpMssArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetVlanInterfaceListDataArpInput)(nil)).Elem(), GetVlanInterfaceListDataArpArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetVlanInterfaceListDataArpArrayInput)(nil)).Elem(), GetVlanInterfaceListDataArpArray{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetVlanInterfaceListDataDdnsConfigInput)(nil)).Elem(), GetVlanInterfaceListDataDdnsConfigArgs{})
@@ -19226,6 +24543,83 @@ func init() {
 	pulumi.RegisterInputType(reflect.TypeOf((*GetZoneProtectionProfileScanWhiteListInput)(nil)).Elem(), GetZoneProtectionProfileScanWhiteListArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetZoneProtectionProfileScanWhiteListArrayInput)(nil)).Elem(), GetZoneProtectionProfileScanWhiteListArray{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetZoneUserAclInput)(nil)).Elem(), GetZoneUserAclArgs{})
+	pulumi.RegisterOutputType(GetSyslogServerProfileListDataFormatEscapingOutput{})
+	pulumi.RegisterOutputType(GetSyslogServerProfileListDataServerOutput{})
+	pulumi.RegisterOutputType(GetSyslogServerProfileListDataServerArrayOutput{})
+	pulumi.RegisterOutputType(GetSyslogServerProfileServerOutput{})
+	pulumi.RegisterOutputType(GetSyslogServerProfileServerArrayOutput{})
+	pulumi.RegisterOutputType(GetSystemMatchListListDataOutput{})
+	pulumi.RegisterOutputType(GetSystemMatchListListDataArrayOutput{})
+	pulumi.RegisterOutputType(GetTacacsServerProfileListDataOutput{})
+	pulumi.RegisterOutputType(GetTacacsServerProfileListDataArrayOutput{})
+	pulumi.RegisterOutputType(GetTacacsServerProfileListDataServerOutput{})
+	pulumi.RegisterOutputType(GetTacacsServerProfileListDataServerArrayOutput{})
+	pulumi.RegisterOutputType(GetTacacsServerProfileServerOutput{})
+	pulumi.RegisterOutputType(GetTacacsServerProfileServerArrayOutput{})
+	pulumi.RegisterOutputType(GetTagListDataOutput{})
+	pulumi.RegisterOutputType(GetTagListDataArrayOutput{})
+	pulumi.RegisterOutputType(GetTcpSettingListDataOutput{})
+	pulumi.RegisterOutputType(GetTcpSettingListDataArrayOutput{})
+	pulumi.RegisterOutputType(GetTcpSettingListDataTcpOutput{})
+	pulumi.RegisterOutputType(GetTcpSettingTcpOutput{})
+	pulumi.RegisterOutputType(GetTlsServiceProfileListDataOutput{})
+	pulumi.RegisterOutputType(GetTlsServiceProfileListDataArrayOutput{})
+	pulumi.RegisterOutputType(GetTlsServiceProfileListDataProtocolSettingsOutput{})
+	pulumi.RegisterOutputType(GetTlsServiceProfileProtocolSettingsOutput{})
+	pulumi.RegisterOutputType(GetTrafficSteeringRuleActionOutput{})
+	pulumi.RegisterOutputType(GetTrafficSteeringRuleActionForwardOutput{})
+	pulumi.RegisterOutputType(GetTrafficSteeringRuleActionForwardForwardOutput{})
+	pulumi.RegisterOutputType(GetTrafficSteeringRuleActionForwardNoPbfOutput{})
+	pulumi.RegisterOutputType(GetTrafficSteeringRuleListDataOutput{})
+	pulumi.RegisterOutputType(GetTrafficSteeringRuleListDataArrayOutput{})
+	pulumi.RegisterOutputType(GetTrafficSteeringRuleListDataActionOutput{})
+	pulumi.RegisterOutputType(GetTrafficSteeringRuleListDataActionForwardOutput{})
+	pulumi.RegisterOutputType(GetTrafficSteeringRuleListDataActionForwardForwardOutput{})
+	pulumi.RegisterOutputType(GetTrafficSteeringRuleListDataActionForwardNoPbfOutput{})
+	pulumi.RegisterOutputType(GetTrustedTenantOverviewPublisherOutput{})
+	pulumi.RegisterOutputType(GetTrustedTenantOverviewSubscriberOutput{})
+	pulumi.RegisterOutputType(GetTunnelInterfaceIpOutput{})
+	pulumi.RegisterOutputType(GetTunnelInterfaceIpArrayOutput{})
+	pulumi.RegisterOutputType(GetTunnelInterfaceIpv6Output{})
+	pulumi.RegisterOutputType(GetTunnelInterfaceIpv6AddressOutput{})
+	pulumi.RegisterOutputType(GetTunnelInterfaceIpv6AddressArrayOutput{})
+	pulumi.RegisterOutputType(GetTunnelInterfaceIpv6AddressAnycastOutput{})
+	pulumi.RegisterOutputType(GetTunnelInterfaceIpv6AddressPrefixOutput{})
+	pulumi.RegisterOutputType(GetTunnelInterfaceListDataOutput{})
+	pulumi.RegisterOutputType(GetTunnelInterfaceListDataArrayOutput{})
+	pulumi.RegisterOutputType(GetTunnelInterfaceListDataIpOutput{})
+	pulumi.RegisterOutputType(GetTunnelInterfaceListDataIpArrayOutput{})
+	pulumi.RegisterOutputType(GetTunnelInterfaceListDataIpv6Output{})
+	pulumi.RegisterOutputType(GetTunnelInterfaceListDataIpv6AddressOutput{})
+	pulumi.RegisterOutputType(GetTunnelInterfaceListDataIpv6AddressArrayOutput{})
+	pulumi.RegisterOutputType(GetTunnelInterfaceListDataIpv6AddressAnycastOutput{})
+	pulumi.RegisterOutputType(GetTunnelInterfaceListDataIpv6AddressPrefixOutput{})
+	pulumi.RegisterOutputType(GetUpdateScheduleListDataOutput{})
+	pulumi.RegisterOutputType(GetUpdateScheduleListDataArrayOutput{})
+	pulumi.RegisterOutputType(GetUpdateScheduleListDataUpdateScheduleOutput{})
+	pulumi.RegisterOutputType(GetUpdateScheduleListDataUpdateScheduleAntiVirusOutput{})
+	pulumi.RegisterOutputType(GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringOutput{})
+	pulumi.RegisterOutputType(GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringDailyOutput{})
+	pulumi.RegisterOutputType(GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringHourlyOutput{})
+	pulumi.RegisterOutputType(GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringNoneOutput{})
+	pulumi.RegisterOutputType(GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringWeeklyOutput{})
+	pulumi.RegisterOutputType(GetUpdateScheduleListDataUpdateScheduleThreatsOutput{})
+	pulumi.RegisterOutputType(GetUpdateScheduleListDataUpdateScheduleThreatsRecurringOutput{})
+	pulumi.RegisterOutputType(GetUpdateScheduleListDataUpdateScheduleThreatsRecurringDailyOutput{})
+	pulumi.RegisterOutputType(GetUpdateScheduleListDataUpdateScheduleThreatsRecurringEvery30MinsOutput{})
+	pulumi.RegisterOutputType(GetUpdateScheduleListDataUpdateScheduleThreatsRecurringHourlyOutput{})
+	pulumi.RegisterOutputType(GetUpdateScheduleListDataUpdateScheduleThreatsRecurringNoneOutput{})
+	pulumi.RegisterOutputType(GetUpdateScheduleListDataUpdateScheduleThreatsRecurringWeeklyOutput{})
+	pulumi.RegisterOutputType(GetUpdateScheduleListDataUpdateScheduleWildfireOutput{})
+	pulumi.RegisterOutputType(GetUpdateScheduleListDataUpdateScheduleWildfireRecurringOutput{})
+	pulumi.RegisterOutputType(GetUpdateScheduleListDataUpdateScheduleWildfireRecurringEvery15MinsOutput{})
+	pulumi.RegisterOutputType(GetUpdateScheduleListDataUpdateScheduleWildfireRecurringEvery30MinsOutput{})
+	pulumi.RegisterOutputType(GetUpdateScheduleListDataUpdateScheduleWildfireRecurringEveryHourOutput{})
+	pulumi.RegisterOutputType(GetUpdateScheduleListDataUpdateScheduleWildfireRecurringEveryMinOutput{})
+	pulumi.RegisterOutputType(GetUpdateScheduleListDataUpdateScheduleWildfireRecurringNoneOutput{})
+	pulumi.RegisterOutputType(GetUpdateScheduleListDataUpdateScheduleWildfireRecurringRealTimeOutput{})
+	pulumi.RegisterOutputType(GetUpdateScheduleUpdateScheduleOutput{})
+	pulumi.RegisterOutputType(GetUpdateScheduleUpdateScheduleAntiVirusOutput{})
 	pulumi.RegisterOutputType(GetUpdateScheduleUpdateScheduleAntiVirusRecurringOutput{})
 	pulumi.RegisterOutputType(GetUpdateScheduleUpdateScheduleAntiVirusRecurringDailyOutput{})
 	pulumi.RegisterOutputType(GetUpdateScheduleUpdateScheduleAntiVirusRecurringHourlyOutput{})
@@ -19264,6 +24658,7 @@ func init() {
 	pulumi.RegisterOutputType(GetUseridMatchListListDataArrayOutput{})
 	pulumi.RegisterOutputType(GetVariableListDataOutput{})
 	pulumi.RegisterOutputType(GetVariableListDataArrayOutput{})
+	pulumi.RegisterOutputType(GetVlanInterfaceAdjustTcpMssOutput{})
 	pulumi.RegisterOutputType(GetVlanInterfaceArpOutput{})
 	pulumi.RegisterOutputType(GetVlanInterfaceArpArrayOutput{})
 	pulumi.RegisterOutputType(GetVlanInterfaceDdnsConfigOutput{})
@@ -19273,6 +24668,7 @@ func init() {
 	pulumi.RegisterOutputType(GetVlanInterfaceIpArrayOutput{})
 	pulumi.RegisterOutputType(GetVlanInterfaceListDataOutput{})
 	pulumi.RegisterOutputType(GetVlanInterfaceListDataArrayOutput{})
+	pulumi.RegisterOutputType(GetVlanInterfaceListDataAdjustTcpMssOutput{})
 	pulumi.RegisterOutputType(GetVlanInterfaceListDataArpOutput{})
 	pulumi.RegisterOutputType(GetVlanInterfaceListDataArpArrayOutput{})
 	pulumi.RegisterOutputType(GetVlanInterfaceListDataDdnsConfigOutput{})

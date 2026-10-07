@@ -5,6 +5,7 @@ package com.pulumi.scm.outputs;
 
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.scm.outputs.AggregateInterfaceLayer2Lacp;
+import com.pulumi.scm.outputs.AggregateInterfaceLayer2Lldp;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,6 +18,11 @@ public final class AggregateInterfaceLayer2 {
      * 
      */
     private @Nullable AggregateInterfaceLayer2Lacp lacp;
+    /**
+     * @return LLDP settings for the interface
+     * 
+     */
+    private @Nullable AggregateInterfaceLayer2Lldp lldp;
     /**
      * @return Name of Netflow Profile to assign to Interface
      * 
@@ -35,6 +41,13 @@ public final class AggregateInterfaceLayer2 {
      */
     public Optional<AggregateInterfaceLayer2Lacp> lacp() {
         return Optional.ofNullable(this.lacp);
+    }
+    /**
+     * @return LLDP settings for the interface
+     * 
+     */
+    public Optional<AggregateInterfaceLayer2Lldp> lldp() {
+        return Optional.ofNullable(this.lldp);
     }
     /**
      * @return Name of Netflow Profile to assign to Interface
@@ -61,12 +74,14 @@ public final class AggregateInterfaceLayer2 {
     @CustomType.Builder
     public static final class Builder {
         private @Nullable AggregateInterfaceLayer2Lacp lacp;
+        private @Nullable AggregateInterfaceLayer2Lldp lldp;
         private @Nullable String netflowProfile;
         private @Nullable String vlanTag;
         public Builder() {}
         public Builder(AggregateInterfaceLayer2 defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.lacp = defaults.lacp;
+    	      this.lldp = defaults.lldp;
     	      this.netflowProfile = defaults.netflowProfile;
     	      this.vlanTag = defaults.vlanTag;
         }
@@ -75,6 +90,12 @@ public final class AggregateInterfaceLayer2 {
         public Builder lacp(@Nullable AggregateInterfaceLayer2Lacp lacp) {
 
             this.lacp = lacp;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder lldp(@Nullable AggregateInterfaceLayer2Lldp lldp) {
+
+            this.lldp = lldp;
             return this;
         }
         @CustomType.Setter
@@ -92,6 +113,7 @@ public final class AggregateInterfaceLayer2 {
         public AggregateInterfaceLayer2 build() {
             final var _resultValue = new AggregateInterfaceLayer2();
             _resultValue.lacp = lacp;
+            _resultValue.lldp = lldp;
             _resultValue.netflowProfile = netflowProfile;
             _resultValue.vlanTag = vlanTag;
             return _resultValue;

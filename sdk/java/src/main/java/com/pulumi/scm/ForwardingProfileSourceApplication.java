@@ -137,14 +137,14 @@ public class ForwardingProfileSourceApplication extends com.pulumi.resources.Cus
         return Codegen.optional(this.description);
     }
     /**
-     * The folder in which the resource is defined
+     * The folder in which the resource is defined. Possible values are `Mobile Users`.
      * 
      */
     @Export(name="folder", refs={String.class}, tree="[0]")
     private Output<String> folder;
 
     /**
-     * @return The folder in which the resource is defined
+     * @return The folder in which the resource is defined. Possible values are `Mobile Users`.
      * 
      */
     public Output<String> folder() {

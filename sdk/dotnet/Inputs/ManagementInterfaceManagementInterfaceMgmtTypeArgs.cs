@@ -20,8 +20,6 @@ namespace Pulumi.Scm.Inputs
 
         /// <summary>
         /// Static
-        /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `DhcpClient` and `Static`.
         /// </summary>
         [Input("static")]
         public Input<Inputs.ManagementInterfaceManagementInterfaceMgmtTypeStaticArgs>? Static { get; set; }

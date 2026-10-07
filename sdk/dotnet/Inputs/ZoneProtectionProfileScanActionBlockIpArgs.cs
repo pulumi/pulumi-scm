@@ -19,7 +19,7 @@ namespace Pulumi.Scm.Inputs
         public Input<int> Duration { get; set; } = null!;
 
         /// <summary>
-        /// Track by
+        /// Track by. Possible values are `source-and-destination` and `Source`.
         /// </summary>
         [Input("trackBy", required: true)]
         public Input<string> TrackBy { get; set; } = null!;

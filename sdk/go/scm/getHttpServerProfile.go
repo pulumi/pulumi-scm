@@ -26,26 +26,36 @@ func LookupHttpServerProfile(ctx *pulumi.Context, args *LookupHttpServerProfileA
 type LookupHttpServerProfileArgs struct {
 	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
+	// The folder in which the resource is defined
 	Folder *string `pulumi:"folder"`
 	// The UUID of the HTTP server profile
-	Id      string  `pulumi:"id"`
-	Name    *string `pulumi:"name"`
+	Id string `pulumi:"id"`
+	// The name of the profile
+	Name *string `pulumi:"name"`
+	// The snippet in which the resource is defined
 	Snippet *string `pulumi:"snippet"`
 }
 
 // A collection of values returned by getHttpServerProfile.
 type LookupHttpServerProfileResult struct {
 	// The device in which the resource is defined
-	Device string                     `pulumi:"device"`
-	Folder string                     `pulumi:"folder"`
+	Device string `pulumi:"device"`
+	// The folder in which the resource is defined
+	Folder string `pulumi:"folder"`
+	// Format
 	Format GetHttpServerProfileFormat `pulumi:"format"`
 	// The UUID of the HTTP server profile
-	Id              string                       `pulumi:"id"`
-	Name            string                       `pulumi:"name"`
-	Servers         []GetHttpServerProfileServer `pulumi:"servers"`
-	Snippet         string                       `pulumi:"snippet"`
-	TagRegistration bool                         `pulumi:"tagRegistration"`
-	Tfid            string                       `pulumi:"tfid"`
+	Id string `pulumi:"id"`
+	// The name of the profile
+	Name string `pulumi:"name"`
+	// Server
+	Servers []GetHttpServerProfileServer `pulumi:"servers"`
+	// The snippet in which the resource is defined
+	Snippet string `pulumi:"snippet"`
+	// Register tags on match
+	TagRegistration bool `pulumi:"tagRegistration"`
+	// The Terraform ID.
+	Tfid string `pulumi:"tfid"`
 }
 
 func LookupHttpServerProfileOutput(ctx *pulumi.Context, args LookupHttpServerProfileOutputArgs, opts ...pulumi.InvokeOption) LookupHttpServerProfileResultOutput {
@@ -57,10 +67,13 @@ func LookupHttpServerProfileOutput(ctx *pulumi.Context, args LookupHttpServerPro
 type LookupHttpServerProfileOutputArgs struct {
 	// The device in which the resource is defined
 	Device pulumi.StringPtrInput `pulumi:"device"`
+	// The folder in which the resource is defined
 	Folder pulumi.StringPtrInput `pulumi:"folder"`
 	// The UUID of the HTTP server profile
-	Id      pulumi.StringInput    `pulumi:"id"`
-	Name    pulumi.StringPtrInput `pulumi:"name"`
+	Id pulumi.StringInput `pulumi:"id"`
+	// The name of the profile
+	Name pulumi.StringPtrInput `pulumi:"name"`
+	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrInput `pulumi:"snippet"`
 }
 
@@ -88,10 +101,12 @@ func (o LookupHttpServerProfileResultOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupHttpServerProfileResult) string { return v.Device }).(pulumi.StringOutput)
 }
 
+// The folder in which the resource is defined
 func (o LookupHttpServerProfileResultOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupHttpServerProfileResult) string { return v.Folder }).(pulumi.StringOutput)
 }
 
+// Format
 func (o LookupHttpServerProfileResultOutput) Format() GetHttpServerProfileFormatOutput {
 	return o.ApplyT(func(v LookupHttpServerProfileResult) GetHttpServerProfileFormat { return v.Format }).(GetHttpServerProfileFormatOutput)
 }
@@ -101,22 +116,27 @@ func (o LookupHttpServerProfileResultOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupHttpServerProfileResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
+// The name of the profile
 func (o LookupHttpServerProfileResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupHttpServerProfileResult) string { return v.Name }).(pulumi.StringOutput)
 }
 
+// Server
 func (o LookupHttpServerProfileResultOutput) Servers() GetHttpServerProfileServerArrayOutput {
 	return o.ApplyT(func(v LookupHttpServerProfileResult) []GetHttpServerProfileServer { return v.Servers }).(GetHttpServerProfileServerArrayOutput)
 }
 
+// The snippet in which the resource is defined
 func (o LookupHttpServerProfileResultOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupHttpServerProfileResult) string { return v.Snippet }).(pulumi.StringOutput)
 }
 
+// Register tags on match
 func (o LookupHttpServerProfileResultOutput) TagRegistration() pulumi.BoolOutput {
 	return o.ApplyT(func(v LookupHttpServerProfileResult) bool { return v.TagRegistration }).(pulumi.BoolOutput)
 }
 
+// The Terraform ID.
 func (o LookupHttpServerProfileResultOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupHttpServerProfileResult) string { return v.Tfid }).(pulumi.StringOutput)
 }

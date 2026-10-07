@@ -53,9 +53,11 @@ func LookupManagementInterface(ctx *pulumi.Context, args *LookupManagementInterf
 type LookupManagementInterfaceArgs struct {
 	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
+	// The folder in which the resource is defined
 	Folder *string `pulumi:"folder"`
 	// UUID of the resource
-	Id      string  `pulumi:"id"`
+	Id string `pulumi:"id"`
+	// The snippet in which the resource is defined
 	Snippet *string `pulumi:"snippet"`
 }
 
@@ -63,12 +65,16 @@ type LookupManagementInterfaceArgs struct {
 type LookupManagementInterfaceResult struct {
 	// The device in which the resource is defined
 	Device string `pulumi:"device"`
+	// The folder in which the resource is defined
 	Folder string `pulumi:"folder"`
 	// UUID of the resource
-	Id                  string                                    `pulumi:"id"`
+	Id string `pulumi:"id"`
+	// Management interface
 	ManagementInterface GetManagementInterfaceManagementInterface `pulumi:"managementInterface"`
-	Snippet             string                                    `pulumi:"snippet"`
-	Tfid                string                                    `pulumi:"tfid"`
+	// The snippet in which the resource is defined
+	Snippet string `pulumi:"snippet"`
+	// The Terraform ID.
+	Tfid string `pulumi:"tfid"`
 }
 
 func LookupManagementInterfaceOutput(ctx *pulumi.Context, args LookupManagementInterfaceOutputArgs, opts ...pulumi.InvokeOption) LookupManagementInterfaceResultOutput {
@@ -80,9 +86,11 @@ func LookupManagementInterfaceOutput(ctx *pulumi.Context, args LookupManagementI
 type LookupManagementInterfaceOutputArgs struct {
 	// The device in which the resource is defined
 	Device pulumi.StringPtrInput `pulumi:"device"`
+	// The folder in which the resource is defined
 	Folder pulumi.StringPtrInput `pulumi:"folder"`
 	// UUID of the resource
-	Id      pulumi.StringInput    `pulumi:"id"`
+	Id pulumi.StringInput `pulumi:"id"`
+	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrInput `pulumi:"snippet"`
 }
 
@@ -110,6 +118,7 @@ func (o LookupManagementInterfaceResultOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupManagementInterfaceResult) string { return v.Device }).(pulumi.StringOutput)
 }
 
+// The folder in which the resource is defined
 func (o LookupManagementInterfaceResultOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupManagementInterfaceResult) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -119,16 +128,19 @@ func (o LookupManagementInterfaceResultOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupManagementInterfaceResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
+// Management interface
 func (o LookupManagementInterfaceResultOutput) ManagementInterface() GetManagementInterfaceManagementInterfaceOutput {
 	return o.ApplyT(func(v LookupManagementInterfaceResult) GetManagementInterfaceManagementInterface {
 		return v.ManagementInterface
 	}).(GetManagementInterfaceManagementInterfaceOutput)
 }
 
+// The snippet in which the resource is defined
 func (o LookupManagementInterfaceResultOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupManagementInterfaceResult) string { return v.Snippet }).(pulumi.StringOutput)
 }
 
+// The Terraform ID.
 func (o LookupManagementInterfaceResultOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupManagementInterfaceResult) string { return v.Tfid }).(pulumi.StringOutput)
 }

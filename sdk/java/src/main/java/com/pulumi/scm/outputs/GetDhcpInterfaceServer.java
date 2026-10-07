@@ -20,7 +20,7 @@ public final class GetDhcpInterfaceServer {
      */
     private List<String> ipPools;
     /**
-     * @return DHCP server mode
+     * @return DHCP server mode. Possible values are `auto`, `enabled` and `disabled`.
      * 
      */
     private String mode;
@@ -49,7 +49,7 @@ public final class GetDhcpInterfaceServer {
         return this.ipPools;
     }
     /**
-     * @return DHCP server mode
+     * @return DHCP server mode. Possible values are `auto`, `enabled` and `disabled`.
      * 
      */
     public String mode() {

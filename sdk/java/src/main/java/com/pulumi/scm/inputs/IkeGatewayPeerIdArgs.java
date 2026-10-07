@@ -31,14 +31,14 @@ public final class IkeGatewayPeerIdArgs extends com.pulumi.resources.ResourceArg
     }
 
     /**
-     * Type
+     * Type. Possible values are `ipaddr`, `keyid`, `fqdn` and `ufqdn`.
      * 
      */
     @Import(name="type")
     private @Nullable Output<String> type;
 
     /**
-     * @return Type
+     * @return Type. Possible values are `ipaddr`, `keyid`, `fqdn` and `ufqdn`.
      * 
      */
     public Optional<Output<String>> type() {
@@ -92,7 +92,7 @@ public final class IkeGatewayPeerIdArgs extends com.pulumi.resources.ResourceArg
         }
 
         /**
-         * @param type Type
+         * @param type Type. Possible values are `ipaddr`, `keyid`, `fqdn` and `ufqdn`.
          * 
          * @return builder
          * 
@@ -103,7 +103,7 @@ public final class IkeGatewayPeerIdArgs extends com.pulumi.resources.ResourceArg
         }
 
         /**
-         * @param type Type
+         * @param type Type. Possible values are `ipaddr`, `keyid`, `fqdn` and `ufqdn`.
          * 
          * @return builder
          * 

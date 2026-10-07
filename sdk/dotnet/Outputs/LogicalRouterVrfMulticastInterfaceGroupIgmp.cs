@@ -38,7 +38,7 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly string? MaxSources;
         /// <summary>
-        /// Mode
+        /// Mode. Possible values are `Router` and `Host`.
         /// </summary>
         public readonly string? Mode;
         /// <summary>
@@ -46,7 +46,7 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly int? QueryInterval;
         /// <summary>
-        /// Robustness
+        /// Robustness. Possible values are `1`, `2`, `3`, `4`, `5`, `6` and `7`.
         /// </summary>
         public readonly string? Robustness;
         /// <summary>
@@ -54,7 +54,7 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly bool? RouterAlertPolicing;
         /// <summary>
-        /// Version
+        /// Version. Possible values are `1`, `2` and `3`.
         /// </summary>
         public readonly string? Version;
 

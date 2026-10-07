@@ -34,7 +34,7 @@ public final class GetDataFilteringProfileListData {
      */
     private String disableOverride;
     /**
-     * @return The folder of the item. Default: Shared.
+     * @return The folder in which the resource is defined
      * 
      */
     private String folder;
@@ -44,7 +44,7 @@ public final class GetDataFilteringProfileListData {
      */
     private String id;
     /**
-     * @return The name of the item.
+     * @return The name of the data filtering profile
      * 
      */
     private String name;
@@ -54,7 +54,7 @@ public final class GetDataFilteringProfileListData {
      */
     private List<GetDataFilteringProfileListDataRule> rules;
     /**
-     * @return The snippet of the item.
+     * @return The snippet in which the resource is defined
      * 
      */
     private String snippet;
@@ -94,7 +94,7 @@ public final class GetDataFilteringProfileListData {
         return this.disableOverride;
     }
     /**
-     * @return The folder of the item. Default: Shared.
+     * @return The folder in which the resource is defined
      * 
      */
     public String folder() {
@@ -108,7 +108,7 @@ public final class GetDataFilteringProfileListData {
         return this.id;
     }
     /**
-     * @return The name of the item.
+     * @return The name of the data filtering profile
      * 
      */
     public String name() {
@@ -122,7 +122,7 @@ public final class GetDataFilteringProfileListData {
         return this.rules;
     }
     /**
-     * @return The snippet of the item.
+     * @return The snippet in which the resource is defined
      * 
      */
     public String snippet() {

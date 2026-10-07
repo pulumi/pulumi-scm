@@ -19,8 +19,6 @@ public final class GetBgpAddressFamilyProfileListDataIpv4UnicastMaximumPrefixAct
     /**
      * @return Warning only
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `restart` and `warningOnly`.
-     * 
      */
     private GetBgpAddressFamilyProfileListDataIpv4UnicastMaximumPrefixActionWarningOnly warningOnly;
 
@@ -34,8 +32,6 @@ public final class GetBgpAddressFamilyProfileListDataIpv4UnicastMaximumPrefixAct
     }
     /**
      * @return Warning only
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `restart` and `warningOnly`.
      * 
      */
     public GetBgpAddressFamilyProfileListDataIpv4UnicastMaximumPrefixActionWarningOnly warningOnly() {

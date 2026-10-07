@@ -126,22 +126,14 @@ type AddressGroup struct {
 	// The device in which the resource is defined
 	Device pulumi.StringPtrOutput `pulumi:"device"`
 	// Dynamic
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `dynamic` and `static`.
 	Dynamic AddressGroupDynamicPtrOutput `pulumi:"dynamic"`
 	// The folder in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrOutput `pulumi:"folder"`
 	// The name of the address group
 	Name pulumi.StringOutput `pulumi:"name"`
 	// The snippet in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
 	// Static
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `dynamic` and `static`.
 	Statics pulumi.StringArrayOutput `pulumi:"statics"`
 	// Tags for address group object
 	Tags pulumi.StringArrayOutput `pulumi:"tags"`
@@ -184,22 +176,14 @@ type addressGroupState struct {
 	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
 	// Dynamic
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `dynamic` and `static`.
 	Dynamic *AddressGroupDynamic `pulumi:"dynamic"`
 	// The folder in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// The name of the address group
 	Name *string `pulumi:"name"`
 	// The snippet in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	// Static
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `dynamic` and `static`.
 	Statics []string `pulumi:"statics"`
 	// Tags for address group object
 	Tags []string `pulumi:"tags"`
@@ -213,22 +197,14 @@ type AddressGroupState struct {
 	// The device in which the resource is defined
 	Device pulumi.StringPtrInput
 	// Dynamic
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `dynamic` and `static`.
 	Dynamic AddressGroupDynamicPtrInput
 	// The folder in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// The name of the address group
 	Name pulumi.StringPtrInput
 	// The snippet in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	// Static
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `dynamic` and `static`.
 	Statics pulumi.StringArrayInput
 	// Tags for address group object
 	Tags pulumi.StringArrayInput
@@ -246,22 +222,14 @@ type addressGroupArgs struct {
 	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
 	// Dynamic
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `dynamic` and `static`.
 	Dynamic *AddressGroupDynamic `pulumi:"dynamic"`
 	// The folder in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// The name of the address group
 	Name *string `pulumi:"name"`
 	// The snippet in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	// Static
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `dynamic` and `static`.
 	Statics []string `pulumi:"statics"`
 	// Tags for address group object
 	Tags []string `pulumi:"tags"`
@@ -274,22 +242,14 @@ type AddressGroupArgs struct {
 	// The device in which the resource is defined
 	Device pulumi.StringPtrInput
 	// Dynamic
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `dynamic` and `static`.
 	Dynamic AddressGroupDynamicPtrInput
 	// The folder in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// The name of the address group
 	Name pulumi.StringPtrInput
 	// The snippet in which the resource is defined
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	// Static
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `dynamic` and `static`.
 	Statics pulumi.StringArrayInput
 	// Tags for address group object
 	Tags pulumi.StringArrayInput
@@ -393,15 +353,11 @@ func (o AddressGroupOutput) Device() pulumi.StringPtrOutput {
 }
 
 // Dynamic
-//
-// > ℹ️ **Note:** You must specify exactly one of `dynamic` and `static`.
 func (o AddressGroupOutput) Dynamic() AddressGroupDynamicPtrOutput {
 	return o.ApplyT(func(v *AddressGroup) AddressGroupDynamicPtrOutput { return v.Dynamic }).(AddressGroupDynamicPtrOutput)
 }
 
 // The folder in which the resource is defined
-//
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o AddressGroupOutput) Folder() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *AddressGroup) pulumi.StringPtrOutput { return v.Folder }).(pulumi.StringPtrOutput)
 }
@@ -412,15 +368,11 @@ func (o AddressGroupOutput) Name() pulumi.StringOutput {
 }
 
 // The snippet in which the resource is defined
-//
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o AddressGroupOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *AddressGroup) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)
 }
 
 // Static
-//
-// > ℹ️ **Note:** You must specify exactly one of `dynamic` and `static`.
 func (o AddressGroupOutput) Statics() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v *AddressGroup) pulumi.StringArrayOutput { return v.Statics }).(pulumi.StringArrayOutput)
 }

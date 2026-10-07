@@ -34,7 +34,7 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly Outputs.GetLogicalRouterVrfRipInterfaceInterfaceOutboundDistributeListResult InterfaceOutboundDistributeList;
         /// <summary>
-        /// Mode
+        /// Mode. Possible values are `Active`, `Passive` and `send-only`.
         /// </summary>
         public readonly string Mode;
         /// <summary>
@@ -42,7 +42,7 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly string Name;
         /// <summary>
-        /// Split horizon
+        /// Split horizon. Possible values are `split-horizon`, `no-split-horizon` and `no-split-horizon-with-poison-reverse`.
         /// </summary>
         public readonly string SplitHorizon;
 

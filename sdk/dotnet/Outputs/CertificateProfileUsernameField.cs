@@ -14,11 +14,11 @@ namespace Pulumi.Scm.Outputs
     public sealed class CertificateProfileUsernameField
     {
         /// <summary>
-        /// Common name
+        /// Common name. Possible values are `common-name`.
         /// </summary>
         public readonly string? Subject;
         /// <summary>
-        /// Email address
+        /// Email address. Possible values are `Email`.
         /// </summary>
         public readonly string? SubjectAlt;
 

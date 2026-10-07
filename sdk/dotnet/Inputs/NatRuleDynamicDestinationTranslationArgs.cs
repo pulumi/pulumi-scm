@@ -13,7 +13,7 @@ namespace Pulumi.Scm.Inputs
     public sealed class NatRuleDynamicDestinationTranslationArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Distribution method
+        /// Distribution method. Possible values are `round-robin`, `source-ip-hash`, `ip-modulo`, `ip-hash` and `least-sessions`.
         /// </summary>
         [Input("distribution")]
         public Input<string>? Distribution { get; set; }

@@ -60,28 +60,40 @@ func LookupTacacsServerProfile(ctx *pulumi.Context, args *LookupTacacsServerProf
 type LookupTacacsServerProfileArgs struct {
 	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
+	// The folder in which the resource is defined
 	Folder *string `pulumi:"folder"`
 	// The UUID of the TACACS+ server profile
-	Id      string  `pulumi:"id"`
-	Name    *string `pulumi:"name"`
+	Id string `pulumi:"id"`
+	// The name of the TACACS+ server profile
+	Name *string `pulumi:"name"`
+	// The snippet in which the resource is defined
 	Snippet *string `pulumi:"snippet"`
 }
 
 // A collection of values returned by getTacacsServerProfile.
 type LookupTacacsServerProfileResult struct {
 	// The device in which the resource is defined
-	Device          string            `pulumi:"device"`
+	Device string `pulumi:"device"`
+	// Map of sensitive values returned from the API.
 	EncryptedValues map[string]string `pulumi:"encryptedValues"`
-	Folder          string            `pulumi:"folder"`
+	// The folder in which the resource is defined
+	Folder string `pulumi:"folder"`
 	// The UUID of the TACACS+ server profile
-	Id                  string                         `pulumi:"id"`
-	Name                string                         `pulumi:"name"`
-	Protocol            string                         `pulumi:"protocol"`
-	Servers             []GetTacacsServerProfileServer `pulumi:"servers"`
-	Snippet             string                         `pulumi:"snippet"`
-	Tfid                string                         `pulumi:"tfid"`
-	Timeout             int                            `pulumi:"timeout"`
-	UseSingleConnection bool                           `pulumi:"useSingleConnection"`
+	Id string `pulumi:"id"`
+	// The name of the TACACS+ server profile
+	Name string `pulumi:"name"`
+	// The TACACS+ authentication protocol. Possible values are `CHAP` and `PAP`.
+	Protocol string `pulumi:"protocol"`
+	// The TACACS+ server configuration
+	Servers []GetTacacsServerProfileServer `pulumi:"servers"`
+	// The snippet in which the resource is defined
+	Snippet string `pulumi:"snippet"`
+	// The Terraform ID.
+	Tfid string `pulumi:"tfid"`
+	// The TACACS+ timeout (seconds)
+	Timeout int `pulumi:"timeout"`
+	// Use a single TACACS+ connection?
+	UseSingleConnection bool `pulumi:"useSingleConnection"`
 }
 
 func LookupTacacsServerProfileOutput(ctx *pulumi.Context, args LookupTacacsServerProfileOutputArgs, opts ...pulumi.InvokeOption) LookupTacacsServerProfileResultOutput {
@@ -93,10 +105,13 @@ func LookupTacacsServerProfileOutput(ctx *pulumi.Context, args LookupTacacsServe
 type LookupTacacsServerProfileOutputArgs struct {
 	// The device in which the resource is defined
 	Device pulumi.StringPtrInput `pulumi:"device"`
+	// The folder in which the resource is defined
 	Folder pulumi.StringPtrInput `pulumi:"folder"`
 	// The UUID of the TACACS+ server profile
-	Id      pulumi.StringInput    `pulumi:"id"`
-	Name    pulumi.StringPtrInput `pulumi:"name"`
+	Id pulumi.StringInput `pulumi:"id"`
+	// The name of the TACACS+ server profile
+	Name pulumi.StringPtrInput `pulumi:"name"`
+	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrInput `pulumi:"snippet"`
 }
 
@@ -124,10 +139,12 @@ func (o LookupTacacsServerProfileResultOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupTacacsServerProfileResult) string { return v.Device }).(pulumi.StringOutput)
 }
 
+// Map of sensitive values returned from the API.
 func (o LookupTacacsServerProfileResultOutput) EncryptedValues() pulumi.StringMapOutput {
 	return o.ApplyT(func(v LookupTacacsServerProfileResult) map[string]string { return v.EncryptedValues }).(pulumi.StringMapOutput)
 }
 
+// The folder in which the resource is defined
 func (o LookupTacacsServerProfileResultOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupTacacsServerProfileResult) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -137,30 +154,37 @@ func (o LookupTacacsServerProfileResultOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupTacacsServerProfileResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
+// The name of the TACACS+ server profile
 func (o LookupTacacsServerProfileResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupTacacsServerProfileResult) string { return v.Name }).(pulumi.StringOutput)
 }
 
+// The TACACS+ authentication protocol. Possible values are `CHAP` and `PAP`.
 func (o LookupTacacsServerProfileResultOutput) Protocol() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupTacacsServerProfileResult) string { return v.Protocol }).(pulumi.StringOutput)
 }
 
+// The TACACS+ server configuration
 func (o LookupTacacsServerProfileResultOutput) Servers() GetTacacsServerProfileServerArrayOutput {
 	return o.ApplyT(func(v LookupTacacsServerProfileResult) []GetTacacsServerProfileServer { return v.Servers }).(GetTacacsServerProfileServerArrayOutput)
 }
 
+// The snippet in which the resource is defined
 func (o LookupTacacsServerProfileResultOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupTacacsServerProfileResult) string { return v.Snippet }).(pulumi.StringOutput)
 }
 
+// The Terraform ID.
 func (o LookupTacacsServerProfileResultOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupTacacsServerProfileResult) string { return v.Tfid }).(pulumi.StringOutput)
 }
 
+// The TACACS+ timeout (seconds)
 func (o LookupTacacsServerProfileResultOutput) Timeout() pulumi.IntOutput {
 	return o.ApplyT(func(v LookupTacacsServerProfileResult) int { return v.Timeout }).(pulumi.IntOutput)
 }
 
+// Use a single TACACS+ connection?
 func (o LookupTacacsServerProfileResultOutput) UseSingleConnection() pulumi.BoolOutput {
 	return o.ApplyT(func(v LookupTacacsServerProfileResult) bool { return v.UseSingleConnection }).(pulumi.BoolOutput)
 }

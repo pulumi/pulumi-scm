@@ -18,7 +18,7 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly Outputs.GetBgpRouteMapRedistributionConnectedStaticOspfRouteMapSetMetricResult Metric;
         /// <summary>
-        /// Connected Static BGP OSPF Route map set Metric type
+        /// Connected Static BGP OSPF Route map set Metric type. Possible values are `type-1` and `type-2`.
         /// </summary>
         public readonly string MetricType;
         /// <summary>

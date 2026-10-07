@@ -42,7 +42,7 @@ public final class GetLogicalRouterVrfMulticast {
      */
     private List<GetLogicalRouterVrfMulticastInterfaceGroup> interfaceGroups;
     /**
-     * @return Mode
+     * @return Mode. Possible values are `PIM-SM` and `IGMP-Proxy`.
      * 
      */
     private String mode;
@@ -112,7 +112,7 @@ public final class GetLogicalRouterVrfMulticast {
         return this.interfaceGroups;
     }
     /**
-     * @return Mode
+     * @return Mode. Possible values are `PIM-SM` and `IGMP-Proxy`.
      * 
      */
     public String mode() {

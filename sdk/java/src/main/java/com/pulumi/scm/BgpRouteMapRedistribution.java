@@ -62,16 +62,12 @@ public class BgpRouteMapRedistribution extends com.pulumi.resources.CustomResour
     /**
      * Connected static
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `bgp`, `connectedStatic`, and `ospf`.
-     * 
      */
     @Export(name="connectedStatic", refs={BgpRouteMapRedistributionConnectedStatic.class}, tree="[0]")
     private Output</* @Nullable */ BgpRouteMapRedistributionConnectedStatic> connectedStatic;
 
     /**
      * @return Connected static
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `bgp`, `connectedStatic`, and `ospf`.
      * 
      */
     public Output<Optional<BgpRouteMapRedistributionConnectedStatic>> connectedStatic() {
@@ -94,16 +90,12 @@ public class BgpRouteMapRedistribution extends com.pulumi.resources.CustomResour
     /**
      * The device in which the resource is defined
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
      */
     @Export(name="device", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> device;
 
     /**
      * @return The device in which the resource is defined
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public Output<Optional<String>> device() {
@@ -112,16 +104,12 @@ public class BgpRouteMapRedistribution extends com.pulumi.resources.CustomResour
     /**
      * The folder in which the resource is defined
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
      */
     @Export(name="folder", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> folder;
 
     /**
      * @return The folder in which the resource is defined
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public Output<Optional<String>> folder() {
@@ -144,16 +132,12 @@ public class BgpRouteMapRedistribution extends com.pulumi.resources.CustomResour
     /**
      * Ospf
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `bgp`, `connectedStatic`, and `ospf`.
-     * 
      */
     @Export(name="ospf", refs={BgpRouteMapRedistributionOspf.class}, tree="[0]")
     private Output</* @Nullable */ BgpRouteMapRedistributionOspf> ospf;
 
     /**
      * @return Ospf
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `bgp`, `connectedStatic`, and `ospf`.
      * 
      */
     public Output<Optional<BgpRouteMapRedistributionOspf>> ospf() {
@@ -162,16 +146,12 @@ public class BgpRouteMapRedistribution extends com.pulumi.resources.CustomResour
     /**
      * The snippet in which the resource is defined
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
      */
     @Export(name="snippet", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> snippet;
 
     /**
      * @return The snippet in which the resource is defined
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public Output<Optional<String>> snippet() {

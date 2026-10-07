@@ -23,7 +23,7 @@ public final class AntiSpywareSignatureSignatureCombinationTimeAttribute {
      */
     private @Nullable Integer threshold;
     /**
-     * @return Track by
+     * @return Track by. Possible values are `source-and-destination`, `source` and `destination`.
      * 
      */
     private @Nullable String trackBy;
@@ -44,7 +44,7 @@ public final class AntiSpywareSignatureSignatureCombinationTimeAttribute {
         return Optional.ofNullable(this.threshold);
     }
     /**
-     * @return Track by
+     * @return Track by. Possible values are `source-and-destination`, `source` and `destination`.
      * 
      */
     public Optional<String> trackBy() {

@@ -4,11 +4,13 @@
 package com.pulumi.scm.outputs;
 
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.scm.outputs.AggregateInterfaceLayer3AdjustTcpMss;
 import com.pulumi.scm.outputs.AggregateInterfaceLayer3Arp;
 import com.pulumi.scm.outputs.AggregateInterfaceLayer3DdnsConfig;
 import com.pulumi.scm.outputs.AggregateInterfaceLayer3DhcpClient;
 import com.pulumi.scm.outputs.AggregateInterfaceLayer3Ip;
 import com.pulumi.scm.outputs.AggregateInterfaceLayer3Lacp;
+import com.pulumi.scm.outputs.AggregateInterfaceLayer3Lldp;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -18,6 +20,11 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class AggregateInterfaceLayer3 {
+    /**
+     * @return TCP MSS adjustment settings for the interface
+     * 
+     */
+    private @Nullable AggregateInterfaceLayer3AdjustTcpMss adjustTcpMss;
     /**
      * @return Aggregate Ethernet ARP configuration
      * 
@@ -41,8 +48,6 @@ public final class AggregateInterfaceLayer3 {
     /**
      * @return Aggregate Interface IP addresses
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
-     * 
      */
     private @Nullable List<AggregateInterfaceLayer3Ip> ips;
     /**
@@ -50,6 +55,11 @@ public final class AggregateInterfaceLayer3 {
      * 
      */
     private @Nullable AggregateInterfaceLayer3Lacp lacp;
+    /**
+     * @return LLDP settings for the interface
+     * 
+     */
+    private @Nullable AggregateInterfaceLayer3Lldp lldp;
     /**
      * @return MTU
      * 
@@ -62,6 +72,13 @@ public final class AggregateInterfaceLayer3 {
     private @Nullable String netflowProfile;
 
     private AggregateInterfaceLayer3() {}
+    /**
+     * @return TCP MSS adjustment settings for the interface
+     * 
+     */
+    public Optional<AggregateInterfaceLayer3AdjustTcpMss> adjustTcpMss() {
+        return Optional.ofNullable(this.adjustTcpMss);
+    }
     /**
      * @return Aggregate Ethernet ARP configuration
      * 
@@ -93,8 +110,6 @@ public final class AggregateInterfaceLayer3 {
     /**
      * @return Aggregate Interface IP addresses
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
-     * 
      */
     public List<AggregateInterfaceLayer3Ip> ips() {
         return this.ips == null ? List.of() : this.ips;
@@ -105,6 +120,13 @@ public final class AggregateInterfaceLayer3 {
      */
     public Optional<AggregateInterfaceLayer3Lacp> lacp() {
         return Optional.ofNullable(this.lacp);
+    }
+    /**
+     * @return LLDP settings for the interface
+     * 
+     */
+    public Optional<AggregateInterfaceLayer3Lldp> lldp() {
+        return Optional.ofNullable(this.lldp);
     }
     /**
      * @return MTU
@@ -130,27 +152,37 @@ public final class AggregateInterfaceLayer3 {
     }
     @CustomType.Builder
     public static final class Builder {
+        private @Nullable AggregateInterfaceLayer3AdjustTcpMss adjustTcpMss;
         private @Nullable List<AggregateInterfaceLayer3Arp> arps;
         private @Nullable AggregateInterfaceLayer3DdnsConfig ddnsConfig;
         private @Nullable AggregateInterfaceLayer3DhcpClient dhcpClient;
         private @Nullable String interfaceManagementProfile;
         private @Nullable List<AggregateInterfaceLayer3Ip> ips;
         private @Nullable AggregateInterfaceLayer3Lacp lacp;
+        private @Nullable AggregateInterfaceLayer3Lldp lldp;
         private @Nullable Integer mtu;
         private @Nullable String netflowProfile;
         public Builder() {}
         public Builder(AggregateInterfaceLayer3 defaults) {
     	      Objects.requireNonNull(defaults);
+    	      this.adjustTcpMss = defaults.adjustTcpMss;
     	      this.arps = defaults.arps;
     	      this.ddnsConfig = defaults.ddnsConfig;
     	      this.dhcpClient = defaults.dhcpClient;
     	      this.interfaceManagementProfile = defaults.interfaceManagementProfile;
     	      this.ips = defaults.ips;
     	      this.lacp = defaults.lacp;
+    	      this.lldp = defaults.lldp;
     	      this.mtu = defaults.mtu;
     	      this.netflowProfile = defaults.netflowProfile;
         }
 
+        @CustomType.Setter
+        public Builder adjustTcpMss(@Nullable AggregateInterfaceLayer3AdjustTcpMss adjustTcpMss) {
+
+            this.adjustTcpMss = adjustTcpMss;
+            return this;
+        }
         @CustomType.Setter
         public Builder arps(@Nullable List<AggregateInterfaceLayer3Arp> arps) {
 
@@ -194,6 +226,12 @@ public final class AggregateInterfaceLayer3 {
             return this;
         }
         @CustomType.Setter
+        public Builder lldp(@Nullable AggregateInterfaceLayer3Lldp lldp) {
+
+            this.lldp = lldp;
+            return this;
+        }
+        @CustomType.Setter
         public Builder mtu(@Nullable Integer mtu) {
 
             this.mtu = mtu;
@@ -207,12 +245,14 @@ public final class AggregateInterfaceLayer3 {
         }
         public AggregateInterfaceLayer3 build() {
             final var _resultValue = new AggregateInterfaceLayer3();
+            _resultValue.adjustTcpMss = adjustTcpMss;
             _resultValue.arps = arps;
             _resultValue.ddnsConfig = ddnsConfig;
             _resultValue.dhcpClient = dhcpClient;
             _resultValue.interfaceManagementProfile = interfaceManagementProfile;
             _resultValue.ips = ips;
             _resultValue.lacp = lacp;
+            _resultValue.lldp = lldp;
             _resultValue.mtu = mtu;
             _resultValue.netflowProfile = netflowProfile;
             return _resultValue;

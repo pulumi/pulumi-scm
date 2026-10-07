@@ -127,14 +127,14 @@ public final class BgpRouteMapRedistributionOspfBgpRouteMapSetArgs extends com.p
     }
 
     /**
-     * OSPF BGP Route maps set Origin
+     * OSPF BGP Route maps set Origin. Possible values are `none`, `egp`, `igp` and `incomplete`.
      * 
      */
     @Import(name="origin")
     private @Nullable Output<String> origin;
 
     /**
-     * @return OSPF BGP Route maps set Origin
+     * @return OSPF BGP Route maps set Origin. Possible values are `none`, `egp`, `igp` and `incomplete`.
      * 
      */
     public Optional<Output<String>> origin() {
@@ -404,7 +404,7 @@ public final class BgpRouteMapRedistributionOspfBgpRouteMapSetArgs extends com.p
         }
 
         /**
-         * @param origin OSPF BGP Route maps set Origin
+         * @param origin OSPF BGP Route maps set Origin. Possible values are `none`, `egp`, `igp` and `incomplete`.
          * 
          * @return builder
          * 
@@ -415,7 +415,7 @@ public final class BgpRouteMapRedistributionOspfBgpRouteMapSetArgs extends com.p
         }
 
         /**
-         * @param origin OSPF BGP Route maps set Origin
+         * @param origin OSPF BGP Route maps set Origin. Possible values are `none`, `egp`, `igp` and `incomplete`.
          * 
          * @return builder
          * 

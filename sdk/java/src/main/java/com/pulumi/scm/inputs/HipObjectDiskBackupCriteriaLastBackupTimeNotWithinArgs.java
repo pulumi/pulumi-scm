@@ -33,16 +33,12 @@ public final class HipObjectDiskBackupCriteriaLastBackupTimeNotWithinArgs extend
     /**
      * specify time in hours
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `days` and `hours`.
-     * 
      */
     @Import(name="hours")
     private @Nullable Output<Integer> hours;
 
     /**
      * @return specify time in hours
-     * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `days` and `hours`.
      * 
      */
     public Optional<Output<Integer>> hours() {
@@ -98,8 +94,6 @@ public final class HipObjectDiskBackupCriteriaLastBackupTimeNotWithinArgs extend
         /**
          * @param hours specify time in hours
          * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `days` and `hours`.
-         * 
          * @return builder
          * 
          */
@@ -110,8 +104,6 @@ public final class HipObjectDiskBackupCriteriaLastBackupTimeNotWithinArgs extend
 
         /**
          * @param hours specify time in hours
-         * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `days` and `hours`.
          * 
          * @return builder
          * 
