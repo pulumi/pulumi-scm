@@ -24,7 +24,7 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     // This data source will call the "ListAddresses" API endpoint
+        ///     // This function will call the "ListAddresses" API endpoint
         ///     // and return all filters in the "All" folder.
         ///     // 1. Use a single data block to fetch ALL addresses in the "All" folder.
         ///     var allShared = Scm.GetAddressGroupList.Invoke(new()
@@ -43,10 +43,10 @@ namespace Pulumi.Scm
         ///     {
         ///         ["addressGroupsDataSourceResultsFromList"] = ,
         ///         ["paginatedAddressGroups"] = ,
-        ///         ["paginationAddressGroupsDetails"] = 
+        ///         ["paginationAddressGroupsDetails"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "totalObjectsInFolder", paginatedAddressGroupsExample.Apply(getAddressGroupListResult =&gt; getAddressGroupListResult.Total) },
-        ///             { "limitUsed", paginatedAddressGroupsExample.Apply(getAddressGroupListResult =&gt; getAddressGroupListResult.Limit) },
+        ///             ["totalObjectsInFolder"] = paginatedAddressGroupsExample.Apply(getAddressGroupListResult =&gt; getAddressGroupListResult.Total),
+        ///             ["limitUsed"] = paginatedAddressGroupsExample.Apply(getAddressGroupListResult =&gt; getAddressGroupListResult.Limit),
         ///         },
         ///     };
         /// });
@@ -68,7 +68,7 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     // This data source will call the "ListAddresses" API endpoint
+        ///     // This function will call the "ListAddresses" API endpoint
         ///     // and return all filters in the "All" folder.
         ///     // 1. Use a single data block to fetch ALL addresses in the "All" folder.
         ///     var allShared = Scm.GetAddressGroupList.Invoke(new()
@@ -87,10 +87,10 @@ namespace Pulumi.Scm
         ///     {
         ///         ["addressGroupsDataSourceResultsFromList"] = ,
         ///         ["paginatedAddressGroups"] = ,
-        ///         ["paginationAddressGroupsDetails"] = 
+        ///         ["paginationAddressGroupsDetails"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "totalObjectsInFolder", paginatedAddressGroupsExample.Apply(getAddressGroupListResult =&gt; getAddressGroupListResult.Total) },
-        ///             { "limitUsed", paginatedAddressGroupsExample.Apply(getAddressGroupListResult =&gt; getAddressGroupListResult.Limit) },
+        ///             ["totalObjectsInFolder"] = paginatedAddressGroupsExample.Apply(getAddressGroupListResult =&gt; getAddressGroupListResult.Total),
+        ///             ["limitUsed"] = paginatedAddressGroupsExample.Apply(getAddressGroupListResult =&gt; getAddressGroupListResult.Limit),
         ///         },
         ///     };
         /// });
@@ -112,7 +112,7 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     // This data source will call the "ListAddresses" API endpoint
+        ///     // This function will call the "ListAddresses" API endpoint
         ///     // and return all filters in the "All" folder.
         ///     // 1. Use a single data block to fetch ALL addresses in the "All" folder.
         ///     var allShared = Scm.GetAddressGroupList.Invoke(new()
@@ -131,10 +131,10 @@ namespace Pulumi.Scm
         ///     {
         ///         ["addressGroupsDataSourceResultsFromList"] = ,
         ///         ["paginatedAddressGroups"] = ,
-        ///         ["paginationAddressGroupsDetails"] = 
+        ///         ["paginationAddressGroupsDetails"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "totalObjectsInFolder", paginatedAddressGroupsExample.Apply(getAddressGroupListResult =&gt; getAddressGroupListResult.Total) },
-        ///             { "limitUsed", paginatedAddressGroupsExample.Apply(getAddressGroupListResult =&gt; getAddressGroupListResult.Limit) },
+        ///             ["totalObjectsInFolder"] = paginatedAddressGroupsExample.Apply(getAddressGroupListResult =&gt; getAddressGroupListResult.Total),
+        ///             ["limitUsed"] = paginatedAddressGroupsExample.Apply(getAddressGroupListResult =&gt; getAddressGroupListResult.Limit),
         ///         },
         ///     };
         /// });

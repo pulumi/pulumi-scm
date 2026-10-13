@@ -35,11 +35,11 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["scmQosProfileDetails"] = 
+        ///         ["scmQosProfileDetails"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "id", scmQosProf.Apply(getQosProfileResult =&gt; getQosProfileResult.Id) },
-        ///             { "folder", scmQosProf.Apply(getQosProfileResult =&gt; getQosProfileResult.Folder) },
-        ///             { "name", scmQosProf.Apply(getQosProfileResult =&gt; getQosProfileResult.Name) },
+        ///             ["id"] = scmQosProf.Apply(getQosProfileResult =&gt; getQosProfileResult.Id),
+        ///             ["folder"] = scmQosProf.Apply(getQosProfileResult =&gt; getQosProfileResult.Folder),
+        ///             ["name"] = scmQosProf.Apply(getQosProfileResult =&gt; getQosProfileResult.Name),
         ///         },
         ///     };
         /// });
@@ -72,11 +72,11 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["scmQosProfileDetails"] = 
+        ///         ["scmQosProfileDetails"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "id", scmQosProf.Apply(getQosProfileResult =&gt; getQosProfileResult.Id) },
-        ///             { "folder", scmQosProf.Apply(getQosProfileResult =&gt; getQosProfileResult.Folder) },
-        ///             { "name", scmQosProf.Apply(getQosProfileResult =&gt; getQosProfileResult.Name) },
+        ///             ["id"] = scmQosProf.Apply(getQosProfileResult =&gt; getQosProfileResult.Id),
+        ///             ["folder"] = scmQosProf.Apply(getQosProfileResult =&gt; getQosProfileResult.Folder),
+        ///             ["name"] = scmQosProf.Apply(getQosProfileResult =&gt; getQosProfileResult.Name),
         ///         },
         ///     };
         /// });
@@ -109,11 +109,11 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["scmQosProfileDetails"] = 
+        ///         ["scmQosProfileDetails"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "id", scmQosProf.Apply(getQosProfileResult =&gt; getQosProfileResult.Id) },
-        ///             { "folder", scmQosProf.Apply(getQosProfileResult =&gt; getQosProfileResult.Folder) },
-        ///             { "name", scmQosProf.Apply(getQosProfileResult =&gt; getQosProfileResult.Name) },
+        ///             ["id"] = scmQosProf.Apply(getQosProfileResult =&gt; getQosProfileResult.Id),
+        ///             ["folder"] = scmQosProf.Apply(getQosProfileResult =&gt; getQosProfileResult.Folder),
+        ///             ["name"] = scmQosProf.Apply(getQosProfileResult =&gt; getQosProfileResult.Name),
         ///         },
         ///     };
         /// });

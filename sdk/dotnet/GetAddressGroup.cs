@@ -32,13 +32,13 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["addressGroupOutputs"] = 
+        ///         ["addressGroupOutputs"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "groupId", scmAddressGroupDs.Apply(getAddressGroupResult =&gt; getAddressGroupResult.Id) },
-        ///             { "folder", scmAddressGroupDs.Apply(getAddressGroupResult =&gt; getAddressGroupResult.Folder) },
-        ///             { "name", scmAddressGroupDs.Apply(getAddressGroupResult =&gt; getAddressGroupResult.Name) },
-        ///             { "description", scmAddressGroupDs.Apply(getAddressGroupResult =&gt; getAddressGroupResult.Description) },
-        ///             { "static", scmAddressGroupDs.Apply(getAddressGroupResult =&gt; getAddressGroupResult.Statics) },
+        ///             ["groupId"] = scmAddressGroupDs.Apply(getAddressGroupResult =&gt; getAddressGroupResult.Id),
+        ///             ["folder"] = scmAddressGroupDs.Apply(getAddressGroupResult =&gt; getAddressGroupResult.Folder),
+        ///             ["name"] = scmAddressGroupDs.Apply(getAddressGroupResult =&gt; getAddressGroupResult.Name),
+        ///             ["description"] = scmAddressGroupDs.Apply(getAddressGroupResult =&gt; getAddressGroupResult.Description),
+        ///             ["static"] = scmAddressGroupDs.Apply(getAddressGroupResult =&gt; getAddressGroupResult.Statics),
         ///         },
         ///     };
         /// });
@@ -68,13 +68,13 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["addressGroupOutputs"] = 
+        ///         ["addressGroupOutputs"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "groupId", scmAddressGroupDs.Apply(getAddressGroupResult =&gt; getAddressGroupResult.Id) },
-        ///             { "folder", scmAddressGroupDs.Apply(getAddressGroupResult =&gt; getAddressGroupResult.Folder) },
-        ///             { "name", scmAddressGroupDs.Apply(getAddressGroupResult =&gt; getAddressGroupResult.Name) },
-        ///             { "description", scmAddressGroupDs.Apply(getAddressGroupResult =&gt; getAddressGroupResult.Description) },
-        ///             { "static", scmAddressGroupDs.Apply(getAddressGroupResult =&gt; getAddressGroupResult.Statics) },
+        ///             ["groupId"] = scmAddressGroupDs.Apply(getAddressGroupResult =&gt; getAddressGroupResult.Id),
+        ///             ["folder"] = scmAddressGroupDs.Apply(getAddressGroupResult =&gt; getAddressGroupResult.Folder),
+        ///             ["name"] = scmAddressGroupDs.Apply(getAddressGroupResult =&gt; getAddressGroupResult.Name),
+        ///             ["description"] = scmAddressGroupDs.Apply(getAddressGroupResult =&gt; getAddressGroupResult.Description),
+        ///             ["static"] = scmAddressGroupDs.Apply(getAddressGroupResult =&gt; getAddressGroupResult.Statics),
         ///         },
         ///     };
         /// });
@@ -104,13 +104,13 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["addressGroupOutputs"] = 
+        ///         ["addressGroupOutputs"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "groupId", scmAddressGroupDs.Apply(getAddressGroupResult =&gt; getAddressGroupResult.Id) },
-        ///             { "folder", scmAddressGroupDs.Apply(getAddressGroupResult =&gt; getAddressGroupResult.Folder) },
-        ///             { "name", scmAddressGroupDs.Apply(getAddressGroupResult =&gt; getAddressGroupResult.Name) },
-        ///             { "description", scmAddressGroupDs.Apply(getAddressGroupResult =&gt; getAddressGroupResult.Description) },
-        ///             { "static", scmAddressGroupDs.Apply(getAddressGroupResult =&gt; getAddressGroupResult.Statics) },
+        ///             ["groupId"] = scmAddressGroupDs.Apply(getAddressGroupResult =&gt; getAddressGroupResult.Id),
+        ///             ["folder"] = scmAddressGroupDs.Apply(getAddressGroupResult =&gt; getAddressGroupResult.Folder),
+        ///             ["name"] = scmAddressGroupDs.Apply(getAddressGroupResult =&gt; getAddressGroupResult.Name),
+        ///             ["description"] = scmAddressGroupDs.Apply(getAddressGroupResult =&gt; getAddressGroupResult.Description),
+        ///             ["static"] = scmAddressGroupDs.Apply(getAddressGroupResult =&gt; getAddressGroupResult.Statics),
         ///         },
         ///     };
         /// });

@@ -32,12 +32,12 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["bgpRedistributionProfileDataSourceResults"] = 
+        ///         ["bgpRedistributionProfileDataSourceResults"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "id", scmBgpRedistributionProfileDs.Apply(getBgpRedistributionProfileResult =&gt; getBgpRedistributionProfileResult.Id) },
-        ///             { "name", scmBgpRedistributionProfileDs.Apply(getBgpRedistributionProfileResult =&gt; getBgpRedistributionProfileResult.Name) },
-        ///             { "ipv4", scmBgpRedistributionProfileDs.Apply(getBgpRedistributionProfileResult =&gt; getBgpRedistributionProfileResult.Ipv4) },
-        ///             { "folder", scmBgpRedistributionProfileDs.Apply(getBgpRedistributionProfileResult =&gt; getBgpRedistributionProfileResult.Folder) },
+        ///             ["id"] = scmBgpRedistributionProfileDs.Apply(getBgpRedistributionProfileResult =&gt; getBgpRedistributionProfileResult.Id),
+        ///             ["name"] = scmBgpRedistributionProfileDs.Apply(getBgpRedistributionProfileResult =&gt; getBgpRedistributionProfileResult.Name),
+        ///             ["ipv4"] = scmBgpRedistributionProfileDs.Apply(getBgpRedistributionProfileResult =&gt; getBgpRedistributionProfileResult.Ipv4),
+        ///             ["folder"] = scmBgpRedistributionProfileDs.Apply(getBgpRedistributionProfileResult =&gt; getBgpRedistributionProfileResult.Folder),
         ///         },
         ///     };
         /// });
@@ -67,12 +67,12 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["bgpRedistributionProfileDataSourceResults"] = 
+        ///         ["bgpRedistributionProfileDataSourceResults"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "id", scmBgpRedistributionProfileDs.Apply(getBgpRedistributionProfileResult =&gt; getBgpRedistributionProfileResult.Id) },
-        ///             { "name", scmBgpRedistributionProfileDs.Apply(getBgpRedistributionProfileResult =&gt; getBgpRedistributionProfileResult.Name) },
-        ///             { "ipv4", scmBgpRedistributionProfileDs.Apply(getBgpRedistributionProfileResult =&gt; getBgpRedistributionProfileResult.Ipv4) },
-        ///             { "folder", scmBgpRedistributionProfileDs.Apply(getBgpRedistributionProfileResult =&gt; getBgpRedistributionProfileResult.Folder) },
+        ///             ["id"] = scmBgpRedistributionProfileDs.Apply(getBgpRedistributionProfileResult =&gt; getBgpRedistributionProfileResult.Id),
+        ///             ["name"] = scmBgpRedistributionProfileDs.Apply(getBgpRedistributionProfileResult =&gt; getBgpRedistributionProfileResult.Name),
+        ///             ["ipv4"] = scmBgpRedistributionProfileDs.Apply(getBgpRedistributionProfileResult =&gt; getBgpRedistributionProfileResult.Ipv4),
+        ///             ["folder"] = scmBgpRedistributionProfileDs.Apply(getBgpRedistributionProfileResult =&gt; getBgpRedistributionProfileResult.Folder),
         ///         },
         ///     };
         /// });
@@ -102,12 +102,12 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["bgpRedistributionProfileDataSourceResults"] = 
+        ///         ["bgpRedistributionProfileDataSourceResults"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "id", scmBgpRedistributionProfileDs.Apply(getBgpRedistributionProfileResult =&gt; getBgpRedistributionProfileResult.Id) },
-        ///             { "name", scmBgpRedistributionProfileDs.Apply(getBgpRedistributionProfileResult =&gt; getBgpRedistributionProfileResult.Name) },
-        ///             { "ipv4", scmBgpRedistributionProfileDs.Apply(getBgpRedistributionProfileResult =&gt; getBgpRedistributionProfileResult.Ipv4) },
-        ///             { "folder", scmBgpRedistributionProfileDs.Apply(getBgpRedistributionProfileResult =&gt; getBgpRedistributionProfileResult.Folder) },
+        ///             ["id"] = scmBgpRedistributionProfileDs.Apply(getBgpRedistributionProfileResult =&gt; getBgpRedistributionProfileResult.Id),
+        ///             ["name"] = scmBgpRedistributionProfileDs.Apply(getBgpRedistributionProfileResult =&gt; getBgpRedistributionProfileResult.Name),
+        ///             ["ipv4"] = scmBgpRedistributionProfileDs.Apply(getBgpRedistributionProfileResult =&gt; getBgpRedistributionProfileResult.Ipv4),
+        ///             ["folder"] = scmBgpRedistributionProfileDs.Apply(getBgpRedistributionProfileResult =&gt; getBgpRedistributionProfileResult.Folder),
         ///         },
         ///     };
         /// });

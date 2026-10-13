@@ -15,7 +15,7 @@ import * as utilities from "./utilities";
  * import * as pulumi from "@pulumi/pulumi";
  * import * as scm from "@pulumi/scm";
  *
- * // Look up the application group by its ID from the terraform.tfstate file.
+ * // Look up the application group by its ID from the pulumi.tfstate file.
  * const scmAutoVpnClusterDs = scm.getAutoVpnCluster({
  *     id: "e3c732fb-85c7-4116-b5ed-ba3977209b29",
  * });
@@ -100,7 +100,7 @@ export interface GetAutoVpnClusterResult {
  * import * as pulumi from "@pulumi/pulumi";
  * import * as scm from "@pulumi/scm";
  *
- * // Look up the application group by its ID from the terraform.tfstate file.
+ * // Look up the application group by its ID from the pulumi.tfstate file.
  * const scmAutoVpnClusterDs = scm.getAutoVpnCluster({
  *     id: "e3c732fb-85c7-4116-b5ed-ba3977209b29",
  * });

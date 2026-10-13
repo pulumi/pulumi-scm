@@ -32,14 +32,14 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["dynamicUserGroupDetails"] = 
+        ///         ["dynamicUserGroupDetails"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "id", scmDynamicUserGroupDs.Apply(getDynamicUserGroupResult =&gt; getDynamicUserGroupResult.Id) },
-        ///             { "name", scmDynamicUserGroupDs.Apply(getDynamicUserGroupResult =&gt; getDynamicUserGroupResult.Name) },
-        ///             { "folder", scmDynamicUserGroupDs.Apply(getDynamicUserGroupResult =&gt; getDynamicUserGroupResult.Folder) },
-        ///             { "description", scmDynamicUserGroupDs.Apply(getDynamicUserGroupResult =&gt; getDynamicUserGroupResult.Description) },
-        ///             { "filter", scmDynamicUserGroupDs.Apply(getDynamicUserGroupResult =&gt; getDynamicUserGroupResult.Filter) },
-        ///             { "tags", scmDynamicUserGroupDs.Apply(getDynamicUserGroupResult =&gt; getDynamicUserGroupResult.Tags) },
+        ///             ["id"] = scmDynamicUserGroupDs.Apply(getDynamicUserGroupResult =&gt; getDynamicUserGroupResult.Id),
+        ///             ["name"] = scmDynamicUserGroupDs.Apply(getDynamicUserGroupResult =&gt; getDynamicUserGroupResult.Name),
+        ///             ["folder"] = scmDynamicUserGroupDs.Apply(getDynamicUserGroupResult =&gt; getDynamicUserGroupResult.Folder),
+        ///             ["description"] = scmDynamicUserGroupDs.Apply(getDynamicUserGroupResult =&gt; getDynamicUserGroupResult.Description),
+        ///             ["filter"] = scmDynamicUserGroupDs.Apply(getDynamicUserGroupResult =&gt; getDynamicUserGroupResult.Filter),
+        ///             ["tags"] = scmDynamicUserGroupDs.Apply(getDynamicUserGroupResult =&gt; getDynamicUserGroupResult.Tags),
         ///         },
         ///     };
         /// });
@@ -69,14 +69,14 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["dynamicUserGroupDetails"] = 
+        ///         ["dynamicUserGroupDetails"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "id", scmDynamicUserGroupDs.Apply(getDynamicUserGroupResult =&gt; getDynamicUserGroupResult.Id) },
-        ///             { "name", scmDynamicUserGroupDs.Apply(getDynamicUserGroupResult =&gt; getDynamicUserGroupResult.Name) },
-        ///             { "folder", scmDynamicUserGroupDs.Apply(getDynamicUserGroupResult =&gt; getDynamicUserGroupResult.Folder) },
-        ///             { "description", scmDynamicUserGroupDs.Apply(getDynamicUserGroupResult =&gt; getDynamicUserGroupResult.Description) },
-        ///             { "filter", scmDynamicUserGroupDs.Apply(getDynamicUserGroupResult =&gt; getDynamicUserGroupResult.Filter) },
-        ///             { "tags", scmDynamicUserGroupDs.Apply(getDynamicUserGroupResult =&gt; getDynamicUserGroupResult.Tags) },
+        ///             ["id"] = scmDynamicUserGroupDs.Apply(getDynamicUserGroupResult =&gt; getDynamicUserGroupResult.Id),
+        ///             ["name"] = scmDynamicUserGroupDs.Apply(getDynamicUserGroupResult =&gt; getDynamicUserGroupResult.Name),
+        ///             ["folder"] = scmDynamicUserGroupDs.Apply(getDynamicUserGroupResult =&gt; getDynamicUserGroupResult.Folder),
+        ///             ["description"] = scmDynamicUserGroupDs.Apply(getDynamicUserGroupResult =&gt; getDynamicUserGroupResult.Description),
+        ///             ["filter"] = scmDynamicUserGroupDs.Apply(getDynamicUserGroupResult =&gt; getDynamicUserGroupResult.Filter),
+        ///             ["tags"] = scmDynamicUserGroupDs.Apply(getDynamicUserGroupResult =&gt; getDynamicUserGroupResult.Tags),
         ///         },
         ///     };
         /// });
@@ -106,14 +106,14 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["dynamicUserGroupDetails"] = 
+        ///         ["dynamicUserGroupDetails"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "id", scmDynamicUserGroupDs.Apply(getDynamicUserGroupResult =&gt; getDynamicUserGroupResult.Id) },
-        ///             { "name", scmDynamicUserGroupDs.Apply(getDynamicUserGroupResult =&gt; getDynamicUserGroupResult.Name) },
-        ///             { "folder", scmDynamicUserGroupDs.Apply(getDynamicUserGroupResult =&gt; getDynamicUserGroupResult.Folder) },
-        ///             { "description", scmDynamicUserGroupDs.Apply(getDynamicUserGroupResult =&gt; getDynamicUserGroupResult.Description) },
-        ///             { "filter", scmDynamicUserGroupDs.Apply(getDynamicUserGroupResult =&gt; getDynamicUserGroupResult.Filter) },
-        ///             { "tags", scmDynamicUserGroupDs.Apply(getDynamicUserGroupResult =&gt; getDynamicUserGroupResult.Tags) },
+        ///             ["id"] = scmDynamicUserGroupDs.Apply(getDynamicUserGroupResult =&gt; getDynamicUserGroupResult.Id),
+        ///             ["name"] = scmDynamicUserGroupDs.Apply(getDynamicUserGroupResult =&gt; getDynamicUserGroupResult.Name),
+        ///             ["folder"] = scmDynamicUserGroupDs.Apply(getDynamicUserGroupResult =&gt; getDynamicUserGroupResult.Folder),
+        ///             ["description"] = scmDynamicUserGroupDs.Apply(getDynamicUserGroupResult =&gt; getDynamicUserGroupResult.Description),
+        ///             ["filter"] = scmDynamicUserGroupDs.Apply(getDynamicUserGroupResult =&gt; getDynamicUserGroupResult.Filter),
+        ///             ["tags"] = scmDynamicUserGroupDs.Apply(getDynamicUserGroupResult =&gt; getDynamicUserGroupResult.Tags),
         ///         },
         ///     };
         /// });

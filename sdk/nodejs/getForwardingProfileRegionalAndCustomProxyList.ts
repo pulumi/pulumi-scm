@@ -15,7 +15,7 @@ import * as utilities from "./utilities";
  * import * as pulumi from "@pulumi/pulumi";
  * import * as scm from "@pulumi/scm";
  *
- * // This data source will call the "ListForwardingProfileRegionalAndCustomProxies" API endpoint
+ * // This function will call the "ListForwardingProfileRegionalAndCustomProxies" API endpoint
  * // and return all forwarding profile regional and custom proxies in the "Mobile Users" folder.
  * // 1. Use a single data block to fetch ALL forwarding profile regional and custom proxies in the "Mobile Users" folder.
  * const allMobileUsers = scm.getForwardingProfileRegionalAndCustomProxyList({
@@ -127,7 +127,7 @@ export interface GetForwardingProfileRegionalAndCustomProxyListResult {
  * import * as pulumi from "@pulumi/pulumi";
  * import * as scm from "@pulumi/scm";
  *
- * // This data source will call the "ListForwardingProfileRegionalAndCustomProxies" API endpoint
+ * // This function will call the "ListForwardingProfileRegionalAndCustomProxies" API endpoint
  * // and return all forwarding profile regional and custom proxies in the "Mobile Users" folder.
  * // 1. Use a single data block to fetch ALL forwarding profile regional and custom proxies in the "Mobile Users" folder.
  * const allMobileUsers = scm.getForwardingProfileRegionalAndCustomProxyList({

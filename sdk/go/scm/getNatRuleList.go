@@ -27,7 +27,7 @@ import (
 //
 //	func main() {
 //		pulumi.Run(func(ctx *pulumi.Context) error {
-//			// Define a data source for listing NAT rules
+//			// Define a function for listing NAT rules
 //			pagedNatRulesList, err := scm.GetNatRuleList(ctx, &scm.GetNatRuleListArgs{
 //				Folder:   pulumi.StringRef("All"),
 //				Limit:    pulumi.IntRef(10),

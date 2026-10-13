@@ -160,7 +160,7 @@ namespace Pulumi.Scm
     ///         Qos = new Scm.Inputs.SiteQosArgs
     ///         {
     ///             Profile = "Default Profile",
-    ///             Cir = 20,
+    ///             Cir = 20.0,
     ///         },
     ///     });
     /// 

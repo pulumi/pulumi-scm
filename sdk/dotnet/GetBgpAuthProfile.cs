@@ -32,12 +32,12 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["bgpAuthProfileDataSourceResults"] = 
+        ///         ["bgpAuthProfileDataSourceResults"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "id", scmBgpAuthProfileDs.Apply(getBgpAuthProfileResult =&gt; getBgpAuthProfileResult.Id) },
-        ///             { "name", scmBgpAuthProfileDs.Apply(getBgpAuthProfileResult =&gt; getBgpAuthProfileResult.Name) },
-        ///             { "secret", scmBgpAuthProfileDs.Apply(getBgpAuthProfileResult =&gt; getBgpAuthProfileResult.Secret) },
-        ///             { "folder", scmBgpAuthProfileDs.Apply(getBgpAuthProfileResult =&gt; getBgpAuthProfileResult.Folder) },
+        ///             ["id"] = scmBgpAuthProfileDs.Apply(getBgpAuthProfileResult =&gt; getBgpAuthProfileResult.Id),
+        ///             ["name"] = scmBgpAuthProfileDs.Apply(getBgpAuthProfileResult =&gt; getBgpAuthProfileResult.Name),
+        ///             ["secret"] = scmBgpAuthProfileDs.Apply(getBgpAuthProfileResult =&gt; getBgpAuthProfileResult.Secret),
+        ///             ["folder"] = scmBgpAuthProfileDs.Apply(getBgpAuthProfileResult =&gt; getBgpAuthProfileResult.Folder),
         ///         },
         ///     };
         /// });
@@ -67,12 +67,12 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["bgpAuthProfileDataSourceResults"] = 
+        ///         ["bgpAuthProfileDataSourceResults"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "id", scmBgpAuthProfileDs.Apply(getBgpAuthProfileResult =&gt; getBgpAuthProfileResult.Id) },
-        ///             { "name", scmBgpAuthProfileDs.Apply(getBgpAuthProfileResult =&gt; getBgpAuthProfileResult.Name) },
-        ///             { "secret", scmBgpAuthProfileDs.Apply(getBgpAuthProfileResult =&gt; getBgpAuthProfileResult.Secret) },
-        ///             { "folder", scmBgpAuthProfileDs.Apply(getBgpAuthProfileResult =&gt; getBgpAuthProfileResult.Folder) },
+        ///             ["id"] = scmBgpAuthProfileDs.Apply(getBgpAuthProfileResult =&gt; getBgpAuthProfileResult.Id),
+        ///             ["name"] = scmBgpAuthProfileDs.Apply(getBgpAuthProfileResult =&gt; getBgpAuthProfileResult.Name),
+        ///             ["secret"] = scmBgpAuthProfileDs.Apply(getBgpAuthProfileResult =&gt; getBgpAuthProfileResult.Secret),
+        ///             ["folder"] = scmBgpAuthProfileDs.Apply(getBgpAuthProfileResult =&gt; getBgpAuthProfileResult.Folder),
         ///         },
         ///     };
         /// });
@@ -102,12 +102,12 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["bgpAuthProfileDataSourceResults"] = 
+        ///         ["bgpAuthProfileDataSourceResults"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "id", scmBgpAuthProfileDs.Apply(getBgpAuthProfileResult =&gt; getBgpAuthProfileResult.Id) },
-        ///             { "name", scmBgpAuthProfileDs.Apply(getBgpAuthProfileResult =&gt; getBgpAuthProfileResult.Name) },
-        ///             { "secret", scmBgpAuthProfileDs.Apply(getBgpAuthProfileResult =&gt; getBgpAuthProfileResult.Secret) },
-        ///             { "folder", scmBgpAuthProfileDs.Apply(getBgpAuthProfileResult =&gt; getBgpAuthProfileResult.Folder) },
+        ///             ["id"] = scmBgpAuthProfileDs.Apply(getBgpAuthProfileResult =&gt; getBgpAuthProfileResult.Id),
+        ///             ["name"] = scmBgpAuthProfileDs.Apply(getBgpAuthProfileResult =&gt; getBgpAuthProfileResult.Name),
+        ///             ["secret"] = scmBgpAuthProfileDs.Apply(getBgpAuthProfileResult =&gt; getBgpAuthProfileResult.Secret),
+        ///             ["folder"] = scmBgpAuthProfileDs.Apply(getBgpAuthProfileResult =&gt; getBgpAuthProfileResult.Folder),
         ///         },
         ///     };
         /// });

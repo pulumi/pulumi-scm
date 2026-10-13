@@ -82,7 +82,7 @@ namespace Pulumi.Scm
     ///         Name = "$scm_l3_interface",
     ///         Comment = "Managed by Pulumi",
     ///         Folder = "ngfw-shared",
-    ///         Layer3 = null,
+    ///         Layer3 = new() { },
     ///     });
     /// 
     ///     //

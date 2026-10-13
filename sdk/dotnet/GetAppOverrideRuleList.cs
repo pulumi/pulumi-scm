@@ -33,10 +33,10 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["fetchedRuleListSummary"] = 
+        ///         ["fetchedRuleListSummary"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "countOfRulesFetched", allPreRules.Apply(getAppOverrideRuleListResult =&gt; getAppOverrideRuleListResult.Total) },
-        ///             { "firstRuleName", allPreRules.Apply(getAppOverrideRuleListResult =&gt; getAppOverrideRuleListResult.Datas[0]?.Name) },
+        ///             ["countOfRulesFetched"] = allPreRules.Apply(getAppOverrideRuleListResult =&gt; getAppOverrideRuleListResult.Total),
+        ///             ["firstRuleName"] = allPreRules.Apply(getAppOverrideRuleListResult =&gt; getAppOverrideRuleListResult.Datas[0]?.Name),
         ///         },
         ///     };
         /// });
@@ -67,10 +67,10 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["fetchedRuleListSummary"] = 
+        ///         ["fetchedRuleListSummary"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "countOfRulesFetched", allPreRules.Apply(getAppOverrideRuleListResult =&gt; getAppOverrideRuleListResult.Total) },
-        ///             { "firstRuleName", allPreRules.Apply(getAppOverrideRuleListResult =&gt; getAppOverrideRuleListResult.Datas[0]?.Name) },
+        ///             ["countOfRulesFetched"] = allPreRules.Apply(getAppOverrideRuleListResult =&gt; getAppOverrideRuleListResult.Total),
+        ///             ["firstRuleName"] = allPreRules.Apply(getAppOverrideRuleListResult =&gt; getAppOverrideRuleListResult.Datas[0]?.Name),
         ///         },
         ///     };
         /// });
@@ -101,10 +101,10 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["fetchedRuleListSummary"] = 
+        ///         ["fetchedRuleListSummary"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "countOfRulesFetched", allPreRules.Apply(getAppOverrideRuleListResult =&gt; getAppOverrideRuleListResult.Total) },
-        ///             { "firstRuleName", allPreRules.Apply(getAppOverrideRuleListResult =&gt; getAppOverrideRuleListResult.Datas[0]?.Name) },
+        ///             ["countOfRulesFetched"] = allPreRules.Apply(getAppOverrideRuleListResult =&gt; getAppOverrideRuleListResult.Total),
+        ///             ["firstRuleName"] = allPreRules.Apply(getAppOverrideRuleListResult =&gt; getAppOverrideRuleListResult.Datas[0]?.Name),
         ///         },
         ///     };
         /// });

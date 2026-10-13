@@ -28,7 +28,7 @@ import (
 //	func main() {
 //		pulumi.Run(func(ctx *pulumi.Context) error {
 //			// Fetch a list of all application objects.
-//			// This data source will call the "List" API endpoint.
+//			// This function will call the "List" API endpoint.
 //			allTags, err := scm.GetTagList(ctx, &scm.GetTagListArgs{
 //				Folder: pulumi.StringRef("All"),
 //			}, nil)

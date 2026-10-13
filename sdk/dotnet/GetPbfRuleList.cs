@@ -24,7 +24,7 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     // Define a data source for listing pbf rules
+        ///     // Define a function for listing pbf rules
         ///     var pagedPbfRulesList = Scm.GetPbfRuleList.Invoke(new()
         ///     {
         ///         Folder = "All",
@@ -33,10 +33,10 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["fetchedPbfRuleListSummary"] = 
+        ///         ["fetchedPbfRuleListSummary"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "totalRulesInList", pagedPbfRulesList.Apply(getPbfRuleListResult =&gt; getPbfRuleListResult.Total) },
-        ///             { "allRules", pagedPbfRulesList.Apply(getPbfRuleListResult =&gt; getPbfRuleListResult.Datas) },
+        ///             ["totalRulesInList"] = pagedPbfRulesList.Apply(getPbfRuleListResult =&gt; getPbfRuleListResult.Total),
+        ///             ["allRules"] = pagedPbfRulesList.Apply(getPbfRuleListResult =&gt; getPbfRuleListResult.Datas),
         ///         },
         ///     };
         /// });
@@ -58,7 +58,7 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     // Define a data source for listing pbf rules
+        ///     // Define a function for listing pbf rules
         ///     var pagedPbfRulesList = Scm.GetPbfRuleList.Invoke(new()
         ///     {
         ///         Folder = "All",
@@ -67,10 +67,10 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["fetchedPbfRuleListSummary"] = 
+        ///         ["fetchedPbfRuleListSummary"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "totalRulesInList", pagedPbfRulesList.Apply(getPbfRuleListResult =&gt; getPbfRuleListResult.Total) },
-        ///             { "allRules", pagedPbfRulesList.Apply(getPbfRuleListResult =&gt; getPbfRuleListResult.Datas) },
+        ///             ["totalRulesInList"] = pagedPbfRulesList.Apply(getPbfRuleListResult =&gt; getPbfRuleListResult.Total),
+        ///             ["allRules"] = pagedPbfRulesList.Apply(getPbfRuleListResult =&gt; getPbfRuleListResult.Datas),
         ///         },
         ///     };
         /// });
@@ -92,7 +92,7 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     // Define a data source for listing pbf rules
+        ///     // Define a function for listing pbf rules
         ///     var pagedPbfRulesList = Scm.GetPbfRuleList.Invoke(new()
         ///     {
         ///         Folder = "All",
@@ -101,10 +101,10 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["fetchedPbfRuleListSummary"] = 
+        ///         ["fetchedPbfRuleListSummary"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "totalRulesInList", pagedPbfRulesList.Apply(getPbfRuleListResult =&gt; getPbfRuleListResult.Total) },
-        ///             { "allRules", pagedPbfRulesList.Apply(getPbfRuleListResult =&gt; getPbfRuleListResult.Datas) },
+        ///             ["totalRulesInList"] = pagedPbfRulesList.Apply(getPbfRuleListResult =&gt; getPbfRuleListResult.Total),
+        ///             ["allRules"] = pagedPbfRulesList.Apply(getPbfRuleListResult =&gt; getPbfRuleListResult.Datas),
         ///         },
         ///     };
         /// });

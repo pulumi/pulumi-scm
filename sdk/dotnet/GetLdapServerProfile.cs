@@ -35,11 +35,11 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["scmLdapServerProfileDetails"] = 
+        ///         ["scmLdapServerProfileDetails"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "id", ldapServerProf.Apply(getLdapServerProfileResult =&gt; getLdapServerProfileResult.Id) },
-        ///             { "folder", ldapServerProf.Apply(getLdapServerProfileResult =&gt; getLdapServerProfileResult.Folder) },
-        ///             { "name", ldapServerProf.Apply(getLdapServerProfileResult =&gt; getLdapServerProfileResult.Name) },
+        ///             ["id"] = ldapServerProf.Apply(getLdapServerProfileResult =&gt; getLdapServerProfileResult.Id),
+        ///             ["folder"] = ldapServerProf.Apply(getLdapServerProfileResult =&gt; getLdapServerProfileResult.Folder),
+        ///             ["name"] = ldapServerProf.Apply(getLdapServerProfileResult =&gt; getLdapServerProfileResult.Name),
         ///         },
         ///     };
         /// });
@@ -72,11 +72,11 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["scmLdapServerProfileDetails"] = 
+        ///         ["scmLdapServerProfileDetails"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "id", ldapServerProf.Apply(getLdapServerProfileResult =&gt; getLdapServerProfileResult.Id) },
-        ///             { "folder", ldapServerProf.Apply(getLdapServerProfileResult =&gt; getLdapServerProfileResult.Folder) },
-        ///             { "name", ldapServerProf.Apply(getLdapServerProfileResult =&gt; getLdapServerProfileResult.Name) },
+        ///             ["id"] = ldapServerProf.Apply(getLdapServerProfileResult =&gt; getLdapServerProfileResult.Id),
+        ///             ["folder"] = ldapServerProf.Apply(getLdapServerProfileResult =&gt; getLdapServerProfileResult.Folder),
+        ///             ["name"] = ldapServerProf.Apply(getLdapServerProfileResult =&gt; getLdapServerProfileResult.Name),
         ///         },
         ///     };
         /// });
@@ -109,11 +109,11 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["scmLdapServerProfileDetails"] = 
+        ///         ["scmLdapServerProfileDetails"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "id", ldapServerProf.Apply(getLdapServerProfileResult =&gt; getLdapServerProfileResult.Id) },
-        ///             { "folder", ldapServerProf.Apply(getLdapServerProfileResult =&gt; getLdapServerProfileResult.Folder) },
-        ///             { "name", ldapServerProf.Apply(getLdapServerProfileResult =&gt; getLdapServerProfileResult.Name) },
+        ///             ["id"] = ldapServerProf.Apply(getLdapServerProfileResult =&gt; getLdapServerProfileResult.Id),
+        ///             ["folder"] = ldapServerProf.Apply(getLdapServerProfileResult =&gt; getLdapServerProfileResult.Folder),
+        ///             ["name"] = ldapServerProf.Apply(getLdapServerProfileResult =&gt; getLdapServerProfileResult.Name),
         ///         },
         ///     };
         /// });

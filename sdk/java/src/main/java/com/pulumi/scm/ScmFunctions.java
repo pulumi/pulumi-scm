@@ -3802,7 +3802,7 @@ public final class ScmFunctions {
      *     }
      * 
      *     public static void stack(Context ctx) {
-     *         // Look up the application group by its ID from the terraform.tfstate file.
+     *         // Look up the application group by its ID from the pulumi.tfstate file.
      *         final var scmApplicationGroupDs = ScmFunctions.getApplicationGroup(GetApplicationGroupArgs.builder()
      *             .id("91616221-ddeb-4b49-866d-48d64dedc056")
      *             .build());
@@ -3849,7 +3849,7 @@ public final class ScmFunctions {
      *     }
      * 
      *     public static void stack(Context ctx) {
-     *         // Look up the application group by its ID from the terraform.tfstate file.
+     *         // Look up the application group by its ID from the pulumi.tfstate file.
      *         final var scmApplicationGroupDs = ScmFunctions.getApplicationGroup(GetApplicationGroupArgs.builder()
      *             .id("91616221-ddeb-4b49-866d-48d64dedc056")
      *             .build());
@@ -3896,7 +3896,7 @@ public final class ScmFunctions {
      *     }
      * 
      *     public static void stack(Context ctx) {
-     *         // Look up the application group by its ID from the terraform.tfstate file.
+     *         // Look up the application group by its ID from the pulumi.tfstate file.
      *         final var scmApplicationGroupDs = ScmFunctions.getApplicationGroup(GetApplicationGroupArgs.builder()
      *             .id("91616221-ddeb-4b49-866d-48d64dedc056")
      *             .build());
@@ -3943,7 +3943,7 @@ public final class ScmFunctions {
      *     }
      * 
      *     public static void stack(Context ctx) {
-     *         // Look up the application group by its ID from the terraform.tfstate file.
+     *         // Look up the application group by its ID from the pulumi.tfstate file.
      *         final var scmApplicationGroupDs = ScmFunctions.getApplicationGroup(GetApplicationGroupArgs.builder()
      *             .id("91616221-ddeb-4b49-866d-48d64dedc056")
      *             .build());
@@ -3990,7 +3990,7 @@ public final class ScmFunctions {
      *     }
      * 
      *     public static void stack(Context ctx) {
-     *         // Look up the application group by its ID from the terraform.tfstate file.
+     *         // Look up the application group by its ID from the pulumi.tfstate file.
      *         final var scmApplicationGroupDs = ScmFunctions.getApplicationGroup(GetApplicationGroupArgs.builder()
      *             .id("91616221-ddeb-4b49-866d-48d64dedc056")
      *             .build());
@@ -4101,7 +4101,7 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         // Fetch a list of all application objects.
-     *         // This data source will call the "List" API endpoint.
+     *         // This function will call the "List" API endpoint.
      *         final var allApps = ScmFunctions.getApplicationList(GetApplicationListArgs.builder()
      *             .folder("All")
      *             .build());
@@ -4144,7 +4144,7 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         // Fetch a list of all application objects.
-     *         // This data source will call the "List" API endpoint.
+     *         // This function will call the "List" API endpoint.
      *         final var allApps = ScmFunctions.getApplicationList(GetApplicationListArgs.builder()
      *             .folder("All")
      *             .build());
@@ -4187,7 +4187,7 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         // Fetch a list of all application objects.
-     *         // This data source will call the "List" API endpoint.
+     *         // This function will call the "List" API endpoint.
      *         final var allApps = ScmFunctions.getApplicationList(GetApplicationListArgs.builder()
      *             .folder("All")
      *             .build());
@@ -4230,7 +4230,7 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         // Fetch a list of all application objects.
-     *         // This data source will call the "List" API endpoint.
+     *         // This function will call the "List" API endpoint.
      *         final var allApps = ScmFunctions.getApplicationList(GetApplicationListArgs.builder()
      *             .folder("All")
      *             .build());
@@ -4273,7 +4273,7 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         // Fetch a list of all application objects.
-     *         // This data source will call the "List" API endpoint.
+     *         // This function will call the "List" API endpoint.
      *         final var allApps = ScmFunctions.getApplicationList(GetApplicationListArgs.builder()
      *             .folder("All")
      *             .build());
@@ -4316,7 +4316,7 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         // Fetch a list of all application objects.
-     *         // This data source will call the "List" API endpoint.
+     *         // This function will call the "List" API endpoint.
      *         final var allApps = ScmFunctions.getApplicationList(GetApplicationListArgs.builder()
      *             .folder("All")
      *             .build());
@@ -4359,7 +4359,7 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         // Fetch a list of all application objects.
-     *         // This data source will call the "List" API endpoint.
+     *         // This function will call the "List" API endpoint.
      *         final var allApps = ScmFunctions.getApplicationList(GetApplicationListArgs.builder()
      *             .folder("All")
      *             .build());
@@ -6409,7 +6409,7 @@ public final class ScmFunctions {
      *     }
      * 
      *     public static void stack(Context ctx) {
-     *         // Look up the application group by its ID from the terraform.tfstate file.
+     *         // Look up the application group by its ID from the pulumi.tfstate file.
      *         final var scmAutoVpnClusterDs = ScmFunctions.getAutoVpnCluster(GetAutoVpnClusterArgs.builder()
      *             .id("e3c732fb-85c7-4116-b5ed-ba3977209b29")
      *             .build());
@@ -6457,7 +6457,7 @@ public final class ScmFunctions {
      *     }
      * 
      *     public static void stack(Context ctx) {
-     *         // Look up the application group by its ID from the terraform.tfstate file.
+     *         // Look up the application group by its ID from the pulumi.tfstate file.
      *         final var scmAutoVpnClusterDs = ScmFunctions.getAutoVpnCluster(GetAutoVpnClusterArgs.builder()
      *             .id("e3c732fb-85c7-4116-b5ed-ba3977209b29")
      *             .build());
@@ -6505,7 +6505,7 @@ public final class ScmFunctions {
      *     }
      * 
      *     public static void stack(Context ctx) {
-     *         // Look up the application group by its ID from the terraform.tfstate file.
+     *         // Look up the application group by its ID from the pulumi.tfstate file.
      *         final var scmAutoVpnClusterDs = ScmFunctions.getAutoVpnCluster(GetAutoVpnClusterArgs.builder()
      *             .id("e3c732fb-85c7-4116-b5ed-ba3977209b29")
      *             .build());
@@ -6553,7 +6553,7 @@ public final class ScmFunctions {
      *     }
      * 
      *     public static void stack(Context ctx) {
-     *         // Look up the application group by its ID from the terraform.tfstate file.
+     *         // Look up the application group by its ID from the pulumi.tfstate file.
      *         final var scmAutoVpnClusterDs = ScmFunctions.getAutoVpnCluster(GetAutoVpnClusterArgs.builder()
      *             .id("e3c732fb-85c7-4116-b5ed-ba3977209b29")
      *             .build());
@@ -6601,7 +6601,7 @@ public final class ScmFunctions {
      *     }
      * 
      *     public static void stack(Context ctx) {
-     *         // Look up the application group by its ID from the terraform.tfstate file.
+     *         // Look up the application group by its ID from the pulumi.tfstate file.
      *         final var scmAutoVpnClusterDs = ScmFunctions.getAutoVpnCluster(GetAutoVpnClusterArgs.builder()
      *             .id("e3c732fb-85c7-4116-b5ed-ba3977209b29")
      *             .build());
@@ -22908,7 +22908,7 @@ public final class ScmFunctions {
      *     public static void stack(Context ctx) {
      *         // -----------------------------------------------------------------------------
      *         // 6. DATA SOURCE: Fetch a list of Interface Management Profiles
-     *         // This data source retrieves multiple Interface Management Profiles from SCM.
+     *         // This function retrieves multiple Interface Management Profiles from SCM.
      *         // -----------------------------------------------------------------------------
      *         final var allMgmtProfiles = ScmFunctions.getInterfaceManagementProfileList(GetInterfaceManagementProfileListArgs.builder()
      *             .limit(50)
@@ -22958,7 +22958,7 @@ public final class ScmFunctions {
      *     public static void stack(Context ctx) {
      *         // -----------------------------------------------------------------------------
      *         // 6. DATA SOURCE: Fetch a list of Interface Management Profiles
-     *         // This data source retrieves multiple Interface Management Profiles from SCM.
+     *         // This function retrieves multiple Interface Management Profiles from SCM.
      *         // -----------------------------------------------------------------------------
      *         final var allMgmtProfiles = ScmFunctions.getInterfaceManagementProfileList(GetInterfaceManagementProfileListArgs.builder()
      *             .limit(50)
@@ -23008,7 +23008,7 @@ public final class ScmFunctions {
      *     public static void stack(Context ctx) {
      *         // -----------------------------------------------------------------------------
      *         // 6. DATA SOURCE: Fetch a list of Interface Management Profiles
-     *         // This data source retrieves multiple Interface Management Profiles from SCM.
+     *         // This function retrieves multiple Interface Management Profiles from SCM.
      *         // -----------------------------------------------------------------------------
      *         final var allMgmtProfiles = ScmFunctions.getInterfaceManagementProfileList(GetInterfaceManagementProfileListArgs.builder()
      *             .limit(50)
@@ -23058,7 +23058,7 @@ public final class ScmFunctions {
      *     public static void stack(Context ctx) {
      *         // -----------------------------------------------------------------------------
      *         // 6. DATA SOURCE: Fetch a list of Interface Management Profiles
-     *         // This data source retrieves multiple Interface Management Profiles from SCM.
+     *         // This function retrieves multiple Interface Management Profiles from SCM.
      *         // -----------------------------------------------------------------------------
      *         final var allMgmtProfiles = ScmFunctions.getInterfaceManagementProfileList(GetInterfaceManagementProfileListArgs.builder()
      *             .limit(50)
@@ -23108,7 +23108,7 @@ public final class ScmFunctions {
      *     public static void stack(Context ctx) {
      *         // -----------------------------------------------------------------------------
      *         // 6. DATA SOURCE: Fetch a list of Interface Management Profiles
-     *         // This data source retrieves multiple Interface Management Profiles from SCM.
+     *         // This function retrieves multiple Interface Management Profiles from SCM.
      *         // -----------------------------------------------------------------------------
      *         final var allMgmtProfiles = ScmFunctions.getInterfaceManagementProfileList(GetInterfaceManagementProfileListArgs.builder()
      *             .limit(50)
@@ -23158,7 +23158,7 @@ public final class ScmFunctions {
      *     public static void stack(Context ctx) {
      *         // -----------------------------------------------------------------------------
      *         // 6. DATA SOURCE: Fetch a list of Interface Management Profiles
-     *         // This data source retrieves multiple Interface Management Profiles from SCM.
+     *         // This function retrieves multiple Interface Management Profiles from SCM.
      *         // -----------------------------------------------------------------------------
      *         final var allMgmtProfiles = ScmFunctions.getInterfaceManagementProfileList(GetInterfaceManagementProfileListArgs.builder()
      *             .limit(50)
@@ -23208,7 +23208,7 @@ public final class ScmFunctions {
      *     public static void stack(Context ctx) {
      *         // -----------------------------------------------------------------------------
      *         // 6. DATA SOURCE: Fetch a list of Interface Management Profiles
-     *         // This data source retrieves multiple Interface Management Profiles from SCM.
+     *         // This function retrieves multiple Interface Management Profiles from SCM.
      *         // -----------------------------------------------------------------------------
      *         final var allMgmtProfiles = ScmFunctions.getInterfaceManagementProfileList(GetInterfaceManagementProfileListArgs.builder()
      *             .limit(50)
@@ -29135,7 +29135,7 @@ public final class ScmFunctions {
      *     }
      * 
      *     public static void stack(Context ctx) {
-     *         // Define the data source (the item to be retrieved via API GET)
+     *         // Define the function (the item to be retrieved via API GET)
      *         final var dnatExternalWebTestGet = ScmFunctions.getNatRule(GetNatRuleArgs.builder()
      *             .id("574717ac-8a63-4b6f-bf77-f05a66ba6322")
      *             .build());
@@ -29182,7 +29182,7 @@ public final class ScmFunctions {
      *     }
      * 
      *     public static void stack(Context ctx) {
-     *         // Define the data source (the item to be retrieved via API GET)
+     *         // Define the function (the item to be retrieved via API GET)
      *         final var dnatExternalWebTestGet = ScmFunctions.getNatRule(GetNatRuleArgs.builder()
      *             .id("574717ac-8a63-4b6f-bf77-f05a66ba6322")
      *             .build());
@@ -29229,7 +29229,7 @@ public final class ScmFunctions {
      *     }
      * 
      *     public static void stack(Context ctx) {
-     *         // Define the data source (the item to be retrieved via API GET)
+     *         // Define the function (the item to be retrieved via API GET)
      *         final var dnatExternalWebTestGet = ScmFunctions.getNatRule(GetNatRuleArgs.builder()
      *             .id("574717ac-8a63-4b6f-bf77-f05a66ba6322")
      *             .build());
@@ -29276,7 +29276,7 @@ public final class ScmFunctions {
      *     }
      * 
      *     public static void stack(Context ctx) {
-     *         // Define the data source (the item to be retrieved via API GET)
+     *         // Define the function (the item to be retrieved via API GET)
      *         final var dnatExternalWebTestGet = ScmFunctions.getNatRule(GetNatRuleArgs.builder()
      *             .id("574717ac-8a63-4b6f-bf77-f05a66ba6322")
      *             .build());
@@ -29323,7 +29323,7 @@ public final class ScmFunctions {
      *     }
      * 
      *     public static void stack(Context ctx) {
-     *         // Define the data source (the item to be retrieved via API GET)
+     *         // Define the function (the item to be retrieved via API GET)
      *         final var dnatExternalWebTestGet = ScmFunctions.getNatRule(GetNatRuleArgs.builder()
      *             .id("574717ac-8a63-4b6f-bf77-f05a66ba6322")
      *             .build());
@@ -29370,7 +29370,7 @@ public final class ScmFunctions {
      *     }
      * 
      *     public static void stack(Context ctx) {
-     *         // Define a data source for listing NAT rules
+     *         // Define a function for listing NAT rules
      *         final var pagedNatRulesList = ScmFunctions.getNatRuleList(GetNatRuleListArgs.builder()
      *             .folder("All")
      *             .limit(10)
@@ -29418,7 +29418,7 @@ public final class ScmFunctions {
      *     }
      * 
      *     public static void stack(Context ctx) {
-     *         // Define a data source for listing NAT rules
+     *         // Define a function for listing NAT rules
      *         final var pagedNatRulesList = ScmFunctions.getNatRuleList(GetNatRuleListArgs.builder()
      *             .folder("All")
      *             .limit(10)
@@ -29466,7 +29466,7 @@ public final class ScmFunctions {
      *     }
      * 
      *     public static void stack(Context ctx) {
-     *         // Define a data source for listing NAT rules
+     *         // Define a function for listing NAT rules
      *         final var pagedNatRulesList = ScmFunctions.getNatRuleList(GetNatRuleListArgs.builder()
      *             .folder("All")
      *             .limit(10)
@@ -29514,7 +29514,7 @@ public final class ScmFunctions {
      *     }
      * 
      *     public static void stack(Context ctx) {
-     *         // Define a data source for listing NAT rules
+     *         // Define a function for listing NAT rules
      *         final var pagedNatRulesList = ScmFunctions.getNatRuleList(GetNatRuleListArgs.builder()
      *             .folder("All")
      *             .limit(10)
@@ -29562,7 +29562,7 @@ public final class ScmFunctions {
      *     }
      * 
      *     public static void stack(Context ctx) {
-     *         // Define a data source for listing NAT rules
+     *         // Define a function for listing NAT rules
      *         final var pagedNatRulesList = ScmFunctions.getNatRuleList(GetNatRuleListArgs.builder()
      *             .folder("All")
      *             .limit(10)
@@ -29694,7 +29694,7 @@ public final class ScmFunctions {
      *     }
      * 
      *     public static void stack(Context ctx) {
-     *         // Define the data source (the item to be retrieved via API GET)
+     *         // Define the function (the item to be retrieved via API GET)
      *         final var pbfExternalWebTestGet = ScmFunctions.getPbfRule(GetPbfRuleArgs.builder()
      *             .id("044d67ad-1c36-4b97-bbf4-584445fe8a7d")
      *             .build());
@@ -29740,7 +29740,7 @@ public final class ScmFunctions {
      *     }
      * 
      *     public static void stack(Context ctx) {
-     *         // Define the data source (the item to be retrieved via API GET)
+     *         // Define the function (the item to be retrieved via API GET)
      *         final var pbfExternalWebTestGet = ScmFunctions.getPbfRule(GetPbfRuleArgs.builder()
      *             .id("044d67ad-1c36-4b97-bbf4-584445fe8a7d")
      *             .build());
@@ -29786,7 +29786,7 @@ public final class ScmFunctions {
      *     }
      * 
      *     public static void stack(Context ctx) {
-     *         // Define the data source (the item to be retrieved via API GET)
+     *         // Define the function (the item to be retrieved via API GET)
      *         final var pbfExternalWebTestGet = ScmFunctions.getPbfRule(GetPbfRuleArgs.builder()
      *             .id("044d67ad-1c36-4b97-bbf4-584445fe8a7d")
      *             .build());
@@ -29832,7 +29832,7 @@ public final class ScmFunctions {
      *     }
      * 
      *     public static void stack(Context ctx) {
-     *         // Define the data source (the item to be retrieved via API GET)
+     *         // Define the function (the item to be retrieved via API GET)
      *         final var pbfExternalWebTestGet = ScmFunctions.getPbfRule(GetPbfRuleArgs.builder()
      *             .id("044d67ad-1c36-4b97-bbf4-584445fe8a7d")
      *             .build());
@@ -29878,7 +29878,7 @@ public final class ScmFunctions {
      *     }
      * 
      *     public static void stack(Context ctx) {
-     *         // Define the data source (the item to be retrieved via API GET)
+     *         // Define the function (the item to be retrieved via API GET)
      *         final var pbfExternalWebTestGet = ScmFunctions.getPbfRule(GetPbfRuleArgs.builder()
      *             .id("044d67ad-1c36-4b97-bbf4-584445fe8a7d")
      *             .build());
@@ -29924,7 +29924,7 @@ public final class ScmFunctions {
      *     }
      * 
      *     public static void stack(Context ctx) {
-     *         // Define a data source for listing pbf rules
+     *         // Define a function for listing pbf rules
      *         final var pagedPbfRulesList = ScmFunctions.getPbfRuleList(GetPbfRuleListArgs.builder()
      *             .folder("All")
      *             .limit(10)
@@ -29970,7 +29970,7 @@ public final class ScmFunctions {
      *     }
      * 
      *     public static void stack(Context ctx) {
-     *         // Define a data source for listing pbf rules
+     *         // Define a function for listing pbf rules
      *         final var pagedPbfRulesList = ScmFunctions.getPbfRuleList(GetPbfRuleListArgs.builder()
      *             .folder("All")
      *             .limit(10)
@@ -30016,7 +30016,7 @@ public final class ScmFunctions {
      *     }
      * 
      *     public static void stack(Context ctx) {
-     *         // Define a data source for listing pbf rules
+     *         // Define a function for listing pbf rules
      *         final var pagedPbfRulesList = ScmFunctions.getPbfRuleList(GetPbfRuleListArgs.builder()
      *             .folder("All")
      *             .limit(10)
@@ -30062,7 +30062,7 @@ public final class ScmFunctions {
      *     }
      * 
      *     public static void stack(Context ctx) {
-     *         // Define a data source for listing pbf rules
+     *         // Define a function for listing pbf rules
      *         final var pagedPbfRulesList = ScmFunctions.getPbfRuleList(GetPbfRuleListArgs.builder()
      *             .folder("All")
      *             .limit(10)
@@ -30108,7 +30108,7 @@ public final class ScmFunctions {
      *     }
      * 
      *     public static void stack(Context ctx) {
-     *         // Define a data source for listing pbf rules
+     *         // Define a function for listing pbf rules
      *         final var pagedPbfRulesList = ScmFunctions.getPbfRuleList(GetPbfRuleListArgs.builder()
      *             .folder("All")
      *             .limit(10)
@@ -30154,7 +30154,7 @@ public final class ScmFunctions {
      *     }
      * 
      *     public static void stack(Context ctx) {
-     *         // Define a data source for listing pbf rules
+     *         // Define a function for listing pbf rules
      *         final var pagedPbfRulesList = ScmFunctions.getPbfRuleList(GetPbfRuleListArgs.builder()
      *             .folder("All")
      *             .limit(10)
@@ -30200,7 +30200,7 @@ public final class ScmFunctions {
      *     }
      * 
      *     public static void stack(Context ctx) {
-     *         // Define a data source for listing pbf rules
+     *         // Define a function for listing pbf rules
      *         final var pagedPbfRulesList = ScmFunctions.getPbfRuleList(GetPbfRuleListArgs.builder()
      *             .folder("All")
      *             .limit(10)
@@ -34858,7 +34858,7 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         // ------------------------------------------------------------------
-     *         // Data Source: SCM Service Connection Group (Single Lookup)
+     *         // Function: SCM Service Connection Group (Single Lookup)
      *         // ------------------------------------------------------------------
      *         final var groupLookup = ScmFunctions.getServiceConnectionGroup(GetServiceConnectionGroupArgs.builder()
      *             .id("1480fd9d-dae7-4bf3-94f6-4945e89b59b6")
@@ -34902,7 +34902,7 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         // ------------------------------------------------------------------
-     *         // Data Source: SCM Service Connection Group (Single Lookup)
+     *         // Function: SCM Service Connection Group (Single Lookup)
      *         // ------------------------------------------------------------------
      *         final var groupLookup = ScmFunctions.getServiceConnectionGroup(GetServiceConnectionGroupArgs.builder()
      *             .id("1480fd9d-dae7-4bf3-94f6-4945e89b59b6")
@@ -34946,7 +34946,7 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         // ------------------------------------------------------------------
-     *         // Data Source: SCM Service Connection Group (Single Lookup)
+     *         // Function: SCM Service Connection Group (Single Lookup)
      *         // ------------------------------------------------------------------
      *         final var groupLookup = ScmFunctions.getServiceConnectionGroup(GetServiceConnectionGroupArgs.builder()
      *             .id("1480fd9d-dae7-4bf3-94f6-4945e89b59b6")
@@ -34990,7 +34990,7 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         // ------------------------------------------------------------------
-     *         // Data Source: SCM Service Connection Group (Single Lookup)
+     *         // Function: SCM Service Connection Group (Single Lookup)
      *         // ------------------------------------------------------------------
      *         final var groupLookup = ScmFunctions.getServiceConnectionGroup(GetServiceConnectionGroupArgs.builder()
      *             .id("1480fd9d-dae7-4bf3-94f6-4945e89b59b6")
@@ -35034,7 +35034,7 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         // ------------------------------------------------------------------
-     *         // Data Source: SCM Service Connection Group (Single Lookup)
+     *         // Function: SCM Service Connection Group (Single Lookup)
      *         // ------------------------------------------------------------------
      *         final var groupLookup = ScmFunctions.getServiceConnectionGroup(GetServiceConnectionGroupArgs.builder()
      *             .id("1480fd9d-dae7-4bf3-94f6-4945e89b59b6")
@@ -35204,7 +35204,7 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         // Look up a single service group object by its ID.
-     *         // The ID used here is from the terraform.tfstate file.
+     *         // The ID used here is from the pulumi.tfstate file.
      *         final var scmServiceGroupDs = ScmFunctions.getServiceGroup(GetServiceGroupArgs.builder()
      *             .id("dc430d61-52ca-44bc-a797-e65123a94134")
      *             .build());
@@ -35247,7 +35247,7 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         // Look up a single service group object by its ID.
-     *         // The ID used here is from the terraform.tfstate file.
+     *         // The ID used here is from the pulumi.tfstate file.
      *         final var scmServiceGroupDs = ScmFunctions.getServiceGroup(GetServiceGroupArgs.builder()
      *             .id("dc430d61-52ca-44bc-a797-e65123a94134")
      *             .build());
@@ -35290,7 +35290,7 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         // Look up a single service group object by its ID.
-     *         // The ID used here is from the terraform.tfstate file.
+     *         // The ID used here is from the pulumi.tfstate file.
      *         final var scmServiceGroupDs = ScmFunctions.getServiceGroup(GetServiceGroupArgs.builder()
      *             .id("dc430d61-52ca-44bc-a797-e65123a94134")
      *             .build());
@@ -35333,7 +35333,7 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         // Look up a single service group object by its ID.
-     *         // The ID used here is from the terraform.tfstate file.
+     *         // The ID used here is from the pulumi.tfstate file.
      *         final var scmServiceGroupDs = ScmFunctions.getServiceGroup(GetServiceGroupArgs.builder()
      *             .id("dc430d61-52ca-44bc-a797-e65123a94134")
      *             .build());
@@ -35376,7 +35376,7 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         // Look up a single service group object by its ID.
-     *         // The ID used here is from the terraform.tfstate file.
+     *         // The ID used here is from the pulumi.tfstate file.
      *         final var scmServiceGroupDs = ScmFunctions.getServiceGroup(GetServiceGroupArgs.builder()
      *             .id("dc430d61-52ca-44bc-a797-e65123a94134")
      *             .build());
@@ -35419,7 +35419,7 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         // Fetch a list of all service group objects.
-     *         // This data source will call the "List" API endpoint.
+     *         // This function will call the "List" API endpoint.
      *         final var allServiceGroups = ScmFunctions.getServiceGroupList(GetServiceGroupListArgs.builder()
      *             .folder("All")
      *             .build());
@@ -35462,7 +35462,7 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         // Fetch a list of all service group objects.
-     *         // This data source will call the "List" API endpoint.
+     *         // This function will call the "List" API endpoint.
      *         final var allServiceGroups = ScmFunctions.getServiceGroupList(GetServiceGroupListArgs.builder()
      *             .folder("All")
      *             .build());
@@ -35505,7 +35505,7 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         // Fetch a list of all service group objects.
-     *         // This data source will call the "List" API endpoint.
+     *         // This function will call the "List" API endpoint.
      *         final var allServiceGroups = ScmFunctions.getServiceGroupList(GetServiceGroupListArgs.builder()
      *             .folder("All")
      *             .build());
@@ -35548,7 +35548,7 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         // Fetch a list of all service group objects.
-     *         // This data source will call the "List" API endpoint.
+     *         // This function will call the "List" API endpoint.
      *         final var allServiceGroups = ScmFunctions.getServiceGroupList(GetServiceGroupListArgs.builder()
      *             .folder("All")
      *             .build());
@@ -35591,7 +35591,7 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         // Fetch a list of all service group objects.
-     *         // This data source will call the "List" API endpoint.
+     *         // This function will call the "List" API endpoint.
      *         final var allServiceGroups = ScmFunctions.getServiceGroupList(GetServiceGroupListArgs.builder()
      *             .folder("All")
      *             .build());
@@ -35634,7 +35634,7 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         // Fetch a list of all service group objects.
-     *         // This data source will call the "List" API endpoint.
+     *         // This function will call the "List" API endpoint.
      *         final var allServiceGroups = ScmFunctions.getServiceGroupList(GetServiceGroupListArgs.builder()
      *             .folder("All")
      *             .build());
@@ -35677,7 +35677,7 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         // Fetch a list of all service group objects.
-     *         // This data source will call the "List" API endpoint.
+     *         // This function will call the "List" API endpoint.
      *         final var allServiceGroups = ScmFunctions.getServiceGroupList(GetServiceGroupListArgs.builder()
      *             .folder("All")
      *             .build());
@@ -40165,7 +40165,7 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         // Fetch a list of all application objects.
-     *         // This data source will call the "List" API endpoint.
+     *         // This function will call the "List" API endpoint.
      *         final var allTags = ScmFunctions.getTagList(GetTagListArgs.builder()
      *             .folder("All")
      *             .build());
@@ -40208,7 +40208,7 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         // Fetch a list of all application objects.
-     *         // This data source will call the "List" API endpoint.
+     *         // This function will call the "List" API endpoint.
      *         final var allTags = ScmFunctions.getTagList(GetTagListArgs.builder()
      *             .folder("All")
      *             .build());
@@ -40251,7 +40251,7 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         // Fetch a list of all application objects.
-     *         // This data source will call the "List" API endpoint.
+     *         // This function will call the "List" API endpoint.
      *         final var allTags = ScmFunctions.getTagList(GetTagListArgs.builder()
      *             .folder("All")
      *             .build());
@@ -40294,7 +40294,7 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         // Fetch a list of all application objects.
-     *         // This data source will call the "List" API endpoint.
+     *         // This function will call the "List" API endpoint.
      *         final var allTags = ScmFunctions.getTagList(GetTagListArgs.builder()
      *             .folder("All")
      *             .build());
@@ -40337,7 +40337,7 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         // Fetch a list of all application objects.
-     *         // This data source will call the "List" API endpoint.
+     *         // This function will call the "List" API endpoint.
      *         final var allTags = ScmFunctions.getTagList(GetTagListArgs.builder()
      *             .folder("All")
      *             .build());
@@ -40380,7 +40380,7 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         // Fetch a list of all application objects.
-     *         // This data source will call the "List" API endpoint.
+     *         // This function will call the "List" API endpoint.
      *         final var allTags = ScmFunctions.getTagList(GetTagListArgs.builder()
      *             .folder("All")
      *             .build());
@@ -40423,7 +40423,7 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         // Fetch a list of all application objects.
-     *         // This data source will call the "List" API endpoint.
+     *         // This function will call the "List" API endpoint.
      *         final var allTags = ScmFunctions.getTagList(GetTagListArgs.builder()
      *             .folder("All")
      *             .build());

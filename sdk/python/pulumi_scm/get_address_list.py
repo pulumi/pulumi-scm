@@ -162,7 +162,7 @@ def get_address_list(device: Optional[_builtins.str] = None,
     import pulumi
     import pulumi_scm as scm
 
-    # This data source will call the "ListAddresses" API endpoint
+    # This function will call the "ListAddresses" API endpoint
     # and return all filters in the "All" folder.
     # 1. Use a single data block to fetch ALL addresses in the "All" folder.
     all_shared = scm.get_address_list(folder="All")
@@ -221,7 +221,7 @@ def get_address_list_output(device: pulumi.Input[Optional[Optional[_builtins.str
     import pulumi
     import pulumi_scm as scm
 
-    # This data source will call the "ListAddresses" API endpoint
+    # This function will call the "ListAddresses" API endpoint
     # and return all filters in the "All" folder.
     # 1. Use a single data block to fetch ALL addresses in the "All" folder.
     all_shared = scm.get_address_list(folder="All")

@@ -35,11 +35,11 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["scmDnsSecurityProfileDetails"] = 
+        ///         ["scmDnsSecurityProfileDetails"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "profileId", scmDnsProfile.Apply(getDnsSecurityProfileResult =&gt; getDnsSecurityProfileResult.Id) },
-        ///             { "folder", scmDnsProfile.Apply(getDnsSecurityProfileResult =&gt; getDnsSecurityProfileResult.Folder) },
-        ///             { "name", scmDnsProfile.Apply(getDnsSecurityProfileResult =&gt; getDnsSecurityProfileResult.Name) },
+        ///             ["profileId"] = scmDnsProfile.Apply(getDnsSecurityProfileResult =&gt; getDnsSecurityProfileResult.Id),
+        ///             ["folder"] = scmDnsProfile.Apply(getDnsSecurityProfileResult =&gt; getDnsSecurityProfileResult.Folder),
+        ///             ["name"] = scmDnsProfile.Apply(getDnsSecurityProfileResult =&gt; getDnsSecurityProfileResult.Name),
         ///         },
         ///     };
         /// });
@@ -72,11 +72,11 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["scmDnsSecurityProfileDetails"] = 
+        ///         ["scmDnsSecurityProfileDetails"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "profileId", scmDnsProfile.Apply(getDnsSecurityProfileResult =&gt; getDnsSecurityProfileResult.Id) },
-        ///             { "folder", scmDnsProfile.Apply(getDnsSecurityProfileResult =&gt; getDnsSecurityProfileResult.Folder) },
-        ///             { "name", scmDnsProfile.Apply(getDnsSecurityProfileResult =&gt; getDnsSecurityProfileResult.Name) },
+        ///             ["profileId"] = scmDnsProfile.Apply(getDnsSecurityProfileResult =&gt; getDnsSecurityProfileResult.Id),
+        ///             ["folder"] = scmDnsProfile.Apply(getDnsSecurityProfileResult =&gt; getDnsSecurityProfileResult.Folder),
+        ///             ["name"] = scmDnsProfile.Apply(getDnsSecurityProfileResult =&gt; getDnsSecurityProfileResult.Name),
         ///         },
         ///     };
         /// });
@@ -109,11 +109,11 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["scmDnsSecurityProfileDetails"] = 
+        ///         ["scmDnsSecurityProfileDetails"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "profileId", scmDnsProfile.Apply(getDnsSecurityProfileResult =&gt; getDnsSecurityProfileResult.Id) },
-        ///             { "folder", scmDnsProfile.Apply(getDnsSecurityProfileResult =&gt; getDnsSecurityProfileResult.Folder) },
-        ///             { "name", scmDnsProfile.Apply(getDnsSecurityProfileResult =&gt; getDnsSecurityProfileResult.Name) },
+        ///             ["profileId"] = scmDnsProfile.Apply(getDnsSecurityProfileResult =&gt; getDnsSecurityProfileResult.Id),
+        ///             ["folder"] = scmDnsProfile.Apply(getDnsSecurityProfileResult =&gt; getDnsSecurityProfileResult.Folder),
+        ///             ["name"] = scmDnsProfile.Apply(getDnsSecurityProfileResult =&gt; getDnsSecurityProfileResult.Name),
         ///         },
         ///     };
         /// });

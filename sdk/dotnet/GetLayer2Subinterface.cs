@@ -32,14 +32,14 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["layer2SubinterfaceDataSourceResults"] = 
+        ///         ["layer2SubinterfaceDataSourceResults"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "id", scmL2SubinterfaceDs.Apply(getLayer2SubinterfaceResult =&gt; getLayer2SubinterfaceResult.Id) },
-        ///             { "name", scmL2SubinterfaceDs.Apply(getLayer2SubinterfaceResult =&gt; getLayer2SubinterfaceResult.Name) },
-        ///             { "comment", scmL2SubinterfaceDs.Apply(getLayer2SubinterfaceResult =&gt; getLayer2SubinterfaceResult.Comment) },
-        ///             { "vlanTag", scmL2SubinterfaceDs.Apply(getLayer2SubinterfaceResult =&gt; getLayer2SubinterfaceResult.VlanTag) },
-        ///             { "parentInterface", scmL2SubinterfaceDs.Apply(getLayer2SubinterfaceResult =&gt; getLayer2SubinterfaceResult.ParentInterface) },
-        ///             { "folder", scmL2SubinterfaceDs.Apply(getLayer2SubinterfaceResult =&gt; getLayer2SubinterfaceResult.Folder) },
+        ///             ["id"] = scmL2SubinterfaceDs.Apply(getLayer2SubinterfaceResult =&gt; getLayer2SubinterfaceResult.Id),
+        ///             ["name"] = scmL2SubinterfaceDs.Apply(getLayer2SubinterfaceResult =&gt; getLayer2SubinterfaceResult.Name),
+        ///             ["comment"] = scmL2SubinterfaceDs.Apply(getLayer2SubinterfaceResult =&gt; getLayer2SubinterfaceResult.Comment),
+        ///             ["vlanTag"] = scmL2SubinterfaceDs.Apply(getLayer2SubinterfaceResult =&gt; getLayer2SubinterfaceResult.VlanTag),
+        ///             ["parentInterface"] = scmL2SubinterfaceDs.Apply(getLayer2SubinterfaceResult =&gt; getLayer2SubinterfaceResult.ParentInterface),
+        ///             ["folder"] = scmL2SubinterfaceDs.Apply(getLayer2SubinterfaceResult =&gt; getLayer2SubinterfaceResult.Folder),
         ///         },
         ///     };
         /// });
@@ -69,14 +69,14 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["layer2SubinterfaceDataSourceResults"] = 
+        ///         ["layer2SubinterfaceDataSourceResults"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "id", scmL2SubinterfaceDs.Apply(getLayer2SubinterfaceResult =&gt; getLayer2SubinterfaceResult.Id) },
-        ///             { "name", scmL2SubinterfaceDs.Apply(getLayer2SubinterfaceResult =&gt; getLayer2SubinterfaceResult.Name) },
-        ///             { "comment", scmL2SubinterfaceDs.Apply(getLayer2SubinterfaceResult =&gt; getLayer2SubinterfaceResult.Comment) },
-        ///             { "vlanTag", scmL2SubinterfaceDs.Apply(getLayer2SubinterfaceResult =&gt; getLayer2SubinterfaceResult.VlanTag) },
-        ///             { "parentInterface", scmL2SubinterfaceDs.Apply(getLayer2SubinterfaceResult =&gt; getLayer2SubinterfaceResult.ParentInterface) },
-        ///             { "folder", scmL2SubinterfaceDs.Apply(getLayer2SubinterfaceResult =&gt; getLayer2SubinterfaceResult.Folder) },
+        ///             ["id"] = scmL2SubinterfaceDs.Apply(getLayer2SubinterfaceResult =&gt; getLayer2SubinterfaceResult.Id),
+        ///             ["name"] = scmL2SubinterfaceDs.Apply(getLayer2SubinterfaceResult =&gt; getLayer2SubinterfaceResult.Name),
+        ///             ["comment"] = scmL2SubinterfaceDs.Apply(getLayer2SubinterfaceResult =&gt; getLayer2SubinterfaceResult.Comment),
+        ///             ["vlanTag"] = scmL2SubinterfaceDs.Apply(getLayer2SubinterfaceResult =&gt; getLayer2SubinterfaceResult.VlanTag),
+        ///             ["parentInterface"] = scmL2SubinterfaceDs.Apply(getLayer2SubinterfaceResult =&gt; getLayer2SubinterfaceResult.ParentInterface),
+        ///             ["folder"] = scmL2SubinterfaceDs.Apply(getLayer2SubinterfaceResult =&gt; getLayer2SubinterfaceResult.Folder),
         ///         },
         ///     };
         /// });
@@ -106,14 +106,14 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["layer2SubinterfaceDataSourceResults"] = 
+        ///         ["layer2SubinterfaceDataSourceResults"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "id", scmL2SubinterfaceDs.Apply(getLayer2SubinterfaceResult =&gt; getLayer2SubinterfaceResult.Id) },
-        ///             { "name", scmL2SubinterfaceDs.Apply(getLayer2SubinterfaceResult =&gt; getLayer2SubinterfaceResult.Name) },
-        ///             { "comment", scmL2SubinterfaceDs.Apply(getLayer2SubinterfaceResult =&gt; getLayer2SubinterfaceResult.Comment) },
-        ///             { "vlanTag", scmL2SubinterfaceDs.Apply(getLayer2SubinterfaceResult =&gt; getLayer2SubinterfaceResult.VlanTag) },
-        ///             { "parentInterface", scmL2SubinterfaceDs.Apply(getLayer2SubinterfaceResult =&gt; getLayer2SubinterfaceResult.ParentInterface) },
-        ///             { "folder", scmL2SubinterfaceDs.Apply(getLayer2SubinterfaceResult =&gt; getLayer2SubinterfaceResult.Folder) },
+        ///             ["id"] = scmL2SubinterfaceDs.Apply(getLayer2SubinterfaceResult =&gt; getLayer2SubinterfaceResult.Id),
+        ///             ["name"] = scmL2SubinterfaceDs.Apply(getLayer2SubinterfaceResult =&gt; getLayer2SubinterfaceResult.Name),
+        ///             ["comment"] = scmL2SubinterfaceDs.Apply(getLayer2SubinterfaceResult =&gt; getLayer2SubinterfaceResult.Comment),
+        ///             ["vlanTag"] = scmL2SubinterfaceDs.Apply(getLayer2SubinterfaceResult =&gt; getLayer2SubinterfaceResult.VlanTag),
+        ///             ["parentInterface"] = scmL2SubinterfaceDs.Apply(getLayer2SubinterfaceResult =&gt; getLayer2SubinterfaceResult.ParentInterface),
+        ///             ["folder"] = scmL2SubinterfaceDs.Apply(getLayer2SubinterfaceResult =&gt; getLayer2SubinterfaceResult.Folder),
         ///         },
         ///     };
         /// });

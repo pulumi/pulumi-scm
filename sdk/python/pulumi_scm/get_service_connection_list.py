@@ -168,7 +168,7 @@ def get_service_connection_list(device: Optional[_builtins.str] = None,
     if folder_scope is None:
         folder_scope = "Service Connections"
     # ------------------------------------------------------------------
-    # Data Source List Lookup
+    # Function List Lookup
     # ------------------------------------------------------------------
     all_connections_in_folder = scm.get_service_connection_list(folder=folder_scope,
         limit=50)
@@ -226,7 +226,7 @@ def get_service_connection_list_output(device: pulumi.Input[Optional[Optional[_b
     if folder_scope is None:
         folder_scope = "Service Connections"
     # ------------------------------------------------------------------
-    # Data Source List Lookup
+    # Function List Lookup
     # ------------------------------------------------------------------
     all_connections_in_folder = scm.get_service_connection_list(folder=folder_scope,
         limit=50)

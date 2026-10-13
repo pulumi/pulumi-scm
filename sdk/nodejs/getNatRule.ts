@@ -15,7 +15,7 @@ import * as utilities from "./utilities";
  * import * as pulumi from "@pulumi/pulumi";
  * import * as scm from "@pulumi/scm";
  *
- * // Define the data source (the item to be retrieved via API GET)
+ * // Define the function (the item to be retrieved via API GET)
  * const dnatExternalWebTestGet = scm.getNatRule({
  *     id: "574717ac-8a63-4b6f-bf77-f05a66ba6322",
  * });
@@ -162,7 +162,7 @@ export interface GetNatRuleResult {
  * import * as pulumi from "@pulumi/pulumi";
  * import * as scm from "@pulumi/scm";
  *
- * // Define the data source (the item to be retrieved via API GET)
+ * // Define the function (the item to be retrieved via API GET)
  * const dnatExternalWebTestGet = scm.getNatRule({
  *     id: "574717ac-8a63-4b6f-bf77-f05a66ba6322",
  * });

@@ -29,7 +29,7 @@ namespace Pulumi.Scm
     ///     {
     ///         Folder = "ngfw-shared",
     ///         Name = "scm_bgp_filtering_profile",
-    ///         Ipv4 = null,
+    ///         Ipv4 = new() { },
     ///     });
     /// 
     ///     //

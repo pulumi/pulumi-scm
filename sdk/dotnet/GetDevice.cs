@@ -32,19 +32,19 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["scmDeviceOutput"] = 
+        ///         ["scmDeviceOutput"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "id", myDevice.Apply(getDeviceResult =&gt; getDeviceResult.Id) },
-        ///             { "name", myDevice.Apply(getDeviceResult =&gt; getDeviceResult.Name) },
-        ///             { "hostname", myDevice.Apply(getDeviceResult =&gt; getDeviceResult.Hostname) },
-        ///             { "model", myDevice.Apply(getDeviceResult =&gt; getDeviceResult.Model) },
-        ///             { "family", myDevice.Apply(getDeviceResult =&gt; getDeviceResult.Family) },
-        ///             { "folder", myDevice.Apply(getDeviceResult =&gt; getDeviceResult.Folder) },
-        ///             { "isConnected", myDevice.Apply(getDeviceResult =&gt; getDeviceResult.IsConnected) },
-        ///             { "softwareVersion", myDevice.Apply(getDeviceResult =&gt; getDeviceResult.SoftwareVersion) },
-        ///             { "ipAddress", myDevice.Apply(getDeviceResult =&gt; getDeviceResult.IpAddress) },
-        ///             { "macAddress", myDevice.Apply(getDeviceResult =&gt; getDeviceResult.MacAddress) },
-        ///             { "uptime", myDevice.Apply(getDeviceResult =&gt; getDeviceResult.Uptime) },
+        ///             ["id"] = myDevice.Apply(getDeviceResult =&gt; getDeviceResult.Id),
+        ///             ["name"] = myDevice.Apply(getDeviceResult =&gt; getDeviceResult.Name),
+        ///             ["hostname"] = myDevice.Apply(getDeviceResult =&gt; getDeviceResult.Hostname),
+        ///             ["model"] = myDevice.Apply(getDeviceResult =&gt; getDeviceResult.Model),
+        ///             ["family"] = myDevice.Apply(getDeviceResult =&gt; getDeviceResult.Family),
+        ///             ["folder"] = myDevice.Apply(getDeviceResult =&gt; getDeviceResult.Folder),
+        ///             ["isConnected"] = myDevice.Apply(getDeviceResult =&gt; getDeviceResult.IsConnected),
+        ///             ["softwareVersion"] = myDevice.Apply(getDeviceResult =&gt; getDeviceResult.SoftwareVersion),
+        ///             ["ipAddress"] = myDevice.Apply(getDeviceResult =&gt; getDeviceResult.IpAddress),
+        ///             ["macAddress"] = myDevice.Apply(getDeviceResult =&gt; getDeviceResult.MacAddress),
+        ///             ["uptime"] = myDevice.Apply(getDeviceResult =&gt; getDeviceResult.Uptime),
         ///         },
         ///     };
         /// });
@@ -74,19 +74,19 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["scmDeviceOutput"] = 
+        ///         ["scmDeviceOutput"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "id", myDevice.Apply(getDeviceResult =&gt; getDeviceResult.Id) },
-        ///             { "name", myDevice.Apply(getDeviceResult =&gt; getDeviceResult.Name) },
-        ///             { "hostname", myDevice.Apply(getDeviceResult =&gt; getDeviceResult.Hostname) },
-        ///             { "model", myDevice.Apply(getDeviceResult =&gt; getDeviceResult.Model) },
-        ///             { "family", myDevice.Apply(getDeviceResult =&gt; getDeviceResult.Family) },
-        ///             { "folder", myDevice.Apply(getDeviceResult =&gt; getDeviceResult.Folder) },
-        ///             { "isConnected", myDevice.Apply(getDeviceResult =&gt; getDeviceResult.IsConnected) },
-        ///             { "softwareVersion", myDevice.Apply(getDeviceResult =&gt; getDeviceResult.SoftwareVersion) },
-        ///             { "ipAddress", myDevice.Apply(getDeviceResult =&gt; getDeviceResult.IpAddress) },
-        ///             { "macAddress", myDevice.Apply(getDeviceResult =&gt; getDeviceResult.MacAddress) },
-        ///             { "uptime", myDevice.Apply(getDeviceResult =&gt; getDeviceResult.Uptime) },
+        ///             ["id"] = myDevice.Apply(getDeviceResult =&gt; getDeviceResult.Id),
+        ///             ["name"] = myDevice.Apply(getDeviceResult =&gt; getDeviceResult.Name),
+        ///             ["hostname"] = myDevice.Apply(getDeviceResult =&gt; getDeviceResult.Hostname),
+        ///             ["model"] = myDevice.Apply(getDeviceResult =&gt; getDeviceResult.Model),
+        ///             ["family"] = myDevice.Apply(getDeviceResult =&gt; getDeviceResult.Family),
+        ///             ["folder"] = myDevice.Apply(getDeviceResult =&gt; getDeviceResult.Folder),
+        ///             ["isConnected"] = myDevice.Apply(getDeviceResult =&gt; getDeviceResult.IsConnected),
+        ///             ["softwareVersion"] = myDevice.Apply(getDeviceResult =&gt; getDeviceResult.SoftwareVersion),
+        ///             ["ipAddress"] = myDevice.Apply(getDeviceResult =&gt; getDeviceResult.IpAddress),
+        ///             ["macAddress"] = myDevice.Apply(getDeviceResult =&gt; getDeviceResult.MacAddress),
+        ///             ["uptime"] = myDevice.Apply(getDeviceResult =&gt; getDeviceResult.Uptime),
         ///         },
         ///     };
         /// });
@@ -116,19 +116,19 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["scmDeviceOutput"] = 
+        ///         ["scmDeviceOutput"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "id", myDevice.Apply(getDeviceResult =&gt; getDeviceResult.Id) },
-        ///             { "name", myDevice.Apply(getDeviceResult =&gt; getDeviceResult.Name) },
-        ///             { "hostname", myDevice.Apply(getDeviceResult =&gt; getDeviceResult.Hostname) },
-        ///             { "model", myDevice.Apply(getDeviceResult =&gt; getDeviceResult.Model) },
-        ///             { "family", myDevice.Apply(getDeviceResult =&gt; getDeviceResult.Family) },
-        ///             { "folder", myDevice.Apply(getDeviceResult =&gt; getDeviceResult.Folder) },
-        ///             { "isConnected", myDevice.Apply(getDeviceResult =&gt; getDeviceResult.IsConnected) },
-        ///             { "softwareVersion", myDevice.Apply(getDeviceResult =&gt; getDeviceResult.SoftwareVersion) },
-        ///             { "ipAddress", myDevice.Apply(getDeviceResult =&gt; getDeviceResult.IpAddress) },
-        ///             { "macAddress", myDevice.Apply(getDeviceResult =&gt; getDeviceResult.MacAddress) },
-        ///             { "uptime", myDevice.Apply(getDeviceResult =&gt; getDeviceResult.Uptime) },
+        ///             ["id"] = myDevice.Apply(getDeviceResult =&gt; getDeviceResult.Id),
+        ///             ["name"] = myDevice.Apply(getDeviceResult =&gt; getDeviceResult.Name),
+        ///             ["hostname"] = myDevice.Apply(getDeviceResult =&gt; getDeviceResult.Hostname),
+        ///             ["model"] = myDevice.Apply(getDeviceResult =&gt; getDeviceResult.Model),
+        ///             ["family"] = myDevice.Apply(getDeviceResult =&gt; getDeviceResult.Family),
+        ///             ["folder"] = myDevice.Apply(getDeviceResult =&gt; getDeviceResult.Folder),
+        ///             ["isConnected"] = myDevice.Apply(getDeviceResult =&gt; getDeviceResult.IsConnected),
+        ///             ["softwareVersion"] = myDevice.Apply(getDeviceResult =&gt; getDeviceResult.SoftwareVersion),
+        ///             ["ipAddress"] = myDevice.Apply(getDeviceResult =&gt; getDeviceResult.IpAddress),
+        ///             ["macAddress"] = myDevice.Apply(getDeviceResult =&gt; getDeviceResult.MacAddress),
+        ///             ["uptime"] = myDevice.Apply(getDeviceResult =&gt; getDeviceResult.Uptime),
         ///         },
         ///     };
         /// });

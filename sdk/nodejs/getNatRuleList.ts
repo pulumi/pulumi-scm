@@ -15,7 +15,7 @@ import * as utilities from "./utilities";
  * import * as pulumi from "@pulumi/pulumi";
  * import * as scm from "@pulumi/scm";
  *
- * // Define a data source for listing NAT rules
+ * // Define a function for listing NAT rules
  * const pagedNatRulesList = scm.getNatRuleList({
  *     folder: "All",
  *     limit: 10,
@@ -129,7 +129,7 @@ export interface GetNatRuleListResult {
  * import * as pulumi from "@pulumi/pulumi";
  * import * as scm from "@pulumi/scm";
  *
- * // Define a data source for listing NAT rules
+ * // Define a function for listing NAT rules
  * const pagedNatRulesList = scm.getNatRuleList({
  *     folder: "All",
  *     limit: 10,

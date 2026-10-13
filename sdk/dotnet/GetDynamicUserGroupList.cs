@@ -30,7 +30,7 @@ namespace Pulumi.Scm
         ///         Folder = "All",
         ///     });
         /// 
-        ///     // This data source block shows an example of pagination.
+        ///     // This function block shows an example of pagination.
         ///     var paginatedDugsExample = Scm.GetDynamicUserGroupList.Invoke(new()
         ///     {
         ///         Folder = "All",
@@ -42,10 +42,10 @@ namespace Pulumi.Scm
         ///     {
         ///         ["dugResultsFromList"] = ,
         ///         ["paginatedDugs"] = ,
-        ///         ["paginationDugsDetails"] = 
+        ///         ["paginationDugsDetails"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "totalObjectsInFolder", paginatedDugsExample.Apply(getDynamicUserGroupListResult =&gt; getDynamicUserGroupListResult.Total) },
-        ///             { "limitUsed", paginatedDugsExample.Apply(getDynamicUserGroupListResult =&gt; getDynamicUserGroupListResult.Limit) },
+        ///             ["totalObjectsInFolder"] = paginatedDugsExample.Apply(getDynamicUserGroupListResult =&gt; getDynamicUserGroupListResult.Total),
+        ///             ["limitUsed"] = paginatedDugsExample.Apply(getDynamicUserGroupListResult =&gt; getDynamicUserGroupListResult.Limit),
         ///         },
         ///     };
         /// });
@@ -73,7 +73,7 @@ namespace Pulumi.Scm
         ///         Folder = "All",
         ///     });
         /// 
-        ///     // This data source block shows an example of pagination.
+        ///     // This function block shows an example of pagination.
         ///     var paginatedDugsExample = Scm.GetDynamicUserGroupList.Invoke(new()
         ///     {
         ///         Folder = "All",
@@ -85,10 +85,10 @@ namespace Pulumi.Scm
         ///     {
         ///         ["dugResultsFromList"] = ,
         ///         ["paginatedDugs"] = ,
-        ///         ["paginationDugsDetails"] = 
+        ///         ["paginationDugsDetails"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "totalObjectsInFolder", paginatedDugsExample.Apply(getDynamicUserGroupListResult =&gt; getDynamicUserGroupListResult.Total) },
-        ///             { "limitUsed", paginatedDugsExample.Apply(getDynamicUserGroupListResult =&gt; getDynamicUserGroupListResult.Limit) },
+        ///             ["totalObjectsInFolder"] = paginatedDugsExample.Apply(getDynamicUserGroupListResult =&gt; getDynamicUserGroupListResult.Total),
+        ///             ["limitUsed"] = paginatedDugsExample.Apply(getDynamicUserGroupListResult =&gt; getDynamicUserGroupListResult.Limit),
         ///         },
         ///     };
         /// });
@@ -116,7 +116,7 @@ namespace Pulumi.Scm
         ///         Folder = "All",
         ///     });
         /// 
-        ///     // This data source block shows an example of pagination.
+        ///     // This function block shows an example of pagination.
         ///     var paginatedDugsExample = Scm.GetDynamicUserGroupList.Invoke(new()
         ///     {
         ///         Folder = "All",
@@ -128,10 +128,10 @@ namespace Pulumi.Scm
         ///     {
         ///         ["dugResultsFromList"] = ,
         ///         ["paginatedDugs"] = ,
-        ///         ["paginationDugsDetails"] = 
+        ///         ["paginationDugsDetails"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "totalObjectsInFolder", paginatedDugsExample.Apply(getDynamicUserGroupListResult =&gt; getDynamicUserGroupListResult.Total) },
-        ///             { "limitUsed", paginatedDugsExample.Apply(getDynamicUserGroupListResult =&gt; getDynamicUserGroupListResult.Limit) },
+        ///             ["totalObjectsInFolder"] = paginatedDugsExample.Apply(getDynamicUserGroupListResult =&gt; getDynamicUserGroupListResult.Total),
+        ///             ["limitUsed"] = paginatedDugsExample.Apply(getDynamicUserGroupListResult =&gt; getDynamicUserGroupListResult.Limit),
         ///         },
         ///     };
         /// });

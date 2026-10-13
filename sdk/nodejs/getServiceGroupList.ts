@@ -16,7 +16,7 @@ import * as utilities from "./utilities";
  * import * as scm from "@pulumi/scm";
  *
  * // Fetch a list of all service group objects.
- * // This data source will call the "List" API endpoint.
+ * // This function will call the "List" API endpoint.
  * const allServiceGroups = scm.getServiceGroupList({
  *     folder: "All",
  * });
@@ -117,7 +117,7 @@ export interface GetServiceGroupListResult {
  * import * as scm from "@pulumi/scm";
  *
  * // Fetch a list of all service group objects.
- * // This data source will call the "List" API endpoint.
+ * // This function will call the "List" API endpoint.
  * const allServiceGroups = scm.getServiceGroupList({
  *     folder: "All",
  * });

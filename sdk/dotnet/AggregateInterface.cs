@@ -30,7 +30,7 @@ namespace Pulumi.Scm
     ///         Name = "$scm_aggregate_intf_l2",
     ///         Comment = "Managed by Pulumi",
     ///         Folder = "ngfw-shared",
-    ///         Layer2 = null,
+    ///         Layer2 = new() { },
     ///     });
     /// 
     ///     //
@@ -70,7 +70,7 @@ namespace Pulumi.Scm
     ///         Name = "$scm_aggregate_intf_l3",
     ///         Comment = "Managed by Pulumi",
     ///         Folder = "ngfw-shared",
-    ///         Layer3 = null,
+    ///         Layer3 = new() { },
     ///     });
     /// 
     ///     //

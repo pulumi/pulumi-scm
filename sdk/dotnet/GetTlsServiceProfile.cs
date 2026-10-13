@@ -35,11 +35,11 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["scmTlsServiceProfileDetails"] = 
+        ///         ["scmTlsServiceProfileDetails"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "profileId", scmTlsServiceProf.Apply(getTlsServiceProfileResult =&gt; getTlsServiceProfileResult.Id) },
-        ///             { "folder", scmTlsServiceProf.Apply(getTlsServiceProfileResult =&gt; getTlsServiceProfileResult.Folder) },
-        ///             { "name", scmTlsServiceProf.Apply(getTlsServiceProfileResult =&gt; getTlsServiceProfileResult.Name) },
+        ///             ["profileId"] = scmTlsServiceProf.Apply(getTlsServiceProfileResult =&gt; getTlsServiceProfileResult.Id),
+        ///             ["folder"] = scmTlsServiceProf.Apply(getTlsServiceProfileResult =&gt; getTlsServiceProfileResult.Folder),
+        ///             ["name"] = scmTlsServiceProf.Apply(getTlsServiceProfileResult =&gt; getTlsServiceProfileResult.Name),
         ///         },
         ///     };
         /// });
@@ -72,11 +72,11 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["scmTlsServiceProfileDetails"] = 
+        ///         ["scmTlsServiceProfileDetails"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "profileId", scmTlsServiceProf.Apply(getTlsServiceProfileResult =&gt; getTlsServiceProfileResult.Id) },
-        ///             { "folder", scmTlsServiceProf.Apply(getTlsServiceProfileResult =&gt; getTlsServiceProfileResult.Folder) },
-        ///             { "name", scmTlsServiceProf.Apply(getTlsServiceProfileResult =&gt; getTlsServiceProfileResult.Name) },
+        ///             ["profileId"] = scmTlsServiceProf.Apply(getTlsServiceProfileResult =&gt; getTlsServiceProfileResult.Id),
+        ///             ["folder"] = scmTlsServiceProf.Apply(getTlsServiceProfileResult =&gt; getTlsServiceProfileResult.Folder),
+        ///             ["name"] = scmTlsServiceProf.Apply(getTlsServiceProfileResult =&gt; getTlsServiceProfileResult.Name),
         ///         },
         ///     };
         /// });
@@ -109,11 +109,11 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["scmTlsServiceProfileDetails"] = 
+        ///         ["scmTlsServiceProfileDetails"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "profileId", scmTlsServiceProf.Apply(getTlsServiceProfileResult =&gt; getTlsServiceProfileResult.Id) },
-        ///             { "folder", scmTlsServiceProf.Apply(getTlsServiceProfileResult =&gt; getTlsServiceProfileResult.Folder) },
-        ///             { "name", scmTlsServiceProf.Apply(getTlsServiceProfileResult =&gt; getTlsServiceProfileResult.Name) },
+        ///             ["profileId"] = scmTlsServiceProf.Apply(getTlsServiceProfileResult =&gt; getTlsServiceProfileResult.Id),
+        ///             ["folder"] = scmTlsServiceProf.Apply(getTlsServiceProfileResult =&gt; getTlsServiceProfileResult.Folder),
+        ///             ["name"] = scmTlsServiceProf.Apply(getTlsServiceProfileResult =&gt; getTlsServiceProfileResult.Name),
         ///         },
         ///     };
         /// });

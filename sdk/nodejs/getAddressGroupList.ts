@@ -15,7 +15,7 @@ import * as utilities from "./utilities";
  * import * as pulumi from "@pulumi/pulumi";
  * import * as scm from "@pulumi/scm";
  *
- * // This data source will call the "ListAddresses" API endpoint
+ * // This function will call the "ListAddresses" API endpoint
  * // and return all filters in the "All" folder.
  * // 1. Use a single data block to fetch ALL addresses in the "All" folder.
  * const allShared = scm.getAddressGroupList({
@@ -127,7 +127,7 @@ export interface GetAddressGroupListResult {
  * import * as pulumi from "@pulumi/pulumi";
  * import * as scm from "@pulumi/scm";
  *
- * // This data source will call the "ListAddresses" API endpoint
+ * // This function will call the "ListAddresses" API endpoint
  * // and return all filters in the "All" folder.
  * // 1. Use a single data block to fetch ALL addresses in the "All" folder.
  * const allShared = scm.getAddressGroupList({

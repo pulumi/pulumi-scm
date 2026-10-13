@@ -32,14 +32,14 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["scmAntiSpywareSignatureOutput"] = 
+        ///         ["scmAntiSpywareSignatureOutput"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "threadId", scmAntiSpywareSignatureDs.Apply(getAntiSpywareSignatureResult =&gt; getAntiSpywareSignatureResult.Id) },
-        ///             { "folder", scmAntiSpywareSignatureDs.Apply(getAntiSpywareSignatureResult =&gt; getAntiSpywareSignatureResult.Folder) },
-        ///             { "name", scmAntiSpywareSignatureDs.Apply(getAntiSpywareSignatureResult =&gt; getAntiSpywareSignatureResult.Name) },
-        ///             { "comment", scmAntiSpywareSignatureDs.Apply(getAntiSpywareSignatureResult =&gt; getAntiSpywareSignatureResult.Comment) },
-        ///             { "severity", scmAntiSpywareSignatureDs.Apply(getAntiSpywareSignatureResult =&gt; getAntiSpywareSignatureResult.Severity) },
-        ///             { "signature", scmAntiSpywareSignatureDs.Apply(getAntiSpywareSignatureResult =&gt; getAntiSpywareSignatureResult.Signature) },
+        ///             ["threadId"] = scmAntiSpywareSignatureDs.Apply(getAntiSpywareSignatureResult =&gt; getAntiSpywareSignatureResult.Id),
+        ///             ["folder"] = scmAntiSpywareSignatureDs.Apply(getAntiSpywareSignatureResult =&gt; getAntiSpywareSignatureResult.Folder),
+        ///             ["name"] = scmAntiSpywareSignatureDs.Apply(getAntiSpywareSignatureResult =&gt; getAntiSpywareSignatureResult.Name),
+        ///             ["comment"] = scmAntiSpywareSignatureDs.Apply(getAntiSpywareSignatureResult =&gt; getAntiSpywareSignatureResult.Comment),
+        ///             ["severity"] = scmAntiSpywareSignatureDs.Apply(getAntiSpywareSignatureResult =&gt; getAntiSpywareSignatureResult.Severity),
+        ///             ["signature"] = scmAntiSpywareSignatureDs.Apply(getAntiSpywareSignatureResult =&gt; getAntiSpywareSignatureResult.Signature),
         ///         },
         ///     };
         /// });
@@ -69,14 +69,14 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["scmAntiSpywareSignatureOutput"] = 
+        ///         ["scmAntiSpywareSignatureOutput"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "threadId", scmAntiSpywareSignatureDs.Apply(getAntiSpywareSignatureResult =&gt; getAntiSpywareSignatureResult.Id) },
-        ///             { "folder", scmAntiSpywareSignatureDs.Apply(getAntiSpywareSignatureResult =&gt; getAntiSpywareSignatureResult.Folder) },
-        ///             { "name", scmAntiSpywareSignatureDs.Apply(getAntiSpywareSignatureResult =&gt; getAntiSpywareSignatureResult.Name) },
-        ///             { "comment", scmAntiSpywareSignatureDs.Apply(getAntiSpywareSignatureResult =&gt; getAntiSpywareSignatureResult.Comment) },
-        ///             { "severity", scmAntiSpywareSignatureDs.Apply(getAntiSpywareSignatureResult =&gt; getAntiSpywareSignatureResult.Severity) },
-        ///             { "signature", scmAntiSpywareSignatureDs.Apply(getAntiSpywareSignatureResult =&gt; getAntiSpywareSignatureResult.Signature) },
+        ///             ["threadId"] = scmAntiSpywareSignatureDs.Apply(getAntiSpywareSignatureResult =&gt; getAntiSpywareSignatureResult.Id),
+        ///             ["folder"] = scmAntiSpywareSignatureDs.Apply(getAntiSpywareSignatureResult =&gt; getAntiSpywareSignatureResult.Folder),
+        ///             ["name"] = scmAntiSpywareSignatureDs.Apply(getAntiSpywareSignatureResult =&gt; getAntiSpywareSignatureResult.Name),
+        ///             ["comment"] = scmAntiSpywareSignatureDs.Apply(getAntiSpywareSignatureResult =&gt; getAntiSpywareSignatureResult.Comment),
+        ///             ["severity"] = scmAntiSpywareSignatureDs.Apply(getAntiSpywareSignatureResult =&gt; getAntiSpywareSignatureResult.Severity),
+        ///             ["signature"] = scmAntiSpywareSignatureDs.Apply(getAntiSpywareSignatureResult =&gt; getAntiSpywareSignatureResult.Signature),
         ///         },
         ///     };
         /// });
@@ -106,14 +106,14 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["scmAntiSpywareSignatureOutput"] = 
+        ///         ["scmAntiSpywareSignatureOutput"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "threadId", scmAntiSpywareSignatureDs.Apply(getAntiSpywareSignatureResult =&gt; getAntiSpywareSignatureResult.Id) },
-        ///             { "folder", scmAntiSpywareSignatureDs.Apply(getAntiSpywareSignatureResult =&gt; getAntiSpywareSignatureResult.Folder) },
-        ///             { "name", scmAntiSpywareSignatureDs.Apply(getAntiSpywareSignatureResult =&gt; getAntiSpywareSignatureResult.Name) },
-        ///             { "comment", scmAntiSpywareSignatureDs.Apply(getAntiSpywareSignatureResult =&gt; getAntiSpywareSignatureResult.Comment) },
-        ///             { "severity", scmAntiSpywareSignatureDs.Apply(getAntiSpywareSignatureResult =&gt; getAntiSpywareSignatureResult.Severity) },
-        ///             { "signature", scmAntiSpywareSignatureDs.Apply(getAntiSpywareSignatureResult =&gt; getAntiSpywareSignatureResult.Signature) },
+        ///             ["threadId"] = scmAntiSpywareSignatureDs.Apply(getAntiSpywareSignatureResult =&gt; getAntiSpywareSignatureResult.Id),
+        ///             ["folder"] = scmAntiSpywareSignatureDs.Apply(getAntiSpywareSignatureResult =&gt; getAntiSpywareSignatureResult.Folder),
+        ///             ["name"] = scmAntiSpywareSignatureDs.Apply(getAntiSpywareSignatureResult =&gt; getAntiSpywareSignatureResult.Name),
+        ///             ["comment"] = scmAntiSpywareSignatureDs.Apply(getAntiSpywareSignatureResult =&gt; getAntiSpywareSignatureResult.Comment),
+        ///             ["severity"] = scmAntiSpywareSignatureDs.Apply(getAntiSpywareSignatureResult =&gt; getAntiSpywareSignatureResult.Severity),
+        ///             ["signature"] = scmAntiSpywareSignatureDs.Apply(getAntiSpywareSignatureResult =&gt; getAntiSpywareSignatureResult.Signature),
         ///         },
         ///     };
         /// });

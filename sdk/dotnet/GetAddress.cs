@@ -56,13 +56,13 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["addressDataSourceResults"] = 
+        ///         ["addressDataSourceResults"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "netmaskObject", scmAddress1Ds },
-        ///             { "ipRangeObject", scmAddress2Ds },
-        ///             { "fqdnObject", scmAddress3Ds },
-        ///             { "classCWildcardObject", scmAddress4Ds },
-        ///             { "multiTagTestObject", scmAddress5Ds },
+        ///             ["netmaskObject"] = scmAddress1Ds,
+        ///             ["ipRangeObject"] = scmAddress2Ds,
+        ///             ["fqdnObject"] = scmAddress3Ds,
+        ///             ["classCWildcardObject"] = scmAddress4Ds,
+        ///             ["multiTagTestObject"] = scmAddress5Ds,
         ///         },
         ///     };
         /// });
@@ -116,13 +116,13 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["addressDataSourceResults"] = 
+        ///         ["addressDataSourceResults"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "netmaskObject", scmAddress1Ds },
-        ///             { "ipRangeObject", scmAddress2Ds },
-        ///             { "fqdnObject", scmAddress3Ds },
-        ///             { "classCWildcardObject", scmAddress4Ds },
-        ///             { "multiTagTestObject", scmAddress5Ds },
+        ///             ["netmaskObject"] = scmAddress1Ds,
+        ///             ["ipRangeObject"] = scmAddress2Ds,
+        ///             ["fqdnObject"] = scmAddress3Ds,
+        ///             ["classCWildcardObject"] = scmAddress4Ds,
+        ///             ["multiTagTestObject"] = scmAddress5Ds,
         ///         },
         ///     };
         /// });
@@ -176,13 +176,13 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["addressDataSourceResults"] = 
+        ///         ["addressDataSourceResults"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "netmaskObject", scmAddress1Ds },
-        ///             { "ipRangeObject", scmAddress2Ds },
-        ///             { "fqdnObject", scmAddress3Ds },
-        ///             { "classCWildcardObject", scmAddress4Ds },
-        ///             { "multiTagTestObject", scmAddress5Ds },
+        ///             ["netmaskObject"] = scmAddress1Ds,
+        ///             ["ipRangeObject"] = scmAddress2Ds,
+        ///             ["fqdnObject"] = scmAddress3Ds,
+        ///             ["classCWildcardObject"] = scmAddress4Ds,
+        ///             ["multiTagTestObject"] = scmAddress5Ds,
         ///         },
         ///     };
         /// });

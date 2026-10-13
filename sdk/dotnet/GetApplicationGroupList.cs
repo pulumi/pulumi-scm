@@ -42,10 +42,10 @@ namespace Pulumi.Scm
         ///     {
         ///         ["applicationGroupsDataSourceResultsFromList"] = ,
         ///         ["paginatedApplicationGroups"] = ,
-        ///         ["paginationApplicationGroupsDetails"] = 
+        ///         ["paginationApplicationGroupsDetails"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "totalObjectsInFolder", paginatedExample.Apply(getApplicationGroupListResult =&gt; getApplicationGroupListResult.Total) },
-        ///             { "limitUsed", paginatedExample.Apply(getApplicationGroupListResult =&gt; getApplicationGroupListResult.Limit) },
+        ///             ["totalObjectsInFolder"] = paginatedExample.Apply(getApplicationGroupListResult =&gt; getApplicationGroupListResult.Total),
+        ///             ["limitUsed"] = paginatedExample.Apply(getApplicationGroupListResult =&gt; getApplicationGroupListResult.Limit),
         ///         },
         ///     };
         /// });
@@ -85,10 +85,10 @@ namespace Pulumi.Scm
         ///     {
         ///         ["applicationGroupsDataSourceResultsFromList"] = ,
         ///         ["paginatedApplicationGroups"] = ,
-        ///         ["paginationApplicationGroupsDetails"] = 
+        ///         ["paginationApplicationGroupsDetails"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "totalObjectsInFolder", paginatedExample.Apply(getApplicationGroupListResult =&gt; getApplicationGroupListResult.Total) },
-        ///             { "limitUsed", paginatedExample.Apply(getApplicationGroupListResult =&gt; getApplicationGroupListResult.Limit) },
+        ///             ["totalObjectsInFolder"] = paginatedExample.Apply(getApplicationGroupListResult =&gt; getApplicationGroupListResult.Total),
+        ///             ["limitUsed"] = paginatedExample.Apply(getApplicationGroupListResult =&gt; getApplicationGroupListResult.Limit),
         ///         },
         ///     };
         /// });
@@ -128,10 +128,10 @@ namespace Pulumi.Scm
         ///     {
         ///         ["applicationGroupsDataSourceResultsFromList"] = ,
         ///         ["paginatedApplicationGroups"] = ,
-        ///         ["paginationApplicationGroupsDetails"] = 
+        ///         ["paginationApplicationGroupsDetails"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "totalObjectsInFolder", paginatedExample.Apply(getApplicationGroupListResult =&gt; getApplicationGroupListResult.Total) },
-        ///             { "limitUsed", paginatedExample.Apply(getApplicationGroupListResult =&gt; getApplicationGroupListResult.Limit) },
+        ///             ["totalObjectsInFolder"] = paginatedExample.Apply(getApplicationGroupListResult =&gt; getApplicationGroupListResult.Total),
+        ///             ["limitUsed"] = paginatedExample.Apply(getApplicationGroupListResult =&gt; getApplicationGroupListResult.Limit),
         ///         },
         ///     };
         /// });

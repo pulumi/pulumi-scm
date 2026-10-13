@@ -15,7 +15,7 @@ import * as utilities from "./utilities";
  * import * as pulumi from "@pulumi/pulumi";
  * import * as scm from "@pulumi/scm";
  *
- * // Define a data source for listing pbf rules
+ * // Define a function for listing pbf rules
  * const pagedPbfRulesList = scm.getPbfRuleList({
  *     folder: "All",
  *     limit: 10,
@@ -119,7 +119,7 @@ export interface GetPbfRuleListResult {
  * import * as pulumi from "@pulumi/pulumi";
  * import * as scm from "@pulumi/scm";
  *
- * // Define a data source for listing pbf rules
+ * // Define a function for listing pbf rules
  * const pagedPbfRulesList = scm.getPbfRuleList({
  *     folder: "All",
  *     limit: 10,

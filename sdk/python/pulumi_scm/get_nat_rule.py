@@ -305,7 +305,7 @@ def get_nat_rule(device: Optional[_builtins.str] = None,
     import pulumi
     import pulumi_scm as scm
 
-    # Define the data source (the item to be retrieved via API GET)
+    # Define the function (the item to be retrieved via API GET)
     dnat_external_web_test_get = scm.get_nat_rule(id="574717ac-8a63-4b6f-bf77-f05a66ba6322")
     pulumi.export("retrievedIDAndName", {
         "id": dnat_external_web_test_get.id,
@@ -368,7 +368,7 @@ def get_nat_rule_output(device: pulumi.Input[Optional[Optional[_builtins.str]]] 
     import pulumi
     import pulumi_scm as scm
 
-    # Define the data source (the item to be retrieved via API GET)
+    # Define the function (the item to be retrieved via API GET)
     dnat_external_web_test_get = scm.get_nat_rule(id="574717ac-8a63-4b6f-bf77-f05a66ba6322")
     pulumi.export("retrievedIDAndName", {
         "id": dnat_external_web_test_get.id,

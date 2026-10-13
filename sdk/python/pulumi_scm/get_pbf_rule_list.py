@@ -162,7 +162,7 @@ def get_pbf_rule_list(device: Optional[_builtins.str] = None,
     import pulumi
     import pulumi_scm as scm
 
-    # Define a data source for listing pbf rules
+    # Define a function for listing pbf rules
     paged_pbf_rules_list = scm.get_pbf_rule_list(folder="All",
         limit=10)
     pulumi.export("fetchedPbfRuleListSummary", {
@@ -215,7 +215,7 @@ def get_pbf_rule_list_output(device: pulumi.Input[Optional[Optional[_builtins.st
     import pulumi
     import pulumi_scm as scm
 
-    # Define a data source for listing pbf rules
+    # Define a function for listing pbf rules
     paged_pbf_rules_list = scm.get_pbf_rule_list(folder="All",
         limit=10)
     pulumi.export("fetchedPbfRuleListSummary", {

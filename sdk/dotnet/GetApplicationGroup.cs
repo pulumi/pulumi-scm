@@ -24,7 +24,7 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     // Look up the application group by its ID from the terraform.tfstate file.
+        ///     // Look up the application group by its ID from the pulumi.tfstate file.
         ///     var scmApplicationGroupDs = Scm.GetApplicationGroup.Invoke(new()
         ///     {
         ///         Id = "91616221-ddeb-4b49-866d-48d64dedc056",
@@ -32,12 +32,12 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["applicationGroupOutputs"] = 
+        ///         ["applicationGroupOutputs"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "groupId", scmApplicationGroupDs.Apply(getApplicationGroupResult =&gt; getApplicationGroupResult.Id) },
-        ///             { "folder", scmApplicationGroupDs.Apply(getApplicationGroupResult =&gt; getApplicationGroupResult.Folder) },
-        ///             { "name", scmApplicationGroupDs.Apply(getApplicationGroupResult =&gt; getApplicationGroupResult.Name) },
-        ///             { "members", scmApplicationGroupDs.Apply(getApplicationGroupResult =&gt; getApplicationGroupResult.Members) },
+        ///             ["groupId"] = scmApplicationGroupDs.Apply(getApplicationGroupResult =&gt; getApplicationGroupResult.Id),
+        ///             ["folder"] = scmApplicationGroupDs.Apply(getApplicationGroupResult =&gt; getApplicationGroupResult.Folder),
+        ///             ["name"] = scmApplicationGroupDs.Apply(getApplicationGroupResult =&gt; getApplicationGroupResult.Name),
+        ///             ["members"] = scmApplicationGroupDs.Apply(getApplicationGroupResult =&gt; getApplicationGroupResult.Members),
         ///         },
         ///     };
         /// });
@@ -59,7 +59,7 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     // Look up the application group by its ID from the terraform.tfstate file.
+        ///     // Look up the application group by its ID from the pulumi.tfstate file.
         ///     var scmApplicationGroupDs = Scm.GetApplicationGroup.Invoke(new()
         ///     {
         ///         Id = "91616221-ddeb-4b49-866d-48d64dedc056",
@@ -67,12 +67,12 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["applicationGroupOutputs"] = 
+        ///         ["applicationGroupOutputs"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "groupId", scmApplicationGroupDs.Apply(getApplicationGroupResult =&gt; getApplicationGroupResult.Id) },
-        ///             { "folder", scmApplicationGroupDs.Apply(getApplicationGroupResult =&gt; getApplicationGroupResult.Folder) },
-        ///             { "name", scmApplicationGroupDs.Apply(getApplicationGroupResult =&gt; getApplicationGroupResult.Name) },
-        ///             { "members", scmApplicationGroupDs.Apply(getApplicationGroupResult =&gt; getApplicationGroupResult.Members) },
+        ///             ["groupId"] = scmApplicationGroupDs.Apply(getApplicationGroupResult =&gt; getApplicationGroupResult.Id),
+        ///             ["folder"] = scmApplicationGroupDs.Apply(getApplicationGroupResult =&gt; getApplicationGroupResult.Folder),
+        ///             ["name"] = scmApplicationGroupDs.Apply(getApplicationGroupResult =&gt; getApplicationGroupResult.Name),
+        ///             ["members"] = scmApplicationGroupDs.Apply(getApplicationGroupResult =&gt; getApplicationGroupResult.Members),
         ///         },
         ///     };
         /// });
@@ -94,7 +94,7 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     // Look up the application group by its ID from the terraform.tfstate file.
+        ///     // Look up the application group by its ID from the pulumi.tfstate file.
         ///     var scmApplicationGroupDs = Scm.GetApplicationGroup.Invoke(new()
         ///     {
         ///         Id = "91616221-ddeb-4b49-866d-48d64dedc056",
@@ -102,12 +102,12 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["applicationGroupOutputs"] = 
+        ///         ["applicationGroupOutputs"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "groupId", scmApplicationGroupDs.Apply(getApplicationGroupResult =&gt; getApplicationGroupResult.Id) },
-        ///             { "folder", scmApplicationGroupDs.Apply(getApplicationGroupResult =&gt; getApplicationGroupResult.Folder) },
-        ///             { "name", scmApplicationGroupDs.Apply(getApplicationGroupResult =&gt; getApplicationGroupResult.Name) },
-        ///             { "members", scmApplicationGroupDs.Apply(getApplicationGroupResult =&gt; getApplicationGroupResult.Members) },
+        ///             ["groupId"] = scmApplicationGroupDs.Apply(getApplicationGroupResult =&gt; getApplicationGroupResult.Id),
+        ///             ["folder"] = scmApplicationGroupDs.Apply(getApplicationGroupResult =&gt; getApplicationGroupResult.Folder),
+        ///             ["name"] = scmApplicationGroupDs.Apply(getApplicationGroupResult =&gt; getApplicationGroupResult.Name),
+        ///             ["members"] = scmApplicationGroupDs.Apply(getApplicationGroupResult =&gt; getApplicationGroupResult.Members),
         ///         },
         ///     };
         /// });

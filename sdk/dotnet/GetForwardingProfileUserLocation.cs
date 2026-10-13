@@ -44,11 +44,11 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["forwardingProfileUserLocationDataSourceResults"] = 
+        ///         ["forwardingProfileUserLocationDataSourceResults"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "ipAddressesObject", scmForwardingProfileUserLocation1Ds },
-        ///             { "internalHostDetectionObject", scmForwardingProfileUserLocation2Ds },
-        ///             { "multiIpRangeObject", scmForwardingProfileUserLocation4Ds },
+        ///             ["ipAddressesObject"] = scmForwardingProfileUserLocation1Ds,
+        ///             ["internalHostDetectionObject"] = scmForwardingProfileUserLocation2Ds,
+        ///             ["multiIpRangeObject"] = scmForwardingProfileUserLocation4Ds,
         ///         },
         ///     };
         /// });
@@ -90,11 +90,11 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["forwardingProfileUserLocationDataSourceResults"] = 
+        ///         ["forwardingProfileUserLocationDataSourceResults"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "ipAddressesObject", scmForwardingProfileUserLocation1Ds },
-        ///             { "internalHostDetectionObject", scmForwardingProfileUserLocation2Ds },
-        ///             { "multiIpRangeObject", scmForwardingProfileUserLocation4Ds },
+        ///             ["ipAddressesObject"] = scmForwardingProfileUserLocation1Ds,
+        ///             ["internalHostDetectionObject"] = scmForwardingProfileUserLocation2Ds,
+        ///             ["multiIpRangeObject"] = scmForwardingProfileUserLocation4Ds,
         ///         },
         ///     };
         /// });
@@ -136,11 +136,11 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["forwardingProfileUserLocationDataSourceResults"] = 
+        ///         ["forwardingProfileUserLocationDataSourceResults"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "ipAddressesObject", scmForwardingProfileUserLocation1Ds },
-        ///             { "internalHostDetectionObject", scmForwardingProfileUserLocation2Ds },
-        ///             { "multiIpRangeObject", scmForwardingProfileUserLocation4Ds },
+        ///             ["ipAddressesObject"] = scmForwardingProfileUserLocation1Ds,
+        ///             ["internalHostDetectionObject"] = scmForwardingProfileUserLocation2Ds,
+        ///             ["multiIpRangeObject"] = scmForwardingProfileUserLocation4Ds,
         ///         },
         ///     };
         /// });

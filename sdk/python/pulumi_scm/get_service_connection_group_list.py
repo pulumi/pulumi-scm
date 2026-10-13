@@ -168,7 +168,7 @@ def get_service_connection_group_list(device: Optional[_builtins.str] = None,
     if folder_scope is None:
         folder_scope = "Service Connections"
     # ------------------------------------------------------------------
-    # Data Source List: SCM Service Connection Group (List Lookup)
+    # Function List: SCM Service Connection Group (List Lookup)
     # ------------------------------------------------------------------
     all_groups_in_folder = scm.get_service_connection_group_list(folder=folder_scope,
         limit=50)
@@ -226,7 +226,7 @@ def get_service_connection_group_list_output(device: pulumi.Input[Optional[Optio
     if folder_scope is None:
         folder_scope = "Service Connections"
     # ------------------------------------------------------------------
-    # Data Source List: SCM Service Connection Group (List Lookup)
+    # Function List: SCM Service Connection Group (List Lookup)
     # ------------------------------------------------------------------
     all_groups_in_folder = scm.get_service_connection_group_list(folder=folder_scope,
         limit=50)

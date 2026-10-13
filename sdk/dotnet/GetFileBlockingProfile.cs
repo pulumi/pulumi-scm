@@ -35,11 +35,11 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["scmFileBlockingProfileDetails"] = 
+        ///         ["scmFileBlockingProfileDetails"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "profileId", scmFileBlockingProf.Apply(getFileBlockingProfileResult =&gt; getFileBlockingProfileResult.Id) },
-        ///             { "folder", scmFileBlockingProf.Apply(getFileBlockingProfileResult =&gt; getFileBlockingProfileResult.Folder) },
-        ///             { "name", scmFileBlockingProf.Apply(getFileBlockingProfileResult =&gt; getFileBlockingProfileResult.Name) },
+        ///             ["profileId"] = scmFileBlockingProf.Apply(getFileBlockingProfileResult =&gt; getFileBlockingProfileResult.Id),
+        ///             ["folder"] = scmFileBlockingProf.Apply(getFileBlockingProfileResult =&gt; getFileBlockingProfileResult.Folder),
+        ///             ["name"] = scmFileBlockingProf.Apply(getFileBlockingProfileResult =&gt; getFileBlockingProfileResult.Name),
         ///         },
         ///     };
         /// });
@@ -72,11 +72,11 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["scmFileBlockingProfileDetails"] = 
+        ///         ["scmFileBlockingProfileDetails"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "profileId", scmFileBlockingProf.Apply(getFileBlockingProfileResult =&gt; getFileBlockingProfileResult.Id) },
-        ///             { "folder", scmFileBlockingProf.Apply(getFileBlockingProfileResult =&gt; getFileBlockingProfileResult.Folder) },
-        ///             { "name", scmFileBlockingProf.Apply(getFileBlockingProfileResult =&gt; getFileBlockingProfileResult.Name) },
+        ///             ["profileId"] = scmFileBlockingProf.Apply(getFileBlockingProfileResult =&gt; getFileBlockingProfileResult.Id),
+        ///             ["folder"] = scmFileBlockingProf.Apply(getFileBlockingProfileResult =&gt; getFileBlockingProfileResult.Folder),
+        ///             ["name"] = scmFileBlockingProf.Apply(getFileBlockingProfileResult =&gt; getFileBlockingProfileResult.Name),
         ///         },
         ///     };
         /// });
@@ -109,11 +109,11 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["scmFileBlockingProfileDetails"] = 
+        ///         ["scmFileBlockingProfileDetails"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "profileId", scmFileBlockingProf.Apply(getFileBlockingProfileResult =&gt; getFileBlockingProfileResult.Id) },
-        ///             { "folder", scmFileBlockingProf.Apply(getFileBlockingProfileResult =&gt; getFileBlockingProfileResult.Folder) },
-        ///             { "name", scmFileBlockingProf.Apply(getFileBlockingProfileResult =&gt; getFileBlockingProfileResult.Name) },
+        ///             ["profileId"] = scmFileBlockingProf.Apply(getFileBlockingProfileResult =&gt; getFileBlockingProfileResult.Id),
+        ///             ["folder"] = scmFileBlockingProf.Apply(getFileBlockingProfileResult =&gt; getFileBlockingProfileResult.Folder),
+        ///             ["name"] = scmFileBlockingProf.Apply(getFileBlockingProfileResult =&gt; getFileBlockingProfileResult.Name),
         ///         },
         ///     };
         /// });

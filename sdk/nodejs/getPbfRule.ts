@@ -15,7 +15,7 @@ import * as utilities from "./utilities";
  * import * as pulumi from "@pulumi/pulumi";
  * import * as scm from "@pulumi/scm";
  *
- * // Define the data source (the item to be retrieved via API GET)
+ * // Define the function (the item to be retrieved via API GET)
  * const pbfExternalWebTestGet = scm.getPbfRule({
  *     id: "044d67ad-1c36-4b97-bbf4-584445fe8a7d",
  * });
@@ -153,7 +153,7 @@ export interface GetPbfRuleResult {
  * import * as pulumi from "@pulumi/pulumi";
  * import * as scm from "@pulumi/scm";
  *
- * // Define the data source (the item to be retrieved via API GET)
+ * // Define the function (the item to be retrieved via API GET)
  * const pbfExternalWebTestGet = scm.getPbfRule({
  *     id: "044d67ad-1c36-4b97-bbf4-584445fe8a7d",
  * });

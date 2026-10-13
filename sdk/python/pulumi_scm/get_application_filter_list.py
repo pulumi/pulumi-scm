@@ -172,7 +172,7 @@ def get_application_filter_list(device: Optional[_builtins.str] = None,
         return None
 
 
-    # This data source will call the "List" API endpoint
+    # This function will call the "List" API endpoint
     # and return all application filters in the "All" folder.
     # 1. Use a single data block to fetch ALL application filters in the "All" folder.
     all_shared = scm.get_application_filter_list(folder="All")
@@ -252,7 +252,7 @@ def get_application_filter_list_output(device: pulumi.Input[Optional[Optional[_b
         return None
 
 
-    # This data source will call the "List" API endpoint
+    # This function will call the "List" API endpoint
     # and return all application filters in the "All" folder.
     # 1. Use a single data block to fetch ALL application filters in the "All" folder.
     all_shared = scm.get_application_filter_list(folder="All")

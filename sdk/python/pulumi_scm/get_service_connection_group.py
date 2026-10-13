@@ -135,7 +135,7 @@ def get_service_connection_group(folder: Optional[_builtins.str] = None,
     import pulumi_scm as scm
 
     # ------------------------------------------------------------------
-    # Data Source: SCM Service Connection Group (Single Lookup)
+    # Function: SCM Service Connection Group (Single Lookup)
     # ------------------------------------------------------------------
     group_lookup = scm.get_service_connection_group(id="1480fd9d-dae7-4bf3-94f6-4945e89b59b6")
     pulumi.export("lookedUpServiceConnectionGroupDetails", group_lookup)
@@ -175,7 +175,7 @@ def get_service_connection_group_output(folder: pulumi.Input[Optional[Optional[_
     import pulumi_scm as scm
 
     # ------------------------------------------------------------------
-    # Data Source: SCM Service Connection Group (Single Lookup)
+    # Function: SCM Service Connection Group (Single Lookup)
     # ------------------------------------------------------------------
     group_lookup = scm.get_service_connection_group(id="1480fd9d-dae7-4bf3-94f6-4945e89b59b6")
     pulumi.export("lookedUpServiceConnectionGroupDetails", group_lookup)

@@ -28,7 +28,7 @@ import (
 //	func main() {
 //		pulumi.Run(func(ctx *pulumi.Context) error {
 //			// ------------------------------------------------------------------
-//			// Data Source: SCM Service Connection Group (Single Lookup)
+//			// Function: SCM Service Connection Group (Single Lookup)
 //			// ------------------------------------------------------------------
 //			groupLookup, err := scm.GetServiceConnectionGroup(ctx, &scm.LookupServiceConnectionGroupArgs{
 //				Id: "1480fd9d-dae7-4bf3-94f6-4945e89b59b6",

@@ -31,10 +31,10 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["fetchedProfilesListSummary"] = 
+        ///         ["fetchedProfilesListSummary"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "countOfSettingsFetched", allProfiles.Apply(getLldpProfileListResult =&gt; getLldpProfileListResult.Total) },
-        ///             { "firstProfile", allProfiles.Apply(getLldpProfileListResult =&gt; getLldpProfileListResult.Datas[0]) },
+        ///             ["countOfSettingsFetched"] = allProfiles.Apply(getLldpProfileListResult =&gt; getLldpProfileListResult.Total),
+        ///             ["firstProfile"] = allProfiles.Apply(getLldpProfileListResult =&gt; getLldpProfileListResult.Datas[0]),
         ///         },
         ///     };
         /// });
@@ -63,10 +63,10 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["fetchedProfilesListSummary"] = 
+        ///         ["fetchedProfilesListSummary"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "countOfSettingsFetched", allProfiles.Apply(getLldpProfileListResult =&gt; getLldpProfileListResult.Total) },
-        ///             { "firstProfile", allProfiles.Apply(getLldpProfileListResult =&gt; getLldpProfileListResult.Datas[0]) },
+        ///             ["countOfSettingsFetched"] = allProfiles.Apply(getLldpProfileListResult =&gt; getLldpProfileListResult.Total),
+        ///             ["firstProfile"] = allProfiles.Apply(getLldpProfileListResult =&gt; getLldpProfileListResult.Datas[0]),
         ///         },
         ///     };
         /// });
@@ -95,10 +95,10 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["fetchedProfilesListSummary"] = 
+        ///         ["fetchedProfilesListSummary"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "countOfSettingsFetched", allProfiles.Apply(getLldpProfileListResult =&gt; getLldpProfileListResult.Total) },
-        ///             { "firstProfile", allProfiles.Apply(getLldpProfileListResult =&gt; getLldpProfileListResult.Datas[0]) },
+        ///             ["countOfSettingsFetched"] = allProfiles.Apply(getLldpProfileListResult =&gt; getLldpProfileListResult.Total),
+        ///             ["firstProfile"] = allProfiles.Apply(getLldpProfileListResult =&gt; getLldpProfileListResult.Datas[0]),
         ///         },
         ///     };
         /// });

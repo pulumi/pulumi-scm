@@ -30,7 +30,7 @@ namespace Pulumi.Scm
     ///         Name = "$scm_tf_parent_interface",
     ///         Comment = "Managed by Pulumi",
     ///         Folder = "ngfw-shared",
-    ///         Layer2 = null,
+    ///         Layer2 = new() { },
     ///     });
     /// 
     ///     //

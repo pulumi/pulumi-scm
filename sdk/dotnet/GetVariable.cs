@@ -32,12 +32,12 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["variableOutputs"] = 
+        ///         ["variableOutputs"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "exampleId", scmVariableDs.Apply(getVariableResult =&gt; getVariableResult.Id) },
-        ///             { "exampleName", scmVariableDs.Apply(getVariableResult =&gt; getVariableResult.Name) },
-        ///             { "exampleType", scmVariableDs.Apply(getVariableResult =&gt; getVariableResult.Type) },
-        ///             { "exampleValue", scmVariableDs.Apply(getVariableResult =&gt; getVariableResult.Value) },
+        ///             ["exampleId"] = scmVariableDs.Apply(getVariableResult =&gt; getVariableResult.Id),
+        ///             ["exampleName"] = scmVariableDs.Apply(getVariableResult =&gt; getVariableResult.Name),
+        ///             ["exampleType"] = scmVariableDs.Apply(getVariableResult =&gt; getVariableResult.Type),
+        ///             ["exampleValue"] = scmVariableDs.Apply(getVariableResult =&gt; getVariableResult.Value),
         ///         },
         ///     };
         /// });
@@ -67,12 +67,12 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["variableOutputs"] = 
+        ///         ["variableOutputs"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "exampleId", scmVariableDs.Apply(getVariableResult =&gt; getVariableResult.Id) },
-        ///             { "exampleName", scmVariableDs.Apply(getVariableResult =&gt; getVariableResult.Name) },
-        ///             { "exampleType", scmVariableDs.Apply(getVariableResult =&gt; getVariableResult.Type) },
-        ///             { "exampleValue", scmVariableDs.Apply(getVariableResult =&gt; getVariableResult.Value) },
+        ///             ["exampleId"] = scmVariableDs.Apply(getVariableResult =&gt; getVariableResult.Id),
+        ///             ["exampleName"] = scmVariableDs.Apply(getVariableResult =&gt; getVariableResult.Name),
+        ///             ["exampleType"] = scmVariableDs.Apply(getVariableResult =&gt; getVariableResult.Type),
+        ///             ["exampleValue"] = scmVariableDs.Apply(getVariableResult =&gt; getVariableResult.Value),
         ///         },
         ///     };
         /// });
@@ -102,12 +102,12 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["variableOutputs"] = 
+        ///         ["variableOutputs"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "exampleId", scmVariableDs.Apply(getVariableResult =&gt; getVariableResult.Id) },
-        ///             { "exampleName", scmVariableDs.Apply(getVariableResult =&gt; getVariableResult.Name) },
-        ///             { "exampleType", scmVariableDs.Apply(getVariableResult =&gt; getVariableResult.Type) },
-        ///             { "exampleValue", scmVariableDs.Apply(getVariableResult =&gt; getVariableResult.Value) },
+        ///             ["exampleId"] = scmVariableDs.Apply(getVariableResult =&gt; getVariableResult.Id),
+        ///             ["exampleName"] = scmVariableDs.Apply(getVariableResult =&gt; getVariableResult.Name),
+        ///             ["exampleType"] = scmVariableDs.Apply(getVariableResult =&gt; getVariableResult.Type),
+        ///             ["exampleValue"] = scmVariableDs.Apply(getVariableResult =&gt; getVariableResult.Value),
         ///         },
         ///     };
         /// });

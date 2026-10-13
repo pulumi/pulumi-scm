@@ -30,7 +30,7 @@ namespace Pulumi.Scm
     ///         Name = "$scm_ae_intf",
     ///         Comment = "Managed by Pulumi",
     ///         Folder = "ngfw-shared",
-    ///         Layer2 = null,
+    ///         Layer2 = new() { },
     ///     });
     /// 
     ///     //
@@ -44,7 +44,7 @@ namespace Pulumi.Scm
     ///         LinkSpeed = "auto",
     ///         LinkDuplex = "full",
     ///         LinkState = "auto",
-    ///         Layer2 = null,
+    ///         Layer2 = new() { },
     ///     });
     /// 
     ///     //
@@ -58,7 +58,7 @@ namespace Pulumi.Scm
     ///         LinkSpeed = "auto",
     ///         LinkDuplex = "full",
     ///         LinkState = "auto",
-    ///         Tap = null,
+    ///         Tap = new() { },
     ///     });
     /// 
     ///     //
@@ -72,7 +72,7 @@ namespace Pulumi.Scm
     ///         LinkSpeed = "auto",
     ///         LinkDuplex = "full",
     ///         LinkState = "auto",
-    ///         Layer3 = null,
+    ///         Layer3 = new() { },
     ///     });
     /// 
     ///     //

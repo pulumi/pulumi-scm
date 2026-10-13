@@ -25,7 +25,7 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // Fetch a list of all application objects.
-        ///     // This data source will call the "List" API endpoint.
+        ///     // This function will call the "List" API endpoint.
         ///     var allTags = Scm.GetTagList.Invoke(new()
         ///     {
         ///         Folder = "All",
@@ -55,7 +55,7 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // Fetch a list of all application objects.
-        ///     // This data source will call the "List" API endpoint.
+        ///     // This function will call the "List" API endpoint.
         ///     var allTags = Scm.GetTagList.Invoke(new()
         ///     {
         ///         Folder = "All",
@@ -85,7 +85,7 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // Fetch a list of all application objects.
-        ///     // This data source will call the "List" API endpoint.
+        ///     // This function will call the "List" API endpoint.
         ///     var allTags = Scm.GetTagList.Invoke(new()
         ///     {
         ///         Folder = "All",

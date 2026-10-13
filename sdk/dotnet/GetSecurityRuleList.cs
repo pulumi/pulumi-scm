@@ -32,10 +32,10 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["fetchedRuleListSummary"] = 
+        ///         ["fetchedRuleListSummary"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "countOfRulesFetched", pagedRulesList.Apply(getSecurityRuleListResult =&gt; getSecurityRuleListResult.Total) },
-        ///             { "firstRuleName", pagedRulesList.Apply(getSecurityRuleListResult =&gt; getSecurityRuleListResult.Datas[0]?.Name) },
+        ///             ["countOfRulesFetched"] = pagedRulesList.Apply(getSecurityRuleListResult =&gt; getSecurityRuleListResult.Total),
+        ///             ["firstRuleName"] = pagedRulesList.Apply(getSecurityRuleListResult =&gt; getSecurityRuleListResult.Datas[0]?.Name),
         ///         },
         ///     };
         /// });
@@ -65,10 +65,10 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["fetchedRuleListSummary"] = 
+        ///         ["fetchedRuleListSummary"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "countOfRulesFetched", pagedRulesList.Apply(getSecurityRuleListResult =&gt; getSecurityRuleListResult.Total) },
-        ///             { "firstRuleName", pagedRulesList.Apply(getSecurityRuleListResult =&gt; getSecurityRuleListResult.Datas[0]?.Name) },
+        ///             ["countOfRulesFetched"] = pagedRulesList.Apply(getSecurityRuleListResult =&gt; getSecurityRuleListResult.Total),
+        ///             ["firstRuleName"] = pagedRulesList.Apply(getSecurityRuleListResult =&gt; getSecurityRuleListResult.Datas[0]?.Name),
         ///         },
         ///     };
         /// });
@@ -98,10 +98,10 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["fetchedRuleListSummary"] = 
+        ///         ["fetchedRuleListSummary"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "countOfRulesFetched", pagedRulesList.Apply(getSecurityRuleListResult =&gt; getSecurityRuleListResult.Total) },
-        ///             { "firstRuleName", pagedRulesList.Apply(getSecurityRuleListResult =&gt; getSecurityRuleListResult.Datas[0]?.Name) },
+        ///             ["countOfRulesFetched"] = pagedRulesList.Apply(getSecurityRuleListResult =&gt; getSecurityRuleListResult.Total),
+        ///             ["firstRuleName"] = pagedRulesList.Apply(getSecurityRuleListResult =&gt; getSecurityRuleListResult.Datas[0]?.Name),
         ///         },
         ///     };
         /// });

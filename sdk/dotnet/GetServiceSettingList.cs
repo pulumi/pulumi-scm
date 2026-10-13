@@ -31,10 +31,10 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["fetchedSettingListSummary"] = 
+        ///         ["fetchedSettingListSummary"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "countOfSettingsFetched", allSettings.Apply(getServiceSettingListResult =&gt; getServiceSettingListResult.Total) },
-        ///             { "dnsSetting", allSettings.Apply(getServiceSettingListResult =&gt; getServiceSettingListResult.Datas[0]?.Services?.DnsSetting) },
+        ///             ["countOfSettingsFetched"] = allSettings.Apply(getServiceSettingListResult =&gt; getServiceSettingListResult.Total),
+        ///             ["dnsSetting"] = allSettings.Apply(getServiceSettingListResult =&gt; getServiceSettingListResult.Datas[0]?.Services?.DnsSetting),
         ///         },
         ///     };
         /// });
@@ -63,10 +63,10 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["fetchedSettingListSummary"] = 
+        ///         ["fetchedSettingListSummary"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "countOfSettingsFetched", allSettings.Apply(getServiceSettingListResult =&gt; getServiceSettingListResult.Total) },
-        ///             { "dnsSetting", allSettings.Apply(getServiceSettingListResult =&gt; getServiceSettingListResult.Datas[0]?.Services?.DnsSetting) },
+        ///             ["countOfSettingsFetched"] = allSettings.Apply(getServiceSettingListResult =&gt; getServiceSettingListResult.Total),
+        ///             ["dnsSetting"] = allSettings.Apply(getServiceSettingListResult =&gt; getServiceSettingListResult.Datas[0]?.Services?.DnsSetting),
         ///         },
         ///     };
         /// });
@@ -95,10 +95,10 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["fetchedSettingListSummary"] = 
+        ///         ["fetchedSettingListSummary"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "countOfSettingsFetched", allSettings.Apply(getServiceSettingListResult =&gt; getServiceSettingListResult.Total) },
-        ///             { "dnsSetting", allSettings.Apply(getServiceSettingListResult =&gt; getServiceSettingListResult.Datas[0]?.Services?.DnsSetting) },
+        ///             ["countOfSettingsFetched"] = allSettings.Apply(getServiceSettingListResult =&gt; getServiceSettingListResult.Total),
+        ///             ["dnsSetting"] = allSettings.Apply(getServiceSettingListResult =&gt; getServiceSettingListResult.Datas[0]?.Services?.DnsSetting),
         ///         },
         ///     };
         /// });

@@ -35,8 +35,8 @@ namespace Pulumi.Scm
     ///                     Secondary = "10.10.10.11",
     ///                 },
     ///             },
-    ///             FqdnRefreshTime = 15,
-    ///             FqdnStaleEntryTimeout = 1440,
+    ///             FqdnRefreshTime = 15.0,
+    ///             FqdnStaleEntryTimeout = 1440.0,
     ///             NtpServers = new Scm.Inputs.ServiceSettingServicesNtpServersArgs
     ///             {
     ///                 PrimaryNtpServer = new Scm.Inputs.ServiceSettingServicesNtpServersPrimaryNtpServerArgs
@@ -59,7 +59,7 @@ namespace Pulumi.Scm
     ///             UpdateServer = "updates.paloaltonetworks.com",
     ///             ServerVerification = true,
     ///             SecureProxyServer = "test_proxy_server",
-    ///             SecureProxyPort = 90,
+    ///             SecureProxyPort = 90.0,
     ///             SecureProxyUser = "test_proxy_user",
     ///             SecureProxyPassword = "test_password",
     ///             LcaasUseProxy = true,

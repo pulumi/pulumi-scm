@@ -75,13 +75,13 @@ import (
 //									"*.dropbox.com",
 //									"dropboxformum.com",
 //								},
-//								"headers": []map[string]string{
-//									{
+//								"headers": []interface{}{
+//									map[string]string{
 //										"name":   "X-Dropbox-allowed-Team-Ids",
 //										"header": "X-Dropbox-allowed-Team-Ids",
 //										"value":  "dropbox-users",
 //									},
-//									{
+//									map[string]string{
 //										"name":   "custom_header",
 //										"header": "custom_header",
 //										"value":  "10-header",
@@ -100,13 +100,13 @@ import (
 //									"login.mircosoftonline.com",
 //									"login.windows.net",
 //								},
-//								"headers": []map[string]string{
-//									{
+//								"headers": []interface{}{
+//									map[string]string{
 //										"name":   "Restrict-Access-Context",
 //										"header": "Restrict-Access-Context",
 //										"value":  "denied-context",
 //									},
-//									{
+//									map[string]string{
 //										"name":   "Restrict-Access-To-Tenants",
 //										"header": "Restrict-Access-To-Tenants",
 //										"value":  "denied-tenants",

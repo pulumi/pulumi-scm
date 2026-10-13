@@ -35,12 +35,12 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["scmLogForwardingProfileDetails"] = 
+        ///         ["scmLogForwardingProfileDetails"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "profileId", scmLogForwardingProf.Apply(getLogForwardingProfileResult =&gt; getLogForwardingProfileResult.Id) },
-        ///             { "folder", scmLogForwardingProf.Apply(getLogForwardingProfileResult =&gt; getLogForwardingProfileResult.Folder) },
-        ///             { "name", scmLogForwardingProf.Apply(getLogForwardingProfileResult =&gt; getLogForwardingProfileResult.Name) },
-        ///             { "description", scmLogForwardingProf.Apply(getLogForwardingProfileResult =&gt; getLogForwardingProfileResult.Description) },
+        ///             ["profileId"] = scmLogForwardingProf.Apply(getLogForwardingProfileResult =&gt; getLogForwardingProfileResult.Id),
+        ///             ["folder"] = scmLogForwardingProf.Apply(getLogForwardingProfileResult =&gt; getLogForwardingProfileResult.Folder),
+        ///             ["name"] = scmLogForwardingProf.Apply(getLogForwardingProfileResult =&gt; getLogForwardingProfileResult.Name),
+        ///             ["description"] = scmLogForwardingProf.Apply(getLogForwardingProfileResult =&gt; getLogForwardingProfileResult.Description),
         ///         },
         ///     };
         /// });
@@ -73,12 +73,12 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["scmLogForwardingProfileDetails"] = 
+        ///         ["scmLogForwardingProfileDetails"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "profileId", scmLogForwardingProf.Apply(getLogForwardingProfileResult =&gt; getLogForwardingProfileResult.Id) },
-        ///             { "folder", scmLogForwardingProf.Apply(getLogForwardingProfileResult =&gt; getLogForwardingProfileResult.Folder) },
-        ///             { "name", scmLogForwardingProf.Apply(getLogForwardingProfileResult =&gt; getLogForwardingProfileResult.Name) },
-        ///             { "description", scmLogForwardingProf.Apply(getLogForwardingProfileResult =&gt; getLogForwardingProfileResult.Description) },
+        ///             ["profileId"] = scmLogForwardingProf.Apply(getLogForwardingProfileResult =&gt; getLogForwardingProfileResult.Id),
+        ///             ["folder"] = scmLogForwardingProf.Apply(getLogForwardingProfileResult =&gt; getLogForwardingProfileResult.Folder),
+        ///             ["name"] = scmLogForwardingProf.Apply(getLogForwardingProfileResult =&gt; getLogForwardingProfileResult.Name),
+        ///             ["description"] = scmLogForwardingProf.Apply(getLogForwardingProfileResult =&gt; getLogForwardingProfileResult.Description),
         ///         },
         ///     };
         /// });
@@ -111,12 +111,12 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["scmLogForwardingProfileDetails"] = 
+        ///         ["scmLogForwardingProfileDetails"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "profileId", scmLogForwardingProf.Apply(getLogForwardingProfileResult =&gt; getLogForwardingProfileResult.Id) },
-        ///             { "folder", scmLogForwardingProf.Apply(getLogForwardingProfileResult =&gt; getLogForwardingProfileResult.Folder) },
-        ///             { "name", scmLogForwardingProf.Apply(getLogForwardingProfileResult =&gt; getLogForwardingProfileResult.Name) },
-        ///             { "description", scmLogForwardingProf.Apply(getLogForwardingProfileResult =&gt; getLogForwardingProfileResult.Description) },
+        ///             ["profileId"] = scmLogForwardingProf.Apply(getLogForwardingProfileResult =&gt; getLogForwardingProfileResult.Id),
+        ///             ["folder"] = scmLogForwardingProf.Apply(getLogForwardingProfileResult =&gt; getLogForwardingProfileResult.Folder),
+        ///             ["name"] = scmLogForwardingProf.Apply(getLogForwardingProfileResult =&gt; getLogForwardingProfileResult.Name),
+        ///             ["description"] = scmLogForwardingProf.Apply(getLogForwardingProfileResult =&gt; getLogForwardingProfileResult.Description),
         ///         },
         ///     };
         /// });

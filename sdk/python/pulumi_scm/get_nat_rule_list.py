@@ -175,7 +175,7 @@ def get_nat_rule_list(device: Optional[_builtins.str] = None,
     import pulumi
     import pulumi_scm as scm
 
-    # Define a data source for listing NAT rules
+    # Define a function for listing NAT rules
     paged_nat_rules_list = scm.get_nat_rule_list(folder="All",
         limit=10,
         offset=10,
@@ -234,7 +234,7 @@ def get_nat_rule_list_output(device: pulumi.Input[Optional[Optional[_builtins.st
     import pulumi
     import pulumi_scm as scm
 
-    # Define a data source for listing NAT rules
+    # Define a function for listing NAT rules
     paged_nat_rules_list = scm.get_nat_rule_list(folder="All",
         limit=10,
         offset=10,

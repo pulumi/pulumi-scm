@@ -28,7 +28,7 @@ import (
 //	func main() {
 //		pulumi.Run(func(ctx *pulumi.Context) error {
 //			// Fetch a list of all service group objects.
-//			// This data source will call the "List" API endpoint.
+//			// This function will call the "List" API endpoint.
 //			allServiceGroups, err := scm.GetServiceGroupList(ctx, &scm.GetServiceGroupListArgs{
 //				Folder: pulumi.StringRef("All"),
 //			}, nil)

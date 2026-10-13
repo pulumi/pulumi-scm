@@ -24,7 +24,7 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     // This data source will call the "ListForwardingProfileUserLocations" API endpoint
+        ///     // This function will call the "ListForwardingProfileUserLocations" API endpoint
         ///     // and return all forwarding profile user locations in the "Mobile Users" folder.
         ///     // 1. Use a single data block to fetch ALL user locations in the "Mobile Users" folder.
         ///     var allMobileUsers = Scm.GetForwardingProfileUserLocationList.Invoke(new()
@@ -43,10 +43,10 @@ namespace Pulumi.Scm
         ///     {
         ///         ["forwardingProfileUserLocationDataSourceResultsFromList"] = ,
         ///         ["paginatedUserLocations"] = ,
-        ///         ["paginationUserLocationsDetails"] = 
+        ///         ["paginationUserLocationsDetails"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "totalObjectsInFolder", paginatedUserLocationsExample.Apply(getForwardingProfileUserLocationListResult =&gt; getForwardingProfileUserLocationListResult.Total) },
-        ///             { "limitUsed", paginatedUserLocationsExample.Apply(getForwardingProfileUserLocationListResult =&gt; getForwardingProfileUserLocationListResult.Limit) },
+        ///             ["totalObjectsInFolder"] = paginatedUserLocationsExample.Apply(getForwardingProfileUserLocationListResult =&gt; getForwardingProfileUserLocationListResult.Total),
+        ///             ["limitUsed"] = paginatedUserLocationsExample.Apply(getForwardingProfileUserLocationListResult =&gt; getForwardingProfileUserLocationListResult.Limit),
         ///         },
         ///     };
         /// });
@@ -68,7 +68,7 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     // This data source will call the "ListForwardingProfileUserLocations" API endpoint
+        ///     // This function will call the "ListForwardingProfileUserLocations" API endpoint
         ///     // and return all forwarding profile user locations in the "Mobile Users" folder.
         ///     // 1. Use a single data block to fetch ALL user locations in the "Mobile Users" folder.
         ///     var allMobileUsers = Scm.GetForwardingProfileUserLocationList.Invoke(new()
@@ -87,10 +87,10 @@ namespace Pulumi.Scm
         ///     {
         ///         ["forwardingProfileUserLocationDataSourceResultsFromList"] = ,
         ///         ["paginatedUserLocations"] = ,
-        ///         ["paginationUserLocationsDetails"] = 
+        ///         ["paginationUserLocationsDetails"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "totalObjectsInFolder", paginatedUserLocationsExample.Apply(getForwardingProfileUserLocationListResult =&gt; getForwardingProfileUserLocationListResult.Total) },
-        ///             { "limitUsed", paginatedUserLocationsExample.Apply(getForwardingProfileUserLocationListResult =&gt; getForwardingProfileUserLocationListResult.Limit) },
+        ///             ["totalObjectsInFolder"] = paginatedUserLocationsExample.Apply(getForwardingProfileUserLocationListResult =&gt; getForwardingProfileUserLocationListResult.Total),
+        ///             ["limitUsed"] = paginatedUserLocationsExample.Apply(getForwardingProfileUserLocationListResult =&gt; getForwardingProfileUserLocationListResult.Limit),
         ///         },
         ///     };
         /// });
@@ -112,7 +112,7 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     // This data source will call the "ListForwardingProfileUserLocations" API endpoint
+        ///     // This function will call the "ListForwardingProfileUserLocations" API endpoint
         ///     // and return all forwarding profile user locations in the "Mobile Users" folder.
         ///     // 1. Use a single data block to fetch ALL user locations in the "Mobile Users" folder.
         ///     var allMobileUsers = Scm.GetForwardingProfileUserLocationList.Invoke(new()
@@ -131,10 +131,10 @@ namespace Pulumi.Scm
         ///     {
         ///         ["forwardingProfileUserLocationDataSourceResultsFromList"] = ,
         ///         ["paginatedUserLocations"] = ,
-        ///         ["paginationUserLocationsDetails"] = 
+        ///         ["paginationUserLocationsDetails"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "totalObjectsInFolder", paginatedUserLocationsExample.Apply(getForwardingProfileUserLocationListResult =&gt; getForwardingProfileUserLocationListResult.Total) },
-        ///             { "limitUsed", paginatedUserLocationsExample.Apply(getForwardingProfileUserLocationListResult =&gt; getForwardingProfileUserLocationListResult.Limit) },
+        ///             ["totalObjectsInFolder"] = paginatedUserLocationsExample.Apply(getForwardingProfileUserLocationListResult =&gt; getForwardingProfileUserLocationListResult.Total),
+        ///             ["limitUsed"] = paginatedUserLocationsExample.Apply(getForwardingProfileUserLocationListResult =&gt; getForwardingProfileUserLocationListResult.Limit),
         ///         },
         ///     };
         /// });

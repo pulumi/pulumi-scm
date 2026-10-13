@@ -31,23 +31,23 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["fetchedSettings"] = 
+        ///         ["fetchedSettings"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "folder", settingsData.Apply(getServiceSettingResult =&gt; getServiceSettingResult.Folder) },
-        ///             { "id", settingsData.Apply(getServiceSettingResult =&gt; getServiceSettingResult.Id) },
-        ///             { "dnsPrimary", settingsData.Apply(getServiceSettingResult =&gt; getServiceSettingResult.Services?.DnsSetting?.Servers?.Primary) },
-        ///             { "dnsSecondary", settingsData.Apply(getServiceSettingResult =&gt; getServiceSettingResult.Services?.DnsSetting?.Servers?.Secondary) },
-        ///             { "fqdnRefreshTime", settingsData.Apply(getServiceSettingResult =&gt; getServiceSettingResult.Services?.FqdnRefreshTime) },
-        ///             { "fqdnStaleEntryTimeout", settingsData.Apply(getServiceSettingResult =&gt; getServiceSettingResult.Services?.FqdnStaleEntryTimeout) },
-        ///             { "ntpPrimaryAddress", settingsData.Apply(getServiceSettingResult =&gt; getServiceSettingResult.Services?.NtpServers?.PrimaryNtpServer?.NtpServerAddress) },
-        ///             { "ntpSecondaryAddress", settingsData.Apply(getServiceSettingResult =&gt; getServiceSettingResult.Services?.NtpServers?.SecondaryNtpServer?.NtpServerAddress) },
-        ///             { "updateServer", settingsData.Apply(getServiceSettingResult =&gt; getServiceSettingResult.Services?.UpdateServer) },
-        ///             { "serverVerification", settingsData.Apply(getServiceSettingResult =&gt; getServiceSettingResult.Services?.ServerVerification) },
-        ///             { "secureProxyServer", settingsData.Apply(getServiceSettingResult =&gt; getServiceSettingResult.Services?.SecureProxyServer) },
-        ///             { "secureProxyPort", settingsData.Apply(getServiceSettingResult =&gt; getServiceSettingResult.Services?.SecureProxyPort) },
-        ///             { "secureProxyUser", settingsData.Apply(getServiceSettingResult =&gt; getServiceSettingResult.Services?.SecureProxyUser) },
-        ///             { "lcaasUseProxy", settingsData.Apply(getServiceSettingResult =&gt; getServiceSettingResult.Services?.LcaasUseProxy) },
-        ///             { "inlineCloudProxy", settingsData.Apply(getServiceSettingResult =&gt; getServiceSettingResult.Services?.InlineCloudProxy) },
+        ///             ["folder"] = settingsData.Apply(getServiceSettingResult =&gt; getServiceSettingResult.Folder),
+        ///             ["id"] = settingsData.Apply(getServiceSettingResult =&gt; getServiceSettingResult.Id),
+        ///             ["dnsPrimary"] = settingsData.Apply(getServiceSettingResult =&gt; getServiceSettingResult.Services?.DnsSetting?.Servers?.Primary),
+        ///             ["dnsSecondary"] = settingsData.Apply(getServiceSettingResult =&gt; getServiceSettingResult.Services?.DnsSetting?.Servers?.Secondary),
+        ///             ["fqdnRefreshTime"] = settingsData.Apply(getServiceSettingResult =&gt; getServiceSettingResult.Services?.FqdnRefreshTime),
+        ///             ["fqdnStaleEntryTimeout"] = settingsData.Apply(getServiceSettingResult =&gt; getServiceSettingResult.Services?.FqdnStaleEntryTimeout),
+        ///             ["ntpPrimaryAddress"] = settingsData.Apply(getServiceSettingResult =&gt; getServiceSettingResult.Services?.NtpServers?.PrimaryNtpServer?.NtpServerAddress),
+        ///             ["ntpSecondaryAddress"] = settingsData.Apply(getServiceSettingResult =&gt; getServiceSettingResult.Services?.NtpServers?.SecondaryNtpServer?.NtpServerAddress),
+        ///             ["updateServer"] = settingsData.Apply(getServiceSettingResult =&gt; getServiceSettingResult.Services?.UpdateServer),
+        ///             ["serverVerification"] = settingsData.Apply(getServiceSettingResult =&gt; getServiceSettingResult.Services?.ServerVerification),
+        ///             ["secureProxyServer"] = settingsData.Apply(getServiceSettingResult =&gt; getServiceSettingResult.Services?.SecureProxyServer),
+        ///             ["secureProxyPort"] = settingsData.Apply(getServiceSettingResult =&gt; getServiceSettingResult.Services?.SecureProxyPort),
+        ///             ["secureProxyUser"] = settingsData.Apply(getServiceSettingResult =&gt; getServiceSettingResult.Services?.SecureProxyUser),
+        ///             ["lcaasUseProxy"] = settingsData.Apply(getServiceSettingResult =&gt; getServiceSettingResult.Services?.LcaasUseProxy),
+        ///             ["inlineCloudProxy"] = settingsData.Apply(getServiceSettingResult =&gt; getServiceSettingResult.Services?.InlineCloudProxy),
         ///         },
         ///     };
         /// });
@@ -76,23 +76,23 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["fetchedSettings"] = 
+        ///         ["fetchedSettings"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "folder", settingsData.Apply(getServiceSettingResult =&gt; getServiceSettingResult.Folder) },
-        ///             { "id", settingsData.Apply(getServiceSettingResult =&gt; getServiceSettingResult.Id) },
-        ///             { "dnsPrimary", settingsData.Apply(getServiceSettingResult =&gt; getServiceSettingResult.Services?.DnsSetting?.Servers?.Primary) },
-        ///             { "dnsSecondary", settingsData.Apply(getServiceSettingResult =&gt; getServiceSettingResult.Services?.DnsSetting?.Servers?.Secondary) },
-        ///             { "fqdnRefreshTime", settingsData.Apply(getServiceSettingResult =&gt; getServiceSettingResult.Services?.FqdnRefreshTime) },
-        ///             { "fqdnStaleEntryTimeout", settingsData.Apply(getServiceSettingResult =&gt; getServiceSettingResult.Services?.FqdnStaleEntryTimeout) },
-        ///             { "ntpPrimaryAddress", settingsData.Apply(getServiceSettingResult =&gt; getServiceSettingResult.Services?.NtpServers?.PrimaryNtpServer?.NtpServerAddress) },
-        ///             { "ntpSecondaryAddress", settingsData.Apply(getServiceSettingResult =&gt; getServiceSettingResult.Services?.NtpServers?.SecondaryNtpServer?.NtpServerAddress) },
-        ///             { "updateServer", settingsData.Apply(getServiceSettingResult =&gt; getServiceSettingResult.Services?.UpdateServer) },
-        ///             { "serverVerification", settingsData.Apply(getServiceSettingResult =&gt; getServiceSettingResult.Services?.ServerVerification) },
-        ///             { "secureProxyServer", settingsData.Apply(getServiceSettingResult =&gt; getServiceSettingResult.Services?.SecureProxyServer) },
-        ///             { "secureProxyPort", settingsData.Apply(getServiceSettingResult =&gt; getServiceSettingResult.Services?.SecureProxyPort) },
-        ///             { "secureProxyUser", settingsData.Apply(getServiceSettingResult =&gt; getServiceSettingResult.Services?.SecureProxyUser) },
-        ///             { "lcaasUseProxy", settingsData.Apply(getServiceSettingResult =&gt; getServiceSettingResult.Services?.LcaasUseProxy) },
-        ///             { "inlineCloudProxy", settingsData.Apply(getServiceSettingResult =&gt; getServiceSettingResult.Services?.InlineCloudProxy) },
+        ///             ["folder"] = settingsData.Apply(getServiceSettingResult =&gt; getServiceSettingResult.Folder),
+        ///             ["id"] = settingsData.Apply(getServiceSettingResult =&gt; getServiceSettingResult.Id),
+        ///             ["dnsPrimary"] = settingsData.Apply(getServiceSettingResult =&gt; getServiceSettingResult.Services?.DnsSetting?.Servers?.Primary),
+        ///             ["dnsSecondary"] = settingsData.Apply(getServiceSettingResult =&gt; getServiceSettingResult.Services?.DnsSetting?.Servers?.Secondary),
+        ///             ["fqdnRefreshTime"] = settingsData.Apply(getServiceSettingResult =&gt; getServiceSettingResult.Services?.FqdnRefreshTime),
+        ///             ["fqdnStaleEntryTimeout"] = settingsData.Apply(getServiceSettingResult =&gt; getServiceSettingResult.Services?.FqdnStaleEntryTimeout),
+        ///             ["ntpPrimaryAddress"] = settingsData.Apply(getServiceSettingResult =&gt; getServiceSettingResult.Services?.NtpServers?.PrimaryNtpServer?.NtpServerAddress),
+        ///             ["ntpSecondaryAddress"] = settingsData.Apply(getServiceSettingResult =&gt; getServiceSettingResult.Services?.NtpServers?.SecondaryNtpServer?.NtpServerAddress),
+        ///             ["updateServer"] = settingsData.Apply(getServiceSettingResult =&gt; getServiceSettingResult.Services?.UpdateServer),
+        ///             ["serverVerification"] = settingsData.Apply(getServiceSettingResult =&gt; getServiceSettingResult.Services?.ServerVerification),
+        ///             ["secureProxyServer"] = settingsData.Apply(getServiceSettingResult =&gt; getServiceSettingResult.Services?.SecureProxyServer),
+        ///             ["secureProxyPort"] = settingsData.Apply(getServiceSettingResult =&gt; getServiceSettingResult.Services?.SecureProxyPort),
+        ///             ["secureProxyUser"] = settingsData.Apply(getServiceSettingResult =&gt; getServiceSettingResult.Services?.SecureProxyUser),
+        ///             ["lcaasUseProxy"] = settingsData.Apply(getServiceSettingResult =&gt; getServiceSettingResult.Services?.LcaasUseProxy),
+        ///             ["inlineCloudProxy"] = settingsData.Apply(getServiceSettingResult =&gt; getServiceSettingResult.Services?.InlineCloudProxy),
         ///         },
         ///     };
         /// });
@@ -121,23 +121,23 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["fetchedSettings"] = 
+        ///         ["fetchedSettings"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "folder", settingsData.Apply(getServiceSettingResult =&gt; getServiceSettingResult.Folder) },
-        ///             { "id", settingsData.Apply(getServiceSettingResult =&gt; getServiceSettingResult.Id) },
-        ///             { "dnsPrimary", settingsData.Apply(getServiceSettingResult =&gt; getServiceSettingResult.Services?.DnsSetting?.Servers?.Primary) },
-        ///             { "dnsSecondary", settingsData.Apply(getServiceSettingResult =&gt; getServiceSettingResult.Services?.DnsSetting?.Servers?.Secondary) },
-        ///             { "fqdnRefreshTime", settingsData.Apply(getServiceSettingResult =&gt; getServiceSettingResult.Services?.FqdnRefreshTime) },
-        ///             { "fqdnStaleEntryTimeout", settingsData.Apply(getServiceSettingResult =&gt; getServiceSettingResult.Services?.FqdnStaleEntryTimeout) },
-        ///             { "ntpPrimaryAddress", settingsData.Apply(getServiceSettingResult =&gt; getServiceSettingResult.Services?.NtpServers?.PrimaryNtpServer?.NtpServerAddress) },
-        ///             { "ntpSecondaryAddress", settingsData.Apply(getServiceSettingResult =&gt; getServiceSettingResult.Services?.NtpServers?.SecondaryNtpServer?.NtpServerAddress) },
-        ///             { "updateServer", settingsData.Apply(getServiceSettingResult =&gt; getServiceSettingResult.Services?.UpdateServer) },
-        ///             { "serverVerification", settingsData.Apply(getServiceSettingResult =&gt; getServiceSettingResult.Services?.ServerVerification) },
-        ///             { "secureProxyServer", settingsData.Apply(getServiceSettingResult =&gt; getServiceSettingResult.Services?.SecureProxyServer) },
-        ///             { "secureProxyPort", settingsData.Apply(getServiceSettingResult =&gt; getServiceSettingResult.Services?.SecureProxyPort) },
-        ///             { "secureProxyUser", settingsData.Apply(getServiceSettingResult =&gt; getServiceSettingResult.Services?.SecureProxyUser) },
-        ///             { "lcaasUseProxy", settingsData.Apply(getServiceSettingResult =&gt; getServiceSettingResult.Services?.LcaasUseProxy) },
-        ///             { "inlineCloudProxy", settingsData.Apply(getServiceSettingResult =&gt; getServiceSettingResult.Services?.InlineCloudProxy) },
+        ///             ["folder"] = settingsData.Apply(getServiceSettingResult =&gt; getServiceSettingResult.Folder),
+        ///             ["id"] = settingsData.Apply(getServiceSettingResult =&gt; getServiceSettingResult.Id),
+        ///             ["dnsPrimary"] = settingsData.Apply(getServiceSettingResult =&gt; getServiceSettingResult.Services?.DnsSetting?.Servers?.Primary),
+        ///             ["dnsSecondary"] = settingsData.Apply(getServiceSettingResult =&gt; getServiceSettingResult.Services?.DnsSetting?.Servers?.Secondary),
+        ///             ["fqdnRefreshTime"] = settingsData.Apply(getServiceSettingResult =&gt; getServiceSettingResult.Services?.FqdnRefreshTime),
+        ///             ["fqdnStaleEntryTimeout"] = settingsData.Apply(getServiceSettingResult =&gt; getServiceSettingResult.Services?.FqdnStaleEntryTimeout),
+        ///             ["ntpPrimaryAddress"] = settingsData.Apply(getServiceSettingResult =&gt; getServiceSettingResult.Services?.NtpServers?.PrimaryNtpServer?.NtpServerAddress),
+        ///             ["ntpSecondaryAddress"] = settingsData.Apply(getServiceSettingResult =&gt; getServiceSettingResult.Services?.NtpServers?.SecondaryNtpServer?.NtpServerAddress),
+        ///             ["updateServer"] = settingsData.Apply(getServiceSettingResult =&gt; getServiceSettingResult.Services?.UpdateServer),
+        ///             ["serverVerification"] = settingsData.Apply(getServiceSettingResult =&gt; getServiceSettingResult.Services?.ServerVerification),
+        ///             ["secureProxyServer"] = settingsData.Apply(getServiceSettingResult =&gt; getServiceSettingResult.Services?.SecureProxyServer),
+        ///             ["secureProxyPort"] = settingsData.Apply(getServiceSettingResult =&gt; getServiceSettingResult.Services?.SecureProxyPort),
+        ///             ["secureProxyUser"] = settingsData.Apply(getServiceSettingResult =&gt; getServiceSettingResult.Services?.SecureProxyUser),
+        ///             ["lcaasUseProxy"] = settingsData.Apply(getServiceSettingResult =&gt; getServiceSettingResult.Services?.LcaasUseProxy),
+        ///             ["inlineCloudProxy"] = settingsData.Apply(getServiceSettingResult =&gt; getServiceSettingResult.Services?.InlineCloudProxy),
         ///         },
         ///     };
         /// });

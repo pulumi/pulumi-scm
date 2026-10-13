@@ -17,7 +17,7 @@ import * as utilities from "./utilities";
  *
  * // -----------------------------------------------------------------------------
  * // 6. DATA SOURCE: Fetch a list of Interface Management Profiles
- * // This data source retrieves multiple Interface Management Profiles from SCM.
+ * // This function retrieves multiple Interface Management Profiles from SCM.
  * // -----------------------------------------------------------------------------
  * const allMgmtProfiles = scm.getInterfaceManagementProfileList({
  *     limit: 50,
@@ -125,7 +125,7 @@ export interface GetInterfaceManagementProfileListResult {
  *
  * // -----------------------------------------------------------------------------
  * // 6. DATA SOURCE: Fetch a list of Interface Management Profiles
- * // This data source retrieves multiple Interface Management Profiles from SCM.
+ * // This function retrieves multiple Interface Management Profiles from SCM.
  * // -----------------------------------------------------------------------------
  * const allMgmtProfiles = scm.getInterfaceManagementProfileList({
  *     limit: 50,

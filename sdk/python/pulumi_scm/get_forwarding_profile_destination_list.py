@@ -162,7 +162,7 @@ def get_forwarding_profile_destination_list(device: Optional[_builtins.str] = No
     import pulumi
     import pulumi_scm as scm
 
-    # This data source will call the "ListForwardingProfileDestinations" API endpoint
+    # This function will call the "ListForwardingProfileDestinations" API endpoint
     # and return all forwarding profile destinations in the "Mobile Users" folder.
     # 1. Use a single data block to fetch ALL forwarding profile destinations in the "Mobile Users" folder.
     all_mobile_users = scm.get_forwarding_profile_destination_list(folder="Mobile Users")
@@ -221,7 +221,7 @@ def get_forwarding_profile_destination_list_output(device: pulumi.Input[Optional
     import pulumi
     import pulumi_scm as scm
 
-    # This data source will call the "ListForwardingProfileDestinations" API endpoint
+    # This function will call the "ListForwardingProfileDestinations" API endpoint
     # and return all forwarding profile destinations in the "Mobile Users" folder.
     # 1. Use a single data block to fetch ALL forwarding profile destinations in the "Mobile Users" folder.
     all_mobile_users = scm.get_forwarding_profile_destination_list(folder="Mobile Users")

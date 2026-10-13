@@ -32,12 +32,12 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["bgpRouteMapDataSourceResults"] = 
+        ///         ["bgpRouteMapDataSourceResults"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "id", scmBgpRouteMapDs.Apply(getBgpRouteMapResult =&gt; getBgpRouteMapResult.Id) },
-        ///             { "name", scmBgpRouteMapDs.Apply(getBgpRouteMapResult =&gt; getBgpRouteMapResult.Name) },
-        ///             { "routeMap", scmBgpRouteMapDs.Apply(getBgpRouteMapResult =&gt; getBgpRouteMapResult.RouteMaps) },
-        ///             { "folder", scmBgpRouteMapDs.Apply(getBgpRouteMapResult =&gt; getBgpRouteMapResult.Folder) },
+        ///             ["id"] = scmBgpRouteMapDs.Apply(getBgpRouteMapResult =&gt; getBgpRouteMapResult.Id),
+        ///             ["name"] = scmBgpRouteMapDs.Apply(getBgpRouteMapResult =&gt; getBgpRouteMapResult.Name),
+        ///             ["routeMap"] = scmBgpRouteMapDs.Apply(getBgpRouteMapResult =&gt; getBgpRouteMapResult.RouteMaps),
+        ///             ["folder"] = scmBgpRouteMapDs.Apply(getBgpRouteMapResult =&gt; getBgpRouteMapResult.Folder),
         ///         },
         ///     };
         /// });
@@ -67,12 +67,12 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["bgpRouteMapDataSourceResults"] = 
+        ///         ["bgpRouteMapDataSourceResults"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "id", scmBgpRouteMapDs.Apply(getBgpRouteMapResult =&gt; getBgpRouteMapResult.Id) },
-        ///             { "name", scmBgpRouteMapDs.Apply(getBgpRouteMapResult =&gt; getBgpRouteMapResult.Name) },
-        ///             { "routeMap", scmBgpRouteMapDs.Apply(getBgpRouteMapResult =&gt; getBgpRouteMapResult.RouteMaps) },
-        ///             { "folder", scmBgpRouteMapDs.Apply(getBgpRouteMapResult =&gt; getBgpRouteMapResult.Folder) },
+        ///             ["id"] = scmBgpRouteMapDs.Apply(getBgpRouteMapResult =&gt; getBgpRouteMapResult.Id),
+        ///             ["name"] = scmBgpRouteMapDs.Apply(getBgpRouteMapResult =&gt; getBgpRouteMapResult.Name),
+        ///             ["routeMap"] = scmBgpRouteMapDs.Apply(getBgpRouteMapResult =&gt; getBgpRouteMapResult.RouteMaps),
+        ///             ["folder"] = scmBgpRouteMapDs.Apply(getBgpRouteMapResult =&gt; getBgpRouteMapResult.Folder),
         ///         },
         ///     };
         /// });
@@ -102,12 +102,12 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["bgpRouteMapDataSourceResults"] = 
+        ///         ["bgpRouteMapDataSourceResults"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "id", scmBgpRouteMapDs.Apply(getBgpRouteMapResult =&gt; getBgpRouteMapResult.Id) },
-        ///             { "name", scmBgpRouteMapDs.Apply(getBgpRouteMapResult =&gt; getBgpRouteMapResult.Name) },
-        ///             { "routeMap", scmBgpRouteMapDs.Apply(getBgpRouteMapResult =&gt; getBgpRouteMapResult.RouteMaps) },
-        ///             { "folder", scmBgpRouteMapDs.Apply(getBgpRouteMapResult =&gt; getBgpRouteMapResult.Folder) },
+        ///             ["id"] = scmBgpRouteMapDs.Apply(getBgpRouteMapResult =&gt; getBgpRouteMapResult.Id),
+        ///             ["name"] = scmBgpRouteMapDs.Apply(getBgpRouteMapResult =&gt; getBgpRouteMapResult.Name),
+        ///             ["routeMap"] = scmBgpRouteMapDs.Apply(getBgpRouteMapResult =&gt; getBgpRouteMapResult.RouteMaps),
+        ///             ["folder"] = scmBgpRouteMapDs.Apply(getBgpRouteMapResult =&gt; getBgpRouteMapResult.Folder),
         ///         },
         ///     };
         /// });

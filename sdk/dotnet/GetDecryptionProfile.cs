@@ -35,11 +35,11 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["scmDecryptionProfileDetails"] = 
+        ///         ["scmDecryptionProfileDetails"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "profileId", scmDpProfile.Apply(getDecryptionProfileResult =&gt; getDecryptionProfileResult.Id) },
-        ///             { "folder", scmDpProfile.Apply(getDecryptionProfileResult =&gt; getDecryptionProfileResult.Folder) },
-        ///             { "name", scmDpProfile.Apply(getDecryptionProfileResult =&gt; getDecryptionProfileResult.Name) },
+        ///             ["profileId"] = scmDpProfile.Apply(getDecryptionProfileResult =&gt; getDecryptionProfileResult.Id),
+        ///             ["folder"] = scmDpProfile.Apply(getDecryptionProfileResult =&gt; getDecryptionProfileResult.Folder),
+        ///             ["name"] = scmDpProfile.Apply(getDecryptionProfileResult =&gt; getDecryptionProfileResult.Name),
         ///         },
         ///     };
         /// });
@@ -72,11 +72,11 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["scmDecryptionProfileDetails"] = 
+        ///         ["scmDecryptionProfileDetails"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "profileId", scmDpProfile.Apply(getDecryptionProfileResult =&gt; getDecryptionProfileResult.Id) },
-        ///             { "folder", scmDpProfile.Apply(getDecryptionProfileResult =&gt; getDecryptionProfileResult.Folder) },
-        ///             { "name", scmDpProfile.Apply(getDecryptionProfileResult =&gt; getDecryptionProfileResult.Name) },
+        ///             ["profileId"] = scmDpProfile.Apply(getDecryptionProfileResult =&gt; getDecryptionProfileResult.Id),
+        ///             ["folder"] = scmDpProfile.Apply(getDecryptionProfileResult =&gt; getDecryptionProfileResult.Folder),
+        ///             ["name"] = scmDpProfile.Apply(getDecryptionProfileResult =&gt; getDecryptionProfileResult.Name),
         ///         },
         ///     };
         /// });
@@ -109,11 +109,11 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["scmDecryptionProfileDetails"] = 
+        ///         ["scmDecryptionProfileDetails"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "profileId", scmDpProfile.Apply(getDecryptionProfileResult =&gt; getDecryptionProfileResult.Id) },
-        ///             { "folder", scmDpProfile.Apply(getDecryptionProfileResult =&gt; getDecryptionProfileResult.Folder) },
-        ///             { "name", scmDpProfile.Apply(getDecryptionProfileResult =&gt; getDecryptionProfileResult.Name) },
+        ///             ["profileId"] = scmDpProfile.Apply(getDecryptionProfileResult =&gt; getDecryptionProfileResult.Id),
+        ///             ["folder"] = scmDpProfile.Apply(getDecryptionProfileResult =&gt; getDecryptionProfileResult.Folder),
+        ///             ["name"] = scmDpProfile.Apply(getDecryptionProfileResult =&gt; getDecryptionProfileResult.Name),
         ///         },
         ///     };
         /// });
