@@ -35,11 +35,11 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["scmScepProfileDetails"] = 
+        ///         ["scmScepProfileDetails"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "profileId", scmScepProf.Apply(getScepProfileResult =&gt; getScepProfileResult.Id) },
-        ///             { "folder", scmScepProf.Apply(getScepProfileResult =&gt; getScepProfileResult.Folder) },
-        ///             { "name", scmScepProf.Apply(getScepProfileResult =&gt; getScepProfileResult.Name) },
+        ///             ["profileId"] = scmScepProf.Apply(getScepProfileResult =&gt; getScepProfileResult.Id),
+        ///             ["folder"] = scmScepProf.Apply(getScepProfileResult =&gt; getScepProfileResult.Folder),
+        ///             ["name"] = scmScepProf.Apply(getScepProfileResult =&gt; getScepProfileResult.Name),
         ///         },
         ///     };
         /// });
@@ -72,11 +72,11 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["scmScepProfileDetails"] = 
+        ///         ["scmScepProfileDetails"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "profileId", scmScepProf.Apply(getScepProfileResult =&gt; getScepProfileResult.Id) },
-        ///             { "folder", scmScepProf.Apply(getScepProfileResult =&gt; getScepProfileResult.Folder) },
-        ///             { "name", scmScepProf.Apply(getScepProfileResult =&gt; getScepProfileResult.Name) },
+        ///             ["profileId"] = scmScepProf.Apply(getScepProfileResult =&gt; getScepProfileResult.Id),
+        ///             ["folder"] = scmScepProf.Apply(getScepProfileResult =&gt; getScepProfileResult.Folder),
+        ///             ["name"] = scmScepProf.Apply(getScepProfileResult =&gt; getScepProfileResult.Name),
         ///         },
         ///     };
         /// });
@@ -109,11 +109,11 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["scmScepProfileDetails"] = 
+        ///         ["scmScepProfileDetails"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "profileId", scmScepProf.Apply(getScepProfileResult =&gt; getScepProfileResult.Id) },
-        ///             { "folder", scmScepProf.Apply(getScepProfileResult =&gt; getScepProfileResult.Folder) },
-        ///             { "name", scmScepProf.Apply(getScepProfileResult =&gt; getScepProfileResult.Name) },
+        ///             ["profileId"] = scmScepProf.Apply(getScepProfileResult =&gt; getScepProfileResult.Id),
+        ///             ["folder"] = scmScepProf.Apply(getScepProfileResult =&gt; getScepProfileResult.Folder),
+        ///             ["name"] = scmScepProf.Apply(getScepProfileResult =&gt; getScepProfileResult.Name),
         ///         },
         ///     };
         /// });

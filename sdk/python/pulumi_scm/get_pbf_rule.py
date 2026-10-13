@@ -281,7 +281,7 @@ def get_pbf_rule(device: Optional[_builtins.str] = None,
     import pulumi
     import pulumi_scm as scm
 
-    # Define the data source (the item to be retrieved via API GET)
+    # Define the function (the item to be retrieved via API GET)
     pbf_external_web_test_get = scm.get_pbf_rule(id="044d67ad-1c36-4b97-bbf4-584445fe8a7d")
     pulumi.export("retrievedIDAndName", {
         "id": pbf_external_web_test_get.id,
@@ -341,7 +341,7 @@ def get_pbf_rule_output(device: pulumi.Input[Optional[Optional[_builtins.str]]] 
     import pulumi
     import pulumi_scm as scm
 
-    # Define the data source (the item to be retrieved via API GET)
+    # Define the function (the item to be retrieved via API GET)
     pbf_external_web_test_get = scm.get_pbf_rule(id="044d67ad-1c36-4b97-bbf4-584445fe8a7d")
     pulumi.export("retrievedIDAndName", {
         "id": pbf_external_web_test_get.id,

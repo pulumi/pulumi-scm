@@ -20,7 +20,7 @@ import * as utilities from "./utilities";
  *     folder: "All",
  * });
  * export const dugResultsFromList = allSharedDugs.then(allSharedDugs => .reduce((__obj, group) => ({ ...__obj, [group.id]: group }), {}));
- * // This data source block shows an example of pagination.
+ * // This function block shows an example of pagination.
  * const paginatedDugsExample = scm.getDynamicUserGroupList({
  *     folder: "All",
  *     limit: 5,
@@ -131,7 +131,7 @@ export interface GetDynamicUserGroupListResult {
  *     folder: "All",
  * });
  * export const dugResultsFromList = allSharedDugs.then(allSharedDugs => .reduce((__obj, group) => ({ ...__obj, [group.id]: group }), {}));
- * // This data source block shows an example of pagination.
+ * // This function block shows an example of pagination.
  * const paginatedDugsExample = scm.getDynamicUserGroupList({
  *     folder: "All",
  *     limit: 5,

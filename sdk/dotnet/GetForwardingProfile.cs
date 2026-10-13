@@ -50,12 +50,12 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["forwardingProfileDataSourceResults"] = 
+        ///         ["forwardingProfileDataSourceResults"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "gpProxyBasicObject", gpProxyBasic },
-        ///             { "gpProxyFullObject", gpProxyFull },
-        ///             { "pacFileObject", pacFile },
-        ///             { "ztnaAgentObject", ztnaAgent },
+        ///             ["gpProxyBasicObject"] = gpProxyBasic,
+        ///             ["gpProxyFullObject"] = gpProxyFull,
+        ///             ["pacFileObject"] = pacFile,
+        ///             ["ztnaAgentObject"] = ztnaAgent,
         ///         },
         ///     };
         /// });
@@ -103,12 +103,12 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["forwardingProfileDataSourceResults"] = 
+        ///         ["forwardingProfileDataSourceResults"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "gpProxyBasicObject", gpProxyBasic },
-        ///             { "gpProxyFullObject", gpProxyFull },
-        ///             { "pacFileObject", pacFile },
-        ///             { "ztnaAgentObject", ztnaAgent },
+        ///             ["gpProxyBasicObject"] = gpProxyBasic,
+        ///             ["gpProxyFullObject"] = gpProxyFull,
+        ///             ["pacFileObject"] = pacFile,
+        ///             ["ztnaAgentObject"] = ztnaAgent,
         ///         },
         ///     };
         /// });
@@ -156,12 +156,12 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["forwardingProfileDataSourceResults"] = 
+        ///         ["forwardingProfileDataSourceResults"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "gpProxyBasicObject", gpProxyBasic },
-        ///             { "gpProxyFullObject", gpProxyFull },
-        ///             { "pacFileObject", pacFile },
-        ///             { "ztnaAgentObject", ztnaAgent },
+        ///             ["gpProxyBasicObject"] = gpProxyBasic,
+        ///             ["gpProxyFullObject"] = gpProxyFull,
+        ///             ["pacFileObject"] = pacFile,
+        ///             ["ztnaAgentObject"] = ztnaAgent,
         ///         },
         ///     };
         /// });

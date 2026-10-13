@@ -42,11 +42,11 @@ namespace Pulumi.Scm
         ///     {
         ///         ["allSharedServicesMap"] = ,
         ///         ["paginatedServicesList"] = paginatedServices.Apply(getServiceListResult =&gt; getServiceListResult.Datas),
-        ///         ["paginatedServicesDetails"] = 
+        ///         ["paginatedServicesDetails"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "totalInFolder", paginatedServices.Apply(getServiceListResult =&gt; getServiceListResult.Total) },
-        ///             { "limitUsed", paginatedServices.Apply(getServiceListResult =&gt; getServiceListResult.Limit) },
-        ///             { "offsetUsed", paginatedServices.Apply(getServiceListResult =&gt; getServiceListResult.Offset) },
+        ///             ["totalInFolder"] = paginatedServices.Apply(getServiceListResult =&gt; getServiceListResult.Total),
+        ///             ["limitUsed"] = paginatedServices.Apply(getServiceListResult =&gt; getServiceListResult.Limit),
+        ///             ["offsetUsed"] = paginatedServices.Apply(getServiceListResult =&gt; getServiceListResult.Offset),
         ///         },
         ///     };
         /// });
@@ -86,11 +86,11 @@ namespace Pulumi.Scm
         ///     {
         ///         ["allSharedServicesMap"] = ,
         ///         ["paginatedServicesList"] = paginatedServices.Apply(getServiceListResult =&gt; getServiceListResult.Datas),
-        ///         ["paginatedServicesDetails"] = 
+        ///         ["paginatedServicesDetails"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "totalInFolder", paginatedServices.Apply(getServiceListResult =&gt; getServiceListResult.Total) },
-        ///             { "limitUsed", paginatedServices.Apply(getServiceListResult =&gt; getServiceListResult.Limit) },
-        ///             { "offsetUsed", paginatedServices.Apply(getServiceListResult =&gt; getServiceListResult.Offset) },
+        ///             ["totalInFolder"] = paginatedServices.Apply(getServiceListResult =&gt; getServiceListResult.Total),
+        ///             ["limitUsed"] = paginatedServices.Apply(getServiceListResult =&gt; getServiceListResult.Limit),
+        ///             ["offsetUsed"] = paginatedServices.Apply(getServiceListResult =&gt; getServiceListResult.Offset),
         ///         },
         ///     };
         /// });
@@ -130,11 +130,11 @@ namespace Pulumi.Scm
         ///     {
         ///         ["allSharedServicesMap"] = ,
         ///         ["paginatedServicesList"] = paginatedServices.Apply(getServiceListResult =&gt; getServiceListResult.Datas),
-        ///         ["paginatedServicesDetails"] = 
+        ///         ["paginatedServicesDetails"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "totalInFolder", paginatedServices.Apply(getServiceListResult =&gt; getServiceListResult.Total) },
-        ///             { "limitUsed", paginatedServices.Apply(getServiceListResult =&gt; getServiceListResult.Limit) },
-        ///             { "offsetUsed", paginatedServices.Apply(getServiceListResult =&gt; getServiceListResult.Offset) },
+        ///             ["totalInFolder"] = paginatedServices.Apply(getServiceListResult =&gt; getServiceListResult.Total),
+        ///             ["limitUsed"] = paginatedServices.Apply(getServiceListResult =&gt; getServiceListResult.Limit),
+        ///             ["offsetUsed"] = paginatedServices.Apply(getServiceListResult =&gt; getServiceListResult.Offset),
         ///         },
         ///     };
         /// });

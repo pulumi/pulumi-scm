@@ -136,7 +136,7 @@ def get_application_group(device: Optional[_builtins.str] = None,
     import pulumi
     import pulumi_scm as scm
 
-    # Look up the application group by its ID from the terraform.tfstate file.
+    # Look up the application group by its ID from the pulumi.tfstate file.
     scm_application_group_ds = scm.get_application_group(id="91616221-ddeb-4b49-866d-48d64dedc056")
     pulumi.export("applicationGroupOutputs", {
         "groupId": scm_application_group_ds.id,
@@ -185,7 +185,7 @@ def get_application_group_output(device: pulumi.Input[Optional[Optional[_builtin
     import pulumi
     import pulumi_scm as scm
 
-    # Look up the application group by its ID from the terraform.tfstate file.
+    # Look up the application group by its ID from the pulumi.tfstate file.
     scm_application_group_ds = scm.get_application_group(id="91616221-ddeb-4b49-866d-48d64dedc056")
     pulumi.export("applicationGroupOutputs", {
         "groupId": scm_application_group_ds.id,

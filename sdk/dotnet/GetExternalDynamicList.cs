@@ -32,14 +32,14 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["externalDynamicListDetails"] = 
+        ///         ["externalDynamicListDetails"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "id", scmExternalDynamicListDs.Apply(getExternalDynamicListResult =&gt; getExternalDynamicListResult.Id) },
-        ///             { "name", scmExternalDynamicListDs.Apply(getExternalDynamicListResult =&gt; getExternalDynamicListResult.Name) },
-        ///             { "folder", scmExternalDynamicListDs.Apply(getExternalDynamicListResult =&gt; getExternalDynamicListResult.Folder) },
-        ///             { "description", scmExternalDynamicListDs.Apply(getExternalDynamicListResult =&gt; getExternalDynamicListResult.Type?.Domain?.Description) },
-        ///             { "url", scmExternalDynamicListDs.Apply(getExternalDynamicListResult =&gt; getExternalDynamicListResult.Type?.Domain?.Url) },
-        ///             { "recurring", scmExternalDynamicListDs.Apply(getExternalDynamicListResult =&gt; getExternalDynamicListResult.Type?.Domain?.Recurring) },
+        ///             ["id"] = scmExternalDynamicListDs.Apply(getExternalDynamicListResult =&gt; getExternalDynamicListResult.Id),
+        ///             ["name"] = scmExternalDynamicListDs.Apply(getExternalDynamicListResult =&gt; getExternalDynamicListResult.Name),
+        ///             ["folder"] = scmExternalDynamicListDs.Apply(getExternalDynamicListResult =&gt; getExternalDynamicListResult.Folder),
+        ///             ["description"] = scmExternalDynamicListDs.Apply(getExternalDynamicListResult =&gt; getExternalDynamicListResult.Type?.Domain?.Description),
+        ///             ["url"] = scmExternalDynamicListDs.Apply(getExternalDynamicListResult =&gt; getExternalDynamicListResult.Type?.Domain?.Url),
+        ///             ["recurring"] = scmExternalDynamicListDs.Apply(getExternalDynamicListResult =&gt; getExternalDynamicListResult.Type?.Domain?.Recurring),
         ///         },
         ///     };
         /// });
@@ -69,14 +69,14 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["externalDynamicListDetails"] = 
+        ///         ["externalDynamicListDetails"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "id", scmExternalDynamicListDs.Apply(getExternalDynamicListResult =&gt; getExternalDynamicListResult.Id) },
-        ///             { "name", scmExternalDynamicListDs.Apply(getExternalDynamicListResult =&gt; getExternalDynamicListResult.Name) },
-        ///             { "folder", scmExternalDynamicListDs.Apply(getExternalDynamicListResult =&gt; getExternalDynamicListResult.Folder) },
-        ///             { "description", scmExternalDynamicListDs.Apply(getExternalDynamicListResult =&gt; getExternalDynamicListResult.Type?.Domain?.Description) },
-        ///             { "url", scmExternalDynamicListDs.Apply(getExternalDynamicListResult =&gt; getExternalDynamicListResult.Type?.Domain?.Url) },
-        ///             { "recurring", scmExternalDynamicListDs.Apply(getExternalDynamicListResult =&gt; getExternalDynamicListResult.Type?.Domain?.Recurring) },
+        ///             ["id"] = scmExternalDynamicListDs.Apply(getExternalDynamicListResult =&gt; getExternalDynamicListResult.Id),
+        ///             ["name"] = scmExternalDynamicListDs.Apply(getExternalDynamicListResult =&gt; getExternalDynamicListResult.Name),
+        ///             ["folder"] = scmExternalDynamicListDs.Apply(getExternalDynamicListResult =&gt; getExternalDynamicListResult.Folder),
+        ///             ["description"] = scmExternalDynamicListDs.Apply(getExternalDynamicListResult =&gt; getExternalDynamicListResult.Type?.Domain?.Description),
+        ///             ["url"] = scmExternalDynamicListDs.Apply(getExternalDynamicListResult =&gt; getExternalDynamicListResult.Type?.Domain?.Url),
+        ///             ["recurring"] = scmExternalDynamicListDs.Apply(getExternalDynamicListResult =&gt; getExternalDynamicListResult.Type?.Domain?.Recurring),
         ///         },
         ///     };
         /// });
@@ -106,14 +106,14 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["externalDynamicListDetails"] = 
+        ///         ["externalDynamicListDetails"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "id", scmExternalDynamicListDs.Apply(getExternalDynamicListResult =&gt; getExternalDynamicListResult.Id) },
-        ///             { "name", scmExternalDynamicListDs.Apply(getExternalDynamicListResult =&gt; getExternalDynamicListResult.Name) },
-        ///             { "folder", scmExternalDynamicListDs.Apply(getExternalDynamicListResult =&gt; getExternalDynamicListResult.Folder) },
-        ///             { "description", scmExternalDynamicListDs.Apply(getExternalDynamicListResult =&gt; getExternalDynamicListResult.Type?.Domain?.Description) },
-        ///             { "url", scmExternalDynamicListDs.Apply(getExternalDynamicListResult =&gt; getExternalDynamicListResult.Type?.Domain?.Url) },
-        ///             { "recurring", scmExternalDynamicListDs.Apply(getExternalDynamicListResult =&gt; getExternalDynamicListResult.Type?.Domain?.Recurring) },
+        ///             ["id"] = scmExternalDynamicListDs.Apply(getExternalDynamicListResult =&gt; getExternalDynamicListResult.Id),
+        ///             ["name"] = scmExternalDynamicListDs.Apply(getExternalDynamicListResult =&gt; getExternalDynamicListResult.Name),
+        ///             ["folder"] = scmExternalDynamicListDs.Apply(getExternalDynamicListResult =&gt; getExternalDynamicListResult.Folder),
+        ///             ["description"] = scmExternalDynamicListDs.Apply(getExternalDynamicListResult =&gt; getExternalDynamicListResult.Type?.Domain?.Description),
+        ///             ["url"] = scmExternalDynamicListDs.Apply(getExternalDynamicListResult =&gt; getExternalDynamicListResult.Type?.Domain?.Url),
+        ///             ["recurring"] = scmExternalDynamicListDs.Apply(getExternalDynamicListResult =&gt; getExternalDynamicListResult.Type?.Domain?.Recurring),
         ///         },
         ///     };
         /// });

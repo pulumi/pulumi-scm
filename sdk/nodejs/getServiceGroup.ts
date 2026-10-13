@@ -14,7 +14,7 @@ import * as utilities from "./utilities";
  * import * as scm from "@pulumi/scm";
  *
  * // Look up a single service group object by its ID.
- * // The ID used here is from the terraform.tfstate file.
+ * // The ID used here is from the pulumi.tfstate file.
  * const scmServiceGroupDs = scm.getServiceGroup({
  *     id: "dc430d61-52ca-44bc-a797-e65123a94134",
  * });
@@ -105,7 +105,7 @@ export interface GetServiceGroupResult {
  * import * as scm from "@pulumi/scm";
  *
  * // Look up a single service group object by its ID.
- * // The ID used here is from the terraform.tfstate file.
+ * // The ID used here is from the pulumi.tfstate file.
  * const scmServiceGroupDs = scm.getServiceGroup({
  *     id: "dc430d61-52ca-44bc-a797-e65123a94134",
  * });

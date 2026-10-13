@@ -34,10 +34,10 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["fetchedRuleListSummary"] = 
+        ///         ["fetchedRuleListSummary"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "countOfRulesFetched", allPreRules.Apply(getAuthenticationRuleListResult =&gt; getAuthenticationRuleListResult.Total) },
-        ///             { "firstRuleName", allPreRules.Apply(getAuthenticationRuleListResult =&gt; getAuthenticationRuleListResult.Datas[0]?.Name) },
+        ///             ["countOfRulesFetched"] = allPreRules.Apply(getAuthenticationRuleListResult =&gt; getAuthenticationRuleListResult.Total),
+        ///             ["firstRuleName"] = allPreRules.Apply(getAuthenticationRuleListResult =&gt; getAuthenticationRuleListResult.Datas[0]?.Name),
         ///         },
         ///     };
         /// });
@@ -69,10 +69,10 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["fetchedRuleListSummary"] = 
+        ///         ["fetchedRuleListSummary"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "countOfRulesFetched", allPreRules.Apply(getAuthenticationRuleListResult =&gt; getAuthenticationRuleListResult.Total) },
-        ///             { "firstRuleName", allPreRules.Apply(getAuthenticationRuleListResult =&gt; getAuthenticationRuleListResult.Datas[0]?.Name) },
+        ///             ["countOfRulesFetched"] = allPreRules.Apply(getAuthenticationRuleListResult =&gt; getAuthenticationRuleListResult.Total),
+        ///             ["firstRuleName"] = allPreRules.Apply(getAuthenticationRuleListResult =&gt; getAuthenticationRuleListResult.Datas[0]?.Name),
         ///         },
         ///     };
         /// });
@@ -104,10 +104,10 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["fetchedRuleListSummary"] = 
+        ///         ["fetchedRuleListSummary"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "countOfRulesFetched", allPreRules.Apply(getAuthenticationRuleListResult =&gt; getAuthenticationRuleListResult.Total) },
-        ///             { "firstRuleName", allPreRules.Apply(getAuthenticationRuleListResult =&gt; getAuthenticationRuleListResult.Datas[0]?.Name) },
+        ///             ["countOfRulesFetched"] = allPreRules.Apply(getAuthenticationRuleListResult =&gt; getAuthenticationRuleListResult.Total),
+        ///             ["firstRuleName"] = allPreRules.Apply(getAuthenticationRuleListResult =&gt; getAuthenticationRuleListResult.Datas[0]?.Name),
         ///         },
         ///     };
         /// });

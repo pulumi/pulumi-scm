@@ -19,14 +19,14 @@ import * as utilities from "./utilities";
  * // The folder scope for the SCM resource (e.g., 'Shared', 'Predefined', or a specific folder name).
  * const folderScope = config.get("folderScope") || "Service Connections";
  * // ------------------------------------------------------------------
- * // Data Source List Lookup
+ * // Function List Lookup
  * // ------------------------------------------------------------------
  * const allConnectionsInFolder = scm.getServiceConnectionList({
  *     folder: folderScope,
  *     limit: 50,
  * });
  * export const listOfAllConnectionNames = allConnectionsInFolder.then(allConnectionsInFolder => .map(conn => (conn.name)));
- * export const totalConnectionsCount = allConnectionsInFolder.then(allConnectionsInFolder => allConnectionsInFolder.datas).length;
+ * export const totalConnectionsCount = allConnectionsInFolder.then(allConnectionsInFolder => allConnectionsInFolder.datas.length);
  * ```
  */
 export function getServiceConnectionList(args?: GetServiceConnectionListArgs, opts?: pulumi.InvokeOptions): Promise<GetServiceConnectionListResult> {
@@ -126,14 +126,14 @@ export interface GetServiceConnectionListResult {
  * // The folder scope for the SCM resource (e.g., 'Shared', 'Predefined', or a specific folder name).
  * const folderScope = config.get("folderScope") || "Service Connections";
  * // ------------------------------------------------------------------
- * // Data Source List Lookup
+ * // Function List Lookup
  * // ------------------------------------------------------------------
  * const allConnectionsInFolder = scm.getServiceConnectionList({
  *     folder: folderScope,
  *     limit: 50,
  * });
  * export const listOfAllConnectionNames = allConnectionsInFolder.then(allConnectionsInFolder => .map(conn => (conn.name)));
- * export const totalConnectionsCount = allConnectionsInFolder.then(allConnectionsInFolder => allConnectionsInFolder.datas).length;
+ * export const totalConnectionsCount = allConnectionsInFolder.then(allConnectionsInFolder => allConnectionsInFolder.datas.length);
  * ```
  */
 export function getServiceConnectionListOutput(args?: GetServiceConnectionListOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetServiceConnectionListResult> {

@@ -35,11 +35,11 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["scmKerberosServerProfileDetails"] = 
+        ///         ["scmKerberosServerProfileDetails"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "profileId", scmKerberosProf.Apply(getKerberosServerProfileResult =&gt; getKerberosServerProfileResult.Id) },
-        ///             { "folder", scmKerberosProf.Apply(getKerberosServerProfileResult =&gt; getKerberosServerProfileResult.Folder) },
-        ///             { "name", scmKerberosProf.Apply(getKerberosServerProfileResult =&gt; getKerberosServerProfileResult.Name) },
+        ///             ["profileId"] = scmKerberosProf.Apply(getKerberosServerProfileResult =&gt; getKerberosServerProfileResult.Id),
+        ///             ["folder"] = scmKerberosProf.Apply(getKerberosServerProfileResult =&gt; getKerberosServerProfileResult.Folder),
+        ///             ["name"] = scmKerberosProf.Apply(getKerberosServerProfileResult =&gt; getKerberosServerProfileResult.Name),
         ///         },
         ///     };
         /// });
@@ -72,11 +72,11 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["scmKerberosServerProfileDetails"] = 
+        ///         ["scmKerberosServerProfileDetails"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "profileId", scmKerberosProf.Apply(getKerberosServerProfileResult =&gt; getKerberosServerProfileResult.Id) },
-        ///             { "folder", scmKerberosProf.Apply(getKerberosServerProfileResult =&gt; getKerberosServerProfileResult.Folder) },
-        ///             { "name", scmKerberosProf.Apply(getKerberosServerProfileResult =&gt; getKerberosServerProfileResult.Name) },
+        ///             ["profileId"] = scmKerberosProf.Apply(getKerberosServerProfileResult =&gt; getKerberosServerProfileResult.Id),
+        ///             ["folder"] = scmKerberosProf.Apply(getKerberosServerProfileResult =&gt; getKerberosServerProfileResult.Folder),
+        ///             ["name"] = scmKerberosProf.Apply(getKerberosServerProfileResult =&gt; getKerberosServerProfileResult.Name),
         ///         },
         ///     };
         /// });
@@ -109,11 +109,11 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["scmKerberosServerProfileDetails"] = 
+        ///         ["scmKerberosServerProfileDetails"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "profileId", scmKerberosProf.Apply(getKerberosServerProfileResult =&gt; getKerberosServerProfileResult.Id) },
-        ///             { "folder", scmKerberosProf.Apply(getKerberosServerProfileResult =&gt; getKerberosServerProfileResult.Folder) },
-        ///             { "name", scmKerberosProf.Apply(getKerberosServerProfileResult =&gt; getKerberosServerProfileResult.Name) },
+        ///             ["profileId"] = scmKerberosProf.Apply(getKerberosServerProfileResult =&gt; getKerberosServerProfileResult.Id),
+        ///             ["folder"] = scmKerberosProf.Apply(getKerberosServerProfileResult =&gt; getKerberosServerProfileResult.Folder),
+        ///             ["name"] = scmKerberosProf.Apply(getKerberosServerProfileResult =&gt; getKerberosServerProfileResult.Name),
         ///         },
         ///     };
         /// });

@@ -15,7 +15,7 @@ import * as utilities from "./utilities";
  * import * as pulumi from "@pulumi/pulumi";
  * import * as scm from "@pulumi/scm";
  *
- * // This data source will call the "ListForwardingProfileDestinations" API endpoint
+ * // This function will call the "ListForwardingProfileDestinations" API endpoint
  * // and return all forwarding profile destinations in the "Mobile Users" folder.
  * // 1. Use a single data block to fetch ALL forwarding profile destinations in the "Mobile Users" folder.
  * const allMobileUsers = scm.getForwardingProfileDestinationList({
@@ -127,7 +127,7 @@ export interface GetForwardingProfileDestinationListResult {
  * import * as pulumi from "@pulumi/pulumi";
  * import * as scm from "@pulumi/scm";
  *
- * // This data source will call the "ListForwardingProfileDestinations" API endpoint
+ * // This function will call the "ListForwardingProfileDestinations" API endpoint
  * // and return all forwarding profile destinations in the "Mobile Users" folder.
  * // 1. Use a single data block to fetch ALL forwarding profile destinations in the "Mobile Users" folder.
  * const allMobileUsers = scm.getForwardingProfileDestinationList({

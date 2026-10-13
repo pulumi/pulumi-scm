@@ -35,11 +35,11 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["scmSyslogServerProfileDetails"] = 
+        ///         ["scmSyslogServerProfileDetails"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "profileId", scmSyslogServerProf.Apply(getSyslogServerProfileResult =&gt; getSyslogServerProfileResult.Id) },
-        ///             { "folder", scmSyslogServerProf.Apply(getSyslogServerProfileResult =&gt; getSyslogServerProfileResult.Folder) },
-        ///             { "name", scmSyslogServerProf.Apply(getSyslogServerProfileResult =&gt; getSyslogServerProfileResult.Name) },
+        ///             ["profileId"] = scmSyslogServerProf.Apply(getSyslogServerProfileResult =&gt; getSyslogServerProfileResult.Id),
+        ///             ["folder"] = scmSyslogServerProf.Apply(getSyslogServerProfileResult =&gt; getSyslogServerProfileResult.Folder),
+        ///             ["name"] = scmSyslogServerProf.Apply(getSyslogServerProfileResult =&gt; getSyslogServerProfileResult.Name),
         ///         },
         ///     };
         /// });
@@ -72,11 +72,11 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["scmSyslogServerProfileDetails"] = 
+        ///         ["scmSyslogServerProfileDetails"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "profileId", scmSyslogServerProf.Apply(getSyslogServerProfileResult =&gt; getSyslogServerProfileResult.Id) },
-        ///             { "folder", scmSyslogServerProf.Apply(getSyslogServerProfileResult =&gt; getSyslogServerProfileResult.Folder) },
-        ///             { "name", scmSyslogServerProf.Apply(getSyslogServerProfileResult =&gt; getSyslogServerProfileResult.Name) },
+        ///             ["profileId"] = scmSyslogServerProf.Apply(getSyslogServerProfileResult =&gt; getSyslogServerProfileResult.Id),
+        ///             ["folder"] = scmSyslogServerProf.Apply(getSyslogServerProfileResult =&gt; getSyslogServerProfileResult.Folder),
+        ///             ["name"] = scmSyslogServerProf.Apply(getSyslogServerProfileResult =&gt; getSyslogServerProfileResult.Name),
         ///         },
         ///     };
         /// });
@@ -109,11 +109,11 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["scmSyslogServerProfileDetails"] = 
+        ///         ["scmSyslogServerProfileDetails"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "profileId", scmSyslogServerProf.Apply(getSyslogServerProfileResult =&gt; getSyslogServerProfileResult.Id) },
-        ///             { "folder", scmSyslogServerProf.Apply(getSyslogServerProfileResult =&gt; getSyslogServerProfileResult.Folder) },
-        ///             { "name", scmSyslogServerProf.Apply(getSyslogServerProfileResult =&gt; getSyslogServerProfileResult.Name) },
+        ///             ["profileId"] = scmSyslogServerProf.Apply(getSyslogServerProfileResult =&gt; getSyslogServerProfileResult.Id),
+        ///             ["folder"] = scmSyslogServerProf.Apply(getSyslogServerProfileResult =&gt; getSyslogServerProfileResult.Folder),
+        ///             ["name"] = scmSyslogServerProf.Apply(getSyslogServerProfileResult =&gt; getSyslogServerProfileResult.Name),
         ///         },
         ///     };
         /// });

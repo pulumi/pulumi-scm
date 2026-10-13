@@ -19,14 +19,14 @@ import * as utilities from "./utilities";
  * // The folder scope for the SCM resource (e.g., 'Shared', 'Predefined', or a specific folder name).
  * const folderScope = config.get("folderScope") || "Service Connections";
  * // ------------------------------------------------------------------
- * // Data Source List: SCM Service Connection Group (List Lookup)
+ * // Function List: SCM Service Connection Group (List Lookup)
  * // ------------------------------------------------------------------
  * const allGroupsInFolder = scm.getServiceConnectionGroupList({
  *     folder: folderScope,
  *     limit: 50,
  * });
  * export const listOfAllGroupNames = allGroupsInFolder.then(allGroupsInFolder => .map(group => (group.name)));
- * export const totalGroupsCount = allGroupsInFolder.then(allGroupsInFolder => allGroupsInFolder.datas).length;
+ * export const totalGroupsCount = allGroupsInFolder.then(allGroupsInFolder => allGroupsInFolder.datas.length);
  * ```
  */
 export function getServiceConnectionGroupList(args?: GetServiceConnectionGroupListArgs, opts?: pulumi.InvokeOptions): Promise<GetServiceConnectionGroupListResult> {
@@ -126,14 +126,14 @@ export interface GetServiceConnectionGroupListResult {
  * // The folder scope for the SCM resource (e.g., 'Shared', 'Predefined', or a specific folder name).
  * const folderScope = config.get("folderScope") || "Service Connections";
  * // ------------------------------------------------------------------
- * // Data Source List: SCM Service Connection Group (List Lookup)
+ * // Function List: SCM Service Connection Group (List Lookup)
  * // ------------------------------------------------------------------
  * const allGroupsInFolder = scm.getServiceConnectionGroupList({
  *     folder: folderScope,
  *     limit: 50,
  * });
  * export const listOfAllGroupNames = allGroupsInFolder.then(allGroupsInFolder => .map(group => (group.name)));
- * export const totalGroupsCount = allGroupsInFolder.then(allGroupsInFolder => allGroupsInFolder.datas).length;
+ * export const totalGroupsCount = allGroupsInFolder.then(allGroupsInFolder => allGroupsInFolder.datas.length);
  * ```
  */
 export function getServiceConnectionGroupListOutput(args?: GetServiceConnectionGroupListOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetServiceConnectionGroupListResult> {

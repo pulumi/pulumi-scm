@@ -32,12 +32,12 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["scmBgpAddressFamilyProfileDsResults"] = 
+        ///         ["scmBgpAddressFamilyProfileDsResults"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "id", scmBgpAddressFamilyProfileDs.Apply(getBgpAddressFamilyProfileResult =&gt; getBgpAddressFamilyProfileResult.Id) },
-        ///             { "name", scmBgpAddressFamilyProfileDs.Apply(getBgpAddressFamilyProfileResult =&gt; getBgpAddressFamilyProfileResult.Name) },
-        ///             { "ipv4", scmBgpAddressFamilyProfileDs.Apply(getBgpAddressFamilyProfileResult =&gt; getBgpAddressFamilyProfileResult.Ipv4) },
-        ///             { "folder", scmBgpAddressFamilyProfileDs.Apply(getBgpAddressFamilyProfileResult =&gt; getBgpAddressFamilyProfileResult.Folder) },
+        ///             ["id"] = scmBgpAddressFamilyProfileDs.Apply(getBgpAddressFamilyProfileResult =&gt; getBgpAddressFamilyProfileResult.Id),
+        ///             ["name"] = scmBgpAddressFamilyProfileDs.Apply(getBgpAddressFamilyProfileResult =&gt; getBgpAddressFamilyProfileResult.Name),
+        ///             ["ipv4"] = scmBgpAddressFamilyProfileDs.Apply(getBgpAddressFamilyProfileResult =&gt; getBgpAddressFamilyProfileResult.Ipv4),
+        ///             ["folder"] = scmBgpAddressFamilyProfileDs.Apply(getBgpAddressFamilyProfileResult =&gt; getBgpAddressFamilyProfileResult.Folder),
         ///         },
         ///     };
         /// });
@@ -67,12 +67,12 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["scmBgpAddressFamilyProfileDsResults"] = 
+        ///         ["scmBgpAddressFamilyProfileDsResults"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "id", scmBgpAddressFamilyProfileDs.Apply(getBgpAddressFamilyProfileResult =&gt; getBgpAddressFamilyProfileResult.Id) },
-        ///             { "name", scmBgpAddressFamilyProfileDs.Apply(getBgpAddressFamilyProfileResult =&gt; getBgpAddressFamilyProfileResult.Name) },
-        ///             { "ipv4", scmBgpAddressFamilyProfileDs.Apply(getBgpAddressFamilyProfileResult =&gt; getBgpAddressFamilyProfileResult.Ipv4) },
-        ///             { "folder", scmBgpAddressFamilyProfileDs.Apply(getBgpAddressFamilyProfileResult =&gt; getBgpAddressFamilyProfileResult.Folder) },
+        ///             ["id"] = scmBgpAddressFamilyProfileDs.Apply(getBgpAddressFamilyProfileResult =&gt; getBgpAddressFamilyProfileResult.Id),
+        ///             ["name"] = scmBgpAddressFamilyProfileDs.Apply(getBgpAddressFamilyProfileResult =&gt; getBgpAddressFamilyProfileResult.Name),
+        ///             ["ipv4"] = scmBgpAddressFamilyProfileDs.Apply(getBgpAddressFamilyProfileResult =&gt; getBgpAddressFamilyProfileResult.Ipv4),
+        ///             ["folder"] = scmBgpAddressFamilyProfileDs.Apply(getBgpAddressFamilyProfileResult =&gt; getBgpAddressFamilyProfileResult.Folder),
         ///         },
         ///     };
         /// });
@@ -102,12 +102,12 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["scmBgpAddressFamilyProfileDsResults"] = 
+        ///         ["scmBgpAddressFamilyProfileDsResults"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "id", scmBgpAddressFamilyProfileDs.Apply(getBgpAddressFamilyProfileResult =&gt; getBgpAddressFamilyProfileResult.Id) },
-        ///             { "name", scmBgpAddressFamilyProfileDs.Apply(getBgpAddressFamilyProfileResult =&gt; getBgpAddressFamilyProfileResult.Name) },
-        ///             { "ipv4", scmBgpAddressFamilyProfileDs.Apply(getBgpAddressFamilyProfileResult =&gt; getBgpAddressFamilyProfileResult.Ipv4) },
-        ///             { "folder", scmBgpAddressFamilyProfileDs.Apply(getBgpAddressFamilyProfileResult =&gt; getBgpAddressFamilyProfileResult.Folder) },
+        ///             ["id"] = scmBgpAddressFamilyProfileDs.Apply(getBgpAddressFamilyProfileResult =&gt; getBgpAddressFamilyProfileResult.Id),
+        ///             ["name"] = scmBgpAddressFamilyProfileDs.Apply(getBgpAddressFamilyProfileResult =&gt; getBgpAddressFamilyProfileResult.Name),
+        ///             ["ipv4"] = scmBgpAddressFamilyProfileDs.Apply(getBgpAddressFamilyProfileResult =&gt; getBgpAddressFamilyProfileResult.Ipv4),
+        ///             ["folder"] = scmBgpAddressFamilyProfileDs.Apply(getBgpAddressFamilyProfileResult =&gt; getBgpAddressFamilyProfileResult.Folder),
         ///         },
         ///     };
         /// });

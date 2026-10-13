@@ -36,7 +36,7 @@ namespace Pulumi.Scm
     ///                     SyncToPeer = false,
     ///                     Hourly = new Scm.Inputs.UpdateScheduleUpdateScheduleThreatsRecurringHourlyArgs
     ///                     {
-    ///                         At = 30,
+    ///                         At = 30.0,
     ///                         Action = "download-only",
     ///                         DisableNewContent = false,
     ///                     },

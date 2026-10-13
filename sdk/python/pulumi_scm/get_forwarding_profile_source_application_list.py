@@ -172,7 +172,7 @@ def get_forwarding_profile_source_application_list(device: Optional[_builtins.st
         return None
 
 
-    # This data source will call the "List" API endpoint
+    # This function will call the "List" API endpoint
     # and return all forwarding profile source applications in the "Mobile Users" folder.
     # 1. Use a single data block to fetch ALL forwarding profile source applications in the "Mobile Users" folder.
     mobile_users = scm.get_forwarding_profile_source_application_list(folder="Mobile Users")
@@ -252,7 +252,7 @@ def get_forwarding_profile_source_application_list_output(device: pulumi.Input[O
         return None
 
 
-    # This data source will call the "List" API endpoint
+    # This function will call the "List" API endpoint
     # and return all forwarding profile source applications in the "Mobile Users" folder.
     # 1. Use a single data block to fetch ALL forwarding profile source applications in the "Mobile Users" folder.
     mobile_users = scm.get_forwarding_profile_source_application_list(folder="Mobile Users")

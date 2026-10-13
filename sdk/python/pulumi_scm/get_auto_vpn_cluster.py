@@ -158,7 +158,7 @@ def get_auto_vpn_cluster(id: Optional[_builtins.str] = None,
     import pulumi
     import pulumi_scm as scm
 
-    # Look up the application group by its ID from the terraform.tfstate file.
+    # Look up the application group by its ID from the pulumi.tfstate file.
     scm_auto_vpn_cluster_ds = scm.get_auto_vpn_cluster(id="e3c732fb-85c7-4116-b5ed-ba3977209b29")
     pulumi.export("autoVpnClusterOutputs", {
         "id": scm_auto_vpn_cluster_ds.id,
@@ -201,7 +201,7 @@ def get_auto_vpn_cluster_output(id: pulumi.Input[Optional[_builtins.str]] = None
     import pulumi
     import pulumi_scm as scm
 
-    # Look up the application group by its ID from the terraform.tfstate file.
+    # Look up the application group by its ID from the pulumi.tfstate file.
     scm_auto_vpn_cluster_ds = scm.get_auto_vpn_cluster(id="e3c732fb-85c7-4116-b5ed-ba3977209b29")
     pulumi.export("autoVpnClusterOutputs", {
         "id": scm_auto_vpn_cluster_ds.id,

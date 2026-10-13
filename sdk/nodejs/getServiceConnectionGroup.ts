@@ -14,7 +14,7 @@ import * as utilities from "./utilities";
  * import * as scm from "@pulumi/scm";
  *
  * // ------------------------------------------------------------------
- * // Data Source: SCM Service Connection Group (Single Lookup)
+ * // Function: SCM Service Connection Group (Single Lookup)
  * // ------------------------------------------------------------------
  * const groupLookup = scm.getServiceConnectionGroup({
  *     id: "1480fd9d-dae7-4bf3-94f6-4945e89b59b6",
@@ -92,7 +92,7 @@ export interface GetServiceConnectionGroupResult {
  * import * as scm from "@pulumi/scm";
  *
  * // ------------------------------------------------------------------
- * // Data Source: SCM Service Connection Group (Single Lookup)
+ * // Function: SCM Service Connection Group (Single Lookup)
  * // ------------------------------------------------------------------
  * const groupLookup = scm.getServiceConnectionGroup({
  *     id: "1480fd9d-dae7-4bf3-94f6-4945e89b59b6",

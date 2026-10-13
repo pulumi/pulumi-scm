@@ -31,7 +31,7 @@ import * as utilities from "./utilities";
  * }
  *
  *
- * // This data source will call the "List" API endpoint
+ * // This function will call the "List" API endpoint
  * // and return all forwarding profile source applications in the "Mobile Users" folder.
  * // 1. Use a single data block to fetch ALL forwarding profile source applications in the "Mobile Users" folder.
  * const mobileUsers = scm.getForwardingProfileSourceApplicationList({
@@ -170,7 +170,7 @@ export interface GetForwardingProfileSourceApplicationListResult {
  * }
  *
  *
- * // This data source will call the "List" API endpoint
+ * // This function will call the "List" API endpoint
  * // and return all forwarding profile source applications in the "Mobile Users" folder.
  * // 1. Use a single data block to fetch ALL forwarding profile source applications in the "Mobile Users" folder.
  * const mobileUsers = scm.getForwardingProfileSourceApplicationList({

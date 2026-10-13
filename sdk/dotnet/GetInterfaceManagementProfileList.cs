@@ -26,7 +26,7 @@ namespace Pulumi.Scm
         /// {
         ///     // -----------------------------------------------------------------------------
         ///     // 6. DATA SOURCE: Fetch a list of Interface Management Profiles
-        ///     // This data source retrieves multiple Interface Management Profiles from SCM.
+        ///     // This function retrieves multiple Interface Management Profiles from SCM.
         ///     // -----------------------------------------------------------------------------
         ///     var allMgmtProfiles = Scm.GetInterfaceManagementProfileList.Invoke(new()
         ///     {
@@ -36,11 +36,11 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["fetchedMgmtProfileListSummary"] = 
+        ///         ["fetchedMgmtProfileListSummary"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "countOfProfilesFetched", allMgmtProfiles.Apply(getInterfaceManagementProfileListResult =&gt; getInterfaceManagementProfileListResult.Total) },
-        ///             { "firstProfileName", allMgmtProfiles.Apply(getInterfaceManagementProfileListResult =&gt; getInterfaceManagementProfileListResult.Datas[0]?.Name) },
-        ///             { "data", allMgmtProfiles.Apply(getInterfaceManagementProfileListResult =&gt; getInterfaceManagementProfileListResult.Datas) },
+        ///             ["countOfProfilesFetched"] = allMgmtProfiles.Apply(getInterfaceManagementProfileListResult =&gt; getInterfaceManagementProfileListResult.Total),
+        ///             ["firstProfileName"] = allMgmtProfiles.Apply(getInterfaceManagementProfileListResult =&gt; getInterfaceManagementProfileListResult.Datas[0]?.Name),
+        ///             ["data"] = allMgmtProfiles.Apply(getInterfaceManagementProfileListResult =&gt; getInterfaceManagementProfileListResult.Datas),
         ///         },
         ///     };
         /// });
@@ -64,7 +64,7 @@ namespace Pulumi.Scm
         /// {
         ///     // -----------------------------------------------------------------------------
         ///     // 6. DATA SOURCE: Fetch a list of Interface Management Profiles
-        ///     // This data source retrieves multiple Interface Management Profiles from SCM.
+        ///     // This function retrieves multiple Interface Management Profiles from SCM.
         ///     // -----------------------------------------------------------------------------
         ///     var allMgmtProfiles = Scm.GetInterfaceManagementProfileList.Invoke(new()
         ///     {
@@ -74,11 +74,11 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["fetchedMgmtProfileListSummary"] = 
+        ///         ["fetchedMgmtProfileListSummary"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "countOfProfilesFetched", allMgmtProfiles.Apply(getInterfaceManagementProfileListResult =&gt; getInterfaceManagementProfileListResult.Total) },
-        ///             { "firstProfileName", allMgmtProfiles.Apply(getInterfaceManagementProfileListResult =&gt; getInterfaceManagementProfileListResult.Datas[0]?.Name) },
-        ///             { "data", allMgmtProfiles.Apply(getInterfaceManagementProfileListResult =&gt; getInterfaceManagementProfileListResult.Datas) },
+        ///             ["countOfProfilesFetched"] = allMgmtProfiles.Apply(getInterfaceManagementProfileListResult =&gt; getInterfaceManagementProfileListResult.Total),
+        ///             ["firstProfileName"] = allMgmtProfiles.Apply(getInterfaceManagementProfileListResult =&gt; getInterfaceManagementProfileListResult.Datas[0]?.Name),
+        ///             ["data"] = allMgmtProfiles.Apply(getInterfaceManagementProfileListResult =&gt; getInterfaceManagementProfileListResult.Datas),
         ///         },
         ///     };
         /// });
@@ -102,7 +102,7 @@ namespace Pulumi.Scm
         /// {
         ///     // -----------------------------------------------------------------------------
         ///     // 6. DATA SOURCE: Fetch a list of Interface Management Profiles
-        ///     // This data source retrieves multiple Interface Management Profiles from SCM.
+        ///     // This function retrieves multiple Interface Management Profiles from SCM.
         ///     // -----------------------------------------------------------------------------
         ///     var allMgmtProfiles = Scm.GetInterfaceManagementProfileList.Invoke(new()
         ///     {
@@ -112,11 +112,11 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["fetchedMgmtProfileListSummary"] = 
+        ///         ["fetchedMgmtProfileListSummary"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "countOfProfilesFetched", allMgmtProfiles.Apply(getInterfaceManagementProfileListResult =&gt; getInterfaceManagementProfileListResult.Total) },
-        ///             { "firstProfileName", allMgmtProfiles.Apply(getInterfaceManagementProfileListResult =&gt; getInterfaceManagementProfileListResult.Datas[0]?.Name) },
-        ///             { "data", allMgmtProfiles.Apply(getInterfaceManagementProfileListResult =&gt; getInterfaceManagementProfileListResult.Datas) },
+        ///             ["countOfProfilesFetched"] = allMgmtProfiles.Apply(getInterfaceManagementProfileListResult =&gt; getInterfaceManagementProfileListResult.Total),
+        ///             ["firstProfileName"] = allMgmtProfiles.Apply(getInterfaceManagementProfileListResult =&gt; getInterfaceManagementProfileListResult.Datas[0]?.Name),
+        ///             ["data"] = allMgmtProfiles.Apply(getInterfaceManagementProfileListResult =&gt; getInterfaceManagementProfileListResult.Datas),
         ///         },
         ///     };
         /// });

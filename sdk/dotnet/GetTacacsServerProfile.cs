@@ -32,13 +32,13 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["profileDataSourceResults"] = 
+        ///         ["profileDataSourceResults"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "name", scmTacacsServerProfile5Ds.Apply(getTacacsServerProfileResult =&gt; getTacacsServerProfileResult.Name) },
-        ///             { "protocol", scmTacacsServerProfile5Ds.Apply(getTacacsServerProfileResult =&gt; getTacacsServerProfileResult.Protocol) },
-        ///             { "timeout", scmTacacsServerProfile5Ds.Apply(getTacacsServerProfileResult =&gt; getTacacsServerProfileResult.Timeout) },
-        ///             { "folder", scmTacacsServerProfile5Ds.Apply(getTacacsServerProfileResult =&gt; getTacacsServerProfileResult.Folder) },
-        ///             { "useSingleConnection", scmTacacsServerProfile5Ds.Apply(getTacacsServerProfileResult =&gt; getTacacsServerProfileResult.UseSingleConnection) },
+        ///             ["name"] = scmTacacsServerProfile5Ds.Apply(getTacacsServerProfileResult =&gt; getTacacsServerProfileResult.Name),
+        ///             ["protocol"] = scmTacacsServerProfile5Ds.Apply(getTacacsServerProfileResult =&gt; getTacacsServerProfileResult.Protocol),
+        ///             ["timeout"] = scmTacacsServerProfile5Ds.Apply(getTacacsServerProfileResult =&gt; getTacacsServerProfileResult.Timeout),
+        ///             ["folder"] = scmTacacsServerProfile5Ds.Apply(getTacacsServerProfileResult =&gt; getTacacsServerProfileResult.Folder),
+        ///             ["useSingleConnection"] = scmTacacsServerProfile5Ds.Apply(getTacacsServerProfileResult =&gt; getTacacsServerProfileResult.UseSingleConnection),
         ///         },
         ///     };
         /// });
@@ -68,13 +68,13 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["profileDataSourceResults"] = 
+        ///         ["profileDataSourceResults"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "name", scmTacacsServerProfile5Ds.Apply(getTacacsServerProfileResult =&gt; getTacacsServerProfileResult.Name) },
-        ///             { "protocol", scmTacacsServerProfile5Ds.Apply(getTacacsServerProfileResult =&gt; getTacacsServerProfileResult.Protocol) },
-        ///             { "timeout", scmTacacsServerProfile5Ds.Apply(getTacacsServerProfileResult =&gt; getTacacsServerProfileResult.Timeout) },
-        ///             { "folder", scmTacacsServerProfile5Ds.Apply(getTacacsServerProfileResult =&gt; getTacacsServerProfileResult.Folder) },
-        ///             { "useSingleConnection", scmTacacsServerProfile5Ds.Apply(getTacacsServerProfileResult =&gt; getTacacsServerProfileResult.UseSingleConnection) },
+        ///             ["name"] = scmTacacsServerProfile5Ds.Apply(getTacacsServerProfileResult =&gt; getTacacsServerProfileResult.Name),
+        ///             ["protocol"] = scmTacacsServerProfile5Ds.Apply(getTacacsServerProfileResult =&gt; getTacacsServerProfileResult.Protocol),
+        ///             ["timeout"] = scmTacacsServerProfile5Ds.Apply(getTacacsServerProfileResult =&gt; getTacacsServerProfileResult.Timeout),
+        ///             ["folder"] = scmTacacsServerProfile5Ds.Apply(getTacacsServerProfileResult =&gt; getTacacsServerProfileResult.Folder),
+        ///             ["useSingleConnection"] = scmTacacsServerProfile5Ds.Apply(getTacacsServerProfileResult =&gt; getTacacsServerProfileResult.UseSingleConnection),
         ///         },
         ///     };
         /// });
@@ -104,13 +104,13 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["profileDataSourceResults"] = 
+        ///         ["profileDataSourceResults"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "name", scmTacacsServerProfile5Ds.Apply(getTacacsServerProfileResult =&gt; getTacacsServerProfileResult.Name) },
-        ///             { "protocol", scmTacacsServerProfile5Ds.Apply(getTacacsServerProfileResult =&gt; getTacacsServerProfileResult.Protocol) },
-        ///             { "timeout", scmTacacsServerProfile5Ds.Apply(getTacacsServerProfileResult =&gt; getTacacsServerProfileResult.Timeout) },
-        ///             { "folder", scmTacacsServerProfile5Ds.Apply(getTacacsServerProfileResult =&gt; getTacacsServerProfileResult.Folder) },
-        ///             { "useSingleConnection", scmTacacsServerProfile5Ds.Apply(getTacacsServerProfileResult =&gt; getTacacsServerProfileResult.UseSingleConnection) },
+        ///             ["name"] = scmTacacsServerProfile5Ds.Apply(getTacacsServerProfileResult =&gt; getTacacsServerProfileResult.Name),
+        ///             ["protocol"] = scmTacacsServerProfile5Ds.Apply(getTacacsServerProfileResult =&gt; getTacacsServerProfileResult.Protocol),
+        ///             ["timeout"] = scmTacacsServerProfile5Ds.Apply(getTacacsServerProfileResult =&gt; getTacacsServerProfileResult.Timeout),
+        ///             ["folder"] = scmTacacsServerProfile5Ds.Apply(getTacacsServerProfileResult =&gt; getTacacsServerProfileResult.Folder),
+        ///             ["useSingleConnection"] = scmTacacsServerProfile5Ds.Apply(getTacacsServerProfileResult =&gt; getTacacsServerProfileResult.UseSingleConnection),
         ///         },
         ///     };
         /// });

@@ -30,7 +30,7 @@ namespace Pulumi.Scm
     ///         Name = "$scm_tf_parent_interface",
     ///         Comment = "Managed by Pulumi",
     ///         Folder = "ngfw-shared",
-    ///         Layer3 = null,
+    ///         Layer3 = new() { },
     ///     });
     /// 
     ///     //
@@ -69,7 +69,7 @@ namespace Pulumi.Scm
     ///         Name = "$scm_parent_tf_dhcp_interface",
     ///         Comment = "Managed by Pulumi",
     ///         Folder = "ngfw-shared",
-    ///         Layer3 = null,
+    ///         Layer3 = new() { },
     ///     });
     /// 
     ///     //
@@ -109,7 +109,7 @@ namespace Pulumi.Scm
     ///         Name = "$scm_parent_tf_pppoe_interface",
     ///         Comment = "Managed by Pulumi",
     ///         Folder = "ngfw-shared",
-    ///         Layer3 = null,
+    ///         Layer3 = new() { },
     ///     });
     /// 
     ///     //

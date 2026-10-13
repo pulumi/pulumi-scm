@@ -24,7 +24,7 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     // Define the data source (the item to be retrieved via API GET)
+        ///     // Define the function (the item to be retrieved via API GET)
         ///     var dnatExternalWebTestGet = Scm.GetNatRule.Invoke(new()
         ///     {
         ///         Id = "574717ac-8a63-4b6f-bf77-f05a66ba6322",
@@ -32,10 +32,10 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["retrievedIDAndName"] = 
+        ///         ["retrievedIDAndName"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "id", dnatExternalWebTestGet.Apply(getNatRuleResult =&gt; getNatRuleResult.Id) },
-        ///             { "name", dnatExternalWebTestGet.Apply(getNatRuleResult =&gt; getNatRuleResult.Name) },
+        ///             ["id"] = dnatExternalWebTestGet.Apply(getNatRuleResult =&gt; getNatRuleResult.Id),
+        ///             ["name"] = dnatExternalWebTestGet.Apply(getNatRuleResult =&gt; getNatRuleResult.Name),
         ///         },
         ///         ["retrievedDestinationTranslation"] = dnatExternalWebTestGet.Apply(getNatRuleResult =&gt; getNatRuleResult.DestinationTranslation),
         ///         ["recievedResponse"] = dnatExternalWebTestGet,
@@ -59,7 +59,7 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     // Define the data source (the item to be retrieved via API GET)
+        ///     // Define the function (the item to be retrieved via API GET)
         ///     var dnatExternalWebTestGet = Scm.GetNatRule.Invoke(new()
         ///     {
         ///         Id = "574717ac-8a63-4b6f-bf77-f05a66ba6322",
@@ -67,10 +67,10 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["retrievedIDAndName"] = 
+        ///         ["retrievedIDAndName"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "id", dnatExternalWebTestGet.Apply(getNatRuleResult =&gt; getNatRuleResult.Id) },
-        ///             { "name", dnatExternalWebTestGet.Apply(getNatRuleResult =&gt; getNatRuleResult.Name) },
+        ///             ["id"] = dnatExternalWebTestGet.Apply(getNatRuleResult =&gt; getNatRuleResult.Id),
+        ///             ["name"] = dnatExternalWebTestGet.Apply(getNatRuleResult =&gt; getNatRuleResult.Name),
         ///         },
         ///         ["retrievedDestinationTranslation"] = dnatExternalWebTestGet.Apply(getNatRuleResult =&gt; getNatRuleResult.DestinationTranslation),
         ///         ["recievedResponse"] = dnatExternalWebTestGet,
@@ -94,7 +94,7 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     // Define the data source (the item to be retrieved via API GET)
+        ///     // Define the function (the item to be retrieved via API GET)
         ///     var dnatExternalWebTestGet = Scm.GetNatRule.Invoke(new()
         ///     {
         ///         Id = "574717ac-8a63-4b6f-bf77-f05a66ba6322",
@@ -102,10 +102,10 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["retrievedIDAndName"] = 
+        ///         ["retrievedIDAndName"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "id", dnatExternalWebTestGet.Apply(getNatRuleResult =&gt; getNatRuleResult.Id) },
-        ///             { "name", dnatExternalWebTestGet.Apply(getNatRuleResult =&gt; getNatRuleResult.Name) },
+        ///             ["id"] = dnatExternalWebTestGet.Apply(getNatRuleResult =&gt; getNatRuleResult.Id),
+        ///             ["name"] = dnatExternalWebTestGet.Apply(getNatRuleResult =&gt; getNatRuleResult.Name),
         ///         },
         ///         ["retrievedDestinationTranslation"] = dnatExternalWebTestGet.Apply(getNatRuleResult =&gt; getNatRuleResult.DestinationTranslation),
         ///         ["recievedResponse"] = dnatExternalWebTestGet,

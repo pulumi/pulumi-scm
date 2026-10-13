@@ -32,16 +32,16 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["zoneDataSourceResults"] = 
+        ///         ["zoneDataSourceResults"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "id", scmZoneDs.Apply(getZoneResult =&gt; getZoneResult.Id) },
-        ///             { "name", scmZoneDs.Apply(getZoneResult =&gt; getZoneResult.Name) },
-        ///             { "network", scmZoneDs.Apply(getZoneResult =&gt; getZoneResult.Network) },
-        ///             { "enableDeviceIdentification", scmZoneDs.Apply(getZoneResult =&gt; getZoneResult.EnableDeviceIdentification) },
-        ///             { "enableUserIdentification", scmZoneDs.Apply(getZoneResult =&gt; getZoneResult.EnableUserIdentification) },
-        ///             { "userAcl", scmZoneDs.Apply(getZoneResult =&gt; getZoneResult.UserAcl) },
-        ///             { "deviceAcl", scmZoneDs.Apply(getZoneResult =&gt; getZoneResult.DeviceAcl) },
-        ///             { "folder", scmZoneDs.Apply(getZoneResult =&gt; getZoneResult.Folder) },
+        ///             ["id"] = scmZoneDs.Apply(getZoneResult =&gt; getZoneResult.Id),
+        ///             ["name"] = scmZoneDs.Apply(getZoneResult =&gt; getZoneResult.Name),
+        ///             ["network"] = scmZoneDs.Apply(getZoneResult =&gt; getZoneResult.Network),
+        ///             ["enableDeviceIdentification"] = scmZoneDs.Apply(getZoneResult =&gt; getZoneResult.EnableDeviceIdentification),
+        ///             ["enableUserIdentification"] = scmZoneDs.Apply(getZoneResult =&gt; getZoneResult.EnableUserIdentification),
+        ///             ["userAcl"] = scmZoneDs.Apply(getZoneResult =&gt; getZoneResult.UserAcl),
+        ///             ["deviceAcl"] = scmZoneDs.Apply(getZoneResult =&gt; getZoneResult.DeviceAcl),
+        ///             ["folder"] = scmZoneDs.Apply(getZoneResult =&gt; getZoneResult.Folder),
         ///         },
         ///     };
         /// });
@@ -71,16 +71,16 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["zoneDataSourceResults"] = 
+        ///         ["zoneDataSourceResults"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "id", scmZoneDs.Apply(getZoneResult =&gt; getZoneResult.Id) },
-        ///             { "name", scmZoneDs.Apply(getZoneResult =&gt; getZoneResult.Name) },
-        ///             { "network", scmZoneDs.Apply(getZoneResult =&gt; getZoneResult.Network) },
-        ///             { "enableDeviceIdentification", scmZoneDs.Apply(getZoneResult =&gt; getZoneResult.EnableDeviceIdentification) },
-        ///             { "enableUserIdentification", scmZoneDs.Apply(getZoneResult =&gt; getZoneResult.EnableUserIdentification) },
-        ///             { "userAcl", scmZoneDs.Apply(getZoneResult =&gt; getZoneResult.UserAcl) },
-        ///             { "deviceAcl", scmZoneDs.Apply(getZoneResult =&gt; getZoneResult.DeviceAcl) },
-        ///             { "folder", scmZoneDs.Apply(getZoneResult =&gt; getZoneResult.Folder) },
+        ///             ["id"] = scmZoneDs.Apply(getZoneResult =&gt; getZoneResult.Id),
+        ///             ["name"] = scmZoneDs.Apply(getZoneResult =&gt; getZoneResult.Name),
+        ///             ["network"] = scmZoneDs.Apply(getZoneResult =&gt; getZoneResult.Network),
+        ///             ["enableDeviceIdentification"] = scmZoneDs.Apply(getZoneResult =&gt; getZoneResult.EnableDeviceIdentification),
+        ///             ["enableUserIdentification"] = scmZoneDs.Apply(getZoneResult =&gt; getZoneResult.EnableUserIdentification),
+        ///             ["userAcl"] = scmZoneDs.Apply(getZoneResult =&gt; getZoneResult.UserAcl),
+        ///             ["deviceAcl"] = scmZoneDs.Apply(getZoneResult =&gt; getZoneResult.DeviceAcl),
+        ///             ["folder"] = scmZoneDs.Apply(getZoneResult =&gt; getZoneResult.Folder),
         ///         },
         ///     };
         /// });
@@ -110,16 +110,16 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["zoneDataSourceResults"] = 
+        ///         ["zoneDataSourceResults"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "id", scmZoneDs.Apply(getZoneResult =&gt; getZoneResult.Id) },
-        ///             { "name", scmZoneDs.Apply(getZoneResult =&gt; getZoneResult.Name) },
-        ///             { "network", scmZoneDs.Apply(getZoneResult =&gt; getZoneResult.Network) },
-        ///             { "enableDeviceIdentification", scmZoneDs.Apply(getZoneResult =&gt; getZoneResult.EnableDeviceIdentification) },
-        ///             { "enableUserIdentification", scmZoneDs.Apply(getZoneResult =&gt; getZoneResult.EnableUserIdentification) },
-        ///             { "userAcl", scmZoneDs.Apply(getZoneResult =&gt; getZoneResult.UserAcl) },
-        ///             { "deviceAcl", scmZoneDs.Apply(getZoneResult =&gt; getZoneResult.DeviceAcl) },
-        ///             { "folder", scmZoneDs.Apply(getZoneResult =&gt; getZoneResult.Folder) },
+        ///             ["id"] = scmZoneDs.Apply(getZoneResult =&gt; getZoneResult.Id),
+        ///             ["name"] = scmZoneDs.Apply(getZoneResult =&gt; getZoneResult.Name),
+        ///             ["network"] = scmZoneDs.Apply(getZoneResult =&gt; getZoneResult.Network),
+        ///             ["enableDeviceIdentification"] = scmZoneDs.Apply(getZoneResult =&gt; getZoneResult.EnableDeviceIdentification),
+        ///             ["enableUserIdentification"] = scmZoneDs.Apply(getZoneResult =&gt; getZoneResult.EnableUserIdentification),
+        ///             ["userAcl"] = scmZoneDs.Apply(getZoneResult =&gt; getZoneResult.UserAcl),
+        ///             ["deviceAcl"] = scmZoneDs.Apply(getZoneResult =&gt; getZoneResult.DeviceAcl),
+        ///             ["folder"] = scmZoneDs.Apply(getZoneResult =&gt; getZoneResult.Folder),
         ///         },
         ///     };
         /// });

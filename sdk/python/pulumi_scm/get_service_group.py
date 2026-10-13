@@ -149,7 +149,7 @@ def get_service_group(device: Optional[_builtins.str] = None,
     import pulumi_scm as scm
 
     # Look up a single service group object by its ID.
-    # The ID used here is from the terraform.tfstate file.
+    # The ID used here is from the pulumi.tfstate file.
     scm_service_group_ds = scm.get_service_group(id="dc430d61-52ca-44bc-a797-e65123a94134")
     pulumi.export("serviceGroupDsResult", scm_service_group_ds)
     ```
@@ -195,7 +195,7 @@ def get_service_group_output(device: pulumi.Input[Optional[Optional[_builtins.st
     import pulumi_scm as scm
 
     # Look up a single service group object by its ID.
-    # The ID used here is from the terraform.tfstate file.
+    # The ID used here is from the pulumi.tfstate file.
     scm_service_group_ds = scm.get_service_group(id="dc430d61-52ca-44bc-a797-e65123a94134")
     pulumi.export("serviceGroupDsResult", scm_service_group_ds)
     ```

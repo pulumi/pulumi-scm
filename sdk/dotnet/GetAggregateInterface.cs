@@ -32,13 +32,13 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["aggregateInterfaceDataSourceResults"] = 
+        ///         ["aggregateInterfaceDataSourceResults"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "id", scmAggregateInterfaceDs.Apply(getAggregateInterfaceResult =&gt; getAggregateInterfaceResult.Id) },
-        ///             { "name", scmAggregateInterfaceDs.Apply(getAggregateInterfaceResult =&gt; getAggregateInterfaceResult.Name) },
-        ///             { "comment", scmAggregateInterfaceDs.Apply(getAggregateInterfaceResult =&gt; getAggregateInterfaceResult.Comment) },
-        ///             { "layer3", scmAggregateInterfaceDs.Apply(getAggregateInterfaceResult =&gt; getAggregateInterfaceResult.Layer3) },
-        ///             { "folder", scmAggregateInterfaceDs.Apply(getAggregateInterfaceResult =&gt; getAggregateInterfaceResult.Folder) },
+        ///             ["id"] = scmAggregateInterfaceDs.Apply(getAggregateInterfaceResult =&gt; getAggregateInterfaceResult.Id),
+        ///             ["name"] = scmAggregateInterfaceDs.Apply(getAggregateInterfaceResult =&gt; getAggregateInterfaceResult.Name),
+        ///             ["comment"] = scmAggregateInterfaceDs.Apply(getAggregateInterfaceResult =&gt; getAggregateInterfaceResult.Comment),
+        ///             ["layer3"] = scmAggregateInterfaceDs.Apply(getAggregateInterfaceResult =&gt; getAggregateInterfaceResult.Layer3),
+        ///             ["folder"] = scmAggregateInterfaceDs.Apply(getAggregateInterfaceResult =&gt; getAggregateInterfaceResult.Folder),
         ///         },
         ///     };
         /// });
@@ -68,13 +68,13 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["aggregateInterfaceDataSourceResults"] = 
+        ///         ["aggregateInterfaceDataSourceResults"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "id", scmAggregateInterfaceDs.Apply(getAggregateInterfaceResult =&gt; getAggregateInterfaceResult.Id) },
-        ///             { "name", scmAggregateInterfaceDs.Apply(getAggregateInterfaceResult =&gt; getAggregateInterfaceResult.Name) },
-        ///             { "comment", scmAggregateInterfaceDs.Apply(getAggregateInterfaceResult =&gt; getAggregateInterfaceResult.Comment) },
-        ///             { "layer3", scmAggregateInterfaceDs.Apply(getAggregateInterfaceResult =&gt; getAggregateInterfaceResult.Layer3) },
-        ///             { "folder", scmAggregateInterfaceDs.Apply(getAggregateInterfaceResult =&gt; getAggregateInterfaceResult.Folder) },
+        ///             ["id"] = scmAggregateInterfaceDs.Apply(getAggregateInterfaceResult =&gt; getAggregateInterfaceResult.Id),
+        ///             ["name"] = scmAggregateInterfaceDs.Apply(getAggregateInterfaceResult =&gt; getAggregateInterfaceResult.Name),
+        ///             ["comment"] = scmAggregateInterfaceDs.Apply(getAggregateInterfaceResult =&gt; getAggregateInterfaceResult.Comment),
+        ///             ["layer3"] = scmAggregateInterfaceDs.Apply(getAggregateInterfaceResult =&gt; getAggregateInterfaceResult.Layer3),
+        ///             ["folder"] = scmAggregateInterfaceDs.Apply(getAggregateInterfaceResult =&gt; getAggregateInterfaceResult.Folder),
         ///         },
         ///     };
         /// });
@@ -104,13 +104,13 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["aggregateInterfaceDataSourceResults"] = 
+        ///         ["aggregateInterfaceDataSourceResults"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "id", scmAggregateInterfaceDs.Apply(getAggregateInterfaceResult =&gt; getAggregateInterfaceResult.Id) },
-        ///             { "name", scmAggregateInterfaceDs.Apply(getAggregateInterfaceResult =&gt; getAggregateInterfaceResult.Name) },
-        ///             { "comment", scmAggregateInterfaceDs.Apply(getAggregateInterfaceResult =&gt; getAggregateInterfaceResult.Comment) },
-        ///             { "layer3", scmAggregateInterfaceDs.Apply(getAggregateInterfaceResult =&gt; getAggregateInterfaceResult.Layer3) },
-        ///             { "folder", scmAggregateInterfaceDs.Apply(getAggregateInterfaceResult =&gt; getAggregateInterfaceResult.Folder) },
+        ///             ["id"] = scmAggregateInterfaceDs.Apply(getAggregateInterfaceResult =&gt; getAggregateInterfaceResult.Id),
+        ///             ["name"] = scmAggregateInterfaceDs.Apply(getAggregateInterfaceResult =&gt; getAggregateInterfaceResult.Name),
+        ///             ["comment"] = scmAggregateInterfaceDs.Apply(getAggregateInterfaceResult =&gt; getAggregateInterfaceResult.Comment),
+        ///             ["layer3"] = scmAggregateInterfaceDs.Apply(getAggregateInterfaceResult =&gt; getAggregateInterfaceResult.Layer3),
+        ///             ["folder"] = scmAggregateInterfaceDs.Apply(getAggregateInterfaceResult =&gt; getAggregateInterfaceResult.Folder),
         ///         },
         ///     };
         /// });

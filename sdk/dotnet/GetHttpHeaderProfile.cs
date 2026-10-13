@@ -35,11 +35,11 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["scmHttpHeaderProfileDetails"] = 
+        ///         ["scmHttpHeaderProfileDetails"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "profileId", scmHttpHeaderProf.Apply(getHttpHeaderProfileResult =&gt; getHttpHeaderProfileResult.Id) },
-        ///             { "folder", scmHttpHeaderProf.Apply(getHttpHeaderProfileResult =&gt; getHttpHeaderProfileResult.Folder) },
-        ///             { "name", scmHttpHeaderProf.Apply(getHttpHeaderProfileResult =&gt; getHttpHeaderProfileResult.Name) },
+        ///             ["profileId"] = scmHttpHeaderProf.Apply(getHttpHeaderProfileResult =&gt; getHttpHeaderProfileResult.Id),
+        ///             ["folder"] = scmHttpHeaderProf.Apply(getHttpHeaderProfileResult =&gt; getHttpHeaderProfileResult.Folder),
+        ///             ["name"] = scmHttpHeaderProf.Apply(getHttpHeaderProfileResult =&gt; getHttpHeaderProfileResult.Name),
         ///         },
         ///     };
         /// });
@@ -72,11 +72,11 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["scmHttpHeaderProfileDetails"] = 
+        ///         ["scmHttpHeaderProfileDetails"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "profileId", scmHttpHeaderProf.Apply(getHttpHeaderProfileResult =&gt; getHttpHeaderProfileResult.Id) },
-        ///             { "folder", scmHttpHeaderProf.Apply(getHttpHeaderProfileResult =&gt; getHttpHeaderProfileResult.Folder) },
-        ///             { "name", scmHttpHeaderProf.Apply(getHttpHeaderProfileResult =&gt; getHttpHeaderProfileResult.Name) },
+        ///             ["profileId"] = scmHttpHeaderProf.Apply(getHttpHeaderProfileResult =&gt; getHttpHeaderProfileResult.Id),
+        ///             ["folder"] = scmHttpHeaderProf.Apply(getHttpHeaderProfileResult =&gt; getHttpHeaderProfileResult.Folder),
+        ///             ["name"] = scmHttpHeaderProf.Apply(getHttpHeaderProfileResult =&gt; getHttpHeaderProfileResult.Name),
         ///         },
         ///     };
         /// });
@@ -109,11 +109,11 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["scmHttpHeaderProfileDetails"] = 
+        ///         ["scmHttpHeaderProfileDetails"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "profileId", scmHttpHeaderProf.Apply(getHttpHeaderProfileResult =&gt; getHttpHeaderProfileResult.Id) },
-        ///             { "folder", scmHttpHeaderProf.Apply(getHttpHeaderProfileResult =&gt; getHttpHeaderProfileResult.Folder) },
-        ///             { "name", scmHttpHeaderProf.Apply(getHttpHeaderProfileResult =&gt; getHttpHeaderProfileResult.Name) },
+        ///             ["profileId"] = scmHttpHeaderProf.Apply(getHttpHeaderProfileResult =&gt; getHttpHeaderProfileResult.Id),
+        ///             ["folder"] = scmHttpHeaderProf.Apply(getHttpHeaderProfileResult =&gt; getHttpHeaderProfileResult.Folder),
+        ///             ["name"] = scmHttpHeaderProf.Apply(getHttpHeaderProfileResult =&gt; getHttpHeaderProfileResult.Name),
         ///         },
         ///     };
         /// });

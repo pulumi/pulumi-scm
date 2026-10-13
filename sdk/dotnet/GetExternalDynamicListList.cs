@@ -41,11 +41,11 @@ namespace Pulumi.Scm
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
         ///         ["allSharedEdlsMap"] = allSharedEdls.Apply(getExternalDynamicListListResult =&gt; getExternalDynamicListListResult.Datas),
-        ///         ["paginatedEdlsDetails"] = 
+        ///         ["paginatedEdlsDetails"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "totalInFolder", paginatedEdls.Apply(getExternalDynamicListListResult =&gt; getExternalDynamicListListResult.Total) },
-        ///             { "limitUsed", paginatedEdls.Apply(getExternalDynamicListListResult =&gt; getExternalDynamicListListResult.Limit) },
-        ///             { "offsetUsed", paginatedEdls.Apply(getExternalDynamicListListResult =&gt; getExternalDynamicListListResult.Offset) },
+        ///             ["totalInFolder"] = paginatedEdls.Apply(getExternalDynamicListListResult =&gt; getExternalDynamicListListResult.Total),
+        ///             ["limitUsed"] = paginatedEdls.Apply(getExternalDynamicListListResult =&gt; getExternalDynamicListListResult.Limit),
+        ///             ["offsetUsed"] = paginatedEdls.Apply(getExternalDynamicListListResult =&gt; getExternalDynamicListListResult.Offset),
         ///         },
         ///     };
         /// });
@@ -84,11 +84,11 @@ namespace Pulumi.Scm
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
         ///         ["allSharedEdlsMap"] = allSharedEdls.Apply(getExternalDynamicListListResult =&gt; getExternalDynamicListListResult.Datas),
-        ///         ["paginatedEdlsDetails"] = 
+        ///         ["paginatedEdlsDetails"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "totalInFolder", paginatedEdls.Apply(getExternalDynamicListListResult =&gt; getExternalDynamicListListResult.Total) },
-        ///             { "limitUsed", paginatedEdls.Apply(getExternalDynamicListListResult =&gt; getExternalDynamicListListResult.Limit) },
-        ///             { "offsetUsed", paginatedEdls.Apply(getExternalDynamicListListResult =&gt; getExternalDynamicListListResult.Offset) },
+        ///             ["totalInFolder"] = paginatedEdls.Apply(getExternalDynamicListListResult =&gt; getExternalDynamicListListResult.Total),
+        ///             ["limitUsed"] = paginatedEdls.Apply(getExternalDynamicListListResult =&gt; getExternalDynamicListListResult.Limit),
+        ///             ["offsetUsed"] = paginatedEdls.Apply(getExternalDynamicListListResult =&gt; getExternalDynamicListListResult.Offset),
         ///         },
         ///     };
         /// });
@@ -127,11 +127,11 @@ namespace Pulumi.Scm
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
         ///         ["allSharedEdlsMap"] = allSharedEdls.Apply(getExternalDynamicListListResult =&gt; getExternalDynamicListListResult.Datas),
-        ///         ["paginatedEdlsDetails"] = 
+        ///         ["paginatedEdlsDetails"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "totalInFolder", paginatedEdls.Apply(getExternalDynamicListListResult =&gt; getExternalDynamicListListResult.Total) },
-        ///             { "limitUsed", paginatedEdls.Apply(getExternalDynamicListListResult =&gt; getExternalDynamicListListResult.Limit) },
-        ///             { "offsetUsed", paginatedEdls.Apply(getExternalDynamicListListResult =&gt; getExternalDynamicListListResult.Offset) },
+        ///             ["totalInFolder"] = paginatedEdls.Apply(getExternalDynamicListListResult =&gt; getExternalDynamicListListResult.Total),
+        ///             ["limitUsed"] = paginatedEdls.Apply(getExternalDynamicListListResult =&gt; getExternalDynamicListListResult.Limit),
+        ///             ["offsetUsed"] = paginatedEdls.Apply(getExternalDynamicListListResult =&gt; getExternalDynamicListListResult.Offset),
         ///         },
         ///     };
         /// });

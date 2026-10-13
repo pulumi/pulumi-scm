@@ -24,7 +24,7 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     // Look up the application group by its ID from the terraform.tfstate file.
+        ///     // Look up the application group by its ID from the pulumi.tfstate file.
         ///     var scmAutoVpnClusterDs = Scm.GetAutoVpnCluster.Invoke(new()
         ///     {
         ///         Id = "e3c732fb-85c7-4116-b5ed-ba3977209b29",
@@ -32,13 +32,13 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["autoVpnClusterOutputs"] = 
+        ///         ["autoVpnClusterOutputs"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "id", scmAutoVpnClusterDs.Apply(getAutoVpnClusterResult =&gt; getAutoVpnClusterResult.Id) },
-        ///             { "name", scmAutoVpnClusterDs.Apply(getAutoVpnClusterResult =&gt; getAutoVpnClusterResult.Name) },
-        ///             { "branches", scmAutoVpnClusterDs.Apply(getAutoVpnClusterResult =&gt; getAutoVpnClusterResult.Branches) },
-        ///             { "gateways", scmAutoVpnClusterDs.Apply(getAutoVpnClusterResult =&gt; getAutoVpnClusterResult.Gateways) },
-        ///             { "enableSdwan", scmAutoVpnClusterDs.Apply(getAutoVpnClusterResult =&gt; getAutoVpnClusterResult.EnableSdwan) },
+        ///             ["id"] = scmAutoVpnClusterDs.Apply(getAutoVpnClusterResult =&gt; getAutoVpnClusterResult.Id),
+        ///             ["name"] = scmAutoVpnClusterDs.Apply(getAutoVpnClusterResult =&gt; getAutoVpnClusterResult.Name),
+        ///             ["branches"] = scmAutoVpnClusterDs.Apply(getAutoVpnClusterResult =&gt; getAutoVpnClusterResult.Branches),
+        ///             ["gateways"] = scmAutoVpnClusterDs.Apply(getAutoVpnClusterResult =&gt; getAutoVpnClusterResult.Gateways),
+        ///             ["enableSdwan"] = scmAutoVpnClusterDs.Apply(getAutoVpnClusterResult =&gt; getAutoVpnClusterResult.EnableSdwan),
         ///         },
         ///     };
         /// });
@@ -60,7 +60,7 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     // Look up the application group by its ID from the terraform.tfstate file.
+        ///     // Look up the application group by its ID from the pulumi.tfstate file.
         ///     var scmAutoVpnClusterDs = Scm.GetAutoVpnCluster.Invoke(new()
         ///     {
         ///         Id = "e3c732fb-85c7-4116-b5ed-ba3977209b29",
@@ -68,13 +68,13 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["autoVpnClusterOutputs"] = 
+        ///         ["autoVpnClusterOutputs"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "id", scmAutoVpnClusterDs.Apply(getAutoVpnClusterResult =&gt; getAutoVpnClusterResult.Id) },
-        ///             { "name", scmAutoVpnClusterDs.Apply(getAutoVpnClusterResult =&gt; getAutoVpnClusterResult.Name) },
-        ///             { "branches", scmAutoVpnClusterDs.Apply(getAutoVpnClusterResult =&gt; getAutoVpnClusterResult.Branches) },
-        ///             { "gateways", scmAutoVpnClusterDs.Apply(getAutoVpnClusterResult =&gt; getAutoVpnClusterResult.Gateways) },
-        ///             { "enableSdwan", scmAutoVpnClusterDs.Apply(getAutoVpnClusterResult =&gt; getAutoVpnClusterResult.EnableSdwan) },
+        ///             ["id"] = scmAutoVpnClusterDs.Apply(getAutoVpnClusterResult =&gt; getAutoVpnClusterResult.Id),
+        ///             ["name"] = scmAutoVpnClusterDs.Apply(getAutoVpnClusterResult =&gt; getAutoVpnClusterResult.Name),
+        ///             ["branches"] = scmAutoVpnClusterDs.Apply(getAutoVpnClusterResult =&gt; getAutoVpnClusterResult.Branches),
+        ///             ["gateways"] = scmAutoVpnClusterDs.Apply(getAutoVpnClusterResult =&gt; getAutoVpnClusterResult.Gateways),
+        ///             ["enableSdwan"] = scmAutoVpnClusterDs.Apply(getAutoVpnClusterResult =&gt; getAutoVpnClusterResult.EnableSdwan),
         ///         },
         ///     };
         /// });
@@ -96,7 +96,7 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     // Look up the application group by its ID from the terraform.tfstate file.
+        ///     // Look up the application group by its ID from the pulumi.tfstate file.
         ///     var scmAutoVpnClusterDs = Scm.GetAutoVpnCluster.Invoke(new()
         ///     {
         ///         Id = "e3c732fb-85c7-4116-b5ed-ba3977209b29",
@@ -104,13 +104,13 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["autoVpnClusterOutputs"] = 
+        ///         ["autoVpnClusterOutputs"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "id", scmAutoVpnClusterDs.Apply(getAutoVpnClusterResult =&gt; getAutoVpnClusterResult.Id) },
-        ///             { "name", scmAutoVpnClusterDs.Apply(getAutoVpnClusterResult =&gt; getAutoVpnClusterResult.Name) },
-        ///             { "branches", scmAutoVpnClusterDs.Apply(getAutoVpnClusterResult =&gt; getAutoVpnClusterResult.Branches) },
-        ///             { "gateways", scmAutoVpnClusterDs.Apply(getAutoVpnClusterResult =&gt; getAutoVpnClusterResult.Gateways) },
-        ///             { "enableSdwan", scmAutoVpnClusterDs.Apply(getAutoVpnClusterResult =&gt; getAutoVpnClusterResult.EnableSdwan) },
+        ///             ["id"] = scmAutoVpnClusterDs.Apply(getAutoVpnClusterResult =&gt; getAutoVpnClusterResult.Id),
+        ///             ["name"] = scmAutoVpnClusterDs.Apply(getAutoVpnClusterResult =&gt; getAutoVpnClusterResult.Name),
+        ///             ["branches"] = scmAutoVpnClusterDs.Apply(getAutoVpnClusterResult =&gt; getAutoVpnClusterResult.Branches),
+        ///             ["gateways"] = scmAutoVpnClusterDs.Apply(getAutoVpnClusterResult =&gt; getAutoVpnClusterResult.Gateways),
+        ///             ["enableSdwan"] = scmAutoVpnClusterDs.Apply(getAutoVpnClusterResult =&gt; getAutoVpnClusterResult.EnableSdwan),
         ///         },
         ///     };
         /// });

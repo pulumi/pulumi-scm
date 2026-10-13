@@ -162,7 +162,7 @@ def get_forwarding_profile_regional_and_custom_proxy_list(device: Optional[_buil
     import pulumi
     import pulumi_scm as scm
 
-    # This data source will call the "ListForwardingProfileRegionalAndCustomProxies" API endpoint
+    # This function will call the "ListForwardingProfileRegionalAndCustomProxies" API endpoint
     # and return all forwarding profile regional and custom proxies in the "Mobile Users" folder.
     # 1. Use a single data block to fetch ALL forwarding profile regional and custom proxies in the "Mobile Users" folder.
     all_mobile_users = scm.get_forwarding_profile_regional_and_custom_proxy_list(folder="Mobile Users")
@@ -221,7 +221,7 @@ def get_forwarding_profile_regional_and_custom_proxy_list_output(device: pulumi.
     import pulumi
     import pulumi_scm as scm
 
-    # This data source will call the "ListForwardingProfileRegionalAndCustomProxies" API endpoint
+    # This function will call the "ListForwardingProfileRegionalAndCustomProxies" API endpoint
     # and return all forwarding profile regional and custom proxies in the "Mobile Users" folder.
     # 1. Use a single data block to fetch ALL forwarding profile regional and custom proxies in the "Mobile Users" folder.
     all_mobile_users = scm.get_forwarding_profile_regional_and_custom_proxy_list(folder="Mobile Users")

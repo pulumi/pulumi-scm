@@ -50,12 +50,12 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["forwardingProfileRegionalAndCustomProxyDataSourceResults"] = 
+        ///         ["forwardingProfileRegionalAndCustomProxyDataSourceResults"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "gpAndPacBasicProxy", scmForwardingProfileRegionalAndCustomProxy1Ds },
-        ///             { "gpAndPacDualProxy", scmForwardingProfileRegionalAndCustomProxy2Ds },
-        ///             { "ztnaAgentBasicProxy", scmForwardingProfileRegionalAndCustomProxy3Ds },
-        ///             { "ztnaAgentFullProxy", scmForwardingProfileRegionalAndCustomProxy4Ds },
+        ///             ["gpAndPacBasicProxy"] = scmForwardingProfileRegionalAndCustomProxy1Ds,
+        ///             ["gpAndPacDualProxy"] = scmForwardingProfileRegionalAndCustomProxy2Ds,
+        ///             ["ztnaAgentBasicProxy"] = scmForwardingProfileRegionalAndCustomProxy3Ds,
+        ///             ["ztnaAgentFullProxy"] = scmForwardingProfileRegionalAndCustomProxy4Ds,
         ///         },
         ///     };
         /// });
@@ -103,12 +103,12 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["forwardingProfileRegionalAndCustomProxyDataSourceResults"] = 
+        ///         ["forwardingProfileRegionalAndCustomProxyDataSourceResults"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "gpAndPacBasicProxy", scmForwardingProfileRegionalAndCustomProxy1Ds },
-        ///             { "gpAndPacDualProxy", scmForwardingProfileRegionalAndCustomProxy2Ds },
-        ///             { "ztnaAgentBasicProxy", scmForwardingProfileRegionalAndCustomProxy3Ds },
-        ///             { "ztnaAgentFullProxy", scmForwardingProfileRegionalAndCustomProxy4Ds },
+        ///             ["gpAndPacBasicProxy"] = scmForwardingProfileRegionalAndCustomProxy1Ds,
+        ///             ["gpAndPacDualProxy"] = scmForwardingProfileRegionalAndCustomProxy2Ds,
+        ///             ["ztnaAgentBasicProxy"] = scmForwardingProfileRegionalAndCustomProxy3Ds,
+        ///             ["ztnaAgentFullProxy"] = scmForwardingProfileRegionalAndCustomProxy4Ds,
         ///         },
         ///     };
         /// });
@@ -156,12 +156,12 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["forwardingProfileRegionalAndCustomProxyDataSourceResults"] = 
+        ///         ["forwardingProfileRegionalAndCustomProxyDataSourceResults"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "gpAndPacBasicProxy", scmForwardingProfileRegionalAndCustomProxy1Ds },
-        ///             { "gpAndPacDualProxy", scmForwardingProfileRegionalAndCustomProxy2Ds },
-        ///             { "ztnaAgentBasicProxy", scmForwardingProfileRegionalAndCustomProxy3Ds },
-        ///             { "ztnaAgentFullProxy", scmForwardingProfileRegionalAndCustomProxy4Ds },
+        ///             ["gpAndPacBasicProxy"] = scmForwardingProfileRegionalAndCustomProxy1Ds,
+        ///             ["gpAndPacDualProxy"] = scmForwardingProfileRegionalAndCustomProxy2Ds,
+        ///             ["ztnaAgentBasicProxy"] = scmForwardingProfileRegionalAndCustomProxy3Ds,
+        ///             ["ztnaAgentFullProxy"] = scmForwardingProfileRegionalAndCustomProxy4Ds,
         ///         },
         ///     };
         /// });

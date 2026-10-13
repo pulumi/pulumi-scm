@@ -31,10 +31,10 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["fetchedSequenceListSummary"] = 
+        ///         ["fetchedSequenceListSummary"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "countOfSettingsFetched", allSettings.Apply(getSessionSettingListResult =&gt; getSessionSettingListResult.Total) },
-        ///             { "value", allSettings.Apply(getSessionSettingListResult =&gt; getSessionSettingListResult.Datas[0]) },
+        ///             ["countOfSettingsFetched"] = allSettings.Apply(getSessionSettingListResult =&gt; getSessionSettingListResult.Total),
+        ///             ["value"] = allSettings.Apply(getSessionSettingListResult =&gt; getSessionSettingListResult.Datas[0]),
         ///         },
         ///     };
         /// });
@@ -63,10 +63,10 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["fetchedSequenceListSummary"] = 
+        ///         ["fetchedSequenceListSummary"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "countOfSettingsFetched", allSettings.Apply(getSessionSettingListResult =&gt; getSessionSettingListResult.Total) },
-        ///             { "value", allSettings.Apply(getSessionSettingListResult =&gt; getSessionSettingListResult.Datas[0]) },
+        ///             ["countOfSettingsFetched"] = allSettings.Apply(getSessionSettingListResult =&gt; getSessionSettingListResult.Total),
+        ///             ["value"] = allSettings.Apply(getSessionSettingListResult =&gt; getSessionSettingListResult.Datas[0]),
         ///         },
         ///     };
         /// });
@@ -95,10 +95,10 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["fetchedSequenceListSummary"] = 
+        ///         ["fetchedSequenceListSummary"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "countOfSettingsFetched", allSettings.Apply(getSessionSettingListResult =&gt; getSessionSettingListResult.Total) },
-        ///             { "value", allSettings.Apply(getSessionSettingListResult =&gt; getSessionSettingListResult.Datas[0]) },
+        ///             ["countOfSettingsFetched"] = allSettings.Apply(getSessionSettingListResult =&gt; getSessionSettingListResult.Total),
+        ///             ["value"] = allSettings.Apply(getSessionSettingListResult =&gt; getSessionSettingListResult.Datas[0]),
         ///         },
         ///     };
         /// });

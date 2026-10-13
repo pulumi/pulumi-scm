@@ -32,10 +32,10 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["fetchedInterfaceListSummary"] = 
+        ///         ["fetchedInterfaceListSummary"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "countOfRulesFetched", pagedInterfaceList.Apply(getDhcpInterfaceListResult =&gt; getDhcpInterfaceListResult.Total) },
-        ///             { "firstRuleName", pagedInterfaceList.Apply(getDhcpInterfaceListResult =&gt; getDhcpInterfaceListResult.Datas) },
+        ///             ["countOfRulesFetched"] = pagedInterfaceList.Apply(getDhcpInterfaceListResult =&gt; getDhcpInterfaceListResult.Total),
+        ///             ["firstRuleName"] = pagedInterfaceList.Apply(getDhcpInterfaceListResult =&gt; getDhcpInterfaceListResult.Datas),
         ///         },
         ///     };
         /// });
@@ -65,10 +65,10 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["fetchedInterfaceListSummary"] = 
+        ///         ["fetchedInterfaceListSummary"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "countOfRulesFetched", pagedInterfaceList.Apply(getDhcpInterfaceListResult =&gt; getDhcpInterfaceListResult.Total) },
-        ///             { "firstRuleName", pagedInterfaceList.Apply(getDhcpInterfaceListResult =&gt; getDhcpInterfaceListResult.Datas) },
+        ///             ["countOfRulesFetched"] = pagedInterfaceList.Apply(getDhcpInterfaceListResult =&gt; getDhcpInterfaceListResult.Total),
+        ///             ["firstRuleName"] = pagedInterfaceList.Apply(getDhcpInterfaceListResult =&gt; getDhcpInterfaceListResult.Datas),
         ///         },
         ///     };
         /// });
@@ -98,10 +98,10 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["fetchedInterfaceListSummary"] = 
+        ///         ["fetchedInterfaceListSummary"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "countOfRulesFetched", pagedInterfaceList.Apply(getDhcpInterfaceListResult =&gt; getDhcpInterfaceListResult.Total) },
-        ///             { "firstRuleName", pagedInterfaceList.Apply(getDhcpInterfaceListResult =&gt; getDhcpInterfaceListResult.Datas) },
+        ///             ["countOfRulesFetched"] = pagedInterfaceList.Apply(getDhcpInterfaceListResult =&gt; getDhcpInterfaceListResult.Total),
+        ///             ["firstRuleName"] = pagedInterfaceList.Apply(getDhcpInterfaceListResult =&gt; getDhcpInterfaceListResult.Datas),
         ///         },
         ///     };
         /// });

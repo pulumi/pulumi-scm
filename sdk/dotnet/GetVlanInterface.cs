@@ -32,14 +32,14 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["vlanInterfaceDataSourceResults"] = 
+        ///         ["vlanInterfaceDataSourceResults"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "id", scmVlanInterfaceDs.Apply(getVlanInterfaceResult =&gt; getVlanInterfaceResult.Id) },
-        ///             { "name", scmVlanInterfaceDs.Apply(getVlanInterfaceResult =&gt; getVlanInterfaceResult.Name) },
-        ///             { "comment", scmVlanInterfaceDs.Apply(getVlanInterfaceResult =&gt; getVlanInterfaceResult.Comment) },
-        ///             { "vlanTag", scmVlanInterfaceDs.Apply(getVlanInterfaceResult =&gt; getVlanInterfaceResult.VlanTag) },
-        ///             { "ip", scmVlanInterfaceDs.Apply(getVlanInterfaceResult =&gt; getVlanInterfaceResult.Ips) },
-        ///             { "folder", scmVlanInterfaceDs.Apply(getVlanInterfaceResult =&gt; getVlanInterfaceResult.Folder) },
+        ///             ["id"] = scmVlanInterfaceDs.Apply(getVlanInterfaceResult =&gt; getVlanInterfaceResult.Id),
+        ///             ["name"] = scmVlanInterfaceDs.Apply(getVlanInterfaceResult =&gt; getVlanInterfaceResult.Name),
+        ///             ["comment"] = scmVlanInterfaceDs.Apply(getVlanInterfaceResult =&gt; getVlanInterfaceResult.Comment),
+        ///             ["vlanTag"] = scmVlanInterfaceDs.Apply(getVlanInterfaceResult =&gt; getVlanInterfaceResult.VlanTag),
+        ///             ["ip"] = scmVlanInterfaceDs.Apply(getVlanInterfaceResult =&gt; getVlanInterfaceResult.Ips),
+        ///             ["folder"] = scmVlanInterfaceDs.Apply(getVlanInterfaceResult =&gt; getVlanInterfaceResult.Folder),
         ///         },
         ///     };
         /// });
@@ -69,14 +69,14 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["vlanInterfaceDataSourceResults"] = 
+        ///         ["vlanInterfaceDataSourceResults"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "id", scmVlanInterfaceDs.Apply(getVlanInterfaceResult =&gt; getVlanInterfaceResult.Id) },
-        ///             { "name", scmVlanInterfaceDs.Apply(getVlanInterfaceResult =&gt; getVlanInterfaceResult.Name) },
-        ///             { "comment", scmVlanInterfaceDs.Apply(getVlanInterfaceResult =&gt; getVlanInterfaceResult.Comment) },
-        ///             { "vlanTag", scmVlanInterfaceDs.Apply(getVlanInterfaceResult =&gt; getVlanInterfaceResult.VlanTag) },
-        ///             { "ip", scmVlanInterfaceDs.Apply(getVlanInterfaceResult =&gt; getVlanInterfaceResult.Ips) },
-        ///             { "folder", scmVlanInterfaceDs.Apply(getVlanInterfaceResult =&gt; getVlanInterfaceResult.Folder) },
+        ///             ["id"] = scmVlanInterfaceDs.Apply(getVlanInterfaceResult =&gt; getVlanInterfaceResult.Id),
+        ///             ["name"] = scmVlanInterfaceDs.Apply(getVlanInterfaceResult =&gt; getVlanInterfaceResult.Name),
+        ///             ["comment"] = scmVlanInterfaceDs.Apply(getVlanInterfaceResult =&gt; getVlanInterfaceResult.Comment),
+        ///             ["vlanTag"] = scmVlanInterfaceDs.Apply(getVlanInterfaceResult =&gt; getVlanInterfaceResult.VlanTag),
+        ///             ["ip"] = scmVlanInterfaceDs.Apply(getVlanInterfaceResult =&gt; getVlanInterfaceResult.Ips),
+        ///             ["folder"] = scmVlanInterfaceDs.Apply(getVlanInterfaceResult =&gt; getVlanInterfaceResult.Folder),
         ///         },
         ///     };
         /// });
@@ -106,14 +106,14 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["vlanInterfaceDataSourceResults"] = 
+        ///         ["vlanInterfaceDataSourceResults"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "id", scmVlanInterfaceDs.Apply(getVlanInterfaceResult =&gt; getVlanInterfaceResult.Id) },
-        ///             { "name", scmVlanInterfaceDs.Apply(getVlanInterfaceResult =&gt; getVlanInterfaceResult.Name) },
-        ///             { "comment", scmVlanInterfaceDs.Apply(getVlanInterfaceResult =&gt; getVlanInterfaceResult.Comment) },
-        ///             { "vlanTag", scmVlanInterfaceDs.Apply(getVlanInterfaceResult =&gt; getVlanInterfaceResult.VlanTag) },
-        ///             { "ip", scmVlanInterfaceDs.Apply(getVlanInterfaceResult =&gt; getVlanInterfaceResult.Ips) },
-        ///             { "folder", scmVlanInterfaceDs.Apply(getVlanInterfaceResult =&gt; getVlanInterfaceResult.Folder) },
+        ///             ["id"] = scmVlanInterfaceDs.Apply(getVlanInterfaceResult =&gt; getVlanInterfaceResult.Id),
+        ///             ["name"] = scmVlanInterfaceDs.Apply(getVlanInterfaceResult =&gt; getVlanInterfaceResult.Name),
+        ///             ["comment"] = scmVlanInterfaceDs.Apply(getVlanInterfaceResult =&gt; getVlanInterfaceResult.Comment),
+        ///             ["vlanTag"] = scmVlanInterfaceDs.Apply(getVlanInterfaceResult =&gt; getVlanInterfaceResult.VlanTag),
+        ///             ["ip"] = scmVlanInterfaceDs.Apply(getVlanInterfaceResult =&gt; getVlanInterfaceResult.Ips),
+        ///             ["folder"] = scmVlanInterfaceDs.Apply(getVlanInterfaceResult =&gt; getVlanInterfaceResult.Folder),
         ///         },
         ///     };
         /// });

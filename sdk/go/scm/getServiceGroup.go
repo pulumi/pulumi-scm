@@ -28,7 +28,7 @@ import (
 //	func main() {
 //		pulumi.Run(func(ctx *pulumi.Context) error {
 //			// Look up a single service group object by its ID.
-//			// The ID used here is from the terraform.tfstate file.
+//			// The ID used here is from the pulumi.tfstate file.
 //			scmServiceGroupDs, err := scm.GetServiceGroup(ctx, &scm.LookupServiceGroupArgs{
 //				Id: "dc430d61-52ca-44bc-a797-e65123a94134",
 //			}, nil)

@@ -32,13 +32,13 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["scmLoopbackInterfaceDataSourceResults"] = 
+        ///         ["scmLoopbackInterfaceDataSourceResults"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "id", scmLoopbackIntfDs.Apply(getLoopbackInterfaceResult =&gt; getLoopbackInterfaceResult.Id) },
-        ///             { "name", scmLoopbackIntfDs.Apply(getLoopbackInterfaceResult =&gt; getLoopbackInterfaceResult.Name) },
-        ///             { "comment", scmLoopbackIntfDs.Apply(getLoopbackInterfaceResult =&gt; getLoopbackInterfaceResult.Comment) },
-        ///             { "ip", scmLoopbackIntfDs.Apply(getLoopbackInterfaceResult =&gt; getLoopbackInterfaceResult.Ips) },
-        ///             { "folder", scmLoopbackIntfDs.Apply(getLoopbackInterfaceResult =&gt; getLoopbackInterfaceResult.Folder) },
+        ///             ["id"] = scmLoopbackIntfDs.Apply(getLoopbackInterfaceResult =&gt; getLoopbackInterfaceResult.Id),
+        ///             ["name"] = scmLoopbackIntfDs.Apply(getLoopbackInterfaceResult =&gt; getLoopbackInterfaceResult.Name),
+        ///             ["comment"] = scmLoopbackIntfDs.Apply(getLoopbackInterfaceResult =&gt; getLoopbackInterfaceResult.Comment),
+        ///             ["ip"] = scmLoopbackIntfDs.Apply(getLoopbackInterfaceResult =&gt; getLoopbackInterfaceResult.Ips),
+        ///             ["folder"] = scmLoopbackIntfDs.Apply(getLoopbackInterfaceResult =&gt; getLoopbackInterfaceResult.Folder),
         ///         },
         ///     };
         /// });
@@ -68,13 +68,13 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["scmLoopbackInterfaceDataSourceResults"] = 
+        ///         ["scmLoopbackInterfaceDataSourceResults"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "id", scmLoopbackIntfDs.Apply(getLoopbackInterfaceResult =&gt; getLoopbackInterfaceResult.Id) },
-        ///             { "name", scmLoopbackIntfDs.Apply(getLoopbackInterfaceResult =&gt; getLoopbackInterfaceResult.Name) },
-        ///             { "comment", scmLoopbackIntfDs.Apply(getLoopbackInterfaceResult =&gt; getLoopbackInterfaceResult.Comment) },
-        ///             { "ip", scmLoopbackIntfDs.Apply(getLoopbackInterfaceResult =&gt; getLoopbackInterfaceResult.Ips) },
-        ///             { "folder", scmLoopbackIntfDs.Apply(getLoopbackInterfaceResult =&gt; getLoopbackInterfaceResult.Folder) },
+        ///             ["id"] = scmLoopbackIntfDs.Apply(getLoopbackInterfaceResult =&gt; getLoopbackInterfaceResult.Id),
+        ///             ["name"] = scmLoopbackIntfDs.Apply(getLoopbackInterfaceResult =&gt; getLoopbackInterfaceResult.Name),
+        ///             ["comment"] = scmLoopbackIntfDs.Apply(getLoopbackInterfaceResult =&gt; getLoopbackInterfaceResult.Comment),
+        ///             ["ip"] = scmLoopbackIntfDs.Apply(getLoopbackInterfaceResult =&gt; getLoopbackInterfaceResult.Ips),
+        ///             ["folder"] = scmLoopbackIntfDs.Apply(getLoopbackInterfaceResult =&gt; getLoopbackInterfaceResult.Folder),
         ///         },
         ///     };
         /// });
@@ -104,13 +104,13 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["scmLoopbackInterfaceDataSourceResults"] = 
+        ///         ["scmLoopbackInterfaceDataSourceResults"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "id", scmLoopbackIntfDs.Apply(getLoopbackInterfaceResult =&gt; getLoopbackInterfaceResult.Id) },
-        ///             { "name", scmLoopbackIntfDs.Apply(getLoopbackInterfaceResult =&gt; getLoopbackInterfaceResult.Name) },
-        ///             { "comment", scmLoopbackIntfDs.Apply(getLoopbackInterfaceResult =&gt; getLoopbackInterfaceResult.Comment) },
-        ///             { "ip", scmLoopbackIntfDs.Apply(getLoopbackInterfaceResult =&gt; getLoopbackInterfaceResult.Ips) },
-        ///             { "folder", scmLoopbackIntfDs.Apply(getLoopbackInterfaceResult =&gt; getLoopbackInterfaceResult.Folder) },
+        ///             ["id"] = scmLoopbackIntfDs.Apply(getLoopbackInterfaceResult =&gt; getLoopbackInterfaceResult.Id),
+        ///             ["name"] = scmLoopbackIntfDs.Apply(getLoopbackInterfaceResult =&gt; getLoopbackInterfaceResult.Name),
+        ///             ["comment"] = scmLoopbackIntfDs.Apply(getLoopbackInterfaceResult =&gt; getLoopbackInterfaceResult.Comment),
+        ///             ["ip"] = scmLoopbackIntfDs.Apply(getLoopbackInterfaceResult =&gt; getLoopbackInterfaceResult.Ips),
+        ///             ["folder"] = scmLoopbackIntfDs.Apply(getLoopbackInterfaceResult =&gt; getLoopbackInterfaceResult.Folder),
         ///         },
         ///     };
         /// });

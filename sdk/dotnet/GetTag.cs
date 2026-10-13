@@ -32,13 +32,13 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["tagOutputs"] = 
+        ///         ["tagOutputs"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "productionId", scmTagDs.Apply(getTagResult =&gt; getTagResult.Id) },
-        ///             { "productionColor", scmTagDs.Apply(getTagResult =&gt; getTagResult.Color) },
-        ///             { "productionFolder", scmTagDs.Apply(getTagResult =&gt; getTagResult.Folder) },
-        ///             { "productionSnippet", scmTagDs.Apply(getTagResult =&gt; getTagResult.Snippet) },
-        ///             { "productionDevice", scmTagDs.Apply(getTagResult =&gt; getTagResult.Device) },
+        ///             ["productionId"] = scmTagDs.Apply(getTagResult =&gt; getTagResult.Id),
+        ///             ["productionColor"] = scmTagDs.Apply(getTagResult =&gt; getTagResult.Color),
+        ///             ["productionFolder"] = scmTagDs.Apply(getTagResult =&gt; getTagResult.Folder),
+        ///             ["productionSnippet"] = scmTagDs.Apply(getTagResult =&gt; getTagResult.Snippet),
+        ///             ["productionDevice"] = scmTagDs.Apply(getTagResult =&gt; getTagResult.Device),
         ///         },
         ///     };
         /// });
@@ -68,13 +68,13 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["tagOutputs"] = 
+        ///         ["tagOutputs"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "productionId", scmTagDs.Apply(getTagResult =&gt; getTagResult.Id) },
-        ///             { "productionColor", scmTagDs.Apply(getTagResult =&gt; getTagResult.Color) },
-        ///             { "productionFolder", scmTagDs.Apply(getTagResult =&gt; getTagResult.Folder) },
-        ///             { "productionSnippet", scmTagDs.Apply(getTagResult =&gt; getTagResult.Snippet) },
-        ///             { "productionDevice", scmTagDs.Apply(getTagResult =&gt; getTagResult.Device) },
+        ///             ["productionId"] = scmTagDs.Apply(getTagResult =&gt; getTagResult.Id),
+        ///             ["productionColor"] = scmTagDs.Apply(getTagResult =&gt; getTagResult.Color),
+        ///             ["productionFolder"] = scmTagDs.Apply(getTagResult =&gt; getTagResult.Folder),
+        ///             ["productionSnippet"] = scmTagDs.Apply(getTagResult =&gt; getTagResult.Snippet),
+        ///             ["productionDevice"] = scmTagDs.Apply(getTagResult =&gt; getTagResult.Device),
         ///         },
         ///     };
         /// });
@@ -104,13 +104,13 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["tagOutputs"] = 
+        ///         ["tagOutputs"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "productionId", scmTagDs.Apply(getTagResult =&gt; getTagResult.Id) },
-        ///             { "productionColor", scmTagDs.Apply(getTagResult =&gt; getTagResult.Color) },
-        ///             { "productionFolder", scmTagDs.Apply(getTagResult =&gt; getTagResult.Folder) },
-        ///             { "productionSnippet", scmTagDs.Apply(getTagResult =&gt; getTagResult.Snippet) },
-        ///             { "productionDevice", scmTagDs.Apply(getTagResult =&gt; getTagResult.Device) },
+        ///             ["productionId"] = scmTagDs.Apply(getTagResult =&gt; getTagResult.Id),
+        ///             ["productionColor"] = scmTagDs.Apply(getTagResult =&gt; getTagResult.Color),
+        ///             ["productionFolder"] = scmTagDs.Apply(getTagResult =&gt; getTagResult.Folder),
+        ///             ["productionSnippet"] = scmTagDs.Apply(getTagResult =&gt; getTagResult.Snippet),
+        ///             ["productionDevice"] = scmTagDs.Apply(getTagResult =&gt; getTagResult.Device),
         ///         },
         ///     };
         /// });

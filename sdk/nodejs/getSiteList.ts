@@ -20,7 +20,7 @@ import * as utilities from "./utilities";
  *     folder: "Remote Networks",
  * });
  * export const listOfAllConnectionNames = allSites.then(allSites => .map(conn => (conn.name)));
- * export const totalConnectionsCount = allSites.then(allSites => allSites.datas).length;
+ * export const totalConnectionsCount = allSites.then(allSites => allSites.datas.length);
  * ```
  */
 export function getSiteList(args?: GetSiteListArgs, opts?: pulumi.InvokeOptions): Promise<GetSiteListResult> {
@@ -121,7 +121,7 @@ export interface GetSiteListResult {
  *     folder: "Remote Networks",
  * });
  * export const listOfAllConnectionNames = allSites.then(allSites => .map(conn => (conn.name)));
- * export const totalConnectionsCount = allSites.then(allSites => allSites.datas).length;
+ * export const totalConnectionsCount = allSites.then(allSites => allSites.datas.length);
  * ```
  */
 export function getSiteListOutput(args?: GetSiteListOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetSiteListResult> {

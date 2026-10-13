@@ -32,13 +32,13 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["ethernetInterfaceDataSourceResults"] = 
+        ///         ["ethernetInterfaceDataSourceResults"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "id", scmL3IntfStaticDs.Apply(getEthernetInterfaceResult =&gt; getEthernetInterfaceResult.Id) },
-        ///             { "name", scmL3IntfStaticDs.Apply(getEthernetInterfaceResult =&gt; getEthernetInterfaceResult.Name) },
-        ///             { "comment", scmL3IntfStaticDs.Apply(getEthernetInterfaceResult =&gt; getEthernetInterfaceResult.Comment) },
-        ///             { "layer3", scmL3IntfStaticDs.Apply(getEthernetInterfaceResult =&gt; getEthernetInterfaceResult.Layer3) },
-        ///             { "folder", scmL3IntfStaticDs.Apply(getEthernetInterfaceResult =&gt; getEthernetInterfaceResult.Folder) },
+        ///             ["id"] = scmL3IntfStaticDs.Apply(getEthernetInterfaceResult =&gt; getEthernetInterfaceResult.Id),
+        ///             ["name"] = scmL3IntfStaticDs.Apply(getEthernetInterfaceResult =&gt; getEthernetInterfaceResult.Name),
+        ///             ["comment"] = scmL3IntfStaticDs.Apply(getEthernetInterfaceResult =&gt; getEthernetInterfaceResult.Comment),
+        ///             ["layer3"] = scmL3IntfStaticDs.Apply(getEthernetInterfaceResult =&gt; getEthernetInterfaceResult.Layer3),
+        ///             ["folder"] = scmL3IntfStaticDs.Apply(getEthernetInterfaceResult =&gt; getEthernetInterfaceResult.Folder),
         ///         },
         ///     };
         /// });
@@ -68,13 +68,13 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["ethernetInterfaceDataSourceResults"] = 
+        ///         ["ethernetInterfaceDataSourceResults"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "id", scmL3IntfStaticDs.Apply(getEthernetInterfaceResult =&gt; getEthernetInterfaceResult.Id) },
-        ///             { "name", scmL3IntfStaticDs.Apply(getEthernetInterfaceResult =&gt; getEthernetInterfaceResult.Name) },
-        ///             { "comment", scmL3IntfStaticDs.Apply(getEthernetInterfaceResult =&gt; getEthernetInterfaceResult.Comment) },
-        ///             { "layer3", scmL3IntfStaticDs.Apply(getEthernetInterfaceResult =&gt; getEthernetInterfaceResult.Layer3) },
-        ///             { "folder", scmL3IntfStaticDs.Apply(getEthernetInterfaceResult =&gt; getEthernetInterfaceResult.Folder) },
+        ///             ["id"] = scmL3IntfStaticDs.Apply(getEthernetInterfaceResult =&gt; getEthernetInterfaceResult.Id),
+        ///             ["name"] = scmL3IntfStaticDs.Apply(getEthernetInterfaceResult =&gt; getEthernetInterfaceResult.Name),
+        ///             ["comment"] = scmL3IntfStaticDs.Apply(getEthernetInterfaceResult =&gt; getEthernetInterfaceResult.Comment),
+        ///             ["layer3"] = scmL3IntfStaticDs.Apply(getEthernetInterfaceResult =&gt; getEthernetInterfaceResult.Layer3),
+        ///             ["folder"] = scmL3IntfStaticDs.Apply(getEthernetInterfaceResult =&gt; getEthernetInterfaceResult.Folder),
         ///         },
         ///     };
         /// });
@@ -104,13 +104,13 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["ethernetInterfaceDataSourceResults"] = 
+        ///         ["ethernetInterfaceDataSourceResults"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "id", scmL3IntfStaticDs.Apply(getEthernetInterfaceResult =&gt; getEthernetInterfaceResult.Id) },
-        ///             { "name", scmL3IntfStaticDs.Apply(getEthernetInterfaceResult =&gt; getEthernetInterfaceResult.Name) },
-        ///             { "comment", scmL3IntfStaticDs.Apply(getEthernetInterfaceResult =&gt; getEthernetInterfaceResult.Comment) },
-        ///             { "layer3", scmL3IntfStaticDs.Apply(getEthernetInterfaceResult =&gt; getEthernetInterfaceResult.Layer3) },
-        ///             { "folder", scmL3IntfStaticDs.Apply(getEthernetInterfaceResult =&gt; getEthernetInterfaceResult.Folder) },
+        ///             ["id"] = scmL3IntfStaticDs.Apply(getEthernetInterfaceResult =&gt; getEthernetInterfaceResult.Id),
+        ///             ["name"] = scmL3IntfStaticDs.Apply(getEthernetInterfaceResult =&gt; getEthernetInterfaceResult.Name),
+        ///             ["comment"] = scmL3IntfStaticDs.Apply(getEthernetInterfaceResult =&gt; getEthernetInterfaceResult.Comment),
+        ///             ["layer3"] = scmL3IntfStaticDs.Apply(getEthernetInterfaceResult =&gt; getEthernetInterfaceResult.Layer3),
+        ///             ["folder"] = scmL3IntfStaticDs.Apply(getEthernetInterfaceResult =&gt; getEthernetInterfaceResult.Folder),
         ///         },
         ///     };
         /// });

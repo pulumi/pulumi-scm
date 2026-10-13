@@ -32,10 +32,10 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["fetchedProfileListSummary"] = 
+        ///         ["fetchedProfileListSummary"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "countOfRulesFetched", allProfiles.Apply(getAuthenticationProfileListResult =&gt; getAuthenticationProfileListResult.Total) },
-        ///             { "firstRuleName", allProfiles.Apply(getAuthenticationProfileListResult =&gt; getAuthenticationProfileListResult.Datas[0]?.Name) },
+        ///             ["countOfRulesFetched"] = allProfiles.Apply(getAuthenticationProfileListResult =&gt; getAuthenticationProfileListResult.Total),
+        ///             ["firstRuleName"] = allProfiles.Apply(getAuthenticationProfileListResult =&gt; getAuthenticationProfileListResult.Datas[0]?.Name),
         ///         },
         ///     };
         /// });
@@ -65,10 +65,10 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["fetchedProfileListSummary"] = 
+        ///         ["fetchedProfileListSummary"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "countOfRulesFetched", allProfiles.Apply(getAuthenticationProfileListResult =&gt; getAuthenticationProfileListResult.Total) },
-        ///             { "firstRuleName", allProfiles.Apply(getAuthenticationProfileListResult =&gt; getAuthenticationProfileListResult.Datas[0]?.Name) },
+        ///             ["countOfRulesFetched"] = allProfiles.Apply(getAuthenticationProfileListResult =&gt; getAuthenticationProfileListResult.Total),
+        ///             ["firstRuleName"] = allProfiles.Apply(getAuthenticationProfileListResult =&gt; getAuthenticationProfileListResult.Datas[0]?.Name),
         ///         },
         ///     };
         /// });
@@ -98,10 +98,10 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["fetchedProfileListSummary"] = 
+        ///         ["fetchedProfileListSummary"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "countOfRulesFetched", allProfiles.Apply(getAuthenticationProfileListResult =&gt; getAuthenticationProfileListResult.Total) },
-        ///             { "firstRuleName", allProfiles.Apply(getAuthenticationProfileListResult =&gt; getAuthenticationProfileListResult.Datas[0]?.Name) },
+        ///             ["countOfRulesFetched"] = allProfiles.Apply(getAuthenticationProfileListResult =&gt; getAuthenticationProfileListResult.Total),
+        ///             ["firstRuleName"] = allProfiles.Apply(getAuthenticationProfileListResult =&gt; getAuthenticationProfileListResult.Datas[0]?.Name),
         ///         },
         ///     };
         /// });

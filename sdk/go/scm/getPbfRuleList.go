@@ -27,7 +27,7 @@ import (
 //
 //	func main() {
 //		pulumi.Run(func(ctx *pulumi.Context) error {
-//			// Define a data source for listing pbf rules
+//			// Define a function for listing pbf rules
 //			pagedPbfRulesList, err := scm.GetPbfRuleList(ctx, &scm.GetPbfRuleListArgs{
 //				Folder: pulumi.StringRef("All"),
 //				Limit:  pulumi.IntRef(10),

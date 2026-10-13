@@ -44,11 +44,11 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["forwardingProfileDestinationDataSourceResults"] = 
+        ///         ["forwardingProfileDestinationDataSourceResults"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "fqdnDestination", scmForwardingProfileDestination1Ds },
-        ///             { "ipDestination", scmForwardingProfileDestination2Ds },
-        ///             { "mixedDestination", scmForwardingProfileDestination3Ds },
+        ///             ["fqdnDestination"] = scmForwardingProfileDestination1Ds,
+        ///             ["ipDestination"] = scmForwardingProfileDestination2Ds,
+        ///             ["mixedDestination"] = scmForwardingProfileDestination3Ds,
         ///         },
         ///     };
         /// });
@@ -90,11 +90,11 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["forwardingProfileDestinationDataSourceResults"] = 
+        ///         ["forwardingProfileDestinationDataSourceResults"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "fqdnDestination", scmForwardingProfileDestination1Ds },
-        ///             { "ipDestination", scmForwardingProfileDestination2Ds },
-        ///             { "mixedDestination", scmForwardingProfileDestination3Ds },
+        ///             ["fqdnDestination"] = scmForwardingProfileDestination1Ds,
+        ///             ["ipDestination"] = scmForwardingProfileDestination2Ds,
+        ///             ["mixedDestination"] = scmForwardingProfileDestination3Ds,
         ///         },
         ///     };
         /// });
@@ -136,11 +136,11 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["forwardingProfileDestinationDataSourceResults"] = 
+        ///         ["forwardingProfileDestinationDataSourceResults"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "fqdnDestination", scmForwardingProfileDestination1Ds },
-        ///             { "ipDestination", scmForwardingProfileDestination2Ds },
-        ///             { "mixedDestination", scmForwardingProfileDestination3Ds },
+        ///             ["fqdnDestination"] = scmForwardingProfileDestination1Ds,
+        ///             ["ipDestination"] = scmForwardingProfileDestination2Ds,
+        ///             ["mixedDestination"] = scmForwardingProfileDestination3Ds,
         ///         },
         ///     };
         /// });

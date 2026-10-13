@@ -32,12 +32,12 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["scmFolderOutput"] = 
+        ///         ["scmFolderOutput"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "id", scmFolderDs.Apply(getFolderResult =&gt; getFolderResult.Id) },
-        ///             { "name", scmFolderDs.Apply(getFolderResult =&gt; getFolderResult.Name) },
-        ///             { "description", scmFolderDs.Apply(getFolderResult =&gt; getFolderResult.Description) },
-        ///             { "parent", scmFolderDs.Apply(getFolderResult =&gt; getFolderResult.Parent) },
+        ///             ["id"] = scmFolderDs.Apply(getFolderResult =&gt; getFolderResult.Id),
+        ///             ["name"] = scmFolderDs.Apply(getFolderResult =&gt; getFolderResult.Name),
+        ///             ["description"] = scmFolderDs.Apply(getFolderResult =&gt; getFolderResult.Description),
+        ///             ["parent"] = scmFolderDs.Apply(getFolderResult =&gt; getFolderResult.Parent),
         ///         },
         ///     };
         /// });
@@ -67,12 +67,12 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["scmFolderOutput"] = 
+        ///         ["scmFolderOutput"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "id", scmFolderDs.Apply(getFolderResult =&gt; getFolderResult.Id) },
-        ///             { "name", scmFolderDs.Apply(getFolderResult =&gt; getFolderResult.Name) },
-        ///             { "description", scmFolderDs.Apply(getFolderResult =&gt; getFolderResult.Description) },
-        ///             { "parent", scmFolderDs.Apply(getFolderResult =&gt; getFolderResult.Parent) },
+        ///             ["id"] = scmFolderDs.Apply(getFolderResult =&gt; getFolderResult.Id),
+        ///             ["name"] = scmFolderDs.Apply(getFolderResult =&gt; getFolderResult.Name),
+        ///             ["description"] = scmFolderDs.Apply(getFolderResult =&gt; getFolderResult.Description),
+        ///             ["parent"] = scmFolderDs.Apply(getFolderResult =&gt; getFolderResult.Parent),
         ///         },
         ///     };
         /// });
@@ -102,12 +102,12 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["scmFolderOutput"] = 
+        ///         ["scmFolderOutput"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "id", scmFolderDs.Apply(getFolderResult =&gt; getFolderResult.Id) },
-        ///             { "name", scmFolderDs.Apply(getFolderResult =&gt; getFolderResult.Name) },
-        ///             { "description", scmFolderDs.Apply(getFolderResult =&gt; getFolderResult.Description) },
-        ///             { "parent", scmFolderDs.Apply(getFolderResult =&gt; getFolderResult.Parent) },
+        ///             ["id"] = scmFolderDs.Apply(getFolderResult =&gt; getFolderResult.Id),
+        ///             ["name"] = scmFolderDs.Apply(getFolderResult =&gt; getFolderResult.Name),
+        ///             ["description"] = scmFolderDs.Apply(getFolderResult =&gt; getFolderResult.Description),
+        ///             ["parent"] = scmFolderDs.Apply(getFolderResult =&gt; getFolderResult.Parent),
         ///         },
         ///     };
         /// });

@@ -32,13 +32,13 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["scmLogicalRouterDataSourceOutput"] = 
+        ///         ["scmLogicalRouterDataSourceOutput"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "id", scmLogicalRouterDs.Apply(getLogicalRouterResult =&gt; getLogicalRouterResult.Id) },
-        ///             { "name", scmLogicalRouterDs.Apply(getLogicalRouterResult =&gt; getLogicalRouterResult.Name) },
-        ///             { "routingStack", scmLogicalRouterDs.Apply(getLogicalRouterResult =&gt; getLogicalRouterResult.RoutingStack) },
-        ///             { "vrf", scmLogicalRouterDs.Apply(getLogicalRouterResult =&gt; getLogicalRouterResult.Vrves) },
-        ///             { "folder", scmLogicalRouterDs.Apply(getLogicalRouterResult =&gt; getLogicalRouterResult.Folder) },
+        ///             ["id"] = scmLogicalRouterDs.Apply(getLogicalRouterResult =&gt; getLogicalRouterResult.Id),
+        ///             ["name"] = scmLogicalRouterDs.Apply(getLogicalRouterResult =&gt; getLogicalRouterResult.Name),
+        ///             ["routingStack"] = scmLogicalRouterDs.Apply(getLogicalRouterResult =&gt; getLogicalRouterResult.RoutingStack),
+        ///             ["vrf"] = scmLogicalRouterDs.Apply(getLogicalRouterResult =&gt; getLogicalRouterResult.Vrves),
+        ///             ["folder"] = scmLogicalRouterDs.Apply(getLogicalRouterResult =&gt; getLogicalRouterResult.Folder),
         ///         },
         ///     };
         /// });
@@ -68,13 +68,13 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["scmLogicalRouterDataSourceOutput"] = 
+        ///         ["scmLogicalRouterDataSourceOutput"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "id", scmLogicalRouterDs.Apply(getLogicalRouterResult =&gt; getLogicalRouterResult.Id) },
-        ///             { "name", scmLogicalRouterDs.Apply(getLogicalRouterResult =&gt; getLogicalRouterResult.Name) },
-        ///             { "routingStack", scmLogicalRouterDs.Apply(getLogicalRouterResult =&gt; getLogicalRouterResult.RoutingStack) },
-        ///             { "vrf", scmLogicalRouterDs.Apply(getLogicalRouterResult =&gt; getLogicalRouterResult.Vrves) },
-        ///             { "folder", scmLogicalRouterDs.Apply(getLogicalRouterResult =&gt; getLogicalRouterResult.Folder) },
+        ///             ["id"] = scmLogicalRouterDs.Apply(getLogicalRouterResult =&gt; getLogicalRouterResult.Id),
+        ///             ["name"] = scmLogicalRouterDs.Apply(getLogicalRouterResult =&gt; getLogicalRouterResult.Name),
+        ///             ["routingStack"] = scmLogicalRouterDs.Apply(getLogicalRouterResult =&gt; getLogicalRouterResult.RoutingStack),
+        ///             ["vrf"] = scmLogicalRouterDs.Apply(getLogicalRouterResult =&gt; getLogicalRouterResult.Vrves),
+        ///             ["folder"] = scmLogicalRouterDs.Apply(getLogicalRouterResult =&gt; getLogicalRouterResult.Folder),
         ///         },
         ///     };
         /// });
@@ -104,13 +104,13 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["scmLogicalRouterDataSourceOutput"] = 
+        ///         ["scmLogicalRouterDataSourceOutput"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "id", scmLogicalRouterDs.Apply(getLogicalRouterResult =&gt; getLogicalRouterResult.Id) },
-        ///             { "name", scmLogicalRouterDs.Apply(getLogicalRouterResult =&gt; getLogicalRouterResult.Name) },
-        ///             { "routingStack", scmLogicalRouterDs.Apply(getLogicalRouterResult =&gt; getLogicalRouterResult.RoutingStack) },
-        ///             { "vrf", scmLogicalRouterDs.Apply(getLogicalRouterResult =&gt; getLogicalRouterResult.Vrves) },
-        ///             { "folder", scmLogicalRouterDs.Apply(getLogicalRouterResult =&gt; getLogicalRouterResult.Folder) },
+        ///             ["id"] = scmLogicalRouterDs.Apply(getLogicalRouterResult =&gt; getLogicalRouterResult.Id),
+        ///             ["name"] = scmLogicalRouterDs.Apply(getLogicalRouterResult =&gt; getLogicalRouterResult.Name),
+        ///             ["routingStack"] = scmLogicalRouterDs.Apply(getLogicalRouterResult =&gt; getLogicalRouterResult.RoutingStack),
+        ///             ["vrf"] = scmLogicalRouterDs.Apply(getLogicalRouterResult =&gt; getLogicalRouterResult.Vrves),
+        ///             ["folder"] = scmLogicalRouterDs.Apply(getLogicalRouterResult =&gt; getLogicalRouterResult.Folder),
         ///         },
         ///     };
         /// });

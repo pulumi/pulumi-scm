@@ -32,13 +32,13 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["scmTunnelInterfaceDataSourceResults"] = 
+        ///         ["scmTunnelInterfaceDataSourceResults"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "id", scmTunnelIntfDs.Apply(getTunnelInterfaceResult =&gt; getTunnelInterfaceResult.Id) },
-        ///             { "name", scmTunnelIntfDs.Apply(getTunnelInterfaceResult =&gt; getTunnelInterfaceResult.Name) },
-        ///             { "comment", scmTunnelIntfDs.Apply(getTunnelInterfaceResult =&gt; getTunnelInterfaceResult.Comment) },
-        ///             { "ip", scmTunnelIntfDs.Apply(getTunnelInterfaceResult =&gt; getTunnelInterfaceResult.Ips) },
-        ///             { "folder", scmTunnelIntfDs.Apply(getTunnelInterfaceResult =&gt; getTunnelInterfaceResult.Folder) },
+        ///             ["id"] = scmTunnelIntfDs.Apply(getTunnelInterfaceResult =&gt; getTunnelInterfaceResult.Id),
+        ///             ["name"] = scmTunnelIntfDs.Apply(getTunnelInterfaceResult =&gt; getTunnelInterfaceResult.Name),
+        ///             ["comment"] = scmTunnelIntfDs.Apply(getTunnelInterfaceResult =&gt; getTunnelInterfaceResult.Comment),
+        ///             ["ip"] = scmTunnelIntfDs.Apply(getTunnelInterfaceResult =&gt; getTunnelInterfaceResult.Ips),
+        ///             ["folder"] = scmTunnelIntfDs.Apply(getTunnelInterfaceResult =&gt; getTunnelInterfaceResult.Folder),
         ///         },
         ///     };
         /// });
@@ -68,13 +68,13 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["scmTunnelInterfaceDataSourceResults"] = 
+        ///         ["scmTunnelInterfaceDataSourceResults"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "id", scmTunnelIntfDs.Apply(getTunnelInterfaceResult =&gt; getTunnelInterfaceResult.Id) },
-        ///             { "name", scmTunnelIntfDs.Apply(getTunnelInterfaceResult =&gt; getTunnelInterfaceResult.Name) },
-        ///             { "comment", scmTunnelIntfDs.Apply(getTunnelInterfaceResult =&gt; getTunnelInterfaceResult.Comment) },
-        ///             { "ip", scmTunnelIntfDs.Apply(getTunnelInterfaceResult =&gt; getTunnelInterfaceResult.Ips) },
-        ///             { "folder", scmTunnelIntfDs.Apply(getTunnelInterfaceResult =&gt; getTunnelInterfaceResult.Folder) },
+        ///             ["id"] = scmTunnelIntfDs.Apply(getTunnelInterfaceResult =&gt; getTunnelInterfaceResult.Id),
+        ///             ["name"] = scmTunnelIntfDs.Apply(getTunnelInterfaceResult =&gt; getTunnelInterfaceResult.Name),
+        ///             ["comment"] = scmTunnelIntfDs.Apply(getTunnelInterfaceResult =&gt; getTunnelInterfaceResult.Comment),
+        ///             ["ip"] = scmTunnelIntfDs.Apply(getTunnelInterfaceResult =&gt; getTunnelInterfaceResult.Ips),
+        ///             ["folder"] = scmTunnelIntfDs.Apply(getTunnelInterfaceResult =&gt; getTunnelInterfaceResult.Folder),
         ///         },
         ///     };
         /// });
@@ -104,13 +104,13 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["scmTunnelInterfaceDataSourceResults"] = 
+        ///         ["scmTunnelInterfaceDataSourceResults"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "id", scmTunnelIntfDs.Apply(getTunnelInterfaceResult =&gt; getTunnelInterfaceResult.Id) },
-        ///             { "name", scmTunnelIntfDs.Apply(getTunnelInterfaceResult =&gt; getTunnelInterfaceResult.Name) },
-        ///             { "comment", scmTunnelIntfDs.Apply(getTunnelInterfaceResult =&gt; getTunnelInterfaceResult.Comment) },
-        ///             { "ip", scmTunnelIntfDs.Apply(getTunnelInterfaceResult =&gt; getTunnelInterfaceResult.Ips) },
-        ///             { "folder", scmTunnelIntfDs.Apply(getTunnelInterfaceResult =&gt; getTunnelInterfaceResult.Folder) },
+        ///             ["id"] = scmTunnelIntfDs.Apply(getTunnelInterfaceResult =&gt; getTunnelInterfaceResult.Id),
+        ///             ["name"] = scmTunnelIntfDs.Apply(getTunnelInterfaceResult =&gt; getTunnelInterfaceResult.Name),
+        ///             ["comment"] = scmTunnelIntfDs.Apply(getTunnelInterfaceResult =&gt; getTunnelInterfaceResult.Comment),
+        ///             ["ip"] = scmTunnelIntfDs.Apply(getTunnelInterfaceResult =&gt; getTunnelInterfaceResult.Ips),
+        ///             ["folder"] = scmTunnelIntfDs.Apply(getTunnelInterfaceResult =&gt; getTunnelInterfaceResult.Folder),
         ///         },
         ///     };
         /// });

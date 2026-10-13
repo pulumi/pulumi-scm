@@ -24,7 +24,7 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     // Define a data source for listing NAT rules
+        ///     // Define a function for listing NAT rules
         ///     var pagedNatRulesList = Scm.GetNatRuleList.Invoke(new()
         ///     {
         ///         Folder = "All",
@@ -35,10 +35,10 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["fetchedNATRuleListSummary"] = 
+        ///         ["fetchedNATRuleListSummary"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "totalRulesInList", pagedNatRulesList.Apply(getNatRuleListResult =&gt; getNatRuleListResult.Total) },
-        ///             { "allRules", pagedNatRulesList.Apply(getNatRuleListResult =&gt; getNatRuleListResult.Datas) },
+        ///             ["totalRulesInList"] = pagedNatRulesList.Apply(getNatRuleListResult =&gt; getNatRuleListResult.Total),
+        ///             ["allRules"] = pagedNatRulesList.Apply(getNatRuleListResult =&gt; getNatRuleListResult.Datas),
         ///         },
         ///     };
         /// });
@@ -60,7 +60,7 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     // Define a data source for listing NAT rules
+        ///     // Define a function for listing NAT rules
         ///     var pagedNatRulesList = Scm.GetNatRuleList.Invoke(new()
         ///     {
         ///         Folder = "All",
@@ -71,10 +71,10 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["fetchedNATRuleListSummary"] = 
+        ///         ["fetchedNATRuleListSummary"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "totalRulesInList", pagedNatRulesList.Apply(getNatRuleListResult =&gt; getNatRuleListResult.Total) },
-        ///             { "allRules", pagedNatRulesList.Apply(getNatRuleListResult =&gt; getNatRuleListResult.Datas) },
+        ///             ["totalRulesInList"] = pagedNatRulesList.Apply(getNatRuleListResult =&gt; getNatRuleListResult.Total),
+        ///             ["allRules"] = pagedNatRulesList.Apply(getNatRuleListResult =&gt; getNatRuleListResult.Datas),
         ///         },
         ///     };
         /// });
@@ -96,7 +96,7 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     // Define a data source for listing NAT rules
+        ///     // Define a function for listing NAT rules
         ///     var pagedNatRulesList = Scm.GetNatRuleList.Invoke(new()
         ///     {
         ///         Folder = "All",
@@ -107,10 +107,10 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["fetchedNATRuleListSummary"] = 
+        ///         ["fetchedNATRuleListSummary"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "totalRulesInList", pagedNatRulesList.Apply(getNatRuleListResult =&gt; getNatRuleListResult.Total) },
-        ///             { "allRules", pagedNatRulesList.Apply(getNatRuleListResult =&gt; getNatRuleListResult.Datas) },
+        ///             ["totalRulesInList"] = pagedNatRulesList.Apply(getNatRuleListResult =&gt; getNatRuleListResult.Total),
+        ///             ["allRules"] = pagedNatRulesList.Apply(getNatRuleListResult =&gt; getNatRuleListResult.Datas),
         ///         },
         ///     };
         /// });

@@ -13,7 +13,7 @@ import * as utilities from "./utilities";
  * import * as pulumi from "@pulumi/pulumi";
  * import * as scm from "@pulumi/scm";
  *
- * // Look up the application group by its ID from the terraform.tfstate file.
+ * // Look up the application group by its ID from the pulumi.tfstate file.
  * const scmApplicationGroupDs = scm.getApplicationGroup({
  *     id: "91616221-ddeb-4b49-866d-48d64dedc056",
  * });
@@ -104,7 +104,7 @@ export interface GetApplicationGroupResult {
  * import * as pulumi from "@pulumi/pulumi";
  * import * as scm from "@pulumi/scm";
  *
- * // Look up the application group by its ID from the terraform.tfstate file.
+ * // Look up the application group by its ID from the pulumi.tfstate file.
  * const scmApplicationGroupDs = scm.getApplicationGroup({
  *     id: "91616221-ddeb-4b49-866d-48d64dedc056",
  * });

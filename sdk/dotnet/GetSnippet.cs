@@ -32,12 +32,12 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["snippetOutputs"] = 
+        ///         ["snippetOutputs"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "productionId", scmSnippetOutputsDs.Apply(getSnippetResult =&gt; getSnippetResult.Id) },
-        ///             { "productionName", scmSnippetOutputsDs.Apply(getSnippetResult =&gt; getSnippetResult.Name) },
-        ///             { "productionDescription", scmSnippetOutputsDs.Apply(getSnippetResult =&gt; getSnippetResult.Description) },
-        ///             { "productionLabels", scmSnippetOutputsDs.Apply(getSnippetResult =&gt; getSnippetResult.Labels) },
+        ///             ["productionId"] = scmSnippetOutputsDs.Apply(getSnippetResult =&gt; getSnippetResult.Id),
+        ///             ["productionName"] = scmSnippetOutputsDs.Apply(getSnippetResult =&gt; getSnippetResult.Name),
+        ///             ["productionDescription"] = scmSnippetOutputsDs.Apply(getSnippetResult =&gt; getSnippetResult.Description),
+        ///             ["productionLabels"] = scmSnippetOutputsDs.Apply(getSnippetResult =&gt; getSnippetResult.Labels),
         ///         },
         ///     };
         /// });
@@ -67,12 +67,12 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["snippetOutputs"] = 
+        ///         ["snippetOutputs"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "productionId", scmSnippetOutputsDs.Apply(getSnippetResult =&gt; getSnippetResult.Id) },
-        ///             { "productionName", scmSnippetOutputsDs.Apply(getSnippetResult =&gt; getSnippetResult.Name) },
-        ///             { "productionDescription", scmSnippetOutputsDs.Apply(getSnippetResult =&gt; getSnippetResult.Description) },
-        ///             { "productionLabels", scmSnippetOutputsDs.Apply(getSnippetResult =&gt; getSnippetResult.Labels) },
+        ///             ["productionId"] = scmSnippetOutputsDs.Apply(getSnippetResult =&gt; getSnippetResult.Id),
+        ///             ["productionName"] = scmSnippetOutputsDs.Apply(getSnippetResult =&gt; getSnippetResult.Name),
+        ///             ["productionDescription"] = scmSnippetOutputsDs.Apply(getSnippetResult =&gt; getSnippetResult.Description),
+        ///             ["productionLabels"] = scmSnippetOutputsDs.Apply(getSnippetResult =&gt; getSnippetResult.Labels),
         ///         },
         ///     };
         /// });
@@ -102,12 +102,12 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["snippetOutputs"] = 
+        ///         ["snippetOutputs"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "productionId", scmSnippetOutputsDs.Apply(getSnippetResult =&gt; getSnippetResult.Id) },
-        ///             { "productionName", scmSnippetOutputsDs.Apply(getSnippetResult =&gt; getSnippetResult.Name) },
-        ///             { "productionDescription", scmSnippetOutputsDs.Apply(getSnippetResult =&gt; getSnippetResult.Description) },
-        ///             { "productionLabels", scmSnippetOutputsDs.Apply(getSnippetResult =&gt; getSnippetResult.Labels) },
+        ///             ["productionId"] = scmSnippetOutputsDs.Apply(getSnippetResult =&gt; getSnippetResult.Id),
+        ///             ["productionName"] = scmSnippetOutputsDs.Apply(getSnippetResult =&gt; getSnippetResult.Name),
+        ///             ["productionDescription"] = scmSnippetOutputsDs.Apply(getSnippetResult =&gt; getSnippetResult.Description),
+        ///             ["productionLabels"] = scmSnippetOutputsDs.Apply(getSnippetResult =&gt; getSnippetResult.Labels),
         ///         },
         ///     };
         /// });

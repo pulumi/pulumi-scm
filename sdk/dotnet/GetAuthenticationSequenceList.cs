@@ -32,10 +32,10 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["fetchedSequenceListSummary"] = 
+        ///         ["fetchedSequenceListSummary"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "countOfSequencesFetched", allSequences.Apply(getAuthenticationSequenceListResult =&gt; getAuthenticationSequenceListResult.Total) },
-        ///             { "firstRuleName", allSequences.Apply(getAuthenticationSequenceListResult =&gt; getAuthenticationSequenceListResult.Datas[0]?.Name) },
+        ///             ["countOfSequencesFetched"] = allSequences.Apply(getAuthenticationSequenceListResult =&gt; getAuthenticationSequenceListResult.Total),
+        ///             ["firstRuleName"] = allSequences.Apply(getAuthenticationSequenceListResult =&gt; getAuthenticationSequenceListResult.Datas[0]?.Name),
         ///         },
         ///     };
         /// });
@@ -65,10 +65,10 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["fetchedSequenceListSummary"] = 
+        ///         ["fetchedSequenceListSummary"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "countOfSequencesFetched", allSequences.Apply(getAuthenticationSequenceListResult =&gt; getAuthenticationSequenceListResult.Total) },
-        ///             { "firstRuleName", allSequences.Apply(getAuthenticationSequenceListResult =&gt; getAuthenticationSequenceListResult.Datas[0]?.Name) },
+        ///             ["countOfSequencesFetched"] = allSequences.Apply(getAuthenticationSequenceListResult =&gt; getAuthenticationSequenceListResult.Total),
+        ///             ["firstRuleName"] = allSequences.Apply(getAuthenticationSequenceListResult =&gt; getAuthenticationSequenceListResult.Datas[0]?.Name),
         ///         },
         ///     };
         /// });
@@ -98,10 +98,10 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["fetchedSequenceListSummary"] = 
+        ///         ["fetchedSequenceListSummary"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "countOfSequencesFetched", allSequences.Apply(getAuthenticationSequenceListResult =&gt; getAuthenticationSequenceListResult.Total) },
-        ///             { "firstRuleName", allSequences.Apply(getAuthenticationSequenceListResult =&gt; getAuthenticationSequenceListResult.Datas[0]?.Name) },
+        ///             ["countOfSequencesFetched"] = allSequences.Apply(getAuthenticationSequenceListResult =&gt; getAuthenticationSequenceListResult.Total),
+        ///             ["firstRuleName"] = allSequences.Apply(getAuthenticationSequenceListResult =&gt; getAuthenticationSequenceListResult.Datas[0]?.Name),
         ///         },
         ///     };
         /// });

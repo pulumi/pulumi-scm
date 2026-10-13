@@ -28,7 +28,7 @@ namespace Pulumi.Scm
         ///     // The folder scope for the SCM resource (e.g., 'Shared', 'Predefined', or a specific folder name).
         ///     var folderScope = config.Get("folderScope") ?? "Service Connections";
         ///     // ------------------------------------------------------------------
-        ///     // Data Source List Lookup
+        ///     // Function List Lookup
         ///     // ------------------------------------------------------------------
         ///     var allConnectionsInFolder = Scm.GetServiceConnectionList.Invoke(new()
         ///     {
@@ -42,7 +42,7 @@ namespace Pulumi.Scm
         ///         {
         ///             return conn.Name;
         ///         }).ToList(),
-        ///         ["totalConnectionsCount"] = allConnectionsInFolder.Apply(getServiceConnectionListResult =&gt; getServiceConnectionListResult.Datas).Length(),
+        ///         ["totalConnectionsCount"] = allConnectionsInFolder.Apply(getServiceConnectionListResult =&gt; getServiceConnectionListResult.Datas).Length,
         ///     };
         /// });
         /// ```
@@ -67,7 +67,7 @@ namespace Pulumi.Scm
         ///     // The folder scope for the SCM resource (e.g., 'Shared', 'Predefined', or a specific folder name).
         ///     var folderScope = config.Get("folderScope") ?? "Service Connections";
         ///     // ------------------------------------------------------------------
-        ///     // Data Source List Lookup
+        ///     // Function List Lookup
         ///     // ------------------------------------------------------------------
         ///     var allConnectionsInFolder = Scm.GetServiceConnectionList.Invoke(new()
         ///     {
@@ -81,7 +81,7 @@ namespace Pulumi.Scm
         ///         {
         ///             return conn.Name;
         ///         }).ToList(),
-        ///         ["totalConnectionsCount"] = allConnectionsInFolder.Apply(getServiceConnectionListResult =&gt; getServiceConnectionListResult.Datas).Length(),
+        ///         ["totalConnectionsCount"] = allConnectionsInFolder.Apply(getServiceConnectionListResult =&gt; getServiceConnectionListResult.Datas).Length,
         ///     };
         /// });
         /// ```
@@ -106,7 +106,7 @@ namespace Pulumi.Scm
         ///     // The folder scope for the SCM resource (e.g., 'Shared', 'Predefined', or a specific folder name).
         ///     var folderScope = config.Get("folderScope") ?? "Service Connections";
         ///     // ------------------------------------------------------------------
-        ///     // Data Source List Lookup
+        ///     // Function List Lookup
         ///     // ------------------------------------------------------------------
         ///     var allConnectionsInFolder = Scm.GetServiceConnectionList.Invoke(new()
         ///     {
@@ -120,7 +120,7 @@ namespace Pulumi.Scm
         ///         {
         ///             return conn.Name;
         ///         }).ToList(),
-        ///         ["totalConnectionsCount"] = allConnectionsInFolder.Apply(getServiceConnectionListResult =&gt; getServiceConnectionListResult.Datas).Length(),
+        ///         ["totalConnectionsCount"] = allConnectionsInFolder.Apply(getServiceConnectionListResult =&gt; getServiceConnectionListResult.Datas).Length,
         ///     };
         /// });
         /// ```

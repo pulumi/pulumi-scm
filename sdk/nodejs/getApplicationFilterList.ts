@@ -31,7 +31,7 @@ import * as utilities from "./utilities";
  * }
  *
  *
- * // This data source will call the "List" API endpoint
+ * // This function will call the "List" API endpoint
  * // and return all application filters in the "All" folder.
  * // 1. Use a single data block to fetch ALL application filters in the "All" folder.
  * const allShared = scm.getApplicationFilterList({
@@ -170,7 +170,7 @@ export interface GetApplicationFilterListResult {
  * }
  *
  *
- * // This data source will call the "List" API endpoint
+ * // This function will call the "List" API endpoint
  * // and return all application filters in the "All" folder.
  * // 1. Use a single data block to fetch ALL application filters in the "All" folder.
  * const allShared = scm.getApplicationFilterList({

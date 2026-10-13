@@ -32,13 +32,13 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["scmAntiSpywareProfileOutput"] = 
+        ///         ["scmAntiSpywareProfileOutput"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "profileId", scmAntiSpywareProfileDs.Apply(getAntiSpywareProfileResult =&gt; getAntiSpywareProfileResult.Id) },
-        ///             { "folder", scmAntiSpywareProfileDs.Apply(getAntiSpywareProfileResult =&gt; getAntiSpywareProfileResult.Folder) },
-        ///             { "name", scmAntiSpywareProfileDs.Apply(getAntiSpywareProfileResult =&gt; getAntiSpywareProfileResult.Name) },
-        ///             { "description", scmAntiSpywareProfileDs.Apply(getAntiSpywareProfileResult =&gt; getAntiSpywareProfileResult.Description) },
-        ///             { "cloudInlineAnalysis", scmAntiSpywareProfileDs.Apply(getAntiSpywareProfileResult =&gt; getAntiSpywareProfileResult.CloudInlineAnalysis) },
+        ///             ["profileId"] = scmAntiSpywareProfileDs.Apply(getAntiSpywareProfileResult =&gt; getAntiSpywareProfileResult.Id),
+        ///             ["folder"] = scmAntiSpywareProfileDs.Apply(getAntiSpywareProfileResult =&gt; getAntiSpywareProfileResult.Folder),
+        ///             ["name"] = scmAntiSpywareProfileDs.Apply(getAntiSpywareProfileResult =&gt; getAntiSpywareProfileResult.Name),
+        ///             ["description"] = scmAntiSpywareProfileDs.Apply(getAntiSpywareProfileResult =&gt; getAntiSpywareProfileResult.Description),
+        ///             ["cloudInlineAnalysis"] = scmAntiSpywareProfileDs.Apply(getAntiSpywareProfileResult =&gt; getAntiSpywareProfileResult.CloudInlineAnalysis),
         ///         },
         ///     };
         /// });
@@ -68,13 +68,13 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["scmAntiSpywareProfileOutput"] = 
+        ///         ["scmAntiSpywareProfileOutput"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "profileId", scmAntiSpywareProfileDs.Apply(getAntiSpywareProfileResult =&gt; getAntiSpywareProfileResult.Id) },
-        ///             { "folder", scmAntiSpywareProfileDs.Apply(getAntiSpywareProfileResult =&gt; getAntiSpywareProfileResult.Folder) },
-        ///             { "name", scmAntiSpywareProfileDs.Apply(getAntiSpywareProfileResult =&gt; getAntiSpywareProfileResult.Name) },
-        ///             { "description", scmAntiSpywareProfileDs.Apply(getAntiSpywareProfileResult =&gt; getAntiSpywareProfileResult.Description) },
-        ///             { "cloudInlineAnalysis", scmAntiSpywareProfileDs.Apply(getAntiSpywareProfileResult =&gt; getAntiSpywareProfileResult.CloudInlineAnalysis) },
+        ///             ["profileId"] = scmAntiSpywareProfileDs.Apply(getAntiSpywareProfileResult =&gt; getAntiSpywareProfileResult.Id),
+        ///             ["folder"] = scmAntiSpywareProfileDs.Apply(getAntiSpywareProfileResult =&gt; getAntiSpywareProfileResult.Folder),
+        ///             ["name"] = scmAntiSpywareProfileDs.Apply(getAntiSpywareProfileResult =&gt; getAntiSpywareProfileResult.Name),
+        ///             ["description"] = scmAntiSpywareProfileDs.Apply(getAntiSpywareProfileResult =&gt; getAntiSpywareProfileResult.Description),
+        ///             ["cloudInlineAnalysis"] = scmAntiSpywareProfileDs.Apply(getAntiSpywareProfileResult =&gt; getAntiSpywareProfileResult.CloudInlineAnalysis),
         ///         },
         ///     };
         /// });
@@ -104,13 +104,13 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["scmAntiSpywareProfileOutput"] = 
+        ///         ["scmAntiSpywareProfileOutput"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "profileId", scmAntiSpywareProfileDs.Apply(getAntiSpywareProfileResult =&gt; getAntiSpywareProfileResult.Id) },
-        ///             { "folder", scmAntiSpywareProfileDs.Apply(getAntiSpywareProfileResult =&gt; getAntiSpywareProfileResult.Folder) },
-        ///             { "name", scmAntiSpywareProfileDs.Apply(getAntiSpywareProfileResult =&gt; getAntiSpywareProfileResult.Name) },
-        ///             { "description", scmAntiSpywareProfileDs.Apply(getAntiSpywareProfileResult =&gt; getAntiSpywareProfileResult.Description) },
-        ///             { "cloudInlineAnalysis", scmAntiSpywareProfileDs.Apply(getAntiSpywareProfileResult =&gt; getAntiSpywareProfileResult.CloudInlineAnalysis) },
+        ///             ["profileId"] = scmAntiSpywareProfileDs.Apply(getAntiSpywareProfileResult =&gt; getAntiSpywareProfileResult.Id),
+        ///             ["folder"] = scmAntiSpywareProfileDs.Apply(getAntiSpywareProfileResult =&gt; getAntiSpywareProfileResult.Folder),
+        ///             ["name"] = scmAntiSpywareProfileDs.Apply(getAntiSpywareProfileResult =&gt; getAntiSpywareProfileResult.Name),
+        ///             ["description"] = scmAntiSpywareProfileDs.Apply(getAntiSpywareProfileResult =&gt; getAntiSpywareProfileResult.Description),
+        ///             ["cloudInlineAnalysis"] = scmAntiSpywareProfileDs.Apply(getAntiSpywareProfileResult =&gt; getAntiSpywareProfileResult.CloudInlineAnalysis),
         ///         },
         ///     };
         /// });

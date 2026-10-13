@@ -24,7 +24,7 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     // This data source will call the "ListForwardingProfiles" API endpoint
+        ///     // This function will call the "ListForwardingProfiles" API endpoint
         ///     // and return all forwarding profiles in the "Mobile Users" folder.
         ///     // 1. Use a single data block to fetch ALL forwarding profiles in the "Mobile Users" folder.
         ///     var allMobileUsers = Scm.GetForwardingProfileList.Invoke(new()
@@ -43,10 +43,10 @@ namespace Pulumi.Scm
         ///     {
         ///         ["forwardingProfileDataSourceResultsFromList"] = ,
         ///         ["paginatedForwardingProfiles"] = ,
-        ///         ["paginationForwardingProfilesDetails"] = 
+        ///         ["paginationForwardingProfilesDetails"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "totalObjectsInFolder", paginatedProfilesExample.Apply(getForwardingProfileListResult =&gt; getForwardingProfileListResult.Total) },
-        ///             { "limitUsed", paginatedProfilesExample.Apply(getForwardingProfileListResult =&gt; getForwardingProfileListResult.Limit) },
+        ///             ["totalObjectsInFolder"] = paginatedProfilesExample.Apply(getForwardingProfileListResult =&gt; getForwardingProfileListResult.Total),
+        ///             ["limitUsed"] = paginatedProfilesExample.Apply(getForwardingProfileListResult =&gt; getForwardingProfileListResult.Limit),
         ///         },
         ///     };
         /// });
@@ -68,7 +68,7 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     // This data source will call the "ListForwardingProfiles" API endpoint
+        ///     // This function will call the "ListForwardingProfiles" API endpoint
         ///     // and return all forwarding profiles in the "Mobile Users" folder.
         ///     // 1. Use a single data block to fetch ALL forwarding profiles in the "Mobile Users" folder.
         ///     var allMobileUsers = Scm.GetForwardingProfileList.Invoke(new()
@@ -87,10 +87,10 @@ namespace Pulumi.Scm
         ///     {
         ///         ["forwardingProfileDataSourceResultsFromList"] = ,
         ///         ["paginatedForwardingProfiles"] = ,
-        ///         ["paginationForwardingProfilesDetails"] = 
+        ///         ["paginationForwardingProfilesDetails"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "totalObjectsInFolder", paginatedProfilesExample.Apply(getForwardingProfileListResult =&gt; getForwardingProfileListResult.Total) },
-        ///             { "limitUsed", paginatedProfilesExample.Apply(getForwardingProfileListResult =&gt; getForwardingProfileListResult.Limit) },
+        ///             ["totalObjectsInFolder"] = paginatedProfilesExample.Apply(getForwardingProfileListResult =&gt; getForwardingProfileListResult.Total),
+        ///             ["limitUsed"] = paginatedProfilesExample.Apply(getForwardingProfileListResult =&gt; getForwardingProfileListResult.Limit),
         ///         },
         ///     };
         /// });
@@ -112,7 +112,7 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     // This data source will call the "ListForwardingProfiles" API endpoint
+        ///     // This function will call the "ListForwardingProfiles" API endpoint
         ///     // and return all forwarding profiles in the "Mobile Users" folder.
         ///     // 1. Use a single data block to fetch ALL forwarding profiles in the "Mobile Users" folder.
         ///     var allMobileUsers = Scm.GetForwardingProfileList.Invoke(new()
@@ -131,10 +131,10 @@ namespace Pulumi.Scm
         ///     {
         ///         ["forwardingProfileDataSourceResultsFromList"] = ,
         ///         ["paginatedForwardingProfiles"] = ,
-        ///         ["paginationForwardingProfilesDetails"] = 
+        ///         ["paginationForwardingProfilesDetails"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "totalObjectsInFolder", paginatedProfilesExample.Apply(getForwardingProfileListResult =&gt; getForwardingProfileListResult.Total) },
-        ///             { "limitUsed", paginatedProfilesExample.Apply(getForwardingProfileListResult =&gt; getForwardingProfileListResult.Limit) },
+        ///             ["totalObjectsInFolder"] = paginatedProfilesExample.Apply(getForwardingProfileListResult =&gt; getForwardingProfileListResult.Total),
+        ///             ["limitUsed"] = paginatedProfilesExample.Apply(getForwardingProfileListResult =&gt; getForwardingProfileListResult.Limit),
         ///         },
         ///     };
         /// });

@@ -36,7 +36,7 @@ namespace Pulumi.Scm
         ///         {
         ///             return conn.Name;
         ///         }).ToList(),
-        ///         ["totalConnectionsCount"] = allSites.Apply(getSiteListResult =&gt; getSiteListResult.Datas).Length(),
+        ///         ["totalConnectionsCount"] = allSites.Apply(getSiteListResult =&gt; getSiteListResult.Datas).Length,
         ///     };
         /// });
         /// ```
@@ -69,7 +69,7 @@ namespace Pulumi.Scm
         ///         {
         ///             return conn.Name;
         ///         }).ToList(),
-        ///         ["totalConnectionsCount"] = allSites.Apply(getSiteListResult =&gt; getSiteListResult.Datas).Length(),
+        ///         ["totalConnectionsCount"] = allSites.Apply(getSiteListResult =&gt; getSiteListResult.Datas).Length,
         ///     };
         /// });
         /// ```
@@ -102,7 +102,7 @@ namespace Pulumi.Scm
         ///         {
         ///             return conn.Name;
         ///         }).ToList(),
-        ///         ["totalConnectionsCount"] = allSites.Apply(getSiteListResult =&gt; getSiteListResult.Datas).Length(),
+        ///         ["totalConnectionsCount"] = allSites.Apply(getSiteListResult =&gt; getSiteListResult.Datas).Length,
         ///     };
         /// });
         /// ```

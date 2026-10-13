@@ -32,15 +32,15 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["layer3SubinterfaceDataSourceResults"] = 
+        ///         ["layer3SubinterfaceDataSourceResults"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "id", scmL3SubinterfaceDs.Apply(getLayer3SubinterfaceResult =&gt; getLayer3SubinterfaceResult.Id) },
-        ///             { "name", scmL3SubinterfaceDs.Apply(getLayer3SubinterfaceResult =&gt; getLayer3SubinterfaceResult.Name) },
-        ///             { "comment", scmL3SubinterfaceDs.Apply(getLayer3SubinterfaceResult =&gt; getLayer3SubinterfaceResult.Comment) },
-        ///             { "ip", scmL3SubinterfaceDs.Apply(getLayer3SubinterfaceResult =&gt; getLayer3SubinterfaceResult.Ips) },
-        ///             { "tag", scmL3SubinterfaceDs.Apply(getLayer3SubinterfaceResult =&gt; getLayer3SubinterfaceResult.Tag) },
-        ///             { "parentInterface", scmL3SubinterfaceDs.Apply(getLayer3SubinterfaceResult =&gt; getLayer3SubinterfaceResult.ParentInterface) },
-        ///             { "folder", scmL3SubinterfaceDs.Apply(getLayer3SubinterfaceResult =&gt; getLayer3SubinterfaceResult.Folder) },
+        ///             ["id"] = scmL3SubinterfaceDs.Apply(getLayer3SubinterfaceResult =&gt; getLayer3SubinterfaceResult.Id),
+        ///             ["name"] = scmL3SubinterfaceDs.Apply(getLayer3SubinterfaceResult =&gt; getLayer3SubinterfaceResult.Name),
+        ///             ["comment"] = scmL3SubinterfaceDs.Apply(getLayer3SubinterfaceResult =&gt; getLayer3SubinterfaceResult.Comment),
+        ///             ["ip"] = scmL3SubinterfaceDs.Apply(getLayer3SubinterfaceResult =&gt; getLayer3SubinterfaceResult.Ips),
+        ///             ["tag"] = scmL3SubinterfaceDs.Apply(getLayer3SubinterfaceResult =&gt; getLayer3SubinterfaceResult.Tag),
+        ///             ["parentInterface"] = scmL3SubinterfaceDs.Apply(getLayer3SubinterfaceResult =&gt; getLayer3SubinterfaceResult.ParentInterface),
+        ///             ["folder"] = scmL3SubinterfaceDs.Apply(getLayer3SubinterfaceResult =&gt; getLayer3SubinterfaceResult.Folder),
         ///         },
         ///     };
         /// });
@@ -70,15 +70,15 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["layer3SubinterfaceDataSourceResults"] = 
+        ///         ["layer3SubinterfaceDataSourceResults"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "id", scmL3SubinterfaceDs.Apply(getLayer3SubinterfaceResult =&gt; getLayer3SubinterfaceResult.Id) },
-        ///             { "name", scmL3SubinterfaceDs.Apply(getLayer3SubinterfaceResult =&gt; getLayer3SubinterfaceResult.Name) },
-        ///             { "comment", scmL3SubinterfaceDs.Apply(getLayer3SubinterfaceResult =&gt; getLayer3SubinterfaceResult.Comment) },
-        ///             { "ip", scmL3SubinterfaceDs.Apply(getLayer3SubinterfaceResult =&gt; getLayer3SubinterfaceResult.Ips) },
-        ///             { "tag", scmL3SubinterfaceDs.Apply(getLayer3SubinterfaceResult =&gt; getLayer3SubinterfaceResult.Tag) },
-        ///             { "parentInterface", scmL3SubinterfaceDs.Apply(getLayer3SubinterfaceResult =&gt; getLayer3SubinterfaceResult.ParentInterface) },
-        ///             { "folder", scmL3SubinterfaceDs.Apply(getLayer3SubinterfaceResult =&gt; getLayer3SubinterfaceResult.Folder) },
+        ///             ["id"] = scmL3SubinterfaceDs.Apply(getLayer3SubinterfaceResult =&gt; getLayer3SubinterfaceResult.Id),
+        ///             ["name"] = scmL3SubinterfaceDs.Apply(getLayer3SubinterfaceResult =&gt; getLayer3SubinterfaceResult.Name),
+        ///             ["comment"] = scmL3SubinterfaceDs.Apply(getLayer3SubinterfaceResult =&gt; getLayer3SubinterfaceResult.Comment),
+        ///             ["ip"] = scmL3SubinterfaceDs.Apply(getLayer3SubinterfaceResult =&gt; getLayer3SubinterfaceResult.Ips),
+        ///             ["tag"] = scmL3SubinterfaceDs.Apply(getLayer3SubinterfaceResult =&gt; getLayer3SubinterfaceResult.Tag),
+        ///             ["parentInterface"] = scmL3SubinterfaceDs.Apply(getLayer3SubinterfaceResult =&gt; getLayer3SubinterfaceResult.ParentInterface),
+        ///             ["folder"] = scmL3SubinterfaceDs.Apply(getLayer3SubinterfaceResult =&gt; getLayer3SubinterfaceResult.Folder),
         ///         },
         ///     };
         /// });
@@ -108,15 +108,15 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["layer3SubinterfaceDataSourceResults"] = 
+        ///         ["layer3SubinterfaceDataSourceResults"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "id", scmL3SubinterfaceDs.Apply(getLayer3SubinterfaceResult =&gt; getLayer3SubinterfaceResult.Id) },
-        ///             { "name", scmL3SubinterfaceDs.Apply(getLayer3SubinterfaceResult =&gt; getLayer3SubinterfaceResult.Name) },
-        ///             { "comment", scmL3SubinterfaceDs.Apply(getLayer3SubinterfaceResult =&gt; getLayer3SubinterfaceResult.Comment) },
-        ///             { "ip", scmL3SubinterfaceDs.Apply(getLayer3SubinterfaceResult =&gt; getLayer3SubinterfaceResult.Ips) },
-        ///             { "tag", scmL3SubinterfaceDs.Apply(getLayer3SubinterfaceResult =&gt; getLayer3SubinterfaceResult.Tag) },
-        ///             { "parentInterface", scmL3SubinterfaceDs.Apply(getLayer3SubinterfaceResult =&gt; getLayer3SubinterfaceResult.ParentInterface) },
-        ///             { "folder", scmL3SubinterfaceDs.Apply(getLayer3SubinterfaceResult =&gt; getLayer3SubinterfaceResult.Folder) },
+        ///             ["id"] = scmL3SubinterfaceDs.Apply(getLayer3SubinterfaceResult =&gt; getLayer3SubinterfaceResult.Id),
+        ///             ["name"] = scmL3SubinterfaceDs.Apply(getLayer3SubinterfaceResult =&gt; getLayer3SubinterfaceResult.Name),
+        ///             ["comment"] = scmL3SubinterfaceDs.Apply(getLayer3SubinterfaceResult =&gt; getLayer3SubinterfaceResult.Comment),
+        ///             ["ip"] = scmL3SubinterfaceDs.Apply(getLayer3SubinterfaceResult =&gt; getLayer3SubinterfaceResult.Ips),
+        ///             ["tag"] = scmL3SubinterfaceDs.Apply(getLayer3SubinterfaceResult =&gt; getLayer3SubinterfaceResult.Tag),
+        ///             ["parentInterface"] = scmL3SubinterfaceDs.Apply(getLayer3SubinterfaceResult =&gt; getLayer3SubinterfaceResult.ParentInterface),
+        ///             ["folder"] = scmL3SubinterfaceDs.Apply(getLayer3SubinterfaceResult =&gt; getLayer3SubinterfaceResult.Folder),
         ///         },
         ///     };
         /// });

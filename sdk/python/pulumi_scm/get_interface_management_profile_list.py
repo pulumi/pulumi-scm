@@ -164,7 +164,7 @@ def get_interface_management_profile_list(device: Optional[_builtins.str] = None
 
     # -----------------------------------------------------------------------------
     # 6. DATA SOURCE: Fetch a list of Interface Management Profiles
-    # This data source retrieves multiple Interface Management Profiles from SCM.
+    # This function retrieves multiple Interface Management Profiles from SCM.
     # -----------------------------------------------------------------------------
     all_mgmt_profiles = scm.get_interface_management_profile_list(limit=50,
         folder="All")
@@ -221,7 +221,7 @@ def get_interface_management_profile_list_output(device: pulumi.Input[Optional[O
 
     # -----------------------------------------------------------------------------
     # 6. DATA SOURCE: Fetch a list of Interface Management Profiles
-    # This data source retrieves multiple Interface Management Profiles from SCM.
+    # This function retrieves multiple Interface Management Profiles from SCM.
     # -----------------------------------------------------------------------------
     all_mgmt_profiles = scm.get_interface_management_profile_list(limit=50,
         folder="All")

@@ -25,7 +25,7 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // ------------------------------------------------------------------
-        ///     // Data Source: SCM Service Connection Group (Single Lookup)
+        ///     // Function: SCM Service Connection Group (Single Lookup)
         ///     // ------------------------------------------------------------------
         ///     var groupLookup = Scm.GetServiceConnectionGroup.Invoke(new()
         ///     {
@@ -56,7 +56,7 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // ------------------------------------------------------------------
-        ///     // Data Source: SCM Service Connection Group (Single Lookup)
+        ///     // Function: SCM Service Connection Group (Single Lookup)
         ///     // ------------------------------------------------------------------
         ///     var groupLookup = Scm.GetServiceConnectionGroup.Invoke(new()
         ///     {
@@ -87,7 +87,7 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // ------------------------------------------------------------------
-        ///     // Data Source: SCM Service Connection Group (Single Lookup)
+        ///     // Function: SCM Service Connection Group (Single Lookup)
         ///     // ------------------------------------------------------------------
         ///     var groupLookup = Scm.GetServiceConnectionGroup.Invoke(new()
         ///     {

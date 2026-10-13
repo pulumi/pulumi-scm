@@ -29,7 +29,7 @@ import (
 //		pulumi.Run(func(ctx *pulumi.Context) error {
 //			// -----------------------------------------------------------------------------
 //			// 6. DATA SOURCE: Fetch a list of Interface Management Profiles
-//			// This data source retrieves multiple Interface Management Profiles from SCM.
+//			// This function retrieves multiple Interface Management Profiles from SCM.
 //			// -----------------------------------------------------------------------------
 //			allMgmtProfiles, err := scm.GetInterfaceManagementProfileList(ctx, &scm.GetInterfaceManagementProfileListArgs{
 //				Limit:  pulumi.IntRef(50),

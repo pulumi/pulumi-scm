@@ -35,12 +35,12 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["scmSamlServerProfileDetails"] = 
+        ///         ["scmSamlServerProfileDetails"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "folder", scmSamlServerProf.Apply(getSamlServerProfileResult =&gt; getSamlServerProfileResult.Folder) },
-        ///             { "name", scmSamlServerProf.Apply(getSamlServerProfileResult =&gt; getSamlServerProfileResult.Name) },
-        ///             { "id", scmSamlServerProf.Apply(getSamlServerProfileResult =&gt; getSamlServerProfileResult.Id) },
-        ///             { "ssoUrl", scmSamlServerProf.Apply(getSamlServerProfileResult =&gt; getSamlServerProfileResult.SsoUrl) },
+        ///             ["folder"] = scmSamlServerProf.Apply(getSamlServerProfileResult =&gt; getSamlServerProfileResult.Folder),
+        ///             ["name"] = scmSamlServerProf.Apply(getSamlServerProfileResult =&gt; getSamlServerProfileResult.Name),
+        ///             ["id"] = scmSamlServerProf.Apply(getSamlServerProfileResult =&gt; getSamlServerProfileResult.Id),
+        ///             ["ssoUrl"] = scmSamlServerProf.Apply(getSamlServerProfileResult =&gt; getSamlServerProfileResult.SsoUrl),
         ///         },
         ///     };
         /// });
@@ -73,12 +73,12 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["scmSamlServerProfileDetails"] = 
+        ///         ["scmSamlServerProfileDetails"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "folder", scmSamlServerProf.Apply(getSamlServerProfileResult =&gt; getSamlServerProfileResult.Folder) },
-        ///             { "name", scmSamlServerProf.Apply(getSamlServerProfileResult =&gt; getSamlServerProfileResult.Name) },
-        ///             { "id", scmSamlServerProf.Apply(getSamlServerProfileResult =&gt; getSamlServerProfileResult.Id) },
-        ///             { "ssoUrl", scmSamlServerProf.Apply(getSamlServerProfileResult =&gt; getSamlServerProfileResult.SsoUrl) },
+        ///             ["folder"] = scmSamlServerProf.Apply(getSamlServerProfileResult =&gt; getSamlServerProfileResult.Folder),
+        ///             ["name"] = scmSamlServerProf.Apply(getSamlServerProfileResult =&gt; getSamlServerProfileResult.Name),
+        ///             ["id"] = scmSamlServerProf.Apply(getSamlServerProfileResult =&gt; getSamlServerProfileResult.Id),
+        ///             ["ssoUrl"] = scmSamlServerProf.Apply(getSamlServerProfileResult =&gt; getSamlServerProfileResult.SsoUrl),
         ///         },
         ///     };
         /// });
@@ -111,12 +111,12 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["scmSamlServerProfileDetails"] = 
+        ///         ["scmSamlServerProfileDetails"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "folder", scmSamlServerProf.Apply(getSamlServerProfileResult =&gt; getSamlServerProfileResult.Folder) },
-        ///             { "name", scmSamlServerProf.Apply(getSamlServerProfileResult =&gt; getSamlServerProfileResult.Name) },
-        ///             { "id", scmSamlServerProf.Apply(getSamlServerProfileResult =&gt; getSamlServerProfileResult.Id) },
-        ///             { "ssoUrl", scmSamlServerProf.Apply(getSamlServerProfileResult =&gt; getSamlServerProfileResult.SsoUrl) },
+        ///             ["folder"] = scmSamlServerProf.Apply(getSamlServerProfileResult =&gt; getSamlServerProfileResult.Folder),
+        ///             ["name"] = scmSamlServerProf.Apply(getSamlServerProfileResult =&gt; getSamlServerProfileResult.Name),
+        ///             ["id"] = scmSamlServerProf.Apply(getSamlServerProfileResult =&gt; getSamlServerProfileResult.Id),
+        ///             ["ssoUrl"] = scmSamlServerProf.Apply(getSamlServerProfileResult =&gt; getSamlServerProfileResult.SsoUrl),
         ///         },
         ///     };
         /// });

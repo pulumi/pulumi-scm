@@ -31,10 +31,10 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["fetchedSettingListSummary"] = 
+        ///         ["fetchedSettingListSummary"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "countOfSettingsFetched", allSettings.Apply(getServiceRouteListResult =&gt; getServiceRouteListResult.Total) },
-        ///             { "value", allSettings.Apply(getServiceRouteListResult =&gt; getServiceRouteListResult.Datas[0]) },
+        ///             ["countOfSettingsFetched"] = allSettings.Apply(getServiceRouteListResult =&gt; getServiceRouteListResult.Total),
+        ///             ["value"] = allSettings.Apply(getServiceRouteListResult =&gt; getServiceRouteListResult.Datas[0]),
         ///         },
         ///     };
         /// });
@@ -63,10 +63,10 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["fetchedSettingListSummary"] = 
+        ///         ["fetchedSettingListSummary"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "countOfSettingsFetched", allSettings.Apply(getServiceRouteListResult =&gt; getServiceRouteListResult.Total) },
-        ///             { "value", allSettings.Apply(getServiceRouteListResult =&gt; getServiceRouteListResult.Datas[0]) },
+        ///             ["countOfSettingsFetched"] = allSettings.Apply(getServiceRouteListResult =&gt; getServiceRouteListResult.Total),
+        ///             ["value"] = allSettings.Apply(getServiceRouteListResult =&gt; getServiceRouteListResult.Datas[0]),
         ///         },
         ///     };
         /// });
@@ -95,10 +95,10 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["fetchedSettingListSummary"] = 
+        ///         ["fetchedSettingListSummary"] = new Dictionary&lt;string, object?&gt;
         ///         {
-        ///             { "countOfSettingsFetched", allSettings.Apply(getServiceRouteListResult =&gt; getServiceRouteListResult.Total) },
-        ///             { "value", allSettings.Apply(getServiceRouteListResult =&gt; getServiceRouteListResult.Datas[0]) },
+        ///             ["countOfSettingsFetched"] = allSettings.Apply(getServiceRouteListResult =&gt; getServiceRouteListResult.Total),
+        ///             ["value"] = allSettings.Apply(getServiceRouteListResult =&gt; getServiceRouteListResult.Datas[0]),
         ///         },
         ///     };
         /// });
