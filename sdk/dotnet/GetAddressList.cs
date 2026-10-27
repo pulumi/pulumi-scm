@@ -41,8 +41,20 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["addressDataSourceResultsFromList"] = ,
-        ///         ["paginatedAddresses"] = ,
+        ///         ["addressDataSourceResultsFromList"] = .ToDictionary(item =&gt; {
+        ///             var addr = item.Value;
+        ///             return addr.Id;
+        ///         }, item =&gt; {
+        ///             var addr = item.Value;
+        ///             return addr;
+        ///         }),
+        ///         ["paginatedAddresses"] = .ToDictionary(item =&gt; {
+        ///             var addr = item.Value;
+        ///             return addr.Id;
+        ///         }, item =&gt; {
+        ///             var addr = item.Value;
+        ///             return addr;
+        ///         }),
         ///         ["paginationAddressesDetails"] = new Dictionary&lt;string, object?&gt;
         ///         {
         ///             ["totalObjectsInFolder"] = paginatedAddressesExample.Apply(getAddressListResult =&gt; getAddressListResult.Total),
@@ -85,8 +97,20 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["addressDataSourceResultsFromList"] = ,
-        ///         ["paginatedAddresses"] = ,
+        ///         ["addressDataSourceResultsFromList"] = .ToDictionary(item =&gt; {
+        ///             var addr = item.Value;
+        ///             return addr.Id;
+        ///         }, item =&gt; {
+        ///             var addr = item.Value;
+        ///             return addr;
+        ///         }),
+        ///         ["paginatedAddresses"] = .ToDictionary(item =&gt; {
+        ///             var addr = item.Value;
+        ///             return addr.Id;
+        ///         }, item =&gt; {
+        ///             var addr = item.Value;
+        ///             return addr;
+        ///         }),
         ///         ["paginationAddressesDetails"] = new Dictionary&lt;string, object?&gt;
         ///         {
         ///             ["totalObjectsInFolder"] = paginatedAddressesExample.Apply(getAddressListResult =&gt; getAddressListResult.Total),
@@ -129,8 +153,20 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["addressDataSourceResultsFromList"] = ,
-        ///         ["paginatedAddresses"] = ,
+        ///         ["addressDataSourceResultsFromList"] = .ToDictionary(item =&gt; {
+        ///             var addr = item.Value;
+        ///             return addr.Id;
+        ///         }, item =&gt; {
+        ///             var addr = item.Value;
+        ///             return addr;
+        ///         }),
+        ///         ["paginatedAddresses"] = .ToDictionary(item =&gt; {
+        ///             var addr = item.Value;
+        ///             return addr.Id;
+        ///         }, item =&gt; {
+        ///             var addr = item.Value;
+        ///             return addr;
+        ///         }),
         ///         ["paginationAddressesDetails"] = new Dictionary&lt;string, object?&gt;
         ///         {
         ///             ["totalObjectsInFolder"] = paginatedAddressesExample.Apply(getAddressListResult =&gt; getAddressListResult.Total),

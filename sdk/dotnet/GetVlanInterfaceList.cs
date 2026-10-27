@@ -32,7 +32,13 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["scmVlanInterfaceList"] = ,
+        ///         ["scmVlanInterfaceList"] = .ToDictionary(item =&gt; {
+        ///             var interface = item.Value;
+        ///             return @interface.Name;
+        ///         }, item =&gt; {
+        ///             var interface = item.Value;
+        ///             return @interface;
+        ///         }),
         ///     };
         /// });
         /// ```
@@ -61,7 +67,13 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["scmVlanInterfaceList"] = ,
+        ///         ["scmVlanInterfaceList"] = .ToDictionary(item =&gt; {
+        ///             var interface = item.Value;
+        ///             return @interface.Name;
+        ///         }, item =&gt; {
+        ///             var interface = item.Value;
+        ///             return @interface;
+        ///         }),
         ///     };
         /// });
         /// ```
@@ -90,7 +102,13 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["scmVlanInterfaceList"] = ,
+        ///         ["scmVlanInterfaceList"] = .ToDictionary(item =&gt; {
+        ///             var interface = item.Value;
+        ///             return @interface.Name;
+        ///         }, item =&gt; {
+        ///             var interface = item.Value;
+        ///             return @interface;
+        ///         }),
         ///     };
         /// });
         /// ```

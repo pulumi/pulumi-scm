@@ -32,7 +32,13 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["scmBgpRouteMapList"] = ,
+        ///         ["scmBgpRouteMapList"] = .ToDictionary(item =&gt; {
+        ///             var routeMap = item.Value;
+        ///             return routeMap.Id;
+        ///         }, item =&gt; {
+        ///             var routeMap = item.Value;
+        ///             return routeMap;
+        ///         }),
         ///     };
         /// });
         /// ```
@@ -61,7 +67,13 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["scmBgpRouteMapList"] = ,
+        ///         ["scmBgpRouteMapList"] = .ToDictionary(item =&gt; {
+        ///             var routeMap = item.Value;
+        ///             return routeMap.Id;
+        ///         }, item =&gt; {
+        ///             var routeMap = item.Value;
+        ///             return routeMap;
+        ///         }),
         ///     };
         /// });
         /// ```
@@ -90,7 +102,13 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["scmBgpRouteMapList"] = ,
+        ///         ["scmBgpRouteMapList"] = .ToDictionary(item =&gt; {
+        ///             var routeMap = item.Value;
+        ///             return routeMap.Id;
+        ///         }, item =&gt; {
+        ///             var routeMap = item.Value;
+        ///             return routeMap;
+        ///         }),
         ///     };
         /// });
         /// ```

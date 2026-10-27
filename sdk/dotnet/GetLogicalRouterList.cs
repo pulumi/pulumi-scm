@@ -33,7 +33,13 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["scmLogicalRouterList"] = ,
+        ///         ["scmLogicalRouterList"] = .ToDictionary(item =&gt; {
+        ///             var router = item.Value;
+        ///             return router.Name;
+        ///         }, item =&gt; {
+        ///             var router = item.Value;
+        ///             return router;
+        ///         }),
         ///     };
         /// });
         /// ```
@@ -63,7 +69,13 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["scmLogicalRouterList"] = ,
+        ///         ["scmLogicalRouterList"] = .ToDictionary(item =&gt; {
+        ///             var router = item.Value;
+        ///             return router.Name;
+        ///         }, item =&gt; {
+        ///             var router = item.Value;
+        ///             return router;
+        ///         }),
         ///     };
         /// });
         /// ```
@@ -93,7 +105,13 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["scmLogicalRouterList"] = ,
+        ///         ["scmLogicalRouterList"] = .ToDictionary(item =&gt; {
+        ///             var router = item.Value;
+        ///             return router.Name;
+        ///         }, item =&gt; {
+        ///             var router = item.Value;
+        ///             return router;
+        ///         }),
         ///     };
         /// });
         /// ```

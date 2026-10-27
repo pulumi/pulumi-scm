@@ -41,8 +41,20 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["forwardingProfileRegionalAndCustomProxyDataSourceResultsFromList"] = ,
-        ///         ["paginatedProxies"] = ,
+        ///         ["forwardingProfileRegionalAndCustomProxyDataSourceResultsFromList"] = .ToDictionary(item =&gt; {
+        ///             var proxy = item.Value;
+        ///             return proxy.Id;
+        ///         }, item =&gt; {
+        ///             var proxy = item.Value;
+        ///             return proxy;
+        ///         }),
+        ///         ["paginatedProxies"] = .ToDictionary(item =&gt; {
+        ///             var proxy = item.Value;
+        ///             return proxy.Id;
+        ///         }, item =&gt; {
+        ///             var proxy = item.Value;
+        ///             return proxy;
+        ///         }),
         ///         ["paginationProxiesDetails"] = new Dictionary&lt;string, object?&gt;
         ///         {
         ///             ["totalObjectsInFolder"] = paginatedProxiesExample.Apply(getForwardingProfileRegionalAndCustomProxyListResult =&gt; getForwardingProfileRegionalAndCustomProxyListResult.Total),
@@ -85,8 +97,20 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["forwardingProfileRegionalAndCustomProxyDataSourceResultsFromList"] = ,
-        ///         ["paginatedProxies"] = ,
+        ///         ["forwardingProfileRegionalAndCustomProxyDataSourceResultsFromList"] = .ToDictionary(item =&gt; {
+        ///             var proxy = item.Value;
+        ///             return proxy.Id;
+        ///         }, item =&gt; {
+        ///             var proxy = item.Value;
+        ///             return proxy;
+        ///         }),
+        ///         ["paginatedProxies"] = .ToDictionary(item =&gt; {
+        ///             var proxy = item.Value;
+        ///             return proxy.Id;
+        ///         }, item =&gt; {
+        ///             var proxy = item.Value;
+        ///             return proxy;
+        ///         }),
         ///         ["paginationProxiesDetails"] = new Dictionary&lt;string, object?&gt;
         ///         {
         ///             ["totalObjectsInFolder"] = paginatedProxiesExample.Apply(getForwardingProfileRegionalAndCustomProxyListResult =&gt; getForwardingProfileRegionalAndCustomProxyListResult.Total),
@@ -129,8 +153,20 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["forwardingProfileRegionalAndCustomProxyDataSourceResultsFromList"] = ,
-        ///         ["paginatedProxies"] = ,
+        ///         ["forwardingProfileRegionalAndCustomProxyDataSourceResultsFromList"] = .ToDictionary(item =&gt; {
+        ///             var proxy = item.Value;
+        ///             return proxy.Id;
+        ///         }, item =&gt; {
+        ///             var proxy = item.Value;
+        ///             return proxy;
+        ///         }),
+        ///         ["paginatedProxies"] = .ToDictionary(item =&gt; {
+        ///             var proxy = item.Value;
+        ///             return proxy.Id;
+        ///         }, item =&gt; {
+        ///             var proxy = item.Value;
+        ///             return proxy;
+        ///         }),
         ///         ["paginationProxiesDetails"] = new Dictionary&lt;string, object?&gt;
         ///         {
         ///             ["totalObjectsInFolder"] = paginatedProxiesExample.Apply(getForwardingProfileRegionalAndCustomProxyListResult =&gt; getForwardingProfileRegionalAndCustomProxyListResult.Total),
