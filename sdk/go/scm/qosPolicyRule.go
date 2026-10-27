@@ -86,7 +86,7 @@ import (
 //				Folder:           pulumi.String("ngfw-shared"),
 //				Position:         pulumi.String("pre"),
 //				RelativePosition: pulumi.String("before"),
-//				TargetRule:       anchorQosRule.ID().ToIDOutput().ToStringOutput(),
+//				TargetRule:       anchorQosRule.ID(),
 //				Action: &scm.QosPolicyRuleActionArgs{
 //					Class: pulumi.String("5"),
 //				},
@@ -100,7 +100,7 @@ import (
 //				Folder:           pulumi.String("ngfw-shared"),
 //				Position:         pulumi.String("pre"),
 //				RelativePosition: pulumi.String("after"),
-//				TargetRule:       anchorQosRule.ID().ToIDOutput().ToStringOutput(),
+//				TargetRule:       anchorQosRule.ID(),
 //				Action: &scm.QosPolicyRuleActionArgs{
 //					Class: pulumi.String("4"),
 //				},

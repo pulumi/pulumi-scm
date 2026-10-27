@@ -32,7 +32,13 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["scmBgpRedistributionProfileList"] = ,
+        ///         ["scmBgpRedistributionProfileList"] = .ToDictionary(item =&gt; {
+        ///             var profile = item.Value;
+        ///             return profile.Id;
+        ///         }, item =&gt; {
+        ///             var profile = item.Value;
+        ///             return profile;
+        ///         }),
         ///     };
         /// });
         /// ```
@@ -61,7 +67,13 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["scmBgpRedistributionProfileList"] = ,
+        ///         ["scmBgpRedistributionProfileList"] = .ToDictionary(item =&gt; {
+        ///             var profile = item.Value;
+        ///             return profile.Id;
+        ///         }, item =&gt; {
+        ///             var profile = item.Value;
+        ///             return profile;
+        ///         }),
         ///     };
         /// });
         /// ```
@@ -90,7 +102,13 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["scmBgpRedistributionProfileList"] = ,
+        ///         ["scmBgpRedistributionProfileList"] = .ToDictionary(item =&gt; {
+        ///             var profile = item.Value;
+        ///             return profile.Id;
+        ///         }, item =&gt; {
+        ///             var profile = item.Value;
+        ///             return profile;
+        ///         }),
         ///     };
         /// });
         /// ```

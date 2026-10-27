@@ -40,7 +40,13 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["allSharedServicesMap"] = ,
+        ///         ["allSharedServicesMap"] = .ToDictionary(item =&gt; {
+        ///             var svc = item.Value;
+        ///             return svc.Name;
+        ///         }, item =&gt; {
+        ///             var svc = item.Value;
+        ///             return svc;
+        ///         }),
         ///         ["paginatedServicesList"] = paginatedServices.Apply(getServiceListResult =&gt; getServiceListResult.Datas),
         ///         ["paginatedServicesDetails"] = new Dictionary&lt;string, object?&gt;
         ///         {
@@ -84,7 +90,13 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["allSharedServicesMap"] = ,
+        ///         ["allSharedServicesMap"] = .ToDictionary(item =&gt; {
+        ///             var svc = item.Value;
+        ///             return svc.Name;
+        ///         }, item =&gt; {
+        ///             var svc = item.Value;
+        ///             return svc;
+        ///         }),
         ///         ["paginatedServicesList"] = paginatedServices.Apply(getServiceListResult =&gt; getServiceListResult.Datas),
         ///         ["paginatedServicesDetails"] = new Dictionary&lt;string, object?&gt;
         ///         {
@@ -128,7 +140,13 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["allSharedServicesMap"] = ,
+        ///         ["allSharedServicesMap"] = .ToDictionary(item =&gt; {
+        ///             var svc = item.Value;
+        ///             return svc.Name;
+        ///         }, item =&gt; {
+        ///             var svc = item.Value;
+        ///             return svc;
+        ///         }),
         ///         ["paginatedServicesList"] = paginatedServices.Apply(getServiceListResult =&gt; getServiceListResult.Datas),
         ///         ["paginatedServicesDetails"] = new Dictionary&lt;string, object?&gt;
         ///         {

@@ -41,8 +41,20 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["forwardingProfileDestinationDataSourceResultsFromList"] = ,
-        ///         ["paginatedDestinations"] = ,
+        ///         ["forwardingProfileDestinationDataSourceResultsFromList"] = .ToDictionary(item =&gt; {
+        ///             var dest = item.Value;
+        ///             return dest.Id;
+        ///         }, item =&gt; {
+        ///             var dest = item.Value;
+        ///             return dest;
+        ///         }),
+        ///         ["paginatedDestinations"] = .ToDictionary(item =&gt; {
+        ///             var dest = item.Value;
+        ///             return dest.Id;
+        ///         }, item =&gt; {
+        ///             var dest = item.Value;
+        ///             return dest;
+        ///         }),
         ///         ["paginationDestinationsDetails"] = new Dictionary&lt;string, object?&gt;
         ///         {
         ///             ["totalObjectsInFolder"] = paginatedDestinationsExample.Apply(getForwardingProfileDestinationListResult =&gt; getForwardingProfileDestinationListResult.Total),
@@ -85,8 +97,20 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["forwardingProfileDestinationDataSourceResultsFromList"] = ,
-        ///         ["paginatedDestinations"] = ,
+        ///         ["forwardingProfileDestinationDataSourceResultsFromList"] = .ToDictionary(item =&gt; {
+        ///             var dest = item.Value;
+        ///             return dest.Id;
+        ///         }, item =&gt; {
+        ///             var dest = item.Value;
+        ///             return dest;
+        ///         }),
+        ///         ["paginatedDestinations"] = .ToDictionary(item =&gt; {
+        ///             var dest = item.Value;
+        ///             return dest.Id;
+        ///         }, item =&gt; {
+        ///             var dest = item.Value;
+        ///             return dest;
+        ///         }),
         ///         ["paginationDestinationsDetails"] = new Dictionary&lt;string, object?&gt;
         ///         {
         ///             ["totalObjectsInFolder"] = paginatedDestinationsExample.Apply(getForwardingProfileDestinationListResult =&gt; getForwardingProfileDestinationListResult.Total),
@@ -129,8 +153,20 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["forwardingProfileDestinationDataSourceResultsFromList"] = ,
-        ///         ["paginatedDestinations"] = ,
+        ///         ["forwardingProfileDestinationDataSourceResultsFromList"] = .ToDictionary(item =&gt; {
+        ///             var dest = item.Value;
+        ///             return dest.Id;
+        ///         }, item =&gt; {
+        ///             var dest = item.Value;
+        ///             return dest;
+        ///         }),
+        ///         ["paginatedDestinations"] = .ToDictionary(item =&gt; {
+        ///             var dest = item.Value;
+        ///             return dest.Id;
+        ///         }, item =&gt; {
+        ///             var dest = item.Value;
+        ///             return dest;
+        ///         }),
         ///         ["paginationDestinationsDetails"] = new Dictionary&lt;string, object?&gt;
         ///         {
         ///             ["totalObjectsInFolder"] = paginatedDestinationsExample.Apply(getForwardingProfileDestinationListResult =&gt; getForwardingProfileDestinationListResult.Total),

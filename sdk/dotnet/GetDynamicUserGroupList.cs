@@ -40,8 +40,20 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["dugResultsFromList"] = ,
-        ///         ["paginatedDugs"] = ,
+        ///         ["dugResultsFromList"] = .ToDictionary(item =&gt; {
+        ///             var group = item.Value;
+        ///             return @group.Id;
+        ///         }, item =&gt; {
+        ///             var group = item.Value;
+        ///             return @group;
+        ///         }),
+        ///         ["paginatedDugs"] = .ToDictionary(item =&gt; {
+        ///             var group = item.Value;
+        ///             return @group.Id;
+        ///         }, item =&gt; {
+        ///             var group = item.Value;
+        ///             return @group;
+        ///         }),
         ///         ["paginationDugsDetails"] = new Dictionary&lt;string, object?&gt;
         ///         {
         ///             ["totalObjectsInFolder"] = paginatedDugsExample.Apply(getDynamicUserGroupListResult =&gt; getDynamicUserGroupListResult.Total),
@@ -83,8 +95,20 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["dugResultsFromList"] = ,
-        ///         ["paginatedDugs"] = ,
+        ///         ["dugResultsFromList"] = .ToDictionary(item =&gt; {
+        ///             var group = item.Value;
+        ///             return @group.Id;
+        ///         }, item =&gt; {
+        ///             var group = item.Value;
+        ///             return @group;
+        ///         }),
+        ///         ["paginatedDugs"] = .ToDictionary(item =&gt; {
+        ///             var group = item.Value;
+        ///             return @group.Id;
+        ///         }, item =&gt; {
+        ///             var group = item.Value;
+        ///             return @group;
+        ///         }),
         ///         ["paginationDugsDetails"] = new Dictionary&lt;string, object?&gt;
         ///         {
         ///             ["totalObjectsInFolder"] = paginatedDugsExample.Apply(getDynamicUserGroupListResult =&gt; getDynamicUserGroupListResult.Total),
@@ -126,8 +150,20 @@ namespace Pulumi.Scm
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
-        ///         ["dugResultsFromList"] = ,
-        ///         ["paginatedDugs"] = ,
+        ///         ["dugResultsFromList"] = .ToDictionary(item =&gt; {
+        ///             var group = item.Value;
+        ///             return @group.Id;
+        ///         }, item =&gt; {
+        ///             var group = item.Value;
+        ///             return @group;
+        ///         }),
+        ///         ["paginatedDugs"] = .ToDictionary(item =&gt; {
+        ///             var group = item.Value;
+        ///             return @group.Id;
+        ///         }, item =&gt; {
+        ///             var group = item.Value;
+        ///             return @group;
+        ///         }),
         ///         ["paginationDugsDetails"] = new Dictionary&lt;string, object?&gt;
         ///         {
         ///             ["totalObjectsInFolder"] = paginatedDugsExample.Apply(getDynamicUserGroupListResult =&gt; getDynamicUserGroupListResult.Total),
