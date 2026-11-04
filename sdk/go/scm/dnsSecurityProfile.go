@@ -282,6 +282,12 @@ func (DnsSecurityProfileState) ElementType() reflect.Type {
 	return reflect.TypeOf((*dnsSecurityProfileState)(nil)).Elem()
 }
 
+// DnsSecurityProfileExists checks whether an existing DnsSecurityProfile resource with the given ID exists.
+func DnsSecurityProfileExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *DnsSecurityProfileState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("scm:index/dnsSecurityProfile:DnsSecurityProfile", id, state, "", opts...)
+}
+
 type dnsSecurityProfileArgs struct {
 	// Botnet domains
 	BotnetDomains *DnsSecurityProfileBotnetDomains `pulumi:"botnetDomains"`

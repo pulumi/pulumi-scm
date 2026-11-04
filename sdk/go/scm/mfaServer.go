@@ -134,6 +134,12 @@ func (MfaServerState) ElementType() reflect.Type {
 	return reflect.TypeOf((*mfaServerState)(nil)).Elem()
 }
 
+// MfaServerExists checks whether an existing MfaServer resource with the given ID exists.
+func MfaServerExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *MfaServerState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("scm:index/mfaServer:MfaServer", id, state, "", opts...)
+}
+
 type mfaServerArgs struct {
 	// The device in which the resource is defined
 	Device *string `pulumi:"device"`

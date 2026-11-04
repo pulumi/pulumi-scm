@@ -248,6 +248,12 @@ func (AddressState) ElementType() reflect.Type {
 	return reflect.TypeOf((*addressState)(nil)).Elem()
 }
 
+// AddressExists checks whether an existing Address resource with the given ID exists.
+func AddressExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *AddressState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("scm:index/address:Address", id, state, "", opts...)
+}
+
 type addressArgs struct {
 	// The description of the address object
 	Description *string `pulumi:"description"`

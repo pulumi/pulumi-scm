@@ -254,6 +254,12 @@ func (QosPolicyRuleState) ElementType() reflect.Type {
 	return reflect.TypeOf((*qosPolicyRuleState)(nil)).Elem()
 }
 
+// QosPolicyRuleExists checks whether an existing QosPolicyRule resource with the given ID exists.
+func QosPolicyRuleExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *QosPolicyRuleState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("scm:index/qosPolicyRule:QosPolicyRule", id, state, "", opts...)
+}
+
 type qosPolicyRuleArgs struct {
 	// Action
 	Action QosPolicyRuleAction `pulumi:"action"`

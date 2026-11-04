@@ -434,6 +434,24 @@ class ServiceSetting(pulumi.CustomResource):
         __props__.__dict__["tfid"] = tfid
         return ServiceSetting(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            device: pulumi.Input[Optional[_builtins.str]] = None,
+            encrypted_values: pulumi.Input[Optional[Mapping[str, pulumi.Input[_builtins.str]]]] = None,
+            folder: pulumi.Input[Optional[_builtins.str]] = None,
+            services: pulumi.Input[Optional[Union['ServiceSettingServicesArgs', 'ServiceSettingServicesArgsDict', 'outputs.ServiceSettingServices']]] = None,
+            snippet: pulumi.Input[Optional[_builtins.str]] = None,
+            tfid: pulumi.Input[Optional[_builtins.str]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["device"] = device
+        __props__["encryptedValues"] = encrypted_values
+        __props__["folder"] = folder
+        __props__["services"] = services
+        __props__["snippet"] = snippet
+        __props__["tfid"] = tfid
+        return pulumi.runtime.exists_resource(None, 'scm:index/serviceSetting:ServiceSetting', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter
     def device(self) -> pulumi.Output[Optional[_builtins.str]]:

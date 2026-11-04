@@ -692,6 +692,30 @@ class AggregateInterface(pulumi.CustomResource):
         __props__.__dict__["tfid"] = tfid
         return AggregateInterface(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            comment: pulumi.Input[Optional[_builtins.str]] = None,
+            default_value: pulumi.Input[Optional[_builtins.str]] = None,
+            device: pulumi.Input[Optional[_builtins.str]] = None,
+            folder: pulumi.Input[Optional[_builtins.str]] = None,
+            layer2: pulumi.Input[Optional[Union['AggregateInterfaceLayer2Args', 'AggregateInterfaceLayer2ArgsDict', 'outputs.AggregateInterfaceLayer2']]] = None,
+            layer3: pulumi.Input[Optional[Union['AggregateInterfaceLayer3Args', 'AggregateInterfaceLayer3ArgsDict', 'outputs.AggregateInterfaceLayer3']]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            snippet: pulumi.Input[Optional[_builtins.str]] = None,
+            tfid: pulumi.Input[Optional[_builtins.str]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["comment"] = comment
+        __props__["defaultValue"] = default_value
+        __props__["device"] = device
+        __props__["folder"] = folder
+        __props__["layer2"] = layer2
+        __props__["layer3"] = layer3
+        __props__["name"] = name
+        __props__["snippet"] = snippet
+        __props__["tfid"] = tfid
+        return pulumi.runtime.exists_resource(None, 'scm:index/aggregateInterface:AggregateInterface', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter
     def comment(self) -> pulumi.Output[Optional[_builtins.str]]:

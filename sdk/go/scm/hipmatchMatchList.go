@@ -199,6 +199,12 @@ func (HipmatchMatchListState) ElementType() reflect.Type {
 	return reflect.TypeOf((*hipmatchMatchListState)(nil)).Elem()
 }
 
+// HipmatchMatchListExists checks whether an existing HipmatchMatchList resource with the given ID exists.
+func HipmatchMatchListExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *HipmatchMatchListState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("scm:index/hipmatchMatchList:HipmatchMatchList", id, state, "", opts...)
+}
+
 type hipmatchMatchListArgs struct {
 	// Description of the hipmatch match list entry
 	Description *string `pulumi:"description"`

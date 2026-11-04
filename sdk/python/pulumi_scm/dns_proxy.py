@@ -641,6 +641,38 @@ class DnsProxy(pulumi.CustomResource):
         __props__.__dict__["udp_queries"] = udp_queries
         return DnsProxy(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            cache: pulumi.Input[Optional[Union['DnsProxyCacheArgs', 'DnsProxyCacheArgsDict', 'outputs.DnsProxyCache']]] = None,
+            default: pulumi.Input[Optional[Union['DnsProxyDefaultArgs', 'DnsProxyDefaultArgsDict', 'outputs.DnsProxyDefault']]] = None,
+            device: pulumi.Input[Optional[_builtins.str]] = None,
+            domain_servers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['DnsProxyDomainServerArgs', 'DnsProxyDomainServerArgsDict', 'outputs.DnsProxyDomainServer']]]]] = None,
+            enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+            folder: pulumi.Input[Optional[_builtins.str]] = None,
+            interfaces: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            snippet: pulumi.Input[Optional[_builtins.str]] = None,
+            static_entries: pulumi.Input[Optional[Sequence[pulumi.Input[Union['DnsProxyStaticEntryArgs', 'DnsProxyStaticEntryArgsDict', 'outputs.DnsProxyStaticEntry']]]]] = None,
+            tcp_queries: pulumi.Input[Optional[Union['DnsProxyTcpQueriesArgs', 'DnsProxyTcpQueriesArgsDict', 'outputs.DnsProxyTcpQueries']]] = None,
+            tfid: pulumi.Input[Optional[_builtins.str]] = None,
+            udp_queries: pulumi.Input[Optional[Union['DnsProxyUdpQueriesArgs', 'DnsProxyUdpQueriesArgsDict', 'outputs.DnsProxyUdpQueries']]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["cache"] = cache
+        __props__["default"] = default
+        __props__["device"] = device
+        __props__["domainServers"] = domain_servers
+        __props__["enabled"] = enabled
+        __props__["folder"] = folder
+        __props__["interfaces"] = interfaces
+        __props__["name"] = name
+        __props__["snippet"] = snippet
+        __props__["staticEntries"] = static_entries
+        __props__["tcpQueries"] = tcp_queries
+        __props__["tfid"] = tfid
+        __props__["udpQueries"] = udp_queries
+        return pulumi.runtime.exists_resource(None, 'scm:index/dnsProxy:DnsProxy', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter
     def cache(self) -> pulumi.Output[Optional['outputs.DnsProxyCache']]:

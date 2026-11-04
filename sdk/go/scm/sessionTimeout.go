@@ -150,6 +150,12 @@ func (SessionTimeoutState) ElementType() reflect.Type {
 	return reflect.TypeOf((*sessionTimeoutState)(nil)).Elem()
 }
 
+// SessionTimeoutExists checks whether an existing SessionTimeout resource with the given ID exists.
+func SessionTimeoutExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *SessionTimeoutState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("scm:index/sessionTimeout:SessionTimeout", id, state, "", opts...)
+}
+
 type sessionTimeoutArgs struct {
 	// The device in which the resource is defined
 	Device *string `pulumi:"device"`

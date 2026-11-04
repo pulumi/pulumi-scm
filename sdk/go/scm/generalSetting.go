@@ -154,6 +154,12 @@ func (GeneralSettingState) ElementType() reflect.Type {
 	return reflect.TypeOf((*generalSettingState)(nil)).Elem()
 }
 
+// GeneralSettingExists checks whether an existing GeneralSetting resource with the given ID exists.
+func GeneralSettingExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *GeneralSettingState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("scm:index/generalSetting:GeneralSetting", id, state, "", opts...)
+}
+
 type generalSettingArgs struct {
 	// The device in which the resource is defined
 	Device *string `pulumi:"device"`

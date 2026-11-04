@@ -959,6 +959,52 @@ class UrlAccessProfile(pulumi.CustomResource):
         __props__.__dict__["tfid"] = tfid
         return UrlAccessProfile(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            alerts: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            allows: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            blocks: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            cloud_inline_cat: pulumi.Input[Optional[_builtins.bool]] = None,
+            continues: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            credential_enforcement: pulumi.Input[Optional[Union['UrlAccessProfileCredentialEnforcementArgs', 'UrlAccessProfileCredentialEnforcementArgsDict', 'outputs.UrlAccessProfileCredentialEnforcement']]] = None,
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            device: pulumi.Input[Optional[_builtins.str]] = None,
+            folder: pulumi.Input[Optional[_builtins.str]] = None,
+            local_inline_cat: pulumi.Input[Optional[_builtins.bool]] = None,
+            log_container_page_only: pulumi.Input[Optional[_builtins.bool]] = None,
+            log_http_hdr_referer: pulumi.Input[Optional[_builtins.bool]] = None,
+            log_http_hdr_user_agent: pulumi.Input[Optional[_builtins.bool]] = None,
+            log_http_hdr_xff: pulumi.Input[Optional[_builtins.bool]] = None,
+            mlav_category_exceptions: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            redirects: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            safe_search_enforcement: pulumi.Input[Optional[_builtins.bool]] = None,
+            snippet: pulumi.Input[Optional[_builtins.str]] = None,
+            tfid: pulumi.Input[Optional[_builtins.str]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["alerts"] = alerts
+        __props__["allows"] = allows
+        __props__["blocks"] = blocks
+        __props__["cloudInlineCat"] = cloud_inline_cat
+        __props__["continues"] = continues
+        __props__["credentialEnforcement"] = credential_enforcement
+        __props__["description"] = description
+        __props__["device"] = device
+        __props__["folder"] = folder
+        __props__["localInlineCat"] = local_inline_cat
+        __props__["logContainerPageOnly"] = log_container_page_only
+        __props__["logHttpHdrReferer"] = log_http_hdr_referer
+        __props__["logHttpHdrUserAgent"] = log_http_hdr_user_agent
+        __props__["logHttpHdrXff"] = log_http_hdr_xff
+        __props__["mlavCategoryExceptions"] = mlav_category_exceptions
+        __props__["name"] = name
+        __props__["redirects"] = redirects
+        __props__["safeSearchEnforcement"] = safe_search_enforcement
+        __props__["snippet"] = snippet
+        __props__["tfid"] = tfid
+        return pulumi.runtime.exists_resource(None, 'scm:index/urlAccessProfile:UrlAccessProfile', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter
     def alerts(self) -> pulumi.Output[Optional[Sequence[_builtins.str]]]:

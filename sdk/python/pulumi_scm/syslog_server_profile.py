@@ -573,6 +573,26 @@ class SyslogServerProfile(pulumi.CustomResource):
         __props__.__dict__["tfid"] = tfid
         return SyslogServerProfile(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            device: pulumi.Input[Optional[_builtins.str]] = None,
+            folder: pulumi.Input[Optional[_builtins.str]] = None,
+            format: pulumi.Input[Optional[Union['SyslogServerProfileFormatArgs', 'SyslogServerProfileFormatArgsDict', 'outputs.SyslogServerProfileFormat']]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            servers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SyslogServerProfileServerArgs', 'SyslogServerProfileServerArgsDict', 'outputs.SyslogServerProfileServer']]]]] = None,
+            snippet: pulumi.Input[Optional[_builtins.str]] = None,
+            tfid: pulumi.Input[Optional[_builtins.str]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["device"] = device
+        __props__["folder"] = folder
+        __props__["format"] = format
+        __props__["name"] = name
+        __props__["servers"] = servers
+        __props__["snippet"] = snippet
+        __props__["tfid"] = tfid
+        return pulumi.runtime.exists_resource(None, 'scm:index/syslogServerProfile:SyslogServerProfile', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter
     def device(self) -> pulumi.Output[Optional[_builtins.str]]:

@@ -199,6 +199,12 @@ func (DynamicUserGroupState) ElementType() reflect.Type {
 	return reflect.TypeOf((*dynamicUserGroupState)(nil)).Elem()
 }
 
+// DynamicUserGroupExists checks whether an existing DynamicUserGroup resource with the given ID exists.
+func DynamicUserGroupExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *DynamicUserGroupState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("scm:index/dynamicUserGroup:DynamicUserGroup", id, state, "", opts...)
+}
+
 type dynamicUserGroupArgs struct {
 	// The description of the dynamic address group
 	Description *string `pulumi:"description"`

@@ -162,6 +162,12 @@ func (ProfileGroupState) ElementType() reflect.Type {
 	return reflect.TypeOf((*profileGroupState)(nil)).Elem()
 }
 
+// ProfileGroupExists checks whether an existing ProfileGroup resource with the given ID exists.
+func ProfileGroupExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *ProfileGroupState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("scm:index/profileGroup:ProfileGroup", id, state, "", opts...)
+}
+
 type profileGroupArgs struct {
 	// Ai security
 	AiSecurities []string `pulumi:"aiSecurities"`

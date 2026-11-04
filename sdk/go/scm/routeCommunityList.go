@@ -120,6 +120,12 @@ func (RouteCommunityListState) ElementType() reflect.Type {
 	return reflect.TypeOf((*routeCommunityListState)(nil)).Elem()
 }
 
+// RouteCommunityListExists checks whether an existing RouteCommunityList resource with the given ID exists.
+func RouteCommunityListExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *RouteCommunityListState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("scm:index/routeCommunityList:RouteCommunityList", id, state, "", opts...)
+}
+
 type routeCommunityListArgs struct {
 	// Description
 	Description *string `pulumi:"description"`

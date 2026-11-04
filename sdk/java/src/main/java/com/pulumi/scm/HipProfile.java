@@ -35,22 +35,22 @@ import javax.annotation.Nullable;
  * import java.nio.file.Files;
  * import java.nio.file.Paths;
  * 
- * public class App {
- *     public static void main(String[] args) {
+ * public class App }{{@code
+ *     public static void main(String[] args) }{{@code
  *         Pulumi.run(App::stack);
- *     }
+ *     }}{@code
  * 
- *     public static void stack(Context ctx) {
+ *     public static void stack(Context ctx) }{{@code
  *         // This resource creates a new HIP Profile.
  *         var scmHipProfile1 = new HipProfile("scmHipProfile1", HipProfileArgs.builder()
  *             .folder("Prisma Access")
  *             .name("scm_hip_profile_1")
  *             .description("A HIP profile created by Terraform")
- *             .match("\"is-win\" and \"is-anti-malware-and-rtp-enabled\"")
+ *             .match("}&#92;{@code "is-win}&#92;{@code " and }&#92;{@code "is-anti-malware-and-rtp-enabled}&#92;{@code "")
  *             .build());
  * 
- *     }
- * }
+ *     }}{@code
+ * }}{@code
  * }
  * </pre>
  * 

@@ -193,6 +193,12 @@ func (BgpRouteMapState) ElementType() reflect.Type {
 	return reflect.TypeOf((*bgpRouteMapState)(nil)).Elem()
 }
 
+// BgpRouteMapExists checks whether an existing BgpRouteMap resource with the given ID exists.
+func BgpRouteMapExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *BgpRouteMapState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("scm:index/bgpRouteMap:BgpRouteMap", id, state, "", opts...)
+}
+
 type bgpRouteMapArgs struct {
 	// Description
 	Description *string `pulumi:"description"`

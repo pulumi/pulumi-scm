@@ -148,6 +148,12 @@ func (BgpRoutingState) ElementType() reflect.Type {
 	return reflect.TypeOf((*bgpRoutingState)(nil)).Elem()
 }
 
+// BgpRoutingExists checks whether an existing BgpRouting resource with the given ID exists.
+func BgpRoutingExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *BgpRoutingState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("scm:index/bgpRouting:BgpRouting", id, state, "", opts...)
+}
+
 type bgpRoutingArgs struct {
 	// Accept route over s c
 	AcceptRouteOverSc *bool `pulumi:"acceptRouteOverSc"`

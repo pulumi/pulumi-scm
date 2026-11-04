@@ -877,6 +877,44 @@ class ServiceConnection(pulumi.CustomResource):
         __props__.__dict__["tfid"] = tfid
         return ServiceConnection(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            backup_sc: pulumi.Input[Optional[_builtins.str]] = None,
+            encrypted_values: pulumi.Input[Optional[Mapping[str, pulumi.Input[_builtins.str]]]] = None,
+            folder: pulumi.Input[Optional[_builtins.str]] = None,
+            ipsec_tunnel: pulumi.Input[Optional[_builtins.str]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            nat_pool: pulumi.Input[Optional[_builtins.str]] = None,
+            no_export_community: pulumi.Input[Optional[_builtins.str]] = None,
+            onboarding_type: pulumi.Input[Optional[_builtins.str]] = None,
+            protocol: pulumi.Input[Optional[Union['ServiceConnectionProtocolArgs', 'ServiceConnectionProtocolArgsDict', 'outputs.ServiceConnectionProtocol']]] = None,
+            qos: pulumi.Input[Optional[Union['ServiceConnectionQosArgs', 'ServiceConnectionQosArgsDict', 'outputs.ServiceConnectionQos']]] = None,
+            region: pulumi.Input[Optional[_builtins.str]] = None,
+            region_tag: pulumi.Input[Optional[_builtins.str]] = None,
+            secondary_ipsec_tunnel: pulumi.Input[Optional[_builtins.str]] = None,
+            source_nat: pulumi.Input[Optional[_builtins.bool]] = None,
+            subnets: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            tfid: pulumi.Input[Optional[_builtins.str]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["backupSc"] = backup_sc
+        __props__["encryptedValues"] = encrypted_values
+        __props__["folder"] = folder
+        __props__["ipsecTunnel"] = ipsec_tunnel
+        __props__["name"] = name
+        __props__["natPool"] = nat_pool
+        __props__["noExportCommunity"] = no_export_community
+        __props__["onboardingType"] = onboarding_type
+        __props__["protocol"] = protocol
+        __props__["qos"] = qos
+        __props__["region"] = region
+        __props__["regionTag"] = region_tag
+        __props__["secondaryIpsecTunnel"] = secondary_ipsec_tunnel
+        __props__["sourceNat"] = source_nat
+        __props__["subnets"] = subnets
+        __props__["tfid"] = tfid
+        return pulumi.runtime.exists_resource(None, 'scm:index/serviceConnection:ServiceConnection', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter(name="backupSc")
     def backup_sc(self) -> pulumi.Output[Optional[_builtins.str]]:

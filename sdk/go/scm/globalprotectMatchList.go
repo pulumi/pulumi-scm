@@ -199,6 +199,12 @@ func (GlobalprotectMatchListState) ElementType() reflect.Type {
 	return reflect.TypeOf((*globalprotectMatchListState)(nil)).Elem()
 }
 
+// GlobalprotectMatchListExists checks whether an existing GlobalprotectMatchList resource with the given ID exists.
+func GlobalprotectMatchListExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *GlobalprotectMatchListState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("scm:index/globalprotectMatchList:GlobalprotectMatchList", id, state, "", opts...)
+}
+
 type globalprotectMatchListArgs struct {
 	// Description of the globalprotect match list entry
 	Description *string `pulumi:"description"`

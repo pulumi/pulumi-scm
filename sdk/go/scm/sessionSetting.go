@@ -175,6 +175,12 @@ func (SessionSettingState) ElementType() reflect.Type {
 	return reflect.TypeOf((*sessionSettingState)(nil)).Elem()
 }
 
+// SessionSettingExists checks whether an existing SessionSetting resource with the given ID exists.
+func SessionSettingExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *SessionSettingState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("scm:index/sessionSetting:SessionSetting", id, state, "", opts...)
+}
+
 type sessionSettingArgs struct {
 	// The device in which the resource is defined
 	Device *string `pulumi:"device"`

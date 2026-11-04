@@ -76,7 +76,7 @@ public final class GetAuthenticationProfileResult {
      */
     private String userDomain;
     /**
-     * @return Username modifier. Possible values are `%USERINPUT%`, `%USERINPUT%{@literal @}%USERDOMAIN%` and `%USERDOMAIN%\\%USERINPUT%`.
+     * @return Username modifier. Possible values are `%USERINPUT%`, `%USERINPUT%{@literal @}%USERDOMAIN%` and `%USERDOMAIN%&#92;&#92;%USERINPUT%`.
      * 
      */
     private String usernameModifier;
@@ -167,7 +167,7 @@ public final class GetAuthenticationProfileResult {
         return this.userDomain;
     }
     /**
-     * @return Username modifier. Possible values are `%USERINPUT%`, `%USERINPUT%{@literal @}%USERDOMAIN%` and `%USERDOMAIN%\\%USERINPUT%`.
+     * @return Username modifier. Possible values are `%USERINPUT%`, `%USERINPUT%{@literal @}%USERDOMAIN%` and `%USERDOMAIN%&#92;&#92;%USERINPUT%`.
      * 
      */
     public String usernameModifier() {

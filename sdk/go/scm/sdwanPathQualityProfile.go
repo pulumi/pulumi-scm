@@ -118,6 +118,12 @@ func (SdwanPathQualityProfileState) ElementType() reflect.Type {
 	return reflect.TypeOf((*sdwanPathQualityProfileState)(nil)).Elem()
 }
 
+// SdwanPathQualityProfileExists checks whether an existing SdwanPathQualityProfile resource with the given ID exists.
+func SdwanPathQualityProfileExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *SdwanPathQualityProfileState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("scm:index/sdwanPathQualityProfile:SdwanPathQualityProfile", id, state, "", opts...)
+}
+
 type sdwanPathQualityProfileArgs struct {
 	// The device in which the resource is defined
 	Device *string `pulumi:"device"`

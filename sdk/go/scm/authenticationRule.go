@@ -460,6 +460,12 @@ func (AuthenticationRuleState) ElementType() reflect.Type {
 	return reflect.TypeOf((*authenticationRuleState)(nil)).Elem()
 }
 
+// AuthenticationRuleExists checks whether an existing AuthenticationRule resource with the given ID exists.
+func AuthenticationRuleExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *AuthenticationRuleState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("scm:index/authenticationRule:AuthenticationRule", id, state, "", opts...)
+}
+
 type authenticationRuleArgs struct {
 	// The authentication profile name
 	AuthenticationEnforcement *string `pulumi:"authenticationEnforcement"`

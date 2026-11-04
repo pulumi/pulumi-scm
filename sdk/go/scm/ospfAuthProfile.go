@@ -134,6 +134,12 @@ func (OspfAuthProfileState) ElementType() reflect.Type {
 	return reflect.TypeOf((*ospfAuthProfileState)(nil)).Elem()
 }
 
+// OspfAuthProfileExists checks whether an existing OspfAuthProfile resource with the given ID exists.
+func OspfAuthProfileExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *OspfAuthProfileState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("scm:index/ospfAuthProfile:OspfAuthProfile", id, state, "", opts...)
+}
+
 type ospfAuthProfileArgs struct {
 	// The device in which the resource is defined
 	Device *string `pulumi:"device"`

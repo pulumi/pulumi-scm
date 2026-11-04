@@ -264,6 +264,12 @@ func (LogForwardingProfileState) ElementType() reflect.Type {
 	return reflect.TypeOf((*logForwardingProfileState)(nil)).Elem()
 }
 
+// LogForwardingProfileExists checks whether an existing LogForwardingProfile resource with the given ID exists.
+func LogForwardingProfileExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *LogForwardingProfileState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("scm:index/logForwardingProfile:LogForwardingProfile", id, state, "", opts...)
+}
+
 type logForwardingProfileArgs struct {
 	// Log forwarding profile description
 	Description *string `pulumi:"description"`

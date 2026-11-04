@@ -162,6 +162,12 @@ func (RoutePrefixListState) ElementType() reflect.Type {
 	return reflect.TypeOf((*routePrefixListState)(nil)).Elem()
 }
 
+// RoutePrefixListExists checks whether an existing RoutePrefixList resource with the given ID exists.
+func RoutePrefixListExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *RoutePrefixListState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("scm:index/routePrefixList:RoutePrefixList", id, state, "", opts...)
+}
+
 type routePrefixListArgs struct {
 	// Description
 	Description *string `pulumi:"description"`

@@ -298,14 +298,14 @@ public class AuthenticationProfile extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.userDomain);
     }
     /**
-     * Username modifier. Possible values are `%USERINPUT%`, `%USERINPUT%{@literal @}%USERDOMAIN%` and `%USERDOMAIN%\\%USERINPUT%`.
+     * Username modifier. Possible values are `%USERINPUT%`, `%USERINPUT%{@literal @}%USERDOMAIN%` and `%USERDOMAIN%&#92;&#92;%USERINPUT%`.
      * 
      */
     @Export(name="usernameModifier", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> usernameModifier;
 
     /**
-     * @return Username modifier. Possible values are `%USERINPUT%`, `%USERINPUT%{@literal @}%USERDOMAIN%` and `%USERDOMAIN%\\%USERINPUT%`.
+     * @return Username modifier. Possible values are `%USERINPUT%`, `%USERINPUT%{@literal @}%USERDOMAIN%` and `%USERDOMAIN%&#92;&#92;%USERINPUT%`.
      * 
      */
     public Output<Optional<String>> usernameModifier() {

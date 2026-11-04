@@ -233,6 +233,12 @@ func (ExternalDynamicListState) ElementType() reflect.Type {
 	return reflect.TypeOf((*externalDynamicListState)(nil)).Elem()
 }
 
+// ExternalDynamicListExists checks whether an existing ExternalDynamicList resource with the given ID exists.
+func ExternalDynamicListExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *ExternalDynamicListState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("scm:index/externalDynamicList:ExternalDynamicList", id, state, "", opts...)
+}
+
 type externalDynamicListArgs struct {
 	// The device in which the resource is defined
 	Device *string `pulumi:"device"`

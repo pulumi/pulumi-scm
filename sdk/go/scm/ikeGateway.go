@@ -245,6 +245,12 @@ func (IkeGatewayState) ElementType() reflect.Type {
 	return reflect.TypeOf((*ikeGatewayState)(nil)).Elem()
 }
 
+// IkeGatewayExists checks whether an existing IkeGateway resource with the given ID exists.
+func IkeGatewayExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *IkeGatewayState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("scm:index/ikeGateway:IkeGateway", id, state, "", opts...)
+}
+
 type ikeGatewayArgs struct {
 	// Authentication
 	Authentication IkeGatewayAuthentication `pulumi:"authentication"`

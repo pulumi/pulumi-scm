@@ -1501,6 +1501,68 @@ class DecryptionRule(pulumi.CustomResource):
         __props__.__dict__["type"] = type
         return DecryptionRule(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            action: pulumi.Input[Optional[_builtins.str]] = None,
+            categories: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            destination_hips: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            destinations: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            device: pulumi.Input[Optional[_builtins.str]] = None,
+            disabled: pulumi.Input[Optional[_builtins.bool]] = None,
+            folder: pulumi.Input[Optional[_builtins.str]] = None,
+            froms: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            log_fail: pulumi.Input[Optional[_builtins.bool]] = None,
+            log_setting: pulumi.Input[Optional[_builtins.str]] = None,
+            log_success: pulumi.Input[Optional[_builtins.bool]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            negate_destination: pulumi.Input[Optional[_builtins.bool]] = None,
+            negate_source: pulumi.Input[Optional[_builtins.bool]] = None,
+            position: pulumi.Input[Optional[_builtins.str]] = None,
+            profile: pulumi.Input[Optional[_builtins.str]] = None,
+            relative_position: pulumi.Input[Optional[_builtins.str]] = None,
+            services: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            snippet: pulumi.Input[Optional[_builtins.str]] = None,
+            source_hips: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            source_users: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            sources: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            tags: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            target_rule: pulumi.Input[Optional[_builtins.str]] = None,
+            tfid: pulumi.Input[Optional[_builtins.str]] = None,
+            tos: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            type: pulumi.Input[Optional[Union['DecryptionRuleTypeArgs', 'DecryptionRuleTypeArgsDict', 'outputs.DecryptionRuleType']]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["action"] = action
+        __props__["categories"] = categories
+        __props__["description"] = description
+        __props__["destinationHips"] = destination_hips
+        __props__["destinations"] = destinations
+        __props__["device"] = device
+        __props__["disabled"] = disabled
+        __props__["folder"] = folder
+        __props__["froms"] = froms
+        __props__["logFail"] = log_fail
+        __props__["logSetting"] = log_setting
+        __props__["logSuccess"] = log_success
+        __props__["name"] = name
+        __props__["negateDestination"] = negate_destination
+        __props__["negateSource"] = negate_source
+        __props__["position"] = position
+        __props__["profile"] = profile
+        __props__["relativePosition"] = relative_position
+        __props__["services"] = services
+        __props__["snippet"] = snippet
+        __props__["sourceHips"] = source_hips
+        __props__["sourceUsers"] = source_users
+        __props__["sources"] = sources
+        __props__["tags"] = tags
+        __props__["targetRule"] = target_rule
+        __props__["tfid"] = tfid
+        __props__["tos"] = tos
+        __props__["type"] = type
+        return pulumi.runtime.exists_resource(None, 'scm:index/decryptionRule:DecryptionRule', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter
     def action(self) -> pulumi.Output[_builtins.str]:

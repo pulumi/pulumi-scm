@@ -270,6 +270,12 @@ func (ServiceConnectionGroupState) ElementType() reflect.Type {
 	return reflect.TypeOf((*serviceConnectionGroupState)(nil)).Elem()
 }
 
+// ServiceConnectionGroupExists checks whether an existing ServiceConnectionGroup resource with the given ID exists.
+func ServiceConnectionGroupExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *ServiceConnectionGroupState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("scm:index/serviceConnectionGroup:ServiceConnectionGroup", id, state, "", opts...)
+}
+
 type serviceConnectionGroupArgs struct {
 	// Disable snat
 	DisableSnat *bool `pulumi:"disableSnat"`

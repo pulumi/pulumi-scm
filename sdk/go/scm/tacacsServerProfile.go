@@ -199,6 +199,12 @@ func (TacacsServerProfileState) ElementType() reflect.Type {
 	return reflect.TypeOf((*tacacsServerProfileState)(nil)).Elem()
 }
 
+// TacacsServerProfileExists checks whether an existing TacacsServerProfile resource with the given ID exists.
+func TacacsServerProfileExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *TacacsServerProfileState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("scm:index/tacacsServerProfile:TacacsServerProfile", id, state, "", opts...)
+}
+
 type tacacsServerProfileArgs struct {
 	// The device in which the resource is defined
 	Device *string `pulumi:"device"`

@@ -175,6 +175,12 @@ func (ApplicationGroupState) ElementType() reflect.Type {
 	return reflect.TypeOf((*applicationGroupState)(nil)).Elem()
 }
 
+// ApplicationGroupExists checks whether an existing ApplicationGroup resource with the given ID exists.
+func ApplicationGroupExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *ApplicationGroupState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("scm:index/applicationGroup:ApplicationGroup", id, state, "", opts...)
+}
+
 type applicationGroupArgs struct {
 	// The device in which the resource is defined
 	Device *string `pulumi:"device"`

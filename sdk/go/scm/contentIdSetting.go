@@ -146,6 +146,12 @@ func (ContentIdSettingState) ElementType() reflect.Type {
 	return reflect.TypeOf((*contentIdSettingState)(nil)).Elem()
 }
 
+// ContentIdSettingExists checks whether an existing ContentIdSetting resource with the given ID exists.
+func ContentIdSettingExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *ContentIdSettingState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("scm:index/contentIdSetting:ContentIdSetting", id, state, "", opts...)
+}
+
 type contentIdSettingArgs struct {
 	// Content id
 	ContentId *ContentIdSettingContentId `pulumi:"contentId"`

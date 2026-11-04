@@ -248,6 +248,12 @@ func (QosProfileState) ElementType() reflect.Type {
 	return reflect.TypeOf((*qosProfileState)(nil)).Elem()
 }
 
+// QosProfileExists checks whether an existing QosProfile resource with the given ID exists.
+func QosProfileExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *QosProfileState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("scm:index/qosProfile:QosProfile", id, state, "", opts...)
+}
+
 type qosProfileArgs struct {
 	// Aggregate bandwidth
 	AggregateBandwidth *QosProfileAggregateBandwidth `pulumi:"aggregateBandwidth"`

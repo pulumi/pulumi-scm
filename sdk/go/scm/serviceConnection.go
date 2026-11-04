@@ -309,6 +309,12 @@ func (ServiceConnectionState) ElementType() reflect.Type {
 	return reflect.TypeOf((*serviceConnectionState)(nil)).Elem()
 }
 
+// ServiceConnectionExists checks whether an existing ServiceConnection resource with the given ID exists.
+func ServiceConnectionExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *ServiceConnectionState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("scm:index/serviceConnection:ServiceConnection", id, state, "", opts...)
+}
+
 type serviceConnectionArgs struct {
 	// Backup s c
 	BackupSc *string `pulumi:"backupSc"`

@@ -138,6 +138,12 @@ func (LocalUserState) ElementType() reflect.Type {
 	return reflect.TypeOf((*localUserState)(nil)).Elem()
 }
 
+// LocalUserExists checks whether an existing LocalUser resource with the given ID exists.
+func LocalUserExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *LocalUserState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("scm:index/localUser:LocalUser", id, state, "", opts...)
+}
+
 type localUserArgs struct {
 	// The device in which the resource is defined
 	Device *string `pulumi:"device"`

@@ -1116,6 +1116,54 @@ class AppOverrideRule(pulumi.CustomResource):
         __props__.__dict__["tos"] = tos
         return AppOverrideRule(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            application: pulumi.Input[Optional[_builtins.str]] = None,
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            destinations: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            device: pulumi.Input[Optional[_builtins.str]] = None,
+            disabled: pulumi.Input[Optional[_builtins.bool]] = None,
+            folder: pulumi.Input[Optional[_builtins.str]] = None,
+            froms: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            group_tag: pulumi.Input[Optional[_builtins.str]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            negate_destination: pulumi.Input[Optional[_builtins.bool]] = None,
+            negate_source: pulumi.Input[Optional[_builtins.bool]] = None,
+            port: pulumi.Input[Optional[_builtins.str]] = None,
+            position: pulumi.Input[Optional[_builtins.str]] = None,
+            protocol: pulumi.Input[Optional[_builtins.str]] = None,
+            relative_position: pulumi.Input[Optional[_builtins.str]] = None,
+            snippet: pulumi.Input[Optional[_builtins.str]] = None,
+            sources: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            tags: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            target_rule: pulumi.Input[Optional[_builtins.str]] = None,
+            tfid: pulumi.Input[Optional[_builtins.str]] = None,
+            tos: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["application"] = application
+        __props__["description"] = description
+        __props__["destinations"] = destinations
+        __props__["device"] = device
+        __props__["disabled"] = disabled
+        __props__["folder"] = folder
+        __props__["froms"] = froms
+        __props__["groupTag"] = group_tag
+        __props__["name"] = name
+        __props__["negateDestination"] = negate_destination
+        __props__["negateSource"] = negate_source
+        __props__["port"] = port
+        __props__["position"] = position
+        __props__["protocol"] = protocol
+        __props__["relativePosition"] = relative_position
+        __props__["snippet"] = snippet
+        __props__["sources"] = sources
+        __props__["tags"] = tags
+        __props__["targetRule"] = target_rule
+        __props__["tfid"] = tfid
+        __props__["tos"] = tos
+        return pulumi.runtime.exists_resource(None, 'scm:index/appOverrideRule:AppOverrideRule', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter
     def application(self) -> pulumi.Output[Optional[_builtins.str]]:

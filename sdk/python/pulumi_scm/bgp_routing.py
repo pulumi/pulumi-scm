@@ -426,6 +426,26 @@ class BgpRouting(pulumi.CustomResource):
         __props__.__dict__["withdraw_static_route"] = withdraw_static_route
         return BgpRouting(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            accept_route_over_sc: pulumi.Input[Optional[_builtins.bool]] = None,
+            add_host_route_to_ike_peer: pulumi.Input[Optional[_builtins.bool]] = None,
+            backbone_routing: pulumi.Input[Optional[_builtins.str]] = None,
+            outbound_routes_for_services: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            routing_preference: pulumi.Input[Optional[Union['BgpRoutingRoutingPreferenceArgs', 'BgpRoutingRoutingPreferenceArgsDict', 'outputs.BgpRoutingRoutingPreference']]] = None,
+            tfid: pulumi.Input[Optional[_builtins.str]] = None,
+            withdraw_static_route: pulumi.Input[Optional[_builtins.bool]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["acceptRouteOverSc"] = accept_route_over_sc
+        __props__["addHostRouteToIkePeer"] = add_host_route_to_ike_peer
+        __props__["backboneRouting"] = backbone_routing
+        __props__["outboundRoutesForServices"] = outbound_routes_for_services
+        __props__["routingPreference"] = routing_preference
+        __props__["tfid"] = tfid
+        __props__["withdrawStaticRoute"] = withdraw_static_route
+        return pulumi.runtime.exists_resource(None, 'scm:index/bgpRouting:BgpRouting', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter(name="acceptRouteOverSc")
     def accept_route_over_sc(self) -> pulumi.Output[Optional[_builtins.bool]]:

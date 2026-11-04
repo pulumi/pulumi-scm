@@ -171,14 +171,14 @@ public final class AuthenticationProfileArgs extends com.pulumi.resources.Resour
     }
 
     /**
-     * Username modifier. Possible values are `%USERINPUT%`, `%USERINPUT%{@literal @}%USERDOMAIN%` and `%USERDOMAIN%\\%USERINPUT%`.
+     * Username modifier. Possible values are `%USERINPUT%`, `%USERINPUT%{@literal @}%USERDOMAIN%` and `%USERDOMAIN%&#92;&#92;%USERINPUT%`.
      * 
      */
     @Import(name="usernameModifier")
     private @Nullable Output<String> usernameModifier;
 
     /**
-     * @return Username modifier. Possible values are `%USERINPUT%`, `%USERINPUT%{@literal @}%USERDOMAIN%` and `%USERDOMAIN%\\%USERINPUT%`.
+     * @return Username modifier. Possible values are `%USERINPUT%`, `%USERINPUT%{@literal @}%USERDOMAIN%` and `%USERDOMAIN%&#92;&#92;%USERINPUT%`.
      * 
      */
     public Optional<Output<String>> usernameModifier() {
@@ -440,7 +440,7 @@ public final class AuthenticationProfileArgs extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param usernameModifier Username modifier. Possible values are `%USERINPUT%`, `%USERINPUT%{@literal @}%USERDOMAIN%` and `%USERDOMAIN%\\%USERINPUT%`.
+         * @param usernameModifier Username modifier. Possible values are `%USERINPUT%`, `%USERINPUT%{@literal @}%USERDOMAIN%` and `%USERDOMAIN%&#92;&#92;%USERINPUT%`.
          * 
          * @return builder
          * 
@@ -451,7 +451,7 @@ public final class AuthenticationProfileArgs extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param usernameModifier Username modifier. Possible values are `%USERINPUT%`, `%USERINPUT%{@literal @}%USERDOMAIN%` and `%USERDOMAIN%\\%USERINPUT%`.
+         * @param usernameModifier Username modifier. Possible values are `%USERINPUT%`, `%USERINPUT%{@literal @}%USERDOMAIN%` and `%USERDOMAIN%&#92;&#92;%USERINPUT%`.
          * 
          * @return builder
          * 

@@ -335,6 +335,12 @@ func (ScepProfileState) ElementType() reflect.Type {
 	return reflect.TypeOf((*scepProfileState)(nil)).Elem()
 }
 
+// ScepProfileExists checks whether an existing ScepProfile resource with the given ID exists.
+func ScepProfileExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *ScepProfileState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("scm:index/scepProfile:ScepProfile", id, state, "", opts...)
+}
+
 type scepProfileArgs struct {
 	// Algorithm
 	Algorithm ScepProfileAlgorithm `pulumi:"algorithm"`

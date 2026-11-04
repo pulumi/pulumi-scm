@@ -126,6 +126,12 @@ func (HttpServerProfileState) ElementType() reflect.Type {
 	return reflect.TypeOf((*httpServerProfileState)(nil)).Elem()
 }
 
+// HttpServerProfileExists checks whether an existing HttpServerProfile resource with the given ID exists.
+func HttpServerProfileExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *HttpServerProfileState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("scm:index/httpServerProfile:HttpServerProfile", id, state, "", opts...)
+}
+
 type httpServerProfileArgs struct {
 	// The device in which the resource is defined
 	Device *string `pulumi:"device"`

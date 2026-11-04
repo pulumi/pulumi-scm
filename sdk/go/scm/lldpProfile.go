@@ -164,6 +164,12 @@ func (LldpProfileState) ElementType() reflect.Type {
 	return reflect.TypeOf((*lldpProfileState)(nil)).Elem()
 }
 
+// LldpProfileExists checks whether an existing LldpProfile resource with the given ID exists.
+func LldpProfileExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *LldpProfileState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("scm:index/lldpProfile:LldpProfile", id, state, "", opts...)
+}
+
 type lldpProfileArgs struct {
 	// The device in which the resource is defined
 	Device *string `pulumi:"device"`

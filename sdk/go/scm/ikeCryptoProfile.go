@@ -192,6 +192,12 @@ func (IkeCryptoProfileState) ElementType() reflect.Type {
 	return reflect.TypeOf((*ikeCryptoProfileState)(nil)).Elem()
 }
 
+// IkeCryptoProfileExists checks whether an existing IkeCryptoProfile resource with the given ID exists.
+func IkeCryptoProfileExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *IkeCryptoProfileState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("scm:index/ikeCryptoProfile:IkeCryptoProfile", id, state, "", opts...)
+}
+
 type ikeCryptoProfileArgs struct {
 	// IKEv2 SA reauthentication interval equals authetication-multiple * rekey-lifetime; 0 means reauthentication disabled
 	AuthenticationMultiple *int `pulumi:"authenticationMultiple"`

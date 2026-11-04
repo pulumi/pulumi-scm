@@ -220,6 +220,12 @@ func (FileBlockingProfileState) ElementType() reflect.Type {
 	return reflect.TypeOf((*fileBlockingProfileState)(nil)).Elem()
 }
 
+// FileBlockingProfileExists checks whether an existing FileBlockingProfile resource with the given ID exists.
+func FileBlockingProfileExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *FileBlockingProfileState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("scm:index/fileBlockingProfile:FileBlockingProfile", id, state, "", opts...)
+}
+
 type fileBlockingProfileArgs struct {
 	// Description
 	Description *string `pulumi:"description"`

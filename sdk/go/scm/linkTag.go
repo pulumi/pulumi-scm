@@ -120,6 +120,12 @@ func (LinkTagState) ElementType() reflect.Type {
 	return reflect.TypeOf((*linkTagState)(nil)).Elem()
 }
 
+// LinkTagExists checks whether an existing LinkTag resource with the given ID exists.
+func LinkTagExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *LinkTagState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("scm:index/linkTag:LinkTag", id, state, "", opts...)
+}
+
 type linkTagArgs struct {
 	// The color of the link tag. Possible values are `Red`, `Green`, `Blue`, `Yellow`, `Copper`, `Orange`, `Purple`, `Gray`, `Light Green`, `Cyan`, `Light Gray`, `Blue Gray`, `Lime`, `Black`, `Gold`, `Brown`, `Olive`, `Maroon`, `Red-Orange`, `Yellow-Orange`, `Forest Green`, `Turquoise Blue`, `Azure Blue`, `Cerulean Blue`, `Midnight Blue`, `Medium Blue`, `Cobalt Blue`, `Violet Blue`, `Blue Violet`, `Medium Violet`, `Medium Rose`, `Lavender`, `Orchid`, `Thistle`, `Peach`, `Salmon`, `Magenta`, `Red Violet`, `Mahogany`, `Burnt Sienna` and `Chestnut`.
 	Color *string `pulumi:"color"`

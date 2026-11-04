@@ -160,6 +160,12 @@ func (UrlCategoryState) ElementType() reflect.Type {
 	return reflect.TypeOf((*urlCategoryState)(nil)).Elem()
 }
 
+// UrlCategoryExists checks whether an existing UrlCategory resource with the given ID exists.
+func UrlCategoryExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *UrlCategoryState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("scm:index/urlCategory:UrlCategory", id, state, "", opts...)
+}
+
 type urlCategoryArgs struct {
 	// Description
 	Description *string `pulumi:"description"`

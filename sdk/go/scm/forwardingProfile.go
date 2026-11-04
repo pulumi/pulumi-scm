@@ -311,6 +311,12 @@ func (ForwardingProfileState) ElementType() reflect.Type {
 	return reflect.TypeOf((*forwardingProfileState)(nil)).Elem()
 }
 
+// ForwardingProfileExists checks whether an existing ForwardingProfile resource with the given ID exists.
+func ForwardingProfileExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *ForwardingProfileState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("scm:index/forwardingProfile:ForwardingProfile", id, state, "", opts...)
+}
+
 type forwardingProfileArgs struct {
 	// Enable forwarding rule for forwarding profile. Possible values are `rules` and `pac-file`.
 	DefinitionMethod *string `pulumi:"definitionMethod"`

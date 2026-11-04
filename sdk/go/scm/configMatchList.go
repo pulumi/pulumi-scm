@@ -192,6 +192,12 @@ func (ConfigMatchListState) ElementType() reflect.Type {
 	return reflect.TypeOf((*configMatchListState)(nil)).Elem()
 }
 
+// ConfigMatchListExists checks whether an existing ConfigMatchList resource with the given ID exists.
+func ConfigMatchListExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *ConfigMatchListState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("scm:index/configMatchList:ConfigMatchList", id, state, "", opts...)
+}
+
 type configMatchListArgs struct {
 	// Description of the config match list entry
 	Description *string `pulumi:"description"`

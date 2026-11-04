@@ -91,12 +91,12 @@ import javax.annotation.Nullable;
  * import java.nio.file.Files;
  * import java.nio.file.Paths;
  * 
- * public class App {
- *     public static void main(String[] args) {
+ * public class App }{{@code
+ *     public static void main(String[] args) }{{@code
  *         Pulumi.run(App::stack);
- *     }
+ *     }}{@code
  * 
- *     public static void stack(Context ctx) {
+ *     public static void stack(Context ctx) }{{@code
  *         // This resource creates a comprehensive HIP Object with many criteria enabled.
  *         // This showcases the use of nested objects and lists of objects that the
  *         // corrected provider schema now supports.
@@ -146,13 +146,13 @@ import javax.annotation.Nullable;
  *                     .isInstalled(true)
  *                     .encryptedLocations(                    
  *                         HipObjectDiskEncryptionCriteriaEncryptedLocationArgs.builder()
- *                             .name("C:\\")
+ *                             .name("C:}&#92;&#92;{@code ")
  *                             .encryptionState(HipObjectDiskEncryptionCriteriaEncryptedLocationEncryptionStateArgs.builder()
  *                                 .is("encrypted")
  *                                 .build())
  *                             .build(),
  *                         HipObjectDiskEncryptionCriteriaEncryptedLocationArgs.builder()
- *                             .name("D:\\Users\\")
+ *                             .name("D:}&#92;&#92;{@code Users}&#92;&#92;{@code ")
  *                             .encryptionState(HipObjectDiskEncryptionCriteriaEncryptedLocationEncryptionStateArgs.builder()
  *                                 .isNot("unencrypted")
  *                                 .build())
@@ -236,7 +236,7 @@ import javax.annotation.Nullable;
  *                             .running(true)
  *                             .build())
  *                     .registryKeys(HipObjectCustomChecksCriteriaRegistryKeyArgs.builder()
- *                         .name("HKEY_LOCAL_MACHINE\\Software\\PaloAltoNetworks")
+ *                         .name("HKEY_LOCAL_MACHINE}&#92;&#92;{@code Software}&#92;&#92;{@code PaloAltoNetworks")
  *                         .registryValue(Arrays.asList(Map.ofEntries(
  *                             Map.entry("name", "AllowRemoteAccess"),
  *                             Map.entry("valueData", "false")
@@ -246,8 +246,8 @@ import javax.annotation.Nullable;
  *                 .build())
  *             .build());
  * 
- *     }
- * }
+ *     }}{@code
+ * }}{@code
  * }
  * </pre>
  * 

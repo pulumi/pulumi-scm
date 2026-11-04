@@ -173,6 +173,12 @@ func (Layer2SubinterfaceState) ElementType() reflect.Type {
 	return reflect.TypeOf((*layer2SubinterfaceState)(nil)).Elem()
 }
 
+// Layer2SubinterfaceExists checks whether an existing Layer2Subinterface resource with the given ID exists.
+func Layer2SubinterfaceExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *Layer2SubinterfaceState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("scm:index/layer2Subinterface:Layer2Subinterface", id, state, "", opts...)
+}
+
 type layer2SubinterfaceArgs struct {
 	// Description
 	Comment *string `pulumi:"comment"`

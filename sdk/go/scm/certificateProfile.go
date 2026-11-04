@@ -232,6 +232,12 @@ func (CertificateProfileState) ElementType() reflect.Type {
 	return reflect.TypeOf((*certificateProfileState)(nil)).Elem()
 }
 
+// CertificateProfileExists checks whether an existing CertificateProfile resource with the given ID exists.
+func CertificateProfileExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *CertificateProfileState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("scm:index/certificateProfile:CertificateProfile", id, state, "", opts...)
+}
+
 type certificateProfileArgs struct {
 	// Block sessions with expired certificates?
 	BlockExpiredCert *bool `pulumi:"blockExpiredCert"`

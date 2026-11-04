@@ -41,12 +41,12 @@ import javax.annotation.Nullable;
  * import java.nio.file.Files;
  * import java.nio.file.Paths;
  * 
- * public class App {
- *     public static void main(String[] args) {
+ * public class App }{{@code
+ *     public static void main(String[] args) }{{@code
  *         Pulumi.run(App::stack);
- *     }
+ *     }}{@code
  * 
- *     public static void stack(Context ctx) {
+ *     public static void stack(Context ctx) }{{@code
  *         var scmSyslogServerProf1 = new SyslogServerProfile("scmSyslogServerProf1", SyslogServerProfileArgs.builder()
  *             .folder("ngfw-shared")
  *             .name("syslog-server-prof-base")
@@ -105,7 +105,7 @@ import javax.annotation.Nullable;
  *             .format(SyslogServerProfileFormatArgs.builder()
  *                 .escaping(SyslogServerProfileFormatEscapingArgs.builder()
  *                     .escapeCharacter("*")
- *                     .escapedCharacters("&\\#")
+ *                     .escapedCharacters("&}&#92;&#92;{@code #")
  *                     .build())
  *                 .traffic("$actionflags")
  *                 .threat("$error + $errorcode")
@@ -127,8 +127,8 @@ import javax.annotation.Nullable;
  *                 .build())
  *             .build());
  * 
- *     }
- * }
+ *     }}{@code
+ * }}{@code
  * }
  * </pre>
  * 

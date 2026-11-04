@@ -1142,6 +1142,52 @@ class NatRule(pulumi.CustomResource):
         __props__.__dict__["tos"] = tos
         return NatRule(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            active_active_device_binding: pulumi.Input[Optional[_builtins.str]] = None,
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            destination_translation: pulumi.Input[Optional[Union['NatRuleDestinationTranslationArgs', 'NatRuleDestinationTranslationArgsDict', 'outputs.NatRuleDestinationTranslation']]] = None,
+            destinations: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            device: pulumi.Input[Optional[_builtins.str]] = None,
+            disabled: pulumi.Input[Optional[_builtins.bool]] = None,
+            dynamic_destination_translation: pulumi.Input[Optional[Union['NatRuleDynamicDestinationTranslationArgs', 'NatRuleDynamicDestinationTranslationArgsDict', 'outputs.NatRuleDynamicDestinationTranslation']]] = None,
+            folder: pulumi.Input[Optional[_builtins.str]] = None,
+            froms: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            nat_type: pulumi.Input[Optional[_builtins.str]] = None,
+            position: pulumi.Input[Optional[_builtins.str]] = None,
+            service: pulumi.Input[Optional[_builtins.str]] = None,
+            snippet: pulumi.Input[Optional[_builtins.str]] = None,
+            source_translation: pulumi.Input[Optional[Union['NatRuleSourceTranslationArgs', 'NatRuleSourceTranslationArgsDict', 'outputs.NatRuleSourceTranslation']]] = None,
+            sources: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            tags: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            tfid: pulumi.Input[Optional[_builtins.str]] = None,
+            to_interface: pulumi.Input[Optional[_builtins.str]] = None,
+            tos: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["activeActiveDeviceBinding"] = active_active_device_binding
+        __props__["description"] = description
+        __props__["destinationTranslation"] = destination_translation
+        __props__["destinations"] = destinations
+        __props__["device"] = device
+        __props__["disabled"] = disabled
+        __props__["dynamicDestinationTranslation"] = dynamic_destination_translation
+        __props__["folder"] = folder
+        __props__["froms"] = froms
+        __props__["name"] = name
+        __props__["natType"] = nat_type
+        __props__["position"] = position
+        __props__["service"] = service
+        __props__["snippet"] = snippet
+        __props__["sourceTranslation"] = source_translation
+        __props__["sources"] = sources
+        __props__["tags"] = tags
+        __props__["tfid"] = tfid
+        __props__["toInterface"] = to_interface
+        __props__["tos"] = tos
+        return pulumi.runtime.exists_resource(None, 'scm:index/natRule:NatRule', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter(name="activeActiveDeviceBinding")
     def active_active_device_binding(self) -> pulumi.Output[Optional[_builtins.str]]:

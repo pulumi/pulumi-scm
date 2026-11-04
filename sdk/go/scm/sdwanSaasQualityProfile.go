@@ -118,6 +118,12 @@ func (SdwanSaasQualityProfileState) ElementType() reflect.Type {
 	return reflect.TypeOf((*sdwanSaasQualityProfileState)(nil)).Elem()
 }
 
+// SdwanSaasQualityProfileExists checks whether an existing SdwanSaasQualityProfile resource with the given ID exists.
+func SdwanSaasQualityProfileExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *SdwanSaasQualityProfileState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("scm:index/sdwanSaasQualityProfile:SdwanSaasQualityProfile", id, state, "", opts...)
+}
+
 type sdwanSaasQualityProfileArgs struct {
 	// The device in which the resource is defined
 	Device *string `pulumi:"device"`

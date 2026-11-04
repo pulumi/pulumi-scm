@@ -372,6 +372,22 @@ class ContentIdSetting(pulumi.CustomResource):
         __props__.__dict__["tfid"] = tfid
         return ContentIdSetting(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            content_id: pulumi.Input[Optional[Union['ContentIdSettingContentIdArgs', 'ContentIdSettingContentIdArgsDict', 'outputs.ContentIdSettingContentId']]] = None,
+            device: pulumi.Input[Optional[_builtins.str]] = None,
+            folder: pulumi.Input[Optional[_builtins.str]] = None,
+            snippet: pulumi.Input[Optional[_builtins.str]] = None,
+            tfid: pulumi.Input[Optional[_builtins.str]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["contentId"] = content_id
+        __props__["device"] = device
+        __props__["folder"] = folder
+        __props__["snippet"] = snippet
+        __props__["tfid"] = tfid
+        return pulumi.runtime.exists_resource(None, 'scm:index/contentIdSetting:ContentIdSetting', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter(name="contentId")
     def content_id(self) -> pulumi.Output[Optional['outputs.ContentIdSettingContentId']]:

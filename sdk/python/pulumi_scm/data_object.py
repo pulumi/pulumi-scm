@@ -509,6 +509,28 @@ class DataObject(pulumi.CustomResource):
         __props__.__dict__["tfid"] = tfid
         return DataObject(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            device: pulumi.Input[Optional[_builtins.str]] = None,
+            disable_override: pulumi.Input[Optional[_builtins.str]] = None,
+            folder: pulumi.Input[Optional[_builtins.str]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            pattern_type: pulumi.Input[Optional[Union['DataObjectPatternTypeArgs', 'DataObjectPatternTypeArgsDict', 'outputs.DataObjectPatternType']]] = None,
+            snippet: pulumi.Input[Optional[_builtins.str]] = None,
+            tfid: pulumi.Input[Optional[_builtins.str]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["description"] = description
+        __props__["device"] = device
+        __props__["disableOverride"] = disable_override
+        __props__["folder"] = folder
+        __props__["name"] = name
+        __props__["patternType"] = pattern_type
+        __props__["snippet"] = snippet
+        __props__["tfid"] = tfid
+        return pulumi.runtime.exists_resource(None, 'scm:index/dataObject:DataObject', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter
     def description(self) -> pulumi.Output[Optional[_builtins.str]]:

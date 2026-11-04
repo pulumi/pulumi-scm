@@ -755,6 +755,40 @@ class SamlServerProfile(pulumi.CustomResource):
         __props__.__dict__["want_auth_requests_signed"] = want_auth_requests_signed
         return SamlServerProfile(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            certificate: pulumi.Input[Optional[_builtins.str]] = None,
+            device: pulumi.Input[Optional[_builtins.str]] = None,
+            entity_id: pulumi.Input[Optional[_builtins.str]] = None,
+            folder: pulumi.Input[Optional[_builtins.str]] = None,
+            max_clock_skew: pulumi.Input[Optional[_builtins.int]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            slo_bindings: pulumi.Input[Optional[_builtins.str]] = None,
+            slo_url: pulumi.Input[Optional[_builtins.str]] = None,
+            snippet: pulumi.Input[Optional[_builtins.str]] = None,
+            sso_bindings: pulumi.Input[Optional[_builtins.str]] = None,
+            sso_url: pulumi.Input[Optional[_builtins.str]] = None,
+            tfid: pulumi.Input[Optional[_builtins.str]] = None,
+            validate_idp_certificate: pulumi.Input[Optional[_builtins.bool]] = None,
+            want_auth_requests_signed: pulumi.Input[Optional[_builtins.bool]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["certificate"] = certificate
+        __props__["device"] = device
+        __props__["entityId"] = entity_id
+        __props__["folder"] = folder
+        __props__["maxClockSkew"] = max_clock_skew
+        __props__["name"] = name
+        __props__["sloBindings"] = slo_bindings
+        __props__["sloUrl"] = slo_url
+        __props__["snippet"] = snippet
+        __props__["ssoBindings"] = sso_bindings
+        __props__["ssoUrl"] = sso_url
+        __props__["tfid"] = tfid
+        __props__["validateIdpCertificate"] = validate_idp_certificate
+        __props__["wantAuthRequestsSigned"] = want_auth_requests_signed
+        return pulumi.runtime.exists_resource(None, 'scm:index/samlServerProfile:SamlServerProfile', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter
     def certificate(self) -> pulumi.Output[_builtins.str]:

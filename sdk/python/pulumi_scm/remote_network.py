@@ -778,6 +778,38 @@ class RemoteNetwork(pulumi.CustomResource):
         __props__.__dict__["tfid"] = tfid
         return RemoteNetwork(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            ecmp_load_balancing: pulumi.Input[Optional[_builtins.str]] = None,
+            ecmp_tunnels: pulumi.Input[Optional[Sequence[pulumi.Input[Union['RemoteNetworkEcmpTunnelArgs', 'RemoteNetworkEcmpTunnelArgsDict', 'outputs.RemoteNetworkEcmpTunnel']]]]] = None,
+            encrypted_values: pulumi.Input[Optional[Mapping[str, pulumi.Input[_builtins.str]]]] = None,
+            folder: pulumi.Input[Optional[_builtins.str]] = None,
+            ipsec_tunnel: pulumi.Input[Optional[_builtins.str]] = None,
+            license_type: pulumi.Input[Optional[_builtins.str]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            protocol: pulumi.Input[Optional[Union['RemoteNetworkProtocolArgs', 'RemoteNetworkProtocolArgsDict', 'outputs.RemoteNetworkProtocol']]] = None,
+            region: pulumi.Input[Optional[_builtins.str]] = None,
+            secondary_ipsec_tunnel: pulumi.Input[Optional[_builtins.str]] = None,
+            spn_name: pulumi.Input[Optional[_builtins.str]] = None,
+            subnets: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            tfid: pulumi.Input[Optional[_builtins.str]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["ecmpLoadBalancing"] = ecmp_load_balancing
+        __props__["ecmpTunnels"] = ecmp_tunnels
+        __props__["encryptedValues"] = encrypted_values
+        __props__["folder"] = folder
+        __props__["ipsecTunnel"] = ipsec_tunnel
+        __props__["licenseType"] = license_type
+        __props__["name"] = name
+        __props__["protocol"] = protocol
+        __props__["region"] = region
+        __props__["secondaryIpsecTunnel"] = secondary_ipsec_tunnel
+        __props__["spnName"] = spn_name
+        __props__["subnets"] = subnets
+        __props__["tfid"] = tfid
+        return pulumi.runtime.exists_resource(None, 'scm:index/remoteNetwork:RemoteNetwork', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter(name="ecmpLoadBalancing")
     def ecmp_load_balancing(self) -> pulumi.Output[_builtins.str]:

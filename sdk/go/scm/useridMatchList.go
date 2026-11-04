@@ -199,6 +199,12 @@ func (UseridMatchListState) ElementType() reflect.Type {
 	return reflect.TypeOf((*useridMatchListState)(nil)).Elem()
 }
 
+// UseridMatchListExists checks whether an existing UseridMatchList resource with the given ID exists.
+func UseridMatchListExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *UseridMatchListState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("scm:index/useridMatchList:UseridMatchList", id, state, "", opts...)
+}
+
 type useridMatchListArgs struct {
 	// Description of the userid match list entry
 	Description *string `pulumi:"description"`

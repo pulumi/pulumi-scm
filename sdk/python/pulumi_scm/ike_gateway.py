@@ -724,6 +724,38 @@ class IkeGateway(pulumi.CustomResource):
         __props__.__dict__["tfid"] = tfid
         return IkeGateway(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            authentication: pulumi.Input[Optional[Union['IkeGatewayAuthenticationArgs', 'IkeGatewayAuthenticationArgsDict', 'outputs.IkeGatewayAuthentication']]] = None,
+            device: pulumi.Input[Optional[_builtins.str]] = None,
+            encrypted_values: pulumi.Input[Optional[Mapping[str, pulumi.Input[_builtins.str]]]] = None,
+            folder: pulumi.Input[Optional[_builtins.str]] = None,
+            local_address: pulumi.Input[Optional[Union['IkeGatewayLocalAddressArgs', 'IkeGatewayLocalAddressArgsDict', 'outputs.IkeGatewayLocalAddress']]] = None,
+            local_id: pulumi.Input[Optional[Union['IkeGatewayLocalIdArgs', 'IkeGatewayLocalIdArgsDict', 'outputs.IkeGatewayLocalId']]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            peer_address: pulumi.Input[Optional[Union['IkeGatewayPeerAddressArgs', 'IkeGatewayPeerAddressArgsDict', 'outputs.IkeGatewayPeerAddress']]] = None,
+            peer_id: pulumi.Input[Optional[Union['IkeGatewayPeerIdArgs', 'IkeGatewayPeerIdArgsDict', 'outputs.IkeGatewayPeerId']]] = None,
+            protocol: pulumi.Input[Optional[Union['IkeGatewayProtocolArgs', 'IkeGatewayProtocolArgsDict', 'outputs.IkeGatewayProtocol']]] = None,
+            protocol_common: pulumi.Input[Optional[Union['IkeGatewayProtocolCommonArgs', 'IkeGatewayProtocolCommonArgsDict', 'outputs.IkeGatewayProtocolCommon']]] = None,
+            snippet: pulumi.Input[Optional[_builtins.str]] = None,
+            tfid: pulumi.Input[Optional[_builtins.str]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["authentication"] = authentication
+        __props__["device"] = device
+        __props__["encryptedValues"] = encrypted_values
+        __props__["folder"] = folder
+        __props__["localAddress"] = local_address
+        __props__["localId"] = local_id
+        __props__["name"] = name
+        __props__["peerAddress"] = peer_address
+        __props__["peerId"] = peer_id
+        __props__["protocol"] = protocol
+        __props__["protocolCommon"] = protocol_common
+        __props__["snippet"] = snippet
+        __props__["tfid"] = tfid
+        return pulumi.runtime.exists_resource(None, 'scm:index/ikeGateway:IkeGateway', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter
     def authentication(self) -> pulumi.Output['outputs.IkeGatewayAuthentication']:

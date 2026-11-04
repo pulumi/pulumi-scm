@@ -114,6 +114,12 @@ func (LocalUserGroupState) ElementType() reflect.Type {
 	return reflect.TypeOf((*localUserGroupState)(nil)).Elem()
 }
 
+// LocalUserGroupExists checks whether an existing LocalUserGroup resource with the given ID exists.
+func LocalUserGroupExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *LocalUserGroupState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("scm:index/localUserGroup:LocalUserGroup", id, state, "", opts...)
+}
+
 type localUserGroupArgs struct {
 	// The device in which the resource is defined
 	Device *string `pulumi:"device"`

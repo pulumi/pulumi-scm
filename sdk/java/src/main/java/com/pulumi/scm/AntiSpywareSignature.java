@@ -279,14 +279,14 @@ public class AntiSpywareSignature extends com.pulumi.resources.CustomResource {
         return this.tfid;
     }
     /**
-     * threat id range \n\n and \n\n
+     * threat id range &#92;n&#92;n and &#92;n&#92;n
      * 
      */
     @Export(name="threatId", refs={String.class}, tree="[0]")
     private Output<String> threatId;
 
     /**
-     * @return threat id range \n\n and \n\n
+     * @return threat id range &#92;n&#92;n and &#92;n&#92;n
      * 
      */
     public Output<String> threatId() {

@@ -287,6 +287,12 @@ func (RemoteNetworkState) ElementType() reflect.Type {
 	return reflect.TypeOf((*remoteNetworkState)(nil)).Elem()
 }
 
+// RemoteNetworkExists checks whether an existing RemoteNetwork resource with the given ID exists.
+func RemoteNetworkExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *RemoteNetworkState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("scm:index/remoteNetwork:RemoteNetwork", id, state, "", opts...)
+}
+
 type remoteNetworkArgs struct {
 	// Ecmp load balancing. Possible values are `enable` and `disable`.
 	EcmpLoadBalancing *string `pulumi:"ecmpLoadBalancing"`

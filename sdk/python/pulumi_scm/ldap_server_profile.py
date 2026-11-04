@@ -957,6 +957,44 @@ class LdapServerProfile(pulumi.CustomResource):
         __props__.__dict__["verify_server_certificate"] = verify_server_certificate
         return LdapServerProfile(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            base: pulumi.Input[Optional[_builtins.str]] = None,
+            bind_dn: pulumi.Input[Optional[_builtins.str]] = None,
+            bind_password: pulumi.Input[Optional[_builtins.str]] = None,
+            bind_timelimit: pulumi.Input[Optional[_builtins.str]] = None,
+            device: pulumi.Input[Optional[_builtins.str]] = None,
+            encrypted_values: pulumi.Input[Optional[Mapping[str, pulumi.Input[_builtins.str]]]] = None,
+            folder: pulumi.Input[Optional[_builtins.str]] = None,
+            ldap_type: pulumi.Input[Optional[_builtins.str]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            retry_interval: pulumi.Input[Optional[_builtins.int]] = None,
+            servers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['LdapServerProfileServerArgs', 'LdapServerProfileServerArgsDict', 'outputs.LdapServerProfileServer']]]]] = None,
+            snippet: pulumi.Input[Optional[_builtins.str]] = None,
+            ssl: pulumi.Input[Optional[_builtins.bool]] = None,
+            tfid: pulumi.Input[Optional[_builtins.str]] = None,
+            timelimit: pulumi.Input[Optional[_builtins.int]] = None,
+            verify_server_certificate: pulumi.Input[Optional[_builtins.bool]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["base"] = base
+        __props__["bindDn"] = bind_dn
+        __props__["bindPassword"] = bind_password
+        __props__["bindTimelimit"] = bind_timelimit
+        __props__["device"] = device
+        __props__["encryptedValues"] = encrypted_values
+        __props__["folder"] = folder
+        __props__["ldapType"] = ldap_type
+        __props__["name"] = name
+        __props__["retryInterval"] = retry_interval
+        __props__["servers"] = servers
+        __props__["snippet"] = snippet
+        __props__["ssl"] = ssl
+        __props__["tfid"] = tfid
+        __props__["timelimit"] = timelimit
+        __props__["verifyServerCertificate"] = verify_server_certificate
+        return pulumi.runtime.exists_resource(None, 'scm:index/ldapServerProfile:LdapServerProfile', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter
     def base(self) -> pulumi.Output[Optional[_builtins.str]]:

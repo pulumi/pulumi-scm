@@ -166,6 +166,12 @@ func (TagState) ElementType() reflect.Type {
 	return reflect.TypeOf((*tagState)(nil)).Elem()
 }
 
+// TagExists checks whether an existing Tag resource with the given ID exists.
+func TagExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *TagState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("scm:index/tag:Tag", id, state, "", opts...)
+}
+
 type tagArgs struct {
 	// The color of the tag. Possible values are `Red`, `Green`, `Blue`, `Yellow`, `Copper`, `Orange`, `Purple`, `Gray`, `Light Green`, `Cyan`, `Light Gray`, `Blue Gray`, `Lime`, `Black`, `Gold`, `Brown`, `Olive`, `Maroon`, `Red-Orange`, `Yellow-Orange`, `Forest Green`, `Turquoise Blue`, `Azure Blue`, `Cerulean Blue`, `Midnight Blue`, `Medium Blue`, `Cobalt Blue`, `Violet Blue`, `Blue Violet`, `Medium Violet`, `Medium Rose`, `Lavender`, `Orchid`, `Thistle`, `Peach`, `Salmon`, `Magenta`, `Red Violet`, `Mahogany`, `Burnt Sienna` and `Chestnut`.
 	Color *string `pulumi:"color"`

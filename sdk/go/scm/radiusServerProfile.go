@@ -209,6 +209,12 @@ func (RadiusServerProfileState) ElementType() reflect.Type {
 	return reflect.TypeOf((*radiusServerProfileState)(nil)).Elem()
 }
 
+// RadiusServerProfileExists checks whether an existing RadiusServerProfile resource with the given ID exists.
+func RadiusServerProfileExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *RadiusServerProfileState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("scm:index/radiusServerProfile:RadiusServerProfile", id, state, "", opts...)
+}
+
 type radiusServerProfileArgs struct {
 	// The device in which the resource is defined
 	Device *string `pulumi:"device"`

@@ -132,6 +132,12 @@ func (BgpRouteMapRedistributionState) ElementType() reflect.Type {
 	return reflect.TypeOf((*bgpRouteMapRedistributionState)(nil)).Elem()
 }
 
+// BgpRouteMapRedistributionExists checks whether an existing BgpRouteMapRedistribution resource with the given ID exists.
+func BgpRouteMapRedistributionExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *BgpRouteMapRedistributionState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("scm:index/bgpRouteMapRedistribution:BgpRouteMapRedistribution", id, state, "", opts...)
+}
+
 type bgpRouteMapRedistributionArgs struct {
 	// Bgp
 	Bgp *BgpRouteMapRedistributionBgp `pulumi:"bgp"`

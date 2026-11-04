@@ -196,6 +196,12 @@ func (AutoVpnClusterState) ElementType() reflect.Type {
 	return reflect.TypeOf((*autoVpnClusterState)(nil)).Elem()
 }
 
+// AutoVpnClusterExists checks whether an existing AutoVpnCluster resource with the given ID exists.
+func AutoVpnClusterExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *AutoVpnClusterState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("scm:index/autoVpnCluster:AutoVpnCluster", id, state, "", opts...)
+}
+
 type autoVpnClusterArgs struct {
 	// Branches
 	Branches []AutoVpnClusterBranch `pulumi:"branches"`

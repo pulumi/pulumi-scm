@@ -214,6 +214,12 @@ func (VlanInterfaceState) ElementType() reflect.Type {
 	return reflect.TypeOf((*vlanInterfaceState)(nil)).Elem()
 }
 
+// VlanInterfaceExists checks whether an existing VlanInterface resource with the given ID exists.
+func VlanInterfaceExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *VlanInterfaceState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("scm:index/vlanInterface:VlanInterface", id, state, "", opts...)
+}
+
 type vlanInterfaceArgs struct {
 	// TCP MSS adjustment settings for the interface
 	AdjustTcpMss *VlanInterfaceAdjustTcpMss `pulumi:"adjustTcpMss"`

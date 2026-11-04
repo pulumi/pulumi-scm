@@ -184,6 +184,12 @@ func (DataObjectState) ElementType() reflect.Type {
 	return reflect.TypeOf((*dataObjectState)(nil)).Elem()
 }
 
+// DataObjectExists checks whether an existing DataObject resource with the given ID exists.
+func DataObjectExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *DataObjectState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("scm:index/dataObject:DataObject", id, state, "", opts...)
+}
+
 type dataObjectArgs struct {
 	// The description of the data object
 	Description *string `pulumi:"description"`

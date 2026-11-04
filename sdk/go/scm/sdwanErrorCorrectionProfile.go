@@ -127,6 +127,12 @@ func (SdwanErrorCorrectionProfileState) ElementType() reflect.Type {
 	return reflect.TypeOf((*sdwanErrorCorrectionProfileState)(nil)).Elem()
 }
 
+// SdwanErrorCorrectionProfileExists checks whether an existing SdwanErrorCorrectionProfile resource with the given ID exists.
+func SdwanErrorCorrectionProfileExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *SdwanErrorCorrectionProfileState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("scm:index/sdwanErrorCorrectionProfile:SdwanErrorCorrectionProfile", id, state, "", opts...)
+}
+
 type sdwanErrorCorrectionProfileArgs struct {
 	// Activation threshold
 	ActivationThreshold int `pulumi:"activationThreshold"`

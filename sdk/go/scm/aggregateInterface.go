@@ -262,6 +262,12 @@ func (AggregateInterfaceState) ElementType() reflect.Type {
 	return reflect.TypeOf((*aggregateInterfaceState)(nil)).Elem()
 }
 
+// AggregateInterfaceExists checks whether an existing AggregateInterface resource with the given ID exists.
+func AggregateInterfaceExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *AggregateInterfaceState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("scm:index/aggregateInterface:AggregateInterface", id, state, "", opts...)
+}
+
 type aggregateInterfaceArgs struct {
 	// Aggregate interface description
 	Comment *string `pulumi:"comment"`

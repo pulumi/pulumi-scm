@@ -715,6 +715,36 @@ class AuthenticationProfile(pulumi.CustomResource):
         __props__.__dict__["username_modifier"] = username_modifier
         return AuthenticationProfile(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            allow_lists: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            device: pulumi.Input[Optional[_builtins.str]] = None,
+            folder: pulumi.Input[Optional[_builtins.str]] = None,
+            lockout: pulumi.Input[Optional[Union['AuthenticationProfileLockoutArgs', 'AuthenticationProfileLockoutArgsDict', 'outputs.AuthenticationProfileLockout']]] = None,
+            method: pulumi.Input[Optional[Union['AuthenticationProfileMethodArgs', 'AuthenticationProfileMethodArgsDict', 'outputs.AuthenticationProfileMethod']]] = None,
+            multi_factor_auth: pulumi.Input[Optional[Union['AuthenticationProfileMultiFactorAuthArgs', 'AuthenticationProfileMultiFactorAuthArgsDict', 'outputs.AuthenticationProfileMultiFactorAuth']]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            single_sign_on: pulumi.Input[Optional[Union['AuthenticationProfileSingleSignOnArgs', 'AuthenticationProfileSingleSignOnArgsDict', 'outputs.AuthenticationProfileSingleSignOn']]] = None,
+            snippet: pulumi.Input[Optional[_builtins.str]] = None,
+            tfid: pulumi.Input[Optional[_builtins.str]] = None,
+            user_domain: pulumi.Input[Optional[_builtins.str]] = None,
+            username_modifier: pulumi.Input[Optional[_builtins.str]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["allowLists"] = allow_lists
+        __props__["device"] = device
+        __props__["folder"] = folder
+        __props__["lockout"] = lockout
+        __props__["method"] = method
+        __props__["multiFactorAuth"] = multi_factor_auth
+        __props__["name"] = name
+        __props__["singleSignOn"] = single_sign_on
+        __props__["snippet"] = snippet
+        __props__["tfid"] = tfid
+        __props__["userDomain"] = user_domain
+        __props__["usernameModifier"] = username_modifier
+        return pulumi.runtime.exists_resource(None, 'scm:index/authenticationProfile:AuthenticationProfile', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter(name="allowLists")
     def allow_lists(self) -> pulumi.Output[Sequence[_builtins.str]]:

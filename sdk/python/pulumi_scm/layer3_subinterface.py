@@ -984,6 +984,48 @@ class Layer3Subinterface(pulumi.CustomResource):
         __props__.__dict__["tfid"] = tfid
         return Layer3Subinterface(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            adjust_tcp_mss: pulumi.Input[Optional[Union['Layer3SubinterfaceAdjustTcpMssArgs', 'Layer3SubinterfaceAdjustTcpMssArgsDict', 'outputs.Layer3SubinterfaceAdjustTcpMss']]] = None,
+            arps: pulumi.Input[Optional[Sequence[pulumi.Input[Union['Layer3SubinterfaceArpArgs', 'Layer3SubinterfaceArpArgsDict', 'outputs.Layer3SubinterfaceArp']]]]] = None,
+            comment: pulumi.Input[Optional[_builtins.str]] = None,
+            ddns_config: pulumi.Input[Optional[Union['Layer3SubinterfaceDdnsConfigArgs', 'Layer3SubinterfaceDdnsConfigArgsDict', 'outputs.Layer3SubinterfaceDdnsConfig']]] = None,
+            device: pulumi.Input[Optional[_builtins.str]] = None,
+            dhcp_client: pulumi.Input[Optional[Union['Layer3SubinterfaceDhcpClientArgs', 'Layer3SubinterfaceDhcpClientArgsDict', 'outputs.Layer3SubinterfaceDhcpClient']]] = None,
+            encrypted_values: pulumi.Input[Optional[Mapping[str, pulumi.Input[_builtins.str]]]] = None,
+            folder: pulumi.Input[Optional[_builtins.str]] = None,
+            interface_management_profile: pulumi.Input[Optional[_builtins.str]] = None,
+            ips: pulumi.Input[Optional[Sequence[pulumi.Input[Union['Layer3SubinterfaceIpArgs', 'Layer3SubinterfaceIpArgsDict', 'outputs.Layer3SubinterfaceIp']]]]] = None,
+            mtu: pulumi.Input[Optional[_builtins.int]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            netflow_profile: pulumi.Input[Optional[_builtins.str]] = None,
+            parent_interface: pulumi.Input[Optional[_builtins.str]] = None,
+            pppoe: pulumi.Input[Optional[Union['Layer3SubinterfacePppoeArgs', 'Layer3SubinterfacePppoeArgsDict', 'outputs.Layer3SubinterfacePppoe']]] = None,
+            snippet: pulumi.Input[Optional[_builtins.str]] = None,
+            tag: pulumi.Input[Optional[_builtins.int]] = None,
+            tfid: pulumi.Input[Optional[_builtins.str]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["adjustTcpMss"] = adjust_tcp_mss
+        __props__["arps"] = arps
+        __props__["comment"] = comment
+        __props__["ddnsConfig"] = ddns_config
+        __props__["device"] = device
+        __props__["dhcpClient"] = dhcp_client
+        __props__["encryptedValues"] = encrypted_values
+        __props__["folder"] = folder
+        __props__["interfaceManagementProfile"] = interface_management_profile
+        __props__["ips"] = ips
+        __props__["mtu"] = mtu
+        __props__["name"] = name
+        __props__["netflowProfile"] = netflow_profile
+        __props__["parentInterface"] = parent_interface
+        __props__["pppoe"] = pppoe
+        __props__["snippet"] = snippet
+        __props__["tag"] = tag
+        __props__["tfid"] = tfid
+        return pulumi.runtime.exists_resource(None, 'scm:index/layer3Subinterface:Layer3Subinterface', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter(name="adjustTcpMss")
     def adjust_tcp_mss(self) -> pulumi.Output[Optional['outputs.Layer3SubinterfaceAdjustTcpMss']]:

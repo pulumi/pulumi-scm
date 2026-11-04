@@ -135,6 +135,12 @@ func (AutoVpnSettingState) ElementType() reflect.Type {
 	return reflect.TypeOf((*autoVpnSettingState)(nil)).Elem()
 }
 
+// AutoVpnSettingExists checks whether an existing AutoVpnSetting resource with the given ID exists.
+func AutoVpnSettingExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *AutoVpnSettingState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("scm:index/autoVpnSetting:AutoVpnSetting", id, state, "", opts...)
+}
+
 type autoVpnSettingArgs struct {
 	// As range
 	AsRange AutoVpnSettingAsRange `pulumi:"asRange"`

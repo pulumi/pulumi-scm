@@ -1020,6 +1020,48 @@ class ScepProfile(pulumi.CustomResource):
         __props__.__dict__["use_for_key_encipherment"] = use_for_key_encipherment
         return ScepProfile(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            algorithm: pulumi.Input[Optional[Union['ScepProfileAlgorithmArgs', 'ScepProfileAlgorithmArgsDict', 'outputs.ScepProfileAlgorithm']]] = None,
+            ca_identity_name: pulumi.Input[Optional[_builtins.str]] = None,
+            certificate_attributes: pulumi.Input[Optional[Union['ScepProfileCertificateAttributesArgs', 'ScepProfileCertificateAttributesArgsDict', 'outputs.ScepProfileCertificateAttributes']]] = None,
+            device: pulumi.Input[Optional[_builtins.str]] = None,
+            digest: pulumi.Input[Optional[_builtins.str]] = None,
+            encrypted_values: pulumi.Input[Optional[Mapping[str, pulumi.Input[_builtins.str]]]] = None,
+            fingerprint: pulumi.Input[Optional[_builtins.str]] = None,
+            folder: pulumi.Input[Optional[_builtins.str]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            scep_ca_cert: pulumi.Input[Optional[_builtins.str]] = None,
+            scep_challenge: pulumi.Input[Optional[Union['ScepProfileScepChallengeArgs', 'ScepProfileScepChallengeArgsDict', 'outputs.ScepProfileScepChallenge']]] = None,
+            scep_client_cert: pulumi.Input[Optional[_builtins.str]] = None,
+            scep_url: pulumi.Input[Optional[_builtins.str]] = None,
+            snippet: pulumi.Input[Optional[_builtins.str]] = None,
+            subject: pulumi.Input[Optional[_builtins.str]] = None,
+            tfid: pulumi.Input[Optional[_builtins.str]] = None,
+            use_as_digital_signature: pulumi.Input[Optional[_builtins.bool]] = None,
+            use_for_key_encipherment: pulumi.Input[Optional[_builtins.bool]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["algorithm"] = algorithm
+        __props__["caIdentityName"] = ca_identity_name
+        __props__["certificateAttributes"] = certificate_attributes
+        __props__["device"] = device
+        __props__["digest"] = digest
+        __props__["encryptedValues"] = encrypted_values
+        __props__["fingerprint"] = fingerprint
+        __props__["folder"] = folder
+        __props__["name"] = name
+        __props__["scepCaCert"] = scep_ca_cert
+        __props__["scepChallenge"] = scep_challenge
+        __props__["scepClientCert"] = scep_client_cert
+        __props__["scepUrl"] = scep_url
+        __props__["snippet"] = snippet
+        __props__["subject"] = subject
+        __props__["tfid"] = tfid
+        __props__["useAsDigitalSignature"] = use_as_digital_signature
+        __props__["useForKeyEncipherment"] = use_for_key_encipherment
+        return pulumi.runtime.exists_resource(None, 'scm:index/scepProfile:ScepProfile', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter
     def algorithm(self) -> pulumi.Output['outputs.ScepProfileAlgorithm']:

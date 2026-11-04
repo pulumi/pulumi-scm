@@ -253,6 +253,12 @@ func (ApplicationFilterState) ElementType() reflect.Type {
 	return reflect.TypeOf((*applicationFilterState)(nil)).Elem()
 }
 
+// ApplicationFilterExists checks whether an existing ApplicationFilter resource with the given ID exists.
+func ApplicationFilterExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *ApplicationFilterState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("scm:index/applicationFilter:ApplicationFilter", id, state, "", opts...)
+}
+
 type applicationFilterArgs struct {
 	// Category
 	Categories []string `pulumi:"categories"`

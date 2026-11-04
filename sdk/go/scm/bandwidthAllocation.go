@@ -147,6 +147,12 @@ func (BandwidthAllocationState) ElementType() reflect.Type {
 	return reflect.TypeOf((*bandwidthAllocationState)(nil)).Elem()
 }
 
+// BandwidthAllocationExists checks whether an existing BandwidthAllocation resource with the given ID exists.
+func BandwidthAllocationExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *BandwidthAllocationState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("scm:index/bandwidthAllocation:BandwidthAllocation", id, state, "", opts...)
+}
+
 type bandwidthAllocationArgs struct {
 	// bandwidth to allocate in Mbps
 	AllocatedBandwidth int `pulumi:"allocatedBandwidth"`

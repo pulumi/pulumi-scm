@@ -48,12 +48,12 @@ import javax.annotation.Nullable;
  * import java.nio.file.Files;
  * import java.nio.file.Paths;
  * 
- * public class App {
- *     public static void main(String[] args) {
+ * public class App }{{@code
+ *     public static void main(String[] args) }{{@code
  *         Pulumi.run(App::stack);
- *     }
+ *     }}{@code
  * 
- *     public static void stack(Context ctx) {
+ *     public static void stack(Context ctx) }{{@code
  *         // First, create the tag objects that you will reference.
  *         var outboundTag = new Tag("outboundTag", TagArgs.builder()
  *             .folder("ngfw-shared")
@@ -229,12 +229,12 @@ import javax.annotation.Nullable;
  *             .destinations("any")
  *             .action("allow")
  *             .sourceUsers(            
- *                 "casidp\\test_1",
+ *                 "casidp}&#92;&#92;{@code test_1",
  *                 "CN=ng1,DC=casidp,DC=onmicrosoft,DC=com")
  *             .build());
  * 
- *     }
- * }
+ *     }}{@code
+ * }}{@code
  * }
  * </pre>
  * 

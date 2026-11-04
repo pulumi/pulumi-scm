@@ -115,6 +115,12 @@ func (InternalDnsServerState) ElementType() reflect.Type {
 	return reflect.TypeOf((*internalDnsServerState)(nil)).Elem()
 }
 
+// InternalDnsServerExists checks whether an existing InternalDnsServer resource with the given ID exists.
+func InternalDnsServerExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *InternalDnsServerState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("scm:index/internalDnsServer:InternalDnsServer", id, state, "", opts...)
+}
+
 type internalDnsServerArgs struct {
 	// The DNS domain name(s)
 	DomainNames []string `pulumi:"domainNames"`

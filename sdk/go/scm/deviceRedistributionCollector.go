@@ -155,6 +155,12 @@ func (DeviceRedistributionCollectorState) ElementType() reflect.Type {
 	return reflect.TypeOf((*deviceRedistributionCollectorState)(nil)).Elem()
 }
 
+// DeviceRedistributionCollectorExists checks whether an existing DeviceRedistributionCollector resource with the given ID exists.
+func DeviceRedistributionCollectorExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *DeviceRedistributionCollectorState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("scm:index/deviceRedistributionCollector:DeviceRedistributionCollector", id, state, "", opts...)
+}
+
 type deviceRedistributionCollectorArgs struct {
 	// The device in which the resource is defined
 	Device *string `pulumi:"device"`

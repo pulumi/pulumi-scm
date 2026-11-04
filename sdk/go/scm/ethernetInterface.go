@@ -356,6 +356,12 @@ func (EthernetInterfaceState) ElementType() reflect.Type {
 	return reflect.TypeOf((*ethernetInterfaceState)(nil)).Elem()
 }
 
+// EthernetInterfaceExists checks whether an existing EthernetInterface resource with the given ID exists.
+func EthernetInterfaceExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *EthernetInterfaceState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("scm:index/ethernetInterface:EthernetInterface", id, state, "", opts...)
+}
+
 type ethernetInterfaceArgs struct {
 	// Aggregate group
 	AggregateGroup *string `pulumi:"aggregateGroup"`

@@ -402,6 +402,12 @@ func (NatRuleState) ElementType() reflect.Type {
 	return reflect.TypeOf((*natRuleState)(nil)).Elem()
 }
 
+// NatRuleExists checks whether an existing NatRule resource with the given ID exists.
+func NatRuleExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *NatRuleState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("scm:index/natRule:NatRule", id, state, "", opts...)
+}
+
 type natRuleArgs struct {
 	// Active active device binding. Possible values are `primary`, `both`, `0` and `1`.
 	ActiveActiveDeviceBinding *string `pulumi:"activeActiveDeviceBinding"`

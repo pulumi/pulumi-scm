@@ -289,6 +289,12 @@ func (HttpHeaderProfileState) ElementType() reflect.Type {
 	return reflect.TypeOf((*httpHeaderProfileState)(nil)).Elem()
 }
 
+// HttpHeaderProfileExists checks whether an existing HttpHeaderProfile resource with the given ID exists.
+func HttpHeaderProfileExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *HttpHeaderProfileState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("scm:index/httpHeaderProfile:HttpHeaderProfile", id, state, "", opts...)
+}
+
 type httpHeaderProfileArgs struct {
 	// The description of the HTTP header profile
 	Description *string `pulumi:"description"`

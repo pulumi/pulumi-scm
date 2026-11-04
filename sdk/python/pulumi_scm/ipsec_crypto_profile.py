@@ -582,6 +582,32 @@ class IpsecCryptoProfile(pulumi.CustomResource):
         __props__.__dict__["tfid"] = tfid
         return IpsecCryptoProfile(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            ah: pulumi.Input[Optional[Union['IpsecCryptoProfileAhArgs', 'IpsecCryptoProfileAhArgsDict', 'outputs.IpsecCryptoProfileAh']]] = None,
+            device: pulumi.Input[Optional[_builtins.str]] = None,
+            dh_group: pulumi.Input[Optional[_builtins.str]] = None,
+            esp: pulumi.Input[Optional[Union['IpsecCryptoProfileEspArgs', 'IpsecCryptoProfileEspArgsDict', 'outputs.IpsecCryptoProfileEsp']]] = None,
+            folder: pulumi.Input[Optional[_builtins.str]] = None,
+            lifesize: pulumi.Input[Optional[Union['IpsecCryptoProfileLifesizeArgs', 'IpsecCryptoProfileLifesizeArgsDict', 'outputs.IpsecCryptoProfileLifesize']]] = None,
+            lifetime: pulumi.Input[Optional[Union['IpsecCryptoProfileLifetimeArgs', 'IpsecCryptoProfileLifetimeArgsDict', 'outputs.IpsecCryptoProfileLifetime']]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            snippet: pulumi.Input[Optional[_builtins.str]] = None,
+            tfid: pulumi.Input[Optional[_builtins.str]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["ah"] = ah
+        __props__["device"] = device
+        __props__["dhGroup"] = dh_group
+        __props__["esp"] = esp
+        __props__["folder"] = folder
+        __props__["lifesize"] = lifesize
+        __props__["lifetime"] = lifetime
+        __props__["name"] = name
+        __props__["snippet"] = snippet
+        __props__["tfid"] = tfid
+        return pulumi.runtime.exists_resource(None, 'scm:index/ipsecCryptoProfile:IpsecCryptoProfile', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter
     def ah(self) -> pulumi.Output[Optional['outputs.IpsecCryptoProfileAh']]:

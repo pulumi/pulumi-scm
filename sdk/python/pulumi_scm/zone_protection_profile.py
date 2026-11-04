@@ -1687,6 +1687,88 @@ class ZoneProtectionProfile(pulumi.CustomResource):
         __props__.__dict__["unknown_option_discard"] = unknown_option_discard
         return ZoneProtectionProfile(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            asymmetric_path: pulumi.Input[Optional[_builtins.str]] = None,
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            device: pulumi.Input[Optional[_builtins.str]] = None,
+            discard_icmp_embedded_error: pulumi.Input[Optional[_builtins.bool]] = None,
+            flood: pulumi.Input[Optional[Union['ZoneProtectionProfileFloodArgs', 'ZoneProtectionProfileFloodArgsDict', 'outputs.ZoneProtectionProfileFlood']]] = None,
+            folder: pulumi.Input[Optional[_builtins.str]] = None,
+            fragmented_traffic_discard: pulumi.Input[Optional[_builtins.bool]] = None,
+            icmp_frag_discard: pulumi.Input[Optional[_builtins.bool]] = None,
+            icmp_large_packet_discard: pulumi.Input[Optional[_builtins.bool]] = None,
+            icmp_ping_zero_id_discard: pulumi.Input[Optional[_builtins.bool]] = None,
+            ipv6: pulumi.Input[Optional[Union['ZoneProtectionProfileIpv6Args', 'ZoneProtectionProfileIpv6ArgsDict', 'outputs.ZoneProtectionProfileIpv6']]] = None,
+            l2_sec_group_tag_protection: pulumi.Input[Optional[Union['ZoneProtectionProfileL2SecGroupTagProtectionArgs', 'ZoneProtectionProfileL2SecGroupTagProtectionArgsDict', 'outputs.ZoneProtectionProfileL2SecGroupTagProtection']]] = None,
+            loose_source_routing_discard: pulumi.Input[Optional[_builtins.bool]] = None,
+            malformed_option_discard: pulumi.Input[Optional[_builtins.bool]] = None,
+            mismatched_overlapping_tcp_segment_discard: pulumi.Input[Optional[_builtins.bool]] = None,
+            mptcp_option_strip: pulumi.Input[Optional[_builtins.str]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            non_ip_protocol: pulumi.Input[Optional[Union['ZoneProtectionProfileNonIpProtocolArgs', 'ZoneProtectionProfileNonIpProtocolArgsDict', 'outputs.ZoneProtectionProfileNonIpProtocol']]] = None,
+            record_route_discard: pulumi.Input[Optional[_builtins.bool]] = None,
+            reject_non_syn_tcp: pulumi.Input[Optional[_builtins.str]] = None,
+            scan_white_lists: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ZoneProtectionProfileScanWhiteListArgs', 'ZoneProtectionProfileScanWhiteListArgsDict', 'outputs.ZoneProtectionProfileScanWhiteList']]]]] = None,
+            scans: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ZoneProtectionProfileScanArgs', 'ZoneProtectionProfileScanArgsDict', 'outputs.ZoneProtectionProfileScan']]]]] = None,
+            security_discard: pulumi.Input[Optional[_builtins.bool]] = None,
+            snippet: pulumi.Input[Optional[_builtins.str]] = None,
+            spoofed_ip_discard: pulumi.Input[Optional[_builtins.bool]] = None,
+            stream_id_discard: pulumi.Input[Optional[_builtins.bool]] = None,
+            strict_ip_check: pulumi.Input[Optional[_builtins.bool]] = None,
+            strict_source_routing_discard: pulumi.Input[Optional[_builtins.bool]] = None,
+            suppress_icmp_needfrag: pulumi.Input[Optional[_builtins.bool]] = None,
+            suppress_icmp_timeexceeded: pulumi.Input[Optional[_builtins.bool]] = None,
+            tcp_fast_open_and_data_strip: pulumi.Input[Optional[_builtins.bool]] = None,
+            tcp_handshake_discard: pulumi.Input[Optional[_builtins.bool]] = None,
+            tcp_syn_with_data_discard: pulumi.Input[Optional[_builtins.bool]] = None,
+            tcp_synack_with_data_discard: pulumi.Input[Optional[_builtins.bool]] = None,
+            tcp_timestamp_strip: pulumi.Input[Optional[_builtins.bool]] = None,
+            tfid: pulumi.Input[Optional[_builtins.str]] = None,
+            timestamp_discard: pulumi.Input[Optional[_builtins.bool]] = None,
+            unknown_option_discard: pulumi.Input[Optional[_builtins.bool]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["asymmetricPath"] = asymmetric_path
+        __props__["description"] = description
+        __props__["device"] = device
+        __props__["discardIcmpEmbeddedError"] = discard_icmp_embedded_error
+        __props__["flood"] = flood
+        __props__["folder"] = folder
+        __props__["fragmentedTrafficDiscard"] = fragmented_traffic_discard
+        __props__["icmpFragDiscard"] = icmp_frag_discard
+        __props__["icmpLargePacketDiscard"] = icmp_large_packet_discard
+        __props__["icmpPingZeroIdDiscard"] = icmp_ping_zero_id_discard
+        __props__["ipv6"] = ipv6
+        __props__["l2SecGroupTagProtection"] = l2_sec_group_tag_protection
+        __props__["looseSourceRoutingDiscard"] = loose_source_routing_discard
+        __props__["malformedOptionDiscard"] = malformed_option_discard
+        __props__["mismatchedOverlappingTcpSegmentDiscard"] = mismatched_overlapping_tcp_segment_discard
+        __props__["mptcpOptionStrip"] = mptcp_option_strip
+        __props__["name"] = name
+        __props__["nonIpProtocol"] = non_ip_protocol
+        __props__["recordRouteDiscard"] = record_route_discard
+        __props__["rejectNonSynTcp"] = reject_non_syn_tcp
+        __props__["scanWhiteLists"] = scan_white_lists
+        __props__["scans"] = scans
+        __props__["securityDiscard"] = security_discard
+        __props__["snippet"] = snippet
+        __props__["spoofedIpDiscard"] = spoofed_ip_discard
+        __props__["streamIdDiscard"] = stream_id_discard
+        __props__["strictIpCheck"] = strict_ip_check
+        __props__["strictSourceRoutingDiscard"] = strict_source_routing_discard
+        __props__["suppressIcmpNeedfrag"] = suppress_icmp_needfrag
+        __props__["suppressIcmpTimeexceeded"] = suppress_icmp_timeexceeded
+        __props__["tcpFastOpenAndDataStrip"] = tcp_fast_open_and_data_strip
+        __props__["tcpHandshakeDiscard"] = tcp_handshake_discard
+        __props__["tcpSynWithDataDiscard"] = tcp_syn_with_data_discard
+        __props__["tcpSynackWithDataDiscard"] = tcp_synack_with_data_discard
+        __props__["tcpTimestampStrip"] = tcp_timestamp_strip
+        __props__["tfid"] = tfid
+        __props__["timestampDiscard"] = timestamp_discard
+        __props__["unknownOptionDiscard"] = unknown_option_discard
+        return pulumi.runtime.exists_resource(None, 'scm:index/zoneProtectionProfile:ZoneProtectionProfile', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter(name="asymmetricPath")
     def asymmetric_path(self) -> pulumi.Output[Optional[_builtins.str]]:
