@@ -230,6 +230,12 @@ func (AntiSpywareSignatureState) ElementType() reflect.Type {
 	return reflect.TypeOf((*antiSpywareSignatureState)(nil)).Elem()
 }
 
+// AntiSpywareSignatureExists checks whether an existing AntiSpywareSignature resource with the given ID exists.
+func AntiSpywareSignatureExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *AntiSpywareSignatureState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("scm:index/antiSpywareSignature:AntiSpywareSignature", id, state, "", opts...)
+}
+
 type antiSpywareSignatureArgs struct {
 	// Bugtraq
 	Bugtraqs []string `pulumi:"bugtraqs"`

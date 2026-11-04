@@ -198,6 +198,12 @@ func (ManagementInterfaceState) ElementType() reflect.Type {
 	return reflect.TypeOf((*managementInterfaceState)(nil)).Elem()
 }
 
+// ManagementInterfaceExists checks whether an existing ManagementInterface resource with the given ID exists.
+func ManagementInterfaceExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *ManagementInterfaceState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("scm:index/managementInterface:ManagementInterface", id, state, "", opts...)
+}
+
 type managementInterfaceArgs struct {
 	// The device in which the resource is defined
 	Device *string `pulumi:"device"`

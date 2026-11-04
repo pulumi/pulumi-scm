@@ -734,6 +734,36 @@ class QosPolicyRule(pulumi.CustomResource):
         __props__.__dict__["tfid"] = tfid
         return QosPolicyRule(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            action: pulumi.Input[Optional[Union['QosPolicyRuleActionArgs', 'QosPolicyRuleActionArgsDict', 'outputs.QosPolicyRuleAction']]] = None,
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            device: pulumi.Input[Optional[_builtins.str]] = None,
+            dscp_tos: pulumi.Input[Optional[Union['QosPolicyRuleDscpTosArgs', 'QosPolicyRuleDscpTosArgsDict', 'outputs.QosPolicyRuleDscpTos']]] = None,
+            folder: pulumi.Input[Optional[_builtins.str]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            position: pulumi.Input[Optional[_builtins.str]] = None,
+            relative_position: pulumi.Input[Optional[_builtins.str]] = None,
+            schedule: pulumi.Input[Optional[_builtins.str]] = None,
+            snippet: pulumi.Input[Optional[_builtins.str]] = None,
+            target_rule: pulumi.Input[Optional[_builtins.str]] = None,
+            tfid: pulumi.Input[Optional[_builtins.str]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["action"] = action
+        __props__["description"] = description
+        __props__["device"] = device
+        __props__["dscpTos"] = dscp_tos
+        __props__["folder"] = folder
+        __props__["name"] = name
+        __props__["position"] = position
+        __props__["relativePosition"] = relative_position
+        __props__["schedule"] = schedule
+        __props__["snippet"] = snippet
+        __props__["targetRule"] = target_rule
+        __props__["tfid"] = tfid
+        return pulumi.runtime.exists_resource(None, 'scm:index/qosPolicyRule:QosPolicyRule', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter
     def action(self) -> pulumi.Output['outputs.QosPolicyRuleAction']:

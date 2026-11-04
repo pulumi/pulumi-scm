@@ -790,6 +790,42 @@ class AntiSpywareSignature(pulumi.CustomResource):
         __props__.__dict__["vendors"] = vendors
         return AntiSpywareSignature(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            bugtraqs: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            comment: pulumi.Input[Optional[_builtins.str]] = None,
+            cves: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            default_action: pulumi.Input[Optional[Union['AntiSpywareSignatureDefaultActionArgs', 'AntiSpywareSignatureDefaultActionArgsDict', 'outputs.AntiSpywareSignatureDefaultAction']]] = None,
+            device: pulumi.Input[Optional[_builtins.str]] = None,
+            direction: pulumi.Input[Optional[_builtins.str]] = None,
+            folder: pulumi.Input[Optional[_builtins.str]] = None,
+            references: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            severity: pulumi.Input[Optional[_builtins.str]] = None,
+            signature: pulumi.Input[Optional[Union['AntiSpywareSignatureSignatureArgs', 'AntiSpywareSignatureSignatureArgsDict', 'outputs.AntiSpywareSignatureSignature']]] = None,
+            snippet: pulumi.Input[Optional[_builtins.str]] = None,
+            tfid: pulumi.Input[Optional[_builtins.str]] = None,
+            threat_id: pulumi.Input[Optional[_builtins.str]] = None,
+            threatname: pulumi.Input[Optional[_builtins.str]] = None,
+            vendors: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["bugtraqs"] = bugtraqs
+        __props__["comment"] = comment
+        __props__["cves"] = cves
+        __props__["defaultAction"] = default_action
+        __props__["device"] = device
+        __props__["direction"] = direction
+        __props__["folder"] = folder
+        __props__["references"] = references
+        __props__["severity"] = severity
+        __props__["signature"] = signature
+        __props__["snippet"] = snippet
+        __props__["tfid"] = tfid
+        __props__["threatId"] = threat_id
+        __props__["threatname"] = threatname
+        __props__["vendors"] = vendors
+        return pulumi.runtime.exists_resource(None, 'scm:index/antiSpywareSignature:AntiSpywareSignature', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter
     def bugtraqs(self) -> pulumi.Output[Optional[Sequence[_builtins.str]]]:

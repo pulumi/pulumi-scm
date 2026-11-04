@@ -857,6 +857,46 @@ class CertificateProfile(pulumi.CustomResource):
         __props__.__dict__["username_field"] = username_field
         return CertificateProfile(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            block_expired_cert: pulumi.Input[Optional[_builtins.bool]] = None,
+            block_timeout_cert: pulumi.Input[Optional[_builtins.bool]] = None,
+            block_unauthenticated_cert: pulumi.Input[Optional[_builtins.bool]] = None,
+            block_unknown_cert: pulumi.Input[Optional[_builtins.bool]] = None,
+            ca_certificates: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CertificateProfileCaCertificateArgs', 'CertificateProfileCaCertificateArgsDict', 'outputs.CertificateProfileCaCertificate']]]]] = None,
+            cert_status_timeout: pulumi.Input[Optional[_builtins.str]] = None,
+            crl_receive_timeout: pulumi.Input[Optional[_builtins.str]] = None,
+            device: pulumi.Input[Optional[_builtins.str]] = None,
+            domain: pulumi.Input[Optional[_builtins.str]] = None,
+            folder: pulumi.Input[Optional[_builtins.str]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            ocsp_receive_timeout: pulumi.Input[Optional[_builtins.str]] = None,
+            snippet: pulumi.Input[Optional[_builtins.str]] = None,
+            tfid: pulumi.Input[Optional[_builtins.str]] = None,
+            use_crl: pulumi.Input[Optional[_builtins.bool]] = None,
+            use_ocsp: pulumi.Input[Optional[_builtins.bool]] = None,
+            username_field: pulumi.Input[Optional[Union['CertificateProfileUsernameFieldArgs', 'CertificateProfileUsernameFieldArgsDict', 'outputs.CertificateProfileUsernameField']]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["blockExpiredCert"] = block_expired_cert
+        __props__["blockTimeoutCert"] = block_timeout_cert
+        __props__["blockUnauthenticatedCert"] = block_unauthenticated_cert
+        __props__["blockUnknownCert"] = block_unknown_cert
+        __props__["caCertificates"] = ca_certificates
+        __props__["certStatusTimeout"] = cert_status_timeout
+        __props__["crlReceiveTimeout"] = crl_receive_timeout
+        __props__["device"] = device
+        __props__["domain"] = domain
+        __props__["folder"] = folder
+        __props__["name"] = name
+        __props__["ocspReceiveTimeout"] = ocsp_receive_timeout
+        __props__["snippet"] = snippet
+        __props__["tfid"] = tfid
+        __props__["useCrl"] = use_crl
+        __props__["useOcsp"] = use_ocsp
+        __props__["usernameField"] = username_field
+        return pulumi.runtime.exists_resource(None, 'scm:index/certificateProfile:CertificateProfile', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter(name="blockExpiredCert")
     def block_expired_cert(self) -> pulumi.Output[Optional[_builtins.bool]]:

@@ -328,6 +328,22 @@ class InternalDnsServer(pulumi.CustomResource):
         __props__.__dict__["tfid"] = tfid
         return InternalDnsServer(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            domain_names: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            primary: pulumi.Input[Optional[_builtins.str]] = None,
+            secondary: pulumi.Input[Optional[_builtins.str]] = None,
+            tfid: pulumi.Input[Optional[_builtins.str]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["domainNames"] = domain_names
+        __props__["name"] = name
+        __props__["primary"] = primary
+        __props__["secondary"] = secondary
+        __props__["tfid"] = tfid
+        return pulumi.runtime.exists_resource(None, 'scm:index/internalDnsServer:InternalDnsServer', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter(name="domainNames")
     def domain_names(self) -> pulumi.Output[Sequence[_builtins.str]]:

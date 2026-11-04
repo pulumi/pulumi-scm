@@ -2047,6 +2047,92 @@ class SecurityRule(pulumi.CustomResource):
         __props__.__dict__["tos"] = tos
         return SecurityRule(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            action: pulumi.Input[Optional[_builtins.str]] = None,
+            allow_url_categories: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SecurityRuleAllowUrlCategoryArgs', 'SecurityRuleAllowUrlCategoryArgsDict', 'outputs.SecurityRuleAllowUrlCategory']]]]] = None,
+            allow_web_applications: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SecurityRuleAllowWebApplicationArgs', 'SecurityRuleAllowWebApplicationArgsDict', 'outputs.SecurityRuleAllowWebApplication']]]]] = None,
+            applications: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            block_url_categories: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            block_web_applications: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            categories: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            default_profile_settings: pulumi.Input[Optional[Union['SecurityRuleDefaultProfileSettingsArgs', 'SecurityRuleDefaultProfileSettingsArgsDict', 'outputs.SecurityRuleDefaultProfileSettings']]] = None,
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            destination_hips: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            destinations: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            device: pulumi.Input[Optional[_builtins.str]] = None,
+            devices: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            disabled: pulumi.Input[Optional[_builtins.bool]] = None,
+            folder: pulumi.Input[Optional[_builtins.str]] = None,
+            froms: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            log_end: pulumi.Input[Optional[_builtins.bool]] = None,
+            log_setting: pulumi.Input[Optional[_builtins.str]] = None,
+            log_settings: pulumi.Input[Optional[Union['SecurityRuleLogSettingsArgs', 'SecurityRuleLogSettingsArgsDict', 'outputs.SecurityRuleLogSettings']]] = None,
+            log_start: pulumi.Input[Optional[_builtins.bool]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            negate_destination: pulumi.Input[Optional[_builtins.bool]] = None,
+            negate_source: pulumi.Input[Optional[_builtins.bool]] = None,
+            negate_user: pulumi.Input[Optional[_builtins.bool]] = None,
+            policy_type: pulumi.Input[Optional[_builtins.str]] = None,
+            position: pulumi.Input[Optional[_builtins.str]] = None,
+            profile_setting: pulumi.Input[Optional[Union['SecurityRuleProfileSettingArgs', 'SecurityRuleProfileSettingArgsDict', 'outputs.SecurityRuleProfileSetting']]] = None,
+            relative_position: pulumi.Input[Optional[_builtins.str]] = None,
+            schedule: pulumi.Input[Optional[_builtins.str]] = None,
+            security_settings: pulumi.Input[Optional[Union['SecurityRuleSecuritySettingsArgs', 'SecurityRuleSecuritySettingsArgsDict', 'outputs.SecurityRuleSecuritySettings']]] = None,
+            services: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            snippet: pulumi.Input[Optional[_builtins.str]] = None,
+            source_hips: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            source_users: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            sources: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            tags: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            target_rule: pulumi.Input[Optional[_builtins.str]] = None,
+            tenant_restrictions: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            tfid: pulumi.Input[Optional[_builtins.str]] = None,
+            tos: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["action"] = action
+        __props__["allowUrlCategories"] = allow_url_categories
+        __props__["allowWebApplications"] = allow_web_applications
+        __props__["applications"] = applications
+        __props__["blockUrlCategories"] = block_url_categories
+        __props__["blockWebApplications"] = block_web_applications
+        __props__["categories"] = categories
+        __props__["defaultProfileSettings"] = default_profile_settings
+        __props__["description"] = description
+        __props__["destinationHips"] = destination_hips
+        __props__["destinations"] = destinations
+        __props__["device"] = device
+        __props__["devices"] = devices
+        __props__["disabled"] = disabled
+        __props__["folder"] = folder
+        __props__["froms"] = froms
+        __props__["logEnd"] = log_end
+        __props__["logSetting"] = log_setting
+        __props__["logSettings"] = log_settings
+        __props__["logStart"] = log_start
+        __props__["name"] = name
+        __props__["negateDestination"] = negate_destination
+        __props__["negateSource"] = negate_source
+        __props__["negateUser"] = negate_user
+        __props__["policyType"] = policy_type
+        __props__["position"] = position
+        __props__["profileSetting"] = profile_setting
+        __props__["relativePosition"] = relative_position
+        __props__["schedule"] = schedule
+        __props__["securitySettings"] = security_settings
+        __props__["services"] = services
+        __props__["snippet"] = snippet
+        __props__["sourceHips"] = source_hips
+        __props__["sourceUsers"] = source_users
+        __props__["sources"] = sources
+        __props__["tags"] = tags
+        __props__["targetRule"] = target_rule
+        __props__["tenantRestrictions"] = tenant_restrictions
+        __props__["tfid"] = tfid
+        __props__["tos"] = tos
+        return pulumi.runtime.exists_resource(None, 'scm:index/securityRule:SecurityRule', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter
     def action(self) -> pulumi.Output[Optional[_builtins.str]]:

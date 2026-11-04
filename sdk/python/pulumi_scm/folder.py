@@ -442,6 +442,24 @@ class Folder(pulumi.CustomResource):
         __props__.__dict__["tfid"] = tfid
         return Folder(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            labels: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            parent: pulumi.Input[Optional[_builtins.str]] = None,
+            snippets: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            tfid: pulumi.Input[Optional[_builtins.str]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["description"] = description
+        __props__["labels"] = labels
+        __props__["name"] = name
+        __props__["parent"] = parent
+        __props__["snippets"] = snippets
+        __props__["tfid"] = tfid
+        return pulumi.runtime.exists_resource(None, 'scm:index/folder:Folder', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter
     def description(self) -> pulumi.Output[Optional[_builtins.str]]:

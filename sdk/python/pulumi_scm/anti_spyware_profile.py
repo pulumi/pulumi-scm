@@ -641,6 +641,36 @@ class AntiSpywareProfile(pulumi.CustomResource):
         __props__.__dict__["threat_exceptions"] = threat_exceptions
         return AntiSpywareProfile(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            cloud_inline_analysis: pulumi.Input[Optional[_builtins.bool]] = None,
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            device: pulumi.Input[Optional[_builtins.str]] = None,
+            folder: pulumi.Input[Optional[_builtins.str]] = None,
+            inline_exception_edl_urls: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            inline_exception_ip_addresses: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            mica_engine_spyware_enableds: pulumi.Input[Optional[Sequence[pulumi.Input[Union['AntiSpywareProfileMicaEngineSpywareEnabledArgs', 'AntiSpywareProfileMicaEngineSpywareEnabledArgsDict', 'outputs.AntiSpywareProfileMicaEngineSpywareEnabled']]]]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            rules: pulumi.Input[Optional[Sequence[pulumi.Input[Union['AntiSpywareProfileRuleArgs', 'AntiSpywareProfileRuleArgsDict', 'outputs.AntiSpywareProfileRule']]]]] = None,
+            snippet: pulumi.Input[Optional[_builtins.str]] = None,
+            tfid: pulumi.Input[Optional[_builtins.str]] = None,
+            threat_exceptions: pulumi.Input[Optional[Sequence[pulumi.Input[Union['AntiSpywareProfileThreatExceptionArgs', 'AntiSpywareProfileThreatExceptionArgsDict', 'outputs.AntiSpywareProfileThreatException']]]]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["cloudInlineAnalysis"] = cloud_inline_analysis
+        __props__["description"] = description
+        __props__["device"] = device
+        __props__["folder"] = folder
+        __props__["inlineExceptionEdlUrls"] = inline_exception_edl_urls
+        __props__["inlineExceptionIpAddresses"] = inline_exception_ip_addresses
+        __props__["micaEngineSpywareEnableds"] = mica_engine_spyware_enableds
+        __props__["name"] = name
+        __props__["rules"] = rules
+        __props__["snippet"] = snippet
+        __props__["tfid"] = tfid
+        __props__["threatExceptions"] = threat_exceptions
+        return pulumi.runtime.exists_resource(None, 'scm:index/antiSpywareProfile:AntiSpywareProfile', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter(name="cloudInlineAnalysis")
     def cloud_inline_analysis(self) -> pulumi.Output[_builtins.bool]:

@@ -120,6 +120,12 @@ func (RoutePathAccessListState) ElementType() reflect.Type {
 	return reflect.TypeOf((*routePathAccessListState)(nil)).Elem()
 }
 
+// RoutePathAccessListExists checks whether an existing RoutePathAccessList resource with the given ID exists.
+func RoutePathAccessListExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *RoutePathAccessListState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("scm:index/routePathAccessList:RoutePathAccessList", id, state, "", opts...)
+}
+
 type routePathAccessListArgs struct {
 	// AS paths
 	AspathEntries []RoutePathAccessListAspathEntry `pulumi:"aspathEntries"`

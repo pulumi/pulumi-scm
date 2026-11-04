@@ -216,6 +216,12 @@ func (AddressGroupState) ElementType() reflect.Type {
 	return reflect.TypeOf((*addressGroupState)(nil)).Elem()
 }
 
+// AddressGroupExists checks whether an existing AddressGroup resource with the given ID exists.
+func AddressGroupExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *AddressGroupState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("scm:index/addressGroup:AddressGroup", id, state, "", opts...)
+}
+
 type addressGroupArgs struct {
 	// Description
 	Description *string `pulumi:"description"`

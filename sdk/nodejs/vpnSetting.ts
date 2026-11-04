@@ -63,6 +63,17 @@ export class VpnSetting extends pulumi.CustomResource {
         return new VpnSetting(name, <any>state, { ...opts, id: id });
     }
 
+    /**
+     * Check whether an existing VpnSetting resource with the given ID exists.
+     *
+     * @param id The _unique_ provider ID of the resource to check.
+     * @param state Any extra arguments used during the lookup.
+     * @param opts Optional settings to control the behavior of the CustomResource.
+     */
+    public static exists(id: pulumi.Input<string>, state?: VpnSettingState, opts?: pulumi.CustomResourceOptions): pulumi.Output<boolean> {
+        return pulumi.runtime.existsResource("scm:index/vpnSetting:VpnSetting", id, <any>state || {}, { ...opts }, undefined);
+    }
+
     /** @internal */
     public static readonly __pulumiType = 'scm:index/vpnSetting:VpnSetting';
 

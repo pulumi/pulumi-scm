@@ -187,6 +187,12 @@ func (IpsecCryptoProfileState) ElementType() reflect.Type {
 	return reflect.TypeOf((*ipsecCryptoProfileState)(nil)).Elem()
 }
 
+// IpsecCryptoProfileExists checks whether an existing IpsecCryptoProfile resource with the given ID exists.
+func IpsecCryptoProfileExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *IpsecCryptoProfileState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("scm:index/ipsecCryptoProfile:IpsecCryptoProfile", id, state, "", opts...)
+}
+
 type ipsecCryptoProfileArgs struct {
 	// Ah
 	Ah *IpsecCryptoProfileAh `pulumi:"ah"`

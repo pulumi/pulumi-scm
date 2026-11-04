@@ -194,6 +194,12 @@ func (TlsServiceProfileState) ElementType() reflect.Type {
 	return reflect.TypeOf((*tlsServiceProfileState)(nil)).Elem()
 }
 
+// TlsServiceProfileExists checks whether an existing TlsServiceProfile resource with the given ID exists.
+func TlsServiceProfileExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *TlsServiceProfileState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("scm:index/tlsServiceProfile:TlsServiceProfile", id, state, "", opts...)
+}
+
 type tlsServiceProfileArgs struct {
 	// Certificate name
 	Certificate string `pulumi:"certificate"`

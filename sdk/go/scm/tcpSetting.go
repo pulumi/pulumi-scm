@@ -145,6 +145,12 @@ func (TcpSettingState) ElementType() reflect.Type {
 	return reflect.TypeOf((*tcpSettingState)(nil)).Elem()
 }
 
+// TcpSettingExists checks whether an existing TcpSetting resource with the given ID exists.
+func TcpSettingExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *TcpSettingState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("scm:index/tcpSetting:TcpSetting", id, state, "", opts...)
+}
+
 type tcpSettingArgs struct {
 	// The device in which the resource is defined
 	Device *string `pulumi:"device"`

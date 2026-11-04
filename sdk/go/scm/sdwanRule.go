@@ -241,6 +241,12 @@ func (SdwanRuleState) ElementType() reflect.Type {
 	return reflect.TypeOf((*sdwanRuleState)(nil)).Elem()
 }
 
+// SdwanRuleExists checks whether an existing SdwanRule resource with the given ID exists.
+func SdwanRuleExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *SdwanRuleState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("scm:index/sdwanRule:SdwanRule", id, state, "", opts...)
+}
+
 type sdwanRuleArgs struct {
 	// Action
 	Action SdwanRuleAction `pulumi:"action"`

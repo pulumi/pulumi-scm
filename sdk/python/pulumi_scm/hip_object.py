@@ -1110,6 +1110,46 @@ class HipObject(pulumi.CustomResource):
         __props__.__dict__["tfid"] = tfid
         return HipObject(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            anti_malware: pulumi.Input[Optional[Union['HipObjectAntiMalwareArgs', 'HipObjectAntiMalwareArgsDict', 'outputs.HipObjectAntiMalware']]] = None,
+            certificate: pulumi.Input[Optional[Union['HipObjectCertificateArgs', 'HipObjectCertificateArgsDict', 'outputs.HipObjectCertificate']]] = None,
+            custom_checks: pulumi.Input[Optional[Union['HipObjectCustomChecksArgs', 'HipObjectCustomChecksArgsDict', 'outputs.HipObjectCustomChecks']]] = None,
+            data_loss_prevention: pulumi.Input[Optional[Union['HipObjectDataLossPreventionArgs', 'HipObjectDataLossPreventionArgsDict', 'outputs.HipObjectDataLossPrevention']]] = None,
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            device: pulumi.Input[Optional[_builtins.str]] = None,
+            disk_backup: pulumi.Input[Optional[Union['HipObjectDiskBackupArgs', 'HipObjectDiskBackupArgsDict', 'outputs.HipObjectDiskBackup']]] = None,
+            disk_encryption: pulumi.Input[Optional[Union['HipObjectDiskEncryptionArgs', 'HipObjectDiskEncryptionArgsDict', 'outputs.HipObjectDiskEncryption']]] = None,
+            firewall: pulumi.Input[Optional[Union['HipObjectFirewallArgs', 'HipObjectFirewallArgsDict', 'outputs.HipObjectFirewall']]] = None,
+            folder: pulumi.Input[Optional[_builtins.str]] = None,
+            host_info: pulumi.Input[Optional[Union['HipObjectHostInfoArgs', 'HipObjectHostInfoArgsDict', 'outputs.HipObjectHostInfo']]] = None,
+            mobile_device: pulumi.Input[Optional[Union['HipObjectMobileDeviceArgs', 'HipObjectMobileDeviceArgsDict', 'outputs.HipObjectMobileDevice']]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            network_info: pulumi.Input[Optional[Union['HipObjectNetworkInfoArgs', 'HipObjectNetworkInfoArgsDict', 'outputs.HipObjectNetworkInfo']]] = None,
+            patch_management: pulumi.Input[Optional[Union['HipObjectPatchManagementArgs', 'HipObjectPatchManagementArgsDict', 'outputs.HipObjectPatchManagement']]] = None,
+            snippet: pulumi.Input[Optional[_builtins.str]] = None,
+            tfid: pulumi.Input[Optional[_builtins.str]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["antiMalware"] = anti_malware
+        __props__["certificate"] = certificate
+        __props__["customChecks"] = custom_checks
+        __props__["dataLossPrevention"] = data_loss_prevention
+        __props__["description"] = description
+        __props__["device"] = device
+        __props__["diskBackup"] = disk_backup
+        __props__["diskEncryption"] = disk_encryption
+        __props__["firewall"] = firewall
+        __props__["folder"] = folder
+        __props__["hostInfo"] = host_info
+        __props__["mobileDevice"] = mobile_device
+        __props__["name"] = name
+        __props__["networkInfo"] = network_info
+        __props__["patchManagement"] = patch_management
+        __props__["snippet"] = snippet
+        __props__["tfid"] = tfid
+        return pulumi.runtime.exists_resource(None, 'scm:index/hipObject:HipObject', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter(name="antiMalware")
     def anti_malware(self) -> pulumi.Output[Optional['outputs.HipObjectAntiMalware']]:

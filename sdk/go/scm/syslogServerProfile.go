@@ -235,6 +235,12 @@ func (SyslogServerProfileState) ElementType() reflect.Type {
 	return reflect.TypeOf((*syslogServerProfileState)(nil)).Elem()
 }
 
+// SyslogServerProfileExists checks whether an existing SyslogServerProfile resource with the given ID exists.
+func SyslogServerProfileExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *SyslogServerProfileState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("scm:index/syslogServerProfile:SyslogServerProfile", id, state, "", opts...)
+}
+
 type syslogServerProfileArgs struct {
 	// The device in which the resource is defined
 	Device *string `pulumi:"device"`

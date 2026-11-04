@@ -160,6 +160,12 @@ func (AuthenticationSettingState) ElementType() reflect.Type {
 	return reflect.TypeOf((*authenticationSettingState)(nil)).Elem()
 }
 
+// AuthenticationSettingExists checks whether an existing AuthenticationSetting resource with the given ID exists.
+func AuthenticationSettingExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *AuthenticationSettingState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("scm:index/authenticationSetting:AuthenticationSetting", id, state, "", opts...)
+}
+
 type authenticationSettingArgs struct {
 	// Authentication
 	Authentication *AuthenticationSettingAuthentication `pulumi:"authentication"`

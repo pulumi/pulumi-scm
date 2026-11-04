@@ -189,6 +189,12 @@ func (KerberosServerProfileState) ElementType() reflect.Type {
 	return reflect.TypeOf((*kerberosServerProfileState)(nil)).Elem()
 }
 
+// KerberosServerProfileExists checks whether an existing KerberosServerProfile resource with the given ID exists.
+func KerberosServerProfileExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *KerberosServerProfileState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("scm:index/kerberosServerProfile:KerberosServerProfile", id, state, "", opts...)
+}
+
 type kerberosServerProfileArgs struct {
 	// The device in which the resource is defined
 	Device *string `pulumi:"device"`

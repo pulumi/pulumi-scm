@@ -815,6 +815,44 @@ class InterfaceManagementProfile(pulumi.CustomResource):
         __props__.__dict__["userid_syslog_listener_udp"] = userid_syslog_listener_udp
         return InterfaceManagementProfile(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            device: pulumi.Input[Optional[_builtins.str]] = None,
+            folder: pulumi.Input[Optional[_builtins.str]] = None,
+            http: pulumi.Input[Optional[_builtins.bool]] = None,
+            http_ocsp: pulumi.Input[Optional[_builtins.bool]] = None,
+            https: pulumi.Input[Optional[_builtins.bool]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            permitted_ips: pulumi.Input[Optional[Sequence[pulumi.Input[Union['InterfaceManagementProfilePermittedIpArgs', 'InterfaceManagementProfilePermittedIpArgsDict', 'outputs.InterfaceManagementProfilePermittedIp']]]]] = None,
+            ping: pulumi.Input[Optional[_builtins.bool]] = None,
+            response_pages: pulumi.Input[Optional[_builtins.bool]] = None,
+            snippet: pulumi.Input[Optional[_builtins.str]] = None,
+            ssh: pulumi.Input[Optional[_builtins.bool]] = None,
+            telnet: pulumi.Input[Optional[_builtins.bool]] = None,
+            tfid: pulumi.Input[Optional[_builtins.str]] = None,
+            userid_service: pulumi.Input[Optional[_builtins.bool]] = None,
+            userid_syslog_listener_ssl: pulumi.Input[Optional[_builtins.bool]] = None,
+            userid_syslog_listener_udp: pulumi.Input[Optional[_builtins.bool]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["device"] = device
+        __props__["folder"] = folder
+        __props__["http"] = http
+        __props__["httpOcsp"] = http_ocsp
+        __props__["https"] = https
+        __props__["name"] = name
+        __props__["permittedIps"] = permitted_ips
+        __props__["ping"] = ping
+        __props__["responsePages"] = response_pages
+        __props__["snippet"] = snippet
+        __props__["ssh"] = ssh
+        __props__["telnet"] = telnet
+        __props__["tfid"] = tfid
+        __props__["useridService"] = userid_service
+        __props__["useridSyslogListenerSsl"] = userid_syslog_listener_ssl
+        __props__["useridSyslogListenerUdp"] = userid_syslog_listener_udp
+        return pulumi.runtime.exists_resource(None, 'scm:index/interfaceManagementProfile:InterfaceManagementProfile', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter
     def device(self) -> pulumi.Output[Optional[_builtins.str]]:

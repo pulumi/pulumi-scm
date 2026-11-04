@@ -805,6 +805,44 @@ class VlanInterface(pulumi.CustomResource):
         __props__.__dict__["vlan_tag"] = vlan_tag
         return VlanInterface(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            adjust_tcp_mss: pulumi.Input[Optional[Union['VlanInterfaceAdjustTcpMssArgs', 'VlanInterfaceAdjustTcpMssArgsDict', 'outputs.VlanInterfaceAdjustTcpMss']]] = None,
+            arps: pulumi.Input[Optional[Sequence[pulumi.Input[Union['VlanInterfaceArpArgs', 'VlanInterfaceArpArgsDict', 'outputs.VlanInterfaceArp']]]]] = None,
+            comment: pulumi.Input[Optional[_builtins.str]] = None,
+            ddns_config: pulumi.Input[Optional[Union['VlanInterfaceDdnsConfigArgs', 'VlanInterfaceDdnsConfigArgsDict', 'outputs.VlanInterfaceDdnsConfig']]] = None,
+            default_value: pulumi.Input[Optional[_builtins.str]] = None,
+            device: pulumi.Input[Optional[_builtins.str]] = None,
+            dhcp_client: pulumi.Input[Optional[Union['VlanInterfaceDhcpClientArgs', 'VlanInterfaceDhcpClientArgsDict', 'outputs.VlanInterfaceDhcpClient']]] = None,
+            folder: pulumi.Input[Optional[_builtins.str]] = None,
+            interface_management_profile: pulumi.Input[Optional[_builtins.str]] = None,
+            ips: pulumi.Input[Optional[Sequence[pulumi.Input[Union['VlanInterfaceIpArgs', 'VlanInterfaceIpArgsDict', 'outputs.VlanInterfaceIp']]]]] = None,
+            mtu: pulumi.Input[Optional[_builtins.int]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            netflow_profile: pulumi.Input[Optional[_builtins.str]] = None,
+            snippet: pulumi.Input[Optional[_builtins.str]] = None,
+            tfid: pulumi.Input[Optional[_builtins.str]] = None,
+            vlan_tag: pulumi.Input[Optional[_builtins.str]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["adjustTcpMss"] = adjust_tcp_mss
+        __props__["arps"] = arps
+        __props__["comment"] = comment
+        __props__["ddnsConfig"] = ddns_config
+        __props__["defaultValue"] = default_value
+        __props__["device"] = device
+        __props__["dhcpClient"] = dhcp_client
+        __props__["folder"] = folder
+        __props__["interfaceManagementProfile"] = interface_management_profile
+        __props__["ips"] = ips
+        __props__["mtu"] = mtu
+        __props__["name"] = name
+        __props__["netflowProfile"] = netflow_profile
+        __props__["snippet"] = snippet
+        __props__["tfid"] = tfid
+        __props__["vlanTag"] = vlan_tag
+        return pulumi.runtime.exists_resource(None, 'scm:index/vlanInterface:VlanInterface', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter(name="adjustTcpMss")
     def adjust_tcp_mss(self) -> pulumi.Output[Optional['outputs.VlanInterfaceAdjustTcpMss']]:

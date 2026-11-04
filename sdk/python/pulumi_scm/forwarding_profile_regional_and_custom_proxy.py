@@ -750,6 +750,34 @@ class ForwardingProfileRegionalAndCustomProxy(pulumi.CustomResource):
         __props__.__dict__["type"] = type
         return ForwardingProfileRegionalAndCustomProxy(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            connectivity_preferences: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ForwardingProfileRegionalAndCustomProxyConnectivityPreferenceArgs', 'ForwardingProfileRegionalAndCustomProxyConnectivityPreferenceArgsDict', 'outputs.ForwardingProfileRegionalAndCustomProxyConnectivityPreference']]]]] = None,
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            fallback_option: pulumi.Input[Optional[_builtins.str]] = None,
+            folder: pulumi.Input[Optional[_builtins.str]] = None,
+            location_preference: pulumi.Input[Optional[_builtins.str]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            prisma_access_locations: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ForwardingProfileRegionalAndCustomProxyPrismaAccessLocationArgs', 'ForwardingProfileRegionalAndCustomProxyPrismaAccessLocationArgsDict', 'outputs.ForwardingProfileRegionalAndCustomProxyPrismaAccessLocation']]]]] = None,
+            proxy1: pulumi.Input[Optional[Union['ForwardingProfileRegionalAndCustomProxyProxy1Args', 'ForwardingProfileRegionalAndCustomProxyProxy1ArgsDict', 'outputs.ForwardingProfileRegionalAndCustomProxyProxy1']]] = None,
+            proxy2: pulumi.Input[Optional[Union['ForwardingProfileRegionalAndCustomProxyProxy2Args', 'ForwardingProfileRegionalAndCustomProxyProxy2ArgsDict', 'outputs.ForwardingProfileRegionalAndCustomProxyProxy2']]] = None,
+            tfid: pulumi.Input[Optional[_builtins.str]] = None,
+            type: pulumi.Input[Optional[_builtins.str]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["connectivityPreferences"] = connectivity_preferences
+        __props__["description"] = description
+        __props__["fallbackOption"] = fallback_option
+        __props__["folder"] = folder
+        __props__["locationPreference"] = location_preference
+        __props__["name"] = name
+        __props__["prismaAccessLocations"] = prisma_access_locations
+        __props__["proxy1"] = proxy1
+        __props__["proxy2"] = proxy2
+        __props__["tfid"] = tfid
+        __props__["type"] = type
+        return pulumi.runtime.exists_resource(None, 'scm:index/forwardingProfileRegionalAndCustomProxy:ForwardingProfileRegionalAndCustomProxy', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter(name="connectivityPreferences")
     def connectivity_preferences(self) -> pulumi.Output[Optional[Sequence['outputs.ForwardingProfileRegionalAndCustomProxyConnectivityPreference']]]:

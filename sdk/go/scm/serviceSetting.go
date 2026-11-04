@@ -176,6 +176,12 @@ func (ServiceSettingState) ElementType() reflect.Type {
 	return reflect.TypeOf((*serviceSettingState)(nil)).Elem()
 }
 
+// ServiceSettingExists checks whether an existing ServiceSetting resource with the given ID exists.
+func ServiceSettingExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *ServiceSettingState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("scm:index/serviceSetting:ServiceSetting", id, state, "", opts...)
+}
+
 type serviceSettingArgs struct {
 	// The device in which the resource is defined
 	Device *string `pulumi:"device"`

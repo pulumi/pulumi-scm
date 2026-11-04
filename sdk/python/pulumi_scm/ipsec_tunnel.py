@@ -689,6 +689,34 @@ class IpsecTunnel(pulumi.CustomResource):
         __props__.__dict__["tunnel_monitor"] = tunnel_monitor
         return IpsecTunnel(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            anti_replay: pulumi.Input[Optional[_builtins.bool]] = None,
+            auto_key: pulumi.Input[Optional[Union['IpsecTunnelAutoKeyArgs', 'IpsecTunnelAutoKeyArgsDict', 'outputs.IpsecTunnelAutoKey']]] = None,
+            copy_tos: pulumi.Input[Optional[_builtins.bool]] = None,
+            device: pulumi.Input[Optional[_builtins.str]] = None,
+            enable_gre_encapsulation: pulumi.Input[Optional[_builtins.bool]] = None,
+            folder: pulumi.Input[Optional[_builtins.str]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            snippet: pulumi.Input[Optional[_builtins.str]] = None,
+            tfid: pulumi.Input[Optional[_builtins.str]] = None,
+            tunnel_interface: pulumi.Input[Optional[_builtins.str]] = None,
+            tunnel_monitor: pulumi.Input[Optional[Union['IpsecTunnelTunnelMonitorArgs', 'IpsecTunnelTunnelMonitorArgsDict', 'outputs.IpsecTunnelTunnelMonitor']]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["antiReplay"] = anti_replay
+        __props__["autoKey"] = auto_key
+        __props__["copyTos"] = copy_tos
+        __props__["device"] = device
+        __props__["enableGreEncapsulation"] = enable_gre_encapsulation
+        __props__["folder"] = folder
+        __props__["name"] = name
+        __props__["snippet"] = snippet
+        __props__["tfid"] = tfid
+        __props__["tunnelInterface"] = tunnel_interface
+        __props__["tunnelMonitor"] = tunnel_monitor
+        return pulumi.runtime.exists_resource(None, 'scm:index/ipsecTunnel:IpsecTunnel', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter(name="antiReplay")
     def anti_replay(self) -> pulumi.Output[Optional[_builtins.bool]]:

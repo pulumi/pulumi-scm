@@ -1519,6 +1519,76 @@ class Application(pulumi.CustomResource):
         __props__.__dict__["virus_ident"] = virus_ident
         return Application(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            able_to_transfer_file: pulumi.Input[Optional[_builtins.bool]] = None,
+            alg_disable_capability: pulumi.Input[Optional[_builtins.str]] = None,
+            category: pulumi.Input[Optional[_builtins.str]] = None,
+            consume_big_bandwidth: pulumi.Input[Optional[_builtins.bool]] = None,
+            data_ident: pulumi.Input[Optional[_builtins.bool]] = None,
+            default: pulumi.Input[Optional[Union['ApplicationDefaultArgs', 'ApplicationDefaultArgsDict', 'outputs.ApplicationDefault']]] = None,
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            device: pulumi.Input[Optional[_builtins.str]] = None,
+            evasive_behavior: pulumi.Input[Optional[_builtins.bool]] = None,
+            file_type_ident: pulumi.Input[Optional[_builtins.bool]] = None,
+            folder: pulumi.Input[Optional[_builtins.str]] = None,
+            has_known_vulnerability: pulumi.Input[Optional[_builtins.bool]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            no_appid_caching: pulumi.Input[Optional[_builtins.bool]] = None,
+            parent_app: pulumi.Input[Optional[_builtins.str]] = None,
+            pervasive_use: pulumi.Input[Optional[_builtins.bool]] = None,
+            prone_to_misuse: pulumi.Input[Optional[_builtins.bool]] = None,
+            risk: pulumi.Input[Optional[_builtins.str]] = None,
+            signatures: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ApplicationSignatureArgs', 'ApplicationSignatureArgsDict', 'outputs.ApplicationSignature']]]]] = None,
+            snippet: pulumi.Input[Optional[_builtins.str]] = None,
+            subcategory: pulumi.Input[Optional[_builtins.str]] = None,
+            tcp_half_closed_timeout: pulumi.Input[Optional[_builtins.int]] = None,
+            tcp_time_wait_timeout: pulumi.Input[Optional[_builtins.int]] = None,
+            tcp_timeout: pulumi.Input[Optional[_builtins.int]] = None,
+            technology: pulumi.Input[Optional[_builtins.str]] = None,
+            tfid: pulumi.Input[Optional[_builtins.str]] = None,
+            timeout: pulumi.Input[Optional[_builtins.int]] = None,
+            tunnel_applications: pulumi.Input[Optional[_builtins.bool]] = None,
+            tunnel_other_application: pulumi.Input[Optional[_builtins.bool]] = None,
+            udp_timeout: pulumi.Input[Optional[_builtins.int]] = None,
+            used_by_malware: pulumi.Input[Optional[_builtins.bool]] = None,
+            virus_ident: pulumi.Input[Optional[_builtins.bool]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["ableToTransferFile"] = able_to_transfer_file
+        __props__["algDisableCapability"] = alg_disable_capability
+        __props__["category"] = category
+        __props__["consumeBigBandwidth"] = consume_big_bandwidth
+        __props__["dataIdent"] = data_ident
+        __props__["default"] = default
+        __props__["description"] = description
+        __props__["device"] = device
+        __props__["evasiveBehavior"] = evasive_behavior
+        __props__["fileTypeIdent"] = file_type_ident
+        __props__["folder"] = folder
+        __props__["hasKnownVulnerability"] = has_known_vulnerability
+        __props__["name"] = name
+        __props__["noAppidCaching"] = no_appid_caching
+        __props__["parentApp"] = parent_app
+        __props__["pervasiveUse"] = pervasive_use
+        __props__["proneToMisuse"] = prone_to_misuse
+        __props__["risk"] = risk
+        __props__["signatures"] = signatures
+        __props__["snippet"] = snippet
+        __props__["subcategory"] = subcategory
+        __props__["tcpHalfClosedTimeout"] = tcp_half_closed_timeout
+        __props__["tcpTimeWaitTimeout"] = tcp_time_wait_timeout
+        __props__["tcpTimeout"] = tcp_timeout
+        __props__["technology"] = technology
+        __props__["tfid"] = tfid
+        __props__["timeout"] = timeout
+        __props__["tunnelApplications"] = tunnel_applications
+        __props__["tunnelOtherApplication"] = tunnel_other_application
+        __props__["udpTimeout"] = udp_timeout
+        __props__["usedByMalware"] = used_by_malware
+        __props__["virusIdent"] = virus_ident
+        return pulumi.runtime.exists_resource(None, 'scm:index/application:Application', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter(name="ableToTransferFile")
     def able_to_transfer_file(self) -> pulumi.Output[Optional[_builtins.bool]]:

@@ -134,6 +134,12 @@ func (BgpAuthProfileState) ElementType() reflect.Type {
 	return reflect.TypeOf((*bgpAuthProfileState)(nil)).Elem()
 }
 
+// BgpAuthProfileExists checks whether an existing BgpAuthProfile resource with the given ID exists.
+func BgpAuthProfileExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *BgpAuthProfileState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("scm:index/bgpAuthProfile:BgpAuthProfile", id, state, "", opts...)
+}
+
 type bgpAuthProfileArgs struct {
 	// The device in which the resource is defined
 	Device *string `pulumi:"device"`

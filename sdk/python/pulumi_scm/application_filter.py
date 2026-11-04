@@ -1064,6 +1064,58 @@ class ApplicationFilter(pulumi.CustomResource):
         __props__.__dict__["used_by_malware"] = used_by_malware
         return ApplicationFilter(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            categories: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            device: pulumi.Input[Optional[_builtins.str]] = None,
+            evasive: pulumi.Input[Optional[_builtins.bool]] = None,
+            excessive_bandwidth_use: pulumi.Input[Optional[_builtins.bool]] = None,
+            excludes: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            folder: pulumi.Input[Optional[_builtins.str]] = None,
+            has_known_vulnerabilities: pulumi.Input[Optional[_builtins.bool]] = None,
+            is_saas: pulumi.Input[Optional[_builtins.bool]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            new_appid: pulumi.Input[Optional[_builtins.bool]] = None,
+            pervasive: pulumi.Input[Optional[_builtins.bool]] = None,
+            prone_to_misuse: pulumi.Input[Optional[_builtins.bool]] = None,
+            risks: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.int]]]] = None,
+            saas_certifications: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            saas_risks: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            snippet: pulumi.Input[Optional[_builtins.str]] = None,
+            subcategories: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            tagging: pulumi.Input[Optional[Union['ApplicationFilterTaggingArgs', 'ApplicationFilterTaggingArgsDict', 'outputs.ApplicationFilterTagging']]] = None,
+            technologies: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            tfid: pulumi.Input[Optional[_builtins.str]] = None,
+            transfers_files: pulumi.Input[Optional[_builtins.bool]] = None,
+            tunnels_other_apps: pulumi.Input[Optional[_builtins.bool]] = None,
+            used_by_malware: pulumi.Input[Optional[_builtins.bool]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["categories"] = categories
+        __props__["device"] = device
+        __props__["evasive"] = evasive
+        __props__["excessiveBandwidthUse"] = excessive_bandwidth_use
+        __props__["excludes"] = excludes
+        __props__["folder"] = folder
+        __props__["hasKnownVulnerabilities"] = has_known_vulnerabilities
+        __props__["isSaas"] = is_saas
+        __props__["name"] = name
+        __props__["newAppid"] = new_appid
+        __props__["pervasive"] = pervasive
+        __props__["proneToMisuse"] = prone_to_misuse
+        __props__["risks"] = risks
+        __props__["saasCertifications"] = saas_certifications
+        __props__["saasRisks"] = saas_risks
+        __props__["snippet"] = snippet
+        __props__["subcategories"] = subcategories
+        __props__["tagging"] = tagging
+        __props__["technologies"] = technologies
+        __props__["tfid"] = tfid
+        __props__["transfersFiles"] = transfers_files
+        __props__["tunnelsOtherApps"] = tunnels_other_apps
+        __props__["usedByMalware"] = used_by_malware
+        return pulumi.runtime.exists_resource(None, 'scm:index/applicationFilter:ApplicationFilter', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter
     def categories(self) -> pulumi.Output[Optional[Sequence[_builtins.str]]]:

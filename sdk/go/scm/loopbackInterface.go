@@ -243,6 +243,12 @@ func (LoopbackInterfaceState) ElementType() reflect.Type {
 	return reflect.TypeOf((*loopbackInterfaceState)(nil)).Elem()
 }
 
+// LoopbackInterfaceExists checks whether an existing LoopbackInterface resource with the given ID exists.
+func LoopbackInterfaceExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *LoopbackInterfaceState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("scm:index/loopbackInterface:LoopbackInterface", id, state, "", opts...)
+}
+
 type loopbackInterfaceArgs struct {
 	// TCP MSS adjustment settings for the interface
 	AdjustTcpMss *LoopbackInterfaceAdjustTcpMss `pulumi:"adjustTcpMss"`

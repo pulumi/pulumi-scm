@@ -301,6 +301,12 @@ func (LogicalRouterState) ElementType() reflect.Type {
 	return reflect.TypeOf((*logicalRouterState)(nil)).Elem()
 }
 
+// LogicalRouterExists checks whether an existing LogicalRouter resource with the given ID exists.
+func LogicalRouterExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *LogicalRouterState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("scm:index/logicalRouter:LogicalRouter", id, state, "", opts...)
+}
+
 type logicalRouterArgs struct {
 	// The device in which the resource is defined
 	Device *string `pulumi:"device"`

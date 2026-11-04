@@ -79,7 +79,7 @@ public final class GetAntiSpywareSignatureListData {
      */
     private String tfid;
     /**
-     * @return threat id range \n\n and \n\n
+     * @return threat id range &#92;n&#92;n and &#92;n&#92;n
      * 
      */
     private String threatId;
@@ -187,7 +187,7 @@ public final class GetAntiSpywareSignatureListData {
         return this.tfid;
     }
     /**
-     * @return threat id range \n\n and \n\n
+     * @return threat id range &#92;n&#92;n and &#92;n&#92;n
      * 
      */
     public String threatId() {

@@ -120,6 +120,12 @@ func (SdwanTrafficDistributionProfileState) ElementType() reflect.Type {
 	return reflect.TypeOf((*sdwanTrafficDistributionProfileState)(nil)).Elem()
 }
 
+// SdwanTrafficDistributionProfileExists checks whether an existing SdwanTrafficDistributionProfile resource with the given ID exists.
+func SdwanTrafficDistributionProfileExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *SdwanTrafficDistributionProfileState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("scm:index/sdwanTrafficDistributionProfile:SdwanTrafficDistributionProfile", id, state, "", opts...)
+}
+
 type sdwanTrafficDistributionProfileArgs struct {
 	// The device in which the resource is defined
 	Device *string `pulumi:"device"`

@@ -199,6 +199,12 @@ func (IptagMatchListState) ElementType() reflect.Type {
 	return reflect.TypeOf((*iptagMatchListState)(nil)).Elem()
 }
 
+// IptagMatchListExists checks whether an existing IptagMatchList resource with the given ID exists.
+func IptagMatchListExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *IptagMatchListState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("scm:index/iptagMatchList:IptagMatchList", id, state, "", opts...)
+}
+
 type iptagMatchListArgs struct {
 	// Description of the iptag match list entry
 	Description *string `pulumi:"description"`

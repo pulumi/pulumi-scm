@@ -205,6 +205,12 @@ func (AntiSpywareProfileState) ElementType() reflect.Type {
 	return reflect.TypeOf((*antiSpywareProfileState)(nil)).Elem()
 }
 
+// AntiSpywareProfileExists checks whether an existing AntiSpywareProfile resource with the given ID exists.
+func AntiSpywareProfileExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *AntiSpywareProfileState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("scm:index/antiSpywareProfile:AntiSpywareProfile", id, state, "", opts...)
+}
+
 type antiSpywareProfileArgs struct {
 	// Cloud inline analysis
 	CloudInlineAnalysis *bool `pulumi:"cloudInlineAnalysis"`

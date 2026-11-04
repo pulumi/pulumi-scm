@@ -138,6 +138,12 @@ func (WildfireAntiVirusProfileState) ElementType() reflect.Type {
 	return reflect.TypeOf((*wildfireAntiVirusProfileState)(nil)).Elem()
 }
 
+// WildfireAntiVirusProfileExists checks whether an existing WildfireAntiVirusProfile resource with the given ID exists.
+func WildfireAntiVirusProfileExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *WildfireAntiVirusProfileState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("scm:index/wildfireAntiVirusProfile:WildfireAntiVirusProfile", id, state, "", opts...)
+}
+
 type wildfireAntiVirusProfileArgs struct {
 	// Description
 	Description *string `pulumi:"description"`

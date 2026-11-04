@@ -160,6 +160,12 @@ func (DnsProxyState) ElementType() reflect.Type {
 	return reflect.TypeOf((*dnsProxyState)(nil)).Elem()
 }
 
+// DnsProxyExists checks whether an existing DnsProxy resource with the given ID exists.
+func DnsProxyExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *DnsProxyState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("scm:index/dnsProxy:DnsProxy", id, state, "", opts...)
+}
+
 type dnsProxyArgs struct {
 	// Cache
 	Cache *DnsProxyCache `pulumi:"cache"`

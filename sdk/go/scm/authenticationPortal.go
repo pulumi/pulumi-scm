@@ -176,6 +176,12 @@ func (AuthenticationPortalState) ElementType() reflect.Type {
 	return reflect.TypeOf((*authenticationPortalState)(nil)).Elem()
 }
 
+// AuthenticationPortalExists checks whether an existing AuthenticationPortal resource with the given ID exists.
+func AuthenticationPortalExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *AuthenticationPortalState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("scm:index/authenticationPortal:AuthenticationPortal", id, state, "", opts...)
+}
+
 type authenticationPortalArgs struct {
 	// The authentication profile
 	AuthenticationProfile *string `pulumi:"authenticationProfile"`

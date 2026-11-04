@@ -200,6 +200,12 @@ func (ServiceGroupState) ElementType() reflect.Type {
 	return reflect.TypeOf((*serviceGroupState)(nil)).Elem()
 }
 
+// ServiceGroupExists checks whether an existing ServiceGroup resource with the given ID exists.
+func ServiceGroupExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *ServiceGroupState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("scm:index/serviceGroup:ServiceGroup", id, state, "", opts...)
+}
+
 type serviceGroupArgs struct {
 	// The device in which the resource is defined
 	Device *string `pulumi:"device"`

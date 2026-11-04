@@ -219,6 +219,12 @@ func (InterfaceManagementProfileState) ElementType() reflect.Type {
 	return reflect.TypeOf((*interfaceManagementProfileState)(nil)).Elem()
 }
 
+// InterfaceManagementProfileExists checks whether an existing InterfaceManagementProfile resource with the given ID exists.
+func InterfaceManagementProfileExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *InterfaceManagementProfileState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("scm:index/interfaceManagementProfile:InterfaceManagementProfile", id, state, "", opts...)
+}
+
 type interfaceManagementProfileArgs struct {
 	// The device in which the resource is defined
 	Device *string `pulumi:"device"`

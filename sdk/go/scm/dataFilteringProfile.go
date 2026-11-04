@@ -196,6 +196,12 @@ func (DataFilteringProfileState) ElementType() reflect.Type {
 	return reflect.TypeOf((*dataFilteringProfileState)(nil)).Elem()
 }
 
+// DataFilteringProfileExists checks whether an existing DataFilteringProfile resource with the given ID exists.
+func DataFilteringProfileExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *DataFilteringProfileState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("scm:index/dataFilteringProfile:DataFilteringProfile", id, state, "", opts...)
+}
+
 type dataFilteringProfileArgs struct {
 	// Data capture
 	DataCapture *bool `pulumi:"dataCapture"`

@@ -206,7 +206,7 @@ namespace Pulumi.Scm
         /// Check that both conditions are true:
         /// * The source IP address is not the subnet broadcast IP address of the ingress interface.
         /// * The source IP address is routable over the exact ingress interface.
-        /// If either condition is not true, discard the packet.
+        ///   If either condition is not true, discard the packet.
         /// </summary>
         [Output("strictIpCheck")]
         public Output<bool?> StrictIpCheck { get; private set; } = null!;
@@ -504,7 +504,7 @@ namespace Pulumi.Scm
         /// Check that both conditions are true:
         /// * The source IP address is not the subnet broadcast IP address of the ingress interface.
         /// * The source IP address is routable over the exact ingress interface.
-        /// If either condition is not true, discard the packet.
+        ///   If either condition is not true, discard the packet.
         /// </summary>
         [Input("strictIpCheck")]
         public Input<bool>? StrictIpCheck { get; set; }
@@ -758,7 +758,7 @@ namespace Pulumi.Scm
         /// Check that both conditions are true:
         /// * The source IP address is not the subnet broadcast IP address of the ingress interface.
         /// * The source IP address is routable over the exact ingress interface.
-        /// If either condition is not true, discard the packet.
+        ///   If either condition is not true, discard the packet.
         /// </summary>
         [Input("strictIpCheck")]
         public Input<bool>? StrictIpCheck { get; set; }

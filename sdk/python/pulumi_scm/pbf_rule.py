@@ -1005,6 +1005,48 @@ class PbfRule(pulumi.CustomResource):
         __props__.__dict__["tfid"] = tfid
         return PbfRule(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            action: pulumi.Input[Optional[Union['PbfRuleActionArgs', 'PbfRuleActionArgsDict', 'outputs.PbfRuleAction']]] = None,
+            applications: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            destinations: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            device: pulumi.Input[Optional[_builtins.str]] = None,
+            enforce_symmetric_return: pulumi.Input[Optional[Union['PbfRuleEnforceSymmetricReturnArgs', 'PbfRuleEnforceSymmetricReturnArgsDict', 'outputs.PbfRuleEnforceSymmetricReturn']]] = None,
+            folder: pulumi.Input[Optional[_builtins.str]] = None,
+            from_: pulumi.Input[Optional[Union['PbfRuleFromArgs', 'PbfRuleFromArgsDict', 'outputs.PbfRuleFrom']]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            negate_destination: pulumi.Input[Optional[_builtins.bool]] = None,
+            negate_source: pulumi.Input[Optional[_builtins.bool]] = None,
+            schedule: pulumi.Input[Optional[_builtins.str]] = None,
+            services: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            snippet: pulumi.Input[Optional[_builtins.str]] = None,
+            source_users: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            sources: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            tags: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            tfid: pulumi.Input[Optional[_builtins.str]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["action"] = action
+        __props__["applications"] = applications
+        __props__["description"] = description
+        __props__["destinations"] = destinations
+        __props__["device"] = device
+        __props__["enforceSymmetricReturn"] = enforce_symmetric_return
+        __props__["folder"] = folder
+        __props__["from"] = from_
+        __props__["name"] = name
+        __props__["negateDestination"] = negate_destination
+        __props__["negateSource"] = negate_source
+        __props__["schedule"] = schedule
+        __props__["services"] = services
+        __props__["snippet"] = snippet
+        __props__["sourceUsers"] = source_users
+        __props__["sources"] = sources
+        __props__["tags"] = tags
+        __props__["tfid"] = tfid
+        return pulumi.runtime.exists_resource(None, 'scm:index/pbfRule:PbfRule', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter
     def action(self) -> pulumi.Output[Optional['outputs.PbfRuleAction']]:

@@ -235,6 +235,12 @@ func (UrlAccessProfileState) ElementType() reflect.Type {
 	return reflect.TypeOf((*urlAccessProfileState)(nil)).Elem()
 }
 
+// UrlAccessProfileExists checks whether an existing UrlAccessProfile resource with the given ID exists.
+func UrlAccessProfileExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *UrlAccessProfileState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("scm:index/urlAccessProfile:UrlAccessProfile", id, state, "", opts...)
+}
+
 type urlAccessProfileArgs struct {
 	// Alert
 	Alerts []string `pulumi:"alerts"`

@@ -1001,6 +1001,56 @@ class SdwanRule(pulumi.CustomResource):
         __props__.__dict__["tos"] = tos
         return SdwanRule(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            action: pulumi.Input[Optional[Union['SdwanRuleActionArgs', 'SdwanRuleActionArgsDict', 'outputs.SdwanRuleAction']]] = None,
+            applications: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            destinations: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            device: pulumi.Input[Optional[_builtins.str]] = None,
+            disabled: pulumi.Input[Optional[_builtins.bool]] = None,
+            error_correction_profile: pulumi.Input[Optional[_builtins.str]] = None,
+            folder: pulumi.Input[Optional[_builtins.str]] = None,
+            froms: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            negate_destination: pulumi.Input[Optional[_builtins.bool]] = None,
+            negate_source: pulumi.Input[Optional[_builtins.bool]] = None,
+            path_quality_profile: pulumi.Input[Optional[_builtins.str]] = None,
+            position: pulumi.Input[Optional[_builtins.str]] = None,
+            saas_quality_profile: pulumi.Input[Optional[_builtins.str]] = None,
+            services: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            snippet: pulumi.Input[Optional[_builtins.str]] = None,
+            source_users: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            sources: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            tags: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            tfid: pulumi.Input[Optional[_builtins.str]] = None,
+            tos: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["action"] = action
+        __props__["applications"] = applications
+        __props__["description"] = description
+        __props__["destinations"] = destinations
+        __props__["device"] = device
+        __props__["disabled"] = disabled
+        __props__["errorCorrectionProfile"] = error_correction_profile
+        __props__["folder"] = folder
+        __props__["froms"] = froms
+        __props__["name"] = name
+        __props__["negateDestination"] = negate_destination
+        __props__["negateSource"] = negate_source
+        __props__["pathQualityProfile"] = path_quality_profile
+        __props__["position"] = position
+        __props__["saasQualityProfile"] = saas_quality_profile
+        __props__["services"] = services
+        __props__["snippet"] = snippet
+        __props__["sourceUsers"] = source_users
+        __props__["sources"] = sources
+        __props__["tags"] = tags
+        __props__["tfid"] = tfid
+        __props__["tos"] = tos
+        return pulumi.runtime.exists_resource(None, 'scm:index/sdwanRule:SdwanRule', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter
     def action(self) -> pulumi.Output['outputs.SdwanRuleAction']:

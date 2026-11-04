@@ -342,6 +342,12 @@ func (ZoneProtectionProfileState) ElementType() reflect.Type {
 	return reflect.TypeOf((*zoneProtectionProfileState)(nil)).Elem()
 }
 
+// ZoneProtectionProfileExists checks whether an existing ZoneProtectionProfile resource with the given ID exists.
+func ZoneProtectionProfileExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *ZoneProtectionProfileState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("scm:index/zoneProtectionProfile:ZoneProtectionProfile", id, state, "", opts...)
+}
+
 type zoneProtectionProfileArgs struct {
 	// Determine whether to drop or bypass packets that contain out-of-sync ACKs or out-of-window sequence numbers:
 	// * `global` — Use system-wide setting that is assigned through TCP Settings or the CLI.

@@ -167,6 +167,12 @@ func (UpdateScheduleState) ElementType() reflect.Type {
 	return reflect.TypeOf((*updateScheduleState)(nil)).Elem()
 }
 
+// UpdateScheduleExists checks whether an existing UpdateSchedule resource with the given ID exists.
+func UpdateScheduleExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *UpdateScheduleState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("scm:index/updateSchedule:UpdateSchedule", id, state, "", opts...)
+}
+
 type updateScheduleArgs struct {
 	// The device in which the resource is defined
 	Device *string `pulumi:"device"`

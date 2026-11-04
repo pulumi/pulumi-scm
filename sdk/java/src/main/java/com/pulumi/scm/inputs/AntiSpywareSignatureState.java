@@ -199,14 +199,14 @@ public final class AntiSpywareSignatureState extends com.pulumi.resources.Resour
     }
 
     /**
-     * threat id range \n\n and \n\n
+     * threat id range &#92;n&#92;n and &#92;n&#92;n
      * 
      */
     @Import(name="threatId")
     private @Nullable Output<String> threatId;
 
     /**
-     * @return threat id range \n\n and \n\n
+     * @return threat id range &#92;n&#92;n and &#92;n&#92;n
      * 
      */
     public Optional<Output<String>> threatId() {
@@ -564,7 +564,7 @@ public final class AntiSpywareSignatureState extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param threatId threat id range \n\n and \n\n
+         * @param threatId threat id range &#92;n&#92;n and &#92;n&#92;n
          * 
          * @return builder
          * 
@@ -575,7 +575,7 @@ public final class AntiSpywareSignatureState extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param threatId threat id range \n\n and \n\n
+         * @param threatId threat id range &#92;n&#92;n and &#92;n&#92;n
          * 
          * @return builder
          * 

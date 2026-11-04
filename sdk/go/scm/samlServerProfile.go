@@ -236,6 +236,12 @@ func (SamlServerProfileState) ElementType() reflect.Type {
 	return reflect.TypeOf((*samlServerProfileState)(nil)).Elem()
 }
 
+// SamlServerProfileExists checks whether an existing SamlServerProfile resource with the given ID exists.
+func SamlServerProfileExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *SamlServerProfileState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("scm:index/samlServerProfile:SamlServerProfile", id, state, "", opts...)
+}
+
 type samlServerProfileArgs struct {
 	// The identity provider certificate
 	Certificate string `pulumi:"certificate"`

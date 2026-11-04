@@ -139,6 +139,12 @@ func (TrafficSteeringRuleState) ElementType() reflect.Type {
 	return reflect.TypeOf((*trafficSteeringRuleState)(nil)).Elem()
 }
 
+// TrafficSteeringRuleExists checks whether an existing TrafficSteeringRule resource with the given ID exists.
+func TrafficSteeringRuleExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *TrafficSteeringRuleState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("scm:index/trafficSteeringRule:TrafficSteeringRule", id, state, "", opts...)
+}
+
 type trafficSteeringRuleArgs struct {
 	// Action
 	Action *TrafficSteeringRuleAction `pulumi:"action"`

@@ -270,6 +270,12 @@ func (ForwardingProfileRegionalAndCustomProxyState) ElementType() reflect.Type {
 	return reflect.TypeOf((*forwardingProfileRegionalAndCustomProxyState)(nil)).Elem()
 }
 
+// ForwardingProfileRegionalAndCustomProxyExists checks whether an existing ForwardingProfileRegionalAndCustomProxy resource with the given ID exists.
+func ForwardingProfileRegionalAndCustomProxyExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *ForwardingProfileRegionalAndCustomProxyState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("scm:index/forwardingProfileRegionalAndCustomProxy:ForwardingProfileRegionalAndCustomProxy", id, state, "", opts...)
+}
+
 type forwardingProfileRegionalAndCustomProxyArgs struct {
 	// List of connectivity methods and their enablement status for establishing proxy connections
 	ConnectivityPreferences []ForwardingProfileRegionalAndCustomProxyConnectivityPreference `pulumi:"connectivityPreferences"`

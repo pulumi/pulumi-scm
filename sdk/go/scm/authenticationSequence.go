@@ -185,6 +185,12 @@ func (AuthenticationSequenceState) ElementType() reflect.Type {
 	return reflect.TypeOf((*authenticationSequenceState)(nil)).Elem()
 }
 
+// AuthenticationSequenceExists checks whether an existing AuthenticationSequence resource with the given ID exists.
+func AuthenticationSequenceExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *AuthenticationSequenceState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("scm:index/authenticationSequence:AuthenticationSequence", id, state, "", opts...)
+}
+
 type authenticationSequenceArgs struct {
 	// An ordered list of authentication profiles
 	AuthenticationProfiles []string `pulumi:"authenticationProfiles"`

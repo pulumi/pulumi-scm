@@ -149,6 +149,12 @@ func (MotdBannerSettingState) ElementType() reflect.Type {
 	return reflect.TypeOf((*motdBannerSettingState)(nil)).Elem()
 }
 
+// MotdBannerSettingExists checks whether an existing MotdBannerSetting resource with the given ID exists.
+func MotdBannerSettingExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *MotdBannerSettingState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("scm:index/motdBannerSetting:MotdBannerSetting", id, state, "", opts...)
+}
+
 type motdBannerSettingArgs struct {
 	// The device in which the resource is defined
 	Device *string `pulumi:"device"`

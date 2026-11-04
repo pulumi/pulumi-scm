@@ -592,6 +592,34 @@ class AuthenticationPortal(pulumi.CustomResource):
         __props__.__dict__["tls_service_profile"] = tls_service_profile
         return AuthenticationPortal(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            authentication_profile: pulumi.Input[Optional[_builtins.str]] = None,
+            certificate_profile: pulumi.Input[Optional[_builtins.str]] = None,
+            device: pulumi.Input[Optional[_builtins.str]] = None,
+            folder: pulumi.Input[Optional[_builtins.str]] = None,
+            gp_udp_port: pulumi.Input[Optional[_builtins.int]] = None,
+            idle_timer: pulumi.Input[Optional[_builtins.int]] = None,
+            redirect_host: pulumi.Input[Optional[_builtins.str]] = None,
+            snippet: pulumi.Input[Optional[_builtins.str]] = None,
+            tfid: pulumi.Input[Optional[_builtins.str]] = None,
+            timer: pulumi.Input[Optional[_builtins.int]] = None,
+            tls_service_profile: pulumi.Input[Optional[_builtins.str]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["authenticationProfile"] = authentication_profile
+        __props__["certificateProfile"] = certificate_profile
+        __props__["device"] = device
+        __props__["folder"] = folder
+        __props__["gpUdpPort"] = gp_udp_port
+        __props__["idleTimer"] = idle_timer
+        __props__["redirectHost"] = redirect_host
+        __props__["snippet"] = snippet
+        __props__["tfid"] = tfid
+        __props__["timer"] = timer
+        __props__["tlsServiceProfile"] = tls_service_profile
+        return pulumi.runtime.exists_resource(None, 'scm:index/authenticationPortal:AuthenticationPortal', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter(name="authenticationProfile")
     def authentication_profile(self) -> pulumi.Output[Optional[_builtins.str]]:

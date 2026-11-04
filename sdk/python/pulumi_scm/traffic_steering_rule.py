@@ -486,6 +486,30 @@ class TrafficSteeringRule(pulumi.CustomResource):
         __props__.__dict__["tfid"] = tfid
         return TrafficSteeringRule(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            action: pulumi.Input[Optional[Union['TrafficSteeringRuleActionArgs', 'TrafficSteeringRuleActionArgsDict', 'outputs.TrafficSteeringRuleAction']]] = None,
+            categories: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            destinations: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            folder: pulumi.Input[Optional[_builtins.str]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            services: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            source_users: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            sources: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            tfid: pulumi.Input[Optional[_builtins.str]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["action"] = action
+        __props__["categories"] = categories
+        __props__["destinations"] = destinations
+        __props__["folder"] = folder
+        __props__["name"] = name
+        __props__["services"] = services
+        __props__["sourceUsers"] = source_users
+        __props__["sources"] = sources
+        __props__["tfid"] = tfid
+        return pulumi.runtime.exists_resource(None, 'scm:index/trafficSteeringRule:TrafficSteeringRule', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter
     def action(self) -> pulumi.Output[Optional['outputs.TrafficSteeringRuleAction']]:

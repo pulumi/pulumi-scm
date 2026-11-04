@@ -141,6 +141,12 @@ func (VpnSettingState) ElementType() reflect.Type {
 	return reflect.TypeOf((*vpnSettingState)(nil)).Elem()
 }
 
+// VpnSettingExists checks whether an existing VpnSetting resource with the given ID exists.
+func VpnSettingExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *VpnSettingState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("scm:index/vpnSetting:VpnSetting", id, state, "", opts...)
+}
+
 type vpnSettingArgs struct {
 	// The device in which the resource is defined
 	Device *string `pulumi:"device"`

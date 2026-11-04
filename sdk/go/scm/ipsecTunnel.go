@@ -252,6 +252,12 @@ func (IpsecTunnelState) ElementType() reflect.Type {
 	return reflect.TypeOf((*ipsecTunnelState)(nil)).Elem()
 }
 
+// IpsecTunnelExists checks whether an existing IpsecTunnel resource with the given ID exists.
+func IpsecTunnelExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *IpsecTunnelState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("scm:index/ipsecTunnel:IpsecTunnel", id, state, "", opts...)
+}
+
 type ipsecTunnelArgs struct {
 	// Enable Anti-Replay check on this tunnel
 	AntiReplay *bool `pulumi:"antiReplay"`

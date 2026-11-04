@@ -539,6 +539,12 @@ func (DecryptionRuleState) ElementType() reflect.Type {
 	return reflect.TypeOf((*decryptionRuleState)(nil)).Elem()
 }
 
+// DecryptionRuleExists checks whether an existing DecryptionRule resource with the given ID exists.
+func DecryptionRuleExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *DecryptionRuleState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("scm:index/decryptionRule:DecryptionRule", id, state, "", opts...)
+}
+
 type decryptionRuleArgs struct {
 	// The action to be taken. Possible values are `decrypt` and `no-decrypt`.
 	Action string `pulumi:"action"`

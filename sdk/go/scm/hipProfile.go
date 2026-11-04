@@ -154,6 +154,12 @@ func (HipProfileState) ElementType() reflect.Type {
 	return reflect.TypeOf((*hipProfileState)(nil)).Elem()
 }
 
+// HipProfileExists checks whether an existing HipProfile resource with the given ID exists.
+func HipProfileExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *HipProfileState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("scm:index/hipProfile:HipProfile", id, state, "", opts...)
+}
+
 type hipProfileArgs struct {
 	// Description
 	Description *string `pulumi:"description"`

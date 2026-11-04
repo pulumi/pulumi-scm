@@ -330,6 +330,12 @@ func (LdapServerProfileState) ElementType() reflect.Type {
 	return reflect.TypeOf((*ldapServerProfileState)(nil)).Elem()
 }
 
+// LdapServerProfileExists checks whether an existing LdapServerProfile resource with the given ID exists.
+func LdapServerProfileExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *LdapServerProfileState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("scm:index/ldapServerProfile:LdapServerProfile", id, state, "", opts...)
+}
+
 type ldapServerProfileArgs struct {
 	// The base DN
 	Base *string `pulumi:"base"`

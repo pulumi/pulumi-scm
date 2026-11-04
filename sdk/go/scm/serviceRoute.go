@@ -189,6 +189,12 @@ func (ServiceRouteState) ElementType() reflect.Type {
 	return reflect.TypeOf((*serviceRouteState)(nil)).Elem()
 }
 
+// ServiceRouteExists checks whether an existing ServiceRoute resource with the given ID exists.
+func ServiceRouteExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *ServiceRouteState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("scm:index/serviceRoute:ServiceRoute", id, state, "", opts...)
+}
+
 type serviceRouteArgs struct {
 	// The device in which the resource is defined
 	Device *string `pulumi:"device"`

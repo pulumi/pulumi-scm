@@ -430,6 +430,22 @@ class SessionSetting(pulumi.CustomResource):
         __props__.__dict__["tfid"] = tfid
         return SessionSetting(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            device: pulumi.Input[Optional[_builtins.str]] = None,
+            folder: pulumi.Input[Optional[_builtins.str]] = None,
+            session_settings: pulumi.Input[Optional[Union['SessionSettingSessionSettingsArgs', 'SessionSettingSessionSettingsArgsDict', 'outputs.SessionSettingSessionSettings']]] = None,
+            snippet: pulumi.Input[Optional[_builtins.str]] = None,
+            tfid: pulumi.Input[Optional[_builtins.str]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["device"] = device
+        __props__["folder"] = folder
+        __props__["sessionSettings"] = session_settings
+        __props__["snippet"] = snippet
+        __props__["tfid"] = tfid
+        return pulumi.runtime.exists_resource(None, 'scm:index/sessionSetting:SessionSetting', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter
     def device(self) -> pulumi.Output[Optional[_builtins.str]]:

@@ -196,6 +196,12 @@ func (ForwardingProfileDestinationState) ElementType() reflect.Type {
 	return reflect.TypeOf((*forwardingProfileDestinationState)(nil)).Elem()
 }
 
+// ForwardingProfileDestinationExists checks whether an existing ForwardingProfileDestination resource with the given ID exists.
+func ForwardingProfileDestinationExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *ForwardingProfileDestinationState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("scm:index/forwardingProfileDestination:ForwardingProfileDestination", id, state, "", opts...)
+}
+
 type forwardingProfileDestinationArgs struct {
 	// description of the destination
 	Description *string `pulumi:"description"`

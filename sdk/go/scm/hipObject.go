@@ -371,6 +371,12 @@ func (HipObjectState) ElementType() reflect.Type {
 	return reflect.TypeOf((*hipObjectState)(nil)).Elem()
 }
 
+// HipObjectExists checks whether an existing HipObject resource with the given ID exists.
+func HipObjectExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *HipObjectState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("scm:index/hipObject:HipObject", id, state, "", opts...)
+}
+
 type hipObjectArgs struct {
 	// Anti malware
 	AntiMalware *HipObjectAntiMalware `pulumi:"antiMalware"`

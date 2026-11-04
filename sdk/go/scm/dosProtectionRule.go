@@ -208,6 +208,12 @@ func (DosProtectionRuleState) ElementType() reflect.Type {
 	return reflect.TypeOf((*dosProtectionRuleState)(nil)).Elem()
 }
 
+// DosProtectionRuleExists checks whether an existing DosProtectionRule resource with the given ID exists.
+func DosProtectionRuleExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *DosProtectionRuleState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("scm:index/dosProtectionRule:DosProtectionRule", id, state, "", opts...)
+}
+
 type dosProtectionRuleArgs struct {
 	// The action to take on rule match
 	Action *DosProtectionRuleAction `pulumi:"action"`

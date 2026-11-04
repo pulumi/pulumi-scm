@@ -152,6 +152,12 @@ func (BgpAddressFamilyProfileState) ElementType() reflect.Type {
 	return reflect.TypeOf((*bgpAddressFamilyProfileState)(nil)).Elem()
 }
 
+// BgpAddressFamilyProfileExists checks whether an existing BgpAddressFamilyProfile resource with the given ID exists.
+func BgpAddressFamilyProfileExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *BgpAddressFamilyProfileState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("scm:index/bgpAddressFamilyProfile:BgpAddressFamilyProfile", id, state, "", opts...)
+}
+
 type bgpAddressFamilyProfileArgs struct {
 	// The device in which the resource is defined
 	Device *string `pulumi:"device"`

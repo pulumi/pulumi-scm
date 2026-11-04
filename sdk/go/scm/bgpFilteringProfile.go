@@ -273,6 +273,12 @@ func (BgpFilteringProfileState) ElementType() reflect.Type {
 	return reflect.TypeOf((*bgpFilteringProfileState)(nil)).Elem()
 }
 
+// BgpFilteringProfileExists checks whether an existing BgpFilteringProfile resource with the given ID exists.
+func BgpFilteringProfileExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *BgpFilteringProfileState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("scm:index/bgpFilteringProfile:BgpFilteringProfile", id, state, "", opts...)
+}
+
 type bgpFilteringProfileArgs struct {
 	// Description
 	Description *string `pulumi:"description"`

@@ -749,6 +749,36 @@ class Zone(pulumi.CustomResource):
         __props__.__dict__["user_acl"] = user_acl
         return Zone(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            device: pulumi.Input[Optional[_builtins.str]] = None,
+            device_acl: pulumi.Input[Optional[Union['ZoneDeviceAclArgs', 'ZoneDeviceAclArgsDict', 'outputs.ZoneDeviceAcl']]] = None,
+            dos_log_setting: pulumi.Input[Optional[_builtins.str]] = None,
+            dos_profile: pulumi.Input[Optional[_builtins.str]] = None,
+            enable_device_identification: pulumi.Input[Optional[_builtins.bool]] = None,
+            enable_user_identification: pulumi.Input[Optional[_builtins.bool]] = None,
+            folder: pulumi.Input[Optional[_builtins.str]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            network: pulumi.Input[Optional[Union['ZoneNetworkArgs', 'ZoneNetworkArgsDict', 'outputs.ZoneNetwork']]] = None,
+            snippet: pulumi.Input[Optional[_builtins.str]] = None,
+            tfid: pulumi.Input[Optional[_builtins.str]] = None,
+            user_acl: pulumi.Input[Optional[Union['ZoneUserAclArgs', 'ZoneUserAclArgsDict', 'outputs.ZoneUserAcl']]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["device"] = device
+        __props__["deviceAcl"] = device_acl
+        __props__["dosLogSetting"] = dos_log_setting
+        __props__["dosProfile"] = dos_profile
+        __props__["enableDeviceIdentification"] = enable_device_identification
+        __props__["enableUserIdentification"] = enable_user_identification
+        __props__["folder"] = folder
+        __props__["name"] = name
+        __props__["network"] = network
+        __props__["snippet"] = snippet
+        __props__["tfid"] = tfid
+        __props__["userAcl"] = user_acl
+        return pulumi.runtime.exists_resource(None, 'scm:index/zone:Zone', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter
     def device(self) -> pulumi.Output[Optional[_builtins.str]]:

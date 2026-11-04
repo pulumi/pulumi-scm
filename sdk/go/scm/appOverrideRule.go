@@ -365,6 +365,12 @@ func (AppOverrideRuleState) ElementType() reflect.Type {
 	return reflect.TypeOf((*appOverrideRuleState)(nil)).Elem()
 }
 
+// AppOverrideRuleExists checks whether an existing AppOverrideRule resource with the given ID exists.
+func AppOverrideRuleExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *AppOverrideRuleState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("scm:index/appOverrideRule:AppOverrideRule", id, state, "", opts...)
+}
+
 type appOverrideRuleArgs struct {
 	// Application
 	Application *string `pulumi:"application"`

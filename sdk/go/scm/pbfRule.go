@@ -341,6 +341,12 @@ func (PbfRuleState) ElementType() reflect.Type {
 	return reflect.TypeOf((*pbfRuleState)(nil)).Elem()
 }
 
+// PbfRuleExists checks whether an existing PbfRule resource with the given ID exists.
+func PbfRuleExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *PbfRuleState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("scm:index/pbfRule:PbfRule", id, state, "", opts...)
+}
+
 type pbfRuleArgs struct {
 	// Action
 	Action *PbfRuleAction `pulumi:"action"`

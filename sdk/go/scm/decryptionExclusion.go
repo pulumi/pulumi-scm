@@ -114,6 +114,12 @@ func (DecryptionExclusionState) ElementType() reflect.Type {
 	return reflect.TypeOf((*decryptionExclusionState)(nil)).Elem()
 }
 
+// DecryptionExclusionExists checks whether an existing DecryptionExclusion resource with the given ID exists.
+func DecryptionExclusionExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *DecryptionExclusionState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("scm:index/decryptionExclusion:DecryptionExclusion", id, state, "", opts...)
+}
+
 type decryptionExclusionArgs struct {
 	// Description
 	Description *string `pulumi:"description"`

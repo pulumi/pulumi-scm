@@ -237,6 +237,12 @@ func (AuthenticationProfileState) ElementType() reflect.Type {
 	return reflect.TypeOf((*authenticationProfileState)(nil)).Elem()
 }
 
+// AuthenticationProfileExists checks whether an existing AuthenticationProfile resource with the given ID exists.
+func AuthenticationProfileExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *AuthenticationProfileState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("scm:index/authenticationProfile:AuthenticationProfile", id, state, "", opts...)
+}
+
 type authenticationProfileArgs struct {
 	// The allowList of the authentication profile
 	AllowLists []string `pulumi:"allowLists"`

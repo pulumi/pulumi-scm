@@ -304,6 +304,12 @@ func (Layer3SubinterfaceState) ElementType() reflect.Type {
 	return reflect.TypeOf((*layer3SubinterfaceState)(nil)).Elem()
 }
 
+// Layer3SubinterfaceExists checks whether an existing Layer3Subinterface resource with the given ID exists.
+func Layer3SubinterfaceExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *Layer3SubinterfaceState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("scm:index/layer3Subinterface:Layer3Subinterface", id, state, "", opts...)
+}
+
 type layer3SubinterfaceArgs struct {
 	// TCP MSS adjustment settings for the interface
 	AdjustTcpMss *Layer3SubinterfaceAdjustTcpMss `pulumi:"adjustTcpMss"`

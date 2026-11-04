@@ -1024,6 +1024,44 @@ class EthernetInterface(pulumi.CustomResource):
         __props__.__dict__["tfid"] = tfid
         return EthernetInterface(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            aggregate_group: pulumi.Input[Optional[_builtins.str]] = None,
+            comment: pulumi.Input[Optional[_builtins.str]] = None,
+            default_value: pulumi.Input[Optional[_builtins.str]] = None,
+            device: pulumi.Input[Optional[_builtins.str]] = None,
+            encrypted_values: pulumi.Input[Optional[Mapping[str, pulumi.Input[_builtins.str]]]] = None,
+            folder: pulumi.Input[Optional[_builtins.str]] = None,
+            layer2: pulumi.Input[Optional[Union['EthernetInterfaceLayer2Args', 'EthernetInterfaceLayer2ArgsDict', 'outputs.EthernetInterfaceLayer2']]] = None,
+            layer3: pulumi.Input[Optional[Union['EthernetInterfaceLayer3Args', 'EthernetInterfaceLayer3ArgsDict', 'outputs.EthernetInterfaceLayer3']]] = None,
+            link_duplex: pulumi.Input[Optional[_builtins.str]] = None,
+            link_speed: pulumi.Input[Optional[_builtins.str]] = None,
+            link_state: pulumi.Input[Optional[_builtins.str]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            poe: pulumi.Input[Optional[Union['EthernetInterfacePoeArgs', 'EthernetInterfacePoeArgsDict', 'outputs.EthernetInterfacePoe']]] = None,
+            snippet: pulumi.Input[Optional[_builtins.str]] = None,
+            tap: pulumi.Input[Optional[Union['EthernetInterfaceTapArgs', 'EthernetInterfaceTapArgsDict', 'outputs.EthernetInterfaceTap']]] = None,
+            tfid: pulumi.Input[Optional[_builtins.str]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["aggregateGroup"] = aggregate_group
+        __props__["comment"] = comment
+        __props__["defaultValue"] = default_value
+        __props__["device"] = device
+        __props__["encryptedValues"] = encrypted_values
+        __props__["folder"] = folder
+        __props__["layer2"] = layer2
+        __props__["layer3"] = layer3
+        __props__["linkDuplex"] = link_duplex
+        __props__["linkSpeed"] = link_speed
+        __props__["linkState"] = link_state
+        __props__["name"] = name
+        __props__["poe"] = poe
+        __props__["snippet"] = snippet
+        __props__["tap"] = tap
+        __props__["tfid"] = tfid
+        return pulumi.runtime.exists_resource(None, 'scm:index/ethernetInterface:EthernetInterface', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter(name="aggregateGroup")
     def aggregate_group(self) -> pulumi.Output[Optional[_builtins.str]]:

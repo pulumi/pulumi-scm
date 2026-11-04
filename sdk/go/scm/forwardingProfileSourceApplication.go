@@ -177,6 +177,12 @@ func (ForwardingProfileSourceApplicationState) ElementType() reflect.Type {
 	return reflect.TypeOf((*forwardingProfileSourceApplicationState)(nil)).Elem()
 }
 
+// ForwardingProfileSourceApplicationExists checks whether an existing ForwardingProfileSourceApplication resource with the given ID exists.
+func ForwardingProfileSourceApplicationExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *ForwardingProfileSourceApplicationState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("scm:index/forwardingProfileSourceApplication:ForwardingProfileSourceApplication", id, state, "", opts...)
+}
+
 type forwardingProfileSourceApplicationArgs struct {
 	// List of application names to be included in this source application profile
 	Applications []string `pulumi:"applications"`

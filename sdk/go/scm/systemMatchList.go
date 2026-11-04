@@ -192,6 +192,12 @@ func (SystemMatchListState) ElementType() reflect.Type {
 	return reflect.TypeOf((*systemMatchListState)(nil)).Elem()
 }
 
+// SystemMatchListExists checks whether an existing SystemMatchList resource with the given ID exists.
+func SystemMatchListExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *SystemMatchListState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("scm:index/systemMatchList:SystemMatchList", id, state, "", opts...)
+}
+
 type systemMatchListArgs struct {
 	// Description of the system match list entry
 	Description *string `pulumi:"description"`

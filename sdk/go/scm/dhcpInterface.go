@@ -219,6 +219,12 @@ func (DhcpInterfaceState) ElementType() reflect.Type {
 	return reflect.TypeOf((*dhcpInterfaceState)(nil)).Elem()
 }
 
+// DhcpInterfaceExists checks whether an existing DhcpInterface resource with the given ID exists.
+func DhcpInterfaceExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *DhcpInterfaceState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("scm:index/dhcpInterface:DhcpInterface", id, state, "", opts...)
+}
+
 type dhcpInterfaceArgs struct {
 	// The device in which the resource is defined
 	Device *string `pulumi:"device"`

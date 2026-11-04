@@ -479,6 +479,24 @@ class ForwardingProfileDestination(pulumi.CustomResource):
         __props__.__dict__["tfid"] = tfid
         return ForwardingProfileDestination(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            folder: pulumi.Input[Optional[_builtins.str]] = None,
+            fqdns: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ForwardingProfileDestinationFqdnArgs', 'ForwardingProfileDestinationFqdnArgsDict', 'outputs.ForwardingProfileDestinationFqdn']]]]] = None,
+            ip_addresses: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ForwardingProfileDestinationIpAddressArgs', 'ForwardingProfileDestinationIpAddressArgsDict', 'outputs.ForwardingProfileDestinationIpAddress']]]]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            tfid: pulumi.Input[Optional[_builtins.str]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["description"] = description
+        __props__["folder"] = folder
+        __props__["fqdns"] = fqdns
+        __props__["ipAddresses"] = ip_addresses
+        __props__["name"] = name
+        __props__["tfid"] = tfid
+        return pulumi.runtime.exists_resource(None, 'scm:index/forwardingProfileDestination:ForwardingProfileDestination', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter
     def description(self) -> pulumi.Output[Optional[_builtins.str]]:

@@ -646,6 +646,12 @@ func (SecurityRuleState) ElementType() reflect.Type {
 	return reflect.TypeOf((*securityRuleState)(nil)).Elem()
 }
 
+// SecurityRuleExists checks whether an existing SecurityRule resource with the given ID exists.
+func SecurityRuleExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *SecurityRuleState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("scm:index/securityRule:SecurityRule", id, state, "", opts...)
+}
+
 type securityRuleArgs struct {
 	// The action to be taken when the rule is matched. Possible values are `allow`, `deny`, `drop`, `reset-client`, `reset-server` and `reset-both`.
 	Action *string `pulumi:"action"`

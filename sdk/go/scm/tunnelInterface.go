@@ -231,6 +231,12 @@ func (TunnelInterfaceState) ElementType() reflect.Type {
 	return reflect.TypeOf((*tunnelInterfaceState)(nil)).Elem()
 }
 
+// TunnelInterfaceExists checks whether an existing TunnelInterface resource with the given ID exists.
+func TunnelInterfaceExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *TunnelInterfaceState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("scm:index/tunnelInterface:TunnelInterface", id, state, "", opts...)
+}
+
 type tunnelInterfaceArgs struct {
 	// Description for tunnel interface
 	Comment *string `pulumi:"comment"`

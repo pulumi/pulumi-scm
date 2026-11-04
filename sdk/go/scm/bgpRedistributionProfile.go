@@ -160,6 +160,12 @@ func (BgpRedistributionProfileState) ElementType() reflect.Type {
 	return reflect.TypeOf((*bgpRedistributionProfileState)(nil)).Elem()
 }
 
+// BgpRedistributionProfileExists checks whether an existing BgpRedistributionProfile resource with the given ID exists.
+func BgpRedistributionProfileExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *BgpRedistributionProfileState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("scm:index/bgpRedistributionProfile:BgpRedistributionProfile", id, state, "", opts...)
+}
+
 type bgpRedistributionProfileArgs struct {
 	// The device in which the resource is defined
 	Device *string `pulumi:"device"`

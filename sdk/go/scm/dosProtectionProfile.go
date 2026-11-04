@@ -136,6 +136,12 @@ func (DosProtectionProfileState) ElementType() reflect.Type {
 	return reflect.TypeOf((*dosProtectionProfileState)(nil)).Elem()
 }
 
+// DosProtectionProfileExists checks whether an existing DosProtectionProfile resource with the given ID exists.
+func DosProtectionProfileExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *DosProtectionProfileState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("scm:index/dosProtectionProfile:DosProtectionProfile", id, state, "", opts...)
+}
+
 type dosProtectionProfileArgs struct {
 	// Description
 	Description *string `pulumi:"description"`
